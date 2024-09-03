@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class ApplyConcurrentRequest extends AbstractModel {
 
     /**
-    * The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+    * Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * Public IP of user’s application client, which is used for nearby scheduling.
+    * Public IP address of the user's client, which is used for nearby scheduling.
     */
     @SerializedName("UserIp")
     @Expose
     private String UserIp;
 
     /**
-    * The project ID.
+    * Project ID.
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
+    * Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of the other versions is requested, you need to specify the version through this field.
     */
     @SerializedName("ApplicationVersionId")
     @Expose
@@ -59,64 +59,64 @@ public class ApplyConcurrentRequest extends AbstractModel {
     private String ApplicationId;
 
     /**
-     * Get The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application. 
-     * @return UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+     * Get Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application. 
+     * @return UserId Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
-     * @param UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+     * Set Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+     * @param UserId Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get Public IP of user’s application client, which is used for nearby scheduling. 
-     * @return UserIp Public IP of user’s application client, which is used for nearby scheduling.
+     * Get Public IP address of the user's client, which is used for nearby scheduling. 
+     * @return UserIp Public IP address of the user's client, which is used for nearby scheduling.
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set Public IP of user’s application client, which is used for nearby scheduling.
-     * @param UserIp Public IP of user’s application client, which is used for nearby scheduling.
+     * Set Public IP address of the user's client, which is used for nearby scheduling.
+     * @param UserIp Public IP address of the user's client, which is used for nearby scheduling.
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;
     }
 
     /**
-     * Get The project ID. 
-     * @return ProjectId The project ID.
+     * Get Project ID. 
+     * @return ProjectId Project ID.
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set The project ID.
-     * @param ProjectId The project ID.
+     * Set Project ID.
+     * @param ProjectId Project ID.
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field. 
-     * @return ApplicationVersionId Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
+     * Get Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of the other versions is requested, you need to specify the version through this field. 
+     * @return ApplicationVersionId Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of the other versions is requested, you need to specify the version through this field.
      */
     public String getApplicationVersionId() {
         return this.ApplicationVersionId;
     }
 
     /**
-     * Set Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
-     * @param ApplicationVersionId Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
+     * Set Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of the other versions is requested, you need to specify the version through this field.
+     * @param ApplicationVersionId Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of the other versions is requested, you need to specify the version through this field.
      */
     public void setApplicationVersionId(String ApplicationVersionId) {
         this.ApplicationVersionId = ApplicationVersionId;

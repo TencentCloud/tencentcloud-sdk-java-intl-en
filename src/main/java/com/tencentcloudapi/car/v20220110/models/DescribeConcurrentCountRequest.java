@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeConcurrentCountRequest extends AbstractModel {
 
     /**
-    * Project ID
+    * Project ID.
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get Project ID. 
+     * @return ProjectId Project ID.
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set Project ID.
+     * @param ProjectId Project ID.
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

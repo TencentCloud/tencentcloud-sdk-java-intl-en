@@ -24,216 +24,196 @@ import java.util.HashMap;
 public class CreateSessionRequest extends AbstractModel {
 
     /**
-    * The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+    * Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * Public IP of user’s application client, which is used for nearby scheduling.
+    * Public IP address of the user's client, which is used for nearby scheduling.
     */
     @SerializedName("UserIp")
     @Expose
     private String UserIp;
 
     /**
-    * The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
+    * Client-side session information, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be empty.
     */
     @SerializedName("ClientSession")
     @Expose
     private String ClientSession;
 
     /**
-    * The on-cloud running mode.
-`RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
-Empty string (default): Keep the application running on the cloud only when there are client connections.
+    * On-cloud running mode.RunWithoutClient: Keeps the application running on the cloud even when there are no client connections.Empty string (default): Keeps the application running on the cloud only when there are client connections.
     */
     @SerializedName("RunMode")
     @Expose
     private String RunMode;
 
     /**
-    * Application startup parameter.
-If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
- 
-If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
-
-Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
-For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
+    * Application startup parameters.This parameter is effective for multi-application projects.
+This parameter is effective for single-application projects with prelaunch disabled.This parameter is ineffective for single-application projects with prelaunch enabled.
+Note: When this parameter is effective, it will be appended to the startup parameters of application or project configuration in the console.
+For example, for a single-application project with prelaunch disabled, if its startup parameter `bar` is `0` for project configuration in the console and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 and foo=1`.
     */
     @SerializedName("ApplicationParameters")
     @Expose
     private String ApplicationParameters;
 
     /**
-    * The user ID of the host in **multi-person interaction** scenarios, which is required.
-If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+    * [Multi-person Interaction] Homeowner's user ID, which is required in multi-person interaction mode.
+If the user is the homeowner, HostUserID must be the same as UserID.
+If the user is not the homeowner, HostUserID must be the homeowner's HostUserID.
     */
     @SerializedName("HostUserId")
     @Expose
     private String HostUserId;
 
     /**
-    * The role in **multi-person interaction** scenarios. Valid values:
-`Player`: A user who can operate an application by using a keyboard and mouse
-`Viewer`: A user who can only watch the video in the room but cannot operate the application
+    * [Multi-person Interaction] Role.
+Player: a user who can operate the application via keyboard, mouse, etc.
+Viewer: a user who can only watch the video in the room but cannot operate the application.
     */
     @SerializedName("Role")
     @Expose
     private String Role;
 
     /**
-     * Get The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application. 
-     * @return UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+     * Get Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application. 
+     * @return UserId Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
-     * @param UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+     * Set Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+     * @param UserId Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get Public IP of user’s application client, which is used for nearby scheduling. 
-     * @return UserIp Public IP of user’s application client, which is used for nearby scheduling.
+     * Get Public IP address of the user's client, which is used for nearby scheduling. 
+     * @return UserIp Public IP address of the user's client, which is used for nearby scheduling.
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set Public IP of user’s application client, which is used for nearby scheduling.
-     * @param UserIp Public IP of user’s application client, which is used for nearby scheduling.
+     * Set Public IP address of the user's client, which is used for nearby scheduling.
+     * @param UserIp Public IP address of the user's client, which is used for nearby scheduling.
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;
     }
 
     /**
-     * Get The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null. 
-     * @return ClientSession The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
+     * Get Client-side session information, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be empty. 
+     * @return ClientSession Client-side session information, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be empty.
      */
     public String getClientSession() {
         return this.ClientSession;
     }
 
     /**
-     * Set The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
-     * @param ClientSession The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
+     * Set Client-side session information, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be empty.
+     * @param ClientSession Client-side session information, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be empty.
      */
     public void setClientSession(String ClientSession) {
         this.ClientSession = ClientSession;
     }
 
     /**
-     * Get The on-cloud running mode.
-`RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
-Empty string (default): Keep the application running on the cloud only when there are client connections. 
-     * @return RunMode The on-cloud running mode.
-`RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
-Empty string (default): Keep the application running on the cloud only when there are client connections.
+     * Get On-cloud running mode.RunWithoutClient: Keeps the application running on the cloud even when there are no client connections.Empty string (default): Keeps the application running on the cloud only when there are client connections. 
+     * @return RunMode On-cloud running mode.RunWithoutClient: Keeps the application running on the cloud even when there are no client connections.Empty string (default): Keeps the application running on the cloud only when there are client connections.
      */
     public String getRunMode() {
         return this.RunMode;
     }
 
     /**
-     * Set The on-cloud running mode.
-`RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
-Empty string (default): Keep the application running on the cloud only when there are client connections.
-     * @param RunMode The on-cloud running mode.
-`RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
-Empty string (default): Keep the application running on the cloud only when there are client connections.
+     * Set On-cloud running mode.RunWithoutClient: Keeps the application running on the cloud even when there are no client connections.Empty string (default): Keeps the application running on the cloud only when there are client connections.
+     * @param RunMode On-cloud running mode.RunWithoutClient: Keeps the application running on the cloud even when there are no client connections.Empty string (default): Keeps the application running on the cloud only when there are client connections.
      */
     public void setRunMode(String RunMode) {
         this.RunMode = RunMode;
     }
 
     /**
-     * Get Application startup parameter.
-If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
- 
-If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
-
-Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
-For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`. 
-     * @return ApplicationParameters Application startup parameter.
-If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
- 
-If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
-
-Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
-For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
+     * Get Application startup parameters.This parameter is effective for multi-application projects.
+This parameter is effective for single-application projects with prelaunch disabled.This parameter is ineffective for single-application projects with prelaunch enabled.
+Note: When this parameter is effective, it will be appended to the startup parameters of application or project configuration in the console.
+For example, for a single-application project with prelaunch disabled, if its startup parameter `bar` is `0` for project configuration in the console and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 and foo=1`. 
+     * @return ApplicationParameters Application startup parameters.This parameter is effective for multi-application projects.
+This parameter is effective for single-application projects with prelaunch disabled.This parameter is ineffective for single-application projects with prelaunch enabled.
+Note: When this parameter is effective, it will be appended to the startup parameters of application or project configuration in the console.
+For example, for a single-application project with prelaunch disabled, if its startup parameter `bar` is `0` for project configuration in the console and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 and foo=1`.
      */
     public String getApplicationParameters() {
         return this.ApplicationParameters;
     }
 
     /**
-     * Set Application startup parameter.
-If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
- 
-If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
-
-Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
-For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
-     * @param ApplicationParameters Application startup parameter.
-If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
- 
-If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
-
-Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
-For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
+     * Set Application startup parameters.This parameter is effective for multi-application projects.
+This parameter is effective for single-application projects with prelaunch disabled.This parameter is ineffective for single-application projects with prelaunch enabled.
+Note: When this parameter is effective, it will be appended to the startup parameters of application or project configuration in the console.
+For example, for a single-application project with prelaunch disabled, if its startup parameter `bar` is `0` for project configuration in the console and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 and foo=1`.
+     * @param ApplicationParameters Application startup parameters.This parameter is effective for multi-application projects.
+This parameter is effective for single-application projects with prelaunch disabled.This parameter is ineffective for single-application projects with prelaunch enabled.
+Note: When this parameter is effective, it will be appended to the startup parameters of application or project configuration in the console.
+For example, for a single-application project with prelaunch disabled, if its startup parameter `bar` is `0` for project configuration in the console and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 and foo=1`.
      */
     public void setApplicationParameters(String ApplicationParameters) {
         this.ApplicationParameters = ApplicationParameters;
     }
 
     /**
-     * Get The user ID of the host in **multi-person interaction** scenarios, which is required.
-If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`. 
-     * @return HostUserId The user ID of the host in **multi-person interaction** scenarios, which is required.
-If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+     * Get [Multi-person Interaction] Homeowner's user ID, which is required in multi-person interaction mode.
+If the user is the homeowner, HostUserID must be the same as UserID.
+If the user is not the homeowner, HostUserID must be the homeowner's HostUserID. 
+     * @return HostUserId [Multi-person Interaction] Homeowner's user ID, which is required in multi-person interaction mode.
+If the user is the homeowner, HostUserID must be the same as UserID.
+If the user is not the homeowner, HostUserID must be the homeowner's HostUserID.
      */
     public String getHostUserId() {
         return this.HostUserId;
     }
 
     /**
-     * Set The user ID of the host in **multi-person interaction** scenarios, which is required.
-If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
-     * @param HostUserId The user ID of the host in **multi-person interaction** scenarios, which is required.
-If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+     * Set [Multi-person Interaction] Homeowner's user ID, which is required in multi-person interaction mode.
+If the user is the homeowner, HostUserID must be the same as UserID.
+If the user is not the homeowner, HostUserID must be the homeowner's HostUserID.
+     * @param HostUserId [Multi-person Interaction] Homeowner's user ID, which is required in multi-person interaction mode.
+If the user is the homeowner, HostUserID must be the same as UserID.
+If the user is not the homeowner, HostUserID must be the homeowner's HostUserID.
      */
     public void setHostUserId(String HostUserId) {
         this.HostUserId = HostUserId;
     }
 
     /**
-     * Get The role in **multi-person interaction** scenarios. Valid values:
-`Player`: A user who can operate an application by using a keyboard and mouse
-`Viewer`: A user who can only watch the video in the room but cannot operate the application 
-     * @return Role The role in **multi-person interaction** scenarios. Valid values:
-`Player`: A user who can operate an application by using a keyboard and mouse
-`Viewer`: A user who can only watch the video in the room but cannot operate the application
+     * Get [Multi-person Interaction] Role.
+Player: a user who can operate the application via keyboard, mouse, etc.
+Viewer: a user who can only watch the video in the room but cannot operate the application. 
+     * @return Role [Multi-person Interaction] Role.
+Player: a user who can operate the application via keyboard, mouse, etc.
+Viewer: a user who can only watch the video in the room but cannot operate the application.
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set The role in **multi-person interaction** scenarios. Valid values:
-`Player`: A user who can operate an application by using a keyboard and mouse
-`Viewer`: A user who can only watch the video in the room but cannot operate the application
-     * @param Role The role in **multi-person interaction** scenarios. Valid values:
-`Player`: A user who can operate an application by using a keyboard and mouse
-`Viewer`: A user who can only watch the video in the room but cannot operate the application
+     * Set [Multi-person Interaction] Role.
+Player: a user who can operate the application via keyboard, mouse, etc.
+Viewer: a user who can only watch the video in the room but cannot operate the application.
+     * @param Role [Multi-person Interaction] Role.
+Player: a user who can operate the application via keyboard, mouse, etc.
+Viewer: a user who can only watch the video in the room but cannot operate the application.
      */
     public void setRole(String Role) {
         this.Role = Role;

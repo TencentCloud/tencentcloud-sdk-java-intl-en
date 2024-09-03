@@ -39,6 +39,17 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add and modify a user.
+     * @param req ActionAlterUserRequest
+     * @return ActionAlterUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActionAlterUserResponse ActionAlterUser(ActionAlterUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ActionAlterUser", ActionAlterUserResponse.class);
+    }
+
+    /**
      *This API is used to cancel the corresponding backup instance task.
      * @param req CancelBackupJobRequest
      * @return CancelBackupJobResponse
@@ -47,6 +58,17 @@ public class CdwdorisClient extends AbstractClient{
     public CancelBackupJobResponse CancelBackupJob(CancelBackupJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CancelBackupJob", CancelBackupJobResponse.class);
+    }
+
+    /**
+     *This API is used to check whether variables and configurations for hot/cold data layering are correct.
+     * @param req CheckCoolDownWorkingVariableConfigCorrectRequest
+     * @return CheckCoolDownWorkingVariableConfigCorrectResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckCoolDownWorkingVariableConfigCorrectResponse CheckCoolDownWorkingVariableConfigCorrect(CheckCoolDownWorkingVariableConfigCorrectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckCoolDownWorkingVariableConfigCorrect", CheckCoolDownWorkingVariableConfigCorrectResponse.class);
     }
 
     /**
@@ -69,6 +91,17 @@ public class CdwdorisClient extends AbstractClient{
     public CreateBackUpScheduleResponse CreateBackUpSchedule(CreateBackUpScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateBackUpSchedule", CreateBackUpScheduleResponse.class);
+    }
+
+    /**
+     *This API is used to create a hot/cold data layering policy.
+     * @param req CreateCoolDownPolicyRequest
+     * @return CreateCoolDownPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCoolDownPolicyResponse CreateCoolDownPolicy(CreateCoolDownPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCoolDownPolicy", CreateCoolDownPolicyResponse.class);
     }
 
     /**
@@ -234,6 +267,50 @@ public class CdwdorisClient extends AbstractClient{
     public DescribeClusterConfigsHistoryResponse DescribeClusterConfigsHistory(DescribeClusterConfigsHistoryRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClusterConfigsHistory", DescribeClusterConfigsHistoryResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of backend nodes supporting hot/cold data layering.
+     * @param req DescribeCoolDownBackendsRequest
+     * @return DescribeCoolDownBackendsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCoolDownBackendsResponse DescribeCoolDownBackends(DescribeCoolDownBackendsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCoolDownBackends", DescribeCoolDownBackendsResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of hot/cold data layering policies.
+     * @param req DescribeCoolDownPoliciesRequest
+     * @return DescribeCoolDownPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCoolDownPoliciesResponse DescribeCoolDownPolicies(DescribeCoolDownPoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCoolDownPolicies", DescribeCoolDownPoliciesResponse.class);
+    }
+
+    /**
+     *This API is used to query the layered hot and cold data in a table.
+     * @param req DescribeCoolDownTableDataRequest
+     * @return DescribeCoolDownTableDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCoolDownTableDataResponse DescribeCoolDownTableData(DescribeCoolDownTableDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCoolDownTableData", DescribeCoolDownTableDataResponse.class);
+    }
+
+    /**
+     *This API is used to batch obtain the table creation DDL.
+     * @param req DescribeCreateTablesDDLRequest
+     * @return DescribeCreateTablesDDLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCreateTablesDDLResponse DescribeCreateTablesDDL(DescribeCreateTablesDDLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCreateTablesDDL", DescribeCreateTablesDDLResponse.class);
     }
 
     /**
@@ -435,7 +512,7 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the CK cluster API for the driver SQL command.
+     *This API is used to query the cluster information by executing SQL commands.
      * @param req DescribeSqlApisRequest
      * @return DescribeSqlApisResponse
      * @throws TencentCloudSDKException
@@ -545,6 +622,28 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the XML cluster configuration file on the cluster configuration page.
+     * @param req ModifyClusterConfigsRequest
+     * @return ModifyClusterConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterConfigsResponse ModifyClusterConfigs(ModifyClusterConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterConfigs", ModifyClusterConfigsResponse.class);
+    }
+
+    /**
+     *This API is used to modify the hot/cold data layering policy.
+     * @param req ModifyCoolDownPolicyRequest
+     * @return ModifyCoolDownPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCoolDownPolicyResponse ModifyCoolDownPolicy(ModifyCoolDownPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCoolDownPolicy", ModifyCoolDownPolicyResponse.class);
+    }
+
+    /**
      *This API is used to GRANT and REVOKE the database and table in the Doris database.
      * @param req ModifyDatabaseTableAccessRequest
      * @return ModifyDatabaseTableAccessResponse
@@ -644,6 +743,28 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to enable hot/cold data layering.
+     * @param req OpenCoolDownRequest
+     * @return OpenCoolDownResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenCoolDownResponse OpenCoolDown(OpenCoolDownRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenCoolDown", OpenCoolDownResponse.class);
+    }
+
+    /**
+     *This API is used to enable and describe the cold storage policy.
+     * @param req OpenCoolDownPolicyRequest
+     * @return OpenCoolDownPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenCoolDownPolicyResponse OpenCoolDownPolicy(OpenCoolDownPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenCoolDownPolicy", OpenCoolDownPolicyResponse.class);
+    }
+
+    /**
      *This API is used to query data according to the specified database and table names, and support field selection and pagination.
      * @param req QueryTableDataRequest
      * @return QueryTableDataResponse
@@ -729,6 +850,17 @@ public class CdwdorisClient extends AbstractClient{
     public ScaleUpInstanceResponse ScaleUpInstance(ScaleUpInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ScaleUpInstance", ScaleUpInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to update the hot/cold data layering information on a cluster.
+     * @param req UpdateCoolDownRequest
+     * @return UpdateCoolDownResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCoolDownResponse UpdateCoolDown(UpdateCoolDownRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateCoolDown", UpdateCoolDownResponse.class);
     }
 
     /**

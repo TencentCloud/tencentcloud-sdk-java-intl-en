@@ -1,7 +1,19 @@
 package com.tencentcloudapi.car.v20220110;
 public enum CarErrorCode {
+    // CAM signature/authentication error.
+     AUTHFAILURE("AuthFailure"),
+     
     // Operation failed.
      FAILEDOPERATION("FailedOperation"),
+     
+    // Application creation failed.
+     FAILEDOPERATION_APPLICATIONCREATEFAIL("FailedOperation.ApplicationCreateFail"),
+     
+    // Application lock failed.
+     FAILEDOPERATION_APPLICATIONLOCKFAIL("FailedOperation.ApplicationLockFail"),
+     
+    // Application does not exist.
+     FAILEDOPERATION_APPLICATIONNOTFIND("FailedOperation.ApplicationNotFind"),
      
     // Concurrency quota not requested or request timed out.
      FAILEDOPERATION_LOCKTIMEOUT("FailedOperation.LockTimeout"),
@@ -12,8 +24,11 @@ public enum CarErrorCode {
     // Processing timed out.
      FAILEDOPERATION_PROCESSTIMEOUT("FailedOperation.ProcessTimeout"),
      
-    // The request for the current `UserId` is being processed. Try again later.
+    // The request of the current `UserId` is being processed. Try again later.
      FAILEDOPERATION_SLOWDOWN("FailedOperation.SlowDown"),
+     
+    // Version lock failed.
+     FAILEDOPERATION_VERSIONLOCKFAIL("FailedOperation.VersionLockFail"),
      
     // Internal error.
      INTERNALERROR("InternalError"),
@@ -27,11 +42,20 @@ public enum CarErrorCode {
     // Invalid parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // The number of roles in a **multi-person interaction** scenario exceeds the limit.
+    // [Multi-person Interaction] The number of persons corresponding to a role exceeds the limit.
      LIMITEXCEEDED_ROLE("LimitExceeded.Role"),
      
     // Operation denied.
      OPERATIONDENIED("OperationDenied"),
+     
+    // The number of applications exceeds the limit.
+     OPERATIONDENIED_APPLICATIONLIMITEXCEEDED("OperationDenied.ApplicationLimitExceeded"),
+     
+    // Version is being created.
+     OPERATIONDENIED_VERSIONCREATING("OperationDenied.VersionCreating"),
+     
+    // The number of versions exceeds the limit.
+     OPERATIONDENIED_VERSIONLIMITEXCEEDED("OperationDenied.VersionLimitExceeded"),
      
     // No available concurrency quota.
      RESOURCENOTFOUND_NOIDLE("ResourceNotFound.NoIdle"),
@@ -42,7 +66,7 @@ public enum CarErrorCode {
     // Failed to access the concurrency instance.
      RESOURCEUNAVAILABLE_ACCESSFAILED("ResourceUnavailable.AccessFailed"),
      
-    // The instance is being initialized.
+    // It is being initialized.
      RESOURCEUNAVAILABLE_INITIALIZATION("ResourceUnavailable.Initialization"),
      
     // The session is being terminated.

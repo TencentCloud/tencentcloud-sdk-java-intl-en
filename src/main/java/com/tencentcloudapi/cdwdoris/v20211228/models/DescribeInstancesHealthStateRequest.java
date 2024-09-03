@@ -31,7 +31,7 @@ public class DescribeInstancesHealthStateRequest extends AbstractModel {
     private String InstanceID;
 
     /**
-    * "" or a cluster ID
+    * If this parameter is left blank, all clusters corresponding to the current appId are involved. Otherwise, a specific cluster is involved.
     */
     @SerializedName("Input")
     @Expose
@@ -58,16 +58,16 @@ public class DescribeInstancesHealthStateRequest extends AbstractModel {
     }
 
     /**
-     * Get "" or a cluster ID 
-     * @return Input "" or a cluster ID
+     * Get If this parameter is left blank, all clusters corresponding to the current appId are involved. Otherwise, a specific cluster is involved. 
+     * @return Input If this parameter is left blank, all clusters corresponding to the current appId are involved. Otherwise, a specific cluster is involved.
      */
     public String getInput() {
         return this.Input;
     }
 
     /**
-     * Set "" or a cluster ID
-     * @param Input "" or a cluster ID
+     * Set If this parameter is left blank, all clusters corresponding to the current appId are involved. Otherwise, a specific cluster is involved.
+     * @param Input If this parameter is left blank, all clusters corresponding to the current appId are involved. Otherwise, a specific cluster is involved.
      */
     public void setInput(String Input) {
         this.Input = Input;

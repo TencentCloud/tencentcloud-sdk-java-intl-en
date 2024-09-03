@@ -407,6 +407,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CoolDownBucket;
 
     /**
+    * Instance extension information
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Details")
+    @Expose
+    private InstanceDetail Details;
+
+    /**
+    * Whether to enable DLC. 0: disable; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EnableDlc")
+    @Expose
+    private Long EnableDlc;
+
+    /**
+    * Account type. 0: ordinary user; 1: CAM user.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private Long AccountType;
+
+    /**
      * Get Cluster instance ID, "cdw-xxxx" string type
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return InstanceId Cluster instance ID, "cdw-xxxx" string type
@@ -1378,6 +1402,66 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.CoolDownBucket = CoolDownBucket;
     }
 
+    /**
+     * Get Instance extension information
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Details Instance extension information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public InstanceDetail getDetails() {
+        return this.Details;
+    }
+
+    /**
+     * Set Instance extension information
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Details Instance extension information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDetails(InstanceDetail Details) {
+        this.Details = Details;
+    }
+
+    /**
+     * Get Whether to enable DLC. 0: disable; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EnableDlc Whether to enable DLC. 0: disable; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getEnableDlc() {
+        return this.EnableDlc;
+    }
+
+    /**
+     * Set Whether to enable DLC. 0: disable; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EnableDlc Whether to enable DLC. 0: disable; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEnableDlc(Long EnableDlc) {
+        this.EnableDlc = EnableDlc;
+    }
+
+    /**
+     * Get Account type. 0: ordinary user; 1: CAM user.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AccountType Account type. 0: ordinary user; 1: CAM user.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set Account type. 0: ordinary user; 1: CAM user.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AccountType Account type. 0: ordinary user; 1: CAM user.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAccountType(Long AccountType) {
+        this.AccountType = AccountType;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1536,6 +1620,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.CoolDownBucket != null) {
             this.CoolDownBucket = new String(source.CoolDownBucket);
         }
+        if (source.Details != null) {
+            this.Details = new InstanceDetail(source.Details);
+        }
+        if (source.EnableDlc != null) {
+            this.EnableDlc = new Long(source.EnableDlc);
+        }
+        if (source.AccountType != null) {
+            this.AccountType = new Long(source.AccountType);
+        }
     }
 
 
@@ -1590,6 +1683,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UserNetworkInfos", this.UserNetworkInfos);
         this.setParamSimple(map, prefix + "EnableCoolDown", this.EnableCoolDown);
         this.setParamSimple(map, prefix + "CoolDownBucket", this.CoolDownBucket);
+        this.setParamObj(map, prefix + "Details.", this.Details);
+        this.setParamSimple(map, prefix + "EnableDlc", this.EnableDlc);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

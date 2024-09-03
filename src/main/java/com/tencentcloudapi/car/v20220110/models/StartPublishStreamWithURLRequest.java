@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class StartPublishStreamWithURLRequest extends AbstractModel {
 
     /**
-    * Unique user ID, which is customized by you and is not understood by CAR.
+    * Unique user ID, which is customized by you and is not parsed by CAR.
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * Push address. Only RTMP is supported for push currently.
+    * Streaming address. Only RTMP is supported for streaming currently.
     */
     @SerializedName("PublishStreamURL")
     @Expose
     private String PublishStreamURL;
 
     /**
-     * Get Unique user ID, which is customized by you and is not understood by CAR. 
-     * @return UserId Unique user ID, which is customized by you and is not understood by CAR.
+     * Get Unique user ID, which is customized by you and is not parsed by CAR. 
+     * @return UserId Unique user ID, which is customized by you and is not parsed by CAR.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set Unique user ID, which is customized by you and is not understood by CAR.
-     * @param UserId Unique user ID, which is customized by you and is not understood by CAR.
+     * Set Unique user ID, which is customized by you and is not parsed by CAR.
+     * @param UserId Unique user ID, which is customized by you and is not parsed by CAR.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get Push address. Only RTMP is supported for push currently. 
-     * @return PublishStreamURL Push address. Only RTMP is supported for push currently.
+     * Get Streaming address. Only RTMP is supported for streaming currently. 
+     * @return PublishStreamURL Streaming address. Only RTMP is supported for streaming currently.
      */
     public String getPublishStreamURL() {
         return this.PublishStreamURL;
     }
 
     /**
-     * Set Push address. Only RTMP is supported for push currently.
-     * @param PublishStreamURL Push address. Only RTMP is supported for push currently.
+     * Set Streaming address. Only RTMP is supported for streaming currently.
+     * @param PublishStreamURL Streaming address. Only RTMP is supported for streaming currently.
      */
     public void setPublishStreamURL(String PublishStreamURL) {
         this.PublishStreamURL = PublishStreamURL;

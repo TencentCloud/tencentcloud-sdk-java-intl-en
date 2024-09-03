@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class StartPublishStreamRequest extends AbstractModel {
 
     /**
-    * Unique user ID, which is customized by you and is not understood by CAR. It will be used as the `StreamId` for pushing streams. For example, if the bound push domain is **abc.livepush.myqcloud.com**, the push address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
+    * Unique user ID, which is customized by you and is not parsed by CAR. It will be used as the `StreamId` for streaming. For example, if the bound streaming domain is **abc.livepush.myqcloud.com**, the streaming address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * Push parameter, which is a custom parameter carried during stream pushing.
+    * Streaming parameter, which is a custom parameter carried during streaming.
     */
     @SerializedName("PublishStreamArgs")
     @Expose
     private String PublishStreamArgs;
 
     /**
-     * Get Unique user ID, which is customized by you and is not understood by CAR. It will be used as the `StreamId` for pushing streams. For example, if the bound push domain is **abc.livepush.myqcloud.com**, the push address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**. 
-     * @return UserId Unique user ID, which is customized by you and is not understood by CAR. It will be used as the `StreamId` for pushing streams. For example, if the bound push domain is **abc.livepush.myqcloud.com**, the push address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
+     * Get Unique user ID, which is customized by you and is not parsed by CAR. It will be used as the `StreamId` for streaming. For example, if the bound streaming domain is **abc.livepush.myqcloud.com**, the streaming address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**. 
+     * @return UserId Unique user ID, which is customized by you and is not parsed by CAR. It will be used as the `StreamId` for streaming. For example, if the bound streaming domain is **abc.livepush.myqcloud.com**, the streaming address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set Unique user ID, which is customized by you and is not understood by CAR. It will be used as the `StreamId` for pushing streams. For example, if the bound push domain is **abc.livepush.myqcloud.com**, the push address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
-     * @param UserId Unique user ID, which is customized by you and is not understood by CAR. It will be used as the `StreamId` for pushing streams. For example, if the bound push domain is **abc.livepush.myqcloud.com**, the push address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
+     * Set Unique user ID, which is customized by you and is not parsed by CAR. It will be used as the `StreamId` for streaming. For example, if the bound streaming domain is **abc.livepush.myqcloud.com**, the streaming address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
+     * @param UserId Unique user ID, which is customized by you and is not parsed by CAR. It will be used as the `StreamId` for streaming. For example, if the bound streaming domain is **abc.livepush.myqcloud.com**, the streaming address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get Push parameter, which is a custom parameter carried during stream pushing. 
-     * @return PublishStreamArgs Push parameter, which is a custom parameter carried during stream pushing.
+     * Get Streaming parameter, which is a custom parameter carried during streaming. 
+     * @return PublishStreamArgs Streaming parameter, which is a custom parameter carried during streaming.
      */
     public String getPublishStreamArgs() {
         return this.PublishStreamArgs;
     }
 
     /**
-     * Set Push parameter, which is a custom parameter carried during stream pushing.
-     * @param PublishStreamArgs Push parameter, which is a custom parameter carried during stream pushing.
+     * Set Streaming parameter, which is a custom parameter carried during streaming.
+     * @param PublishStreamArgs Streaming parameter, which is a custom parameter carried during streaming.
      */
     public void setPublishStreamArgs(String PublishStreamArgs) {
         this.PublishStreamArgs = PublishStreamArgs;

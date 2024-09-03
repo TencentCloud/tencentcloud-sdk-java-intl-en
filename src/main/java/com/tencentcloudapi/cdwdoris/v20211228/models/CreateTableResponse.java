@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class CreateTableResponse extends AbstractModel {
 
     /**
-    * Error message
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Message")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Error message
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Message Error message
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Message Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Message Error message
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Message Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMessage(String Message) {
         this.Message = Message;

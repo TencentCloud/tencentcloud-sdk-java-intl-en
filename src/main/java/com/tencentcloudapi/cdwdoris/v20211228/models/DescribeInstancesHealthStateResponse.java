@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstancesHealthStateResponse extends AbstractModel {
 
     /**
-    * Output parameter
+    * Base64-encoded data, which contains the cluster health information
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Output parameter
+     * Get Base64-encoded data, which contains the cluster health information
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data Output parameter
+     * @return Data Base64-encoded data, which contains the cluster health information
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getData() {
@@ -49,9 +49,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Output parameter
+     * Set Base64-encoded data, which contains the cluster health information
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data Output parameter
+     * @param Data Base64-encoded data, which contains the cluster health information
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setData(String Data) {

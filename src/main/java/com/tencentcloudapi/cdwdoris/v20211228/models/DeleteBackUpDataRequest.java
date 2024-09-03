@@ -38,7 +38,7 @@ public class DeleteBackUpDataRequest extends AbstractModel {
     private Long BackUpJobId;
 
     /**
-    * Whether to delete all data
+    * Whether to delete all instances
     */
     @SerializedName("IsDeleteAll")
     @Expose
@@ -77,16 +77,16 @@ public class DeleteBackUpDataRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to delete all data 
-     * @return IsDeleteAll Whether to delete all data
+     * Get Whether to delete all instances 
+     * @return IsDeleteAll Whether to delete all instances
      */
     public Boolean getIsDeleteAll() {
         return this.IsDeleteAll;
     }
 
     /**
-     * Set Whether to delete all data
-     * @param IsDeleteAll Whether to delete all data
+     * Set Whether to delete all instances
+     * @param IsDeleteAll Whether to delete all instances
      */
     public void setIsDeleteAll(Boolean IsDeleteAll) {
         this.IsDeleteAll = IsDeleteAll;

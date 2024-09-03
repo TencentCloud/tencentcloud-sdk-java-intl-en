@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeConcurrentCountResponse extends AbstractModel {
 
     /**
-    * Total Concurrency Count
+    * Total number of concurrencies.
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * The number of concurrent executions, including those in pre-launch, connected, waiting for reconnection, to be cleaned up or recovered, and all non-idle concurrent executions. Therefore, refreshing projects or disconnecting user connections with concurrency packages will affect this value.
+    * The number of concurrent executions, including all non-idle concurrent executions such as those in prelaunch, connected, waiting for reconnection, and to be cleaned up or recovered. Therefore, refreshing projects or disconnecting user connections with concurrency packages will affect this value.
     */
     @SerializedName("Running")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeConcurrentCountResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total Concurrency Count 
-     * @return Total Total Concurrency Count
+     * Get Total number of concurrencies. 
+     * @return Total Total number of concurrencies.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total Concurrency Count
-     * @param Total Total Concurrency Count
+     * Set Total number of concurrencies.
+     * @param Total Total number of concurrencies.
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get The number of concurrent executions, including those in pre-launch, connected, waiting for reconnection, to be cleaned up or recovered, and all non-idle concurrent executions. Therefore, refreshing projects or disconnecting user connections with concurrency packages will affect this value. 
-     * @return Running The number of concurrent executions, including those in pre-launch, connected, waiting for reconnection, to be cleaned up or recovered, and all non-idle concurrent executions. Therefore, refreshing projects or disconnecting user connections with concurrency packages will affect this value.
+     * Get The number of concurrent executions, including all non-idle concurrent executions such as those in prelaunch, connected, waiting for reconnection, and to be cleaned up or recovered. Therefore, refreshing projects or disconnecting user connections with concurrency packages will affect this value. 
+     * @return Running The number of concurrent executions, including all non-idle concurrent executions such as those in prelaunch, connected, waiting for reconnection, and to be cleaned up or recovered. Therefore, refreshing projects or disconnecting user connections with concurrency packages will affect this value.
      */
     public Long getRunning() {
         return this.Running;
     }
 
     /**
-     * Set The number of concurrent executions, including those in pre-launch, connected, waiting for reconnection, to be cleaned up or recovered, and all non-idle concurrent executions. Therefore, refreshing projects or disconnecting user connections with concurrency packages will affect this value.
-     * @param Running The number of concurrent executions, including those in pre-launch, connected, waiting for reconnection, to be cleaned up or recovered, and all non-idle concurrent executions. Therefore, refreshing projects or disconnecting user connections with concurrency packages will affect this value.
+     * Set The number of concurrent executions, including all non-idle concurrent executions such as those in prelaunch, connected, waiting for reconnection, and to be cleaned up or recovered. Therefore, refreshing projects or disconnecting user connections with concurrency packages will affect this value.
+     * @param Running The number of concurrent executions, including all non-idle concurrent executions such as those in prelaunch, connected, waiting for reconnection, and to be cleaned up or recovered. Therefore, refreshing projects or disconnecting user connections with concurrency packages will affect this value.
      */
     public void setRunning(Long Running) {
         this.Running = Running;

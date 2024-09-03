@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSessionResponse extends AbstractModel {
 
     /**
-    * The server-side session data, which is returned to the SDK.
+    * Server-side session information, which is returned to the SDK.
     */
     @SerializedName("ServerSession")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSessionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The server-side session data, which is returned to the SDK. 
-     * @return ServerSession The server-side session data, which is returned to the SDK.
+     * Get Server-side session information, which is returned to the SDK. 
+     * @return ServerSession Server-side session information, which is returned to the SDK.
      */
     public String getServerSession() {
         return this.ServerSession;
     }
 
     /**
-     * Set The server-side session data, which is returned to the SDK.
-     * @param ServerSession The server-side session data, which is returned to the SDK.
+     * Set Server-side session information, which is returned to the SDK.
+     * @param ServerSession Server-side session information, which is returned to the SDK.
      */
     public void setServerSession(String ServerSession) {
         this.ServerSession = ServerSession;

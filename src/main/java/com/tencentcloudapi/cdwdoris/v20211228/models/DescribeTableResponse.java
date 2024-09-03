@@ -24,66 +24,56 @@ import java.util.HashMap;
 public class DescribeTableResponse extends AbstractModel {
 
     /**
-    * Table data model: 
-AGG_KEY: aggregation model; 
-UNI_KEY: primary key model; 
-DUP_KEY: detail model
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("KeysType")
     @Expose
     private String KeysType;
 
     /**
-    * Table column information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Columns")
     @Expose
     private Column [] Columns;
 
     /**
-    * Index information. The inverted index and N-Gram index can be viewed through this parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IndexInfos")
     @Expose
     private IndexInfo [] IndexInfos;
 
     /**
-    * Partition information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Partition")
     @Expose
     private Partition Partition;
 
     /**
-    * Bucket information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Distribution")
     @Expose
     private Distribution Distribution;
 
     /**
-    * Table description
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TableComment")
     @Expose
     private String TableComment;
 
     /**
-    * Table attributes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Properties")
     @Expose
     private Property [] Properties;
 
     /**
-    * Error message
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Message")
     @Expose
@@ -97,168 +87,128 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Table data model: 
-AGG_KEY: aggregation model; 
-UNI_KEY: primary key model; 
-DUP_KEY: detail model 
-     * @return KeysType Table data model: 
-AGG_KEY: aggregation model; 
-UNI_KEY: primary key model; 
-DUP_KEY: detail model
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return KeysType Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getKeysType() {
         return this.KeysType;
     }
 
     /**
-     * Set Table data model: 
-AGG_KEY: aggregation model; 
-UNI_KEY: primary key model; 
-DUP_KEY: detail model
-     * @param KeysType Table data model: 
-AGG_KEY: aggregation model; 
-UNI_KEY: primary key model; 
-DUP_KEY: detail model
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param KeysType Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setKeysType(String KeysType) {
         this.KeysType = KeysType;
     }
 
     /**
-     * Get Table column information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Columns Table column information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Columns Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Column [] getColumns() {
         return this.Columns;
     }
 
     /**
-     * Set Table column information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Columns Table column information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Columns Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setColumns(Column [] Columns) {
         this.Columns = Columns;
     }
 
     /**
-     * Get Index information. The inverted index and N-Gram index can be viewed through this parameter.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IndexInfos Index information. The inverted index and N-Gram index can be viewed through this parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IndexInfos Note: This field may return null, indicating that no valid values can be obtained.
      */
     public IndexInfo [] getIndexInfos() {
         return this.IndexInfos;
     }
 
     /**
-     * Set Index information. The inverted index and N-Gram index can be viewed through this parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IndexInfos Index information. The inverted index and N-Gram index can be viewed through this parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IndexInfos Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIndexInfos(IndexInfo [] IndexInfos) {
         this.IndexInfos = IndexInfos;
     }
 
     /**
-     * Get Partition information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Partition Partition information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Partition Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Partition getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set Partition information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Partition Partition information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Partition Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPartition(Partition Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get Bucket information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Distribution Bucket information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Distribution Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Distribution getDistribution() {
         return this.Distribution;
     }
 
     /**
-     * Set Bucket information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Distribution Bucket information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Distribution Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDistribution(Distribution Distribution) {
         this.Distribution = Distribution;
     }
 
     /**
-     * Get Table description
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TableComment Table description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TableComment Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTableComment() {
         return this.TableComment;
     }
 
     /**
-     * Set Table description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TableComment Table description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TableComment Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTableComment(String TableComment) {
         this.TableComment = TableComment;
     }
 
     /**
-     * Get Table attributes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Properties Table attributes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Properties Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Property [] getProperties() {
         return this.Properties;
     }
 
     /**
-     * Set Table attributes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Properties Table attributes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Properties Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProperties(Property [] Properties) {
         this.Properties = Properties;
     }
 
     /**
-     * Get Error message
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Message Error message
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Message Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Message Error message
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Message Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMessage(String Message) {
         this.Message = Message;
