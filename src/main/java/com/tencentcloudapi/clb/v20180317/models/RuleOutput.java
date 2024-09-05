@@ -70,7 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CertificateOutput Certificate;
 
     /**
-    * Request forwarding method of the rule
+    * Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.
     */
     @SerializedName("Scheduler")
     @Expose
@@ -134,7 +134,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CreateTime;
 
     /**
-    * Real server type
+    * Real server type. NODE indicates binding to a general node, and TARGETGROUP indicates binding to a target group.
     */
     @SerializedName("TargetType")
     @Expose
@@ -173,8 +173,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TrpcFunc;
 
     /**
-    * QUIC status
-Note: this field may return null, indicating that no valid values can be obtained.
+    * QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("QuicStatus")
     @Expose
@@ -195,6 +194,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     @SerializedName("TargetGroupList")
     @Expose
     private BasicTargetGroupInfo [] TargetGroupList;
+
+    /**
+    * OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OAuth")
+    @Expose
+    private OAuth OAuth;
 
     /**
      * Get Forwarding rule ID 
@@ -309,16 +315,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Request forwarding method of the rule 
-     * @return Scheduler Request forwarding method of the rule
+     * Get Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash. 
+     * @return Scheduler Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set Request forwarding method of the rule
-     * @param Scheduler Request forwarding method of the rule
+     * Set Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.
+     * @param Scheduler Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
@@ -457,16 +463,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Real server type 
-     * @return TargetType Real server type
+     * Get Real server type. NODE indicates binding to a general node, and TARGETGROUP indicates binding to a target group. 
+     * @return TargetType Real server type. NODE indicates binding to a general node, and TARGETGROUP indicates binding to a target group.
      */
     public String getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set Real server type
-     * @param TargetType Real server type
+     * Set Real server type. NODE indicates binding to a general node, and TARGETGROUP indicates binding to a target group.
+     * @param TargetType Real server type. NODE indicates binding to a general node, and TARGETGROUP indicates binding to a target group.
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
@@ -553,20 +559,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get QUIC status
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return QuicStatus QUIC status
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return QuicStatus QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getQuicStatus() {
         return this.QuicStatus;
     }
 
     /**
-     * Set QUIC status
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param QuicStatus QUIC status
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param QuicStatus QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQuicStatus(String QuicStatus) {
         this.QuicStatus = QuicStatus;
@@ -610,6 +612,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      */
     public void setTargetGroupList(BasicTargetGroupInfo [] TargetGroupList) {
         this.TargetGroupList = TargetGroupList;
+    }
+
+    /**
+     * Get OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OAuth OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public OAuth getOAuth() {
+        return this.OAuth;
+    }
+
+    /**
+     * Set OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OAuth OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOAuth(OAuth OAuth) {
+        this.OAuth = OAuth;
     }
 
     public RuleOutput() {
@@ -695,6 +713,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 this.TargetGroupList[i] = new BasicTargetGroupInfo(source.TargetGroupList[i]);
             }
         }
+        if (source.OAuth != null) {
+            this.OAuth = new OAuth(source.OAuth);
+        }
     }
 
 
@@ -725,6 +746,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "QuicStatus", this.QuicStatus);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
+        this.setParamObj(map, prefix + "OAuth.", this.OAuth);
 
     }
 }

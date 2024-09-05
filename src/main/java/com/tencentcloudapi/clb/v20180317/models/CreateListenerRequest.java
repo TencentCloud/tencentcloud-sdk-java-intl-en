@@ -158,6 +158,13 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
     private Boolean SnatEnable;
 
     /**
+    * 
+    */
+    @SerializedName("FullEndPorts")
+    @Expose
+    private Long [] FullEndPorts;
+
+    /**
      * Get CLB instance ID 
      * @return LoadBalancerId CLB instance ID
      */
@@ -465,6 +472,22 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
         this.SnatEnable = SnatEnable;
     }
 
+    /**
+     * Get  
+     * @return FullEndPorts 
+     */
+    public Long [] getFullEndPorts() {
+        return this.FullEndPorts;
+    }
+
+    /**
+     * Set 
+     * @param FullEndPorts 
+     */
+    public void setFullEndPorts(Long [] FullEndPorts) {
+        this.FullEndPorts = FullEndPorts;
+    }
+
     public CreateListenerRequest() {
     }
 
@@ -536,6 +559,12 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
         if (source.SnatEnable != null) {
             this.SnatEnable = new Boolean(source.SnatEnable);
         }
+        if (source.FullEndPorts != null) {
+            this.FullEndPorts = new Long[source.FullEndPorts.length];
+            for (int i = 0; i < source.FullEndPorts.length; i++) {
+                this.FullEndPorts[i] = new Long(source.FullEndPorts[i]);
+            }
+        }
     }
 
 
@@ -562,6 +591,7 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
         this.setParamSimple(map, prefix + "MaxCps", this.MaxCps);
         this.setParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
         this.setParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
+        this.setParamArraySimple(map, prefix + "FullEndPorts.", this.FullEndPorts);
 
     }
 }

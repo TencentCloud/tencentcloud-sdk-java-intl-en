@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Backend extends AbstractModel {
 
     /**
-    * Real server type. Valid values: CVM, ENI.
+    * Real server type. Valid values: CVM, ENI, CCN.
     */
     @SerializedName("Type")
     @Expose
@@ -92,16 +92,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String EniId;
 
     /**
-     * Get Real server type. Valid values: CVM, ENI. 
-     * @return Type Real server type. Valid values: CVM, ENI.
+    * Tag.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tag")
+    @Expose
+    private String Tag;
+
+    /**
+     * Get Real server type. Valid values: CVM, ENI, CCN. 
+     * @return Type Real server type. Valid values: CVM, ENI, CCN.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Real server type. Valid values: CVM, ENI.
-     * @param Type Real server type. Valid values: CVM, ENI.
+     * Set Real server type. Valid values: CVM, ENI, CCN.
+     * @param Type Real server type. Valid values: CVM, ENI, CCN.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -255,6 +262,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.EniId = EniId;
     }
 
+    /**
+     * Get Tag.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set Tag.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTag(String Tag) {
+        this.Tag = Tag;
+    }
+
     public Backend() {
     }
 
@@ -296,6 +319,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.EniId != null) {
             this.EniId = new String(source.EniId);
         }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
     }
 
 
@@ -312,6 +338,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "RegisteredTime", this.RegisteredTime);
         this.setParamSimple(map, prefix + "EniId", this.EniId);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
 
     }
 }

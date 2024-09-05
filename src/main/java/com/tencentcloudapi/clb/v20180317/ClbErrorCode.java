@@ -3,6 +3,9 @@ public enum ClbErrorCode {
     // CAM signature/authentication error
      AUTHFAILURE("AuthFailure"),
      
+    // Token error.
+     AUTHFAILURE_TOKENFAILURE("AuthFailure.TokenFailure"),
+     
     // DryRun operation, which means the DryRun parameter is passed in yet the request will still be successful.
      DRYRUNOPERATION("DryRunOperation"),
      
@@ -12,7 +15,10 @@ public enum ClbErrorCode {
     // Exceptional CLB instance status
      FAILEDOPERATION_INVALIDLBSTATUS("FailedOperation.InvalidLBStatus"),
      
-    // 
+    // Instances without listeners cannot be stopped.
+     FAILEDOPERATION_NOLISTENERINLB("FailedOperation.NoListenerInLB"),
+     
+    // The specified resource is currently being operated. Please try again later.
      FAILEDOPERATION_RESOURCEINOPERATING("FailedOperation.ResourceInOperating"),
      
     // Internal error.
@@ -20,6 +26,9 @@ public enum ClbErrorCode {
      
     // Parameter error.
      INVALIDPARAMETER("InvalidParameter"),
+     
+    // To ensure no resource leakage and maintain the ID idempotence of created resources, ClientToken is used to create resources. If the order process has ended and shipment failed, or the order process has not been updated for a long time, a message will indicate that the current ClientToken has timed out.
+     INVALIDPARAMETER_CLIENTTOKENLIMITEXCEEDED("InvalidParameter.ClientTokenLimitExceeded"),
      
     // Wrong parameter format.
      INVALIDPARAMETER_FORMATERROR("InvalidParameter.FormatError"),

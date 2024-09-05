@@ -52,9 +52,7 @@ public class DescribeTargetsRequest extends AbstractModel {
     private Long Port;
 
     /**
-    * Query the list of backend services associated with a load balancer
-<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
-<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+    * Conditions for querying the list of real servers bound to the CLB. The filter criteria are as follows:<li> location-id - String - Required: No - (Filter criterion) Filter by rule ID, such as loc-12345678.</li><li> private-ip-address - String - Required: No - (Filter criterion) Filter by private IP address of the real server, such as 172.16.1.1.</li><li> tag - String - Required: No - (Filter criterion) Filter by tag, such as tag-test.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -125,24 +123,16 @@ public class DescribeTargetsRequest extends AbstractModel {
     }
 
     /**
-     * Get Query the list of backend services associated with a load balancer
-<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
-<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li> 
-     * @return Filters Query the list of backend services associated with a load balancer
-<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
-<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+     * Get Conditions for querying the list of real servers bound to the CLB. The filter criteria are as follows:<li> location-id - String - Required: No - (Filter criterion) Filter by rule ID, such as loc-12345678.</li><li> private-ip-address - String - Required: No - (Filter criterion) Filter by private IP address of the real server, such as 172.16.1.1.</li><li> tag - String - Required: No - (Filter criterion) Filter by tag, such as tag-test.</li> 
+     * @return Filters Conditions for querying the list of real servers bound to the CLB. The filter criteria are as follows:<li> location-id - String - Required: No - (Filter criterion) Filter by rule ID, such as loc-12345678.</li><li> private-ip-address - String - Required: No - (Filter criterion) Filter by private IP address of the real server, such as 172.16.1.1.</li><li> tag - String - Required: No - (Filter criterion) Filter by tag, such as tag-test.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Query the list of backend services associated with a load balancer
-<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
-<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
-     * @param Filters Query the list of backend services associated with a load balancer
-<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
-<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+     * Set Conditions for querying the list of real servers bound to the CLB. The filter criteria are as follows:<li> location-id - String - Required: No - (Filter criterion) Filter by rule ID, such as loc-12345678.</li><li> private-ip-address - String - Required: No - (Filter criterion) Filter by private IP address of the real server, such as 172.16.1.1.</li><li> tag - String - Required: No - (Filter criterion) Filter by tag, such as tag-test.</li>
+     * @param Filters Conditions for querying the list of real servers bound to the CLB. The filter criteria are as follows:<li> location-id - String - Required: No - (Filter criterion) Filter by rule ID, such as loc-12345678.</li><li> private-ip-address - String - Required: No - (Filter criterion) Filter by private IP address of the real server, such as 172.16.1.1.</li><li> tag - String - Required: No - (Filter criterion) Filter by tag, such as tag-test.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

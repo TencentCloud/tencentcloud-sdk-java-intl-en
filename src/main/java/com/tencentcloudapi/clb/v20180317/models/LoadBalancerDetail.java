@@ -96,8 +96,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Zone;
 
     /**
-    * ISP to which the CLB IP address belongs.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * ISP for the IP address of the CLB instance. Valid values: BGP (multi-line), CMCC (China Mobile), CUCC (China Unicom), CTCC (China Telecom), INTERNAL (private network).Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AddressIsp")
     @Expose
@@ -128,8 +127,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CreateTime;
 
     /**
-    * CLB instance billing mode.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Billing type of a CLB instance. Valid values: PREPAID (prepaid), POSTPAID_BY_HOUR (pay-as-you-go).Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ChargeType")
     @Expose
@@ -272,8 +270,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String [] SecurityGroup;
 
     /**
-    * Whether the CLB instance is billed by IP.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether to enable moving up CLB security groups. Valid values: 1 (enabled), 0 (not enabled).Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LoadBalancerPassToTarget")
     @Expose
@@ -334,6 +331,27 @@ Note: This field may return·null, indicating that no valid values can be obtain
     @SerializedName("Egress")
     @Expose
     private String Egress;
+
+    /**
+    * 
+    */
+    @SerializedName("AttributeFlags")
+    @Expose
+    private String [] AttributeFlags;
+
+    /**
+    * 
+    */
+    @SerializedName("SlaType")
+    @Expose
+    private String SlaType;
+
+    /**
+    * 
+    */
+    @SerializedName("Exclusive")
+    @Expose
+    private Long Exclusive;
 
     /**
      * Get CLB instance ID. 
@@ -516,20 +534,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get ISP to which the CLB IP address belongs.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AddressIsp ISP to which the CLB IP address belongs.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get ISP for the IP address of the CLB instance. Valid values: BGP (multi-line), CMCC (China Mobile), CUCC (China Unicom), CTCC (China Telecom), INTERNAL (private network).Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AddressIsp ISP for the IP address of the CLB instance. Valid values: BGP (multi-line), CMCC (China Mobile), CUCC (China Unicom), CTCC (China Telecom), INTERNAL (private network).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAddressIsp() {
         return this.AddressIsp;
     }
 
     /**
-     * Set ISP to which the CLB IP address belongs.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AddressIsp ISP to which the CLB IP address belongs.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set ISP for the IP address of the CLB instance. Valid values: BGP (multi-line), CMCC (China Mobile), CUCC (China Unicom), CTCC (China Telecom), INTERNAL (private network).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AddressIsp ISP for the IP address of the CLB instance. Valid values: BGP (multi-line), CMCC (China Mobile), CUCC (China Unicom), CTCC (China Telecom), INTERNAL (private network).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAddressIsp(String AddressIsp) {
         this.AddressIsp = AddressIsp;
@@ -596,20 +610,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get CLB instance billing mode.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ChargeType CLB instance billing mode.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Billing type of a CLB instance. Valid values: PREPAID (prepaid), POSTPAID_BY_HOUR (pay-as-you-go).Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ChargeType Billing type of a CLB instance. Valid values: PREPAID (prepaid), POSTPAID_BY_HOUR (pay-as-you-go).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set CLB instance billing mode.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ChargeType CLB instance billing mode.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Billing type of a CLB instance. Valid values: PREPAID (prepaid), POSTPAID_BY_HOUR (pay-as-you-go).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ChargeType Billing type of a CLB instance. Valid values: PREPAID (prepaid), POSTPAID_BY_HOUR (pay-as-you-go).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
@@ -956,20 +966,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Whether the CLB instance is billed by IP.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return LoadBalancerPassToTarget Whether the CLB instance is billed by IP.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether to enable moving up CLB security groups. Valid values: 1 (enabled), 0 (not enabled).Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LoadBalancerPassToTarget Whether to enable moving up CLB security groups. Valid values: 1 (enabled), 0 (not enabled).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getLoadBalancerPassToTarget() {
         return this.LoadBalancerPassToTarget;
     }
 
     /**
-     * Set Whether the CLB instance is billed by IP.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param LoadBalancerPassToTarget Whether the CLB instance is billed by IP.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether to enable moving up CLB security groups. Valid values: 1 (enabled), 0 (not enabled).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LoadBalancerPassToTarget Whether to enable moving up CLB security groups. Valid values: 1 (enabled), 0 (not enabled).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLoadBalancerPassToTarget(Long LoadBalancerPassToTarget) {
         this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
@@ -1115,6 +1121,54 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.Egress = Egress;
     }
 
+    /**
+     * Get  
+     * @return AttributeFlags 
+     */
+    public String [] getAttributeFlags() {
+        return this.AttributeFlags;
+    }
+
+    /**
+     * Set 
+     * @param AttributeFlags 
+     */
+    public void setAttributeFlags(String [] AttributeFlags) {
+        this.AttributeFlags = AttributeFlags;
+    }
+
+    /**
+     * Get  
+     * @return SlaType 
+     */
+    public String getSlaType() {
+        return this.SlaType;
+    }
+
+    /**
+     * Set 
+     * @param SlaType 
+     */
+    public void setSlaType(String SlaType) {
+        this.SlaType = SlaType;
+    }
+
+    /**
+     * Get  
+     * @return Exclusive 
+     */
+    public Long getExclusive() {
+        return this.Exclusive;
+    }
+
+    /**
+     * Set 
+     * @param Exclusive 
+     */
+    public void setExclusive(Long Exclusive) {
+        this.Exclusive = Exclusive;
+    }
+
     public LoadBalancerDetail() {
     }
 
@@ -1252,6 +1306,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (source.Egress != null) {
             this.Egress = new String(source.Egress);
         }
+        if (source.AttributeFlags != null) {
+            this.AttributeFlags = new String[source.AttributeFlags.length];
+            for (int i = 0; i < source.AttributeFlags.length; i++) {
+                this.AttributeFlags[i] = new String(source.AttributeFlags[i]);
+            }
+        }
+        if (source.SlaType != null) {
+            this.SlaType = new String(source.SlaType);
+        }
+        if (source.Exclusive != null) {
+            this.Exclusive = new Long(source.Exclusive);
+        }
     }
 
 
@@ -1298,6 +1364,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
         this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
         this.setParamSimple(map, prefix + "Egress", this.Egress);
+        this.setParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
+        this.setParamSimple(map, prefix + "SlaType", this.SlaType);
+        this.setParamSimple(map, prefix + "Exclusive", this.Exclusive);
 
     }
 }

@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class SpecAvailability extends AbstractModel {
 
     /**
-    * Specification type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SpecType")
     @Expose
     private String SpecType;
 
     /**
-    * Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Availability")
     @Expose
     private String Availability;
 
     /**
-     * Get Specification type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SpecType Specification type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SpecType Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSpecType() {
         return this.SpecType;
     }
 
     /**
-     * Set Specification type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SpecType Specification type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SpecType Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSpecType(String SpecType) {
         this.SpecType = SpecType;
     }
 
     /**
-     * Get Specification availability
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Availability Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Availability Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAvailability() {
         return this.Availability;
     }
 
     /**
-     * Set Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Availability Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Availability Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAvailability(String Availability) {
         this.Availability = Availability;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AssociateTargetGroupsRequest extends AbstractModel {
 
     /**
-    * Association array
+    * Binding relationship array. A single request supports up to 20 items.
     */
     @SerializedName("Associations")
     @Expose
     private TargetGroupAssociation [] Associations;
 
     /**
-     * Get Association array 
-     * @return Associations Association array
+     * Get Binding relationship array. A single request supports up to 20 items. 
+     * @return Associations Binding relationship array. A single request supports up to 20 items.
      */
     public TargetGroupAssociation [] getAssociations() {
         return this.Associations;
     }
 
     /**
-     * Set Association array
-     * @param Associations Association array
+     * Set Binding relationship array. A single request supports up to 20 items.
+     * @param Associations Binding relationship array. A single request supports up to 20 items.
      */
     public void setAssociations(TargetGroupAssociation [] Associations) {
         this.Associations = Associations;

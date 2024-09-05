@@ -60,11 +60,18 @@ Note: either `InstanceId` or `EniIp` must be passed in, which is required for bi
     private Long Weight;
 
     /**
-    * Layer-7 rule ID.
+    * Layer-7 rule ID. This parameter is required for Layer-7 CLB.
     */
     @SerializedName("LocationId")
     @Expose
     private String LocationId;
+
+    /**
+    * Tag.
+    */
+    @SerializedName("Tag")
+    @Expose
+    private String Tag;
 
     /**
      * Get Listener ID. 
@@ -151,19 +158,35 @@ Note: either `InstanceId` or `EniIp` must be passed in, which is required for bi
     }
 
     /**
-     * Get Layer-7 rule ID. 
-     * @return LocationId Layer-7 rule ID.
+     * Get Layer-7 rule ID. This parameter is required for Layer-7 CLB. 
+     * @return LocationId Layer-7 rule ID. This parameter is required for Layer-7 CLB.
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set Layer-7 rule ID.
-     * @param LocationId Layer-7 rule ID.
+     * Set Layer-7 rule ID. This parameter is required for Layer-7 CLB.
+     * @param LocationId Layer-7 rule ID. This parameter is required for Layer-7 CLB.
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
+    }
+
+    /**
+     * Get Tag. 
+     * @return Tag Tag.
+     */
+    public String getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set Tag.
+     * @param Tag Tag.
+     */
+    public void setTag(String Tag) {
+        this.Tag = Tag;
     }
 
     public BatchTarget() {
@@ -192,6 +215,9 @@ Note: either `InstanceId` or `EniIp` must be passed in, which is required for bi
         if (source.LocationId != null) {
             this.LocationId = new String(source.LocationId);
         }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
     }
 
 
@@ -205,6 +231,7 @@ Note: either `InstanceId` or `EniIp` must be passed in, which is required for bi
         this.setParamSimple(map, prefix + "EniIp", this.EniIp);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
 
     }
 }

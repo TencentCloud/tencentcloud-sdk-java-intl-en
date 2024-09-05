@@ -31,15 +31,7 @@ public class SlaUpdateParam extends AbstractModel {
     private String LoadBalancerId;
 
     /**
-    * LCU-supported instance specification. Value:
-<li>`SLA`: If you have activated Super Large LCU-supported instances, `SLA` indicates Super Large 4.</li>
-<li>`clb.c2.medium`: Standard</li>
-<li>`clb.c3.small`: Advanced 1</li>
-<li>`clb.c3.medium`: Advanced 2</li>
-<li>`clb.c4.small`: Super Large 1</li>
-<li>`clb.c4.medium`: Super Large 2</li>
-<li>`clb.c4.large`: Super Large 3</li>
-<li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above specifications, please [submit a ticket](https://console.cloud.tencent.com/workorder/category). For more specifications, see [Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1)
+    * Specification of the LCU-supported instance. Valid values:<li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li> For specification details, see [Instance Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
     */
     @SerializedName("SlaType")
     @Expose
@@ -62,48 +54,16 @@ public class SlaUpdateParam extends AbstractModel {
     }
 
     /**
-     * Get LCU-supported instance specification. Value:
-<li>`SLA`: If you have activated Super Large LCU-supported instances, `SLA` indicates Super Large 4.</li>
-<li>`clb.c2.medium`: Standard</li>
-<li>`clb.c3.small`: Advanced 1</li>
-<li>`clb.c3.medium`: Advanced 2</li>
-<li>`clb.c4.small`: Super Large 1</li>
-<li>`clb.c4.medium`: Super Large 2</li>
-<li>`clb.c4.large`: Super Large 3</li>
-<li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above specifications, please [submit a ticket](https://console.cloud.tencent.com/workorder/category). For more specifications, see [Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1) 
-     * @return SlaType LCU-supported instance specification. Value:
-<li>`SLA`: If you have activated Super Large LCU-supported instances, `SLA` indicates Super Large 4.</li>
-<li>`clb.c2.medium`: Standard</li>
-<li>`clb.c3.small`: Advanced 1</li>
-<li>`clb.c3.medium`: Advanced 2</li>
-<li>`clb.c4.small`: Super Large 1</li>
-<li>`clb.c4.medium`: Super Large 2</li>
-<li>`clb.c4.large`: Super Large 3</li>
-<li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above specifications, please [submit a ticket](https://console.cloud.tencent.com/workorder/category). For more specifications, see [Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1)
+     * Get Specification of the LCU-supported instance. Valid values:<li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li> For specification details, see [Instance Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1). 
+     * @return SlaType Specification of the LCU-supported instance. Valid values:<li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li> For specification details, see [Instance Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
      */
     public String getSlaType() {
         return this.SlaType;
     }
 
     /**
-     * Set LCU-supported instance specification. Value:
-<li>`SLA`: If you have activated Super Large LCU-supported instances, `SLA` indicates Super Large 4.</li>
-<li>`clb.c2.medium`: Standard</li>
-<li>`clb.c3.small`: Advanced 1</li>
-<li>`clb.c3.medium`: Advanced 2</li>
-<li>`clb.c4.small`: Super Large 1</li>
-<li>`clb.c4.medium`: Super Large 2</li>
-<li>`clb.c4.large`: Super Large 3</li>
-<li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above specifications, please [submit a ticket](https://console.cloud.tencent.com/workorder/category). For more specifications, see [Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1)
-     * @param SlaType LCU-supported instance specification. Value:
-<li>`SLA`: If you have activated Super Large LCU-supported instances, `SLA` indicates Super Large 4.</li>
-<li>`clb.c2.medium`: Standard</li>
-<li>`clb.c3.small`: Advanced 1</li>
-<li>`clb.c3.medium`: Advanced 2</li>
-<li>`clb.c4.small`: Super Large 1</li>
-<li>`clb.c4.medium`: Super Large 2</li>
-<li>`clb.c4.large`: Super Large 3</li>
-<li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above specifications, please [submit a ticket](https://console.cloud.tencent.com/workorder/category). For more specifications, see [Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1)
+     * Set Specification of the LCU-supported instance. Valid values:<li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li> For specification details, see [Instance Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
+     * @param SlaType Specification of the LCU-supported instance. Valid values:<li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li> For specification details, see [Instance Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;

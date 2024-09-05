@@ -31,13 +31,6 @@ public class TargetGroupAssociation extends AbstractModel {
     private String LoadBalancerId;
 
     /**
-    * Listener ID
-    */
-    @SerializedName("ListenerId")
-    @Expose
-    private String ListenerId;
-
-    /**
     * Target group ID
     */
     @SerializedName("TargetGroupId")
@@ -45,11 +38,25 @@ public class TargetGroupAssociation extends AbstractModel {
     private String TargetGroupId;
 
     /**
+    * Listener ID. This parameter is required when the AssociateTargetGroups and DisassociateTargetGroups APIs are called.
+    */
+    @SerializedName("ListenerId")
+    @Expose
+    private String ListenerId;
+
+    /**
     * Forwarding rule ID
     */
     @SerializedName("LocationId")
     @Expose
     private String LocationId;
+
+    /**
+    * Weight of the target group. Value range: [0, 100]. It takes effect only for binding v2 target groups. If not specified, it defaults to 10.
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
 
     /**
      * Get CLB instance ID 
@@ -65,22 +72,6 @@ public class TargetGroupAssociation extends AbstractModel {
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
-    }
-
-    /**
-     * Get Listener ID 
-     * @return ListenerId Listener ID
-     */
-    public String getListenerId() {
-        return this.ListenerId;
-    }
-
-    /**
-     * Set Listener ID
-     * @param ListenerId Listener ID
-     */
-    public void setListenerId(String ListenerId) {
-        this.ListenerId = ListenerId;
     }
 
     /**
@@ -100,6 +91,22 @@ public class TargetGroupAssociation extends AbstractModel {
     }
 
     /**
+     * Get Listener ID. This parameter is required when the AssociateTargetGroups and DisassociateTargetGroups APIs are called. 
+     * @return ListenerId Listener ID. This parameter is required when the AssociateTargetGroups and DisassociateTargetGroups APIs are called.
+     */
+    public String getListenerId() {
+        return this.ListenerId;
+    }
+
+    /**
+     * Set Listener ID. This parameter is required when the AssociateTargetGroups and DisassociateTargetGroups APIs are called.
+     * @param ListenerId Listener ID. This parameter is required when the AssociateTargetGroups and DisassociateTargetGroups APIs are called.
+     */
+    public void setListenerId(String ListenerId) {
+        this.ListenerId = ListenerId;
+    }
+
+    /**
      * Get Forwarding rule ID 
      * @return LocationId Forwarding rule ID
      */
@@ -115,6 +122,22 @@ public class TargetGroupAssociation extends AbstractModel {
         this.LocationId = LocationId;
     }
 
+    /**
+     * Get Weight of the target group. Value range: [0, 100]. It takes effect only for binding v2 target groups. If not specified, it defaults to 10. 
+     * @return Weight Weight of the target group. Value range: [0, 100]. It takes effect only for binding v2 target groups. If not specified, it defaults to 10.
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set Weight of the target group. Value range: [0, 100]. It takes effect only for binding v2 target groups. If not specified, it defaults to 10.
+     * @param Weight Weight of the target group. Value range: [0, 100]. It takes effect only for binding v2 target groups. If not specified, it defaults to 10.
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
+    }
+
     public TargetGroupAssociation() {
     }
 
@@ -126,14 +149,17 @@ public class TargetGroupAssociation extends AbstractModel {
         if (source.LoadBalancerId != null) {
             this.LoadBalancerId = new String(source.LoadBalancerId);
         }
-        if (source.ListenerId != null) {
-            this.ListenerId = new String(source.ListenerId);
-        }
         if (source.TargetGroupId != null) {
             this.TargetGroupId = new String(source.TargetGroupId);
         }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
         if (source.LocationId != null) {
             this.LocationId = new String(source.LocationId);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
         }
     }
 
@@ -143,9 +169,10 @@ public class TargetGroupAssociation extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
-        this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
         this.setParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
+        this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
 
     }
 }

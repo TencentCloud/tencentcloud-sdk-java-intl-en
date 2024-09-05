@@ -145,7 +145,7 @@ Basic network does not support queries by VpcId.
     private String SecurityGroup;
 
     /**
-    * Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+    * Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
     */
     @SerializedName("MasterZone")
     @Expose
@@ -440,16 +440,16 @@ Basic network does not support queries by VpcId.
     }
 
     /**
-     * Get Primary AZ ID, e.g., `100001` (Guangzhou Zone 1). 
-     * @return MasterZone Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+     * Get Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1). 
+     * @return MasterZone Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
      */
     public String getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
-     * @param MasterZone Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+     * Set Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
+     * @param MasterZone Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;

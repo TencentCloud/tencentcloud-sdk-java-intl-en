@@ -67,14 +67,14 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     private String Scheduler;
 
     /**
-    * Session persistence time
+    * Session persistence duration, in seconds. Value range: 0 or 30-86400.
     */
     @SerializedName("SessionExpireTime")
     @Expose
     private Long SessionExpireTime;
 
     /**
-    * Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
+    * Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
     */
     @SerializedName("ForwardType")
     @Expose
@@ -93,6 +93,13 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     @SerializedName("TrpcFunc")
     @Expose
     private String TrpcFunc;
+
+    /**
+    * OAuth configuration information.
+    */
+    @SerializedName("OAuth")
+    @Expose
+    private OAuth OAuth;
 
     /**
      * Get CLB instance ID 
@@ -195,32 +202,32 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     }
 
     /**
-     * Get Session persistence time 
-     * @return SessionExpireTime Session persistence time
+     * Get Session persistence duration, in seconds. Value range: 0 or 30-86400. 
+     * @return SessionExpireTime Session persistence duration, in seconds. Value range: 0 or 30-86400.
      */
     public Long getSessionExpireTime() {
         return this.SessionExpireTime;
     }
 
     /**
-     * Set Session persistence time
-     * @param SessionExpireTime Session persistence time
+     * Set Session persistence duration, in seconds. Value range: 0 or 30-86400.
+     * @param SessionExpireTime Session persistence duration, in seconds. Value range: 0 or 30-86400.
      */
     public void setSessionExpireTime(Long SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;
     }
 
     /**
-     * Get Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC. 
-     * @return ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
+     * Get Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners. 
+     * @return ForwardType Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
      */
     public String getForwardType() {
         return this.ForwardType;
     }
 
     /**
-     * Set Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
-     * @param ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
+     * Set Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
+     * @param ForwardType Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
      */
     public void setForwardType(String ForwardType) {
         this.ForwardType = ForwardType;
@@ -256,6 +263,22 @@ They represent weighted round robin, least connections, and IP hash, respectivel
      */
     public void setTrpcFunc(String TrpcFunc) {
         this.TrpcFunc = TrpcFunc;
+    }
+
+    /**
+     * Get OAuth configuration information. 
+     * @return OAuth OAuth configuration information.
+     */
+    public OAuth getOAuth() {
+        return this.OAuth;
+    }
+
+    /**
+     * Set OAuth configuration information.
+     * @param OAuth OAuth configuration information.
+     */
+    public void setOAuth(OAuth OAuth) {
+        this.OAuth = OAuth;
     }
 
     public ModifyRuleRequest() {
@@ -296,6 +319,9 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         if (source.TrpcFunc != null) {
             this.TrpcFunc = new String(source.TrpcFunc);
         }
+        if (source.OAuth != null) {
+            this.OAuth = new OAuth(source.OAuth);
+        }
     }
 
 
@@ -313,6 +339,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         this.setParamSimple(map, prefix + "ForwardType", this.ForwardType);
         this.setParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
         this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
+        this.setParamObj(map, prefix + "OAuth.", this.OAuth);
 
     }
 }

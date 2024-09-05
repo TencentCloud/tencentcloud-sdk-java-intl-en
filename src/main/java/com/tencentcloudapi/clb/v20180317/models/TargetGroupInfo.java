@@ -67,8 +67,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String UpdatedTime;
 
     /**
-    * Array of associated rules
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AssociatedRule")
     @Expose
@@ -175,20 +174,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Array of associated rules
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AssociatedRule Array of associated rules
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AssociatedRule Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssociationItem [] getAssociatedRule() {
         return this.AssociatedRule;
     }
 
     /**
-     * Set Array of associated rules
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AssociatedRule Array of associated rules
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AssociatedRule Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAssociatedRule(AssociationItem [] AssociatedRule) {
         this.AssociatedRule = AssociatedRule;

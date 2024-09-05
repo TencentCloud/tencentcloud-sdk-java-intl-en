@@ -38,7 +38,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * Default port of a target group, which can be used for subsequently added servers.
+    * Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input.
     */
     @SerializedName("Port")
     @Expose
@@ -84,16 +84,16 @@ public class CreateTargetGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get Default port of a target group, which can be used for subsequently added servers. 
-     * @return Port Default port of a target group, which can be used for subsequently added servers.
+     * Get Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input. 
+     * @return Port Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Default port of a target group, which can be used for subsequently added servers.
-     * @param Port Default port of a target group, which can be used for subsequently added servers.
+     * Set Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input.
+     * @param Port Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input.
      */
     public void setPort(Long Port) {
         this.Port = Port;

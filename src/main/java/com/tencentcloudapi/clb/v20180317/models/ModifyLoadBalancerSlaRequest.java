@@ -31,6 +31,13 @@ public class ModifyLoadBalancerSlaRequest extends AbstractModel {
     private SlaUpdateParam [] LoadBalancerSla;
 
     /**
+    * Whether to force upgrade. The default is no.
+    */
+    @SerializedName("Force")
+    @Expose
+    private Boolean Force;
+
+    /**
      * Get CLB instance information. 
      * @return LoadBalancerSla CLB instance information.
      */
@@ -44,6 +51,22 @@ public class ModifyLoadBalancerSlaRequest extends AbstractModel {
      */
     public void setLoadBalancerSla(SlaUpdateParam [] LoadBalancerSla) {
         this.LoadBalancerSla = LoadBalancerSla;
+    }
+
+    /**
+     * Get Whether to force upgrade. The default is no. 
+     * @return Force Whether to force upgrade. The default is no.
+     */
+    public Boolean getForce() {
+        return this.Force;
+    }
+
+    /**
+     * Set Whether to force upgrade. The default is no.
+     * @param Force Whether to force upgrade. The default is no.
+     */
+    public void setForce(Boolean Force) {
+        this.Force = Force;
     }
 
     public ModifyLoadBalancerSlaRequest() {
@@ -60,6 +83,9 @@ public class ModifyLoadBalancerSlaRequest extends AbstractModel {
                 this.LoadBalancerSla[i] = new SlaUpdateParam(source.LoadBalancerSla[i]);
             }
         }
+        if (source.Force != null) {
+            this.Force = new Boolean(source.Force);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class ModifyLoadBalancerSlaRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "LoadBalancerSla.", this.LoadBalancerSla);
+        this.setParamSimple(map, prefix + "Force", this.Force);
 
     }
 }

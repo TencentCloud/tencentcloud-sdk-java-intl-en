@@ -66,6 +66,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String EniIp;
 
     /**
+    * Tag.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tag")
+    @Expose
+    private String Tag;
+
+    /**
      * Get Listening port of a real server
 Note: this parameter is required when binding a CVM or ENI.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
@@ -173,6 +180,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.EniIp = EniIp;
     }
 
+    /**
+     * Get Tag.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set Tag.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTag(String Tag) {
+        this.Tag = Tag;
+    }
+
     public Target() {
     }
 
@@ -196,6 +219,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.EniIp != null) {
             this.EniIp = new String(source.EniIp);
         }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
     }
 
 
@@ -208,6 +234,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "EniIp", this.EniIp);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
 
     }
 }

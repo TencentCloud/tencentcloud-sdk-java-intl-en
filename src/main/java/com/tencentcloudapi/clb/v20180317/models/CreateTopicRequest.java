@@ -45,7 +45,7 @@ public class CreateTopicRequest extends AbstractModel {
     private String TopicType;
 
     /**
-    * Logset retention period (in days). Default: 30 days.
+    * Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
     */
     @SerializedName("Period")
     @Expose
@@ -107,16 +107,16 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get Logset retention period (in days). Default: 30 days. 
-     * @return Period Logset retention period (in days). Default: 30 days.
+     * Get Logset retention period, in days. Default value: 30 days. Value range: [1, 3600]. 
+     * @return Period Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Logset retention period (in days). Default: 30 days.
-     * @param Period Logset retention period (in days). Default: 30 days.
+     * Set Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
+     * @param Period Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

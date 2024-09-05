@@ -53,8 +53,7 @@ OPEN: public network; INTERNAL: private network.
     private Long Forward;
 
     /**
-    * Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Domain")
     @Expose
@@ -197,8 +196,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long NumericalVpcId;
 
     /**
-    * ISP to which a CLB IP address belongs
-Note: This field may return null, indicating that no valid values can be obtained.
+    * ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VipIsp")
     @Expose
@@ -349,8 +347,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private SnatIp [] SnatIps;
 
     /**
-    * Specification of the LCU-supported instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SlaType")
     @Expose
@@ -460,6 +457,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String Egress;
 
     /**
+    * 
+    */
+    @SerializedName("Exclusive")
+    @Expose
+    private Long Exclusive;
+
+    /**
      * Get CLB instance ID. 
      * @return LoadBalancerId CLB instance ID.
      */
@@ -528,20 +532,16 @@ OPEN: public network; INTERNAL: private network.
     }
 
     /**
-     * Get Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Domain Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Domain Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Domain Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Domain Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
@@ -732,7 +732,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Log Log information. Only the public network CLB that have HTTP or HTTPS listeners can generate logs.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String getLog() {
         return this.Log;
     }
@@ -742,7 +744,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param Log Log information. Only the public network CLB that have HTTP or HTTPS listeners can generate logs.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setLog(String Log) {
         this.Log = Log;
     }
@@ -888,20 +892,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get ISP to which a CLB IP address belongs
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VipIsp ISP to which a CLB IP address belongs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return VipIsp ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVipIsp() {
         return this.VipIsp;
     }
 
     /**
-     * Set ISP to which a CLB IP address belongs
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VipIsp ISP to which a CLB IP address belongs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param VipIsp ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVipIsp(String VipIsp) {
         this.VipIsp = VipIsp;
@@ -1268,20 +1268,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specification of the LCU-supported instance.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SlaType Specification of the LCU-supported instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SlaType Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSlaType() {
         return this.SlaType;
     }
 
     /**
-     * Set Specification of the LCU-supported instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SlaType Specification of the LCU-supported instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SlaType Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;
@@ -1543,6 +1539,22 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.Egress = Egress;
     }
 
+    /**
+     * Get  
+     * @return Exclusive 
+     */
+    public Long getExclusive() {
+        return this.Exclusive;
+    }
+
+    /**
+     * Set 
+     * @param Exclusive 
+     */
+    public void setExclusive(Long Exclusive) {
+        this.Exclusive = Exclusive;
+    }
+
     public LoadBalancer() {
     }
 
@@ -1740,6 +1752,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (source.Egress != null) {
             this.Egress = new String(source.Egress);
         }
+        if (source.Exclusive != null) {
+            this.Exclusive = new Long(source.Exclusive);
+        }
     }
 
 
@@ -1802,6 +1817,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.setParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
         this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
         this.setParamSimple(map, prefix + "Egress", this.Egress);
+        this.setParamSimple(map, prefix + "Exclusive", this.Exclusive);
 
     }
 }

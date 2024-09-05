@@ -61,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private HealthCheck HealthCheck;
 
     /**
-    * Request scheduling method
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Scheduler")
     @Expose
@@ -205,6 +204,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long IdleConnectTimeout;
 
     /**
+    * Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RescheduleInterval")
+    @Expose
+    private Long RescheduleInterval;
+
+    /**
      * Get CLB listener ID 
      * @return ListenerId CLB listener ID
      */
@@ -293,20 +299,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Request scheduling method
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Scheduler Request scheduling method
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Scheduler Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set Request scheduling method
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Scheduler Request scheduling method
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Scheduler Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
@@ -652,6 +654,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.IdleConnectTimeout = IdleConnectTimeout;
     }
 
+    /**
+     * Get Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RescheduleInterval Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getRescheduleInterval() {
+        return this.RescheduleInterval;
+    }
+
+    /**
+     * Set Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RescheduleInterval Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRescheduleInterval(Long RescheduleInterval) {
+        this.RescheduleInterval = RescheduleInterval;
+    }
+
     public Listener() {
     }
 
@@ -738,6 +756,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.IdleConnectTimeout != null) {
             this.IdleConnectTimeout = new Long(source.IdleConnectTimeout);
         }
+        if (source.RescheduleInterval != null) {
+            this.RescheduleInterval = new Long(source.RescheduleInterval);
+        }
     }
 
 
@@ -768,6 +789,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "MaxConn", this.MaxConn);
         this.setParamSimple(map, prefix + "MaxCps", this.MaxCps);
         this.setParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
+        this.setParamSimple(map, prefix + "RescheduleInterval", this.RescheduleInterval);
 
     }
 }
