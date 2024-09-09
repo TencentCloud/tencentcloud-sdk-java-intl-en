@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteStaffRequest extends AbstractModel {
+public class ModifyStaffPasswordRequest extends AbstractModel {
 
     /**
     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
@@ -31,11 +31,18 @@ public class DeleteStaffRequest extends AbstractModel {
     private Long SdkAppId;
 
     /**
-    * Customer service emails, supports up to 200 at a time.
+    * Agent email.
     */
-    @SerializedName("StaffList")
+    @SerializedName("Email")
     @Expose
-    private String [] StaffList;
+    private String Email;
+
+    /**
+    * The set password 
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
 
     /**
      * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
@@ -54,37 +61,53 @@ public class DeleteStaffRequest extends AbstractModel {
     }
 
     /**
-     * Get Customer service emails, supports up to 200 at a time. 
-     * @return StaffList Customer service emails, supports up to 200 at a time.
+     * Get Agent email. 
+     * @return Email Agent email.
      */
-    public String [] getStaffList() {
-        return this.StaffList;
+    public String getEmail() {
+        return this.Email;
     }
 
     /**
-     * Set Customer service emails, supports up to 200 at a time.
-     * @param StaffList Customer service emails, supports up to 200 at a time.
+     * Set Agent email.
+     * @param Email Agent email.
      */
-    public void setStaffList(String [] StaffList) {
-        this.StaffList = StaffList;
+    public void setEmail(String Email) {
+        this.Email = Email;
     }
 
-    public DeleteStaffRequest() {
+    /**
+     * Get The set password  
+     * @return Password The set password 
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * Set The set password 
+     * @param Password The set password 
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
+    public ModifyStaffPasswordRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteStaffRequest(DeleteStaffRequest source) {
+    public ModifyStaffPasswordRequest(ModifyStaffPasswordRequest source) {
         if (source.SdkAppId != null) {
             this.SdkAppId = new Long(source.SdkAppId);
         }
-        if (source.StaffList != null) {
-            this.StaffList = new String[source.StaffList.length];
-            for (int i = 0; i < source.StaffList.length; i++) {
-                this.StaffList[i] = new String(source.StaffList[i]);
-            }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
         }
     }
 
@@ -94,7 +117,8 @@ public class DeleteStaffRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-        this.setParamArraySimple(map, prefix + "StaffList.", this.StaffList);
+        this.setParamSimple(map, prefix + "Email", this.Email);
+        this.setParamSimple(map, prefix + "Password", this.Password);
 
     }
 }

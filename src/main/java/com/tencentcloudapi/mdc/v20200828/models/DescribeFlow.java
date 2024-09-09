@@ -67,6 +67,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private DescribeOutput [] OutputGroup;
 
     /**
+    * EventId of the StreamLink event associated with this Flow.
+    */
+    @SerializedName("EventId")
+    @Expose
+    private String EventId;
+
+    /**
      * Get Flow ID. 
      * @return FlowId Flow ID.
      */
@@ -166,6 +173,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.OutputGroup = OutputGroup;
     }
 
+    /**
+     * Get EventId of the StreamLink event associated with this Flow. 
+     * @return EventId EventId of the StreamLink event associated with this Flow.
+     */
+    public String getEventId() {
+        return this.EventId;
+    }
+
+    /**
+     * Set EventId of the StreamLink event associated with this Flow.
+     * @param EventId EventId of the StreamLink event associated with this Flow.
+     */
+    public void setEventId(String EventId) {
+        this.EventId = EventId;
+    }
+
     public DescribeFlow() {
     }
 
@@ -198,6 +221,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.OutputGroup[i] = new DescribeOutput(source.OutputGroup[i]);
             }
         }
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
     }
 
 
@@ -211,6 +237,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
         this.setParamArrayObj(map, prefix + "InputGroup.", this.InputGroup);
         this.setParamArrayObj(map, prefix + "OutputGroup.", this.OutputGroup);
+        this.setParamSimple(map, prefix + "EventId", this.EventId);
 
     }
 }

@@ -73,15 +73,14 @@ public class ModifyOutputInfo extends AbstractModel {
     private CreateOutputRTMPSettings RTMPSettings;
 
     /**
-    * The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+    * IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
     */
     @SerializedName("AllowIpList")
     @Expose
     private String [] AllowIpList;
 
     /**
-    * 
+    * The maximum number of concurrent stream pulls is 4, and the default value is 4.
     */
     @SerializedName("MaxConcurrent")
     @Expose
@@ -207,36 +206,32 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
     }
 
     /**
-     * Get The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses. 
-     * @return AllowIpList The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+     * Get IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP. 
+     * @return AllowIpList IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
      */
     public String [] getAllowIpList() {
         return this.AllowIpList;
     }
 
     /**
-     * Set The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
-     * @param AllowIpList The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+     * Set IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+     * @param AllowIpList IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
      */
     public void setAllowIpList(String [] AllowIpList) {
         this.AllowIpList = AllowIpList;
     }
 
     /**
-     * Get  
-     * @return MaxConcurrent 
+     * Get The maximum number of concurrent stream pulls is 4, and the default value is 4. 
+     * @return MaxConcurrent The maximum number of concurrent stream pulls is 4, and the default value is 4.
      */
     public Long getMaxConcurrent() {
         return this.MaxConcurrent;
     }
 
     /**
-     * Set 
-     * @param MaxConcurrent 
+     * Set The maximum number of concurrent stream pulls is 4, and the default value is 4.
+     * @param MaxConcurrent The maximum number of concurrent stream pulls is 4, and the default value is 4.
      */
     public void setMaxConcurrent(Long MaxConcurrent) {
         this.MaxConcurrent = MaxConcurrent;

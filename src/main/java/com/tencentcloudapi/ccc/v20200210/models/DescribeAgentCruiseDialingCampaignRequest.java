@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteStaffRequest extends AbstractModel {
+public class DescribeAgentCruiseDialingCampaignRequest extends AbstractModel {
 
     /**
     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
@@ -31,11 +31,11 @@ public class DeleteStaffRequest extends AbstractModel {
     private Long SdkAppId;
 
     /**
-    * Customer service emails, supports up to 200 at a time.
+    * Task ID.
     */
-    @SerializedName("StaffList")
+    @SerializedName("CampaignId")
     @Expose
-    private String [] StaffList;
+    private Long CampaignId;
 
     /**
      * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
@@ -54,37 +54,34 @@ public class DeleteStaffRequest extends AbstractModel {
     }
 
     /**
-     * Get Customer service emails, supports up to 200 at a time. 
-     * @return StaffList Customer service emails, supports up to 200 at a time.
+     * Get Task ID. 
+     * @return CampaignId Task ID.
      */
-    public String [] getStaffList() {
-        return this.StaffList;
+    public Long getCampaignId() {
+        return this.CampaignId;
     }
 
     /**
-     * Set Customer service emails, supports up to 200 at a time.
-     * @param StaffList Customer service emails, supports up to 200 at a time.
+     * Set Task ID.
+     * @param CampaignId Task ID.
      */
-    public void setStaffList(String [] StaffList) {
-        this.StaffList = StaffList;
+    public void setCampaignId(Long CampaignId) {
+        this.CampaignId = CampaignId;
     }
 
-    public DeleteStaffRequest() {
+    public DescribeAgentCruiseDialingCampaignRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteStaffRequest(DeleteStaffRequest source) {
+    public DescribeAgentCruiseDialingCampaignRequest(DescribeAgentCruiseDialingCampaignRequest source) {
         if (source.SdkAppId != null) {
             this.SdkAppId = new Long(source.SdkAppId);
         }
-        if (source.StaffList != null) {
-            this.StaffList = new String[source.StaffList.length];
-            for (int i = 0; i < source.StaffList.length; i++) {
-                this.StaffList[i] = new String(source.StaffList[i]);
-            }
+        if (source.CampaignId != null) {
+            this.CampaignId = new Long(source.CampaignId);
         }
     }
 
@@ -94,7 +91,7 @@ public class DeleteStaffRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-        this.setParamArraySimple(map, prefix + "StaffList.", this.StaffList);
+        this.setParamSimple(map, prefix + "CampaignId", this.CampaignId);
 
     }
 }

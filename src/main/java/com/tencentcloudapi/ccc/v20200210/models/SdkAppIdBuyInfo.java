@@ -38,14 +38,14 @@ public class SdkAppIdBuyInfo extends AbstractModel {
     private String Name;
 
     /**
-    * Number of agents purchased (still within the validity period).
+    * Agent Purchase Count (still within the validity period)
     */
     @SerializedName("StaffBuyNum")
     @Expose
     private Long StaffBuyNum;
 
     /**
-    * List of agents purchased (still within the validity period).
+    * Agent Purchase List (still within the validity period)
     */
     @SerializedName("StaffBuyList")
     @Expose
@@ -99,32 +99,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of agents purchased (still within the validity period). 
-     * @return StaffBuyNum Number of agents purchased (still within the validity period).
+     * Get Agent Purchase Count (still within the validity period) 
+     * @return StaffBuyNum Agent Purchase Count (still within the validity period)
      */
     public Long getStaffBuyNum() {
         return this.StaffBuyNum;
     }
 
     /**
-     * Set Number of agents purchased (still within the validity period).
-     * @param StaffBuyNum Number of agents purchased (still within the validity period).
+     * Set Agent Purchase Count (still within the validity period)
+     * @param StaffBuyNum Agent Purchase Count (still within the validity period)
      */
     public void setStaffBuyNum(Long StaffBuyNum) {
         this.StaffBuyNum = StaffBuyNum;
     }
 
     /**
-     * Get List of agents purchased (still within the validity period). 
-     * @return StaffBuyList List of agents purchased (still within the validity period).
+     * Get Agent Purchase List (still within the validity period) 
+     * @return StaffBuyList Agent Purchase List (still within the validity period)
      */
     public StaffBuyInfo [] getStaffBuyList() {
         return this.StaffBuyList;
     }
 
     /**
-     * Set List of agents purchased (still within the validity period).
-     * @param StaffBuyList List of agents purchased (still within the validity period).
+     * Set Agent Purchase List (still within the validity period)
+     * @param StaffBuyList Agent Purchase List (still within the validity period)
      */
     public void setStaffBuyList(StaffBuyInfo [] StaffBuyList) {
         this.StaffBuyList = StaffBuyList;

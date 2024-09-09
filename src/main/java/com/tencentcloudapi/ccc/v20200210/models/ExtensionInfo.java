@@ -87,14 +87,14 @@ public class ExtensionInfo extends AbstractModel {
     private Boolean Register;
 
     /**
-    * Bind agent email.
+    * Bind Agent Email
     */
     @SerializedName("Relation")
     @Expose
     private String Relation;
 
     /**
-    * Bind agent name
+    * Bind Agent Name
     */
     @SerializedName("RelationName")
     @Expose
@@ -245,32 +245,32 @@ public class ExtensionInfo extends AbstractModel {
     }
 
     /**
-     * Get Bind agent email. 
-     * @return Relation Bind agent email.
+     * Get Bind Agent Email 
+     * @return Relation Bind Agent Email
      */
     public String getRelation() {
         return this.Relation;
     }
 
     /**
-     * Set Bind agent email.
-     * @param Relation Bind agent email.
+     * Set Bind Agent Email
+     * @param Relation Bind Agent Email
      */
     public void setRelation(String Relation) {
         this.Relation = Relation;
     }
 
     /**
-     * Get Bind agent name 
-     * @return RelationName Bind agent name
+     * Get Bind Agent Name 
+     * @return RelationName Bind Agent Name
      */
     public String getRelationName() {
         return this.RelationName;
     }
 
     /**
-     * Set Bind agent name
-     * @param RelationName Bind agent name
+     * Set Bind Agent Name
+     * @param RelationName Bind Agent Name
      */
     public void setRelationName(String RelationName) {
         this.RelationName = RelationName;

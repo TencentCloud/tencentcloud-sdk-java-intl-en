@@ -73,15 +73,14 @@ public class CreateOutputInfo extends AbstractModel {
     private CreateOutputInfoRTPSettings RTPSettings;
 
     /**
-    * The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+    * IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
     */
     @SerializedName("AllowIpList")
     @Expose
     private String [] AllowIpList;
 
     /**
-    * 
+    * The maximum number of concurrent stream pulls is 4, and the default value is 4.
     */
     @SerializedName("MaxConcurrent")
     @Expose
@@ -93,6 +92,13 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
+
+    /**
+    * Availability zone: output supports at most one availability zone as input.
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
 
     /**
      * Get The output name. 
@@ -207,36 +213,32 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
     }
 
     /**
-     * Get The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses. 
-     * @return AllowIpList The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+     * Get IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP. 
+     * @return AllowIpList IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
      */
     public String [] getAllowIpList() {
         return this.AllowIpList;
     }
 
     /**
-     * Set The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
-     * @param AllowIpList The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+     * Set IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+     * @param AllowIpList IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
      */
     public void setAllowIpList(String [] AllowIpList) {
         this.AllowIpList = AllowIpList;
     }
 
     /**
-     * Get  
-     * @return MaxConcurrent 
+     * Get The maximum number of concurrent stream pulls is 4, and the default value is 4. 
+     * @return MaxConcurrent The maximum number of concurrent stream pulls is 4, and the default value is 4.
      */
     public Long getMaxConcurrent() {
         return this.MaxConcurrent;
     }
 
     /**
-     * Set 
-     * @param MaxConcurrent 
+     * Set The maximum number of concurrent stream pulls is 4, and the default value is 4.
+     * @param MaxConcurrent The maximum number of concurrent stream pulls is 4, and the default value is 4.
      */
     public void setMaxConcurrent(Long MaxConcurrent) {
         this.MaxConcurrent = MaxConcurrent;
@@ -256,6 +258,22 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get Availability zone: output supports at most one availability zone as input. 
+     * @return Zones Availability zone: output supports at most one availability zone as input.
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set Availability zone: output supports at most one availability zone as input.
+     * @param Zones Availability zone: output supports at most one availability zone as input.
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
     }
 
     public CreateOutputInfo() {
@@ -302,6 +320,12 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
     }
 
 
@@ -319,6 +343,7 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
         this.setParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
         this.setParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
 
     }
 }

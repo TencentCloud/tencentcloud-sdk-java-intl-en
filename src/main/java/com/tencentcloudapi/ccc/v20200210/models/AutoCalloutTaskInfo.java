@@ -67,7 +67,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long IvrId;
 
     /**
-    * Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - closed.
+    * Task status:
+0 Initial: Task created, calling not started
+1 Running
+2  Completed: All calls in the task are completed
+3 Ending: The task is due, but some calls are still not finished
+4 Ended: Task terminated due to expiration
     */
     @SerializedName("State")
     @Expose
@@ -181,16 +186,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - closed. 
-     * @return State Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - closed.
+     * Get Task status:
+0 Initial: Task created, calling not started
+1 Running
+2  Completed: All calls in the task are completed
+3 Ending: The task is due, but some calls are still not finished
+4 Ended: Task terminated due to expiration 
+     * @return State Task status:
+0 Initial: Task created, calling not started
+1 Running
+2  Completed: All calls in the task are completed
+3 Ending: The task is due, but some calls are still not finished
+4 Ended: Task terminated due to expiration
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - closed.
-     * @param State Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - closed.
+     * Set Task status:
+0 Initial: Task created, calling not started
+1 Running
+2  Completed: All calls in the task are completed
+3 Ending: The task is due, but some calls are still not finished
+4 Ended: Task terminated due to expiration
+     * @param State Task status:
+0 Initial: Task created, calling not started
+1 Running
+2  Completed: All calls in the task are completed
+3 Ending: The task is due, but some calls are still not finished
+4 Ended: Task terminated due to expiration
      */
     public void setState(Long State) {
         this.State = State;

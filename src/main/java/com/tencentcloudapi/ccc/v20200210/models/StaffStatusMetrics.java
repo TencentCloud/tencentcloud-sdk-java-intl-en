@@ -31,14 +31,14 @@ public class StaffStatusMetrics extends AbstractModel {
     private String Email;
 
     /**
-    * Agent status: Free for Available | busy for Busy | rest for Break | notReady for Not Ready | afterCallWork for After Call Work | offline for Offline.
+    * Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Supplementary agent status information.
+    * Supplementary Information on Agent Status
     */
     @SerializedName("StatusExtra")
     @Expose
@@ -154,32 +154,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Agent status: Free for Available | busy for Busy | rest for Break | notReady for Not Ready | afterCallWork for After Call Work | offline for Offline. 
-     * @return Status Agent status: Free for Available | busy for Busy | rest for Break | notReady for Not Ready | afterCallWork for After Call Work | offline for Offline.
+     * Get Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline 
+     * @return Status Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Agent status: Free for Available | busy for Busy | rest for Break | notReady for Not Ready | afterCallWork for After Call Work | offline for Offline.
-     * @param Status Agent status: Free for Available | busy for Busy | rest for Break | notReady for Not Ready | afterCallWork for After Call Work | offline for Offline.
+     * Set Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+     * @param Status Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Supplementary agent status information. 
-     * @return StatusExtra Supplementary agent status information.
+     * Get Supplementary Information on Agent Status 
+     * @return StatusExtra Supplementary Information on Agent Status
      */
     public StaffStatusExtra getStatusExtra() {
         return this.StatusExtra;
     }
 
     /**
-     * Set Supplementary agent status information.
-     * @param StatusExtra Supplementary agent status information.
+     * Set Supplementary Information on Agent Status
+     * @param StatusExtra Supplementary Information on Agent Status
      */
     public void setStatusExtra(StaffStatusExtra StatusExtra) {
         this.StatusExtra = StatusExtra;

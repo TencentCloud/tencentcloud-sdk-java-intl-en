@@ -83,39 +83,46 @@ If there is an SRT input, the output must be SRT.
     private String FailOver;
 
     /**
-    * 
+    * Configuration information for RTMP_PULL.
     */
     @SerializedName("RTMPPullSettings")
     @Expose
     private CreateInputRTMPPullSettings RTMPPullSettings;
 
     /**
-    * 
+    * Configuration information of RTSP_PULL.
     */
     @SerializedName("RTSPPullSettings")
     @Expose
     private CreateInputRTSPPullSettings RTSPPullSettings;
 
     /**
-    * 
+    * HLS_PULL configuration information.
     */
     @SerializedName("HLSPullSettings")
     @Expose
     private CreateInputHLSPullSettings HLSPullSettings;
 
     /**
-    * 
+    * Delayed broadcast smooth streaming configuration information.
     */
     @SerializedName("ResilientStream")
     @Expose
     private ResilientStreamConf ResilientStream;
 
     /**
-    * The bound security group IDs. 
+    * The ID of the input security group to bind. Only one security group can be associated.
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
+
+    /**
+    * Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
 
     /**
      * Get The input ID. 
@@ -258,83 +265,99 @@ If there is an SRT input, the output must be SRT.
     }
 
     /**
-     * Get  
-     * @return RTMPPullSettings 
+     * Get Configuration information for RTMP_PULL. 
+     * @return RTMPPullSettings Configuration information for RTMP_PULL.
      */
     public CreateInputRTMPPullSettings getRTMPPullSettings() {
         return this.RTMPPullSettings;
     }
 
     /**
-     * Set 
-     * @param RTMPPullSettings 
+     * Set Configuration information for RTMP_PULL.
+     * @param RTMPPullSettings Configuration information for RTMP_PULL.
      */
     public void setRTMPPullSettings(CreateInputRTMPPullSettings RTMPPullSettings) {
         this.RTMPPullSettings = RTMPPullSettings;
     }
 
     /**
-     * Get  
-     * @return RTSPPullSettings 
+     * Get Configuration information of RTSP_PULL. 
+     * @return RTSPPullSettings Configuration information of RTSP_PULL.
      */
     public CreateInputRTSPPullSettings getRTSPPullSettings() {
         return this.RTSPPullSettings;
     }
 
     /**
-     * Set 
-     * @param RTSPPullSettings 
+     * Set Configuration information of RTSP_PULL.
+     * @param RTSPPullSettings Configuration information of RTSP_PULL.
      */
     public void setRTSPPullSettings(CreateInputRTSPPullSettings RTSPPullSettings) {
         this.RTSPPullSettings = RTSPPullSettings;
     }
 
     /**
-     * Get  
-     * @return HLSPullSettings 
+     * Get HLS_PULL configuration information. 
+     * @return HLSPullSettings HLS_PULL configuration information.
      */
     public CreateInputHLSPullSettings getHLSPullSettings() {
         return this.HLSPullSettings;
     }
 
     /**
-     * Set 
-     * @param HLSPullSettings 
+     * Set HLS_PULL configuration information.
+     * @param HLSPullSettings HLS_PULL configuration information.
      */
     public void setHLSPullSettings(CreateInputHLSPullSettings HLSPullSettings) {
         this.HLSPullSettings = HLSPullSettings;
     }
 
     /**
-     * Get  
-     * @return ResilientStream 
+     * Get Delayed broadcast smooth streaming configuration information. 
+     * @return ResilientStream Delayed broadcast smooth streaming configuration information.
      */
     public ResilientStreamConf getResilientStream() {
         return this.ResilientStream;
     }
 
     /**
-     * Set 
-     * @param ResilientStream 
+     * Set Delayed broadcast smooth streaming configuration information.
+     * @param ResilientStream Delayed broadcast smooth streaming configuration information.
      */
     public void setResilientStream(ResilientStreamConf ResilientStream) {
         this.ResilientStream = ResilientStream;
     }
 
     /**
-     * Get The bound security group IDs.  
-     * @return SecurityGroupIds The bound security group IDs. 
+     * Get The ID of the input security group to bind. Only one security group can be associated. 
+     * @return SecurityGroupIds The ID of the input security group to bind. Only one security group can be associated.
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set The bound security group IDs. 
-     * @param SecurityGroupIds The bound security group IDs. 
+     * Set The ID of the input security group to bind. Only one security group can be associated.
+     * @param SecurityGroupIds The ID of the input security group to bind. Only one security group can be associated.
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated). 
+     * @return Zones Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+     * @param Zones Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
     }
 
     public ModifyInput() {
@@ -390,6 +413,12 @@ If there is an SRT input, the output must be SRT.
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
     }
 
 
@@ -410,6 +439,7 @@ If there is an SRT input, the output must be SRT.
         this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
         this.setParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
 
     }
 }

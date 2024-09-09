@@ -50,6 +50,17 @@ public class MdcClient extends AbstractClient{
     }
 
     /**
+     *Create an input configuration for the StreamLink.
+     * @param req CreateStreamLinkInputRequest
+     * @return CreateStreamLinkInputResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamLinkInputResponse CreateStreamLinkInput(CreateStreamLinkInputRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStreamLinkInput", CreateStreamLinkInputResponse.class);
+    }
+
+    /**
      *This API is used to create a StreamLink output.
      * @param req CreateStreamLinkOutputInfoRequest
      * @return CreateStreamLinkOutputInfoResponse

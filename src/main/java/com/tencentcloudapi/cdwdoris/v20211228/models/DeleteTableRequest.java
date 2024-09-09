@@ -31,7 +31,7 @@ public class DeleteTableRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * The name of the database where the table belongs needs to be deleted
+    * The name of the database where the table belongs needs to be deleted.
     */
     @SerializedName("DbName")
     @Expose
@@ -82,16 +82,16 @@ public class DeleteTableRequest extends AbstractModel {
     }
 
     /**
-     * Get The name of the database where the table belongs needs to be deleted 
-     * @return DbName The name of the database where the table belongs needs to be deleted
+     * Get The name of the database where the table belongs needs to be deleted. 
+     * @return DbName The name of the database where the table belongs needs to be deleted.
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set The name of the database where the table belongs needs to be deleted
-     * @param DbName The name of the database where the table belongs needs to be deleted
+     * Set The name of the database where the table belongs needs to be deleted.
+     * @param DbName The name of the database where the table belongs needs to be deleted.
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;

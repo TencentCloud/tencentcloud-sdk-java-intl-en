@@ -31,7 +31,7 @@ public class CreateInput extends AbstractModel {
     private String InputName;
 
     /**
-    * Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
+    * Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`.
     */
     @SerializedName("Protocol")
     @Expose
@@ -73,28 +73,28 @@ public class CreateInput extends AbstractModel {
     private String FailOver;
 
     /**
-    * 
+    * Input RTMP_PULL configuration information.
     */
     @SerializedName("RTMPPullSettings")
     @Expose
     private CreateInputRTMPPullSettings RTMPPullSettings;
 
     /**
-    * 
+    * Input RTSP_PULL configuration information.
     */
     @SerializedName("RTSPPullSettings")
     @Expose
     private CreateInputRTSPPullSettings RTSPPullSettings;
 
     /**
-    * 
+    * Input HLS_PULL configuration information.
     */
     @SerializedName("HLSPullSettings")
     @Expose
     private CreateInputHLSPullSettings HLSPullSettings;
 
     /**
-    * 
+    * Delayed broadcast smooth streaming configuration information.
     */
     @SerializedName("ResilientStream")
     @Expose
@@ -106,6 +106,13 @@ public class CreateInput extends AbstractModel {
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
+
+    /**
+    * Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most.
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
 
     /**
      * Get Input name, which can contain 1 to 32 letters, digits, and underscores. 
@@ -124,16 +131,16 @@ public class CreateInput extends AbstractModel {
     }
 
     /**
-     * Get Input protocol. Valid values: `SRT`, `RTP`, `RTMP` 
-     * @return Protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
+     * Get Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`. 
+     * @return Protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
-     * @param Protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
+     * Set Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`.
+     * @param Protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -220,64 +227,64 @@ public class CreateInput extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return RTMPPullSettings 
+     * Get Input RTMP_PULL configuration information. 
+     * @return RTMPPullSettings Input RTMP_PULL configuration information.
      */
     public CreateInputRTMPPullSettings getRTMPPullSettings() {
         return this.RTMPPullSettings;
     }
 
     /**
-     * Set 
-     * @param RTMPPullSettings 
+     * Set Input RTMP_PULL configuration information.
+     * @param RTMPPullSettings Input RTMP_PULL configuration information.
      */
     public void setRTMPPullSettings(CreateInputRTMPPullSettings RTMPPullSettings) {
         this.RTMPPullSettings = RTMPPullSettings;
     }
 
     /**
-     * Get  
-     * @return RTSPPullSettings 
+     * Get Input RTSP_PULL configuration information. 
+     * @return RTSPPullSettings Input RTSP_PULL configuration information.
      */
     public CreateInputRTSPPullSettings getRTSPPullSettings() {
         return this.RTSPPullSettings;
     }
 
     /**
-     * Set 
-     * @param RTSPPullSettings 
+     * Set Input RTSP_PULL configuration information.
+     * @param RTSPPullSettings Input RTSP_PULL configuration information.
      */
     public void setRTSPPullSettings(CreateInputRTSPPullSettings RTSPPullSettings) {
         this.RTSPPullSettings = RTSPPullSettings;
     }
 
     /**
-     * Get  
-     * @return HLSPullSettings 
+     * Get Input HLS_PULL configuration information. 
+     * @return HLSPullSettings Input HLS_PULL configuration information.
      */
     public CreateInputHLSPullSettings getHLSPullSettings() {
         return this.HLSPullSettings;
     }
 
     /**
-     * Set 
-     * @param HLSPullSettings 
+     * Set Input HLS_PULL configuration information.
+     * @param HLSPullSettings Input HLS_PULL configuration information.
      */
     public void setHLSPullSettings(CreateInputHLSPullSettings HLSPullSettings) {
         this.HLSPullSettings = HLSPullSettings;
     }
 
     /**
-     * Get  
-     * @return ResilientStream 
+     * Get Delayed broadcast smooth streaming configuration information. 
+     * @return ResilientStream Delayed broadcast smooth streaming configuration information.
      */
     public ResilientStreamConf getResilientStream() {
         return this.ResilientStream;
     }
 
     /**
-     * Set 
-     * @param ResilientStream 
+     * Set Delayed broadcast smooth streaming configuration information.
+     * @param ResilientStream Delayed broadcast smooth streaming configuration information.
      */
     public void setResilientStream(ResilientStreamConf ResilientStream) {
         this.ResilientStream = ResilientStream;
@@ -297,6 +304,22 @@ public class CreateInput extends AbstractModel {
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most. 
+     * @return Zones Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most.
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most.
+     * @param Zones Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most.
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
     }
 
     public CreateInput() {
@@ -349,6 +372,12 @@ public class CreateInput extends AbstractModel {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
     }
 
 
@@ -368,6 +397,7 @@ public class CreateInput extends AbstractModel {
         this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
         this.setParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
 
     }
 }

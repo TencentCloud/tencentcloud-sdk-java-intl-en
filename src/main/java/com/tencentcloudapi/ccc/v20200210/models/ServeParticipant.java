@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Mail;
 
     /**
-    * Agent phone number.
+    * Agent Telephone
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Phone")
@@ -64,7 +64,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long EndedTimestamp;
 
     /**
-    * Recording ID can be indexed to the agent side recording.
+    * Recording ID, which can be used to index the recording on the agent side
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RecordId")
@@ -80,7 +80,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Type;
 
     /**
-    * Transfer source agent information.
+    * Transfer Source Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TransferFrom")
@@ -96,7 +96,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TransferFromType;
 
     /**
-    * Transfer destination agent information.
+    * Transfer Destination Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TransferTo")
@@ -188,9 +188,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Agent phone number.
+     * Get Agent Telephone
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Phone Agent phone number.
+     * @return Phone Agent Telephone
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPhone() {
@@ -198,9 +198,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Agent phone number.
+     * Set Agent Telephone
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Phone Agent phone number.
+     * @param Phone Agent Telephone
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPhone(String Phone) {
@@ -268,9 +268,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Recording ID can be indexed to the agent side recording.
+     * Get Recording ID, which can be used to index the recording on the agent side
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RecordId Recording ID can be indexed to the agent side recording.
+     * @return RecordId Recording ID, which can be used to index the recording on the agent side
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRecordId() {
@@ -278,9 +278,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Recording ID can be indexed to the agent side recording.
+     * Set Recording ID, which can be used to index the recording on the agent side
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RecordId Recording ID can be indexed to the agent side recording.
+     * @param RecordId Recording ID, which can be used to index the recording on the agent side
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRecordId(String RecordId) {
@@ -308,9 +308,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Transfer source agent information.
+     * Get Transfer Source Agent Information
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferFrom Transfer source agent information.
+     * @return TransferFrom Transfer Source Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTransferFrom() {
@@ -318,9 +318,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Transfer source agent information.
+     * Set Transfer Source Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferFrom Transfer source agent information.
+     * @param TransferFrom Transfer Source Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTransferFrom(String TransferFrom) {
@@ -348,9 +348,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Transfer destination agent information.
+     * Get Transfer Destination Agent Information
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferTo Transfer destination agent information.
+     * @return TransferTo Transfer Destination Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTransferTo() {
@@ -358,9 +358,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Transfer destination agent information.
+     * Set Transfer Destination Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferTo Transfer destination agent information.
+     * @param TransferTo Transfer Destination Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTransferTo(String TransferTo) {

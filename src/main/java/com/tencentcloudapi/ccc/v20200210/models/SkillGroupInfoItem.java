@@ -53,8 +53,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RoutePolicy;
 
     /**
-    * Whether the session is allocated to the last serviced agent first.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Should the conversation allocation prioritize the last service seat?
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UsingLastSeat")
     @Expose
@@ -83,6 +83,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("SkillGroupType")
     @Expose
     private Long SkillGroupType;
+
+    /**
+    * Extension number within the skill group
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
 
     /**
      * Get Skill group ID. 
@@ -153,20 +161,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the session is allocated to the last serviced agent first.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return UsingLastSeat Whether the session is allocated to the last serviced agent first.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Should the conversation allocation prioritize the last service seat?
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return UsingLastSeat Should the conversation allocation prioritize the last service seat?
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getUsingLastSeat() {
         return this.UsingLastSeat;
     }
 
     /**
-     * Set Whether the session is allocated to the last serviced agent first.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param UsingLastSeat Whether the session is allocated to the last serviced agent first.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Should the conversation allocation prioritize the last service seat?
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UsingLastSeat Should the conversation allocation prioritize the last service seat?
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUsingLastSeat(Long UsingLastSeat) {
         this.UsingLastSeat = UsingLastSeat;
@@ -232,6 +240,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.SkillGroupType = SkillGroupType;
     }
 
+    /**
+     * Get Extension number within the skill group
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Alias Extension number within the skill group
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set Extension number within the skill group
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Alias Extension number within the skill group
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
     public SkillGroupInfoItem() {
     }
 
@@ -264,6 +292,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.SkillGroupType != null) {
             this.SkillGroupType = new Long(source.SkillGroupType);
         }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
     }
 
 
@@ -279,6 +310,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MaxConcurrency", this.MaxConcurrency);
         this.setParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
         this.setParamSimple(map, prefix + "SkillGroupType", this.SkillGroupType);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
 
     }
 }

@@ -73,14 +73,14 @@ public class PSTNSessionInfo extends AbstractModel {
     private String StaffEmail;
 
     /**
-    * Agent work number.
+    * Agent ID
     */
     @SerializedName("StaffNumber")
     @Expose
     private String StaffNumber;
 
     /**
-    * Agent status: inProgress for in progress.
+    * Agent Status inProgress Ongoing
     */
     @SerializedName("SessionStatus")
     @Expose
@@ -227,32 +227,32 @@ public class PSTNSessionInfo extends AbstractModel {
     }
 
     /**
-     * Get Agent work number. 
-     * @return StaffNumber Agent work number.
+     * Get Agent ID 
+     * @return StaffNumber Agent ID
      */
     public String getStaffNumber() {
         return this.StaffNumber;
     }
 
     /**
-     * Set Agent work number.
-     * @param StaffNumber Agent work number.
+     * Set Agent ID
+     * @param StaffNumber Agent ID
      */
     public void setStaffNumber(String StaffNumber) {
         this.StaffNumber = StaffNumber;
     }
 
     /**
-     * Get Agent status: inProgress for in progress. 
-     * @return SessionStatus Agent status: inProgress for in progress.
+     * Get Agent Status inProgress Ongoing 
+     * @return SessionStatus Agent Status inProgress Ongoing
      */
     public String getSessionStatus() {
         return this.SessionStatus;
     }
 
     /**
-     * Set Agent status: inProgress for in progress.
-     * @param SessionStatus Agent status: inProgress for in progress.
+     * Set Agent Status inProgress Ongoing
+     * @param SessionStatus Agent Status inProgress Ongoing
      */
     public void setSessionStatus(String SessionStatus) {
         this.SessionStatus = SessionStatus;

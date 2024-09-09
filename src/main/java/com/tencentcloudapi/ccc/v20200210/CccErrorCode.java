@@ -3,11 +3,26 @@ public enum CccErrorCode {
     // Outbound call failure.
      FAILEDOPERATION_CALLOUTFAILED("FailedOperation.CallOutFailed"),
      
+    // High-risk users, do not call
+     FAILEDOPERATION_CALLEEISBLACKUSER("FailedOperation.CalleeIsBlackUser"),
+     
     // Limited outbound called number.
      FAILEDOPERATION_CALLEEISLIMITED("FailedOperation.CalleeIsLimited"),
      
     // Outbound over-frequency caller number.
      FAILEDOPERATION_CALLEROVERFREQUENCY("FailedOperation.CallerOverFrequency"),
+     
+    // Trigger Default Inbound Rule, Call Blind Spot
+     FAILEDOPERATION_CALLOUTRULEBLINDAREA("FailedOperation.CalloutRuleBlindArea"),
+     
+    // Trigger Default Outbound Rule, Call Volume for Called Party within a Period
+     FAILEDOPERATION_CALLOUTRULEMAXCALLCOUNTCALLEEINTERVALTIME("FailedOperation.CalloutRuleMaxCallCountCalleeIntervalTime"),
+     
+    // Trigger Default Outbound Rule, Daily Maximum Calls for Called Party
+     FAILEDOPERATION_CALLOUTRULEMAXCALLCOUNTCALLEEPERDAYAPPID("FailedOperation.CalloutRuleMaxCallCountCalleePerDayAppID"),
+     
+    // Trigger Default Outbound Rule, Not in Outbound Time
+     FAILEDOPERATION_CALLOUTRULENOTWORKTIME("FailedOperation.CalloutRuleNotWorkTime"),
      
     // The current number status cannot be modified.
      FAILEDOPERATION_CURSTATENOTALLOWMODIFY("FailedOperation.CurStateNotAllowModify"),
@@ -23,6 +38,9 @@ public enum CccErrorCode {
      
     // Agent is busy.
      FAILEDOPERATION_SEATSTATUSBUSY("FailedOperation.SeatStatusBusy"),
+     
+    // Number of Uploaded Files exceeds the limit
+     FAILEDOPERATION_UPLOADFILEOVERFLOW("FailedOperation.UploadFileOverflow"),
      
     // An internal error occurs.
      INTERNALERROR("InternalError"),
@@ -75,7 +93,7 @@ public enum CccErrorCode {
     // SIP channel information not found
      INVALIDPARAMETER_SIPTRUNKNOTFOUND("InvalidParameter.SipTrunkNotFound"),
      
-    // The parameter value is invalid.
+    // parameter value is invalid.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
     // Account does not exist.
@@ -95,6 +113,9 @@ public enum CccErrorCode {
      
     // Exceeded quota limit.
      LIMITEXCEEDED("LimitExceeded"),
+     
+    // Package quota exhausted
+     LIMITEXCEEDED_BASEPACKAGEEXPIRED("LimitExceeded.BasePackageExpired"),
      
     // Exceeded quantity limit.
      LIMITEXCEEDED_OUTOFCOUNTLIMIT("LimitExceeded.OutOfCountLimit"),

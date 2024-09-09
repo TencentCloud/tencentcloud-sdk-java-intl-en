@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeTelCdrRequest extends AbstractModel {
 
     /**
-    * Start timestamp. Unix second-level timestamp.
+    * Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
     */
     @SerializedName("StartTimeStamp")
     @Expose
     private Long StartTimeStamp;
 
     /**
-    * End timestamp. Unix second-level timestamp.
+    * End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
     */
     @SerializedName("EndTimeStamp")
     @Expose
@@ -94,32 +94,32 @@ public class DescribeTelCdrRequest extends AbstractModel {
     private String [] SessionIds;
 
     /**
-     * Get Start timestamp. Unix second-level timestamp. 
-     * @return StartTimeStamp Start timestamp. Unix second-level timestamp.
+     * Get Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days. 
+     * @return StartTimeStamp Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
      */
     public Long getStartTimeStamp() {
         return this.StartTimeStamp;
     }
 
     /**
-     * Set Start timestamp. Unix second-level timestamp.
-     * @param StartTimeStamp Start timestamp. Unix second-level timestamp.
+     * Set Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
+     * @param StartTimeStamp Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
      */
     public void setStartTimeStamp(Long StartTimeStamp) {
         this.StartTimeStamp = StartTimeStamp;
     }
 
     /**
-     * Get End timestamp. Unix second-level timestamp. 
-     * @return EndTimeStamp End timestamp. Unix second-level timestamp.
+     * Get End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days. 
+     * @return EndTimeStamp End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
      */
     public Long getEndTimeStamp() {
         return this.EndTimeStamp;
     }
 
     /**
-     * Set End timestamp. Unix second-level timestamp.
-     * @param EndTimeStamp End timestamp. Unix second-level timestamp.
+     * Set End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
+     * @param EndTimeStamp End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
      */
     public void setEndTimeStamp(Long EndTimeStamp) {
         this.EndTimeStamp = EndTimeStamp;

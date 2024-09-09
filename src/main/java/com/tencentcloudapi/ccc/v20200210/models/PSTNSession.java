@@ -80,17 +80,17 @@ public class PSTNSession extends AbstractModel {
     private String StaffEmail;
 
     /**
-    * Agent work number.
+    * Agent ID
     */
     @SerializedName("StaffNumber")
     @Expose
     private String StaffNumber;
 
     /**
-    * Session state.
-ringing - In progress.
-seatJoining - Waiting for agent to receive call.
-InProgress - Ongoing.
+    * Session Status
+ringing Ringing
+seatJoining  waiting for the agent to answer
+inProgress  Ongoing
 finished - Completed.
     */
     @SerializedName("SessionStatus")
@@ -261,31 +261,31 @@ finished - Completed.
     }
 
     /**
-     * Get Agent work number. 
-     * @return StaffNumber Agent work number.
+     * Get Agent ID 
+     * @return StaffNumber Agent ID
      */
     public String getStaffNumber() {
         return this.StaffNumber;
     }
 
     /**
-     * Set Agent work number.
-     * @param StaffNumber Agent work number.
+     * Set Agent ID
+     * @param StaffNumber Agent ID
      */
     public void setStaffNumber(String StaffNumber) {
         this.StaffNumber = StaffNumber;
     }
 
     /**
-     * Get Session state.
-ringing - In progress.
-seatJoining - Waiting for agent to receive call.
-InProgress - Ongoing.
+     * Get Session Status
+ringing Ringing
+seatJoining  waiting for the agent to answer
+inProgress  Ongoing
 finished - Completed. 
-     * @return SessionStatus Session state.
-ringing - In progress.
-seatJoining - Waiting for agent to receive call.
-InProgress - Ongoing.
+     * @return SessionStatus Session Status
+ringing Ringing
+seatJoining  waiting for the agent to answer
+inProgress  Ongoing
 finished - Completed.
      */
     public String getSessionStatus() {
@@ -293,15 +293,15 @@ finished - Completed.
     }
 
     /**
-     * Set Session state.
-ringing - In progress.
-seatJoining - Waiting for agent to receive call.
-InProgress - Ongoing.
+     * Set Session Status
+ringing Ringing
+seatJoining  waiting for the agent to answer
+inProgress  Ongoing
 finished - Completed.
-     * @param SessionStatus Session state.
-ringing - In progress.
-seatJoining - Waiting for agent to receive call.
-InProgress - Ongoing.
+     * @param SessionStatus Session Status
+ringing Ringing
+seatJoining  waiting for the agent to answer
+inProgress  Ongoing
 finished - Completed.
      */
     public void setSessionStatus(String SessionStatus) {

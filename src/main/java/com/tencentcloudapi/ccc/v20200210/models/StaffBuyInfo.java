@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StaffBuyInfo extends AbstractModel {
 
     /**
-    * Number of agents purchased.
+    * Number of agents purchased
     */
     @SerializedName("Num")
     @Expose
@@ -53,16 +53,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long SipNum;
 
     /**
-     * Get Number of agents purchased. 
-     * @return Num Number of agents purchased.
+     * Get Number of agents purchased 
+     * @return Num Number of agents purchased
      */
     public Long getNum() {
         return this.Num;
     }
 
     /**
-     * Set Number of agents purchased.
-     * @param Num Number of agents purchased.
+     * Set Number of agents purchased
+     * @param Num Number of agents purchased
      */
     public void setNum(Long Num) {
         this.Num = Num;

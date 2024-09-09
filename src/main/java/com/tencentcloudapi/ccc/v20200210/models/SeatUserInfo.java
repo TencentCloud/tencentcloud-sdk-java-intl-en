@@ -46,7 +46,7 @@ Note: This field may return null, indicating that no valid value could be obtain
     private String StaffNumber;
 
     /**
-    * Agent phone number (preceded by 0086).
+    * Agent's Telephone Number (With 0086 Prefix)
     */
     @SerializedName("Phone")
     @Expose
@@ -67,8 +67,8 @@ Note: This field may return null, indicating that no valid value could be obtain
     private String UserId;
 
     /**
-    * List of skill groups associated with the agent.
-Note: This field may return null, indicating that no valid value could be obtained.
+    * List of skill groups associated with the seat
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SkillGroupNameList")
     @Expose
@@ -138,16 +138,16 @@ Note: This field may return null, indicating that no valid value could be obtain
     }
 
     /**
-     * Get Agent phone number (preceded by 0086). 
-     * @return Phone Agent phone number (preceded by 0086).
+     * Get Agent's Telephone Number (With 0086 Prefix) 
+     * @return Phone Agent's Telephone Number (With 0086 Prefix)
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set Agent phone number (preceded by 0086).
-     * @param Phone Agent phone number (preceded by 0086).
+     * Set Agent's Telephone Number (With 0086 Prefix)
+     * @param Phone Agent's Telephone Number (With 0086 Prefix)
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
@@ -186,20 +186,20 @@ Note: This field may return null, indicating that no valid value could be obtain
     }
 
     /**
-     * Get List of skill groups associated with the agent.
-Note: This field may return null, indicating that no valid value could be obtained. 
-     * @return SkillGroupNameList List of skill groups associated with the agent.
-Note: This field may return null, indicating that no valid value could be obtained.
+     * Get List of skill groups associated with the seat
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SkillGroupNameList List of skill groups associated with the seat
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getSkillGroupNameList() {
         return this.SkillGroupNameList;
     }
 
     /**
-     * Set List of skill groups associated with the agent.
-Note: This field may return null, indicating that no valid value could be obtained.
-     * @param SkillGroupNameList List of skill groups associated with the agent.
-Note: This field may return null, indicating that no valid value could be obtained.
+     * Set List of skill groups associated with the seat
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SkillGroupNameList List of skill groups associated with the seat
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSkillGroupNameList(String [] SkillGroupNameList) {
         this.SkillGroupNameList = SkillGroupNameList;

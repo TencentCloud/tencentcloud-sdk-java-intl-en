@@ -25,7 +25,7 @@ public class StaffInfo extends AbstractModel {
 
     /**
     * Agent name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
@@ -39,8 +39,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Mail;
 
     /**
-    * Agent telephone number.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Agent's Telephone Number
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Phone")
     @Expose
@@ -48,22 +48,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Agent nickname.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Nick")
     @Expose
     private String Nick;
 
     /**
-    * Agent number.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Agent ID
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StaffNumber")
     @Expose
     private String StaffNumber;
 
     /**
-    * 
+    * User Role ID
     */
     @SerializedName("RoleId")
     @Expose
@@ -87,9 +87,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Agent name.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Name Agent name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -97,9 +97,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Agent name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name Agent name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -122,20 +122,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Agent telephone number.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Phone Agent telephone number.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Agent's Telephone Number
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Phone Agent's Telephone Number
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set Agent telephone number.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Phone Agent telephone number.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Agent's Telephone Number
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Phone Agent's Telephone Number
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
@@ -143,9 +143,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Agent nickname.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Nick Agent nickname.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNick() {
         return this.Nick;
@@ -153,45 +153,45 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Agent nickname.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Nick Agent nickname.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
     }
 
     /**
-     * Get Agent number.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StaffNumber Agent number.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Agent ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return StaffNumber Agent ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStaffNumber() {
         return this.StaffNumber;
     }
 
     /**
-     * Set Agent number.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StaffNumber Agent number.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Agent ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param StaffNumber Agent ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStaffNumber(String StaffNumber) {
         this.StaffNumber = StaffNumber;
     }
 
     /**
-     * Get  
-     * @return RoleId 
+     * Get User Role ID 
+     * @return RoleId User Role ID
      */
     public Long getRoleId() {
         return this.RoleId;
     }
 
     /**
-     * Set 
-     * @param RoleId 
+     * Set User Role ID
+     * @param RoleId User Role ID
      */
     public void setRoleId(Long RoleId) {
         this.RoleId = RoleId;

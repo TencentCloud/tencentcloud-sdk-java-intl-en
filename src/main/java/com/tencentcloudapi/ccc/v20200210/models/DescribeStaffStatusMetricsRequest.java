@@ -45,7 +45,7 @@ public class DescribeStaffStatusMetricsRequest extends AbstractModel {
     private Long [] GroupIdList;
 
     /**
-    * Filter agent status list.
+    * Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
     */
     @SerializedName("StatusList")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeStaffStatusMetricsRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter agent status list. 
-     * @return StatusList Filter agent status list.
+     * Get Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline 
+     * @return StatusList Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
      */
     public String [] getStatusList() {
         return this.StatusList;
     }
 
     /**
-     * Set Filter agent status list.
-     * @param StatusList Filter agent status list.
+     * Set Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+     * @param StatusList Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
      */
     public void setStatusList(String [] StatusList) {
         this.StatusList = StatusList;

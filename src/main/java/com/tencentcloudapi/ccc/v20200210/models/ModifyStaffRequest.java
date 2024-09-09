@@ -59,6 +59,13 @@ public class ModifyStaffRequest extends AbstractModel {
     private String Nick;
 
     /**
+    * Agent ID
+    */
+    @SerializedName("StaffNo")
+    @Expose
+    private String StaffNo;
+
+    /**
     * Bind skill group ID list.
     */
     @SerializedName("SkillGroupIds")
@@ -160,6 +167,22 @@ public class ModifyStaffRequest extends AbstractModel {
     }
 
     /**
+     * Get Agent ID 
+     * @return StaffNo Agent ID
+     */
+    public String getStaffNo() {
+        return this.StaffNo;
+    }
+
+    /**
+     * Set Agent ID
+     * @param StaffNo Agent ID
+     */
+    public void setStaffNo(String StaffNo) {
+        this.StaffNo = StaffNo;
+    }
+
+    /**
      * Get Bind skill group ID list. 
      * @return SkillGroupIds Bind skill group ID list.
      */
@@ -230,6 +253,9 @@ public class ModifyStaffRequest extends AbstractModel {
         if (source.Nick != null) {
             this.Nick = new String(source.Nick);
         }
+        if (source.StaffNo != null) {
+            this.StaffNo = new String(source.StaffNo);
+        }
         if (source.SkillGroupIds != null) {
             this.SkillGroupIds = new Long[source.SkillGroupIds.length];
             for (int i = 0; i < source.SkillGroupIds.length; i++) {
@@ -254,6 +280,7 @@ public class ModifyStaffRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "Nick", this.Nick);
+        this.setParamSimple(map, prefix + "StaffNo", this.StaffNo);
         this.setParamArraySimple(map, prefix + "SkillGroupIds.", this.SkillGroupIds);
         this.setParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
         this.setParamSimple(map, prefix + "UseMobileAccept", this.UseMobileAccept);

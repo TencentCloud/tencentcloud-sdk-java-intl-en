@@ -39,7 +39,18 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *This API is used to pause the predictive outbound call task.
+     *If you want to stop running agent's individual auto task, then call AbortAgentCruiseDialingCampaign to terminate.
+     * @param req AbortAgentCruiseDialingCampaignRequest
+     * @return AbortAgentCruiseDialingCampaignResponse
+     * @throws TencentCloudSDKException
+     */
+    public AbortAgentCruiseDialingCampaignResponse AbortAgentCruiseDialingCampaign(AbortAgentCruiseDialingCampaignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AbortAgentCruiseDialingCampaign", AbortAgentCruiseDialingCampaignResponse.class);
+    }
+
+    /**
+     *This API is used to pause predictive dialing campaign
      * @param req AbortPredictiveDialingCampaignRequest
      * @return AbortPredictiveDialingCampaignResponse
      * @throws TencentCloudSDKException
@@ -50,7 +61,7 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *This API is used to bind outbound skill group of number.
+     *This API is used to assign outbound skill group(s) to your number
      * @param req BindNumberCallOutSkillGroupRequest
      * @return BindNumberCallOutSkillGroupResponse
      * @throws TencentCloudSDKException
@@ -61,7 +72,7 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *This API is used to bind the agent's skill group.
+     *This API is used to assign an agent to skill group
      * @param req BindStaffSkillGroupListRequest
      * @return BindStaffSkillGroupListResponse
      * @throws TencentCloudSDKException
@@ -80,6 +91,17 @@ public class CccClient extends AbstractClient{
     public CreateAdminURLResponse CreateAdminURL(CreateAdminURLRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAdminURL", CreateAdminURLResponse.class);
+    }
+
+    /**
+     *This document shows how to call API to create an individual auto dialing campaign for agent
+     * @param req CreateAgentCruiseDialingCampaignRequest
+     * @return CreateAgentCruiseDialingCampaignResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAgentCruiseDialingCampaignResponse CreateAgentCruiseDialingCampaign(CreateAgentCruiseDialingCampaignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAgentCruiseDialingCampaign", CreateAgentCruiseDialingCampaignResponse.class);
     }
 
     /**
@@ -124,6 +146,17 @@ public class CccClient extends AbstractClient{
     public CreateExtensionResponse CreateExtension(CreateExtensionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateExtension", CreateExtensionResponse.class);
+    }
+
+    /**
+     *Create a session associated with IVR. This feature is supported only in the Advanced Version. Currently, it supports inbound and automatic outbound IVR types. Upon receiving the request, TCCC will first attempt to call the callee, then enter the IVR flow.
+     * @param req CreateIVRSessionRequest
+     * @return CreateIVRSessionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIVRSessionResponse CreateIVRSession(CreateIVRSessionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIVRSession", CreateIVRSessionResponse.class);
     }
 
     /**
@@ -193,6 +226,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *Query Agent Cruise-style Outbound Call Task
+     * @param req DescribeAgentCruiseDialingCampaignRequest
+     * @return DescribeAgentCruiseDialingCampaignResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentCruiseDialingCampaignResponse DescribeAgentCruiseDialingCampaign(DescribeAgentCruiseDialingCampaignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAgentCruiseDialingCampaign", DescribeAgentCruiseDialingCampaignResponse.class);
+    }
+
+    /**
      *This API is used to query automatic outbound call task details.
      * @param req DescribeAutoCalloutTaskRequest
      * @return DescribeAutoCalloutTaskResponse
@@ -204,7 +248,7 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query auto-task outbound calls in batch.
+     *Batch Query Automatic Outbound Call Tasks
      * @param req DescribeAutoCalloutTasksRequest
      * @return DescribeAutoCalloutTasksResponse
      * @throws TencentCloudSDKException
@@ -256,6 +300,17 @@ public class CccClient extends AbstractClient{
     public DescribeExtensionsResponse DescribeExtensions(DescribeExtensionsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeExtensions", DescribeExtensionsResponse.class);
+    }
+
+    /**
+     *Query IVR Audio File List Information
+     * @param req DescribeIvrAudioListRequest
+     * @return DescribeIvrAudioListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIvrAudioListResponse DescribeIvrAudioList(DescribeIvrAudioListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIvrAudioList", DescribeIvrAudioListResponse.class);
     }
 
     /**
@@ -358,7 +413,7 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *This API is used to access telephone consumption statistics by instance.
+     *This API is used to access call detail records by application
      * @param req DescribeTelCallInfoRequest
      * @return DescribeTelCallInfoResponse
      * @throws TencentCloudSDKException
@@ -424,7 +479,7 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the customer service account.
+     *This API is used to modify  customer service / agent account.
      * @param req ModifyStaffRequest
      * @return ModifyStaffResponse
      * @throws TencentCloudSDKException
@@ -432,6 +487,17 @@ public class CccClient extends AbstractClient{
     public ModifyStaffResponse ModifyStaff(ModifyStaffRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyStaff", ModifyStaffResponse.class);
+    }
+
+    /**
+     *Modify Agent's Password
+     * @param req ModifyStaffPasswordRequest
+     * @return ModifyStaffPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStaffPasswordResponse ModifyStaffPassword(ModifyStaffPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyStaffPassword", ModifyStaffPasswordResponse.class);
     }
 
     /**
@@ -520,6 +586,17 @@ public class CccClient extends AbstractClient{
     public UpdatePredictiveDialingCampaignResponse UpdatePredictiveDialingCampaign(UpdatePredictiveDialingCampaignRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdatePredictiveDialingCampaign", UpdatePredictiveDialingCampaignResponse.class);
+    }
+
+    /**
+     *Upload audio files used in IVR, with a daily upload limit of 50 files. (It is recommended to use temporary links stored in Tencent Cloud Cos for the audio file URL in the parameters)
+     * @param req UploadIvrAudioRequest
+     * @return UploadIvrAudioResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadIvrAudioResponse UploadIvrAudio(UploadIvrAudioRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UploadIvrAudio", UploadIvrAudioResponse.class);
     }
 
 }

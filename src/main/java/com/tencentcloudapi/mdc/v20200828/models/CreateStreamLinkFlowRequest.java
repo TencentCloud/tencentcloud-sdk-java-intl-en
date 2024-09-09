@@ -45,6 +45,13 @@ public class CreateStreamLinkFlowRequest extends AbstractModel {
     private CreateInput [] InputGroup;
 
     /**
+    * The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+    */
+    @SerializedName("EventId")
+    @Expose
+    private String EventId;
+
+    /**
      * Get Flow name 
      * @return FlowName Flow name
      */
@@ -92,6 +99,22 @@ public class CreateStreamLinkFlowRequest extends AbstractModel {
         this.InputGroup = InputGroup;
     }
 
+    /**
+     * Get The media transmission event ID associated with the Flow. Each flow can only be associated with one event. 
+     * @return EventId The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+     */
+    public String getEventId() {
+        return this.EventId;
+    }
+
+    /**
+     * Set The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+     * @param EventId The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+     */
+    public void setEventId(String EventId) {
+        this.EventId = EventId;
+    }
+
     public CreateStreamLinkFlowRequest() {
     }
 
@@ -112,6 +135,9 @@ public class CreateStreamLinkFlowRequest extends AbstractModel {
                 this.InputGroup[i] = new CreateInput(source.InputGroup[i]);
             }
         }
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class CreateStreamLinkFlowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
         this.setParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
         this.setParamArrayObj(map, prefix + "InputGroup.", this.InputGroup);
+        this.setParamSimple(map, prefix + "EventId", this.EventId);
 
     }
 }
