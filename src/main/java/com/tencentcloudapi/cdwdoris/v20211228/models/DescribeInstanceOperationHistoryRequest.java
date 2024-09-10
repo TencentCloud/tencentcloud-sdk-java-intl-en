@@ -73,6 +73,14 @@ public class DescribeInstanceOperationHistoryRequest extends AbstractModel {
     private String PassWord;
 
     /**
+    * Information, deprecated.
+
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
      * Get Cluster ID 
      * @return InstanceId Cluster ID
      */
@@ -184,6 +192,30 @@ public class DescribeInstanceOperationHistoryRequest extends AbstractModel {
         this.PassWord = PassWord;
     }
 
+    /**
+     * Get Information, deprecated.
+ 
+     * @return Message Information, deprecated.
+
+     * @deprecated
+     */
+    @Deprecated
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set Information, deprecated.
+
+     * @param Message Information, deprecated.
+
+     * @deprecated
+     */
+    @Deprecated
+    public void setMessage(String Message) {
+        this.Message = Message;
+    }
+
     public DescribeInstanceOperationHistoryRequest() {
     }
 
@@ -213,6 +245,9 @@ public class DescribeInstanceOperationHistoryRequest extends AbstractModel {
         if (source.PassWord != null) {
             this.PassWord = new String(source.PassWord);
         }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
     }
 
 
@@ -227,6 +262,7 @@ public class DescribeInstanceOperationHistoryRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "PassWord", this.PassWord);
+        this.setParamSimple(map, prefix + "Message", this.Message);
 
     }
 }

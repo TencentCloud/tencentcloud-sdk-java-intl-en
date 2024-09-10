@@ -73,6 +73,21 @@ public class QueryTableDataRequest extends AbstractModel {
     private String PassWord;
 
     /**
+    * Catalog name, defaults to 'internal' if not specified.
+
+    */
+    @SerializedName("CatalogName")
+    @Expose
+    private String CatalogName;
+
+    /**
+    * InstanceId
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get Database name 
      * @return Database Database name
      */
@@ -184,6 +199,42 @@ public class QueryTableDataRequest extends AbstractModel {
         this.PassWord = PassWord;
     }
 
+    /**
+     * Get Catalog name, defaults to 'internal' if not specified.
+ 
+     * @return CatalogName Catalog name, defaults to 'internal' if not specified.
+
+     */
+    public String getCatalogName() {
+        return this.CatalogName;
+    }
+
+    /**
+     * Set Catalog name, defaults to 'internal' if not specified.
+
+     * @param CatalogName Catalog name, defaults to 'internal' if not specified.
+
+     */
+    public void setCatalogName(String CatalogName) {
+        this.CatalogName = CatalogName;
+    }
+
+    /**
+     * Get InstanceId 
+     * @return InstanceId InstanceId
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set InstanceId
+     * @param InstanceId InstanceId
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public QueryTableDataRequest() {
     }
 
@@ -216,6 +267,12 @@ public class QueryTableDataRequest extends AbstractModel {
         if (source.PassWord != null) {
             this.PassWord = new String(source.PassWord);
         }
+        if (source.CatalogName != null) {
+            this.CatalogName = new String(source.CatalogName);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -230,6 +287,8 @@ public class QueryTableDataRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "PassWord", this.PassWord);
+        this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

@@ -101,6 +101,13 @@ public class DescribeQueryAnalyseRequest extends AbstractModel {
     private String SortOrder;
 
     /**
+    * Minimum query execution time, in milliseconds.
+    */
+    @SerializedName("QueryTime")
+    @Expose
+    private Long QueryTime;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -276,6 +283,22 @@ public class DescribeQueryAnalyseRequest extends AbstractModel {
         this.SortOrder = SortOrder;
     }
 
+    /**
+     * Get Minimum query execution time, in milliseconds. 
+     * @return QueryTime Minimum query execution time, in milliseconds.
+     */
+    public Long getQueryTime() {
+        return this.QueryTime;
+    }
+
+    /**
+     * Set Minimum query execution time, in milliseconds.
+     * @param QueryTime Minimum query execution time, in milliseconds.
+     */
+    public void setQueryTime(Long QueryTime) {
+        this.QueryTime = QueryTime;
+    }
+
     public DescribeQueryAnalyseRequest() {
     }
 
@@ -317,6 +340,9 @@ public class DescribeQueryAnalyseRequest extends AbstractModel {
         if (source.SortOrder != null) {
             this.SortOrder = new String(source.SortOrder);
         }
+        if (source.QueryTime != null) {
+            this.QueryTime = new Long(source.QueryTime);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class DescribeQueryAnalyseRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SQLTypeFilter", this.SQLTypeFilter);
         this.setParamSimple(map, prefix + "SortField", this.SortField);
         this.setParamSimple(map, prefix + "SortOrder", this.SortOrder);
+        this.setParamSimple(map, prefix + "QueryTime", this.QueryTime);
 
     }
 }

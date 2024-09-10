@@ -144,6 +144,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private MainlandIDCard MainlandIDCard;
 
     /**
+    * Japan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("JapanIDCard")
+    @Expose
+    private JapanIDCard JapanIDCard;
+
+    /**
+    * Taiwan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TaiWanIDCard")
+    @Expose
+    private TaiWanIDCard TaiWanIDCard;
+
+    /**
      * Get Hong Kong ID Card
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return HKIDCard Hong Kong ID Card
@@ -443,6 +459,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.MainlandIDCard = MainlandIDCard;
     }
 
+    /**
+     * Get Japan ID Card
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return JapanIDCard Japan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public JapanIDCard getJapanIDCard() {
+        return this.JapanIDCard;
+    }
+
+    /**
+     * Set Japan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param JapanIDCard Japan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setJapanIDCard(JapanIDCard JapanIDCard) {
+        this.JapanIDCard = JapanIDCard;
+    }
+
+    /**
+     * Get Taiwan ID Card
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TaiWanIDCard Taiwan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public TaiWanIDCard getTaiWanIDCard() {
+        return this.TaiWanIDCard;
+    }
+
+    /**
+     * Set Taiwan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TaiWanIDCard Taiwan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTaiWanIDCard(TaiWanIDCard TaiWanIDCard) {
+        this.TaiWanIDCard = TaiWanIDCard;
+    }
+
     public NormalCardInfo() {
     }
 
@@ -496,6 +552,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.MainlandIDCard != null) {
             this.MainlandIDCard = new MainlandIDCard(source.MainlandIDCard);
         }
+        if (source.JapanIDCard != null) {
+            this.JapanIDCard = new JapanIDCard(source.JapanIDCard);
+        }
+        if (source.TaiWanIDCard != null) {
+            this.TaiWanIDCard = new TaiWanIDCard(source.TaiWanIDCard);
+        }
     }
 
 
@@ -518,6 +580,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "SingaporeIDCard.", this.SingaporeIDCard);
         this.setParamObj(map, prefix + "MacaoIDCard.", this.MacaoIDCard);
         this.setParamObj(map, prefix + "MainlandIDCard.", this.MainlandIDCard);
+        this.setParamObj(map, prefix + "JapanIDCard.", this.JapanIDCard);
+        this.setParamObj(map, prefix + "TaiWanIDCard.", this.TaiWanIDCard);
 
     }
 }

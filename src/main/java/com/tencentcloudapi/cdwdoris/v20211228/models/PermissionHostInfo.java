@@ -50,6 +50,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private TablePermissions [] TablePermissions;
 
     /**
+    * The key is the full name of the catalog, and the value is the permission list of the user on the catalog.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CatalogPermissions")
+    @Expose
+    private CatalogPermission [] CatalogPermissions;
+
+    /**
      * Get A list of user permissions in the global scope, which can be applied to all databases and tables.
 
 Note: This field may return null, indicating that no valid values can be obtained. 
@@ -117,6 +126,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.TablePermissions = TablePermissions;
     }
 
+    /**
+     * Get The key is the full name of the catalog, and the value is the permission list of the user on the catalog.
+
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CatalogPermissions The key is the full name of the catalog, and the value is the permission list of the user on the catalog.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public CatalogPermission [] getCatalogPermissions() {
+        return this.CatalogPermissions;
+    }
+
+    /**
+     * Set The key is the full name of the catalog, and the value is the permission list of the user on the catalog.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CatalogPermissions The key is the full name of the catalog, and the value is the permission list of the user on the catalog.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCatalogPermissions(CatalogPermission [] CatalogPermissions) {
+        this.CatalogPermissions = CatalogPermissions;
+    }
+
     public PermissionHostInfo() {
     }
 
@@ -143,6 +176,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.TablePermissions[i] = new TablePermissions(source.TablePermissions[i]);
             }
         }
+        if (source.CatalogPermissions != null) {
+            this.CatalogPermissions = new CatalogPermission[source.CatalogPermissions.length];
+            for (int i = 0; i < source.CatalogPermissions.length; i++) {
+                this.CatalogPermissions[i] = new CatalogPermission(source.CatalogPermissions[i]);
+            }
+        }
     }
 
 
@@ -153,6 +192,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "GlobalPermissions.", this.GlobalPermissions);
         this.setParamArrayObj(map, prefix + "DatabasePermissions.", this.DatabasePermissions);
         this.setParamArrayObj(map, prefix + "TablePermissions.", this.TablePermissions);
+        this.setParamArrayObj(map, prefix + "CatalogPermissions.", this.CatalogPermissions);
 
     }
 }

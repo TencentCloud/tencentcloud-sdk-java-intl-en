@@ -73,6 +73,13 @@ public class UpdateDatabaseRequest extends AbstractModel {
     private String PassWord;
 
     /**
+    * InstanceId
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get The database name to be modified 
      * @return DbName The database name to be modified
      */
@@ -184,6 +191,22 @@ public class UpdateDatabaseRequest extends AbstractModel {
         this.PassWord = PassWord;
     }
 
+    /**
+     * Get InstanceId 
+     * @return InstanceId InstanceId
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set InstanceId
+     * @param InstanceId InstanceId
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public UpdateDatabaseRequest() {
     }
 
@@ -216,6 +239,9 @@ public class UpdateDatabaseRequest extends AbstractModel {
         if (source.PassWord != null) {
             this.PassWord = new String(source.PassWord);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class UpdateDatabaseRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "PassWord", this.PassWord);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

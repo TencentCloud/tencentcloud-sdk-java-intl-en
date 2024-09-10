@@ -65,7 +65,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Database;
 
     /**
-    * SQL type
+    * SQL Type: 0 is non-query, 1 is query, -1 is unrestricted.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SQLType")
@@ -225,9 +225,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get SQL type
+     * Get SQL Type: 0 is non-query, 1 is query, -1 is unrestricted.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SQLType SQL type
+     * @return SQLType SQL Type: 0 is non-query, 1 is query, -1 is unrestricted.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSQLType() {
@@ -235,9 +235,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set SQL type
+     * Set SQL Type: 0 is non-query, 1 is query, -1 is unrestricted.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SQLType SQL type
+     * @param SQLType SQL Type: 0 is non-query, 1 is query, -1 is unrestricted.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSQLType(String SQLType) {

@@ -87,11 +87,33 @@ public class InsertDatasToTableRequest extends AbstractModel {
     private String PassWord;
 
     /**
-    * Column type
+    * Column type, this field has been deprecated, please use Types
     */
     @SerializedName("ColumnTypes")
     @Expose
     private String ColumnTypes;
+
+    /**
+    * Array of column types
+
+    */
+    @SerializedName("Types")
+    @Expose
+    private String [] Types;
+
+    /**
+    * Catalog name, defaults to 'internal' if not specified.
+    */
+    @SerializedName("CatalogName")
+    @Expose
+    private String CatalogName;
+
+    /**
+    * InstanceId
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
 
     /**
      * Get Database name 
@@ -238,19 +260,75 @@ public class InsertDatasToTableRequest extends AbstractModel {
     }
 
     /**
-     * Get Column type 
-     * @return ColumnTypes Column type
+     * Get Column type, this field has been deprecated, please use Types 
+     * @return ColumnTypes Column type, this field has been deprecated, please use Types
+     * @deprecated
      */
+    @Deprecated
     public String getColumnTypes() {
         return this.ColumnTypes;
     }
 
     /**
-     * Set Column type
-     * @param ColumnTypes Column type
+     * Set Column type, this field has been deprecated, please use Types
+     * @param ColumnTypes Column type, this field has been deprecated, please use Types
+     * @deprecated
      */
+    @Deprecated
     public void setColumnTypes(String ColumnTypes) {
         this.ColumnTypes = ColumnTypes;
+    }
+
+    /**
+     * Get Array of column types
+ 
+     * @return Types Array of column types
+
+     */
+    public String [] getTypes() {
+        return this.Types;
+    }
+
+    /**
+     * Set Array of column types
+
+     * @param Types Array of column types
+
+     */
+    public void setTypes(String [] Types) {
+        this.Types = Types;
+    }
+
+    /**
+     * Get Catalog name, defaults to 'internal' if not specified. 
+     * @return CatalogName Catalog name, defaults to 'internal' if not specified.
+     */
+    public String getCatalogName() {
+        return this.CatalogName;
+    }
+
+    /**
+     * Set Catalog name, defaults to 'internal' if not specified.
+     * @param CatalogName Catalog name, defaults to 'internal' if not specified.
+     */
+    public void setCatalogName(String CatalogName) {
+        this.CatalogName = CatalogName;
+    }
+
+    /**
+     * Get InstanceId 
+     * @return InstanceId InstanceId
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set InstanceId
+     * @param InstanceId InstanceId
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     public InsertDatasToTableRequest() {
@@ -297,6 +375,18 @@ public class InsertDatasToTableRequest extends AbstractModel {
         if (source.ColumnTypes != null) {
             this.ColumnTypes = new String(source.ColumnTypes);
         }
+        if (source.Types != null) {
+            this.Types = new String[source.Types.length];
+            for (int i = 0; i < source.Types.length; i++) {
+                this.Types[i] = new String(source.Types[i]);
+            }
+        }
+        if (source.CatalogName != null) {
+            this.CatalogName = new String(source.CatalogName);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -314,6 +404,9 @@ public class InsertDatasToTableRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "PassWord", this.PassWord);
         this.setParamSimple(map, prefix + "ColumnTypes", this.ColumnTypes);
+        this.setParamArraySimple(map, prefix + "Types.", this.Types);
+        this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

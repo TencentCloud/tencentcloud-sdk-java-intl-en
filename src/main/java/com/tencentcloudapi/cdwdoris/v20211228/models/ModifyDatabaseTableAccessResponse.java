@@ -31,7 +31,7 @@ public class ModifyDatabaseTableAccessResponse extends AbstractModel {
     private Boolean Success;
 
     /**
-    * Message description of the operation result
+    * Error message
     */
     @SerializedName("Message")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyDatabaseTableAccessResponse extends AbstractModel {
     }
 
     /**
-     * Get Message description of the operation result 
-     * @return Message Message description of the operation result
+     * Get Error message 
+     * @return Message Error message
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Message description of the operation result
-     * @param Message Message description of the operation result
+     * Set Error message
+     * @param Message Error message
      */
     public void setMessage(String Message) {
         this.Message = Message;
