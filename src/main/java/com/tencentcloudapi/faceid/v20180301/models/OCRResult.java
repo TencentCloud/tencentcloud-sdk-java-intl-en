@@ -46,6 +46,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CardInfo CardInfo;
 
     /**
+    * OCR result of the ID card.
+    */
+    @SerializedName("NormalCardInfo")
+    @Expose
+    private NormalCardInfo NormalCardInfo;
+
+    /**
     * The request id
     */
     @SerializedName("RequestId")
@@ -105,7 +112,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get OCR result of the ID card. 
      * @return CardInfo OCR result of the ID card.
+     * @deprecated
      */
+    @Deprecated
     public CardInfo getCardInfo() {
         return this.CardInfo;
     }
@@ -113,9 +122,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set OCR result of the ID card.
      * @param CardInfo OCR result of the ID card.
+     * @deprecated
      */
+    @Deprecated
     public void setCardInfo(CardInfo CardInfo) {
         this.CardInfo = CardInfo;
+    }
+
+    /**
+     * Get OCR result of the ID card. 
+     * @return NormalCardInfo OCR result of the ID card.
+     */
+    public NormalCardInfo getNormalCardInfo() {
+        return this.NormalCardInfo;
+    }
+
+    /**
+     * Set OCR result of the ID card.
+     * @param NormalCardInfo OCR result of the ID card.
+     */
+    public void setNormalCardInfo(NormalCardInfo NormalCardInfo) {
+        this.NormalCardInfo = NormalCardInfo;
     }
 
     /**
@@ -183,6 +210,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.CardInfo != null) {
             this.CardInfo = new CardInfo(source.CardInfo);
         }
+        if (source.NormalCardInfo != null) {
+            this.NormalCardInfo = new NormalCardInfo(source.NormalCardInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -202,6 +232,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsPass", this.IsPass);
         this.setParamSimple(map, prefix + "CardImageBase64", this.CardImageBase64);
         this.setParamObj(map, prefix + "CardInfo.", this.CardInfo);
+        this.setParamObj(map, prefix + "NormalCardInfo.", this.NormalCardInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
         this.setParamSimple(map, prefix + "CardCutImageBase64", this.CardCutImageBase64);
         this.setParamSimple(map, prefix + "CardBackCutImageBase64", this.CardBackCutImageBase64);
