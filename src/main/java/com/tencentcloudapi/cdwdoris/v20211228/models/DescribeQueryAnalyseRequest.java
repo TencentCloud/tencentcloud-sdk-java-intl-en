@@ -52,7 +52,7 @@ public class DescribeQueryAnalyseRequest extends AbstractModel {
     private String StartTime;
 
     /**
-    * End time of operation period
+    * End time of operation period.
     */
     @SerializedName("EndTime")
     @Expose
@@ -172,16 +172,16 @@ public class DescribeQueryAnalyseRequest extends AbstractModel {
     }
 
     /**
-     * Get End time of operation period 
-     * @return EndTime End time of operation period
+     * Get End time of operation period. 
+     * @return EndTime End time of operation period.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of operation period
-     * @param EndTime End time of operation period
+     * Set End time of operation period.
+     * @param EndTime End time of operation period.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

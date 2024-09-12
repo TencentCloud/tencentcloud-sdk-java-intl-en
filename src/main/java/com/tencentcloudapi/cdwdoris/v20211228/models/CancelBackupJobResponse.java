@@ -25,7 +25,7 @@ public class CancelBackupJobResponse extends AbstractModel {
 
     /**
     * Error message
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -40,9 +40,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Error message
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained 
      * @return ErrorMsg Error message
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -50,9 +50,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Error message
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained
      * @param ErrorMsg Error message
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

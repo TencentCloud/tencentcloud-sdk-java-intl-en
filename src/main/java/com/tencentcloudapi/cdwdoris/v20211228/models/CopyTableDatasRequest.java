@@ -31,7 +31,7 @@ public class CopyTableDatasRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Name of the database where the source table is located
+    * Name of the database where the source table is located.
     */
     @SerializedName("CopiedFromDb")
     @Expose
@@ -96,16 +96,16 @@ public class CopyTableDatasRequest extends AbstractModel {
     }
 
     /**
-     * Get Name of the database where the source table is located 
-     * @return CopiedFromDb Name of the database where the source table is located
+     * Get Name of the database where the source table is located. 
+     * @return CopiedFromDb Name of the database where the source table is located.
      */
     public String getCopiedFromDb() {
         return this.CopiedFromDb;
     }
 
     /**
-     * Set Name of the database where the source table is located
-     * @param CopiedFromDb Name of the database where the source table is located
+     * Set Name of the database where the source table is located.
+     * @param CopiedFromDb Name of the database where the source table is located.
      */
     public void setCopiedFromDb(String CopiedFromDb) {
         this.CopiedFromDb = CopiedFromDb;
