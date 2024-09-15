@@ -38,6 +38,13 @@ public class QueryTableDataRequest extends AbstractModel {
     private String Table;
 
     /**
+    * InstanceId
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
     * Array of fields to be queried
     */
     @SerializedName("SelectedFields")
@@ -81,13 +88,6 @@ public class QueryTableDataRequest extends AbstractModel {
     private String CatalogName;
 
     /**
-    * InstanceId
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
      * Get Database name 
      * @return Database Database name
      */
@@ -117,6 +117,22 @@ public class QueryTableDataRequest extends AbstractModel {
      */
     public void setTable(String Table) {
         this.Table = Table;
+    }
+
+    /**
+     * Get InstanceId 
+     * @return InstanceId InstanceId
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set InstanceId
+     * @param InstanceId InstanceId
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
@@ -219,22 +235,6 @@ public class QueryTableDataRequest extends AbstractModel {
         this.CatalogName = CatalogName;
     }
 
-    /**
-     * Get InstanceId 
-     * @return InstanceId InstanceId
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set InstanceId
-     * @param InstanceId InstanceId
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
     public QueryTableDataRequest() {
     }
 
@@ -248,6 +248,9 @@ public class QueryTableDataRequest extends AbstractModel {
         }
         if (source.Table != null) {
             this.Table = new String(source.Table);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
         if (source.SelectedFields != null) {
             this.SelectedFields = new String[source.SelectedFields.length];
@@ -270,9 +273,6 @@ public class QueryTableDataRequest extends AbstractModel {
         if (source.CatalogName != null) {
             this.CatalogName = new String(source.CatalogName);
         }
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
     }
 
 
@@ -282,13 +282,13 @@ public class QueryTableDataRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Database", this.Database);
         this.setParamSimple(map, prefix + "Table", this.Table);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "SelectedFields.", this.SelectedFields);
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "PassWord", this.PassWord);
         this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

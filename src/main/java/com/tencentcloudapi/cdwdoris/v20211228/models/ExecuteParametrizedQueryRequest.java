@@ -38,6 +38,13 @@ public class ExecuteParametrizedQueryRequest extends AbstractModel {
     private String Sql;
 
     /**
+    * InstanceId
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
     * Query parameter array.
     */
     @SerializedName("QueryParameter")
@@ -80,13 +87,6 @@ public class ExecuteParametrizedQueryRequest extends AbstractModel {
     private String CatalogName;
 
     /**
-    * InstanceId
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
      * Get Database name 
      * @return Database Database name
      */
@@ -116,6 +116,22 @@ public class ExecuteParametrizedQueryRequest extends AbstractModel {
      */
     public void setSql(String Sql) {
         this.Sql = Sql;
+    }
+
+    /**
+     * Get InstanceId 
+     * @return InstanceId InstanceId
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set InstanceId
+     * @param InstanceId InstanceId
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
@@ -214,22 +230,6 @@ public class ExecuteParametrizedQueryRequest extends AbstractModel {
         this.CatalogName = CatalogName;
     }
 
-    /**
-     * Get InstanceId 
-     * @return InstanceId InstanceId
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set InstanceId
-     * @param InstanceId InstanceId
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
     public ExecuteParametrizedQueryRequest() {
     }
 
@@ -243,6 +243,9 @@ public class ExecuteParametrizedQueryRequest extends AbstractModel {
         }
         if (source.Sql != null) {
             this.Sql = new String(source.Sql);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
         if (source.QueryParameter != null) {
             this.QueryParameter = new PropertiesMap[source.QueryParameter.length];
@@ -265,9 +268,6 @@ public class ExecuteParametrizedQueryRequest extends AbstractModel {
         if (source.CatalogName != null) {
             this.CatalogName = new String(source.CatalogName);
         }
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
     }
 
 
@@ -277,13 +277,13 @@ public class ExecuteParametrizedQueryRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Database", this.Database);
         this.setParamSimple(map, prefix + "Sql", this.Sql);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "QueryParameter.", this.QueryParameter);
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "PassWord", this.PassWord);
         this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

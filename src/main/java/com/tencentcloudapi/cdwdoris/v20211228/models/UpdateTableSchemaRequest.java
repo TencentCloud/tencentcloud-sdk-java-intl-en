@@ -31,20 +31,6 @@ public class UpdateTableSchemaRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-    */
-    @SerializedName("UserName")
-    @Expose
-    private String UserName;
-
-    /**
-    * Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-    */
-    @SerializedName("PassWord")
-    @Expose
-    private String PassWord;
-
-    /**
     * Database name
     */
     @SerializedName("DbName")
@@ -66,18 +52,32 @@ public class UpdateTableSchemaRequest extends AbstractModel {
     private Column [] Columns;
 
     /**
-    * Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
-    */
-    @SerializedName("IndexInfos")
-    @Expose
-    private IndexInfo [] IndexInfos;
-
-    /**
     * Bucket information
     */
     @SerializedName("Distribution")
     @Expose
     private Distribution Distribution;
+
+    /**
+    * Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
+    * Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+    */
+    @SerializedName("PassWord")
+    @Expose
+    private String PassWord;
+
+    /**
+    * Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
+    */
+    @SerializedName("IndexInfos")
+    @Expose
+    private IndexInfo [] IndexInfos;
 
     /**
     * Table description
@@ -107,38 +107,6 @@ public class UpdateTableSchemaRequest extends AbstractModel {
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
-    }
-
-    /**
-     * Get Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in. 
-     * @return UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-     */
-    public String getUserName() {
-        return this.UserName;
-    }
-
-    /**
-     * Set Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-     * @param UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-     */
-    public void setUserName(String UserName) {
-        this.UserName = UserName;
-    }
-
-    /**
-     * Get Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in. 
-     * @return PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-     */
-    public String getPassWord() {
-        return this.PassWord;
-    }
-
-    /**
-     * Set Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-     * @param PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-     */
-    public void setPassWord(String PassWord) {
-        this.PassWord = PassWord;
     }
 
     /**
@@ -190,22 +158,6 @@ public class UpdateTableSchemaRequest extends AbstractModel {
     }
 
     /**
-     * Get Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required. 
-     * @return IndexInfos Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
-     */
-    public IndexInfo [] getIndexInfos() {
-        return this.IndexInfos;
-    }
-
-    /**
-     * Set Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
-     * @param IndexInfos Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
-     */
-    public void setIndexInfos(IndexInfo [] IndexInfos) {
-        this.IndexInfos = IndexInfos;
-    }
-
-    /**
      * Get Bucket information 
      * @return Distribution Bucket information
      */
@@ -219,6 +171,54 @@ public class UpdateTableSchemaRequest extends AbstractModel {
      */
     public void setDistribution(Distribution Distribution) {
         this.Distribution = Distribution;
+    }
+
+    /**
+     * Get Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in. 
+     * @return UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+     * @param UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
+    /**
+     * Get Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in. 
+     * @return PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+     */
+    public String getPassWord() {
+        return this.PassWord;
+    }
+
+    /**
+     * Set Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+     * @param PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+     */
+    public void setPassWord(String PassWord) {
+        this.PassWord = PassWord;
+    }
+
+    /**
+     * Get Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required. 
+     * @return IndexInfos Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
+     */
+    public IndexInfo [] getIndexInfos() {
+        return this.IndexInfos;
+    }
+
+    /**
+     * Set Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
+     * @param IndexInfos Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
+     */
+    public void setIndexInfos(IndexInfo [] IndexInfos) {
+        this.IndexInfos = IndexInfos;
     }
 
     /**
@@ -264,12 +264,6 @@ public class UpdateTableSchemaRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.UserName != null) {
-            this.UserName = new String(source.UserName);
-        }
-        if (source.PassWord != null) {
-            this.PassWord = new String(source.PassWord);
-        }
         if (source.DbName != null) {
             this.DbName = new String(source.DbName);
         }
@@ -282,14 +276,20 @@ public class UpdateTableSchemaRequest extends AbstractModel {
                 this.Columns[i] = new Column(source.Columns[i]);
             }
         }
+        if (source.Distribution != null) {
+            this.Distribution = new Distribution(source.Distribution);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.PassWord != null) {
+            this.PassWord = new String(source.PassWord);
+        }
         if (source.IndexInfos != null) {
             this.IndexInfos = new IndexInfo[source.IndexInfos.length];
             for (int i = 0; i < source.IndexInfos.length; i++) {
                 this.IndexInfos[i] = new IndexInfo(source.IndexInfos[i]);
             }
-        }
-        if (source.Distribution != null) {
-            this.Distribution = new Distribution(source.Distribution);
         }
         if (source.TableComment != null) {
             this.TableComment = new String(source.TableComment);
@@ -308,13 +308,13 @@ public class UpdateTableSchemaRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "UserName", this.UserName);
-        this.setParamSimple(map, prefix + "PassWord", this.PassWord);
         this.setParamSimple(map, prefix + "DbName", this.DbName);
         this.setParamSimple(map, prefix + "TableName", this.TableName);
         this.setParamArrayObj(map, prefix + "Columns.", this.Columns);
-        this.setParamArrayObj(map, prefix + "IndexInfos.", this.IndexInfos);
         this.setParamObj(map, prefix + "Distribution.", this.Distribution);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "PassWord", this.PassWord);
+        this.setParamArrayObj(map, prefix + "IndexInfos.", this.IndexInfos);
         this.setParamSimple(map, prefix + "TableComment", this.TableComment);
         this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
 

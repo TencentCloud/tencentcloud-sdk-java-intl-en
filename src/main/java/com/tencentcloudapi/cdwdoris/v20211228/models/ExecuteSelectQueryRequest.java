@@ -38,6 +38,13 @@ public class ExecuteSelectQueryRequest extends AbstractModel {
     private String Query;
 
     /**
+    * InstanceId
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
     * Page number, which is 1 by default.
     */
     @SerializedName("PageNum")
@@ -74,13 +81,6 @@ public class ExecuteSelectQueryRequest extends AbstractModel {
     private String CatalogName;
 
     /**
-    * InstanceId
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
      * Get Database name 
      * @return Database Database name
      */
@@ -110,6 +110,22 @@ public class ExecuteSelectQueryRequest extends AbstractModel {
      */
     public void setQuery(String Query) {
         this.Query = Query;
+    }
+
+    /**
+     * Get InstanceId 
+     * @return InstanceId InstanceId
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set InstanceId
+     * @param InstanceId InstanceId
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
@@ -196,22 +212,6 @@ public class ExecuteSelectQueryRequest extends AbstractModel {
         this.CatalogName = CatalogName;
     }
 
-    /**
-     * Get InstanceId 
-     * @return InstanceId InstanceId
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set InstanceId
-     * @param InstanceId InstanceId
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
     public ExecuteSelectQueryRequest() {
     }
 
@@ -225,6 +225,9 @@ public class ExecuteSelectQueryRequest extends AbstractModel {
         }
         if (source.Query != null) {
             this.Query = new String(source.Query);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
         if (source.PageNum != null) {
             this.PageNum = new Long(source.PageNum);
@@ -241,9 +244,6 @@ public class ExecuteSelectQueryRequest extends AbstractModel {
         if (source.CatalogName != null) {
             this.CatalogName = new String(source.CatalogName);
         }
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
     }
 
 
@@ -253,12 +253,12 @@ public class ExecuteSelectQueryRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Database", this.Database);
         this.setParamSimple(map, prefix + "Query", this.Query);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "PassWord", this.PassWord);
         this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

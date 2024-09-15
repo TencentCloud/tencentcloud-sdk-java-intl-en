@@ -108,6 +108,20 @@ public class DescribeQueryAnalyseRequest extends AbstractModel {
     private Long QueryTime;
 
     /**
+    * Page number, defaults to 1.
+    */
+    @SerializedName("PageNum")
+    @Expose
+    private Long PageNum;
+
+    /**
+    * Number of records per page, defaults to 10.
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -299,6 +313,38 @@ public class DescribeQueryAnalyseRequest extends AbstractModel {
         this.QueryTime = QueryTime;
     }
 
+    /**
+     * Get Page number, defaults to 1. 
+     * @return PageNum Page number, defaults to 1.
+     */
+    public Long getPageNum() {
+        return this.PageNum;
+    }
+
+    /**
+     * Set Page number, defaults to 1.
+     * @param PageNum Page number, defaults to 1.
+     */
+    public void setPageNum(Long PageNum) {
+        this.PageNum = PageNum;
+    }
+
+    /**
+     * Get Number of records per page, defaults to 10. 
+     * @return PageSize Number of records per page, defaults to 10.
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set Number of records per page, defaults to 10.
+     * @param PageSize Number of records per page, defaults to 10.
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
     public DescribeQueryAnalyseRequest() {
     }
 
@@ -343,6 +389,12 @@ public class DescribeQueryAnalyseRequest extends AbstractModel {
         if (source.QueryTime != null) {
             this.QueryTime = new Long(source.QueryTime);
         }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
     }
 
 
@@ -362,6 +414,8 @@ public class DescribeQueryAnalyseRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SortField", this.SortField);
         this.setParamSimple(map, prefix + "SortOrder", this.SortOrder);
         this.setParamSimple(map, prefix + "QueryTime", this.QueryTime);
+        this.setParamSimple(map, prefix + "PageNum", this.PageNum);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
 
     }
 }

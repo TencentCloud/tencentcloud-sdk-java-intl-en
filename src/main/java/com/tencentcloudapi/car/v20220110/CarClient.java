@@ -50,6 +50,17 @@ public class CarClient extends AbstractClient{
     }
 
     /**
+     *This API is used to bind a concurrency pack to a project.
+     * @param req BindConcurrentPackagesToProjectRequest
+     * @return BindConcurrentPackagesToProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindConcurrentPackagesToProjectResponse BindConcurrentPackagesToProject(BindConcurrentPackagesToProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindConcurrentPackagesToProject", BindConcurrentPackagesToProjectResponse.class);
+    }
+
+    /**
      *This API is used to create an application.
      * @param req CreateApplicationRequest
      * @return CreateApplicationResponse
@@ -58,6 +69,17 @@ public class CarClient extends AbstractClient{
     public CreateApplicationResponse CreateApplication(CreateApplicationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateApplication", CreateApplicationResponse.class);
+    }
+
+    /**
+     *This API is used to create a cloud application project.
+     * @param req CreateApplicationProjectRequest
+     * @return CreateApplicationProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApplicationProjectResponse CreateApplicationProject(CreateApplicationProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateApplicationProject", CreateApplicationProjectResponse.class);
     }
 
     /**
@@ -105,6 +127,17 @@ public class CarClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete cloud application projects in batches.
+     * @param req DeleteApplicationProjectsRequest
+     * @return DeleteApplicationProjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApplicationProjectsResponse DeleteApplicationProjects(DeleteApplicationProjectsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteApplicationProjects", DeleteApplicationProjectsResponse.class);
+    }
+
+    /**
      *This API is used to delete a cloud application version.
      * @param req DeleteApplicationVersionRequest
      * @return DeleteApplicationVersionResponse
@@ -149,6 +182,28 @@ public class CarClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the advanced configuration information of a cloud application project.
+     * @param req DescribeApplicationProjectAdvancedConfigRequest
+     * @return DescribeApplicationProjectAdvancedConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationProjectAdvancedConfigResponse DescribeApplicationProjectAdvancedConfig(DescribeApplicationProjectAdvancedConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApplicationProjectAdvancedConfig", DescribeApplicationProjectAdvancedConfigResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the cloud application project list.
+     * @param req DescribeApplicationProjectsRequest
+     * @return DescribeApplicationProjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationProjectsResponse DescribeApplicationProjects(DescribeApplicationProjectsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApplicationProjects", DescribeApplicationProjectsResponse.class);
+    }
+
+    /**
      *This API is used to query the running status of a cloud application and update status information.
      * @param req DescribeApplicationStatusRequest
      * @return DescribeApplicationStatusResponse
@@ -179,6 +234,28 @@ public class CarClient extends AbstractClient{
     public DescribeConcurrentCountResponse DescribeConcurrentCount(DescribeConcurrentCountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeConcurrentCount", DescribeConcurrentCountResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the cloud application concurrency pack list.
+     * @param req DescribeConcurrentPackagesRequest
+     * @return DescribeConcurrentPackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConcurrentPackagesResponse DescribeConcurrentPackages(DescribeConcurrentPackagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConcurrentPackages", DescribeConcurrentPackagesResponse.class);
+    }
+
+    /**
+     *This API is used to query the concurrency overview.
+     * @param req DescribeConcurrentSummaryRequest
+     * @return DescribeConcurrentSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConcurrentSummaryResponse DescribeConcurrentSummary(DescribeConcurrentSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConcurrentSummary", DescribeConcurrentSummaryResponse.class);
     }
 
     /**
@@ -215,6 +292,17 @@ public class CarClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify a cloud application project.
+     * @param req ModifyApplicationProjectRequest
+     * @return ModifyApplicationProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApplicationProjectResponse ModifyApplicationProject(ModifyApplicationProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApplicationProject", ModifyApplicationProjectResponse.class);
+    }
+
+    /**
      *This API is used to modify the version information of a cloud application.
      * @param req ModifyApplicationVersionRequest
      * @return ModifyApplicationVersionResponse
@@ -223,6 +311,17 @@ public class CarClient extends AbstractClient{
     public ModifyApplicationVersionResponse ModifyApplicationVersion(ModifyApplicationVersionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyApplicationVersion", ModifyApplicationVersionResponse.class);
+    }
+
+    /**
+     *This API is used to modify a cloud application concurrency pack.
+     * @param req ModifyConcurrentPackageRequest
+     * @return ModifyConcurrentPackageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConcurrentPackageResponse ModifyConcurrentPackage(ModifyConcurrentPackageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyConcurrentPackage", ModifyConcurrentPackageResponse.class);
     }
 
     /**
@@ -237,6 +336,17 @@ public class CarClient extends AbstractClient{
     }
 
     /**
+     *This API is used to reset a concurrency pack and disconnect all user connections.
+     * @param req ResetConcurrentPackagesRequest
+     * @return ResetConcurrentPackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetConcurrentPackagesResponse ResetConcurrentPackages(ResetConcurrentPackagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetConcurrentPackages", ResetConcurrentPackagesResponse.class);
+    }
+
+    /**
      *This API is used to launch an application version.
      * @param req SetApplicationVersionOnlineRequest
      * @return SetApplicationVersionOnlineResponse
@@ -248,7 +358,7 @@ public class CarClient extends AbstractClient{
     }
 
     /**
-     *This API is used to start cloud-based streaming. The codec for the cloud-based streaming is automatically selected based on the client's (SDK) capabilities, with a default order of H.265, H.264, VP8, and VP9.
+     *This API is used to start pushing your cloud application's video streams in real time to CSS. The codec for the streaming is automatically selected based on the client's (SDK) capabilities, with a default order of H.265, H.264, VP8, and VP9.
      * @param req StartPublishStreamRequest
      * @return StartPublishStreamResponse
      * @throws TencentCloudSDKException
@@ -259,7 +369,7 @@ public class CarClient extends AbstractClient{
     }
 
     /**
-     *This API is used to start cloud-based streaming to the specified URL. The codec for the cloud-based streaming is automatically selected based on the client's (SDK) capabilities, with a default order of H.265, H.264, VP8, and VP9. This streaming method will be billed separately. For details about the billing method, see [Charging for Streaming to Specified URL](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6).
+     *This API is used to start pushing your cloud application's video streams to a specified URL. The codec for the streaming is automatically selected based on the client's (SDK) capabilities, with a default order of H.265, H.264, VP8, and VP9. This streaming method will be billed separately. For details about the billing method, see [Charging for Streaming to Specified URL](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6).
      * @param req StartPublishStreamWithURLRequest
      * @return StartPublishStreamWithURLResponse
      * @throws TencentCloudSDKException
@@ -270,7 +380,7 @@ public class CarClient extends AbstractClient{
     }
 
     /**
-     *This API is used to stop cloud-based streaming.
+     *This API is used to stop pushing streams.
      * @param req StopPublishStreamRequest
      * @return StopPublishStreamResponse
      * @throws TencentCloudSDKException
@@ -278,6 +388,17 @@ public class CarClient extends AbstractClient{
     public StopPublishStreamResponse StopPublishStream(StopPublishStreamRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopPublishStream", StopPublishStreamResponse.class);
+    }
+
+    /**
+     *This API is used to unbind a concurrency pack from a project.
+     * @param req UnbindConcurrentPackagesFromProjectRequest
+     * @return UnbindConcurrentPackagesFromProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindConcurrentPackagesFromProjectResponse UnbindConcurrentPackagesFromProject(UnbindConcurrentPackagesFromProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnbindConcurrentPackagesFromProject", UnbindConcurrentPackagesFromProjectResponse.class);
     }
 
 }

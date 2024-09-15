@@ -31,13 +31,6 @@ public class ModifyDatabaseTableAccessRequest extends AbstractModel {
     private String Database;
 
     /**
-    * Table name. If it is null, it indicates that the entire database is authorized.
-    */
-    @SerializedName("Table")
-    @Expose
-    private String Table;
-
-    /**
     * Permission list
     */
     @SerializedName("Privileges")
@@ -45,18 +38,32 @@ public class ModifyDatabaseTableAccessRequest extends AbstractModel {
     private String [] Privileges;
 
     /**
-    * Role name, if authorized to the role
-    */
-    @SerializedName("Role")
-    @Expose
-    private String Role;
-
-    /**
     * Operation type: GRANT or REVOKE
     */
     @SerializedName("GrantOrRevoke")
     @Expose
     private String GrantOrRevoke;
+
+    /**
+    * InstanceId
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * Table name. If it is null, it indicates that the entire database is authorized.
+    */
+    @SerializedName("Table")
+    @Expose
+    private String Table;
+
+    /**
+    * Role name, if authorized to the role
+    */
+    @SerializedName("Role")
+    @Expose
+    private String Role;
 
     /**
     * Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
@@ -78,13 +85,6 @@ public class ModifyDatabaseTableAccessRequest extends AbstractModel {
     @SerializedName("CatalogName")
     @Expose
     private String CatalogName;
-
-    /**
-    * InstanceId
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
 
     /**
     * Machine Group, defaults to % if not specified.
@@ -110,22 +110,6 @@ public class ModifyDatabaseTableAccessRequest extends AbstractModel {
     }
 
     /**
-     * Get Table name. If it is null, it indicates that the entire database is authorized. 
-     * @return Table Table name. If it is null, it indicates that the entire database is authorized.
-     */
-    public String getTable() {
-        return this.Table;
-    }
-
-    /**
-     * Set Table name. If it is null, it indicates that the entire database is authorized.
-     * @param Table Table name. If it is null, it indicates that the entire database is authorized.
-     */
-    public void setTable(String Table) {
-        this.Table = Table;
-    }
-
-    /**
      * Get Permission list 
      * @return Privileges Permission list
      */
@@ -142,22 +126,6 @@ public class ModifyDatabaseTableAccessRequest extends AbstractModel {
     }
 
     /**
-     * Get Role name, if authorized to the role 
-     * @return Role Role name, if authorized to the role
-     */
-    public String getRole() {
-        return this.Role;
-    }
-
-    /**
-     * Set Role name, if authorized to the role
-     * @param Role Role name, if authorized to the role
-     */
-    public void setRole(String Role) {
-        this.Role = Role;
-    }
-
-    /**
      * Get Operation type: GRANT or REVOKE 
      * @return GrantOrRevoke Operation type: GRANT or REVOKE
      */
@@ -171,6 +139,54 @@ public class ModifyDatabaseTableAccessRequest extends AbstractModel {
      */
     public void setGrantOrRevoke(String GrantOrRevoke) {
         this.GrantOrRevoke = GrantOrRevoke;
+    }
+
+    /**
+     * Get InstanceId 
+     * @return InstanceId InstanceId
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set InstanceId
+     * @param InstanceId InstanceId
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Table name. If it is null, it indicates that the entire database is authorized. 
+     * @return Table Table name. If it is null, it indicates that the entire database is authorized.
+     */
+    public String getTable() {
+        return this.Table;
+    }
+
+    /**
+     * Set Table name. If it is null, it indicates that the entire database is authorized.
+     * @param Table Table name. If it is null, it indicates that the entire database is authorized.
+     */
+    public void setTable(String Table) {
+        this.Table = Table;
+    }
+
+    /**
+     * Get Role name, if authorized to the role 
+     * @return Role Role name, if authorized to the role
+     */
+    public String getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set Role name, if authorized to the role
+     * @param Role Role name, if authorized to the role
+     */
+    public void setRole(String Role) {
+        this.Role = Role;
     }
 
     /**
@@ -222,22 +238,6 @@ public class ModifyDatabaseTableAccessRequest extends AbstractModel {
     }
 
     /**
-     * Get InstanceId 
-     * @return InstanceId InstanceId
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set InstanceId
-     * @param InstanceId InstanceId
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
-    /**
      * Get Machine Group, defaults to % if not specified. 
      * @return WhiteHost Machine Group, defaults to % if not specified.
      */
@@ -264,20 +264,23 @@ public class ModifyDatabaseTableAccessRequest extends AbstractModel {
         if (source.Database != null) {
             this.Database = new String(source.Database);
         }
-        if (source.Table != null) {
-            this.Table = new String(source.Table);
-        }
         if (source.Privileges != null) {
             this.Privileges = new String[source.Privileges.length];
             for (int i = 0; i < source.Privileges.length; i++) {
                 this.Privileges[i] = new String(source.Privileges[i]);
             }
         }
-        if (source.Role != null) {
-            this.Role = new String(source.Role);
-        }
         if (source.GrantOrRevoke != null) {
             this.GrantOrRevoke = new String(source.GrantOrRevoke);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Table != null) {
+            this.Table = new String(source.Table);
+        }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
         }
         if (source.UserName != null) {
             this.UserName = new String(source.UserName);
@@ -287,9 +290,6 @@ public class ModifyDatabaseTableAccessRequest extends AbstractModel {
         }
         if (source.CatalogName != null) {
             this.CatalogName = new String(source.CatalogName);
-        }
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
         }
         if (source.WhiteHost != null) {
             this.WhiteHost = new String(source.WhiteHost);
@@ -302,14 +302,14 @@ public class ModifyDatabaseTableAccessRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Database", this.Database);
-        this.setParamSimple(map, prefix + "Table", this.Table);
         this.setParamArraySimple(map, prefix + "Privileges.", this.Privileges);
-        this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "GrantOrRevoke", this.GrantOrRevoke);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Table", this.Table);
+        this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "PassWord", this.PassWord);
         this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "WhiteHost", this.WhiteHost);
 
     }

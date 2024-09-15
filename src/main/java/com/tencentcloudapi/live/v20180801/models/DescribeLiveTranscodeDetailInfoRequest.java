@@ -40,7 +40,7 @@ public class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel {
     /**
     * Query date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a day in the past three months, with yesterday as the latest date allowed.
+Note: you can query the statistics for a day in the past one month, with yesterday as the latest date allowed.
     */
     @SerializedName("DayTime")
     @Expose
@@ -65,7 +65,7 @@ Value range: [10,1000].
     /**
     * Start date (UTC+8)
 Format: yyyymmdd
-Note: details for the last three months can be queried.
+Note: details for the last one month can be queried.
     */
     @SerializedName("StartDayTime")
     @Expose
@@ -74,7 +74,7 @@ Note: details for the last three months can be queried.
     /**
     * End date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a period in the past three months, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+Note: you can query the statistics for a period in the past one month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
     */
     @SerializedName("EndDayTime")
     @Expose
@@ -115,10 +115,10 @@ Note: you can query the statistics for a period in the past three months, with y
     /**
      * Get Query date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a day in the past three months, with yesterday as the latest date allowed. 
+Note: you can query the statistics for a day in the past one month, with yesterday as the latest date allowed. 
      * @return DayTime Query date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a day in the past three months, with yesterday as the latest date allowed.
+Note: you can query the statistics for a day in the past one month, with yesterday as the latest date allowed.
      */
     public String getDayTime() {
         return this.DayTime;
@@ -127,10 +127,10 @@ Note: you can query the statistics for a day in the past three months, with yest
     /**
      * Set Query date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a day in the past three months, with yesterday as the latest date allowed.
+Note: you can query the statistics for a day in the past one month, with yesterday as the latest date allowed.
      * @param DayTime Query date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a day in the past three months, with yesterday as the latest date allowed.
+Note: you can query the statistics for a day in the past one month, with yesterday as the latest date allowed.
      */
     public void setDayTime(String DayTime) {
         this.DayTime = DayTime;
@@ -179,10 +179,10 @@ Value range: [10,1000].
     /**
      * Get Start date (UTC+8)
 Format: yyyymmdd
-Note: details for the last three months can be queried. 
+Note: details for the last one month can be queried. 
      * @return StartDayTime Start date (UTC+8)
 Format: yyyymmdd
-Note: details for the last three months can be queried.
+Note: details for the last one month can be queried.
      */
     public String getStartDayTime() {
         return this.StartDayTime;
@@ -191,10 +191,10 @@ Note: details for the last three months can be queried.
     /**
      * Set Start date (UTC+8)
 Format: yyyymmdd
-Note: details for the last three months can be queried.
+Note: details for the last one month can be queried.
      * @param StartDayTime Start date (UTC+8)
 Format: yyyymmdd
-Note: details for the last three months can be queried.
+Note: details for the last one month can be queried.
      */
     public void setStartDayTime(String StartDayTime) {
         this.StartDayTime = StartDayTime;
@@ -203,10 +203,10 @@ Note: details for the last three months can be queried.
     /**
      * Get End date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a period in the past three months, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied. 
+Note: you can query the statistics for a period in the past one month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied. 
      * @return EndDayTime End date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a period in the past three months, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+Note: you can query the statistics for a period in the past one month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
      */
     public String getEndDayTime() {
         return this.EndDayTime;
@@ -215,10 +215,10 @@ Note: you can query the statistics for a period in the past three months, with y
     /**
      * Set End date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a period in the past three months, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+Note: you can query the statistics for a period in the past one month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
      * @param EndDayTime End date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a period in the past three months, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+Note: you can query the statistics for a period in the past one month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
      */
     public void setEndDayTime(String EndDayTime) {
         this.EndDayTime = EndDayTime;

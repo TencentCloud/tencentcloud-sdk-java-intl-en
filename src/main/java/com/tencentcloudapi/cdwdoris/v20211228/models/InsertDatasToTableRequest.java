@@ -38,20 +38,6 @@ public class InsertDatasToTableRequest extends AbstractModel {
     private String Table;
 
     /**
-    * Whether to use the strict mode
-    */
-    @SerializedName("Strict")
-    @Expose
-    private Boolean Strict;
-
-    /**
-    * Maximum filtration ratio, ranging from 0 to 1.0
-    */
-    @SerializedName("MaxFilterRatio")
-    @Expose
-    private Float MaxFilterRatio;
-
-    /**
     * Array of column names
     */
     @SerializedName("Columns")
@@ -64,6 +50,35 @@ public class InsertDatasToTableRequest extends AbstractModel {
     @SerializedName("Rows")
     @Expose
     private Rows [] Rows;
+
+    /**
+    * Array of column types
+
+    */
+    @SerializedName("Types")
+    @Expose
+    private String [] Types;
+
+    /**
+    * InstanceId
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * Whether to use the strict mode
+    */
+    @SerializedName("Strict")
+    @Expose
+    private Boolean Strict;
+
+    /**
+    * Maximum filtration ratio, ranging from 0 to 1.0
+    */
+    @SerializedName("MaxFilterRatio")
+    @Expose
+    private Float MaxFilterRatio;
 
     /**
     * Tags for inserting data
@@ -87,33 +102,11 @@ public class InsertDatasToTableRequest extends AbstractModel {
     private String PassWord;
 
     /**
-    * Column type, this field has been deprecated, please use Types
-    */
-    @SerializedName("ColumnTypes")
-    @Expose
-    private String ColumnTypes;
-
-    /**
-    * Array of column types
-
-    */
-    @SerializedName("Types")
-    @Expose
-    private String [] Types;
-
-    /**
     * Catalog name, defaults to 'internal' if not specified.
     */
     @SerializedName("CatalogName")
     @Expose
     private String CatalogName;
-
-    /**
-    * InstanceId
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
 
     /**
      * Get Database name 
@@ -148,38 +141,6 @@ public class InsertDatasToTableRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to use the strict mode 
-     * @return Strict Whether to use the strict mode
-     */
-    public Boolean getStrict() {
-        return this.Strict;
-    }
-
-    /**
-     * Set Whether to use the strict mode
-     * @param Strict Whether to use the strict mode
-     */
-    public void setStrict(Boolean Strict) {
-        this.Strict = Strict;
-    }
-
-    /**
-     * Get Maximum filtration ratio, ranging from 0 to 1.0 
-     * @return MaxFilterRatio Maximum filtration ratio, ranging from 0 to 1.0
-     */
-    public Float getMaxFilterRatio() {
-        return this.MaxFilterRatio;
-    }
-
-    /**
-     * Set Maximum filtration ratio, ranging from 0 to 1.0
-     * @param MaxFilterRatio Maximum filtration ratio, ranging from 0 to 1.0
-     */
-    public void setMaxFilterRatio(Float MaxFilterRatio) {
-        this.MaxFilterRatio = MaxFilterRatio;
-    }
-
-    /**
      * Get Array of column names 
      * @return Columns Array of column names
      */
@@ -209,6 +170,74 @@ public class InsertDatasToTableRequest extends AbstractModel {
      */
     public void setRows(Rows [] Rows) {
         this.Rows = Rows;
+    }
+
+    /**
+     * Get Array of column types
+ 
+     * @return Types Array of column types
+
+     */
+    public String [] getTypes() {
+        return this.Types;
+    }
+
+    /**
+     * Set Array of column types
+
+     * @param Types Array of column types
+
+     */
+    public void setTypes(String [] Types) {
+        this.Types = Types;
+    }
+
+    /**
+     * Get InstanceId 
+     * @return InstanceId InstanceId
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set InstanceId
+     * @param InstanceId InstanceId
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Whether to use the strict mode 
+     * @return Strict Whether to use the strict mode
+     */
+    public Boolean getStrict() {
+        return this.Strict;
+    }
+
+    /**
+     * Set Whether to use the strict mode
+     * @param Strict Whether to use the strict mode
+     */
+    public void setStrict(Boolean Strict) {
+        this.Strict = Strict;
+    }
+
+    /**
+     * Get Maximum filtration ratio, ranging from 0 to 1.0 
+     * @return MaxFilterRatio Maximum filtration ratio, ranging from 0 to 1.0
+     */
+    public Float getMaxFilterRatio() {
+        return this.MaxFilterRatio;
+    }
+
+    /**
+     * Set Maximum filtration ratio, ranging from 0 to 1.0
+     * @param MaxFilterRatio Maximum filtration ratio, ranging from 0 to 1.0
+     */
+    public void setMaxFilterRatio(Float MaxFilterRatio) {
+        this.MaxFilterRatio = MaxFilterRatio;
     }
 
     /**
@@ -260,46 +289,6 @@ public class InsertDatasToTableRequest extends AbstractModel {
     }
 
     /**
-     * Get Column type, this field has been deprecated, please use Types 
-     * @return ColumnTypes Column type, this field has been deprecated, please use Types
-     * @deprecated
-     */
-    @Deprecated
-    public String getColumnTypes() {
-        return this.ColumnTypes;
-    }
-
-    /**
-     * Set Column type, this field has been deprecated, please use Types
-     * @param ColumnTypes Column type, this field has been deprecated, please use Types
-     * @deprecated
-     */
-    @Deprecated
-    public void setColumnTypes(String ColumnTypes) {
-        this.ColumnTypes = ColumnTypes;
-    }
-
-    /**
-     * Get Array of column types
- 
-     * @return Types Array of column types
-
-     */
-    public String [] getTypes() {
-        return this.Types;
-    }
-
-    /**
-     * Set Array of column types
-
-     * @param Types Array of column types
-
-     */
-    public void setTypes(String [] Types) {
-        this.Types = Types;
-    }
-
-    /**
      * Get Catalog name, defaults to 'internal' if not specified. 
      * @return CatalogName Catalog name, defaults to 'internal' if not specified.
      */
@@ -313,22 +302,6 @@ public class InsertDatasToTableRequest extends AbstractModel {
      */
     public void setCatalogName(String CatalogName) {
         this.CatalogName = CatalogName;
-    }
-
-    /**
-     * Get InstanceId 
-     * @return InstanceId InstanceId
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set InstanceId
-     * @param InstanceId InstanceId
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
     }
 
     public InsertDatasToTableRequest() {
@@ -345,12 +318,6 @@ public class InsertDatasToTableRequest extends AbstractModel {
         if (source.Table != null) {
             this.Table = new String(source.Table);
         }
-        if (source.Strict != null) {
-            this.Strict = new Boolean(source.Strict);
-        }
-        if (source.MaxFilterRatio != null) {
-            this.MaxFilterRatio = new Float(source.MaxFilterRatio);
-        }
         if (source.Columns != null) {
             this.Columns = new String[source.Columns.length];
             for (int i = 0; i < source.Columns.length; i++) {
@@ -363,6 +330,21 @@ public class InsertDatasToTableRequest extends AbstractModel {
                 this.Rows[i] = new Rows(source.Rows[i]);
             }
         }
+        if (source.Types != null) {
+            this.Types = new String[source.Types.length];
+            for (int i = 0; i < source.Types.length; i++) {
+                this.Types[i] = new String(source.Types[i]);
+            }
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Strict != null) {
+            this.Strict = new Boolean(source.Strict);
+        }
+        if (source.MaxFilterRatio != null) {
+            this.MaxFilterRatio = new Float(source.MaxFilterRatio);
+        }
         if (source.Label != null) {
             this.Label = new String(source.Label);
         }
@@ -372,20 +354,8 @@ public class InsertDatasToTableRequest extends AbstractModel {
         if (source.PassWord != null) {
             this.PassWord = new String(source.PassWord);
         }
-        if (source.ColumnTypes != null) {
-            this.ColumnTypes = new String(source.ColumnTypes);
-        }
-        if (source.Types != null) {
-            this.Types = new String[source.Types.length];
-            for (int i = 0; i < source.Types.length; i++) {
-                this.Types[i] = new String(source.Types[i]);
-            }
-        }
         if (source.CatalogName != null) {
             this.CatalogName = new String(source.CatalogName);
-        }
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -396,17 +366,16 @@ public class InsertDatasToTableRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Database", this.Database);
         this.setParamSimple(map, prefix + "Table", this.Table);
-        this.setParamSimple(map, prefix + "Strict", this.Strict);
-        this.setParamSimple(map, prefix + "MaxFilterRatio", this.MaxFilterRatio);
         this.setParamArraySimple(map, prefix + "Columns.", this.Columns);
         this.setParamArrayObj(map, prefix + "Rows.", this.Rows);
+        this.setParamArraySimple(map, prefix + "Types.", this.Types);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Strict", this.Strict);
+        this.setParamSimple(map, prefix + "MaxFilterRatio", this.MaxFilterRatio);
         this.setParamSimple(map, prefix + "Label", this.Label);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "PassWord", this.PassWord);
-        this.setParamSimple(map, prefix + "ColumnTypes", this.ColumnTypes);
-        this.setParamArraySimple(map, prefix + "Types.", this.Types);
         this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

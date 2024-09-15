@@ -38,6 +38,13 @@ public class UpdateDatabaseRequest extends AbstractModel {
     private String Operation;
 
     /**
+    * InstanceId
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
     * Quota value, which is used to set the quota of data volume or replicas.
     */
     @SerializedName("Quota")
@@ -73,11 +80,11 @@ public class UpdateDatabaseRequest extends AbstractModel {
     private String PassWord;
 
     /**
-    * InstanceId
+    * The name of the catalog, if left unspecified, defaults to "internal".
     */
-    @SerializedName("InstanceId")
+    @SerializedName("CatalogName")
     @Expose
-    private String InstanceId;
+    private String CatalogName;
 
     /**
      * Get The database name to be modified 
@@ -109,6 +116,22 @@ public class UpdateDatabaseRequest extends AbstractModel {
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
+    }
+
+    /**
+     * Get InstanceId 
+     * @return InstanceId InstanceId
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set InstanceId
+     * @param InstanceId InstanceId
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
@@ -192,19 +215,19 @@ public class UpdateDatabaseRequest extends AbstractModel {
     }
 
     /**
-     * Get InstanceId 
-     * @return InstanceId InstanceId
+     * Get The name of the catalog, if left unspecified, defaults to "internal". 
+     * @return CatalogName The name of the catalog, if left unspecified, defaults to "internal".
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String getCatalogName() {
+        return this.CatalogName;
     }
 
     /**
-     * Set InstanceId
-     * @param InstanceId InstanceId
+     * Set The name of the catalog, if left unspecified, defaults to "internal".
+     * @param CatalogName The name of the catalog, if left unspecified, defaults to "internal".
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setCatalogName(String CatalogName) {
+        this.CatalogName = CatalogName;
     }
 
     public UpdateDatabaseRequest() {
@@ -220,6 +243,9 @@ public class UpdateDatabaseRequest extends AbstractModel {
         }
         if (source.Operation != null) {
             this.Operation = new String(source.Operation);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
         if (source.Quota != null) {
             this.Quota = new String(source.Quota);
@@ -239,8 +265,8 @@ public class UpdateDatabaseRequest extends AbstractModel {
         if (source.PassWord != null) {
             this.PassWord = new String(source.PassWord);
         }
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
+        if (source.CatalogName != null) {
+            this.CatalogName = new String(source.CatalogName);
         }
     }
 
@@ -251,12 +277,13 @@ public class UpdateDatabaseRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DbName", this.DbName);
         this.setParamSimple(map, prefix + "Operation", this.Operation);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Quota", this.Quota);
         this.setParamSimple(map, prefix + "NewDbName", this.NewDbName);
         this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "PassWord", this.PassWord);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
 
     }
 }
