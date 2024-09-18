@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AudioNormalizationSettings extends AbstractModel {
 
     /**
-    * 
+    * Whether to enable special configuration for audio transcoding: 1: Enable 0: Disable, the default value is 0.
     */
     @SerializedName("AudioNormalizationEnabled")
     @Expose
     private Long AudioNormalizationEnabled;
 
     /**
-    * 
+    * Loudness value, floating-point number, rounded to one decimal place, range -5 to -70.
     */
     @SerializedName("TargetLUFS")
     @Expose
     private Float TargetLUFS;
 
     /**
-     * Get  
-     * @return AudioNormalizationEnabled 
+     * Get Whether to enable special configuration for audio transcoding: 1: Enable 0: Disable, the default value is 0. 
+     * @return AudioNormalizationEnabled Whether to enable special configuration for audio transcoding: 1: Enable 0: Disable, the default value is 0.
      */
     public Long getAudioNormalizationEnabled() {
         return this.AudioNormalizationEnabled;
     }
 
     /**
-     * Set 
-     * @param AudioNormalizationEnabled 
+     * Set Whether to enable special configuration for audio transcoding: 1: Enable 0: Disable, the default value is 0.
+     * @param AudioNormalizationEnabled Whether to enable special configuration for audio transcoding: 1: Enable 0: Disable, the default value is 0.
      */
     public void setAudioNormalizationEnabled(Long AudioNormalizationEnabled) {
         this.AudioNormalizationEnabled = AudioNormalizationEnabled;
     }
 
     /**
-     * Get  
-     * @return TargetLUFS 
+     * Get Loudness value, floating-point number, rounded to one decimal place, range -5 to -70. 
+     * @return TargetLUFS Loudness value, floating-point number, rounded to one decimal place, range -5 to -70.
      */
     public Float getTargetLUFS() {
         return this.TargetLUFS;
     }
 
     /**
-     * Set 
-     * @param TargetLUFS 
+     * Set Loudness value, floating-point number, rounded to one decimal place, range -5 to -70.
+     * @param TargetLUFS Loudness value, floating-point number, rounded to one decimal place, range -5 to -70.
      */
     public void setTargetLUFS(Float TargetLUFS) {
         this.TargetLUFS = TargetLUFS;

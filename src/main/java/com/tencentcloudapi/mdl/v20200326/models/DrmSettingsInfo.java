@@ -65,7 +65,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     private SDMCSettingsInfo SDMCSettings;
 
     /**
-    * The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
+    * Optional Types:
+`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
+
+HLS-TS supports `FAIRPLAY` and `AES128`.
+
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
+
+DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
     */
     @SerializedName("DrmType")
     @Expose
@@ -176,16 +183,44 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`.  
-     * @return DrmType The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
+     * Get Optional Types:
+`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
+
+HLS-TS supports `FAIRPLAY` and `AES128`.
+
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
+
+DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE"). 
+     * @return DrmType Optional Types:
+`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
+
+HLS-TS supports `FAIRPLAY` and `AES128`.
+
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
+
+DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
      */
     public String getDrmType() {
         return this.DrmType;
     }
 
     /**
-     * Set The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
-     * @param DrmType The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
+     * Set Optional Types:
+`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
+
+HLS-TS supports `FAIRPLAY` and `AES128`.
+
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
+
+DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
+     * @param DrmType Optional Types:
+`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
+
+HLS-TS supports `FAIRPLAY` and `AES128`.
+
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
+
+DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
      */
     public void setDrmType(String DrmType) {
         this.DrmType = DrmType;

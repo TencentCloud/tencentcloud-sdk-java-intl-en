@@ -74,8 +74,7 @@ Note: This field may return `null`, indicating that no valid value was found.
     private Long DelayTime;
 
     /**
-    * The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
-Note: This field may return `null`, indicating that no valid value was found.
+    * The domain name of the SRT_PUSH push address. No need to fill in the input parameter.
     */
     @SerializedName("InputDomain")
     @Expose
@@ -96,6 +95,13 @@ Note: This field may return `null`, indicating that no valid value was found.
     @SerializedName("Password")
     @Expose
     private String Password;
+
+    /**
+    * This parameter is valid when the input source is HLS_PULL and MP4_PULL. It indicates the type of file the source is. The optional values are: LIVE, VOD. Please note that if you do not enter this parameter, the system will take the default input value VOD.
+    */
+    @SerializedName("ContentType")
+    @Expose
+    private String ContentType;
 
     /**
      * Get Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
@@ -226,20 +232,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return InputDomain The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get The domain name of the SRT_PUSH push address. No need to fill in the input parameter. 
+     * @return InputDomain The domain name of the SRT_PUSH push address. No need to fill in the input parameter.
      */
     public String getInputDomain() {
         return this.InputDomain;
     }
 
     /**
-     * Set The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param InputDomain The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set The domain name of the SRT_PUSH push address. No need to fill in the input parameter.
+     * @param InputDomain The domain name of the SRT_PUSH push address. No need to fill in the input parameter.
      */
     public void setInputDomain(String InputDomain) {
         this.InputDomain = InputDomain;
@@ -285,6 +287,22 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.Password = Password;
     }
 
+    /**
+     * Get This parameter is valid when the input source is HLS_PULL and MP4_PULL. It indicates the type of file the source is. The optional values are: LIVE, VOD. Please note that if you do not enter this parameter, the system will take the default input value VOD. 
+     * @return ContentType This parameter is valid when the input source is HLS_PULL and MP4_PULL. It indicates the type of file the source is. The optional values are: LIVE, VOD. Please note that if you do not enter this parameter, the system will take the default input value VOD.
+     */
+    public String getContentType() {
+        return this.ContentType;
+    }
+
+    /**
+     * Set This parameter is valid when the input source is HLS_PULL and MP4_PULL. It indicates the type of file the source is. The optional values are: LIVE, VOD. Please note that if you do not enter this parameter, the system will take the default input value VOD.
+     * @param ContentType This parameter is valid when the input source is HLS_PULL and MP4_PULL. It indicates the type of file the source is. The optional values are: LIVE, VOD. Please note that if you do not enter this parameter, the system will take the default input value VOD.
+     */
+    public void setContentType(String ContentType) {
+        this.ContentType = ContentType;
+    }
+
     public InputSettingInfo() {
     }
 
@@ -320,6 +338,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.ContentType != null) {
+            this.ContentType = new String(source.ContentType);
+        }
     }
 
 
@@ -336,6 +357,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "InputDomain", this.InputDomain);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "ContentType", this.ContentType);
 
     }
 }

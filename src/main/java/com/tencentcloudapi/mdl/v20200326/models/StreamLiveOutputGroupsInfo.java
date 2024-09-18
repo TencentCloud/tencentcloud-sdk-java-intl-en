@@ -32,7 +32,7 @@ public class StreamLiveOutputGroupsInfo extends AbstractModel {
 
     /**
     * Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
     */
     @SerializedName("Type")
     @Expose
@@ -111,9 +111,9 @@ Note: This field may return `null`, indicating that no valid value was found.
 
     /**
      * Get Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE` 
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`. 
      * @return Type Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
      */
     public String getType() {
         return this.Type;
@@ -121,9 +121,9 @@ Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_P
 
     /**
      * Set Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
      * @param Type Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
      */
     public void setType(String Type) {
         this.Type = Type;

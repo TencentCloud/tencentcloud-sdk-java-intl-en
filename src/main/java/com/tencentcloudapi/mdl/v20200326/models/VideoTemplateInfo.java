@@ -80,7 +80,7 @@ public class VideoTemplateInfo extends AbstractModel {
     private Long BitrateCompressionRatio;
 
     /**
-    * Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+    * Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
     */
     @SerializedName("RateControlMode")
     @Expose
@@ -149,6 +149,20 @@ Note: This field may return `null`, indicating that no valid value was found.
     @SerializedName("VideoCodecDetails")
     @Expose
     private VideoCodecDetail VideoCodecDetails;
+
+    /**
+    * 
+    */
+    @SerializedName("VideoEnhanceEnabled")
+    @Expose
+    private Long VideoEnhanceEnabled;
+
+    /**
+    * 
+    */
+    @SerializedName("VideoEnhanceSettings")
+    @Expose
+    private VideoEnhanceSetting [] VideoEnhanceSettings;
 
     /**
      * Get Video transcoding template name, which can contain 1-20 letters and digits. 
@@ -279,16 +293,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Bitrate control mode. Valid values: `CBR`, `ABR` (default) 
-     * @return RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+     * Get Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`. 
+     * @return RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
      */
     public String getRateControlMode() {
         return this.RateControlMode;
     }
 
     /**
-     * Set Bitrate control mode. Valid values: `CBR`, `ABR` (default)
-     * @param RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+     * Set Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
+     * @param RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
      */
     public void setRateControlMode(String RateControlMode) {
         this.RateControlMode = RateControlMode;
@@ -442,6 +456,38 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.VideoCodecDetails = VideoCodecDetails;
     }
 
+    /**
+     * Get  
+     * @return VideoEnhanceEnabled 
+     */
+    public Long getVideoEnhanceEnabled() {
+        return this.VideoEnhanceEnabled;
+    }
+
+    /**
+     * Set 
+     * @param VideoEnhanceEnabled 
+     */
+    public void setVideoEnhanceEnabled(Long VideoEnhanceEnabled) {
+        this.VideoEnhanceEnabled = VideoEnhanceEnabled;
+    }
+
+    /**
+     * Get  
+     * @return VideoEnhanceSettings 
+     */
+    public VideoEnhanceSetting [] getVideoEnhanceSettings() {
+        return this.VideoEnhanceSettings;
+    }
+
+    /**
+     * Set 
+     * @param VideoEnhanceSettings 
+     */
+    public void setVideoEnhanceSettings(VideoEnhanceSetting [] VideoEnhanceSettings) {
+        this.VideoEnhanceSettings = VideoEnhanceSettings;
+    }
+
     public VideoTemplateInfo() {
     }
 
@@ -504,6 +550,15 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.VideoCodecDetails != null) {
             this.VideoCodecDetails = new VideoCodecDetail(source.VideoCodecDetails);
         }
+        if (source.VideoEnhanceEnabled != null) {
+            this.VideoEnhanceEnabled = new Long(source.VideoEnhanceEnabled);
+        }
+        if (source.VideoEnhanceSettings != null) {
+            this.VideoEnhanceSettings = new VideoEnhanceSetting[source.VideoEnhanceSettings.length];
+            for (int i = 0; i < source.VideoEnhanceSettings.length; i++) {
+                this.VideoEnhanceSettings[i] = new VideoEnhanceSetting(source.VideoEnhanceSettings[i]);
+            }
+        }
     }
 
 
@@ -529,6 +584,8 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "RefFramesNum", this.RefFramesNum);
         this.setParamObj(map, prefix + "AdditionalRateSettings.", this.AdditionalRateSettings);
         this.setParamObj(map, prefix + "VideoCodecDetails.", this.VideoCodecDetails);
+        this.setParamSimple(map, prefix + "VideoEnhanceEnabled", this.VideoEnhanceEnabled);
+        this.setParamArrayObj(map, prefix + "VideoEnhanceSettings.", this.VideoEnhanceSettings);
 
     }
 }

@@ -31,7 +31,7 @@ public class HlsRemuxSettingsInfo extends AbstractModel {
     private Long SegmentDuration;
 
     /**
-    * Number of segments. Value range: [1,30]. Default value: 5.
+    * Number of segments. Value range: [3,30]. Default value: 5.
     */
     @SerializedName("SegmentNumber")
     @Expose
@@ -125,16 +125,16 @@ Currently, fMP4 segments do not support DRM or time shifting.
     }
 
     /**
-     * Get Number of segments. Value range: [1,30]. Default value: 5. 
-     * @return SegmentNumber Number of segments. Value range: [1,30]. Default value: 5.
+     * Get Number of segments. Value range: [3,30]. Default value: 5. 
+     * @return SegmentNumber Number of segments. Value range: [3,30]. Default value: 5.
      */
     public Long getSegmentNumber() {
         return this.SegmentNumber;
     }
 
     /**
-     * Set Number of segments. Value range: [1,30]. Default value: 5.
-     * @param SegmentNumber Number of segments. Value range: [1,30]. Default value: 5.
+     * Set Number of segments. Value range: [3,30]. Default value: 5.
+     * @param SegmentNumber Number of segments. Value range: [3,30]. Default value: 5.
      */
     public void setSegmentNumber(Long SegmentNumber) {
         this.SegmentNumber = SegmentNumber;

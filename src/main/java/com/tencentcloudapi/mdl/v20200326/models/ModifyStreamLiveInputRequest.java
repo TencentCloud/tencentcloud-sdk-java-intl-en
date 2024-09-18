@@ -45,9 +45,13 @@ public class ModifyStreamLiveInputRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
-    * Input settings
-For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+    * Input settings. 
+For the type:
+`RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`,`RTSP_PULL`,`SRT_PULL` or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+For the type:
+`SRT_PUSH`, 0 or 2 inputs of the corresponding type can be configured.
 This parameter can be left empty for RTP_PUSH and UDP_PUSH inputs.
+
 Note: If this parameter is not specified or empty, the original input settings will be used.
     */
     @SerializedName("InputSettings")
@@ -103,13 +107,21 @@ Note: If this parameter is not specified or empty, the original input settings w
     }
 
     /**
-     * Get Input settings
-For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+     * Get Input settings. 
+For the type:
+`RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`,`RTSP_PULL`,`SRT_PULL` or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+For the type:
+`SRT_PUSH`, 0 or 2 inputs of the corresponding type can be configured.
 This parameter can be left empty for RTP_PUSH and UDP_PUSH inputs.
+
 Note: If this parameter is not specified or empty, the original input settings will be used. 
-     * @return InputSettings Input settings
-For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+     * @return InputSettings Input settings. 
+For the type:
+`RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`,`RTSP_PULL`,`SRT_PULL` or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+For the type:
+`SRT_PUSH`, 0 or 2 inputs of the corresponding type can be configured.
 This parameter can be left empty for RTP_PUSH and UDP_PUSH inputs.
+
 Note: If this parameter is not specified or empty, the original input settings will be used.
      */
     public InputSettingInfo [] getInputSettings() {
@@ -117,13 +129,21 @@ Note: If this parameter is not specified or empty, the original input settings w
     }
 
     /**
-     * Set Input settings
-For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+     * Set Input settings. 
+For the type:
+`RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`,`RTSP_PULL`,`SRT_PULL` or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+For the type:
+`SRT_PUSH`, 0 or 2 inputs of the corresponding type can be configured.
 This parameter can be left empty for RTP_PUSH and UDP_PUSH inputs.
+
 Note: If this parameter is not specified or empty, the original input settings will be used.
-     * @param InputSettings Input settings
-For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+     * @param InputSettings Input settings. 
+For the type:
+`RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`,`RTSP_PULL`,`SRT_PULL` or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+For the type:
+`SRT_PUSH`, 0 or 2 inputs of the corresponding type can be configured.
 This parameter can be left empty for RTP_PUSH and UDP_PUSH inputs.
+
 Note: If this parameter is not specified or empty, the original input settings will be used.
      */
     public void setInputSettings(InputSettingInfo [] InputSettings) {
