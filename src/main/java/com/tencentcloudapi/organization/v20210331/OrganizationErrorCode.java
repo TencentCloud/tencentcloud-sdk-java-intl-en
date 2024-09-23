@@ -1,7 +1,13 @@
 package com.tencentcloudapi.organization.v20210331;
 public enum OrganizationErrorCode {
+    // The application already exists.
+     FAILEDOPERATION_APPLYEXIST("FailedOperation.ApplyExist"),
+     
     // The user has not completed identity verification.
      FAILEDOPERATION_AUTHINFOEMPTY("FailedOperation.AuthInfoEmpty"),
+     
+    // Enterprise real name mismatch.
+     FAILEDOPERATION_AUTHINFONOTSAME("FailedOperation.AuthInfoNotSame"),
      
     // The user has not completed enterprise identity verification.
      FAILEDOPERATION_AUTHNOTENTERPRISE("FailedOperation.AuthNotEnterprise"),
@@ -48,6 +54,12 @@ public enum OrganizationErrorCode {
     // You cannot quit an organization created by yourself.
      FAILEDOPERATION_DISABLEQUITSELFCREATEDORGANIZATION("FailedOperation.DisableQuitSelfCreatedOrganization"),
      
+    // There are shared resources with other organization members or from other organization members.
+     FAILEDOPERATION_EXISTOTHERORGANIZATIONMEMBERSHARED("FailedOperation.ExistOtherOrganizationMemberShared"),
+     
+    // Errors occurred when account's regional attributes are obtained.
+     FAILEDOPERATION_GETACCOUNTREGION("FailedOperation.GetAccountRegion"),
+     
     // An error occurred while querying the identity information.
      FAILEDOPERATION_GETAUTHINFO("FailedOperation.GetAuthInfo"),
      
@@ -75,8 +87,17 @@ public enum OrganizationErrorCode {
     // The user has not activated Tencent Cloud Organization and cannot activate the CIC service.
      FAILEDOPERATION_IDENTITYCENTERORGANIZATIONNOTOPEN("FailedOperation.IdentityCenterOrganizationNotOpen"),
      
+    // The uploaded file is invalid.
+     FAILEDOPERATION_IMPORTFILEILLEGAL("FailedOperation.ImportFileIllegal"),
+     
+    // The invitation already exists.
+     FAILEDOPERATION_INVITATIONEXIST("FailedOperation.InvitationExist"),
+     
     // The member has a payer and cannot be deleted.
      FAILEDOPERATION_MEMBEREXISTDELEGATEPAYERNOTALLOWDELETE("FailedOperation.MemberExistDelegatePayerNotAllowDelete"),
+     
+    // The member already belongs to another organization.
+     FAILEDOPERATION_MEMBEREXISTINOTHERORGANIZATION("FailedOperation.MemberExistInOtherOrganization"),
      
     // The member is a payer and cannot be deleted.
      FAILEDOPERATION_MEMBERISDELEGATEPAYERNOTALLOWDELETE("FailedOperation.MemberIsDelegatePayerNotAllowDelete"),
@@ -96,6 +117,9 @@ public enum OrganizationErrorCode {
     // There are members in this department
      FAILEDOPERATION_NODENOTEMPTY("FailedOperation.NodeNotEmpty"),
      
+    // You can only invite accounts within the same site.
+     FAILEDOPERATION_NOTSAMEREGION("FailedOperation.NotSameRegion"),
+     
     // An error occurred while manipulating the billing member permission.
      FAILEDOPERATION_OPERATEBILLINGPERMISSIONERR("FailedOperation.OperateBillingPermissionErr"),
      
@@ -104,6 +128,12 @@ public enum OrganizationErrorCode {
      
     // The member is an entity admin account and cannot quit the organization.
      FAILEDOPERATION_ORGANIZATIONAUTHMANAGENOTALLOWDELETE("FailedOperation.OrganizationAuthManageNotAllowDelete"),
+     
+    // Real-name authentication relationship already exists.
+     FAILEDOPERATION_ORGANIZATIONAUTHRELATIONEXIST("FailedOperation.OrganizationAuthRelationExist"),
+     
+    // Member already exists.
+     FAILEDOPERATION_ORGANIZATIONMEMBEREXIST("FailedOperation.OrganizationMemberExist"),
      
     // The member name already exists.
      FAILEDOPERATION_ORGANIZATIONMEMBERNAMEUSED("FailedOperation.OrganizationMemberNameUsed"),
@@ -140,6 +170,9 @@ public enum OrganizationErrorCode {
      
     // Failed to leave the shared unit.
      FAILEDOPERATION_QUITSHAREUINTERROR("FailedOperation.QuitShareUintError"),
+     
+    // The invitation has already been sent before.
+     FAILEDOPERATION_RESENTINVITATION("FailedOperation.ReSentInvitation"),
      
     // The permission authorization already exists.
      FAILEDOPERATION_ROLECONFIGURATIONAUTHORIZATIONALREADYEXIST("FailedOperation.RoleConfigurationAuthorizationAlreadyExist"),
@@ -197,6 +230,9 @@ public enum OrganizationErrorCode {
      
     // System policies bound to the permission configuration exceed the upper limit.
      FAILEDOPERATION_SYSTEMPOLICYOVERUPPERLIMIT("FailedOperation.SystemPolicyOverUpperLimit"),
+     
+    // Tagging error.
+     FAILEDOPERATION_TAGRESOURCESERROR("FailedOperation.TagResourcesError"),
      
     // Data file uploading failed.
      FAILEDOPERATION_UPLOADMETADATAFAILED("FailedOperation.UploadMetadataFailed"),
@@ -294,6 +330,9 @@ public enum OrganizationErrorCode {
     // The policy does not exist.
      INVALIDPARAMETER_ROLEPOLICYNOTEXIST("InvalidParameter.RolePolicyNotExist"),
      
+    // Tag value error.
+     INVALIDPARAMETER_TAGERROR("InvalidParameter.TagError"),
+     
     // The user still exists in the user group.
      INVALIDPARAMETER_USERALREADYEXISTSGROUP("InvalidParameter.UserAlreadyExistsGroup"),
      
@@ -332,6 +371,9 @@ public enum OrganizationErrorCode {
      
     // Requests for creating user synchronization tasks exceed the limit.
      LIMITEXCEEDED_CREATEUSERSYNCPROVISIONINGLIMITEXCEEDED("LimitExceeded.CreateUserSyncProvisioningLimitExceeded"),
+     
+    // Invitation limit exceeded.
+     LIMITEXCEEDED_INVITATIONOVERLIMIT("LimitExceeded.InvitationOverLimit"),
      
     // The department has too many levels.
      LIMITEXCEEDED_NODEDEPTHEXCEEDLIMIT("LimitExceeded.NodeDepthExceedLimit"),
@@ -408,11 +450,17 @@ public enum OrganizationErrorCode {
     // The payer has a financial status exception and does not support pay-on-behalf.
      UNSUPPORTEDOPERATION_ABNORMALFINANCIALSTATUSOFADMIN("UnsupportedOperation.AbnormalFinancialStatusOfAdmin"),
      
+    // Member's financial status is abnormal. Pay-on-behalf mode is not supported.
+     UNSUPPORTEDOPERATION_ABNORMALFINANCIALSTATUSOFMEMBER("UnsupportedOperation.AbnormalFinancialStatusOfMember"),
+     
     // No paying relationships can be added.
      UNSUPPORTEDOPERATION_ADDDELEGATEPAYERNOTALLOW("UnsupportedOperation.AddDelegatePayerNotAllow"),
      
     // No offer inheritance relationships can be added.
      UNSUPPORTEDOPERATION_ADDDISCOUNTINHERITNOTALLOW("UnsupportedOperation.AddDiscountInheritNotAllow"),
+     
+    // The resellers of the administrator and the member do not match.
+     UNSUPPORTEDOPERATION_AGENTNOTSAME("UnsupportedOperation.AgentNotSame"),
      
     // The created member cannot be removed from the organization.
      UNSUPPORTEDOPERATION_CREATEMEMBERNOTALLOWDELETE("UnsupportedOperation.CreateMemberNotAllowDelete"),
@@ -444,8 +492,14 @@ public enum OrganizationErrorCode {
     // The member is a delegated admin of the organization service and cannot quit the organization.
      UNSUPPORTEDOPERATION_MEMBEREXISTSERVICENOTALLOWDELETE("UnsupportedOperation.MemberExistServiceNotAllowDelete"),
      
+    // The member has vouchers. Pay-on-behalf mode is not supported.
+     UNSUPPORTEDOPERATION_MEMBERHASVOUCHER("UnsupportedOperation.MemberHasVoucher"),
+     
     // The account is an agent or an agent customer.
      UNSUPPORTEDOPERATION_MEMBERISAGENT("UnsupportedOperation.MemberIsAgent"),
+     
+    // The member is not a reseller customer.
+     UNSUPPORTEDOPERATION_MEMBERISNOTCLIENT("UnsupportedOperation.MemberIsNotClient"),
      
     // No credit card is bound to the member.
      UNSUPPORTEDOPERATION_MEMBERNOPAYMENT("UnsupportedOperation.MemberNoPayment"),

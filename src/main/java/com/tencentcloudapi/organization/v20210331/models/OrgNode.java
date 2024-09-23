@@ -72,6 +72,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String UpdateTime;
 
     /**
+    * Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Organization node ID
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return NodeId Organization node ID
@@ -191,6 +199,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tags Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tags Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public OrgNode() {
     }
 
@@ -217,6 +245,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -230,6 +264,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -45,6 +45,13 @@ public class AddOrganizationNodeRequest extends AbstractModel {
     private String Remark;
 
     /**
+    * Department tag list, with a maximum of 10.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1). 
      * @return ParentNodeId Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      */
@@ -92,6 +99,22 @@ public class AddOrganizationNodeRequest extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get Department tag list, with a maximum of 10. 
+     * @return Tags Department tag list, with a maximum of 10.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Department tag list, with a maximum of 10.
+     * @param Tags Department tag list, with a maximum of 10.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public AddOrganizationNodeRequest() {
     }
 
@@ -109,6 +132,12 @@ public class AddOrganizationNodeRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class AddOrganizationNodeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ParentNodeId", this.ParentNodeId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

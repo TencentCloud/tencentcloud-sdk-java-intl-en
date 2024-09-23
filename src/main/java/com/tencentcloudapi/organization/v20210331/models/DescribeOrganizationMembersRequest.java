@@ -66,6 +66,13 @@ public class DescribeOrganizationMembersRequest extends AbstractModel {
     private String Product;
 
     /**
+    * Member tag search list, with a maximum of 10.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Offset, which is an integer multiple of the value of `Limit`. Default value: `0`. 
      * @return Offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
      */
@@ -161,6 +168,22 @@ public class DescribeOrganizationMembersRequest extends AbstractModel {
         this.Product = Product;
     }
 
+    /**
+     * Get Member tag search list, with a maximum of 10. 
+     * @return Tags Member tag search list, with a maximum of 10.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Member tag search list, with a maximum of 10.
+     * @param Tags Member tag search list, with a maximum of 10.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DescribeOrganizationMembersRequest() {
     }
 
@@ -187,6 +210,12 @@ public class DescribeOrganizationMembersRequest extends AbstractModel {
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -200,6 +229,7 @@ public class DescribeOrganizationMembersRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
         this.setParamSimple(map, prefix + "AuthName", this.AuthName);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -479,6 +479,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to invite a member.
+     * @param req InviteOrganizationMemberRequest
+     * @return InviteOrganizationMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public InviteOrganizationMemberResponse InviteOrganizationMember(InviteOrganizationMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InviteOrganizationMember", InviteOrganizationMemberResponse.class);
+    }
+
+    /**
      *This API is used to query the SAML signing certificate list.
      * @param req ListExternalSAMLIdPCertificatesRequest
      * @return ListExternalSAMLIdPCertificatesResponse

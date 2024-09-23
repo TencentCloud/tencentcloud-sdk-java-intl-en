@@ -160,6 +160,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PermissionStatus;
 
     /**
+    * Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Member UIN
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return MemberUin Member UIN
@@ -499,6 +507,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.PermissionStatus = PermissionStatus;
     }
 
+    /**
+     * Get Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tags Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tags Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public OrgMember() {
     }
 
@@ -564,6 +592,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.PermissionStatus != null) {
             this.PermissionStatus = new String(source.PermissionStatus);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -588,6 +622,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "OrgIdentity.", this.OrgIdentity);
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "PermissionStatus", this.PermissionStatus);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

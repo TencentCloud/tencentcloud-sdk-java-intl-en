@@ -21,10 +21,17 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOrganizationMemberRequest extends AbstractModel {
+public class InviteOrganizationMemberRequest extends AbstractModel {
 
     /**
-    * Member name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
+    * UIN of an invited account.
+    */
+    @SerializedName("MemberUin")
+    @Expose
+    private Long MemberUin;
+
+    /**
+    * Member name, which contains up to 25 characters, including English letters, digits, and symbols `+@&._[]-:,`.
     */
     @SerializedName("Name")
     @Expose
@@ -38,7 +45,7 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
     private String PolicyType;
 
     /**
-    * List of member financial permission IDs. `7` indicates paying, which is the default value.
+    * List of member financial permission IDs. Valid values: 1: View bills. 2: View balance. 3: Transfer funds. 4: Consolidate bills. 5: Issue invoice. 6: Inherit discounts. 7: Pay on behalf. 1 and 2 are required by default.
     */
     @SerializedName("PermissionIds")
     @Expose
@@ -52,13 +59,6 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
     private Long NodeId;
 
     /**
-    * Account name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
-    */
-    @SerializedName("AccountName")
-    @Expose
-    private String AccountName;
-
-    /**
     * Remarks.
     */
     @SerializedName("Remark")
@@ -66,32 +66,32 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
     private String Remark;
 
     /**
-    * Member creation record ID, which is required during retry upon creation exception.
+    * Whether to allow a member to exit. Valid values: Allow, Denied.
     */
-    @SerializedName("RecordId")
+    @SerializedName("IsAllowQuit")
     @Expose
-    private Long RecordId;
+    private String IsAllowQuit;
 
     /**
-    * Payer UIN, which is required during paying for a member.
+    * Payer UIN, which is required when pay-on-behalf mode is used.
     */
     @SerializedName("PayUin")
     @Expose
     private String PayUin;
 
     /**
-    * List of member access identity IDs, which can be obtained through the `ListOrganizationIdentity` API. `1` indicates supported, which is the default value.
+    * Name of a mutual trust real-name entity.
     */
-    @SerializedName("IdentityRoleID")
+    @SerializedName("RelationAuthName")
     @Expose
-    private Long [] IdentityRoleID;
+    private String RelationAuthName;
 
     /**
-    * Verified entity relationship ID, which is required during creating members for different entities.
+    * List of proof files of a mutual trust entity.
     */
-    @SerializedName("AuthRelationId")
+    @SerializedName("AuthFile")
     @Expose
-    private Long AuthRelationId;
+    private AuthRelationFile [] AuthFile;
 
     /**
     * Member tag list, with a maximum of 10.
@@ -101,16 +101,32 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get Member name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`. 
-     * @return Name Member name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
+     * Get UIN of an invited account. 
+     * @return MemberUin UIN of an invited account.
+     */
+    public Long getMemberUin() {
+        return this.MemberUin;
+    }
+
+    /**
+     * Set UIN of an invited account.
+     * @param MemberUin UIN of an invited account.
+     */
+    public void setMemberUin(Long MemberUin) {
+        this.MemberUin = MemberUin;
+    }
+
+    /**
+     * Get Member name, which contains up to 25 characters, including English letters, digits, and symbols `+@&._[]-:,`. 
+     * @return Name Member name, which contains up to 25 characters, including English letters, digits, and symbols `+@&._[]-:,`.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Member name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
-     * @param Name Member name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
+     * Set Member name, which contains up to 25 characters, including English letters, digits, and symbols `+@&._[]-:,`.
+     * @param Name Member name, which contains up to 25 characters, including English letters, digits, and symbols `+@&._[]-:,`.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -133,16 +149,16 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
     }
 
     /**
-     * Get List of member financial permission IDs. `7` indicates paying, which is the default value. 
-     * @return PermissionIds List of member financial permission IDs. `7` indicates paying, which is the default value.
+     * Get List of member financial permission IDs. Valid values: 1: View bills. 2: View balance. 3: Transfer funds. 4: Consolidate bills. 5: Issue invoice. 6: Inherit discounts. 7: Pay on behalf. 1 and 2 are required by default. 
+     * @return PermissionIds List of member financial permission IDs. Valid values: 1: View bills. 2: View balance. 3: Transfer funds. 4: Consolidate bills. 5: Issue invoice. 6: Inherit discounts. 7: Pay on behalf. 1 and 2 are required by default.
      */
     public Long [] getPermissionIds() {
         return this.PermissionIds;
     }
 
     /**
-     * Set List of member financial permission IDs. `7` indicates paying, which is the default value.
-     * @param PermissionIds List of member financial permission IDs. `7` indicates paying, which is the default value.
+     * Set List of member financial permission IDs. Valid values: 1: View bills. 2: View balance. 3: Transfer funds. 4: Consolidate bills. 5: Issue invoice. 6: Inherit discounts. 7: Pay on behalf. 1 and 2 are required by default.
+     * @param PermissionIds List of member financial permission IDs. Valid values: 1: View bills. 2: View balance. 3: Transfer funds. 4: Consolidate bills. 5: Issue invoice. 6: Inherit discounts. 7: Pay on behalf. 1 and 2 are required by default.
      */
     public void setPermissionIds(Long [] PermissionIds) {
         this.PermissionIds = PermissionIds;
@@ -165,22 +181,6 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
     }
 
     /**
-     * Get Account name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`. 
-     * @return AccountName Account name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
-     */
-    public String getAccountName() {
-        return this.AccountName;
-    }
-
-    /**
-     * Set Account name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
-     * @param AccountName Account name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
-     */
-    public void setAccountName(String AccountName) {
-        this.AccountName = AccountName;
-    }
-
-    /**
      * Get Remarks. 
      * @return Remark Remarks.
      */
@@ -197,67 +197,67 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
     }
 
     /**
-     * Get Member creation record ID, which is required during retry upon creation exception. 
-     * @return RecordId Member creation record ID, which is required during retry upon creation exception.
+     * Get Whether to allow a member to exit. Valid values: Allow, Denied. 
+     * @return IsAllowQuit Whether to allow a member to exit. Valid values: Allow, Denied.
      */
-    public Long getRecordId() {
-        return this.RecordId;
+    public String getIsAllowQuit() {
+        return this.IsAllowQuit;
     }
 
     /**
-     * Set Member creation record ID, which is required during retry upon creation exception.
-     * @param RecordId Member creation record ID, which is required during retry upon creation exception.
+     * Set Whether to allow a member to exit. Valid values: Allow, Denied.
+     * @param IsAllowQuit Whether to allow a member to exit. Valid values: Allow, Denied.
      */
-    public void setRecordId(Long RecordId) {
-        this.RecordId = RecordId;
+    public void setIsAllowQuit(String IsAllowQuit) {
+        this.IsAllowQuit = IsAllowQuit;
     }
 
     /**
-     * Get Payer UIN, which is required during paying for a member. 
-     * @return PayUin Payer UIN, which is required during paying for a member.
+     * Get Payer UIN, which is required when pay-on-behalf mode is used. 
+     * @return PayUin Payer UIN, which is required when pay-on-behalf mode is used.
      */
     public String getPayUin() {
         return this.PayUin;
     }
 
     /**
-     * Set Payer UIN, which is required during paying for a member.
-     * @param PayUin Payer UIN, which is required during paying for a member.
+     * Set Payer UIN, which is required when pay-on-behalf mode is used.
+     * @param PayUin Payer UIN, which is required when pay-on-behalf mode is used.
      */
     public void setPayUin(String PayUin) {
         this.PayUin = PayUin;
     }
 
     /**
-     * Get List of member access identity IDs, which can be obtained through the `ListOrganizationIdentity` API. `1` indicates supported, which is the default value. 
-     * @return IdentityRoleID List of member access identity IDs, which can be obtained through the `ListOrganizationIdentity` API. `1` indicates supported, which is the default value.
+     * Get Name of a mutual trust real-name entity. 
+     * @return RelationAuthName Name of a mutual trust real-name entity.
      */
-    public Long [] getIdentityRoleID() {
-        return this.IdentityRoleID;
+    public String getRelationAuthName() {
+        return this.RelationAuthName;
     }
 
     /**
-     * Set List of member access identity IDs, which can be obtained through the `ListOrganizationIdentity` API. `1` indicates supported, which is the default value.
-     * @param IdentityRoleID List of member access identity IDs, which can be obtained through the `ListOrganizationIdentity` API. `1` indicates supported, which is the default value.
+     * Set Name of a mutual trust real-name entity.
+     * @param RelationAuthName Name of a mutual trust real-name entity.
      */
-    public void setIdentityRoleID(Long [] IdentityRoleID) {
-        this.IdentityRoleID = IdentityRoleID;
+    public void setRelationAuthName(String RelationAuthName) {
+        this.RelationAuthName = RelationAuthName;
     }
 
     /**
-     * Get Verified entity relationship ID, which is required during creating members for different entities. 
-     * @return AuthRelationId Verified entity relationship ID, which is required during creating members for different entities.
+     * Get List of proof files of a mutual trust entity. 
+     * @return AuthFile List of proof files of a mutual trust entity.
      */
-    public Long getAuthRelationId() {
-        return this.AuthRelationId;
+    public AuthRelationFile [] getAuthFile() {
+        return this.AuthFile;
     }
 
     /**
-     * Set Verified entity relationship ID, which is required during creating members for different entities.
-     * @param AuthRelationId Verified entity relationship ID, which is required during creating members for different entities.
+     * Set List of proof files of a mutual trust entity.
+     * @param AuthFile List of proof files of a mutual trust entity.
      */
-    public void setAuthRelationId(Long AuthRelationId) {
-        this.AuthRelationId = AuthRelationId;
+    public void setAuthFile(AuthRelationFile [] AuthFile) {
+        this.AuthFile = AuthFile;
     }
 
     /**
@@ -276,14 +276,17 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
-    public CreateOrganizationMemberRequest() {
+    public InviteOrganizationMemberRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateOrganizationMemberRequest(CreateOrganizationMemberRequest source) {
+    public InviteOrganizationMemberRequest(InviteOrganizationMemberRequest source) {
+        if (source.MemberUin != null) {
+            this.MemberUin = new Long(source.MemberUin);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -299,26 +302,23 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
         if (source.NodeId != null) {
             this.NodeId = new Long(source.NodeId);
         }
-        if (source.AccountName != null) {
-            this.AccountName = new String(source.AccountName);
-        }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
-        if (source.RecordId != null) {
-            this.RecordId = new Long(source.RecordId);
+        if (source.IsAllowQuit != null) {
+            this.IsAllowQuit = new String(source.IsAllowQuit);
         }
         if (source.PayUin != null) {
             this.PayUin = new String(source.PayUin);
         }
-        if (source.IdentityRoleID != null) {
-            this.IdentityRoleID = new Long[source.IdentityRoleID.length];
-            for (int i = 0; i < source.IdentityRoleID.length; i++) {
-                this.IdentityRoleID[i] = new Long(source.IdentityRoleID[i]);
-            }
+        if (source.RelationAuthName != null) {
+            this.RelationAuthName = new String(source.RelationAuthName);
         }
-        if (source.AuthRelationId != null) {
-            this.AuthRelationId = new Long(source.AuthRelationId);
+        if (source.AuthFile != null) {
+            this.AuthFile = new AuthRelationFile[source.AuthFile.length];
+            for (int i = 0; i < source.AuthFile.length; i++) {
+                this.AuthFile[i] = new AuthRelationFile(source.AuthFile[i]);
+            }
         }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
@@ -333,16 +333,16 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "MemberUin", this.MemberUin);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "PolicyType", this.PolicyType);
         this.setParamArraySimple(map, prefix + "PermissionIds.", this.PermissionIds);
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);
-        this.setParamSimple(map, prefix + "AccountName", this.AccountName);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
-        this.setParamSimple(map, prefix + "RecordId", this.RecordId);
+        this.setParamSimple(map, prefix + "IsAllowQuit", this.IsAllowQuit);
         this.setParamSimple(map, prefix + "PayUin", this.PayUin);
-        this.setParamArraySimple(map, prefix + "IdentityRoleID.", this.IdentityRoleID);
-        this.setParamSimple(map, prefix + "AuthRelationId", this.AuthRelationId);
+        this.setParamSimple(map, prefix + "RelationAuthName", this.RelationAuthName);
+        this.setParamArrayObj(map, prefix + "AuthFile.", this.AuthFile);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
