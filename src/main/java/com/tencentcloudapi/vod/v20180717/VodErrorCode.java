@@ -321,6 +321,9 @@ public enum VodErrorCode {
     // Invalid `OperationType`.
      INVALIDPARAMETERVALUE_INVALIDOPERATIONTYPE("InvalidParameterValue.InvalidOperationType"),
      
+    // 
+     INVALIDPARAMETERVALUE_ISPERSISTENCE("InvalidParameterValue.IsPersistence"),
+     
     // Invalid `Isps`.
      INVALIDPARAMETERVALUE_ISPS("InvalidParameterValue.Isps"),
      
@@ -381,11 +384,20 @@ public enum VodErrorCode {
     // Parameter error: Current storage class error.
      INVALIDPARAMETERVALUE_ORIGINALSTORAGECLASS("InvalidParameterValue.OriginalStorageClass"),
      
+    // 
+     INVALIDPARAMETERVALUE_OUTPUTMEDIATYPE("InvalidParameterValue.OutputMediaType"),
+     
     // Incorrect parameter value: invalid `ParentId`
      INVALIDPARAMETERVALUE_PARENTID("InvalidParameterValue.ParentId"),
      
     // Incorrect parameter value: the face image format is incorrect.
      INVALIDPARAMETERVALUE_PICFORMATERROR("InvalidParameterValue.PicFormatError"),
+     
+    // 
+     INVALIDPARAMETERVALUE_PRECISION("InvalidParameterValue.Precision"),
+     
+    // 
+     INVALIDPARAMETERVALUE_PROCEDURE("InvalidParameterValue.Procedure"),
      
     // The task flow template name is invalid.
      INVALIDPARAMETERVALUE_PROCEDURENAME("InvalidParameterValue.ProcedureName"),

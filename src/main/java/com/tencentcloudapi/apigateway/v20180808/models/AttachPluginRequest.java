@@ -45,7 +45,7 @@ public class AttachPluginRequest extends AbstractModel {
     private String EnvironmentName;
 
     /**
-    * List of APIs bound with the plugin.
+    * List of APIs bound with the plugin
     */
     @SerializedName("ApiIds")
     @Expose
@@ -100,16 +100,16 @@ public class AttachPluginRequest extends AbstractModel {
     }
 
     /**
-     * Get List of APIs bound with the plugin. 
-     * @return ApiIds List of APIs bound with the plugin.
+     * Get List of APIs bound with the plugin 
+     * @return ApiIds List of APIs bound with the plugin
      */
     public String [] getApiIds() {
         return this.ApiIds;
     }
 
     /**
-     * Set List of APIs bound with the plugin.
-     * @param ApiIds List of APIs bound with the plugin.
+     * Set List of APIs bound with the plugin
+     * @param ApiIds List of APIs bound with the plugin
      */
     public void setApiIds(String [] ApiIds) {
         this.ApiIds = ApiIds;

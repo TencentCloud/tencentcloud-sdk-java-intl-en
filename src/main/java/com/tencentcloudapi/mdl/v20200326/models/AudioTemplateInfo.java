@@ -38,7 +38,7 @@ public class AudioTemplateInfo extends AbstractModel {
     private String Name;
 
     /**
-    * Audio codec. Valid value: AAC. Default value: AAC.
+    * Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
     */
     @SerializedName("Acodec")
     @Expose
@@ -113,16 +113,16 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
     }
 
     /**
-     * Get Audio codec. Valid value: AAC. Default value: AAC. 
-     * @return Acodec Audio codec. Valid value: AAC. Default value: AAC.
+     * Get Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default. 
+     * @return Acodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
      */
     public String getAcodec() {
         return this.Acodec;
     }
 
     /**
-     * Set Audio codec. Valid value: AAC. Default value: AAC.
-     * @param Acodec Audio codec. Valid value: AAC. Default value: AAC.
+     * Set Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+     * @param Acodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
      */
     public void setAcodec(String Acodec) {
         this.Acodec = Acodec;

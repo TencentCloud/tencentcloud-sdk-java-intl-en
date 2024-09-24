@@ -96,6 +96,27 @@ This parameter is valid only if `IsPersistence` is `1`.
     private String SessionContext;
 
     /**
+    * 
+    */
+    @SerializedName("Precision")
+    @Expose
+    private String Precision;
+
+    /**
+    * 
+    */
+    @SerializedName("OutputMediaType")
+    @Expose
+    private String OutputMediaType;
+
+    /**
+    * 
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
      * Get URL of the HLS video in VOD that needs to be clipped. 
      * @return Url URL of the HLS video in VOD that needs to be clipped.
      */
@@ -263,6 +284,54 @@ This parameter is valid only if `IsPersistence` is `1`.
         this.SessionContext = SessionContext;
     }
 
+    /**
+     * Get  
+     * @return Precision 
+     */
+    public String getPrecision() {
+        return this.Precision;
+    }
+
+    /**
+     * Set 
+     * @param Precision 
+     */
+    public void setPrecision(String Precision) {
+        this.Precision = Precision;
+    }
+
+    /**
+     * Get  
+     * @return OutputMediaType 
+     */
+    public String getOutputMediaType() {
+        return this.OutputMediaType;
+    }
+
+    /**
+     * Set 
+     * @param OutputMediaType 
+     */
+    public void setOutputMediaType(String OutputMediaType) {
+        this.OutputMediaType = OutputMediaType;
+    }
+
+    /**
+     * Get  
+     * @return ExtInfo 
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set 
+     * @param ExtInfo 
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
+    }
+
     public SimpleHlsClipRequest() {
     }
 
@@ -301,6 +370,15 @@ This parameter is valid only if `IsPersistence` is `1`.
         if (source.SessionContext != null) {
             this.SessionContext = new String(source.SessionContext);
         }
+        if (source.Precision != null) {
+            this.Precision = new String(source.Precision);
+        }
+        if (source.OutputMediaType != null) {
+            this.OutputMediaType = new String(source.OutputMediaType);
+        }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
     }
 
 
@@ -318,6 +396,9 @@ This parameter is valid only if `IsPersistence` is `1`.
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);
         this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
+        this.setParamSimple(map, prefix + "Precision", this.Precision);
+        this.setParamSimple(map, prefix + "OutputMediaType", this.OutputMediaType);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
 
     }
 }

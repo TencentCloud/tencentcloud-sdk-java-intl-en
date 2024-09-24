@@ -31,7 +31,7 @@ public class AudioTrackInfo extends AbstractModel {
     private String TrackName;
 
     /**
-    * Only AAC is supported.
+    * Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
     */
     @SerializedName("AudioCodec")
     @Expose
@@ -89,16 +89,16 @@ public class AudioTrackInfo extends AbstractModel {
     }
 
     /**
-     * Get Only AAC is supported. 
-     * @return AudioCodec Only AAC is supported.
+     * Get Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default. 
+     * @return AudioCodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
      */
     public String getAudioCodec() {
         return this.AudioCodec;
     }
 
     /**
-     * Set Only AAC is supported.
-     * @param AudioCodec Only AAC is supported.
+     * Set Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+     * @param AudioCodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
      */
     public void setAudioCodec(String AudioCodec) {
         this.AudioCodec = AudioCodec;
