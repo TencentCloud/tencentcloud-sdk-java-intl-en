@@ -31,7 +31,7 @@ public class CreateTaskFromActionRequest extends AbstractModel {
     private Long TaskActionId;
 
     /**
-    * ID of the instance participating in the experiment
+    * ID of the instance participating in the experiment.
     */
     @SerializedName("TaskInstances")
     @Expose
@@ -89,16 +89,16 @@ public class CreateTaskFromActionRequest extends AbstractModel {
     }
 
     /**
-     * Get ID of the instance participating in the experiment 
-     * @return TaskInstances ID of the instance participating in the experiment
+     * Get ID of the instance participating in the experiment. 
+     * @return TaskInstances ID of the instance participating in the experiment.
      */
     public String [] getTaskInstances() {
         return this.TaskInstances;
     }
 
     /**
-     * Set ID of the instance participating in the experiment
-     * @param TaskInstances ID of the instance participating in the experiment
+     * Set ID of the instance participating in the experiment.
+     * @param TaskInstances ID of the instance participating in the experiment.
      */
     public void setTaskInstances(String [] TaskInstances) {
         this.TaskInstances = TaskInstances;
