@@ -53,26 +53,4 @@ public class FacefusionClient extends AbstractClient{
         return this.internalRequest(req, "FuseFace", FuseFaceResponse.class);
     }
 
-    /**
-     *This API is used to query the progress and status of video face fusion tasks by Job ID.
-     * @param req QueryVideoFaceFusionJobRequest
-     * @return QueryVideoFaceFusionJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public QueryVideoFaceFusionJobResponse QueryVideoFaceFusionJob(QueryVideoFaceFusionJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "QueryVideoFaceFusionJob", QueryVideoFaceFusionJobResponse.class);
-    }
-
-    /**
-     *This API is used to submit asynchronous processing tasks of video face fusion. After a task is submitted, the Job ID, estimated completion time, and current queue length will be returned.
-     * @param req SubmitVideoFaceFusionJobRequest
-     * @return SubmitVideoFaceFusionJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public SubmitVideoFaceFusionJobResponse SubmitVideoFaceFusionJob(SubmitVideoFaceFusionJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SubmitVideoFaceFusionJob", SubmitVideoFaceFusionJobResponse.class);
-    }
-
 }
