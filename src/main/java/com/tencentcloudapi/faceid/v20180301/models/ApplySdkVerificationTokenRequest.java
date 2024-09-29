@@ -67,6 +67,8 @@ Default value: 4
 17.ThailandDrivingLicense: Thailand Driving License
 18.SingaporeDrivingLicense: Singapore Driving License
 19.JapanDrivingLicense: Japan Driving License
+20.TaiWanIDCard:Taiwan ID Card
+21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
     */
     @SerializedName("IdCardType")
     @Expose
@@ -196,7 +198,9 @@ Default value: 4
 16.IndonesiaDrivingLicense: Indonesia Driving License
 17.ThailandDrivingLicense: Thailand Driving License
 18.SingaporeDrivingLicense: Singapore Driving License
-19.JapanDrivingLicense: Japan Driving License 
+19.JapanDrivingLicense: Japan Driving License
+20.TaiWanIDCard:Taiwan ID Card
+21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan 
      * @return IdCardType The identity document type. Valid values: 
 1. HK (default): Identity card of Hong Kong (China)
 2. ML: Malaysian identity card
@@ -217,6 +221,8 @@ Default value: 4
 17.ThailandDrivingLicense: Thailand Driving License
 18.SingaporeDrivingLicense: Singapore Driving License
 19.JapanDrivingLicense: Japan Driving License
+20.TaiWanIDCard:Taiwan ID Card
+21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
      */
     public String getIdCardType() {
         return this.IdCardType;
@@ -243,6 +249,8 @@ Default value: 4
 17.ThailandDrivingLicense: Thailand Driving License
 18.SingaporeDrivingLicense: Singapore Driving License
 19.JapanDrivingLicense: Japan Driving License
+20.TaiWanIDCard:Taiwan ID Card
+21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
      * @param IdCardType The identity document type. Valid values: 
 1. HK (default): Identity card of Hong Kong (China)
 2. ML: Malaysian identity card
@@ -263,6 +271,8 @@ Default value: 4
 17.ThailandDrivingLicense: Thailand Driving License
 18.SingaporeDrivingLicense: Singapore Driving License
 19.JapanDrivingLicense: Japan Driving License
+20.TaiWanIDCard:Taiwan ID Card
+21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
      */
     public void setIdCardType(String IdCardType) {
         this.IdCardType = IdCardType;

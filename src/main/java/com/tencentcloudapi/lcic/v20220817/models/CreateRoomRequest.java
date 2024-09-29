@@ -59,7 +59,9 @@ public class CreateRoomRequest extends AbstractModel {
     private Long Resolution;
 
     /**
-    * Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
+    * Maximum number of mic-on users (excluding teachers). Value range: [0, 16]. This value affects billing, please set it according to the actual business situation. For billing rules, see "Billing Overview" under "Purchase Guide". Example:
+1: Billing based on the 1v1 rule;
+10: Billing based on the 1v7-12 rule.
     */
     @SerializedName("MaxMicNumber")
     @Expose
@@ -229,6 +231,13 @@ public class CreateRoomRequest extends AbstractModel {
     private String RecordLang;
 
     /**
+    * Recording type. 0: Records only mixed streams (default); 1: Records mixed streams and single streams. In this mode, in addition to the mixed streams, the audio and video streams of the teacher and students on stage are recorded separately. Each recording incurs corresponding recording fees. Example: 0.
+    */
+    @SerializedName("RecordStream")
+    @Expose
+    private Long RecordStream;
+
+    /**
      * Get Room name 
      * @return Name Room name
      */
@@ -309,16 +318,24 @@ public class CreateRoomRequest extends AbstractModel {
     }
 
     /**
-     * Get Maximum number of mic-on users (excluding teachers). Value range: [0, 16] 
-     * @return MaxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
+     * Get Maximum number of mic-on users (excluding teachers). Value range: [0, 16]. This value affects billing, please set it according to the actual business situation. For billing rules, see "Billing Overview" under "Purchase Guide". Example:
+1: Billing based on the 1v1 rule;
+10: Billing based on the 1v7-12 rule. 
+     * @return MaxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]. This value affects billing, please set it according to the actual business situation. For billing rules, see "Billing Overview" under "Purchase Guide". Example:
+1: Billing based on the 1v1 rule;
+10: Billing based on the 1v7-12 rule.
      */
     public Long getMaxMicNumber() {
         return this.MaxMicNumber;
     }
 
     /**
-     * Set Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
-     * @param MaxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
+     * Set Maximum number of mic-on users (excluding teachers). Value range: [0, 16]. This value affects billing, please set it according to the actual business situation. For billing rules, see "Billing Overview" under "Purchase Guide". Example:
+1: Billing based on the 1v1 rule;
+10: Billing based on the 1v7-12 rule.
+     * @param MaxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]. This value affects billing, please set it according to the actual business situation. For billing rules, see "Billing Overview" under "Purchase Guide". Example:
+1: Billing based on the 1v1 rule;
+10: Billing based on the 1v7-12 rule.
      */
     public void setMaxMicNumber(Long MaxMicNumber) {
         this.MaxMicNumber = MaxMicNumber;
@@ -704,6 +721,22 @@ public class CreateRoomRequest extends AbstractModel {
         this.RecordLang = RecordLang;
     }
 
+    /**
+     * Get Recording type. 0: Records only mixed streams (default); 1: Records mixed streams and single streams. In this mode, in addition to the mixed streams, the audio and video streams of the teacher and students on stage are recorded separately. Each recording incurs corresponding recording fees. Example: 0. 
+     * @return RecordStream Recording type. 0: Records only mixed streams (default); 1: Records mixed streams and single streams. In this mode, in addition to the mixed streams, the audio and video streams of the teacher and students on stage are recorded separately. Each recording incurs corresponding recording fees. Example: 0.
+     */
+    public Long getRecordStream() {
+        return this.RecordStream;
+    }
+
+    /**
+     * Set Recording type. 0: Records only mixed streams (default); 1: Records mixed streams and single streams. In this mode, in addition to the mixed streams, the audio and video streams of the teacher and students on stage are recorded separately. Each recording incurs corresponding recording fees. Example: 0.
+     * @param RecordStream Recording type. 0: Records only mixed streams (default); 1: Records mixed streams and single streams. In this mode, in addition to the mixed streams, the audio and video streams of the teacher and students on stage are recorded separately. Each recording incurs corresponding recording fees. Example: 0.
+     */
+    public void setRecordStream(Long RecordStream) {
+        this.RecordStream = RecordStream;
+    }
+
     public CreateRoomRequest() {
     }
 
@@ -802,6 +835,9 @@ public class CreateRoomRequest extends AbstractModel {
         if (source.RecordLang != null) {
             this.RecordLang = new String(source.RecordLang);
         }
+        if (source.RecordStream != null) {
+            this.RecordStream = new Long(source.RecordStream);
+        }
     }
 
 
@@ -838,6 +874,7 @@ public class CreateRoomRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
         this.setParamSimple(map, prefix + "RecordScene", this.RecordScene);
         this.setParamSimple(map, prefix + "RecordLang", this.RecordLang);
+        this.setParamSimple(map, prefix + "RecordStream", this.RecordStream);
 
     }
 }

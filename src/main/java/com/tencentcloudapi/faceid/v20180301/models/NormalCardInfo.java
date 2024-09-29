@@ -160,6 +160,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private TaiWanIDCard TaiWanIDCard;
 
     /**
+    * exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HMTPermitCard")
+    @Expose
+    private HMTPermit HMTPermitCard;
+
+    /**
      * Get Hong Kong ID Card
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return HKIDCard Hong Kong ID Card
@@ -499,6 +507,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.TaiWanIDCard = TaiWanIDCard;
     }
 
+    /**
+     * Get exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HMTPermitCard exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public HMTPermit getHMTPermitCard() {
+        return this.HMTPermitCard;
+    }
+
+    /**
+     * Set exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HMTPermitCard exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHMTPermitCard(HMTPermit HMTPermitCard) {
+        this.HMTPermitCard = HMTPermitCard;
+    }
+
     public NormalCardInfo() {
     }
 
@@ -558,6 +586,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TaiWanIDCard != null) {
             this.TaiWanIDCard = new TaiWanIDCard(source.TaiWanIDCard);
         }
+        if (source.HMTPermitCard != null) {
+            this.HMTPermitCard = new HMTPermit(source.HMTPermitCard);
+        }
     }
 
 
@@ -582,6 +613,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "MainlandIDCard.", this.MainlandIDCard);
         this.setParamObj(map, prefix + "JapanIDCard.", this.JapanIDCard);
         this.setParamObj(map, prefix + "TaiWanIDCard.", this.TaiWanIDCard);
+        this.setParamObj(map, prefix + "HMTPermitCard.", this.HMTPermitCard);
 
     }
 }
