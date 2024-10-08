@@ -102,6 +102,29 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * Whether it is an audio-only template. 0: video template. 1: audio-only template.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PureAudio")
+    @Expose
+    private Long PureAudio;
+
+    /**
+    * HLS segment type. Valid values:
+<li>ts-segment: HLS+TS segment.</li>
+<li>ts-byterange: HLS+TS byte range.</li>
+<li>mp4-segment: HLS+MP4 segment.</li>
+<li>mp4-byterange: HLS+MP4 byte range.</li>
+<li>ts-packed-audio: TS+Packed audio.</li>
+<li>mp4-packed-audio: MP4+Packed audio.</li>
+Default value: ts-segment.
+
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SegmentType")
+    @Expose
+    private String SegmentType;
+
+    /**
      * Get Unique ID of an adaptive bitrate streaming template. 
      * @return Definition Unique ID of an adaptive bitrate streaming template.
      */
@@ -293,6 +316,74 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get Whether it is an audio-only template. 0: video template. 1: audio-only template.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getPureAudio() {
+        return this.PureAudio;
+    }
+
+    /**
+     * Set Whether it is an audio-only template. 0: video template. 1: audio-only template.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPureAudio(Long PureAudio) {
+        this.PureAudio = PureAudio;
+    }
+
+    /**
+     * Get HLS segment type. Valid values:
+<li>ts-segment: HLS+TS segment.</li>
+<li>ts-byterange: HLS+TS byte range.</li>
+<li>mp4-segment: HLS+MP4 segment.</li>
+<li>mp4-byterange: HLS+MP4 byte range.</li>
+<li>ts-packed-audio: TS+Packed audio.</li>
+<li>mp4-packed-audio: MP4+Packed audio.</li>
+Default value: ts-segment.
+
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SegmentType HLS segment type. Valid values:
+<li>ts-segment: HLS+TS segment.</li>
+<li>ts-byterange: HLS+TS byte range.</li>
+<li>mp4-segment: HLS+MP4 segment.</li>
+<li>mp4-byterange: HLS+MP4 byte range.</li>
+<li>ts-packed-audio: TS+Packed audio.</li>
+<li>mp4-packed-audio: MP4+Packed audio.</li>
+Default value: ts-segment.
+
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSegmentType() {
+        return this.SegmentType;
+    }
+
+    /**
+     * Set HLS segment type. Valid values:
+<li>ts-segment: HLS+TS segment.</li>
+<li>ts-byterange: HLS+TS byte range.</li>
+<li>mp4-segment: HLS+MP4 segment.</li>
+<li>mp4-byterange: HLS+MP4 byte range.</li>
+<li>ts-packed-audio: TS+Packed audio.</li>
+<li>mp4-packed-audio: MP4+Packed audio.</li>
+Default value: ts-segment.
+
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SegmentType HLS segment type. Valid values:
+<li>ts-segment: HLS+TS segment.</li>
+<li>ts-byterange: HLS+TS byte range.</li>
+<li>mp4-segment: HLS+MP4 segment.</li>
+<li>mp4-byterange: HLS+MP4 byte range.</li>
+<li>ts-packed-audio: TS+Packed audio.</li>
+<li>mp4-packed-audio: MP4+Packed audio.</li>
+Default value: ts-segment.
+
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSegmentType(String SegmentType) {
+        this.SegmentType = SegmentType;
+    }
+
     public AdaptiveDynamicStreamingTemplate() {
     }
 
@@ -334,6 +425,12 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.PureAudio != null) {
+            this.PureAudio = new Long(source.PureAudio);
+        }
+        if (source.SegmentType != null) {
+            this.SegmentType = new String(source.SegmentType);
+        }
     }
 
 
@@ -351,6 +448,8 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "PureAudio", this.PureAudio);
+        this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
 
     }
 }

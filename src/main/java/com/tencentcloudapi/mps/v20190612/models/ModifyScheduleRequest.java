@@ -75,6 +75,13 @@ Note: If this parameter is left empty, the current `OutputDir` value will be inv
     private TaskNotifyConfig TaskNotifyConfig;
 
     /**
+    * Resource ID. Ensure the corresponding resource is in the enabled state.
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
      * Get The scheme ID. 
      * @return ScheduleId The scheme ID.
      */
@@ -194,6 +201,22 @@ Note: If this parameter is left empty, the current `OutputDir` value will be inv
         this.TaskNotifyConfig = TaskNotifyConfig;
     }
 
+    /**
+     * Get Resource ID. Ensure the corresponding resource is in the enabled state. 
+     * @return ResourceId Resource ID. Ensure the corresponding resource is in the enabled state.
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set Resource ID. Ensure the corresponding resource is in the enabled state.
+     * @param ResourceId Resource ID. Ensure the corresponding resource is in the enabled state.
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
     public ModifyScheduleRequest() {
     }
 
@@ -226,6 +249,9 @@ Note: If this parameter is left empty, the current `OutputDir` value will be inv
         if (source.TaskNotifyConfig != null) {
             this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -240,6 +266,7 @@ Note: If this parameter is left empty, the current `OutputDir` value will be inv
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputDir", this.OutputDir);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

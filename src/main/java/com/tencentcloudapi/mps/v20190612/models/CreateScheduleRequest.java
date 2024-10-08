@@ -67,6 +67,13 @@ If you do not specify this, the file will be saved to the trigger directory.
     private TaskNotifyConfig TaskNotifyConfig;
 
     /**
+    * Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
      * Get The scheme name (max 128 characters). This name should be unique across your account. 
      * @return ScheduleName The scheme name (max 128 characters). This name should be unique across your account.
      */
@@ -166,6 +173,22 @@ If you do not specify this, the file will be saved to the trigger directory.
         this.TaskNotifyConfig = TaskNotifyConfig;
     }
 
+    /**
+     * Get Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID. 
+     * @return ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     * @param ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
     public CreateScheduleRequest() {
     }
 
@@ -195,6 +218,9 @@ If you do not specify this, the file will be saved to the trigger directory.
         if (source.TaskNotifyConfig != null) {
             this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -208,6 +234,7 @@ If you do not specify this, the file will be saved to the trigger directory.
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputDir", this.OutputDir);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

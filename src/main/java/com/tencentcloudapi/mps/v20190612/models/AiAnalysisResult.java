@@ -25,11 +25,14 @@ public class AiAnalysisResult extends AbstractModel {
 
     /**
     * Task type. Valid values:
-<li>Classification: intelligent categorization</li>
-<li>Cover: intelligent cover generating</li>
-<li>Tag: intelligent tagging</li>
-<li>FrameTag: intelligent frame-specific tagging</li>
-<li>Highlight: intelligent highlight generating</li>
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent thumbnail generating.</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame-by-frame tagging.</li>
+<li>Highlight: intelligent highlights generating.</li>
+
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -72,18 +75,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AiAnalysisTaskHighlightResult HighlightTask;
 
     /**
+    * The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DeLogoTask")
+    @Expose
+    private AiAnalysisTaskDelLogoResult DeLogoTask;
+
+    /**
+    * The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SegmentTask")
+    @Expose
+    private AiAnalysisTaskSegmentResult SegmentTask;
+
+    /**
+    * The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HeadTailTask")
+    @Expose
+    private AiAnalysisTaskHeadTailResult HeadTailTask;
+
+    /**
+    * The query result of a video analysis summarization task, which is valid when the task type is Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DescriptionTask")
+    @Expose
+    private AiAnalysisTaskDescriptionResult DescriptionTask;
+
+    /**
+    * The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HorizontalToVerticalTask")
+    @Expose
+    private AiAnalysisTaskHorizontalToVerticalResult HorizontalToVerticalTask;
+
+    /**
      * Get Task type. Valid values:
-<li>Classification: intelligent categorization</li>
-<li>Cover: intelligent cover generating</li>
-<li>Tag: intelligent tagging</li>
-<li>FrameTag: intelligent frame-specific tagging</li>
-<li>Highlight: intelligent highlight generating</li> 
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent thumbnail generating.</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame-by-frame tagging.</li>
+<li>Highlight: intelligent highlights generating.</li>
+
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li> 
      * @return Type Task type. Valid values:
-<li>Classification: intelligent categorization</li>
-<li>Cover: intelligent cover generating</li>
-<li>Tag: intelligent tagging</li>
-<li>FrameTag: intelligent frame-specific tagging</li>
-<li>Highlight: intelligent highlight generating</li>
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent thumbnail generating.</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame-by-frame tagging.</li>
+<li>Highlight: intelligent highlights generating.</li>
+
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
      */
     public String getType() {
         return this.Type;
@@ -91,17 +140,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task type. Valid values:
-<li>Classification: intelligent categorization</li>
-<li>Cover: intelligent cover generating</li>
-<li>Tag: intelligent tagging</li>
-<li>FrameTag: intelligent frame-specific tagging</li>
-<li>Highlight: intelligent highlight generating</li>
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent thumbnail generating.</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame-by-frame tagging.</li>
+<li>Highlight: intelligent highlights generating.</li>
+
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
      * @param Type Task type. Valid values:
-<li>Classification: intelligent categorization</li>
-<li>Cover: intelligent cover generating</li>
-<li>Tag: intelligent tagging</li>
-<li>FrameTag: intelligent frame-specific tagging</li>
-<li>Highlight: intelligent highlight generating</li>
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent thumbnail generating.</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame-by-frame tagging.</li>
+<li>Highlight: intelligent highlights generating.</li>
+
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -191,6 +246,106 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.HighlightTask = HighlightTask;
     }
 
+    /**
+     * Get The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DeLogoTask The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AiAnalysisTaskDelLogoResult getDeLogoTask() {
+        return this.DeLogoTask;
+    }
+
+    /**
+     * Set The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DeLogoTask The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDeLogoTask(AiAnalysisTaskDelLogoResult DeLogoTask) {
+        this.DeLogoTask = DeLogoTask;
+    }
+
+    /**
+     * Get The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SegmentTask The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AiAnalysisTaskSegmentResult getSegmentTask() {
+        return this.SegmentTask;
+    }
+
+    /**
+     * Set The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SegmentTask The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSegmentTask(AiAnalysisTaskSegmentResult SegmentTask) {
+        this.SegmentTask = SegmentTask;
+    }
+
+    /**
+     * Get The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HeadTailTask The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AiAnalysisTaskHeadTailResult getHeadTailTask() {
+        return this.HeadTailTask;
+    }
+
+    /**
+     * Set The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HeadTailTask The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHeadTailTask(AiAnalysisTaskHeadTailResult HeadTailTask) {
+        this.HeadTailTask = HeadTailTask;
+    }
+
+    /**
+     * Get The query result of a video analysis summarization task, which is valid when the task type is Description.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DescriptionTask The query result of a video analysis summarization task, which is valid when the task type is Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AiAnalysisTaskDescriptionResult getDescriptionTask() {
+        return this.DescriptionTask;
+    }
+
+    /**
+     * Set The query result of a video analysis summarization task, which is valid when the task type is Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DescriptionTask The query result of a video analysis summarization task, which is valid when the task type is Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDescriptionTask(AiAnalysisTaskDescriptionResult DescriptionTask) {
+        this.DescriptionTask = DescriptionTask;
+    }
+
+    /**
+     * Get The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HorizontalToVerticalTask The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AiAnalysisTaskHorizontalToVerticalResult getHorizontalToVerticalTask() {
+        return this.HorizontalToVerticalTask;
+    }
+
+    /**
+     * Set The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HorizontalToVerticalTask The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHorizontalToVerticalTask(AiAnalysisTaskHorizontalToVerticalResult HorizontalToVerticalTask) {
+        this.HorizontalToVerticalTask = HorizontalToVerticalTask;
+    }
+
     public AiAnalysisResult() {
     }
 
@@ -217,6 +372,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.HighlightTask != null) {
             this.HighlightTask = new AiAnalysisTaskHighlightResult(source.HighlightTask);
         }
+        if (source.DeLogoTask != null) {
+            this.DeLogoTask = new AiAnalysisTaskDelLogoResult(source.DeLogoTask);
+        }
+        if (source.SegmentTask != null) {
+            this.SegmentTask = new AiAnalysisTaskSegmentResult(source.SegmentTask);
+        }
+        if (source.HeadTailTask != null) {
+            this.HeadTailTask = new AiAnalysisTaskHeadTailResult(source.HeadTailTask);
+        }
+        if (source.DescriptionTask != null) {
+            this.DescriptionTask = new AiAnalysisTaskDescriptionResult(source.DescriptionTask);
+        }
+        if (source.HorizontalToVerticalTask != null) {
+            this.HorizontalToVerticalTask = new AiAnalysisTaskHorizontalToVerticalResult(source.HorizontalToVerticalTask);
+        }
     }
 
 
@@ -230,6 +400,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "TagTask.", this.TagTask);
         this.setParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
         this.setParamObj(map, prefix + "HighlightTask.", this.HighlightTask);
+        this.setParamObj(map, prefix + "DeLogoTask.", this.DeLogoTask);
+        this.setParamObj(map, prefix + "SegmentTask.", this.SegmentTask);
+        this.setParamObj(map, prefix + "HeadTailTask.", this.HeadTailTask);
+        this.setParamObj(map, prefix + "DescriptionTask.", this.DescriptionTask);
+        this.setParamObj(map, prefix + "HorizontalToVerticalTask.", this.HorizontalToVerticalTask);
 
     }
 }

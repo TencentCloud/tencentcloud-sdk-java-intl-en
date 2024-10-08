@@ -87,6 +87,14 @@ public class ActivityPara extends AbstractModel {
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
+    * Media quality inspection task.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("QualityControlTask")
+    @Expose
+    private AiQualityControlTaskInput QualityControlTask;
+
+    /**
      * Get A transcoding task. 
      * @return TranscodeTask A transcoding task.
      */
@@ -230,6 +238,26 @@ public class ActivityPara extends AbstractModel {
         this.AiRecognitionTask = AiRecognitionTask;
     }
 
+    /**
+     * Get Media quality inspection task.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return QualityControlTask Media quality inspection task.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AiQualityControlTaskInput getQualityControlTask() {
+        return this.QualityControlTask;
+    }
+
+    /**
+     * Set Media quality inspection task.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param QualityControlTask Media quality inspection task.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setQualityControlTask(AiQualityControlTaskInput QualityControlTask) {
+        this.QualityControlTask = QualityControlTask;
+    }
+
     public ActivityPara() {
     }
 
@@ -265,6 +293,9 @@ public class ActivityPara extends AbstractModel {
         if (source.AiRecognitionTask != null) {
             this.AiRecognitionTask = new AiRecognitionTaskInput(source.AiRecognitionTask);
         }
+        if (source.QualityControlTask != null) {
+            this.QualityControlTask = new AiQualityControlTaskInput(source.QualityControlTask);
+        }
     }
 
 
@@ -281,6 +312,7 @@ public class ActivityPara extends AbstractModel {
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
+        this.setParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
 
     }
 }

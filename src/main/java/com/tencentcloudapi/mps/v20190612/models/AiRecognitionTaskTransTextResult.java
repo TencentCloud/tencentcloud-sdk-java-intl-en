@@ -67,6 +67,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AiRecognitionTaskTransTextResultOutput Output;
 
     /**
+    * Task progress.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
      * Get The task status. Valid values: PROCESSING, SUCCESS, FAIL. 
      * @return Status The task status. Valid values: PROCESSING, SUCCESS, FAIL.
      */
@@ -166,6 +174,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Output = Output;
     }
 
+    /**
+     * Get Task progress.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Progress Task progress.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set Task progress.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Progress Task progress.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
     public AiRecognitionTaskTransTextResult() {
     }
 
@@ -192,6 +220,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Output != null) {
             this.Output = new AiRecognitionTaskTransTextResultOutput(source.Output);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
     }
 
 
@@ -205,6 +236,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

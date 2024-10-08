@@ -24,28 +24,40 @@ import java.util.HashMap;
 public class VideoTemplateInfoForUpdate extends AbstractModel {
 
     /**
-    * The video codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-<li>av1: AOMedia Video 1</li>
-Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
-Note: You can only use the AOMedia Video 1 codec for MP4 files.
+    * Video stream encoding format. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: A resolution within 640x480 should be specified for H.265 encoding.
+
+Note: AV1 encoding containers only support mp4, webm, and mkv.
+Note: H.266 encoding containers only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * Video frame rate in Hz. Value range: [0, 100].
-If the value is 0, the frame rate will be the same as that of the source video.
+    * Video frame rate. Value range:
+When FpsDenominator is empty, the range is [0, 120], in Hz.
+When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
+If the value is 0, the frame rate will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
+    * Bitrate of a video stream, in kbps. Value range: 0 and [128, 100000].If the value is 0, the bitrate of the video will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Bitrate")
     @Expose
@@ -116,76 +128,158 @@ Default value: 0. If this parameter is set to `1`, multiple streams with differe
     private Long ContentAdaptStream;
 
     /**
-     * Get The video codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-<li>av1: AOMedia Video 1</li>
-Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
-Note: You can only use the AOMedia Video 1 codec for MP4 files. 
-     * @return Codec The video codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-<li>av1: AOMedia Video 1</li>
-Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
-Note: You can only use the AOMedia Video 1 codec for MP4 files.
+    * HLS segment type. Valid values:
+<li>0: HLS+TS segment.</li>
+<li>2: HLS+TS byte range.</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5: HLS+MP4 byte range.</li>
+Default value: 0
+
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SegmentType")
+    @Expose
+    private Long SegmentType;
+
+    /**
+    * Denominator of the frame rate.
+Note: The value must be greater than 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FpsDenominator")
+    @Expose
+    private Long FpsDenominator;
+
+    /**
+    * 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
+<li>side_by_side: side-by-side view.</li>
+<li>top_bottom: top-bottom view.</li>
+Default value: side_by_side.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Stereo3dType")
+    @Expose
+    private String Stereo3dType;
+
+    /**
+     * Get Video stream encoding format. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: A resolution within 640x480 should be specified for H.265 encoding.
+
+Note: AV1 encoding containers only support mp4, webm, and mkv.
+Note: H.266 encoding containers only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Codec Video stream encoding format. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: A resolution within 640x480 should be specified for H.265 encoding.
+
+Note: AV1 encoding containers only support mp4, webm, and mkv.
+Note: H.266 encoding containers only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set The video codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-<li>av1: AOMedia Video 1</li>
-Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
-Note: You can only use the AOMedia Video 1 codec for MP4 files.
-     * @param Codec The video codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-<li>av1: AOMedia Video 1</li>
-Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
-Note: You can only use the AOMedia Video 1 codec for MP4 files.
+     * Set Video stream encoding format. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: A resolution within 640x480 should be specified for H.265 encoding.
+
+Note: AV1 encoding containers only support mp4, webm, and mkv.
+Note: H.266 encoding containers only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Codec Video stream encoding format. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: A resolution within 640x480 should be specified for H.265 encoding.
+
+Note: AV1 encoding containers only support mp4, webm, and mkv.
+Note: H.266 encoding containers only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get Video frame rate in Hz. Value range: [0, 100].
-If the value is 0, the frame rate will be the same as that of the source video. 
-     * @return Fps Video frame rate in Hz. Value range: [0, 100].
-If the value is 0, the frame rate will be the same as that of the source video.
+     * Get Video frame rate. Value range:
+When FpsDenominator is empty, the range is [0, 120], in Hz.
+When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
+If the value is 0, the frame rate will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Fps Video frame rate. Value range:
+When FpsDenominator is empty, the range is [0, 120], in Hz.
+When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
+If the value is 0, the frame rate will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set Video frame rate in Hz. Value range: [0, 100].
-If the value is 0, the frame rate will be the same as that of the source video.
-     * @param Fps Video frame rate in Hz. Value range: [0, 100].
-If the value is 0, the frame rate will be the same as that of the source video.
+     * Set Video frame rate. Value range:
+When FpsDenominator is empty, the range is [0, 120], in Hz.
+When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
+If the value is 0, the frame rate will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Fps Video frame rate. Value range:
+When FpsDenominator is empty, the range is [0, 120], in Hz.
+When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
+If the value is 0, the frame rate will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video. 
-     * @return Bitrate Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
+     * Get Bitrate of a video stream, in kbps. Value range: 0 and [128, 100000].If the value is 0, the bitrate of the video will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Bitrate Bitrate of a video stream, in kbps. Value range: 0 and [128, 100000].If the value is 0, the bitrate of the video will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
-     * @param Bitrate Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
+     * Set Bitrate of a video stream, in kbps. Value range: 0 and [128, 100000].If the value is 0, the bitrate of the video will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Bitrate Bitrate of a video stream, in kbps. Value range: 0 and [128, 100000].If the value is 0, the bitrate of the video will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
@@ -363,6 +457,106 @@ Default value: 0. If this parameter is set to `1`, multiple streams with differe
         this.ContentAdaptStream = ContentAdaptStream;
     }
 
+    /**
+     * Get HLS segment type. Valid values:
+<li>0: HLS+TS segment.</li>
+<li>2: HLS+TS byte range.</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5: HLS+MP4 byte range.</li>
+Default value: 0
+
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SegmentType HLS segment type. Valid values:
+<li>0: HLS+TS segment.</li>
+<li>2: HLS+TS byte range.</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5: HLS+MP4 byte range.</li>
+Default value: 0
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getSegmentType() {
+        return this.SegmentType;
+    }
+
+    /**
+     * Set HLS segment type. Valid values:
+<li>0: HLS+TS segment.</li>
+<li>2: HLS+TS byte range.</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5: HLS+MP4 byte range.</li>
+Default value: 0
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SegmentType HLS segment type. Valid values:
+<li>0: HLS+TS segment.</li>
+<li>2: HLS+TS byte range.</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5: HLS+MP4 byte range.</li>
+Default value: 0
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSegmentType(Long SegmentType) {
+        this.SegmentType = SegmentType;
+    }
+
+    /**
+     * Get Denominator of the frame rate.
+Note: The value must be greater than 0.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FpsDenominator Denominator of the frame rate.
+Note: The value must be greater than 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getFpsDenominator() {
+        return this.FpsDenominator;
+    }
+
+    /**
+     * Set Denominator of the frame rate.
+Note: The value must be greater than 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FpsDenominator Denominator of the frame rate.
+Note: The value must be greater than 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFpsDenominator(Long FpsDenominator) {
+        this.FpsDenominator = FpsDenominator;
+    }
+
+    /**
+     * Get 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
+<li>side_by_side: side-by-side view.</li>
+<li>top_bottom: top-bottom view.</li>
+Default value: side_by_side.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Stereo3dType 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
+<li>side_by_side: side-by-side view.</li>
+<li>top_bottom: top-bottom view.</li>
+Default value: side_by_side.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getStereo3dType() {
+        return this.Stereo3dType;
+    }
+
+    /**
+     * Set 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
+<li>side_by_side: side-by-side view.</li>
+<li>top_bottom: top-bottom view.</li>
+Default value: side_by_side.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Stereo3dType 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
+<li>side_by_side: side-by-side view.</li>
+<li>top_bottom: top-bottom view.</li>
+Default value: side_by_side.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStereo3dType(String Stereo3dType) {
+        this.Stereo3dType = Stereo3dType;
+    }
+
     public VideoTemplateInfoForUpdate() {
     }
 
@@ -401,6 +595,15 @@ Default value: 0. If this parameter is set to `1`, multiple streams with differe
         if (source.ContentAdaptStream != null) {
             this.ContentAdaptStream = new Long(source.ContentAdaptStream);
         }
+        if (source.SegmentType != null) {
+            this.SegmentType = new Long(source.SegmentType);
+        }
+        if (source.FpsDenominator != null) {
+            this.FpsDenominator = new Long(source.FpsDenominator);
+        }
+        if (source.Stereo3dType != null) {
+            this.Stereo3dType = new String(source.Stereo3dType);
+        }
     }
 
 
@@ -418,6 +621,9 @@ Default value: 0. If this parameter is set to `1`, multiple streams with differe
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "Vcrf", this.Vcrf);
         this.setParamSimple(map, prefix + "ContentAdaptStream", this.ContentAdaptStream);
+        this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
+        this.setParamSimple(map, prefix + "FpsDenominator", this.FpsDenominator);
+        this.setParamSimple(map, prefix + "Stereo3dType", this.Stereo3dType);
 
     }
 }

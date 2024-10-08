@@ -24,16 +24,18 @@ import java.util.HashMap;
 public class ActivityResult extends AbstractModel {
 
     /**
-    * The type of the scheme’s subtask.
-<li>Transcode: Transcoding</li>
-<li>SampleSnapshot: Sampled screenshot</li>
-<li>AnimatedGraphics: Animated image generating</li>
-<li>SnapshotByTimeOffset: Time point screenshot</li>
-<li>ImageSprites: Image sprite generating</li>
-<li>AdaptiveDynamicStreaming: Adaptive bitrate streaming</li>
-<li>AiContentReview: Content moderation</li>
-<li>AIRecognition: Content recognition</li>
-<li>AIAnalysis: Content analysis</li>
+    * Atomic task type.
+<li>Transcode: transcoding.</li>
+<li>SampleSnapshot: sampled screenshot taking.</li>
+<li>AnimatedGraphics: animated image generating.</li>
+<li>SnapshotByTimeOffset: time point screenshot taking.</li>
+<li>ImageSprites: sprite image generating.</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
+<li>AiContentReview: content moderation.</li>
+<li>AIRecognition: intelligent identification.</li>
+<li>AIAnalysis: intelligent analysis.</li>
+
+<li>AiQualityControl: media quality inspection.</li>
     */
     @SerializedName("ActivityType")
     @Expose
@@ -47,52 +49,60 @@ public class ActivityResult extends AbstractModel {
     private ActivityResItem ActivityResItem;
 
     /**
-     * Get The type of the scheme’s subtask.
-<li>Transcode: Transcoding</li>
-<li>SampleSnapshot: Sampled screenshot</li>
-<li>AnimatedGraphics: Animated image generating</li>
-<li>SnapshotByTimeOffset: Time point screenshot</li>
-<li>ImageSprites: Image sprite generating</li>
-<li>AdaptiveDynamicStreaming: Adaptive bitrate streaming</li>
-<li>AiContentReview: Content moderation</li>
-<li>AIRecognition: Content recognition</li>
-<li>AIAnalysis: Content analysis</li> 
-     * @return ActivityType The type of the scheme’s subtask.
-<li>Transcode: Transcoding</li>
-<li>SampleSnapshot: Sampled screenshot</li>
-<li>AnimatedGraphics: Animated image generating</li>
-<li>SnapshotByTimeOffset: Time point screenshot</li>
-<li>ImageSprites: Image sprite generating</li>
-<li>AdaptiveDynamicStreaming: Adaptive bitrate streaming</li>
-<li>AiContentReview: Content moderation</li>
-<li>AIRecognition: Content recognition</li>
-<li>AIAnalysis: Content analysis</li>
+     * Get Atomic task type.
+<li>Transcode: transcoding.</li>
+<li>SampleSnapshot: sampled screenshot taking.</li>
+<li>AnimatedGraphics: animated image generating.</li>
+<li>SnapshotByTimeOffset: time point screenshot taking.</li>
+<li>ImageSprites: sprite image generating.</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
+<li>AiContentReview: content moderation.</li>
+<li>AIRecognition: intelligent identification.</li>
+<li>AIAnalysis: intelligent analysis.</li>
+
+<li>AiQualityControl: media quality inspection.</li> 
+     * @return ActivityType Atomic task type.
+<li>Transcode: transcoding.</li>
+<li>SampleSnapshot: sampled screenshot taking.</li>
+<li>AnimatedGraphics: animated image generating.</li>
+<li>SnapshotByTimeOffset: time point screenshot taking.</li>
+<li>ImageSprites: sprite image generating.</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
+<li>AiContentReview: content moderation.</li>
+<li>AIRecognition: intelligent identification.</li>
+<li>AIAnalysis: intelligent analysis.</li>
+
+<li>AiQualityControl: media quality inspection.</li>
      */
     public String getActivityType() {
         return this.ActivityType;
     }
 
     /**
-     * Set The type of the scheme’s subtask.
-<li>Transcode: Transcoding</li>
-<li>SampleSnapshot: Sampled screenshot</li>
-<li>AnimatedGraphics: Animated image generating</li>
-<li>SnapshotByTimeOffset: Time point screenshot</li>
-<li>ImageSprites: Image sprite generating</li>
-<li>AdaptiveDynamicStreaming: Adaptive bitrate streaming</li>
-<li>AiContentReview: Content moderation</li>
-<li>AIRecognition: Content recognition</li>
-<li>AIAnalysis: Content analysis</li>
-     * @param ActivityType The type of the scheme’s subtask.
-<li>Transcode: Transcoding</li>
-<li>SampleSnapshot: Sampled screenshot</li>
-<li>AnimatedGraphics: Animated image generating</li>
-<li>SnapshotByTimeOffset: Time point screenshot</li>
-<li>ImageSprites: Image sprite generating</li>
-<li>AdaptiveDynamicStreaming: Adaptive bitrate streaming</li>
-<li>AiContentReview: Content moderation</li>
-<li>AIRecognition: Content recognition</li>
-<li>AIAnalysis: Content analysis</li>
+     * Set Atomic task type.
+<li>Transcode: transcoding.</li>
+<li>SampleSnapshot: sampled screenshot taking.</li>
+<li>AnimatedGraphics: animated image generating.</li>
+<li>SnapshotByTimeOffset: time point screenshot taking.</li>
+<li>ImageSprites: sprite image generating.</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
+<li>AiContentReview: content moderation.</li>
+<li>AIRecognition: intelligent identification.</li>
+<li>AIAnalysis: intelligent analysis.</li>
+
+<li>AiQualityControl: media quality inspection.</li>
+     * @param ActivityType Atomic task type.
+<li>Transcode: transcoding.</li>
+<li>SampleSnapshot: sampled screenshot taking.</li>
+<li>AnimatedGraphics: animated image generating.</li>
+<li>SnapshotByTimeOffset: time point screenshot taking.</li>
+<li>ImageSprites: sprite image generating.</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
+<li>AiContentReview: content moderation.</li>
+<li>AIRecognition: intelligent identification.</li>
+<li>AIAnalysis: intelligent analysis.</li>
+
+<li>AiQualityControl: media quality inspection.</li>
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;

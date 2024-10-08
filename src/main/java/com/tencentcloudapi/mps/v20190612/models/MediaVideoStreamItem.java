@@ -96,6 +96,29 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String HdrType;
 
     /**
+    * 
+    */
+    @SerializedName("Codecs")
+    @Expose
+    private String Codecs;
+
+    /**
+    * Numerator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FpsNumerator")
+    @Expose
+    private Long FpsNumerator;
+
+    /**
+    * Denominator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FpsDenominator")
+    @Expose
+    private Long FpsDenominator;
+
+    /**
      * Get Bitrate of a video stream in bps.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Bitrate Bitrate of a video stream in bps.
@@ -275,6 +298,62 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.HdrType = HdrType;
     }
 
+    /**
+     * Get  
+     * @return Codecs 
+     */
+    public String getCodecs() {
+        return this.Codecs;
+    }
+
+    /**
+     * Set 
+     * @param Codecs 
+     */
+    public void setCodecs(String Codecs) {
+        this.Codecs = Codecs;
+    }
+
+    /**
+     * Get Numerator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FpsNumerator Numerator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getFpsNumerator() {
+        return this.FpsNumerator;
+    }
+
+    /**
+     * Set Numerator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FpsNumerator Numerator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFpsNumerator(Long FpsNumerator) {
+        this.FpsNumerator = FpsNumerator;
+    }
+
+    /**
+     * Get Denominator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FpsDenominator Denominator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getFpsDenominator() {
+        return this.FpsDenominator;
+    }
+
+    /**
+     * Set Denominator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FpsDenominator Denominator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFpsDenominator(Long FpsDenominator) {
+        this.FpsDenominator = FpsDenominator;
+    }
+
     public MediaVideoStreamItem() {
     }
 
@@ -310,6 +389,15 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.HdrType != null) {
             this.HdrType = new String(source.HdrType);
         }
+        if (source.Codecs != null) {
+            this.Codecs = new String(source.Codecs);
+        }
+        if (source.FpsNumerator != null) {
+            this.FpsNumerator = new Long(source.FpsNumerator);
+        }
+        if (source.FpsDenominator != null) {
+            this.FpsDenominator = new Long(source.FpsDenominator);
+        }
     }
 
 
@@ -326,6 +414,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "ColorSpace", this.ColorSpace);
         this.setParamSimple(map, prefix + "ColorTransfer", this.ColorTransfer);
         this.setParamSimple(map, prefix + "HdrType", this.HdrType);
+        this.setParamSimple(map, prefix + "Codecs", this.Codecs);
+        this.setParamSimple(map, prefix + "FpsNumerator", this.FpsNumerator);
+        this.setParamSimple(map, prefix + "FpsDenominator", this.FpsDenominator);
 
     }
 }

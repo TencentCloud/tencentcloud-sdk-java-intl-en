@@ -24,7 +24,12 @@ import java.util.HashMap;
 public class AiQualityControlTaskInput extends AbstractModel {
 
     /**
-    * The ID of the quality control template.
+    * Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Definition")
@@ -40,9 +45,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ChannelExtPara;
 
     /**
-     * Get The ID of the quality control template.
+     * Get Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Definition The ID of the quality control template.
+     * @return Definition Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDefinition() {
@@ -50,9 +65,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The ID of the quality control template.
+     * Set Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Definition The ID of the quality control template.
+     * @param Definition Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDefinition(Long Definition) {

@@ -54,6 +54,13 @@ public class DescribeAnimatedGraphicsTemplatesRequest extends AbstractModel {
     private String Type;
 
     /**
+    * Filter condition for animated image generating template identifiers, with a length limit of 64 characters.
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get Unique ID filter of animated image generating templates. Array length limit: 100. 
      * @return Definitions Unique ID filter of animated image generating templates. Array length limit: 100.
      */
@@ -125,6 +132,22 @@ public class DescribeAnimatedGraphicsTemplatesRequest extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get Filter condition for animated image generating template identifiers, with a length limit of 64 characters. 
+     * @return Name Filter condition for animated image generating template identifiers, with a length limit of 64 characters.
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Filter condition for animated image generating template identifiers, with a length limit of 64 characters.
+     * @param Name Filter condition for animated image generating template identifiers, with a length limit of 64 characters.
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public DescribeAnimatedGraphicsTemplatesRequest() {
     }
 
@@ -148,6 +171,9 @@ public class DescribeAnimatedGraphicsTemplatesRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -159,6 +185,7 @@ public class DescribeAnimatedGraphicsTemplatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

@@ -33,7 +33,7 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
     private String FontType;
 
     /**
-    * Font size in Npx format where N is a numeric value.
+    * Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
     */
     @SerializedName("FontSize")
     @Expose
@@ -54,6 +54,13 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
     @SerializedName("FontAlpha")
     @Expose
     private Float FontAlpha;
+
+    /**
+    * Text content, up to 100 characters.
+    */
+    @SerializedName("TextContent")
+    @Expose
+    private String TextContent;
 
     /**
      * Get Font type. Currently, two types are supported:
@@ -80,16 +87,16 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
     }
 
     /**
-     * Get Font size in Npx format where N is a numeric value. 
-     * @return FontSize Font size in Npx format where N is a numeric value.
+     * Get Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096]. 
+     * @return FontSize Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
      */
     public String getFontSize() {
         return this.FontSize;
     }
 
     /**
-     * Set Font size in Npx format where N is a numeric value.
-     * @param FontSize Font size in Npx format where N is a numeric value.
+     * Set Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
+     * @param FontSize Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
      */
     public void setFontSize(String FontSize) {
         this.FontSize = FontSize;
@@ -135,6 +142,22 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
         this.FontAlpha = FontAlpha;
     }
 
+    /**
+     * Get Text content, up to 100 characters. 
+     * @return TextContent Text content, up to 100 characters.
+     */
+    public String getTextContent() {
+        return this.TextContent;
+    }
+
+    /**
+     * Set Text content, up to 100 characters.
+     * @param TextContent Text content, up to 100 characters.
+     */
+    public void setTextContent(String TextContent) {
+        this.TextContent = TextContent;
+    }
+
     public TextWatermarkTemplateInputForUpdate() {
     }
 
@@ -155,6 +178,9 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
         if (source.FontAlpha != null) {
             this.FontAlpha = new Float(source.FontAlpha);
         }
+        if (source.TextContent != null) {
+            this.TextContent = new String(source.TextContent);
+        }
     }
 
 
@@ -166,6 +192,7 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
         this.setParamSimple(map, prefix + "FontSize", this.FontSize);
         this.setParamSimple(map, prefix + "FontColor", this.FontColor);
         this.setParamSimple(map, prefix + "FontAlpha", this.FontAlpha);
+        this.setParamSimple(map, prefix + "TextContent", this.TextContent);
 
     }
 }

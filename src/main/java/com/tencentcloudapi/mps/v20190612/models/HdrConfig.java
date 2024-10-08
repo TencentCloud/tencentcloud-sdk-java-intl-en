@@ -34,12 +34,12 @@ Default value: ON.
     private String Switch;
 
     /**
-    * The strength. Valid values:
+    * Type. Valid values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
-Note: The video codec must be `libx265`.
-Note: The bit depth for video encoding is 10 bits.
+Default Value: HDR10.
+Note: The video encoding method should be H.265.
+Note: The video encoding bit depth is 10.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
@@ -75,19 +75,19 @@ Default value: ON.
     }
 
     /**
-     * Get The strength. Valid values:
+     * Get Type. Valid values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
-Note: The video codec must be `libx265`.
-Note: The bit depth for video encoding is 10 bits.
+Default Value: HDR10.
+Note: The video encoding method should be H.265.
+Note: The video encoding bit depth is 10.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type The strength. Valid values:
+     * @return Type Type. Valid values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
-Note: The video codec must be `libx265`.
-Note: The bit depth for video encoding is 10 bits.
+Default Value: HDR10.
+Note: The video encoding method should be H.265.
+Note: The video encoding bit depth is 10.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
@@ -95,19 +95,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The strength. Valid values:
+     * Set Type. Valid values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
-Note: The video codec must be `libx265`.
-Note: The bit depth for video encoding is 10 bits.
+Default Value: HDR10.
+Note: The video encoding method should be H.265.
+Note: The video encoding bit depth is 10.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type The strength. Valid values:
+     * @param Type Type. Valid values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
-Note: The video codec must be `libx265`.
-Note: The bit depth for video encoding is 10 bits.
+Default Value: HDR10.
+Note: The video encoding method should be H.265.
+Note: The video encoding bit depth is 10.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {

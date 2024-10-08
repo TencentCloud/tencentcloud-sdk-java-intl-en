@@ -54,6 +54,20 @@ public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractMo
     private String Type;
 
     /**
+    * Whether it is an audio-only template. 0: video template. 1: audio-only template.
+    */
+    @SerializedName("PureAudio")
+    @Expose
+    private Long PureAudio;
+
+    /**
+    * Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get Unique ID filter of adaptive bitrate streaming templates. Array length limit: 100. 
      * @return Definitions Unique ID filter of adaptive bitrate streaming templates. Array length limit: 100.
      */
@@ -125,6 +139,38 @@ public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractMo
         this.Type = Type;
     }
 
+    /**
+     * Get Whether it is an audio-only template. 0: video template. 1: audio-only template. 
+     * @return PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.
+     */
+    public Long getPureAudio() {
+        return this.PureAudio;
+    }
+
+    /**
+     * Set Whether it is an audio-only template. 0: video template. 1: audio-only template.
+     * @param PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.
+     */
+    public void setPureAudio(Long PureAudio) {
+        this.PureAudio = PureAudio;
+    }
+
+    /**
+     * Get Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters. 
+     * @return Name Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
+     * @param Name Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public DescribeAdaptiveDynamicStreamingTemplatesRequest() {
     }
 
@@ -148,6 +194,12 @@ public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractMo
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.PureAudio != null) {
+            this.PureAudio = new Long(source.PureAudio);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -159,6 +211,8 @@ public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractMo
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "PureAudio", this.PureAudio);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

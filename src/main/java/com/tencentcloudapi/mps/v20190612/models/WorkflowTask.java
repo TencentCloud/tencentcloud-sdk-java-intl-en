@@ -98,7 +98,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AiRecognitionResult [] AiRecognitionResultSet;
 
     /**
-    * The execution status and result of a quality control task.
+    * Execution status and results of a media quality inspection task.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AiQualityControlTaskResult")
@@ -282,9 +282,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The execution status and result of a quality control task.
+     * Get Execution status and results of a media quality inspection task.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AiQualityControlTaskResult The execution status and result of a quality control task.
+     * @return AiQualityControlTaskResult Execution status and results of a media quality inspection task.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ScheduleQualityControlTaskResult getAiQualityControlTaskResult() {
@@ -292,9 +292,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The execution status and result of a quality control task.
+     * Set Execution status and results of a media quality inspection task.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiQualityControlTaskResult The execution status and result of a quality control task.
+     * @param AiQualityControlTaskResult Execution status and results of a media quality inspection task.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAiQualityControlTaskResult(ScheduleQualityControlTaskResult AiQualityControlTaskResult) {

@@ -33,16 +33,15 @@ public class TerrorismImgReviewTemplateInfo extends AbstractModel {
     private String Switch;
 
     /**
-    * The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>bloody</li>
-<li>police</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
+    * Sensitive content filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:
+<li>guns: weapons and guns;</li>
+<li>crowd: crowd gathering;</li>
+<li>bloody: bloodiness;</li>
+<li>police: police force;</li>
+<li>banners: sensitive flags;</li>
+<li>militant: militants;</li>
+<li>explosion: explosions and fires;</li>
+<li>terrorists: sensitive persons.</li>
     */
     @SerializedName("LabelSet")
     @Expose
@@ -87,52 +86,48 @@ public class TerrorismImgReviewTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>bloody</li>
-<li>police</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li> 
-     * @return LabelSet The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>bloody</li>
-<li>police</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
+     * Get Sensitive content filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:
+<li>guns: weapons and guns;</li>
+<li>crowd: crowd gathering;</li>
+<li>bloody: bloodiness;</li>
+<li>police: police force;</li>
+<li>banners: sensitive flags;</li>
+<li>militant: militants;</li>
+<li>explosion: explosions and fires;</li>
+<li>terrorists: sensitive persons.</li> 
+     * @return LabelSet Sensitive content filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:
+<li>guns: weapons and guns;</li>
+<li>crowd: crowd gathering;</li>
+<li>bloody: bloodiness;</li>
+<li>police: police force;</li>
+<li>banners: sensitive flags;</li>
+<li>militant: militants;</li>
+<li>explosion: explosions and fires;</li>
+<li>terrorists: sensitive persons.</li>
      */
     public String [] getLabelSet() {
         return this.LabelSet;
     }
 
     /**
-     * Set The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>bloody</li>
-<li>police</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
-     * @param LabelSet The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>bloody</li>
-<li>police</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
+     * Set Sensitive content filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:
+<li>guns: weapons and guns;</li>
+<li>crowd: crowd gathering;</li>
+<li>bloody: bloodiness;</li>
+<li>police: police force;</li>
+<li>banners: sensitive flags;</li>
+<li>militant: militants;</li>
+<li>explosion: explosions and fires;</li>
+<li>terrorists: sensitive persons.</li>
+     * @param LabelSet Sensitive content filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:
+<li>guns: weapons and guns;</li>
+<li>crowd: crowd gathering;</li>
+<li>bloody: bloodiness;</li>
+<li>police: police force;</li>
+<li>banners: sensitive flags;</li>
+<li>militant: militants;</li>
+<li>explosion: explosions and fires;</li>
+<li>terrorists: sensitive persons.</li>
      */
     public void setLabelSet(String [] LabelSet) {
         this.LabelSet = LabelSet;

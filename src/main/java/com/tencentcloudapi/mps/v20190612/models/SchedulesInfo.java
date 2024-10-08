@@ -115,6 +115,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String UpdateTime;
 
     /**
+    * Resource ID. For those without an associated resource ID, fill in with an account's primary resource ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
      * Get The scheme ID. 
      * @return ScheduleId The scheme ID.
      */
@@ -346,6 +354,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get Resource ID. For those without an associated resource ID, fill in with an account's primary resource ID.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ResourceId Resource ID. For those without an associated resource ID, fill in with an account's primary resource ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set Resource ID. For those without an associated resource ID, fill in with an account's primary resource ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ResourceId Resource ID. For those without an associated resource ID, fill in with an account's primary resource ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
     public SchedulesInfo() {
     }
 
@@ -390,6 +418,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -408,6 +439,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

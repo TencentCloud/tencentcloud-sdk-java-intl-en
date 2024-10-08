@@ -91,6 +91,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AiRecognitionTaskTransTextResult TransTextTask;
 
     /**
+    * Object recognition result, which is valid when Type is
+
+ObjectRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ObjectTask")
+    @Expose
+    private AiRecognitionTaskObjectResult ObjectTask;
+
+    /**
      * Get The task type. Valid values:
 <li>FaceRecognition: Face recognition</li>
 <li>AsrWordsRecognition: Speech keyword recognition</li>
@@ -274,6 +284,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.TransTextTask = TransTextTask;
     }
 
+    /**
+     * Get Object recognition result, which is valid when Type is
+
+ObjectRecognition.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ObjectTask Object recognition result, which is valid when Type is
+
+ObjectRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AiRecognitionTaskObjectResult getObjectTask() {
+        return this.ObjectTask;
+    }
+
+    /**
+     * Set Object recognition result, which is valid when Type is
+
+ObjectRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ObjectTask Object recognition result, which is valid when Type is
+
+ObjectRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setObjectTask(AiRecognitionTaskObjectResult ObjectTask) {
+        this.ObjectTask = ObjectTask;
+    }
+
     public AiRecognitionResult() {
     }
 
@@ -303,6 +341,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TransTextTask != null) {
             this.TransTextTask = new AiRecognitionTaskTransTextResult(source.TransTextTask);
         }
+        if (source.ObjectTask != null) {
+            this.ObjectTask = new AiRecognitionTaskObjectResult(source.ObjectTask);
+        }
     }
 
 
@@ -317,6 +358,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "OcrWordsTask.", this.OcrWordsTask);
         this.setParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
         this.setParamObj(map, prefix + "TransTextTask.", this.TransTextTask);
+        this.setParamObj(map, prefix + "ObjectTask.", this.ObjectTask);
 
     }
 }

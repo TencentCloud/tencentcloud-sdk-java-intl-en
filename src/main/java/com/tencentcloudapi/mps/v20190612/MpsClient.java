@@ -116,6 +116,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a media quality inspection template. Up to 50 templates can be created.
+     * @param req CreateQualityControlTemplateRequest
+     * @return CreateQualityControlTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateQualityControlTemplateResponse CreateQualityControlTemplate(CreateQualityControlTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateQualityControlTemplate", CreateQualityControlTemplateResponse.class);
+    }
+
+    /**
      *This API is used to create a custom sampled screencapturing template. Up to 16 templates can be created.
      * @param req CreateSampleSnapshotTemplateRequest
      * @return CreateSampleSnapshotTemplateResponse
@@ -294,6 +305,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to delete a media quality inspection template.
+     * @param req DeleteQualityControlTemplateRequest
+     * @return DeleteQualityControlTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteQualityControlTemplateResponse DeleteQualityControlTemplate(DeleteQualityControlTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteQualityControlTemplate", DeleteQualityControlTemplateResponse.class);
+    }
+
+    /**
      *This API is used to delete a custom sampled screencapturing template.
      * @param req DeleteSampleSnapshotTemplateRequest
      * @return DeleteSampleSnapshotTemplateResponse
@@ -459,6 +481,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to query custom media quality inspection templates, supporting paged queries by conditions.
+     * @param req DescribeQualityControlTemplatesRequest
+     * @return DescribeQualityControlTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQualityControlTemplatesResponse DescribeQualityControlTemplates(DescribeQualityControlTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeQualityControlTemplates", DescribeQualityControlTemplatesResponse.class);
+    }
+
+    /**
      *This API is used to query the list of sampled screencapturing templates and supports paged queries by filters.
      * @param req DescribeSampleSnapshotTemplatesRequest
      * @return DescribeSampleSnapshotTemplatesResponse
@@ -582,19 +615,19 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to edit a video to generate a new video. Editing actions may include:
-  
+     *This API is used to edit a video to generate a new one. Editing features include:
+ 
 
-1. **Simple editing**: Simple video editing such as clipping and splicing
-1.1 Clipping a file to generate a new video
-1.2 Splicing multiple files to generate a new video
-1.3 Clipping multiple files and then splicing the clips to generate a new video
+1. **Editing task**: simple video editing, such as clipping and splicing.
+1) Edit a file to generate a new video.
+2) Splice multiple files to generate a new video.
+3) Edit multiple files and then splice them to generate a new video.
 
-2. **Compositing**: Composing a new video as required
-2.1 Adding different tracks (video, audio, subtitles) or elements (video, image, audio, text, empty)
-2.2 Image: Adding, scaling, rotating, or mirroring an image
-2.3 Audio: Adjusting volume and adding audio effects such as fade and reverb
-2.4 Video: Adding transition effects, changing playback speed, splicing and clipping videos, adding subtitles, playing videos picture-in-picture, separating audio from videos, adding animation effects, etc.
+2. **Compositing task**: Generate a new video by describing information through APIs.
+1) Multi-track (video, audio, and subtitles) and multi-type elements (video, image, audio, text, and empty).
+2) Image level: mapping, zoom in/out, arbitrary rotation, mirroring, and more.
+3) Audio level: volume control, fade in/out, mixing, and more.
+4) Video level: transition, playback speed adjustment, splicing, clipping, subtitles, picture-in-picture, audio-video separation, entrance and exit animations, and more.
      * @param req EditMediaRequest
      * @return EditMediaResponse
      * @throws TencentCloudSDKException
@@ -728,6 +761,17 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     }
 
     /**
+     *This API is used to modify a media quality inspection template.
+     * @param req ModifyQualityControlTemplateRequest
+     * @return ModifyQualityControlTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyQualityControlTemplateResponse ModifyQualityControlTemplate(ModifyQualityControlTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyQualityControlTemplate", ModifyQualityControlTemplateResponse.class);
+    }
+
+    /**
      *This API is used to modify a custom sampled screencapturing template.
      * @param req ModifySampleSnapshotTemplateRequest
      * @return ModifySampleSnapshotTemplateResponse
@@ -837,16 +881,18 @@ HTTP callbacks are supported for live stream processing events. Notifications ca
     }
 
     /**
-     *This API is used to initiate processing tasks for media specified by a URL or in COS. Such tasks may include the following:
-1. Video transcoding (general transcoding, Top Speed Codec, audio/video enhancement)
-2. Animated image generating
-3. Time point screencapturing
-4. Sampled screencapturing
-5. Image sprite generating
-6. Adaptive bitrate streaming
-7. Intelligent content moderation (detection of pornographic and sensitive content)
-8. Intelligent content analysis (labeling, categorization, thumbnail generation, labeling by frame, splitting, highlight generation, opening and closing segment recognition)
-9. Intelligent content recognition (face, full text, text keyword, full speech, speech keyword, speech translation, object recognition)
+     *This API is used to initiate a processing task for video URLs or media files in Cloud Object Storage (COS). Features include:
+1. Video transcoding (standard transcoding, TSC transcoding, and audio/video enhancement);
+2. Animated image generating;
+3. Screenshot taking at specified time points;
+4. Sampled screenshot taking;
+5. Sprite screenshot taking;
+6. Transcoding to adaptive bitrate streaming;
+7. Intelligent auditing (porn detection and sensitive information detection);
+8. Intelligent analysis (tagging, classification, thumbnail generating, frame-by-frame tagging, video splitting, highlights generating, opening and closing segments recognition, and game timestamping);
+9. Intelligent identification (face, full text, text keyword, full speech, speech keyword, speech translation, and object recognition);
+
+10. Media quality inspection (live stream format diagnosis, audio and video content detection (jitter, blur, low light, overexposure, black and white edges, black and white screens, screen glitch, noise, mosaic, QR code, and more), and no-reference scoring).
      * @param req ProcessMediaRequest
      * @return ProcessMediaResponse
      * @throws TencentCloudSDKException

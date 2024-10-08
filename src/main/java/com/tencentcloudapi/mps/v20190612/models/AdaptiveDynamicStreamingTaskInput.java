@@ -83,6 +83,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private DrmInfo DrmInfo;
 
     /**
+    * Adaptive transcoding template type.
+Common: audio-video.
+PureAudio: audio-only.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DefinitionType")
+    @Expose
+    private String DefinitionType;
+
+    /**
      * Get Adaptive bitrate streaming template ID. 
      * @return Definition Adaptive bitrate streaming template ID.
      */
@@ -222,6 +232,34 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.DrmInfo = DrmInfo;
     }
 
+    /**
+     * Get Adaptive transcoding template type.
+Common: audio-video.
+PureAudio: audio-only.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DefinitionType Adaptive transcoding template type.
+Common: audio-video.
+PureAudio: audio-only.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDefinitionType() {
+        return this.DefinitionType;
+    }
+
+    /**
+     * Set Adaptive transcoding template type.
+Common: audio-video.
+PureAudio: audio-only.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DefinitionType Adaptive transcoding template type.
+Common: audio-video.
+PureAudio: audio-only.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDefinitionType(String DefinitionType) {
+        this.DefinitionType = DefinitionType;
+    }
+
     public AdaptiveDynamicStreamingTaskInput() {
     }
 
@@ -260,6 +298,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (source.DrmInfo != null) {
             this.DrmInfo = new DrmInfo(source.DrmInfo);
         }
+        if (source.DefinitionType != null) {
+            this.DefinitionType = new String(source.DefinitionType);
+        }
     }
 
 
@@ -275,6 +316,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.setParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);
         this.setParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
         this.setParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
+        this.setParamSimple(map, prefix + "DefinitionType", this.DefinitionType);
 
     }
 }

@@ -56,6 +56,13 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * Filter condition for watermark template identifiers, with a length limit of 64 characters.
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get Unique ID filter of watermarking templates. Array length limit: 100. 
      * @return Definitions Unique ID filter of watermarking templates. Array length limit: 100.
      */
@@ -135,6 +142,22 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get Filter condition for watermark template identifiers, with a length limit of 64 characters. 
+     * @return Name Filter condition for watermark template identifiers, with a length limit of 64 characters.
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Filter condition for watermark template identifiers, with a length limit of 64 characters.
+     * @param Name Filter condition for watermark template identifiers, with a length limit of 64 characters.
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public DescribeWatermarkTemplatesRequest() {
     }
 
@@ -158,6 +181,9 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -169,6 +195,7 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

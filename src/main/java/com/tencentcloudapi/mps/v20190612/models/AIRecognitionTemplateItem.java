@@ -85,6 +85,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AsrWordsConfigureInfo AsrWordsConfigure;
 
     /**
+    * Voice translation control parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TranslateConfigure")
+    @Expose
+    private TranslateConfigureInfo TranslateConfigure;
+
+    /**
     * Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
     */
     @SerializedName("CreateTime")
@@ -257,6 +265,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Voice translation control parameters.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TranslateConfigure Voice translation control parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public TranslateConfigureInfo getTranslateConfigure() {
+        return this.TranslateConfigure;
+    }
+
+    /**
+     * Set Voice translation control parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TranslateConfigure Voice translation control parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTranslateConfigure(TranslateConfigureInfo TranslateConfigure) {
+        this.TranslateConfigure = TranslateConfigure;
+    }
+
+    /**
      * Get Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
      * @return CreateTime Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
@@ -348,6 +376,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.AsrWordsConfigure != null) {
             this.AsrWordsConfigure = new AsrWordsConfigureInfo(source.AsrWordsConfigure);
         }
+        if (source.TranslateConfigure != null) {
+            this.TranslateConfigure = new TranslateConfigureInfo(source.TranslateConfigure);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -372,6 +403,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);
         this.setParamObj(map, prefix + "AsrFullTextConfigure.", this.AsrFullTextConfigure);
         this.setParamObj(map, prefix + "AsrWordsConfigure.", this.AsrWordsConfigure);
+        this.setParamObj(map, prefix + "TranslateConfigure.", this.TranslateConfigure);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Type", this.Type);

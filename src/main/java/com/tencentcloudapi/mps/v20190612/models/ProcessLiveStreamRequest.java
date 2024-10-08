@@ -73,7 +73,7 @@ public class ProcessLiveStreamRequest extends AbstractModel {
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * 
+    * Media quality inspection type task parameters.
     */
     @SerializedName("AiQualityControlTask")
     @Expose
@@ -217,16 +217,16 @@ Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, t
     }
 
     /**
-     * Get  
-     * @return AiQualityControlTask 
+     * Get Media quality inspection type task parameters. 
+     * @return AiQualityControlTask Media quality inspection type task parameters.
      */
     public AiQualityControlTaskInput getAiQualityControlTask() {
         return this.AiQualityControlTask;
     }
 
     /**
-     * Set 
-     * @param AiQualityControlTask 
+     * Set Media quality inspection type task parameters.
+     * @param AiQualityControlTask Media quality inspection type task parameters.
      */
     public void setAiQualityControlTask(AiQualityControlTaskInput AiQualityControlTask) {
         this.AiQualityControlTask = AiQualityControlTask;

@@ -45,7 +45,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     */
     @SerializedName("SnapshotByTimeOffsetTask")
     @Expose
-    private MediaProcessTaskSampleSnapshotResult SnapshotByTimeOffsetTask;
+    private MediaProcessTaskSnapshotByTimeOffsetResult SnapshotByTimeOffsetTask;
 
     /**
     * The result of a sampled screenshot task.
@@ -96,6 +96,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ScheduleAnalysisTaskResult AnalysisTask;
 
     /**
+    * Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("QualityControlTask")
+    @Expose
+    private ScheduleQualityControlTaskResult QualityControlTask;
+
+    /**
      * Get The result of a transcoding task.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TranscodeTask The result of a transcoding task.
@@ -141,7 +149,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @return SnapshotByTimeOffsetTask The result of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public MediaProcessTaskSampleSnapshotResult getSnapshotByTimeOffsetTask() {
+    public MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() {
         return this.SnapshotByTimeOffsetTask;
     }
 
@@ -151,7 +159,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param SnapshotByTimeOffsetTask The result of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setSnapshotByTimeOffsetTask(MediaProcessTaskSampleSnapshotResult SnapshotByTimeOffsetTask) {
+    public void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult SnapshotByTimeOffsetTask) {
         this.SnapshotByTimeOffsetTask = SnapshotByTimeOffsetTask;
     }
 
@@ -275,6 +283,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.AnalysisTask = AnalysisTask;
     }
 
+    /**
+     * Get Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return QualityControlTask Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ScheduleQualityControlTaskResult getQualityControlTask() {
+        return this.QualityControlTask;
+    }
+
+    /**
+     * Set Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param QualityControlTask Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setQualityControlTask(ScheduleQualityControlTaskResult QualityControlTask) {
+        this.QualityControlTask = QualityControlTask;
+    }
+
     public ActivityResItem() {
     }
 
@@ -290,7 +318,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
             this.AnimatedGraphicTask = new MediaProcessTaskAnimatedGraphicResult(source.AnimatedGraphicTask);
         }
         if (source.SnapshotByTimeOffsetTask != null) {
-            this.SnapshotByTimeOffsetTask = new MediaProcessTaskSampleSnapshotResult(source.SnapshotByTimeOffsetTask);
+            this.SnapshotByTimeOffsetTask = new MediaProcessTaskSnapshotByTimeOffsetResult(source.SnapshotByTimeOffsetTask);
         }
         if (source.SampleSnapshotTask != null) {
             this.SampleSnapshotTask = new MediaProcessTaskSampleSnapshotResult(source.SampleSnapshotTask);
@@ -310,6 +338,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AnalysisTask != null) {
             this.AnalysisTask = new ScheduleAnalysisTaskResult(source.AnalysisTask);
         }
+        if (source.QualityControlTask != null) {
+            this.QualityControlTask = new ScheduleQualityControlTaskResult(source.QualityControlTask);
+        }
     }
 
 
@@ -326,6 +357,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "RecognitionTask.", this.RecognitionTask);
         this.setParamObj(map, prefix + "ReviewTask.", this.ReviewTask);
         this.setParamObj(map, prefix + "AnalysisTask.", this.AnalysisTask);
+        this.setParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
 
     }
 }

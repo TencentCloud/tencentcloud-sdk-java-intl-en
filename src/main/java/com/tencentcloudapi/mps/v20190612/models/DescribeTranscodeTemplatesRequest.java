@@ -83,6 +83,13 @@ This parameter is left empty by default, which indicates to return all types of 
     private String TranscodeType;
 
     /**
+    * Filter condition for transcoding template identifiers, with a length limit of 64 characters.	
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get Unique ID filter of transcoding templates. Array length limit: 100. 
      * @return Definitions Unique ID filter of transcoding templates. Array length limit: 100.
      */
@@ -234,6 +241,22 @@ This parameter is left empty by default, which indicates to return all types of 
         this.TranscodeType = TranscodeType;
     }
 
+    /**
+     * Get Filter condition for transcoding template identifiers, with a length limit of 64 characters.	 
+     * @return Name Filter condition for transcoding template identifiers, with a length limit of 64 characters.	
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Filter condition for transcoding template identifiers, with a length limit of 64 characters.	
+     * @param Name Filter condition for transcoding template identifiers, with a length limit of 64 characters.	
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public DescribeTranscodeTemplatesRequest() {
     }
 
@@ -266,6 +289,9 @@ This parameter is left empty by default, which indicates to return all types of 
         if (source.TranscodeType != null) {
             this.TranscodeType = new String(source.TranscodeType);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -280,6 +306,7 @@ This parameter is left empty by default, which indicates to return all types of 
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "TranscodeType", this.TranscodeType);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

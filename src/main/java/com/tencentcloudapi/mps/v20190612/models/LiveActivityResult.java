@@ -24,9 +24,10 @@ import java.util.HashMap;
 public class LiveActivityResult extends AbstractModel {
 
     /**
-    * The task type.
-<li>`LiveRecord`: Live recording. </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Atomic task type.
+<li>LiveRecord: live recording.</li>
+<li>AiQualityControl: media quality inspection.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ActivityType")
     @Expose
@@ -41,24 +42,28 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private LiveActivityResItem LiveActivityResItem;
 
     /**
-     * Get The task type.
-<li>`LiveRecord`: Live recording. </li>
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ActivityType The task type.
-<li>`LiveRecord`: Live recording. </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Atomic task type.
+<li>LiveRecord: live recording.</li>
+<li>AiQualityControl: media quality inspection.</li>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ActivityType Atomic task type.
+<li>LiveRecord: live recording.</li>
+<li>AiQualityControl: media quality inspection.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getActivityType() {
         return this.ActivityType;
     }
 
     /**
-     * Set The task type.
-<li>`LiveRecord`: Live recording. </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ActivityType The task type.
-<li>`LiveRecord`: Live recording. </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Atomic task type.
+<li>LiveRecord: live recording.</li>
+<li>AiQualityControl: media quality inspection.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ActivityType Atomic task type.
+<li>LiveRecord: live recording.</li>
+<li>AiQualityControl: media quality inspection.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;

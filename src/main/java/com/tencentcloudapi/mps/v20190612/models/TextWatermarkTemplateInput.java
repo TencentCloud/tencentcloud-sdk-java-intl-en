@@ -33,7 +33,7 @@ public class TextWatermarkTemplateInput extends AbstractModel {
     private String FontType;
 
     /**
-    * Font size in Npx format where N is a numeric value.
+    * Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
     */
     @SerializedName("FontSize")
     @Expose
@@ -55,6 +55,14 @@ Default value: 1.
     @SerializedName("FontAlpha")
     @Expose
     private Float FontAlpha;
+
+    /**
+    * Text content, up to 100 characters.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TextContent")
+    @Expose
+    private String TextContent;
 
     /**
      * Get Font type. Currently, two types are supported:
@@ -81,16 +89,16 @@ Default value: 1.
     }
 
     /**
-     * Get Font size in Npx format where N is a numeric value. 
-     * @return FontSize Font size in Npx format where N is a numeric value.
+     * Get Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096]. 
+     * @return FontSize Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
      */
     public String getFontSize() {
         return this.FontSize;
     }
 
     /**
-     * Set Font size in Npx format where N is a numeric value.
-     * @param FontSize Font size in Npx format where N is a numeric value.
+     * Set Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
+     * @param FontSize Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
      */
     public void setFontSize(String FontSize) {
         this.FontSize = FontSize;
@@ -140,6 +148,26 @@ Default value: 1.
         this.FontAlpha = FontAlpha;
     }
 
+    /**
+     * Get Text content, up to 100 characters.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TextContent Text content, up to 100 characters.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getTextContent() {
+        return this.TextContent;
+    }
+
+    /**
+     * Set Text content, up to 100 characters.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TextContent Text content, up to 100 characters.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTextContent(String TextContent) {
+        this.TextContent = TextContent;
+    }
+
     public TextWatermarkTemplateInput() {
     }
 
@@ -160,6 +188,9 @@ Default value: 1.
         if (source.FontAlpha != null) {
             this.FontAlpha = new Float(source.FontAlpha);
         }
+        if (source.TextContent != null) {
+            this.TextContent = new String(source.TextContent);
+        }
     }
 
 
@@ -171,6 +202,7 @@ Default value: 1.
         this.setParamSimple(map, prefix + "FontSize", this.FontSize);
         this.setParamSimple(map, prefix + "FontColor", this.FontColor);
         this.setParamSimple(map, prefix + "FontAlpha", this.FontAlpha);
+        this.setParamSimple(map, prefix + "TextContent", this.TextContent);
 
     }
 }

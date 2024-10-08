@@ -52,15 +52,14 @@ public class ScheduleQualityControlTaskResult extends AbstractModel {
     private String Message;
 
     /**
-    * The input of the quality control task.
+    * Media quality inspection task input.
     */
     @SerializedName("Input")
     @Expose
     private AiQualityControlTaskInput Input;
 
     /**
-    * The output of the quality control task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Output")
     @Expose
@@ -131,36 +130,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The input of the quality control task. 
-     * @return Input The input of the quality control task.
+     * Get Media quality inspection task input. 
+     * @return Input Media quality inspection task input.
      */
     public AiQualityControlTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set The input of the quality control task.
-     * @param Input The input of the quality control task.
+     * Set Media quality inspection task input.
+     * @param Input Media quality inspection task input.
      */
     public void setInput(AiQualityControlTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get The output of the quality control task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output The output of the quality control task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Output Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public QualityControlData getOutput() {
         return this.Output;
     }
 
     /**
-     * Set The output of the quality control task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output The output of the quality control task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Output Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOutput(QualityControlData Output) {
         this.Output = Output;

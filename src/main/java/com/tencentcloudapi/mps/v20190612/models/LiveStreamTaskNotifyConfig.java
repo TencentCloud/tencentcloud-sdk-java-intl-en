@@ -24,6 +24,15 @@ import java.util.HashMap;
 public class LiveStreamTaskNotifyConfig extends AbstractModel {
 
     /**
+    * The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+
+<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+    */
+    @SerializedName("NotifyType")
+    @Expose
+    private String NotifyType;
+
+    /**
     * CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
     */
     @SerializedName("CmqModel")
@@ -52,20 +61,43 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
     private String TopicName;
 
     /**
-    * The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
-
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
-    */
-    @SerializedName("NotifyType")
-    @Expose
-    private String NotifyType;
-
-    /**
     * HTTP callback URL, required if `NotifyType` is set to `URL`
     */
     @SerializedName("NotifyUrl")
     @Expose
     private String NotifyUrl;
+
+    /**
+    * Key used to generate a callback signature.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NotifyKey")
+    @Expose
+    private String NotifyKey;
+
+    /**
+     * Get The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+
+<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font> 
+     * @return NotifyType The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+
+<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+     */
+    public String getNotifyType() {
+        return this.NotifyType;
+    }
+
+    /**
+     * Set The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+
+<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+     * @param NotifyType The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+
+<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+     */
+    public void setNotifyType(String NotifyType) {
+        this.NotifyType = NotifyType;
+    }
 
     /**
      * Get CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported. 
@@ -132,30 +164,6 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
     }
 
     /**
-     * Get The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
-
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font> 
-     * @return NotifyType The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
-
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
-     */
-    public String getNotifyType() {
-        return this.NotifyType;
-    }
-
-    /**
-     * Set The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
-
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
-     * @param NotifyType The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
-
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
-     */
-    public void setNotifyType(String NotifyType) {
-        this.NotifyType = NotifyType;
-    }
-
-    /**
      * Get HTTP callback URL, required if `NotifyType` is set to `URL` 
      * @return NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
      */
@@ -171,6 +179,26 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
         this.NotifyUrl = NotifyUrl;
     }
 
+    /**
+     * Get Key used to generate a callback signature.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NotifyKey Key used to generate a callback signature.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getNotifyKey() {
+        return this.NotifyKey;
+    }
+
+    /**
+     * Set Key used to generate a callback signature.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NotifyKey Key used to generate a callback signature.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setNotifyKey(String NotifyKey) {
+        this.NotifyKey = NotifyKey;
+    }
+
     public LiveStreamTaskNotifyConfig() {
     }
 
@@ -179,6 +207,9 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public LiveStreamTaskNotifyConfig(LiveStreamTaskNotifyConfig source) {
+        if (source.NotifyType != null) {
+            this.NotifyType = new String(source.NotifyType);
+        }
         if (source.CmqModel != null) {
             this.CmqModel = new String(source.CmqModel);
         }
@@ -191,11 +222,11 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
         if (source.TopicName != null) {
             this.TopicName = new String(source.TopicName);
         }
-        if (source.NotifyType != null) {
-            this.NotifyType = new String(source.NotifyType);
-        }
         if (source.NotifyUrl != null) {
             this.NotifyUrl = new String(source.NotifyUrl);
+        }
+        if (source.NotifyKey != null) {
+            this.NotifyKey = new String(source.NotifyKey);
         }
     }
 
@@ -204,12 +235,13 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
         this.setParamSimple(map, prefix + "CmqModel", this.CmqModel);
         this.setParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
-        this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
         this.setParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
+        this.setParamSimple(map, prefix + "NotifyKey", this.NotifyKey);
 
     }
 }

@@ -24,13 +24,16 @@ import java.util.HashMap;
 public class LiveStreamAiRecognitionResultItem extends AbstractModel {
 
     /**
-    * The result type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
+    * Result type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation.</li>
+
+<li>ObjectRecognition: object recognition.</li>
+<li>TagRecognition: highlights marking.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -84,40 +87,66 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel {
     private LiveStreamTransTextRecognitionResult [] TransTextRecognitionResultSet;
 
     /**
-     * Get The result type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li> 
-     * @return Type The result type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
+    * Object recognition result, which is valid when Type is ObjectRecognition.
+    */
+    @SerializedName("ObjectRecognitionResultSet")
+    @Expose
+    private LiveStreamObjectRecognitionResult [] ObjectRecognitionResultSet;
+
+    /**
+    * 
+    */
+    @SerializedName("TagRecognitionResultSet")
+    @Expose
+    private LiveStreamTagRecognitionResult [] TagRecognitionResultSet;
+
+    /**
+     * Get Result type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation.</li>
+
+<li>ObjectRecognition: object recognition.</li>
+<li>TagRecognition: highlights marking.</li> 
+     * @return Type Result type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation.</li>
+
+<li>ObjectRecognition: object recognition.</li>
+<li>TagRecognition: highlights marking.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The result type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
-     * @param Type The result type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
+     * Set Result type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation.</li>
+
+<li>ObjectRecognition: object recognition.</li>
+<li>TagRecognition: highlights marking.</li>
+     * @param Type Result type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation.</li>
+
+<li>ObjectRecognition: object recognition.</li>
+<li>TagRecognition: highlights marking.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -239,6 +268,38 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel {
         this.TransTextRecognitionResultSet = TransTextRecognitionResultSet;
     }
 
+    /**
+     * Get Object recognition result, which is valid when Type is ObjectRecognition. 
+     * @return ObjectRecognitionResultSet Object recognition result, which is valid when Type is ObjectRecognition.
+     */
+    public LiveStreamObjectRecognitionResult [] getObjectRecognitionResultSet() {
+        return this.ObjectRecognitionResultSet;
+    }
+
+    /**
+     * Set Object recognition result, which is valid when Type is ObjectRecognition.
+     * @param ObjectRecognitionResultSet Object recognition result, which is valid when Type is ObjectRecognition.
+     */
+    public void setObjectRecognitionResultSet(LiveStreamObjectRecognitionResult [] ObjectRecognitionResultSet) {
+        this.ObjectRecognitionResultSet = ObjectRecognitionResultSet;
+    }
+
+    /**
+     * Get  
+     * @return TagRecognitionResultSet 
+     */
+    public LiveStreamTagRecognitionResult [] getTagRecognitionResultSet() {
+        return this.TagRecognitionResultSet;
+    }
+
+    /**
+     * Set 
+     * @param TagRecognitionResultSet 
+     */
+    public void setTagRecognitionResultSet(LiveStreamTagRecognitionResult [] TagRecognitionResultSet) {
+        this.TagRecognitionResultSet = TagRecognitionResultSet;
+    }
+
     public LiveStreamAiRecognitionResultItem() {
     }
 
@@ -286,6 +347,18 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel {
                 this.TransTextRecognitionResultSet[i] = new LiveStreamTransTextRecognitionResult(source.TransTextRecognitionResultSet[i]);
             }
         }
+        if (source.ObjectRecognitionResultSet != null) {
+            this.ObjectRecognitionResultSet = new LiveStreamObjectRecognitionResult[source.ObjectRecognitionResultSet.length];
+            for (int i = 0; i < source.ObjectRecognitionResultSet.length; i++) {
+                this.ObjectRecognitionResultSet[i] = new LiveStreamObjectRecognitionResult(source.ObjectRecognitionResultSet[i]);
+            }
+        }
+        if (source.TagRecognitionResultSet != null) {
+            this.TagRecognitionResultSet = new LiveStreamTagRecognitionResult[source.TagRecognitionResultSet.length];
+            for (int i = 0; i < source.TagRecognitionResultSet.length; i++) {
+                this.TagRecognitionResultSet[i] = new LiveStreamTagRecognitionResult(source.TagRecognitionResultSet[i]);
+            }
+        }
     }
 
 
@@ -300,6 +373,8 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AsrFullTextRecognitionResultSet.", this.AsrFullTextRecognitionResultSet);
         this.setParamArrayObj(map, prefix + "OcrFullTextRecognitionResultSet.", this.OcrFullTextRecognitionResultSet);
         this.setParamArrayObj(map, prefix + "TransTextRecognitionResultSet.", this.TransTextRecognitionResultSet);
+        this.setParamArrayObj(map, prefix + "ObjectRecognitionResultSet.", this.ObjectRecognitionResultSet);
+        this.setParamArrayObj(map, prefix + "TagRecognitionResultSet.", this.TagRecognitionResultSet);
 
     }
 }

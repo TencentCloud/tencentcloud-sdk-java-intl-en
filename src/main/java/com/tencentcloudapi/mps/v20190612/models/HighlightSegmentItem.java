@@ -45,6 +45,14 @@ public class HighlightSegmentItem extends AbstractModel {
     private Float EndTimeOffset;
 
     /**
+    * Segment tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SegmentTags")
+    @Expose
+    private String [] SegmentTags;
+
+    /**
      * Get The confidence score. 
      * @return Confidence The confidence score.
      */
@@ -92,6 +100,26 @@ public class HighlightSegmentItem extends AbstractModel {
         this.EndTimeOffset = EndTimeOffset;
     }
 
+    /**
+     * Get Segment tag.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SegmentTags Segment tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getSegmentTags() {
+        return this.SegmentTags;
+    }
+
+    /**
+     * Set Segment tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SegmentTags Segment tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSegmentTags(String [] SegmentTags) {
+        this.SegmentTags = SegmentTags;
+    }
+
     public HighlightSegmentItem() {
     }
 
@@ -109,6 +137,12 @@ public class HighlightSegmentItem extends AbstractModel {
         if (source.EndTimeOffset != null) {
             this.EndTimeOffset = new Float(source.EndTimeOffset);
         }
+        if (source.SegmentTags != null) {
+            this.SegmentTags = new String[source.SegmentTags.length];
+            for (int i = 0; i < source.SegmentTags.length; i++) {
+                this.SegmentTags[i] = new String(source.SegmentTags[i]);
+            }
+        }
     }
 
 
@@ -119,6 +153,7 @@ public class HighlightSegmentItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+        this.setParamArraySimple(map, prefix + "SegmentTags.", this.SegmentTags);
 
     }
 }

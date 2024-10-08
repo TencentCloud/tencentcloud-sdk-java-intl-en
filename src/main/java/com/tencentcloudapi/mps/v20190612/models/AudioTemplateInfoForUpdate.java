@@ -24,22 +24,24 @@ import java.util.HashMap;
 public class AudioTemplateInfoForUpdate extends AbstractModel {
 
     /**
-    * Audio stream codec.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
+    * Audio stream encoding format.
+When audio transcoding is not needed, the value is:
+<li>copy.</li>
+When the outer parameter Container is mp3, the value is:
+<li>mp3.</li>
+When the outer parameter Container is ogg or flac, the value is:
 <li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
+When the outer parameter Container is m4a, valid values are:
+<li>aac;</li>
 <li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: More suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
+When the outer parameter Container is mp4 or flv, valid values are:
+<li>aac: more suitable for mp4;</li>
+<li>mp3: more suitable for flv;</li>
 <li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
+When the outer parameter Container is hls, valid values are:
+<li>aac;</li>
+<li>mp3.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Codec")
     @Expose
@@ -64,11 +66,12 @@ In Hz.
     private Long SampleRate;
 
     /**
-    * Audio channel system. Valid values:
-<li>1: Mono</li>
-<li>2: Dual</li>
-<li>6: Stereo</li>
-When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
+    * Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: 5.1 surround sound.</li>
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AudioChannel")
     @Expose
@@ -82,76 +85,84 @@ When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound chan
     private Long [] StreamSelects;
 
     /**
-     * Get Audio stream codec.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
+     * Get Audio stream encoding format.
+When audio transcoding is not needed, the value is:
+<li>copy.</li>
+When the outer parameter Container is mp3, the value is:
+<li>mp3.</li>
+When the outer parameter Container is ogg or flac, the value is:
 <li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
+When the outer parameter Container is m4a, valid values are:
+<li>aac;</li>
 <li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: More suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
+When the outer parameter Container is mp4 or flv, valid values are:
+<li>aac: more suitable for mp4;</li>
+<li>mp3: more suitable for flv;</li>
 <li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li> 
-     * @return Codec Audio stream codec.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
+When the outer parameter Container is hls, valid values are:
+<li>aac;</li>
+<li>mp3.</li>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Codec Audio stream encoding format.
+When audio transcoding is not needed, the value is:
+<li>copy.</li>
+When the outer parameter Container is mp3, the value is:
+<li>mp3.</li>
+When the outer parameter Container is ogg or flac, the value is:
 <li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
+When the outer parameter Container is m4a, valid values are:
+<li>aac;</li>
 <li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: More suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
+When the outer parameter Container is mp4 or flv, valid values are:
+<li>aac: more suitable for mp4;</li>
+<li>mp3: more suitable for flv;</li>
 <li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
+When the outer parameter Container is hls, valid values are:
+<li>aac;</li>
+<li>mp3.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set Audio stream codec.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
+     * Set Audio stream encoding format.
+When audio transcoding is not needed, the value is:
+<li>copy.</li>
+When the outer parameter Container is mp3, the value is:
+<li>mp3.</li>
+When the outer parameter Container is ogg or flac, the value is:
 <li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
+When the outer parameter Container is m4a, valid values are:
+<li>aac;</li>
 <li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: More suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
+When the outer parameter Container is mp4 or flv, valid values are:
+<li>aac: more suitable for mp4;</li>
+<li>mp3: more suitable for flv;</li>
 <li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
-     * @param Codec Audio stream codec.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
+When the outer parameter Container is hls, valid values are:
+<li>aac;</li>
+<li>mp3.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Codec Audio stream encoding format.
+When audio transcoding is not needed, the value is:
+<li>copy.</li>
+When the outer parameter Container is mp3, the value is:
+<li>mp3.</li>
+When the outer parameter Container is ogg or flac, the value is:
 <li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
+When the outer parameter Container is m4a, valid values are:
+<li>aac;</li>
 <li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: More suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
+When the outer parameter Container is mp4 or flv, valid values are:
+<li>aac: more suitable for mp4;</li>
+<li>mp3: more suitable for flv;</li>
 <li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
+When the outer parameter Container is hls, valid values are:
+<li>aac;</li>
+<li>mp3.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
@@ -206,32 +217,36 @@ In Hz.
     }
 
     /**
-     * Get Audio channel system. Valid values:
-<li>1: Mono</li>
-<li>2: Dual</li>
-<li>6: Stereo</li>
-When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo. 
-     * @return AudioChannel Audio channel system. Valid values:
-<li>1: Mono</li>
-<li>2: Dual</li>
-<li>6: Stereo</li>
-When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
+     * Get Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: 5.1 surround sound.</li>
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AudioChannel Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: 5.1 surround sound.</li>
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getAudioChannel() {
         return this.AudioChannel;
     }
 
     /**
-     * Set Audio channel system. Valid values:
-<li>1: Mono</li>
-<li>2: Dual</li>
-<li>6: Stereo</li>
-When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
-     * @param AudioChannel Audio channel system. Valid values:
-<li>1: Mono</li>
-<li>2: Dual</li>
-<li>6: Stereo</li>
-When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
+     * Set Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: 5.1 surround sound.</li>
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AudioChannel Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: 5.1 surround sound.</li>
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAudioChannel(Long AudioChannel) {
         this.AudioChannel = AudioChannel;

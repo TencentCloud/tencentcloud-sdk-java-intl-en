@@ -53,6 +53,15 @@ u200c<li>`1`: Mono. </li>
     private Long AudioChannel;
 
     /**
+    * Reference bitrate, in kbps. Value range: 26-10000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on audio parameters.
+    */
+    @SerializedName("Bitrate")
+    @Expose
+    private Long Bitrate;
+
+    /**
      * Get The codec of the audio stream. Valid values:
 <li>`AAC`: AAC (default), which is used for the MP4 container. </li>
 <li>`MP3`: MP3 codec, which is used for the MP3 container. </li> 
@@ -132,6 +141,30 @@ u200c<li>`1`: Mono. </li>
         this.AudioChannel = AudioChannel;
     }
 
+    /**
+     * Get Reference bitrate, in kbps. Value range: 26-10000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on audio parameters. 
+     * @return Bitrate Reference bitrate, in kbps. Value range: 26-10000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on audio parameters.
+     */
+    public Long getBitrate() {
+        return this.Bitrate;
+    }
+
+    /**
+     * Set Reference bitrate, in kbps. Value range: 26-10000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on audio parameters.
+     * @param Bitrate Reference bitrate, in kbps. Value range: 26-10000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on audio parameters.
+     */
+    public void setBitrate(Long Bitrate) {
+        this.Bitrate = Bitrate;
+    }
+
     public ComposeAudioStream() {
     }
 
@@ -149,6 +182,9 @@ u200c<li>`1`: Mono. </li>
         if (source.AudioChannel != null) {
             this.AudioChannel = new Long(source.AudioChannel);
         }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
     }
 
 
@@ -159,6 +195,7 @@ u200c<li>`1`: Mono. </li>
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
+        this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
 
     }
 }

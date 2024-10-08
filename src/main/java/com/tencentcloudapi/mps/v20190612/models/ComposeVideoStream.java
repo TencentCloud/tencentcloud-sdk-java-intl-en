@@ -40,6 +40,15 @@ The default value is `0`, which means that the frame rate will be the same as th
     private Long Fps;
 
     /**
+    * Reference bitrate, in kbps. Value range: 50-35000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on the complexity of an image.
+    */
+    @SerializedName("Bitrate")
+    @Expose
+    private Long Bitrate;
+
+    /**
      * Get The codec. Valid values:
 <li>`H.264` (default) </li> 
      * @return Codec The codec. Valid values:
@@ -79,6 +88,30 @@ The default value is `0`, which means that the frame rate will be the same as th
         this.Fps = Fps;
     }
 
+    /**
+     * Get Reference bitrate, in kbps. Value range: 50-35000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on the complexity of an image. 
+     * @return Bitrate Reference bitrate, in kbps. Value range: 50-35000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on the complexity of an image.
+     */
+    public Long getBitrate() {
+        return this.Bitrate;
+    }
+
+    /**
+     * Set Reference bitrate, in kbps. Value range: 50-35000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on the complexity of an image.
+     * @param Bitrate Reference bitrate, in kbps. Value range: 50-35000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on the complexity of an image.
+     */
+    public void setBitrate(Long Bitrate) {
+        this.Bitrate = Bitrate;
+    }
+
     public ComposeVideoStream() {
     }
 
@@ -93,6 +126,9 @@ The default value is `0`, which means that the frame rate will be the same as th
         if (source.Fps != null) {
             this.Fps = new Long(source.Fps);
         }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
     }
 
 
@@ -102,6 +138,7 @@ The default value is `0`, which means that the frame rate will be the same as th
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "Fps", this.Fps);
+        this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
 
     }
 }

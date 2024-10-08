@@ -32,6 +32,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private LiveScheduleLiveRecordTaskResult LiveRecordTask;
 
     /**
+    * Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LiveQualityControlTask")
+    @Expose
+    private ScheduleQualityControlTaskResult LiveQualityControlTask;
+
+    /**
      * Get The output of a live recording task.
 Note: This field may return·null, indicating that no valid values can be obtained. 
      * @return LiveRecordTask The output of a live recording task.
@@ -51,6 +59,26 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.LiveRecordTask = LiveRecordTask;
     }
 
+    /**
+     * Get Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LiveQualityControlTask Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ScheduleQualityControlTaskResult getLiveQualityControlTask() {
+        return this.LiveQualityControlTask;
+    }
+
+    /**
+     * Set Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LiveQualityControlTask Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLiveQualityControlTask(ScheduleQualityControlTaskResult LiveQualityControlTask) {
+        this.LiveQualityControlTask = LiveQualityControlTask;
+    }
+
     public LiveActivityResItem() {
     }
 
@@ -62,6 +90,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (source.LiveRecordTask != null) {
             this.LiveRecordTask = new LiveScheduleLiveRecordTaskResult(source.LiveRecordTask);
         }
+        if (source.LiveQualityControlTask != null) {
+            this.LiveQualityControlTask = new ScheduleQualityControlTaskResult(source.LiveQualityControlTask);
+        }
     }
 
 
@@ -70,6 +101,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "LiveRecordTask.", this.LiveRecordTask);
+        this.setParamObj(map, prefix + "LiveQualityControlTask.", this.LiveQualityControlTask);
 
     }
 }

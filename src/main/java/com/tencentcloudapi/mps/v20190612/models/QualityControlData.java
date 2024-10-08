@@ -48,12 +48,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long QualityEvaluationScore;
 
     /**
-    * The issues detected by quality control.
+    * Exception items detected in content quality inspection.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("QualityControlResultSet")
     @Expose
     private QualityControlResult [] QualityControlResultSet;
+
+    /**
+    * Exception items detected in format diagnosis.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ContainerDiagnoseResultSet")
+    @Expose
+    private ContainerDiagnoseResultItem [] ContainerDiagnoseResultSet;
 
     /**
      * Get Whether there is an audio track. `true` indicates that there isn't.
@@ -116,9 +124,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The issues detected by quality control.
+     * Get Exception items detected in content quality inspection.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QualityControlResultSet The issues detected by quality control.
+     * @return QualityControlResultSet Exception items detected in content quality inspection.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public QualityControlResult [] getQualityControlResultSet() {
@@ -126,13 +134,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The issues detected by quality control.
+     * Set Exception items detected in content quality inspection.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QualityControlResultSet The issues detected by quality control.
+     * @param QualityControlResultSet Exception items detected in content quality inspection.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQualityControlResultSet(QualityControlResult [] QualityControlResultSet) {
         this.QualityControlResultSet = QualityControlResultSet;
+    }
+
+    /**
+     * Get Exception items detected in format diagnosis.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ContainerDiagnoseResultSet Exception items detected in format diagnosis.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ContainerDiagnoseResultItem [] getContainerDiagnoseResultSet() {
+        return this.ContainerDiagnoseResultSet;
+    }
+
+    /**
+     * Set Exception items detected in format diagnosis.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ContainerDiagnoseResultSet Exception items detected in format diagnosis.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setContainerDiagnoseResultSet(ContainerDiagnoseResultItem [] ContainerDiagnoseResultSet) {
+        this.ContainerDiagnoseResultSet = ContainerDiagnoseResultSet;
     }
 
     public QualityControlData() {
@@ -158,6 +186,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.QualityControlResultSet[i] = new QualityControlResult(source.QualityControlResultSet[i]);
             }
         }
+        if (source.ContainerDiagnoseResultSet != null) {
+            this.ContainerDiagnoseResultSet = new ContainerDiagnoseResultItem[source.ContainerDiagnoseResultSet.length];
+            for (int i = 0; i < source.ContainerDiagnoseResultSet.length; i++) {
+                this.ContainerDiagnoseResultSet[i] = new ContainerDiagnoseResultItem(source.ContainerDiagnoseResultSet[i]);
+            }
+        }
     }
 
 
@@ -169,6 +203,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "NoVideo", this.NoVideo);
         this.setParamSimple(map, prefix + "QualityEvaluationScore", this.QualityEvaluationScore);
         this.setParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
+        this.setParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
 
     }
 }
