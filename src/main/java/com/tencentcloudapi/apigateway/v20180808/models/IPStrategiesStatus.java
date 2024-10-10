@@ -21,72 +21,62 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IPStrategysStatus extends AbstractModel {
+public class IPStrategiesStatus extends AbstractModel {
 
     /**
-    * Number of policies.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Policy list.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StrategySet")
     @Expose
     private IPStrategy [] StrategySet;
 
     /**
-     * Get Number of policies.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Number of policies.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of policies.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Number of policies.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Policy list.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StrategySet Policy list.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StrategySet 
      */
     public IPStrategy [] getStrategySet() {
         return this.StrategySet;
     }
 
     /**
-     * Set Policy list.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StrategySet Policy list.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StrategySet 
      */
     public void setStrategySet(IPStrategy [] StrategySet) {
         this.StrategySet = StrategySet;
     }
 
-    public IPStrategysStatus() {
+    public IPStrategiesStatus() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public IPStrategysStatus(IPStrategysStatus source) {
+    public IPStrategiesStatus(IPStrategiesStatus source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }

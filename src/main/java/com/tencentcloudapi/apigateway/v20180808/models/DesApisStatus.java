@@ -470,7 +470,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return RelationBuniessApiIds List of business APIs associated with authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String [] getRelationBuniessApiIds() {
         return this.RelationBuniessApiIds;
     }
@@ -480,7 +482,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param RelationBuniessApiIds List of business APIs associated with authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setRelationBuniessApiIds(String [] RelationBuniessApiIds) {
         this.RelationBuniessApiIds = RelationBuniessApiIds;
     }

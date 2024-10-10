@@ -37,7 +37,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     */
     @SerializedName("VersionList")
     @Expose
-    private ServiceReleaseHistoryInfo [] VersionList;
+    private DescribeServiceReleaseVersionResultVersionListInfo [] VersionList;
 
     /**
      * Get Total number of published versions.
@@ -65,7 +65,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @return VersionList Release version list.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public ServiceReleaseHistoryInfo [] getVersionList() {
+    public DescribeServiceReleaseVersionResultVersionListInfo [] getVersionList() {
         return this.VersionList;
     }
 
@@ -75,7 +75,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param VersionList Release version list.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public void setVersionList(ServiceReleaseHistoryInfo [] VersionList) {
+    public void setVersionList(DescribeServiceReleaseVersionResultVersionListInfo [] VersionList) {
         this.VersionList = VersionList;
     }
 
@@ -91,9 +91,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
             this.TotalCount = new Long(source.TotalCount);
         }
         if (source.VersionList != null) {
-            this.VersionList = new ServiceReleaseHistoryInfo[source.VersionList.length];
+            this.VersionList = new DescribeServiceReleaseVersionResultVersionListInfo[source.VersionList.length];
             for (int i = 0; i < source.VersionList.length; i++) {
-                this.VersionList[i] = new ServiceReleaseHistoryInfo(source.VersionList[i]);
+                this.VersionList[i] = new DescribeServiceReleaseVersionResultVersionListInfo(source.VersionList[i]);
             }
         }
     }

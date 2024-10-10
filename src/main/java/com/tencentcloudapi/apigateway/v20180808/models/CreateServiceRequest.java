@@ -45,13 +45,6 @@ public class CreateServiceRequest extends AbstractModel {
     private String ServiceDesc;
 
     /**
-    * Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
-    */
-    @SerializedName("ExclusiveSetName")
-    @Expose
-    private String ExclusiveSetName;
-
-    /**
     * Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
     */
     @SerializedName("NetTypes")
@@ -146,22 +139,6 @@ public class CreateServiceRequest extends AbstractModel {
      */
     public void setServiceDesc(String ServiceDesc) {
         this.ServiceDesc = ServiceDesc;
-    }
-
-    /**
-     * Get Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created. 
-     * @return ExclusiveSetName Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
-     */
-    public String getExclusiveSetName() {
-        return this.ExclusiveSetName;
-    }
-
-    /**
-     * Set Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
-     * @param ExclusiveSetName Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
-     */
-    public void setExclusiveSetName(String ExclusiveSetName) {
-        this.ExclusiveSetName = ExclusiveSetName;
     }
 
     /**
@@ -293,9 +270,6 @@ public class CreateServiceRequest extends AbstractModel {
         if (source.ServiceDesc != null) {
             this.ServiceDesc = new String(source.ServiceDesc);
         }
-        if (source.ExclusiveSetName != null) {
-            this.ExclusiveSetName = new String(source.ExclusiveSetName);
-        }
         if (source.NetTypes != null) {
             this.NetTypes = new String[source.NetTypes.length];
             for (int i = 0; i < source.NetTypes.length; i++) {
@@ -333,7 +307,6 @@ public class CreateServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "ServiceDesc", this.ServiceDesc);
-        this.setParamSimple(map, prefix + "ExclusiveSetName", this.ExclusiveSetName);
         this.setParamArraySimple(map, prefix + "NetTypes.", this.NetTypes);
         this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
         this.setParamSimple(map, prefix + "SetServerName", this.SetServerName);

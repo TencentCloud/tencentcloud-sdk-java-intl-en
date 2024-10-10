@@ -38,14 +38,6 @@ public class EnvironmentStrategy extends AbstractModel {
     private Long Quota;
 
     /**
-    * Maximum quota value
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("MaxQuota")
-    @Expose
-    private Long MaxQuota;
-
-    /**
      * Get Environment name 
      * @return EnvironmentName Environment name
      */
@@ -77,26 +69,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Quota = Quota;
     }
 
-    /**
-     * Get Maximum quota value
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MaxQuota Maximum quota value
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public Long getMaxQuota() {
-        return this.MaxQuota;
-    }
-
-    /**
-     * Set Maximum quota value
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MaxQuota Maximum quota value
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setMaxQuota(Long MaxQuota) {
-        this.MaxQuota = MaxQuota;
-    }
-
     public EnvironmentStrategy() {
     }
 
@@ -111,9 +83,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Quota != null) {
             this.Quota = new Long(source.Quota);
         }
-        if (source.MaxQuota != null) {
-            this.MaxQuota = new Long(source.MaxQuota);
-        }
     }
 
 
@@ -123,7 +92,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvironmentName", this.EnvironmentName);
         this.setParamSimple(map, prefix + "Quota", this.Quota);
-        this.setParamSimple(map, prefix + "MaxQuota", this.MaxQuota);
 
     }
 }

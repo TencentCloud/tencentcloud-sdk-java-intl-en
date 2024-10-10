@@ -247,7 +247,9 @@ req_t: ">=", "<="
 
 Note:
 ":" indicates included, and "!=" indicates not equal to. For the meanings of fields, please see the `LogSet` description of the output parameter
+     * @deprecated
      */
+    @Deprecated
     public LogQuery [] getLogQuerys() {
         return this.LogQuerys;
     }
@@ -275,7 +277,9 @@ req_t: ">=", "<="
 
 Note:
 ":" indicates included, and "!=" indicates not equal to. For the meanings of fields, please see the `LogSet` description of the output parameter
+     * @deprecated
      */
+    @Deprecated
     public void setLogQuerys(LogQuery [] LogQuerys) {
         this.LogQuerys = LogQuerys;
     }

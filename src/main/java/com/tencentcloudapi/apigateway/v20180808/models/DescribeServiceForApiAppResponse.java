@@ -78,14 +78,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ModifiedTime;
 
     /**
-    * Self-Deployed cluster name.
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("ExclusiveSetName")
-    @Expose
-    private String ExclusiveSetName;
-
-    /**
     * Network type list. INNER: private network access; OUTER: public network access.
     */
     @SerializedName("NetTypes")
@@ -321,26 +313,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void setModifiedTime(String ModifiedTime) {
         this.ModifiedTime = ModifiedTime;
-    }
-
-    /**
-     * Get Self-Deployed cluster name.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ExclusiveSetName Self-Deployed cluster name.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public String getExclusiveSetName() {
-        return this.ExclusiveSetName;
-    }
-
-    /**
-     * Set Self-Deployed cluster name.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ExclusiveSetName Self-Deployed cluster name.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setExclusiveSetName(String ExclusiveSetName) {
-        this.ExclusiveSetName = ExclusiveSetName;
     }
 
     /**
@@ -631,9 +603,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.ModifiedTime != null) {
             this.ModifiedTime = new String(source.ModifiedTime);
         }
-        if (source.ExclusiveSetName != null) {
-            this.ExclusiveSetName = new String(source.ExclusiveSetName);
-        }
         if (source.NetTypes != null) {
             this.NetTypes = new String[source.NetTypes.length];
             for (int i = 0; i < source.NetTypes.length; i++) {
@@ -702,7 +671,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
-        this.setParamSimple(map, prefix + "ExclusiveSetName", this.ExclusiveSetName);
         this.setParamArraySimple(map, prefix + "NetTypes.", this.NetTypes);
         this.setParamSimple(map, prefix + "InternalSubDomain", this.InternalSubDomain);
         this.setParamSimple(map, prefix + "OuterSubDomain", this.OuterSubDomain);

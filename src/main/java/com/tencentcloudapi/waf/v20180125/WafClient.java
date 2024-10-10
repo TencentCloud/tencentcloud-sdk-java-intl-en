@@ -72,6 +72,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *Add precision allowlist rules
+     * @param req AddCustomWhiteRuleRequest
+     * @return AddCustomWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCustomWhiteRuleResponse AddCustomWhiteRule(AddCustomWhiteRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddCustomWhiteRule", AddCustomWhiteRuleResponse.class);
+    }
+
+    /**
      *Add SaaS WAF protection domain
      * @param req AddSpartaProtectionRequest
      * @return AddSpartaProtectionResponse
@@ -102,6 +113,17 @@ public class WafClient extends AbstractClient{
     public CreateHostResponse CreateHost(CreateHostRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateHost", CreateHostResponse.class);
+    }
+
+    /**
+     *This API is used to add WAF IP allowlists/blocklists.
+     * @param req CreateIpAccessControlRequest
+     * @return CreateIpAccessControlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIpAccessControlResponse CreateIpAccessControl(CreateIpAccessControlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIpAccessControl", CreateIpAccessControlResponse.class);
     }
 
     /**
@@ -149,6 +171,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *Delete precision allowlist rules
+     * @param req DeleteCustomWhiteRuleRequest
+     * @return DeleteCustomWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomWhiteRuleResponse DeleteCustomWhiteRule(DeleteCustomWhiteRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCustomWhiteRule", DeleteCustomWhiteRuleResponse.class);
+    }
+
+    /**
      *This API is used to delete a domain name protected by CLB WAF. Batch operation is supported.
      * @param req DeleteHostRequest
      * @return DeleteHostResponse
@@ -157,6 +190,28 @@ public class WafClient extends AbstractClient{
     public DeleteHostResponse DeleteHost(DeleteHostRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteHost", DeleteHostResponse.class);
+    }
+
+    /**
+     *This API is used to delete latest versions of WAF IP allowlists/blocklists.
+     * @param req DeleteIpAccessControlV2Request
+     * @return DeleteIpAccessControlV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIpAccessControlV2Response DeleteIpAccessControlV2(DeleteIpAccessControlV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteIpAccessControlV2", DeleteIpAccessControlV2Response.class);
+    }
+
+    /**
+     *Delete CC attack session settings
+     * @param req DeleteSessionRequest
+     * @return DeleteSessionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSessionResponse DeleteSession(DeleteSessionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSession", DeleteSessionResponse.class);
     }
 
     /**
@@ -300,6 +355,17 @@ Obtain the information leakage prevention rule list
     }
 
     /**
+     *Obtain the precision allowlist policy list in the protection configuration
+     * @param req DescribeCustomWhiteRuleRequest
+     * @return DescribeCustomWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomWhiteRuleResponse DescribeCustomWhiteRule(DescribeCustomWhiteRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomWhiteRule", DescribeCustomWhiteRuleResponse.class);
+    }
+
+    /**
      *Obtain domain overview
      * @param req DescribeDomainCountInfoRequest
      * @return DescribeDomainCountInfoResponse
@@ -330,6 +396,17 @@ Obtain the information leakage prevention rule list
     public DescribeDomainDetailsSaasResponse DescribeDomainDetailsSaas(DescribeDomainDetailsSaasRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDomainDetailsSaas", DescribeDomainDetailsSaasResponse.class);
+    }
+
+    /**
+     *Obtain the result of adding domain operation
+     * @param req DescribeDomainVerifyResultRequest
+     * @return DescribeDomainVerifyResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainVerifyResultResponse DescribeDomainVerifyResult(DescribeDomainVerifyResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDomainVerifyResult", DescribeDomainVerifyResultResponse.class);
     }
 
     /**
@@ -399,6 +476,28 @@ Obtain the information leakage prevention rule list
     }
 
     /**
+     *Query detailed information of all user instances
+     * @param req DescribeInstancesRequest
+     * @return DescribeInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstances", DescribeInstancesResponse.class);
+    }
+
+    /**
+     *WAF IP blocklist/allowlist query
+     * @param req DescribeIpAccessControlRequest
+     * @return DescribeIpAccessControlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpAccessControlResponse DescribeIpAccessControl(DescribeIpAccessControlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIpAccessControl", DescribeIpAccessControlResponse.class);
+    }
+
+    /**
      *Query the switch status of each WAF basic security module, check if each module is enabled
      * @param req DescribeModuleStatusRequest
      * @return DescribeModuleStatusResponse
@@ -440,6 +539,17 @@ Obtain the information leakage prevention rule list
     public DescribePolicyStatusResponse DescribePolicyStatus(DescribePolicyStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePolicyStatus", DescribePolicyStatusResponse.class);
+    }
+
+    /**
+     *Obtain the SaaS-type WAF protection port list
+     * @param req DescribePortsRequest
+     * @return DescribePortsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePortsResponse DescribePorts(DescribePortsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePorts", DescribePortsResponse.class);
     }
 
     /**
@@ -495,6 +605,17 @@ Obtain the information leakage prevention rule list
     public DescribeTopAttackDomainResponse DescribeTopAttackDomain(DescribeTopAttackDomainRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTopAttackDomain", DescribeTopAttackDomainResponse.class);
+    }
+
+    /**
+     *During the addition and modification of Domain Configuration for CLB-type WAF, it is required to display the supported region list for CLB-type WAF (clb-waf) through DescribeUserClbWafRegions to obtain the currently available region list for the customer.
+     * @param req DescribeUserClbWafRegionsRequest
+     * @return DescribeUserClbWafRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserClbWafRegionsResponse DescribeUserClbWafRegions(DescribeUserClbWafRegionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserClbWafRegions", DescribeUserClbWafRegionsResponse.class);
     }
 
     /**
@@ -572,6 +693,28 @@ Obtain the information leakage prevention rule list
     public GetAttackTotalCountResponse GetAttackTotalCount(GetAttackTotalCountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetAttackTotalCount", GetAttackTotalCountResponse.class);
+    }
+
+    /**
+     *Obtain the elastic QPS limit of package instances
+     * @param req GetInstanceQpsLimitRequest
+     * @return GetInstanceQpsLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetInstanceQpsLimitResponse GetInstanceQpsLimit(GetInstanceQpsLimitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetInstanceQpsLimit", GetInstanceQpsLimitResponse.class);
+    }
+
+    /**
+     *This API is used to import IP allowlists/blocklists.
+     * @param req ImportIpAccessControlRequest
+     * @return ImportIpAccessControlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportIpAccessControlResponse ImportIpAccessControl(ImportIpAccessControlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportIpAccessControl", ImportIpAccessControlResponse.class);
     }
 
     /**
@@ -663,6 +806,17 @@ Obtain the information leakage prevention rule list
     }
 
     /**
+     *This API is used to edit a precise allowlist.
+     * @param req ModifyCustomWhiteRuleRequest
+     * @return ModifyCustomWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomWhiteRuleResponse ModifyCustomWhiteRule(ModifyCustomWhiteRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCustomWhiteRule", ModifyCustomWhiteRuleResponse.class);
+    }
+
+    /**
      *Enable or disable a precision allowlist
      * @param req ModifyCustomWhiteRuleStatusRequest
      * @return ModifyCustomWhiteRuleStatusResponse
@@ -738,6 +892,61 @@ Batch operation is supported.
     public ModifyHostStatusResponse ModifyHostStatus(ModifyHostStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyHostStatus", ModifyHostStatusResponse.class);
+    }
+
+    /**
+     *Modify the QPS elastic billing switch for an instance
+     * @param req ModifyInstanceElasticModeRequest
+     * @return ModifyInstanceElasticModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceElasticModeResponse ModifyInstanceElasticMode(ModifyInstanceElasticModeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceElasticMode", ModifyInstanceElasticModeResponse.class);
+    }
+
+    /**
+     *Modify instance name
+     * @param req ModifyInstanceNameRequest
+     * @return ModifyInstanceNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceNameResponse ModifyInstanceName(ModifyInstanceNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceName", ModifyInstanceNameResponse.class);
+    }
+
+    /**
+     *Set elastic QPS limit for package instances
+     * @param req ModifyInstanceQpsLimitRequest
+     * @return ModifyInstanceQpsLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceQpsLimitResponse ModifyInstanceQpsLimit(ModifyInstanceQpsLimitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceQpsLimit", ModifyInstanceQpsLimitResponse.class);
+    }
+
+    /**
+     *Enable or disable auto-renewal for instance
+     * @param req ModifyInstanceRenewFlagRequest
+     * @return ModifyInstanceRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceRenewFlagResponse ModifyInstanceRenewFlag(ModifyInstanceRenewFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceRenewFlag", ModifyInstanceRenewFlagResponse.class);
+    }
+
+    /**
+     *This API is used to edit WAF IP allowlists/blocklists.
+     * @param req ModifyIpAccessControlRequest
+     * @return ModifyIpAccessControlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIpAccessControlResponse ModifyIpAccessControl(ModifyIpAccessControlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyIpAccessControl", ModifyIpAccessControlResponse.class);
     }
 
     /**
@@ -837,6 +1046,17 @@ Batch operation is supported.
     public RefreshAccessCheckResultResponse RefreshAccessCheckResult(RefreshAccessCheckResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RefreshAccessCheckResult", RefreshAccessCheckResultResponse.class);
+    }
+
+    /**
+     *Toggle elasticity switch
+     * @param req SwitchElasticModeRequest
+     * @return SwitchElasticModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchElasticModeResponse SwitchElasticMode(SwitchElasticModeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SwitchElasticMode", SwitchElasticModeResponse.class);
     }
 
     /**

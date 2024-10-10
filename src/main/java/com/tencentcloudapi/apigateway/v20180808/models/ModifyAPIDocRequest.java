@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class ModifyAPIDocRequest extends AbstractModel {
 
     /**
-    * API document ID
-    */
-    @SerializedName("ApiDocId")
-    @Expose
-    private String ApiDocId;
-
-    /**
     * API document name
     */
     @SerializedName("ApiDocName")
@@ -59,20 +52,11 @@ public class ModifyAPIDocRequest extends AbstractModel {
     private String [] ApiIds;
 
     /**
-     * Get API document ID 
-     * @return ApiDocId API document ID
-     */
-    public String getApiDocId() {
-        return this.ApiDocId;
-    }
-
-    /**
-     * Set API document ID
-     * @param ApiDocId API document ID
-     */
-    public void setApiDocId(String ApiDocId) {
-        this.ApiDocId = ApiDocId;
-    }
+    * API document ID
+    */
+    @SerializedName("ApiDocId")
+    @Expose
+    private String ApiDocId;
 
     /**
      * Get API document name 
@@ -138,6 +122,22 @@ public class ModifyAPIDocRequest extends AbstractModel {
         this.ApiIds = ApiIds;
     }
 
+    /**
+     * Get API document ID 
+     * @return ApiDocId API document ID
+     */
+    public String getApiDocId() {
+        return this.ApiDocId;
+    }
+
+    /**
+     * Set API document ID
+     * @param ApiDocId API document ID
+     */
+    public void setApiDocId(String ApiDocId) {
+        this.ApiDocId = ApiDocId;
+    }
+
     public ModifyAPIDocRequest() {
     }
 
@@ -146,9 +146,6 @@ public class ModifyAPIDocRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyAPIDocRequest(ModifyAPIDocRequest source) {
-        if (source.ApiDocId != null) {
-            this.ApiDocId = new String(source.ApiDocId);
-        }
         if (source.ApiDocName != null) {
             this.ApiDocName = new String(source.ApiDocName);
         }
@@ -164,6 +161,9 @@ public class ModifyAPIDocRequest extends AbstractModel {
                 this.ApiIds[i] = new String(source.ApiIds[i]);
             }
         }
+        if (source.ApiDocId != null) {
+            this.ApiDocId = new String(source.ApiDocId);
+        }
     }
 
 
@@ -171,11 +171,11 @@ public class ModifyAPIDocRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ApiDocId", this.ApiDocId);
         this.setParamSimple(map, prefix + "ApiDocName", this.ApiDocName);
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "Environment", this.Environment);
         this.setParamArraySimple(map, prefix + "ApiIds.", this.ApiIds);
+        this.setParamSimple(map, prefix + "ApiDocId", this.ApiDocId);
 
     }
 }

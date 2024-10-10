@@ -21,69 +21,69 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApisStatus extends AbstractModel {
+public class ApiEnvironmentStrategyStatus extends AbstractModel {
 
     /**
-    * Number of eligible APIs.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * API list.
+    * 
     */
-    @SerializedName("ApiIdStatusSet")
+    @SerializedName("ApiEnvironmentStrategySet")
     @Expose
-    private DesApisStatus [] ApiIdStatusSet;
+    private ApiEnvironmentStrategy [] ApiEnvironmentStrategySet;
 
     /**
-     * Get Number of eligible APIs. 
-     * @return TotalCount Number of eligible APIs.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible APIs.
-     * @param TotalCount Number of eligible APIs.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get API list. 
-     * @return ApiIdStatusSet API list.
+     * Get  
+     * @return ApiEnvironmentStrategySet 
      */
-    public DesApisStatus [] getApiIdStatusSet() {
-        return this.ApiIdStatusSet;
+    public ApiEnvironmentStrategy [] getApiEnvironmentStrategySet() {
+        return this.ApiEnvironmentStrategySet;
     }
 
     /**
-     * Set API list.
-     * @param ApiIdStatusSet API list.
+     * Set 
+     * @param ApiEnvironmentStrategySet 
      */
-    public void setApiIdStatusSet(DesApisStatus [] ApiIdStatusSet) {
-        this.ApiIdStatusSet = ApiIdStatusSet;
+    public void setApiEnvironmentStrategySet(ApiEnvironmentStrategy [] ApiEnvironmentStrategySet) {
+        this.ApiEnvironmentStrategySet = ApiEnvironmentStrategySet;
     }
 
-    public ApisStatus() {
+    public ApiEnvironmentStrategyStatus() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ApisStatus(ApisStatus source) {
+    public ApiEnvironmentStrategyStatus(ApiEnvironmentStrategyStatus source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.ApiIdStatusSet != null) {
-            this.ApiIdStatusSet = new DesApisStatus[source.ApiIdStatusSet.length];
-            for (int i = 0; i < source.ApiIdStatusSet.length; i++) {
-                this.ApiIdStatusSet[i] = new DesApisStatus(source.ApiIdStatusSet[i]);
+        if (source.ApiEnvironmentStrategySet != null) {
+            this.ApiEnvironmentStrategySet = new ApiEnvironmentStrategy[source.ApiEnvironmentStrategySet.length];
+            for (int i = 0; i < source.ApiEnvironmentStrategySet.length; i++) {
+                this.ApiEnvironmentStrategySet[i] = new ApiEnvironmentStrategy(source.ApiEnvironmentStrategySet[i]);
             }
         }
     }
@@ -94,7 +94,7 @@ public class ApisStatus extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "ApiIdStatusSet.", this.ApiIdStatusSet);
+        this.setParamArrayObj(map, prefix + "ApiEnvironmentStrategySet.", this.ApiEnvironmentStrategySet);
 
     }
 }

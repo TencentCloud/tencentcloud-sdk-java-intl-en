@@ -221,7 +221,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     */
     @SerializedName("ServiceParameters")
     @Expose
-    private ServiceParameter [] ServiceParameters;
+    private DescribeApiResultServiceParametersInfo [] ServiceParameters;
 
     /**
     * Constant parameter.
@@ -917,7 +917,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @return ServiceParameters API backend service parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public ServiceParameter [] getServiceParameters() {
+    public DescribeApiResultServiceParametersInfo [] getServiceParameters() {
         return this.ServiceParameters;
     }
 
@@ -927,7 +927,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param ServiceParameters API backend service parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public void setServiceParameters(ServiceParameter [] ServiceParameters) {
+    public void setServiceParameters(DescribeApiResultServiceParametersInfo [] ServiceParameters) {
         this.ServiceParameters = ServiceParameters;
     }
 
@@ -1538,9 +1538,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
             this.ServiceConfig = new ServiceConfig(source.ServiceConfig);
         }
         if (source.ServiceParameters != null) {
-            this.ServiceParameters = new ServiceParameter[source.ServiceParameters.length];
+            this.ServiceParameters = new DescribeApiResultServiceParametersInfo[source.ServiceParameters.length];
             for (int i = 0; i < source.ServiceParameters.length; i++) {
-                this.ServiceParameters[i] = new ServiceParameter(source.ServiceParameters[i]);
+                this.ServiceParameters[i] = new DescribeApiResultServiceParametersInfo(source.ServiceParameters[i]);
             }
         }
         if (source.ConstantParameters != null) {
