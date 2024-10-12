@@ -24,322 +24,322 @@ import java.util.HashMap;
 public class DescribeOverviewL7DataRequest extends AbstractModel {
 
     /**
-    * The start time.
+    * Start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * The end time.
+    * End time.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
-<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+    * Queried metric. Valid values:
+<li>l7Flow_outFlux: EdgeOne response traffic;</li>
+<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
+<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_hit_outFlux: cache hit traffic;</li>
+<li>l7Flow_request: number of access requests;</li>
+<li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
+<li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-    * ZoneId set. This parameter is required.
+    * Site ID set. This parameter is required.
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * Queried domain name set. This parameter has been discarded.
+    * Queried domain name set. This parameter has been deprecated.
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * The protocol type. Values:
-<li>`http`: HTTP protocol;</li>
-<li>`https`: HTTPS protocol;</li>
-<li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
+    * Protocol type of the query. Valid values:
+<li>http: HTTP protocol;</li>
+<li>https: HTTPS protocol;</li>
+<li>http2: HTTP/2 protocol;</li>
+<li>all: all protocols.</li>If this parameter is not input, the default value `all` is used. This parameter is not yet effective.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+    * Time granularity of the query. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.
     */
     @SerializedName("Interval")
     @Expose
     private String Interval;
 
     /**
-    * Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
-<li>domains: Filter based on domain name. </li>
-<li>tagKey: Filter based on Tag Key. </li>
-<li>tagValue: Filter based on Tag Value. </li>
+    * Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
+<li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
+<li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
     */
     @SerializedName("Filters")
     @Expose
     private QueryCondition [] Filters;
 
     /**
-    * Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+    * Data ownership area. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data.</li>If this parameter is not input, the default value `global` is used.
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-     * Get The start time. 
-     * @return StartTime The start time.
+     * Get Start time. 
+     * @return StartTime Start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The start time.
-     * @param StartTime The start time.
+     * Set Start time.
+     * @param StartTime Start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get The end time. 
-     * @return EndTime The end time.
+     * Get End time. 
+     * @return EndTime End time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time.
-     * @param EndTime The end time.
+     * Set End time.
+     * @param EndTime End time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
-<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li> 
-     * @return MetricNames The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
-<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+     * Get Queried metric. Valid values:
+<li>l7Flow_outFlux: EdgeOne response traffic;</li>
+<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
+<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_hit_outFlux: cache hit traffic;</li>
+<li>l7Flow_request: number of access requests;</li>
+<li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
+<li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li> 
+     * @return MetricNames Queried metric. Valid values:
+<li>l7Flow_outFlux: EdgeOne response traffic;</li>
+<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
+<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_hit_outFlux: cache hit traffic;</li>
+<li>l7Flow_request: number of access requests;</li>
+<li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
+<li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
-<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
-     * @param MetricNames The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
-<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+     * Set Queried metric. Valid values:
+<li>l7Flow_outFlux: EdgeOne response traffic;</li>
+<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
+<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_hit_outFlux: cache hit traffic;</li>
+<li>l7Flow_request: number of access requests;</li>
+<li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
+<li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
+     * @param MetricNames Queried metric. Valid values:
+<li>l7Flow_outFlux: EdgeOne response traffic;</li>
+<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
+<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_hit_outFlux: cache hit traffic;</li>
+<li>l7Flow_request: number of access requests;</li>
+<li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
+<li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
     }
 
     /**
-     * Get ZoneId set. This parameter is required. 
-     * @return ZoneIds ZoneId set. This parameter is required.
+     * Get Site ID set. This parameter is required. 
+     * @return ZoneIds Site ID set. This parameter is required.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set ZoneId set. This parameter is required.
-     * @param ZoneIds ZoneId set. This parameter is required.
+     * Set Site ID set. This parameter is required.
+     * @param ZoneIds Site ID set. This parameter is required.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get Queried domain name set. This parameter has been discarded. 
-     * @return Domains Queried domain name set. This parameter has been discarded.
+     * Get Queried domain name set. This parameter has been deprecated. 
+     * @return Domains Queried domain name set. This parameter has been deprecated.
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set Queried domain name set. This parameter has been discarded.
-     * @param Domains Queried domain name set. This parameter has been discarded.
+     * Set Queried domain name set. This parameter has been deprecated.
+     * @param Domains Queried domain name set. This parameter has been deprecated.
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get The protocol type. Values:
-<li>`http`: HTTP protocol;</li>
-<li>`https`: HTTPS protocol;</li>
-<li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now. 
-     * @return Protocol The protocol type. Values:
-<li>`http`: HTTP protocol;</li>
-<li>`https`: HTTPS protocol;</li>
-<li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
+     * Get Protocol type of the query. Valid values:
+<li>http: HTTP protocol;</li>
+<li>https: HTTPS protocol;</li>
+<li>http2: HTTP/2 protocol;</li>
+<li>all: all protocols.</li>If this parameter is not input, the default value `all` is used. This parameter is not yet effective. 
+     * @return Protocol Protocol type of the query. Valid values:
+<li>http: HTTP protocol;</li>
+<li>https: HTTPS protocol;</li>
+<li>http2: HTTP/2 protocol;</li>
+<li>all: all protocols.</li>If this parameter is not input, the default value `all` is used. This parameter is not yet effective.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set The protocol type. Values:
-<li>`http`: HTTP protocol;</li>
-<li>`https`: HTTPS protocol;</li>
-<li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
-     * @param Protocol The protocol type. Values:
-<li>`http`: HTTP protocol;</li>
-<li>`https`: HTTPS protocol;</li>
-<li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
+     * Set Protocol type of the query. Valid values:
+<li>http: HTTP protocol;</li>
+<li>https: HTTPS protocol;</li>
+<li>http2: HTTP/2 protocol;</li>
+<li>all: all protocols.</li>If this parameter is not input, the default value `all` is used. This parameter is not yet effective.
+     * @param Protocol Protocol type of the query. Valid values:
+<li>http: HTTP protocol;</li>
+<li>https: HTTPS protocol;</li>
+<li>http2: HTTP/2 protocol;</li>
+<li>all: all protocols.</li>If this parameter is not input, the default value `all` is used. This parameter is not yet effective.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`. 
-     * @return Interval The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+     * Get Time granularity of the query. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days. 
+     * @return Interval Time granularity of the query. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
-     * @param Interval The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+     * Set Time granularity of the query. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.
+     * @param Interval Time granularity of the query. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
-<li>domains: Filter based on domain name. </li>
-<li>tagKey: Filter based on Tag Key. </li>
-<li>tagValue: Filter based on Tag Value. </li> 
-     * @return Filters Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
-<li>domains: Filter based on domain name. </li>
-<li>tagKey: Filter based on Tag Key. </li>
-<li>tagValue: Filter based on Tag Value. </li>
+     * Get Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
+<li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
+<li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li> 
+     * @return Filters Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
+<li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
+<li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
      */
     public QueryCondition [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
-<li>domains: Filter based on domain name. </li>
-<li>tagKey: Filter based on Tag Key. </li>
-<li>tagValue: Filter based on Tag Value. </li>
-     * @param Filters Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
-<li>domains: Filter based on domain name. </li>
-<li>tagKey: Filter based on Tag Key. </li>
-<li>tagValue: Filter based on Tag Value. </li>
+     * Set Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
+<li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
+<li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
+     * @param Filters Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
+<li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
+<li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
      */
     public void setFilters(QueryCondition [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used. 
-     * @return Area Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+     * Get Data ownership area. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data.</li>If this parameter is not input, the default value `global` is used. 
+     * @return Area Data ownership area. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data.</li>If this parameter is not input, the default value `global` is used.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
-     * @param Area Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+     * Set Data ownership area. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data.</li>If this parameter is not input, the default value `global` is used.
+     * @param Area Data ownership area. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data.</li>If this parameter is not input, the default value `global` is used.
      */
     public void setArea(String Area) {
         this.Area = Area;

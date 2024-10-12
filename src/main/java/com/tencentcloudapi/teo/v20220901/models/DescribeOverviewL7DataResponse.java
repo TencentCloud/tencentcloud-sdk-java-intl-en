@@ -24,14 +24,15 @@ import java.util.HashMap;
 public class DescribeOverviewL7DataResponse extends AbstractModel {
 
     /**
-    * Total number of query results.
+    * Total number of entries in the query result.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Note: This field may return 'null', which indicates a failure to obtain a valid value.
+    * List of time series traffic data in L7 monitoring.
+Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("Data")
     @Expose
@@ -45,32 +46,36 @@ public class DescribeOverviewL7DataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of query results. 
-     * @return TotalCount Total number of query results.
+     * Get Total number of entries in the query result. 
+     * @return TotalCount Total number of entries in the query result.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of query results.
-     * @param TotalCount Total number of query results.
+     * Set Total number of entries in the query result.
+     * @param TotalCount Total number of entries in the query result.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Note: This field may return 'null', which indicates a failure to obtain a valid value. 
-     * @return Data Note: This field may return 'null', which indicates a failure to obtain a valid value.
+     * Get List of time series traffic data in L7 monitoring.
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return Data List of time series traffic data in L7 monitoring.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public TimingDataRecord [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Note: This field may return 'null', which indicates a failure to obtain a valid value.
-     * @param Data Note: This field may return 'null', which indicates a failure to obtain a valid value.
+     * Set List of time series traffic data in L7 monitoring.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param Data List of time series traffic data in L7 monitoring.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setData(TimingDataRecord [] Data) {
         this.Data = Data;

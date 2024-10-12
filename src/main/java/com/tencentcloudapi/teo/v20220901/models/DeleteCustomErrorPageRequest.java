@@ -31,7 +31,7 @@ public class DeleteCustomErrorPageRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Custom response page ID.
+    * Custom page ID.
     */
     @SerializedName("PageId")
     @Expose
@@ -54,16 +54,16 @@ public class DeleteCustomErrorPageRequest extends AbstractModel {
     }
 
     /**
-     * Get Custom response page ID. 
-     * @return PageId Custom response page ID.
+     * Get Custom page ID. 
+     * @return PageId Custom page ID.
      */
     public String getPageId() {
         return this.PageId;
     }
 
     /**
-     * Set Custom response page ID.
-     * @param PageId Custom response page ID.
+     * Set Custom page ID.
+     * @param PageId Custom page ID.
      */
     public void setPageId(String PageId) {
         this.PageId = PageId;

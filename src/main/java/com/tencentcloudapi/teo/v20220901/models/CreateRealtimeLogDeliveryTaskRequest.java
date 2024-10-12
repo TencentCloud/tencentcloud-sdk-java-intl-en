@@ -31,76 +31,76 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters.
+    * Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * The type of the real-time log delivery task. Valid values:
-<li>cls: Push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: Push to a user-defined HTTP(S) address;</li>
-<li>s3: Push to an AWS S3-compatible bucket address.</li>
+    * Type of a real-time log shipping task. Valid values:
+<li>cls: push to Tencent Cloud CLS;</li>
+<li>custom_endpoint: push to a custom HTTP(S) address;</li>
+<li>s3: push to an AWS S3-compatible bucket address.</li>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
+    * List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+<li>L7 domain name: domain.example.com;</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
     */
     @SerializedName("EntityList")
     @Expose
     private String [] EntityList;
 
     /**
-    * The type of data delivery. Valid values:
-<li>domain: Site acceleration log;</li>
-<li>application: Layer 4 proxy log;</li>
-<li>web-rateLiming: Rate limit and CC attack defense log;</li>
-<li>web-attack: Managed rule log;</li>
-<li>web-rule: Custom rule log;</li>
-<li>web-bot: Bot management log.</li>
+    * Data shipping type. Valid values:
+<li>domain: site acceleration logs;</li>
+<li>application: L4 proxy logs;</li>
+<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>web-attack: managed rule logs;</li>
+<li>web-rule: custom rule logs;</li>
+<li>web-bot: Bot management logs.</li>
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * The data delivery area. Valid values:
-<li>mainland: Within the Chinese mainland;</li>
-<li>overseas: Global (excluding the Chinese mainland).</li>
+    * Data shipping area. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * The list of predefined fields for delivery.
+    * List of predefined fields for shipping.
     */
     @SerializedName("Fields")
     @Expose
     private String [] Fields;
 
     /**
-    * The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200.
+    * List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
     */
     @SerializedName("CustomFields")
     @Expose
     private CustomField [] CustomFields;
 
     /**
-    * Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
+    * Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
     */
     @SerializedName("DeliveryConditions")
     @Expose
     private DeliveryCondition [] DeliveryConditions;
 
     /**
-    * The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the sampling ratio is 100%.
+    * Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
     */
     @SerializedName("Sample")
     @Expose
@@ -116,21 +116,21 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private LogFormat LogFormat;
 
     /**
-    * The configuration information of CLS. This parameter is required when TaskType is cls.
+    * Configuration information of CLS. This parameter is required when TaskType is cls.
     */
     @SerializedName("CLS")
     @Expose
     private CLSTopic CLS;
 
     /**
-    * The configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
+    * Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
     */
     @SerializedName("CustomEndpoint")
     @Expose
     private CustomEndpoint CustomEndpoint;
 
     /**
-    * The configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+    * Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
     */
     @SerializedName("S3")
     @Expose
@@ -153,196 +153,196 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters. 
-     * @return TaskName The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters.
+     * Get Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_). 
+     * @return TaskName Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters.
-     * @param TaskName The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters.
+     * Set Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
+     * @param TaskName Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get The type of the real-time log delivery task. Valid values:
-<li>cls: Push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: Push to a user-defined HTTP(S) address;</li>
-<li>s3: Push to an AWS S3-compatible bucket address.</li> 
-     * @return TaskType The type of the real-time log delivery task. Valid values:
-<li>cls: Push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: Push to a user-defined HTTP(S) address;</li>
-<li>s3: Push to an AWS S3-compatible bucket address.</li>
+     * Get Type of a real-time log shipping task. Valid values:
+<li>cls: push to Tencent Cloud CLS;</li>
+<li>custom_endpoint: push to a custom HTTP(S) address;</li>
+<li>s3: push to an AWS S3-compatible bucket address.</li> 
+     * @return TaskType Type of a real-time log shipping task. Valid values:
+<li>cls: push to Tencent Cloud CLS;</li>
+<li>custom_endpoint: push to a custom HTTP(S) address;</li>
+<li>s3: push to an AWS S3-compatible bucket address.</li>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set The type of the real-time log delivery task. Valid values:
-<li>cls: Push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: Push to a user-defined HTTP(S) address;</li>
-<li>s3: Push to an AWS S3-compatible bucket address.</li>
-     * @param TaskType The type of the real-time log delivery task. Valid values:
-<li>cls: Push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: Push to a user-defined HTTP(S) address;</li>
-<li>s3: Push to an AWS S3-compatible bucket address.</li>
+     * Set Type of a real-time log shipping task. Valid values:
+<li>cls: push to Tencent Cloud CLS;</li>
+<li>custom_endpoint: push to a custom HTTP(S) address;</li>
+<li>s3: push to an AWS S3-compatible bucket address.</li>
+     * @param TaskType Type of a real-time log shipping task. Valid values:
+<li>cls: push to Tencent Cloud CLS;</li>
+<li>custom_endpoint: push to a custom HTTP(S) address;</li>
+<li>s3: push to an AWS S3-compatible bucket address.</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li> 
-     * @return EntityList The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
+     * Get List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+<li>L7 domain name: domain.example.com;</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7.</li> 
+     * @return EntityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+<li>L7 domain name: domain.example.com;</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
      */
     public String [] getEntityList() {
         return this.EntityList;
     }
 
     /**
-     * Set The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
-     * @param EntityList The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
+     * Set List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+<li>L7 domain name: domain.example.com;</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
+     * @param EntityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+<li>L7 domain name: domain.example.com;</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
      */
     public void setEntityList(String [] EntityList) {
         this.EntityList = EntityList;
     }
 
     /**
-     * Get The type of data delivery. Valid values:
-<li>domain: Site acceleration log;</li>
-<li>application: Layer 4 proxy log;</li>
-<li>web-rateLiming: Rate limit and CC attack defense log;</li>
-<li>web-attack: Managed rule log;</li>
-<li>web-rule: Custom rule log;</li>
-<li>web-bot: Bot management log.</li> 
-     * @return LogType The type of data delivery. Valid values:
-<li>domain: Site acceleration log;</li>
-<li>application: Layer 4 proxy log;</li>
-<li>web-rateLiming: Rate limit and CC attack defense log;</li>
-<li>web-attack: Managed rule log;</li>
-<li>web-rule: Custom rule log;</li>
-<li>web-bot: Bot management log.</li>
+     * Get Data shipping type. Valid values:
+<li>domain: site acceleration logs;</li>
+<li>application: L4 proxy logs;</li>
+<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>web-attack: managed rule logs;</li>
+<li>web-rule: custom rule logs;</li>
+<li>web-bot: Bot management logs.</li> 
+     * @return LogType Data shipping type. Valid values:
+<li>domain: site acceleration logs;</li>
+<li>application: L4 proxy logs;</li>
+<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>web-attack: managed rule logs;</li>
+<li>web-rule: custom rule logs;</li>
+<li>web-bot: Bot management logs.</li>
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set The type of data delivery. Valid values:
-<li>domain: Site acceleration log;</li>
-<li>application: Layer 4 proxy log;</li>
-<li>web-rateLiming: Rate limit and CC attack defense log;</li>
-<li>web-attack: Managed rule log;</li>
-<li>web-rule: Custom rule log;</li>
-<li>web-bot: Bot management log.</li>
-     * @param LogType The type of data delivery. Valid values:
-<li>domain: Site acceleration log;</li>
-<li>application: Layer 4 proxy log;</li>
-<li>web-rateLiming: Rate limit and CC attack defense log;</li>
-<li>web-attack: Managed rule log;</li>
-<li>web-rule: Custom rule log;</li>
-<li>web-bot: Bot management log.</li>
+     * Set Data shipping type. Valid values:
+<li>domain: site acceleration logs;</li>
+<li>application: L4 proxy logs;</li>
+<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>web-attack: managed rule logs;</li>
+<li>web-rule: custom rule logs;</li>
+<li>web-bot: Bot management logs.</li>
+     * @param LogType Data shipping type. Valid values:
+<li>domain: site acceleration logs;</li>
+<li>application: L4 proxy logs;</li>
+<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>web-attack: managed rule logs;</li>
+<li>web-rule: custom rule logs;</li>
+<li>web-bot: Bot management logs.</li>
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get The data delivery area. Valid values:
-<li>mainland: Within the Chinese mainland;</li>
-<li>overseas: Global (excluding the Chinese mainland).</li> 
-     * @return Area The data delivery area. Valid values:
-<li>mainland: Within the Chinese mainland;</li>
-<li>overseas: Global (excluding the Chinese mainland).</li>
+     * Get Data shipping area. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li> 
+     * @return Area Data shipping area. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set The data delivery area. Valid values:
-<li>mainland: Within the Chinese mainland;</li>
-<li>overseas: Global (excluding the Chinese mainland).</li>
-     * @param Area The data delivery area. Valid values:
-<li>mainland: Within the Chinese mainland;</li>
-<li>overseas: Global (excluding the Chinese mainland).</li>
+     * Set Data shipping area. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+     * @param Area Data shipping area. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get The list of predefined fields for delivery. 
-     * @return Fields The list of predefined fields for delivery.
+     * Get List of predefined fields for shipping. 
+     * @return Fields List of predefined fields for shipping.
      */
     public String [] getFields() {
         return this.Fields;
     }
 
     /**
-     * Set The list of predefined fields for delivery.
-     * @param Fields The list of predefined fields for delivery.
+     * Set List of predefined fields for shipping.
+     * @param Fields List of predefined fields for shipping.
      */
     public void setFields(String [] Fields) {
         this.Fields = Fields;
     }
 
     /**
-     * Get The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200. 
-     * @return CustomFields The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200.
+     * Get List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200. 
+     * @return CustomFields List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
      */
     public CustomField [] getCustomFields() {
         return this.CustomFields;
     }
 
     /**
-     * Set The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200.
-     * @param CustomFields The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200.
+     * Set List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
+     * @param CustomFields List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
      */
     public void setCustomFields(CustomField [] CustomFields) {
         this.CustomFields = CustomFields;
     }
 
     /**
-     * Get Log delivery filter conditions. If this field is not filled in, all logs will be delivered. 
-     * @return DeliveryConditions Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
+     * Get Filter criteria of log shipping. If this parameter is not input, all logs will be shipped. 
+     * @return DeliveryConditions Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
      */
     public DeliveryCondition [] getDeliveryConditions() {
         return this.DeliveryConditions;
     }
 
     /**
-     * Set Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
-     * @param DeliveryConditions Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
+     * Set Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
+     * @param DeliveryConditions Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
      */
     public void setDeliveryConditions(DeliveryCondition [] DeliveryConditions) {
         this.DeliveryConditions = DeliveryConditions;
     }
 
     /**
-     * Get The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the sampling ratio is 100%. 
-     * @return Sample The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the sampling ratio is 100%.
+     * Get Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%. 
+     * @return Sample Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
      */
     public Long getSample() {
         return this.Sample;
     }
 
     /**
-     * Set The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the sampling ratio is 100%.
-     * @param Sample The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the sampling ratio is 100%.
+     * Set Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
+     * @param Sample Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
      */
     public void setSample(Long Sample) {
         this.Sample = Sample;
@@ -373,48 +373,48 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get The configuration information of CLS. This parameter is required when TaskType is cls. 
-     * @return CLS The configuration information of CLS. This parameter is required when TaskType is cls.
+     * Get Configuration information of CLS. This parameter is required when TaskType is cls. 
+     * @return CLS Configuration information of CLS. This parameter is required when TaskType is cls.
      */
     public CLSTopic getCLS() {
         return this.CLS;
     }
 
     /**
-     * Set The configuration information of CLS. This parameter is required when TaskType is cls.
-     * @param CLS The configuration information of CLS. This parameter is required when TaskType is cls.
+     * Set Configuration information of CLS. This parameter is required when TaskType is cls.
+     * @param CLS Configuration information of CLS. This parameter is required when TaskType is cls.
      */
     public void setCLS(CLSTopic CLS) {
         this.CLS = CLS;
     }
 
     /**
-     * Get The configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint. 
-     * @return CustomEndpoint The configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
+     * Get Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint. 
+     * @return CustomEndpoint Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
      */
     public CustomEndpoint getCustomEndpoint() {
         return this.CustomEndpoint;
     }
 
     /**
-     * Set The configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
-     * @param CustomEndpoint The configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
+     * Set Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
+     * @param CustomEndpoint Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
      */
     public void setCustomEndpoint(CustomEndpoint CustomEndpoint) {
         this.CustomEndpoint = CustomEndpoint;
     }
 
     /**
-     * Get The configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3. 
-     * @return S3 The configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+     * Get Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3. 
+     * @return S3 Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
      */
     public S3 getS3() {
         return this.S3;
     }
 
     /**
-     * Set The configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
-     * @param S3 The configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+     * Set Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+     * @param S3 Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
      */
     public void setS3(S3 S3) {
         this.S3 = S3;

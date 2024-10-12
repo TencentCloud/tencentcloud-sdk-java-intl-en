@@ -74,9 +74,9 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
     private String Interval;
 
     /**
-    * Filters
-<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
-<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
+    * Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>ruleId: Filter by forwarding rule ID.</li>
+<li>proxyId: Filter by L4 proxy instance ID.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -221,24 +221,24 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
     }
 
     /**
-     * Get Filters
-<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
-<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li> 
-     * @return Filters Filters
-<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
-<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
+     * Get Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>ruleId: Filter by forwarding rule ID.</li>
+<li>proxyId: Filter by L4 proxy instance ID.</li> 
+     * @return Filters Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>ruleId: Filter by forwarding rule ID.</li>
+<li>proxyId: Filter by L4 proxy instance ID.</li>
      */
     public QueryCondition [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filters
-<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
-<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
-     * @param Filters Filters
-<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
-<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
+     * Set Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>ruleId: Filter by forwarding rule ID.</li>
+<li>proxyId: Filter by L4 proxy instance ID.</li>
+     * @param Filters Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>ruleId: Filter by forwarding rule ID.</li>
+<li>proxyId: Filter by L4 proxy instance ID.</li>
      */
     public void setFilters(QueryCondition [] Filters) {
         this.Filters = Filters;

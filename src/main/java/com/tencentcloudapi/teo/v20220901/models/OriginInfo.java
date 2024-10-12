@@ -249,7 +249,9 @@ If it is not specified, the default value is off.
     /**
      * Get VODEO sub-application ID. This parameter is required when OriginType is VODEO. 
      * @return VodeoSubAppId VODEO sub-application ID. This parameter is required when OriginType is VODEO.
+     * @deprecated
      */
+    @Deprecated
     public Long getVodeoSubAppId() {
         return this.VodeoSubAppId;
     }
@@ -257,7 +259,9 @@ If it is not specified, the default value is off.
     /**
      * Set VODEO sub-application ID. This parameter is required when OriginType is VODEO.
      * @param VodeoSubAppId VODEO sub-application ID. This parameter is required when OriginType is VODEO.
+     * @deprecated
      */
+    @Deprecated
     public void setVodeoSubAppId(Long VodeoSubAppId) {
         this.VodeoSubAppId = VodeoSubAppId;
     }
@@ -269,7 +273,9 @@ If it is not specified, the default value is off.
      * @return VodeoDistributionRange VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
 <li>All: all buckets under the current application;</li> 
 <li>Bucket: a specified bucket.</li>
+     * @deprecated
      */
+    @Deprecated
     public String getVodeoDistributionRange() {
         return this.VodeoDistributionRange;
     }
@@ -281,7 +287,9 @@ If it is not specified, the default value is off.
      * @param VodeoDistributionRange VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
 <li>All: all buckets under the current application;</li> 
 <li>Bucket: a specified bucket.</li>
+     * @deprecated
      */
+    @Deprecated
     public void setVodeoDistributionRange(String VodeoDistributionRange) {
         this.VodeoDistributionRange = VodeoDistributionRange;
     }
@@ -289,7 +297,9 @@ If it is not specified, the default value is off.
     /**
      * Get VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket. 
      * @return VodeoBucketId VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
+     * @deprecated
      */
+    @Deprecated
     public String getVodeoBucketId() {
         return this.VodeoBucketId;
     }
@@ -297,7 +307,9 @@ If it is not specified, the default value is off.
     /**
      * Set VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
      * @param VodeoBucketId VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
+     * @deprecated
      */
+    @Deprecated
     public void setVodeoBucketId(String VodeoBucketId) {
         this.VodeoBucketId = VodeoBucketId;
     }

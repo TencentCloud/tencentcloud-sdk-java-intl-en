@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribePurgeTasksResponse extends AbstractModel {
 
     /**
-    * Total entries that match the specified query condition.
+    * Total number of items in the query condition.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of tasks returned.
+    * Task result list.
     */
     @SerializedName("Tasks")
     @Expose
@@ -45,32 +45,32 @@ public class DescribePurgeTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total entries that match the specified query condition. 
-     * @return TotalCount Total entries that match the specified query condition.
+     * Get Total number of items in the query condition. 
+     * @return TotalCount Total number of items in the query condition.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total entries that match the specified query condition.
-     * @param TotalCount Total entries that match the specified query condition.
+     * Set Total number of items in the query condition.
+     * @param TotalCount Total number of items in the query condition.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of tasks returned. 
-     * @return Tasks List of tasks returned.
+     * Get Task result list. 
+     * @return Tasks Task result list.
      */
     public Task [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set List of tasks returned.
-     * @param Tasks List of tasks returned.
+     * Set Task result list.
+     * @param Tasks Task result list.
      */
     public void setTasks(Task [] Tasks) {
         this.Tasks = Tasks;

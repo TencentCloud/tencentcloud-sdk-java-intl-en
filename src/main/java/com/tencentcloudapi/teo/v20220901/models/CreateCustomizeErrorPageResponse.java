@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCustomizeErrorPageResponse extends AbstractModel {
 
     /**
-    * Custom response page ID.
+    * Page ID.
     */
     @SerializedName("PageId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateCustomizeErrorPageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Custom response page ID. 
-     * @return PageId Custom response page ID.
+     * Get Page ID. 
+     * @return PageId Page ID.
      */
     public String getPageId() {
         return this.PageId;
     }
 
     /**
-     * Set Custom response page ID.
-     * @param PageId Custom response page ID.
+     * Set Page ID.
+     * @param PageId Page ID.
      */
     public void setPageId(String PageId) {
         this.PageId = PageId;

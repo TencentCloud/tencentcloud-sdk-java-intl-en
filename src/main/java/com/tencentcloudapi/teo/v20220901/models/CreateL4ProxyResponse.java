@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateL4ProxyResponse extends AbstractModel {
 
     /**
-    * Layer 4 instance ID.
+    * L4 instance ID.
     */
     @SerializedName("ProxyId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateL4ProxyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Layer 4 instance ID. 
-     * @return ProxyId Layer 4 instance ID.
+     * Get L4 instance ID. 
+     * @return ProxyId L4 instance ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Layer 4 instance ID.
-     * @param ProxyId Layer 4 instance ID.
+     * Set L4 instance ID.
+     * @param ProxyId L4 instance ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;

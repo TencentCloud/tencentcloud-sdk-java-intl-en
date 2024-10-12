@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TimingDataItem extends AbstractModel {
 
     /**
-    * The query time recorded in seconds using UNIX timestamp.
+    * Time point for returning data, in the format of Unix timestamp in seconds.
     */
     @SerializedName("Timestamp")
     @Expose
@@ -38,16 +38,16 @@ public class TimingDataItem extends AbstractModel {
     private Long Value;
 
     /**
-     * Get The query time recorded in seconds using UNIX timestamp. 
-     * @return Timestamp The query time recorded in seconds using UNIX timestamp.
+     * Get Time point for returning data, in the format of Unix timestamp in seconds. 
+     * @return Timestamp Time point for returning data, in the format of Unix timestamp in seconds.
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set The query time recorded in seconds using UNIX timestamp.
-     * @param Timestamp The query time recorded in seconds using UNIX timestamp.
+     * Set Time point for returning data, in the format of Unix timestamp in seconds.
+     * @param Timestamp Time point for returning data, in the format of Unix timestamp in seconds.
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;

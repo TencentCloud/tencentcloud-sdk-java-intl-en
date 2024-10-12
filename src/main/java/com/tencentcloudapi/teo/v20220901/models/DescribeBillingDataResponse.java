@@ -24,8 +24,8 @@ import java.util.HashMap;
 public class DescribeBillingDataResponse extends AbstractModel {
 
     /**
-    * 
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Data point list.
+Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("Data")
     @Expose
@@ -39,20 +39,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Data point list.
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return Data Data point list.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public BillingData [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Data point list.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param Data Data point list.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setData(BillingData [] Data) {
         this.Data = Data;

@@ -140,6 +140,15 @@ Note: Do not set this parameter when L4ProxyRule is used as an input parameter i
     private String BuId;
 
     /**
+    * Remote authentication information.
+Note: RemoteAuth cannot be used as an input parameter in CreateL4ProxyRules or ModifyL4ProxyRules. If this parameter is input, it will be ignored. If the returned data of DescribeL4ProxyRules is empty, it indicates that remote authentication is disabled.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+    */
+    @SerializedName("RemoteAuth")
+    @Expose
+    private L4ProxyRemoteAuth RemoteAuth;
+
+    /**
      * Get Forwarding rule ID.
 Note: Do not fill in this parameter when L4ProxyRule is used as an input parameter in CreateL4ProxyRules; it must be filled in when L4ProxyRule is used as an input parameter in ModifyL4ProxyRules. 
      * @return RuleId Forwarding rule ID.
@@ -459,6 +468,30 @@ Note: Do not set this parameter when L4ProxyRule is used as an input parameter i
         this.BuId = BuId;
     }
 
+    /**
+     * Get Remote authentication information.
+Note: RemoteAuth cannot be used as an input parameter in CreateL4ProxyRules or ModifyL4ProxyRules. If this parameter is input, it will be ignored. If the returned data of DescribeL4ProxyRules is empty, it indicates that remote authentication is disabled.
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return RemoteAuth Remote authentication information.
+Note: RemoteAuth cannot be used as an input parameter in CreateL4ProxyRules or ModifyL4ProxyRules. If this parameter is input, it will be ignored. If the returned data of DescribeL4ProxyRules is empty, it indicates that remote authentication is disabled.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     */
+    public L4ProxyRemoteAuth getRemoteAuth() {
+        return this.RemoteAuth;
+    }
+
+    /**
+     * Set Remote authentication information.
+Note: RemoteAuth cannot be used as an input parameter in CreateL4ProxyRules or ModifyL4ProxyRules. If this parameter is input, it will be ignored. If the returned data of DescribeL4ProxyRules is empty, it indicates that remote authentication is disabled.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param RemoteAuth Remote authentication information.
+Note: RemoteAuth cannot be used as an input parameter in CreateL4ProxyRules or ModifyL4ProxyRules. If this parameter is input, it will be ignored. If the returned data of DescribeL4ProxyRules is empty, it indicates that remote authentication is disabled.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     */
+    public void setRemoteAuth(L4ProxyRemoteAuth RemoteAuth) {
+        this.RemoteAuth = RemoteAuth;
+    }
+
     public L4ProxyRule() {
     }
 
@@ -509,6 +542,9 @@ Note: Do not set this parameter when L4ProxyRule is used as an input parameter i
         if (source.BuId != null) {
             this.BuId = new String(source.BuId);
         }
+        if (source.RemoteAuth != null) {
+            this.RemoteAuth = new L4ProxyRemoteAuth(source.RemoteAuth);
+        }
     }
 
 
@@ -528,6 +564,7 @@ Note: Do not set this parameter when L4ProxyRule is used as an input parameter i
         this.setParamSimple(map, prefix + "RuleTag", this.RuleTag);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "BuId", this.BuId);
+        this.setParamObj(map, prefix + "RemoteAuth.", this.RemoteAuth);
 
     }
 }

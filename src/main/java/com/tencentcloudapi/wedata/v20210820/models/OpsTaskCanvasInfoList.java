@@ -43,7 +43,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     */
     @SerializedName("CirculateTaskList")
     @Expose
-    private OpsTaskCanvasDto CirculateTaskList;
+    private OpsTaskCanvasDto [] CirculateTaskList;
 
     /**
      * Get Canvas Task Information 
@@ -83,7 +83,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @return CirculateTaskList Canvas Cyclic Dependency Task Information
 Note: This field may return null, indicating that no valid value can be obtained.
      */
-    public OpsTaskCanvasDto getCirculateTaskList() {
+    public OpsTaskCanvasDto [] getCirculateTaskList() {
         return this.CirculateTaskList;
     }
 
@@ -93,7 +93,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param CirculateTaskList Canvas Cyclic Dependency Task Information
 Note: This field may return null, indicating that no valid value can be obtained.
      */
-    public void setCirculateTaskList(OpsTaskCanvasDto CirculateTaskList) {
+    public void setCirculateTaskList(OpsTaskCanvasDto [] CirculateTaskList) {
         this.CirculateTaskList = CirculateTaskList;
     }
 
@@ -118,7 +118,10 @@ Note: This field may return null, indicating that no valid value can be obtained
             }
         }
         if (source.CirculateTaskList != null) {
-            this.CirculateTaskList = new OpsTaskCanvasDto(source.CirculateTaskList);
+            this.CirculateTaskList = new OpsTaskCanvasDto[source.CirculateTaskList.length];
+            for (int i = 0; i < source.CirculateTaskList.length; i++) {
+                this.CirculateTaskList[i] = new OpsTaskCanvasDto(source.CirculateTaskList[i]);
+            }
         }
     }
 
@@ -129,7 +132,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TasksList.", this.TasksList);
         this.setParamArrayObj(map, prefix + "LinksList.", this.LinksList);
-        this.setParamObj(map, prefix + "CirculateTaskList.", this.CirculateTaskList);
+        this.setParamArrayObj(map, prefix + "CirculateTaskList.", this.CirculateTaskList);
 
     }
 }

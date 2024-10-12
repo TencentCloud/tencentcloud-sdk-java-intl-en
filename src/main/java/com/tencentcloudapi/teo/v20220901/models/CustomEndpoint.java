@@ -24,148 +24,148 @@ import java.util.HashMap;
 public class CustomEndpoint extends AbstractModel {
 
     /**
-    * The address of the custom HTTP interface for real-time log delivery. Currently, only HTTP and HTTPS protocols are supported.
+    * Address of the custom HTTP API for real-time log shipping. Currently, only HTTP and HTTPS protocols are supported.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Specifies the custom SecretId for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+    * Custom SecretId used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
     */
     @SerializedName("AccessId")
     @Expose
     private String AccessId;
 
     /**
-    * Specifies the custom SecretKey for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+    * Custom SecretKey used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
     */
     @SerializedName("AccessKey")
     @Expose
     private String AccessKey;
 
     /**
-    * The type of data compression. Valid values:<li>gzip: gzip compression.</li>If this field is not filled in, compression is disabled.
+    * Type of data compression. Valid values:<li>gzip: gzip compression.</li>If this parameter is not input, compression is disabled.
     */
     @SerializedName("CompressType")
     @Expose
     private String CompressType;
 
     /**
-    * The type of the application layer protocol used when POST requests log delivery. Valid values:
+    * Type of the application layer protocol used in POST requests for log shipping. Valid values: 
 <li>http: HTTP protocol;</li>
-<li>https: HTTPS protocol.</li>If this field is not filled in, the protocol type will be parsed from the URL field.
+<li>https: HTTPS protocol.</li>If this parameter is not input, the protocol type is parsed from the URL field.	
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * The custom request header carried during log delivery. If the header name you fill in is the default header carried by EdgeOne log delivery such as Content-Type, then the header value you fill in will override the default value. The header value supports referring to a single variable ${batchSize} to obtain the number of log entries included in each POST request.
+    * Custom request header carried in log shipping. For a header carried by default in EdgeOne log pushing, such as Content-Type, the header value you input will overwrite the default value. The header value references a single variable ${batchSize} to obtain the number of log entries included in each POST request.
     */
     @SerializedName("Headers")
     @Expose
     private Header [] Headers;
 
     /**
-     * Get The address of the custom HTTP interface for real-time log delivery. Currently, only HTTP and HTTPS protocols are supported. 
-     * @return Url The address of the custom HTTP interface for real-time log delivery. Currently, only HTTP and HTTPS protocols are supported.
+     * Get Address of the custom HTTP API for real-time log shipping. Currently, only HTTP and HTTPS protocols are supported. 
+     * @return Url Address of the custom HTTP API for real-time log shipping. Currently, only HTTP and HTTPS protocols are supported.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set The address of the custom HTTP interface for real-time log delivery. Currently, only HTTP and HTTPS protocols are supported.
-     * @param Url The address of the custom HTTP interface for real-time log delivery. Currently, only HTTP and HTTPS protocols are supported.
+     * Set Address of the custom HTTP API for real-time log shipping. Currently, only HTTP and HTTPS protocols are supported.
+     * @param Url Address of the custom HTTP API for real-time log shipping. Currently, only HTTP and HTTPS protocols are supported.
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Specifies the custom SecretId for generating an encrypted signature. This parameter is required if the origin server needs authentication. 
-     * @return AccessId Specifies the custom SecretId for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+     * Get Custom SecretId used for generating an encrypted signature. This parameter is required if the origin server needs authentication. 
+     * @return AccessId Custom SecretId used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
      */
     public String getAccessId() {
         return this.AccessId;
     }
 
     /**
-     * Set Specifies the custom SecretId for generating an encrypted signature. This parameter is required if the origin server needs authentication.
-     * @param AccessId Specifies the custom SecretId for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+     * Set Custom SecretId used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+     * @param AccessId Custom SecretId used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
      */
     public void setAccessId(String AccessId) {
         this.AccessId = AccessId;
     }
 
     /**
-     * Get Specifies the custom SecretKey for generating an encrypted signature. This parameter is required if the origin server needs authentication. 
-     * @return AccessKey Specifies the custom SecretKey for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+     * Get Custom SecretKey used for generating an encrypted signature. This parameter is required if the origin server needs authentication. 
+     * @return AccessKey Custom SecretKey used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
      */
     public String getAccessKey() {
         return this.AccessKey;
     }
 
     /**
-     * Set Specifies the custom SecretKey for generating an encrypted signature. This parameter is required if the origin server needs authentication.
-     * @param AccessKey Specifies the custom SecretKey for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+     * Set Custom SecretKey used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+     * @param AccessKey Custom SecretKey used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;
     }
 
     /**
-     * Get The type of data compression. Valid values:<li>gzip: gzip compression.</li>If this field is not filled in, compression is disabled. 
-     * @return CompressType The type of data compression. Valid values:<li>gzip: gzip compression.</li>If this field is not filled in, compression is disabled.
+     * Get Type of data compression. Valid values:<li>gzip: gzip compression.</li>If this parameter is not input, compression is disabled. 
+     * @return CompressType Type of data compression. Valid values:<li>gzip: gzip compression.</li>If this parameter is not input, compression is disabled.
      */
     public String getCompressType() {
         return this.CompressType;
     }
 
     /**
-     * Set The type of data compression. Valid values:<li>gzip: gzip compression.</li>If this field is not filled in, compression is disabled.
-     * @param CompressType The type of data compression. Valid values:<li>gzip: gzip compression.</li>If this field is not filled in, compression is disabled.
+     * Set Type of data compression. Valid values:<li>gzip: gzip compression.</li>If this parameter is not input, compression is disabled.
+     * @param CompressType Type of data compression. Valid values:<li>gzip: gzip compression.</li>If this parameter is not input, compression is disabled.
      */
     public void setCompressType(String CompressType) {
         this.CompressType = CompressType;
     }
 
     /**
-     * Get The type of the application layer protocol used when POST requests log delivery. Valid values:
+     * Get Type of the application layer protocol used in POST requests for log shipping. Valid values: 
 <li>http: HTTP protocol;</li>
-<li>https: HTTPS protocol.</li>If this field is not filled in, the protocol type will be parsed from the URL field. 
-     * @return Protocol The type of the application layer protocol used when POST requests log delivery. Valid values:
+<li>https: HTTPS protocol.</li>If this parameter is not input, the protocol type is parsed from the URL field.	 
+     * @return Protocol Type of the application layer protocol used in POST requests for log shipping. Valid values: 
 <li>http: HTTP protocol;</li>
-<li>https: HTTPS protocol.</li>If this field is not filled in, the protocol type will be parsed from the URL field.
+<li>https: HTTPS protocol.</li>If this parameter is not input, the protocol type is parsed from the URL field.	
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set The type of the application layer protocol used when POST requests log delivery. Valid values:
+     * Set Type of the application layer protocol used in POST requests for log shipping. Valid values: 
 <li>http: HTTP protocol;</li>
-<li>https: HTTPS protocol.</li>If this field is not filled in, the protocol type will be parsed from the URL field.
-     * @param Protocol The type of the application layer protocol used when POST requests log delivery. Valid values:
+<li>https: HTTPS protocol.</li>If this parameter is not input, the protocol type is parsed from the URL field.	
+     * @param Protocol Type of the application layer protocol used in POST requests for log shipping. Valid values: 
 <li>http: HTTP protocol;</li>
-<li>https: HTTPS protocol.</li>If this field is not filled in, the protocol type will be parsed from the URL field.
+<li>https: HTTPS protocol.</li>If this parameter is not input, the protocol type is parsed from the URL field.	
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get The custom request header carried during log delivery. If the header name you fill in is the default header carried by EdgeOne log delivery such as Content-Type, then the header value you fill in will override the default value. The header value supports referring to a single variable ${batchSize} to obtain the number of log entries included in each POST request. 
-     * @return Headers The custom request header carried during log delivery. If the header name you fill in is the default header carried by EdgeOne log delivery such as Content-Type, then the header value you fill in will override the default value. The header value supports referring to a single variable ${batchSize} to obtain the number of log entries included in each POST request.
+     * Get Custom request header carried in log shipping. For a header carried by default in EdgeOne log pushing, such as Content-Type, the header value you input will overwrite the default value. The header value references a single variable ${batchSize} to obtain the number of log entries included in each POST request. 
+     * @return Headers Custom request header carried in log shipping. For a header carried by default in EdgeOne log pushing, such as Content-Type, the header value you input will overwrite the default value. The header value references a single variable ${batchSize} to obtain the number of log entries included in each POST request.
      */
     public Header [] getHeaders() {
         return this.Headers;
     }
 
     /**
-     * Set The custom request header carried during log delivery. If the header name you fill in is the default header carried by EdgeOne log delivery such as Content-Type, then the header value you fill in will override the default value. The header value supports referring to a single variable ${batchSize} to obtain the number of log entries included in each POST request.
-     * @param Headers The custom request header carried during log delivery. If the header name you fill in is the default header carried by EdgeOne log delivery such as Content-Type, then the header value you fill in will override the default value. The header value supports referring to a single variable ${batchSize} to obtain the number of log entries included in each POST request.
+     * Set Custom request header carried in log shipping. For a header carried by default in EdgeOne log pushing, such as Content-Type, the header value you input will overwrite the default value. The header value references a single variable ${batchSize} to obtain the number of log entries included in each POST request.
+     * @param Headers Custom request header carried in log shipping. For a header carried by default in EdgeOne log pushing, such as Content-Type, the header value you input will overwrite the default value. The header value references a single variable ${batchSize} to obtain the number of log entries included in each POST request.
      */
     public void setHeaders(Header [] Headers) {
         this.Headers = Headers;

@@ -24,138 +24,193 @@ import java.util.HashMap;
 public class RateLimitTemplateDetail extends AbstractModel {
 
     /**
-    * Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: normal;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * The unique ID.
+    * Unique ID.
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Penalty duration, in seconds. Value range: 0-2 days.
+Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("PunishTime")
     @Expose
     private Long PunishTime;
 
     /**
-    * The request threshold. Value range: 0-4294967294.
+    * Statistical threshold, in times. Value range: 0-4294967294.
     */
     @SerializedName("Threshold")
     @Expose
     private Long Threshold;
 
     /**
-    * The statistical period. Value range: 0-120 seconds.
+    * Statistical cycle. Value range: 0-120 seconds.
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-     * Get Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return Mode Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: normal;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return Mode Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: normal;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param Mode Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: normal;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param Mode Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: normal;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get The unique ID. 
-     * @return ID The unique ID.
+     * Get Unique ID. 
+     * @return ID Unique ID.
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set The unique ID.
-     * @param ID The unique ID.
+     * Set Unique ID.
+     * @param ID Unique ID.
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return Action Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return Action Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param Action Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param Action Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return PunishTime Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Penalty duration, in seconds. Value range: 0-2 days.
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return PunishTime Penalty duration, in seconds. Value range: 0-2 days.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public Long getPunishTime() {
         return this.PunishTime;
     }
 
     /**
-     * Set Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param PunishTime Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Penalty duration, in seconds. Value range: 0-2 days.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param PunishTime Penalty duration, in seconds. Value range: 0-2 days.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setPunishTime(Long PunishTime) {
         this.PunishTime = PunishTime;
     }
 
     /**
-     * Get The request threshold. Value range: 0-4294967294. 
-     * @return Threshold The request threshold. Value range: 0-4294967294.
+     * Get Statistical threshold, in times. Value range: 0-4294967294. 
+     * @return Threshold Statistical threshold, in times. Value range: 0-4294967294.
      */
     public Long getThreshold() {
         return this.Threshold;
     }
 
     /**
-     * Set The request threshold. Value range: 0-4294967294.
-     * @param Threshold The request threshold. Value range: 0-4294967294.
+     * Set Statistical threshold, in times. Value range: 0-4294967294.
+     * @param Threshold Statistical threshold, in times. Value range: 0-4294967294.
      */
     public void setThreshold(Long Threshold) {
         this.Threshold = Threshold;
     }
 
     /**
-     * Get The statistical period. Value range: 0-120 seconds. 
-     * @return Period The statistical period. Value range: 0-120 seconds.
+     * Get Statistical cycle. Value range: 0-120 seconds. 
+     * @return Period Statistical cycle. Value range: 0-120 seconds.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set The statistical period. Value range: 0-120 seconds.
-     * @param Period The statistical period. Value range: 0-120 seconds.
+     * Set Statistical cycle. Value range: 0-120 seconds.
+     * @param Period Statistical cycle. Value range: 0-120 seconds.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

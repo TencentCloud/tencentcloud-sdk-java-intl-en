@@ -74,6 +74,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CardBackCutImageBase64;
 
     /**
+    * Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+    */
+    @SerializedName("WarnCardInfos")
+    @Expose
+    private Long [] WarnCardInfos;
+
+    /**
      * Get Is the indentity verification or OCR process passed 
      * @return IsPass Is the indentity verification or OCR process passed
      */
@@ -193,6 +208,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.CardBackCutImageBase64 = CardBackCutImageBase64;
     }
 
+    /**
+     * Get Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled. 
+     * @return WarnCardInfos Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+     */
+    public Long [] getWarnCardInfos() {
+        return this.WarnCardInfos;
+    }
+
+    /**
+     * Set Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+     * @param WarnCardInfos Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+     */
+    public void setWarnCardInfos(Long [] WarnCardInfos) {
+        this.WarnCardInfos = WarnCardInfos;
+    }
+
     public OCRResult() {
     }
 
@@ -222,6 +285,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.CardBackCutImageBase64 != null) {
             this.CardBackCutImageBase64 = new String(source.CardBackCutImageBase64);
         }
+        if (source.WarnCardInfos != null) {
+            this.WarnCardInfos = new Long[source.WarnCardInfos.length];
+            for (int i = 0; i < source.WarnCardInfos.length; i++) {
+                this.WarnCardInfos[i] = new Long(source.WarnCardInfos[i]);
+            }
+        }
     }
 
 
@@ -236,6 +305,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
         this.setParamSimple(map, prefix + "CardCutImageBase64", this.CardCutImageBase64);
         this.setParamSimple(map, prefix + "CardBackCutImageBase64", this.CardBackCutImageBase64);
+        this.setParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
 
     }
 }

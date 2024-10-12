@@ -31,7 +31,7 @@ public class DescribeCustomErrorPagesRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Filter criteria. The upper limit for Filters.Values is 20. The detailed filter criteria are as follows:
+    * Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
 <li>page-id: Filter by page ID;</li>
 <li>name: Filter by page name;</li>
 <li>description: Filter by page description;</li>
@@ -49,7 +49,7 @@ public class DescribeCustomErrorPagesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * The limit of paginated query. Default value: 20. Maximum value: 1,000.
+    * The limit of paginated query. Default value: 20. Maximum value: 1,000.  
     */
     @SerializedName("Limit")
     @Expose
@@ -72,12 +72,12 @@ public class DescribeCustomErrorPagesRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter criteria. The upper limit for Filters.Values is 20. The detailed filter criteria are as follows:
+     * Get Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
 <li>page-id: Filter by page ID;</li>
 <li>name: Filter by page name;</li>
 <li>description: Filter by page description;</li>
 <li>content-type: Filter by page type.</li> 
-     * @return Filters Filter criteria. The upper limit for Filters.Values is 20. The detailed filter criteria are as follows:
+     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
 <li>page-id: Filter by page ID;</li>
 <li>name: Filter by page name;</li>
 <li>description: Filter by page description;</li>
@@ -88,12 +88,12 @@ public class DescribeCustomErrorPagesRequest extends AbstractModel {
     }
 
     /**
-     * Set Filter criteria. The upper limit for Filters.Values is 20. The detailed filter criteria are as follows:
+     * Set Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
 <li>page-id: Filter by page ID;</li>
 <li>name: Filter by page name;</li>
 <li>description: Filter by page description;</li>
 <li>content-type: Filter by page type.</li>
-     * @param Filters Filter criteria. The upper limit for Filters.Values is 20. The detailed filter criteria are as follows:
+     * @param Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
 <li>page-id: Filter by page ID;</li>
 <li>name: Filter by page name;</li>
 <li>description: Filter by page description;</li>
@@ -120,16 +120,16 @@ public class DescribeCustomErrorPagesRequest extends AbstractModel {
     }
 
     /**
-     * Get The limit of paginated query. Default value: 20. Maximum value: 1,000. 
-     * @return Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
+     * Get The limit of paginated query. Default value: 20. Maximum value: 1,000.   
+     * @return Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.  
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The limit of paginated query. Default value: 20. Maximum value: 1,000.
-     * @param Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
+     * Set The limit of paginated query. Default value: 20. Maximum value: 1,000.  
+     * @param Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.  
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

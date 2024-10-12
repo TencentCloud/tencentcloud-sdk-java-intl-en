@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePurgeTasksRequest extends AbstractModel {
 
     /**
-    * ZoneId. The parameter is required.
+    * Site ID. This parameter is required.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -45,47 +45,42 @@ public class DescribePurgeTasksRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * Offset for paginated queries. Default value: `0`.
+    * Offset of paginated query. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit on paginated queries. Default value: `20`. Maximum value: `1000`.
+    * Number limit of paginated query. Default value: 20. Maximum value: 1000.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>job-id
-Filter based on task ID. job-id format: 1379afjk91u32h. Multiple values are not supported, Fuzzy search is not supported;</li>
-<li>target
-Filter based on: target resource information. target format: http://www.qq.com/1.txt or tag1. Multiple values are not supported, Fuzzy search is not supported; </li>
-<li>domains
-Filter based on domain name. domains format: www.qq.com, Fuzzy search is not supported; </li>
-<li>statuses
-Filter based on task status, Fuzzy search is not supported. Options: <br>processing: Processing<br>success: Success<br>failed: Failure<br>timeout: Timeout</li>
-<li>type
-Filter based on cleared cache type. Multiple values are not supported, Fuzzy search is not supported. Options:<br> purge_url: URL<br> purge_prefix: Prefix<br> purge_all: All cache content<br> purge_host: Hostname<br> purge_cache_tag: CacheTag</li>
+    * Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>job-id: Filter by task ID in the format like 1379afjk91u32h. Multiple values and fuzzy queries are not supported.</li>
+<li>target: Filter by target resource information in the format like http://www.qq.com/1.txt or tag1. Multiple values are not supported yet. Fuzzy queries are supported.</li>
+<li>domains: Filter by domain name in the format like www.qq.com. Fuzzy queries are not supported.</li>
+<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>?? processing: processing<br>?? success: successful<br>?? failed: failed<br>?? timeout: timed out</li>
+<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>?? purge_url: URL<br>?? purge_prefix: prefix<br>?? purge_all: all cached content<br>?? purge_host: Hostname<br>?? purge_cache_tag: CacheTag</li>
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-     * Get ZoneId. The parameter is required. 
-     * @return ZoneId ZoneId. The parameter is required.
+     * Get Site ID. This parameter is required. 
+     * @return ZoneId Site ID. This parameter is required.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ZoneId. The parameter is required.
-     * @param ZoneId ZoneId. The parameter is required.
+     * Set Site ID. This parameter is required.
+     * @param ZoneId Site ID. This parameter is required.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -124,88 +119,68 @@ Filter based on cleared cache type. Multiple values are not supported, Fuzzy sea
     }
 
     /**
-     * Get Offset for paginated queries. Default value: `0`. 
-     * @return Offset Offset for paginated queries. Default value: `0`.
+     * Get Offset of paginated query. Default value: 0. 
+     * @return Offset Offset of paginated query. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset for paginated queries. Default value: `0`.
-     * @param Offset Offset for paginated queries. Default value: `0`.
+     * Set Offset of paginated query. Default value: 0.
+     * @param Offset Offset of paginated query. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit on paginated queries. Default value: `20`. Maximum value: `1000`. 
-     * @return Limit Limit on paginated queries. Default value: `20`. Maximum value: `1000`.
+     * Get Number limit of paginated query. Default value: 20. Maximum value: 1000. 
+     * @return Limit Number limit of paginated query. Default value: 20. Maximum value: 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paginated queries. Default value: `20`. Maximum value: `1000`.
-     * @param Limit Limit on paginated queries. Default value: `20`. Maximum value: `1000`.
+     * Set Number limit of paginated query. Default value: 20. Maximum value: 1000.
+     * @param Limit Number limit of paginated query. Default value: 20. Maximum value: 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>job-id
-Filter based on task ID. job-id format: 1379afjk91u32h. Multiple values are not supported, Fuzzy search is not supported;</li>
-<li>target
-Filter based on: target resource information. target format: http://www.qq.com/1.txt or tag1. Multiple values are not supported, Fuzzy search is not supported; </li>
-<li>domains
-Filter based on domain name. domains format: www.qq.com, Fuzzy search is not supported; </li>
-<li>statuses
-Filter based on task status, Fuzzy search is not supported. Options: <br>processing: Processing<br>success: Success<br>failed: Failure<br>timeout: Timeout</li>
-<li>type
-Filter based on cleared cache type. Multiple values are not supported, Fuzzy search is not supported. Options:<br> purge_url: URL<br> purge_prefix: Prefix<br> purge_all: All cache content<br> purge_host: Hostname<br> purge_cache_tag: CacheTag</li> 
-     * @return Filters Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>job-id
-Filter based on task ID. job-id format: 1379afjk91u32h. Multiple values are not supported, Fuzzy search is not supported;</li>
-<li>target
-Filter based on: target resource information. target format: http://www.qq.com/1.txt or tag1. Multiple values are not supported, Fuzzy search is not supported; </li>
-<li>domains
-Filter based on domain name. domains format: www.qq.com, Fuzzy search is not supported; </li>
-<li>statuses
-Filter based on task status, Fuzzy search is not supported. Options: <br>processing: Processing<br>success: Success<br>failed: Failure<br>timeout: Timeout</li>
-<li>type
-Filter based on cleared cache type. Multiple values are not supported, Fuzzy search is not supported. Options:<br> purge_url: URL<br> purge_prefix: Prefix<br> purge_all: All cache content<br> purge_host: Hostname<br> purge_cache_tag: CacheTag</li>
+     * Get Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>job-id: Filter by task ID in the format like 1379afjk91u32h. Multiple values and fuzzy queries are not supported.</li>
+<li>target: Filter by target resource information in the format like http://www.qq.com/1.txt or tag1. Multiple values are not supported yet. Fuzzy queries are supported.</li>
+<li>domains: Filter by domain name in the format like www.qq.com. Fuzzy queries are not supported.</li>
+<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>?? processing: processing<br>?? success: successful<br>?? failed: failed<br>?? timeout: timed out</li>
+<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>?? purge_url: URL<br>?? purge_prefix: prefix<br>?? purge_all: all cached content<br>?? purge_host: Hostname<br>?? purge_cache_tag: CacheTag</li> 
+     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>job-id: Filter by task ID in the format like 1379afjk91u32h. Multiple values and fuzzy queries are not supported.</li>
+<li>target: Filter by target resource information in the format like http://www.qq.com/1.txt or tag1. Multiple values are not supported yet. Fuzzy queries are supported.</li>
+<li>domains: Filter by domain name in the format like www.qq.com. Fuzzy queries are not supported.</li>
+<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>?? processing: processing<br>?? success: successful<br>?? failed: failed<br>?? timeout: timed out</li>
+<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>?? purge_url: URL<br>?? purge_prefix: prefix<br>?? purge_all: all cached content<br>?? purge_host: Hostname<br>?? purge_cache_tag: CacheTag</li>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>job-id
-Filter based on task ID. job-id format: 1379afjk91u32h. Multiple values are not supported, Fuzzy search is not supported;</li>
-<li>target
-Filter based on: target resource information. target format: http://www.qq.com/1.txt or tag1. Multiple values are not supported, Fuzzy search is not supported; </li>
-<li>domains
-Filter based on domain name. domains format: www.qq.com, Fuzzy search is not supported; </li>
-<li>statuses
-Filter based on task status, Fuzzy search is not supported. Options: <br>processing: Processing<br>success: Success<br>failed: Failure<br>timeout: Timeout</li>
-<li>type
-Filter based on cleared cache type. Multiple values are not supported, Fuzzy search is not supported. Options:<br> purge_url: URL<br> purge_prefix: Prefix<br> purge_all: All cache content<br> purge_host: Hostname<br> purge_cache_tag: CacheTag</li>
-     * @param Filters Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>job-id
-Filter based on task ID. job-id format: 1379afjk91u32h. Multiple values are not supported, Fuzzy search is not supported;</li>
-<li>target
-Filter based on: target resource information. target format: http://www.qq.com/1.txt or tag1. Multiple values are not supported, Fuzzy search is not supported; </li>
-<li>domains
-Filter based on domain name. domains format: www.qq.com, Fuzzy search is not supported; </li>
-<li>statuses
-Filter based on task status, Fuzzy search is not supported. Options: <br>processing: Processing<br>success: Success<br>failed: Failure<br>timeout: Timeout</li>
-<li>type
-Filter based on cleared cache type. Multiple values are not supported, Fuzzy search is not supported. Options:<br> purge_url: URL<br> purge_prefix: Prefix<br> purge_all: All cache content<br> purge_host: Hostname<br> purge_cache_tag: CacheTag</li>
+     * Set Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>job-id: Filter by task ID in the format like 1379afjk91u32h. Multiple values and fuzzy queries are not supported.</li>
+<li>target: Filter by target resource information in the format like http://www.qq.com/1.txt or tag1. Multiple values are not supported yet. Fuzzy queries are supported.</li>
+<li>domains: Filter by domain name in the format like www.qq.com. Fuzzy queries are not supported.</li>
+<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>?? processing: processing<br>?? success: successful<br>?? failed: failed<br>?? timeout: timed out</li>
+<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>?? purge_url: URL<br>?? purge_prefix: prefix<br>?? purge_all: all cached content<br>?? purge_host: Hostname<br>?? purge_cache_tag: CacheTag</li>
+     * @param Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>job-id: Filter by task ID in the format like 1379afjk91u32h. Multiple values and fuzzy queries are not supported.</li>
+<li>target: Filter by target resource information in the format like http://www.qq.com/1.txt or tag1. Multiple values are not supported yet. Fuzzy queries are supported.</li>
+<li>domains: Filter by domain name in the format like www.qq.com. Fuzzy queries are not supported.</li>
+<li>statuses: Filter by task status. Fuzzy queries are not supported. Options:<br>?? processing: processing<br>?? success: successful<br>?? failed: failed<br>?? timeout: timed out</li>
+<li>type: Filter by cache clearance type. Multiple values and fuzzy queries are not supported yet. Options: <br>?? purge_url: URL<br>?? purge_prefix: prefix<br>?? purge_all: all cached content<br>?? purge_host: Hostname<br>?? purge_cache_tag: CacheTag</li>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;

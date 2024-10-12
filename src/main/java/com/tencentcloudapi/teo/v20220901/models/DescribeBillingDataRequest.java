@@ -24,233 +24,248 @@ import java.util.HashMap;
 public class DescribeBillingDataRequest extends AbstractModel {
 
     /**
-    * Start time of the query.
+    * Start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time of the query.
+    * End time.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Zone ID set. This parameter is required.
+    * Site ID set. This parameter is required.
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * Indicator list. Valid values:<li>acc_flux: Content acceleration traffic, in bytes;</li>
-<li>smt_flux: Smart acceleration traffic, in bytes;</li>
-<li>l4_flux: Layer 4 acceleration traffic, in bytes;</li>
-<li>sec_flux: Exclusive DDoS mitigation traffic, in bytes;</li>
-<li>zxctg_flux: Cross-MLC-border acceleration traffic, in bytes;</li>
-<li>acc_bandwidth: Content acceleration bandwidth, in bps;</li>
-<li>smt_bandwidth: Smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: Exclusive DDoS mitigation bandwidth, in bps;</li>
-<li>zxctg_bandwidth: Cross-MLC-border acceleration bandwidth, in bps;</li><li>sec_request_clean: HTTP/HTTPS requests, in count;</li>
-<li>smt_request_clean: Smart acceleration requests, in count;</li>
-<li>quic_request: QUIC requests, in count;</li>
-<li>bot_request_clean: Bot requests, in count;</li>
-<li>cls_count: Real-time log delivery log counts, in count;</li>
-<li>ddos_bandwidth: Exclusive DDoS mitigation elastic bandwidth, in bps.</li>
+    * Metric list. Valid values:
+<li>acc_flux: content acceleration traffic, in bytes;</li>
+<li>smt_flux: smart acceleration traffic, in bytes;</li>
+<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>sec_flux: exclusive protection traffic, in bytes;</li>
+<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
+<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
+<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<li>sec_request_clean: number of HTTP/HTTPS requests;</li>
+<li>smt_request_clean: number of smart acceleration requests;</li>
+<li>quic_request: number of QUIC requests;</li>
+<li>bot_request_clean: number of Bot requests;</li>
+<li>cls_count: number of real-time log entries pushed;</li>
+<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
     */
     @SerializedName("MetricName")
     @Expose
     private String MetricName;
 
     /**
-    * Query granularity. Valid values:<li>5min: 5-minute granularity;</li>
-<li>hour: 1-hour granularity;</li>
-<li>day: 1-day granularity.</li>
+    * Time granularity of the query. Valid values:
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>
     */
     @SerializedName("Interval")
     @Expose
     private String Interval;
 
     /**
-    * Filter. The detailed filters are as follows:
-<li>host: Filter by Domain Name. Example: test.example.com.<br></li>
-<li>proxy-id: Filter by Layer 4 Proxy Instance ID. Example: sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by Billing Region.Options are:<br>   CH: Chinese mainland<br>   AF: Africa<br>   AS1: Asia-Pacific Region 1<br>   AS2: Asia-Pacific Region 2<br>   AS3: Asia-Pacific Region 3<br>  EU: Europe<br>   MidEast: Middle East<br>   NA: North America<br>   SA: South America</li>
+    * Filter criteria. The detailed values of filter criteria are as follows:
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
+<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
     */
     @SerializedName("Filters")
     @Expose
     private BillingDataFilter [] Filters;
 
     /**
-     * Get Start time of the query. 
-     * @return StartTime Start time of the query.
+     * Get Start time. 
+     * @return StartTime Start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the query.
-     * @param StartTime Start time of the query.
+     * Set Start time.
+     * @param StartTime Start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of the query. 
-     * @return EndTime End time of the query.
+     * Get End time. 
+     * @return EndTime End time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the query.
-     * @param EndTime End time of the query.
+     * Set End time.
+     * @param EndTime End time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Zone ID set. This parameter is required. 
-     * @return ZoneIds Zone ID set. This parameter is required.
+     * Get Site ID set. This parameter is required. 
+     * @return ZoneIds Site ID set. This parameter is required.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set Zone ID set. This parameter is required.
-     * @param ZoneIds Zone ID set. This parameter is required.
+     * Set Site ID set. This parameter is required.
+     * @param ZoneIds Site ID set. This parameter is required.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get Indicator list. Valid values:<li>acc_flux: Content acceleration traffic, in bytes;</li>
-<li>smt_flux: Smart acceleration traffic, in bytes;</li>
-<li>l4_flux: Layer 4 acceleration traffic, in bytes;</li>
-<li>sec_flux: Exclusive DDoS mitigation traffic, in bytes;</li>
-<li>zxctg_flux: Cross-MLC-border acceleration traffic, in bytes;</li>
-<li>acc_bandwidth: Content acceleration bandwidth, in bps;</li>
-<li>smt_bandwidth: Smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: Exclusive DDoS mitigation bandwidth, in bps;</li>
-<li>zxctg_bandwidth: Cross-MLC-border acceleration bandwidth, in bps;</li><li>sec_request_clean: HTTP/HTTPS requests, in count;</li>
-<li>smt_request_clean: Smart acceleration requests, in count;</li>
-<li>quic_request: QUIC requests, in count;</li>
-<li>bot_request_clean: Bot requests, in count;</li>
-<li>cls_count: Real-time log delivery log counts, in count;</li>
-<li>ddos_bandwidth: Exclusive DDoS mitigation elastic bandwidth, in bps.</li> 
-     * @return MetricName Indicator list. Valid values:<li>acc_flux: Content acceleration traffic, in bytes;</li>
-<li>smt_flux: Smart acceleration traffic, in bytes;</li>
-<li>l4_flux: Layer 4 acceleration traffic, in bytes;</li>
-<li>sec_flux: Exclusive DDoS mitigation traffic, in bytes;</li>
-<li>zxctg_flux: Cross-MLC-border acceleration traffic, in bytes;</li>
-<li>acc_bandwidth: Content acceleration bandwidth, in bps;</li>
-<li>smt_bandwidth: Smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: Exclusive DDoS mitigation bandwidth, in bps;</li>
-<li>zxctg_bandwidth: Cross-MLC-border acceleration bandwidth, in bps;</li><li>sec_request_clean: HTTP/HTTPS requests, in count;</li>
-<li>smt_request_clean: Smart acceleration requests, in count;</li>
-<li>quic_request: QUIC requests, in count;</li>
-<li>bot_request_clean: Bot requests, in count;</li>
-<li>cls_count: Real-time log delivery log counts, in count;</li>
-<li>ddos_bandwidth: Exclusive DDoS mitigation elastic bandwidth, in bps.</li>
+     * Get Metric list. Valid values:
+<li>acc_flux: content acceleration traffic, in bytes;</li>
+<li>smt_flux: smart acceleration traffic, in bytes;</li>
+<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>sec_flux: exclusive protection traffic, in bytes;</li>
+<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
+<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
+<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<li>sec_request_clean: number of HTTP/HTTPS requests;</li>
+<li>smt_request_clean: number of smart acceleration requests;</li>
+<li>quic_request: number of QUIC requests;</li>
+<li>bot_request_clean: number of Bot requests;</li>
+<li>cls_count: number of real-time log entries pushed;</li>
+<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li> 
+     * @return MetricName Metric list. Valid values:
+<li>acc_flux: content acceleration traffic, in bytes;</li>
+<li>smt_flux: smart acceleration traffic, in bytes;</li>
+<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>sec_flux: exclusive protection traffic, in bytes;</li>
+<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
+<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
+<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<li>sec_request_clean: number of HTTP/HTTPS requests;</li>
+<li>smt_request_clean: number of smart acceleration requests;</li>
+<li>quic_request: number of QUIC requests;</li>
+<li>bot_request_clean: number of Bot requests;</li>
+<li>cls_count: number of real-time log entries pushed;</li>
+<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set Indicator list. Valid values:<li>acc_flux: Content acceleration traffic, in bytes;</li>
-<li>smt_flux: Smart acceleration traffic, in bytes;</li>
-<li>l4_flux: Layer 4 acceleration traffic, in bytes;</li>
-<li>sec_flux: Exclusive DDoS mitigation traffic, in bytes;</li>
-<li>zxctg_flux: Cross-MLC-border acceleration traffic, in bytes;</li>
-<li>acc_bandwidth: Content acceleration bandwidth, in bps;</li>
-<li>smt_bandwidth: Smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: Exclusive DDoS mitigation bandwidth, in bps;</li>
-<li>zxctg_bandwidth: Cross-MLC-border acceleration bandwidth, in bps;</li><li>sec_request_clean: HTTP/HTTPS requests, in count;</li>
-<li>smt_request_clean: Smart acceleration requests, in count;</li>
-<li>quic_request: QUIC requests, in count;</li>
-<li>bot_request_clean: Bot requests, in count;</li>
-<li>cls_count: Real-time log delivery log counts, in count;</li>
-<li>ddos_bandwidth: Exclusive DDoS mitigation elastic bandwidth, in bps.</li>
-     * @param MetricName Indicator list. Valid values:<li>acc_flux: Content acceleration traffic, in bytes;</li>
-<li>smt_flux: Smart acceleration traffic, in bytes;</li>
-<li>l4_flux: Layer 4 acceleration traffic, in bytes;</li>
-<li>sec_flux: Exclusive DDoS mitigation traffic, in bytes;</li>
-<li>zxctg_flux: Cross-MLC-border acceleration traffic, in bytes;</li>
-<li>acc_bandwidth: Content acceleration bandwidth, in bps;</li>
-<li>smt_bandwidth: Smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: Exclusive DDoS mitigation bandwidth, in bps;</li>
-<li>zxctg_bandwidth: Cross-MLC-border acceleration bandwidth, in bps;</li><li>sec_request_clean: HTTP/HTTPS requests, in count;</li>
-<li>smt_request_clean: Smart acceleration requests, in count;</li>
-<li>quic_request: QUIC requests, in count;</li>
-<li>bot_request_clean: Bot requests, in count;</li>
-<li>cls_count: Real-time log delivery log counts, in count;</li>
-<li>ddos_bandwidth: Exclusive DDoS mitigation elastic bandwidth, in bps.</li>
+     * Set Metric list. Valid values:
+<li>acc_flux: content acceleration traffic, in bytes;</li>
+<li>smt_flux: smart acceleration traffic, in bytes;</li>
+<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>sec_flux: exclusive protection traffic, in bytes;</li>
+<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
+<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
+<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<li>sec_request_clean: number of HTTP/HTTPS requests;</li>
+<li>smt_request_clean: number of smart acceleration requests;</li>
+<li>quic_request: number of QUIC requests;</li>
+<li>bot_request_clean: number of Bot requests;</li>
+<li>cls_count: number of real-time log entries pushed;</li>
+<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
+     * @param MetricName Metric list. Valid values:
+<li>acc_flux: content acceleration traffic, in bytes;</li>
+<li>smt_flux: smart acceleration traffic, in bytes;</li>
+<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>sec_flux: exclusive protection traffic, in bytes;</li>
+<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
+<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
+<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<li>sec_request_clean: number of HTTP/HTTPS requests;</li>
+<li>smt_request_clean: number of smart acceleration requests;</li>
+<li>quic_request: number of QUIC requests;</li>
+<li>bot_request_clean: number of Bot requests;</li>
+<li>cls_count: number of real-time log entries pushed;</li>
+<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
     }
 
     /**
-     * Get Query granularity. Valid values:<li>5min: 5-minute granularity;</li>
-<li>hour: 1-hour granularity;</li>
-<li>day: 1-day granularity.</li> 
-     * @return Interval Query granularity. Valid values:<li>5min: 5-minute granularity;</li>
-<li>hour: 1-hour granularity;</li>
-<li>day: 1-day granularity.</li>
+     * Get Time granularity of the query. Valid values:
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li> 
+     * @return Interval Time granularity of the query. Valid values:
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set Query granularity. Valid values:<li>5min: 5-minute granularity;</li>
-<li>hour: 1-hour granularity;</li>
-<li>day: 1-day granularity.</li>
-     * @param Interval Query granularity. Valid values:<li>5min: 5-minute granularity;</li>
-<li>hour: 1-hour granularity;</li>
-<li>day: 1-day granularity.</li>
+     * Set Time granularity of the query. Valid values:
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>
+     * @param Interval Time granularity of the query. Valid values:
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get Filter. The detailed filters are as follows:
-<li>host: Filter by Domain Name. Example: test.example.com.<br></li>
-<li>proxy-id: Filter by Layer 4 Proxy Instance ID. Example: sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by Billing Region.Options are:<br>   CH: Chinese mainland<br>   AF: Africa<br>   AS1: Asia-Pacific Region 1<br>   AS2: Asia-Pacific Region 2<br>   AS3: Asia-Pacific Region 3<br>  EU: Europe<br>   MidEast: Middle East<br>   NA: North America<br>   SA: South America</li> 
-     * @return Filters Filter. The detailed filters are as follows:
-<li>host: Filter by Domain Name. Example: test.example.com.<br></li>
-<li>proxy-id: Filter by Layer 4 Proxy Instance ID. Example: sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by Billing Region.Options are:<br>   CH: Chinese mainland<br>   AF: Africa<br>   AS1: Asia-Pacific Region 1<br>   AS2: Asia-Pacific Region 2<br>   AS3: Asia-Pacific Region 3<br>  EU: Europe<br>   MidEast: Middle East<br>   NA: North America<br>   SA: South America</li>
+     * Get Filter criteria. The detailed values of filter criteria are as follows:
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
+<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li> 
+     * @return Filters Filter criteria. The detailed values of filter criteria are as follows:
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
+<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
      */
     public BillingDataFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter. The detailed filters are as follows:
-<li>host: Filter by Domain Name. Example: test.example.com.<br></li>
-<li>proxy-id: Filter by Layer 4 Proxy Instance ID. Example: sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by Billing Region.Options are:<br>   CH: Chinese mainland<br>   AF: Africa<br>   AS1: Asia-Pacific Region 1<br>   AS2: Asia-Pacific Region 2<br>   AS3: Asia-Pacific Region 3<br>  EU: Europe<br>   MidEast: Middle East<br>   NA: North America<br>   SA: South America</li>
-     * @param Filters Filter. The detailed filters are as follows:
-<li>host: Filter by Domain Name. Example: test.example.com.<br></li>
-<li>proxy-id: Filter by Layer 4 Proxy Instance ID. Example: sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by Billing Region.Options are:<br>   CH: Chinese mainland<br>   AF: Africa<br>   AS1: Asia-Pacific Region 1<br>   AS2: Asia-Pacific Region 2<br>   AS3: Asia-Pacific Region 3<br>  EU: Europe<br>   MidEast: Middle East<br>   NA: North America<br>   SA: South America</li>
+     * Set Filter criteria. The detailed values of filter criteria are as follows:
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
+<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
+     * @param Filters Filter criteria. The detailed values of filter criteria are as follows:
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
+<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
      */
     public void setFilters(BillingDataFilter [] Filters) {
         this.Filters = Filters;

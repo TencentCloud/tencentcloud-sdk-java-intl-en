@@ -64,11 +64,10 @@ u200c<li>`deactivated`: The site is blocked.</li>
     private String Status;
 
     /**
-    * Site connection method, valid values:
-<li>full: Connect via NS;</li>
-<li>partial: Connect via CNAME;</li>
-<li>noDomainAccess: Connect without using a domain name;</li>
-<li>vodeo: Connect by default when VODEO is enabled.</li>
+    * Site access method. Valid values:
+<li>full: NS access;</li>
+<li>partial: CNAME access;</li>
+<li>noDomainAccess: access with no domain name.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -296,32 +295,28 @@ u200c<li>`deactivated`: The site is blocked.</li>
     }
 
     /**
-     * Get Site connection method, valid values:
-<li>full: Connect via NS;</li>
-<li>partial: Connect via CNAME;</li>
-<li>noDomainAccess: Connect without using a domain name;</li>
-<li>vodeo: Connect by default when VODEO is enabled.</li> 
-     * @return Type Site connection method, valid values:
-<li>full: Connect via NS;</li>
-<li>partial: Connect via CNAME;</li>
-<li>noDomainAccess: Connect without using a domain name;</li>
-<li>vodeo: Connect by default when VODEO is enabled.</li>
+     * Get Site access method. Valid values:
+<li>full: NS access;</li>
+<li>partial: CNAME access;</li>
+<li>noDomainAccess: access with no domain name.</li> 
+     * @return Type Site access method. Valid values:
+<li>full: NS access;</li>
+<li>partial: CNAME access;</li>
+<li>noDomainAccess: access with no domain name.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Site connection method, valid values:
-<li>full: Connect via NS;</li>
-<li>partial: Connect via CNAME;</li>
-<li>noDomainAccess: Connect without using a domain name;</li>
-<li>vodeo: Connect by default when VODEO is enabled.</li>
-     * @param Type Site connection method, valid values:
-<li>full: Connect via NS;</li>
-<li>partial: Connect via CNAME;</li>
-<li>noDomainAccess: Connect without using a domain name;</li>
-<li>vodeo: Connect by default when VODEO is enabled.</li>
+     * Set Site access method. Valid values:
+<li>full: NS access;</li>
+<li>partial: CNAME access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+     * @param Type Site access method. Valid values:
+<li>full: NS access;</li>
+<li>partial: CNAME access;</li>
+<li>noDomainAccess: access with no domain name.</li>
      */
     public void setType(String Type) {
         this.Type = Type;

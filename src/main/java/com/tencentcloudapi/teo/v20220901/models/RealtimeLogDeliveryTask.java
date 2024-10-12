@@ -24,77 +24,77 @@ import java.util.HashMap;
 public class RealtimeLogDeliveryTask extends AbstractModel {
 
     /**
-    * The ID of the real-time log delivery task.
+    * ID of a real-time log shipping task.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * The name of the real-time log delivery task.
+    * Name of a real-time log shipping task.
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * The status of the real-time log delivery task. Valid values:<li>enabled: Enabled;</li><li>disabled: Disabled;</li><li>deleted: Abnormal deletion. Check whether the destination Tencent Cloud CLS log set/log topic has been deleted.</li>
+    * Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li>
     */
     @SerializedName("DeliveryStatus")
     @Expose
     private String DeliveryStatus;
 
     /**
-    * The type of the real-time log delivery task. Valid values:<li>cls: Push to Tencent Cloud CLS;</li><li>custom_endpoint: Push to a custom HTTP(S) address;</li><li>s3: Push to an AWS S3-compatible bucket address.</li>
+    * Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:<li>Layer 7 domain: domain.example.com;</li><li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
+    * List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples: <li>L7 domain name: domain.example.com;</li><li>L4 proxy instance: sid-2s69eb5wcms7.</li>	
     */
     @SerializedName("EntityList")
     @Expose
     private String [] EntityList;
 
     /**
-    * The data delivery type. Valid values: <li>domain: Site acceleration log;</li><li>application: Layer 4 proxy log;</li><li>web-rateLiming: Rate limit and CC attack defense log;</li><li>web-attack: Managed rule log;</li><li>web-rule: Custom rule log;</li><li>web-bot: Bot management log.</li>
+    * Data shipping type. Valid values: <li>domain: site acceleration logs;</li><li>application: L4 proxy logs;</li><li>web-rateLiming: rate limiting and CC attack defense logs;</li><li>web-attack: managed rule logs;</li><li>web-rule: custom rule logs;</li><li>web-bot: Bot management logs.</li>
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * The data delivery area. Valid values:<li>mainland: Within the Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland).</li>
+    * Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * The list of predefined fields for delivery.
+    * List of predefined fields for shipping.
     */
     @SerializedName("Fields")
     @Expose
     private String [] Fields;
 
     /**
-    * The list of custom fields for delivery.
+    * List of custom fields for shipping.
     */
     @SerializedName("CustomFields")
     @Expose
     private CustomField [] CustomFields;
 
     /**
-    * Log delivery filter conditions.
+    * Filter criteria of log shipping.
     */
     @SerializedName("DeliveryConditions")
     @Expose
     private DeliveryCondition [] DeliveryConditions;
 
     /**
-    * The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%.
+    * Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%.
     */
     @SerializedName("Sample")
     @Expose
@@ -111,211 +111,214 @@ Note: This field may return 'null', which indicates a failure to obtain a valid 
     private LogFormat LogFormat;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Configuration information of the CLS.
+Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("CLS")
     @Expose
     private CLSTopic CLS;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Configuration information of the custom HTTP service.
+Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("CustomEndpoint")
     @Expose
     private CustomEndpoint CustomEndpoint;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Configuration information of the AWS S3-compatible bucket.
+Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("S3")
     @Expose
     private S3 S3;
 
     /**
-    * The creation time.
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * The update time.
+    * Update time.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get The ID of the real-time log delivery task. 
-     * @return TaskId The ID of the real-time log delivery task.
+     * Get ID of a real-time log shipping task. 
+     * @return TaskId ID of a real-time log shipping task.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The ID of the real-time log delivery task.
-     * @param TaskId The ID of the real-time log delivery task.
+     * Set ID of a real-time log shipping task.
+     * @param TaskId ID of a real-time log shipping task.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get The name of the real-time log delivery task. 
-     * @return TaskName The name of the real-time log delivery task.
+     * Get Name of a real-time log shipping task. 
+     * @return TaskName Name of a real-time log shipping task.
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set The name of the real-time log delivery task.
-     * @param TaskName The name of the real-time log delivery task.
+     * Set Name of a real-time log shipping task.
+     * @param TaskName Name of a real-time log shipping task.
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get The status of the real-time log delivery task. Valid values:<li>enabled: Enabled;</li><li>disabled: Disabled;</li><li>deleted: Abnormal deletion. Check whether the destination Tencent Cloud CLS log set/log topic has been deleted.</li> 
-     * @return DeliveryStatus The status of the real-time log delivery task. Valid values:<li>enabled: Enabled;</li><li>disabled: Disabled;</li><li>deleted: Abnormal deletion. Check whether the destination Tencent Cloud CLS log set/log topic has been deleted.</li>
+     * Get Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li> 
+     * @return DeliveryStatus Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li>
      */
     public String getDeliveryStatus() {
         return this.DeliveryStatus;
     }
 
     /**
-     * Set The status of the real-time log delivery task. Valid values:<li>enabled: Enabled;</li><li>disabled: Disabled;</li><li>deleted: Abnormal deletion. Check whether the destination Tencent Cloud CLS log set/log topic has been deleted.</li>
-     * @param DeliveryStatus The status of the real-time log delivery task. Valid values:<li>enabled: Enabled;</li><li>disabled: Disabled;</li><li>deleted: Abnormal deletion. Check whether the destination Tencent Cloud CLS log set/log topic has been deleted.</li>
+     * Set Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li>
+     * @param DeliveryStatus Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li>
      */
     public void setDeliveryStatus(String DeliveryStatus) {
         this.DeliveryStatus = DeliveryStatus;
     }
 
     /**
-     * Get The type of the real-time log delivery task. Valid values:<li>cls: Push to Tencent Cloud CLS;</li><li>custom_endpoint: Push to a custom HTTP(S) address;</li><li>s3: Push to an AWS S3-compatible bucket address.</li> 
-     * @return TaskType The type of the real-time log delivery task. Valid values:<li>cls: Push to Tencent Cloud CLS;</li><li>custom_endpoint: Push to a custom HTTP(S) address;</li><li>s3: Push to an AWS S3-compatible bucket address.</li>
+     * Get Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li> 
+     * @return TaskType Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set The type of the real-time log delivery task. Valid values:<li>cls: Push to Tencent Cloud CLS;</li><li>custom_endpoint: Push to a custom HTTP(S) address;</li><li>s3: Push to an AWS S3-compatible bucket address.</li>
-     * @param TaskType The type of the real-time log delivery task. Valid values:<li>cls: Push to Tencent Cloud CLS;</li><li>custom_endpoint: Push to a custom HTTP(S) address;</li><li>s3: Push to an AWS S3-compatible bucket address.</li>
+     * Set Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
+     * @param TaskType Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:<li>Layer 7 domain: domain.example.com;</li><li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li> 
-     * @return EntityList The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:<li>Layer 7 domain: domain.example.com;</li><li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
+     * Get List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples: <li>L7 domain name: domain.example.com;</li><li>L4 proxy instance: sid-2s69eb5wcms7.</li>	 
+     * @return EntityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples: <li>L7 domain name: domain.example.com;</li><li>L4 proxy instance: sid-2s69eb5wcms7.</li>	
      */
     public String [] getEntityList() {
         return this.EntityList;
     }
 
     /**
-     * Set The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:<li>Layer 7 domain: domain.example.com;</li><li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
-     * @param EntityList The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:<li>Layer 7 domain: domain.example.com;</li><li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
+     * Set List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples: <li>L7 domain name: domain.example.com;</li><li>L4 proxy instance: sid-2s69eb5wcms7.</li>	
+     * @param EntityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples: <li>L7 domain name: domain.example.com;</li><li>L4 proxy instance: sid-2s69eb5wcms7.</li>	
      */
     public void setEntityList(String [] EntityList) {
         this.EntityList = EntityList;
     }
 
     /**
-     * Get The data delivery type. Valid values: <li>domain: Site acceleration log;</li><li>application: Layer 4 proxy log;</li><li>web-rateLiming: Rate limit and CC attack defense log;</li><li>web-attack: Managed rule log;</li><li>web-rule: Custom rule log;</li><li>web-bot: Bot management log.</li> 
-     * @return LogType The data delivery type. Valid values: <li>domain: Site acceleration log;</li><li>application: Layer 4 proxy log;</li><li>web-rateLiming: Rate limit and CC attack defense log;</li><li>web-attack: Managed rule log;</li><li>web-rule: Custom rule log;</li><li>web-bot: Bot management log.</li>
+     * Get Data shipping type. Valid values: <li>domain: site acceleration logs;</li><li>application: L4 proxy logs;</li><li>web-rateLiming: rate limiting and CC attack defense logs;</li><li>web-attack: managed rule logs;</li><li>web-rule: custom rule logs;</li><li>web-bot: Bot management logs.</li> 
+     * @return LogType Data shipping type. Valid values: <li>domain: site acceleration logs;</li><li>application: L4 proxy logs;</li><li>web-rateLiming: rate limiting and CC attack defense logs;</li><li>web-attack: managed rule logs;</li><li>web-rule: custom rule logs;</li><li>web-bot: Bot management logs.</li>
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set The data delivery type. Valid values: <li>domain: Site acceleration log;</li><li>application: Layer 4 proxy log;</li><li>web-rateLiming: Rate limit and CC attack defense log;</li><li>web-attack: Managed rule log;</li><li>web-rule: Custom rule log;</li><li>web-bot: Bot management log.</li>
-     * @param LogType The data delivery type. Valid values: <li>domain: Site acceleration log;</li><li>application: Layer 4 proxy log;</li><li>web-rateLiming: Rate limit and CC attack defense log;</li><li>web-attack: Managed rule log;</li><li>web-rule: Custom rule log;</li><li>web-bot: Bot management log.</li>
+     * Set Data shipping type. Valid values: <li>domain: site acceleration logs;</li><li>application: L4 proxy logs;</li><li>web-rateLiming: rate limiting and CC attack defense logs;</li><li>web-attack: managed rule logs;</li><li>web-rule: custom rule logs;</li><li>web-bot: Bot management logs.</li>
+     * @param LogType Data shipping type. Valid values: <li>domain: site acceleration logs;</li><li>application: L4 proxy logs;</li><li>web-rateLiming: rate limiting and CC attack defense logs;</li><li>web-attack: managed rule logs;</li><li>web-rule: custom rule logs;</li><li>web-bot: Bot management logs.</li>
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get The data delivery area. Valid values:<li>mainland: Within the Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland).</li> 
-     * @return Area The data delivery area. Valid values:<li>mainland: Within the Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland).</li>
+     * Get Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li> 
+     * @return Area Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set The data delivery area. Valid values:<li>mainland: Within the Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland).</li>
-     * @param Area The data delivery area. Valid values:<li>mainland: Within the Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland).</li>
+     * Set Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li>
+     * @param Area Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get The list of predefined fields for delivery. 
-     * @return Fields The list of predefined fields for delivery.
+     * Get List of predefined fields for shipping. 
+     * @return Fields List of predefined fields for shipping.
      */
     public String [] getFields() {
         return this.Fields;
     }
 
     /**
-     * Set The list of predefined fields for delivery.
-     * @param Fields The list of predefined fields for delivery.
+     * Set List of predefined fields for shipping.
+     * @param Fields List of predefined fields for shipping.
      */
     public void setFields(String [] Fields) {
         this.Fields = Fields;
     }
 
     /**
-     * Get The list of custom fields for delivery. 
-     * @return CustomFields The list of custom fields for delivery.
+     * Get List of custom fields for shipping. 
+     * @return CustomFields List of custom fields for shipping.
      */
     public CustomField [] getCustomFields() {
         return this.CustomFields;
     }
 
     /**
-     * Set The list of custom fields for delivery.
-     * @param CustomFields The list of custom fields for delivery.
+     * Set List of custom fields for shipping.
+     * @param CustomFields List of custom fields for shipping.
      */
     public void setCustomFields(CustomField [] CustomFields) {
         this.CustomFields = CustomFields;
     }
 
     /**
-     * Get Log delivery filter conditions. 
-     * @return DeliveryConditions Log delivery filter conditions.
+     * Get Filter criteria of log shipping. 
+     * @return DeliveryConditions Filter criteria of log shipping.
      */
     public DeliveryCondition [] getDeliveryConditions() {
         return this.DeliveryConditions;
     }
 
     /**
-     * Set Log delivery filter conditions.
-     * @param DeliveryConditions Log delivery filter conditions.
+     * Set Filter criteria of log shipping.
+     * @param DeliveryConditions Filter criteria of log shipping.
      */
     public void setDeliveryConditions(DeliveryCondition [] DeliveryConditions) {
         this.DeliveryConditions = DeliveryConditions;
     }
 
     /**
-     * Get The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. 
-     * @return Sample The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%.
+     * Get Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. 
+     * @return Sample Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%.
      */
     public Long getSample() {
         return this.Sample;
     }
 
     /**
-     * Set The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%.
-     * @param Sample The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%.
+     * Set Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%.
+     * @param Sample Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%.
      */
     public void setSample(Long Sample) {
         this.Sample = Sample;
@@ -350,80 +353,92 @@ Note: This field may return 'null', which indicates a failure to obtain a valid 
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CLS Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Configuration information of the CLS.
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return CLS Configuration information of the CLS.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public CLSTopic getCLS() {
         return this.CLS;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CLS Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Configuration information of the CLS.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param CLS Configuration information of the CLS.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setCLS(CLSTopic CLS) {
         this.CLS = CLS;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CustomEndpoint Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Configuration information of the custom HTTP service.
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return CustomEndpoint Configuration information of the custom HTTP service.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public CustomEndpoint getCustomEndpoint() {
         return this.CustomEndpoint;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CustomEndpoint Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Configuration information of the custom HTTP service.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param CustomEndpoint Configuration information of the custom HTTP service.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setCustomEndpoint(CustomEndpoint CustomEndpoint) {
         this.CustomEndpoint = CustomEndpoint;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return S3 Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Configuration information of the AWS S3-compatible bucket.
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return S3 Configuration information of the AWS S3-compatible bucket.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public S3 getS3() {
         return this.S3;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param S3 Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Configuration information of the AWS S3-compatible bucket.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param S3 Configuration information of the AWS S3-compatible bucket.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setS3(S3 S3) {
         this.S3 = S3;
     }
 
     /**
-     * Get The creation time. 
-     * @return CreateTime The creation time.
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set The creation time.
-     * @param CreateTime The creation time.
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get The update time. 
-     * @return UpdateTime The update time.
+     * Get Update time. 
+     * @return UpdateTime Update time.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set The update time.
-     * @param UpdateTime The update time.
+     * Set Update time.
+     * @param UpdateTime Update time.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

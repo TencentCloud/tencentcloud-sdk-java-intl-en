@@ -24,84 +24,74 @@ import java.util.HashMap;
 public class Rule extends AbstractModel {
 
     /**
-    * Feature execution conditions.
-Note: If any condition in the array is met, the feature will run.
+    * Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
     */
     @SerializedName("Conditions")
     @Expose
     private RuleAndConditions [] Conditions;
 
     /**
-    * Feature to be executed.
-Note: Actions and SubRules cannot both be empty.
+    * Executed feature. Note: Actions and SubRules cannot be both empty.
     */
     @SerializedName("Actions")
     @Expose
     private Action [] Actions;
 
     /**
-    * The nested rule.
-Note: Actions and SubRules cannot both be empty.
+    * Nested rule. Note: SubRules and Actions cannot be both empty.
     */
     @SerializedName("SubRules")
     @Expose
     private SubRuleItem [] SubRules;
 
     /**
-     * Get Feature execution conditions.
-Note: If any condition in the array is met, the feature will run. 
-     * @return Conditions Feature execution conditions.
-Note: If any condition in the array is met, the feature will run.
+     * Get Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met. 
+     * @return Conditions Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
      */
     public RuleAndConditions [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set Feature execution conditions.
-Note: If any condition in the array is met, the feature will run.
-     * @param Conditions Feature execution conditions.
-Note: If any condition in the array is met, the feature will run.
+     * Set Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
+     * @param Conditions Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
      */
     public void setConditions(RuleAndConditions [] Conditions) {
         this.Conditions = Conditions;
     }
 
     /**
-     * Get Feature to be executed.
-Note: Actions and SubRules cannot both be empty. 
-     * @return Actions Feature to be executed.
-Note: Actions and SubRules cannot both be empty.
+     * Get Executed feature. Note: Actions and SubRules cannot be both empty. 
+     * @return Actions Executed feature. Note: Actions and SubRules cannot be both empty.
      */
     public Action [] getActions() {
         return this.Actions;
     }
 
     /**
-     * Set Feature to be executed.
-Note: Actions and SubRules cannot both be empty.
-     * @param Actions Feature to be executed.
-Note: Actions and SubRules cannot both be empty.
+     * Set Executed feature. Note: Actions and SubRules cannot be both empty.
+     * @param Actions Executed feature. Note: Actions and SubRules cannot be both empty.
      */
     public void setActions(Action [] Actions) {
         this.Actions = Actions;
     }
 
     /**
-     * Get The nested rule.
-Note: Actions and SubRules cannot both be empty. 
-     * @return SubRules The nested rule.
-Note: Actions and SubRules cannot both be empty.
+     * Get Nested rule. Note: SubRules and Actions cannot be both empty. 
+     * @return SubRules Nested rule. Note: SubRules and Actions cannot be both empty.
      */
     public SubRuleItem [] getSubRules() {
         return this.SubRules;
     }
 
     /**
-     * Set The nested rule.
-Note: Actions and SubRules cannot both be empty.
-     * @param SubRules The nested rule.
-Note: Actions and SubRules cannot both be empty.
+     * Set Nested rule. Note: SubRules and Actions cannot be both empty.
+     * @param SubRules Nested rule. Note: SubRules and Actions cannot be both empty.
      */
     public void setSubRules(SubRuleItem [] SubRules) {
         this.SubRules = SubRules;

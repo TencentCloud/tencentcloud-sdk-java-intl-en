@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class LogFormat extends AbstractModel {
 
     /**
-    * Predefined output format type for log delivery. Valid values:
-<li>json: Use the predefined log output format JSON Lines, where fields in each log record are presented as key-value pairs;</li>
-<li>csv: Use the predefined log output format csv, where fields in each log record is only presented as field values, excluding field names. </li>
+    * Predefined output format for log shipping. Valid values:
+<li>json: Use JSON Lines as the predefined log output format. In each log entry, fields are displayed as key-value pairs.</li>
+<li>csv: Use the predefined log output format csv, where each log entry only is presented as field values only, excluding field names. </li>
     */
     @SerializedName("FormatType")
     @Expose
@@ -62,8 +62,8 @@ public class LogFormat extends AbstractModel {
 
     /**
     * A string inserted between log records as a separator. Valid values:
-<li>\n: Line break;</li>
-<li>\t: Tab character;</li>
+<li>\n: line break;</li>
+<li>\t: tab character;</li>
 <li>,: Half-width comma. </li>
     */
     @SerializedName("RecordDelimiter")
@@ -72,8 +72,8 @@ public class LogFormat extends AbstractModel {
 
     /**
     * A string inserted between fields as a separator within a single log record. Valid values:
-<li>\t: Tab character;</li>
-<li>,: Half-width comma;</li>
+<li>\t: tab character;</li>
+<li>,: half-width comma;</li>
 <li>;: Half-width semicolon. </li>
     */
     @SerializedName("FieldDelimiter")
@@ -81,24 +81,24 @@ public class LogFormat extends AbstractModel {
     private String FieldDelimiter;
 
     /**
-     * Get Predefined output format type for log delivery. Valid values:
-<li>json: Use the predefined log output format JSON Lines, where fields in each log record are presented as key-value pairs;</li>
-<li>csv: Use the predefined log output format csv, where fields in each log record is only presented as field values, excluding field names. </li> 
-     * @return FormatType Predefined output format type for log delivery. Valid values:
-<li>json: Use the predefined log output format JSON Lines, where fields in each log record are presented as key-value pairs;</li>
-<li>csv: Use the predefined log output format csv, where fields in each log record is only presented as field values, excluding field names. </li>
+     * Get Predefined output format for log shipping. Valid values:
+<li>json: Use JSON Lines as the predefined log output format. In each log entry, fields are displayed as key-value pairs.</li>
+<li>csv: Use the predefined log output format csv, where each log entry only is presented as field values only, excluding field names. </li> 
+     * @return FormatType Predefined output format for log shipping. Valid values:
+<li>json: Use JSON Lines as the predefined log output format. In each log entry, fields are displayed as key-value pairs.</li>
+<li>csv: Use the predefined log output format csv, where each log entry only is presented as field values only, excluding field names. </li>
      */
     public String getFormatType() {
         return this.FormatType;
     }
 
     /**
-     * Set Predefined output format type for log delivery. Valid values:
-<li>json: Use the predefined log output format JSON Lines, where fields in each log record are presented as key-value pairs;</li>
-<li>csv: Use the predefined log output format csv, where fields in each log record is only presented as field values, excluding field names. </li>
-     * @param FormatType Predefined output format type for log delivery. Valid values:
-<li>json: Use the predefined log output format JSON Lines, where fields in each log record are presented as key-value pairs;</li>
-<li>csv: Use the predefined log output format csv, where fields in each log record is only presented as field values, excluding field names. </li>
+     * Set Predefined output format for log shipping. Valid values:
+<li>json: Use JSON Lines as the predefined log output format. In each log entry, fields are displayed as key-value pairs.</li>
+<li>csv: Use the predefined log output format csv, where each log entry only is presented as field values only, excluding field names. </li>
+     * @param FormatType Predefined output format for log shipping. Valid values:
+<li>json: Use JSON Lines as the predefined log output format. In each log entry, fields are displayed as key-value pairs.</li>
+<li>csv: Use the predefined log output format csv, where each log entry only is presented as field values only, excluding field names. </li>
      */
     public void setFormatType(String FormatType) {
         this.FormatType = FormatType;
@@ -170,12 +170,12 @@ public class LogFormat extends AbstractModel {
 
     /**
      * Get A string inserted between log records as a separator. Valid values:
-<li>\n: Line break;</li>
-<li>\t: Tab character;</li>
+<li>\n: line break;</li>
+<li>\t: tab character;</li>
 <li>,: Half-width comma. </li> 
      * @return RecordDelimiter A string inserted between log records as a separator. Valid values:
-<li>\n: Line break;</li>
-<li>\t: Tab character;</li>
+<li>\n: line break;</li>
+<li>\t: tab character;</li>
 <li>,: Half-width comma. </li>
      */
     public String getRecordDelimiter() {
@@ -184,12 +184,12 @@ public class LogFormat extends AbstractModel {
 
     /**
      * Set A string inserted between log records as a separator. Valid values:
-<li>\n: Line break;</li>
-<li>\t: Tab character;</li>
+<li>\n: line break;</li>
+<li>\t: tab character;</li>
 <li>,: Half-width comma. </li>
      * @param RecordDelimiter A string inserted between log records as a separator. Valid values:
-<li>\n: Line break;</li>
-<li>\t: Tab character;</li>
+<li>\n: line break;</li>
+<li>\t: tab character;</li>
 <li>,: Half-width comma. </li>
      */
     public void setRecordDelimiter(String RecordDelimiter) {
@@ -198,12 +198,12 @@ public class LogFormat extends AbstractModel {
 
     /**
      * Get A string inserted between fields as a separator within a single log record. Valid values:
-<li>\t: Tab character;</li>
-<li>,: Half-width comma;</li>
+<li>\t: tab character;</li>
+<li>,: half-width comma;</li>
 <li>;: Half-width semicolon. </li> 
      * @return FieldDelimiter A string inserted between fields as a separator within a single log record. Valid values:
-<li>\t: Tab character;</li>
-<li>,: Half-width comma;</li>
+<li>\t: tab character;</li>
+<li>,: half-width comma;</li>
 <li>;: Half-width semicolon. </li>
      */
     public String getFieldDelimiter() {
@@ -212,12 +212,12 @@ public class LogFormat extends AbstractModel {
 
     /**
      * Set A string inserted between fields as a separator within a single log record. Valid values:
-<li>\t: Tab character;</li>
-<li>,: Half-width comma;</li>
+<li>\t: tab character;</li>
+<li>,: half-width comma;</li>
 <li>;: Half-width semicolon. </li>
      * @param FieldDelimiter A string inserted between fields as a separator within a single log record. Valid values:
-<li>\t: Tab character;</li>
-<li>,: Half-width comma;</li>
+<li>\t: tab character;</li>
+<li>,: half-width comma;</li>
 <li>;: Half-width semicolon. </li>
      */
     public void setFieldDelimiter(String FieldDelimiter) {

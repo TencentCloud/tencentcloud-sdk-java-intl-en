@@ -162,6 +162,28 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     }
 
     /**
+     *This API is used to create and deploy an edge function to EdgeOne edge nodes.
+     * @param req CreateFunctionRequest
+     * @return CreateFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFunctionResponse CreateFunction(CreateFunctionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateFunction", CreateFunctionResponse.class);
+    }
+
+    /**
+     *This API is used to create a trigger rule for an edge function.
+     * @param req CreateFunctionRuleRequest
+     * @return CreateFunctionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFunctionRuleResponse CreateFunctionRule(CreateFunctionRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateFunctionRule", CreateFunctionRuleResponse.class);
+    }
+
+    /**
      *This API is used to create Layer 4 proxy instances.
      * @param req CreateL4ProxyRequest
      * @return CreateL4ProxyResponse
@@ -352,6 +374,28 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DeleteCustomErrorPageResponse DeleteCustomErrorPage(DeleteCustomErrorPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCustomErrorPage", DeleteCustomErrorPageResponse.class);
+    }
+
+    /**
+     *This API is used to delete an edge function. Once deleted, the function cannot be recovered, and associated trigger rules are also deleted.
+     * @param req DeleteFunctionRequest
+     * @return DeleteFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFunctionResponse DeleteFunction(DeleteFunctionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteFunction", DeleteFunctionResponse.class);
+    }
+
+    /**
+     *This API is used to delete a trigger rule for an edge function.
+     * @param req DeleteFunctionRulesRequest
+     * @return DeleteFunctionRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFunctionRulesResponse DeleteFunctionRules(DeleteFunctionRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteFunctionRules", DeleteFunctionRulesResponse.class);
     }
 
     /**
@@ -616,6 +660,39 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DescribeEnvironmentsResponse DescribeEnvironments(DescribeEnvironmentsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeEnvironments", DescribeEnvironmentsResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of trigger rules for an edge function. It supports filtering by rule ID, function ID, rule description, and so on.
+     * @param req DescribeFunctionRulesRequest
+     * @return DescribeFunctionRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFunctionRulesResponse DescribeFunctionRules(DescribeFunctionRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFunctionRules", DescribeFunctionRulesResponse.class);
+    }
+
+    /**
+     *This API is used to query the runtime environment of an edge function, including environment variables.
+     * @param req DescribeFunctionRuntimeEnvironmentRequest
+     * @return DescribeFunctionRuntimeEnvironmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFunctionRuntimeEnvironmentResponse DescribeFunctionRuntimeEnvironment(DescribeFunctionRuntimeEnvironmentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFunctionRuntimeEnvironment", DescribeFunctionRuntimeEnvironmentResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of edge functions. It supports filtering by function ID, name, description, and so on.
+     * @param req DescribeFunctionsRequest
+     * @return DescribeFunctionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFunctionsResponse DescribeFunctions(DescribeFunctionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFunctions", DescribeFunctionsResponse.class);
     }
 
     /**
@@ -915,6 +992,18 @@ A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/
     }
 
     /**
+     *This API is used to operate the runtime environment of an edge function. It supports related settings for environment variables.
+After the environment variables are set, they can be used in the function code. For details, see [Edge Functions Referencing Environment Variables](https://intl.cloud.tencent.com/document/product/1552/109151?from_cn_redirect=1#0151fd9a-8b0e-407b-ae37-54553a60ded6).
+     * @param req HandleFunctionRuntimeEnvironmentRequest
+     * @return HandleFunctionRuntimeEnvironmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public HandleFunctionRuntimeEnvironmentResponse HandleFunctionRuntimeEnvironment(HandleFunctionRuntimeEnvironmentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "HandleFunctionRuntimeEnvironment", HandleFunctionRuntimeEnvironmentResponse.class);
+    }
+
+    /**
      *This API is used to verify ownership of the site.
      * @param req IdentifyZoneRequest
      * @return IdentifyZoneResponse
@@ -1036,6 +1125,39 @@ A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/
     public ModifyCustomErrorPageResponse ModifyCustomErrorPage(ModifyCustomErrorPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCustomErrorPage", ModifyCustomErrorPageResponse.class);
+    }
+
+    /**
+     *This API is used to modify an edge function. It supports modifying the function content and description. The function will take effect immediately after modification and redeployment.
+     * @param req ModifyFunctionRequest
+     * @return ModifyFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFunctionResponse ModifyFunction(ModifyFunctionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyFunction", ModifyFunctionResponse.class);
+    }
+
+    /**
+     *This API is used to modify a trigger rule for an edge function. It supports modifying rule conditions, execution functions, and description.
+     * @param req ModifyFunctionRuleRequest
+     * @return ModifyFunctionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFunctionRuleResponse ModifyFunctionRule(ModifyFunctionRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyFunctionRule", ModifyFunctionRuleResponse.class);
+    }
+
+    /**
+     *This API is used to modify the priority of trigger rules for an edge function.
+     * @param req ModifyFunctionRulePriorityRequest
+     * @return ModifyFunctionRulePriorityResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFunctionRulePriorityResponse ModifyFunctionRulePriority(ModifyFunctionRulePriorityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyFunctionRulePriority", ModifyFunctionRulePriorityResponse.class);
     }
 
     /**

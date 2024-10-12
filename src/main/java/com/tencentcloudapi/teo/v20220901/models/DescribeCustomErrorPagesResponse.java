@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCustomErrorPagesResponse extends AbstractModel {
 
     /**
-    * Total number of custom response pages.
+    * Total number of custom error pages.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Custom response page data list.
+    * Custom error page data list.
     */
     @SerializedName("ErrorPages")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCustomErrorPagesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of custom response pages. 
-     * @return TotalCount Total number of custom response pages.
+     * Get Total number of custom error pages. 
+     * @return TotalCount Total number of custom error pages.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of custom response pages.
-     * @param TotalCount Total number of custom response pages.
+     * Set Total number of custom error pages.
+     * @param TotalCount Total number of custom error pages.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Custom response page data list. 
-     * @return ErrorPages Custom response page data list.
+     * Get Custom error page data list. 
+     * @return ErrorPages Custom error page data list.
      */
     public CustomErrorPage [] getErrorPages() {
         return this.ErrorPages;
     }
 
     /**
-     * Set Custom response page data list.
-     * @param ErrorPages Custom response page data list.
+     * Set Custom error page data list.
+     * @param ErrorPages Custom error page data list.
      */
     public void setErrorPages(CustomErrorPage [] ErrorPages) {
         this.ErrorPages = ErrorPages;

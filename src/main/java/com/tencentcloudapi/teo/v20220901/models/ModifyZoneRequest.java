@@ -31,9 +31,10 @@ public class ModifyZoneRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+    * Site access method. Valid values:
+<li>full: NS access.</li>
+<li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
     */
     @SerializedName("Type")
     @Expose
@@ -87,24 +88,28 @@ public class ModifyZoneRequest extends AbstractModel {
     }
 
     /**
-     * Get Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified. 
-     * @return Type Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+     * Get Site access method. Valid values:
+<li>full: NS access.</li>
+<li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained. 
+     * @return Type Site access method. Valid values:
+<li>full: NS access.</li>
+<li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
-     * @param Type Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+     * Set Site access method. Valid values:
+<li>full: NS access.</li>
+<li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
+     * @param Type Site access method. Valid values:
+<li>full: NS access.</li>
+<li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -24,14 +24,13 @@ import java.util.HashMap;
 public class OriginDetail extends AbstractModel {
 
     /**
-    * Origin server type, with values:
+    * Origin server type. Valid values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWS_S3: AWS S3 origin server;</li>
-<li>ORIGIN_GROUP: origin server group type origin server;</li>
-<li>VODEO: VOD on EO;</li>
+<li>AWS_S3: AWS S3 COS origin server;</li>
+<li>ORIGIN_GROUP: origin server group;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
     */
     @SerializedName("OriginType")
@@ -39,13 +38,12 @@ public class OriginDetail extends AbstractModel {
     private String OriginType;
 
     /**
-    * Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
-<li>When OriginType = COS, this parameter should be the access domain name of the COS bucket;</li>
-<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID;</li>
-<li>When OriginType = VOD, this parameter should be the VOD application ID;</li>
-<li>When OriginType = VODEO, if VodeoDistributionRange = ALL, then this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange = Bucket, then this parameter is the domain name of the corresponding bucket. </li>
+    * Origin server address, which varies with the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
+<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+<li>When OriginType = VOD, this parameter is the VOD application ID.</li>
     */
     @SerializedName("Origin")
     @Expose
@@ -112,23 +110,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String VodeoBucketId;
 
     /**
-     * Get Origin server type, with values:
+     * Get Origin server type. Valid values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWS_S3: AWS S3 origin server;</li>
-<li>ORIGIN_GROUP: origin server group type origin server;</li>
-<li>VODEO: VOD on EO;</li>
+<li>AWS_S3: AWS S3 COS origin server;</li>
+<li>ORIGIN_GROUP: origin server group;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li> 
-     * @return OriginType Origin server type, with values:
+     * @return OriginType Origin server type. Valid values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWS_S3: AWS S3 origin server;</li>
-<li>ORIGIN_GROUP: origin server group type origin server;</li>
-<li>VODEO: VOD on EO;</li>
+<li>AWS_S3: AWS S3 COS origin server;</li>
+<li>ORIGIN_GROUP: origin server group;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
      */
     public String getOriginType() {
@@ -136,23 +132,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Origin server type, with values:
+     * Set Origin server type. Valid values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWS_S3: AWS S3 origin server;</li>
-<li>ORIGIN_GROUP: origin server group type origin server;</li>
-<li>VODEO: VOD on EO;</li>
+<li>AWS_S3: AWS S3 COS origin server;</li>
+<li>ORIGIN_GROUP: origin server group;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
-     * @param OriginType Origin server type, with values:
+     * @param OriginType Origin server type. Valid values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWS_S3: AWS S3 origin server;</li>
-<li>ORIGIN_GROUP: origin server group type origin server;</li>
-<li>VODEO: VOD on EO;</li>
+<li>AWS_S3: AWS S3 COS origin server;</li>
+<li>ORIGIN_GROUP: origin server group;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
      */
     public void setOriginType(String OriginType) {
@@ -160,40 +154,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
-<li>When OriginType = COS, this parameter should be the access domain name of the COS bucket;</li>
-<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID;</li>
-<li>When OriginType = VOD, this parameter should be the VOD application ID;</li>
-<li>When OriginType = VODEO, if VodeoDistributionRange = ALL, then this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange = Bucket, then this parameter is the domain name of the corresponding bucket. </li> 
-     * @return Origin Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
-<li>When OriginType = COS, this parameter should be the access domain name of the COS bucket;</li>
-<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID;</li>
-<li>When OriginType = VOD, this parameter should be the VOD application ID;</li>
-<li>When OriginType = VODEO, if VodeoDistributionRange = ALL, then this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange = Bucket, then this parameter is the domain name of the corresponding bucket. </li>
+     * Get Origin server address, which varies with the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
+<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+<li>When OriginType = VOD, this parameter is the VOD application ID.</li> 
+     * @return Origin Origin server address, which varies with the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
+<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+<li>When OriginType = VOD, this parameter is the VOD application ID.</li>
      */
     public String getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
-<li>When OriginType = COS, this parameter should be the access domain name of the COS bucket;</li>
-<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID;</li>
-<li>When OriginType = VOD, this parameter should be the VOD application ID;</li>
-<li>When OriginType = VODEO, if VodeoDistributionRange = ALL, then this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange = Bucket, then this parameter is the domain name of the corresponding bucket. </li>
-     * @param Origin Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
-<li>When OriginType = COS, this parameter should be the access domain name of the COS bucket;</li>
-<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID;</li>
-<li>When OriginType = VOD, this parameter should be the VOD application ID;</li>
-<li>When OriginType = VODEO, if VodeoDistributionRange = ALL, then this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange = Bucket, then this parameter is the domain name of the corresponding bucket. </li>
+     * Set Origin server address, which varies with the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
+<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+<li>When OriginType = VOD, this parameter is the VOD application ID.</li>
+     * @param Origin Origin server address, which varies with the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
+<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+<li>When OriginType = VOD, this parameter is the VOD application ID.</li>
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
@@ -298,7 +288,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get MO sub-application ID 
      * @return VodeoSubAppId MO sub-application ID
+     * @deprecated
      */
+    @Deprecated
     public Long getVodeoSubAppId() {
         return this.VodeoSubAppId;
     }
@@ -306,7 +298,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set MO sub-application ID
      * @param VodeoSubAppId MO sub-application ID
+     * @deprecated
      */
+    @Deprecated
     public void setVodeoSubAppId(Long VodeoSubAppId) {
         this.VodeoSubAppId = VodeoSubAppId;
     }
@@ -314,7 +308,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get MO distribution range. Valid values: <li>All: all</li> <li>Bucket: bucket</li> 
      * @return VodeoDistributionRange MO distribution range. Valid values: <li>All: all</li> <li>Bucket: bucket</li>
+     * @deprecated
      */
+    @Deprecated
     public String getVodeoDistributionRange() {
         return this.VodeoDistributionRange;
     }
@@ -322,7 +318,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set MO distribution range. Valid values: <li>All: all</li> <li>Bucket: bucket</li>
      * @param VodeoDistributionRange MO distribution range. Valid values: <li>All: all</li> <li>Bucket: bucket</li>
+     * @deprecated
      */
+    @Deprecated
     public void setVodeoDistributionRange(String VodeoDistributionRange) {
         this.VodeoDistributionRange = VodeoDistributionRange;
     }
@@ -330,7 +328,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket) 
      * @return VodeoBucketId MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+     * @deprecated
      */
+    @Deprecated
     public String getVodeoBucketId() {
         return this.VodeoBucketId;
     }
@@ -338,7 +338,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
      * @param VodeoBucketId MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+     * @deprecated
      */
+    @Deprecated
     public void setVodeoBucketId(String VodeoBucketId) {
         this.VodeoBucketId = VodeoBucketId;
     }
