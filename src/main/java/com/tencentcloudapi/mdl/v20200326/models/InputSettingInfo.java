@@ -40,7 +40,7 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String StreamName;
 
     /**
-    * Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+    * Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`,  `MP4_PULL`, `RTSP_PULL` or `SRT_PULL`, and can contain 1-512 characters
 Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("SourceUrl")
@@ -144,9 +144,9 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+     * Get Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`,  `MP4_PULL`, `RTSP_PULL` or `SRT_PULL`, and can contain 1-512 characters
 Note: This field may return `null`, indicating that no valid value was found. 
-     * @return SourceUrl Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+     * @return SourceUrl Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`,  `MP4_PULL`, `RTSP_PULL` or `SRT_PULL`, and can contain 1-512 characters
 Note: This field may return `null`, indicating that no valid value was found.
      */
     public String getSourceUrl() {
@@ -154,9 +154,9 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Set Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+     * Set Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`,  `MP4_PULL`, `RTSP_PULL` or `SRT_PULL`, and can contain 1-512 characters
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param SourceUrl Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+     * @param SourceUrl Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`,  `MP4_PULL`, `RTSP_PULL` or `SRT_PULL`, and can contain 1-512 characters
 Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setSourceUrl(String SourceUrl) {
