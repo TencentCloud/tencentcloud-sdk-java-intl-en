@@ -255,6 +255,20 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     private VideoEnhanceSetting [] VideoEnhanceSettings;
 
     /**
+    * Key frame interval, 300-10000, optional.
+    */
+    @SerializedName("GopSize")
+    @Expose
+    private Long GopSize;
+
+    /**
+    * Keyframe units, only support MILLISECONDS (milliseconds).
+    */
+    @SerializedName("GopSizeUnits")
+    @Expose
+    private String GopSizeUnits;
+
+    /**
      * Get Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits 
      * @return Name Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits
      */
@@ -794,6 +808,38 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         this.VideoEnhanceSettings = VideoEnhanceSettings;
     }
 
+    /**
+     * Get Key frame interval, 300-10000, optional. 
+     * @return GopSize Key frame interval, 300-10000, optional.
+     */
+    public Long getGopSize() {
+        return this.GopSize;
+    }
+
+    /**
+     * Set Key frame interval, 300-10000, optional.
+     * @param GopSize Key frame interval, 300-10000, optional.
+     */
+    public void setGopSize(Long GopSize) {
+        this.GopSize = GopSize;
+    }
+
+    /**
+     * Get Keyframe units, only support MILLISECONDS (milliseconds). 
+     * @return GopSizeUnits Keyframe units, only support MILLISECONDS (milliseconds).
+     */
+    public String getGopSizeUnits() {
+        return this.GopSizeUnits;
+    }
+
+    /**
+     * Set Keyframe units, only support MILLISECONDS (milliseconds).
+     * @param GopSizeUnits Keyframe units, only support MILLISECONDS (milliseconds).
+     */
+    public void setGopSizeUnits(String GopSizeUnits) {
+        this.GopSizeUnits = GopSizeUnits;
+    }
+
     public AVTemplate() {
     }
 
@@ -904,6 +950,12 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                 this.VideoEnhanceSettings[i] = new VideoEnhanceSetting(source.VideoEnhanceSettings[i]);
             }
         }
+        if (source.GopSize != null) {
+            this.GopSize = new Long(source.GopSize);
+        }
+        if (source.GopSizeUnits != null) {
+            this.GopSizeUnits = new String(source.GopSizeUnits);
+        }
     }
 
 
@@ -943,6 +995,8 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         this.setParamArrayObj(map, prefix + "AudioTracks.", this.AudioTracks);
         this.setParamSimple(map, prefix + "VideoEnhanceEnabled", this.VideoEnhanceEnabled);
         this.setParamArrayObj(map, prefix + "VideoEnhanceSettings.", this.VideoEnhanceSettings);
+        this.setParamSimple(map, prefix + "GopSize", this.GopSize);
+        this.setParamSimple(map, prefix + "GopSizeUnits", this.GopSizeUnits);
 
     }
 }

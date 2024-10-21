@@ -32,7 +32,10 @@ public class StreamLiveOutputGroupsInfo extends AbstractModel {
 
     /**
     * Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
+ `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
+ `DASH_STREAM_PACKAGE`, 
+ `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
     */
     @SerializedName("Type")
     @Expose
@@ -40,7 +43,7 @@ Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`,
 
     /**
     * Output information
-If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
     */
     @SerializedName("Outputs")
     @Expose
@@ -111,9 +114,15 @@ Note: This field may return `null`, indicating that no valid value was found.
 
     /**
      * Get Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`. 
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
+ `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
+ `DASH_STREAM_PACKAGE`, 
+ `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`. 
      * @return Type Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
+ `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
+ `DASH_STREAM_PACKAGE`, 
+ `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
      */
     public String getType() {
         return this.Type;
@@ -121,9 +130,15 @@ Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`,
 
     /**
      * Set Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
+ `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
+ `DASH_STREAM_PACKAGE`, 
+ `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
      * @param Type Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
+ `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
+ `DASH_STREAM_PACKAGE`, 
+ `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -131,9 +146,9 @@ Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`,
 
     /**
      * Get Output information
-If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed. 
+If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed. 
      * @return Outputs Output information
-If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
      */
     public OutputInfo [] getOutputs() {
         return this.Outputs;
@@ -141,9 +156,9 @@ If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-
 
     /**
      * Set Output information
-If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
      * @param Outputs Output information
-If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
      */
     public void setOutputs(OutputInfo [] Outputs) {
         this.Outputs = Outputs;
