@@ -39,6 +39,17 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *Provides server-side control of AI Conversation
+     * @param req ControlAIConversationRequest
+     * @return ControlAIConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ControlAIConversationResponse ControlAIConversation(ControlAIConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ControlAIConversation", ControlAIConversationResponse.class);
+    }
+
+    /**
      *API description:
 This API is used to start an on-cloud recording task. It records the audio and video streams in a room and saves them to the specified cloud storage. You can use this API to record the streams in a room separately, or you can mix the streams first and then record the mixed stream.
 
@@ -69,6 +80,28 @@ Mixed-stream recording: Mix the audios and videos of subscribed users (`UserId`)
     public DeleteCloudRecordingResponse DeleteCloudRecording(DeleteCloudRecordingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCloudRecording", DeleteCloudRecordingResponse.class);
+    }
+
+    /**
+     *Describe the AI conversation task status
+     * @param req DescribeAIConversationRequest
+     * @return DescribeAIConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIConversationResponse DescribeAIConversation(DescribeAIConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIConversation", DescribeAIConversationResponse.class);
+    }
+
+    /**
+     *Describe AI transcription task status
+     * @param req DescribeAITranscriptionRequest
+     * @return DescribeAITranscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAITranscriptionResponse DescribeAITranscription(DescribeAITranscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAITranscription", DescribeAITranscriptionResponse.class);
     }
 
     /**
@@ -396,6 +429,32 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     }
 
     /**
+     *Initiate AI conversation task, where the AI bot enters the TRTC room to engage in AI conversation with specified members in the room. This is suitable for scenarios such as intelligent customer service and AI language teachers. The TRTC AI conversation feature has built-in speech-to-text capabilities , allowing customers to flexibly specify third-party AI model (LLM) services and text-to-speech (TTS) services. For more [feature details](https://cloud.tencent.com/document/product/647/108901).
+     * @param req StartAIConversationRequest
+     * @return StartAIConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartAIConversationResponse StartAIConversation(StartAIConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartAIConversation", StartAIConversationResponse.class);
+    }
+
+    /**
+     *Initiate the transcription bot. The backend will pull the stream through the bot to perform real-time speech recognition and deliver subtitles and transcription messages. The transcription bot supports two stream pulling modes, controlled by the `TranscriptionMode` field:
+- Pull the stream of the entire room.
+- Pull the stream of a specific user.
+
+The server delivers subtitles and transcription messages in real-time through TRTC's custom messages, with `CmdId` fixed at 1. The client only needs to listen for the callback of custom messages. For example, see the [C++ callback](https://cloud.tencent.com/document/product/647/79637#4cd82f4edb24992a15a25187089e1565). Other clients, such as Android, Web, etc., can also be found at the same link.
+     * @param req StartAITranscriptionRequest
+     * @return StartAITranscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartAITranscriptionResponse StartAITranscription(StartAITranscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartAITranscription", StartAITranscriptionResponse.class);
+    }
+
+    /**
      *In a TRTC room, there may be multiple audio and video streams concurrently active. You can use the MixTranscoding API to notify Tencent Cloud server to mix multiple video screens from the same room or multiple rooms together, and specify the position of each screen, while mixing multiple audio streams together. The final result is a single audio and video stream, which can be used for recording and live viewing. It also supports pushing this mixed audio and video stream back to the TRTC room.
 
 The Cloud API MixTranscoding feature includes three interfaces:
@@ -472,6 +531,17 @@ Usage Precautions:
     }
 
     /**
+     *Stop AI Transcription task
+     * @param req StopAITranscriptionRequest
+     * @return StopAITranscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopAITranscriptionResponse StopAITranscription(StopAITranscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopAITranscription", StopAITranscriptionResponse.class);
+    }
+
+    /**
      *This API is used to stop a relaying task.
      * @param req StopPublishCdnStreamRequest
      * @return StopPublishCdnStreamResponse
@@ -491,6 +561,17 @@ Usage Precautions:
     public StopStreamIngestResponse StopStreamIngest(StopStreamIngestRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopStreamIngest", StopStreamIngestResponse.class);
+    }
+
+    /**
+     *Update AI conversation task parameters
+     * @param req UpdateAIConversationRequest
+     * @return UpdateAIConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAIConversationResponse UpdateAIConversation(UpdateAIConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAIConversation", UpdateAIConversationResponse.class);
     }
 
     /**

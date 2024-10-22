@@ -52,6 +52,22 @@ public class ReservedInstancePrice extends AbstractModel {
     private Float DiscountUsagePrice;
 
     /**
+    * Discount on upfront cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+    */
+    @SerializedName("FixedPriceDiscount")
+    @Expose
+    private Float FixedPriceDiscount;
+
+    /**
+    * Discount on subsequent cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+    */
+    @SerializedName("UsagePriceDiscount")
+    @Expose
+    private Float UsagePriceDiscount;
+
+    /**
      * Get Original upfront payment, in USD. 
      * @return OriginalFixedPrice Original upfront payment, in USD.
      */
@@ -115,6 +131,46 @@ public class ReservedInstancePrice extends AbstractModel {
         this.DiscountUsagePrice = DiscountUsagePrice;
     }
 
+    /**
+     * Get Discount on upfront cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found. 
+     * @return FixedPriceDiscount Discount on upfront cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+     */
+    public Float getFixedPriceDiscount() {
+        return this.FixedPriceDiscount;
+    }
+
+    /**
+     * Set Discount on upfront cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+     * @param FixedPriceDiscount Discount on upfront cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+     */
+    public void setFixedPriceDiscount(Float FixedPriceDiscount) {
+        this.FixedPriceDiscount = FixedPriceDiscount;
+    }
+
+    /**
+     * Get Discount on subsequent cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found. 
+     * @return UsagePriceDiscount Discount on subsequent cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+     */
+    public Float getUsagePriceDiscount() {
+        return this.UsagePriceDiscount;
+    }
+
+    /**
+     * Set Discount on subsequent cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+     * @param UsagePriceDiscount Discount on subsequent cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+     */
+    public void setUsagePriceDiscount(Float UsagePriceDiscount) {
+        this.UsagePriceDiscount = UsagePriceDiscount;
+    }
+
     public ReservedInstancePrice() {
     }
 
@@ -135,6 +191,12 @@ public class ReservedInstancePrice extends AbstractModel {
         if (source.DiscountUsagePrice != null) {
             this.DiscountUsagePrice = new Float(source.DiscountUsagePrice);
         }
+        if (source.FixedPriceDiscount != null) {
+            this.FixedPriceDiscount = new Float(source.FixedPriceDiscount);
+        }
+        if (source.UsagePriceDiscount != null) {
+            this.UsagePriceDiscount = new Float(source.UsagePriceDiscount);
+        }
     }
 
 
@@ -146,6 +208,8 @@ public class ReservedInstancePrice extends AbstractModel {
         this.setParamSimple(map, prefix + "DiscountFixedPrice", this.DiscountFixedPrice);
         this.setParamSimple(map, prefix + "OriginalUsagePrice", this.OriginalUsagePrice);
         this.setParamSimple(map, prefix + "DiscountUsagePrice", this.DiscountUsagePrice);
+        this.setParamSimple(map, prefix + "FixedPriceDiscount", this.FixedPriceDiscount);
+        this.setParamSimple(map, prefix + "UsagePriceDiscount", this.UsagePriceDiscount);
 
     }
 }

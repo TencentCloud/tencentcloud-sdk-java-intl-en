@@ -31,7 +31,7 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
     private String Name;
 
     /**
-    * Type of the spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack
+    * Type of a spread placement group. Valid values:<br><li>HOST: physical machine.</li><li>SW: switch.</li><li>RACK: rack.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -61,16 +61,16 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get Type of the spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack 
-     * @return Type Type of the spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack
+     * Get Type of a spread placement group. Valid values:<br><li>HOST: physical machine.</li><li>SW: switch.</li><li>RACK: rack.</li> 
+     * @return Type Type of a spread placement group. Valid values:<br><li>HOST: physical machine.</li><li>SW: switch.</li><li>RACK: rack.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of the spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack
-     * @param Type Type of the spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack
+     * Set Type of a spread placement group. Valid values:<br><li>HOST: physical machine.</li><li>SW: switch.</li><li>RACK: rack.</li>
+     * @param Type Type of a spread placement group. Valid values:<br><li>HOST: physical machine.</li><li>SW: switch.</li><li>RACK: rack.</li>
      */
     public void setType(String Type) {
         this.Type = Type;

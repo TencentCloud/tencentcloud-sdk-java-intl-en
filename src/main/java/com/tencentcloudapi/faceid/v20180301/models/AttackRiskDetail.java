@@ -24,23 +24,38 @@ import java.util.HashMap;
 public class AttackRiskDetail extends AbstractModel {
 
     /**
-    * 
+    * Suspected attack trace types
+SuspectedSpoofingAttack: Suspected spoofing attack
+ SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedWatermark: Suspected watermark
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Suspected attack trace types
+SuspectedSpoofingAttack: Suspected spoofing attack
+ SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedWatermark: Suspected watermark 
+     * @return Type Suspected attack trace types
+SuspectedSpoofingAttack: Suspected spoofing attack
+ SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedWatermark: Suspected watermark
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Suspected attack trace types
+SuspectedSpoofingAttack: Suspected spoofing attack
+ SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedWatermark: Suspected watermark
+     * @param Type Suspected attack trace types
+SuspectedSpoofingAttack: Suspected spoofing attack
+ SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedWatermark: Suspected watermark
      */
     public void setType(String Type) {
         this.Type = Type;

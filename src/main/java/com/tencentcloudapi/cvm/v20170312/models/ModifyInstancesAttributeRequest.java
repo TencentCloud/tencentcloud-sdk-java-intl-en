@@ -39,6 +39,13 @@ public class ModifyInstancesAttributeRequest extends AbstractModel {
     private String InstanceName;
 
     /**
+    * User data provided to an instance, which needs to be encoded in Base64 format with a maximum size of 16 KB. For details on obtaining this parameter, refer to the startup commands for [Windows](https://intl.cloud.tencent.com/document/product/213/17526?from_cn_redirect=1) and [Linux](https://intl.cloud.tencent.com/document/product/213/17525?from_cn_redirect=1).
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+
+    /**
     * IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
     */
     @SerializedName("SecurityGroups")
@@ -53,14 +60,14 @@ public class ModifyInstancesAttributeRequest extends AbstractModel {
     private String CamRoleName;
 
     /**
-    * Host name of the instance. <br><li>Hyphens (-) cannot be the start or end of a host name or appear consecutively in a host name. <br><li>Windows: 2-15 characters, including [a-z], [A-Z], [0-9] and hyphens (-). Digit-only strings are not allowed. <br><li>Other OS: 2-60 characters, including [a-z], [A-Z], [0-9] and [.-]. Separate characters with dots. 
+    * Modified hostname of an instance.<li>Period (.) and hyphen (-) should not be used as the first or last character of the hostname, and should not be used consecutively.</li><li>Windows instances: The hostname should contain 2 to 15 characters, including letters (case insensitive), digits, and hyphens (-), does not support periods (.), and should not be all digits.</li><li>Instances of other types (such as Linux instances): The hostname should contain 2 to 60 characters, including multiple periods (.), with each segment between periods considered as one section. Each section can contain letters (case insensitive), digits, and hyphens (-).</li>Note: After the hostname is modified, the instance will restart immediately, and the new hostname will take effect after the restart.
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-    * Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
+    * Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li>Default value: false.
     */
     @SerializedName("DisableApiTermination")
     @Expose
@@ -74,6 +81,16 @@ When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleT
     @SerializedName("CamRoleType")
     @Expose
     private String CamRoleType;
+
+    /**
+    * Whether to automatically restart an instance when modifying a hostname. If not specified, the instance will automatically restart by default.
+- true: Modify the hostname and automatically restart the instance.
+- false: Modify the hostname without automatically restarting the instance. A manual restart is required for the new hostname to take effect.
+Note: This parameter is valid only when a hostname is modified.
+    */
+    @SerializedName("AutoReboot")
+    @Expose
+    private Boolean AutoReboot;
 
     /**
      * Get Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100. 
@@ -112,6 +129,22 @@ When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleT
     }
 
     /**
+     * Get User data provided to an instance, which needs to be encoded in Base64 format with a maximum size of 16 KB. For details on obtaining this parameter, refer to the startup commands for [Windows](https://intl.cloud.tencent.com/document/product/213/17526?from_cn_redirect=1) and [Linux](https://intl.cloud.tencent.com/document/product/213/17525?from_cn_redirect=1). 
+     * @return UserData User data provided to an instance, which needs to be encoded in Base64 format with a maximum size of 16 KB. For details on obtaining this parameter, refer to the startup commands for [Windows](https://intl.cloud.tencent.com/document/product/213/17526?from_cn_redirect=1) and [Linux](https://intl.cloud.tencent.com/document/product/213/17525?from_cn_redirect=1).
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * Set User data provided to an instance, which needs to be encoded in Base64 format with a maximum size of 16 KB. For details on obtaining this parameter, refer to the startup commands for [Windows](https://intl.cloud.tencent.com/document/product/213/17526?from_cn_redirect=1) and [Linux](https://intl.cloud.tencent.com/document/product/213/17525?from_cn_redirect=1).
+     * @param UserData User data provided to an instance, which needs to be encoded in Base64 format with a maximum size of 16 KB. For details on obtaining this parameter, refer to the startup commands for [Windows](https://intl.cloud.tencent.com/document/product/213/17526?from_cn_redirect=1) and [Linux](https://intl.cloud.tencent.com/document/product/213/17525?from_cn_redirect=1).
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
+    }
+
+    /**
      * Get IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert> 
      * @return SecurityGroups IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
      */
@@ -144,32 +177,32 @@ When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleT
     }
 
     /**
-     * Get Host name of the instance. <br><li>Hyphens (-) cannot be the start or end of a host name or appear consecutively in a host name. <br><li>Windows: 2-15 characters, including [a-z], [A-Z], [0-9] and hyphens (-). Digit-only strings are not allowed. <br><li>Other OS: 2-60 characters, including [a-z], [A-Z], [0-9] and [.-]. Separate characters with dots.  
-     * @return HostName Host name of the instance. <br><li>Hyphens (-) cannot be the start or end of a host name or appear consecutively in a host name. <br><li>Windows: 2-15 characters, including [a-z], [A-Z], [0-9] and hyphens (-). Digit-only strings are not allowed. <br><li>Other OS: 2-60 characters, including [a-z], [A-Z], [0-9] and [.-]. Separate characters with dots. 
+     * Get Modified hostname of an instance.<li>Period (.) and hyphen (-) should not be used as the first or last character of the hostname, and should not be used consecutively.</li><li>Windows instances: The hostname should contain 2 to 15 characters, including letters (case insensitive), digits, and hyphens (-), does not support periods (.), and should not be all digits.</li><li>Instances of other types (such as Linux instances): The hostname should contain 2 to 60 characters, including multiple periods (.), with each segment between periods considered as one section. Each section can contain letters (case insensitive), digits, and hyphens (-).</li>Note: After the hostname is modified, the instance will restart immediately, and the new hostname will take effect after the restart. 
+     * @return HostName Modified hostname of an instance.<li>Period (.) and hyphen (-) should not be used as the first or last character of the hostname, and should not be used consecutively.</li><li>Windows instances: The hostname should contain 2 to 15 characters, including letters (case insensitive), digits, and hyphens (-), does not support periods (.), and should not be all digits.</li><li>Instances of other types (such as Linux instances): The hostname should contain 2 to 60 characters, including multiple periods (.), with each segment between periods considered as one section. Each section can contain letters (case insensitive), digits, and hyphens (-).</li>Note: After the hostname is modified, the instance will restart immediately, and the new hostname will take effect after the restart.
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Host name of the instance. <br><li>Hyphens (-) cannot be the start or end of a host name or appear consecutively in a host name. <br><li>Windows: 2-15 characters, including [a-z], [A-Z], [0-9] and hyphens (-). Digit-only strings are not allowed. <br><li>Other OS: 2-60 characters, including [a-z], [A-Z], [0-9] and [.-]. Separate characters with dots. 
-     * @param HostName Host name of the instance. <br><li>Hyphens (-) cannot be the start or end of a host name or appear consecutively in a host name. <br><li>Windows: 2-15 characters, including [a-z], [A-Z], [0-9] and hyphens (-). Digit-only strings are not allowed. <br><li>Other OS: 2-60 characters, including [a-z], [A-Z], [0-9] and [.-]. Separate characters with dots. 
+     * Set Modified hostname of an instance.<li>Period (.) and hyphen (-) should not be used as the first or last character of the hostname, and should not be used consecutively.</li><li>Windows instances: The hostname should contain 2 to 15 characters, including letters (case insensitive), digits, and hyphens (-), does not support periods (.), and should not be all digits.</li><li>Instances of other types (such as Linux instances): The hostname should contain 2 to 60 characters, including multiple periods (.), with each segment between periods considered as one section. Each section can contain letters (case insensitive), digits, and hyphens (-).</li>Note: After the hostname is modified, the instance will restart immediately, and the new hostname will take effect after the restart.
+     * @param HostName Modified hostname of an instance.<li>Period (.) and hyphen (-) should not be used as the first or last character of the hostname, and should not be used consecutively.</li><li>Windows instances: The hostname should contain 2 to 15 characters, including letters (case insensitive), digits, and hyphens (-), does not support periods (.), and should not be all digits.</li><li>Instances of other types (such as Linux instances): The hostname should contain 2 to 60 characters, including multiple periods (.), with each segment between periods considered as one section. Each section can contain letters (case insensitive), digits, and hyphens (-).</li>Note: After the hostname is modified, the instance will restart immediately, and the new hostname will take effect after the restart.
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`. 
-     * @return DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
+     * Get Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li>Default value: false. 
+     * @return DisableApiTermination Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li>Default value: false.
      */
     public Boolean getDisableApiTermination() {
         return this.DisableApiTermination;
     }
 
     /**
-     * Set Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
-     * @param DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
+     * Set Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li>Default value: false.
+     * @param DisableApiTermination Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li>Default value: false.
      */
     public void setDisableApiTermination(Boolean DisableApiTermination) {
         this.DisableApiTermination = DisableApiTermination;
@@ -199,6 +232,34 @@ When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleT
         this.CamRoleType = CamRoleType;
     }
 
+    /**
+     * Get Whether to automatically restart an instance when modifying a hostname. If not specified, the instance will automatically restart by default.
+- true: Modify the hostname and automatically restart the instance.
+- false: Modify the hostname without automatically restarting the instance. A manual restart is required for the new hostname to take effect.
+Note: This parameter is valid only when a hostname is modified. 
+     * @return AutoReboot Whether to automatically restart an instance when modifying a hostname. If not specified, the instance will automatically restart by default.
+- true: Modify the hostname and automatically restart the instance.
+- false: Modify the hostname without automatically restarting the instance. A manual restart is required for the new hostname to take effect.
+Note: This parameter is valid only when a hostname is modified.
+     */
+    public Boolean getAutoReboot() {
+        return this.AutoReboot;
+    }
+
+    /**
+     * Set Whether to automatically restart an instance when modifying a hostname. If not specified, the instance will automatically restart by default.
+- true: Modify the hostname and automatically restart the instance.
+- false: Modify the hostname without automatically restarting the instance. A manual restart is required for the new hostname to take effect.
+Note: This parameter is valid only when a hostname is modified.
+     * @param AutoReboot Whether to automatically restart an instance when modifying a hostname. If not specified, the instance will automatically restart by default.
+- true: Modify the hostname and automatically restart the instance.
+- false: Modify the hostname without automatically restarting the instance. A manual restart is required for the new hostname to take effect.
+Note: This parameter is valid only when a hostname is modified.
+     */
+    public void setAutoReboot(Boolean AutoReboot) {
+        this.AutoReboot = AutoReboot;
+    }
+
     public ModifyInstancesAttributeRequest() {
     }
 
@@ -215,6 +276,9 @@ When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleT
         }
         if (source.InstanceName != null) {
             this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.UserData != null) {
+            this.UserData = new String(source.UserData);
         }
         if (source.SecurityGroups != null) {
             this.SecurityGroups = new String[source.SecurityGroups.length];
@@ -234,6 +298,9 @@ When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleT
         if (source.CamRoleType != null) {
             this.CamRoleType = new String(source.CamRoleType);
         }
+        if (source.AutoReboot != null) {
+            this.AutoReboot = new Boolean(source.AutoReboot);
+        }
     }
 
 
@@ -243,11 +310,13 @@ When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleT
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
         this.setParamSimple(map, prefix + "CamRoleType", this.CamRoleType);
+        this.setParamSimple(map, prefix + "AutoReboot", this.AutoReboot);
 
     }
 }

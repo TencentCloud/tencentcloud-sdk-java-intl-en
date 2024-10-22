@@ -263,6 +263,13 @@ Note: this field may return null, indicating that no valid value was found.
     private String [] RdmaIpAddresses;
 
     /**
+    * 
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
+
+    /**
     * The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
 Note: this field may return null, indicating that no valid value was found.
     */
@@ -875,6 +882,22 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
+     * Get  
+     * @return DedicatedClusterId 
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set 
+     * @param DedicatedClusterId 
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
+    /**
      * Get The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
 Note: this field may return null, indicating that no valid value was found. 
      * @return IsolatedSource The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
@@ -1126,6 +1149,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 this.RdmaIpAddresses[i] = new String(source.RdmaIpAddresses[i]);
             }
         }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
         if (source.IsolatedSource != null) {
             this.IsolatedSource = new String(source.IsolatedSource);
         }
@@ -1187,6 +1213,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         this.setParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
         this.setParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);

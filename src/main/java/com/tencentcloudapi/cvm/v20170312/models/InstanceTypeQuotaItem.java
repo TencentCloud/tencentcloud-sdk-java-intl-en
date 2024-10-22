@@ -95,7 +95,7 @@ Note: This field may return null, indicating that no valid value is found.
     private LocalDiskType [] LocalDiskTypeList;
 
     /**
-    * Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
+    * Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
     */
     @SerializedName("Status")
     @Expose
@@ -178,6 +178,18 @@ Note: this field may return null, indicating that no valid value is obtained.
     @SerializedName("Frequency")
     @Expose
     private String Frequency;
+
+    /**
+    * Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
+    */
+    @SerializedName("StatusCategory")
+    @Expose
+    private String StatusCategory;
 
     /**
      * Get Availability zone. 
@@ -344,16 +356,16 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Get Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out 
-     * @return Status Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
+     * Get Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out. 
+     * @return Status Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
-     * @param Status Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
+     * Set Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
+     * @param Status Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -539,6 +551,42 @@ Note: this field may return null, indicating that no valid value is obtained.
         this.Frequency = Frequency;
     }
 
+    /**
+     * Get Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found. 
+     * @return StatusCategory Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
+     */
+    public String getStatusCategory() {
+        return this.StatusCategory;
+    }
+
+    /**
+     * Set Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
+     * @param StatusCategory Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
+     */
+    public void setStatusCategory(String StatusCategory) {
+        this.StatusCategory = StatusCategory;
+    }
+
     public InstanceTypeQuotaItem() {
     }
 
@@ -616,6 +664,9 @@ Note: this field may return null, indicating that no valid value is obtained.
         if (source.Frequency != null) {
             this.Frequency = new String(source.Frequency);
         }
+        if (source.StatusCategory != null) {
+            this.StatusCategory = new String(source.StatusCategory);
+        }
     }
 
 
@@ -645,6 +696,7 @@ Note: this field may return null, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "GpuCount", this.GpuCount);
         this.setParamSimple(map, prefix + "Frequency", this.Frequency);
+        this.setParamSimple(map, prefix + "StatusCategory", this.StatusCategory);
 
     }
 }

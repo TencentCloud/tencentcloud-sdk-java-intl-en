@@ -38,7 +38,7 @@ public class BindApiAppRequest extends AbstractModel {
     private String Environment;
 
     /**
-    * Unique ID of the service to be bound
+    * Unique ID of the service to be bound.
     */
     @SerializedName("ServiceId")
     @Expose
@@ -84,16 +84,16 @@ public class BindApiAppRequest extends AbstractModel {
     }
 
     /**
-     * Get Unique ID of the service to be bound 
-     * @return ServiceId Unique ID of the service to be bound
+     * Get Unique ID of the service to be bound. 
+     * @return ServiceId Unique ID of the service to be bound.
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set Unique ID of the service to be bound
-     * @param ServiceId Unique ID of the service to be bound
+     * Set Unique ID of the service to be bound.
+     * @param ServiceId Unique ID of the service to be bound.
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;

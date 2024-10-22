@@ -45,7 +45,8 @@ public class CreateImageRequest extends AbstractModel {
     private String ImageDescription;
 
     /**
-    * Whether to force shut down an instance to create an image when a soft shutdown fails
+    * Whether to perform forced power-off operation to create an image.
+Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security.
     */
     @SerializedName("ForcePoweroff")
     @Expose
@@ -88,6 +89,13 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
     @SerializedName("TagSpecification")
     @Expose
     private TagSpecification [] TagSpecification;
+
+    /**
+    * Image family
+    */
+    @SerializedName("ImageFamily")
+    @Expose
+    private String ImageFamily;
 
     /**
      * Get Image name 
@@ -138,16 +146,20 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
     }
 
     /**
-     * Get Whether to force shut down an instance to create an image when a soft shutdown fails 
-     * @return ForcePoweroff Whether to force shut down an instance to create an image when a soft shutdown fails
+     * Get Whether to perform forced power-off operation to create an image.
+Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security. 
+     * @return ForcePoweroff Whether to perform forced power-off operation to create an image.
+Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security.
      */
     public String getForcePoweroff() {
         return this.ForcePoweroff;
     }
 
     /**
-     * Set Whether to force shut down an instance to create an image when a soft shutdown fails
-     * @param ForcePoweroff Whether to force shut down an instance to create an image when a soft shutdown fails
+     * Set Whether to perform forced power-off operation to create an image.
+Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security.
+     * @param ForcePoweroff Whether to perform forced power-off operation to create an image.
+Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security.
      */
     public void setForcePoweroff(String ForcePoweroff) {
         this.ForcePoweroff = ForcePoweroff;
@@ -245,6 +257,22 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
         this.TagSpecification = TagSpecification;
     }
 
+    /**
+     * Get Image family 
+     * @return ImageFamily Image family
+     */
+    public String getImageFamily() {
+        return this.ImageFamily;
+    }
+
+    /**
+     * Set Image family
+     * @param ImageFamily Image family
+     */
+    public void setImageFamily(String ImageFamily) {
+        this.ImageFamily = ImageFamily;
+    }
+
     public CreateImageRequest() {
     }
 
@@ -289,6 +317,9 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
                 this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
             }
         }
+        if (source.ImageFamily != null) {
+            this.ImageFamily = new String(source.ImageFamily);
+        }
     }
 
 
@@ -305,6 +336,7 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
         this.setParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
 
     }
 }

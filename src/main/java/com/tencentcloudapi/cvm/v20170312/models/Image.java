@@ -147,6 +147,20 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String LicenseType;
 
     /**
+    * Image family, Note: This field may return empty
+    */
+    @SerializedName("ImageFamily")
+    @Expose
+    private String ImageFamily;
+
+    /**
+    * Whether the image is deprecated
+    */
+    @SerializedName("ImageDeprecated")
+    @Expose
+    private Boolean ImageDeprecated;
+
+    /**
      * Get Image ID 
      * @return ImageId Image ID
      */
@@ -434,6 +448,38 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.LicenseType = LicenseType;
     }
 
+    /**
+     * Get Image family, Note: This field may return empty 
+     * @return ImageFamily Image family, Note: This field may return empty
+     */
+    public String getImageFamily() {
+        return this.ImageFamily;
+    }
+
+    /**
+     * Set Image family, Note: This field may return empty
+     * @param ImageFamily Image family, Note: This field may return empty
+     */
+    public void setImageFamily(String ImageFamily) {
+        this.ImageFamily = ImageFamily;
+    }
+
+    /**
+     * Get Whether the image is deprecated 
+     * @return ImageDeprecated Whether the image is deprecated
+     */
+    public Boolean getImageDeprecated() {
+        return this.ImageDeprecated;
+    }
+
+    /**
+     * Set Whether the image is deprecated
+     * @param ImageDeprecated Whether the image is deprecated
+     */
+    public void setImageDeprecated(Boolean ImageDeprecated) {
+        this.ImageDeprecated = ImageDeprecated;
+    }
+
     public Image() {
     }
 
@@ -499,6 +545,12 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.LicenseType != null) {
             this.LicenseType = new String(source.LicenseType);
         }
+        if (source.ImageFamily != null) {
+            this.ImageFamily = new String(source.ImageFamily);
+        }
+        if (source.ImageDeprecated != null) {
+            this.ImageDeprecated = new Boolean(source.ImageDeprecated);
+        }
     }
 
 
@@ -523,6 +575,8 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamArrayObj(map, prefix + "SnapshotSet.", this.SnapshotSet);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
+        this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+        this.setParamSimple(map, prefix + "ImageDeprecated", this.ImageDeprecated);
 
     }
 }

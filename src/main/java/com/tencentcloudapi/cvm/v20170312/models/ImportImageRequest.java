@@ -104,6 +104,13 @@ Valid values:
     private String BootMode;
 
     /**
+    * Image family
+    */
+    @SerializedName("ImageFamily")
+    @Expose
+    private String ImageFamily;
+
+    /**
      * Get OS architecture of the image to be imported, `x86_64` or `i386`. 
      * @return Architecture OS architecture of the image to be imported, `x86_64` or `i386`.
      */
@@ -291,6 +298,22 @@ Valid values:
         this.BootMode = BootMode;
     }
 
+    /**
+     * Get Image family 
+     * @return ImageFamily Image family
+     */
+    public String getImageFamily() {
+        return this.ImageFamily;
+    }
+
+    /**
+     * Set Image family
+     * @param ImageFamily Image family
+     */
+    public void setImageFamily(String ImageFamily) {
+        this.ImageFamily = ImageFamily;
+    }
+
     public ImportImageRequest() {
     }
 
@@ -335,6 +358,9 @@ Valid values:
         if (source.BootMode != null) {
             this.BootMode = new String(source.BootMode);
         }
+        if (source.ImageFamily != null) {
+            this.ImageFamily = new String(source.ImageFamily);
+        }
     }
 
 
@@ -353,6 +379,7 @@ Valid values:
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "BootMode", this.BootMode);
+        this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
 
     }
 }

@@ -75,6 +75,20 @@ Valid value: `Linux`.
     private String ProductDescription;
 
     /**
+    * Upfront total cost, in USD.
+    */
+    @SerializedName("DiscountUsagePrice")
+    @Expose
+    private Float DiscountUsagePrice;
+
+    /**
+    * Discount price for subsequent total cost, in USD/hr.
+    */
+    @SerializedName("DiscountFixedPrice")
+    @Expose
+    private Float DiscountFixedPrice;
+
+    /**
      * Get Payment method. Valid values: All Upfront, Partial Upfront, and No Upfront. 
      * @return OfferingType Payment method. Valid values: All Upfront, Partial Upfront, and No Upfront.
      */
@@ -194,6 +208,38 @@ Valid value: `Linux`.
         this.ProductDescription = ProductDescription;
     }
 
+    /**
+     * Get Upfront total cost, in USD. 
+     * @return DiscountUsagePrice Upfront total cost, in USD.
+     */
+    public Float getDiscountUsagePrice() {
+        return this.DiscountUsagePrice;
+    }
+
+    /**
+     * Set Upfront total cost, in USD.
+     * @param DiscountUsagePrice Upfront total cost, in USD.
+     */
+    public void setDiscountUsagePrice(Float DiscountUsagePrice) {
+        this.DiscountUsagePrice = DiscountUsagePrice;
+    }
+
+    /**
+     * Get Discount price for subsequent total cost, in USD/hr. 
+     * @return DiscountFixedPrice Discount price for subsequent total cost, in USD/hr.
+     */
+    public Float getDiscountFixedPrice() {
+        return this.DiscountFixedPrice;
+    }
+
+    /**
+     * Set Discount price for subsequent total cost, in USD/hr.
+     * @param DiscountFixedPrice Discount price for subsequent total cost, in USD/hr.
+     */
+    public void setDiscountFixedPrice(Float DiscountFixedPrice) {
+        this.DiscountFixedPrice = DiscountFixedPrice;
+    }
+
     public ReservedInstancePriceItem() {
     }
 
@@ -223,6 +269,12 @@ Valid value: `Linux`.
         if (source.ProductDescription != null) {
             this.ProductDescription = new String(source.ProductDescription);
         }
+        if (source.DiscountUsagePrice != null) {
+            this.DiscountUsagePrice = new Float(source.DiscountUsagePrice);
+        }
+        if (source.DiscountFixedPrice != null) {
+            this.DiscountFixedPrice = new Float(source.DiscountFixedPrice);
+        }
     }
 
 
@@ -237,6 +289,8 @@ Valid value: `Linux`.
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "ProductDescription", this.ProductDescription);
+        this.setParamSimple(map, prefix + "DiscountUsagePrice", this.DiscountUsagePrice);
+        this.setParamSimple(map, prefix + "DiscountFixedPrice", this.DiscountFixedPrice);
 
     }
 }

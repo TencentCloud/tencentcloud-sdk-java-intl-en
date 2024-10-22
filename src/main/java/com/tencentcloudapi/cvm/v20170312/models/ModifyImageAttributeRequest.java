@@ -24,72 +24,118 @@ import java.util.HashMap;
 public class ModifyImageAttributeRequest extends AbstractModel {
 
     /**
-    * Image ID such as `img-gvbnzy6f`. You can obtain the image IDs in two ways: <br><li>Call [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response. <br><li>Look for the information in the [Image Console](https://console.cloud.tencent.com/cvm/image).
+    * Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li>
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-    * New image name, which must meet the following requirements: <br> <li>No more than 20 characters. <br> <li>Must be unique.
+    * New image name, which should meet the following requirements:<li>It should not exceed 60 characters.</li><li>It should be unique.</li>
     */
     @SerializedName("ImageName")
     @Expose
     private String ImageName;
 
     /**
-    * New image description, which must meet the following requirement: <br> <li> No more than 60 characters.
+    * New image description, which should meet the following requirement:<li>It should not exceed 256 characters.</li>
     */
     @SerializedName("ImageDescription")
     @Expose
     private String ImageDescription;
 
     /**
-     * Get Image ID such as `img-gvbnzy6f`. You can obtain the image IDs in two ways: <br><li>Call [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response. <br><li>Look for the information in the [Image Console](https://console.cloud.tencent.com/cvm/image). 
-     * @return ImageId Image ID such as `img-gvbnzy6f`. You can obtain the image IDs in two ways: <br><li>Call [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response. <br><li>Look for the information in the [Image Console](https://console.cloud.tencent.com/cvm/image).
+    * Sets the image family;
+    */
+    @SerializedName("ImageFamily")
+    @Expose
+    private String ImageFamily;
+
+    /**
+    * Sets whether the image is deprecated;
+    */
+    @SerializedName("ImageDeprecated")
+    @Expose
+    private Boolean ImageDeprecated;
+
+    /**
+     * Get Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li> 
+     * @return ImageId Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li>
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set Image ID such as `img-gvbnzy6f`. You can obtain the image IDs in two ways: <br><li>Call [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response. <br><li>Look for the information in the [Image Console](https://console.cloud.tencent.com/cvm/image).
-     * @param ImageId Image ID such as `img-gvbnzy6f`. You can obtain the image IDs in two ways: <br><li>Call [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response. <br><li>Look for the information in the [Image Console](https://console.cloud.tencent.com/cvm/image).
+     * Set Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li>
+     * @param ImageId Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li>
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get New image name, which must meet the following requirements: <br> <li>No more than 20 characters. <br> <li>Must be unique. 
-     * @return ImageName New image name, which must meet the following requirements: <br> <li>No more than 20 characters. <br> <li>Must be unique.
+     * Get New image name, which should meet the following requirements:<li>It should not exceed 60 characters.</li><li>It should be unique.</li> 
+     * @return ImageName New image name, which should meet the following requirements:<li>It should not exceed 60 characters.</li><li>It should be unique.</li>
      */
     public String getImageName() {
         return this.ImageName;
     }
 
     /**
-     * Set New image name, which must meet the following requirements: <br> <li>No more than 20 characters. <br> <li>Must be unique.
-     * @param ImageName New image name, which must meet the following requirements: <br> <li>No more than 20 characters. <br> <li>Must be unique.
+     * Set New image name, which should meet the following requirements:<li>It should not exceed 60 characters.</li><li>It should be unique.</li>
+     * @param ImageName New image name, which should meet the following requirements:<li>It should not exceed 60 characters.</li><li>It should be unique.</li>
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
     }
 
     /**
-     * Get New image description, which must meet the following requirement: <br> <li> No more than 60 characters. 
-     * @return ImageDescription New image description, which must meet the following requirement: <br> <li> No more than 60 characters.
+     * Get New image description, which should meet the following requirement:<li>It should not exceed 256 characters.</li> 
+     * @return ImageDescription New image description, which should meet the following requirement:<li>It should not exceed 256 characters.</li>
      */
     public String getImageDescription() {
         return this.ImageDescription;
     }
 
     /**
-     * Set New image description, which must meet the following requirement: <br> <li> No more than 60 characters.
-     * @param ImageDescription New image description, which must meet the following requirement: <br> <li> No more than 60 characters.
+     * Set New image description, which should meet the following requirement:<li>It should not exceed 256 characters.</li>
+     * @param ImageDescription New image description, which should meet the following requirement:<li>It should not exceed 256 characters.</li>
      */
     public void setImageDescription(String ImageDescription) {
         this.ImageDescription = ImageDescription;
+    }
+
+    /**
+     * Get Sets the image family; 
+     * @return ImageFamily Sets the image family;
+     */
+    public String getImageFamily() {
+        return this.ImageFamily;
+    }
+
+    /**
+     * Set Sets the image family;
+     * @param ImageFamily Sets the image family;
+     */
+    public void setImageFamily(String ImageFamily) {
+        this.ImageFamily = ImageFamily;
+    }
+
+    /**
+     * Get Sets whether the image is deprecated; 
+     * @return ImageDeprecated Sets whether the image is deprecated;
+     */
+    public Boolean getImageDeprecated() {
+        return this.ImageDeprecated;
+    }
+
+    /**
+     * Set Sets whether the image is deprecated;
+     * @param ImageDeprecated Sets whether the image is deprecated;
+     */
+    public void setImageDeprecated(Boolean ImageDeprecated) {
+        this.ImageDeprecated = ImageDeprecated;
     }
 
     public ModifyImageAttributeRequest() {
@@ -109,6 +155,12 @@ public class ModifyImageAttributeRequest extends AbstractModel {
         if (source.ImageDescription != null) {
             this.ImageDescription = new String(source.ImageDescription);
         }
+        if (source.ImageFamily != null) {
+            this.ImageFamily = new String(source.ImageFamily);
+        }
+        if (source.ImageDeprecated != null) {
+            this.ImageDeprecated = new Boolean(source.ImageDeprecated);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class ModifyImageAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
         this.setParamSimple(map, prefix + "ImageDescription", this.ImageDescription);
+        this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+        this.setParamSimple(map, prefix + "ImageDeprecated", this.ImageDeprecated);
 
     }
 }
