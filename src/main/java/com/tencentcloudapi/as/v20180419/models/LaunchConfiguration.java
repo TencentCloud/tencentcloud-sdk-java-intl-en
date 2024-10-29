@@ -245,6 +245,14 @@ Note: This field is default to empty
     private String [] DisasterRecoverGroupIds;
 
     /**
+    * Image family name.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ImageFamily")
+    @Expose
+    private String ImageFamily;
+
+    /**
      * Get Project ID of the instance. 
      * @return ProjectId Project ID of the instance.
      */
@@ -756,6 +764,26 @@ Note: This field is default to empty
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
     }
 
+    /**
+     * Get Image family name.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ImageFamily Image family name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getImageFamily() {
+        return this.ImageFamily;
+    }
+
+    /**
+     * Set Image family name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ImageFamily Image family name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setImageFamily(String ImageFamily) {
+        this.ImageFamily = ImageFamily;
+    }
+
     public LaunchConfiguration() {
     }
 
@@ -878,6 +906,9 @@ Note: This field is default to empty
                 this.DisasterRecoverGroupIds[i] = new String(source.DisasterRecoverGroupIds[i]);
             }
         }
+        if (source.ImageFamily != null) {
+            this.ImageFamily = new String(source.ImageFamily);
+        }
     }
 
 
@@ -916,6 +947,7 @@ Note: This field is default to empty
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
+        this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
 
     }
 }

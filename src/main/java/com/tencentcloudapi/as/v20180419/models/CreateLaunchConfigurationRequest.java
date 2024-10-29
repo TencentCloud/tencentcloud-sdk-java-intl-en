@@ -134,12 +134,12 @@ Note that this project ID is not the same as the project ID of the scaling group
     private String CamRoleName;
 
     /**
-    * Instance type verification policy. Value range: ALL, ANY. Default value: ANY.
-<br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
-<br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
+    * InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
+<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
+<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
 
-Common reasons why an instance type is unavailable include stock-out of the instance type or the corresponding cloud disk.
-If a model in InstanceTypes does not exist or has been discontinued, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
+Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
     */
     @SerializedName("InstanceTypesCheckPolicy")
     @Expose
@@ -182,9 +182,9 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+    * Cloud disk type selection policy, whose default value is ORIGINAL. Valid values:
+<li>ORIGINAL: Use the set cloud disk type.</li>
+<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
     */
     @SerializedName("DiskTypePolicy")
     @Expose
@@ -211,6 +211,13 @@ Note: This field is default to empty
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
     private String [] DisasterRecoverGroupIds;
+
+    /**
+    * Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
+    */
+    @SerializedName("ImageFamily")
+    @Expose
+    private String ImageFamily;
 
     /**
      * Get Display name of the launch configuration, which can contain letters, digits, underscores and hyphens (-), and dots. Up to of 60 bytes allowed.. 
@@ -473,36 +480,36 @@ Note that this project ID is not the same as the project ID of the scaling group
     }
 
     /**
-     * Get Instance type verification policy. Value range: ALL, ANY. Default value: ANY.
-<br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
-<br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
+     * Get InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
+<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
+<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
 
-Common reasons why an instance type is unavailable include stock-out of the instance type or the corresponding cloud disk.
-If a model in InstanceTypes does not exist or has been discontinued, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy. 
-     * @return InstanceTypesCheckPolicy Instance type verification policy. Value range: ALL, ANY. Default value: ANY.
-<br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
-<br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
+Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy. 
+     * @return InstanceTypesCheckPolicy InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
+<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
+<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
 
-Common reasons why an instance type is unavailable include stock-out of the instance type or the corresponding cloud disk.
-If a model in InstanceTypes does not exist or has been discontinued, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
+Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
      */
     public String getInstanceTypesCheckPolicy() {
         return this.InstanceTypesCheckPolicy;
     }
 
     /**
-     * Set Instance type verification policy. Value range: ALL, ANY. Default value: ANY.
-<br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
-<br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
+     * Set InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
+<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
+<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
 
-Common reasons why an instance type is unavailable include stock-out of the instance type or the corresponding cloud disk.
-If a model in InstanceTypes does not exist or has been discontinued, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
-     * @param InstanceTypesCheckPolicy Instance type verification policy. Value range: ALL, ANY. Default value: ANY.
-<br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
-<br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
+Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
+     * @param InstanceTypesCheckPolicy InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
+<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
+<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
 
-Common reasons why an instance type is unavailable include stock-out of the instance type or the corresponding cloud disk.
-If a model in InstanceTypes does not exist or has been discontinued, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
+Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
      */
     public void setInstanceTypesCheckPolicy(String InstanceTypesCheckPolicy) {
         this.InstanceTypesCheckPolicy = InstanceTypesCheckPolicy;
@@ -593,24 +600,24 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
     }
 
     /**
-     * Get Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type 
-     * @return DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+     * Get Cloud disk type selection policy, whose default value is ORIGINAL. Valid values:
+<li>ORIGINAL: Use the set cloud disk type.</li>
+<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li> 
+     * @return DiskTypePolicy Cloud disk type selection policy, whose default value is ORIGINAL. Valid values:
+<li>ORIGINAL: Use the set cloud disk type.</li>
+<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
      */
     public String getDiskTypePolicy() {
         return this.DiskTypePolicy;
     }
 
     /**
-     * Set Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type
-     * @param DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+     * Set Cloud disk type selection policy, whose default value is ORIGINAL. Valid values:
+<li>ORIGINAL: Use the set cloud disk type.</li>
+<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
+     * @param DiskTypePolicy Cloud disk type selection policy, whose default value is ORIGINAL. Valid values:
+<li>ORIGINAL: Use the set cloud disk type.</li>
+<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
      */
     public void setDiskTypePolicy(String DiskTypePolicy) {
         this.DiskTypePolicy = DiskTypePolicy;
@@ -666,6 +673,22 @@ Note: This field is default to empty
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
+    }
+
+    /**
+     * Get Image family name. Either image ID or image family name should be filled in, and only one of which can be filled. 
+     * @return ImageFamily Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
+     */
+    public String getImageFamily() {
+        return this.ImageFamily;
+    }
+
+    /**
+     * Set Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
+     * @param ImageFamily Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
+     */
+    public void setImageFamily(String ImageFamily) {
+        this.ImageFamily = ImageFamily;
     }
 
     public CreateLaunchConfigurationRequest() {
@@ -769,6 +792,9 @@ Note: This field is default to empty
                 this.DisasterRecoverGroupIds[i] = new String(source.DisasterRecoverGroupIds[i]);
             }
         }
+        if (source.ImageFamily != null) {
+            this.ImageFamily = new String(source.ImageFamily);
+        }
     }
 
 
@@ -801,6 +827,7 @@ Note: This field is default to empty
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
+        this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
 
     }
 }

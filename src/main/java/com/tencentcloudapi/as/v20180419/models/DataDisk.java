@@ -24,8 +24,16 @@ import java.util.HashMap;
 public class DataDisk extends AbstractModel {
 
     /**
-    * Data disk type. See [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: Local disk<br><li>`LOCAL_SSD`: Local SSD disk<br><li>`CLOUD_BASIC`: HDD cloud disk<br><li>`CLOUD_PREMIUM`: Premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk<br><li>`CLOUD_HSSD`: Enhanced SSD<br><li>`CLOUD_TSSD`: Tremendous SSD<br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local hard disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: General cloud disk.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_TSSD: Ultra SSD.</li>
+The default value is consistent with the system disk type (SystemDisk.DiskType).
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskType")
     @Expose
@@ -48,16 +56,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SnapshotId;
 
     /**
-    * Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+    * Whether the data disk is terminated along with the instance. Valid values:
+<li>TRUE: When the instance is terminated, the data disk is also terminated. This option is only supported for hourly postpaid cloud disks.</li>
+<li>FALSE: When the instance is terminated, the data disk is retained.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DeleteWithInstance")
     @Expose
     private Boolean DeleteWithInstance;
 
     /**
-    * Data disk encryption. Valid values: <br><li>`TRUE`: Encrypted<br><li>`FALSE`: Not encrypted
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether the data disk is encrypted. Valid values:
+<li>TRUE: Encrypted.</li>
+<li>FALSE: Not encrypted.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Encrypt")
     @Expose
@@ -73,20 +85,62 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long ThroughputPerformance;
 
     /**
-     * Get Data disk type. See [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: Local disk<br><li>`LOCAL_SSD`: Local SSD disk<br><li>`CLOUD_BASIC`: HDD cloud disk<br><li>`CLOUD_PREMIUM`: Premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk<br><li>`CLOUD_HSSD`: Enhanced SSD<br><li>`CLOUD_TSSD`: Tremendous SSD<br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return DiskType Data disk type. See [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: Local disk<br><li>`LOCAL_SSD`: Local SSD disk<br><li>`CLOUD_BASIC`: HDD cloud disk<br><li>`CLOUD_PREMIUM`: Premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk<br><li>`CLOUD_HSSD`: Enhanced SSD<br><li>`CLOUD_TSSD`: Tremendous SSD<br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Burst performance: Whether to enable burst performance. The default value is false.
+
+Note: This feature is in beta test and requires a ticket to be submitted for usage.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BurstPerformance")
+    @Expose
+    private Boolean BurstPerformance;
+
+    /**
+     * Get Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local hard disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: General cloud disk.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_TSSD: Ultra SSD.</li>
+The default value is consistent with the system disk type (SystemDisk.DiskType).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DiskType Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local hard disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: General cloud disk.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_TSSD: Ultra SSD.</li>
+The default value is consistent with the system disk type (SystemDisk.DiskType).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Data disk type. See [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: Local disk<br><li>`LOCAL_SSD`: Local SSD disk<br><li>`CLOUD_BASIC`: HDD cloud disk<br><li>`CLOUD_PREMIUM`: Premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk<br><li>`CLOUD_HSSD`: Enhanced SSD<br><li>`CLOUD_TSSD`: Tremendous SSD<br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param DiskType Data disk type. See [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: Local disk<br><li>`LOCAL_SSD`: Local SSD disk<br><li>`CLOUD_BASIC`: HDD cloud disk<br><li>`CLOUD_PREMIUM`: Premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk<br><li>`CLOUD_HSSD`: Enhanced SSD<br><li>`CLOUD_TSSD`: Tremendous SSD<br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local hard disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: General cloud disk.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_TSSD: Ultra SSD.</li>
+The default value is consistent with the system disk type (SystemDisk.DiskType).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DiskType Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local hard disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: General cloud disk.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_TSSD: Ultra SSD.</li>
+The default value is consistent with the system disk type (SystemDisk.DiskType).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
@@ -133,40 +187,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
-Note: this field may return `null`, indicating that no valid value can be obtained. 
-     * @return DeleteWithInstance Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether the data disk is terminated along with the instance. Valid values:
+<li>TRUE: When the instance is terminated, the data disk is also terminated. This option is only supported for hourly postpaid cloud disks.</li>
+<li>FALSE: When the instance is terminated, the data disk is retained.</li>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DeleteWithInstance Whether the data disk is terminated along with the instance. Valid values:
+<li>TRUE: When the instance is terminated, the data disk is also terminated. This option is only supported for hourly postpaid cloud disks.</li>
+<li>FALSE: When the instance is terminated, the data disk is retained.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getDeleteWithInstance() {
         return this.DeleteWithInstance;
     }
 
     /**
-     * Set Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param DeleteWithInstance Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether the data disk is terminated along with the instance. Valid values:
+<li>TRUE: When the instance is terminated, the data disk is also terminated. This option is only supported for hourly postpaid cloud disks.</li>
+<li>FALSE: When the instance is terminated, the data disk is retained.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DeleteWithInstance Whether the data disk is terminated along with the instance. Valid values:
+<li>TRUE: When the instance is terminated, the data disk is also terminated. This option is only supported for hourly postpaid cloud disks.</li>
+<li>FALSE: When the instance is terminated, the data disk is retained.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDeleteWithInstance(Boolean DeleteWithInstance) {
         this.DeleteWithInstance = DeleteWithInstance;
     }
 
     /**
-     * Get Data disk encryption. Valid values: <br><li>`TRUE`: Encrypted<br><li>`FALSE`: Not encrypted
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Encrypt Data disk encryption. Valid values: <br><li>`TRUE`: Encrypted<br><li>`FALSE`: Not encrypted
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether the data disk is encrypted. Valid values:
+<li>TRUE: Encrypted.</li>
+<li>FALSE: Not encrypted.</li>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Encrypt Whether the data disk is encrypted. Valid values:
+<li>TRUE: Encrypted.</li>
+<li>FALSE: Not encrypted.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getEncrypt() {
         return this.Encrypt;
     }
 
     /**
-     * Set Data disk encryption. Valid values: <br><li>`TRUE`: Encrypted<br><li>`FALSE`: Not encrypted
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Encrypt Data disk encryption. Valid values: <br><li>`TRUE`: Encrypted<br><li>`FALSE`: Not encrypted
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether the data disk is encrypted. Valid values:
+<li>TRUE: Encrypted.</li>
+<li>FALSE: Not encrypted.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Encrypt Whether the data disk is encrypted. Valid values:
+<li>TRUE: Encrypted.</li>
+<li>FALSE: Not encrypted.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEncrypt(Boolean Encrypt) {
         this.Encrypt = Encrypt;
@@ -196,6 +266,34 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.ThroughputPerformance = ThroughputPerformance;
     }
 
+    /**
+     * Get Burst performance: Whether to enable burst performance. The default value is false.
+
+Note: This feature is in beta test and requires a ticket to be submitted for usage.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BurstPerformance Burst performance: Whether to enable burst performance. The default value is false.
+
+Note: This feature is in beta test and requires a ticket to be submitted for usage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getBurstPerformance() {
+        return this.BurstPerformance;
+    }
+
+    /**
+     * Set Burst performance: Whether to enable burst performance. The default value is false.
+
+Note: This feature is in beta test and requires a ticket to be submitted for usage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BurstPerformance Burst performance: Whether to enable burst performance. The default value is false.
+
+Note: This feature is in beta test and requires a ticket to be submitted for usage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBurstPerformance(Boolean BurstPerformance) {
+        this.BurstPerformance = BurstPerformance;
+    }
+
     public DataDisk() {
     }
 
@@ -222,6 +320,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.ThroughputPerformance != null) {
             this.ThroughputPerformance = new Long(source.ThroughputPerformance);
         }
+        if (source.BurstPerformance != null) {
+            this.BurstPerformance = new Boolean(source.BurstPerformance);
+        }
     }
 
 
@@ -235,6 +336,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
         this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
         this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
+        this.setParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
 
     }
 }

@@ -31,15 +31,15 @@ public class DescribeLaunchConfigurationsRequest extends AbstractModel {
     private String [] LaunchConfigurationIds;
 
     /**
-    * Filters
-<li> `launch-configuration-id` - String - Required: No - Filter by launch configuration ID.</li>
-<li> `launch-configuration-name` - String - Required: No - Filter by launch configuration name.</li>
-<li> `launch-configuration-name` - String - Required: No - Fuzzy search by launch configuration name.</li>
-<li> `tag-key` - String - Required: No - Filter by the tag key.</li>
-<li> `tag-value` - String - Required: No - Filter by the tag value.</li>
-<li>tag:tag-key - String - Optional - Filter by tag key pair. Use a specific tag key to replace `tag-key`. See Example 3 for the detailed usage.</li>
-</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LaunchConfigurationIds` and `Filters` at the same time.
+    * Filter criteria
+
+<li>launch-configuration-id - String - required: no - (filter condition) filter by launch configuration ID.</li>
+<li>launch-configuration-name - String - required: no - (filter condition) filter by launch configuration name.</li>
+<li>vague-launch-configuration-name - String - required: no - (filter condition) fuzzy search by launch configuration name.</li>
+<li>tag-key - String - required: no - (filter condition) filter by tag key.</li>
+<li>tag-value - String - required: no - (filter condition) filter by tag value.</li>
+<li>tag:tag-key - String - required: no - (filter condition) filter by Tag key-value pair. Replace tag-key with a specific tag key. See Example 3 for usage.</li>
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. The parameter does not support specifying both `LaunchConfigurationIds` and `Filters`.
     */
     @SerializedName("Filters")
     @Expose
@@ -76,48 +76,48 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
     }
 
     /**
-     * Get Filters
-<li> `launch-configuration-id` - String - Required: No - Filter by launch configuration ID.</li>
-<li> `launch-configuration-name` - String - Required: No - Filter by launch configuration name.</li>
-<li> `launch-configuration-name` - String - Required: No - Fuzzy search by launch configuration name.</li>
-<li> `tag-key` - String - Required: No - Filter by the tag key.</li>
-<li> `tag-value` - String - Required: No - Filter by the tag value.</li>
-<li>tag:tag-key - String - Optional - Filter by tag key pair. Use a specific tag key to replace `tag-key`. See Example 3 for the detailed usage.</li>
-</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LaunchConfigurationIds` and `Filters` at the same time. 
-     * @return Filters Filters
-<li> `launch-configuration-id` - String - Required: No - Filter by launch configuration ID.</li>
-<li> `launch-configuration-name` - String - Required: No - Filter by launch configuration name.</li>
-<li> `launch-configuration-name` - String - Required: No - Fuzzy search by launch configuration name.</li>
-<li> `tag-key` - String - Required: No - Filter by the tag key.</li>
-<li> `tag-value` - String - Required: No - Filter by the tag value.</li>
-<li>tag:tag-key - String - Optional - Filter by tag key pair. Use a specific tag key to replace `tag-key`. See Example 3 for the detailed usage.</li>
-</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LaunchConfigurationIds` and `Filters` at the same time.
+     * Get Filter criteria
+
+<li>launch-configuration-id - String - required: no - (filter condition) filter by launch configuration ID.</li>
+<li>launch-configuration-name - String - required: no - (filter condition) filter by launch configuration name.</li>
+<li>vague-launch-configuration-name - String - required: no - (filter condition) fuzzy search by launch configuration name.</li>
+<li>tag-key - String - required: no - (filter condition) filter by tag key.</li>
+<li>tag-value - String - required: no - (filter condition) filter by tag value.</li>
+<li>tag:tag-key - String - required: no - (filter condition) filter by Tag key-value pair. Replace tag-key with a specific tag key. See Example 3 for usage.</li>
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. The parameter does not support specifying both `LaunchConfigurationIds` and `Filters`. 
+     * @return Filters Filter criteria
+
+<li>launch-configuration-id - String - required: no - (filter condition) filter by launch configuration ID.</li>
+<li>launch-configuration-name - String - required: no - (filter condition) filter by launch configuration name.</li>
+<li>vague-launch-configuration-name - String - required: no - (filter condition) fuzzy search by launch configuration name.</li>
+<li>tag-key - String - required: no - (filter condition) filter by tag key.</li>
+<li>tag-value - String - required: no - (filter condition) filter by tag value.</li>
+<li>tag:tag-key - String - required: no - (filter condition) filter by Tag key-value pair. Replace tag-key with a specific tag key. See Example 3 for usage.</li>
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. The parameter does not support specifying both `LaunchConfigurationIds` and `Filters`.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filters
-<li> `launch-configuration-id` - String - Required: No - Filter by launch configuration ID.</li>
-<li> `launch-configuration-name` - String - Required: No - Filter by launch configuration name.</li>
-<li> `launch-configuration-name` - String - Required: No - Fuzzy search by launch configuration name.</li>
-<li> `tag-key` - String - Required: No - Filter by the tag key.</li>
-<li> `tag-value` - String - Required: No - Filter by the tag value.</li>
-<li>tag:tag-key - String - Optional - Filter by tag key pair. Use a specific tag key to replace `tag-key`. See Example 3 for the detailed usage.</li>
-</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LaunchConfigurationIds` and `Filters` at the same time.
-     * @param Filters Filters
-<li> `launch-configuration-id` - String - Required: No - Filter by launch configuration ID.</li>
-<li> `launch-configuration-name` - String - Required: No - Filter by launch configuration name.</li>
-<li> `launch-configuration-name` - String - Required: No - Fuzzy search by launch configuration name.</li>
-<li> `tag-key` - String - Required: No - Filter by the tag key.</li>
-<li> `tag-value` - String - Required: No - Filter by the tag value.</li>
-<li>tag:tag-key - String - Optional - Filter by tag key pair. Use a specific tag key to replace `tag-key`. See Example 3 for the detailed usage.</li>
-</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LaunchConfigurationIds` and `Filters` at the same time.
+     * Set Filter criteria
+
+<li>launch-configuration-id - String - required: no - (filter condition) filter by launch configuration ID.</li>
+<li>launch-configuration-name - String - required: no - (filter condition) filter by launch configuration name.</li>
+<li>vague-launch-configuration-name - String - required: no - (filter condition) fuzzy search by launch configuration name.</li>
+<li>tag-key - String - required: no - (filter condition) filter by tag key.</li>
+<li>tag-value - String - required: no - (filter condition) filter by tag value.</li>
+<li>tag:tag-key - String - required: no - (filter condition) filter by Tag key-value pair. Replace tag-key with a specific tag key. See Example 3 for usage.</li>
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. The parameter does not support specifying both `LaunchConfigurationIds` and `Filters`.
+     * @param Filters Filter criteria
+
+<li>launch-configuration-id - String - required: no - (filter condition) filter by launch configuration ID.</li>
+<li>launch-configuration-name - String - required: no - (filter condition) filter by launch configuration name.</li>
+<li>vague-launch-configuration-name - String - required: no - (filter condition) fuzzy search by launch configuration name.</li>
+<li>tag-key - String - required: no - (filter condition) filter by tag key.</li>
+<li>tag-value - String - required: no - (filter condition) filter by tag value.</li>
+<li>tag:tag-key - String - required: no - (filter condition) filter by Tag key-value pair. Replace tag-key with a specific tag key. See Example 3 for usage.</li>
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. The parameter does not support specifying both `LaunchConfigurationIds` and `Filters`.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

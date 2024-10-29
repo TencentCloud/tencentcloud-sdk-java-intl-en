@@ -33,6 +33,13 @@ Supported image size: The downloaded image should not exceed 7M. The image downl
     private String ImageUrl;
 
     /**
+    * The URL address of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent.
+    */
+    @SerializedName("BackImageUrl")
+    @Expose
+    private String BackImageUrl;
+
+    /**
     * Base64 value of the image.Supported image formats: PNG, JPG, JPEG. Not support GIF yet.
 Supported image size: The downloaded image should not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds.
 One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
@@ -40,6 +47,13 @@ One of ImageUrl and ImageBase64 of the image must be provided. If both are provi
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
+
+    /**
+    * Base64 value of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
+    */
+    @SerializedName("BackImageBase64")
+    @Expose
+    private String BackImageBase64;
 
     /**
     * The following optional fields are of string type and are empty by default: 
@@ -74,6 +88,22 @@ Supported image size: The downloaded image should not exceed 7M. The image downl
     }
 
     /**
+     * Get The URL address of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent. 
+     * @return BackImageUrl The URL address of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent.
+     */
+    public String getBackImageUrl() {
+        return this.BackImageUrl;
+    }
+
+    /**
+     * Set The URL address of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent.
+     * @param BackImageUrl The URL address of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent.
+     */
+    public void setBackImageUrl(String BackImageUrl) {
+        this.BackImageUrl = BackImageUrl;
+    }
+
+    /**
      * Get Base64 value of the image.Supported image formats: PNG, JPG, JPEG. Not support GIF yet.
 Supported image size: The downloaded image should not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds.
 One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used. 
@@ -95,6 +125,22 @@ One of ImageUrl and ImageBase64 of the image must be provided. If both are provi
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
+    }
+
+    /**
+     * Get Base64 value of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used. 
+     * @return BackImageBase64 Base64 value of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
+     */
+    public String getBackImageBase64() {
+        return this.BackImageBase64;
+    }
+
+    /**
+     * Set Base64 value of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
+     * @param BackImageBase64 Base64 value of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
+     */
+    public void setBackImageBase64(String BackImageBase64) {
+        this.BackImageBase64 = BackImageBase64;
     }
 
     /**
@@ -128,8 +174,14 @@ RetImage: whether to return the processed image (base64 encrypted string); the v
         if (source.ImageUrl != null) {
             this.ImageUrl = new String(source.ImageUrl);
         }
+        if (source.BackImageUrl != null) {
+            this.BackImageUrl = new String(source.BackImageUrl);
+        }
         if (source.ImageBase64 != null) {
             this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.BackImageBase64 != null) {
+            this.BackImageBase64 = new String(source.BackImageBase64);
         }
         if (source.Config != null) {
             this.Config = new String(source.Config);
@@ -142,7 +194,9 @@ RetImage: whether to return the processed image (base64 encrypted string); the v
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "BackImageUrl", this.BackImageUrl);
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
+        this.setParamSimple(map, prefix + "BackImageBase64", this.BackImageBase64);
         this.setParamSimple(map, prefix + "Config", this.Config);
 
     }

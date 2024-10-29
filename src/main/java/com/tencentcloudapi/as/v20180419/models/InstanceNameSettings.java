@@ -42,6 +42,16 @@ public class InstanceNameSettings extends AbstractModel {
     private String InstanceNameStyle;
 
     /**
+    * CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
+
+Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceNameSuffix")
+    @Expose
+    private String InstanceNameSuffix;
+
+    /**
      * Get CVM instance name. Value range: 2-108. 
      * @return InstanceName CVM instance name. Value range: 2-108.
      */
@@ -89,6 +99,34 @@ public class InstanceNameSettings extends AbstractModel {
         this.InstanceNameStyle = InstanceNameStyle;
     }
 
+    /**
+     * Get CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
+
+Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceNameSuffix CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
+
+Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getInstanceNameSuffix() {
+        return this.InstanceNameSuffix;
+    }
+
+    /**
+     * Set CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
+
+Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceNameSuffix CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
+
+Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInstanceNameSuffix(String InstanceNameSuffix) {
+        this.InstanceNameSuffix = InstanceNameSuffix;
+    }
+
     public InstanceNameSettings() {
     }
 
@@ -103,6 +141,9 @@ public class InstanceNameSettings extends AbstractModel {
         if (source.InstanceNameStyle != null) {
             this.InstanceNameStyle = new String(source.InstanceNameStyle);
         }
+        if (source.InstanceNameSuffix != null) {
+            this.InstanceNameSuffix = new String(source.InstanceNameSuffix);
+        }
     }
 
 
@@ -112,6 +153,7 @@ public class InstanceNameSettings extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "InstanceNameStyle", this.InstanceNameStyle);
+        this.setParamSimple(map, prefix + "InstanceNameSuffix", this.InstanceNameSuffix);
 
     }
 }

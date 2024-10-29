@@ -63,6 +63,14 @@ Setting it to `true` will clear the instance name settings, which means that CVM
     private Boolean ClearDisasterRecoverGroupIds;
 
     /**
+    * Whether to clear the instance tag list. This parameter is optional, and its default value is false.
+If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
+    */
+    @SerializedName("ClearInstanceTags")
+    @Expose
+    private Boolean ClearInstanceTags;
+
+    /**
      * Get Launch configuration ID 
      * @return LaunchConfigurationId Launch configuration ID
      */
@@ -158,6 +166,26 @@ Setting it to `true` will clear the instance name settings, which means that CVM
         this.ClearDisasterRecoverGroupIds = ClearDisasterRecoverGroupIds;
     }
 
+    /**
+     * Get Whether to clear the instance tag list. This parameter is optional, and its default value is false.
+If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list. 
+     * @return ClearInstanceTags Whether to clear the instance tag list. This parameter is optional, and its default value is false.
+If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
+     */
+    public Boolean getClearInstanceTags() {
+        return this.ClearInstanceTags;
+    }
+
+    /**
+     * Set Whether to clear the instance tag list. This parameter is optional, and its default value is false.
+If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
+     * @param ClearInstanceTags Whether to clear the instance tag list. This parameter is optional, and its default value is false.
+If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
+     */
+    public void setClearInstanceTags(Boolean ClearInstanceTags) {
+        this.ClearInstanceTags = ClearInstanceTags;
+    }
+
     public ClearLaunchConfigurationAttributesRequest() {
     }
 
@@ -181,6 +209,9 @@ Setting it to `true` will clear the instance name settings, which means that CVM
         if (source.ClearDisasterRecoverGroupIds != null) {
             this.ClearDisasterRecoverGroupIds = new Boolean(source.ClearDisasterRecoverGroupIds);
         }
+        if (source.ClearInstanceTags != null) {
+            this.ClearInstanceTags = new Boolean(source.ClearInstanceTags);
+        }
     }
 
 
@@ -193,6 +224,7 @@ Setting it to `true` will clear the instance name settings, which means that CVM
         this.setParamSimple(map, prefix + "ClearHostNameSettings", this.ClearHostNameSettings);
         this.setParamSimple(map, prefix + "ClearInstanceNameSettings", this.ClearInstanceNameSettings);
         this.setParamSimple(map, prefix + "ClearDisasterRecoverGroupIds", this.ClearDisasterRecoverGroupIds);
+        this.setParamSimple(map, prefix + "ClearInstanceTags", this.ClearInstanceTags);
 
     }
 }

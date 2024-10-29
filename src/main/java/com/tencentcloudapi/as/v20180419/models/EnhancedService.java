@@ -86,7 +86,9 @@ public class EnhancedService extends AbstractModel {
     /**
      * Get Deprecated parameter. 
      * @return AutomationService Deprecated parameter.
+     * @deprecated
      */
+    @Deprecated
     public RunAutomationServiceEnabled [] getAutomationService() {
         return this.AutomationService;
     }
@@ -94,7 +96,9 @@ public class EnhancedService extends AbstractModel {
     /**
      * Set Deprecated parameter.
      * @param AutomationService Deprecated parameter.
+     * @deprecated
      */
+    @Deprecated
     public void setAutomationService(RunAutomationServiceEnabled [] AutomationService) {
         this.AutomationService = AutomationService;
     }

@@ -531,6 +531,17 @@ Usage Precautions:
     }
 
     /**
+     *Stop AI conversation task
+     * @param req StopAIConversationRequest
+     * @return StopAIConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopAIConversationResponse StopAIConversation(StopAIConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopAIConversation", StopAIConversationResponse.class);
+    }
+
+    /**
      *Stop AI Transcription task
      * @param req StopAITranscriptionRequest
      * @return StopAITranscriptionResponse

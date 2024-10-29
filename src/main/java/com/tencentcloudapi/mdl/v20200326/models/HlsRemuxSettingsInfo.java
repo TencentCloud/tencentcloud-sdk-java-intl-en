@@ -109,6 +109,13 @@ Currently, fMP4 segments do not support DRM or time shifting.
     private Long VideoResolution;
 
     /**
+    * Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+    */
+    @SerializedName("EndListTag")
+    @Expose
+    private Long EndListTag;
+
+    /**
      * Get Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000. 
      * @return SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
      */
@@ -304,6 +311,22 @@ Currently, fMP4 segments do not support DRM or time shifting.
         this.VideoResolution = VideoResolution;
     }
 
+    /**
+     * Get Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1. 
+     * @return EndListTag Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+     */
+    public Long getEndListTag() {
+        return this.EndListTag;
+    }
+
+    /**
+     * Set Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+     * @param EndListTag Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+     */
+    public void setEndListTag(Long EndListTag) {
+        this.EndListTag = EndListTag;
+    }
+
     public HlsRemuxSettingsInfo() {
     }
 
@@ -348,6 +371,9 @@ Currently, fMP4 segments do not support DRM or time shifting.
         if (source.VideoResolution != null) {
             this.VideoResolution = new Long(source.VideoResolution);
         }
+        if (source.EndListTag != null) {
+            this.EndListTag = new Long(source.EndListTag);
+        }
     }
 
 
@@ -367,6 +393,7 @@ Currently, fMP4 segments do not support DRM or time shifting.
         this.setParamSimple(map, prefix + "PartialSegmentPlaySite", this.PartialSegmentPlaySite);
         this.setParamSimple(map, prefix + "StreamOrder", this.StreamOrder);
         this.setParamSimple(map, prefix + "VideoResolution", this.VideoResolution);
+        this.setParamSimple(map, prefix + "EndListTag", this.EndListTag);
 
     }
 }

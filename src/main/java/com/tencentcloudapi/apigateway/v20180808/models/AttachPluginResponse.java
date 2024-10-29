@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AttachPluginResponse extends AbstractModel {
 
     /**
-    * Whether binding succeeded.
+    * Whether the binding operation is successful.
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class AttachPluginResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Whether binding succeeded. 
-     * @return Result Whether binding succeeded.
+     * Get Whether the binding operation is successful. 
+     * @return Result Whether the binding operation is successful.
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set Whether binding succeeded.
-     * @param Result Whether binding succeeded.
+     * Set Whether the binding operation is successful.
+     * @param Result Whether the binding operation is successful.
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

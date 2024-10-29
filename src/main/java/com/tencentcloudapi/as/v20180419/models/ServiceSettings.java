@@ -48,6 +48,17 @@ Default value: CLASSIC_SCALING
     private Boolean ReplaceLoadBalancerUnhealthy;
 
     /**
+    * Replace mode of unhealthy replacement service. Valid values:
+RECREATE: Rebuild an instance to replace the original unhealthy instance.
+RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+Default value: RECREATE.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReplaceMode")
+    @Expose
+    private String ReplaceMode;
+
+    /**
      * Get Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default. 
      * @return ReplaceMonitorUnhealthy Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
      */
@@ -107,6 +118,38 @@ Default value: CLASSIC_SCALING
         this.ReplaceLoadBalancerUnhealthy = ReplaceLoadBalancerUnhealthy;
     }
 
+    /**
+     * Get Replace mode of unhealthy replacement service. Valid values:
+RECREATE: Rebuild an instance to replace the original unhealthy instance.
+RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+Default value: RECREATE.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReplaceMode Replace mode of unhealthy replacement service. Valid values:
+RECREATE: Rebuild an instance to replace the original unhealthy instance.
+RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+Default value: RECREATE.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getReplaceMode() {
+        return this.ReplaceMode;
+    }
+
+    /**
+     * Set Replace mode of unhealthy replacement service. Valid values:
+RECREATE: Rebuild an instance to replace the original unhealthy instance.
+RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+Default value: RECREATE.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReplaceMode Replace mode of unhealthy replacement service. Valid values:
+RECREATE: Rebuild an instance to replace the original unhealthy instance.
+RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+Default value: RECREATE.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setReplaceMode(String ReplaceMode) {
+        this.ReplaceMode = ReplaceMode;
+    }
+
     public ServiceSettings() {
     }
 
@@ -124,6 +167,9 @@ Default value: CLASSIC_SCALING
         if (source.ReplaceLoadBalancerUnhealthy != null) {
             this.ReplaceLoadBalancerUnhealthy = new Boolean(source.ReplaceLoadBalancerUnhealthy);
         }
+        if (source.ReplaceMode != null) {
+            this.ReplaceMode = new String(source.ReplaceMode);
+        }
     }
 
 
@@ -134,6 +180,7 @@ Default value: CLASSIC_SCALING
         this.setParamSimple(map, prefix + "ReplaceMonitorUnhealthy", this.ReplaceMonitorUnhealthy);
         this.setParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
         this.setParamSimple(map, prefix + "ReplaceLoadBalancerUnhealthy", this.ReplaceLoadBalancerUnhealthy);
+        this.setParamSimple(map, prefix + "ReplaceMode", this.ReplaceMode);
 
     }
 }

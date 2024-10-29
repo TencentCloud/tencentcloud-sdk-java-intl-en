@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AttachPluginRequest extends AbstractModel {
 
     /**
-    * ID of the plugin to be bound.
+    * ID of the bound API gateway plugin.
     */
     @SerializedName("PluginId")
     @Expose
     private String PluginId;
 
     /**
-    * Service ID.
+    * ID of the service to be operated
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-    * API environment.
+    * Environment for operating the API.
     */
     @SerializedName("EnvironmentName")
     @Expose
     private String EnvironmentName;
 
     /**
-    * List of APIs bound with the plugin
+    * List of APIs to be bound.
     */
     @SerializedName("ApiIds")
     @Expose
     private String [] ApiIds;
 
     /**
-     * Get ID of the plugin to be bound. 
-     * @return PluginId ID of the plugin to be bound.
+     * Get ID of the bound API gateway plugin. 
+     * @return PluginId ID of the bound API gateway plugin.
      */
     public String getPluginId() {
         return this.PluginId;
     }
 
     /**
-     * Set ID of the plugin to be bound.
-     * @param PluginId ID of the plugin to be bound.
+     * Set ID of the bound API gateway plugin.
+     * @param PluginId ID of the bound API gateway plugin.
      */
     public void setPluginId(String PluginId) {
         this.PluginId = PluginId;
     }
 
     /**
-     * Get Service ID. 
-     * @return ServiceId Service ID.
+     * Get ID of the service to be operated 
+     * @return ServiceId ID of the service to be operated
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set Service ID.
-     * @param ServiceId Service ID.
+     * Set ID of the service to be operated
+     * @param ServiceId ID of the service to be operated
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get API environment. 
-     * @return EnvironmentName API environment.
+     * Get Environment for operating the API. 
+     * @return EnvironmentName Environment for operating the API.
      */
     public String getEnvironmentName() {
         return this.EnvironmentName;
     }
 
     /**
-     * Set API environment.
-     * @param EnvironmentName API environment.
+     * Set Environment for operating the API.
+     * @param EnvironmentName Environment for operating the API.
      */
     public void setEnvironmentName(String EnvironmentName) {
         this.EnvironmentName = EnvironmentName;
     }
 
     /**
-     * Get List of APIs bound with the plugin 
-     * @return ApiIds List of APIs bound with the plugin
+     * Get List of APIs to be bound. 
+     * @return ApiIds List of APIs to be bound.
      */
     public String [] getApiIds() {
         return this.ApiIds;
     }
 
     /**
-     * Set List of APIs bound with the plugin
-     * @param ApiIds List of APIs bound with the plugin
+     * Set List of APIs to be bound.
+     * @param ApiIds List of APIs to be bound.
      */
     public void setApiIds(String [] ApiIds) {
         this.ApiIds = ApiIds;

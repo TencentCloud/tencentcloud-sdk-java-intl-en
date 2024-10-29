@@ -525,6 +525,17 @@ This API is used to get an Anti-DDoS IP blocklist/allowlist.
     }
 
     /**
+     *
+     * @param req DescribeIpBlockListRequest
+     * @return DescribeIpBlockListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpBlockListResponse DescribeIpBlockList(DescribeIpBlockListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIpBlockList", DescribeIpBlockListResponse.class);
+    }
+
+    /**
      *This API is used to query layer-7 rules matched with certificate IDs.
      * @param req DescribeL7RulesBySSLCertIdRequest
      * @return DescribeL7RulesBySSLCertIdResponse
