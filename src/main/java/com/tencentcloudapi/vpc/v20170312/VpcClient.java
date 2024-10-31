@@ -2328,6 +2328,17 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API is used to adjust the renewal flag for the monthly subscription EIP.
+     * @param req ModifyAddressesRenewFlagRequest
+     * @return ModifyAddressesRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAddressesRenewFlagResponse ModifyAddressesRenewFlag(ModifyAddressesRenewFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAddressesRenewFlag", ModifyAddressesRenewFlagResponse.class);
+    }
+
+    /**
      *This API is used to batch modify (add or delete) secondary CIDR blocks.
      * @param req ModifyAssistantCidrRequest
      * @return ModifyAssistantCidrResponse

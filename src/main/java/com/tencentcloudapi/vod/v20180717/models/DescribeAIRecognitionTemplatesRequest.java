@@ -38,6 +38,15 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
     private Long [] Definitions;
 
     /**
+    * Template type filter. Optional values:
+<li>Preset: preset template;</li>
+<li>Custom: user-defined template.</li>If not filled default is empty, i.e., no template type filter.
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * Pagination offset. Default value: 0.
     */
     @SerializedName("Offset")
@@ -81,6 +90,30 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
+    }
+
+    /**
+     * Get Template type filter. Optional values:
+<li>Preset: preset template;</li>
+<li>Custom: user-defined template.</li>If not filled default is empty, i.e., no template type filter. 
+     * @return Type Template type filter. Optional values:
+<li>Preset: preset template;</li>
+<li>Custom: user-defined template.</li>If not filled default is empty, i.e., no template type filter.
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Template type filter. Optional values:
+<li>Preset: preset template;</li>
+<li>Custom: user-defined template.</li>If not filled default is empty, i.e., no template type filter.
+     * @param Type Template type filter. Optional values:
+<li>Preset: preset template;</li>
+<li>Custom: user-defined template.</li>If not filled default is empty, i.e., no template type filter.
+     */
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     /**
@@ -132,6 +165,9 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
                 this.Definitions[i] = new Long(source.Definitions[i]);
             }
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -147,6 +183,7 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

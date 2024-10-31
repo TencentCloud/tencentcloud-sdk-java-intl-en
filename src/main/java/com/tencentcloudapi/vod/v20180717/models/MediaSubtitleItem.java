@@ -39,10 +39,19 @@ public class MediaSubtitleItem extends AbstractModel {
 
     /**
     * Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
     */
     @SerializedName("Language")
     @Expose
@@ -62,6 +71,15 @@ For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
     @SerializedName("Url")
     @Expose
     private String Url;
+
+    /**
+    * Subtitle source, values:
+<li>UserUploaded: user uploaded;</li>
+<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
 
     /**
      * Get Unique subtitle ID 
@@ -97,15 +115,33 @@ For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
 
     /**
      * Get Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646). 
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646). 
      * @return Language Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
      */
     public String getLanguage() {
         return this.Language;
@@ -113,15 +149,33 @@ For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
 
     /**
      * Set Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
      * @param Language Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
      */
     public void setLanguage(String Language) {
         this.Language = Language;
@@ -163,6 +217,30 @@ For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
         this.Url = Url;
     }
 
+    /**
+     * Get Subtitle source, values:
+<li>UserUploaded: user uploaded;</li>
+<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li> 
+     * @return Source Subtitle source, values:
+<li>UserUploaded: user uploaded;</li>
+<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set Subtitle source, values:
+<li>UserUploaded: user uploaded;</li>
+<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
+     * @param Source Subtitle source, values:
+<li>UserUploaded: user uploaded;</li>
+<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
     public MediaSubtitleItem() {
     }
 
@@ -186,6 +264,9 @@ For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
     }
 
 
@@ -198,6 +279,7 @@ For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Source", this.Source);
 
     }
 }

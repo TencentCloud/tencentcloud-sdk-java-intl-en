@@ -29,6 +29,7 @@ public class AiRecognitionResult extends AbstractModel {
 <li>AsrWordsRecognition: speech keyword recognition,</li>
 <li>OcrWordsRecognition: text keyword recognition,</li>
 <li>AsrFullTextRecognition: full speech recognition,</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
 <li>OcrFullTextRecognition: full text recognition,</li>
 <li>HeadTailRecognition: video opening and ending credits recognition,</li>
 <li>ObjectRecognition: object recognition.</li>
@@ -83,6 +84,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private AiRecognitionTaskAsrFullTextResult AsrFullTextTask;
 
     /**
+    * Voice translation result, valid when Type is AsrTranslateRecognition.
+    */
+    @SerializedName("AsrTranslateTask")
+    @Expose
+    private AiRecognitionTaskAsrTranslateResult AsrTranslateTask;
+
+    /**
     * Text keyword recognition result, which is valid when `Type` is
  `OcrWordsRecognition`.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -115,6 +123,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>AsrWordsRecognition: speech keyword recognition,</li>
 <li>OcrWordsRecognition: text keyword recognition,</li>
 <li>AsrFullTextRecognition: full speech recognition,</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
 <li>OcrFullTextRecognition: full text recognition,</li>
 <li>HeadTailRecognition: video opening and ending credits recognition,</li>
 <li>ObjectRecognition: object recognition.</li> 
@@ -123,6 +132,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>AsrWordsRecognition: speech keyword recognition,</li>
 <li>OcrWordsRecognition: text keyword recognition,</li>
 <li>AsrFullTextRecognition: full speech recognition,</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
 <li>OcrFullTextRecognition: full text recognition,</li>
 <li>HeadTailRecognition: video opening and ending credits recognition,</li>
 <li>ObjectRecognition: object recognition.</li>
@@ -137,6 +147,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>AsrWordsRecognition: speech keyword recognition,</li>
 <li>OcrWordsRecognition: text keyword recognition,</li>
 <li>AsrFullTextRecognition: full speech recognition,</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
 <li>OcrFullTextRecognition: full text recognition,</li>
 <li>HeadTailRecognition: video opening and ending credits recognition,</li>
 <li>ObjectRecognition: object recognition.</li>
@@ -145,6 +156,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>AsrWordsRecognition: speech keyword recognition,</li>
 <li>OcrWordsRecognition: text keyword recognition,</li>
 <li>AsrFullTextRecognition: full speech recognition,</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
 <li>OcrFullTextRecognition: full text recognition,</li>
 <li>HeadTailRecognition: video opening and ending credits recognition,</li>
 <li>ObjectRecognition: object recognition.</li>
@@ -274,6 +286,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Voice translation result, valid when Type is AsrTranslateRecognition. 
+     * @return AsrTranslateTask Voice translation result, valid when Type is AsrTranslateRecognition.
+     */
+    public AiRecognitionTaskAsrTranslateResult getAsrTranslateTask() {
+        return this.AsrTranslateTask;
+    }
+
+    /**
+     * Set Voice translation result, valid when Type is AsrTranslateRecognition.
+     * @param AsrTranslateTask Voice translation result, valid when Type is AsrTranslateRecognition.
+     */
+    public void setAsrTranslateTask(AiRecognitionTaskAsrTranslateResult AsrTranslateTask) {
+        this.AsrTranslateTask = AsrTranslateTask;
+    }
+
+    /**
      * Get Text keyword recognition result, which is valid when `Type` is
  `OcrWordsRecognition`.
 Note: this field may return null, indicating that no valid values can be obtained. 
@@ -371,6 +399,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.AsrFullTextTask != null) {
             this.AsrFullTextTask = new AiRecognitionTaskAsrFullTextResult(source.AsrFullTextTask);
         }
+        if (source.AsrTranslateTask != null) {
+            this.AsrTranslateTask = new AiRecognitionTaskAsrTranslateResult(source.AsrTranslateTask);
+        }
         if (source.OcrWordsTask != null) {
             this.OcrWordsTask = new AiRecognitionTaskOcrWordsResult(source.OcrWordsTask);
         }
@@ -393,6 +424,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "FaceTask.", this.FaceTask);
         this.setParamObj(map, prefix + "AsrWordsTask.", this.AsrWordsTask);
         this.setParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
+        this.setParamObj(map, prefix + "AsrTranslateTask.", this.AsrTranslateTask);
         this.setParamObj(map, prefix + "OcrWordsTask.", this.OcrWordsTask);
         this.setParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
         this.setParamObj(map, prefix + "ObjectTask.", this.ObjectTask);

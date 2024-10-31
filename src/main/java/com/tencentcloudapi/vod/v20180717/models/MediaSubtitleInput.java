@@ -32,10 +32,19 @@ public class MediaSubtitleInput extends AbstractModel {
 
     /**
     * Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
     */
     @SerializedName("Language")
     @Expose
@@ -81,15 +90,33 @@ For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
 
     /**
      * Get Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646). 
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646). 
      * @return Language Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
      */
     public String getLanguage() {
         return this.Language;
@@ -97,15 +124,33 @@ For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
 
     /**
      * Set Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
      * @param Language Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
      */
     public void setLanguage(String Language) {
         this.Language = Language;

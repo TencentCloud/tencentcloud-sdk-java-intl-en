@@ -44,7 +44,7 @@ Image restrictions: The single-edge resolution must be less than 5,000 and great
     /**
     * Text description.
 It is used to increase the possibility that the generation result contains the described content.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+A maximum of 256 UTF-8 characters are supported.
     */
     @SerializedName("Prompt")
     @Expose
@@ -53,7 +53,7 @@ Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
     /**
     * Negative text description.
 It is used to reduce the possibility that the generation result contains the described content, but such content cannot be completely avoided.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+English is recommended. A maximum of 256 UTF-8 characters are supported.
     */
     @SerializedName("NegativePrompt")
     @Expose
@@ -118,7 +118,7 @@ The URL is valid for 1 hour.
     * Switch indicating whether to  enhance image clarity. Default value: 0.
 1: on
 0: off
-If the switch is turned on, the image clarity will be enhanced, but the generation time will increase.
+If the switch is turned on, the image clarity will be enhanced and the generation time will increase.
     */
     @SerializedName("EnhanceImage")
     @Expose
@@ -183,10 +183,10 @@ Image restrictions: The single-edge resolution must be less than 5,000 and great
     /**
      * Get Text description.
 It is used to increase the possibility that the generation result contains the described content.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported. 
+A maximum of 256 UTF-8 characters are supported. 
      * @return Prompt Text description.
 It is used to increase the possibility that the generation result contains the described content.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+A maximum of 256 UTF-8 characters are supported.
      */
     public String getPrompt() {
         return this.Prompt;
@@ -195,10 +195,10 @@ Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
     /**
      * Set Text description.
 It is used to increase the possibility that the generation result contains the described content.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+A maximum of 256 UTF-8 characters are supported.
      * @param Prompt Text description.
 It is used to increase the possibility that the generation result contains the described content.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+A maximum of 256 UTF-8 characters are supported.
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
@@ -207,10 +207,10 @@ Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
     /**
      * Get Negative text description.
 It is used to reduce the possibility that the generation result contains the described content, but such content cannot be completely avoided.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported. 
+English is recommended. A maximum of 256 UTF-8 characters are supported. 
      * @return NegativePrompt Negative text description.
 It is used to reduce the possibility that the generation result contains the described content, but such content cannot be completely avoided.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+English is recommended. A maximum of 256 UTF-8 characters are supported.
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
@@ -219,10 +219,10 @@ Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
     /**
      * Set Negative text description.
 It is used to reduce the possibility that the generation result contains the described content, but such content cannot be completely avoided.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+English is recommended. A maximum of 256 UTF-8 characters are supported.
      * @param NegativePrompt Negative text description.
 It is used to reduce the possibility that the generation result contains the described content, but such content cannot be completely avoided.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+English is recommended. A maximum of 256 UTF-8 characters are supported.
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
@@ -380,11 +380,11 @@ The URL is valid for 1 hour.
      * Get Switch indicating whether to  enhance image clarity. Default value: 0.
 1: on
 0: off
-If the switch is turned on, the image clarity will be enhanced, but the generation time will increase. 
+If the switch is turned on, the image clarity will be enhanced and the generation time will increase. 
      * @return EnhanceImage Switch indicating whether to  enhance image clarity. Default value: 0.
 1: on
 0: off
-If the switch is turned on, the image clarity will be enhanced, but the generation time will increase.
+If the switch is turned on, the image clarity will be enhanced and the generation time will increase.
      */
     public Long getEnhanceImage() {
         return this.EnhanceImage;
@@ -394,11 +394,11 @@ If the switch is turned on, the image clarity will be enhanced, but the generati
      * Set Switch indicating whether to  enhance image clarity. Default value: 0.
 1: on
 0: off
-If the switch is turned on, the image clarity will be enhanced, but the generation time will increase.
+If the switch is turned on, the image clarity will be enhanced and the generation time will increase.
      * @param EnhanceImage Switch indicating whether to  enhance image clarity. Default value: 0.
 1: on
 0: off
-If the switch is turned on, the image clarity will be enhanced, but the generation time will increase.
+If the switch is turned on, the image clarity will be enhanced and the generation time will increase.
      */
     public void setEnhanceImage(Long EnhanceImage) {
         this.EnhanceImage = EnhanceImage;

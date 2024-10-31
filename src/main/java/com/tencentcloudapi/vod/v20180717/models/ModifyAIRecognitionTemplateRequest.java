@@ -101,6 +101,13 @@ public class ModifyAIRecognitionTemplateRequest extends AbstractModel {
     private AsrWordsConfigureInfoForUpdate AsrWordsConfigure;
 
     /**
+    * Control parameter of voice translation.
+    */
+    @SerializedName("AsrTranslateConfigure")
+    @Expose
+    private AsrTranslateConfigureInfoForUpdate AsrTranslateConfigure;
+
+    /**
     * Control parameter of object recognition.
     */
     @SerializedName("ObjectConfigure")
@@ -291,6 +298,22 @@ public class ModifyAIRecognitionTemplateRequest extends AbstractModel {
     }
 
     /**
+     * Get Control parameter of voice translation. 
+     * @return AsrTranslateConfigure Control parameter of voice translation.
+     */
+    public AsrTranslateConfigureInfoForUpdate getAsrTranslateConfigure() {
+        return this.AsrTranslateConfigure;
+    }
+
+    /**
+     * Set Control parameter of voice translation.
+     * @param AsrTranslateConfigure Control parameter of voice translation.
+     */
+    public void setAsrTranslateConfigure(AsrTranslateConfigureInfoForUpdate AsrTranslateConfigure) {
+        this.AsrTranslateConfigure = AsrTranslateConfigure;
+    }
+
+    /**
      * Get Control parameter of object recognition. 
      * @return ObjectConfigure Control parameter of object recognition.
      */
@@ -363,6 +386,9 @@ public class ModifyAIRecognitionTemplateRequest extends AbstractModel {
         if (source.AsrWordsConfigure != null) {
             this.AsrWordsConfigure = new AsrWordsConfigureInfoForUpdate(source.AsrWordsConfigure);
         }
+        if (source.AsrTranslateConfigure != null) {
+            this.AsrTranslateConfigure = new AsrTranslateConfigureInfoForUpdate(source.AsrTranslateConfigure);
+        }
         if (source.ObjectConfigure != null) {
             this.ObjectConfigure = new ObjectConfigureInfoForUpdate(source.ObjectConfigure);
         }
@@ -387,6 +413,7 @@ public class ModifyAIRecognitionTemplateRequest extends AbstractModel {
         this.setParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);
         this.setParamObj(map, prefix + "AsrFullTextConfigure.", this.AsrFullTextConfigure);
         this.setParamObj(map, prefix + "AsrWordsConfigure.", this.AsrWordsConfigure);
+        this.setParamObj(map, prefix + "AsrTranslateConfigure.", this.AsrTranslateConfigure);
         this.setParamObj(map, prefix + "ObjectConfigure.", this.ObjectConfigure);
         this.setParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
 

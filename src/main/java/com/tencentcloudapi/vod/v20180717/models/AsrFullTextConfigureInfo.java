@@ -52,11 +52,20 @@ public class AsrFullTextConfigureInfo extends AbstractModel {
     private String SubtitleFormat;
 
     /**
-    * Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+    * Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note: </font> If it fills in an empty string or leaves this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
     */
     @SerializedName("SrcLanguage")
     @Expose
     private String SrcLanguage;
+
+    /**
+    * Specify subtitle name, length limit: 64 characters. This value will be displayed by the player. If not provided, VOD will automatically generate it.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
+
+    */
+    @SerializedName("SubtitleName")
+    @Expose
+    private String SubtitleName;
 
     /**
      * Get Switch of full speech recognition task. Valid values:
@@ -135,19 +144,43 @@ public class AsrFullTextConfigureInfo extends AbstractModel {
     }
 
     /**
-     * Get Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy). 
-     * @return SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+     * Get Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note: </font> If it fills in an empty string or leaves this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy). 
+     * @return SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note: </font> If it fills in an empty string or leaves this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
      */
     public String getSrcLanguage() {
         return this.SrcLanguage;
     }
 
     /**
-     * Set Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
-     * @param SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+     * Set Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note: </font> If it fills in an empty string or leaves this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+     * @param SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note: </font> If it fills in an empty string or leaves this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
      */
     public void setSrcLanguage(String SrcLanguage) {
         this.SrcLanguage = SrcLanguage;
+    }
+
+    /**
+     * Get Specify subtitle name, length limit: 64 characters. This value will be displayed by the player. If not provided, VOD will automatically generate it.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
+ 
+     * @return SubtitleName Specify subtitle name, length limit: 64 characters. This value will be displayed by the player. If not provided, VOD will automatically generate it.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
+
+     */
+    public String getSubtitleName() {
+        return this.SubtitleName;
+    }
+
+    /**
+     * Set Specify subtitle name, length limit: 64 characters. This value will be displayed by the player. If not provided, VOD will automatically generate it.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
+
+     * @param SubtitleName Specify subtitle name, length limit: 64 characters. This value will be displayed by the player. If not provided, VOD will automatically generate it.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
+
+     */
+    public void setSubtitleName(String SubtitleName) {
+        this.SubtitleName = SubtitleName;
     }
 
     public AsrFullTextConfigureInfo() {
@@ -173,6 +206,9 @@ public class AsrFullTextConfigureInfo extends AbstractModel {
         if (source.SrcLanguage != null) {
             this.SrcLanguage = new String(source.SrcLanguage);
         }
+        if (source.SubtitleName != null) {
+            this.SubtitleName = new String(source.SubtitleName);
+        }
     }
 
 
@@ -184,6 +220,7 @@ public class AsrFullTextConfigureInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SubtitleFormats.", this.SubtitleFormats);
         this.setParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
         this.setParamSimple(map, prefix + "SrcLanguage", this.SrcLanguage);
+        this.setParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
 
     }
 }

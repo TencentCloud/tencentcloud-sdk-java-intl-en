@@ -72,6 +72,17 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *This API is used to check whether the current UIN has any adjustment, enabling customers to proactively obtain the adjustment status faster.
+     * @param req DescribeBillAdjustInfoRequest
+     * @return DescribeBillAdjustInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillAdjustInfoResponse DescribeBillAdjustInfo(DescribeBillAdjustInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillAdjustInfo", DescribeBillAdjustInfoResponse.class);
+    }
+
+    /**
      *u200cThis API is used to get bill details.
 Note:
 1. The API request may fail due to network instability or other exceptions. In this case, we recommend you manually retry the request when the API request fails.

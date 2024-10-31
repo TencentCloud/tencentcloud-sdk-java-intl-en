@@ -57,6 +57,13 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
     private String SrcLanguage;
 
     /**
+    * Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+    */
+    @SerializedName("SubtitleName")
+    @Expose
+    private String SubtitleName;
+
+    /**
      * Get Switch of full speech recognition task. Valid values:
 <li>ON: enables intelligent full speech recognition task;</li>
 <li>OFF: disables intelligent full speech recognition task.</li> 
@@ -140,6 +147,22 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
         this.SrcLanguage = SrcLanguage;
     }
 
+    /**
+     * Get Specify subtitle name, length limit: 64 characters. This value will be used for player display. 
+     * @return SubtitleName Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+     */
+    public String getSubtitleName() {
+        return this.SubtitleName;
+    }
+
+    /**
+     * Set Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+     * @param SubtitleName Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+     */
+    public void setSubtitleName(String SubtitleName) {
+        this.SubtitleName = SubtitleName;
+    }
+
     public AsrFullTextConfigureInfoForUpdate() {
     }
 
@@ -160,6 +183,9 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
         if (source.SrcLanguage != null) {
             this.SrcLanguage = new String(source.SrcLanguage);
         }
+        if (source.SubtitleName != null) {
+            this.SubtitleName = new String(source.SubtitleName);
+        }
     }
 
 
@@ -171,6 +197,7 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
         this.setParamObj(map, prefix + "SubtitleFormatsOperation.", this.SubtitleFormatsOperation);
         this.setParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
         this.setParamSimple(map, prefix + "SrcLanguage", this.SrcLanguage);
+        this.setParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
 
     }
 }

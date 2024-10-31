@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCaptchaResultRequest extends AbstractModel {
 
     /**
-    * It must be `9` here. You can configure the CAPTCHA types in the console.
+    * It must be `9` here.
     */
     @SerializedName("CaptchaType")
     @Expose
@@ -101,16 +101,16 @@ public class DescribeCaptchaResultRequest extends AbstractModel {
     private Long NeedGetCaptchaTime;
 
     /**
-     * Get It must be `9` here. You can configure the CAPTCHA types in the console. 
-     * @return CaptchaType It must be `9` here. You can configure the CAPTCHA types in the console.
+     * Get It must be `9` here. 
+     * @return CaptchaType It must be `9` here.
      */
     public Long getCaptchaType() {
         return this.CaptchaType;
     }
 
     /**
-     * Set It must be `9` here. You can configure the CAPTCHA types in the console.
-     * @param CaptchaType It must be `9` here. You can configure the CAPTCHA types in the console.
+     * Set It must be `9` here.
+     * @param CaptchaType It must be `9` here.
      */
     public void setCaptchaType(Long CaptchaType) {
         this.CaptchaType = CaptchaType;

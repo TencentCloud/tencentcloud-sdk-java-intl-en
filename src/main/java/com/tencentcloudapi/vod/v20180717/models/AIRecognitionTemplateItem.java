@@ -45,6 +45,15 @@ public class AIRecognitionTemplateItem extends AbstractModel {
     private String Comment;
 
     /**
+    * Template type, values:
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * Control parameter of opening and closing credits recognition.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
@@ -99,6 +108,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("AsrWordsConfigure")
     @Expose
     private AsrWordsConfigureInfo AsrWordsConfigure;
+
+    /**
+    * Voice translation control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AsrTranslateConfigure")
+    @Expose
+    private AsrTranslateConfigureInfo AsrTranslateConfigure;
 
     /**
     * Control parameter of object recognition.
@@ -175,6 +192,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
+    }
+
+    /**
+     * Get Template type, values:
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li> 
+     * @return Type Template type, values:
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Template type, values:
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
+     * @param Type Template type, values:
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     /**
@@ -318,6 +359,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Voice translation control parameter.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AsrTranslateConfigure Voice translation control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public AsrTranslateConfigureInfo getAsrTranslateConfigure() {
+        return this.AsrTranslateConfigure;
+    }
+
+    /**
+     * Set Voice translation control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AsrTranslateConfigure Voice translation control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAsrTranslateConfigure(AsrTranslateConfigureInfo AsrTranslateConfigure) {
+        this.AsrTranslateConfigure = AsrTranslateConfigure;
+    }
+
+    /**
      * Get Control parameter of object recognition.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return ObjectConfigure Control parameter of object recognition.
@@ -402,6 +463,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.HeadTailConfigure != null) {
             this.HeadTailConfigure = new HeadTailConfigureInfo(source.HeadTailConfigure);
         }
@@ -422,6 +486,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         }
         if (source.AsrWordsConfigure != null) {
             this.AsrWordsConfigure = new AsrWordsConfigureInfo(source.AsrWordsConfigure);
+        }
+        if (source.AsrTranslateConfigure != null) {
+            this.AsrTranslateConfigure = new AsrTranslateConfigureInfo(source.AsrTranslateConfigure);
         }
         if (source.ObjectConfigure != null) {
             this.ObjectConfigure = new ObjectConfigureInfo(source.ObjectConfigure);
@@ -445,6 +512,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "HeadTailConfigure.", this.HeadTailConfigure);
         this.setParamObj(map, prefix + "SegmentConfigure.", this.SegmentConfigure);
         this.setParamObj(map, prefix + "FaceConfigure.", this.FaceConfigure);
@@ -452,6 +520,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);
         this.setParamObj(map, prefix + "AsrFullTextConfigure.", this.AsrFullTextConfigure);
         this.setParamObj(map, prefix + "AsrWordsConfigure.", this.AsrWordsConfigure);
+        this.setParamObj(map, prefix + "AsrTranslateConfigure.", this.AsrTranslateConfigure);
         this.setParamObj(map, prefix + "ObjectConfigure.", this.ObjectConfigure);
         this.setParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
