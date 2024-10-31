@@ -38,18 +38,25 @@ public class CreateApiKeyRequest extends AbstractModel {
     private String AccessKeyType;
 
     /**
-    * Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
+    * Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5-50 letters, digits, and underscores.
     */
     @SerializedName("AccessKeyId")
     @Expose
     private String AccessKeyId;
 
     /**
-    * Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
+    * Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores.
     */
     @SerializedName("AccessKeySecret")
     @Expose
     private String AccessKeySecret;
+
+    /**
+    * 
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
      * Get Custom key name. 
@@ -84,35 +91,51 @@ public class CreateApiKeyRequest extends AbstractModel {
     }
 
     /**
-     * Get Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores. 
-     * @return AccessKeyId Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
+     * Get Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5-50 letters, digits, and underscores. 
+     * @return AccessKeyId Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5-50 letters, digits, and underscores.
      */
     public String getAccessKeyId() {
         return this.AccessKeyId;
     }
 
     /**
-     * Set Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
-     * @param AccessKeyId Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
+     * Set Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5-50 letters, digits, and underscores.
+     * @param AccessKeyId Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5-50 letters, digits, and underscores.
      */
     public void setAccessKeyId(String AccessKeyId) {
         this.AccessKeyId = AccessKeyId;
     }
 
     /**
-     * Get Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores. 
-     * @return AccessKeySecret Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
+     * Get Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores. 
+     * @return AccessKeySecret Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores.
      */
     public String getAccessKeySecret() {
         return this.AccessKeySecret;
     }
 
     /**
-     * Set Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
-     * @param AccessKeySecret Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
+     * Set Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores.
+     * @param AccessKeySecret Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores.
      */
     public void setAccessKeySecret(String AccessKeySecret) {
         this.AccessKeySecret = AccessKeySecret;
+    }
+
+    /**
+     * Get  
+     * @return Tags 
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 
+     * @param Tags 
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
     }
 
     public CreateApiKeyRequest() {
@@ -135,6 +158,12 @@ public class CreateApiKeyRequest extends AbstractModel {
         if (source.AccessKeySecret != null) {
             this.AccessKeySecret = new String(source.AccessKeySecret);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class CreateApiKeyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AccessKeyType", this.AccessKeyType);
         this.setParamSimple(map, prefix + "AccessKeyId", this.AccessKeyId);
         this.setParamSimple(map, prefix + "AccessKeySecret", this.AccessKeySecret);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }
