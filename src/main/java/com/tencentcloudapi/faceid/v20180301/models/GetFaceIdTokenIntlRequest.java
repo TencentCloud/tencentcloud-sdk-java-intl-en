@@ -60,6 +60,22 @@ Default value: `4`.
     private String Extra;
 
     /**
+    * This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+    */
+    @SerializedName("ActionList")
+    @Expose
+    private String ActionList;
+
+    /**
      * Get The detection mode. Valid values:
 `liveness`: Liveness detection only.
 `compare`: Liveness detection and face comparison.
@@ -155,6 +171,58 @@ Default value: `4`.
         this.Extra = Extra;
     }
 
+    /**
+     * Get This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error. 
+     * @return ActionList This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+     */
+    public String getActionList() {
+        return this.ActionList;
+    }
+
+    /**
+     * Set This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+     * @param ActionList This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+     */
+    public void setActionList(String ActionList) {
+        this.ActionList = ActionList;
+    }
+
     public GetFaceIdTokenIntlRequest() {
     }
 
@@ -175,6 +243,9 @@ Default value: `4`.
         if (source.Extra != null) {
             this.Extra = new String(source.Extra);
         }
+        if (source.ActionList != null) {
+            this.ActionList = new String(source.ActionList);
+        }
     }
 
 
@@ -186,6 +257,7 @@ Default value: `4`.
         this.setParamSimple(map, prefix + "SecureLevel", this.SecureLevel);
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
+        this.setParamSimple(map, prefix + "ActionList", this.ActionList);
 
     }
 }

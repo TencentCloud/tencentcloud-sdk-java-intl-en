@@ -128,6 +128,22 @@ Example: HKIDCard
     private Long AutoDowngrade;
 
     /**
+    * This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+    */
+    @SerializedName("ActionList")
+    @Expose
+    private String ActionList;
+
+    /**
      * Get When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered. 
      * @return AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
      */
@@ -411,6 +427,58 @@ Example: HKIDCard
         this.AutoDowngrade = AutoDowngrade;
     }
 
+    /**
+     * Get This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error. 
+     * @return ActionList This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+     */
+    public String getActionList() {
+        return this.ActionList;
+    }
+
+    /**
+     * Set This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+     * @param ActionList This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+     */
+    public void setActionList(String ActionList) {
+        this.ActionList = ActionList;
+    }
+
     public WebVerificationConfigIntl() {
     }
 
@@ -452,6 +520,9 @@ Example: HKIDCard
         if (source.AutoDowngrade != null) {
             this.AutoDowngrade = new Long(source.AutoDowngrade);
         }
+        if (source.ActionList != null) {
+            this.ActionList = new String(source.ActionList);
+        }
     }
 
 
@@ -470,6 +541,7 @@ Example: HKIDCard
         this.setParamSimple(map, prefix + "ThemeColor", this.ThemeColor);
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamSimple(map, prefix + "AutoDowngrade", this.AutoDowngrade);
+        this.setParamSimple(map, prefix + "ActionList", this.ActionList);
 
     }
 }
