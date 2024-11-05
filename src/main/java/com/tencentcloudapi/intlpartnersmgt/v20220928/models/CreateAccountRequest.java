@@ -55,8 +55,7 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
     private String ConfirmPassword;
 
     /**
-    * Customer mobile number, which should be valid and correct.
-A global mobile number within 1-32 digits is allowed, such as 18888888888.
+    * Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
     */
     @SerializedName("PhoneNum")
     @Expose
@@ -82,6 +81,13 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
     @SerializedName("Extended")
     @Expose
     private String Extended;
+
+    /**
+    * Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+    */
+    @SerializedName("VerifyCode")
+    @Expose
+    private String VerifyCode;
 
     /**
      * Get Account type of a new customer. Valid values: `personal`, `company`. 
@@ -160,20 +166,16 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
     }
 
     /**
-     * Get Customer mobile number, which should be valid and correct.
-A global mobile number within 1-32 digits is allowed, such as 18888888888. 
-     * @return PhoneNum Customer mobile number, which should be valid and correct.
-A global mobile number within 1-32 digits is allowed, such as 18888888888.
+     * Get Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number. 
+     * @return PhoneNum Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
      */
     public String getPhoneNum() {
         return this.PhoneNum;
     }
 
     /**
-     * Set Customer mobile number, which should be valid and correct.
-A global mobile number within 1-32 digits is allowed, such as 18888888888.
-     * @param PhoneNum Customer mobile number, which should be valid and correct.
-A global mobile number within 1-32 digits is allowed, such as 18888888888.
+     * Set Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+     * @param PhoneNum Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
      */
     public void setPhoneNum(String PhoneNum) {
         this.PhoneNum = PhoneNum;
@@ -227,6 +229,22 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
         this.Extended = Extended;
     }
 
+    /**
+     * Get Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it. 
+     * @return VerifyCode Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+     */
+    public String getVerifyCode() {
+        return this.VerifyCode;
+    }
+
+    /**
+     * Set Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+     * @param VerifyCode Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+     */
+    public void setVerifyCode(String VerifyCode) {
+        this.VerifyCode = VerifyCode;
+    }
+
     public CreateAccountRequest() {
     }
 
@@ -259,6 +277,9 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
         if (source.Extended != null) {
             this.Extended = new String(source.Extended);
         }
+        if (source.VerifyCode != null) {
+            this.VerifyCode = new String(source.VerifyCode);
+        }
     }
 
 
@@ -274,6 +295,7 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
         this.setParamSimple(map, prefix + "CountryCode", this.CountryCode);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Extended", this.Extended);
+        this.setParamSimple(map, prefix + "VerifyCode", this.VerifyCode);
 
     }
 }

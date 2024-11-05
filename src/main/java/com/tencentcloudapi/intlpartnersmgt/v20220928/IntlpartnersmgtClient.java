@@ -317,4 +317,15 @@ public class IntlpartnersmgtClient extends AbstractClient{
         return this.internalRequest(req, "QueryVoucherPool", QueryVoucherPoolResponse.class);
     }
 
+    /**
+     *This API is used to send a verification code for account registration.
+     * @param req SendVerifyCodeRequest
+     * @return SendVerifyCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendVerifyCodeResponse SendVerifyCode(SendVerifyCodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SendVerifyCode", SendVerifyCodeResponse.class);
+    }
+
 }

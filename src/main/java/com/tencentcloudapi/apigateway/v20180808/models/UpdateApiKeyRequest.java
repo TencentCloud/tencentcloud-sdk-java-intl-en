@@ -31,7 +31,7 @@ public class UpdateApiKeyRequest extends AbstractModel {
     private String AccessKeyId;
 
     /**
-    * Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
+    * Key to be updated, which is required when a custom key is updated. It can contain 10-50 letters, digits, and underscores.
     */
     @SerializedName("AccessKeySecret")
     @Expose
@@ -54,16 +54,16 @@ public class UpdateApiKeyRequest extends AbstractModel {
     }
 
     /**
-     * Get Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores. 
-     * @return AccessKeySecret Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
+     * Get Key to be updated, which is required when a custom key is updated. It can contain 10-50 letters, digits, and underscores. 
+     * @return AccessKeySecret Key to be updated, which is required when a custom key is updated. It can contain 10-50 letters, digits, and underscores.
      */
     public String getAccessKeySecret() {
         return this.AccessKeySecret;
     }
 
     /**
-     * Set Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
-     * @param AccessKeySecret Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
+     * Set Key to be updated, which is required when a custom key is updated. It can contain 10-50 letters, digits, and underscores.
+     * @param AccessKeySecret Key to be updated, which is required when a custom key is updated. It can contain 10-50 letters, digits, and underscores.
      */
     public void setAccessKeySecret(String AccessKeySecret) {
         this.AccessKeySecret = AccessKeySecret;
