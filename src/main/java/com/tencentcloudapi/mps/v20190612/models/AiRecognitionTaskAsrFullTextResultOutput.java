@@ -79,7 +79,9 @@ public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel {
     /**
      * Get Subtitles file storage location. 
      * @return OutputStorage Subtitles file storage location.
+     * @deprecated
      */
+    @Deprecated
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
@@ -87,7 +89,9 @@ public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel {
     /**
      * Set Subtitles file storage location.
      * @param OutputStorage Subtitles file storage location.
+     * @deprecated
      */
+    @Deprecated
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }

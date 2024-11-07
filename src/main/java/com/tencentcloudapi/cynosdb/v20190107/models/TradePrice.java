@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TradePrice extends AbstractModel {
 
     /**
-    * The non-discounted total price of monthly subscribed resources (unit: US cent)
+    * The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalPrice")
@@ -39,7 +39,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Float Discount;
 
     /**
-    * The discounted total price of monthly subscribed resources (unit: US cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
+    * The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalPriceDiscount")
@@ -47,7 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long TotalPriceDiscount;
 
     /**
-    * The non-discounted unit price of pay-as-you-go resources (unit: US cent)
+    * The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UnitPrice")
@@ -55,7 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long UnitPrice;
 
     /**
-    * The discounted unit price of pay-as-you-go resources (unit: US cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
+    * The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UnitPriceDiscount")
@@ -70,9 +70,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ChargeUnit;
 
     /**
-     * Get The non-discounted total price of monthly subscribed resources (unit: US cent)
+     * Get The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalPrice The non-discounted total price of monthly subscribed resources (unit: US cent)
+     * @return TotalPrice The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalPrice() {
@@ -80,9 +80,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The non-discounted total price of monthly subscribed resources (unit: US cent)
+     * Set The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalPrice The non-discounted total price of monthly subscribed resources (unit: US cent)
+     * @param TotalPrice The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalPrice(Long TotalPrice) {
@@ -106,9 +106,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The discounted total price of monthly subscribed resources (unit: US cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
+     * Get The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalPriceDiscount The discounted total price of monthly subscribed resources (unit: US cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
+     * @return TotalPriceDiscount The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalPriceDiscount() {
@@ -116,9 +116,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The discounted total price of monthly subscribed resources (unit: US cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
+     * Set The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalPriceDiscount The discounted total price of monthly subscribed resources (unit: US cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
+     * @param TotalPriceDiscount The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalPriceDiscount(Long TotalPriceDiscount) {
@@ -126,9 +126,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The non-discounted unit price of pay-as-you-go resources (unit: US cent)
+     * Get The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UnitPrice The non-discounted unit price of pay-as-you-go resources (unit: US cent)
+     * @return UnitPrice The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getUnitPrice() {
@@ -136,9 +136,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The non-discounted unit price of pay-as-you-go resources (unit: US cent)
+     * Set The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UnitPrice The non-discounted unit price of pay-as-you-go resources (unit: US cent)
+     * @param UnitPrice The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUnitPrice(Long UnitPrice) {
@@ -146,9 +146,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The discounted unit price of pay-as-you-go resources (unit: US cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
+     * Get The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UnitPriceDiscount The discounted unit price of pay-as-you-go resources (unit: US cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
+     * @return UnitPriceDiscount The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getUnitPriceDiscount() {
@@ -156,9 +156,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The discounted unit price of pay-as-you-go resources (unit: US cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
+     * Set The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UnitPriceDiscount The discounted unit price of pay-as-you-go resources (unit: US cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
+     * @param UnitPriceDiscount The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUnitPriceDiscount(Long UnitPriceDiscount) {

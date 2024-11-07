@@ -48,7 +48,7 @@ public class DescribeQualityControlTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Preset: preset template. Custom: custom template.
+    * "Preset": preset template, "Custom": custom template
     */
     @SerializedName("Type")
     @Expose
@@ -122,16 +122,16 @@ public class DescribeQualityControlTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get Preset: preset template. Custom: custom template. 
-     * @return Type Preset: preset template. Custom: custom template.
+     * Get "Preset": preset template, "Custom": custom template 
+     * @return Type "Preset": preset template, "Custom": custom template
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Preset: preset template. Custom: custom template.
-     * @param Type Preset: preset template. Custom: custom template.
+     * Set "Preset": preset template, "Custom": custom template
+     * @param Type "Preset": preset template, "Custom": custom template
      */
     public void setType(String Type) {
         this.Type = Type;

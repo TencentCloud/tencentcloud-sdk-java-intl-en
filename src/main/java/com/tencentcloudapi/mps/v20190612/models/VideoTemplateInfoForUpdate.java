@@ -24,23 +24,24 @@ import java.util.HashMap;
 public class VideoTemplateInfoForUpdate extends AbstractModel {
 
     /**
-    * Video stream encoding format. Valid values:
-<li>h264: H.264 encoding.</li>
-<li>h265: H.265 encoding.</li>
-<li>h266: H.266 encoding.</li>
-<li>av1: AOMedia Video 1 encoding.</li>
-<li>vp8: VP8 encoding.</li>
-<li>vp9: VP9 encoding.</li>
-<li>mpeg2: MPEG2 encoding.</li>
-<li>dnxhd: DNxHD encoding.</li>
-<li>mv-hevc: MV-HEVC encoding.</li>
-Note: A resolution within 640x480 should be specified for H.265 encoding.
+    * Encoding format for video streams. Optional values:
+<li>h264: H.264 encoding</li>
+<li>h265: H.265 encoding</li>
+<li>h266: H.266 encoding</li>
+<li>av1: AOMedia Video 1 encoding</li>
+<li>vp8: VP8 encoding</li>
+<li>vp9: VP9 encoding</li>
+<li>mpeg2: MPEG2 encoding</li>
+<li>dnxhd: DNxHD encoding</li>
+<li>mv-hevc: MV-HEVC encoding</li>
 
-Note: AV1 encoding containers only support mp4, webm, and mkv.
-Note: H.266 encoding containers only support mp4, hls, ts, and mov.
-Note: VP8 and VP9 encoding containers only support webm and mkv.
-Note: MPEG2 and DNxHD encoding containers only support mxf.
-Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
+Note: AV1 encoding containers currently only support mp4, webm, and mkv.
+Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers currently only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers currently only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
+
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Codec")
     @Expose
@@ -92,26 +93,52 @@ Note: When resolution adaption is enabled, `Width` cannot be smaller than `Heigh
     private Long Height;
 
     /**
-    * Frame interval between I keyframes. Value range: 0 and [1,100000]. If this parameter is 0, the system will automatically set the GOP length.
+    * Interval between I-frames (keyframes), which can be customized in frames or seconds. GOP value range: 0 and [1, 100000].
+If this parameter is 0, the system will automatically set the GOP length.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Gop")
     @Expose
     private Long Gop;
 
     /**
-    * Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+    * GOP value unit. Optional values: 
+frame: indicates frame 
+second: indicates second
+Default value: frame
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("GopUnit")
+    @Expose
+    private String GopUnit;
+
+    /**
+    * Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
+ <li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
+<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
+<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
+<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+
+<li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
+Default value: black.
+
+Note: Only stretch and black are supported for adaptive bitrate streaming.
+
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("FillType")
     @Expose
     private String FillType;
 
     /**
-    * The control factor of video constant bitrate. Value range: [0, 51]. This parameter will be disabled if you enter `0`.
-It is not recommended to specify this parameter if there are no special requirements.
+    * Control factor for constant video bitrate. Value range: [0, 51] and 100.
+It is recommended not to specify this parameter if there are no special requirements.
+
+Note:
+When you need to set it to auto, fill in 100.
+If Mode is set to ABR, the Vcrf value does not need to be configured.
+If Mode is set to CBR, the Vcrf value does not need to be configured.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Vcrf")
     @Expose
@@ -126,6 +153,16 @@ Default value: 0. If this parameter is set to `1`, multiple streams with differe
     @SerializedName("ContentAdaptStream")
     @Expose
     private Long ContentAdaptStream;
+
+    /**
+    * Average segment duration. Value range: (0-10], unit: second
+Default value: 10
+Note: It is used only in the format of HLS.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("HlsTime")
+    @Expose
+    private Long HlsTime;
 
     /**
     * HLS segment type. Valid values:
@@ -162,80 +199,189 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Stereo3dType;
 
     /**
-     * Get Video stream encoding format. Valid values:
-<li>h264: H.264 encoding.</li>
-<li>h265: H.265 encoding.</li>
-<li>h266: H.266 encoding.</li>
-<li>av1: AOMedia Video 1 encoding.</li>
-<li>vp8: VP8 encoding.</li>
-<li>vp9: VP9 encoding.</li>
-<li>mpeg2: MPEG2 encoding.</li>
-<li>dnxhd: DNxHD encoding.</li>
-<li>mv-hevc: MV-HEVC encoding.</li>
-Note: A resolution within 640x480 should be specified for H.265 encoding.
+    * Profile, suitable for different scenarios. 
+baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos. 
+main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices. 
+high: the highest encoding level, with 8x8 prediction added to the main profile and support for custom quantification. It is widely used in scenarios such as Blu-ray storage and HDTV.
+default: automatic filling along with the original video
 
-Note: AV1 encoding containers only support mp4, webm, and mkv.
-Note: H.266 encoding containers only support mp4, hls, ts, and mov.
-Note: VP8 and VP9 encoding containers only support webm and mkv.
-Note: MPEG2 and DNxHD encoding containers only support mxf.
-Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Codec Video stream encoding format. Valid values:
-<li>h264: H.264 encoding.</li>
-<li>h265: H.265 encoding.</li>
-<li>h266: H.266 encoding.</li>
-<li>av1: AOMedia Video 1 encoding.</li>
-<li>vp8: VP8 encoding.</li>
-<li>vp9: VP9 encoding.</li>
-<li>mpeg2: MPEG2 encoding.</li>
-<li>dnxhd: DNxHD encoding.</li>
-<li>mv-hevc: MV-HEVC encoding.</li>
-Note: A resolution within 640x480 should be specified for H.265 encoding.
+This configuration appears only when the encoding standard is set to H264. Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("VideoProfile")
+    @Expose
+    private String VideoProfile;
 
-Note: AV1 encoding containers only support mp4, webm, and mkv.
-Note: H.266 encoding containers only support mp4, hls, ts, and mov.
-Note: VP8 and VP9 encoding containers only support webm and mkv.
-Note: MPEG2 and DNxHD encoding containers only support mxf.
-Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
+    /**
+    * Encoder level. Default value: auto ("")
+If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1. 
+If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("VideoLevel")
+    @Expose
+    private String VideoLevel;
+
+    /**
+    * Maximum number of consecutive B-frames. The default is auto, and 0 - 16 and -1 are supported.
+Note:
+
+-1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Bframes")
+    @Expose
+    private Long Bframes;
+
+    /**
+    * Bitrate control mode. Optional values: 
+VBR: variable bitrate. The output bitrate is adjusted based on the complexity of the video image, ensuring higher image quality. This mode is suitable for storage scenarios as well as applications with high image quality requirements. 
+ABR: average bitrate. The average bitrate of the output video is kept stable to the greatest extent, but short-term bitrate fluctuations are allowed. This mode is suitable for scenarios where it is necessary to minimize the overall bitrate while a certain quality is maintained. 
+CBR: constant bitrate. The output bitrate remains constant during the video encoding process, regardless of changes in image complexity. This mode is suitable for scenarios with strict network bandwidth requirements, such as live streaming. 
+VCRF: constant rate factor. The video quality is controlled by setting a quality factor, achieving constant quality encoding of videos. The bitrate is automatically adjusted based on the complexity of the content. This mode is suitable for scenarios where maintaining a certain quality is desired. 
+VBR is selected by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
+    * Display aspect ratio. Optional values: [1:1, 2:1, default]
+Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Sar")
+    @Expose
+    private String Sar;
+
+    /**
+    * Adaptive I-frame decision. When it is enabled, Media Processing Service will automatically identify transition points between different scenarios in the video (usually they are visually distinct frames, such as those of switching from one shot to another) and adaptively insert keyframes (I-frames) at these points to improve the random accessibility and encoding efficiency of the video. Optional values: 
+0: Disable the adaptive I-frame decision 
+1: Enable the adaptive I-frame decision 
+Default value: 0	
+	
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("NoScenecut")
+    @Expose
+    private Long NoScenecut;
+
+    /**
+    * Bit: 8/10 is supported. Default value: 8	
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("BitDepth")
+    @Expose
+    private Long BitDepth;
+
+    /**
+    * Preservation of original timestamp. Optional values: 
+0: Disabled 
+1: Enabled 
+Default value: Disabled	
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("RawPts")
+    @Expose
+    private Long RawPts;
+
+    /**
+    * Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100, optional values: [0-100] and -1 
+Note: -1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Compress")
+    @Expose
+    private Long Compress;
+
+    /**
+    * Special segment configuration	
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SegmentSpecificInfo")
+    @Expose
+    private SegmentSpecificInfo SegmentSpecificInfo;
+
+    /**
+     * Get Encoding format for video streams. Optional values:
+<li>h264: H.264 encoding</li>
+<li>h265: H.265 encoding</li>
+<li>h266: H.266 encoding</li>
+<li>av1: AOMedia Video 1 encoding</li>
+<li>vp8: VP8 encoding</li>
+<li>vp9: VP9 encoding</li>
+<li>mpeg2: MPEG2 encoding</li>
+<li>dnxhd: DNxHD encoding</li>
+<li>mv-hevc: MV-HEVC encoding</li>
+
+Note: AV1 encoding containers currently only support mp4, webm, and mkv.
+Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers currently only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers currently only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
+
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Codec Encoding format for video streams. Optional values:
+<li>h264: H.264 encoding</li>
+<li>h265: H.265 encoding</li>
+<li>h266: H.266 encoding</li>
+<li>av1: AOMedia Video 1 encoding</li>
+<li>vp8: VP8 encoding</li>
+<li>vp9: VP9 encoding</li>
+<li>mpeg2: MPEG2 encoding</li>
+<li>dnxhd: DNxHD encoding</li>
+<li>mv-hevc: MV-HEVC encoding</li>
+
+Note: AV1 encoding containers currently only support mp4, webm, and mkv.
+Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers currently only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers currently only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
+
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set Video stream encoding format. Valid values:
-<li>h264: H.264 encoding.</li>
-<li>h265: H.265 encoding.</li>
-<li>h266: H.266 encoding.</li>
-<li>av1: AOMedia Video 1 encoding.</li>
-<li>vp8: VP8 encoding.</li>
-<li>vp9: VP9 encoding.</li>
-<li>mpeg2: MPEG2 encoding.</li>
-<li>dnxhd: DNxHD encoding.</li>
-<li>mv-hevc: MV-HEVC encoding.</li>
-Note: A resolution within 640x480 should be specified for H.265 encoding.
+     * Set Encoding format for video streams. Optional values:
+<li>h264: H.264 encoding</li>
+<li>h265: H.265 encoding</li>
+<li>h266: H.266 encoding</li>
+<li>av1: AOMedia Video 1 encoding</li>
+<li>vp8: VP8 encoding</li>
+<li>vp9: VP9 encoding</li>
+<li>mpeg2: MPEG2 encoding</li>
+<li>dnxhd: DNxHD encoding</li>
+<li>mv-hevc: MV-HEVC encoding</li>
 
-Note: AV1 encoding containers only support mp4, webm, and mkv.
-Note: H.266 encoding containers only support mp4, hls, ts, and mov.
-Note: VP8 and VP9 encoding containers only support webm and mkv.
-Note: MPEG2 and DNxHD encoding containers only support mxf.
-Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Codec Video stream encoding format. Valid values:
-<li>h264: H.264 encoding.</li>
-<li>h265: H.265 encoding.</li>
-<li>h266: H.266 encoding.</li>
-<li>av1: AOMedia Video 1 encoding.</li>
-<li>vp8: VP8 encoding.</li>
-<li>vp9: VP9 encoding.</li>
-<li>mpeg2: MPEG2 encoding.</li>
-<li>dnxhd: DNxHD encoding.</li>
-<li>mv-hevc: MV-HEVC encoding.</li>
-Note: A resolution within 640x480 should be specified for H.265 encoding.
+Note: AV1 encoding containers currently only support mp4, webm, and mkv.
+Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers currently only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers currently only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
 
-Note: AV1 encoding containers only support mp4, webm, and mkv.
-Note: H.266 encoding containers only support mp4, hls, ts, and mov.
-Note: VP8 and VP9 encoding containers only support webm and mkv.
-Note: MPEG2 and DNxHD encoding containers only support mxf.
-Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Codec Encoding format for video streams. Optional values:
+<li>h264: H.264 encoding</li>
+<li>h265: H.265 encoding</li>
+<li>h266: H.266 encoding</li>
+<li>av1: AOMedia Video 1 encoding</li>
+<li>vp8: VP8 encoding</li>
+<li>vp9: VP9 encoding</li>
+<li>mpeg2: MPEG2 encoding</li>
+<li>dnxhd: DNxHD encoding</li>
+<li>mv-hevc: MV-HEVC encoding</li>
+
+Note: AV1 encoding containers currently only support mp4, webm, and mkv.
+Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers currently only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers currently only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
+
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
@@ -362,68 +508,160 @@ Note: When resolution adaption is enabled, `Width` cannot be smaller than `Heigh
     }
 
     /**
-     * Get Frame interval between I keyframes. Value range: 0 and [1,100000]. If this parameter is 0, the system will automatically set the GOP length. 
-     * @return Gop Frame interval between I keyframes. Value range: 0 and [1,100000]. If this parameter is 0, the system will automatically set the GOP length.
+     * Get Interval between I-frames (keyframes), which can be customized in frames or seconds. GOP value range: 0 and [1, 100000].
+If this parameter is 0, the system will automatically set the GOP length.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Gop Interval between I-frames (keyframes), which can be customized in frames or seconds. GOP value range: 0 and [1, 100000].
+If this parameter is 0, the system will automatically set the GOP length.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getGop() {
         return this.Gop;
     }
 
     /**
-     * Set Frame interval between I keyframes. Value range: 0 and [1,100000]. If this parameter is 0, the system will automatically set the GOP length.
-     * @param Gop Frame interval between I keyframes. Value range: 0 and [1,100000]. If this parameter is 0, the system will automatically set the GOP length.
+     * Set Interval between I-frames (keyframes), which can be customized in frames or seconds. GOP value range: 0 and [1, 100000].
+If this parameter is 0, the system will automatically set the GOP length.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Gop Interval between I-frames (keyframes), which can be customized in frames or seconds. GOP value range: 0 and [1, 100000].
+If this parameter is 0, the system will automatically set the GOP length.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setGop(Long Gop) {
         this.Gop = Gop;
     }
 
     /**
-     * Get Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li> 
-     * @return FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+     * Get GOP value unit. Optional values: 
+frame: indicates frame 
+second: indicates second
+Default value: frame
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return GopUnit GOP value unit. Optional values: 
+frame: indicates frame 
+second: indicates second
+Default value: frame
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getGopUnit() {
+        return this.GopUnit;
+    }
+
+    /**
+     * Set GOP value unit. Optional values: 
+frame: indicates frame 
+second: indicates second
+Default value: frame
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param GopUnit GOP value unit. Optional values: 
+frame: indicates frame 
+second: indicates second
+Default value: frame
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setGopUnit(String GopUnit) {
+        this.GopUnit = GopUnit;
+    }
+
+    /**
+     * Get Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
+ <li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
+<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
+<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
+<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+
+<li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
+Default value: black.
+
+Note: Only stretch and black are supported for adaptive bitrate streaming.
+
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return FillType Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
+ <li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
+<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
+<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
+<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+
+<li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
+Default value: black.
+
+Note: Only stretch and black are supported for adaptive bitrate streaming.
+
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getFillType() {
         return this.FillType;
     }
 
     /**
-     * Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
-     * @param FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+     * Set Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
+ <li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
+<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
+<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
+<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+
+<li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
+Default value: black.
+
+Note: Only stretch and black are supported for adaptive bitrate streaming.
+
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param FillType Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
+ <li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
+<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
+<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
+<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+
+<li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
+Default value: black.
+
+Note: Only stretch and black are supported for adaptive bitrate streaming.
+
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setFillType(String FillType) {
         this.FillType = FillType;
     }
 
     /**
-     * Get The control factor of video constant bitrate. Value range: [0, 51]. This parameter will be disabled if you enter `0`.
-It is not recommended to specify this parameter if there are no special requirements. 
-     * @return Vcrf The control factor of video constant bitrate. Value range: [0, 51]. This parameter will be disabled if you enter `0`.
-It is not recommended to specify this parameter if there are no special requirements.
+     * Get Control factor for constant video bitrate. Value range: [0, 51] and 100.
+It is recommended not to specify this parameter if there are no special requirements.
+
+Note:
+When you need to set it to auto, fill in 100.
+If Mode is set to ABR, the Vcrf value does not need to be configured.
+If Mode is set to CBR, the Vcrf value does not need to be configured.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Vcrf Control factor for constant video bitrate. Value range: [0, 51] and 100.
+It is recommended not to specify this parameter if there are no special requirements.
+
+Note:
+When you need to set it to auto, fill in 100.
+If Mode is set to ABR, the Vcrf value does not need to be configured.
+If Mode is set to CBR, the Vcrf value does not need to be configured.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getVcrf() {
         return this.Vcrf;
     }
 
     /**
-     * Set The control factor of video constant bitrate. Value range: [0, 51]. This parameter will be disabled if you enter `0`.
-It is not recommended to specify this parameter if there are no special requirements.
-     * @param Vcrf The control factor of video constant bitrate. Value range: [0, 51]. This parameter will be disabled if you enter `0`.
-It is not recommended to specify this parameter if there are no special requirements.
+     * Set Control factor for constant video bitrate. Value range: [0, 51] and 100.
+It is recommended not to specify this parameter if there are no special requirements.
+
+Note:
+When you need to set it to auto, fill in 100.
+If Mode is set to ABR, the Vcrf value does not need to be configured.
+If Mode is set to CBR, the Vcrf value does not need to be configured.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Vcrf Control factor for constant video bitrate. Value range: [0, 51] and 100.
+It is recommended not to specify this parameter if there are no special requirements.
+
+Note:
+When you need to set it to auto, fill in 100.
+If Mode is set to ABR, the Vcrf value does not need to be configured.
+If Mode is set to CBR, the Vcrf value does not need to be configured.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setVcrf(Long Vcrf) {
         this.Vcrf = Vcrf;
@@ -455,6 +693,34 @@ Default value: 0. If this parameter is set to `1`, multiple streams with differe
      */
     public void setContentAdaptStream(Long ContentAdaptStream) {
         this.ContentAdaptStream = ContentAdaptStream;
+    }
+
+    /**
+     * Get Average segment duration. Value range: (0-10], unit: second
+Default value: 10
+Note: It is used only in the format of HLS.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return HlsTime Average segment duration. Value range: (0-10], unit: second
+Default value: 10
+Note: It is used only in the format of HLS.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Long getHlsTime() {
+        return this.HlsTime;
+    }
+
+    /**
+     * Set Average segment duration. Value range: (0-10], unit: second
+Default value: 10
+Note: It is used only in the format of HLS.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param HlsTime Average segment duration. Value range: (0-10], unit: second
+Default value: 10
+Note: It is used only in the format of HLS.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setHlsTime(Long HlsTime) {
+        this.HlsTime = HlsTime;
     }
 
     /**
@@ -557,6 +823,306 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Stereo3dType = Stereo3dType;
     }
 
+    /**
+     * Get Profile, suitable for different scenarios. 
+baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos. 
+main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices. 
+high: the highest encoding level, with 8x8 prediction added to the main profile and support for custom quantification. It is widely used in scenarios such as Blu-ray storage and HDTV.
+default: automatic filling along with the original video
+
+This configuration appears only when the encoding standard is set to H264. Default value: default
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return VideoProfile Profile, suitable for different scenarios. 
+baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos. 
+main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices. 
+high: the highest encoding level, with 8x8 prediction added to the main profile and support for custom quantification. It is widely used in scenarios such as Blu-ray storage and HDTV.
+default: automatic filling along with the original video
+
+This configuration appears only when the encoding standard is set to H264. Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getVideoProfile() {
+        return this.VideoProfile;
+    }
+
+    /**
+     * Set Profile, suitable for different scenarios. 
+baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos. 
+main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices. 
+high: the highest encoding level, with 8x8 prediction added to the main profile and support for custom quantification. It is widely used in scenarios such as Blu-ray storage and HDTV.
+default: automatic filling along with the original video
+
+This configuration appears only when the encoding standard is set to H264. Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param VideoProfile Profile, suitable for different scenarios. 
+baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos. 
+main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices. 
+high: the highest encoding level, with 8x8 prediction added to the main profile and support for custom quantification. It is widely used in scenarios such as Blu-ray storage and HDTV.
+default: automatic filling along with the original video
+
+This configuration appears only when the encoding standard is set to H264. Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setVideoProfile(String VideoProfile) {
+        this.VideoProfile = VideoProfile;
+    }
+
+    /**
+     * Get Encoder level. Default value: auto ("")
+If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1. 
+If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return VideoLevel Encoder level. Default value: auto ("")
+If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1. 
+If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getVideoLevel() {
+        return this.VideoLevel;
+    }
+
+    /**
+     * Set Encoder level. Default value: auto ("")
+If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1. 
+If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param VideoLevel Encoder level. Default value: auto ("")
+If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1. 
+If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setVideoLevel(String VideoLevel) {
+        this.VideoLevel = VideoLevel;
+    }
+
+    /**
+     * Get Maximum number of consecutive B-frames. The default is auto, and 0 - 16 and -1 are supported.
+Note:
+
+-1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Bframes Maximum number of consecutive B-frames. The default is auto, and 0 - 16 and -1 are supported.
+Note:
+
+-1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Long getBframes() {
+        return this.Bframes;
+    }
+
+    /**
+     * Set Maximum number of consecutive B-frames. The default is auto, and 0 - 16 and -1 are supported.
+Note:
+
+-1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Bframes Maximum number of consecutive B-frames. The default is auto, and 0 - 16 and -1 are supported.
+Note:
+
+-1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setBframes(Long Bframes) {
+        this.Bframes = Bframes;
+    }
+
+    /**
+     * Get Bitrate control mode. Optional values: 
+VBR: variable bitrate. The output bitrate is adjusted based on the complexity of the video image, ensuring higher image quality. This mode is suitable for storage scenarios as well as applications with high image quality requirements. 
+ABR: average bitrate. The average bitrate of the output video is kept stable to the greatest extent, but short-term bitrate fluctuations are allowed. This mode is suitable for scenarios where it is necessary to minimize the overall bitrate while a certain quality is maintained. 
+CBR: constant bitrate. The output bitrate remains constant during the video encoding process, regardless of changes in image complexity. This mode is suitable for scenarios with strict network bandwidth requirements, such as live streaming. 
+VCRF: constant rate factor. The video quality is controlled by setting a quality factor, achieving constant quality encoding of videos. The bitrate is automatically adjusted based on the complexity of the content. This mode is suitable for scenarios where maintaining a certain quality is desired. 
+VBR is selected by default.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Mode Bitrate control mode. Optional values: 
+VBR: variable bitrate. The output bitrate is adjusted based on the complexity of the video image, ensuring higher image quality. This mode is suitable for storage scenarios as well as applications with high image quality requirements. 
+ABR: average bitrate. The average bitrate of the output video is kept stable to the greatest extent, but short-term bitrate fluctuations are allowed. This mode is suitable for scenarios where it is necessary to minimize the overall bitrate while a certain quality is maintained. 
+CBR: constant bitrate. The output bitrate remains constant during the video encoding process, regardless of changes in image complexity. This mode is suitable for scenarios with strict network bandwidth requirements, such as live streaming. 
+VCRF: constant rate factor. The video quality is controlled by setting a quality factor, achieving constant quality encoding of videos. The bitrate is automatically adjusted based on the complexity of the content. This mode is suitable for scenarios where maintaining a certain quality is desired. 
+VBR is selected by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set Bitrate control mode. Optional values: 
+VBR: variable bitrate. The output bitrate is adjusted based on the complexity of the video image, ensuring higher image quality. This mode is suitable for storage scenarios as well as applications with high image quality requirements. 
+ABR: average bitrate. The average bitrate of the output video is kept stable to the greatest extent, but short-term bitrate fluctuations are allowed. This mode is suitable for scenarios where it is necessary to minimize the overall bitrate while a certain quality is maintained. 
+CBR: constant bitrate. The output bitrate remains constant during the video encoding process, regardless of changes in image complexity. This mode is suitable for scenarios with strict network bandwidth requirements, such as live streaming. 
+VCRF: constant rate factor. The video quality is controlled by setting a quality factor, achieving constant quality encoding of videos. The bitrate is automatically adjusted based on the complexity of the content. This mode is suitable for scenarios where maintaining a certain quality is desired. 
+VBR is selected by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Mode Bitrate control mode. Optional values: 
+VBR: variable bitrate. The output bitrate is adjusted based on the complexity of the video image, ensuring higher image quality. This mode is suitable for storage scenarios as well as applications with high image quality requirements. 
+ABR: average bitrate. The average bitrate of the output video is kept stable to the greatest extent, but short-term bitrate fluctuations are allowed. This mode is suitable for scenarios where it is necessary to minimize the overall bitrate while a certain quality is maintained. 
+CBR: constant bitrate. The output bitrate remains constant during the video encoding process, regardless of changes in image complexity. This mode is suitable for scenarios with strict network bandwidth requirements, such as live streaming. 
+VCRF: constant rate factor. The video quality is controlled by setting a quality factor, achieving constant quality encoding of videos. The bitrate is automatically adjusted based on the complexity of the content. This mode is suitable for scenarios where maintaining a certain quality is desired. 
+VBR is selected by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
+     * Get Display aspect ratio. Optional values: [1:1, 2:1, default]
+Default value: default
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Sar Display aspect ratio. Optional values: [1:1, 2:1, default]
+Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getSar() {
+        return this.Sar;
+    }
+
+    /**
+     * Set Display aspect ratio. Optional values: [1:1, 2:1, default]
+Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Sar Display aspect ratio. Optional values: [1:1, 2:1, default]
+Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setSar(String Sar) {
+        this.Sar = Sar;
+    }
+
+    /**
+     * Get Adaptive I-frame decision. When it is enabled, Media Processing Service will automatically identify transition points between different scenarios in the video (usually they are visually distinct frames, such as those of switching from one shot to another) and adaptively insert keyframes (I-frames) at these points to improve the random accessibility and encoding efficiency of the video. Optional values: 
+0: Disable the adaptive I-frame decision 
+1: Enable the adaptive I-frame decision 
+Default value: 0	
+	
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return NoScenecut Adaptive I-frame decision. When it is enabled, Media Processing Service will automatically identify transition points between different scenarios in the video (usually they are visually distinct frames, such as those of switching from one shot to another) and adaptively insert keyframes (I-frames) at these points to improve the random accessibility and encoding efficiency of the video. Optional values: 
+0: Disable the adaptive I-frame decision 
+1: Enable the adaptive I-frame decision 
+Default value: 0	
+	
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Long getNoScenecut() {
+        return this.NoScenecut;
+    }
+
+    /**
+     * Set Adaptive I-frame decision. When it is enabled, Media Processing Service will automatically identify transition points between different scenarios in the video (usually they are visually distinct frames, such as those of switching from one shot to another) and adaptively insert keyframes (I-frames) at these points to improve the random accessibility and encoding efficiency of the video. Optional values: 
+0: Disable the adaptive I-frame decision 
+1: Enable the adaptive I-frame decision 
+Default value: 0	
+	
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param NoScenecut Adaptive I-frame decision. When it is enabled, Media Processing Service will automatically identify transition points between different scenarios in the video (usually they are visually distinct frames, such as those of switching from one shot to another) and adaptively insert keyframes (I-frames) at these points to improve the random accessibility and encoding efficiency of the video. Optional values: 
+0: Disable the adaptive I-frame decision 
+1: Enable the adaptive I-frame decision 
+Default value: 0	
+	
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setNoScenecut(Long NoScenecut) {
+        this.NoScenecut = NoScenecut;
+    }
+
+    /**
+     * Get Bit: 8/10 is supported. Default value: 8	
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return BitDepth Bit: 8/10 is supported. Default value: 8	
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Long getBitDepth() {
+        return this.BitDepth;
+    }
+
+    /**
+     * Set Bit: 8/10 is supported. Default value: 8	
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param BitDepth Bit: 8/10 is supported. Default value: 8	
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setBitDepth(Long BitDepth) {
+        this.BitDepth = BitDepth;
+    }
+
+    /**
+     * Get Preservation of original timestamp. Optional values: 
+0: Disabled 
+1: Enabled 
+Default value: Disabled	
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return RawPts Preservation of original timestamp. Optional values: 
+0: Disabled 
+1: Enabled 
+Default value: Disabled	
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Long getRawPts() {
+        return this.RawPts;
+    }
+
+    /**
+     * Set Preservation of original timestamp. Optional values: 
+0: Disabled 
+1: Enabled 
+Default value: Disabled	
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param RawPts Preservation of original timestamp. Optional values: 
+0: Disabled 
+1: Enabled 
+Default value: Disabled	
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setRawPts(Long RawPts) {
+        this.RawPts = RawPts;
+    }
+
+    /**
+     * Get Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100, optional values: [0-100] and -1 
+Note: -1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Compress Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100, optional values: [0-100] and -1 
+Note: -1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Long getCompress() {
+        return this.Compress;
+    }
+
+    /**
+     * Set Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100, optional values: [0-100] and -1 
+Note: -1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Compress Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100, optional values: [0-100] and -1 
+Note: -1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setCompress(Long Compress) {
+        this.Compress = Compress;
+    }
+
+    /**
+     * Get Special segment configuration	
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SegmentSpecificInfo Special segment configuration	
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public SegmentSpecificInfo getSegmentSpecificInfo() {
+        return this.SegmentSpecificInfo;
+    }
+
+    /**
+     * Set Special segment configuration	
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SegmentSpecificInfo Special segment configuration	
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setSegmentSpecificInfo(SegmentSpecificInfo SegmentSpecificInfo) {
+        this.SegmentSpecificInfo = SegmentSpecificInfo;
+    }
+
     public VideoTemplateInfoForUpdate() {
     }
 
@@ -586,6 +1152,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Gop != null) {
             this.Gop = new Long(source.Gop);
         }
+        if (source.GopUnit != null) {
+            this.GopUnit = new String(source.GopUnit);
+        }
         if (source.FillType != null) {
             this.FillType = new String(source.FillType);
         }
@@ -595,6 +1164,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ContentAdaptStream != null) {
             this.ContentAdaptStream = new Long(source.ContentAdaptStream);
         }
+        if (source.HlsTime != null) {
+            this.HlsTime = new Long(source.HlsTime);
+        }
         if (source.SegmentType != null) {
             this.SegmentType = new Long(source.SegmentType);
         }
@@ -603,6 +1175,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.Stereo3dType != null) {
             this.Stereo3dType = new String(source.Stereo3dType);
+        }
+        if (source.VideoProfile != null) {
+            this.VideoProfile = new String(source.VideoProfile);
+        }
+        if (source.VideoLevel != null) {
+            this.VideoLevel = new String(source.VideoLevel);
+        }
+        if (source.Bframes != null) {
+            this.Bframes = new Long(source.Bframes);
+        }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.Sar != null) {
+            this.Sar = new String(source.Sar);
+        }
+        if (source.NoScenecut != null) {
+            this.NoScenecut = new Long(source.NoScenecut);
+        }
+        if (source.BitDepth != null) {
+            this.BitDepth = new Long(source.BitDepth);
+        }
+        if (source.RawPts != null) {
+            this.RawPts = new Long(source.RawPts);
+        }
+        if (source.Compress != null) {
+            this.Compress = new Long(source.Compress);
+        }
+        if (source.SegmentSpecificInfo != null) {
+            this.SegmentSpecificInfo = new SegmentSpecificInfo(source.SegmentSpecificInfo);
         }
     }
 
@@ -618,12 +1220,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "Gop", this.Gop);
+        this.setParamSimple(map, prefix + "GopUnit", this.GopUnit);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "Vcrf", this.Vcrf);
         this.setParamSimple(map, prefix + "ContentAdaptStream", this.ContentAdaptStream);
+        this.setParamSimple(map, prefix + "HlsTime", this.HlsTime);
         this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
         this.setParamSimple(map, prefix + "FpsDenominator", this.FpsDenominator);
         this.setParamSimple(map, prefix + "Stereo3dType", this.Stereo3dType);
+        this.setParamSimple(map, prefix + "VideoProfile", this.VideoProfile);
+        this.setParamSimple(map, prefix + "VideoLevel", this.VideoLevel);
+        this.setParamSimple(map, prefix + "Bframes", this.Bframes);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamSimple(map, prefix + "Sar", this.Sar);
+        this.setParamSimple(map, prefix + "NoScenecut", this.NoScenecut);
+        this.setParamSimple(map, prefix + "BitDepth", this.BitDepth);
+        this.setParamSimple(map, prefix + "RawPts", this.RawPts);
+        this.setParamSimple(map, prefix + "Compress", this.Compress);
+        this.setParamObj(map, prefix + "SegmentSpecificInfo.", this.SegmentSpecificInfo);
 
     }
 }

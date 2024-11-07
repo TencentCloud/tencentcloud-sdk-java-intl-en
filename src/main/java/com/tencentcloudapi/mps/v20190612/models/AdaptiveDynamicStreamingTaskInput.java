@@ -24,59 +24,66 @@ import java.util.HashMap;
 public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
 
     /**
-    * Adaptive bitrate streaming template ID.
+    * Adaptive dynamic streaming template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * List of up to 10 image or text watermarks.
+    * Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
     */
     @SerializedName("WatermarkSet")
     @Expose
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * 
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
+    * Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
+If you need to define an output path, the path must end with `.{format}`. Refer to [Filename Variable Description](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1) for variable names.
+Example of relative path:
+<li>filename_{variable name}.{format}</li>
+<li>filename.{format}</li>
+Example of absolute path:
+<li>/custom path/filename_{variable name}.{format}</li>
+If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
     */
     @SerializedName("OutputObjectPath")
     @Expose
     private String OutputObjectPath;
 
     /**
-    * The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
+    * After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
     */
     @SerializedName("SubStreamObjectName")
     @Expose
     private String SubStreamObjectName;
 
     /**
-    * The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+    * After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
     */
     @SerializedName("SegmentObjectName")
     @Expose
     private String SegmentObjectName;
 
     /**
-    * 
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Subtitle file to be inserted.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("AddOnSubtitles")
     @Expose
     private AddOnSubtitle [] AddOnSubtitles;
 
     /**
-    * 
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("DrmInfo")
     @Expose
@@ -93,140 +100,168 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DefinitionType;
 
     /**
-     * Get Adaptive bitrate streaming template ID. 
-     * @return Definition Adaptive bitrate streaming template ID.
+     * Get Adaptive dynamic streaming template ID. 
+     * @return Definition Adaptive dynamic streaming template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Adaptive bitrate streaming template ID.
-     * @param Definition Adaptive bitrate streaming template ID.
+     * Set Adaptive dynamic streaming template ID.
+     * @param Definition Adaptive dynamic streaming template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get List of up to 10 image or text watermarks. 
-     * @return WatermarkSet List of up to 10 image or text watermarks.
+     * Get Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported. 
+     * @return WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      */
     public WatermarkInput [] getWatermarkSet() {
         return this.WatermarkSet;
     }
 
     /**
-     * Set List of up to 10 image or text watermarks.
-     * @param WatermarkSet List of up to 10 image or text watermarks.
+     * Set Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+     * @param WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;
     }
 
     /**
-     * Get 
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return OutputStorage 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return OutputStorage Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param OutputStorage 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param OutputStorage Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`. 
-     * @return OutputObjectPath The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
+     * Get Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
+If you need to define an output path, the path must end with `.{format}`. Refer to [Filename Variable Description](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1) for variable names.
+Example of relative path:
+<li>filename_{variable name}.{format}</li>
+<li>filename.{format}</li>
+Example of absolute path:
+<li>/custom path/filename_{variable name}.{format}</li>
+If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}. 
+     * @return OutputObjectPath Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
+If you need to define an output path, the path must end with `.{format}`. Refer to [Filename Variable Description](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1) for variable names.
+Example of relative path:
+<li>filename_{variable name}.{format}</li>
+<li>filename.{format}</li>
+Example of absolute path:
+<li>/custom path/filename_{variable name}.{format}</li>
+If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
      */
     public String getOutputObjectPath() {
         return this.OutputObjectPath;
     }
 
     /**
-     * Set The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
-     * @param OutputObjectPath The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
+     * Set Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
+If you need to define an output path, the path must end with `.{format}`. Refer to [Filename Variable Description](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1) for variable names.
+Example of relative path:
+<li>filename_{variable name}.{format}</li>
+<li>filename.{format}</li>
+Example of absolute path:
+<li>/custom path/filename_{variable name}.{format}</li>
+If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
+     * @param OutputObjectPath Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
+If you need to define an output path, the path must end with `.{format}`. Refer to [Filename Variable Description](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1) for variable names.
+Example of relative path:
+<li>filename_{variable name}.{format}</li>
+<li>filename.{format}</li>
+Example of absolute path:
+<li>/custom path/filename_{variable name}.{format}</li>
+If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
      */
     public void setOutputObjectPath(String OutputObjectPath) {
         this.OutputObjectPath = OutputObjectPath;
     }
 
     /**
-     * Get The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`. 
-     * @return SubStreamObjectName The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
+     * Get After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`. 
+     * @return SubStreamObjectName After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
      */
     public String getSubStreamObjectName() {
         return this.SubStreamObjectName;
     }
 
     /**
-     * Set The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
-     * @param SubStreamObjectName The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
+     * Set After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
+     * @param SubStreamObjectName After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
      */
     public void setSubStreamObjectName(String SubStreamObjectName) {
         this.SubStreamObjectName = SubStreamObjectName;
     }
 
     /**
-     * Get The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`. 
-     * @return SegmentObjectName The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+     * Get After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`. 
+     * @return SegmentObjectName After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
      */
     public String getSegmentObjectName() {
         return this.SegmentObjectName;
     }
 
     /**
-     * Set The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
-     * @param SegmentObjectName The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+     * Set After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+     * @param SegmentObjectName After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
      */
     public void setSegmentObjectName(String SegmentObjectName) {
         this.SegmentObjectName = SegmentObjectName;
     }
 
     /**
-     * Get 
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AddOnSubtitles 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Subtitle file to be inserted.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return AddOnSubtitles Subtitle file to be inserted.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public AddOnSubtitle [] getAddOnSubtitles() {
         return this.AddOnSubtitles;
     }
 
     /**
-     * Set 
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AddOnSubtitles 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Subtitle file to be inserted.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param AddOnSubtitles Subtitle file to be inserted.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setAddOnSubtitles(AddOnSubtitle [] AddOnSubtitles) {
         this.AddOnSubtitles = AddOnSubtitles;
     }
 
     /**
-     * Get 
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return DrmInfo 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Drm information.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return DrmInfo Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public DrmInfo getDrmInfo() {
         return this.DrmInfo;
     }
 
     /**
-     * Set 
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param DrmInfo 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param DrmInfo Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setDrmInfo(DrmInfo DrmInfo) {
         this.DrmInfo = DrmInfo;

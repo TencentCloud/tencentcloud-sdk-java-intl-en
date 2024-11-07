@@ -31,7 +31,9 @@ public class ProcessMediaRequest extends AbstractModel {
     private MediaInputInfo InputInfo;
 
     /**
-    * The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+    * Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
+
+Note: When InputInfo.Type is URL, this parameter is required.
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -148,16 +150,24 @@ Note 3: The trigger configured for an orchestration is for automatically startin
     }
 
     /**
-     * Get The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited. 
-     * @return OutputStorage The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+     * Get Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
+
+Note: When InputInfo.Type is URL, this parameter is required. 
+     * @return OutputStorage Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
+
+Note: When InputInfo.Type is URL, this parameter is required.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
-     * @param OutputStorage The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+     * Set Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
+
+Note: When InputInfo.Type is URL, this parameter is required.
+     * @param OutputStorage Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
+
+Note: When InputInfo.Type is URL, this parameter is required.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

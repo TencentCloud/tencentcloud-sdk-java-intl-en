@@ -38,7 +38,7 @@ There can be up to 10 tags, each with a length limit of 16 characters.
     */
     @SerializedName("LabelSet")
     @Expose
-    private String LabelSet;
+    private String [] LabelSet;
 
     /**
     * Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
@@ -84,7 +84,7 @@ There can be up to 10 tags, each with a length limit of 16 characters.
      * @return LabelSet Custom text filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom text keywords.
 There can be up to 10 tags, each with a length limit of 16 characters.
      */
-    public String getLabelSet() {
+    public String [] getLabelSet() {
         return this.LabelSet;
     }
 
@@ -94,7 +94,7 @@ There can be up to 10 tags, each with a length limit of 16 characters.
      * @param LabelSet Custom text filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom text keywords.
 There can be up to 10 tags, each with a length limit of 16 characters.
      */
-    public void setLabelSet(String LabelSet) {
+    public void setLabelSet(String [] LabelSet) {
         this.LabelSet = LabelSet;
     }
 
@@ -142,7 +142,10 @@ There can be up to 10 tags, each with a length limit of 16 characters.
             this.Switch = new String(source.Switch);
         }
         if (source.LabelSet != null) {
-            this.LabelSet = new String(source.LabelSet);
+            this.LabelSet = new String[source.LabelSet.length];
+            for (int i = 0; i < source.LabelSet.length; i++) {
+                this.LabelSet[i] = new String(source.LabelSet[i]);
+            }
         }
         if (source.BlockConfidence != null) {
             this.BlockConfidence = new Long(source.BlockConfidence);
@@ -158,7 +161,7 @@ There can be up to 10 tags, each with a length limit of 16 characters.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
-        this.setParamSimple(map, prefix + "LabelSet", this.LabelSet);
+        this.setParamArraySimple(map, prefix + "LabelSet.", this.LabelSet);
         this.setParamSimple(map, prefix + "BlockConfidence", this.BlockConfidence);
         this.setParamSimple(map, prefix + "ReviewConfidence", this.ReviewConfidence);
 

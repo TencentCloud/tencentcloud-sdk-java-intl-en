@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class TerrorismConfigureInfo extends AbstractModel {
 
     /**
-    * The parameters for detecting sensitive information based on OCR.
-    */
-    @SerializedName("OcrReviewInfo")
-    @Expose
-    private TerrorismOcrReviewTemplateInfo OcrReviewInfo;
-
-    /**
     * The parameters for detecting sensitive information in images.
     */
     @SerializedName("ImgReviewInfo")
@@ -38,20 +31,11 @@ public class TerrorismConfigureInfo extends AbstractModel {
     private TerrorismImgReviewTemplateInfo ImgReviewInfo;
 
     /**
-     * Get The parameters for detecting sensitive information based on OCR. 
-     * @return OcrReviewInfo The parameters for detecting sensitive information based on OCR.
-     */
-    public TerrorismOcrReviewTemplateInfo getOcrReviewInfo() {
-        return this.OcrReviewInfo;
-    }
-
-    /**
-     * Set The parameters for detecting sensitive information based on OCR.
-     * @param OcrReviewInfo The parameters for detecting sensitive information based on OCR.
-     */
-    public void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo OcrReviewInfo) {
-        this.OcrReviewInfo = OcrReviewInfo;
-    }
+    * The parameters for detecting sensitive information based on OCR.
+    */
+    @SerializedName("OcrReviewInfo")
+    @Expose
+    private TerrorismOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
      * Get The parameters for detecting sensitive information in images. 
@@ -69,6 +53,22 @@ public class TerrorismConfigureInfo extends AbstractModel {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
+    /**
+     * Get The parameters for detecting sensitive information based on OCR. 
+     * @return OcrReviewInfo The parameters for detecting sensitive information based on OCR.
+     */
+    public TerrorismOcrReviewTemplateInfo getOcrReviewInfo() {
+        return this.OcrReviewInfo;
+    }
+
+    /**
+     * Set The parameters for detecting sensitive information based on OCR.
+     * @param OcrReviewInfo The parameters for detecting sensitive information based on OCR.
+     */
+    public void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo OcrReviewInfo) {
+        this.OcrReviewInfo = OcrReviewInfo;
+    }
+
     public TerrorismConfigureInfo() {
     }
 
@@ -77,11 +77,11 @@ public class TerrorismConfigureInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public TerrorismConfigureInfo(TerrorismConfigureInfo source) {
-        if (source.OcrReviewInfo != null) {
-            this.OcrReviewInfo = new TerrorismOcrReviewTemplateInfo(source.OcrReviewInfo);
-        }
         if (source.ImgReviewInfo != null) {
             this.ImgReviewInfo = new TerrorismImgReviewTemplateInfo(source.ImgReviewInfo);
+        }
+        if (source.OcrReviewInfo != null) {
+            this.OcrReviewInfo = new TerrorismOcrReviewTemplateInfo(source.OcrReviewInfo);
         }
     }
 
@@ -90,8 +90,8 @@ public class TerrorismConfigureInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "OcrReviewInfo.", this.OcrReviewInfo);
         this.setParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
+        this.setParamObj(map, prefix + "OcrReviewInfo.", this.OcrReviewInfo);
 
     }
 }
