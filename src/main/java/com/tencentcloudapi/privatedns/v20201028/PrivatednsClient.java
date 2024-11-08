@@ -39,6 +39,39 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create an endpoint.
+     * @param req CreateEndPointRequest
+     * @return CreateEndPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEndPointResponse CreateEndPoint(CreateEndPointRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEndPoint", CreateEndPointResponse.class);
+    }
+
+    /**
+     *This API is used to create an endpoint and an endpoint service simultaneously.
+     * @param req CreateEndPointAndEndPointServiceRequest
+     * @return CreateEndPointAndEndPointServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEndPointAndEndPointServiceResponse CreateEndPointAndEndPointService(CreateEndPointAndEndPointServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEndPointAndEndPointService", CreateEndPointAndEndPointServiceResponse.class);
+    }
+
+    /**
+     *This API is used to create a custom forwarding rule.
+     * @param req CreateForwardRuleRequest
+     * @return CreateForwardRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateForwardRuleResponse CreateForwardRule(CreateForwardRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateForwardRule", CreateForwardRuleResponse.class);
+    }
+
+    /**
      *This API is used to create a Private DNS account.
      * @param req CreatePrivateDNSAccountRequest
      * @return CreatePrivateDNSAccountResponse
@@ -113,6 +146,28 @@ public class PrivatednsClient extends AbstractClient{
     public DescribeDashboardResponse DescribeDashboard(DescribeDashboardRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDashboard", DescribeDashboardResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the endpoint list.
+     * @param req DescribeEndPointListRequest
+     * @return DescribeEndPointListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEndPointListResponse DescribeEndPointList(DescribeEndPointListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEndPointList", DescribeEndPointListResponse.class);
+    }
+
+    /**
+     *This API is used to query the forwarding rule list.
+     * @param req DescribeForwardRuleListRequest
+     * @return DescribeForwardRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeForwardRuleListResponse DescribeForwardRuleList(DescribeForwardRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeForwardRuleList", DescribeForwardRuleListResponse.class);
     }
 
     /**
