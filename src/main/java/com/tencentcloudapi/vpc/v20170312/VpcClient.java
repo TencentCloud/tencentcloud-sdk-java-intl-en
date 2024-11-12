@@ -2361,6 +2361,17 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API is used to adjust the bandwidth of a [bandwidth package](https://www.tencentcloud.com/document/product/684/15245).
+     * @param req ModifyBandwidthPackageBandwidthRequest
+     * @return ModifyBandwidthPackageBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBandwidthPackageBandwidthResponse ModifyBandwidthPackageBandwidth(ModifyBandwidthPackageBandwidthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBandwidthPackageBandwidth", ModifyBandwidthPackageBandwidthResponse.class);
+    }
+
+    /**
      *This API is used to modify CCN-associated instance attributes. Currently, only the `description` can be modified.
      * @param req ModifyCcnAttachedInstancesAttributeRequest
      * @return ModifyCcnAttachedInstancesAttributeResponse

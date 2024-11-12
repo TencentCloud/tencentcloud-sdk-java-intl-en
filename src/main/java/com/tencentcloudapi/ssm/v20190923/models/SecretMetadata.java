@@ -96,11 +96,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long NextRotationTime;
 
     /**
-    * `0`: user-defined secret.
-`1`: Tencent Cloud services secret.
-`2`: SSH key secret.
-`3`: Tencent Cloud API key secret.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * 0: custom secret;1: database credential;2: SSH key secret;3: cloud API key secret;4: Redis secret;Note: This field may return `null`, indicating no valid value can be obtained.
     */
     @SerializedName("SecretType")
     @Expose
@@ -339,32 +335,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get `0`: user-defined secret.
-`1`: Tencent Cloud services secret.
-`2`: SSH key secret.
-`3`: Tencent Cloud API key secret.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SecretType `0`: user-defined secret.
-`1`: Tencent Cloud services secret.
-`2`: SSH key secret.
-`3`: Tencent Cloud API key secret.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get 0: custom secret;1: database credential;2: SSH key secret;3: cloud API key secret;4: Redis secret;Note: This field may return `null`, indicating no valid value can be obtained. 
+     * @return SecretType 0: custom secret;1: database credential;2: SSH key secret;3: cloud API key secret;4: Redis secret;Note: This field may return `null`, indicating no valid value can be obtained.
      */
     public Long getSecretType() {
         return this.SecretType;
     }
 
     /**
-     * Set `0`: user-defined secret.
-`1`: Tencent Cloud services secret.
-`2`: SSH key secret.
-`3`: Tencent Cloud API key secret.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SecretType `0`: user-defined secret.
-`1`: Tencent Cloud services secret.
-`2`: SSH key secret.
-`3`: Tencent Cloud API key secret.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set 0: custom secret;1: database credential;2: SSH key secret;3: cloud API key secret;4: Redis secret;Note: This field may return `null`, indicating no valid value can be obtained.
+     * @param SecretType 0: custom secret;1: database credential;2: SSH key secret;3: cloud API key secret;4: Redis secret;Note: This field may return `null`, indicating no valid value can be obtained.
      */
     public void setSecretType(Long SecretType) {
         this.SecretType = SecretType;
