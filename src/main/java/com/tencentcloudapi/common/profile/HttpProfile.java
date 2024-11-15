@@ -99,7 +99,7 @@ public class HttpProfile {
     public HttpProfile() {
         this.reqMethod = HttpProfile.REQ_POST;
         this.endpoint = null;
-        this.rootDomain = "tencentcloudapi.com";
+        this.rootDomain = "intl.tencentcloudapi.com";
         this.protocol = HttpProfile.REQ_HTTPS;
         this.readTimeout = 0;
         this.writeTimeout = 0;
