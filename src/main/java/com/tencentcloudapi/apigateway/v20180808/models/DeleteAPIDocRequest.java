@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteAPIDocRequest extends AbstractModel {
 
     /**
-    * API document ID
+    * API document ID.
     */
     @SerializedName("ApiDocId")
     @Expose
     private String ApiDocId;
 
     /**
-     * Get API document ID 
-     * @return ApiDocId API document ID
+     * Get API document ID. 
+     * @return ApiDocId API document ID.
      */
     public String getApiDocId() {
         return this.ApiDocId;
     }
 
     /**
-     * Set API document ID
-     * @param ApiDocId API document ID
+     * Set API document ID.
+     * @param ApiDocId API document ID.
      */
     public void setApiDocId(String ApiDocId) {
         this.ApiDocId = ApiDocId;

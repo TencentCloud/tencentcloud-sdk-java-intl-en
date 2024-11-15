@@ -203,6 +203,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long ClusterEtcdNodeNum;
 
     /**
+    * CDC Id
+Note: This field may return "null", indicating that no valid value can be obtained.
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -630,6 +638,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.ClusterEtcdNodeNum = ClusterEtcdNodeNum;
     }
 
+    /**
+     * Get CDC Id
+Note: This field may return "null", indicating that no valid value can be obtained. 
+     * @return CdcId CDC Id
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set CDC Id
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param CdcId CDC Id
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
     public Cluster() {
     }
 
@@ -713,6 +741,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.ClusterEtcdNodeNum != null) {
             this.ClusterEtcdNodeNum = new Long(source.ClusterEtcdNodeNum);
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
     }
 
 
@@ -744,6 +775,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
         this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
         this.setParamSimple(map, prefix + "ClusterEtcdNodeNum", this.ClusterEtcdNodeNum);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

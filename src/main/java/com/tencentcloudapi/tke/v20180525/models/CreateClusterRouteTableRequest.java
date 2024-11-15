@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateClusterRouteTableRequest extends AbstractModel {
 
     /**
-    * Route table name
+    * Route table name, usually the cluster ID
     */
     @SerializedName("RouteTableName")
     @Expose
@@ -45,23 +45,23 @@ public class CreateClusterRouteTableRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * Whether to ignore CIDR conflicts
+    * Whether to ignore CIDR and VPC route table conflicts, 0 means not to ignore, 1 means to ignore. The default is not to ignore.
     */
     @SerializedName("IgnoreClusterCidrConflict")
     @Expose
     private Long IgnoreClusterCidrConflict;
 
     /**
-     * Get Route table name 
-     * @return RouteTableName Route table name
+     * Get Route table name, usually the cluster ID 
+     * @return RouteTableName Route table name, usually the cluster ID
      */
     public String getRouteTableName() {
         return this.RouteTableName;
     }
 
     /**
-     * Set Route table name
-     * @param RouteTableName Route table name
+     * Set Route table name, usually the cluster ID
+     * @param RouteTableName Route table name, usually the cluster ID
      */
     public void setRouteTableName(String RouteTableName) {
         this.RouteTableName = RouteTableName;
@@ -100,16 +100,16 @@ public class CreateClusterRouteTableRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to ignore CIDR conflicts 
-     * @return IgnoreClusterCidrConflict Whether to ignore CIDR conflicts
+     * Get Whether to ignore CIDR and VPC route table conflicts, 0 means not to ignore, 1 means to ignore. The default is not to ignore. 
+     * @return IgnoreClusterCidrConflict Whether to ignore CIDR and VPC route table conflicts, 0 means not to ignore, 1 means to ignore. The default is not to ignore.
      */
     public Long getIgnoreClusterCidrConflict() {
         return this.IgnoreClusterCidrConflict;
     }
 
     /**
-     * Set Whether to ignore CIDR conflicts
-     * @param IgnoreClusterCidrConflict Whether to ignore CIDR conflicts
+     * Set Whether to ignore CIDR and VPC route table conflicts, 0 means not to ignore, 1 means to ignore. The default is not to ignore.
+     * @param IgnoreClusterCidrConflict Whether to ignore CIDR and VPC route table conflicts, 0 means not to ignore, 1 means to ignore. The default is not to ignore.
      */
     public void setIgnoreClusterCidrConflict(Long IgnoreClusterCidrConflict) {
         this.IgnoreClusterCidrConflict = IgnoreClusterCidrConflict;

@@ -208,6 +208,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private StandardDebug StandardDebug;
 
     /**
+    * Just-in-time media processing configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+    */
+    @SerializedName("JITVideoProcess")
+    @Expose
+    private JITVideoProcess JITVideoProcess;
+
+    /**
      * Get Name of the site 
      * @return ZoneName Name of the site
      */
@@ -667,6 +675,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.StandardDebug = StandardDebug;
     }
 
+    /**
+     * Get Just-in-time media processing configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return JITVideoProcess Just-in-time media processing configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     */
+    public JITVideoProcess getJITVideoProcess() {
+        return this.JITVideoProcess;
+    }
+
+    /**
+     * Set Just-in-time media processing configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param JITVideoProcess Just-in-time media processing configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     */
+    public void setJITVideoProcess(JITVideoProcess JITVideoProcess) {
+        this.JITVideoProcess = JITVideoProcess;
+    }
+
     public ZoneSetting() {
     }
 
@@ -744,6 +772,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.StandardDebug != null) {
             this.StandardDebug = new StandardDebug(source.StandardDebug);
         }
+        if (source.JITVideoProcess != null) {
+            this.JITVideoProcess = new JITVideoProcess(source.JITVideoProcess);
+        }
     }
 
 
@@ -774,6 +805,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
         this.setParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
         this.setParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
+        this.setParamObj(map, prefix + "JITVideoProcess.", this.JITVideoProcess);
 
     }
 }

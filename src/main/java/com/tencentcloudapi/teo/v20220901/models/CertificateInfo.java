@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CertificateInfo extends AbstractModel {
 
     /**
-    * ID of the server certificate.
+    * Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
     */
     @SerializedName("CertId")
     @Expose
@@ -81,16 +81,16 @@ u200c<li>`failed`: Application rejected</li>
     private String Status;
 
     /**
-     * Get ID of the server certificate. 
-     * @return CertId ID of the server certificate.
+     * Get Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl). 
+     * @return CertId Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set ID of the server certificate.
-     * @param CertId ID of the server certificate.
+     * Set Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+     * @param CertId Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;

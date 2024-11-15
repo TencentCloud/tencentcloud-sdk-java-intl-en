@@ -180,6 +180,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String AlipayUserId;
 
     /**
+    * WeCom user ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("WeComUserId")
+    @Expose
+    private String WeComUserId;
+
+    /**
     * Description
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -732,6 +740,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get WeCom user ID.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return WeComUserId WeCom user ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getWeComUserId() {
+        return this.WeComUserId;
+    }
+
+    /**
+     * Set WeCom user ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param WeComUserId WeCom user ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setWeComUserId(String WeComUserId) {
+        this.WeComUserId = WeComUserId;
+    }
+
+    /**
      * Get Description
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Description Description
@@ -1225,6 +1253,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.AlipayUserId != null) {
             this.AlipayUserId = new String(source.AlipayUserId);
         }
+        if (source.WeComUserId != null) {
+            this.WeComUserId = new String(source.WeComUserId);
+        }
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
@@ -1315,6 +1346,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "WechatOpenId", this.WechatOpenId);
         this.setParamSimple(map, prefix + "WechatUnionId", this.WechatUnionId);
         this.setParamSimple(map, prefix + "AlipayUserId", this.AlipayUserId);
+        this.setParamSimple(map, prefix + "WeComUserId", this.WeComUserId);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Locale", this.Locale);

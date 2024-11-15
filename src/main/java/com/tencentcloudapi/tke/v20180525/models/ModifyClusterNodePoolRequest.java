@@ -73,6 +73,13 @@ public class ModifyClusterNodePoolRequest extends AbstractModel {
     private Taint [] Taints;
 
     /**
+    * Node Annotation List
+    */
+    @SerializedName("Annotations")
+    @Expose
+    private AnnotationValue [] Annotations;
+
+    /**
     * Indicates whether auto scaling is enabled.
     */
     @SerializedName("EnableAutoscale")
@@ -148,6 +155,13 @@ public class ModifyClusterNodePoolRequest extends AbstractModel {
     @SerializedName("DockerGraphPath")
     @Expose
     private String DockerGraphPath;
+
+    /**
+    * Base64-encoded custom script
+    */
+    @SerializedName("PreStartUserScript")
+    @Expose
+    private String PreStartUserScript;
 
     /**
      * Get Cluster ID 
@@ -259,6 +273,22 @@ public class ModifyClusterNodePoolRequest extends AbstractModel {
      */
     public void setTaints(Taint [] Taints) {
         this.Taints = Taints;
+    }
+
+    /**
+     * Get Node Annotation List 
+     * @return Annotations Node Annotation List
+     */
+    public AnnotationValue [] getAnnotations() {
+        return this.Annotations;
+    }
+
+    /**
+     * Set Node Annotation List
+     * @param Annotations Node Annotation List
+     */
+    public void setAnnotations(AnnotationValue [] Annotations) {
+        this.Annotations = Annotations;
     }
 
     /**
@@ -437,6 +467,22 @@ public class ModifyClusterNodePoolRequest extends AbstractModel {
         this.DockerGraphPath = DockerGraphPath;
     }
 
+    /**
+     * Get Base64-encoded custom script 
+     * @return PreStartUserScript Base64-encoded custom script
+     */
+    public String getPreStartUserScript() {
+        return this.PreStartUserScript;
+    }
+
+    /**
+     * Set Base64-encoded custom script
+     * @param PreStartUserScript Base64-encoded custom script
+     */
+    public void setPreStartUserScript(String PreStartUserScript) {
+        this.PreStartUserScript = PreStartUserScript;
+    }
+
     public ModifyClusterNodePoolRequest() {
     }
 
@@ -470,6 +516,12 @@ public class ModifyClusterNodePoolRequest extends AbstractModel {
             this.Taints = new Taint[source.Taints.length];
             for (int i = 0; i < source.Taints.length; i++) {
                 this.Taints[i] = new Taint(source.Taints[i]);
+            }
+        }
+        if (source.Annotations != null) {
+            this.Annotations = new AnnotationValue[source.Annotations.length];
+            for (int i = 0; i < source.Annotations.length; i++) {
+                this.Annotations[i] = new AnnotationValue(source.Annotations[i]);
             }
         }
         if (source.EnableAutoscale != null) {
@@ -508,6 +560,9 @@ public class ModifyClusterNodePoolRequest extends AbstractModel {
         if (source.DockerGraphPath != null) {
             this.DockerGraphPath = new String(source.DockerGraphPath);
         }
+        if (source.PreStartUserScript != null) {
+            this.PreStartUserScript = new String(source.PreStartUserScript);
+        }
     }
 
 
@@ -522,6 +577,7 @@ public class ModifyClusterNodePoolRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MinNodesNum", this.MinNodesNum);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
+        this.setParamArrayObj(map, prefix + "Annotations.", this.Annotations);
         this.setParamSimple(map, prefix + "EnableAutoscale", this.EnableAutoscale);
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
@@ -533,6 +589,7 @@ public class ModifyClusterNodePoolRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         this.setParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
+        this.setParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
 
     }
 }

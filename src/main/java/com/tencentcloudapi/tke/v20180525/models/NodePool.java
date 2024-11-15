@@ -80,6 +80,13 @@ public class NodePool extends AbstractModel {
     private Taint [] Taints;
 
     /**
+    * Node Annotation List
+    */
+    @SerializedName("Annotations")
+    @Expose
+    private AnnotationValue [] Annotations;
+
+    /**
     * Node list
     */
     @SerializedName("NodeCountSummary")
@@ -116,6 +123,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     @SerializedName("DesiredNodesNum")
     @Expose
     private Long DesiredNodesNum;
+
+    /**
+    * Runtime Description
+Note: This field may return "null", indicating that no valid value can be obtained.
+    */
+    @SerializedName("RuntimeConfig")
+    @Expose
+    private RuntimeConfig RuntimeConfig;
 
     /**
     * The operating system of the node pool
@@ -172,6 +187,56 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
+
+    /**
+    * Node Configuration
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+    */
+    @SerializedName("ExtraArgs")
+    @Expose
+    private InstanceExtraArgs ExtraArgs;
+
+    /**
+    * GPU Driver-related Parameters
+Note: This field may return "null", indicating that no valid value can be obtained.
+    */
+    @SerializedName("GPUArgs")
+    @Expose
+    private GPUArgs GPUArgs;
+
+    /**
+    * Specified value of dockerd --graph. Default value: /var/lib/docker
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+    */
+    @SerializedName("DockerGraphPath")
+    @Expose
+    private String DockerGraphPath;
+
+    /**
+    * Multiple Disk Data Disk Mount Information: When creating a new node, make sure that the CVM purchase parameters include the information of purchasing multiple data disks. For example, in the DataDisks under RunInstancesPara of CreateClusterInstances API, it must also be set to purchase multiple data disks. Refer to the example of adding cluster nodes (multiple data disks) of CreateClusterInstances API; when adding existing nodes, ensure that the specified partition information actually exists on the node.
+Note: This field may return "null", indicating that no valid value can be obtained.
+    */
+    @SerializedName("DataDisks")
+    @Expose
+    private DataDisk [] DataDisks;
+
+    /**
+    * Unschedulable or not
+Note: This field may return "null", indicating that no valid value can be obtained.
+    */
+    @SerializedName("Unschedulable")
+    @Expose
+    private Long Unschedulable;
+
+    /**
+    * Custom script, executed before UserScript
+Note: This field may return "null", indicating that no valid value can be obtained.
+    */
+    @SerializedName("PreStartUserScript")
+    @Expose
+    private String PreStartUserScript;
 
     /**
      * Get Node pool ID 
@@ -302,6 +367,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Node Annotation List 
+     * @return Annotations Node Annotation List
+     */
+    public AnnotationValue [] getAnnotations() {
+        return this.Annotations;
+    }
+
+    /**
+     * Set Node Annotation List
+     * @param Annotations Node Annotation List
+     */
+    public void setAnnotations(AnnotationValue [] Annotations) {
+        this.Annotations = Annotations;
+    }
+
+    /**
      * Get Node list 
      * @return NodeCountSummary Node list
      */
@@ -391,6 +472,26 @@ Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setDesiredNodesNum(Long DesiredNodesNum) {
         this.DesiredNodesNum = DesiredNodesNum;
+    }
+
+    /**
+     * Get Runtime Description
+Note: This field may return "null", indicating that no valid value can be obtained. 
+     * @return RuntimeConfig Runtime Description
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public RuntimeConfig getRuntimeConfig() {
+        return this.RuntimeConfig;
+    }
+
+    /**
+     * Set Runtime Description
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param RuntimeConfig Runtime Description
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public void setRuntimeConfig(RuntimeConfig RuntimeConfig) {
+        this.RuntimeConfig = RuntimeConfig;
     }
 
     /**
@@ -533,6 +634,134 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.DeletionProtection = DeletionProtection;
     }
 
+    /**
+     * Get Node Configuration
+
+Note: This field may return "null", indicating that no valid value can be obtained. 
+     * @return ExtraArgs Node Configuration
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public InstanceExtraArgs getExtraArgs() {
+        return this.ExtraArgs;
+    }
+
+    /**
+     * Set Node Configuration
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param ExtraArgs Node Configuration
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public void setExtraArgs(InstanceExtraArgs ExtraArgs) {
+        this.ExtraArgs = ExtraArgs;
+    }
+
+    /**
+     * Get GPU Driver-related Parameters
+Note: This field may return "null", indicating that no valid value can be obtained. 
+     * @return GPUArgs GPU Driver-related Parameters
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public GPUArgs getGPUArgs() {
+        return this.GPUArgs;
+    }
+
+    /**
+     * Set GPU Driver-related Parameters
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param GPUArgs GPU Driver-related Parameters
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public void setGPUArgs(GPUArgs GPUArgs) {
+        this.GPUArgs = GPUArgs;
+    }
+
+    /**
+     * Get Specified value of dockerd --graph. Default value: /var/lib/docker
+
+Note: This field may return "null", indicating that no valid value can be obtained. 
+     * @return DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public String getDockerGraphPath() {
+        return this.DockerGraphPath;
+    }
+
+    /**
+     * Set Specified value of dockerd --graph. Default value: /var/lib/docker
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public void setDockerGraphPath(String DockerGraphPath) {
+        this.DockerGraphPath = DockerGraphPath;
+    }
+
+    /**
+     * Get Multiple Disk Data Disk Mount Information: When creating a new node, make sure that the CVM purchase parameters include the information of purchasing multiple data disks. For example, in the DataDisks under RunInstancesPara of CreateClusterInstances API, it must also be set to purchase multiple data disks. Refer to the example of adding cluster nodes (multiple data disks) of CreateClusterInstances API; when adding existing nodes, ensure that the specified partition information actually exists on the node.
+Note: This field may return "null", indicating that no valid value can be obtained. 
+     * @return DataDisks Multiple Disk Data Disk Mount Information: When creating a new node, make sure that the CVM purchase parameters include the information of purchasing multiple data disks. For example, in the DataDisks under RunInstancesPara of CreateClusterInstances API, it must also be set to purchase multiple data disks. Refer to the example of adding cluster nodes (multiple data disks) of CreateClusterInstances API; when adding existing nodes, ensure that the specified partition information actually exists on the node.
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public DataDisk [] getDataDisks() {
+        return this.DataDisks;
+    }
+
+    /**
+     * Set Multiple Disk Data Disk Mount Information: When creating a new node, make sure that the CVM purchase parameters include the information of purchasing multiple data disks. For example, in the DataDisks under RunInstancesPara of CreateClusterInstances API, it must also be set to purchase multiple data disks. Refer to the example of adding cluster nodes (multiple data disks) of CreateClusterInstances API; when adding existing nodes, ensure that the specified partition information actually exists on the node.
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param DataDisks Multiple Disk Data Disk Mount Information: When creating a new node, make sure that the CVM purchase parameters include the information of purchasing multiple data disks. For example, in the DataDisks under RunInstancesPara of CreateClusterInstances API, it must also be set to purchase multiple data disks. Refer to the example of adding cluster nodes (multiple data disks) of CreateClusterInstances API; when adding existing nodes, ensure that the specified partition information actually exists on the node.
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public void setDataDisks(DataDisk [] DataDisks) {
+        this.DataDisks = DataDisks;
+    }
+
+    /**
+     * Get Unschedulable or not
+Note: This field may return "null", indicating that no valid value can be obtained. 
+     * @return Unschedulable Unschedulable or not
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public Long getUnschedulable() {
+        return this.Unschedulable;
+    }
+
+    /**
+     * Set Unschedulable or not
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param Unschedulable Unschedulable or not
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public void setUnschedulable(Long Unschedulable) {
+        this.Unschedulable = Unschedulable;
+    }
+
+    /**
+     * Get Custom script, executed before UserScript
+Note: This field may return "null", indicating that no valid value can be obtained. 
+     * @return PreStartUserScript Custom script, executed before UserScript
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public String getPreStartUserScript() {
+        return this.PreStartUserScript;
+    }
+
+    /**
+     * Set Custom script, executed before UserScript
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param PreStartUserScript Custom script, executed before UserScript
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public void setPreStartUserScript(String PreStartUserScript) {
+        this.PreStartUserScript = PreStartUserScript;
+    }
+
     public NodePool() {
     }
 
@@ -571,6 +800,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.Taints[i] = new Taint(source.Taints[i]);
             }
         }
+        if (source.Annotations != null) {
+            this.Annotations = new AnnotationValue[source.Annotations.length];
+            for (int i = 0; i < source.Annotations.length; i++) {
+                this.Annotations[i] = new AnnotationValue(source.Annotations[i]);
+            }
+        }
         if (source.NodeCountSummary != null) {
             this.NodeCountSummary = new NodeCountSummary(source.NodeCountSummary);
         }
@@ -585,6 +820,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         }
         if (source.DesiredNodesNum != null) {
             this.DesiredNodesNum = new Long(source.DesiredNodesNum);
+        }
+        if (source.RuntimeConfig != null) {
+            this.RuntimeConfig = new RuntimeConfig(source.RuntimeConfig);
         }
         if (source.NodePoolOs != null) {
             this.NodePoolOs = new String(source.NodePoolOs);
@@ -610,6 +848,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.DeletionProtection != null) {
             this.DeletionProtection = new Boolean(source.DeletionProtection);
         }
+        if (source.ExtraArgs != null) {
+            this.ExtraArgs = new InstanceExtraArgs(source.ExtraArgs);
+        }
+        if (source.GPUArgs != null) {
+            this.GPUArgs = new GPUArgs(source.GPUArgs);
+        }
+        if (source.DockerGraphPath != null) {
+            this.DockerGraphPath = new String(source.DockerGraphPath);
+        }
+        if (source.DataDisks != null) {
+            this.DataDisks = new DataDisk[source.DataDisks.length];
+            for (int i = 0; i < source.DataDisks.length; i++) {
+                this.DataDisks[i] = new DataDisk(source.DataDisks[i]);
+            }
+        }
+        if (source.Unschedulable != null) {
+            this.Unschedulable = new Long(source.Unschedulable);
+        }
+        if (source.PreStartUserScript != null) {
+            this.PreStartUserScript = new String(source.PreStartUserScript);
+        }
     }
 
 
@@ -625,11 +884,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
+        this.setParamArrayObj(map, prefix + "Annotations.", this.Annotations);
         this.setParamObj(map, prefix + "NodeCountSummary.", this.NodeCountSummary);
         this.setParamSimple(map, prefix + "AutoscalingGroupStatus", this.AutoscalingGroupStatus);
         this.setParamSimple(map, prefix + "MaxNodesNum", this.MaxNodesNum);
         this.setParamSimple(map, prefix + "MinNodesNum", this.MinNodesNum);
         this.setParamSimple(map, prefix + "DesiredNodesNum", this.DesiredNodesNum);
+        this.setParamObj(map, prefix + "RuntimeConfig.", this.RuntimeConfig);
         this.setParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
@@ -637,6 +898,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "UserScript", this.UserScript);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+        this.setParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
+        this.setParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
+        this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+        this.setParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
+        this.setParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
 
     }
 }

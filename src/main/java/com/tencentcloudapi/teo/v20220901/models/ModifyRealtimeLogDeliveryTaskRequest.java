@@ -46,8 +46,8 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
 
     /**
     * The status of the real-time log delivery task. Valid values:
-<li>`enabled`: Enabled;</li>
-<li>`disabled`: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+<li>enabled: Enabled;</li>
+<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
     */
     @SerializedName("DeliveryStatus")
     @Expose
@@ -70,7 +70,7 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private String [] Fields;
 
     /**
-    * The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200. If this field is not filled in, the original configuration will be retained.
+    * The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
     */
     @SerializedName("CustomFields")
     @Expose
@@ -91,7 +91,7 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private Long Sample;
 
     /**
-    * Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+    * Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
     */
     @SerializedName("LogFormat")
     @Expose
@@ -161,11 +161,11 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
 
     /**
      * Get The status of the real-time log delivery task. Valid values:
-<li>`enabled`: Enabled;</li>
-<li>`disabled`: Disabled.</li>If this field is not filled in, the original configuration will be retained. 
+<li>enabled: Enabled;</li>
+<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained. 
      * @return DeliveryStatus The status of the real-time log delivery task. Valid values:
-<li>`enabled`: Enabled;</li>
-<li>`disabled`: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+<li>enabled: Enabled;</li>
+<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
      */
     public String getDeliveryStatus() {
         return this.DeliveryStatus;
@@ -173,11 +173,11 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
 
     /**
      * Set The status of the real-time log delivery task. Valid values:
-<li>`enabled`: Enabled;</li>
-<li>`disabled`: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+<li>enabled: Enabled;</li>
+<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
      * @param DeliveryStatus The status of the real-time log delivery task. Valid values:
-<li>`enabled`: Enabled;</li>
-<li>`disabled`: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+<li>enabled: Enabled;</li>
+<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
      */
     public void setDeliveryStatus(String DeliveryStatus) {
         this.DeliveryStatus = DeliveryStatus;
@@ -224,16 +224,16 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200. If this field is not filled in, the original configuration will be retained. 
-     * @return CustomFields The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200. If this field is not filled in, the original configuration will be retained.
+     * Get The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain). 
+     * @return CustomFields The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
      */
     public CustomField [] getCustomFields() {
         return this.CustomFields;
     }
 
     /**
-     * Set The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200. If this field is not filled in, the original configuration will be retained.
-     * @param CustomFields The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200. If this field is not filled in, the original configuration will be retained.
+     * Set The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
+     * @param CustomFields The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
      */
     public void setCustomFields(CustomField [] CustomFields) {
         this.CustomFields = CustomFields;
@@ -272,16 +272,16 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat. 
-     * @return LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+     * Get Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat. 
+     * @return LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
      */
     public LogFormat getLogFormat() {
         return this.LogFormat;
     }
 
     /**
-     * Set Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
-     * @param LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+     * Set Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+     * @param LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
      */
     public void setLogFormat(LogFormat LogFormat) {
         this.LogFormat = LogFormat;

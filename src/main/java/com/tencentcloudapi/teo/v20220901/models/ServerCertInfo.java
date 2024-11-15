@@ -24,8 +24,9 @@ import java.util.HashMap;
 public class ServerCertInfo extends AbstractModel {
 
     /**
-    * ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+
+Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("CertId")
     @Expose
@@ -83,20 +84,24 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String CommonName;
 
     /**
-     * Get ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CertId ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return CertId Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CertId ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param CertId Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;

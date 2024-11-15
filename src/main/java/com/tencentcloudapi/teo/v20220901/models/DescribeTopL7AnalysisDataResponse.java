@@ -31,8 +31,8 @@ public class DescribeTopL7AnalysisDataResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * The list of top-ranked L7 traffic data.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
+Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("Data")
     @Expose
@@ -62,20 +62,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The list of top-ranked L7 traffic data.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data The list of top-ranked L7 traffic data.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return Data The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public TopDataRecord [] getData() {
         return this.Data;
     }
 
     /**
-     * Set The list of top-ranked L7 traffic data.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data The list of top-ranked L7 traffic data.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param Data The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setData(TopDataRecord [] Data) {
         this.Data = Data;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateECMInstancesRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID. Edge clusters need to enable public network access before adding ECM nodes.
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * Module ID
+    * Edge module ID
     */
     @SerializedName("ModuleId")
     @Expose
@@ -108,32 +108,32 @@ public class CreateECMInstancesRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterID Cluster ID
+     * Get Cluster ID. Edge clusters need to enable public network access before adding ECM nodes. 
+     * @return ClusterID Cluster ID. Edge clusters need to enable public network access before adding ECM nodes.
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterID Cluster ID
+     * Set Cluster ID. Edge clusters need to enable public network access before adding ECM nodes.
+     * @param ClusterID Cluster ID. Edge clusters need to enable public network access before adding ECM nodes.
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get Module ID 
-     * @return ModuleId Module ID
+     * Get Edge module ID 
+     * @return ModuleId Edge module ID
      */
     public String getModuleId() {
         return this.ModuleId;
     }
 
     /**
-     * Set Module ID
-     * @param ModuleId Module ID
+     * Set Edge module ID
+     * @param ModuleId Edge module ID
      */
     public void setModuleId(String ModuleId) {
         this.ModuleId = ModuleId;

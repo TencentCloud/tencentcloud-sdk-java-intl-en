@@ -31,7 +31,7 @@ public class DescribeTKEEdgeScriptRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * ENI
+    * Network Card Name, specifies the network card used by the kubelet on edge nodes to register with the apiserver.
     */
     @SerializedName("Interface")
     @Expose
@@ -75,16 +75,16 @@ public class DescribeTKEEdgeScriptRequest extends AbstractModel {
     }
 
     /**
-     * Get ENI 
-     * @return Interface ENI
+     * Get Network Card Name, specifies the network card used by the kubelet on edge nodes to register with the apiserver. 
+     * @return Interface Network Card Name, specifies the network card used by the kubelet on edge nodes to register with the apiserver.
      */
     public String getInterface() {
         return this.Interface;
     }
 
     /**
-     * Set ENI
-     * @param Interface ENI
+     * Set Network Card Name, specifies the network card used by the kubelet on edge nodes to register with the apiserver.
+     * @param Interface Network Card Name, specifies the network card used by the kubelet on edge nodes to register with the apiserver.
      */
     public void setInterface(String Interface) {
         this.Interface = Interface;

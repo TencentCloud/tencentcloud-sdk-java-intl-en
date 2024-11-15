@@ -38,7 +38,7 @@ public class ModifyNodePoolInstanceTypesRequest extends AbstractModel {
     private String NodePoolId;
 
     /**
-    * List of instance types
+    * Model list, master instance model does not support modification.
     */
     @SerializedName("InstanceTypes")
     @Expose
@@ -77,16 +77,16 @@ public class ModifyNodePoolInstanceTypesRequest extends AbstractModel {
     }
 
     /**
-     * Get List of instance types 
-     * @return InstanceTypes List of instance types
+     * Get Model list, master instance model does not support modification. 
+     * @return InstanceTypes Model list, master instance model does not support modification.
      */
     public String [] getInstanceTypes() {
         return this.InstanceTypes;
     }
 
     /**
-     * Set List of instance types
-     * @param InstanceTypes List of instance types
+     * Set Model list, master instance model does not support modification.
+     * @param InstanceTypes Model list, master instance model does not support modification.
      */
     public void setInstanceTypes(String [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;

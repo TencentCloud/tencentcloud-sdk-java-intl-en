@@ -31,25 +31,24 @@ public class DescribeClusterNodePoolsRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * ·  NodePoolsName
-    Filters by the node pool name
+    * · "Name":"NodePoolsName","Values": ["test"]
+    Filter by [Node Pool Name].
     Type: String
-    Required: No
+        Required: No
 
-·  NodePoolsId
-    Filters by the node pool ID
-    Type: String
-    Required: No
 
-·  tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
 
-·  tag:tag-key
-    Filters by key-value pairs of tags
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
+    Filter by [Node Pool ID].
     Type: String
-    Required: No
+        Required: No
+
+
+
+·  "Name":"Tags","Values": ["abc:1"]
+    Filter by [Key-value Pairs of Tags].
+    Type: String
+        Required: No
     */
     @SerializedName("Filters")
     @Expose
@@ -72,88 +71,84 @@ public class DescribeClusterNodePoolsRequest extends AbstractModel {
     }
 
     /**
-     * Get ·  NodePoolsName
-    Filters by the node pool name
+     * Get · "Name":"NodePoolsName","Values": ["test"]
+    Filter by [Node Pool Name].
     Type: String
-    Required: No
+        Required: No
 
-·  NodePoolsId
-    Filters by the node pool ID
-    Type: String
-    Required: No
 
-·  tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
 
-·  tag:tag-key
-    Filters by key-value pairs of tags
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
+    Filter by [Node Pool ID].
     Type: String
-    Required: No 
-     * @return Filters ·  NodePoolsName
-    Filters by the node pool name
-    Type: String
-    Required: No
+        Required: No
 
-·  NodePoolsId
-    Filters by the node pool ID
-    Type: String
-    Required: No
 
-·  tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
 
-·  tag:tag-key
-    Filters by key-value pairs of tags
+·  "Name":"Tags","Values": ["abc:1"]
+    Filter by [Key-value Pairs of Tags].
     Type: String
-    Required: No
+        Required: No 
+     * @return Filters · "Name":"NodePoolsName","Values": ["test"]
+    Filter by [Node Pool Name].
+    Type: String
+        Required: No
+
+
+
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
+    Filter by [Node Pool ID].
+    Type: String
+        Required: No
+
+
+
+·  "Name":"Tags","Values": ["abc:1"]
+    Filter by [Key-value Pairs of Tags].
+    Type: String
+        Required: No
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set ·  NodePoolsName
-    Filters by the node pool name
+     * Set · "Name":"NodePoolsName","Values": ["test"]
+    Filter by [Node Pool Name].
     Type: String
-    Required: No
+        Required: No
 
-·  NodePoolsId
-    Filters by the node pool ID
-    Type: String
-    Required: No
 
-·  tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
 
-·  tag:tag-key
-    Filters by key-value pairs of tags
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
+    Filter by [Node Pool ID].
     Type: String
-    Required: No
-     * @param Filters ·  NodePoolsName
-    Filters by the node pool name
-    Type: String
-    Required: No
+        Required: No
 
-·  NodePoolsId
-    Filters by the node pool ID
-    Type: String
-    Required: No
 
-·  tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
 
-·  tag:tag-key
-    Filters by key-value pairs of tags
+·  "Name":"Tags","Values": ["abc:1"]
+    Filter by [Key-value Pairs of Tags].
     Type: String
-    Required: No
+        Required: No
+     * @param Filters · "Name":"NodePoolsName","Values": ["test"]
+    Filter by [Node Pool Name].
+    Type: String
+        Required: No
+
+
+
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
+    Filter by [Node Pool ID].
+    Type: String
+        Required: No
+
+
+
+·  "Name":"Tags","Values": ["abc:1"]
+    Filter by [Key-value Pairs of Tags].
+    Type: String
+        Required: No
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

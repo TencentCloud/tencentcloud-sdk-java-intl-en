@@ -73,6 +73,13 @@ public class ModifyClusterAttributeRequest extends AbstractModel {
     private Boolean QGPUShareEnable;
 
     /**
+    * Cluster attributes
+    */
+    @SerializedName("ClusterProperty")
+    @Expose
+    private ClusterProperty ClusterProperty;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -184,6 +191,22 @@ public class ModifyClusterAttributeRequest extends AbstractModel {
         this.QGPUShareEnable = QGPUShareEnable;
     }
 
+    /**
+     * Get Cluster attributes 
+     * @return ClusterProperty Cluster attributes
+     */
+    public ClusterProperty getClusterProperty() {
+        return this.ClusterProperty;
+    }
+
+    /**
+     * Set Cluster attributes
+     * @param ClusterProperty Cluster attributes
+     */
+    public void setClusterProperty(ClusterProperty ClusterProperty) {
+        this.ClusterProperty = ClusterProperty;
+    }
+
     public ModifyClusterAttributeRequest() {
     }
 
@@ -213,6 +236,9 @@ public class ModifyClusterAttributeRequest extends AbstractModel {
         if (source.QGPUShareEnable != null) {
             this.QGPUShareEnable = new Boolean(source.QGPUShareEnable);
         }
+        if (source.ClusterProperty != null) {
+            this.ClusterProperty = new ClusterProperty(source.ClusterProperty);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class ModifyClusterAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
         this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
+        this.setParamObj(map, prefix + "ClusterProperty.", this.ClusterProperty);
 
     }
 }

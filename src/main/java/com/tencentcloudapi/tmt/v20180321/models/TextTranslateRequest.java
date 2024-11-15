@@ -37,7 +37,6 @@ zh: Simplified Chinese
 zh_TW: Traditional Chinese
 en: English
 ja: Japanese
-ko: Korean
 fr: French
 es: Spanish
 it: Italian
@@ -59,24 +58,23 @@ hi: Hindi
     /**
     * Supported target languages for the above source languages:
 
-<li> zh (Simplified Chinese): en (English), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
-<li> zh-TW (Traditional Chinese): en (English), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
-<li> en (English): zh (Simplified Chinese), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), ms (Malay), ar (Arabic), and hi (Hindi)</li>
-<li>ja (Japanese): zh (Simplified Chinese), en (English), and ko (Korean)</li>
-<li>ko (Korean): zh (Simplified Chinese), en (English), and ja (Japanese)</li>
-<li>fr (French): zh (Simplified Chinese), en (English), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>es (Spanish): zh (Simplified Chinese), en (English), fr (French), it (Italian), de (German), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>it (Italian): zh (Simplified Chinese), en (English), fr (French), es (Spanish), de (German), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>de (German): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>tr (Turkish): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), de (German), ru (Russian), and pt (Portuguese)</li>
-<li>ru (Russian): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), and pt (Portuguese)</li>
-<li>pt (Portuguese): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), and ru (Russian)</li>
-<li>vi (Vietnamese): zh (Simplified Chinese) and en (English)</li
-<li>id (Bahasa Indonesian): zh (Simplified Chinese) and en (English)</li
-<li>th (Thai): zh (Simplified Chinese) and en (English)</li
-<li>ms (Malay): zh (Simplified Chinese) and en (English)</li
+<li>zh (Simplified Chinese): en (English), ja (Japanese), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
+<li>zh-TW (Traditional Chinese): en (English), ja (Japanese), fr (French), es (Spanish), it (Italian), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
+<li>en (English): zh (Simplified Chinese), zh-TW (Traditional Chinese), ja (Japanese), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), ms (Malay), and hi (Hindi)</li>
+<li>fr (French): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>it (Italian): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>de (German): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>ru (Russian): zh (Simplified Chinese) and zh-TW (Traditional Chinese)</li>
+<li>tr (Turkish): zh (Simplified Chinese) and zh-TW (Traditional Chinese)</li>
+<li>pt (Portuguese): zh (Simplified Chinese) and tr (Turkish)</li>
+<li>es (Spanish): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>ja (Japanese): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>vi (Vietnamese): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>th (Thai): zh (Simplified Chinese) and en (English)</li>
+<li>id (Bahasa Indonesian): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>ms (Malay): zh (Simplified Chinese) and zh-TW (Traditional Chinese)</li>
 <li>ar (Arabic): en (English)</li>
-<li>hi (Hindi): en (English)</li
+<li>hi (Hindi): en (English)</li>
     */
     @SerializedName("Target")
     @Expose
@@ -95,6 +93,20 @@ hi: Hindi
     @SerializedName("UntranslatedText")
     @Expose
     private String UntranslatedText;
+
+    /**
+    * 
+    */
+    @SerializedName("TermRepoIDList")
+    @Expose
+    private String [] TermRepoIDList;
+
+    /**
+    * 
+    */
+    @SerializedName("SentRepoIDList")
+    @Expose
+    private String [] SentRepoIDList;
 
     /**
      * Get The texts to be translated, which must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail. 
@@ -119,7 +131,6 @@ zh: Simplified Chinese
 zh_TW: Traditional Chinese
 en: English
 ja: Japanese
-ko: Korean
 fr: French
 es: Spanish
 it: Italian
@@ -139,7 +150,6 @@ zh: Simplified Chinese
 zh_TW: Traditional Chinese
 en: English
 ja: Japanese
-ko: Korean
 fr: French
 es: Spanish
 it: Italian
@@ -165,7 +175,6 @@ zh: Simplified Chinese
 zh_TW: Traditional Chinese
 en: English
 ja: Japanese
-ko: Korean
 fr: French
 es: Spanish
 it: Italian
@@ -185,7 +194,6 @@ zh: Simplified Chinese
 zh_TW: Traditional Chinese
 en: English
 ja: Japanese
-ko: Korean
 fr: French
 es: Spanish
 it: Italian
@@ -207,44 +215,42 @@ hi: Hindi
     /**
      * Get Supported target languages for the above source languages:
 
-<li> zh (Simplified Chinese): en (English), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
-<li> zh-TW (Traditional Chinese): en (English), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
-<li> en (English): zh (Simplified Chinese), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), ms (Malay), ar (Arabic), and hi (Hindi)</li>
-<li>ja (Japanese): zh (Simplified Chinese), en (English), and ko (Korean)</li>
-<li>ko (Korean): zh (Simplified Chinese), en (English), and ja (Japanese)</li>
-<li>fr (French): zh (Simplified Chinese), en (English), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>es (Spanish): zh (Simplified Chinese), en (English), fr (French), it (Italian), de (German), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>it (Italian): zh (Simplified Chinese), en (English), fr (French), es (Spanish), de (German), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>de (German): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>tr (Turkish): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), de (German), ru (Russian), and pt (Portuguese)</li>
-<li>ru (Russian): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), and pt (Portuguese)</li>
-<li>pt (Portuguese): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), and ru (Russian)</li>
-<li>vi (Vietnamese): zh (Simplified Chinese) and en (English)</li
-<li>id (Bahasa Indonesian): zh (Simplified Chinese) and en (English)</li
-<li>th (Thai): zh (Simplified Chinese) and en (English)</li
-<li>ms (Malay): zh (Simplified Chinese) and en (English)</li
+<li>zh (Simplified Chinese): en (English), ja (Japanese), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
+<li>zh-TW (Traditional Chinese): en (English), ja (Japanese), fr (French), es (Spanish), it (Italian), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
+<li>en (English): zh (Simplified Chinese), zh-TW (Traditional Chinese), ja (Japanese), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), ms (Malay), and hi (Hindi)</li>
+<li>fr (French): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>it (Italian): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>de (German): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>ru (Russian): zh (Simplified Chinese) and zh-TW (Traditional Chinese)</li>
+<li>tr (Turkish): zh (Simplified Chinese) and zh-TW (Traditional Chinese)</li>
+<li>pt (Portuguese): zh (Simplified Chinese) and tr (Turkish)</li>
+<li>es (Spanish): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>ja (Japanese): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>vi (Vietnamese): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>th (Thai): zh (Simplified Chinese) and en (English)</li>
+<li>id (Bahasa Indonesian): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>ms (Malay): zh (Simplified Chinese) and zh-TW (Traditional Chinese)</li>
 <li>ar (Arabic): en (English)</li>
-<li>hi (Hindi): en (English)</li 
+<li>hi (Hindi): en (English)</li> 
      * @return Target Supported target languages for the above source languages:
 
-<li> zh (Simplified Chinese): en (English), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
-<li> zh-TW (Traditional Chinese): en (English), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
-<li> en (English): zh (Simplified Chinese), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), ms (Malay), ar (Arabic), and hi (Hindi)</li>
-<li>ja (Japanese): zh (Simplified Chinese), en (English), and ko (Korean)</li>
-<li>ko (Korean): zh (Simplified Chinese), en (English), and ja (Japanese)</li>
-<li>fr (French): zh (Simplified Chinese), en (English), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>es (Spanish): zh (Simplified Chinese), en (English), fr (French), it (Italian), de (German), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>it (Italian): zh (Simplified Chinese), en (English), fr (French), es (Spanish), de (German), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>de (German): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>tr (Turkish): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), de (German), ru (Russian), and pt (Portuguese)</li>
-<li>ru (Russian): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), and pt (Portuguese)</li>
-<li>pt (Portuguese): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), and ru (Russian)</li>
-<li>vi (Vietnamese): zh (Simplified Chinese) and en (English)</li
-<li>id (Bahasa Indonesian): zh (Simplified Chinese) and en (English)</li
-<li>th (Thai): zh (Simplified Chinese) and en (English)</li
-<li>ms (Malay): zh (Simplified Chinese) and en (English)</li
+<li>zh (Simplified Chinese): en (English), ja (Japanese), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
+<li>zh-TW (Traditional Chinese): en (English), ja (Japanese), fr (French), es (Spanish), it (Italian), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
+<li>en (English): zh (Simplified Chinese), zh-TW (Traditional Chinese), ja (Japanese), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), ms (Malay), and hi (Hindi)</li>
+<li>fr (French): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>it (Italian): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>de (German): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>ru (Russian): zh (Simplified Chinese) and zh-TW (Traditional Chinese)</li>
+<li>tr (Turkish): zh (Simplified Chinese) and zh-TW (Traditional Chinese)</li>
+<li>pt (Portuguese): zh (Simplified Chinese) and tr (Turkish)</li>
+<li>es (Spanish): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>ja (Japanese): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>vi (Vietnamese): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>th (Thai): zh (Simplified Chinese) and en (English)</li>
+<li>id (Bahasa Indonesian): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>ms (Malay): zh (Simplified Chinese) and zh-TW (Traditional Chinese)</li>
 <li>ar (Arabic): en (English)</li>
-<li>hi (Hindi): en (English)</li
+<li>hi (Hindi): en (English)</li>
      */
     public String getTarget() {
         return this.Target;
@@ -253,44 +259,42 @@ hi: Hindi
     /**
      * Set Supported target languages for the above source languages:
 
-<li> zh (Simplified Chinese): en (English), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
-<li> zh-TW (Traditional Chinese): en (English), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
-<li> en (English): zh (Simplified Chinese), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), ms (Malay), ar (Arabic), and hi (Hindi)</li>
-<li>ja (Japanese): zh (Simplified Chinese), en (English), and ko (Korean)</li>
-<li>ko (Korean): zh (Simplified Chinese), en (English), and ja (Japanese)</li>
-<li>fr (French): zh (Simplified Chinese), en (English), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>es (Spanish): zh (Simplified Chinese), en (English), fr (French), it (Italian), de (German), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>it (Italian): zh (Simplified Chinese), en (English), fr (French), es (Spanish), de (German), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>de (German): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>tr (Turkish): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), de (German), ru (Russian), and pt (Portuguese)</li>
-<li>ru (Russian): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), and pt (Portuguese)</li>
-<li>pt (Portuguese): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), and ru (Russian)</li>
-<li>vi (Vietnamese): zh (Simplified Chinese) and en (English)</li
-<li>id (Bahasa Indonesian): zh (Simplified Chinese) and en (English)</li
-<li>th (Thai): zh (Simplified Chinese) and en (English)</li
-<li>ms (Malay): zh (Simplified Chinese) and en (English)</li
+<li>zh (Simplified Chinese): en (English), ja (Japanese), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
+<li>zh-TW (Traditional Chinese): en (English), ja (Japanese), fr (French), es (Spanish), it (Italian), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
+<li>en (English): zh (Simplified Chinese), zh-TW (Traditional Chinese), ja (Japanese), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), ms (Malay), and hi (Hindi)</li>
+<li>fr (French): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>it (Italian): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>de (German): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>ru (Russian): zh (Simplified Chinese) and zh-TW (Traditional Chinese)</li>
+<li>tr (Turkish): zh (Simplified Chinese) and zh-TW (Traditional Chinese)</li>
+<li>pt (Portuguese): zh (Simplified Chinese) and tr (Turkish)</li>
+<li>es (Spanish): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>ja (Japanese): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>vi (Vietnamese): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>th (Thai): zh (Simplified Chinese) and en (English)</li>
+<li>id (Bahasa Indonesian): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>ms (Malay): zh (Simplified Chinese) and zh-TW (Traditional Chinese)</li>
 <li>ar (Arabic): en (English)</li>
-<li>hi (Hindi): en (English)</li
+<li>hi (Hindi): en (English)</li>
      * @param Target Supported target languages for the above source languages:
 
-<li> zh (Simplified Chinese): en (English), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
-<li> zh-TW (Traditional Chinese): en (English), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
-<li> en (English): zh (Simplified Chinese), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), ms (Malay), ar (Arabic), and hi (Hindi)</li>
-<li>ja (Japanese): zh (Simplified Chinese), en (English), and ko (Korean)</li>
-<li>ko (Korean): zh (Simplified Chinese), en (English), and ja (Japanese)</li>
-<li>fr (French): zh (Simplified Chinese), en (English), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>es (Spanish): zh (Simplified Chinese), en (English), fr (French), it (Italian), de (German), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>it (Italian): zh (Simplified Chinese), en (English), fr (French), es (Spanish), de (German), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>de (German): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), tr (Turkish), ru (Russian), and pt (Portuguese)</li>
-<li>tr (Turkish): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), de (German), ru (Russian), and pt (Portuguese)</li>
-<li>ru (Russian): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), and pt (Portuguese)</li>
-<li>pt (Portuguese): zh (Simplified Chinese), en (English), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), and ru (Russian)</li>
-<li>vi (Vietnamese): zh (Simplified Chinese) and en (English)</li
-<li>id (Bahasa Indonesian): zh (Simplified Chinese) and en (English)</li
-<li>th (Thai): zh (Simplified Chinese) and en (English)</li
-<li>ms (Malay): zh (Simplified Chinese) and en (English)</li
+<li>zh (Simplified Chinese): en (English), ja (Japanese), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
+<li>zh-TW (Traditional Chinese): en (English), ja (Japanese), fr (French), es (Spanish), it (Italian), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
+<li>en (English): zh (Simplified Chinese), zh-TW (Traditional Chinese), ja (Japanese), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), ms (Malay), and hi (Hindi)</li>
+<li>fr (French): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>it (Italian): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>de (German): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>ru (Russian): zh (Simplified Chinese) and zh-TW (Traditional Chinese)</li>
+<li>tr (Turkish): zh (Simplified Chinese) and zh-TW (Traditional Chinese)</li>
+<li>pt (Portuguese): zh (Simplified Chinese) and tr (Turkish)</li>
+<li>es (Spanish): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>ja (Japanese): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>vi (Vietnamese): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>th (Thai): zh (Simplified Chinese) and en (English)</li>
+<li>id (Bahasa Indonesian): zh (Simplified Chinese), zh-TW (Traditional Chinese) and en (English)</li>
+<li>ms (Malay): zh (Simplified Chinese) and zh-TW (Traditional Chinese)</li>
 <li>ar (Arabic): en (English)</li>
-<li>hi (Hindi): en (English)</li
+<li>hi (Hindi): en (English)</li>
      */
     public void setTarget(String Target) {
         this.Target = Target;
@@ -328,6 +332,38 @@ hi: Hindi
         this.UntranslatedText = UntranslatedText;
     }
 
+    /**
+     * Get  
+     * @return TermRepoIDList 
+     */
+    public String [] getTermRepoIDList() {
+        return this.TermRepoIDList;
+    }
+
+    /**
+     * Set 
+     * @param TermRepoIDList 
+     */
+    public void setTermRepoIDList(String [] TermRepoIDList) {
+        this.TermRepoIDList = TermRepoIDList;
+    }
+
+    /**
+     * Get  
+     * @return SentRepoIDList 
+     */
+    public String [] getSentRepoIDList() {
+        return this.SentRepoIDList;
+    }
+
+    /**
+     * Set 
+     * @param SentRepoIDList 
+     */
+    public void setSentRepoIDList(String [] SentRepoIDList) {
+        this.SentRepoIDList = SentRepoIDList;
+    }
+
     public TextTranslateRequest() {
     }
 
@@ -351,6 +387,18 @@ hi: Hindi
         if (source.UntranslatedText != null) {
             this.UntranslatedText = new String(source.UntranslatedText);
         }
+        if (source.TermRepoIDList != null) {
+            this.TermRepoIDList = new String[source.TermRepoIDList.length];
+            for (int i = 0; i < source.TermRepoIDList.length; i++) {
+                this.TermRepoIDList[i] = new String(source.TermRepoIDList[i]);
+            }
+        }
+        if (source.SentRepoIDList != null) {
+            this.SentRepoIDList = new String[source.SentRepoIDList.length];
+            for (int i = 0; i < source.SentRepoIDList.length; i++) {
+                this.SentRepoIDList[i] = new String(source.SentRepoIDList[i]);
+            }
+        }
     }
 
 
@@ -363,6 +411,8 @@ hi: Hindi
         this.setParamSimple(map, prefix + "Target", this.Target);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "UntranslatedText", this.UntranslatedText);
+        this.setParamArraySimple(map, prefix + "TermRepoIDList.", this.TermRepoIDList);
+        this.setParamArraySimple(map, prefix + "SentRepoIDList.", this.SentRepoIDList);
 
     }
 }

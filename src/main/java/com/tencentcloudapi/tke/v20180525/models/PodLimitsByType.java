@@ -48,6 +48,14 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private Long TKEDirectENI;
 
     /**
+    * Number of Pods supported by TKE relay network card mode
+Note: This field may return "null", indicating that no valid value can be obtained.
+    */
+    @SerializedName("TKESubENI")
+    @Expose
+    private Long TKESubENI;
+
+    /**
      * Get The number of Pods supported by a TKE shared ENI in non-static IP address mode
 Note: this field may return `null`, indicating that no valid value can be obtained. 
      * @return TKERouteENINonStaticIP The number of Pods supported by a TKE shared ENI in non-static IP address mode
@@ -107,6 +115,26 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.TKEDirectENI = TKEDirectENI;
     }
 
+    /**
+     * Get Number of Pods supported by TKE relay network card mode
+Note: This field may return "null", indicating that no valid value can be obtained. 
+     * @return TKESubENI Number of Pods supported by TKE relay network card mode
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public Long getTKESubENI() {
+        return this.TKESubENI;
+    }
+
+    /**
+     * Set Number of Pods supported by TKE relay network card mode
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param TKESubENI Number of Pods supported by TKE relay network card mode
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public void setTKESubENI(Long TKESubENI) {
+        this.TKESubENI = TKESubENI;
+    }
+
     public PodLimitsByType() {
     }
 
@@ -124,6 +152,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         if (source.TKEDirectENI != null) {
             this.TKEDirectENI = new Long(source.TKEDirectENI);
         }
+        if (source.TKESubENI != null) {
+            this.TKESubENI = new Long(source.TKESubENI);
+        }
     }
 
 
@@ -134,6 +165,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "TKERouteENINonStaticIP", this.TKERouteENINonStaticIP);
         this.setParamSimple(map, prefix + "TKERouteENIStaticIP", this.TKERouteENIStaticIP);
         this.setParamSimple(map, prefix + "TKEDirectENI", this.TKEDirectENI);
+        this.setParamSimple(map, prefix + "TKESubENI", this.TKESubENI);
 
     }
 }

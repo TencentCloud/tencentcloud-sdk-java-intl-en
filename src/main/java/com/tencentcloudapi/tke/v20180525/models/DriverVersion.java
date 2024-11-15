@@ -25,6 +25,8 @@ public class DriverVersion extends AbstractModel {
 
     /**
     * Version of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
     */
     @SerializedName("Version")
     @Expose
@@ -32,14 +34,20 @@ public class DriverVersion extends AbstractModel {
 
     /**
     * Name of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get Version of GPU driver or CUDA 
+     * Get Version of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained. 
      * @return Version Version of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public String getVersion() {
         return this.Version;
@@ -47,15 +55,23 @@ public class DriverVersion extends AbstractModel {
 
     /**
      * Set Version of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      * @param Version Version of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Name of GPU driver or CUDA 
+     * Get Name of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained. 
      * @return Name Name of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -63,7 +79,11 @@ public class DriverVersion extends AbstractModel {
 
     /**
      * Set Name of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      * @param Name Name of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;

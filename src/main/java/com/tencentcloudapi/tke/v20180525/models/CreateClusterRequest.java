@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class CreateClusterRequest extends AbstractModel {
 
     /**
-    * Container networking configuration information for the cluster
-    */
-    @SerializedName("ClusterCIDRSettings")
-    @Expose
-    private ClusterCIDRSettings ClusterCIDRSettings;
-
-    /**
     * Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
+
+    /**
+    * Container networking configuration information for the cluster
+    */
+    @SerializedName("ClusterCIDRSettings")
+    @Expose
+    private ClusterCIDRSettings ClusterCIDRSettings;
 
     /**
     * Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
@@ -87,20 +87,11 @@ public class CreateClusterRequest extends AbstractModel {
     private ExtensionAddon [] ExtensionAddons;
 
     /**
-     * Get Container networking configuration information for the cluster 
-     * @return ClusterCIDRSettings Container networking configuration information for the cluster
-     */
-    public ClusterCIDRSettings getClusterCIDRSettings() {
-        return this.ClusterCIDRSettings;
-    }
-
-    /**
-     * Set Container networking configuration information for the cluster
-     * @param ClusterCIDRSettings Container networking configuration information for the cluster
-     */
-    public void setClusterCIDRSettings(ClusterCIDRSettings ClusterCIDRSettings) {
-        this.ClusterCIDRSettings = ClusterCIDRSettings;
-    }
+    * CDC Id
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
 
     /**
      * Get Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER. 
@@ -116,6 +107,22 @@ public class CreateClusterRequest extends AbstractModel {
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get Container networking configuration information for the cluster 
+     * @return ClusterCIDRSettings Container networking configuration information for the cluster
+     */
+    public ClusterCIDRSettings getClusterCIDRSettings() {
+        return this.ClusterCIDRSettings;
+    }
+
+    /**
+     * Set Container networking configuration information for the cluster
+     * @param ClusterCIDRSettings Container networking configuration information for the cluster
+     */
+    public void setClusterCIDRSettings(ClusterCIDRSettings ClusterCIDRSettings) {
+        this.ClusterCIDRSettings = ClusterCIDRSettings;
     }
 
     /**
@@ -230,6 +237,22 @@ public class CreateClusterRequest extends AbstractModel {
         this.ExtensionAddons = ExtensionAddons;
     }
 
+    /**
+     * Get CDC Id 
+     * @return CdcId CDC Id
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set CDC Id
+     * @param CdcId CDC Id
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -238,11 +261,11 @@ public class CreateClusterRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateClusterRequest(CreateClusterRequest source) {
-        if (source.ClusterCIDRSettings != null) {
-            this.ClusterCIDRSettings = new ClusterCIDRSettings(source.ClusterCIDRSettings);
-        }
         if (source.ClusterType != null) {
             this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.ClusterCIDRSettings != null) {
+            this.ClusterCIDRSettings = new ClusterCIDRSettings(source.ClusterCIDRSettings);
         }
         if (source.RunInstancesForNode != null) {
             this.RunInstancesForNode = new RunInstancesForNode[source.RunInstancesForNode.length];
@@ -277,6 +300,9 @@ public class CreateClusterRequest extends AbstractModel {
                 this.ExtensionAddons[i] = new ExtensionAddon(source.ExtensionAddons[i]);
             }
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
     }
 
 
@@ -284,8 +310,8 @@ public class CreateClusterRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "ClusterCIDRSettings.", this.ClusterCIDRSettings);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamObj(map, prefix + "ClusterCIDRSettings.", this.ClusterCIDRSettings);
         this.setParamArrayObj(map, prefix + "RunInstancesForNode.", this.RunInstancesForNode);
         this.setParamObj(map, prefix + "ClusterBasicSettings.", this.ClusterBasicSettings);
         this.setParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);
@@ -293,6 +319,7 @@ public class CreateClusterRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ExistedInstancesForNode.", this.ExistedInstancesForNode);
         this.setParamArrayObj(map, prefix + "InstanceDataDiskMountSettings.", this.InstanceDataDiskMountSettings);
         this.setParamArrayObj(map, prefix + "ExtensionAddons.", this.ExtensionAddons);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

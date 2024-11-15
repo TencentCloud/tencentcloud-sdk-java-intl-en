@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateEdgeCVMInstancesRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID. Edge clusters need to enable public network access before adding CVM nodes.
     */
     @SerializedName("ClusterID")
     @Expose
@@ -73,16 +73,16 @@ public class CreateEdgeCVMInstancesRequest extends AbstractModel {
     private Boolean EnableEni;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterID Cluster ID
+     * Get Cluster ID. Edge clusters need to enable public network access before adding CVM nodes. 
+     * @return ClusterID Cluster ID. Edge clusters need to enable public network access before adding CVM nodes.
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterID Cluster ID
+     * Set Cluster ID. Edge clusters need to enable public network access before adding CVM nodes.
+     * @param ClusterID Cluster ID. Edge clusters need to enable public network access before adding CVM nodes.
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;

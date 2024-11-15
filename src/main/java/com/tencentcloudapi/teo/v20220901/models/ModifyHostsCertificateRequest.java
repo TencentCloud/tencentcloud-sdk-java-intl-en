@@ -48,7 +48,7 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
     private String Mode;
 
     /**
-    * ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
+    * SSL certificate configuration. This parameter is effective only when the mode is sslcert. You only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
     */
     @SerializedName("ServerCertInfo")
     @Expose
@@ -63,6 +63,13 @@ Default value: `none`.
     @SerializedName("ApplyType")
     @Expose
     private String ApplyType;
+
+    /**
+    * In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
+    */
+    @SerializedName("ClientCertInfo")
+    @Expose
+    private MutualTLS ClientCertInfo;
 
     /**
      * Get ID of the site. 
@@ -125,16 +132,16 @@ Default value: `none`.
     }
 
     /**
-     * Get ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console. 
-     * @return ServerCertInfo ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
+     * Get SSL certificate configuration. This parameter is effective only when the mode is sslcert. You only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl). 
+     * @return ServerCertInfo SSL certificate configuration. This parameter is effective only when the mode is sslcert. You only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
      */
     public ServerCertInfo [] getServerCertInfo() {
         return this.ServerCertInfo;
     }
 
     /**
-     * Set ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
-     * @param ServerCertInfo ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
+     * Set SSL certificate configuration. This parameter is effective only when the mode is sslcert. You only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+     * @param ServerCertInfo SSL certificate configuration. This parameter is effective only when the mode is sslcert. You only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
      */
     public void setServerCertInfo(ServerCertInfo [] ServerCertInfo) {
         this.ServerCertInfo = ServerCertInfo;
@@ -172,6 +179,22 @@ Default value: `none`.
         this.ApplyType = ApplyType;
     }
 
+    /**
+     * Get In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified. 
+     * @return ClientCertInfo In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
+     */
+    public MutualTLS getClientCertInfo() {
+        return this.ClientCertInfo;
+    }
+
+    /**
+     * Set In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
+     * @param ClientCertInfo In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
+     */
+    public void setClientCertInfo(MutualTLS ClientCertInfo) {
+        this.ClientCertInfo = ClientCertInfo;
+    }
+
     public ModifyHostsCertificateRequest() {
     }
 
@@ -201,6 +224,9 @@ Default value: `none`.
         if (source.ApplyType != null) {
             this.ApplyType = new String(source.ApplyType);
         }
+        if (source.ClientCertInfo != null) {
+            this.ClientCertInfo = new MutualTLS(source.ClientCertInfo);
+        }
     }
 
 
@@ -213,6 +239,7 @@ Default value: `none`.
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamArrayObj(map, prefix + "ServerCertInfo.", this.ServerCertInfo);
         this.setParamSimple(map, prefix + "ApplyType", this.ApplyType);
+        this.setParamObj(map, prefix + "ClientCertInfo.", this.ClientCertInfo);
 
     }
 }

@@ -190,6 +190,13 @@ It is disabled if this parameter is not specified.
     private StandardDebug StandardDebug;
 
     /**
+    * Just-in-time media processing configuration. The original configuration applies if this field is not specified.
+    */
+    @SerializedName("JITVideoProcess")
+    @Expose
+    private JITVideoProcess JITVideoProcess;
+
+    /**
      * Get Site ID to modify. 
      * @return ZoneId Site ID to modify.
      */
@@ -601,6 +608,22 @@ It is disabled if this parameter is not specified.
         this.StandardDebug = StandardDebug;
     }
 
+    /**
+     * Get Just-in-time media processing configuration. The original configuration applies if this field is not specified. 
+     * @return JITVideoProcess Just-in-time media processing configuration. The original configuration applies if this field is not specified.
+     */
+    public JITVideoProcess getJITVideoProcess() {
+        return this.JITVideoProcess;
+    }
+
+    /**
+     * Set Just-in-time media processing configuration. The original configuration applies if this field is not specified.
+     * @param JITVideoProcess Just-in-time media processing configuration. The original configuration applies if this field is not specified.
+     */
+    public void setJITVideoProcess(JITVideoProcess JITVideoProcess) {
+        this.JITVideoProcess = JITVideoProcess;
+    }
+
     public ModifyZoneSettingRequest() {
     }
 
@@ -672,6 +695,9 @@ It is disabled if this parameter is not specified.
         if (source.StandardDebug != null) {
             this.StandardDebug = new StandardDebug(source.StandardDebug);
         }
+        if (source.JITVideoProcess != null) {
+            this.JITVideoProcess = new JITVideoProcess(source.JITVideoProcess);
+        }
     }
 
 
@@ -700,6 +726,7 @@ It is disabled if this parameter is not specified.
         this.setParamObj(map, prefix + "Grpc.", this.Grpc);
         this.setParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
         this.setParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
+        this.setParamObj(map, prefix + "JITVideoProcess.", this.JITVideoProcess);
 
     }
 }

@@ -206,6 +206,17 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     }
 
     /**
+     *This API is used to create a LoadBalancer. For details, see [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+     * @param req CreateLoadBalancerRequest
+     * @return CreateLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLoadBalancerResponse CreateLoadBalancer(CreateLoadBalancerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLoadBalancer", CreateLoadBalancerResponse.class);
+    }
+
+    /**
      *This API is used to create an origin group for easy management. The created origin server group can be used for **adding acceleration domain names** and **layer-4 proxy configuration**.
      * @param req CreateOriginGroupRequest
      * @return CreateOriginGroupResponse
@@ -418,6 +429,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DeleteL4ProxyRulesResponse DeleteL4ProxyRules(DeleteL4ProxyRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteL4ProxyRules", DeleteL4ProxyRulesResponse.class);
+    }
+
+    /**
+     *This API is used to delete a LoadBalancer. If the LoadBalancer is referenced by other services (for example, Layer-4 proxy), the LoadBalancer cannot be deleted until the reference relationship is removed. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+     * @param req DeleteLoadBalancerRequest
+     * @return DeleteLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLoadBalancerResponse DeleteLoadBalancer(DeleteLoadBalancerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLoadBalancer", DeleteLoadBalancerResponse.class);
     }
 
     /**
@@ -751,6 +773,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
+     *This API is used to query the LoadBalancer list. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+     * @param req DescribeLoadBalancerListRequest
+     * @return DescribeLoadBalancerListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoadBalancerListResponse DescribeLoadBalancerList(DescribeLoadBalancerListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLoadBalancerList", DescribeLoadBalancerListResponse.class);
+    }
+
+    /**
      *This API is used to obtain a list of origin groups.
      * @param req DescribeOriginGroupRequest
      * @return DescribeOriginGroupResponse
@@ -759,6 +792,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DescribeOriginGroupResponse DescribeOriginGroup(DescribeOriginGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeOriginGroup", DescribeOriginGroupResponse.class);
+    }
+
+    /**
+     *This API is used to query the health status of origin server groups under a LoadBalancer. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+     * @param req DescribeOriginGroupHealthStatusRequest
+     * @return DescribeOriginGroupHealthStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOriginGroupHealthStatusResponse DescribeOriginGroupHealthStatus(DescribeOriginGroupHealthStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOriginGroupHealthStatus", DescribeOriginGroupHealthStatusResponse.class);
     }
 
     /**
@@ -886,7 +930,7 @@ This API is used to query the configuration information of an IP group, includin
     }
 
     /**
-     *This API is used to query the L7 data recorded over time.
+     *This API is used to query the time series data of the L7 domain name. Note that there is a delay of about 10 minutes for this API. It is recommended to pull data from 10 minutes before the current time.
      * @param req DescribeTimingL7AnalysisDataRequest
      * @return DescribeTimingL7AnalysisDataResponse
      * @throws TencentCloudSDKException
@@ -897,7 +941,7 @@ This API is used to query the configuration information of an IP group, includin
     }
 
     /**
-     *This API is used to query the time-series L7 cached data.
+     *This API is used to query the time series traffic data of the L7 cache analysis. It will be deprecated. Use the <a href="https://intl.cloud.tencent.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a> API instead.
      * @param req DescribeTimingL7CacheDataRequest
      * @return DescribeTimingL7CacheDataResponse
      * @throws TencentCloudSDKException
@@ -908,7 +952,7 @@ This API is used to query the configuration information of an IP group, includin
     }
 
     /**
-     *This API is used to query the top-ranked L7 traffic data.
+     *This API is used to query the top N data of the L7 domain name by a specified dimension. Note that there is a delay of about 10 minutes for this API. It is recommended to pull data from 10 minutes before the current time.
      * @param req DescribeTopL7AnalysisDataRequest
      * @return DescribeTopL7AnalysisDataResponse
      * @throws TencentCloudSDKException
@@ -919,7 +963,7 @@ This API is used to query the configuration information of an IP group, includin
     }
 
     /**
-     *This API is used to query the cached L7 top-ranked data.
+     *This API is used to query the top N data of the L7 cache analysis. It will be deprecated. Use the <a href="https://intl.cloud.tencent.com/document/product/1552/80646?from_cn_redirect=1"> DescribeTopL7AnalysisData</a> API instead.
      * @param req DescribeTopL7CacheDataRequest
      * @return DescribeTopL7CacheDataResponse
      * @throws TencentCloudSDKException
@@ -1218,6 +1262,17 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     }
 
     /**
+     *This API is used to modify LoadBalancer configuration. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+     * @param req ModifyLoadBalancerRequest
+     * @return ModifyLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoadBalancerResponse ModifyLoadBalancer(ModifyLoadBalancerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLoadBalancer", ModifyLoadBalancerResponse.class);
+    }
+
+    /**
      *This API is used to modify the configuration of an origin group. The original configuration will be overwritten. 
      * @param req ModifyOriginGroupRequest
      * @return ModifyOriginGroupResponse
@@ -1240,7 +1295,7 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     }
 
     /**
-     *This API is used to modify the real-time log delivery task configuration. This API has the following restrictions:<li>Does not support modifying the destination type of the real-time log delivery task (TaskType);</li><li>Does not support modifying the data delivery type (LogType)</li><li>Does not support modifying the data delivery area (Area)</li><li>Does not support modifying the detailed destination configuration, such as log set and log topic, when the destination of the original real-time log delivery task is Tencent Cloud CLS.</li>
+     *This API is used to modify the real-time log delivery task configuration. This API has the following restrictions:<li>Does not support modifying the destination type of the real-time log delivery task (TaskType);</li><li>Does not support modifying the data delivery type (LogType);</li><li>Does not support modifying the data delivery area (Area);</li><li>Does not support modifying the detailed destination configuration, such as log set and log topic, when the destination of the original real-time log delivery task is Tencent Cloud CLS.</li>
      * @param req ModifyRealtimeLogDeliveryTaskRequest
      * @return ModifyRealtimeLogDeliveryTaskResponse
      * @throws TencentCloudSDKException

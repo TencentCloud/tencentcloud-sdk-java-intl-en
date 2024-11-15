@@ -31,14 +31,14 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
+    * Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * Type of a real-time log shipping task. Valid values:
+    * Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
 <li>custom_endpoint: push to a custom HTTP(S) address;</li>
 <li>s3: push to an AWS S3-compatible bucket address.</li>
@@ -48,7 +48,7 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private String TaskType;
 
     /**
-    * List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+    * List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
 <li>L7 domain name: domain.example.com;</li>
 <li>L4 proxy instance: sid-2s69eb5wcms7.</li>
     */
@@ -57,7 +57,7 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private String [] EntityList;
 
     /**
-    * Data shipping type. Valid values:
+    * Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
 <li>web-rateLiming: rate limit and CC attack defense logs;</li>
@@ -70,7 +70,7 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private String LogType;
 
     /**
-    * Data shipping area. Valid values:
+    * Data area. Valid values:
 <li>mainland: within the Chinese mainland;</li>
 <li>overseas: global (excluding the Chinese mainland).</li>
     */
@@ -79,28 +79,28 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private String Area;
 
     /**
-    * List of predefined fields for shipping.
+    * List of predefined fields for delivery.
     */
     @SerializedName("Fields")
     @Expose
     private String [] Fields;
 
     /**
-    * List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
+    * The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
     */
     @SerializedName("CustomFields")
     @Expose
     private CustomField [] CustomFields;
 
     /**
-    * Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
+    * Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
     */
     @SerializedName("DeliveryConditions")
     @Expose
     private DeliveryCondition [] DeliveryConditions;
 
     /**
-    * Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
+    * Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not specified, the sampling ratio is 100%.
     */
     @SerializedName("Sample")
     @Expose
@@ -153,27 +153,27 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_). 
-     * @return TaskName Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
+     * Get Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_). 
+     * @return TaskName Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
-     * @param TaskName Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
+     * Set Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
+     * @param TaskName Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get Type of a real-time log shipping task. Valid values:
+     * Get Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
 <li>custom_endpoint: push to a custom HTTP(S) address;</li>
 <li>s3: push to an AWS S3-compatible bucket address.</li> 
-     * @return TaskType Type of a real-time log shipping task. Valid values:
+     * @return TaskType Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
 <li>custom_endpoint: push to a custom HTTP(S) address;</li>
 <li>s3: push to an AWS S3-compatible bucket address.</li>
@@ -183,11 +183,11 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Set Type of a real-time log shipping task. Valid values:
+     * Set Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
 <li>custom_endpoint: push to a custom HTTP(S) address;</li>
 <li>s3: push to an AWS S3-compatible bucket address.</li>
-     * @param TaskType Type of a real-time log shipping task. Valid values:
+     * @param TaskType Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
 <li>custom_endpoint: push to a custom HTTP(S) address;</li>
 <li>s3: push to an AWS S3-compatible bucket address.</li>
@@ -197,10 +197,10 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+     * Get List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
 <li>L7 domain name: domain.example.com;</li>
 <li>L4 proxy instance: sid-2s69eb5wcms7.</li> 
-     * @return EntityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+     * @return EntityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
 <li>L7 domain name: domain.example.com;</li>
 <li>L4 proxy instance: sid-2s69eb5wcms7.</li>
      */
@@ -209,10 +209,10 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Set List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+     * Set List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
 <li>L7 domain name: domain.example.com;</li>
 <li>L4 proxy instance: sid-2s69eb5wcms7.</li>
-     * @param EntityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+     * @param EntityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
 <li>L7 domain name: domain.example.com;</li>
 <li>L4 proxy instance: sid-2s69eb5wcms7.</li>
      */
@@ -221,14 +221,14 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Data shipping type. Valid values:
+     * Get Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
 <li>web-rateLiming: rate limit and CC attack defense logs;</li>
 <li>web-attack: managed rule logs;</li>
 <li>web-rule: custom rule logs;</li>
 <li>web-bot: Bot management logs.</li> 
-     * @return LogType Data shipping type. Valid values:
+     * @return LogType Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
 <li>web-rateLiming: rate limit and CC attack defense logs;</li>
@@ -241,14 +241,14 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Set Data shipping type. Valid values:
+     * Set Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
 <li>web-rateLiming: rate limit and CC attack defense logs;</li>
 <li>web-attack: managed rule logs;</li>
 <li>web-rule: custom rule logs;</li>
 <li>web-bot: Bot management logs.</li>
-     * @param LogType Data shipping type. Valid values:
+     * @param LogType Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
 <li>web-rateLiming: rate limit and CC attack defense logs;</li>
@@ -261,10 +261,10 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Data shipping area. Valid values:
+     * Get Data area. Valid values:
 <li>mainland: within the Chinese mainland;</li>
 <li>overseas: global (excluding the Chinese mainland).</li> 
-     * @return Area Data shipping area. Valid values:
+     * @return Area Data area. Valid values:
 <li>mainland: within the Chinese mainland;</li>
 <li>overseas: global (excluding the Chinese mainland).</li>
      */
@@ -273,10 +273,10 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Set Data shipping area. Valid values:
+     * Set Data area. Valid values:
 <li>mainland: within the Chinese mainland;</li>
 <li>overseas: global (excluding the Chinese mainland).</li>
-     * @param Area Data shipping area. Valid values:
+     * @param Area Data area. Valid values:
 <li>mainland: within the Chinese mainland;</li>
 <li>overseas: global (excluding the Chinese mainland).</li>
      */
@@ -285,64 +285,64 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get List of predefined fields for shipping. 
-     * @return Fields List of predefined fields for shipping.
+     * Get List of predefined fields for delivery. 
+     * @return Fields List of predefined fields for delivery.
      */
     public String [] getFields() {
         return this.Fields;
     }
 
     /**
-     * Set List of predefined fields for shipping.
-     * @param Fields List of predefined fields for shipping.
+     * Set List of predefined fields for delivery.
+     * @param Fields List of predefined fields for delivery.
      */
     public void setFields(String [] Fields) {
         this.Fields = Fields;
     }
 
     /**
-     * Get List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200. 
-     * @return CustomFields List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
+     * Get The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields. 
+     * @return CustomFields The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
      */
     public CustomField [] getCustomFields() {
         return this.CustomFields;
     }
 
     /**
-     * Set List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
-     * @param CustomFields List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
+     * Set The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
+     * @param CustomFields The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
      */
     public void setCustomFields(CustomField [] CustomFields) {
         this.CustomFields = CustomFields;
     }
 
     /**
-     * Get Filter criteria of log shipping. If this parameter is not input, all logs will be shipped. 
-     * @return DeliveryConditions Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
+     * Get Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped. 
+     * @return DeliveryConditions Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
      */
     public DeliveryCondition [] getDeliveryConditions() {
         return this.DeliveryConditions;
     }
 
     /**
-     * Set Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
-     * @param DeliveryConditions Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
+     * Set Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
+     * @param DeliveryConditions Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
      */
     public void setDeliveryConditions(DeliveryCondition [] DeliveryConditions) {
         this.DeliveryConditions = DeliveryConditions;
     }
 
     /**
-     * Get Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%. 
-     * @return Sample Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
+     * Get Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not specified, the sampling ratio is 100%. 
+     * @return Sample Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not specified, the sampling ratio is 100%.
      */
     public Long getSample() {
         return this.Sample;
     }
 
     /**
-     * Set Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
-     * @param Sample Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
+     * Set Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not specified, the sampling ratio is 100%.
+     * @param Sample Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not specified, the sampling ratio is 100%.
      */
     public void setSample(Long Sample) {
         this.Sample = Sample;

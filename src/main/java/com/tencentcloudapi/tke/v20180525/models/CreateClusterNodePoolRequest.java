@@ -45,7 +45,7 @@ public class CreateClusterNodePoolRequest extends AbstractModel {
     private String LaunchConfigurePara;
 
     /**
-    * Sample parameters
+    * InstanceAdvancedSettings
     */
     @SerializedName("InstanceAdvancedSettings")
     @Expose
@@ -78,6 +78,13 @@ public class CreateClusterNodePoolRequest extends AbstractModel {
     @SerializedName("Taints")
     @Expose
     private Taint [] Taints;
+
+    /**
+    * Node Annotation List
+    */
+    @SerializedName("Annotations")
+    @Expose
+    private AnnotationValue [] Annotations;
 
     /**
     * Node pool runtime type and version
@@ -170,16 +177,16 @@ public class CreateClusterNodePoolRequest extends AbstractModel {
     }
 
     /**
-     * Get Sample parameters 
-     * @return InstanceAdvancedSettings Sample parameters
+     * Get InstanceAdvancedSettings 
+     * @return InstanceAdvancedSettings InstanceAdvancedSettings
      */
     public InstanceAdvancedSettings getInstanceAdvancedSettings() {
         return this.InstanceAdvancedSettings;
     }
 
     /**
-     * Set Sample parameters
-     * @param InstanceAdvancedSettings Sample parameters
+     * Set InstanceAdvancedSettings
+     * @param InstanceAdvancedSettings InstanceAdvancedSettings
      */
     public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
         this.InstanceAdvancedSettings = InstanceAdvancedSettings;
@@ -247,6 +254,22 @@ public class CreateClusterNodePoolRequest extends AbstractModel {
      */
     public void setTaints(Taint [] Taints) {
         this.Taints = Taints;
+    }
+
+    /**
+     * Get Node Annotation List 
+     * @return Annotations Node Annotation List
+     */
+    public AnnotationValue [] getAnnotations() {
+        return this.Annotations;
+    }
+
+    /**
+     * Set Node Annotation List
+     * @param Annotations Node Annotation List
+     */
+    public void setAnnotations(AnnotationValue [] Annotations) {
+        this.Annotations = Annotations;
     }
 
     /**
@@ -383,6 +406,12 @@ public class CreateClusterNodePoolRequest extends AbstractModel {
                 this.Taints[i] = new Taint(source.Taints[i]);
             }
         }
+        if (source.Annotations != null) {
+            this.Annotations = new AnnotationValue[source.Annotations.length];
+            for (int i = 0; i < source.Annotations.length; i++) {
+                this.Annotations[i] = new AnnotationValue(source.Annotations[i]);
+            }
+        }
         if (source.ContainerRuntime != null) {
             this.ContainerRuntime = new String(source.ContainerRuntime);
         }
@@ -419,6 +448,7 @@ public class CreateClusterNodePoolRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
+        this.setParamArrayObj(map, prefix + "Annotations.", this.Annotations);
         this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
         this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
         this.setParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);

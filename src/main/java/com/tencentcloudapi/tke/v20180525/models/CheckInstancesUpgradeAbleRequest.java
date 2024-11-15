@@ -38,7 +38,7 @@ public class CheckInstancesUpgradeAbleRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * Upgrade type
+    * Upgrade type, enum values: reset (Reinstallation and Upgrade, supports major and minor versions), hot (In-place Rolling Minor Version Upgrade), major (In-place Rolling Major Version Upgrade).
     */
     @SerializedName("UpgradeType")
     @Expose
@@ -98,16 +98,16 @@ public class CheckInstancesUpgradeAbleRequest extends AbstractModel {
     }
 
     /**
-     * Get Upgrade type 
-     * @return UpgradeType Upgrade type
+     * Get Upgrade type, enum values: reset (Reinstallation and Upgrade, supports major and minor versions), hot (In-place Rolling Minor Version Upgrade), major (In-place Rolling Major Version Upgrade). 
+     * @return UpgradeType Upgrade type, enum values: reset (Reinstallation and Upgrade, supports major and minor versions), hot (In-place Rolling Minor Version Upgrade), major (In-place Rolling Major Version Upgrade).
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set Upgrade type
-     * @param UpgradeType Upgrade type
+     * Set Upgrade type, enum values: reset (Reinstallation and Upgrade, supports major and minor versions), hot (In-place Rolling Minor Version Upgrade), major (In-place Rolling Major Version Upgrade).
+     * @param UpgradeType Upgrade type, enum values: reset (Reinstallation and Upgrade, supports major and minor versions), hot (In-place Rolling Minor Version Upgrade), major (In-place Rolling Major Version Upgrade).
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;

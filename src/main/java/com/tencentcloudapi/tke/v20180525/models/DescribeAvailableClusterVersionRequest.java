@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeAvailableClusterVersionRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID. If you need to query the upgradable version of a specific cluster, this field is required.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * List of cluster IDs
+    * Cluster ID list. If you need to query the upgradable versions of multiple clusters, this field is required.
     */
     @SerializedName("ClusterIds")
     @Expose
     private String [] ClusterIds;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. If you need to query the upgradable version of a specific cluster, this field is required. 
+     * @return ClusterId Cluster ID. If you need to query the upgradable version of a specific cluster, this field is required.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID. If you need to query the upgradable version of a specific cluster, this field is required.
+     * @param ClusterId Cluster ID. If you need to query the upgradable version of a specific cluster, this field is required.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get List of cluster IDs 
-     * @return ClusterIds List of cluster IDs
+     * Get Cluster ID list. If you need to query the upgradable versions of multiple clusters, this field is required. 
+     * @return ClusterIds Cluster ID list. If you need to query the upgradable versions of multiple clusters, this field is required.
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set List of cluster IDs
-     * @param ClusterIds List of cluster IDs
+     * Set Cluster ID list. If you need to query the upgradable versions of multiple clusters, this field is required.
+     * @param ClusterIds Cluster ID list. If you need to query the upgradable versions of multiple clusters, this field is required.
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;

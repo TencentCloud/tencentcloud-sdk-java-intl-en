@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteAPIDocResponse extends AbstractModel {
 
     /**
-    * Whether the operation succeeded
+    * Whether the operation succeeded.
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteAPIDocResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Whether the operation succeeded 
-     * @return Result Whether the operation succeeded
+     * Get Whether the operation succeeded. 
+     * @return Result Whether the operation succeeded.
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set Whether the operation succeeded
-     * @param Result Whether the operation succeeded
+     * Set Whether the operation succeeded.
+     * @param Result Whether the operation succeeded.
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

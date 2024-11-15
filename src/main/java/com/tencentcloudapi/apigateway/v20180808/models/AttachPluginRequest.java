@@ -31,7 +31,7 @@ public class AttachPluginRequest extends AbstractModel {
     private String PluginId;
 
     /**
-    * ID of the service to be operated
+    * ID of the service to be operated.
     */
     @SerializedName("ServiceId")
     @Expose
@@ -68,16 +68,16 @@ public class AttachPluginRequest extends AbstractModel {
     }
 
     /**
-     * Get ID of the service to be operated 
-     * @return ServiceId ID of the service to be operated
+     * Get ID of the service to be operated. 
+     * @return ServiceId ID of the service to be operated.
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set ID of the service to be operated
-     * @param ServiceId ID of the service to be operated
+     * Set ID of the service to be operated.
+     * @param ServiceId ID of the service to be operated.
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;

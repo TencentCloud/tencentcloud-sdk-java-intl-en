@@ -116,6 +116,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create log collection configuration.
+     * @param req CreateCLSLogConfigRequest
+     * @return CreateCLSLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCLSLogConfigResponse CreateCLSLogConfig(CreateCLSLogConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCLSLogConfig", CreateCLSLogConfigResponse.class);
+    }
+
+    /**
      *This API is used to create a cluster.
      * @param req CreateClusterRequest
      * @return CreateClusterResponse
@@ -182,7 +193,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a virtual node.
+     *This API is used to create the Pay-as-you-go Super Node.
      * @param req CreateClusterVirtualNodeRequest
      * @return CreateClusterVirtualNodeResponse
      * @throws TencentCloudSDKException
@@ -193,7 +204,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a virtual node pool.
+     *This API is used to create the Super Node Pool.
      * @param req CreateClusterVirtualNodePoolRequest
      * @return CreateClusterVirtualNodePoolResponse
      * @throws TencentCloudSDKException
@@ -234,6 +245,17 @@ public class TkeClient extends AbstractClient{
     public CreateEdgeLogConfigResponse CreateEdgeLogConfig(CreateEdgeLogConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateEdgeLogConfig", CreateEdgeLogConfigResponse.class);
+    }
+
+    /**
+     *This API is used to create Log Collection Configuration for Elastic Cluster.
+     * @param req CreateEksLogConfigRequest
+     * @return CreateEksLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEksLogConfigResponse CreateEksLogConfig(CreateEksLogConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEksLogConfig", CreateEksLogConfigResponse.class);
     }
 
     /**
@@ -369,7 +391,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a virtual node.
+     *This API is used to delete the super node.
      * @param req DeleteClusterVirtualNodeRequest
      * @return DeleteClusterVirtualNodeResponse
      * @throws TencentCloudSDKException
@@ -380,7 +402,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a virtual node pool.
+     *This API is used to delete the Super Node Pool.
      * @param req DeleteClusterVirtualNodePoolRequest
      * @return DeleteClusterVirtualNodePoolResponse
      * @throws TencentCloudSDKException
@@ -421,6 +443,17 @@ public class TkeClient extends AbstractClient{
     public DeleteEdgeClusterInstancesResponse DeleteEdgeClusterInstances(DeleteEdgeClusterInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteEdgeClusterInstances", DeleteEdgeClusterInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to delete collection rules within the cluster.
+     * @param req DeleteLogConfigsRequest
+     * @return DeleteLogConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLogConfigsResponse DeleteLogConfigs(DeleteLogConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLogConfigs", DeleteLogConfigsResponse.class);
     }
 
     /**
@@ -501,6 +534,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query batch modification Tag status.
+     * @param req DescribeBatchModifyTagsStatusRequest
+     * @return DescribeBatchModifyTagsStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBatchModifyTagsStatusResponse DescribeBatchModifyTagsStatus(DescribeBatchModifyTagsStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBatchModifyTagsStatus", DescribeBatchModifyTagsStatusResponse.class);
+    }
+
+    /**
      *Cluster auto scaling configuration
      * @param req DescribeClusterAsGroupOptionRequest
      * @return DescribeClusterAsGroupOptionResponse
@@ -575,6 +619,17 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterEndpointsResponse DescribeClusterEndpoints(DescribeClusterEndpointsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClusterEndpoints", DescribeClusterEndpointsResponse.class);
+    }
+
+    /**
+     *This API is used to query custom parameters of a cluster.
+     * @param req DescribeClusterExtraArgsRequest
+     * @return DescribeClusterExtraArgsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterExtraArgsResponse DescribeClusterExtraArgs(DescribeClusterExtraArgsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterExtraArgs", DescribeClusterExtraArgsResponse.class);
     }
 
     /**
@@ -688,7 +743,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of virtual nodes.
+     *This API is used to view the Super Node list.
      * @param req DescribeClusterVirtualNodeRequest
      * @return DescribeClusterVirtualNodeResponse
      * @throws TencentCloudSDKException
@@ -699,7 +754,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of virtual node pools.
+     *This API is used to view the Super Node Pool list.
      * @param req DescribeClusterVirtualNodePoolsRequest
      * @return DescribeClusterVirtualNodePoolsResponse
      * @throws TencentCloudSDKException
@@ -831,6 +886,28 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to view third-party node pool configuration information.
+     * @param req DescribeExternalNodeSupportConfigRequest
+     * @return DescribeExternalNodeSupportConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExternalNodeSupportConfigResponse DescribeExternalNodeSupportConfig(DescribeExternalNodeSupportConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExternalNodeSupportConfig", DescribeExternalNodeSupportConfigResponse.class);
+    }
+
+    /**
+     *This API is used to obtain eniipamd component information.
+     * @param req DescribeIPAMDRequest
+     * @return DescribeIPAMDResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIPAMDResponse DescribeIPAMD(DescribeIPAMDRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIPAMD", DescribeIPAMDResponse.class);
+    }
+
+    /**
      *This API is used to get image information.
      * @param req DescribeImagesRequest
      * @return DescribeImagesResponse
@@ -839,6 +916,39 @@ public class TkeClient extends AbstractClient{
     public DescribeImagesResponse DescribeImages(DescribeImagesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeImages", DescribeImagesResponse.class);
+    }
+
+    /**
+     *This API is used to query the log collection rules.
+     * @param req DescribeLogConfigsRequest
+     * @return DescribeLogConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogConfigsResponse DescribeLogConfigs(DescribeLogConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogConfigs", DescribeLogConfigsResponse.class);
+    }
+
+    /**
+     *This API is used to query Cluster Log (Auditing, Event, Common Log) Switch List.
+     * @param req DescribeLogSwitchesRequest
+     * @return DescribeLogSwitchesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogSwitchesResponse DescribeLogSwitches(DescribeLogSwitchesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogSwitches", DescribeLogSwitchesResponse.class);
+    }
+
+    /**
+     *This API is used to query the billing information of running Pods. You can query a specific Pod by Namespace and Name or batch query by Pod Uid.
+     * @param req DescribePodChargeInfoRequest
+     * @return DescribePodChargeInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePodChargeInfoResponse DescribePodChargeInfo(DescribePodChargeInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePodChargeInfo", DescribePodChargeInfoResponse.class);
     }
 
     /**
@@ -864,6 +974,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the usage rate of various types of Reserved Coupons.
+     * @param req DescribeReservedInstanceUtilizationRateRequest
+     * @return DescribeReservedInstanceUtilizationRateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReservedInstanceUtilizationRateResponse DescribeReservedInstanceUtilizationRate(DescribeReservedInstanceUtilizationRateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReservedInstanceUtilizationRate", DescribeReservedInstanceUtilizationRateResponse.class);
+    }
+
+    /**
      *This API is used to query the cluster resource usage.
      * @param req DescribeResourceUsageRequest
      * @return DescribeResourceUsageResponse
@@ -883,6 +1004,17 @@ public class TkeClient extends AbstractClient{
     public DescribeRouteTableConflictsResponse DescribeRouteTableConflicts(DescribeRouteTableConflictsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRouteTableConflicts", DescribeRouteTableConflictsResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve optional runtime versions based on K8S version.
+     * @param req DescribeSupportedRuntimeRequest
+     * @return DescribeSupportedRuntimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSupportedRuntimeResponse DescribeSupportedRuntime(DescribeSupportedRuntimeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSupportedRuntime", DescribeSupportedRuntimeResponse.class);
     }
 
     /**
@@ -985,7 +1117,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to drain a virtual node.
+     *This API is used to evict the Super Node.
      * @param req DrainClusterVirtualNodeRequest
      * @return DrainClusterVirtualNodeResponse
      * @throws TencentCloudSDKException
@@ -1007,7 +1139,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to enable encryption protection.
+     *This API is used to enable Encrypted Data Protection, which requires enabling KMS capability and completing KMS authorization.
      * @param req EnableEncryptionProtectionRequest
      * @return EnableEncryptionProtectionResponse
      * @throws TencentCloudSDKException
@@ -1051,7 +1183,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to obtain the current progress of the node upgrade.
+     *This API is used to obtain the current progress of node upgrade. If the cluster is not in node upgrade status, the API will report an error: Task not found.
      * @param req GetUpgradeInstanceProgressRequest
      * @return GetUpgradeInstanceProgressResponse
      * @throws TencentCloudSDKException
@@ -1139,6 +1271,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the cluster image.
+     * @param req ModifyClusterImageRequest
+     * @return ModifyClusterImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterImageResponse ModifyClusterImage(ModifyClusterImageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterImage", ModifyClusterImageResponse.class);
+    }
+
+    /**
      *This API is used to edit a node pool.
      * @param req ModifyClusterNodePoolRequest
      * @return ModifyClusterNodePoolResponse
@@ -1150,7 +1293,29 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify a virtual node pool.
+     *This API is used to modify the latitude runtime configuration of clusters and node pools.
+     * @param req ModifyClusterRuntimeConfigRequest
+     * @return ModifyClusterRuntimeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterRuntimeConfigResponse ModifyClusterRuntimeConfig(ModifyClusterRuntimeConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterRuntimeConfig", ModifyClusterRuntimeConfigResponse.class);
+    }
+
+    /**
+     *This API is used to modify cluster tags.
+     * @param req ModifyClusterTagsRequest
+     * @return ModifyClusterTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterTagsResponse ModifyClusterTags(ModifyClusterTagsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterTags", ModifyClusterTagsResponse.class);
+    }
+
+    /**
+     *This API is used to modify the Super Node Pool.
      * @param req ModifyClusterVirtualNodePoolRequest
      * @return ModifyClusterVirtualNodePoolResponse
      * @throws TencentCloudSDKException

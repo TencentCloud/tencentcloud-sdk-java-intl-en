@@ -25,6 +25,8 @@ public class CUDNN extends AbstractModel {
 
     /**
     * cuDNN version
+
+Note: This field may return "null", indicating that no valid value can be obtained.
     */
     @SerializedName("Version")
     @Expose
@@ -32,6 +34,8 @@ public class CUDNN extends AbstractModel {
 
     /**
     * cuDNN name
+
+Note: This field may return "null", indicating that no valid value can be obtained.
     */
     @SerializedName("Name")
     @Expose
@@ -39,6 +43,8 @@ public class CUDNN extends AbstractModel {
 
     /**
     * Doc name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
     */
     @SerializedName("DocName")
     @Expose
@@ -46,14 +52,20 @@ public class CUDNN extends AbstractModel {
 
     /**
     * Dev name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
     */
     @SerializedName("DevName")
     @Expose
     private String DevName;
 
     /**
-     * Get cuDNN version 
+     * Get cuDNN version
+
+Note: This field may return "null", indicating that no valid value can be obtained. 
      * @return Version cuDNN version
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public String getVersion() {
         return this.Version;
@@ -61,15 +73,23 @@ public class CUDNN extends AbstractModel {
 
     /**
      * Set cuDNN version
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      * @param Version cuDNN version
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get cuDNN name 
+     * Get cuDNN name
+
+Note: This field may return "null", indicating that no valid value can be obtained. 
      * @return Name cuDNN name
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -77,15 +97,23 @@ public class CUDNN extends AbstractModel {
 
     /**
      * Set cuDNN name
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      * @param Name cuDNN name
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Doc name of cuDNN 
+     * Get Doc name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained. 
      * @return DocName Doc name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public String getDocName() {
         return this.DocName;
@@ -93,15 +121,23 @@ public class CUDNN extends AbstractModel {
 
     /**
      * Set Doc name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      * @param DocName Doc name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public void setDocName(String DocName) {
         this.DocName = DocName;
     }
 
     /**
-     * Get Dev name of cuDNN 
+     * Get Dev name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained. 
      * @return DevName Dev name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public String getDevName() {
         return this.DevName;
@@ -109,7 +145,11 @@ public class CUDNN extends AbstractModel {
 
     /**
      * Set Dev name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      * @param DevName Dev name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public void setDevName(String DevName) {
         this.DevName = DevName;

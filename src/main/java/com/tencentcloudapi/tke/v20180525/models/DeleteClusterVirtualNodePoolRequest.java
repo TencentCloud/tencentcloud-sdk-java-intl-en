@@ -31,14 +31,14 @@ public class DeleteClusterVirtualNodePoolRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * List of virtual node pool IDs
+    * Super Node Pool ID list
     */
     @SerializedName("NodePoolIds")
     @Expose
     private String [] NodePoolIds;
 
     /**
-    * Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
+    * Mandatory deletion or not. If there are pods on the super node, and you choose non-mandatory deletion, the deletion will fail.
     */
     @SerializedName("Force")
     @Expose
@@ -61,32 +61,32 @@ public class DeleteClusterVirtualNodePoolRequest extends AbstractModel {
     }
 
     /**
-     * Get List of virtual node pool IDs 
-     * @return NodePoolIds List of virtual node pool IDs
+     * Get Super Node Pool ID list 
+     * @return NodePoolIds Super Node Pool ID list
      */
     public String [] getNodePoolIds() {
         return this.NodePoolIds;
     }
 
     /**
-     * Set List of virtual node pool IDs
-     * @param NodePoolIds List of virtual node pool IDs
+     * Set Super Node Pool ID list
+     * @param NodePoolIds Super Node Pool ID list
      */
     public void setNodePoolIds(String [] NodePoolIds) {
         this.NodePoolIds = NodePoolIds;
     }
 
     /**
-     * Get Whether to forcibly delete the nodes with pods. Values: `true`, `false`. 
-     * @return Force Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
+     * Get Mandatory deletion or not. If there are pods on the super node, and you choose non-mandatory deletion, the deletion will fail. 
+     * @return Force Mandatory deletion or not. If there are pods on the super node, and you choose non-mandatory deletion, the deletion will fail.
      */
     public Boolean getForce() {
         return this.Force;
     }
 
     /**
-     * Set Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
-     * @param Force Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
+     * Set Mandatory deletion or not. If there are pods on the super node, and you choose non-mandatory deletion, the deletion will fail.
+     * @param Force Mandatory deletion or not. If there are pods on the super node, and you choose non-mandatory deletion, the deletion will fail.
      */
     public void setForce(Boolean Force) {
         this.Force = Force;

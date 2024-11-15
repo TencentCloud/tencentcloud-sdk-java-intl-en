@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class ResourceDeleteOption extends AbstractModel {
 
     /**
-    * Resource type, for example `CBS`
+    * Resource type, such as CBS, CLB, CVM
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
+    * Deletion mode for CBS resources when the cluster is deleted: terminate, retain. Other resources are terminated by default.
     */
     @SerializedName("DeleteMode")
     @Expose
     private String DeleteMode;
 
     /**
-     * Get Resource type, for example `CBS` 
-     * @return ResourceType Resource type, for example `CBS`
+    * Whether to skip the resources with deletion protection enabled. It is false by default. When set to true, the resources with deletion protection enabled are not cleaned up. CLB with terminal nodes also belongs to the resources with deletion protection enabled.
+    */
+    @SerializedName("SkipDeletionProtection")
+    @Expose
+    private Boolean SkipDeletionProtection;
+
+    /**
+     * Get Resource type, such as CBS, CLB, CVM 
+     * @return ResourceType Resource type, such as CBS, CLB, CVM
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Resource type, for example `CBS`
-     * @param ResourceType Resource type, for example `CBS`
+     * Set Resource type, such as CBS, CLB, CVM
+     * @param ResourceType Resource type, such as CBS, CLB, CVM
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`. 
-     * @return DeleteMode Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
+     * Get Deletion mode for CBS resources when the cluster is deleted: terminate, retain. Other resources are terminated by default. 
+     * @return DeleteMode Deletion mode for CBS resources when the cluster is deleted: terminate, retain. Other resources are terminated by default.
      */
     public String getDeleteMode() {
         return this.DeleteMode;
     }
 
     /**
-     * Set Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
-     * @param DeleteMode Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
+     * Set Deletion mode for CBS resources when the cluster is deleted: terminate, retain. Other resources are terminated by default.
+     * @param DeleteMode Deletion mode for CBS resources when the cluster is deleted: terminate, retain. Other resources are terminated by default.
      */
     public void setDeleteMode(String DeleteMode) {
         this.DeleteMode = DeleteMode;
+    }
+
+    /**
+     * Get Whether to skip the resources with deletion protection enabled. It is false by default. When set to true, the resources with deletion protection enabled are not cleaned up. CLB with terminal nodes also belongs to the resources with deletion protection enabled. 
+     * @return SkipDeletionProtection Whether to skip the resources with deletion protection enabled. It is false by default. When set to true, the resources with deletion protection enabled are not cleaned up. CLB with terminal nodes also belongs to the resources with deletion protection enabled.
+     */
+    public Boolean getSkipDeletionProtection() {
+        return this.SkipDeletionProtection;
+    }
+
+    /**
+     * Set Whether to skip the resources with deletion protection enabled. It is false by default. When set to true, the resources with deletion protection enabled are not cleaned up. CLB with terminal nodes also belongs to the resources with deletion protection enabled.
+     * @param SkipDeletionProtection Whether to skip the resources with deletion protection enabled. It is false by default. When set to true, the resources with deletion protection enabled are not cleaned up. CLB with terminal nodes also belongs to the resources with deletion protection enabled.
+     */
+    public void setSkipDeletionProtection(Boolean SkipDeletionProtection) {
+        this.SkipDeletionProtection = SkipDeletionProtection;
     }
 
     public ResourceDeleteOption() {
@@ -83,6 +106,9 @@ public class ResourceDeleteOption extends AbstractModel {
         if (source.DeleteMode != null) {
             this.DeleteMode = new String(source.DeleteMode);
         }
+        if (source.SkipDeletionProtection != null) {
+            this.SkipDeletionProtection = new Boolean(source.SkipDeletionProtection);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ResourceDeleteOption extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "DeleteMode", this.DeleteMode);
+        this.setParamSimple(map, prefix + "SkipDeletionProtection", this.SkipDeletionProtection);
 
     }
 }

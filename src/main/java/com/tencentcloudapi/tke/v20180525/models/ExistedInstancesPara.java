@@ -31,7 +31,7 @@ public class ExistedInstancesPara extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * Additional parameter to be set for the instance
+    * Additional parameter information required for the instance (currently not supported by the backend, we will implement this in future versions)
     */
     @SerializedName("InstanceAdvancedSettings")
     @Expose
@@ -82,16 +82,16 @@ public class ExistedInstancesPara extends AbstractModel {
     }
 
     /**
-     * Get Additional parameter to be set for the instance 
-     * @return InstanceAdvancedSettings Additional parameter to be set for the instance
+     * Get Additional parameter information required for the instance (currently not supported by the backend, we will implement this in future versions) 
+     * @return InstanceAdvancedSettings Additional parameter information required for the instance (currently not supported by the backend, we will implement this in future versions)
      */
     public InstanceAdvancedSettings getInstanceAdvancedSettings() {
         return this.InstanceAdvancedSettings;
     }
 
     /**
-     * Set Additional parameter to be set for the instance
-     * @param InstanceAdvancedSettings Additional parameter to be set for the instance
+     * Set Additional parameter information required for the instance (currently not supported by the backend, we will implement this in future versions)
+     * @param InstanceAdvancedSettings Additional parameter information required for the instance (currently not supported by the backend, we will implement this in future versions)
      */
     public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
         this.InstanceAdvancedSettings = InstanceAdvancedSettings;
