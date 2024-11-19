@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyStreamPackageChannelRequest extends AbstractModel {
 
     /**
-    * Channel ID
+    * Channel ID.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * New channel name
+    * New channel name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * New channel protocol. Valid values: HLS, DASH
+    * New channel protocol. Valid values: HLS, DASH, CMAF.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Cache configuration
+    * Cache configuration.
     */
     @SerializedName("CacheInfo")
     @Expose
     private CacheInfo CacheInfo;
 
     /**
-     * Get Channel ID 
-     * @return Id Channel ID
+     * Get Channel ID. 
+     * @return Id Channel ID.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Channel ID
-     * @param Id Channel ID
+     * Set Channel ID.
+     * @param Id Channel ID.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get New channel name 
-     * @return Name New channel name
+     * Get New channel name. 
+     * @return Name New channel name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set New channel name
-     * @param Name New channel name
+     * Set New channel name.
+     * @param Name New channel name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get New channel protocol. Valid values: HLS, DASH 
-     * @return Protocol New channel protocol. Valid values: HLS, DASH
+     * Get New channel protocol. Valid values: HLS, DASH, CMAF. 
+     * @return Protocol New channel protocol. Valid values: HLS, DASH, CMAF.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set New channel protocol. Valid values: HLS, DASH
-     * @param Protocol New channel protocol. Valid values: HLS, DASH
+     * Set New channel protocol. Valid values: HLS, DASH, CMAF.
+     * @param Protocol New channel protocol. Valid values: HLS, DASH, CMAF.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Cache configuration 
-     * @return CacheInfo Cache configuration
+     * Get Cache configuration. 
+     * @return CacheInfo Cache configuration.
      */
     public CacheInfo getCacheInfo() {
         return this.CacheInfo;
     }
 
     /**
-     * Set Cache configuration
-     * @param CacheInfo Cache configuration
+     * Set Cache configuration.
+     * @param CacheInfo Cache configuration.
      */
     public void setCacheInfo(CacheInfo CacheInfo) {
         this.CacheInfo = CacheInfo;

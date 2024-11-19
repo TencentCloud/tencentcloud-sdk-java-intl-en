@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateStreamPackageChannelRequest extends AbstractModel {
 
     /**
-    * Channel name
+    * Channel name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Channel protocol. Valid values: HLS, DASH
+    * Channel protocol. Valid values: HLS, DASH, CMAF.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Cache configuration
+    * Cache configuration.
     */
     @SerializedName("CacheInfo")
     @Expose
     private CacheInfo CacheInfo;
 
     /**
-     * Get Channel name 
-     * @return Name Channel name
+     * Get Channel name. 
+     * @return Name Channel name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Channel name
-     * @param Name Channel name
+     * Set Channel name.
+     * @param Name Channel name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Channel protocol. Valid values: HLS, DASH 
-     * @return Protocol Channel protocol. Valid values: HLS, DASH
+     * Get Channel protocol. Valid values: HLS, DASH, CMAF. 
+     * @return Protocol Channel protocol. Valid values: HLS, DASH, CMAF.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Channel protocol. Valid values: HLS, DASH
-     * @param Protocol Channel protocol. Valid values: HLS, DASH
+     * Set Channel protocol. Valid values: HLS, DASH, CMAF.
+     * @param Protocol Channel protocol. Valid values: HLS, DASH, CMAF.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Cache configuration 
-     * @return CacheInfo Cache configuration
+     * Get Cache configuration. 
+     * @return CacheInfo Cache configuration.
      */
     public CacheInfo getCacheInfo() {
         return this.CacheInfo;
     }
 
     /**
-     * Set Cache configuration
-     * @param CacheInfo Cache configuration
+     * Set Cache configuration.
+     * @param CacheInfo Cache configuration.
      */
     public void setCacheInfo(CacheInfo CacheInfo) {
         this.CacheInfo = CacheInfo;

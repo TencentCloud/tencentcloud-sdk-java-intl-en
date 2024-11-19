@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class CreateAccountRequest extends AbstractModel {
 
     /**
-    * Account type of a new customer. Valid values: `personal`, `company`.
+    * Account type of a new customer.
+Valid values: `personal`, `company`.
     */
     @SerializedName("AccountType")
     @Expose
@@ -39,7 +40,7 @@ For example, account@qq.com.
     private String Mail;
 
     /**
-    * Account password
+    * Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
     */
@@ -55,7 +56,9 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
     private String ConfirmPassword;
 
     /**
-    * Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+    * Customer's mobile number. 
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
     */
     @SerializedName("PhoneNum")
     @Expose
@@ -63,6 +66,7 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
 
     /**
     * Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+Parameter value is not allowed to be 7,380,86.
     */
     @SerializedName("CountryCode")
     @Expose
@@ -83,23 +87,29 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
     private String Extended;
 
     /**
-    * Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+    * Verification code. 
+It will be used to verify the validity of the mobile number you provide. 
+When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
     */
     @SerializedName("VerifyCode")
     @Expose
     private String VerifyCode;
 
     /**
-     * Get Account type of a new customer. Valid values: `personal`, `company`. 
-     * @return AccountType Account type of a new customer. Valid values: `personal`, `company`.
+     * Get Account type of a new customer.
+Valid values: `personal`, `company`. 
+     * @return AccountType Account type of a new customer.
+Valid values: `personal`, `company`.
      */
     public String getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set Account type of a new customer. Valid values: `personal`, `company`.
-     * @param AccountType Account type of a new customer. Valid values: `personal`, `company`.
+     * Set Account type of a new customer.
+Valid values: `personal`, `company`.
+     * @param AccountType Account type of a new customer.
+Valid values: `personal`, `company`.
      */
     public void setAccountType(String AccountType) {
         this.AccountType = AccountType;
@@ -126,10 +136,10 @@ For example, account@qq.com.
     }
 
     /**
-     * Get Account password
+     * Get Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed. 
-     * @return Password Account password
+     * @return Password Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
      */
@@ -138,10 +148,10 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
     }
 
     /**
-     * Set Account password
+     * Set Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
-     * @param Password Account password
+     * @param Password Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
      */
@@ -166,24 +176,34 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
     }
 
     /**
-     * Get Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number. 
-     * @return PhoneNum Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+     * Get Customer's mobile number. 
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number. 
+     * @return PhoneNum Customer's mobile number. 
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
      */
     public String getPhoneNum() {
         return this.PhoneNum;
     }
 
     /**
-     * Set Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
-     * @param PhoneNum Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+     * Set Customer's mobile number. 
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+     * @param PhoneNum Customer's mobile number. 
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
      */
     public void setPhoneNum(String PhoneNum) {
         this.PhoneNum = PhoneNum;
     }
 
     /**
-     * Get Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852". 
+     * Get Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+Parameter value is not allowed to be 7,380,86. 
      * @return CountryCode Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+Parameter value is not allowed to be 7,380,86.
      */
     public String getCountryCode() {
         return this.CountryCode;
@@ -191,7 +211,9 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
 
     /**
      * Set Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+Parameter value is not allowed to be 7,380,86.
      * @param CountryCode Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+Parameter value is not allowed to be 7,380,86.
      */
     public void setCountryCode(String CountryCode) {
         this.CountryCode = CountryCode;
@@ -230,16 +252,24 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
     }
 
     /**
-     * Get Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it. 
-     * @return VerifyCode Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+     * Get Verification code. 
+It will be used to verify the validity of the mobile number you provide. 
+When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it. 
+     * @return VerifyCode Verification code. 
+It will be used to verify the validity of the mobile number you provide. 
+When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
      */
     public String getVerifyCode() {
         return this.VerifyCode;
     }
 
     /**
-     * Set Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
-     * @param VerifyCode Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+     * Set Verification code. 
+It will be used to verify the validity of the mobile number you provide. 
+When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+     * @param VerifyCode Verification code. 
+It will be used to verify the validity of the mobile number you provide. 
+When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
      */
     public void setVerifyCode(String VerifyCode) {
         this.VerifyCode = VerifyCode;

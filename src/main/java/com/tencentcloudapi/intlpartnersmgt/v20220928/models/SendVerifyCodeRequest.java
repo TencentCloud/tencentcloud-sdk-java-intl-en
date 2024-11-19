@@ -25,6 +25,7 @@ public class SendVerifyCodeRequest extends AbstractModel {
 
     /**
     * Country code.
+Parameter value is not allowed to be 7,380,86.
     */
     @SerializedName("CountryCode")
     @Expose
@@ -38,8 +39,10 @@ public class SendVerifyCodeRequest extends AbstractModel {
     private String PhoneNum;
 
     /**
-     * Get Country code. 
+     * Get Country code.
+Parameter value is not allowed to be 7,380,86. 
      * @return CountryCode Country code.
+Parameter value is not allowed to be 7,380,86.
      */
     public String getCountryCode() {
         return this.CountryCode;
@@ -47,7 +50,9 @@ public class SendVerifyCodeRequest extends AbstractModel {
 
     /**
      * Set Country code.
+Parameter value is not allowed to be 7,380,86.
      * @param CountryCode Country code.
+Parameter value is not allowed to be 7,380,86.
      */
     public void setCountryCode(String CountryCode) {
         this.CountryCode = CountryCode;

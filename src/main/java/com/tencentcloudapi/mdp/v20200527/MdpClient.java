@@ -83,6 +83,50 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
+     *Create a linear assembly channel.
+     * @param req CreateStreamPackageLinearAssemblyChannelRequest
+     * @return CreateStreamPackageLinearAssemblyChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamPackageLinearAssemblyChannelResponse CreateStreamPackageLinearAssemblyChannel(CreateStreamPackageLinearAssemblyChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStreamPackageLinearAssemblyChannel", CreateStreamPackageLinearAssemblyChannelResponse.class);
+    }
+
+    /**
+     *Create a linear assembly program.
+     * @param req CreateStreamPackageLinearAssemblyProgramRequest
+     * @return CreateStreamPackageLinearAssemblyProgramResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamPackageLinearAssemblyProgramResponse CreateStreamPackageLinearAssemblyProgram(CreateStreamPackageLinearAssemblyProgramRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStreamPackageLinearAssemblyProgram", CreateStreamPackageLinearAssemblyProgramResponse.class);
+    }
+
+    /**
+     *Create channel linear assembly Source.
+     * @param req CreateStreamPackageSourceRequest
+     * @return CreateStreamPackageSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamPackageSourceResponse CreateStreamPackageSource(CreateStreamPackageSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStreamPackageSource", CreateStreamPackageSourceResponse.class);
+    }
+
+    /**
+     *Create Linear Assembly SourceLocation.
+     * @param req CreateStreamPackageSourceLocationRequest
+     * @return CreateStreamPackageSourceLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamPackageSourceLocationResponse CreateStreamPackageSourceLocation(CreateStreamPackageSourceLocationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStreamPackageSourceLocation", CreateStreamPackageSourceLocationResponse.class);
+    }
+
+    /**
      *This API is used to delete endpoints from a StreamPackage channel in batches.
      * @param req DeleteStreamPackageChannelEndpointsRequest
      * @return DeleteStreamPackageChannelEndpointsResponse
@@ -124,6 +168,72 @@ public class MdpClient extends AbstractClient{
     public DeleteStreamPackageHarvestJobsResponse DeleteStreamPackageHarvestJobs(DeleteStreamPackageHarvestJobsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteStreamPackageHarvestJobs", DeleteStreamPackageHarvestJobsResponse.class);
+    }
+
+    /**
+     *Delete channel linear assemblyChannel.
+     * @param req DeleteStreamPackageLinearAssemblyChannelRequest
+     * @return DeleteStreamPackageLinearAssemblyChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageLinearAssemblyChannelResponse DeleteStreamPackageLinearAssemblyChannel(DeleteStreamPackageLinearAssemblyChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageLinearAssemblyChannel", DeleteStreamPackageLinearAssemblyChannelResponse.class);
+    }
+
+    /**
+     *Delete channels in batches and linearly assemble channels.
+     * @param req DeleteStreamPackageLinearAssemblyChannelsRequest
+     * @return DeleteStreamPackageLinearAssemblyChannelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageLinearAssemblyChannelsResponse DeleteStreamPackageLinearAssemblyChannels(DeleteStreamPackageLinearAssemblyChannelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageLinearAssemblyChannels", DeleteStreamPackageLinearAssemblyChannelsResponse.class);
+    }
+
+    /**
+     *Delete Channel Linear Assembly Program.
+     * @param req DeleteStreamPackageLinearAssemblyProgramRequest
+     * @return DeleteStreamPackageLinearAssemblyProgramResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageLinearAssemblyProgramResponse DeleteStreamPackageLinearAssemblyProgram(DeleteStreamPackageLinearAssemblyProgramRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageLinearAssemblyProgram", DeleteStreamPackageLinearAssemblyProgramResponse.class);
+    }
+
+    /**
+     *Batch deletion of channels linear assembly program.
+     * @param req DeleteStreamPackageLinearAssemblyProgramsRequest
+     * @return DeleteStreamPackageLinearAssemblyProgramsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageLinearAssemblyProgramsResponse DeleteStreamPackageLinearAssemblyPrograms(DeleteStreamPackageLinearAssemblyProgramsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageLinearAssemblyPrograms", DeleteStreamPackageLinearAssemblyProgramsResponse.class);
+    }
+
+    /**
+     *Delete channel linear assembly Source.
+     * @param req DeleteStreamPackageSourceRequest
+     * @return DeleteStreamPackageSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageSourceResponse DeleteStreamPackageSource(DeleteStreamPackageSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageSource", DeleteStreamPackageSourceResponse.class);
+    }
+
+    /**
+     *Batch delete media packaging SourceLocation.
+     * @param req DeleteStreamPackageSourceLocationRequest
+     * @return DeleteStreamPackageSourceLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageSourceLocationResponse DeleteStreamPackageSourceLocation(DeleteStreamPackageSourceLocationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageSourceLocation", DeleteStreamPackageSourceLocationResponse.class);
     }
 
     /**
@@ -171,6 +281,138 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
+     *Query channel linear assembly Channel information.
+     * @param req DescribeStreamPackageLinearAssemblyChannelRequest
+     * @return DescribeStreamPackageLinearAssemblyChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageLinearAssemblyChannelResponse DescribeStreamPackageLinearAssemblyChannel(DescribeStreamPackageLinearAssemblyChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageLinearAssemblyChannel", DescribeStreamPackageLinearAssemblyChannelResponse.class);
+    }
+
+    /**
+     *Query linear assembly channel alarm information.
+     * @param req DescribeStreamPackageLinearAssemblyChannelAlertsRequest
+     * @return DescribeStreamPackageLinearAssemblyChannelAlertsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageLinearAssemblyChannelAlertsResponse DescribeStreamPackageLinearAssemblyChannelAlerts(DescribeStreamPackageLinearAssemblyChannelAlertsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageLinearAssemblyChannelAlerts", DescribeStreamPackageLinearAssemblyChannelAlertsResponse.class);
+    }
+
+    /**
+     *Query channel linear assembly Channel information list.
+     * @param req DescribeStreamPackageLinearAssemblyChannelsRequest
+     * @return DescribeStreamPackageLinearAssemblyChannelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageLinearAssemblyChannelsResponse DescribeStreamPackageLinearAssemblyChannels(DescribeStreamPackageLinearAssemblyChannelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageLinearAssemblyChannels", DescribeStreamPackageLinearAssemblyChannelsResponse.class);
+    }
+
+    /**
+     *Query channel linear assembly program information.
+     * @param req DescribeStreamPackageLinearAssemblyProgramRequest
+     * @return DescribeStreamPackageLinearAssemblyProgramResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageLinearAssemblyProgramResponse DescribeStreamPackageLinearAssemblyProgram(DescribeStreamPackageLinearAssemblyProgramRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageLinearAssemblyProgram", DescribeStreamPackageLinearAssemblyProgramResponse.class);
+    }
+
+    /**
+     *Query channel linear assembly Programl assembly scheduling information list.
+     * @param req DescribeStreamPackageLinearAssemblyProgramSchedulesRequest
+     * @return DescribeStreamPackageLinearAssemblyProgramSchedulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageLinearAssemblyProgramSchedulesResponse DescribeStreamPackageLinearAssemblyProgramSchedules(DescribeStreamPackageLinearAssemblyProgramSchedulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageLinearAssemblyProgramSchedules", DescribeStreamPackageLinearAssemblyProgramSchedulesResponse.class);
+    }
+
+    /**
+     *Query channel linear assembly Programl information list.
+     * @param req DescribeStreamPackageLinearAssemblyProgramsRequest
+     * @return DescribeStreamPackageLinearAssemblyProgramsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageLinearAssemblyProgramsResponse DescribeStreamPackageLinearAssemblyPrograms(DescribeStreamPackageLinearAssemblyProgramsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageLinearAssemblyPrograms", DescribeStreamPackageLinearAssemblyProgramsResponse.class);
+    }
+
+    /**
+     *Query channel linear assembly Source information.
+     * @param req DescribeStreamPackageSourceRequest
+     * @return DescribeStreamPackageSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSourceResponse DescribeStreamPackageSource(DescribeStreamPackageSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSource", DescribeStreamPackageSourceResponse.class);
+    }
+
+    /**
+     *Query channel linear assembly Source alarm information.
+     * @param req DescribeStreamPackageSourceAlertsRequest
+     * @return DescribeStreamPackageSourceAlertsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSourceAlertsResponse DescribeStreamPackageSourceAlerts(DescribeStreamPackageSourceAlertsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSourceAlerts", DescribeStreamPackageSourceAlertsResponse.class);
+    }
+
+    /**
+     *Query channel linear assembly sourceLocation information.
+     * @param req DescribeStreamPackageSourceLocationRequest
+     * @return DescribeStreamPackageSourceLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSourceLocationResponse DescribeStreamPackageSourceLocation(DescribeStreamPackageSourceLocationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSourceLocation", DescribeStreamPackageSourceLocationResponse.class);
+    }
+
+    /**
+     *Query channel linear assembly Location alarm information.
+     * @param req DescribeStreamPackageSourceLocationAlertsRequest
+     * @return DescribeStreamPackageSourceLocationAlertsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSourceLocationAlertsResponse DescribeStreamPackageSourceLocationAlerts(DescribeStreamPackageSourceLocationAlertsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSourceLocationAlerts", DescribeStreamPackageSourceLocationAlertsResponse.class);
+    }
+
+    /**
+     *Query channel linear assembly SourceLocation information list.
+     * @param req DescribeStreamPackageSourceLocationsRequest
+     * @return DescribeStreamPackageSourceLocationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSourceLocationsResponse DescribeStreamPackageSourceLocations(DescribeStreamPackageSourceLocationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSourceLocations", DescribeStreamPackageSourceLocationsResponse.class);
+    }
+
+    /**
+     *Query channel linear assembly Source information list.
+     * @param req DescribeStreamPackageSourcesRequest
+     * @return DescribeStreamPackageSourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSourcesResponse DescribeStreamPackageSources(DescribeStreamPackageSourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSources", DescribeStreamPackageSourcesResponse.class);
+    }
+
+    /**
      *This API is used to modify a StreamPackage channel.
      * @param req ModifyStreamPackageChannelRequest
      * @return ModifyStreamPackageChannelResponse
@@ -201,6 +443,72 @@ public class MdpClient extends AbstractClient{
     public ModifyStreamPackageChannelInputAuthInfoResponse ModifyStreamPackageChannelInputAuthInfo(ModifyStreamPackageChannelInputAuthInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyStreamPackageChannelInputAuthInfo", ModifyStreamPackageChannelInputAuthInfoResponse.class);
+    }
+
+    /**
+     *Modify channel linear assembly Channel configuration.
+     * @param req ModifyStreamPackageLinearAssemblyChannelRequest
+     * @return ModifyStreamPackageLinearAssemblyChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamPackageLinearAssemblyChannelResponse ModifyStreamPackageLinearAssemblyChannel(ModifyStreamPackageLinearAssemblyChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyStreamPackageLinearAssemblyChannel", ModifyStreamPackageLinearAssemblyChannelResponse.class);
+    }
+
+    /**
+     *Modify channel linear assembly Program configuration.
+     * @param req ModifyStreamPackageLinearAssemblyProgramRequest
+     * @return ModifyStreamPackageLinearAssemblyProgramResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamPackageLinearAssemblyProgramResponse ModifyStreamPackageLinearAssemblyProgram(ModifyStreamPackageLinearAssemblyProgramRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyStreamPackageLinearAssemblyProgram", ModifyStreamPackageLinearAssemblyProgramResponse.class);
+    }
+
+    /**
+     *Modify channel linear assembly Source configuration.
+     * @param req ModifyStreamPackageSourceRequest
+     * @return ModifyStreamPackageSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamPackageSourceResponse ModifyStreamPackageSource(ModifyStreamPackageSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyStreamPackageSource", ModifyStreamPackageSourceResponse.class);
+    }
+
+    /**
+     *Modify channel linear assembly SourceLocation configuration
+     * @param req ModifyStreamPackageSourceLocationRequest
+     * @return ModifyStreamPackageSourceLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamPackageSourceLocationResponse ModifyStreamPackageSourceLocation(ModifyStreamPackageSourceLocationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyStreamPackageSourceLocation", ModifyStreamPackageSourceLocationResponse.class);
+    }
+
+    /**
+     *Start Linear Assembly Channel.
+     * @param req StartStreamPackageLinearAssemblyChannelRequest
+     * @return StartStreamPackageLinearAssemblyChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartStreamPackageLinearAssemblyChannelResponse StartStreamPackageLinearAssemblyChannel(StartStreamPackageLinearAssemblyChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartStreamPackageLinearAssemblyChannel", StartStreamPackageLinearAssemblyChannelResponse.class);
+    }
+
+    /**
+     *Stop linear assembly channel.
+     * @param req StopStreamPackageLinearAssemblyChannelRequest
+     * @return StopStreamPackageLinearAssemblyChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannel(StopStreamPackageLinearAssemblyChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopStreamPackageLinearAssemblyChannel", StopStreamPackageLinearAssemblyChannelResponse.class);
     }
 
     /**
