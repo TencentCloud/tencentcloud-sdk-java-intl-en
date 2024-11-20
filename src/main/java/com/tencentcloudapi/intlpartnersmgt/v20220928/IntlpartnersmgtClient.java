@@ -189,6 +189,17 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
+     *This API is used to set and cancel forced service suspension.Reseller need to be allowlisted to use the API.
+     * @param req ForceQNRequest
+     * @return ForceQNResponse
+     * @throws TencentCloudSDKException
+     */
+    public ForceQNResponse ForceQN(ForceQNRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ForceQN", ForceQNResponse.class);
+    }
+
+    /**
      *This API is used to obtain country/region codes.
      * @param req GetCountryCodesRequest
      * @return GetCountryCodesResponse
