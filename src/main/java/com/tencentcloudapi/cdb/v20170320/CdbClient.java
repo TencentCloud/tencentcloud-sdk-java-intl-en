@@ -975,21 +975,6 @@ Note: the HTTP response packet will be very large if it contain a single large s
     }
 
     /**
-     *该接口不再维护，参考CreateDBInstance+API文档，在发货时即可完成初始化。
-
-This API was disused. You can refer to the CreateDBInstance API, and initialize the instance when creating it.
-
-This API is used to initialize a TencentDB instance, including initial password, default character set, and instance port number. But it is disused and not recommended. You can now set the instance information by using the parameter `Password`, `ParamList`, and `Port` respectively in the `CreateDBInstance` and `CreateDBInstanceHour` APIs.
-     * @param req InitDBInstancesRequest
-     * @return InitDBInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public InitDBInstancesResponse InitDBInstances(InitDBInstancesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "InitDBInstances", InitDBInstancesResponse.class);
-    }
-
-    /**
      *This API is used to isolate a TencentDB instance, which will no longer be accessible via IP and port. The isolated instance can be started up in the recycle bin. If it is isolated due to arrears, please top up your account as soon as possible.
      * @param req IsolateDBInstanceRequest
      * @return IsolateDBInstanceResponse

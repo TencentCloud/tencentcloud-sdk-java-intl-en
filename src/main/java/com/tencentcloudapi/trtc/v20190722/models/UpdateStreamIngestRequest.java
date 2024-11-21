@@ -45,6 +45,13 @@ public class UpdateStreamIngestRequest extends AbstractModel {
     private String StreamUrl;
 
     /**
+    * Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+    */
+    @SerializedName("Volume")
+    @Expose
+    private Long Volume;
+
+    /**
      * Get The SDKAppId of TRTC should be the same as the SDKAppId corresponding to the task room. 
      * @return SdkAppId The SDKAppId of TRTC should be the same as the SDKAppId corresponding to the task room.
      */
@@ -92,6 +99,22 @@ public class UpdateStreamIngestRequest extends AbstractModel {
         this.StreamUrl = StreamUrl;
     }
 
+    /**
+     * Get Volume. Valid value range: [0, 100], default value is 100, indicating the original volume. 
+     * @return Volume Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+     */
+    public Long getVolume() {
+        return this.Volume;
+    }
+
+    /**
+     * Set Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+     * @param Volume Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+     */
+    public void setVolume(Long Volume) {
+        this.Volume = Volume;
+    }
+
     public UpdateStreamIngestRequest() {
     }
 
@@ -109,6 +132,9 @@ public class UpdateStreamIngestRequest extends AbstractModel {
         if (source.StreamUrl != null) {
             this.StreamUrl = new String(source.StreamUrl);
         }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class UpdateStreamIngestRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
+        this.setParamSimple(map, prefix + "Volume", this.Volume);
 
     }
 }
