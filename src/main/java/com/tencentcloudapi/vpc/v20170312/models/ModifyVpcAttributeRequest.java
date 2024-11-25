@@ -59,7 +59,7 @@ public class ModifyVpcAttributeRequest extends AbstractModel {
     private String DomainName;
 
     /**
-    * Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
+    * Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish
     */
     @SerializedName("EnableCdcPublish")
     @Expose
@@ -146,16 +146,16 @@ public class ModifyVpcAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish 
-     * @return EnableCdcPublish Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
+     * Get Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish 
+     * @return EnableCdcPublish Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish
      */
     public Boolean getEnableCdcPublish() {
         return this.EnableCdcPublish;
     }
 
     /**
-     * Set Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
-     * @param EnableCdcPublish Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
+     * Set Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish
+     * @param EnableCdcPublish Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish
      */
     public void setEnableCdcPublish(Boolean EnableCdcPublish) {
         this.EnableCdcPublish = EnableCdcPublish;

@@ -174,6 +174,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long NatProductVersion;
 
     /**
+    * 
+    */
+    @SerializedName("SmartScheduleMode")
+    @Expose
+    private Boolean SmartScheduleMode;
+
+    /**
      * Get NAT gateway ID. 
      * @return NatGatewayId NAT gateway ID.
      */
@@ -533,6 +540,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.NatProductVersion = NatProductVersion;
     }
 
+    /**
+     * Get  
+     * @return SmartScheduleMode 
+     */
+    public Boolean getSmartScheduleMode() {
+        return this.SmartScheduleMode;
+    }
+
+    /**
+     * Set 
+     * @param SmartScheduleMode 
+     */
+    public void setSmartScheduleMode(Boolean SmartScheduleMode) {
+        this.SmartScheduleMode = SmartScheduleMode;
+    }
+
     public NatGateway() {
     }
 
@@ -619,6 +642,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.NatProductVersion != null) {
             this.NatProductVersion = new Long(source.NatProductVersion);
         }
+        if (source.SmartScheduleMode != null) {
+            this.SmartScheduleMode = new Boolean(source.SmartScheduleMode);
+        }
     }
 
 
@@ -646,6 +672,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ExclusiveGatewayBandwidth", this.ExclusiveGatewayBandwidth);
         this.setParamSimple(map, prefix + "RestrictState", this.RestrictState);
         this.setParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
+        this.setParamSimple(map, prefix + "SmartScheduleMode", this.SmartScheduleMode);
 
     }
 }

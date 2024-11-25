@@ -31,30 +31,6 @@ public class CheckNetDetectStateRequest extends AbstractModel {
     private String [] DetectDestinationIp;
 
     /**
-    * The type of the next hop. Currently supported types are:
-VPN: VPN gateway;
-DIRECTCONNECT: direct connect gateway;
-PEERCONNECTION: peering connection;
-NAT: NAT gateway;
-NORMAL_CVM: normal CVM.
-    */
-    @SerializedName("NextHopType")
-    @Expose
-    private String NextHopType;
-
-    /**
-    * The next-hop destination gateway. The value is related to NextHopType.
-If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
-If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
-If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
-If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
-If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
-    */
-    @SerializedName("NextHopDestination")
-    @Expose
-    private String NextHopDestination;
-
-    /**
     * ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
     */
     @SerializedName("NetDetectId")
@@ -83,6 +59,30 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
     private String NetDetectName;
 
     /**
+    * The type of the next hop. Currently supported types are:
+VPN: VPN gateway;
+DIRECTCONNECT: direct connect gateway;
+PEERCONNECTION: peering connection;
+NAT: NAT gateway;
+NORMAL_CVM: normal CVM.
+    */
+    @SerializedName("NextHopType")
+    @Expose
+    private String NextHopType;
+
+    /**
+    * The next-hop destination gateway. The value is related to NextHopType.
+If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
+If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
+If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
+If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
+If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
+    */
+    @SerializedName("NextHopDestination")
+    @Expose
+    private String NextHopDestination;
+
+    /**
      * Get The array of detection destination IPv4 addresses, which contains at most two IP addresses. 
      * @return DetectDestinationIp The array of detection destination IPv4 addresses, which contains at most two IP addresses.
      */
@@ -96,6 +96,70 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
      */
     public void setDetectDestinationIp(String [] DetectDestinationIp) {
         this.DetectDestinationIp = DetectDestinationIp;
+    }
+
+    /**
+     * Get ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present. 
+     * @return NetDetectId ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
+     */
+    public String getNetDetectId() {
+        return this.NetDetectId;
+    }
+
+    /**
+     * Set ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
+     * @param NetDetectId ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
+     */
+    public void setNetDetectId(String NetDetectId) {
+        this.NetDetectId = NetDetectId;
+    }
+
+    /**
+     * Get ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present. 
+     * @return VpcId ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+     * @param VpcId ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present. 
+     * @return SubnetId ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+     * @param SubnetId ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present. 
+     * @return NetDetectName The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+     */
+    public String getNetDetectName() {
+        return this.NetDetectName;
+    }
+
+    /**
+     * Set The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+     * @param NetDetectName The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+     */
+    public void setNetDetectName(String NetDetectName) {
+        this.NetDetectName = NetDetectName;
     }
 
     /**
@@ -170,70 +234,6 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
         this.NextHopDestination = NextHopDestination;
     }
 
-    /**
-     * Get ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present. 
-     * @return NetDetectId ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
-     */
-    public String getNetDetectId() {
-        return this.NetDetectId;
-    }
-
-    /**
-     * Set ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
-     * @param NetDetectId ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
-     */
-    public void setNetDetectId(String NetDetectId) {
-        this.NetDetectId = NetDetectId;
-    }
-
-    /**
-     * Get ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present. 
-     * @return VpcId ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
-     */
-    public String getVpcId() {
-        return this.VpcId;
-    }
-
-    /**
-     * Set ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
-     * @param VpcId ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
-     */
-    public void setVpcId(String VpcId) {
-        this.VpcId = VpcId;
-    }
-
-    /**
-     * Get ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present. 
-     * @return SubnetId ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
-     */
-    public String getSubnetId() {
-        return this.SubnetId;
-    }
-
-    /**
-     * Set ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
-     * @param SubnetId ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
-     */
-    public void setSubnetId(String SubnetId) {
-        this.SubnetId = SubnetId;
-    }
-
-    /**
-     * Get The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present. 
-     * @return NetDetectName The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
-     */
-    public String getNetDetectName() {
-        return this.NetDetectName;
-    }
-
-    /**
-     * Set The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
-     * @param NetDetectName The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
-     */
-    public void setNetDetectName(String NetDetectName) {
-        this.NetDetectName = NetDetectName;
-    }
-
     public CheckNetDetectStateRequest() {
     }
 
@@ -248,12 +248,6 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
                 this.DetectDestinationIp[i] = new String(source.DetectDestinationIp[i]);
             }
         }
-        if (source.NextHopType != null) {
-            this.NextHopType = new String(source.NextHopType);
-        }
-        if (source.NextHopDestination != null) {
-            this.NextHopDestination = new String(source.NextHopDestination);
-        }
         if (source.NetDetectId != null) {
             this.NetDetectId = new String(source.NetDetectId);
         }
@@ -266,6 +260,12 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
         if (source.NetDetectName != null) {
             this.NetDetectName = new String(source.NetDetectName);
         }
+        if (source.NextHopType != null) {
+            this.NextHopType = new String(source.NextHopType);
+        }
+        if (source.NextHopDestination != null) {
+            this.NextHopDestination = new String(source.NextHopDestination);
+        }
     }
 
 
@@ -274,12 +274,12 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DetectDestinationIp.", this.DetectDestinationIp);
-        this.setParamSimple(map, prefix + "NextHopType", this.NextHopType);
-        this.setParamSimple(map, prefix + "NextHopDestination", this.NextHopDestination);
         this.setParamSimple(map, prefix + "NetDetectId", this.NetDetectId);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "NetDetectName", this.NetDetectName);
+        this.setParamSimple(map, prefix + "NextHopType", this.NextHopType);
+        this.setParamSimple(map, prefix + "NextHopDestination", this.NextHopDestination);
 
     }
 }

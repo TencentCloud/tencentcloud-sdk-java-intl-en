@@ -31,7 +31,7 @@ public class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel {
     private String LoadBalancerId;
 
     /**
-    * GWLB name.
+    * GWLB instance name. It supports input of 1 to 60 characters.
     */
     @SerializedName("LoadBalancerName")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get GWLB name. 
-     * @return LoadBalancerName GWLB name.
+     * Get GWLB instance name. It supports input of 1 to 60 characters. 
+     * @return LoadBalancerName GWLB instance name. It supports input of 1 to 60 characters.
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
     }
 
     /**
-     * Set GWLB name.
-     * @param LoadBalancerName GWLB name.
+     * Set GWLB instance name. It supports input of 1 to 60 characters.
+     * @param LoadBalancerName GWLB instance name. It supports input of 1 to 60 characters.
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;

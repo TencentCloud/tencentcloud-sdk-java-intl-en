@@ -31,7 +31,10 @@ public class TargetGroupHealthCheck extends AbstractModel {
     private Boolean HealthSwitch;
 
     /**
-    * Protocol used for health checks. ICMP and TCP are supported, and the default is ICMP.
+    * Protocol used for health check, which supports PING and TCP and is PING by default.
+
+- PING: icmp
+- TCP: tcp
     */
     @SerializedName("Protocol")
     @Expose
@@ -89,16 +92,28 @@ public class TargetGroupHealthCheck extends AbstractModel {
     }
 
     /**
-     * Get Protocol used for health checks. ICMP and TCP are supported, and the default is ICMP. 
-     * @return Protocol Protocol used for health checks. ICMP and TCP are supported, and the default is ICMP.
+     * Get Protocol used for health check, which supports PING and TCP and is PING by default.
+
+- PING: icmp
+- TCP: tcp 
+     * @return Protocol Protocol used for health check, which supports PING and TCP and is PING by default.
+
+- PING: icmp
+- TCP: tcp
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Protocol used for health checks. ICMP and TCP are supported, and the default is ICMP.
-     * @param Protocol Protocol used for health checks. ICMP and TCP are supported, and the default is ICMP.
+     * Set Protocol used for health check, which supports PING and TCP and is PING by default.
+
+- PING: icmp
+- TCP: tcp
+     * @param Protocol Protocol used for health check, which supports PING and TCP and is PING by default.
+
+- PING: icmp
+- TCP: tcp
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

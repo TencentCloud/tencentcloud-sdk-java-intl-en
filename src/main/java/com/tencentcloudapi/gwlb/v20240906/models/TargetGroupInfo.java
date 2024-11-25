@@ -82,7 +82,9 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String Protocol;
 
     /**
-    * Scheduling algorithm.ip_hash_3: 3-tuple symmetric elastic hashingip_hash_3_consistent: 3-tuple symmetric consistent hashingNote: This field may return null, indicating that no valid value can be obtained.
+    * Scheduling algorithm.
+ip_hash_3: elastic hashing
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ScheduleAlgorithm")
     @Expose
@@ -253,16 +255,24 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Scheduling algorithm.ip_hash_3: 3-tuple symmetric elastic hashingip_hash_3_consistent: 3-tuple symmetric consistent hashingNote: This field may return null, indicating that no valid value can be obtained. 
-     * @return ScheduleAlgorithm Scheduling algorithm.ip_hash_3: 3-tuple symmetric elastic hashingip_hash_3_consistent: 3-tuple symmetric consistent hashingNote: This field may return null, indicating that no valid value can be obtained.
+     * Get Scheduling algorithm.
+ip_hash_3: elastic hashing
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return ScheduleAlgorithm Scheduling algorithm.
+ip_hash_3: elastic hashing
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getScheduleAlgorithm() {
         return this.ScheduleAlgorithm;
     }
 
     /**
-     * Set Scheduling algorithm.ip_hash_3: 3-tuple symmetric elastic hashingip_hash_3_consistent: 3-tuple symmetric consistent hashingNote: This field may return null, indicating that no valid value can be obtained.
-     * @param ScheduleAlgorithm Scheduling algorithm.ip_hash_3: 3-tuple symmetric elastic hashingip_hash_3_consistent: 3-tuple symmetric consistent hashingNote: This field may return null, indicating that no valid value can be obtained.
+     * Set Scheduling algorithm.
+ip_hash_3: elastic hashing
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ScheduleAlgorithm Scheduling algorithm.
+ip_hash_3: elastic hashing
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setScheduleAlgorithm(String ScheduleAlgorithm) {
         this.ScheduleAlgorithm = ScheduleAlgorithm;

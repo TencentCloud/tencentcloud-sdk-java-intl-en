@@ -31,18 +31,18 @@ public class CreateHaVipRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * The `ID` of the subnet to which the `HAVIP` belongs.
-    */
-    @SerializedName("SubnetId")
-    @Expose
-    private String SubnetId;
-
-    /**
     * The name of the `HAVIP`.
     */
     @SerializedName("HaVipName")
     @Expose
     private String HaVipName;
+
+    /**
+    * The `ID` of the subnet to which the `HAVIP` belongs.
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
 
     /**
     * The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
@@ -75,22 +75,6 @@ public class CreateHaVipRequest extends AbstractModel {
     }
 
     /**
-     * Get The `ID` of the subnet to which the `HAVIP` belongs. 
-     * @return SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
-     */
-    public String getSubnetId() {
-        return this.SubnetId;
-    }
-
-    /**
-     * Set The `ID` of the subnet to which the `HAVIP` belongs.
-     * @param SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
-     */
-    public void setSubnetId(String SubnetId) {
-        this.SubnetId = SubnetId;
-    }
-
-    /**
      * Get The name of the `HAVIP`. 
      * @return HaVipName The name of the `HAVIP`.
      */
@@ -104,6 +88,22 @@ public class CreateHaVipRequest extends AbstractModel {
      */
     public void setHaVipName(String HaVipName) {
         this.HaVipName = HaVipName;
+    }
+
+    /**
+     * Get The `ID` of the subnet to which the `HAVIP` belongs. 
+     * @return SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set The `ID` of the subnet to which the `HAVIP` belongs.
+     * @param SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
     }
 
     /**
@@ -149,11 +149,11 @@ public class CreateHaVipRequest extends AbstractModel {
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
-        if (source.SubnetId != null) {
-            this.SubnetId = new String(source.SubnetId);
-        }
         if (source.HaVipName != null) {
             this.HaVipName = new String(source.HaVipName);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
         }
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
@@ -169,8 +169,8 @@ public class CreateHaVipRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
-        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "HaVipName", this.HaVipName);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
 

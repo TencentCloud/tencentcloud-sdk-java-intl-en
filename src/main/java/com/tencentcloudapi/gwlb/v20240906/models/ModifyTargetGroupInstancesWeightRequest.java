@@ -31,7 +31,7 @@ public class ModifyTargetGroupInstancesWeightRequest extends AbstractModel {
     private String TargetGroupId;
 
     /**
-    * Array of servers whose weight is to be modified.
+    * Instance binding configuration array.
     */
     @SerializedName("TargetGroupInstances")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyTargetGroupInstancesWeightRequest extends AbstractModel {
     }
 
     /**
-     * Get Array of servers whose weight is to be modified. 
-     * @return TargetGroupInstances Array of servers whose weight is to be modified.
+     * Get Instance binding configuration array. 
+     * @return TargetGroupInstances Instance binding configuration array.
      */
     public TargetGroupInstance [] getTargetGroupInstances() {
         return this.TargetGroupInstances;
     }
 
     /**
-     * Set Array of servers whose weight is to be modified.
-     * @param TargetGroupInstances Array of servers whose weight is to be modified.
+     * Set Instance binding configuration array.
+     * @param TargetGroupInstances Instance binding configuration array.
      */
     public void setTargetGroupInstances(TargetGroupInstance [] TargetGroupInstances) {
         this.TargetGroupInstances = TargetGroupInstances;

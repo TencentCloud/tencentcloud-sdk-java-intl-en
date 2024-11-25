@@ -282,6 +282,9 @@ public enum VpcErrorCode {
     // The network interface ID was not found. The private IP address may not be configured on the network interface.
      INVALIDPARAMETERVALUE_NETWORKINTERFACENOTFOUND("InvalidParameterValue.NetworkInterfaceNotFound"),
      
+    // 
+     INVALIDPARAMETERVALUE_NOTUTF8ENCODINGERROR("InvalidParameterValue.NotUtf8EncodingError"),
+     
     // This operation is only available for primary ENIs.
      INVALIDPARAMETERVALUE_ONLYSUPPORTEDFORMASTERNETWORKCARD("InvalidParameterValue.OnlySupportedForMasterNetworkCard"),
      
@@ -311,6 +314,9 @@ public enum VpcErrorCode {
      
     // The resource does not support this operation.
      INVALIDPARAMETERVALUE_RESOURCENOTSUPPORT("InvalidParameterValue.ResourceNotSupport"),
+     
+    // 
+     INVALIDPARAMETERVALUE_ROUTEPOLICYPRIORITYCONFLICT("InvalidParameterValue.RoutePolicyPriorityConflict"),
      
     // Operation failed: The instance to shut down is using the current resource. 
      INVALIDPARAMETERVALUE_STOPCHARGINGINSTANCEINUSE("InvalidParameterValue.StopChargingInstanceInUse"),
@@ -383,6 +389,15 @@ public enum VpcErrorCode {
      
     // This feature is not available for this direct connect gateway.
      INVALIDPARAMETERVALUE_VPGTYPENOTMATCH("InvalidParameterValue.VpgTypeNotMatch"),
+     
+    // 
+     INVALIDPARAMETERVALUE_VPNCONNBGPTUNNELCIDRCONFLICT("InvalidParameterValue.VpnConnBgpTunnelCidrConflict"),
+     
+    // 
+     INVALIDPARAMETERVALUE_VPNCONNBGPTUNNELCIDRMASK("InvalidParameterValue.VpnConnBgpTunnelCidrMask"),
+     
+    // 
+     INVALIDPARAMETERVALUE_VPNCONNBGPTUNNELCIDRNOTSUPPORTED("InvalidParameterValue.VpnConnBgpTunnelCidrNotSupported"),
      
     // Destination IP address range conflicts with CIDR block of the current VPC tunnel.
      INVALIDPARAMETERVALUE_VPNCONNCIDRCONFLICT("InvalidParameterValue.VpnConnCidrConflict"),
@@ -462,6 +477,9 @@ public enum VpcErrorCode {
     // Run out of the daily chances to change the IP.
      LIMITEXCEEDED_DAILYCHANGEADDRESSQUOTA("LimitExceeded.DailyChangeAddressQuota"),
      
+    // 
+     LIMITEXCEEDED_DEFAULTVPCLIMITEXCEEDED("LimitExceeded.DefaultVpcLimitExceeded"),
+     
     // Exceeded the upper limit of the EIPs bound to the instance.
      LIMITEXCEEDED_INSTANCEADDRESSQUOTA("LimitExceeded.InstanceAddressQuota"),
      
@@ -471,11 +489,17 @@ public enum VpcErrorCode {
     // Ran out of the monthly quota of chances to retrieve IPs.
      LIMITEXCEEDED_MONTHLYADDRESSRECOVERYQUOTA("LimitExceeded.MonthlyAddressRecoveryQuota"),
      
+    // 
+     LIMITEXCEEDED_NATGATEWAYDNATLIMITEXCEEDED("LimitExceeded.NatGatewayDnatLimitExceeded"),
+     
     // Reached the upper limit of NAT gateways.
      LIMITEXCEEDED_NATGATEWAYLIMITEXCEEDED("LimitExceeded.NatGatewayLimitExceeded"),
      
     // The number of NAT gateways created by the VPC has reached the upper limit.
      LIMITEXCEEDED_NATGATEWAYPERVPCLIMITEXCEEDED("LimitExceeded.NatGatewayPerVpcLimitExceeded"),
+     
+    // 
+     LIMITEXCEEDED_NETWORKINTERFACELIMITEXCEEDED("LimitExceeded.NetworkInterfaceLimitExceeded"),
      
     // Exceeded the character limit of a filter name.
      LIMITEXCEEDED_NUMBEROFFILTERS("LimitExceeded.NumberOfFilters"),
@@ -660,6 +684,9 @@ public enum VpcErrorCode {
     // 
      UNSUPPORTEDOPERATION_DELETEVPNCONNINVALIDSTATE("UnsupportedOperation.DeleteVpnConnInvalidState"),
      
+    // 
+     UNSUPPORTEDOPERATION_DELIVERYFAILED("UnsupportedOperation.DeliveryFailed"),
+     
     // Direct connect gateway is updating the BGP Community attribute.
      UNSUPPORTEDOPERATION_DIRECTCONNECTGATEWAYISUPDATINGCOMMUNITY("UnsupportedOperation.DirectConnectGatewayIsUpdatingCommunity"),
      
@@ -684,10 +711,13 @@ public enum VpcErrorCode {
     // Multi-cast is not available in the current region.
      UNSUPPORTEDOPERATION_ENABLEMULTICAST("UnsupportedOperation.EnableMulticast"),
      
+    // 
+     UNSUPPORTEDOPERATION_ENDPOINTMISMATCHENDPOINTSERVICECDCID("UnsupportedOperation.EndPointMismatchEndPointServiceCdcId"),
+     
     // The endpoint service itself cannot be set as the endpoint.
      UNSUPPORTEDOPERATION_ENDPOINTSERVICE("UnsupportedOperation.EndPointService"),
      
-    // u200dThere is already a flow log created for the specified ResourceId. 
+    // There is already a flow log created for the specified ResourceId.
      UNSUPPORTEDOPERATION_FLOWLOGINSTANCEEXISTED("UnsupportedOperation.FlowLogInstanceExisted"),
      
     // Unable to create a flow log: the current ENI is bound with a KO model.
@@ -695,6 +725,15 @@ public enum VpcErrorCode {
      
     // Unable to create a flow log: the current ENI is not bound to an instance.
      UNSUPPORTEDOPERATION_FLOWLOGSNOTSUPPORTNULLINSTANCEENI("UnsupportedOperation.FlowLogsNotSupportNullInstanceEni"),
+     
+    // 
+     UNSUPPORTEDOPERATION_IPV6CIDRNOTDEPLOYED("UnsupportedOperation.IPV6CidrNotDeployed"),
+     
+    // 
+     UNSUPPORTEDOPERATION_IDEMPOTENTPARAMETERMISMATCH("UnsupportedOperation.IdempotentParameterMismatch"),
+     
+    // 
+     UNSUPPORTEDOPERATION_IDEMPOTENTPROCESSING("UnsupportedOperation.IdempotentProcessing"),
      
     // This type of address does not support this operation.
      UNSUPPORTEDOPERATION_INCORRECTADDRESSRESOURCETYPE("UnsupportedOperation.IncorrectAddressResourceType"),
@@ -770,6 +809,9 @@ public enum VpcErrorCode {
      
     // There are IPs associated with this NAT gateway.
      UNSUPPORTEDOPERATION_NATGATEWAYHADEIPUNASSOCIATE("UnsupportedOperation.NatGatewayHadEipUnassociate"),
+     
+    // 
+     UNSUPPORTEDOPERATION_NATGATEWAYRESTRICTED("UnsupportedOperation.NatGatewayRestricted"),
      
     // The private IP specified in the SNAT/DNAT forwarding rule has been bound with another rule.
      UNSUPPORTEDOPERATION_NATGATEWAYRULEPIPEXISTS("UnsupportedOperation.NatGatewayRulePipExists"),
@@ -855,6 +897,9 @@ public enum VpcErrorCode {
     // The record does not exist.
      UNSUPPORTEDOPERATION_RECORDNOTEXISTS("UnsupportedOperation.RecordNotExists"),
      
+    // 
+     UNSUPPORTEDOPERATION_REMOTEREGIONSGHASREFERENCEDSG("UnsupportedOperation.RemoteRegionSgHasReferencedSg"),
+     
     // Operation prohibited: The resource is not available.
      UNSUPPORTEDOPERATION_RESOURCEISINVALIDSTATE("UnsupportedOperation.ResourceIsInvalidState"),
      
@@ -863,6 +908,9 @@ public enum VpcErrorCode {
      
     // No roles available. Please confirm whether you get the authorization for the role.
      UNSUPPORTEDOPERATION_ROLENOTFOUND("UnsupportedOperation.RoleNotFound"),
+     
+    // 
+     UNSUPPORTEDOPERATION_ROUTETABLECANNOTDELETE("UnsupportedOperation.RouteTableCanNotDelete"),
      
     // The routing table is bound to a subnet.
      UNSUPPORTEDOPERATION_ROUTETABLEHASSUBNETRULE("UnsupportedOperation.RouteTableHasSubnetRule"),
@@ -955,7 +1003,25 @@ public enum VpcErrorCode {
      UNSUPPORTEDOPERATION_VPNCONNINVALIDSTATE("UnsupportedOperation.VpnConnInvalidState"),
      
     // 
+     UNSUPPORTEDOPERATION_VPNCONNSPDOVERLAP("UnsupportedOperation.VpnConnSPDOverlap"),
+     
+    // 
      UNSUPPORTEDOPERATION_VPNGWVPCIDMUSTHAVE("UnsupportedOperation.VpnGwVpcIdMustHave"),
+     
+    // 
+     UNSUPPORTEDOPERATION_VPNUNSUPPORTEDBGP("UnsupportedOperation.VpnUnsupportedBgp"),
+     
+    // 
+     UNSUPPORTEDOPERATION_VPNUNSUPPORTEDBGPASNEQUAL("UnsupportedOperation.VpnUnsupportedBgpAsnEqual"),
+     
+    // 
+     UNSUPPORTEDOPERATION_VPNUNSUPPORTEDMODIFYBANDWIDTH("UnsupportedOperation.VpnUnsupportedModifyBandwidth"),
+     
+    // 
+     UNSUPPORTEDOPERATION_VPNUNSUPPORTEDMODIFYBGPASN("UnsupportedOperation.VpnUnsupportedModifyBgpAsn"),
+     
+    // 
+     UNSUPPORTEDOPERATION_VPNUNSUPPORTEDNOTEXISTBGPASN("UnsupportedOperation.VpnUnsupportedNotExistBgpAsn"),
      
     // The specified resources are not in the same availability zone.
      UNSUPPORTEDOPERATION_ZONEMISMATCH("UnsupportedOperation.ZoneMismatch"),

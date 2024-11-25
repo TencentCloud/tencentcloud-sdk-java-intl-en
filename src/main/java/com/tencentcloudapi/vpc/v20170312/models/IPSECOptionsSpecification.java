@@ -77,7 +77,9 @@ public class IPSECOptionsSpecification extends AbstractModel {
     /**
      * Get Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`. 
      * @return IntegrityAlgorith Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
+     * @deprecated
      */
+    @Deprecated
     public String getIntegrityAlgorith() {
         return this.IntegrityAlgorith;
     }
@@ -85,7 +87,9 @@ public class IPSECOptionsSpecification extends AbstractModel {
     /**
      * Set Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
      * @param IntegrityAlgorith Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
+     * @deprecated
      */
+    @Deprecated
     public void setIntegrityAlgorith(String IntegrityAlgorith) {
         this.IntegrityAlgorith = IntegrityAlgorith;
     }

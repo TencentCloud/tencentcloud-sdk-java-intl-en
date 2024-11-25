@@ -108,7 +108,7 @@ public class CreateNatGatewayRequest extends AbstractModel {
     private Boolean PublicIpFromSameZone;
 
     /**
-    * 
+    * NAT gateway major version. `1`: Classic, `2`: Standard
     */
     @SerializedName("NatProductVersion")
     @Expose
@@ -245,7 +245,9 @@ public class CreateNatGatewayRequest extends AbstractModel {
     /**
      * Get Subnet of the NAT gateway 
      * @return SubnetId Subnet of the NAT gateway
+     * @deprecated
      */
+    @Deprecated
     public String getSubnetId() {
         return this.SubnetId;
     }
@@ -253,7 +255,9 @@ public class CreateNatGatewayRequest extends AbstractModel {
     /**
      * Set Subnet of the NAT gateway
      * @param SubnetId Subnet of the NAT gateway
+     * @deprecated
      */
+    @Deprecated
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
@@ -307,16 +311,16 @@ public class CreateNatGatewayRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return NatProductVersion 
+     * Get NAT gateway major version. `1`: Classic, `2`: Standard 
+     * @return NatProductVersion NAT gateway major version. `1`: Classic, `2`: Standard
      */
     public Long getNatProductVersion() {
         return this.NatProductVersion;
     }
 
     /**
-     * Set 
-     * @param NatProductVersion 
+     * Set NAT gateway major version. `1`: Classic, `2`: Standard
+     * @param NatProductVersion NAT gateway major version. `1`: Classic, `2`: Standard
      */
     public void setNatProductVersion(Long NatProductVersion) {
         this.NatProductVersion = NatProductVersion;

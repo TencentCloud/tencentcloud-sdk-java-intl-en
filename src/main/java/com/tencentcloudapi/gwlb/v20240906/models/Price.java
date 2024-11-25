@@ -31,7 +31,8 @@ public class Price extends AbstractModel {
     private ItemPrice InstancePrice;
 
     /**
-    * It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
+    * It describes the price of GLCU.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("LcuPrice")
     @Expose
@@ -54,16 +55,20 @@ public class Price extends AbstractModel {
     }
 
     /**
-     * Get It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return LcuPrice It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
+     * Get It describes the price of GLCU.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return LcuPrice It describes the price of GLCU.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ItemPrice getLcuPrice() {
         return this.LcuPrice;
     }
 
     /**
-     * Set It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
-     * @param LcuPrice It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
+     * Set It describes the price of GLCU.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param LcuPrice It describes the price of GLCU.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setLcuPrice(ItemPrice LcuPrice) {
         this.LcuPrice = LcuPrice;

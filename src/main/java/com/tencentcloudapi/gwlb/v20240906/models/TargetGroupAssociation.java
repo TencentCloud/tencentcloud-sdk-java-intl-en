@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TargetGroupAssociation extends AbstractModel {
 
     /**
-    * CLB ID.
+    * GWLB instance ID.
     */
     @SerializedName("LoadBalancerId")
     @Expose
@@ -38,16 +38,16 @@ public class TargetGroupAssociation extends AbstractModel {
     private String TargetGroupId;
 
     /**
-     * Get CLB ID. 
-     * @return LoadBalancerId CLB ID.
+     * Get GWLB instance ID. 
+     * @return LoadBalancerId GWLB instance ID.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set CLB ID.
-     * @param LoadBalancerId CLB ID.
+     * Set GWLB instance ID.
+     * @param LoadBalancerId GWLB instance ID.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;

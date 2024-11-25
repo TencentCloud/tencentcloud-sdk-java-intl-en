@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AssociationItem extends AbstractModel {
 
     /**
-    * ID of associated CLB instance
+    * Associated GWLB instance ID
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * CLB name
+    * GWLB instance name
     */
     @SerializedName("LoadBalancerName")
     @Expose
     private String LoadBalancerName;
 
     /**
-     * Get ID of associated CLB instance 
-     * @return LoadBalancerId ID of associated CLB instance
+     * Get Associated GWLB instance ID 
+     * @return LoadBalancerId Associated GWLB instance ID
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set ID of associated CLB instance
-     * @param LoadBalancerId ID of associated CLB instance
+     * Set Associated GWLB instance ID
+     * @param LoadBalancerId Associated GWLB instance ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get CLB name 
-     * @return LoadBalancerName CLB name
+     * Get GWLB instance name 
+     * @return LoadBalancerName GWLB instance name
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
     }
 
     /**
-     * Set CLB name
-     * @param LoadBalancerName CLB name
+     * Set GWLB instance name
+     * @param LoadBalancerName GWLB instance name
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;

@@ -78,6 +78,13 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     private String Protocol;
 
     /**
+    * 
+    */
+    @SerializedName("TimeSpan")
+    @Expose
+    private Long TimeSpan;
+
+    /**
      * Get The network type of the bandwidth package. Default value: `BGP`. Valid values:
 `BGP` 
 `HIGH_QUALITY_BGP` 
@@ -209,6 +216,22 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
         this.Protocol = Protocol;
     }
 
+    /**
+     * Get  
+     * @return TimeSpan 
+     */
+    public Long getTimeSpan() {
+        return this.TimeSpan;
+    }
+
+    /**
+     * Set 
+     * @param TimeSpan 
+     */
+    public void setTimeSpan(Long TimeSpan) {
+        this.TimeSpan = TimeSpan;
+    }
+
     public CreateBandwidthPackageRequest() {
     }
 
@@ -241,6 +264,9 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
     }
 
 
@@ -255,6 +281,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InternetMaxBandwidth", this.InternetMaxBandwidth);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
 
     }
 }

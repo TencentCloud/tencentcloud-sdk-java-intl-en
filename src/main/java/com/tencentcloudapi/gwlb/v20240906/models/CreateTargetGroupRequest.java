@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTargetGroupRequest extends AbstractModel {
 
     /**
-    * Target group name, up to 50 characters
+    * Target group name, limited to 60 characters.
     */
     @SerializedName("TargetGroupName")
     @Expose
@@ -38,7 +38,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * Default port of target group. This default port can be used when servers are added subsequently. Either Port or port in TargetGroupInstances.N is required.
+    * Default port of the target group, which can be used when servers are added later. Either 'Port' or 'TargetGroupInstances.N.port' must be filled in.
     */
     @SerializedName("Port")
     @Expose
@@ -52,21 +52,25 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private TargetGroupInstance [] TargetGroupInstances;
 
     /**
-    * GWLB target group protocol.- AWS_GENEVE: GENEVE compatible protocol - TENCENT_GENEVE: GENEVE standard protocol
+    * GWLB target group protocol.
+- TENCENT_GENEVE: GENEVE standard protocol
+
+- AWS_GENEVE: GENEVE compatibility protocol (a ticket is required for allowlisting)
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Health check.
+    * Health check settings.
     */
     @SerializedName("HealthCheck")
     @Expose
     private TargetGroupHealthCheck HealthCheck;
 
     /**
-    * RS scheduling algorithm.- IP_HASH_3_ELASTIC: elastic hashing
+    * Load balancing algorithm.
+- IP_HASH_3_ELASTIC: elastic hashing
     */
     @SerializedName("ScheduleAlgorithm")
     @Expose
@@ -80,16 +84,16 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private Boolean AllDeadToAlive;
 
     /**
-     * Get Target group name, up to 50 characters 
-     * @return TargetGroupName Target group name, up to 50 characters
+     * Get Target group name, limited to 60 characters. 
+     * @return TargetGroupName Target group name, limited to 60 characters.
      */
     public String getTargetGroupName() {
         return this.TargetGroupName;
     }
 
     /**
-     * Set Target group name, up to 50 characters
-     * @param TargetGroupName Target group name, up to 50 characters
+     * Set Target group name, limited to 60 characters.
+     * @param TargetGroupName Target group name, limited to 60 characters.
      */
     public void setTargetGroupName(String TargetGroupName) {
         this.TargetGroupName = TargetGroupName;
@@ -112,16 +116,16 @@ public class CreateTargetGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get Default port of target group. This default port can be used when servers are added subsequently. Either Port or port in TargetGroupInstances.N is required. 
-     * @return Port Default port of target group. This default port can be used when servers are added subsequently. Either Port or port in TargetGroupInstances.N is required.
+     * Get Default port of the target group, which can be used when servers are added later. Either 'Port' or 'TargetGroupInstances.N.port' must be filled in. 
+     * @return Port Default port of the target group, which can be used when servers are added later. Either 'Port' or 'TargetGroupInstances.N.port' must be filled in.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Default port of target group. This default port can be used when servers are added subsequently. Either Port or port in TargetGroupInstances.N is required.
-     * @param Port Default port of target group. This default port can be used when servers are added subsequently. Either Port or port in TargetGroupInstances.N is required.
+     * Set Default port of the target group, which can be used when servers are added later. Either 'Port' or 'TargetGroupInstances.N.port' must be filled in.
+     * @param Port Default port of the target group, which can be used when servers are added later. Either 'Port' or 'TargetGroupInstances.N.port' must be filled in.
      */
     public void setPort(Long Port) {
         this.Port = Port;
@@ -144,48 +148,64 @@ public class CreateTargetGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get GWLB target group protocol.- AWS_GENEVE: GENEVE compatible protocol - TENCENT_GENEVE: GENEVE standard protocol 
-     * @return Protocol GWLB target group protocol.- AWS_GENEVE: GENEVE compatible protocol - TENCENT_GENEVE: GENEVE standard protocol
+     * Get GWLB target group protocol.
+- TENCENT_GENEVE: GENEVE standard protocol
+
+- AWS_GENEVE: GENEVE compatibility protocol (a ticket is required for allowlisting) 
+     * @return Protocol GWLB target group protocol.
+- TENCENT_GENEVE: GENEVE standard protocol
+
+- AWS_GENEVE: GENEVE compatibility protocol (a ticket is required for allowlisting)
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set GWLB target group protocol.- AWS_GENEVE: GENEVE compatible protocol - TENCENT_GENEVE: GENEVE standard protocol
-     * @param Protocol GWLB target group protocol.- AWS_GENEVE: GENEVE compatible protocol - TENCENT_GENEVE: GENEVE standard protocol
+     * Set GWLB target group protocol.
+- TENCENT_GENEVE: GENEVE standard protocol
+
+- AWS_GENEVE: GENEVE compatibility protocol (a ticket is required for allowlisting)
+     * @param Protocol GWLB target group protocol.
+- TENCENT_GENEVE: GENEVE standard protocol
+
+- AWS_GENEVE: GENEVE compatibility protocol (a ticket is required for allowlisting)
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Health check. 
-     * @return HealthCheck Health check.
+     * Get Health check settings. 
+     * @return HealthCheck Health check settings.
      */
     public TargetGroupHealthCheck getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set Health check.
-     * @param HealthCheck Health check.
+     * Set Health check settings.
+     * @param HealthCheck Health check settings.
      */
     public void setHealthCheck(TargetGroupHealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;
     }
 
     /**
-     * Get RS scheduling algorithm.- IP_HASH_3_ELASTIC: elastic hashing 
-     * @return ScheduleAlgorithm RS scheduling algorithm.- IP_HASH_3_ELASTIC: elastic hashing
+     * Get Load balancing algorithm.
+- IP_HASH_3_ELASTIC: elastic hashing 
+     * @return ScheduleAlgorithm Load balancing algorithm.
+- IP_HASH_3_ELASTIC: elastic hashing
      */
     public String getScheduleAlgorithm() {
         return this.ScheduleAlgorithm;
     }
 
     /**
-     * Set RS scheduling algorithm.- IP_HASH_3_ELASTIC: elastic hashing
-     * @param ScheduleAlgorithm RS scheduling algorithm.- IP_HASH_3_ELASTIC: elastic hashing
+     * Set Load balancing algorithm.
+- IP_HASH_3_ELASTIC: elastic hashing
+     * @param ScheduleAlgorithm Load balancing algorithm.
+- IP_HASH_3_ELASTIC: elastic hashing
      */
     public void setScheduleAlgorithm(String ScheduleAlgorithm) {
         this.ScheduleAlgorithm = ScheduleAlgorithm;

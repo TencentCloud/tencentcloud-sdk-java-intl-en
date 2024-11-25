@@ -80,6 +80,13 @@ public class BandwidthPackage extends AbstractModel {
     private Long Bandwidth;
 
     /**
+    * 
+    */
+    @SerializedName("Egress")
+    @Expose
+    private String Egress;
+
+    /**
      * Get The unique ID of the bandwidth package. 
      * @return BandwidthPackageId The unique ID of the bandwidth package.
      */
@@ -207,6 +214,22 @@ public class BandwidthPackage extends AbstractModel {
         this.Bandwidth = Bandwidth;
     }
 
+    /**
+     * Get  
+     * @return Egress 
+     */
+    public String getEgress() {
+        return this.Egress;
+    }
+
+    /**
+     * Set 
+     * @param Egress 
+     */
+    public void setEgress(String Egress) {
+        this.Egress = Egress;
+    }
+
     public BandwidthPackage() {
     }
 
@@ -242,6 +265,9 @@ public class BandwidthPackage extends AbstractModel {
         if (source.Bandwidth != null) {
             this.Bandwidth = new Long(source.Bandwidth);
         }
+        if (source.Egress != null) {
+            this.Egress = new String(source.Egress);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class BandwidthPackage extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "ResourceSet.", this.ResourceSet);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "Egress", this.Egress);
 
     }
 }

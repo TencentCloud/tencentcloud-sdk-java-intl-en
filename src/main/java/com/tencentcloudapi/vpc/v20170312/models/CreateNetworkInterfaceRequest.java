@@ -59,7 +59,7 @@ public class CreateNetworkInterfaceRequest extends AbstractModel {
     private Long SecondaryPrivateIpAddressCount;
 
     /**
-    * IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
+    * IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` (Default).
     */
     @SerializedName("QosLevel")
     @Expose
@@ -92,6 +92,13 @@ public class CreateNetworkInterfaceRequest extends AbstractModel {
     @SerializedName("TrunkingFlag")
     @Expose
     private String TrunkingFlag;
+
+    /**
+    * 
+    */
+    @SerializedName("ClientToken")
+    @Expose
+    private String ClientToken;
 
     /**
      * Get The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API. 
@@ -174,16 +181,16 @@ public class CreateNetworkInterfaceRequest extends AbstractModel {
     }
 
     /**
-     * Get IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default). 
-     * @return QosLevel IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
+     * Get IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` (Default). 
+     * @return QosLevel IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` (Default).
      */
     public String getQosLevel() {
         return this.QosLevel;
     }
 
     /**
-     * Set IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
-     * @param QosLevel IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
+     * Set IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` (Default).
+     * @param QosLevel IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` (Default).
      */
     public void setQosLevel(String QosLevel) {
         this.QosLevel = QosLevel;
@@ -253,6 +260,22 @@ public class CreateNetworkInterfaceRequest extends AbstractModel {
         this.TrunkingFlag = TrunkingFlag;
     }
 
+    /**
+     * Get  
+     * @return ClientToken 
+     */
+    public String getClientToken() {
+        return this.ClientToken;
+    }
+
+    /**
+     * Set 
+     * @param ClientToken 
+     */
+    public void setClientToken(String ClientToken) {
+        this.ClientToken = ClientToken;
+    }
+
     public CreateNetworkInterfaceRequest() {
     }
 
@@ -300,6 +323,9 @@ public class CreateNetworkInterfaceRequest extends AbstractModel {
         if (source.TrunkingFlag != null) {
             this.TrunkingFlag = new String(source.TrunkingFlag);
         }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
     }
 
 
@@ -317,6 +343,7 @@ public class CreateNetworkInterfaceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "TrunkingFlag", this.TrunkingFlag);
+        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
 
     }
 }
