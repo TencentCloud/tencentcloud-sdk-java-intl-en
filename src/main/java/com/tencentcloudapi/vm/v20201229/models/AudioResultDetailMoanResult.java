@@ -68,6 +68,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SubLabel;
 
     /**
+    * This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
+    */
+    @SerializedName("Suggestion")
+    @Expose
+    private String Suggestion;
+
+    /**
      * Get This field is used to return the type of the content to be detected. It is fixed at **Moan** here to call the moan detection feature.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Label This field is used to return the type of the content to be detected. It is fixed at **Moan** here to call the moan detection feature.
@@ -171,6 +178,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.SubLabel = SubLabel;
     }
 
+    /**
+     * Get This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`. 
+     * @return Suggestion This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
+     */
+    public String getSuggestion() {
+        return this.Suggestion;
+    }
+
+    /**
+     * Set This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
+     * @param Suggestion This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
+     */
+    public void setSuggestion(String Suggestion) {
+        this.Suggestion = Suggestion;
+    }
+
     public AudioResultDetailMoanResult() {
     }
 
@@ -197,6 +220,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.SubLabel != null) {
             this.SubLabel = new String(source.SubLabel);
         }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
     }
 
 
@@ -210,6 +236,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "SubLabelCode", this.SubLabelCode);
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
+        this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
 
     }
 }

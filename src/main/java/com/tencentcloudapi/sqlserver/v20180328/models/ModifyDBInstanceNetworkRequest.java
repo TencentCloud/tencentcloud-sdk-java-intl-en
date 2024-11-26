@@ -59,6 +59,13 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel {
     private String Vip;
 
     /**
+    * 
+    */
+    @SerializedName("DRNetwork")
+    @Expose
+    private Long DRNetwork;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -138,6 +145,22 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel {
         this.Vip = Vip;
     }
 
+    /**
+     * Get  
+     * @return DRNetwork 
+     */
+    public Long getDRNetwork() {
+        return this.DRNetwork;
+    }
+
+    /**
+     * Set 
+     * @param DRNetwork 
+     */
+    public void setDRNetwork(Long DRNetwork) {
+        this.DRNetwork = DRNetwork;
+    }
+
     public ModifyDBInstanceNetworkRequest() {
     }
 
@@ -161,6 +184,9 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel {
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
         }
+        if (source.DRNetwork != null) {
+            this.DRNetwork = new Long(source.DRNetwork);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NewSubnetId", this.NewSubnetId);
         this.setParamSimple(map, prefix + "OldIpRetainTime", this.OldIpRetainTime);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "DRNetwork", this.DRNetwork);
 
     }
 }

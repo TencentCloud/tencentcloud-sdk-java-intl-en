@@ -38,8 +38,7 @@ public class TDEConfigAttribute extends AbstractModel {
     private String CertificateAttribution;
 
     /**
-    * ID of the other referenced root account when enabling TDE
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("QuoteUin")
     @Expose
@@ -78,20 +77,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get ID of the other referenced root account when enabling TDE
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QuoteUin ID of the other referenced root account when enabling TDE
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return QuoteUin Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getQuoteUin() {
         return this.QuoteUin;
     }
 
     /**
-     * Set ID of the other referenced root account when enabling TDE
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QuoteUin ID of the other referenced root account when enabling TDE
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param QuoteUin Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQuoteUin(String QuoteUin) {
         this.QuoteUin = QuoteUin;

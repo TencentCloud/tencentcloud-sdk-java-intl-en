@@ -148,6 +148,13 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private String InstanceType;
 
     /**
+    * 
+    */
+    @SerializedName("PaginationType")
+    @Expose
+    private String PaginationType;
+
+    /**
      * Get Project ID 
      * @return ProjectId Project ID
      */
@@ -451,6 +458,22 @@ public class DescribeDBInstancesRequest extends AbstractModel {
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get  
+     * @return PaginationType 
+     */
+    public String getPaginationType() {
+        return this.PaginationType;
+    }
+
+    /**
+     * Set 
+     * @param PaginationType 
+     */
+    public void setPaginationType(String PaginationType) {
+        this.PaginationType = PaginationType;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -525,6 +548,9 @@ public class DescribeDBInstancesRequest extends AbstractModel {
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
         }
+        if (source.PaginationType != null) {
+            this.PaginationType = new String(source.PaginationType);
+        }
     }
 
 
@@ -548,6 +574,7 @@ public class DescribeDBInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
         this.setParamArraySimple(map, prefix + "UidSet.", this.UidSet);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "PaginationType", this.PaginationType);
 
     }
 }

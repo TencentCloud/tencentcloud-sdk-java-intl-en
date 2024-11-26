@@ -24,138 +24,168 @@ import java.util.HashMap;
 public class DrReadableInfo extends AbstractModel {
 
     /**
-    * 
+    * Replica server status. Valid values: enable - running; disable - unavailable
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SlaveStatus")
     @Expose
     private String SlaveStatus;
 
     /**
-    * 
+    * Replica server readable status. Valid values: enable - enabled; disable - disabled
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReadableStatus")
     @Expose
     private String ReadableStatus;
 
     /**
-    * 
+    * Replica server read-only VIP
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 
+    * Replica server read-only port
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VPort")
     @Expose
     private Long VPort;
 
     /**
-    * 
+    * Replica server VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 
+    * Replica server VPC subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-     * Get  
-     * @return SlaveStatus 
+     * Get Replica server status. Valid values: enable - running; disable - unavailable
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SlaveStatus Replica server status. Valid values: enable - running; disable - unavailable
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSlaveStatus() {
         return this.SlaveStatus;
     }
 
     /**
-     * Set 
-     * @param SlaveStatus 
+     * Set Replica server status. Valid values: enable - running; disable - unavailable
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SlaveStatus Replica server status. Valid values: enable - running; disable - unavailable
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSlaveStatus(String SlaveStatus) {
         this.SlaveStatus = SlaveStatus;
     }
 
     /**
-     * Get  
-     * @return ReadableStatus 
+     * Get Replica server readable status. Valid values: enable - enabled; disable - disabled
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReadableStatus Replica server readable status. Valid values: enable - enabled; disable - disabled
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getReadableStatus() {
         return this.ReadableStatus;
     }
 
     /**
-     * Set 
-     * @param ReadableStatus 
+     * Set Replica server readable status. Valid values: enable - enabled; disable - disabled
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReadableStatus Replica server readable status. Valid values: enable - enabled; disable - disabled
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReadableStatus(String ReadableStatus) {
         this.ReadableStatus = ReadableStatus;
     }
 
     /**
-     * Get  
-     * @return Vip 
+     * Get Replica server read-only VIP
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Vip Replica server read-only VIP
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 
-     * @param Vip 
+     * Set Replica server read-only VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Vip Replica server read-only VIP
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get  
-     * @return VPort 
+     * Get Replica server read-only port
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return VPort Replica server read-only port
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set 
-     * @param VPort 
+     * Set Replica server read-only port
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param VPort Replica server read-only port
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
     }
 
     /**
-     * Get  
-     * @return UniqVpcId 
+     * Get Replica server VPC ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return UniqVpcId Replica server VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set 
-     * @param UniqVpcId 
+     * Set Replica server VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UniqVpcId Replica server VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get  
-     * @return UniqSubnetId 
+     * Get Replica server VPC subnet ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return UniqSubnetId Replica server VPC subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set 
-     * @param UniqSubnetId 
+     * Set Replica server VPC subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UniqSubnetId Replica server VPC subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;

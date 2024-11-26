@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribePrivateZoneListResponse extends AbstractModel {
 
     /**
-    * Number of private domains
+    * Number of private domains.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of private domains
+    * Private domain list.
     */
     @SerializedName("PrivateZoneSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribePrivateZoneListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of private domains 
-     * @return TotalCount Number of private domains
+     * Get Number of private domains. 
+     * @return TotalCount Number of private domains.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of private domains
-     * @param TotalCount Number of private domains
+     * Set Number of private domains.
+     * @param TotalCount Number of private domains.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of private domains 
-     * @return PrivateZoneSet List of private domains
+     * Get Private domain list. 
+     * @return PrivateZoneSet Private domain list.
      */
     public PrivateZone [] getPrivateZoneSet() {
         return this.PrivateZoneSet;
     }
 
     /**
-     * Set List of private domains
-     * @param PrivateZoneSet List of private domains
+     * Set Private domain list.
+     * @param PrivateZoneSet Private domain list.
      */
     public void setPrivateZoneSet(PrivateZone [] PrivateZoneSet) {
         this.PrivateZoneSet = PrivateZoneSet;

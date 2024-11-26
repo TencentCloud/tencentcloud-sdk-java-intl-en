@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class PrivateZone extends AbstractModel {
 
     /**
-    * Private domain ID: zone-xxxxxxxx
+    * Private domain ID, which is in zone-xxxxxxxx format.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Domain name owner UIN
+    * UIN of the domain name owner.
     */
     @SerializedName("OwnerUin")
     @Expose
     private Long OwnerUin;
 
     /**
-    * Private domain
+    * Private domain name.
     */
     @SerializedName("Domain")
     @Expose
@@ -59,99 +59,155 @@ public class PrivateZone extends AbstractModel {
     private String UpdatedOn;
 
     /**
-    * Number of results
+    * Number of records.
     */
     @SerializedName("RecordCount")
     @Expose
     private Long RecordCount;
 
     /**
-    * Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Remarks.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * List of bound VPCs
+    * List of bound VPCs.
     */
     @SerializedName("VpcSet")
     @Expose
     private VpcInfo [] VpcSet;
 
     /**
-    * Private domain status. Valid values: ENABLED (DNS enabled); SUSPEND (DNS paused); FROZEN (locked)
+    * Status of the VPC bound with the private domain. SUSPEND: The VPC is not associated; ENABLED: the VPC has been associated.
+, FAILED: the VPC fails to be associated.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Subdomain recursive DNS status. Valid values: ENABLED, DISABLED
+    * Recursive resolution status of the domain name. ENABLED: enabled; DISABLED: disabled.
     */
     @SerializedName("DnsForwardStatus")
     @Expose
     private String DnsForwardStatus;
 
     /**
-    * Set of tag key-value pairs
+    * Tag key-value pair collection.
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-    * List of authorized accounts' VPCs associated with the private domain
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * List of bound VPCs of the associated account.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AccountVpcSet")
     @Expose
     private AccountVpcInfoOutput [] AccountVpcSet;
 
     /**
-     * Get Private domain ID: zone-xxxxxxxx 
-     * @return ZoneId Private domain ID: zone-xxxxxxxx
+    * Whether the TLD is a custom one.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsCustomTld")
+    @Expose
+    private Boolean IsCustomTld;
+
+    /**
+    * CNAME acceleration status. ENABLED: enabled; DISABLED: disabled.
+    */
+    @SerializedName("CnameSpeedupStatus")
+    @Expose
+    private String CnameSpeedupStatus;
+
+    /**
+    * Forwarding rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ForwardRuleName")
+    @Expose
+    private String ForwardRuleName;
+
+    /**
+    * Forwarding rule type. DOWN: from cloud to off-cloud; UP: from off-cloud to cloud. Currently, only DOWN is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ForwardRuleType")
+    @Expose
+    private String ForwardRuleType;
+
+    /**
+    * Forwarding address.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ForwardAddress")
+    @Expose
+    private String ForwardAddress;
+
+    /**
+    * Endpoint name.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EndPointName")
+    @Expose
+    private String EndPointName;
+
+    /**
+    * Deleted VPC.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DeletedVpcSet")
+    @Expose
+    private VpcInfo [] DeletedVpcSet;
+
+    /**
+     * Get Private domain ID, which is in zone-xxxxxxxx format. 
+     * @return ZoneId Private domain ID, which is in zone-xxxxxxxx format.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Private domain ID: zone-xxxxxxxx
-     * @param ZoneId Private domain ID: zone-xxxxxxxx
+     * Set Private domain ID, which is in zone-xxxxxxxx format.
+     * @param ZoneId Private domain ID, which is in zone-xxxxxxxx format.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Domain name owner UIN 
-     * @return OwnerUin Domain name owner UIN
+     * Get UIN of the domain name owner. 
+     * @return OwnerUin UIN of the domain name owner.
      */
     public Long getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set Domain name owner UIN
-     * @param OwnerUin Domain name owner UIN
+     * Set UIN of the domain name owner.
+     * @param OwnerUin UIN of the domain name owner.
      */
     public void setOwnerUin(Long OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get Private domain 
-     * @return Domain Private domain
+     * Get Private domain name. 
+     * @return Domain Private domain name.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Private domain
-     * @param Domain Private domain
+     * Set Private domain name.
+     * @param Domain Private domain name.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
@@ -190,123 +246,263 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Number of results 
-     * @return RecordCount Number of results
+     * Get Number of records. 
+     * @return RecordCount Number of records.
      */
     public Long getRecordCount() {
         return this.RecordCount;
     }
 
     /**
-     * Set Number of results
-     * @param RecordCount Number of results
+     * Set Number of records.
+     * @param RecordCount Number of records.
      */
     public void setRecordCount(Long RecordCount) {
         this.RecordCount = RecordCount;
     }
 
     /**
-     * Get Remarks
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Remarks.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Remark Remarks.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Remarks.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Remark Remarks.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get List of bound VPCs 
-     * @return VpcSet List of bound VPCs
+     * Get List of bound VPCs. 
+     * @return VpcSet List of bound VPCs.
      */
     public VpcInfo [] getVpcSet() {
         return this.VpcSet;
     }
 
     /**
-     * Set List of bound VPCs
-     * @param VpcSet List of bound VPCs
+     * Set List of bound VPCs.
+     * @param VpcSet List of bound VPCs.
      */
     public void setVpcSet(VpcInfo [] VpcSet) {
         this.VpcSet = VpcSet;
     }
 
     /**
-     * Get Private domain status. Valid values: ENABLED (DNS enabled); SUSPEND (DNS paused); FROZEN (locked) 
-     * @return Status Private domain status. Valid values: ENABLED (DNS enabled); SUSPEND (DNS paused); FROZEN (locked)
+     * Get Status of the VPC bound with the private domain. SUSPEND: The VPC is not associated; ENABLED: the VPC has been associated.
+, FAILED: the VPC fails to be associated. 
+     * @return Status Status of the VPC bound with the private domain. SUSPEND: The VPC is not associated; ENABLED: the VPC has been associated.
+, FAILED: the VPC fails to be associated.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Private domain status. Valid values: ENABLED (DNS enabled); SUSPEND (DNS paused); FROZEN (locked)
-     * @param Status Private domain status. Valid values: ENABLED (DNS enabled); SUSPEND (DNS paused); FROZEN (locked)
+     * Set Status of the VPC bound with the private domain. SUSPEND: The VPC is not associated; ENABLED: the VPC has been associated.
+, FAILED: the VPC fails to be associated.
+     * @param Status Status of the VPC bound with the private domain. SUSPEND: The VPC is not associated; ENABLED: the VPC has been associated.
+, FAILED: the VPC fails to be associated.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Subdomain recursive DNS status. Valid values: ENABLED, DISABLED 
-     * @return DnsForwardStatus Subdomain recursive DNS status. Valid values: ENABLED, DISABLED
+     * Get Recursive resolution status of the domain name. ENABLED: enabled; DISABLED: disabled. 
+     * @return DnsForwardStatus Recursive resolution status of the domain name. ENABLED: enabled; DISABLED: disabled.
      */
     public String getDnsForwardStatus() {
         return this.DnsForwardStatus;
     }
 
     /**
-     * Set Subdomain recursive DNS status. Valid values: ENABLED, DISABLED
-     * @param DnsForwardStatus Subdomain recursive DNS status. Valid values: ENABLED, DISABLED
+     * Set Recursive resolution status of the domain name. ENABLED: enabled; DISABLED: disabled.
+     * @param DnsForwardStatus Recursive resolution status of the domain name. ENABLED: enabled; DISABLED: disabled.
      */
     public void setDnsForwardStatus(String DnsForwardStatus) {
         this.DnsForwardStatus = DnsForwardStatus;
     }
 
     /**
-     * Get Set of tag key-value pairs 
-     * @return Tags Set of tag key-value pairs
+     * Get Tag key-value pair collection. 
+     * @return Tags Tag key-value pair collection.
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Set of tag key-value pairs
-     * @param Tags Set of tag key-value pairs
+     * Set Tag key-value pair collection.
+     * @param Tags Tag key-value pair collection.
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get List of authorized accounts' VPCs associated with the private domain
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return AccountVpcSet List of authorized accounts' VPCs associated with the private domain
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get List of bound VPCs of the associated account.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AccountVpcSet List of bound VPCs of the associated account.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AccountVpcInfoOutput [] getAccountVpcSet() {
         return this.AccountVpcSet;
     }
 
     /**
-     * Set List of authorized accounts' VPCs associated with the private domain
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param AccountVpcSet List of authorized accounts' VPCs associated with the private domain
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set List of bound VPCs of the associated account.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AccountVpcSet List of bound VPCs of the associated account.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAccountVpcSet(AccountVpcInfoOutput [] AccountVpcSet) {
         this.AccountVpcSet = AccountVpcSet;
+    }
+
+    /**
+     * Get Whether the TLD is a custom one.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsCustomTld Whether the TLD is a custom one.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getIsCustomTld() {
+        return this.IsCustomTld;
+    }
+
+    /**
+     * Set Whether the TLD is a custom one.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsCustomTld Whether the TLD is a custom one.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsCustomTld(Boolean IsCustomTld) {
+        this.IsCustomTld = IsCustomTld;
+    }
+
+    /**
+     * Get CNAME acceleration status. ENABLED: enabled; DISABLED: disabled. 
+     * @return CnameSpeedupStatus CNAME acceleration status. ENABLED: enabled; DISABLED: disabled.
+     */
+    public String getCnameSpeedupStatus() {
+        return this.CnameSpeedupStatus;
+    }
+
+    /**
+     * Set CNAME acceleration status. ENABLED: enabled; DISABLED: disabled.
+     * @param CnameSpeedupStatus CNAME acceleration status. ENABLED: enabled; DISABLED: disabled.
+     */
+    public void setCnameSpeedupStatus(String CnameSpeedupStatus) {
+        this.CnameSpeedupStatus = CnameSpeedupStatus;
+    }
+
+    /**
+     * Get Forwarding rule name.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ForwardRuleName Forwarding rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getForwardRuleName() {
+        return this.ForwardRuleName;
+    }
+
+    /**
+     * Set Forwarding rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ForwardRuleName Forwarding rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setForwardRuleName(String ForwardRuleName) {
+        this.ForwardRuleName = ForwardRuleName;
+    }
+
+    /**
+     * Get Forwarding rule type. DOWN: from cloud to off-cloud; UP: from off-cloud to cloud. Currently, only DOWN is supported.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ForwardRuleType Forwarding rule type. DOWN: from cloud to off-cloud; UP: from off-cloud to cloud. Currently, only DOWN is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getForwardRuleType() {
+        return this.ForwardRuleType;
+    }
+
+    /**
+     * Set Forwarding rule type. DOWN: from cloud to off-cloud; UP: from off-cloud to cloud. Currently, only DOWN is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ForwardRuleType Forwarding rule type. DOWN: from cloud to off-cloud; UP: from off-cloud to cloud. Currently, only DOWN is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setForwardRuleType(String ForwardRuleType) {
+        this.ForwardRuleType = ForwardRuleType;
+    }
+
+    /**
+     * Get Forwarding address.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ForwardAddress Forwarding address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getForwardAddress() {
+        return this.ForwardAddress;
+    }
+
+    /**
+     * Set Forwarding address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ForwardAddress Forwarding address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setForwardAddress(String ForwardAddress) {
+        this.ForwardAddress = ForwardAddress;
+    }
+
+    /**
+     * Get Endpoint name.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EndPointName Endpoint name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getEndPointName() {
+        return this.EndPointName;
+    }
+
+    /**
+     * Set Endpoint name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EndPointName Endpoint name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEndPointName(String EndPointName) {
+        this.EndPointName = EndPointName;
+    }
+
+    /**
+     * Get Deleted VPC.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DeletedVpcSet Deleted VPC.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public VpcInfo [] getDeletedVpcSet() {
+        return this.DeletedVpcSet;
+    }
+
+    /**
+     * Set Deleted VPC.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DeletedVpcSet Deleted VPC.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDeletedVpcSet(VpcInfo [] DeletedVpcSet) {
+        this.DeletedVpcSet = DeletedVpcSet;
     }
 
     public PrivateZone() {
@@ -362,6 +558,30 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.AccountVpcSet[i] = new AccountVpcInfoOutput(source.AccountVpcSet[i]);
             }
         }
+        if (source.IsCustomTld != null) {
+            this.IsCustomTld = new Boolean(source.IsCustomTld);
+        }
+        if (source.CnameSpeedupStatus != null) {
+            this.CnameSpeedupStatus = new String(source.CnameSpeedupStatus);
+        }
+        if (source.ForwardRuleName != null) {
+            this.ForwardRuleName = new String(source.ForwardRuleName);
+        }
+        if (source.ForwardRuleType != null) {
+            this.ForwardRuleType = new String(source.ForwardRuleType);
+        }
+        if (source.ForwardAddress != null) {
+            this.ForwardAddress = new String(source.ForwardAddress);
+        }
+        if (source.EndPointName != null) {
+            this.EndPointName = new String(source.EndPointName);
+        }
+        if (source.DeletedVpcSet != null) {
+            this.DeletedVpcSet = new VpcInfo[source.DeletedVpcSet.length];
+            for (int i = 0; i < source.DeletedVpcSet.length; i++) {
+                this.DeletedVpcSet[i] = new VpcInfo(source.DeletedVpcSet[i]);
+            }
+        }
     }
 
 
@@ -381,6 +601,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "DnsForwardStatus", this.DnsForwardStatus);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
+        this.setParamSimple(map, prefix + "IsCustomTld", this.IsCustomTld);
+        this.setParamSimple(map, prefix + "CnameSpeedupStatus", this.CnameSpeedupStatus);
+        this.setParamSimple(map, prefix + "ForwardRuleName", this.ForwardRuleName);
+        this.setParamSimple(map, prefix + "ForwardRuleType", this.ForwardRuleType);
+        this.setParamSimple(map, prefix + "ForwardAddress", this.ForwardAddress);
+        this.setParamSimple(map, prefix + "EndPointName", this.EndPointName);
+        this.setParamArrayObj(map, prefix + "DeletedVpcSet.", this.DeletedVpcSet);
 
     }
 }

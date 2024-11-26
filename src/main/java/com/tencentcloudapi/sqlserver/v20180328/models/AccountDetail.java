@@ -87,6 +87,13 @@ public class AccountDetail extends AbstractModel {
     private Boolean IsAdmin;
 
     /**
+    * Whether it is a CAM managed account
+    */
+    @SerializedName("IsCam")
+    @Expose
+    private Boolean IsCam;
+
+    /**
     * Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
     */
     @SerializedName("Authentication")
@@ -252,6 +259,22 @@ public class AccountDetail extends AbstractModel {
     }
 
     /**
+     * Get Whether it is a CAM managed account 
+     * @return IsCam Whether it is a CAM managed account
+     */
+    public Boolean getIsCam() {
+        return this.IsCam;
+    }
+
+    /**
+     * Set Whether it is a CAM managed account
+     * @param IsCam Whether it is a CAM managed account
+     */
+    public void setIsCam(Boolean IsCam) {
+        this.IsCam = IsCam;
+    }
+
+    /**
      * Get Valid values: `win-windows authentication`, `sql-sqlserver authentication`. 
      * @return Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
      */
@@ -337,6 +360,9 @@ public class AccountDetail extends AbstractModel {
         if (source.IsAdmin != null) {
             this.IsAdmin = new Boolean(source.IsAdmin);
         }
+        if (source.IsCam != null) {
+            this.IsCam = new Boolean(source.IsCam);
+        }
         if (source.Authentication != null) {
             this.Authentication = new String(source.Authentication);
         }
@@ -362,6 +388,7 @@ public class AccountDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "InternalStatus", this.InternalStatus);
         this.setParamArrayObj(map, prefix + "Dbs.", this.Dbs);
         this.setParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
+        this.setParamSimple(map, prefix + "IsCam", this.IsCam);
         this.setParamSimple(map, prefix + "Authentication", this.Authentication);
         this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "AccountType", this.AccountType);

@@ -38,18 +38,18 @@ public class RollbackInstanceRequest extends AbstractModel {
     private Long Type;
 
     /**
-    * Database to be rolled back
-    */
-    @SerializedName("DBs")
-    @Expose
-    private String [] DBs;
-
-    /**
     * Target time point for rollback
     */
     @SerializedName("Time")
     @Expose
     private String Time;
+
+    /**
+    * Database to be rolled back
+    */
+    @SerializedName("DBs")
+    @Expose
+    private String [] DBs;
 
     /**
     * ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
@@ -98,22 +98,6 @@ public class RollbackInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Database to be rolled back 
-     * @return DBs Database to be rolled back
-     */
-    public String [] getDBs() {
-        return this.DBs;
-    }
-
-    /**
-     * Set Database to be rolled back
-     * @param DBs Database to be rolled back
-     */
-    public void setDBs(String [] DBs) {
-        this.DBs = DBs;
-    }
-
-    /**
      * Get Target time point for rollback 
      * @return Time Target time point for rollback
      */
@@ -127,6 +111,22 @@ public class RollbackInstanceRequest extends AbstractModel {
      */
     public void setTime(String Time) {
         this.Time = Time;
+    }
+
+    /**
+     * Get Database to be rolled back 
+     * @return DBs Database to be rolled back
+     */
+    public String [] getDBs() {
+        return this.DBs;
+    }
+
+    /**
+     * Set Database to be rolled back
+     * @param DBs Database to be rolled back
+     */
+    public void setDBs(String [] DBs) {
+        this.DBs = DBs;
     }
 
     /**
@@ -175,14 +175,14 @@ public class RollbackInstanceRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
         if (source.DBs != null) {
             this.DBs = new String[source.DBs.length];
             for (int i = 0; i < source.DBs.length; i++) {
                 this.DBs[i] = new String(source.DBs[i]);
             }
-        }
-        if (source.Time != null) {
-            this.Time = new String(source.Time);
         }
         if (source.TargetInstanceId != null) {
             this.TargetInstanceId = new String(source.TargetInstanceId);
@@ -202,8 +202,8 @@ public class RollbackInstanceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamArraySimple(map, prefix + "DBs.", this.DBs);
         this.setParamSimple(map, prefix + "Time", this.Time);
+        this.setParamArraySimple(map, prefix + "DBs.", this.DBs);
         this.setParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
         this.setParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
 

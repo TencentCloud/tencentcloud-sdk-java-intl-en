@@ -248,56 +248,49 @@ public class DBInstance extends AbstractModel {
     private String UniqSubnetId;
 
     /**
-    * Instance isolation.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsolateOperator")
     @Expose
     private String IsolateOperator;
 
     /**
-    * Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubFlag")
     @Expose
     private String SubFlag;
 
     /**
-    * Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ROFlag")
     @Expose
     private String ROFlag;
 
     /**
-    * Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HAFlag")
     @Expose
     private String HAFlag;
 
     /**
-    * The list of tags associated with the instance
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceTags")
     @Expose
     private ResourceTag [] ResourceTags;
 
     /**
-    * Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BackupModel")
     @Expose
     private String BackupModel;
 
     /**
-    * Instance backup info
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceNote")
     @Expose
@@ -388,24 +381,21 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Boolean IsDrZone;
 
     /**
-    * Replica AZ information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SlaveZones")
     @Expose
     private SlaveZones SlaveZones;
 
     /**
-    * Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Architecture")
     @Expose
     private String Architecture;
 
     /**
-    * Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Style")
     @Expose
@@ -924,140 +914,112 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance isolation.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsolateOperator Instance isolation.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsolateOperator Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIsolateOperator() {
         return this.IsolateOperator;
     }
 
     /**
-     * Set Instance isolation.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsolateOperator Instance isolation.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsolateOperator Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsolateOperator(String IsolateOperator) {
         this.IsolateOperator = IsolateOperator;
     }
 
     /**
-     * Get Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SubFlag Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubFlag Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSubFlag() {
         return this.SubFlag;
     }
 
     /**
-     * Set Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SubFlag Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubFlag Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubFlag(String SubFlag) {
         this.SubFlag = SubFlag;
     }
 
     /**
-     * Get Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ROFlag Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ROFlag Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getROFlag() {
         return this.ROFlag;
     }
 
     /**
-     * Set Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ROFlag Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ROFlag Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setROFlag(String ROFlag) {
         this.ROFlag = ROFlag;
     }
 
     /**
-     * Get Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return HAFlag Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HAFlag Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHAFlag() {
         return this.HAFlag;
     }
 
     /**
-     * Set Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param HAFlag Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HAFlag Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHAFlag(String HAFlag) {
         this.HAFlag = HAFlag;
     }
 
     /**
-     * Get The list of tags associated with the instance
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ResourceTags The list of tags associated with the instance
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ResourceTags Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ResourceTag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set The list of tags associated with the instance
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ResourceTags The list of tags associated with the instance
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ResourceTags Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResourceTags(ResourceTag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return BackupModel Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BackupModel Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBackupModel() {
         return this.BackupModel;
     }
 
     /**
-     * Set Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param BackupModel Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BackupModel Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBackupModel(String BackupModel) {
         this.BackupModel = BackupModel;
     }
 
     /**
-     * Get Instance backup info
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return InstanceNote Instance backup info
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceNote Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceNote() {
         return this.InstanceNote;
     }
 
     /**
-     * Set Instance backup info
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param InstanceNote Instance backup info
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceNote Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceNote(String InstanceNote) {
         this.InstanceNote = InstanceNote;
@@ -1256,60 +1218,48 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Replica AZ information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SlaveZones Replica AZ information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SlaveZones Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SlaveZones getSlaveZones() {
         return this.SlaveZones;
     }
 
     /**
-     * Set Replica AZ information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SlaveZones Replica AZ information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SlaveZones Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSlaveZones(SlaveZones SlaveZones) {
         this.SlaveZones = SlaveZones;
     }
 
     /**
-     * Get Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return Architecture Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Architecture Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getArchitecture() {
         return this.Architecture;
     }
 
     /**
-     * Set Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param Architecture Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Architecture Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setArchitecture(String Architecture) {
         this.Architecture = Architecture;
     }
 
     /**
-     * Get Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Style Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Style Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStyle() {
         return this.Style;
     }
 
     /**
-     * Set Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Style Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Style Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStyle(String Style) {
         this.Style = Style;
