@@ -31,14 +31,14 @@ public class ModifyTopicAttributeRequest extends AbstractModel {
     private String TopicName;
 
     /**
-    * Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+    * Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
     */
     @SerializedName("MaxMsgSize")
     @Expose
     private Long MaxMsgSize;
 
     /**
-    * Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400.
+    * Message retention period. Value range: 60-86400 seconds (i.e., 1 minute-1 day). Default value: 86400.
     */
     @SerializedName("MsgRetentionSeconds")
     @Expose
@@ -68,32 +68,32 @@ public class ModifyTopicAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536. 
-     * @return MaxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+     * Get Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536. 
+     * @return MaxMsgSize Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
      */
     public Long getMaxMsgSize() {
         return this.MaxMsgSize;
     }
 
     /**
-     * Set Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
-     * @param MaxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+     * Set Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
+     * @param MaxMsgSize Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
      */
     public void setMaxMsgSize(Long MaxMsgSize) {
         this.MaxMsgSize = MaxMsgSize;
     }
 
     /**
-     * Get Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400. 
-     * @return MsgRetentionSeconds Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400.
+     * Get Message retention period. Value range: 60-86400 seconds (i.e., 1 minute-1 day). Default value: 86400. 
+     * @return MsgRetentionSeconds Message retention period. Value range: 60-86400 seconds (i.e., 1 minute-1 day). Default value: 86400.
      */
     public Long getMsgRetentionSeconds() {
         return this.MsgRetentionSeconds;
     }
 
     /**
-     * Set Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400.
-     * @param MsgRetentionSeconds Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400.
+     * Set Message retention period. Value range: 60-86400 seconds (i.e., 1 minute-1 day). Default value: 86400.
+     * @param MsgRetentionSeconds Message retention period. Value range: 60-86400 seconds (i.e., 1 minute-1 day). Default value: 86400.
      */
     public void setMsgRetentionSeconds(Long MsgRetentionSeconds) {
         this.MsgRetentionSeconds = MsgRetentionSeconds;

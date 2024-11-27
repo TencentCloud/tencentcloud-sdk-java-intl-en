@@ -45,6 +45,13 @@ public class CreateGroupRequest extends AbstractModel {
     private String Description;
 
     /**
+    * User group type. Manual: manually created, Synchronized: imported from external sources.
+    */
+    @SerializedName("GroupType")
+    @Expose
+    private String GroupType;
+
+    /**
      * Get Space ID. 
      * @return ZoneId Space ID.
      */
@@ -92,6 +99,22 @@ public class CreateGroupRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get User group type. Manual: manually created, Synchronized: imported from external sources. 
+     * @return GroupType User group type. Manual: manually created, Synchronized: imported from external sources.
+     */
+    public String getGroupType() {
+        return this.GroupType;
+    }
+
+    /**
+     * Set User group type. Manual: manually created, Synchronized: imported from external sources.
+     * @param GroupType User group type. Manual: manually created, Synchronized: imported from external sources.
+     */
+    public void setGroupType(String GroupType) {
+        this.GroupType = GroupType;
+    }
+
     public CreateGroupRequest() {
     }
 
@@ -109,6 +132,9 @@ public class CreateGroupRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.GroupType != null) {
+            this.GroupType = new String(source.GroupType);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class CreateGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "GroupType", this.GroupType);
 
     }
 }

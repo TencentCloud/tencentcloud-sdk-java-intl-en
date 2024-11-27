@@ -88,6 +88,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Arg;
 
     /**
+    * 0: case-sensitive.
+1: case-insensitive.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CaseNotSensitive")
+    @Expose
+    private Long CaseNotSensitive;
+
+    /**
      * Get Matching field
 
     Different matching fields result in different matching parameters, logical operators, and matching contents. The details are as follows:
@@ -295,6 +304,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Arg = Arg;
     }
 
+    /**
+     * Get 0: case-sensitive.
+1: case-insensitive.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CaseNotSensitive 0: case-sensitive.
+1: case-insensitive.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getCaseNotSensitive() {
+        return this.CaseNotSensitive;
+    }
+
+    /**
+     * Set 0: case-sensitive.
+1: case-insensitive.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CaseNotSensitive 0: case-sensitive.
+1: case-insensitive.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCaseNotSensitive(Long CaseNotSensitive) {
+        this.CaseNotSensitive = CaseNotSensitive;
+    }
+
     public Strategy() {
     }
 
@@ -315,6 +348,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Arg != null) {
             this.Arg = new String(source.Arg);
         }
+        if (source.CaseNotSensitive != null) {
+            this.CaseNotSensitive = new Long(source.CaseNotSensitive);
+        }
     }
 
 
@@ -326,6 +362,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CompareFunc", this.CompareFunc);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "Arg", this.Arg);
+        this.setParamSimple(map, prefix + "CaseNotSensitive", this.CaseNotSensitive);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.waf.v20180125.models;
+package com.tencentcloudapi.cdc.v20201214.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAntiFakeUrlRequest extends AbstractModel {
+public class DedicatedClusterTypeInfo extends AbstractModel {
 
     /**
-    * Domain name
+    * Cluster type id
     */
-    @SerializedName("Domain")
+    @SerializedName("Id")
     @Expose
-    private String Domain;
+    private String Id;
 
     /**
-    * Page turning parameters
+    * Cluster type count
     */
-    @SerializedName("PageInfo")
+    @SerializedName("Count")
     @Expose
-    private PageInfo PageInfo;
+    private Long Count;
 
     /**
-     * Get Domain name 
-     * @return Domain Domain name
+     * Get Cluster type id 
+     * @return Id Cluster type id
      */
-    public String getDomain() {
-        return this.Domain;
+    public String getId() {
+        return this.Id;
     }
 
     /**
-     * Set Domain name
-     * @param Domain Domain name
+     * Set Cluster type id
+     * @param Id Cluster type id
      */
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
     /**
-     * Get Page turning parameters 
-     * @return PageInfo Page turning parameters
+     * Get Cluster type count 
+     * @return Count Cluster type count
      */
-    public PageInfo getPageInfo() {
-        return this.PageInfo;
+    public Long getCount() {
+        return this.Count;
     }
 
     /**
-     * Set Page turning parameters
-     * @param PageInfo Page turning parameters
+     * Set Cluster type count
+     * @param Count Cluster type count
      */
-    public void setPageInfo(PageInfo PageInfo) {
-        this.PageInfo = PageInfo;
+    public void setCount(Long Count) {
+        this.Count = Count;
     }
 
-    public DescribeAntiFakeUrlRequest() {
+    public DedicatedClusterTypeInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAntiFakeUrlRequest(DescribeAntiFakeUrlRequest source) {
-        if (source.Domain != null) {
-            this.Domain = new String(source.Domain);
+    public DedicatedClusterTypeInfo(DedicatedClusterTypeInfo source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
         }
-        if (source.PageInfo != null) {
-            this.PageInfo = new PageInfo(source.PageInfo);
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
         }
     }
 
@@ -90,8 +90,8 @@ public class DescribeAntiFakeUrlRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Domain", this.Domain);
-        this.setParamObj(map, prefix + "PageInfo.", this.PageInfo);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Count", this.Count);
 
     }
 }

@@ -31,6 +31,13 @@ public class CreateVodDomainRequest extends AbstractModel {
     private String Domain;
 
     /**
+    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * Region to enable acceleration. Valid values:
 <li>`Chinese Mainland`</li>
 <li>`Outside Chinese Mainland`</li>
@@ -42,11 +49,12 @@ If `AccelerateArea` is not specified, VOD will enable acceleration in or outside
     private String AccelerateArea;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>default value: VOD. 
     */
-    @SerializedName("SubAppId")
+    @SerializedName("Type")
     @Expose
-    private Long SubAppId;
+    private String Type;
 
     /**
      * Get Domain name to add to VOD. Note: a wildcard domain name is not supported. 
@@ -62,6 +70,22 @@ If `AccelerateArea` is not specified, VOD will enable acceleration in or outside
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
+    }
+
+    /**
+     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
+     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -97,19 +121,23 @@ If `AccelerateArea` is not specified, VOD will enable acceleration in or outside
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>default value: VOD.  
+     * @return Type Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>default value: VOD. 
      */
-    public Long getSubAppId() {
-        return this.SubAppId;
+    public String getType() {
+        return this.Type;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>default value: VOD. 
+     * @param Type Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>default value: VOD. 
      */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     public CreateVodDomainRequest() {
@@ -123,11 +151,14 @@ If `AccelerateArea` is not specified, VOD will enable acceleration in or outside
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
         if (source.AccelerateArea != null) {
             this.AccelerateArea = new String(source.AccelerateArea);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
         }
     }
 
@@ -137,8 +168,9 @@ If `AccelerateArea` is not specified, VOD will enable acceleration in or outside
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
-        this.setParamSimple(map, prefix + "AccelerateArea", this.AccelerateArea);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "AccelerateArea", this.AccelerateArea);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

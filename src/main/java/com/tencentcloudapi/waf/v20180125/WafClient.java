@@ -237,36 +237,6 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *废弃接口
-
-This API has been deprecated.
-
-Obtain a tamper-proof URL
-     * @param req DescribeAntiFakeUrlRequest
-     * @return DescribeAntiFakeUrlResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAntiFakeUrlResponse DescribeAntiFakeUrl(DescribeAntiFakeUrlRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAntiFakeUrl", DescribeAntiFakeUrlResponse.class);
-    }
-
-    /**
-     *老接口已经不再使用。
-
-The old API is no longer in use.
-
-Obtain the information leakage prevention rule list
-     * @param req DescribeAntiInfoLeakRulesRequest
-     * @return DescribeAntiInfoLeakRulesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAntiInfoLeakRulesResponse DescribeAntiInfoLeakRules(DescribeAntiInfoLeakRulesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAntiInfoLeakRules", DescribeAntiInfoLeakRulesResponse.class);
-    }
-
-    /**
      *Obtain the information leakage prevention rule list
      * @param req DescribeAntiInfoLeakageRulesRequest
      * @return DescribeAntiInfoLeakageRulesResponse
@@ -275,6 +245,17 @@ Obtain the information leakage prevention rule list
     public DescribeAntiInfoLeakageRulesResponse DescribeAntiInfoLeakageRules(DescribeAntiInfoLeakageRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAntiInfoLeakageRules", DescribeAntiInfoLeakageRulesResponse.class);
+    }
+
+    /**
+     *This API is used to describe the attack overview.
+     * @param req DescribeAttackOverviewRequest
+     * @return DescribeAttackOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAttackOverviewResponse DescribeAttackOverview(DescribeAttackOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAttackOverview", DescribeAttackOverviewResponse.class);
     }
 
     /**
@@ -685,6 +666,17 @@ Obtain the information leakage prevention rule list
     }
 
     /**
+     *This API is used to generate a bar chart for the generation time of attack logs.
+     * @param req GetAttackHistogramRequest
+     * @return GetAttackHistogramResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAttackHistogramResponse GetAttackHistogram(GetAttackHistogramRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetAttackHistogram", GetAttackHistogramResponse.class);
+    }
+
+    /**
      *Display total attack count by querying based on conditions
      * @param req GetAttackTotalCountRequest
      * @return GetAttackTotalCountResponse
@@ -836,6 +828,17 @@ Obtain the information leakage prevention rule list
     public ModifyDomainIpv6StatusResponse ModifyDomainIpv6Status(ModifyDomainIpv6StatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDomainIpv6Status", ModifyDomainIpv6StatusResponse.class);
+    }
+
+    /**
+     *This API is used to modify the domain shipping status.
+     * @param req ModifyDomainPostActionRequest
+     * @return ModifyDomainPostActionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDomainPostActionResponse ModifyDomainPostAction(ModifyDomainPostActionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDomainPostAction", ModifyDomainPostActionResponse.class);
     }
 
     /**
@@ -1046,6 +1049,17 @@ Batch operation is supported.
     public RefreshAccessCheckResultResponse RefreshAccessCheckResult(RefreshAccessCheckResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RefreshAccessCheckResult", RefreshAccessCheckResultResponse.class);
+    }
+
+    /**
+     *The new version of the CLS API has parameter changes, with query changed to query_string to support Lucene syntax for API search queries.
+     * @param req SearchAttackLogRequest
+     * @return SearchAttackLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchAttackLogResponse SearchAttackLog(SearchAttackLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchAttackLog", SearchAttackLogResponse.class);
     }
 
     /**

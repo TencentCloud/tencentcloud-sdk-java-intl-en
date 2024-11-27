@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class CheckRuleRequest extends AbstractModel {
 
+    /**
+    * 
+    */
+    @SerializedName("Event")
+    @Expose
+    private String Event;
+
+    /**
+    * 
+    */
+    @SerializedName("EventPattern")
+    @Expose
+    private String EventPattern;
+
+    /**
+     * Get  
+     * @return Event 
+     */
+    public String getEvent() {
+        return this.Event;
+    }
+
+    /**
+     * Set 
+     * @param Event 
+     */
+    public void setEvent(String Event) {
+        this.Event = Event;
+    }
+
+    /**
+     * Get  
+     * @return EventPattern 
+     */
+    public String getEventPattern() {
+        return this.EventPattern;
+    }
+
+    /**
+     * Set 
+     * @param EventPattern 
+     */
+    public void setEventPattern(String EventPattern) {
+        this.EventPattern = EventPattern;
+    }
+
     public CheckRuleRequest() {
     }
 
@@ -31,6 +77,12 @@ public class CheckRuleRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CheckRuleRequest(CheckRuleRequest source) {
+        if (source.Event != null) {
+            this.Event = new String(source.Event);
+        }
+        if (source.EventPattern != null) {
+            this.EventPattern = new String(source.EventPattern);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class CheckRuleRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Event", this.Event);
+        this.setParamSimple(map, prefix + "EventPattern", this.EventPattern);
 
     }
 }

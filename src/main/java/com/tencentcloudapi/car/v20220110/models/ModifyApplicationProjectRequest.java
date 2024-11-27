@@ -80,7 +80,7 @@ public class ModifyApplicationProjectRequest extends AbstractModel {
     private Long FPS;
 
     /**
-    * Waiting time for application pre-launch.
+    * Waiting time for pre-launch.
     */
     @SerializedName("PreloadDuration")
     @Expose
@@ -271,16 +271,16 @@ public class ModifyApplicationProjectRequest extends AbstractModel {
     }
 
     /**
-     * Get Waiting time for application pre-launch. 
-     * @return PreloadDuration Waiting time for application pre-launch.
+     * Get Waiting time for pre-launch. 
+     * @return PreloadDuration Waiting time for pre-launch.
      */
     public String getPreloadDuration() {
         return this.PreloadDuration;
     }
 
     /**
-     * Set Waiting time for application pre-launch.
-     * @param PreloadDuration Waiting time for application pre-launch.
+     * Set Waiting time for pre-launch.
+     * @param PreloadDuration Waiting time for pre-launch.
      */
     public void setPreloadDuration(String PreloadDuration) {
         this.PreloadDuration = PreloadDuration;

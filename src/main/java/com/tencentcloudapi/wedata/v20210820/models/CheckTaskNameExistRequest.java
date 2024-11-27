@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CheckTaskNameExistRequest extends AbstractModel {
 
     /**
-    * Project ID/Workspace ID
+    * Project ID/Workspace ID.
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * Task Type (consistent with scheduling parameters)
+    * Task Type (consistent with scheduling parameters).
     */
     @SerializedName("TypeId")
     @Expose
     private Long TypeId;
 
     /**
-    * Task Name
+    * Task Name.
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-     * Get Project ID/Workspace ID 
-     * @return ProjectId Project ID/Workspace ID
+     * Get Project ID/Workspace ID. 
+     * @return ProjectId Project ID/Workspace ID.
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID/Workspace ID
-     * @param ProjectId Project ID/Workspace ID
+     * Set Project ID/Workspace ID.
+     * @param ProjectId Project ID/Workspace ID.
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Task Type (consistent with scheduling parameters) 
-     * @return TypeId Task Type (consistent with scheduling parameters)
+     * Get Task Type (consistent with scheduling parameters). 
+     * @return TypeId Task Type (consistent with scheduling parameters).
      */
     public Long getTypeId() {
         return this.TypeId;
     }
 
     /**
-     * Set Task Type (consistent with scheduling parameters)
-     * @param TypeId Task Type (consistent with scheduling parameters)
+     * Set Task Type (consistent with scheduling parameters).
+     * @param TypeId Task Type (consistent with scheduling parameters).
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;
     }
 
     /**
-     * Get Task Name 
-     * @return TaskName Task Name
+     * Get Task Name. 
+     * @return TaskName Task Name.
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set Task Name
-     * @param TaskName Task Name
+     * Set Task Name.
+     * @param TaskName Task Name.
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;

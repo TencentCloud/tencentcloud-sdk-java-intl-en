@@ -38,21 +38,21 @@ public class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
     private String RoleConfigurationId;
 
     /**
-    * Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure. Only the system policy is supported at the early stage, and the custom policy will be supported later.
+    * Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure.  
     */
     @SerializedName("RolePolicyType")
     @Expose
     private String RolePolicyType;
 
     /**
-    * Permission policy name, which includes up to 20 policies, each containing up to 32 characters.
+    * Permission policy name, supporting up to 20 policies, with each policy having a maximum of 32 characters. If you need to add a system policy, it is recommended to use the RolePolicies parameter. For custom policies, the array length is up to 1.
     */
     @SerializedName("RolePolicyNames")
     @Expose
     private String [] RolePolicyNames;
 
     /**
-    * Policy details.
+    * Details of an added system policy.
     */
     @SerializedName("RolePolicies")
     @Expose
@@ -98,48 +98,48 @@ public class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
     }
 
     /**
-     * Get Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure. Only the system policy is supported at the early stage, and the custom policy will be supported later. 
-     * @return RolePolicyType Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure. Only the system policy is supported at the early stage, and the custom policy will be supported later.
+     * Get Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure.   
+     * @return RolePolicyType Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure.  
      */
     public String getRolePolicyType() {
         return this.RolePolicyType;
     }
 
     /**
-     * Set Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure. Only the system policy is supported at the early stage, and the custom policy will be supported later.
-     * @param RolePolicyType Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure. Only the system policy is supported at the early stage, and the custom policy will be supported later.
+     * Set Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure.  
+     * @param RolePolicyType Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure.  
      */
     public void setRolePolicyType(String RolePolicyType) {
         this.RolePolicyType = RolePolicyType;
     }
 
     /**
-     * Get Permission policy name, which includes up to 20 policies, each containing up to 32 characters. 
-     * @return RolePolicyNames Permission policy name, which includes up to 20 policies, each containing up to 32 characters.
+     * Get Permission policy name, supporting up to 20 policies, with each policy having a maximum of 32 characters. If you need to add a system policy, it is recommended to use the RolePolicies parameter. For custom policies, the array length is up to 1. 
+     * @return RolePolicyNames Permission policy name, supporting up to 20 policies, with each policy having a maximum of 32 characters. If you need to add a system policy, it is recommended to use the RolePolicies parameter. For custom policies, the array length is up to 1.
      */
     public String [] getRolePolicyNames() {
         return this.RolePolicyNames;
     }
 
     /**
-     * Set Permission policy name, which includes up to 20 policies, each containing up to 32 characters.
-     * @param RolePolicyNames Permission policy name, which includes up to 20 policies, each containing up to 32 characters.
+     * Set Permission policy name, supporting up to 20 policies, with each policy having a maximum of 32 characters. If you need to add a system policy, it is recommended to use the RolePolicies parameter. For custom policies, the array length is up to 1.
+     * @param RolePolicyNames Permission policy name, supporting up to 20 policies, with each policy having a maximum of 32 characters. If you need to add a system policy, it is recommended to use the RolePolicies parameter. For custom policies, the array length is up to 1.
      */
     public void setRolePolicyNames(String [] RolePolicyNames) {
         this.RolePolicyNames = RolePolicyNames;
     }
 
     /**
-     * Get Policy details. 
-     * @return RolePolicies Policy details.
+     * Get Details of an added system policy. 
+     * @return RolePolicies Details of an added system policy.
      */
     public PolicyDetail [] getRolePolicies() {
         return this.RolePolicies;
     }
 
     /**
-     * Set Policy details.
-     * @param RolePolicies Policy details.
+     * Set Details of an added system policy.
+     * @param RolePolicies Details of an added system policy.
      */
     public void setRolePolicies(PolicyDetail [] RolePolicies) {
         this.RolePolicies = RolePolicies;

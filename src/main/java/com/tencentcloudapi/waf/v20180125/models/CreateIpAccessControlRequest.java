@@ -149,7 +149,9 @@ Global domain name, that is, global.
     /**
      * Get valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00. 
      * @return ValidTS valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
+     * @deprecated
      */
+    @Deprecated
     public Long getValidTS() {
         return this.ValidTS;
     }
@@ -157,7 +159,9 @@ Global domain name, that is, global.
     /**
      * Set valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
      * @param ValidTS valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
+     * @deprecated
      */
+    @Deprecated
     public void setValidTS(Long ValidTS) {
         this.ValidTS = ValidTS;
     }

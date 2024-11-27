@@ -357,6 +357,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long AccessStatus;
 
     /**
+    * Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Labels")
+    @Expose
+    private String [] Labels;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -1268,6 +1276,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.AccessStatus = AccessStatus;
     }
 
+    /**
+     * Get Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Labels Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Labels Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLabels(String [] Labels) {
+        this.Labels = Labels;
+    }
+
     public DomainInfo() {
     }
 
@@ -1399,6 +1427,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AccessStatus != null) {
             this.AccessStatus = new Long(source.AccessStatus);
         }
+        if (source.Labels != null) {
+            this.Labels = new String[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new String(source.Labels[i]);
+            }
+        }
     }
 
 
@@ -1441,6 +1475,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "UpstreamDomainList.", this.UpstreamDomainList);
         this.setParamSimple(map, prefix + "SgID", this.SgID);
         this.setParamSimple(map, prefix + "AccessStatus", this.AccessStatus);
+        this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
 
     }
 }

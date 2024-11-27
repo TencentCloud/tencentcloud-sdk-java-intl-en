@@ -384,6 +384,70 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ProxyBuffer;
 
     /**
+    * Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GmType")
+    @Expose
+    private Long GmType;
+
+    /**
+    * SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GmCertType")
+    @Expose
+    private Long GmCertType;
+
+    /**
+    * When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GmCert")
+    @Expose
+    private String GmCert;
+
+    /**
+    * When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GmPrivateKey")
+    @Expose
+    private String GmPrivateKey;
+
+    /**
+    * When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GmEncCert")
+    @Expose
+    private String GmEncCert;
+
+    /**
+    * When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GmEncPrivateKey")
+    @Expose
+    private String GmEncPrivateKey;
+
+    /**
+    * When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GmSSLId")
+    @Expose
+    private String GmSSLId;
+
+    /**
+    * Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Labels")
+    @Expose
+    private String [] Labels;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -1319,6 +1383,166 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ProxyBuffer = ProxyBuffer;
     }
 
+    /**
+     * Get Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GmType Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getGmType() {
+        return this.GmType;
+    }
+
+    /**
+     * Set Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GmType Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setGmType(Long GmType) {
+        this.GmType = GmType;
+    }
+
+    /**
+     * Get SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GmCertType SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getGmCertType() {
+        return this.GmCertType;
+    }
+
+    /**
+     * Set SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GmCertType SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setGmCertType(Long GmCertType) {
+        this.GmCertType = GmCertType;
+    }
+
+    /**
+     * Get When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GmCert When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getGmCert() {
+        return this.GmCert;
+    }
+
+    /**
+     * Set When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GmCert When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setGmCert(String GmCert) {
+        this.GmCert = GmCert;
+    }
+
+    /**
+     * Get When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GmPrivateKey When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getGmPrivateKey() {
+        return this.GmPrivateKey;
+    }
+
+    /**
+     * Set When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GmPrivateKey When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setGmPrivateKey(String GmPrivateKey) {
+        this.GmPrivateKey = GmPrivateKey;
+    }
+
+    /**
+     * Get When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GmEncCert When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getGmEncCert() {
+        return this.GmEncCert;
+    }
+
+    /**
+     * Set When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GmEncCert When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setGmEncCert(String GmEncCert) {
+        this.GmEncCert = GmEncCert;
+    }
+
+    /**
+     * Get When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GmEncPrivateKey When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getGmEncPrivateKey() {
+        return this.GmEncPrivateKey;
+    }
+
+    /**
+     * Set When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GmEncPrivateKey When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setGmEncPrivateKey(String GmEncPrivateKey) {
+        this.GmEncPrivateKey = GmEncPrivateKey;
+    }
+
+    /**
+     * Get When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GmSSLId When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getGmSSLId() {
+        return this.GmSSLId;
+    }
+
+    /**
+     * Set When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GmSSLId When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setGmSSLId(String GmSSLId) {
+        this.GmSSLId = GmSSLId;
+    }
+
+    /**
+     * Get Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Labels Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Labels Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLabels(String [] Labels) {
+        this.Labels = Labels;
+    }
+
     public DomainsPartInfo() {
     }
 
@@ -1468,6 +1692,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ProxyBuffer != null) {
             this.ProxyBuffer = new Long(source.ProxyBuffer);
         }
+        if (source.GmType != null) {
+            this.GmType = new Long(source.GmType);
+        }
+        if (source.GmCertType != null) {
+            this.GmCertType = new Long(source.GmCertType);
+        }
+        if (source.GmCert != null) {
+            this.GmCert = new String(source.GmCert);
+        }
+        if (source.GmPrivateKey != null) {
+            this.GmPrivateKey = new String(source.GmPrivateKey);
+        }
+        if (source.GmEncCert != null) {
+            this.GmEncCert = new String(source.GmEncCert);
+        }
+        if (source.GmEncPrivateKey != null) {
+            this.GmEncPrivateKey = new String(source.GmEncPrivateKey);
+        }
+        if (source.GmSSLId != null) {
+            this.GmSSLId = new String(source.GmSSLId);
+        }
+        if (source.Labels != null) {
+            this.Labels = new String[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new String(source.Labels[i]);
+            }
+        }
     }
 
 
@@ -1517,6 +1768,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "ProxyBuffer", this.ProxyBuffer);
+        this.setParamSimple(map, prefix + "GmType", this.GmType);
+        this.setParamSimple(map, prefix + "GmCertType", this.GmCertType);
+        this.setParamSimple(map, prefix + "GmCert", this.GmCert);
+        this.setParamSimple(map, prefix + "GmPrivateKey", this.GmPrivateKey);
+        this.setParamSimple(map, prefix + "GmEncCert", this.GmEncCert);
+        this.setParamSimple(map, prefix + "GmEncPrivateKey", this.GmEncPrivateKey);
+        this.setParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
+        this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
 
     }
 }

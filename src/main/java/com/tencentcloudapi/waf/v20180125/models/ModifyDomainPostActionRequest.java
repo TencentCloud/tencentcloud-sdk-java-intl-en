@@ -21,93 +21,93 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAntiInfoLeakRulesRequest extends AbstractModel {
+public class ModifyDomainPostActionRequest extends AbstractModel {
 
     /**
-    * Domain name
+    * www.tx.com
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Action type
+    * 0- Disable shipping, 1- Enable shipping
     */
-    @SerializedName("ActionType")
+    @SerializedName("PostCLSAction")
     @Expose
-    private Long ActionType;
+    private Long PostCLSAction;
 
     /**
-    * Page turning
+    * 0- Disable shipping, 1- Enable shipping
     */
-    @SerializedName("PageInfo")
+    @SerializedName("PostCKafkaAction")
     @Expose
-    private PageInfo PageInfo;
+    private Long PostCKafkaAction;
 
     /**
-     * Get Domain name 
-     * @return Domain Domain name
+     * Get www.tx.com 
+     * @return Domain www.tx.com
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name
-     * @param Domain Domain name
+     * Set www.tx.com
+     * @param Domain www.tx.com
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Action type 
-     * @return ActionType Action type
+     * Get 0- Disable shipping, 1- Enable shipping 
+     * @return PostCLSAction 0- Disable shipping, 1- Enable shipping
      */
-    public Long getActionType() {
-        return this.ActionType;
+    public Long getPostCLSAction() {
+        return this.PostCLSAction;
     }
 
     /**
-     * Set Action type
-     * @param ActionType Action type
+     * Set 0- Disable shipping, 1- Enable shipping
+     * @param PostCLSAction 0- Disable shipping, 1- Enable shipping
      */
-    public void setActionType(Long ActionType) {
-        this.ActionType = ActionType;
+    public void setPostCLSAction(Long PostCLSAction) {
+        this.PostCLSAction = PostCLSAction;
     }
 
     /**
-     * Get Page turning 
-     * @return PageInfo Page turning
+     * Get 0- Disable shipping, 1- Enable shipping 
+     * @return PostCKafkaAction 0- Disable shipping, 1- Enable shipping
      */
-    public PageInfo getPageInfo() {
-        return this.PageInfo;
+    public Long getPostCKafkaAction() {
+        return this.PostCKafkaAction;
     }
 
     /**
-     * Set Page turning
-     * @param PageInfo Page turning
+     * Set 0- Disable shipping, 1- Enable shipping
+     * @param PostCKafkaAction 0- Disable shipping, 1- Enable shipping
      */
-    public void setPageInfo(PageInfo PageInfo) {
-        this.PageInfo = PageInfo;
+    public void setPostCKafkaAction(Long PostCKafkaAction) {
+        this.PostCKafkaAction = PostCKafkaAction;
     }
 
-    public DescribeAntiInfoLeakRulesRequest() {
+    public ModifyDomainPostActionRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAntiInfoLeakRulesRequest(DescribeAntiInfoLeakRulesRequest source) {
+    public ModifyDomainPostActionRequest(ModifyDomainPostActionRequest source) {
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
-        if (source.ActionType != null) {
-            this.ActionType = new Long(source.ActionType);
+        if (source.PostCLSAction != null) {
+            this.PostCLSAction = new Long(source.PostCLSAction);
         }
-        if (source.PageInfo != null) {
-            this.PageInfo = new PageInfo(source.PageInfo);
+        if (source.PostCKafkaAction != null) {
+            this.PostCKafkaAction = new Long(source.PostCKafkaAction);
         }
     }
 
@@ -117,8 +117,8 @@ public class DescribeAntiInfoLeakRulesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
-        this.setParamSimple(map, prefix + "ActionType", this.ActionType);
-        this.setParamObj(map, prefix + "PageInfo.", this.PageInfo);
+        this.setParamSimple(map, prefix + "PostCLSAction", this.PostCLSAction);
+        this.setParamSimple(map, prefix + "PostCKafkaAction", this.PostCKafkaAction);
 
     }
 }

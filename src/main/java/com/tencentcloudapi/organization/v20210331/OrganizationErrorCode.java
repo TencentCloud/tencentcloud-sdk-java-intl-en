@@ -12,6 +12,9 @@ public enum OrganizationErrorCode {
     // The user has not completed enterprise identity verification.
      FAILEDOPERATION_AUTHNOTENTERPRISE("FailedOperation.AuthNotEnterprise"),
      
+    // Member permission change record exists.
+     FAILEDOPERATION_CHANGEPERMISSIONRECORDEXIST("FailedOperation.ChangePermissionRecordExist"),
+     
     // Permission configurations created for a directory exceed the upper limit.
      FAILEDOPERATION_CONFIGURATIONOVERUPPERLIMIT("FailedOperation.ConfigurationOverUpperLimit"),
      
@@ -48,6 +51,9 @@ public enum OrganizationErrorCode {
     // The user group still contains users and does not allow deleting users.
      FAILEDOPERATION_DELETEGROUPNOTALLOWEXISTUSER("FailedOperation.DeleteGroupNotAllowExistUser"),
      
+    // Exception occurred when deleting the authorization policy.
+     FAILEDOPERATION_DELETEPOLICY("FailedOperation.DeletePolicy"),
+     
     // An error occurred in the query of the organization service usage status.
      FAILEDOPERATION_DESCRIBEORGSERVICEUSAGESTATUSERR("FailedOperation.DescribeOrgServiceUsageStatusErr"),
      
@@ -63,8 +69,14 @@ public enum OrganizationErrorCode {
     // An error occurred while querying the identity information.
      FAILEDOPERATION_GETAUTHINFO("FailedOperation.GetAuthInfo"),
      
+    // Failed to query the policy.
+     FAILEDOPERATION_GETPOLICYDETAIL("FailedOperation.GetPolicyDetail"),
+     
     // User groups created exceed the upper limit.
      FAILEDOPERATION_GROUPOVERUPPERLIMIT("FailedOperation.GroupOverUpperLimit"),
+     
+    // User group type and user type do not match.
+     FAILEDOPERATION_GROUPTYPEUSERTYPENOTMATCH("FailedOperation.GroupTypeUserTypeNotMatch"),
      
     // Members of the CIC user group exceed the limit.
      FAILEDOPERATION_GROUPUSERCOUNTOVERUPPERLIMIT("FailedOperation.GroupUserCountOverUpperLimit"),
@@ -93,11 +105,26 @@ public enum OrganizationErrorCode {
     // The invitation already exists.
      FAILEDOPERATION_INVITATIONEXIST("FailedOperation.InvitationExist"),
      
+    // Manually created user groups cannot be deleted.
+     FAILEDOPERATION_MANUALGROUPNOTDELETE("FailedOperation.ManualGroupNotDelete"),
+     
+    // Manually created user groups cannot be updated.
+     FAILEDOPERATION_MANUALGROUPNOTUPDATE("FailedOperation.ManualGroupNotUpdate"),
+     
+    // Manually created users cannot be deleted.
+     FAILEDOPERATION_MANUALUSERNOTDELETE("FailedOperation.ManualUserNotDelete"),
+     
+    // Manually created users cannot be updated.
+     FAILEDOPERATION_MANUALUSERNOTUPDATE("FailedOperation.ManualUserNotUpdate"),
+     
     // The member has a payer and cannot be deleted.
      FAILEDOPERATION_MEMBEREXISTDELEGATEPAYERNOTALLOWDELETE("FailedOperation.MemberExistDelegatePayerNotAllowDelete"),
      
     // The member already belongs to another organization.
      FAILEDOPERATION_MEMBEREXISTINOTHERORGANIZATION("FailedOperation.MemberExistInOtherOrganization"),
+     
+    // Member authorization is in use.
+     FAILEDOPERATION_MEMBERIDENTITYAUTHUSED("FailedOperation.MemberIdentityAuthUsed"),
      
     // The member is a payer and cannot be deleted.
      FAILEDOPERATION_MEMBERISDELEGATEPAYERNOTALLOWDELETE("FailedOperation.MemberIsDelegatePayerNotAllowDelete"),
@@ -132,6 +159,18 @@ public enum OrganizationErrorCode {
     // Real-name authentication relationship already exists.
      FAILEDOPERATION_ORGANIZATIONAUTHRELATIONEXIST("FailedOperation.OrganizationAuthRelationExist"),
      
+    // The organization already exists.
+     FAILEDOPERATION_ORGANIZATIONEXISTALREADY("FailedOperation.OrganizationExistAlready"),
+     
+    // Organization identity is in use.
+     FAILEDOPERATION_ORGANIZATIONIDENTITYINUSED("FailedOperation.OrganizationIdentityInUsed"),
+     
+    // Organization identity name is in use.
+     FAILEDOPERATION_ORGANIZATIONIDENTITYNAMEUSED("FailedOperation.OrganizationIdentityNameUsed"),
+     
+    // Organization identity policy is invalid.
+     FAILEDOPERATION_ORGANIZATIONIDENTITYPOLICYERROR("FailedOperation.OrganizationIdentityPolicyError"),
+     
     // Member already exists.
      FAILEDOPERATION_ORGANIZATIONMEMBEREXIST("FailedOperation.OrganizationMemberExist"),
      
@@ -153,11 +192,17 @@ public enum OrganizationErrorCode {
     // The organization node does not exist.
      FAILEDOPERATION_ORGANIZATIONNODENOTEXIST("FailedOperation.OrganizationNodeNotExist"),
      
+    // There are members in this organization.
+     FAILEDOPERATION_ORGANIZATIONNOTEMPTY("FailedOperation.OrganizationNotEmpty"),
+     
     // The organization permission is invalid.
      FAILEDOPERATION_ORGANIZATIONPERMISSIONILLEGAL("FailedOperation.OrganizationPermissionIllegal"),
      
     // The organization policy is invalid.
      FAILEDOPERATION_ORGANIZATIONPOLICYILLEGAL("FailedOperation.OrganizationPolicyIllegal"),
+     
+    // Group policy is not disabled.
+     FAILEDOPERATION_ORGANIZATIONPOLICYISNOTDISABLED("FailedOperation.OrganizationPolicyIsNotDisabled"),
      
     // Organization service delegation is in use.
      FAILEDOPERATION_ORGANIZATIONSERVICEASSIGNISUSE("FailedOperation.OrganizationServiceAssignIsUse"),
@@ -168,8 +213,14 @@ public enum OrganizationErrorCode {
     // The payer is invalid.
      FAILEDOPERATION_PAYUINILLEGAL("FailedOperation.PayUinIllegal"),
      
+    // Failed to exit the shared unit.
+     FAILEDOPERATION_QUITSHAREUINT("FailedOperation.QuitShareUint"),
+     
     // Failed to leave the shared unit.
      FAILEDOPERATION_QUITSHAREUINTERROR("FailedOperation.QuitShareUintError"),
+     
+    // Failed to exit the shared unit.
+     FAILEDOPERATION_QUITESHAREUNIT("FailedOperation.QuiteShareUnit"),
      
     // The invitation has already been sent before.
      FAILEDOPERATION_RESENTINVITATION("FailedOperation.ReSentInvitation"),
@@ -198,8 +249,14 @@ public enum OrganizationErrorCode {
     // The SAML identity provider information cannot be cleared when SSO is enabled.
      FAILEDOPERATION_SSOSTATUSENABLENOTCLEARIDENTITYPROVIDER("FailedOperation.SSoStatusEnableNotClearIdentityProvider"),
      
+    // Failed to generate the SCIM key.
+     FAILEDOPERATION_SCIMCREDENTIALGENERATEERROR("FailedOperation.ScimCredentialGenerateError"),
+     
     // The member is using a shared resource.
      FAILEDOPERATION_SHARERESOURCEMEMBERINUSE("FailedOperation.ShareResourceMemberInUse"),
+     
+    // Shared unit is not empty.
+     FAILEDOPERATION_SHAREUNITNOTEMPTY("FailedOperation.ShareUnitNotEmpty"),
      
     // The UIN does not belong to the organization.
      FAILEDOPERATION_SOMEUINSNOTINORGANIZATION("FailedOperation.SomeUinsNotInOrganization"),
@@ -273,6 +330,9 @@ public enum OrganizationErrorCode {
     // The parameter is incorrect.
      INVALIDPARAMETER("InvalidParameter"),
      
+    // The member in pay-on-behalf mode is not allowed to exit the organization voluntarily.
+     INVALIDPARAMETER_ALLOWQUITILLEGAL("InvalidParameter.AllowQuitIllegal"),
+     
     // The permission configuration cannot be bound to this policy.
      INVALIDPARAMETER_BINDPOLICYNAMENOTALLOWED("InvalidParameter.BindPolicyNameNotAllowed"),
      
@@ -321,6 +381,9 @@ public enum OrganizationErrorCode {
     // The policy name exceeds the length limit.
      INVALIDPARAMETER_POLICYNAMESIZEOVERUPPERLIMIT("InvalidParameter.PolicyNameSizeOverUpperLimit"),
      
+    // Errors occurred when the policy type is modified. Only custom policies can be modified.
+     INVALIDPARAMETER_POLICYTYPEERROR("InvalidParameter.PolicyTypeError"),
+     
     // The permission configuration does not exist.
      INVALIDPARAMETER_ROLECONFIGURATIONNOTEXIST("InvalidParameter.RoleConfigurationNotExist"),
      
@@ -330,11 +393,20 @@ public enum OrganizationErrorCode {
     // The policy does not exist.
      INVALIDPARAMETER_ROLEPOLICYNOTEXIST("InvalidParameter.RolePolicyNotExist"),
      
+    // SCIM key does not exist.
+     INVALIDPARAMETER_SCIMCREDENTIALNOTFOUND("InvalidParameter.ScimCredentialNotFound"),
+     
+    // SCIM synchronization status error
+     INVALIDPARAMETER_SCIMSYNCSTATUSERROR("InvalidParameter.ScimSyncStatusError"),
+     
     // Tag value error.
      INVALIDPARAMETER_TAGERROR("InvalidParameter.TagError"),
      
     // The user still exists in the user group.
      INVALIDPARAMETER_USERALREADYEXISTSGROUP("InvalidParameter.UserAlreadyExistsGroup"),
+     
+    // SCIM key status error
+     INVALIDPARAMETER_USERSCIMCREDENTIALSTATUSERROR("InvalidParameter.UserScimCredentialStatusError"),
      
     // The username already exists.
      INVALIDPARAMETER_USERNAMEALREADYEXISTS("InvalidParameter.UsernameAlreadyExists"),
@@ -372,6 +444,9 @@ public enum OrganizationErrorCode {
     // Requests for creating user synchronization tasks exceed the limit.
      LIMITEXCEEDED_CREATEUSERSYNCPROVISIONINGLIMITEXCEEDED("LimitExceeded.CreateUserSyncProvisioningLimitExceeded"),
      
+    // The number of organization identities exceeds limit.
+     LIMITEXCEEDED_IDENTITYEXCEEDLIMIT("LimitExceeded.IdentityExceedLimit"),
+     
     // Invitation limit exceeded.
      LIMITEXCEEDED_INVITATIONOVERLIMIT("LimitExceeded.InvitationOverLimit"),
      
@@ -387,6 +462,9 @@ public enum OrganizationErrorCode {
     // Requests for removing users from the user group exceed the limit.
      LIMITEXCEEDED_REMOVEUSERFROMGROUPLIMITEXCEEDED("LimitExceeded.RemoveUserFromGroupLimitExceeded"),
      
+    // The number of SCIM keys exceeds the limit.
+     LIMITEXCEEDED_SCIMCREDENTIALLIMITEXCEEDED("LimitExceeded.ScimCredentialLimitExceeded"),
+     
     // The authorizable member identity does not exist.
      RESOURCENOTFOUND_MEMBERIDENTITYNOTEXIST("ResourceNotFound.MemberIdentityNotExist"),
      
@@ -398,6 +476,9 @@ public enum OrganizationErrorCode {
      
     // The authentication subject does not exist.
      RESOURCENOTFOUND_ORGANIZATIONAUTHRELATIONNOTEXIST("ResourceNotFound.OrganizationAuthRelationNotExist"),
+     
+    // Organization identity does not exist.
+     RESOURCENOTFOUND_ORGANIZATIONIDENTITYNOTEXIST("ResourceNotFound.OrganizationIdentityNotExist"),
      
     // The organization member does not exist.
      RESOURCENOTFOUND_ORGANIZATIONMEMBERNOTEXIST("ResourceNotFound.OrganizationMemberNotExist"),
@@ -413,6 +494,9 @@ public enum OrganizationErrorCode {
      
     // The organization service does not exist.
      RESOURCENOTFOUND_ORGANIZATIONSERVICENOTEXIST("ResourceNotFound.OrganizationServiceNotExist"),
+     
+    // Policy does not exist.
+     RESOURCENOTFOUND_POLICYNOTEXIST("ResourceNotFound.PolicyNotExist"),
      
     // The permission authorization record does not exist.
      RESOURCENOTFOUND_ROLECONFIGURATIONAUTHORIZATIONNOTFOUND("ResourceNotFound.RoleConfigurationAuthorizationNotFound"),
@@ -462,8 +546,17 @@ public enum OrganizationErrorCode {
     // The resellers of the administrator and the member do not match.
      UNSUPPORTEDOPERATION_AGENTNOTSAME("UnsupportedOperation.AgentNotSame"),
      
+    // The created member is not allowed to create an organization.
+     UNSUPPORTEDOPERATION_CREATEMEMBERNOTALLOWCREATEORGANIZATION("UnsupportedOperation.CreateMemberNotAllowCreateOrganization"),
+     
     // The created member cannot be removed from the organization.
      UNSUPPORTEDOPERATION_CREATEMEMBERNOTALLOWDELETE("UnsupportedOperation.CreateMemberNotAllowDelete"),
+     
+    // The created member is not allowed to exit.
+     UNSUPPORTEDOPERATION_CREATEMEMBERNOTALLOWQUIT("UnsupportedOperation.CreateMemberNotAllowQuit"),
+     
+    // Deleting the payment relationship is not allowed.
+     UNSUPPORTEDOPERATION_DELETEDELEGATEPAYERNOTALLOW("UnsupportedOperation.DeleteDelegatePayerNotAllow"),
      
     // Payment-on-behalf is not supported for this member or payer as it is a reseller.
      UNSUPPORTEDOPERATION_EXISTEDAGENT("UnsupportedOperation.ExistedAgent"),
@@ -503,6 +596,9 @@ public enum OrganizationErrorCode {
      
     // No credit card is bound to the member.
      UNSUPPORTEDOPERATION_MEMBERNOPAYMENT("UnsupportedOperation.MemberNoPayment"),
+     
+    // The member does not support voluntary exit.
+     UNSUPPORTEDOPERATION_MEMBERNOTALLOWQUIT("UnsupportedOperation.MemberNotAllowQuit"),
      
     // There is an ongoing order.
      UNSUPPORTEDOPERATION_ORDERINPROGRESSEXISTED("UnsupportedOperation.OrderInProgressExisted"),

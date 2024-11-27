@@ -38,21 +38,21 @@ public class UpdateRoleConfigurationRequest extends AbstractModel {
     private String RoleConfigurationId;
 
     /**
-    * Description of new access configuration, which contains up to 1024 characters.
+    * New permission configuration description, which contains up to 1,024 characters.
     */
     @SerializedName("NewDescription")
     @Expose
     private String NewDescription;
 
     /**
-    * New session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours).
+    * New session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours).
     */
     @SerializedName("NewSessionDuration")
     @Expose
     private Long NewSessionDuration;
 
     /**
-    * New initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page.
+    * New initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page.
     */
     @SerializedName("NewRelayState")
     @Expose
@@ -91,48 +91,48 @@ public class UpdateRoleConfigurationRequest extends AbstractModel {
     }
 
     /**
-     * Get Description of new access configuration, which contains up to 1024 characters. 
-     * @return NewDescription Description of new access configuration, which contains up to 1024 characters.
+     * Get New permission configuration description, which contains up to 1,024 characters. 
+     * @return NewDescription New permission configuration description, which contains up to 1,024 characters.
      */
     public String getNewDescription() {
         return this.NewDescription;
     }
 
     /**
-     * Set Description of new access configuration, which contains up to 1024 characters.
-     * @param NewDescription Description of new access configuration, which contains up to 1024 characters.
+     * Set New permission configuration description, which contains up to 1,024 characters.
+     * @param NewDescription New permission configuration description, which contains up to 1,024 characters.
      */
     public void setNewDescription(String NewDescription) {
         this.NewDescription = NewDescription;
     }
 
     /**
-     * Get New session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours). 
-     * @return NewSessionDuration New session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours).
+     * Get New session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours). 
+     * @return NewSessionDuration New session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours).
      */
     public Long getNewSessionDuration() {
         return this.NewSessionDuration;
     }
 
     /**
-     * Set New session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours).
-     * @param NewSessionDuration New session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours).
+     * Set New session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours).
+     * @param NewSessionDuration New session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours).
      */
     public void setNewSessionDuration(Long NewSessionDuration) {
         this.NewSessionDuration = NewSessionDuration;
     }
 
     /**
-     * Get New initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page. 
-     * @return NewRelayState New initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page.
+     * Get New initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page. 
+     * @return NewRelayState New initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page.
      */
     public String getNewRelayState() {
         return this.NewRelayState;
     }
 
     /**
-     * Set New initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page.
-     * @param NewRelayState New initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page.
+     * Set New initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page.
+     * @param NewRelayState New initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page.
      */
     public void setNewRelayState(String NewRelayState) {
         this.NewRelayState = NewRelayState;

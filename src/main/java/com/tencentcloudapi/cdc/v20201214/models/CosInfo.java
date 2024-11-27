@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.waf.v20180125.models;
+package com.tencentcloudapi.cdc.v20201214.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PageInfo extends AbstractModel {
+public class CosInfo extends AbstractModel {
 
     /**
-    * Page number
+    * COS size, in TB
     */
-    @SerializedName("PageNumber")
+    @SerializedName("Size")
     @Expose
-    private String PageNumber;
+    private Long Size;
 
     /**
-    * Page Entry Quantity
+    * COS type, COS by default
     */
-    @SerializedName("PageSize")
+    @SerializedName("Type")
     @Expose
-    private String PageSize;
+    private String Type;
 
     /**
-     * Get Page number 
-     * @return PageNumber Page number
+     * Get COS size, in TB 
+     * @return Size COS size, in TB
      */
-    public String getPageNumber() {
-        return this.PageNumber;
+    public Long getSize() {
+        return this.Size;
     }
 
     /**
-     * Set Page number
-     * @param PageNumber Page number
+     * Set COS size, in TB
+     * @param Size COS size, in TB
      */
-    public void setPageNumber(String PageNumber) {
-        this.PageNumber = PageNumber;
+    public void setSize(Long Size) {
+        this.Size = Size;
     }
 
     /**
-     * Get Page Entry Quantity 
-     * @return PageSize Page Entry Quantity
+     * Get COS type, COS by default 
+     * @return Type COS type, COS by default
      */
-    public String getPageSize() {
-        return this.PageSize;
+    public String getType() {
+        return this.Type;
     }
 
     /**
-     * Set Page Entry Quantity
-     * @param PageSize Page Entry Quantity
+     * Set COS type, COS by default
+     * @param Type COS type, COS by default
      */
-    public void setPageSize(String PageSize) {
-        this.PageSize = PageSize;
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
-    public PageInfo() {
+    public CosInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public PageInfo(PageInfo source) {
-        if (source.PageNumber != null) {
-            this.PageNumber = new String(source.PageNumber);
+    public CosInfo(CosInfo source) {
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
         }
-        if (source.PageSize != null) {
-            this.PageSize = new String(source.PageSize);
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
         }
     }
 
@@ -90,8 +90,8 @@ public class PageInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
-        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "Size", this.Size);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }
