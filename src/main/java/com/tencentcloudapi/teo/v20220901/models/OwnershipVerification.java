@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class OwnershipVerification extends AbstractModel {
 
     /**
-    * u200cInformation required for authentication using DNS resolution. It's applicable to sites connected via CNAME. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * CNAME, when there is no domain name access, the information required for DNS resolution verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("DnsVerification")
     @Expose
     private DnsVerification DnsVerification;
 
     /**
-    * u200cInformation required for verifying via a file. It's applicable to sites connected via CNAMEs. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * CNAME, when there is no domain name access, the information required for file verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("FileVerification")
     @Expose
@@ -50,48 +50,48 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private NsVerification NsVerification;
 
     /**
-     * Get u200cInformation required for authentication using DNS resolution. It's applicable to sites connected via CNAME. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return DnsVerification u200cInformation required for authentication using DNS resolution. It's applicable to sites connected via CNAME. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get CNAME, when there is no domain name access, the information required for DNS resolution verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return DnsVerification CNAME, when there is no domain name access, the information required for DNS resolution verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public DnsVerification getDnsVerification() {
         return this.DnsVerification;
     }
 
     /**
-     * Set u200cInformation required for authentication using DNS resolution. It's applicable to sites connected via CNAME. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param DnsVerification u200cInformation required for authentication using DNS resolution. It's applicable to sites connected via CNAME. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set CNAME, when there is no domain name access, the information required for DNS resolution verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param DnsVerification CNAME, when there is no domain name access, the information required for DNS resolution verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setDnsVerification(DnsVerification DnsVerification) {
         this.DnsVerification = DnsVerification;
     }
 
     /**
-     * Get u200cInformation required for verifying via a file. It's applicable to sites connected via CNAMEs. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return FileVerification u200cInformation required for verifying via a file. It's applicable to sites connected via CNAMEs. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get CNAME, when there is no domain name access, the information required for file verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return FileVerification CNAME, when there is no domain name access, the information required for file verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public FileVerification getFileVerification() {
         return this.FileVerification;
     }
 
     /**
-     * Set u200cInformation required for verifying via a file. It's applicable to sites connected via CNAMEs. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param FileVerification u200cInformation required for verifying via a file. It's applicable to sites connected via CNAMEs. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set CNAME, when there is no domain name access, the information required for file verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param FileVerification CNAME, when there is no domain name access, the information required for file verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setFileVerification(FileVerification FileVerification) {
         this.FileVerification = FileVerification;

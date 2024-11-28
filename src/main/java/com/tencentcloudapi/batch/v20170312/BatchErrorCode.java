@@ -6,6 +6,9 @@ public enum BatchErrorCode {
     // Internal error.
      INTERNALERROR("InternalError"),
      
+    // 
+     INTERNALERROR_CALLCAM("InternalError.CallCam"),
+     
     // The CPM API call returns an error.
      INTERNALERROR_CALLCPMAPI("InternalError.CallCpmAPI"),
      

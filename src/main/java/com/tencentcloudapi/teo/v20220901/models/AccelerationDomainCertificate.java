@@ -31,12 +31,26 @@ public class AccelerationDomainCertificate extends AbstractModel {
     private String Mode;
 
     /**
-    * List of certificates
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * List of server certificates. The relevant certificates are deployed on the entrance side of the EO.
+Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("List")
     @Expose
     private CertificateInfo [] List;
+
+    /**
+    * In the edge mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for EO node authentication of the client certificate.
+    */
+    @SerializedName("ClientCertInfo")
+    @Expose
+    private MutualTLS ClientCertInfo;
+
+    /**
+    * The certificate carried during EO node origin-pull is used when the origin server enables the mutual authentication handshake to validate the client certificate, ensuring that the request originates from a trusted EO node.
+    */
+    @SerializedName("UpstreamCertInfo")
+    @Expose
+    private UpstreamCertInfo UpstreamCertInfo;
 
     /**
      * Get Certificate configuration mode. Values: <li>`disable`: Do not configure the certificate;</li><li>`eofreecert`: Use a free certificate provided by EdgeOne; </li><li>`sslcert`: Configure an SSL certificate.</li> 
@@ -55,23 +69,55 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get List of certificates
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return List List of certificates
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get List of server certificates. The relevant certificates are deployed on the entrance side of the EO.
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return List List of server certificates. The relevant certificates are deployed on the entrance side of the EO.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public CertificateInfo [] getList() {
         return this.List;
     }
 
     /**
-     * Set List of certificates
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param List List of certificates
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set List of server certificates. The relevant certificates are deployed on the entrance side of the EO.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param List List of server certificates. The relevant certificates are deployed on the entrance side of the EO.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setList(CertificateInfo [] List) {
         this.List = List;
+    }
+
+    /**
+     * Get In the edge mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for EO node authentication of the client certificate. 
+     * @return ClientCertInfo In the edge mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for EO node authentication of the client certificate.
+     */
+    public MutualTLS getClientCertInfo() {
+        return this.ClientCertInfo;
+    }
+
+    /**
+     * Set In the edge mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for EO node authentication of the client certificate.
+     * @param ClientCertInfo In the edge mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for EO node authentication of the client certificate.
+     */
+    public void setClientCertInfo(MutualTLS ClientCertInfo) {
+        this.ClientCertInfo = ClientCertInfo;
+    }
+
+    /**
+     * Get The certificate carried during EO node origin-pull is used when the origin server enables the mutual authentication handshake to validate the client certificate, ensuring that the request originates from a trusted EO node. 
+     * @return UpstreamCertInfo The certificate carried during EO node origin-pull is used when the origin server enables the mutual authentication handshake to validate the client certificate, ensuring that the request originates from a trusted EO node.
+     */
+    public UpstreamCertInfo getUpstreamCertInfo() {
+        return this.UpstreamCertInfo;
+    }
+
+    /**
+     * Set The certificate carried during EO node origin-pull is used when the origin server enables the mutual authentication handshake to validate the client certificate, ensuring that the request originates from a trusted EO node.
+     * @param UpstreamCertInfo The certificate carried during EO node origin-pull is used when the origin server enables the mutual authentication handshake to validate the client certificate, ensuring that the request originates from a trusted EO node.
+     */
+    public void setUpstreamCertInfo(UpstreamCertInfo UpstreamCertInfo) {
+        this.UpstreamCertInfo = UpstreamCertInfo;
     }
 
     public AccelerationDomainCertificate() {
@@ -91,6 +137,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 this.List[i] = new CertificateInfo(source.List[i]);
             }
         }
+        if (source.ClientCertInfo != null) {
+            this.ClientCertInfo = new MutualTLS(source.ClientCertInfo);
+        }
+        if (source.UpstreamCertInfo != null) {
+            this.UpstreamCertInfo = new UpstreamCertInfo(source.UpstreamCertInfo);
+        }
     }
 
 
@@ -100,6 +152,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamObj(map, prefix + "ClientCertInfo.", this.ClientCertInfo);
+        this.setParamObj(map, prefix + "UpstreamCertInfo.", this.UpstreamCertInfo);
 
     }
 }
