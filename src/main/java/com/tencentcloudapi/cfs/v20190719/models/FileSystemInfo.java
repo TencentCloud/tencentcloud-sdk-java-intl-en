@@ -156,6 +156,20 @@ public class FileSystemInfo extends AbstractModel {
     private Float BandwidthLimit;
 
     /**
+    * 
+    */
+    @SerializedName("AutoSnapshotPolicyId")
+    @Expose
+    private String AutoSnapshotPolicyId;
+
+    /**
+    * 
+    */
+    @SerializedName("SnapStatus")
+    @Expose
+    private String SnapStatus;
+
+    /**
     * Total capacity of the file system
     */
     @SerializedName("Capacity")
@@ -183,6 +197,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("TieringDetail")
     @Expose
     private TieringDetailInfo TieringDetail;
+
+    /**
+    * 
+    */
+    @SerializedName("AutoScaleUpRule")
+    @Expose
+    private AutoScaleUpRule AutoScaleUpRule;
 
     /**
      * Get Creation time 
@@ -497,6 +518,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return AutoSnapshotPolicyId 
+     */
+    public String getAutoSnapshotPolicyId() {
+        return this.AutoSnapshotPolicyId;
+    }
+
+    /**
+     * Set 
+     * @param AutoSnapshotPolicyId 
+     */
+    public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
+        this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
+    }
+
+    /**
+     * Get  
+     * @return SnapStatus 
+     */
+    public String getSnapStatus() {
+        return this.SnapStatus;
+    }
+
+    /**
+     * Set 
+     * @param SnapStatus 
+     */
+    public void setSnapStatus(String SnapStatus) {
+        this.SnapStatus = SnapStatus;
+    }
+
+    /**
      * Get Total capacity of the file system 
      * @return Capacity Total capacity of the file system
      */
@@ -564,6 +617,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.TieringDetail = TieringDetail;
     }
 
+    /**
+     * Get  
+     * @return AutoScaleUpRule 
+     */
+    public AutoScaleUpRule getAutoScaleUpRule() {
+        return this.AutoScaleUpRule;
+    }
+
+    /**
+     * Set 
+     * @param AutoScaleUpRule 
+     */
+    public void setAutoScaleUpRule(AutoScaleUpRule AutoScaleUpRule) {
+        this.AutoScaleUpRule = AutoScaleUpRule;
+    }
+
     public FileSystemInfo() {
     }
 
@@ -626,6 +695,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.BandwidthLimit != null) {
             this.BandwidthLimit = new Float(source.BandwidthLimit);
         }
+        if (source.AutoSnapshotPolicyId != null) {
+            this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
+        }
+        if (source.SnapStatus != null) {
+            this.SnapStatus = new String(source.SnapStatus);
+        }
         if (source.Capacity != null) {
             this.Capacity = new Long(source.Capacity);
         }
@@ -640,6 +715,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.TieringDetail != null) {
             this.TieringDetail = new TieringDetailInfo(source.TieringDetail);
+        }
+        if (source.AutoScaleUpRule != null) {
+            this.AutoScaleUpRule = new AutoScaleUpRule(source.AutoScaleUpRule);
         }
     }
 
@@ -666,10 +744,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
+        this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
+        this.setParamSimple(map, prefix + "SnapStatus", this.SnapStatus);
         this.setParamSimple(map, prefix + "Capacity", this.Capacity);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "TieringState", this.TieringState);
         this.setParamObj(map, prefix + "TieringDetail.", this.TieringDetail);
+        this.setParamObj(map, prefix + "AutoScaleUpRule.", this.AutoScaleUpRule);
 
     }
 }
