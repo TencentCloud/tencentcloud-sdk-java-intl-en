@@ -135,6 +135,9 @@ public enum TcrErrorCode {
     // The operation is unauthorized.
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
+    // 
+     UNAUTHORIZEDOPERATION_ERRORTCRUNAUTHORIZED("UnauthorizedOperation.ErrorTcrUnauthorized"),
+     
     // Unknown parameter error. Please check and try again.
      UNKNOWNPARAMETER("UnknownParameter"),
      

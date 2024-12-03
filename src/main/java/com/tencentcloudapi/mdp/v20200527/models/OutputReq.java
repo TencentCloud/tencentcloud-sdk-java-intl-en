@@ -45,11 +45,18 @@ public class OutputReq extends AbstractModel {
     private String ManifestName;
 
     /**
-    * Advertisement configuration.
+    * The manifest info, used when Type is HLS.
     */
     @SerializedName("ManifestConf")
     @Expose
     private ManifestInfo ManifestConf;
+
+    /**
+    * The manifest info, used when Type is DASH.
+    */
+    @SerializedName("DashManifestConf")
+    @Expose
+    private DashManifestInfo DashManifestConf;
 
     /**
      * Get Output type, distinguish HLS DASH. 
@@ -100,19 +107,35 @@ public class OutputReq extends AbstractModel {
     }
 
     /**
-     * Get Advertisement configuration. 
-     * @return ManifestConf Advertisement configuration.
+     * Get The manifest info, used when Type is HLS. 
+     * @return ManifestConf The manifest info, used when Type is HLS.
      */
     public ManifestInfo getManifestConf() {
         return this.ManifestConf;
     }
 
     /**
-     * Set Advertisement configuration.
-     * @param ManifestConf Advertisement configuration.
+     * Set The manifest info, used when Type is HLS.
+     * @param ManifestConf The manifest info, used when Type is HLS.
      */
     public void setManifestConf(ManifestInfo ManifestConf) {
         this.ManifestConf = ManifestConf;
+    }
+
+    /**
+     * Get The manifest info, used when Type is DASH. 
+     * @return DashManifestConf The manifest info, used when Type is DASH.
+     */
+    public DashManifestInfo getDashManifestConf() {
+        return this.DashManifestConf;
+    }
+
+    /**
+     * Set The manifest info, used when Type is DASH.
+     * @param DashManifestConf The manifest info, used when Type is DASH.
+     */
+    public void setDashManifestConf(DashManifestInfo DashManifestConf) {
+        this.DashManifestConf = DashManifestConf;
     }
 
     public OutputReq() {
@@ -135,6 +158,9 @@ public class OutputReq extends AbstractModel {
         if (source.ManifestConf != null) {
             this.ManifestConf = new ManifestInfo(source.ManifestConf);
         }
+        if (source.DashManifestConf != null) {
+            this.DashManifestConf = new DashManifestInfo(source.DashManifestConf);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class OutputReq extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "ManifestName", this.ManifestName);
         this.setParamObj(map, prefix + "ManifestConf.", this.ManifestConf);
+        this.setParamObj(map, prefix + "DashManifestConf.", this.DashManifestConf);
 
     }
 }

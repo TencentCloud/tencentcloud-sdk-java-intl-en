@@ -45,7 +45,7 @@ public class OutputInfo extends AbstractModel {
     private String ManifestName;
 
     /**
-    * Advertisement configuration.
+    * The manifest info, used when Type is HLS.
     */
     @SerializedName("ManifestConf")
     @Expose
@@ -57,6 +57,13 @@ public class OutputInfo extends AbstractModel {
     @SerializedName("PlaybackURL")
     @Expose
     private String PlaybackURL;
+
+    /**
+    * The manifest info, used when Type is DASH.
+    */
+    @SerializedName("DashManifestConf")
+    @Expose
+    private DashManifestInfo DashManifestConf;
 
     /**
      * Get HLS DASH. 
@@ -107,16 +114,16 @@ public class OutputInfo extends AbstractModel {
     }
 
     /**
-     * Get Advertisement configuration. 
-     * @return ManifestConf Advertisement configuration.
+     * Get The manifest info, used when Type is HLS. 
+     * @return ManifestConf The manifest info, used when Type is HLS.
      */
     public ManifestInfo getManifestConf() {
         return this.ManifestConf;
     }
 
     /**
-     * Set Advertisement configuration.
-     * @param ManifestConf Advertisement configuration.
+     * Set The manifest info, used when Type is HLS.
+     * @param ManifestConf The manifest info, used when Type is HLS.
      */
     public void setManifestConf(ManifestInfo ManifestConf) {
         this.ManifestConf = ManifestConf;
@@ -136,6 +143,22 @@ public class OutputInfo extends AbstractModel {
      */
     public void setPlaybackURL(String PlaybackURL) {
         this.PlaybackURL = PlaybackURL;
+    }
+
+    /**
+     * Get The manifest info, used when Type is DASH. 
+     * @return DashManifestConf The manifest info, used when Type is DASH.
+     */
+    public DashManifestInfo getDashManifestConf() {
+        return this.DashManifestConf;
+    }
+
+    /**
+     * Set The manifest info, used when Type is DASH.
+     * @param DashManifestConf The manifest info, used when Type is DASH.
+     */
+    public void setDashManifestConf(DashManifestInfo DashManifestConf) {
+        this.DashManifestConf = DashManifestConf;
     }
 
     public OutputInfo() {
@@ -161,6 +184,9 @@ public class OutputInfo extends AbstractModel {
         if (source.PlaybackURL != null) {
             this.PlaybackURL = new String(source.PlaybackURL);
         }
+        if (source.DashManifestConf != null) {
+            this.DashManifestConf = new DashManifestInfo(source.DashManifestConf);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class OutputInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ManifestName", this.ManifestName);
         this.setParamObj(map, prefix + "ManifestConf.", this.ManifestConf);
         this.setParamSimple(map, prefix + "PlaybackURL", this.PlaybackURL);
+        this.setParamObj(map, prefix + "DashManifestConf.", this.DashManifestConf);
 
     }
 }

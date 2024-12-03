@@ -45,7 +45,7 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel {
     private String Month;
 
     /**
-    * The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
+    * The period type. byUsedTime
     */
     @SerializedName("PeriodType")
     @Expose
@@ -60,26 +60,21 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel {
     private Long NeedRecordNum;
 
     /**
-    * Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+    * Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
 Monthly subscription refund
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
     */
     @SerializedName("ActionType")
     @Expose
@@ -93,7 +88,7 @@ Monthly subscription refund
     private String ResourceId;
 
     /**
-    * Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+    * Billing mode: prePay/postPay
     */
     @SerializedName("PayMode")
     @Expose
@@ -178,17 +173,21 @@ This parameter can be used for querying bills after January 2021.
     }
 
     /**
-     * Get The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
-     * @return PeriodType The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
+     * Get The period type. byUsedTime 
+     * @return PeriodType The period type. byUsedTime
+     * @deprecated
      */
+    @Deprecated
     public String getPeriodType() {
         return this.PeriodType;
     }
 
     /**
-     * Set The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
-     * @param PeriodType The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
+     * Set The period type. byUsedTime
+     * @param PeriodType The period type. byUsedTime
+     * @deprecated
      */
+    @Deprecated
     public void setPeriodType(String PeriodType) {
         this.PeriodType = PeriodType;
     }
@@ -214,92 +213,72 @@ This parameter can be used for querying bills after January 2021.
     }
 
     /**
-     * Get Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+     * Get Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
-New monthly subscription
-Monthly subscription renewal
-Monthly subscription specification adjustment
-Monthly subscription refund 
-     * @return ActionType Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
-Daily settlement
-Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
-Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
 Monthly subscription refund
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction 
+     * @return ActionType Hourly settlement
+Daily settlement
+Monthly settlement
+Spot
+New monthly subscription
+Monthly subscription renewal
+Monthly subscription specification adjustment
+Monthly subscription refund
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+     * Set Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
 Monthly subscription refund
-     * @param ActionType Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
+     * @param ActionType Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
 Monthly subscription refund
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
@@ -322,16 +301,16 @@ Monthly subscription refund
     }
 
     /**
-     * Get Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid) 
-     * @return PayMode Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+     * Get Billing mode: prePay/postPay 
+     * @return PayMode Billing mode: prePay/postPay
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
-     * @param PayMode Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+     * Set Billing mode: prePay/postPay
+     * @param PayMode Billing mode: prePay/postPay
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;

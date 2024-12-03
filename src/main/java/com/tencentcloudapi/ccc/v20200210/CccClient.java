@@ -83,6 +83,19 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *Used to make outbound calls by invoking AI models, limited to the use of proprietary phone numbers. Currently, the Advanced version seats are available for a **limited time** free trial.
+
+Before initiating a call, please ensure your AI model is compatible with OpenAI, Azure, or Minimax protocols, and visit the model provider's website to obtain relevant authentication information. For detailed feature descriptions, please refer to the documentation [Tencent Cloud Contact Center AI Call Platform](https://intl.cloud.tencent.com/document/product/679/112100?from_cn_redirect=1).
+     * @param req CreateAICallRequest
+     * @return CreateAICallResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAICallResponse CreateAICall(CreateAICallRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAICall", CreateAICallResponse.class);
+    }
+
+    /**
      *This API is used to create a management access link.
      * @param req CreateAdminURLRequest
      * @return CreateAdminURLResponse

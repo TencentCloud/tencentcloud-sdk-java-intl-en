@@ -31,7 +31,7 @@ public class Filter extends AbstractModel {
     private String FilterKey;
 
     /**
-    * u200cThe value of the filter parameter.
+    * The value of the filter parameter.
     */
     @SerializedName("FilterValue")
     @Expose
@@ -54,16 +54,16 @@ public class Filter extends AbstractModel {
     }
 
     /**
-     * Get u200cThe value of the filter parameter. 
-     * @return FilterValue u200cThe value of the filter parameter.
+     * Get The value of the filter parameter. 
+     * @return FilterValue The value of the filter parameter.
      */
     public String getFilterValue() {
         return this.FilterValue;
     }
 
     /**
-     * Set u200cThe value of the filter parameter.
-     * @param FilterValue u200cThe value of the filter parameter.
+     * Set The value of the filter parameter.
+     * @param FilterValue The value of the filter parameter.
      */
     public void setFilterValue(String FilterValue) {
         this.FilterValue = FilterValue;
