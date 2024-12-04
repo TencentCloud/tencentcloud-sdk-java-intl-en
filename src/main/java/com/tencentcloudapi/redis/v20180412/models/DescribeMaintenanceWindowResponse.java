@@ -24,14 +24,17 @@ import java.util.HashMap;
 public class DescribeMaintenanceWindowResponse extends AbstractModel {
 
     /**
-    * Start time of the maintenance window, such as 17:00.
+    * Start time of the maintenance window. Value range: any time point between 00:00 and 23:00, for example, 03:24.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time of the maintenance window, such as 19:00.
+    * End time of the maintenance window.
+- Value range: any time point between 00:00 and 23:00, for example, 04:24.
+- The minimum maintenance duration is 30 minutes and the maximum is 3 hours.
+- The end time should be later than the start time.
     */
     @SerializedName("EndTime")
     @Expose
@@ -45,32 +48,44 @@ public class DescribeMaintenanceWindowResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Start time of the maintenance window, such as 17:00. 
-     * @return StartTime Start time of the maintenance window, such as 17:00.
+     * Get Start time of the maintenance window. Value range: any time point between 00:00 and 23:00, for example, 03:24. 
+     * @return StartTime Start time of the maintenance window. Value range: any time point between 00:00 and 23:00, for example, 03:24.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the maintenance window, such as 17:00.
-     * @param StartTime Start time of the maintenance window, such as 17:00.
+     * Set Start time of the maintenance window. Value range: any time point between 00:00 and 23:00, for example, 03:24.
+     * @param StartTime Start time of the maintenance window. Value range: any time point between 00:00 and 23:00, for example, 03:24.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of the maintenance window, such as 19:00. 
-     * @return EndTime End time of the maintenance window, such as 19:00.
+     * Get End time of the maintenance window.
+- Value range: any time point between 00:00 and 23:00, for example, 04:24.
+- The minimum maintenance duration is 30 minutes and the maximum is 3 hours.
+- The end time should be later than the start time. 
+     * @return EndTime End time of the maintenance window.
+- Value range: any time point between 00:00 and 23:00, for example, 04:24.
+- The minimum maintenance duration is 30 minutes and the maximum is 3 hours.
+- The end time should be later than the start time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the maintenance window, such as 19:00.
-     * @param EndTime End time of the maintenance window, such as 19:00.
+     * Set End time of the maintenance window.
+- Value range: any time point between 00:00 and 23:00, for example, 04:24.
+- The minimum maintenance duration is 30 minutes and the maximum is 3 hours.
+- The end time should be later than the start time.
+     * @param EndTime End time of the maintenance window.
+- Value range: any time point between 00:00 and 23:00, for example, 04:24.
+- The minimum maintenance duration is 30 minutes and the maximum is 3 hours.
+- The end time should be later than the start time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

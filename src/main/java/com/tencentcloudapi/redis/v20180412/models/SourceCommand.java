@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SourceCommand extends AbstractModel {
 
     /**
-    * Command
+    * Command name.
     */
     @SerializedName("Cmd")
     @Expose
     private String Cmd;
 
     /**
-    * Number of executions
+    * Number of executions.
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-     * Get Command 
-     * @return Cmd Command
+     * Get Command name. 
+     * @return Cmd Command name.
      */
     public String getCmd() {
         return this.Cmd;
     }
 
     /**
-     * Set Command
-     * @param Cmd Command
+     * Set Command name.
+     * @param Cmd Command name.
      */
     public void setCmd(String Cmd) {
         this.Cmd = Cmd;
     }
 
     /**
-     * Get Number of executions 
-     * @return Count Number of executions
+     * Get Number of executions. 
+     * @return Count Number of executions.
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Number of executions
-     * @param Count Number of executions
+     * Set Number of executions.
+     * @param Count Number of executions.
      */
     public void setCount(Long Count) {
         this.Count = Count;

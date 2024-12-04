@@ -53,6 +53,17 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
     }
 
     /**
+     *This API is used to configure data subscription instances.
+     * @param req ConfigureSubscribeJobRequest
+     * @return ConfigureSubscribeJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public ConfigureSubscribeJobResponse ConfigureSubscribeJob(ConfigureSubscribeJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ConfigureSubscribeJob", ConfigureSubscribeJobResponse.class);
+    }
+
+    /**
      *This API is used to configure a sync task.
      * @param req ConfigureSyncJobRequest
      * @return ConfigureSyncJobResponse
@@ -108,6 +119,17 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
     }
 
     /**
+     *This API is used to creat a consumer group for the subscription instance.
+     * @param req CreateConsumerGroupRequest
+     * @return CreateConsumerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConsumerGroupResponse CreateConsumerGroup(CreateConsumerGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateConsumerGroup", CreateConsumerGroupResponse.class);
+    }
+
+    /**
      *This API is used to verify a migration task.
 Before migration, you should call this API to create a check task. Migration will start only if the check succeeds. You can view the check result through the `DescribeMigrationCheckJob` API.
 After successful check, if the migration task needs to be modified, a new check task should be created, and migration will start only after the new check succeeds.
@@ -144,6 +166,28 @@ After successful check, if the migration task needs to be modified, a new check 
     }
 
     /**
+     *This API is used to create a data subscription task.
+     * @param req CreateSubscribeRequest
+     * @return CreateSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSubscribeResponse CreateSubscribe(CreateSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSubscribe", CreateSubscribeResponse.class);
+    }
+
+    /**
+     *This API is used to create a subscription check task. The task must have successfully called the ConfigureSubscribeJob interface to configure all necessary information before starting the check.
+     * @param req CreateSubscribeCheckJobRequest
+     * @return CreateSubscribeCheckJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSubscribeCheckJobResponse CreateSubscribeCheckJob(CreateSubscribeCheckJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSubscribeCheckJob", CreateSubscribeCheckJobResponse.class);
+    }
+
+    /**
      *This API is used to create a sync task.
      * @param req CreateSyncJobRequest
      * @return CreateSyncJobResponse
@@ -163,6 +207,17 @@ After successful check, if the migration task needs to be modified, a new check 
     public DeleteCompareTaskResponse DeleteCompareTask(DeleteCompareTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCompareTask", DeleteCompareTaskResponse.class);
+    }
+
+    /**
+     *This API is used to delete a consumer group of a subscription task.
+     * @param req DeleteConsumerGroupRequest
+     * @return DeleteConsumerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConsumerGroupResponse DeleteConsumerGroup(DeleteConsumerGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteConsumerGroup", DeleteConsumerGroupResponse.class);
     }
 
     /**
@@ -196,6 +251,17 @@ After successful check, if the migration task needs to be modified, a new check 
     public DescribeCompareTasksResponse DescribeCompareTasks(DescribeCompareTasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCompareTasks", DescribeCompareTasksResponse.class);
+    }
+
+    /**
+     *This API is used to get consumer group details for the subscription instance configuration.
+     * @param req DescribeConsumerGroupsRequest
+     * @return DescribeConsumerGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumerGroupsResponse DescribeConsumerGroups(DescribeConsumerGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumerGroups", DescribeConsumerGroupsResponse.class);
     }
 
     /**
@@ -256,6 +322,61 @@ If the check fails, the cause can be queried. Modify the migration configuration
     }
 
     /**
+     *This API is used to query the latest offset before the specified time in KafkaTopic.The offset output by the interface is the closest offset to this time.If the input time is much later than the current time, the output is equivalent to the latest offset;If the input time is much earlier than the current time, the output is equivalent to the oldest offset;If the input is empty, the default time is 0, which is the oldest offset to be queried.
+     * @param req DescribeOffsetByTimeRequest
+     * @return DescribeOffsetByTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOffsetByTimeResponse DescribeOffsetByTime(DescribeOffsetByTimeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOffsetByTime", DescribeOffsetByTimeResponse.class);
+    }
+
+    /**
+     *This API is used to query the results of a subscription check task.
+     * @param req DescribeSubscribeCheckJobRequest
+     * @return DescribeSubscribeCheckJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubscribeCheckJobResponse DescribeSubscribeCheckJob(DescribeSubscribeCheckJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSubscribeCheckJob", DescribeSubscribeCheckJobResponse.class);
+    }
+
+    /**
+     *This API is used to get the configuration information of the data subscription instance.
+     * @param req DescribeSubscribeDetailRequest
+     * @return DescribeSubscribeDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubscribeDetailResponse DescribeSubscribeDetail(DescribeSubscribeDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSubscribeDetail", DescribeSubscribeDetailResponse.class);
+    }
+
+    /**
+     *This API is used to get the information list of data subscription instances. Pagination is enabled by default with 20 results returned each time.
+     * @param req DescribeSubscribeJobsRequest
+     * @return DescribeSubscribeJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubscribeJobsResponse DescribeSubscribeJobs(DescribeSubscribeJobsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSubscribeJobs", DescribeSubscribeJobsResponse.class);
+    }
+
+    /**
+     *This API is used to query whether a subscription task can be terminated and returned.
+     * @param req DescribeSubscribeReturnableRequest
+     * @return DescribeSubscribeReturnableResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubscribeReturnableResponse DescribeSubscribeReturnable(DescribeSubscribeReturnableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSubscribeReturnable", DescribeSubscribeReturnableResponse.class);
+    }
+
+    /**
      *This API is used to query the information of a sync task.
      * @param req DescribeSyncJobsRequest
      * @return DescribeSyncJobsResponse
@@ -264,6 +385,17 @@ If the check fails, the cause can be queried. Modify the migration configuration
     public DescribeSyncJobsResponse DescribeSyncJobs(DescribeSyncJobsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSyncJobs", DescribeSyncJobsResponse.class);
+    }
+
+    /**
+     *This API is used to deactivate an isolated data subscription instance.
+     * @param req DestroyIsolatedSubscribeRequest
+     * @return DestroyIsolatedSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyIsolatedSubscribeResponse DestroyIsolatedSubscribe(DestroyIsolatedSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DestroyIsolatedSubscribe", DestroyIsolatedSubscribeResponse.class);
     }
 
     /**
@@ -300,6 +432,17 @@ If the check fails, the cause can be queried. Modify the migration configuration
     }
 
     /**
+     *This API is used to isolate the subscription task. After calling, the subscription task will not be available. Pay-as-you-go tasks will stop billing, and monthly subscription tasks will refund automatically.
+     * @param req IsolateSubscribeRequest
+     * @return IsolateSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateSubscribeResponse IsolateSubscribe(IsolateSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IsolateSubscribe", IsolateSubscribeResponse.class);
+    }
+
+    /**
      *This API is used to isolate a sync task. After the task is isolated, you can call the `DescribeSyncJobs` API to query its status, call `RecoverSyncJob` to recover it, or directly delete it. For a free task, calling this API will directly delete it permanently.
      * @param req IsolateSyncJobRequest
      * @return IsolateSyncJobResponse
@@ -333,6 +476,28 @@ If the check fails, the cause can be queried. Modify the migration configuration
     }
 
     /**
+     *This API is used to modify the description of the specified subscription consumption group.
+     * @param req ModifyConsumerGroupDescriptionRequest
+     * @return ModifyConsumerGroupDescriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConsumerGroupDescriptionResponse ModifyConsumerGroupDescription(ModifyConsumerGroupDescriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyConsumerGroupDescription", ModifyConsumerGroupDescriptionResponse.class);
+    }
+
+    /**
+     *This API is used to modify the password of the specified subscription consumer group.
+     * @param req ModifyConsumerGroupPasswordRequest
+     * @return ModifyConsumerGroupPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConsumerGroupPasswordResponse ModifyConsumerGroupPassword(ModifyConsumerGroupPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyConsumerGroupPassword", ModifyConsumerGroupPasswordResponse.class);
+    }
+
+    /**
      *This API is used to adjust the specification of a pay-as-you-go task. After calling this API, you can call the `DescribeMigrationJobs` API to query the latest task status.
      * @param req ModifyMigrateJobSpecRequest
      * @return ModifyMigrateJobSpecResponse
@@ -355,6 +520,28 @@ If the check fails, the cause can be queried. Modify the migration configuration
     }
 
     /**
+     *This API is used to restrict the rate limit of the task, when a user finds that migration task has a large impact on the load of user's database.
+     * @param req ModifyMigrateRateLimitRequest
+     * @return ModifyMigrateRateLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMigrateRateLimitResponse ModifyMigrateRateLimit(ModifyMigrateRateLimitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMigrateRateLimit", ModifyMigrateRateLimitResponse.class);
+    }
+
+    /**
+     *This API is used to modify task runtime attributes. This interface is different from the configuration class interface and does not perform state machine evaluation.
+     * @param req ModifyMigrateRuntimeAttributeRequest
+     * @return ModifyMigrateRuntimeAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMigrateRuntimeAttributeResponse ModifyMigrateRuntimeAttribute(ModifyMigrateRuntimeAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMigrateRuntimeAttribute", ModifyMigrateRuntimeAttributeResponse.class);
+    }
+
+    /**
      *This API is used to configure a migration task. After it is configured successfully, you can call the `CreateMigrationCheckJob` API to create a check task, and only after it passes the check can it be started.
      * @param req ModifyMigrationJobRequest
      * @return ModifyMigrationJobResponse
@@ -366,6 +553,39 @@ If the check fails, the cause can be queried. Modify the migration configuration
     }
 
     /**
+     *This API is used to modify the auto-renewal flag of your subscription instance. Only the monthly subscription modification task makes sense. After modifying, the pay-as-you-go task has no impact.
+     * @param req ModifySubscribeAutoRenewFlagRequest
+     * @return ModifySubscribeAutoRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubscribeAutoRenewFlagResponse ModifySubscribeAutoRenewFlag(ModifySubscribeAutoRenewFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySubscribeAutoRenewFlag", ModifySubscribeAutoRenewFlagResponse.class);
+    }
+
+    /**
+     *This API is used to modify the name of the data subscription instance.
+     * @param req ModifySubscribeNameRequest
+     * @return ModifySubscribeNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubscribeNameResponse ModifySubscribeName(ModifySubscribeNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySubscribeName", ModifySubscribeNameResponse.class);
+    }
+
+    /**
+     *This API is used to modify the data subscription object and Kafka partition rule. For MongoDB subscription, you can also modify the output aggregation rule.
+     * @param req ModifySubscribeObjectsRequest
+     * @return ModifySubscribeObjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubscribeObjectsResponse ModifySubscribeObjects(ModifySubscribeObjectsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySubscribeObjects", ModifySubscribeObjectsResponse.class);
+    }
+
+    /**
      *This API is used to modify the configuration of a data sync task after the task is started.\n Configuration modification steps:  Modify sync task configuration -> Create a modification check task -> Query the check task result -> Start the configuration modification check task
      * @param req ModifySyncJobConfigRequest
      * @return ModifySyncJobConfigResponse
@@ -374,6 +594,17 @@ If the check fails, the cause can be queried. Modify the migration configuration
     public ModifySyncJobConfigResponse ModifySyncJobConfig(ModifySyncJobConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySyncJobConfig", ModifySyncJobConfigResponse.class);
+    }
+
+    /**
+     *This API is used to restrict the rate limit of the task, when a user finds that the sync task has a large impact on the load of user's database.
+     * @param req ModifySyncRateLimitRequest
+     * @return ModifySyncRateLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySyncRateLimitResponse ModifySyncRateLimit(ModifySyncRateLimitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySyncRateLimit", ModifySyncRateLimitResponse.class);
     }
 
     /**
@@ -421,6 +652,28 @@ If the check fails, the cause can be queried. Modify the migration configuration
     }
 
     /**
+     *This API is used to reset the offset of the subscription consumer group. Call the DescribeConsumerGroups API to query the status of the consumer group, only when the status is Dead or Empty can this operation be executed. Otherwise, the reset will not be effective and the API will not return any error.
+     * @param req ResetConsumerGroupOffsetRequest
+     * @return ResetConsumerGroupOffsetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetConsumerGroupOffsetResponse ResetConsumerGroupOffset(ResetConsumerGroupOffsetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetConsumerGroupOffset", ResetConsumerGroupOffsetResponse.class);
+    }
+
+    /**
+     *This API is used to reset the subscription instance. After resetting, the subscription task can be reconfigured.You can call DescribeSubscribeDetail to query the subscription information to determine whether the subscription is successful. When SubsStatus changes to notStarted, it means the reset is successful.
+     * @param req ResetSubscribeRequest
+     * @return ResetSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetSubscribeResponse ResetSubscribe(ResetSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetSubscribe", ResetSubscribeResponse.class);
+    }
+
+    /**
      *This API is used to adjust the specification of a pay-as-you-go sync task. After this API is called, the backend needs to take about 3-5 minutes to implement the adjustment. You can call the `DescribeSyncJobs` API to query the latest task status.
      * @param req ResizeSyncJobRequest
      * @return ResizeSyncJobResponse
@@ -440,6 +693,17 @@ If the check fails, the cause can be queried. Modify the migration configuration
     public ResumeMigrateJobResponse ResumeMigrateJob(ResumeMigrateJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResumeMigrateJob", ResumeMigrateJobResponse.class);
+    }
+
+    /**
+     *This API is used to resume faulty subscription tasks. When the status of the subscription task is set to error, you can resume task via this API.
+     * @param req ResumeSubscribeRequest
+     * @return ResumeSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeSubscribeResponse ResumeSubscribe(ResumeSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResumeSubscribe", ResumeSubscribeResponse.class);
     }
 
     /**
@@ -506,6 +770,17 @@ If the check fails, the cause can be queried. Modify the migration configuration
     public StartModifySyncJobResponse StartModifySyncJob(StartModifySyncJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StartModifySyncJob", StartModifySyncJobResponse.class);
+    }
+
+    /**
+     *This API is used to start a Kafka version of the data subscription instance. This interface can be called only when the status of the subscription task is checkPass.
+     * @param req StartSubscribeRequest
+     * @return StartSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartSubscribeResponse StartSubscribe(StartSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartSubscribe", StartSubscribeResponse.class);
     }
 
     /**

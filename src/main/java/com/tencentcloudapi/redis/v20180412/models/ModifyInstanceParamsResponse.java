@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstanceParamsResponse extends AbstractModel {
 
     /**
-    * Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
+    * Whether the parameter configuration is successfully modified.<br> <li>true: successful;</li> <li>false: failed.</li>
     */
     @SerializedName("Changed")
     @Expose
@@ -45,16 +45,16 @@ public class ModifyInstanceParamsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br> 
-     * @return Changed Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
+     * Get Whether the parameter configuration is successfully modified.<br> <li>true: successful;</li> <li>false: failed.</li> 
+     * @return Changed Whether the parameter configuration is successfully modified.<br> <li>true: successful;</li> <li>false: failed.</li>
      */
     public Boolean getChanged() {
         return this.Changed;
     }
 
     /**
-     * Set Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
-     * @param Changed Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
+     * Set Whether the parameter configuration is successfully modified.<br> <li>true: successful;</li> <li>false: failed.</li>
+     * @param Changed Whether the parameter configuration is successfully modified.<br> <li>true: successful;</li> <li>false: failed.</li>
      */
     public void setChanged(Boolean Changed) {
         this.Changed = Changed;

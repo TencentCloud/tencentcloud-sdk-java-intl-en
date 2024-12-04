@@ -32,6 +32,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TableName;
 
     /**
+    * In column mode, all refers to all data, while partial refers to part of the data (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ColumnMode")
+    @Expose
+    private String ColumnMode;
+
+    /**
+    * This field is required when ColumnMode is set to partial (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Columns")
+    @Expose
+    private CompareColumnItem [] Columns;
+
+    /**
      * Get Table name
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TableName Table name
@@ -51,6 +65,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.TableName = TableName;
     }
 
+    /**
+     * Get In column mode, all refers to all data, while partial refers to part of the data (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ColumnMode In column mode, all refers to all data, while partial refers to part of the data (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getColumnMode() {
+        return this.ColumnMode;
+    }
+
+    /**
+     * Set In column mode, all refers to all data, while partial refers to part of the data (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ColumnMode In column mode, all refers to all data, while partial refers to part of the data (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setColumnMode(String ColumnMode) {
+        this.ColumnMode = ColumnMode;
+    }
+
+    /**
+     * Get This field is required when ColumnMode is set to partial (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Columns This field is required when ColumnMode is set to partial (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public CompareColumnItem [] getColumns() {
+        return this.Columns;
+    }
+
+    /**
+     * Set This field is required when ColumnMode is set to partial (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Columns This field is required when ColumnMode is set to partial (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setColumns(CompareColumnItem [] Columns) {
+        this.Columns = Columns;
+    }
+
     public CompareTableItem() {
     }
 
@@ -62,6 +108,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TableName != null) {
             this.TableName = new String(source.TableName);
         }
+        if (source.ColumnMode != null) {
+            this.ColumnMode = new String(source.ColumnMode);
+        }
+        if (source.Columns != null) {
+            this.Columns = new CompareColumnItem[source.Columns.length];
+            for (int i = 0; i < source.Columns.length; i++) {
+                this.Columns[i] = new CompareColumnItem(source.Columns[i]);
+            }
+        }
     }
 
 
@@ -70,6 +125,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TableName", this.TableName);
+        this.setParamSimple(map, prefix + "ColumnMode", this.ColumnMode);
+        this.setParamArrayObj(map, prefix + "Columns.", this.Columns);
 
     }
 }

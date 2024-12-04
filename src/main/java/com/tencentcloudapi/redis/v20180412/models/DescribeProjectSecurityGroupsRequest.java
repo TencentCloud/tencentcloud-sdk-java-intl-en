@@ -31,7 +31,7 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel {
     private String Product;
 
     /**
-    * Project ID
+    * Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -75,16 +75,16 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**. 
+     * @return ProjectId Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
+     * @param ProjectId Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

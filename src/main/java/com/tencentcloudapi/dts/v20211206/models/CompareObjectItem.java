@@ -64,16 +64,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CompareTableItem [] Tables;
 
     /**
-    * View selection mode. Valid values: `all`, `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * View selection mode: all refers to all view objects under the current object, partial refers to partial view objects (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ViewMode")
     @Expose
     private String ViewMode;
 
     /**
-    * View configuration for data consistency check, which is required if `ViewMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * View configuration used for consistency check. When ViewMode is partial, it needs to be filled in (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Views")
     @Expose
@@ -180,40 +178,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get View selection mode. Valid values: `all`, `partial`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ViewMode View selection mode. Valid values: `all`, `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get View selection mode: all refers to all view objects under the current object, partial refers to partial view objects (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ViewMode View selection mode: all refers to all view objects under the current object, partial refers to partial view objects (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getViewMode() {
         return this.ViewMode;
     }
 
     /**
-     * Set View selection mode. Valid values: `all`, `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ViewMode View selection mode. Valid values: `all`, `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set View selection mode: all refers to all view objects under the current object, partial refers to partial view objects (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ViewMode View selection mode: all refers to all view objects under the current object, partial refers to partial view objects (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setViewMode(String ViewMode) {
         this.ViewMode = ViewMode;
     }
 
     /**
-     * Get View configuration for data consistency check, which is required if `ViewMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Views View configuration for data consistency check, which is required if `ViewMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get View configuration used for consistency check. When ViewMode is partial, it needs to be filled in (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Views View configuration used for consistency check. When ViewMode is partial, it needs to be filled in (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CompareViewItem [] getViews() {
         return this.Views;
     }
 
     /**
-     * Set View configuration for data consistency check, which is required if `ViewMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Views View configuration for data consistency check, which is required if `ViewMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set View configuration used for consistency check. When ViewMode is partial, it needs to be filled in (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Views View configuration used for consistency check. When ViewMode is partial, it needs to be filled in (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setViews(CompareViewItem [] Views) {
         this.Views = Views;

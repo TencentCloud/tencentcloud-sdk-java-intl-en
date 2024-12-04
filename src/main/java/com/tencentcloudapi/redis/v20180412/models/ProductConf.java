@@ -71,7 +71,7 @@ public class ProductConf extends AbstractModel {
     private Boolean Saleout;
 
     /**
-    * Product engines, including Tencent Cloud CKV and Redis Community Edition.
+    * Product engine. Valid values: Redis and CKV.
     */
     @SerializedName("Engine")
     @Expose
@@ -269,16 +269,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Product engines, including Tencent Cloud CKV and Redis Community Edition. 
-     * @return Engine Product engines, including Tencent Cloud CKV and Redis Community Edition.
+     * Get Product engine. Valid values: Redis and CKV. 
+     * @return Engine Product engine. Valid values: Redis and CKV.
      */
     public String getEngine() {
         return this.Engine;
     }
 
     /**
-     * Set Product engines, including Tencent Cloud CKV and Redis Community Edition.
-     * @param Engine Product engines, including Tencent Cloud CKV and Redis Community Edition.
+     * Set Product engine. Valid values: Redis and CKV.
+     * @param Engine Product engine. Valid values: Redis and CKV.
      */
     public void setEngine(String Engine) {
         this.Engine = Engine;

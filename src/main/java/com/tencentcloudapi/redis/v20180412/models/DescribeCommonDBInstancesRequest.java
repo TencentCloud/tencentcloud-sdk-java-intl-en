@@ -45,7 +45,7 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel {
     private Long PayMode;
 
     /**
-    * List of instance IDs
+    * Instance ID filter information list, with a maximum array length of 100.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -163,16 +163,16 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get List of instance IDs 
-     * @return InstanceIds List of instance IDs
+     * Get Instance ID filter information list, with a maximum array length of 100. 
+     * @return InstanceIds Instance ID filter information list, with a maximum array length of 100.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of instance IDs
-     * @param InstanceIds List of instance IDs
+     * Set Instance ID filter information list, with a maximum array length of 100.
+     * @param InstanceIds Instance ID filter information list, with a maximum array length of 100.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

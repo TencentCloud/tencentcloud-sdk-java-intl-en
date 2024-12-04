@@ -24,42 +24,56 @@ import java.util.HashMap;
 public class Account extends AbstractModel {
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance ID.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Account name.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Account description.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Read/write permission policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Privilege")
     @Expose
     private String Privilege;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Read-only routing policy.
+- master: primary node.
+- replication: secondary node.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
     private String [] ReadonlyPolicy;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Sub-account status.
+- 1: changing.
+- 2: valid.
+- 4: deleted.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Status")
     @Expose
@@ -73,96 +87,152 @@ public class Account extends AbstractModel {
     private String CreateTime;
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceId Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance ID.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return InstanceId Instance ID.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceId Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance ID.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param InstanceId Instance ID.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AccountName Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Account name.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return AccountName Account name.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AccountName Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Account name.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param AccountName Account name.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Remark Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Account description.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Remark Account description.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Remark Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Account description.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Remark Account description.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Privilege Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Read/write permission policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Privilege Read/write permission policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Privilege Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Read/write permission policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Privilege Read/write permission policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReadonlyPolicy Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Read-only routing policy.
+- master: primary node.
+- replication: secondary node.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return ReadonlyPolicy Read-only routing policy.
+- master: primary node.
+- replication: secondary node.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReadonlyPolicy Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Read-only routing policy.
+- master: primary node.
+- replication: secondary node.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ReadonlyPolicy Read-only routing policy.
+- master: primary node.
+- replication: secondary node.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Sub-account status.
+- 1: changing.
+- 2: valid.
+- 4: deleted.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Status Sub-account status.
+- 1: changing.
+- 2: valid.
+- 4: deleted.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Sub-account status.
+- 1: changing.
+- 2: valid.
+- 4: deleted.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Status Sub-account status.
+- 1: changing.
+- 2: valid.
+- 4: deleted.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

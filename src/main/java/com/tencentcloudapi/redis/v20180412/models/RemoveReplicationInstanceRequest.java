@@ -24,69 +24,84 @@ import java.util.HashMap;
 public class RemoveReplicationInstanceRequest extends AbstractModel {
 
     /**
-    * Replication group ID
+    * Replication group ID, for example, crs-rpl-m3zt****. Log in to the [Redis console](https://console.tencentcloud.com/redis/replication) and obtain it in the global replication group list.
+
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * Instance ID
+    * Specifies the instance ID. Example: crs-xjhsdj****. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Data sync type. Valid values: `true` (strong sync is required), `false` (strong sync is not required, only the master instance can be deleted).
+    * Data synchronization type.
+- true: Strong synchronization is required.
+- false: Strong synchronization is not required, and only the primary instance can be deleted.
     */
     @SerializedName("SyncType")
     @Expose
     private Boolean SyncType;
 
     /**
-     * Get Replication group ID 
-     * @return GroupId Replication group ID
+     * Get Replication group ID, for example, crs-rpl-m3zt****. Log in to the [Redis console](https://console.tencentcloud.com/redis/replication) and obtain it in the global replication group list.
+ 
+     * @return GroupId Replication group ID, for example, crs-rpl-m3zt****. Log in to the [Redis console](https://console.tencentcloud.com/redis/replication) and obtain it in the global replication group list.
+
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Replication group ID
-     * @param GroupId Replication group ID
+     * Set Replication group ID, for example, crs-rpl-m3zt****. Log in to the [Redis console](https://console.tencentcloud.com/redis/replication) and obtain it in the global replication group list.
+
+     * @param GroupId Replication group ID, for example, crs-rpl-m3zt****. Log in to the [Redis console](https://console.tencentcloud.com/redis/replication) and obtain it in the global replication group list.
+
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Specifies the instance ID. Example: crs-xjhsdj****. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list. 
+     * @return InstanceId Specifies the instance ID. Example: crs-xjhsdj****. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Specifies the instance ID. Example: crs-xjhsdj****. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+     * @param InstanceId Specifies the instance ID. Example: crs-xjhsdj****. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Data sync type. Valid values: `true` (strong sync is required), `false` (strong sync is not required, only the master instance can be deleted). 
-     * @return SyncType Data sync type. Valid values: `true` (strong sync is required), `false` (strong sync is not required, only the master instance can be deleted).
+     * Get Data synchronization type.
+- true: Strong synchronization is required.
+- false: Strong synchronization is not required, and only the primary instance can be deleted. 
+     * @return SyncType Data synchronization type.
+- true: Strong synchronization is required.
+- false: Strong synchronization is not required, and only the primary instance can be deleted.
      */
     public Boolean getSyncType() {
         return this.SyncType;
     }
 
     /**
-     * Set Data sync type. Valid values: `true` (strong sync is required), `false` (strong sync is not required, only the master instance can be deleted).
-     * @param SyncType Data sync type. Valid values: `true` (strong sync is required), `false` (strong sync is not required, only the master instance can be deleted).
+     * Set Data synchronization type.
+- true: Strong synchronization is required.
+- false: Strong synchronization is not required, and only the primary instance can be deleted.
+     * @param SyncType Data synchronization type.
+- true: Strong synchronization is required.
+- false: Strong synchronization is not required, and only the primary instance can be deleted.
      */
     public void setSyncType(Boolean SyncType) {
         this.SyncType = SyncType;

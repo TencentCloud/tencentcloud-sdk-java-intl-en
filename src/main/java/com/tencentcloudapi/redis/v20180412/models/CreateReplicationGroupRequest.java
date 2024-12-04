@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateReplicationGroupRequest extends AbstractModel {
 
     /**
-    * Specifies the ID of the primary instance in the replication group.
+    * ID of the primary instance in the replication group. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Replication group name. It supports only Chinese characters, letters, digits, underscores (_), and hyphens (-), with a length of 2-64 characters.
+    * Replication group name. The name should contain 2 to 64 characters, including only letters, digits, underscores (_), and hyphens (-).
     */
     @SerializedName("GroupName")
     @Expose
@@ -45,32 +45,32 @@ public class CreateReplicationGroupRequest extends AbstractModel {
     private String Remark;
 
     /**
-     * Get Specifies the ID of the primary instance in the replication group. 
-     * @return InstanceId Specifies the ID of the primary instance in the replication group.
+     * Get ID of the primary instance in the replication group. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
+     * @return InstanceId ID of the primary instance in the replication group. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Specifies the ID of the primary instance in the replication group.
-     * @param InstanceId Specifies the ID of the primary instance in the replication group.
+     * Set ID of the primary instance in the replication group. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param InstanceId ID of the primary instance in the replication group. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Replication group name. It supports only Chinese characters, letters, digits, underscores (_), and hyphens (-), with a length of 2-64 characters. 
-     * @return GroupName Replication group name. It supports only Chinese characters, letters, digits, underscores (_), and hyphens (-), with a length of 2-64 characters.
+     * Get Replication group name. The name should contain 2 to 64 characters, including only letters, digits, underscores (_), and hyphens (-). 
+     * @return GroupName Replication group name. The name should contain 2 to 64 characters, including only letters, digits, underscores (_), and hyphens (-).
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set Replication group name. It supports only Chinese characters, letters, digits, underscores (_), and hyphens (-), with a length of 2-64 characters.
-     * @param GroupName Replication group name. It supports only Chinese characters, letters, digits, underscores (_), and hyphens (-), with a length of 2-64 characters.
+     * Set Replication group name. The name should contain 2 to 64 characters, including only letters, digits, underscores (_), and hyphens (-).
+     * @param GroupName Replication group name. The name should contain 2 to 64 characters, including only letters, digits, underscores (_), and hyphens (-).
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;

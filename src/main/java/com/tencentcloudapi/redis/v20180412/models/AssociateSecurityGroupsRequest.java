@@ -31,14 +31,14 @@ public class AssociateSecurityGroupsRequest extends AbstractModel {
     private String Product;
 
     /**
-    * ID of the security group to be associated in the format of sg-efil73jd.
+    * ID of the security group to be bound. Obtain it on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-    * ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
+    * ID of the bound instance. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. You can specify multiple instance IDs.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -61,32 +61,32 @@ public class AssociateSecurityGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get ID of the security group to be associated in the format of sg-efil73jd. 
-     * @return SecurityGroupId ID of the security group to be associated in the format of sg-efil73jd.
+     * Get ID of the security group to be bound. Obtain it on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console. 
+     * @return SecurityGroupId ID of the security group to be bound. Obtain it on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set ID of the security group to be associated in the format of sg-efil73jd.
-     * @param SecurityGroupId ID of the security group to be associated in the format of sg-efil73jd.
+     * Set ID of the security group to be bound. Obtain it on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
+     * @param SecurityGroupId ID of the security group to be bound. Obtain it on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances. 
-     * @return InstanceIds ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
+     * Get ID of the bound instance. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. You can specify multiple instance IDs. 
+     * @return InstanceIds ID of the bound instance. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. You can specify multiple instance IDs.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
-     * @param InstanceIds ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
+     * Set ID of the bound instance. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. You can specify multiple instance IDs.
+     * @param InstanceIds ID of the bound instance. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. You can specify multiple instance IDs.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

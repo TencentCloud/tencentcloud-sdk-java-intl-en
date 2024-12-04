@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeTendisSlowLogRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of crs-ngvou0i1
+    * Instance ID. Log in to the [Tendis console](https://console.cloud.tencent.com/tendis) and copy it in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Start time in the format of 2019-09-08 12:12:41
+    * Start time for a query, for example, 2019-09-08 12:12:41, with a maximum query span of 30 days.
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * End time in the format of 2019-09-09 12:12:41
+    * End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days.
     */
     @SerializedName("EndTime")
     @Expose
@@ -52,62 +52,62 @@ public class DescribeTendisSlowLogRequest extends AbstractModel {
     private Long MinQueryTime;
 
     /**
-    * Maximum number of results returned per page. Default value: 20.
+    * Page size. Default value 20. Maximum value 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset, which is an integral multiple of `Limit`.
+    * Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get Instance ID in the format of crs-ngvou0i1 
-     * @return InstanceId Instance ID in the format of crs-ngvou0i1
+     * Get Instance ID. Log in to the [Tendis console](https://console.cloud.tencent.com/tendis) and copy it in the instance list. 
+     * @return InstanceId Instance ID. Log in to the [Tendis console](https://console.cloud.tencent.com/tendis) and copy it in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of crs-ngvou0i1
-     * @param InstanceId Instance ID in the format of crs-ngvou0i1
+     * Set Instance ID. Log in to the [Tendis console](https://console.cloud.tencent.com/tendis) and copy it in the instance list.
+     * @param InstanceId Instance ID. Log in to the [Tendis console](https://console.cloud.tencent.com/tendis) and copy it in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Start time in the format of 2019-09-08 12:12:41 
-     * @return BeginTime Start time in the format of 2019-09-08 12:12:41
+     * Get Start time for a query, for example, 2019-09-08 12:12:41, with a maximum query span of 30 days. 
+     * @return BeginTime Start time for a query, for example, 2019-09-08 12:12:41, with a maximum query span of 30 days.
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set Start time in the format of 2019-09-08 12:12:41
-     * @param BeginTime Start time in the format of 2019-09-08 12:12:41
+     * Set Start time for a query, for example, 2019-09-08 12:12:41, with a maximum query span of 30 days.
+     * @param BeginTime Start time for a query, for example, 2019-09-08 12:12:41, with a maximum query span of 30 days.
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get End time in the format of 2019-09-09 12:12:41 
-     * @return EndTime End time in the format of 2019-09-09 12:12:41
+     * Get End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days. 
+     * @return EndTime End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time in the format of 2019-09-09 12:12:41
-     * @param EndTime End time in the format of 2019-09-09 12:12:41
+     * Set End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days.
+     * @param EndTime End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -130,32 +130,32 @@ public class DescribeTendisSlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get Maximum number of results returned per page. Default value: 20. 
-     * @return Limit Maximum number of results returned per page. Default value: 20.
+     * Get Page size. Default value 20. Maximum value 100. 
+     * @return Limit Page size. Default value 20. Maximum value 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number of results returned per page. Default value: 20.
-     * @param Limit Maximum number of results returned per page. Default value: 20.
+     * Set Page size. Default value 20. Maximum value 100.
+     * @param Limit Page size. Default value 20. Maximum value 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset, which is an integral multiple of `Limit`. 
-     * @return Offset Offset, which is an integral multiple of `Limit`.
+     * Get Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1). 
+     * @return Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, which is an integral multiple of `Limit`.
-     * @param Offset Offset, which is an integral multiple of `Limit`.
+     * Set Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+     * @param Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -38,18 +38,18 @@ public class ModifyLifecycleHookRequest extends AbstractModel {
     private String LifecycleHookName;
 
     /**
-    * The time when the lifecycle hook is applied. Valid values:
-<li> `INSTANCE_LAUNCHING`: After the instance launch
-<li> `INSTANCE_TERMINATING`: Before the instance termination
+    * Scenario for entering the lifecycle hook. Valid values:
+<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
+<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
     */
     @SerializedName("LifecycleTransition")
     @Expose
     private String LifecycleTransition;
 
     /**
-    * Actions after the lifecycle hook times out. Valid values:
-<li> `CONTINUE`: Continue the scaling activity after the timeout
-<li> `ABANDON`: Terminate the scaling activity after the timeout
+    * Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
+<li>CONTINUE: Continue the scaling activity after timeout.</li>
+<li>ABANDON: Terminate the scaling activity after timeout.</li>
     */
     @SerializedName("DefaultResult")
     @Expose
@@ -123,48 +123,48 @@ public class ModifyLifecycleHookRequest extends AbstractModel {
     }
 
     /**
-     * Get The time when the lifecycle hook is applied. Valid values:
-<li> `INSTANCE_LAUNCHING`: After the instance launch
-<li> `INSTANCE_TERMINATING`: Before the instance termination 
-     * @return LifecycleTransition The time when the lifecycle hook is applied. Valid values:
-<li> `INSTANCE_LAUNCHING`: After the instance launch
-<li> `INSTANCE_TERMINATING`: Before the instance termination
+     * Get Scenario for entering the lifecycle hook. Valid values:
+<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
+<li>INSTANCE_TERMINATING: before the instance is terminated.</li> 
+     * @return LifecycleTransition Scenario for entering the lifecycle hook. Valid values:
+<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
+<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
      */
     public String getLifecycleTransition() {
         return this.LifecycleTransition;
     }
 
     /**
-     * Set The time when the lifecycle hook is applied. Valid values:
-<li> `INSTANCE_LAUNCHING`: After the instance launch
-<li> `INSTANCE_TERMINATING`: Before the instance termination
-     * @param LifecycleTransition The time when the lifecycle hook is applied. Valid values:
-<li> `INSTANCE_LAUNCHING`: After the instance launch
-<li> `INSTANCE_TERMINATING`: Before the instance termination
+     * Set Scenario for entering the lifecycle hook. Valid values:
+<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
+<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
+     * @param LifecycleTransition Scenario for entering the lifecycle hook. Valid values:
+<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
+<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
      */
     public void setLifecycleTransition(String LifecycleTransition) {
         this.LifecycleTransition = LifecycleTransition;
     }
 
     /**
-     * Get Actions after the lifecycle hook times out. Valid values:
-<li> `CONTINUE`: Continue the scaling activity after the timeout
-<li> `ABANDON`: Terminate the scaling activity after the timeout 
-     * @return DefaultResult Actions after the lifecycle hook times out. Valid values:
-<li> `CONTINUE`: Continue the scaling activity after the timeout
-<li> `ABANDON`: Terminate the scaling activity after the timeout
+     * Get Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
+<li>CONTINUE: Continue the scaling activity after timeout.</li>
+<li>ABANDON: Terminate the scaling activity after timeout.</li> 
+     * @return DefaultResult Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
+<li>CONTINUE: Continue the scaling activity after timeout.</li>
+<li>ABANDON: Terminate the scaling activity after timeout.</li>
      */
     public String getDefaultResult() {
         return this.DefaultResult;
     }
 
     /**
-     * Set Actions after the lifecycle hook times out. Valid values:
-<li> `CONTINUE`: Continue the scaling activity after the timeout
-<li> `ABANDON`: Terminate the scaling activity after the timeout
-     * @param DefaultResult Actions after the lifecycle hook times out. Valid values:
-<li> `CONTINUE`: Continue the scaling activity after the timeout
-<li> `ABANDON`: Terminate the scaling activity after the timeout
+     * Set Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
+<li>CONTINUE: Continue the scaling activity after timeout.</li>
+<li>ABANDON: Terminate the scaling activity after timeout.</li>
+     * @param DefaultResult Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
+<li>CONTINUE: Continue the scaling activity after timeout.</li>
+<li>ABANDON: Terminate the scaling activity after timeout.</li>
      */
     public void setDefaultResult(String DefaultResult) {
         this.DefaultResult = DefaultResult;

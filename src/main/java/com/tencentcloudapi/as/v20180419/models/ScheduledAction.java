@@ -94,7 +94,9 @@ public class ScheduledAction extends AbstractModel {
     private String CreatedTime;
 
     /**
-    * Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+    * Scheduled task execution type. Valid values:
+<li>CRONTAB: repeated execution.</li>
+<li>ONCE: single execution.</li>
     */
     @SerializedName("ScheduledType")
     @Expose
@@ -261,16 +263,24 @@ public class ScheduledAction extends AbstractModel {
     }
 
     /**
-     * Get Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once 
-     * @return ScheduledType Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+     * Get Scheduled task execution type. Valid values:
+<li>CRONTAB: repeated execution.</li>
+<li>ONCE: single execution.</li> 
+     * @return ScheduledType Scheduled task execution type. Valid values:
+<li>CRONTAB: repeated execution.</li>
+<li>ONCE: single execution.</li>
      */
     public String getScheduledType() {
         return this.ScheduledType;
     }
 
     /**
-     * Set Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
-     * @param ScheduledType Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+     * Set Scheduled task execution type. Valid values:
+<li>CRONTAB: repeated execution.</li>
+<li>ONCE: single execution.</li>
+     * @param ScheduledType Scheduled task execution type. Valid values:
+<li>CRONTAB: repeated execution.</li>
+<li>ONCE: single execution.</li>
      */
     public void setScheduledType(String ScheduledType) {
         this.ScheduledType = ScheduledType;

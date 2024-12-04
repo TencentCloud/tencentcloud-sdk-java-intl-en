@@ -24,15 +24,15 @@ import java.util.HashMap;
 public class CreateInstanceAccountRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Custom the name of the database to access.
-- Contains only letters, digits, underscores, and hyphens.
+    * Custom account name for accessing the database.
+- It contains only letters, digits, underscores (_), and hyphens (-).
 - The length cannot exceed 32 characters.
     */
     @SerializedName("AccountName")
@@ -40,9 +40,10 @@ public class CreateInstanceAccountRequest extends AbstractModel {
     private String AccountName;
 
     /**
-    * Set a password for the customized account. The password complexity requirements are as follows:
-- Value range: [8, 32].
-- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+    * Password of the custom account. The password complexity requirements are as follows:
+- It can contain 8 to 64 characters.
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+- It cannot start with a forward slash (/).
 
     */
     @SerializedName("AccountPassword")
@@ -74,27 +75,27 @@ public class CreateInstanceAccountRequest extends AbstractModel {
     private String Remark;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
+     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Custom the name of the database to access.
-- Contains only letters, digits, underscores, and hyphens.
+     * Get Custom account name for accessing the database.
+- It contains only letters, digits, underscores (_), and hyphens (-).
 - The length cannot exceed 32 characters. 
-     * @return AccountName Custom the name of the database to access.
-- Contains only letters, digits, underscores, and hyphens.
+     * @return AccountName Custom account name for accessing the database.
+- It contains only letters, digits, underscores (_), and hyphens (-).
 - The length cannot exceed 32 characters.
      */
     public String getAccountName() {
@@ -102,11 +103,11 @@ public class CreateInstanceAccountRequest extends AbstractModel {
     }
 
     /**
-     * Set Custom the name of the database to access.
-- Contains only letters, digits, underscores, and hyphens.
+     * Set Custom account name for accessing the database.
+- It contains only letters, digits, underscores (_), and hyphens (-).
 - The length cannot exceed 32 characters.
-     * @param AccountName Custom the name of the database to access.
-- Contains only letters, digits, underscores, and hyphens.
+     * @param AccountName Custom account name for accessing the database.
+- It contains only letters, digits, underscores (_), and hyphens (-).
 - The length cannot exceed 32 characters.
      */
     public void setAccountName(String AccountName) {
@@ -114,13 +115,15 @@ public class CreateInstanceAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get Set a password for the customized account. The password complexity requirements are as follows:
-- Value range: [8, 32].
-- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+     * Get Password of the custom account. The password complexity requirements are as follows:
+- It can contain 8 to 64 characters.
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+- It cannot start with a forward slash (/).
  
-     * @return AccountPassword Set a password for the customized account. The password complexity requirements are as follows:
-- Value range: [8, 32].
-- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+     * @return AccountPassword Password of the custom account. The password complexity requirements are as follows:
+- It can contain 8 to 64 characters.
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+- It cannot start with a forward slash (/).
 
      */
     public String getAccountPassword() {
@@ -128,13 +131,15 @@ public class CreateInstanceAccountRequest extends AbstractModel {
     }
 
     /**
-     * Set Set a password for the customized account. The password complexity requirements are as follows:
-- Value range: [8, 32].
-- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+     * Set Password of the custom account. The password complexity requirements are as follows:
+- It can contain 8 to 64 characters.
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+- It cannot start with a forward slash (/).
 
-     * @param AccountPassword Set a password for the customized account. The password complexity requirements are as follows:
-- Value range: [8, 32].
-- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+     * @param AccountPassword Password of the custom account. The password complexity requirements are as follows:
+- It can contain 8 to 64 characters.
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+- It cannot start with a forward slash (/).
 
      */
     public void setAccountPassword(String AccountPassword) {

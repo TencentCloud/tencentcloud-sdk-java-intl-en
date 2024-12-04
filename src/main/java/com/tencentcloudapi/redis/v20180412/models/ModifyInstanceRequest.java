@@ -24,42 +24,49 @@ import java.util.HashMap;
 public class ModifyInstanceRequest extends AbstractModel {
 
     /**
-    * Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
+    * Instance modification operation. Valid values:
+- rename: Rename the instance.
+- modifyProject: Modify the project to which the instance belongs.
+- modifyAutoRenew: Modify the instance renewal flag.
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * Instance ID
+    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. The maximum number of instances per request is 10.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * New name of the instance
+    * New name of the instance.
     */
     @SerializedName("InstanceNames")
     @Expose
     private String [] InstanceNames;
 
     /**
-    * Project ID
+    * Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+    * Auto-renewal flag.
+
+- 0: default status (manual renewal).
+- 1: automatic renewal.
+- 2: no automatic renewal.
     */
     @SerializedName("AutoRenews")
     @Expose
     private Long [] AutoRenews;
 
     /**
-    * Disused
+    * This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -73,103 +80,131 @@ public class ModifyInstanceRequest extends AbstractModel {
     private String InstanceName;
 
     /**
-    * Disused
+    * This parameter has been deprecated.
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-     * Get Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance. 
-     * @return Operation Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
+     * Get Instance modification operation. Valid values:
+- rename: Rename the instance.
+- modifyProject: Modify the project to which the instance belongs.
+- modifyAutoRenew: Modify the instance renewal flag. 
+     * @return Operation Instance modification operation. Valid values:
+- rename: Rename the instance.
+- modifyProject: Modify the project to which the instance belongs.
+- modifyAutoRenew: Modify the instance renewal flag.
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
-     * @param Operation Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
+     * Set Instance modification operation. Valid values:
+- rename: Rename the instance.
+- modifyProject: Modify the project to which the instance belongs.
+- modifyAutoRenew: Modify the instance renewal flag.
+     * @param Operation Instance modification operation. Valid values:
+- rename: Rename the instance.
+- modifyProject: Modify the project to which the instance belongs.
+- modifyAutoRenew: Modify the instance renewal flag.
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceIds Instance ID
+     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. The maximum number of instances per request is 10. 
+     * @return InstanceIds Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. The maximum number of instances per request is 10.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceIds Instance ID
+     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. The maximum number of instances per request is 10.
+     * @param InstanceIds Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. The maximum number of instances per request is 10.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get New name of the instance 
-     * @return InstanceNames New name of the instance
+     * Get New name of the instance. 
+     * @return InstanceNames New name of the instance.
      */
     public String [] getInstanceNames() {
         return this.InstanceNames;
     }
 
     /**
-     * Set New name of the instance
-     * @param InstanceNames New name of the instance
+     * Set New name of the instance.
+     * @param InstanceNames New name of the instance.
      */
     public void setInstanceNames(String [] InstanceNames) {
         this.InstanceNames = InstanceNames;
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**. 
+     * @return ProjectId Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
+     * @param ProjectId Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled 
-     * @return AutoRenews Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+     * Get Auto-renewal flag.
+
+- 0: default status (manual renewal).
+- 1: automatic renewal.
+- 2: no automatic renewal. 
+     * @return AutoRenews Auto-renewal flag.
+
+- 0: default status (manual renewal).
+- 1: automatic renewal.
+- 2: no automatic renewal.
      */
     public Long [] getAutoRenews() {
         return this.AutoRenews;
     }
 
     /**
-     * Set Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
-     * @param AutoRenews Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+     * Set Auto-renewal flag.
+
+- 0: default status (manual renewal).
+- 1: automatic renewal.
+- 2: no automatic renewal.
+     * @param AutoRenews Auto-renewal flag.
+
+- 0: default status (manual renewal).
+- 1: automatic renewal.
+- 2: no automatic renewal.
      */
     public void setAutoRenews(Long [] AutoRenews) {
         this.AutoRenews = AutoRenews;
     }
 
     /**
-     * Get Disused 
-     * @return InstanceId Disused
+     * Get This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds. 
+     * @return InstanceId This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Disused
-     * @param InstanceId Disused
+     * Set This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
+     * @param InstanceId This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -192,16 +227,16 @@ public class ModifyInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Disused 
-     * @return AutoRenew Disused
+     * Get This parameter has been deprecated. 
+     * @return AutoRenew This parameter has been deprecated.
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set Disused
-     * @param AutoRenew Disused
+     * Set This parameter has been deprecated.
+     * @param AutoRenew This parameter has been deprecated.
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;

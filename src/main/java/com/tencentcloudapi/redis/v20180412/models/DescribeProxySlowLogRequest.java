@@ -32,14 +32,14 @@ public class DescribeProxySlowLogRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Start time of slow query
+    * Start time of a slow query, with a maximum query span of 30 days.
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * End time of slow query
+    * End time of a slow query, with a maximum query span of 30 days.
     */
     @SerializedName("EndTime")
     @Expose
@@ -53,14 +53,14 @@ public class DescribeProxySlowLogRequest extends AbstractModel {
     private Long MinQueryTime;
 
     /**
-    * Number of results per page.  Default value: `20`. Value range: [20,1000].
+    * Number of tasks output on each page. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset, which is an integral multiple of `Limit`.
+    * Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
     */
     @SerializedName("Offset")
     @Expose
@@ -87,32 +87,32 @@ public class DescribeProxySlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get Start time of slow query 
-     * @return BeginTime Start time of slow query
+     * Get Start time of a slow query, with a maximum query span of 30 days. 
+     * @return BeginTime Start time of a slow query, with a maximum query span of 30 days.
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set Start time of slow query
-     * @param BeginTime Start time of slow query
+     * Set Start time of a slow query, with a maximum query span of 30 days.
+     * @param BeginTime Start time of a slow query, with a maximum query span of 30 days.
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get End time of slow query 
-     * @return EndTime End time of slow query
+     * Get End time of a slow query, with a maximum query span of 30 days. 
+     * @return EndTime End time of a slow query, with a maximum query span of 30 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of slow query
-     * @param EndTime End time of slow query
+     * Set End time of a slow query, with a maximum query span of 30 days.
+     * @param EndTime End time of a slow query, with a maximum query span of 30 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -135,32 +135,32 @@ public class DescribeProxySlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of results per page.  Default value: `20`. Value range: [20,1000]. 
-     * @return Limit Number of results per page.  Default value: `20`. Value range: [20,1000].
+     * Get Number of tasks output on each page. Default value: 20. Maximum value: 100. 
+     * @return Limit Number of tasks output on each page. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results per page.  Default value: `20`. Value range: [20,1000].
-     * @param Limit Number of results per page.  Default value: `20`. Value range: [20,1000].
+     * Set Number of tasks output on each page. Default value: 20. Maximum value: 100.
+     * @param Limit Number of tasks output on each page. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset, which is an integral multiple of `Limit`. 
-     * @return Offset Offset, which is an integral multiple of `Limit`.
+     * Get Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1). 
+     * @return Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, which is an integral multiple of `Limit`.
-     * @param Offset Offset, which is an integral multiple of `Limit`.
+     * Set Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+     * @param Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

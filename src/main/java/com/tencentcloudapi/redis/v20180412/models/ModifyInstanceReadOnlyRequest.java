@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class ModifyInstanceReadOnlyRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance input mode. Valid values: `0` (read/write), `1` (read-only)
+    * Instance input mode.
+- 0: read/write.
+- 1: read-only.
     */
     @SerializedName("InputMode")
     @Expose
     private String InputMode;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
+     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance input mode. Valid values: `0` (read/write), `1` (read-only) 
-     * @return InputMode Instance input mode. Valid values: `0` (read/write), `1` (read-only)
+     * Get Instance input mode.
+- 0: read/write.
+- 1: read-only. 
+     * @return InputMode Instance input mode.
+- 0: read/write.
+- 1: read-only.
      */
     public String getInputMode() {
         return this.InputMode;
     }
 
     /**
-     * Set Instance input mode. Valid values: `0` (read/write), `1` (read-only)
-     * @param InputMode Instance input mode. Valid values: `0` (read/write), `1` (read-only)
+     * Set Instance input mode.
+- 0: read/write.
+- 1: read-only.
+     * @param InputMode Instance input mode.
+- 0: read/write.
+- 1: read-only.
      */
     public void setInputMode(String InputMode) {
         this.InputMode = InputMode;

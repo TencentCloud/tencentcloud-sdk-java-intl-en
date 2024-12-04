@@ -45,7 +45,7 @@ public class ReplicaGroup extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Node group type. Valid values: master (master node group); replica (replica node group)
+    * Node group type. master: primary node; replica: replica node.
     */
     @SerializedName("Role")
     @Expose
@@ -107,16 +107,16 @@ public class ReplicaGroup extends AbstractModel {
     }
 
     /**
-     * Get Node group type. Valid values: master (master node group); replica (replica node group) 
-     * @return Role Node group type. Valid values: master (master node group); replica (replica node group)
+     * Get Node group type. master: primary node; replica: replica node. 
+     * @return Role Node group type. master: primary node; replica: replica node.
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set Node group type. Valid values: master (master node group); replica (replica node group)
-     * @param Role Node group type. Valid values: master (master node group); replica (replica node group)
+     * Set Node group type. master: primary node; replica: replica node.
+     * @param Role Node group type. master: primary node; replica: replica node.
      */
     public void setRole(String Role) {
         this.Role = Role;

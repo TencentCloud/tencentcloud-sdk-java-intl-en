@@ -45,9 +45,9 @@ public class Advice extends AbstractModel {
     private String Solution;
 
     /**
-    * Risk level of the scaling group configuration. Valid values: <br>
-<li>WARNING<br>
-<li>CRITICAL<br>
+    * Scaling suggestion warning level. Valid values:
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
     */
     @SerializedName("Level")
     @Expose
@@ -102,24 +102,24 @@ public class Advice extends AbstractModel {
     }
 
     /**
-     * Get Risk level of the scaling group configuration. Valid values: <br>
-<li>WARNING<br>
-<li>CRITICAL<br> 
-     * @return Level Risk level of the scaling group configuration. Valid values: <br>
-<li>WARNING<br>
-<li>CRITICAL<br>
+     * Get Scaling suggestion warning level. Valid values:
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li> 
+     * @return Level Scaling suggestion warning level. Valid values:
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level of the scaling group configuration. Valid values: <br>
-<li>WARNING<br>
-<li>CRITICAL<br>
-     * @param Level Risk level of the scaling group configuration. Valid values: <br>
-<li>WARNING<br>
-<li>CRITICAL<br>
+     * Set Scaling suggestion warning level. Valid values:
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
+     * @param Level Scaling suggestion warning level. Valid values:
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
      */
     public void setLevel(String Level) {
         this.Level = Level;

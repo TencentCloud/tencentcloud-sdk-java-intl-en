@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstanceEventsRequest extends AbstractModel {
 
     /**
-    * Configures the start date for querying the event execution schedule.
+    * Start date for querying the event execution plan, with a maximum query span of 30 days.
     */
     @SerializedName("ExecutionStartDate")
     @Expose
     private String ExecutionStartDate;
 
     /**
-    * Configures the end date for querying the event execution schedule.
+    * End date for querying the event execution plan, with a maximum query span of 30 days.
     */
     @SerializedName("ExecutionEndDate")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeInstanceEventsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Outputs the number of events displayed per page. Default value: 10.
+    * Number of events displayed per page. Default value: 10. Maximum value: 100.
     */
     @SerializedName("PageSize")
     @Expose
@@ -80,32 +80,32 @@ public class DescribeInstanceEventsRequest extends AbstractModel {
     private String [] Grades;
 
     /**
-     * Get Configures the start date for querying the event execution schedule. 
-     * @return ExecutionStartDate Configures the start date for querying the event execution schedule.
+     * Get Start date for querying the event execution plan, with a maximum query span of 30 days. 
+     * @return ExecutionStartDate Start date for querying the event execution plan, with a maximum query span of 30 days.
      */
     public String getExecutionStartDate() {
         return this.ExecutionStartDate;
     }
 
     /**
-     * Set Configures the start date for querying the event execution schedule.
-     * @param ExecutionStartDate Configures the start date for querying the event execution schedule.
+     * Set Start date for querying the event execution plan, with a maximum query span of 30 days.
+     * @param ExecutionStartDate Start date for querying the event execution plan, with a maximum query span of 30 days.
      */
     public void setExecutionStartDate(String ExecutionStartDate) {
         this.ExecutionStartDate = ExecutionStartDate;
     }
 
     /**
-     * Get Configures the end date for querying the event execution schedule. 
-     * @return ExecutionEndDate Configures the end date for querying the event execution schedule.
+     * Get End date for querying the event execution plan, with a maximum query span of 30 days. 
+     * @return ExecutionEndDate End date for querying the event execution plan, with a maximum query span of 30 days.
      */
     public String getExecutionEndDate() {
         return this.ExecutionEndDate;
     }
 
     /**
-     * Set Configures the end date for querying the event execution schedule.
-     * @param ExecutionEndDate Configures the end date for querying the event execution schedule.
+     * Set End date for querying the event execution plan, with a maximum query span of 30 days.
+     * @param ExecutionEndDate End date for querying the event execution plan, with a maximum query span of 30 days.
      */
     public void setExecutionEndDate(String ExecutionEndDate) {
         this.ExecutionEndDate = ExecutionEndDate;
@@ -128,16 +128,16 @@ public class DescribeInstanceEventsRequest extends AbstractModel {
     }
 
     /**
-     * Get Outputs the number of events displayed per page. Default value: 10. 
-     * @return PageSize Outputs the number of events displayed per page. Default value: 10.
+     * Get Number of events displayed per page. Default value: 10. Maximum value: 100. 
+     * @return PageSize Number of events displayed per page. Default value: 10. Maximum value: 100.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Outputs the number of events displayed per page. Default value: 10.
-     * @param PageSize Outputs the number of events displayed per page. Default value: 10.
+     * Set Number of events displayed per page. Default value: 10. Maximum value: 100.
+     * @param PageSize Number of events displayed per page. Default value: 10. Maximum value: 100.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

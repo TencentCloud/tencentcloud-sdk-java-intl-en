@@ -161,6 +161,15 @@ public class CloneInstancesRequest extends AbstractModel {
     private String [] AlarmPolicyList;
 
     /**
+    * Time to restore data for cloning.
+Only instances with second-level backup enabled are supported.
+
+    */
+    @SerializedName("CloneTime")
+    @Expose
+    private String CloneTime;
+
+    /**
      * Get The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list. 
      * @return InstanceId The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
@@ -480,6 +489,30 @@ public class CloneInstancesRequest extends AbstractModel {
         this.AlarmPolicyList = AlarmPolicyList;
     }
 
+    /**
+     * Get Time to restore data for cloning.
+Only instances with second-level backup enabled are supported.
+ 
+     * @return CloneTime Time to restore data for cloning.
+Only instances with second-level backup enabled are supported.
+
+     */
+    public String getCloneTime() {
+        return this.CloneTime;
+    }
+
+    /**
+     * Set Time to restore data for cloning.
+Only instances with second-level backup enabled are supported.
+
+     * @param CloneTime Time to restore data for cloning.
+Only instances with second-level backup enabled are supported.
+
+     */
+    public void setCloneTime(String CloneTime) {
+        this.CloneTime = CloneTime;
+    }
+
     public CloneInstancesRequest() {
     }
 
@@ -557,6 +590,9 @@ public class CloneInstancesRequest extends AbstractModel {
                 this.AlarmPolicyList[i] = new String(source.AlarmPolicyList[i]);
             }
         }
+        if (source.CloneTime != null) {
+            this.CloneTime = new String(source.CloneTime);
+        }
     }
 
 
@@ -583,6 +619,7 @@ public class CloneInstancesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
+        this.setParamSimple(map, prefix + "CloneTime", this.CloneTime);
 
     }
 }

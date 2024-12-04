@@ -31,11 +31,7 @@ public class ActivtyRelatedInstance extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Status of the instance in the scaling activity. Value range:
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>FAILED: failed
+    * Status of the instance in the scaling activity. Valid values: <br><li>INIT: initializing;</li> <li>RUNNING: instance in operation;</li> <li>SUCCESSFUL: activity successful;</li> <li>FAILED: activity failed.
     */
     @SerializedName("InstanceStatus")
     @Expose
@@ -58,32 +54,16 @@ public class ActivtyRelatedInstance extends AbstractModel {
     }
 
     /**
-     * Get Status of the instance in the scaling activity. Value range:
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>FAILED: failed 
-     * @return InstanceStatus Status of the instance in the scaling activity. Value range:
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>FAILED: failed
+     * Get Status of the instance in the scaling activity. Valid values: <br><li>INIT: initializing;</li> <li>RUNNING: instance in operation;</li> <li>SUCCESSFUL: activity successful;</li> <li>FAILED: activity failed. 
+     * @return InstanceStatus Status of the instance in the scaling activity. Valid values: <br><li>INIT: initializing;</li> <li>RUNNING: instance in operation;</li> <li>SUCCESSFUL: activity successful;</li> <li>FAILED: activity failed.
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set Status of the instance in the scaling activity. Value range:
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>FAILED: failed
-     * @param InstanceStatus Status of the instance in the scaling activity. Value range:
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>FAILED: failed
+     * Set Status of the instance in the scaling activity. Valid values: <br><li>INIT: initializing;</li> <li>RUNNING: instance in operation;</li> <li>SUCCESSFUL: activity successful;</li> <li>FAILED: activity failed.
+     * @param InstanceStatus Status of the instance in the scaling activity. Valid values: <br><li>INIT: initializing;</li> <li>RUNNING: instance in operation;</li> <li>SUCCESSFUL: activity successful;</li> <li>FAILED: activity failed.
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;

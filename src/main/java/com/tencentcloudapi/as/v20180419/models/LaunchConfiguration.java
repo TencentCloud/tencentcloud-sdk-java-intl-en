@@ -253,6 +253,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ImageFamily;
 
     /**
+    * CDC ID.
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
+
+    /**
      * Get Project ID of the instance. 
      * @return ProjectId Project ID of the instance.
      */
@@ -784,6 +791,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ImageFamily = ImageFamily;
     }
 
+    /**
+     * Get CDC ID. 
+     * @return DedicatedClusterId CDC ID.
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set CDC ID.
+     * @param DedicatedClusterId CDC ID.
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
     public LaunchConfiguration() {
     }
 
@@ -909,6 +932,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ImageFamily != null) {
             this.ImageFamily = new String(source.ImageFamily);
         }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
     }
 
 
@@ -948,6 +974,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
         this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
 
     }
 }

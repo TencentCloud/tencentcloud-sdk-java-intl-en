@@ -66,7 +66,7 @@ public class InstanceMultiParam extends AbstractModel {
     private String Tips;
 
     /**
-    * Description
+    * Parameter enumeration value.
     */
     @SerializedName("EnumValue")
     @Expose
@@ -176,16 +176,16 @@ public class InstanceMultiParam extends AbstractModel {
     }
 
     /**
-     * Get Description 
-     * @return EnumValue Description
+     * Get Parameter enumeration value. 
+     * @return EnumValue Parameter enumeration value.
      */
     public String [] getEnumValue() {
         return this.EnumValue;
     }
 
     /**
-     * Set Description
-     * @param EnumValue Description
+     * Set Parameter enumeration value.
+     * @param EnumValue Parameter enumeration value.
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;

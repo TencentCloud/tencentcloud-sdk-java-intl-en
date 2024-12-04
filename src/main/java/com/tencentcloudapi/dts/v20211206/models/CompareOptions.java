@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class CompareOptions extends AbstractModel {
 
     /**
-    * Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Comparative Method: dataCheck (Complete Data Comparison), sampleDataCheck (Sampling Data Comparison), rowsCount (Row Count Comparison)Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Method")
     @Expose
@@ -48,20 +47,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ThreadCount;
 
     /**
-     * Get Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Method Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Comparative Method: dataCheck (Complete Data Comparison), sampleDataCheck (Sampling Data Comparison), rowsCount (Row Count Comparison)Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Method Comparative Method: dataCheck (Complete Data Comparison), sampleDataCheck (Sampling Data Comparison), rowsCount (Row Count Comparison)Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getMethod() {
         return this.Method;
     }
 
     /**
-     * Set Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Method Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Comparative Method: dataCheck (Complete Data Comparison), sampleDataCheck (Sampling Data Comparison), rowsCount (Row Count Comparison)Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Method Comparative Method: dataCheck (Complete Data Comparison), sampleDataCheck (Sampling Data Comparison), rowsCount (Row Count Comparison)Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setMethod(String Method) {
         this.Method = Method;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyMaintenanceWindowRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Maintenance start time, such as 17:00
+    * Start time of the maintenance window, for example, 17:00.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Maintenance end time, such as 19:00
+    * End time of the maintenance window, for example, 19:00.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
+     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Maintenance start time, such as 17:00 
-     * @return StartTime Maintenance start time, such as 17:00
+     * Get Start time of the maintenance window, for example, 17:00. 
+     * @return StartTime Start time of the maintenance window, for example, 17:00.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Maintenance start time, such as 17:00
-     * @param StartTime Maintenance start time, such as 17:00
+     * Set Start time of the maintenance window, for example, 17:00.
+     * @param StartTime Start time of the maintenance window, for example, 17:00.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Maintenance end time, such as 19:00 
-     * @return EndTime Maintenance end time, such as 19:00
+     * Get End time of the maintenance window, for example, 19:00. 
+     * @return EndTime End time of the maintenance window, for example, 19:00.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Maintenance end time, such as 19:00
-     * @param EndTime Maintenance end time, such as 19:00
+     * Set End time of the maintenance window, for example, 19:00.
+     * @param EndTime End time of the maintenance window, for example, 19:00.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

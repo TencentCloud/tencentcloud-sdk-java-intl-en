@@ -31,28 +31,31 @@ public class ZoneCapacityConf extends AbstractModel {
     private String ZoneId;
 
     /**
-    * AZ name
+    * Availability zone name.
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * Whether a product is sold out in an AZ
+    * Whether the AZ is sold out.
     */
     @SerializedName("IsSaleout")
     @Expose
     private Boolean IsSaleout;
 
     /**
-    * Whether it is a default AZ
+    * Whether the default AZ is used.
     */
     @SerializedName("IsDefault")
     @Expose
     private Boolean IsDefault;
 
     /**
-    * Network type. basenet: basic network; vpcnet: VPC
+    * Network type.
+
+- basenet: basic network.
+- vpcnet: VPC.
     */
     @SerializedName("NetWorkType")
     @Expose
@@ -89,64 +92,76 @@ public class ZoneCapacityConf extends AbstractModel {
     }
 
     /**
-     * Get AZ name 
-     * @return ZoneName AZ name
+     * Get Availability zone name. 
+     * @return ZoneName Availability zone name.
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set AZ name
-     * @param ZoneName AZ name
+     * Set Availability zone name.
+     * @param ZoneName Availability zone name.
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get Whether a product is sold out in an AZ 
-     * @return IsSaleout Whether a product is sold out in an AZ
+     * Get Whether the AZ is sold out. 
+     * @return IsSaleout Whether the AZ is sold out.
      */
     public Boolean getIsSaleout() {
         return this.IsSaleout;
     }
 
     /**
-     * Set Whether a product is sold out in an AZ
-     * @param IsSaleout Whether a product is sold out in an AZ
+     * Set Whether the AZ is sold out.
+     * @param IsSaleout Whether the AZ is sold out.
      */
     public void setIsSaleout(Boolean IsSaleout) {
         this.IsSaleout = IsSaleout;
     }
 
     /**
-     * Get Whether it is a default AZ 
-     * @return IsDefault Whether it is a default AZ
+     * Get Whether the default AZ is used. 
+     * @return IsDefault Whether the default AZ is used.
      */
     public Boolean getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set Whether it is a default AZ
-     * @param IsDefault Whether it is a default AZ
+     * Set Whether the default AZ is used.
+     * @param IsDefault Whether the default AZ is used.
      */
     public void setIsDefault(Boolean IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get Network type. basenet: basic network; vpcnet: VPC 
-     * @return NetWorkType Network type. basenet: basic network; vpcnet: VPC
+     * Get Network type.
+
+- basenet: basic network.
+- vpcnet: VPC. 
+     * @return NetWorkType Network type.
+
+- basenet: basic network.
+- vpcnet: VPC.
      */
     public String [] getNetWorkType() {
         return this.NetWorkType;
     }
 
     /**
-     * Set Network type. basenet: basic network; vpcnet: VPC
-     * @param NetWorkType Network type. basenet: basic network; vpcnet: VPC
+     * Set Network type.
+
+- basenet: basic network.
+- vpcnet: VPC.
+     * @param NetWorkType Network type.
+
+- basenet: basic network.
+- vpcnet: VPC.
      */
     public void setNetWorkType(String [] NetWorkType) {
         this.NetWorkType = NetWorkType;

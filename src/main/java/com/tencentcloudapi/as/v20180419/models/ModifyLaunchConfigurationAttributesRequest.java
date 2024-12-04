@@ -217,6 +217,13 @@ This parameter will overwrite the original instance tag list. To add new tags, y
     private String ImageFamily;
 
     /**
+    * Cloud Dedicated Cluster (CDC) ID.
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
+
+    /**
      * Get Launch configuration ID 
      * @return LaunchConfigurationId Launch configuration ID
      */
@@ -700,6 +707,22 @@ This parameter will overwrite the original instance tag list. To add new tags, y
         this.ImageFamily = ImageFamily;
     }
 
+    /**
+     * Get Cloud Dedicated Cluster (CDC) ID. 
+     * @return DedicatedClusterId Cloud Dedicated Cluster (CDC) ID.
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set Cloud Dedicated Cluster (CDC) ID.
+     * @param DedicatedClusterId Cloud Dedicated Cluster (CDC) ID.
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
     public ModifyLaunchConfigurationAttributesRequest() {
     }
 
@@ -795,6 +818,9 @@ This parameter will overwrite the original instance tag list. To add new tags, y
         if (source.ImageFamily != null) {
             this.ImageFamily = new String(source.ImageFamily);
         }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
     }
 
 
@@ -826,6 +852,7 @@ This parameter will overwrite the original instance tag list. To add new tags, y
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
 
     }
 }

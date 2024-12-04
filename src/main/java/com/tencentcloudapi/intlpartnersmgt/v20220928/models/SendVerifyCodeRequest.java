@@ -33,6 +33,7 @@ Parameter value is not allowed to be 7,380,86.
 
     /**
     * Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
     */
     @SerializedName("PhoneNum")
     @Expose
@@ -59,8 +60,10 @@ Parameter value is not allowed to be 7,380,86.
     }
 
     /**
-     * Get Mobile number. 
+     * Get Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number. 
      * @return PhoneNum Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
      */
     public String getPhoneNum() {
         return this.PhoneNum;
@@ -68,7 +71,9 @@ Parameter value is not allowed to be 7,380,86.
 
     /**
      * Set Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
      * @param PhoneNum Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
      */
     public void setPhoneNum(String PhoneNum) {
         this.PhoneNum = PhoneNum;
