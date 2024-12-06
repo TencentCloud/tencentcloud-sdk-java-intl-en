@@ -454,7 +454,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Number of sensitive data items 
      * @return SentiveInfoCnt Number of sensitive data items
+     * @deprecated
      */
+    @Deprecated
     public Long getSentiveInfoCnt() {
         return this.SentiveInfoCnt;
     }
@@ -462,7 +464,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Number of sensitive data items
      * @param SentiveInfoCnt Number of sensitive data items
+     * @deprecated
      */
+    @Deprecated
     public void setSentiveInfoCnt(Long SentiveInfoCnt) {
         this.SentiveInfoCnt = SentiveInfoCnt;
     }

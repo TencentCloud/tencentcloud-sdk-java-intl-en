@@ -178,7 +178,9 @@ public class CreateAssetImageScanSettingRequest extends AbstractModel {
     /**
      * Get All images 
      * @return All All images
+     * @deprecated
      */
+    @Deprecated
     public Boolean getAll() {
         return this.All;
     }
@@ -186,7 +188,9 @@ public class CreateAssetImageScanSettingRequest extends AbstractModel {
     /**
      * Set All images
      * @param All All images
+     * @deprecated
      */
+    @Deprecated
     public void setAll(Boolean All) {
         this.All = All;
     }

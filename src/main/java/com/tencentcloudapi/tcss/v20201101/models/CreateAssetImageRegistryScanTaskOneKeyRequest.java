@@ -54,7 +54,9 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
     /**
      * Get Whether to scan all images 
      * @return All Whether to scan all images
+     * @deprecated
      */
+    @Deprecated
     public Boolean getAll() {
         return this.All;
     }
@@ -62,7 +64,9 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
     /**
      * Set Whether to scan all images
      * @param All Whether to scan all images
+     * @deprecated
      */
+    @Deprecated
     public void setAll(Boolean All) {
         this.All = All;
     }

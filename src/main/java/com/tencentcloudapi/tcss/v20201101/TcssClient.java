@@ -735,7 +735,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to remove the specified check item from the allowlist.
+     *产品重构优化，这几个接口已经没有调用了
+
+This API is used to remove the specified check item from the allowlist.
      * @param req DeleteCompliancePolicyItemFromWhitelistRequest
      * @return DeleteCompliancePolicyItemFromWhitelistResponse
      * @throws TencentCloudSDKException
@@ -900,7 +902,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query and export the list of abnormal process events at runtime.
+     *接口已废弃
+
+This API is used to query and export the list of abnormal process events at runtime.
      * @param req DescribeAbnormalProcessEventsExportRequest
      * @return DescribeAbnormalProcessEventsExportResponse
      * @throws TencentCloudSDKException
@@ -944,7 +948,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query and export the list of abnormal process policies at runtime.
+     *接口已废弃
+
+This API is used to query and export the list of abnormal process policies at runtime.
      * @param req DescribeAbnormalProcessRulesExportRequest
      * @return DescribeAbnormalProcessRulesExportResponse
      * @throws TencentCloudSDKException
@@ -1010,7 +1016,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to export the list of access control policies at runtime.
+     *接口已废弃
+
+This API is used to export the list of access control policies at runtime.
      * @param req DescribeAccessControlRulesExportRequest
      * @return DescribeAccessControlRulesExportResponse
      * @throws TencentCloudSDKException
@@ -1208,7 +1216,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to export the list of images.
+     *接口已废弃
+
+This API is used to export the list of images.
      * @param req DescribeAssetImageListExportRequest
      * @return DescribeAssetImageListExportResponse
      * @throws TencentCloudSDKException
@@ -1791,7 +1801,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to export the list of container escape events.
+     *接口已废弃
+
+This API is used to export the list of container escape events.
      * @param req DescribeEscapeEventsExportRequest
      * @return DescribeEscapeEventsExportResponse
      * @throws TencentCloudSDKException
