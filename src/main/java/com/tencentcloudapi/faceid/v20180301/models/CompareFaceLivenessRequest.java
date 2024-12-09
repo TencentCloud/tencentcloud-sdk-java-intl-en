@@ -44,8 +44,8 @@ Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
     private String VideoBase64;
 
     /**
-    * The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
-`LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+    * The liveness detection type. Valid values: `ACTION`, and `SILENT`.
+`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
 Example value: "SILENT"
     */
     @SerializedName("LivenessType")
@@ -126,11 +126,11 @@ Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
     }
 
     /**
-     * Get The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
-`LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+     * Get The liveness detection type. Valid values: `ACTION`, and `SILENT`.
+`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
 Example value: "SILENT" 
-     * @return LivenessType The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
-`LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+     * @return LivenessType The liveness detection type. Valid values: `ACTION`, and `SILENT`.
+`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
 Example value: "SILENT"
      */
     public String getLivenessType() {
@@ -138,11 +138,11 @@ Example value: "SILENT"
     }
 
     /**
-     * Set The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
-`LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+     * Set The liveness detection type. Valid values: `ACTION`, and `SILENT`.
+`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
 Example value: "SILENT"
-     * @param LivenessType The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
-`LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+     * @param LivenessType The liveness detection type. Valid values: `ACTION`, and `SILENT`.
+`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
 Example value: "SILENT"
      */
     public void setLivenessType(String LivenessType) {

@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeClusterPodAssetsRequest extends AbstractModel {
 
     /**
+    * Member id
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
     * Filter conditions
     */
     @SerializedName("Filter")
     @Expose
     private Filter Filter;
+
+    /**
+     * Get Member id 
+     * @return MemberId Member id
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set Member id
+     * @param MemberId Member id
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
+    }
 
     /**
      * Get Filter conditions 
@@ -54,6 +77,12 @@ public class DescribeClusterPodAssetsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeClusterPodAssetsRequest(DescribeClusterPodAssetsRequest source) {
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
         if (source.Filter != null) {
             this.Filter = new Filter(source.Filter);
         }
@@ -64,6 +93,7 @@ public class DescribeClusterPodAssetsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
 
     }
