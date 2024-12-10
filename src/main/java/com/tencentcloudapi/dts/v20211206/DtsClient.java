@@ -41,8 +41,7 @@ public class DtsClient extends AbstractClient{
     /**
      *This API is used to complete a data migration task.
 For tasks in incremental migration mode, you need to call this API before migration gets ready for completion to stop migrating incremental data.
-If the task status queried through the `DescribeMigrationJobs` API is ready (`Status` = `readyComplete), you can call this API to complete the migration task.
-
+If the task status queried through the `DescribeMigrationJobs` API is ready (`Status` = `readyComplete`), you can call this API to complete the migration task.
      * @param req CompleteMigrateJobRequest
      * @return CompleteMigrateJobResponse
      * @throws TencentCloudSDKException

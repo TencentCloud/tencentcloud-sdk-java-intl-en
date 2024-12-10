@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class DstInfo extends AbstractModel {
 
     /**
-    * Target instance ID, such as cdb-jd92ijd8
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
     * Target instance region, such as ap-guangzhou
     */
     @SerializedName("Region")
     @Expose
     private String Region;
+
+    /**
+    * Target instance ID, such as cdb-jd92ijd8
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
 
     /**
     * Target instance VIP, which has been disused and does not need to be entered
@@ -73,22 +73,6 @@ public class DstInfo extends AbstractModel {
     private String Password;
 
     /**
-     * Get Target instance ID, such as cdb-jd92ijd8 
-     * @return InstanceId Target instance ID, such as cdb-jd92ijd8
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set Target instance ID, such as cdb-jd92ijd8
-     * @param InstanceId Target instance ID, such as cdb-jd92ijd8
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
-    /**
      * Get Target instance region, such as ap-guangzhou 
      * @return Region Target instance region, such as ap-guangzhou
      */
@@ -102,6 +86,22 @@ public class DstInfo extends AbstractModel {
      */
     public void setRegion(String Region) {
         this.Region = Region;
+    }
+
+    /**
+     * Get Target instance ID, such as cdb-jd92ijd8 
+     * @return InstanceId Target instance ID, such as cdb-jd92ijd8
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Target instance ID, such as cdb-jd92ijd8
+     * @param InstanceId Target instance ID, such as cdb-jd92ijd8
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
@@ -192,11 +192,11 @@ public class DstInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DstInfo(DstInfo source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
         if (source.Region != null) {
             this.Region = new String(source.Region);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
         if (source.Ip != null) {
             this.Ip = new String(source.Ip);
@@ -220,8 +220,8 @@ public class DstInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);

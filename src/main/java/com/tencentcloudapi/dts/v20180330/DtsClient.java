@@ -150,17 +150,6 @@ For a finance zone linkage, please use the domain name https://dts.ap-shenzhen-f
     }
 
     /**
-     *This API is used to query the purchasable subscription instance regions.
-     * @param req DescribeRegionConfRequest
-     * @return DescribeRegionConfResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRegionConfResponse DescribeRegionConf(DescribeRegionConfRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRegionConf", DescribeRegionConfResponse.class);
-    }
-
-    /**
      *This API is used to query the subscription instance configuration.
      * @param req DescribeSubscribeConfRequest
      * @return DescribeSubscribeConfResponse
