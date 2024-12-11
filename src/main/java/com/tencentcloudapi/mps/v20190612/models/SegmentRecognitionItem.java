@@ -52,6 +52,14 @@ public class SegmentRecognitionItem extends AbstractModel {
     private String SegmentUrl;
 
     /**
+    * Segment cover.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("CovImgUrl")
+    @Expose
+    private String CovImgUrl;
+
+    /**
     * Segment title.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -66,6 +74,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("Summary")
     @Expose
     private String Summary;
+
+    /**
+    * Segmentation keywords.
+    */
+    @SerializedName("Keywords")
+    @Expose
+    private String [] Keywords;
+
+    /**
+    * The start time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("BeginTime")
+    @Expose
+    private String BeginTime;
+
+    /**
+    * The end time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
 
     /**
      * Get  
@@ -132,6 +163,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Segment cover.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return CovImgUrl Segment cover.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getCovImgUrl() {
+        return this.CovImgUrl;
+    }
+
+    /**
+     * Set Segment cover.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param CovImgUrl Segment cover.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setCovImgUrl(String CovImgUrl) {
+        this.CovImgUrl = CovImgUrl;
+    }
+
+    /**
      * Get Segment title.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Title Segment title.
@@ -171,6 +222,62 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Summary = Summary;
     }
 
+    /**
+     * Get Segmentation keywords. 
+     * @return Keywords Segmentation keywords.
+     */
+    public String [] getKeywords() {
+        return this.Keywords;
+    }
+
+    /**
+     * Set Segmentation keywords.
+     * @param Keywords Segmentation keywords.
+     */
+    public void setKeywords(String [] Keywords) {
+        this.Keywords = Keywords;
+    }
+
+    /**
+     * Get The start time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return BeginTime The start time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getBeginTime() {
+        return this.BeginTime;
+    }
+
+    /**
+     * Set The start time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param BeginTime The start time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setBeginTime(String BeginTime) {
+        this.BeginTime = BeginTime;
+    }
+
+    /**
+     * Get The end time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return EndTime The end time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set The end time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param EndTime The end time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
     public SegmentRecognitionItem() {
     }
 
@@ -191,11 +298,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SegmentUrl != null) {
             this.SegmentUrl = new String(source.SegmentUrl);
         }
+        if (source.CovImgUrl != null) {
+            this.CovImgUrl = new String(source.CovImgUrl);
+        }
         if (source.Title != null) {
             this.Title = new String(source.Title);
         }
         if (source.Summary != null) {
             this.Summary = new String(source.Summary);
+        }
+        if (source.Keywords != null) {
+            this.Keywords = new String[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new String(source.Keywords[i]);
+            }
+        }
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
         }
     }
 
@@ -208,8 +330,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         this.setParamSimple(map, prefix + "SegmentUrl", this.SegmentUrl);
+        this.setParamSimple(map, prefix + "CovImgUrl", this.CovImgUrl);
         this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamSimple(map, prefix + "Summary", this.Summary);
+        this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+        this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

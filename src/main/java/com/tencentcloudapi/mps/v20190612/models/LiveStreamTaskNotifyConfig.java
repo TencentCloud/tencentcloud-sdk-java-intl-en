@@ -24,13 +24,23 @@ import java.util.HashMap;
 public class LiveStreamTaskNotifyConfig extends AbstractModel {
 
     /**
-    * The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+    * Notification type:
 
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+"CMQ": Callback messages are written to the CMQ queue; 
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://intl.cloud.tencent.com/document/product/862/39229?from_cn_redirect=1).
+
+<font color="red">Note: If left blank, it is CMQ by default. To use the other type, you need to fill in the corresponding type value.</font>
     */
     @SerializedName("NotifyType")
     @Expose
     private String NotifyType;
+
+    /**
+    * HTTP callback URL, required if `NotifyType` is set to `URL`
+    */
+    @SerializedName("NotifyUrl")
+    @Expose
+    private String NotifyUrl;
 
     /**
     * CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
@@ -61,13 +71,6 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
     private String TopicName;
 
     /**
-    * HTTP callback URL, required if `NotifyType` is set to `URL`
-    */
-    @SerializedName("NotifyUrl")
-    @Expose
-    private String NotifyUrl;
-
-    /**
     * Key used to generate a callback signature.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -76,27 +79,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String NotifyKey;
 
     /**
-     * Get The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+     * Get Notification type:
 
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font> 
-     * @return NotifyType The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+"CMQ": Callback messages are written to the CMQ queue; 
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://intl.cloud.tencent.com/document/product/862/39229?from_cn_redirect=1).
 
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+<font color="red">Note: If left blank, it is CMQ by default. To use the other type, you need to fill in the corresponding type value.</font> 
+     * @return NotifyType Notification type:
+
+"CMQ": Callback messages are written to the CMQ queue; 
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://intl.cloud.tencent.com/document/product/862/39229?from_cn_redirect=1).
+
+<font color="red">Note: If left blank, it is CMQ by default. To use the other type, you need to fill in the corresponding type value.</font>
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+     * Set Notification type:
 
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
-     * @param NotifyType The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+"CMQ": Callback messages are written to the CMQ queue; 
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://intl.cloud.tencent.com/document/product/862/39229?from_cn_redirect=1).
 
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+<font color="red">Note: If left blank, it is CMQ by default. To use the other type, you need to fill in the corresponding type value.</font>
+     * @param NotifyType Notification type:
+
+"CMQ": Callback messages are written to the CMQ queue; 
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://intl.cloud.tencent.com/document/product/862/39229?from_cn_redirect=1).
+
+<font color="red">Note: If left blank, it is CMQ by default. To use the other type, you need to fill in the corresponding type value.</font>
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
+    }
+
+    /**
+     * Get HTTP callback URL, required if `NotifyType` is set to `URL` 
+     * @return NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+     */
+    public String getNotifyUrl() {
+        return this.NotifyUrl;
+    }
+
+    /**
+     * Set HTTP callback URL, required if `NotifyType` is set to `URL`
+     * @param NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+     */
+    public void setNotifyUrl(String NotifyUrl) {
+        this.NotifyUrl = NotifyUrl;
     }
 
     /**
@@ -164,22 +195,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get HTTP callback URL, required if `NotifyType` is set to `URL` 
-     * @return NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
-     */
-    public String getNotifyUrl() {
-        return this.NotifyUrl;
-    }
-
-    /**
-     * Set HTTP callback URL, required if `NotifyType` is set to `URL`
-     * @param NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
-     */
-    public void setNotifyUrl(String NotifyUrl) {
-        this.NotifyUrl = NotifyUrl;
-    }
-
-    /**
      * Get Key used to generate a callback signature.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return NotifyKey Key used to generate a callback signature.
@@ -210,6 +225,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.NotifyType != null) {
             this.NotifyType = new String(source.NotifyType);
         }
+        if (source.NotifyUrl != null) {
+            this.NotifyUrl = new String(source.NotifyUrl);
+        }
         if (source.CmqModel != null) {
             this.CmqModel = new String(source.CmqModel);
         }
@@ -222,9 +240,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TopicName != null) {
             this.TopicName = new String(source.TopicName);
         }
-        if (source.NotifyUrl != null) {
-            this.NotifyUrl = new String(source.NotifyUrl);
-        }
         if (source.NotifyKey != null) {
             this.NotifyKey = new String(source.NotifyKey);
         }
@@ -236,11 +251,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
+        this.setParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
         this.setParamSimple(map, prefix + "CmqModel", this.CmqModel);
         this.setParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
-        this.setParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
         this.setParamSimple(map, prefix + "NotifyKey", this.NotifyKey);
 
     }

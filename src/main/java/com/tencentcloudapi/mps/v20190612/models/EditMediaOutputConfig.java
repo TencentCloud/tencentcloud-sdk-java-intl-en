@@ -32,8 +32,11 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String Container;
 
     /**
-    * The clip mode. Valid values: `normal` (default), `fast`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Editing mode. Optional values:
+normal (default): Precise editing
+fast: Fast editing, with faster processing speed but lower precision to some extent
+Note: fast only supports individual files, and the default output transcoding format of normal is h264.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -60,20 +63,32 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get The clip mode. Valid values: `normal` (default), `fast`.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Type The clip mode. Valid values: `normal` (default), `fast`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Editing mode. Optional values:
+normal (default): Precise editing
+fast: Fast editing, with faster processing speed but lower precision to some extent
+Note: fast only supports individual files, and the default output transcoding format of normal is h264.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Type Editing mode. Optional values:
+normal (default): Precise editing
+fast: Fast editing, with faster processing speed but lower precision to some extent
+Note: fast only supports individual files, and the default output transcoding format of normal is h264.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The clip mode. Valid values: `normal` (default), `fast`.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Type The clip mode. Valid values: `normal` (default), `fast`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Editing mode. Optional values:
+normal (default): Precise editing
+fast: Fast editing, with faster processing speed but lower precision to some extent
+Note: fast only supports individual files, and the default output transcoding format of normal is h264.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Type Editing mode. Optional values:
+normal (default): Precise editing
+fast: Fast editing, with faster processing speed but lower precision to some extent
+Note: fast only supports individual files, and the default output transcoding format of normal is h264.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;

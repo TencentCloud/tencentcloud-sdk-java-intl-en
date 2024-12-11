@@ -293,6 +293,48 @@ Note: This field may return null, indicating that no valid value can be obtained
     private SegmentSpecificInfo SegmentSpecificInfo;
 
     /**
+    * Whether to enable scenario-based settings for the template 
+0: disable 
+1: enable 
+ 
+Default value: 0	
+	
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ScenarioBased")
+    @Expose
+    private Long ScenarioBased;
+
+    /**
+    * Video scenario. Optional values: 
+normal: General transcoding scenario: General transcoding and compression scenario.
+pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+Default value: normal
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private String SceneType;
+
+    /**
+    * Transcoding policy. Optional values: 
+ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+standard_compress: Comprehensively optimal: The compression ratio and image quality are balanced, and files are compressed as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Priority is given to reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Priority is given to ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+Default value: standard_compress 
+Note: If you need to watch videos on TV, it is recommended no to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("CompressType")
+    @Expose
+    private String CompressType;
+
+    /**
      * Get Encoding format for video streams. Optional values:
 <li>h264: H.264 encoding</li>
 <li>h265: H.265 encoding</li>
@@ -1080,6 +1122,138 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.SegmentSpecificInfo = SegmentSpecificInfo;
     }
 
+    /**
+     * Get Whether to enable scenario-based settings for the template 
+0: disable 
+1: enable 
+ 
+Default value: 0	
+	
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return ScenarioBased Whether to enable scenario-based settings for the template 
+0: disable 
+1: enable 
+ 
+Default value: 0	
+	
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Long getScenarioBased() {
+        return this.ScenarioBased;
+    }
+
+    /**
+     * Set Whether to enable scenario-based settings for the template 
+0: disable 
+1: enable 
+ 
+Default value: 0	
+	
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ScenarioBased Whether to enable scenario-based settings for the template 
+0: disable 
+1: enable 
+ 
+Default value: 0	
+	
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setScenarioBased(Long ScenarioBased) {
+        this.ScenarioBased = ScenarioBased;
+    }
+
+    /**
+     * Get Video scenario. Optional values: 
+normal: General transcoding scenario: General transcoding and compression scenario.
+pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+Default value: normal
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SceneType Video scenario. Optional values: 
+normal: General transcoding scenario: General transcoding and compression scenario.
+pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+Default value: normal
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set Video scenario. Optional values: 
+normal: General transcoding scenario: General transcoding and compression scenario.
+pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+Default value: normal
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SceneType Video scenario. Optional values: 
+normal: General transcoding scenario: General transcoding and compression scenario.
+pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+Default value: normal
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setSceneType(String SceneType) {
+        this.SceneType = SceneType;
+    }
+
+    /**
+     * Get Transcoding policy. Optional values: 
+ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+standard_compress: Comprehensively optimal: The compression ratio and image quality are balanced, and files are compressed as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Priority is given to reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Priority is given to ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+Default value: standard_compress 
+Note: If you need to watch videos on TV, it is recommended no to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return CompressType Transcoding policy. Optional values: 
+ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+standard_compress: Comprehensively optimal: The compression ratio and image quality are balanced, and files are compressed as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Priority is given to reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Priority is given to ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+Default value: standard_compress 
+Note: If you need to watch videos on TV, it is recommended no to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getCompressType() {
+        return this.CompressType;
+    }
+
+    /**
+     * Set Transcoding policy. Optional values: 
+ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+standard_compress: Comprehensively optimal: The compression ratio and image quality are balanced, and files are compressed as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Priority is given to reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Priority is given to ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+Default value: standard_compress 
+Note: If you need to watch videos on TV, it is recommended no to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param CompressType Transcoding policy. Optional values: 
+ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+standard_compress: Comprehensively optimal: The compression ratio and image quality are balanced, and files are compressed as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Priority is given to reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Priority is given to ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+Default value: standard_compress 
+Note: If you need to watch videos on TV, it is recommended no to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setCompressType(String CompressType) {
+        this.CompressType = CompressType;
+    }
+
     public VideoTemplateInfo() {
     }
 
@@ -1160,6 +1334,15 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.SegmentSpecificInfo != null) {
             this.SegmentSpecificInfo = new SegmentSpecificInfo(source.SegmentSpecificInfo);
         }
+        if (source.ScenarioBased != null) {
+            this.ScenarioBased = new Long(source.ScenarioBased);
+        }
+        if (source.SceneType != null) {
+            this.SceneType = new String(source.SceneType);
+        }
+        if (source.CompressType != null) {
+            this.CompressType = new String(source.CompressType);
+        }
     }
 
 
@@ -1191,6 +1374,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "RawPts", this.RawPts);
         this.setParamSimple(map, prefix + "Compress", this.Compress);
         this.setParamObj(map, prefix + "SegmentSpecificInfo.", this.SegmentSpecificInfo);
+        this.setParamSimple(map, prefix + "ScenarioBased", this.ScenarioBased);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
+        this.setParamSimple(map, prefix + "CompressType", this.CompressType);
 
     }
 }

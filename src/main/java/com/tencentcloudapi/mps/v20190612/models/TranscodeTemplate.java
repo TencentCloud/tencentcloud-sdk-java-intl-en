@@ -136,6 +136,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private EnhanceConfig EnhanceConfig;
 
     /**
+    * Transcoding template alias.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("AliasName")
+    @Expose
+    private String AliasName;
+
+    /**
      * Get Unique ID of a transcoding template. 
      * @return Definition Unique ID of a transcoding template.
      */
@@ -415,6 +423,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.EnhanceConfig = EnhanceConfig;
     }
 
+    /**
+     * Get Transcoding template alias.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return AliasName Transcoding template alias.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getAliasName() {
+        return this.AliasName;
+    }
+
+    /**
+     * Set Transcoding template alias.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param AliasName Transcoding template alias.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setAliasName(String AliasName) {
+        this.AliasName = AliasName;
+    }
+
     public TranscodeTemplate() {
     }
 
@@ -465,6 +493,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.EnhanceConfig != null) {
             this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
         }
+        if (source.AliasName != null) {
+            this.AliasName = new String(source.AliasName);
+        }
     }
 
 
@@ -486,6 +517,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
+        this.setParamSimple(map, prefix + "AliasName", this.AliasName);
 
     }
 }

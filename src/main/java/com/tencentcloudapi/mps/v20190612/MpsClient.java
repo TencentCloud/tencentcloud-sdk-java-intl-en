@@ -862,6 +862,19 @@ Instead of initiating a video processing task, this API is used to help generate
     }
 
     /**
+     *This API is used to initiate image processing. Its features include:
+1. Format conversion;
+2. Image enhancement;
+     * @param req ProcessImageRequest
+     * @return ProcessImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ProcessImageResponse ProcessImage(ProcessImageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ProcessImage", ProcessImageResponse.class);
+    }
+
+    /**
      *This API is used to initiate live stream processing tasks. Such tasks may include the following:
 
 * Intelligent content moderation (detection of pornographic content in images and audio, detection of sensitive information)

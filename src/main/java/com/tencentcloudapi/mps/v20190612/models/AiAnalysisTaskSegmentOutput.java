@@ -31,6 +31,14 @@ public class AiAnalysisTaskSegmentOutput extends AbstractModel {
     private SegmentRecognitionItem [] SegmentSet;
 
     /**
+    * Video abstract, used for offline scenarios.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Abstract")
+    @Expose
+    private String Abstract;
+
+    /**
      * Get Intelligent splitting sub-segment list. 
      * @return SegmentSet Intelligent splitting sub-segment list.
      */
@@ -44,6 +52,26 @@ public class AiAnalysisTaskSegmentOutput extends AbstractModel {
      */
     public void setSegmentSet(SegmentRecognitionItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
+    }
+
+    /**
+     * Get Video abstract, used for offline scenarios.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Abstract Video abstract, used for offline scenarios.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getAbstract() {
+        return this.Abstract;
+    }
+
+    /**
+     * Set Video abstract, used for offline scenarios.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Abstract Video abstract, used for offline scenarios.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setAbstract(String Abstract) {
+        this.Abstract = Abstract;
     }
 
     public AiAnalysisTaskSegmentOutput() {
@@ -60,6 +88,9 @@ public class AiAnalysisTaskSegmentOutput extends AbstractModel {
                 this.SegmentSet[i] = new SegmentRecognitionItem(source.SegmentSet[i]);
             }
         }
+        if (source.Abstract != null) {
+            this.Abstract = new String(source.Abstract);
+        }
     }
 
 
@@ -68,6 +99,7 @@ public class AiAnalysisTaskSegmentOutput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+        this.setParamSimple(map, prefix + "Abstract", this.Abstract);
 
     }
 }
