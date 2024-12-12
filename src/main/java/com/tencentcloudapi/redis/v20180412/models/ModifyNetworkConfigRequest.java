@@ -71,7 +71,7 @@ public class ModifyNetworkConfigRequest extends AbstractModel {
     * Retention duration of the original private IPv4 address.
 - Unit: day.
 - Valid values: 0, 1, 2, 3, 7, and 15.
-
+**Note**: If the retention duration is not set or set to 0, the original network address will be released immediately.
     */
     @SerializedName("Recycle")
     @Expose
@@ -204,11 +204,11 @@ public class ModifyNetworkConfigRequest extends AbstractModel {
      * Get Retention duration of the original private IPv4 address.
 - Unit: day.
 - Valid values: 0, 1, 2, 3, 7, and 15.
- 
+**Note**: If the retention duration is not set or set to 0, the original network address will be released immediately. 
      * @return Recycle Retention duration of the original private IPv4 address.
 - Unit: day.
 - Valid values: 0, 1, 2, 3, 7, and 15.
-
+**Note**: If the retention duration is not set or set to 0, the original network address will be released immediately.
      */
     public Long getRecycle() {
         return this.Recycle;
@@ -218,11 +218,11 @@ public class ModifyNetworkConfigRequest extends AbstractModel {
      * Set Retention duration of the original private IPv4 address.
 - Unit: day.
 - Valid values: 0, 1, 2, 3, 7, and 15.
-
+**Note**: If the retention duration is not set or set to 0, the original network address will be released immediately.
      * @param Recycle Retention duration of the original private IPv4 address.
 - Unit: day.
 - Valid values: 0, 1, 2, 3, 7, and 15.
-
+**Note**: If the retention duration is not set or set to 0, the original network address will be released immediately.
      */
     public void setRecycle(Long Recycle) {
         this.Recycle = Recycle;
