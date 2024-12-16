@@ -51,6 +51,9 @@ public enum TeoErrorCode {
     // The edge client certificate has expired. It is not supported to issue expired certificates for the time being.
      FAILEDOPERATION_EDGECLIENTCERTIFICATEHASEXPIRED("FailedOperation.EdgeClientCertificateHasExpired"),
      
+    // 
+     FAILEDOPERATION_FAILEDTOCALLDNSPOD("FailedOperation.FailedToCallDNSPod"),
+     
     // Another task is being deployed. Please try again later.
      FAILEDOPERATION_FUNCTIONDEPLOYING("FailedOperation.FunctionDeploying"),
      
@@ -95,9 +98,6 @@ public enum TeoErrorCode {
      
     // Failed to get configuration
      INTERNALERROR_DOMAINCONFIG("InternalError.DomainConfig"),
-     
-    // Failed to call DNSPod. Please try again later. If the issue persists, please contact the intelligent customer service or submit a ticket.
-     INTERNALERROR_FAILEDTOCALLDNSPOD("InternalError.FailedToCallDNSPod"),
      
     // Failed to generate an upload link.
      INTERNALERROR_FAILEDTOGENERATEURL("InternalError.FailedToGenerateUrl"),

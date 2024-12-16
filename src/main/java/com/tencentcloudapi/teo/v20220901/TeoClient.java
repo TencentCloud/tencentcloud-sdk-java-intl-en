@@ -974,6 +974,17 @@ This API is used to query the configuration information of an IP group, includin
     }
 
     /**
+     *This API is used to query the results of site configuration import via API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+     * @param req DescribeZoneConfigImportResultRequest
+     * @return DescribeZoneConfigImportResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZoneConfigImportResultResponse DescribeZoneConfigImportResult(DescribeZoneConfigImportResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeZoneConfigImportResult", DescribeZoneConfigImportResultResponse.class);
+    }
+
+    /**
      *This API is used to query the site configuration.
      * @param req DescribeZoneSettingRequest
      * @return DescribeZoneSettingResponse
@@ -1036,6 +1047,17 @@ A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/
     }
 
     /**
+     *This API is used to export site configuration . The exported configuration is used for import via the API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+     * @param req ExportZoneConfigRequest
+     * @return ExportZoneConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportZoneConfigResponse ExportZoneConfig(ExportZoneConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportZoneConfig", ExportZoneConfigResponse.class);
+    }
+
+    /**
      *This API is used to operate the runtime environment of an edge function. It supports related settings for environment variables.
 After the environment variables are set, they can be used in the function code. For details, see [Edge Functions Referencing Environment Variables](https://intl.cloud.tencent.com/document/product/1552/109151?from_cn_redirect=1#0151fd9a-8b0e-407b-ae37-54553a60ded6).
      * @param req HandleFunctionRuntimeEnvironmentRequest
@@ -1056,6 +1078,17 @@ After the environment variables are set, they can be used in the function code. 
     public IdentifyZoneResponse IdentifyZone(IdentifyZoneRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "IdentifyZone", IdentifyZoneResponse.class);
+    }
+
+    /**
+     *This API is used to quickly import site configuration files. After the import is initiated, the API will return the corresponding task ID (TaskId). Users need to use the site configuration import result query API (DescribeZoneConfigImportResult) to obtain the results of this import task. This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+     * @param req ImportZoneConfigRequest
+     * @return ImportZoneConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportZoneConfigResponse ImportZoneConfig(ImportZoneConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportZoneConfig", ImportZoneConfigResponse.class);
     }
 
     /**

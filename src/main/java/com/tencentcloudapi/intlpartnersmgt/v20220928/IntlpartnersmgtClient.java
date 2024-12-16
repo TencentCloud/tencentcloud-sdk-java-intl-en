@@ -299,6 +299,17 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the product list information within the specified policy range. To call this API, contact your account manager to add it to the allowlist.
+     * @param req QueryPolicyProductListByCodeRequest
+     * @return QueryPolicyProductListByCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryPolicyProductListByCodeResponse QueryPolicyProductListByCode(QueryPolicyProductListByCodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryPolicyProductListByCode", QueryPolicyProductListByCodeResponse.class);
+    }
+
+    /**
      *This API is used to query the voucher quota based on the customer UIN.
      * @param req QueryVoucherAmountByUinRequest
      * @return QueryVoucherAmountByUinResponse
