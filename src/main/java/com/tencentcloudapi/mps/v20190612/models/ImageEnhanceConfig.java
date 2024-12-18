@@ -25,28 +25,31 @@ public class ImageEnhanceConfig extends AbstractModel {
 
     /**
     * Super-resolution configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+
     */
     @SerializedName("SuperResolution")
     @Expose
     private SuperResolutionConfig SuperResolution;
 
     /**
-    * 
+    * Color enhancement configuration.
+
     */
     @SerializedName("ColorEnhance")
     @Expose
     private ColorEnhanceConfig ColorEnhance;
 
     /**
-    * 
+    * Detail enhancement configuration.
+
     */
     @SerializedName("SharpEnhance")
     @Expose
     private SharpEnhanceConfig SharpEnhance;
 
     /**
-    * 
+    * Face enhancement configuration.
+
     */
     @SerializedName("FaceEnhance")
     @Expose
@@ -54,9 +57,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Super-resolution configuration.
-Note: This field may return null, indicating that no valid value can be obtained. 
+ 
      * @return SuperResolution Super-resolution configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+
      */
     public SuperResolutionConfig getSuperResolution() {
         return this.SuperResolution;
@@ -64,57 +67,69 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Super-resolution configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+
      * @param SuperResolution Super-resolution configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+
      */
     public void setSuperResolution(SuperResolutionConfig SuperResolution) {
         this.SuperResolution = SuperResolution;
     }
 
     /**
-     * Get  
-     * @return ColorEnhance 
+     * Get Color enhancement configuration.
+ 
+     * @return ColorEnhance Color enhancement configuration.
+
      */
     public ColorEnhanceConfig getColorEnhance() {
         return this.ColorEnhance;
     }
 
     /**
-     * Set 
-     * @param ColorEnhance 
+     * Set Color enhancement configuration.
+
+     * @param ColorEnhance Color enhancement configuration.
+
      */
     public void setColorEnhance(ColorEnhanceConfig ColorEnhance) {
         this.ColorEnhance = ColorEnhance;
     }
 
     /**
-     * Get  
-     * @return SharpEnhance 
+     * Get Detail enhancement configuration.
+ 
+     * @return SharpEnhance Detail enhancement configuration.
+
      */
     public SharpEnhanceConfig getSharpEnhance() {
         return this.SharpEnhance;
     }
 
     /**
-     * Set 
-     * @param SharpEnhance 
+     * Set Detail enhancement configuration.
+
+     * @param SharpEnhance Detail enhancement configuration.
+
      */
     public void setSharpEnhance(SharpEnhanceConfig SharpEnhance) {
         this.SharpEnhance = SharpEnhance;
     }
 
     /**
-     * Get  
-     * @return FaceEnhance 
+     * Get Face enhancement configuration.
+ 
+     * @return FaceEnhance Face enhancement configuration.
+
      */
     public FaceEnhanceConfig getFaceEnhance() {
         return this.FaceEnhance;
     }
 
     /**
-     * Set 
-     * @param FaceEnhance 
+     * Set Face enhancement configuration.
+
+     * @param FaceEnhance Face enhancement configuration.
+
      */
     public void setFaceEnhance(FaceEnhanceConfig FaceEnhance) {
         this.FaceEnhance = FaceEnhance;

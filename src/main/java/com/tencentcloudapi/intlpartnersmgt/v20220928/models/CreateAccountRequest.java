@@ -33,7 +33,7 @@ Valid values: `personal`, `company`.
 
     /**
     * Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
     */
     @SerializedName("Mail")
     @Expose
@@ -56,8 +56,8 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
     private String ConfirmPassword;
 
     /**
-    * Customer's mobile number. 
-The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+    * Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
 The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
     */
     @SerializedName("PhoneNum")
@@ -65,7 +65,7 @@ The system will perform binding limit verification of the mobile number you prov
     private String PhoneNum;
 
     /**
-    * Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+    * Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
 Parameter value is not allowed to be 7,380,86.
     */
     @SerializedName("CountryCode")
@@ -73,7 +73,7 @@ Parameter value is not allowed to be 7,380,86.
     private String CountryCode;
 
     /**
-    * Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+    * Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
     */
     @SerializedName("Area")
     @Expose
@@ -87,9 +87,8 @@ Parameter value is not allowed to be 7,380,86.
     private String Extended;
 
     /**
-    * Verification code. 
-It will be used to verify the validity of the mobile number you provide. 
-When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+    * VerifyCode. This field is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
     */
     @SerializedName("VerifyCode")
     @Expose
@@ -117,9 +116,9 @@ Valid values: `personal`, `company`.
 
     /**
      * Get Registered email address, which should be valid and correct.
-For example, account@qq.com. 
+such as "account@qq.com" 
      * @return Mail Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
      */
     public String getMail() {
         return this.Mail;
@@ -127,9 +126,9 @@ For example, account@qq.com.
 
     /**
      * Set Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
      * @param Mail Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
      */
     public void setMail(String Mail) {
         this.Mail = Mail;
@@ -176,11 +175,11 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
     }
 
     /**
-     * Get Customer's mobile number. 
-The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+     * Get Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
 The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number. 
-     * @return PhoneNum Customer's mobile number. 
-The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+     * @return PhoneNum Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
 The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
      */
     public String getPhoneNum() {
@@ -188,11 +187,11 @@ The system will perform binding limit verification of the mobile number you prov
     }
 
     /**
-     * Set Customer's mobile number. 
-The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+     * Set Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
 The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
-     * @param PhoneNum Customer's mobile number. 
-The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+     * @param PhoneNum Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
 The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
      */
     public void setPhoneNum(String PhoneNum) {
@@ -200,9 +199,9 @@ The system will perform binding limit verification of the mobile number you prov
     }
 
     /**
-     * Get Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+     * Get Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
 Parameter value is not allowed to be 7,380,86. 
-     * @return CountryCode Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+     * @return CountryCode Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
 Parameter value is not allowed to be 7,380,86.
      */
     public String getCountryCode() {
@@ -210,9 +209,9 @@ Parameter value is not allowed to be 7,380,86.
     }
 
     /**
-     * Set Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+     * Set Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
 Parameter value is not allowed to be 7,380,86.
-     * @param CountryCode Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+     * @param CountryCode Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
 Parameter value is not allowed to be 7,380,86.
      */
     public void setCountryCode(String CountryCode) {
@@ -220,16 +219,16 @@ Parameter value is not allowed to be 7,380,86.
     }
 
     /**
-     * Get Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`. 
-     * @return Area Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+     * Get Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`. 
+     * @return Area Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
-     * @param Area Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+     * Set Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
+     * @param Area Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
      */
     public void setArea(String Area) {
         this.Area = Area;
@@ -252,24 +251,20 @@ Parameter value is not allowed to be 7,380,86.
     }
 
     /**
-     * Get Verification code. 
-It will be used to verify the validity of the mobile number you provide. 
-When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it. 
-     * @return VerifyCode Verification code. 
-It will be used to verify the validity of the mobile number you provide. 
-When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+     * Get VerifyCode. This field is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters. 
+     * @return VerifyCode VerifyCode. This field is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
      */
     public String getVerifyCode() {
         return this.VerifyCode;
     }
 
     /**
-     * Set Verification code. 
-It will be used to verify the validity of the mobile number you provide. 
-When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
-     * @param VerifyCode Verification code. 
-It will be used to verify the validity of the mobile number you provide. 
-When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+     * Set VerifyCode. This field is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
+     * @param VerifyCode VerifyCode. This field is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
      */
     public void setVerifyCode(String VerifyCode) {
         this.VerifyCode = VerifyCode;
