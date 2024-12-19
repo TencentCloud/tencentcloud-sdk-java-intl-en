@@ -79,6 +79,22 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
+     *This API is used to apply for the allowlist. If needed, please contact your business representative.Directions:
+1.This API is used to create an invitation link, which you can send to a specified email address.
+2.Customer need to click the invitation link in the email, fill in and submit the required information.
+3.You can review the customer's application in customer management  after submission.
+
+Note:This API is used to manually send the invitation link to the customer if the specified email does not receive it.
+     * @param req CreateAndSendClientInvitationMailRequest
+     * @return CreateAndSendClientInvitationMailResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAndSendClientInvitationMailResponse CreateAndSendClientInvitationMail(CreateAndSendClientInvitationMailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAndSendClientInvitationMail", CreateAndSendClientInvitationMailResponse.class);
+    }
+
+    /**
      *This API is used to query bill details by customers.
      * @param req DescribeBillDetailRequest
      * @return DescribeBillDetailResponse
