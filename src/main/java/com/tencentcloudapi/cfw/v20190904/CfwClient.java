@@ -194,7 +194,6 @@ public class CfwClient extends AbstractClient{
 
     /**
      *This API is used to get blocked IP data.
-
      * @param req DescribeBlockByIpTimesListRequest
      * @return DescribeBlockByIpTimesListResponse
      * @throws TencentCloudSDKException

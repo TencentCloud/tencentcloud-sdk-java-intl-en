@@ -102,7 +102,7 @@ public enum TcmppErrorCode {
     // You do not have permissions to manage the admin account.
      FAILEDOPERATION_UNABLEOPERATEADMINACCOUNT("FailedOperation.UnableOperateAdminAccount"),
      
-    // Internal error
+    // Internal error.
      INTERNALERROR("InternalError"),
      
     // Incorrect parameter.

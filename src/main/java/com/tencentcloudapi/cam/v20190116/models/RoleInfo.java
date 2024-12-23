@@ -105,6 +105,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private RoleTags [] Tags;
 
     /**
+    * The Role Arn 
+    */
+    @SerializedName("RoleArn")
+    @Expose
+    private String RoleArn;
+
+    /**
      * Get Role ID 
      * @return RoleId Role ID
      */
@@ -296,6 +303,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.Tags = Tags;
     }
 
+    /**
+     * Get The Role Arn  
+     * @return RoleArn The Role Arn 
+     */
+    public String getRoleArn() {
+        return this.RoleArn;
+    }
+
+    /**
+     * Set The Role Arn 
+     * @param RoleArn The Role Arn 
+     */
+    public void setRoleArn(String RoleArn) {
+        this.RoleArn = RoleArn;
+    }
+
     public RoleInfo() {
     }
 
@@ -340,6 +363,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 this.Tags[i] = new RoleTags(source.Tags[i]);
             }
         }
+        if (source.RoleArn != null) {
+            this.RoleArn = new String(source.RoleArn);
+        }
     }
 
 
@@ -358,6 +384,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
         this.setParamSimple(map, prefix + "DeletionTaskId", this.DeletionTaskId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
 
     }
 }

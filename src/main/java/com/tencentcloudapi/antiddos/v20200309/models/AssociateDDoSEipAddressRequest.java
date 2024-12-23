@@ -31,7 +31,7 @@ public class AssociateDDoSEipAddressRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * EIP of the Anti-DDoS instance ID
+    * EIP of the Anti-DDoS instance ID.
     */
     @SerializedName("Eip")
     @Expose
@@ -68,16 +68,16 @@ public class AssociateDDoSEipAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get EIP of the Anti-DDoS instance ID 
-     * @return Eip EIP of the Anti-DDoS instance ID
+     * Get EIP of the Anti-DDoS instance ID. 
+     * @return Eip EIP of the Anti-DDoS instance ID.
      */
     public String getEip() {
         return this.Eip;
     }
 
     /**
-     * Set EIP of the Anti-DDoS instance ID
-     * @param Eip EIP of the Anti-DDoS instance ID
+     * Set EIP of the Anti-DDoS instance ID.
+     * @param Eip EIP of the Anti-DDoS instance ID.
      */
     public void setEip(String Eip) {
         this.Eip = Eip;

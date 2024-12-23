@@ -43,7 +43,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private MediaInputInfo Subtitle;
 
     /**
-    * Subtitle name.	
+    * Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
 Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("SubtitleName")
@@ -103,9 +104,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Subtitle name.	
+     * Get Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
 Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SubtitleName Subtitle name.	
+     * @return SubtitleName Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getSubtitleName() {
@@ -113,9 +116,11 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Set Subtitle name.	
+     * Set Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SubtitleName Subtitle name.	
+     * @param SubtitleName Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSubtitleName(String SubtitleName) {
