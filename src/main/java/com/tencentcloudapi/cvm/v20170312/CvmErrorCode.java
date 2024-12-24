@@ -255,7 +255,7 @@ public enum CvmErrorCode {
     // Invalid VPC IP address format.
      INVALIDPARAMETER_INVALIDIPFORMAT("InvalidParameter.InvalidIpFormat"),
      
-    // 
+    // The specified KMS key ID is invalid.
      INVALIDPARAMETER_INVALIDKMSKEYID("InvalidParameter.InvalidKmsKeyId"),
      
     // `ImageIds` and `Filters` cannot be specified at the same time.
@@ -1056,7 +1056,7 @@ public enum CvmErrorCode {
     // Configuration adjustment of the same type is not supported for instances with no charges when shut down.
      UNSUPPORTEDOPERATION_STOPPEDMODESTOPCHARGINGSAMEFAMILY("UnsupportedOperation.StoppedModeStopChargingSameFamily"),
      
-    // 
+    // The specified image does not support synchronization to an encrypted custom image.
      UNSUPPORTEDOPERATION_SYNCENCRYPTIMAGENOTSUPPORT("UnsupportedOperation.SyncEncryptImageNotSupport"),
      
     // 
