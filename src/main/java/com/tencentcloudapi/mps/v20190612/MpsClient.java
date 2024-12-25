@@ -105,6 +105,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a live recording template.
+     * @param req CreateLiveRecordTemplateRequest
+     * @return CreateLiveRecordTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(CreateLiveRecordTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLiveRecordTemplate", CreateLiveRecordTemplateResponse.class);
+    }
+
+    /**
      *This API is used to create image samples for video processing operations such as content recognition and inappropriate information detection with the help of technologies such as facial feature positioning.
      * @param req CreatePersonSampleRequest
      * @return CreatePersonSampleResponse
@@ -294,6 +305,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to delete a live recording template.
+     * @param req DeleteLiveRecordTemplateRequest
+     * @return DeleteLiveRecordTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveRecordTemplateResponse DeleteLiveRecordTemplate(DeleteLiveRecordTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLiveRecordTemplate", DeleteLiveRecordTemplateResponse.class);
+    }
+
+    /**
      *This API is used to delete image samples by image ID.
      * @param req DeletePersonSampleRequest
      * @return DeletePersonSampleResponse
@@ -456,6 +478,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(DescribeImageSpriteTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeImageSpriteTemplates", DescribeImageSpriteTemplatesResponse.class);
+    }
+
+    /**
+     *This API is used to get a live recording template.
+     * @param req DescribeLiveRecordTemplatesRequest
+     * @return DescribeLiveRecordTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(DescribeLiveRecordTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveRecordTemplates", DescribeLiveRecordTemplatesResponse.class);
     }
 
     /**
@@ -747,6 +780,17 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(ModifyImageSpriteTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyImageSpriteTemplate", ModifyImageSpriteTemplateResponse.class);
+    }
+
+    /**
+     *This API is used to modify a live recording template.
+     * @param req ModifyLiveRecordTemplateRequest
+     * @return ModifyLiveRecordTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(ModifyLiveRecordTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLiveRecordTemplate", ModifyLiveRecordTemplateResponse.class);
     }
 
     /**
