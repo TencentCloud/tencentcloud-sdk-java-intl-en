@@ -2255,6 +2255,39 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API (InquiryPriceAllocateAddresses) is used to query the price of purchasing EIPs.
+     * @param req InquiryPriceAllocateAddressesRequest
+     * @return InquiryPriceAllocateAddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceAllocateAddressesResponse InquiryPriceAllocateAddresses(InquiryPriceAllocateAddressesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquiryPriceAllocateAddresses", InquiryPriceAllocateAddressesResponse.class);
+    }
+
+    /**
+     *This API is used to query the price of modifying EIP bandwidth.
+     * @param req InquiryPriceModifyAddressesBandwidthRequest
+     * @return InquiryPriceModifyAddressesBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceModifyAddressesBandwidthResponse InquiryPriceModifyAddressesBandwidth(InquiryPriceModifyAddressesBandwidthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquiryPriceModifyAddressesBandwidth", InquiryPriceModifyAddressesBandwidthResponse.class);
+    }
+
+    /**
+     *This API (InquiryPriceRenewAddresses) is used to query the price of renewing prepaid EIPs.
+     * @param req InquiryPriceRenewAddressesRequest
+     * @return InquiryPriceRenewAddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceRenewAddressesResponse InquiryPriceRenewAddresses(InquiryPriceRenewAddressesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquiryPriceRenewAddresses", InquiryPriceRenewAddressesResponse.class);
+    }
+
+    /**
      *This API (InquiryPriceRenewVpnGateway) is used to query the price for VPN gateway renewal. Currently, only querying prices for IPSEC-type gateways is supported.
      * @param req InquiryPriceRenewVpnGatewayRequest
      * @return InquiryPriceRenewVpnGatewayResponse

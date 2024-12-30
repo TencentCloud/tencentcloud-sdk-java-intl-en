@@ -162,6 +162,17 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     }
 
     /**
+     *This API is used to create a DNS record.
+     * @param req CreateDnsRecordRequest
+     * @return CreateDnsRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDnsRecordResponse CreateDnsRecord(CreateDnsRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDnsRecord", CreateDnsRecordResponse.class);
+    }
+
+    /**
      *This API is used to create and deploy an edge function to EdgeOne edge nodes.
      * @param req CreateFunctionRequest
      * @return CreateFunctionResponse
@@ -385,6 +396,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DeleteCustomErrorPageResponse DeleteCustomErrorPage(DeleteCustomErrorPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCustomErrorPage", DeleteCustomErrorPageResponse.class);
+    }
+
+    /**
+     *This API is used to delete DNS records in batches.
+     * @param req DeleteDnsRecordsRequest
+     * @return DeleteDnsRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDnsRecordsResponse DeleteDnsRecords(DeleteDnsRecordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDnsRecords", DeleteDnsRecordsResponse.class);
     }
 
     /**
@@ -671,6 +693,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DescribeDeployHistoryResponse DescribeDeployHistory(DescribeDeployHistoryRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDeployHistory", DescribeDeployHistoryResponse.class);
+    }
+
+    /**
+     *This API is used to query DNS records. Paging, sorting and filtering are supported.
+     * @param req DescribeDnsRecordsRequest
+     * @return DescribeDnsRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDnsRecordsResponse DescribeDnsRecords(DescribeDnsRecordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDnsRecords", DescribeDnsRecordsResponse.class);
     }
 
     /**
@@ -1202,6 +1235,28 @@ After the environment variables are set, they can be used in the function code. 
     public ModifyCustomErrorPageResponse ModifyCustomErrorPage(ModifyCustomErrorPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCustomErrorPage", ModifyCustomErrorPageResponse.class);
+    }
+
+    /**
+     *You can use this interface to batch modify DNS records.
+     * @param req ModifyDnsRecordsRequest
+     * @return ModifyDnsRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDnsRecordsResponse ModifyDnsRecords(ModifyDnsRecordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDnsRecords", ModifyDnsRecordsResponse.class);
+    }
+
+    /**
+     *You can use this interface to batch modify the status of DNS records, enabling and disabling records in bulk.
+     * @param req ModifyDnsRecordsStatusRequest
+     * @return ModifyDnsRecordsStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDnsRecordsStatusResponse ModifyDnsRecordsStatus(ModifyDnsRecordsStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDnsRecordsStatus", ModifyDnsRecordsStatusResponse.class);
     }
 
     /**

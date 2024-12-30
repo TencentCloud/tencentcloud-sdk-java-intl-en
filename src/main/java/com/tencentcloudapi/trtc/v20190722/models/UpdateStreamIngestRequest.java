@@ -52,6 +52,13 @@ public class UpdateStreamIngestRequest extends AbstractModel {
     private Long Volume;
 
     /**
+    * Whether to pause, the default value of false indicates no pause. During the pause, the task is still in progress and is billed. If you want to terminate the task, please call the stop interface.
+    */
+    @SerializedName("IsPause")
+    @Expose
+    private Boolean IsPause;
+
+    /**
      * Get The SDKAppId of TRTC should be the same as the SDKAppId corresponding to the task room. 
      * @return SdkAppId The SDKAppId of TRTC should be the same as the SDKAppId corresponding to the task room.
      */
@@ -115,6 +122,22 @@ public class UpdateStreamIngestRequest extends AbstractModel {
         this.Volume = Volume;
     }
 
+    /**
+     * Get Whether to pause, the default value of false indicates no pause. During the pause, the task is still in progress and is billed. If you want to terminate the task, please call the stop interface. 
+     * @return IsPause Whether to pause, the default value of false indicates no pause. During the pause, the task is still in progress and is billed. If you want to terminate the task, please call the stop interface.
+     */
+    public Boolean getIsPause() {
+        return this.IsPause;
+    }
+
+    /**
+     * Set Whether to pause, the default value of false indicates no pause. During the pause, the task is still in progress and is billed. If you want to terminate the task, please call the stop interface.
+     * @param IsPause Whether to pause, the default value of false indicates no pause. During the pause, the task is still in progress and is billed. If you want to terminate the task, please call the stop interface.
+     */
+    public void setIsPause(Boolean IsPause) {
+        this.IsPause = IsPause;
+    }
+
     public UpdateStreamIngestRequest() {
     }
 
@@ -135,6 +158,9 @@ public class UpdateStreamIngestRequest extends AbstractModel {
         if (source.Volume != null) {
             this.Volume = new Long(source.Volume);
         }
+        if (source.IsPause != null) {
+            this.IsPause = new Boolean(source.IsPause);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class UpdateStreamIngestRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
         this.setParamSimple(map, prefix + "Volume", this.Volume);
+        this.setParamSimple(map, prefix + "IsPause", this.IsPause);
 
     }
 }
