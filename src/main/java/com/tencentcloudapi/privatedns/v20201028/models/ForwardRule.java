@@ -88,7 +88,6 @@ public class ForwardRule extends AbstractModel {
 
     /**
     * List of VPCs bound to the private domain.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VpcSet")
     @Expose
@@ -102,8 +101,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ZoneId;
 
     /**
-    * Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Tag
     */
     @SerializedName("Tags")
     @Expose
@@ -254,10 +252,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of VPCs bound to the private domain.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of VPCs bound to the private domain. 
      * @return VpcSet List of VPCs bound to the private domain.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public VpcInfo [] getVpcSet() {
         return this.VpcSet;
@@ -265,9 +261,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of VPCs bound to the private domain.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VpcSet List of VPCs bound to the private domain.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVpcSet(VpcInfo [] VpcSet) {
         this.VpcSet = VpcSet;
@@ -290,20 +284,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Tag.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag 
+     * @return Tags Tag
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Tag
+     * @param Tags Tag
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
