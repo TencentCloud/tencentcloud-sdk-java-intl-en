@@ -275,6 +275,13 @@ Currently, the supported languages are as follows. The English name of the langu
     private String NotifyMessage;
 
     /**
+    * 
+    */
+    @SerializedName("NotifyMaxCount")
+    @Expose
+    private Long NotifyMaxCount;
+
+    /**
     * <p>And VoiceType field needs to select one, here is to use your own custom TTS, VoiceType is some built-in sound qualities</p>
 <ul>
 <li>Tencent TTS<br>
@@ -1136,6 +1143,22 @@ Currently, the supported languages are as follows. The English name of the langu
     }
 
     /**
+     * Get  
+     * @return NotifyMaxCount 
+     */
+    public Long getNotifyMaxCount() {
+        return this.NotifyMaxCount;
+    }
+
+    /**
+     * Set 
+     * @param NotifyMaxCount 
+     */
+    public void setNotifyMaxCount(Long NotifyMaxCount) {
+        this.NotifyMaxCount = NotifyMaxCount;
+    }
+
+    /**
      * Get <p>And VoiceType field needs to select one, here is to use your own custom TTS, VoiceType is some built-in sound qualities</p>
 <ul>
 <li>Tencent TTS<br>
@@ -1534,6 +1557,9 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
         if (source.NotifyMessage != null) {
             this.NotifyMessage = new String(source.NotifyMessage);
         }
+        if (source.NotifyMaxCount != null) {
+            this.NotifyMaxCount = new Long(source.NotifyMaxCount);
+        }
         if (source.CustomTTSConfig != null) {
             this.CustomTTSConfig = new String(source.CustomTTSConfig);
         }
@@ -1563,6 +1589,7 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
         this.setParamSimple(map, prefix + "EndFunctionDesc", this.EndFunctionDesc);
         this.setParamSimple(map, prefix + "NotifyDuration", this.NotifyDuration);
         this.setParamSimple(map, prefix + "NotifyMessage", this.NotifyMessage);
+        this.setParamSimple(map, prefix + "NotifyMaxCount", this.NotifyMaxCount);
         this.setParamSimple(map, prefix + "CustomTTSConfig", this.CustomTTSConfig);
 
     }
