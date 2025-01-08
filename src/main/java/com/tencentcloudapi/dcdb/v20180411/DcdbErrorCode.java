@@ -111,6 +111,9 @@ public enum DcdbErrorCode {
     // Failed to create a process
      INTERNALERROR_CREATEFLOWERROR("InternalError.CreateFlowError"),
      
+    // Failed to create a task workflow.
+     INTERNALERROR_CREATEFLOWFAILED("InternalError.CreateFlowFailed"),
+     
     // No database data has changed.
      INTERNALERROR_DBROWSAFFECTEDERROR("InternalError.DBRowsAffectedError"),
      

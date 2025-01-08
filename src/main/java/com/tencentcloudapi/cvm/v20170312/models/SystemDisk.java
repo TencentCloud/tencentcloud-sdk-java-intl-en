@@ -24,15 +24,15 @@ import java.util.HashMap;
 public class SystemDisk extends AbstractModel {
 
     /**
-    * System disk type. For the restrictions on the system disk type, refer to [Storage Overview] (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value range:<br>
+    * System disk type. For the restrictions on the system disk type, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value values:<br>
 <li>LOCAL_BASIC: Local Disk</li>
-<li>LOCAL_SSD: Local SSD Disk</li>
-<li>CLOUD_BASIC: HDD Cloud Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
+<li>CLOUD_BASIC: Basic Cloud Disk</li>
 <li>CLOUD_SSD: Cloud SSD</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
 <li>CLOUD_BSSD: Balanced SSD</li>
 <li>CLOUD_HSSD: Enhanced SSD</li>
-<li>CLOUD_TSSD: ulTra SSD</li><br>
+<li>CLOUD_TSSD: Tremendous SSD</li><br>
 Default value: Current disk types with inventory available.
     */
     @SerializedName("DiskType")
@@ -72,25 +72,25 @@ Note: This field may return null, indicating that no valid value is found.
     private String DiskName;
 
     /**
-     * Get System disk type. For the restrictions on the system disk type, refer to [Storage Overview] (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value range:<br>
+     * Get System disk type. For the restrictions on the system disk type, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value values:<br>
 <li>LOCAL_BASIC: Local Disk</li>
-<li>LOCAL_SSD: Local SSD Disk</li>
-<li>CLOUD_BASIC: HDD Cloud Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
+<li>CLOUD_BASIC: Basic Cloud Disk</li>
 <li>CLOUD_SSD: Cloud SSD</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
 <li>CLOUD_BSSD: Balanced SSD</li>
 <li>CLOUD_HSSD: Enhanced SSD</li>
-<li>CLOUD_TSSD: ulTra SSD</li><br>
+<li>CLOUD_TSSD: Tremendous SSD</li><br>
 Default value: Current disk types with inventory available. 
-     * @return DiskType System disk type. For the restrictions on the system disk type, refer to [Storage Overview] (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value range:<br>
+     * @return DiskType System disk type. For the restrictions on the system disk type, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value values:<br>
 <li>LOCAL_BASIC: Local Disk</li>
-<li>LOCAL_SSD: Local SSD Disk</li>
-<li>CLOUD_BASIC: HDD Cloud Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
+<li>CLOUD_BASIC: Basic Cloud Disk</li>
 <li>CLOUD_SSD: Cloud SSD</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
 <li>CLOUD_BSSD: Balanced SSD</li>
 <li>CLOUD_HSSD: Enhanced SSD</li>
-<li>CLOUD_TSSD: ulTra SSD</li><br>
+<li>CLOUD_TSSD: Tremendous SSD</li><br>
 Default value: Current disk types with inventory available.
      */
     public String getDiskType() {
@@ -98,25 +98,25 @@ Default value: Current disk types with inventory available.
     }
 
     /**
-     * Set System disk type. For the restrictions on the system disk type, refer to [Storage Overview] (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value range:<br>
+     * Set System disk type. For the restrictions on the system disk type, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value values:<br>
 <li>LOCAL_BASIC: Local Disk</li>
-<li>LOCAL_SSD: Local SSD Disk</li>
-<li>CLOUD_BASIC: HDD Cloud Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
+<li>CLOUD_BASIC: Basic Cloud Disk</li>
 <li>CLOUD_SSD: Cloud SSD</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
 <li>CLOUD_BSSD: Balanced SSD</li>
 <li>CLOUD_HSSD: Enhanced SSD</li>
-<li>CLOUD_TSSD: ulTra SSD</li><br>
+<li>CLOUD_TSSD: Tremendous SSD</li><br>
 Default value: Current disk types with inventory available.
-     * @param DiskType System disk type. For the restrictions on the system disk type, refer to [Storage Overview] (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value range:<br>
+     * @param DiskType System disk type. For the restrictions on the system disk type, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value values:<br>
 <li>LOCAL_BASIC: Local Disk</li>
-<li>LOCAL_SSD: Local SSD Disk</li>
-<li>CLOUD_BASIC: HDD Cloud Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
+<li>CLOUD_BASIC: Basic Cloud Disk</li>
 <li>CLOUD_SSD: Cloud SSD</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
 <li>CLOUD_BSSD: Balanced SSD</li>
 <li>CLOUD_HSSD: Enhanced SSD</li>
-<li>CLOUD_TSSD: ulTra SSD</li><br>
+<li>CLOUD_TSSD: Tremendous SSD</li><br>
 Default value: Current disk types with inventory available.
      */
     public void setDiskType(String DiskType) {
