@@ -152,6 +152,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private JapanIDCard JapanIDCard;
 
     /**
+    * Bangladesh ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BangladeshIDCard")
+    @Expose
+    private BangladeshIDCard BangladeshIDCard;
+
+    /**
+    * Nigeria ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NigeriaIDCard")
+    @Expose
+    private NigeriaIDCard NigeriaIDCard;
+
+    /**
+    * Nigeria driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NigeriaDrivingLicense")
+    @Expose
+    private NigeriaDrivingLicense NigeriaDrivingLicense;
+
+    /**
+    * Pakistan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PakistanIDCard")
+    @Expose
+    private PakistanIDCard PakistanIDCard;
+
+    /**
+    * Pakistan driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PakistanDrivingLicense")
+    @Expose
+    private PakistanDrivingLicense PakistanDrivingLicense;
+
+    /**
      * Get Hong Kong ID Card
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return HKIDCard Hong Kong ID Card
@@ -471,6 +511,106 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.JapanIDCard = JapanIDCard;
     }
 
+    /**
+     * Get Bangladesh ID Card
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BangladeshIDCard Bangladesh ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public BangladeshIDCard getBangladeshIDCard() {
+        return this.BangladeshIDCard;
+    }
+
+    /**
+     * Set Bangladesh ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BangladeshIDCard Bangladesh ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBangladeshIDCard(BangladeshIDCard BangladeshIDCard) {
+        this.BangladeshIDCard = BangladeshIDCard;
+    }
+
+    /**
+     * Get Nigeria ID Card
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NigeriaIDCard Nigeria ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public NigeriaIDCard getNigeriaIDCard() {
+        return this.NigeriaIDCard;
+    }
+
+    /**
+     * Set Nigeria ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NigeriaIDCard Nigeria ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setNigeriaIDCard(NigeriaIDCard NigeriaIDCard) {
+        this.NigeriaIDCard = NigeriaIDCard;
+    }
+
+    /**
+     * Get Nigeria driving license
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NigeriaDrivingLicense Nigeria driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public NigeriaDrivingLicense getNigeriaDrivingLicense() {
+        return this.NigeriaDrivingLicense;
+    }
+
+    /**
+     * Set Nigeria driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NigeriaDrivingLicense Nigeria driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setNigeriaDrivingLicense(NigeriaDrivingLicense NigeriaDrivingLicense) {
+        this.NigeriaDrivingLicense = NigeriaDrivingLicense;
+    }
+
+    /**
+     * Get Pakistan ID Card
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PakistanIDCard Pakistan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public PakistanIDCard getPakistanIDCard() {
+        return this.PakistanIDCard;
+    }
+
+    /**
+     * Set Pakistan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PakistanIDCard Pakistan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPakistanIDCard(PakistanIDCard PakistanIDCard) {
+        this.PakistanIDCard = PakistanIDCard;
+    }
+
+    /**
+     * Get Pakistan driving license
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PakistanDrivingLicense Pakistan driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public PakistanDrivingLicense getPakistanDrivingLicense() {
+        return this.PakistanDrivingLicense;
+    }
+
+    /**
+     * Set Pakistan driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PakistanDrivingLicense Pakistan driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPakistanDrivingLicense(PakistanDrivingLicense PakistanDrivingLicense) {
+        this.PakistanDrivingLicense = PakistanDrivingLicense;
+    }
+
     public CardInfo() {
     }
 
@@ -527,6 +667,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.JapanIDCard != null) {
             this.JapanIDCard = new JapanIDCard(source.JapanIDCard);
         }
+        if (source.BangladeshIDCard != null) {
+            this.BangladeshIDCard = new BangladeshIDCard(source.BangladeshIDCard);
+        }
+        if (source.NigeriaIDCard != null) {
+            this.NigeriaIDCard = new NigeriaIDCard(source.NigeriaIDCard);
+        }
+        if (source.NigeriaDrivingLicense != null) {
+            this.NigeriaDrivingLicense = new NigeriaDrivingLicense(source.NigeriaDrivingLicense);
+        }
+        if (source.PakistanIDCard != null) {
+            this.PakistanIDCard = new PakistanIDCard(source.PakistanIDCard);
+        }
+        if (source.PakistanDrivingLicense != null) {
+            this.PakistanDrivingLicense = new PakistanDrivingLicense(source.PakistanDrivingLicense);
+        }
     }
 
 
@@ -550,6 +705,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "MacaoIDCard.", this.MacaoIDCard);
         this.setParamObj(map, prefix + "TaiWanIDCard.", this.TaiWanIDCard);
         this.setParamObj(map, prefix + "JapanIDCard.", this.JapanIDCard);
+        this.setParamObj(map, prefix + "BangladeshIDCard.", this.BangladeshIDCard);
+        this.setParamObj(map, prefix + "NigeriaIDCard.", this.NigeriaIDCard);
+        this.setParamObj(map, prefix + "NigeriaDrivingLicense.", this.NigeriaDrivingLicense);
+        this.setParamObj(map, prefix + "PakistanIDCard.", this.PakistanIDCard);
+        this.setParamObj(map, prefix + "PakistanDrivingLicense.", this.PakistanDrivingLicense);
 
     }
 }
