@@ -261,6 +261,20 @@ Currently, the supported languages are as follows. The English name of the langu
     private String EndFunctionDesc;
 
     /**
+    * 
+    */
+    @SerializedName("TransferFunctionEnable")
+    @Expose
+    private Boolean TransferFunctionEnable;
+
+    /**
+    * 
+    */
+    @SerializedName("TransferItems")
+    @Expose
+    private AITransferItem [] TransferItems;
+
+    /**
     * The duration after which the user hasn't spoken to trigger a notification, minimum 10 seconds, default 10 seconds
     */
     @SerializedName("NotifyDuration")
@@ -365,6 +379,13 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
     @SerializedName("CustomTTSConfig")
     @Expose
     private String CustomTTSConfig;
+
+    /**
+    * 
+    */
+    @SerializedName("PromptVariables")
+    @Expose
+    private Variable [] PromptVariables;
 
     /**
      * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
@@ -1111,6 +1132,38 @@ Currently, the supported languages are as follows. The English name of the langu
     }
 
     /**
+     * Get  
+     * @return TransferFunctionEnable 
+     */
+    public Boolean getTransferFunctionEnable() {
+        return this.TransferFunctionEnable;
+    }
+
+    /**
+     * Set 
+     * @param TransferFunctionEnable 
+     */
+    public void setTransferFunctionEnable(Boolean TransferFunctionEnable) {
+        this.TransferFunctionEnable = TransferFunctionEnable;
+    }
+
+    /**
+     * Get  
+     * @return TransferItems 
+     */
+    public AITransferItem [] getTransferItems() {
+        return this.TransferItems;
+    }
+
+    /**
+     * Set 
+     * @param TransferItems 
+     */
+    public void setTransferItems(AITransferItem [] TransferItems) {
+        this.TransferItems = TransferItems;
+    }
+
+    /**
      * Get The duration after which the user hasn't spoken to trigger a notification, minimum 10 seconds, default 10 seconds 
      * @return NotifyDuration The duration after which the user hasn't spoken to trigger a notification, minimum 10 seconds, default 10 seconds
      */
@@ -1486,6 +1539,22 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
         this.CustomTTSConfig = CustomTTSConfig;
     }
 
+    /**
+     * Get  
+     * @return PromptVariables 
+     */
+    public Variable [] getPromptVariables() {
+        return this.PromptVariables;
+    }
+
+    /**
+     * Set 
+     * @param PromptVariables 
+     */
+    public void setPromptVariables(Variable [] PromptVariables) {
+        this.PromptVariables = PromptVariables;
+    }
+
     public CreateAICallRequest() {
     }
 
@@ -1551,6 +1620,15 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
         if (source.EndFunctionDesc != null) {
             this.EndFunctionDesc = new String(source.EndFunctionDesc);
         }
+        if (source.TransferFunctionEnable != null) {
+            this.TransferFunctionEnable = new Boolean(source.TransferFunctionEnable);
+        }
+        if (source.TransferItems != null) {
+            this.TransferItems = new AITransferItem[source.TransferItems.length];
+            for (int i = 0; i < source.TransferItems.length; i++) {
+                this.TransferItems[i] = new AITransferItem(source.TransferItems[i]);
+            }
+        }
         if (source.NotifyDuration != null) {
             this.NotifyDuration = new Long(source.NotifyDuration);
         }
@@ -1562,6 +1640,12 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
         }
         if (source.CustomTTSConfig != null) {
             this.CustomTTSConfig = new String(source.CustomTTSConfig);
+        }
+        if (source.PromptVariables != null) {
+            this.PromptVariables = new Variable[source.PromptVariables.length];
+            for (int i = 0; i < source.PromptVariables.length; i++) {
+                this.PromptVariables[i] = new Variable(source.PromptVariables[i]);
+            }
         }
     }
 
@@ -1587,10 +1671,13 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
         this.setParamSimple(map, prefix + "InterruptSpeechDuration", this.InterruptSpeechDuration);
         this.setParamSimple(map, prefix + "EndFunctionEnable", this.EndFunctionEnable);
         this.setParamSimple(map, prefix + "EndFunctionDesc", this.EndFunctionDesc);
+        this.setParamSimple(map, prefix + "TransferFunctionEnable", this.TransferFunctionEnable);
+        this.setParamArrayObj(map, prefix + "TransferItems.", this.TransferItems);
         this.setParamSimple(map, prefix + "NotifyDuration", this.NotifyDuration);
         this.setParamSimple(map, prefix + "NotifyMessage", this.NotifyMessage);
         this.setParamSimple(map, prefix + "NotifyMaxCount", this.NotifyMaxCount);
         this.setParamSimple(map, prefix + "CustomTTSConfig", this.CustomTTSConfig);
+        this.setParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
 
     }
 }
