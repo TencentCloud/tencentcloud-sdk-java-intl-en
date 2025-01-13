@@ -501,6 +501,17 @@ To make authentication and throttling for a service take effect, you need to bin
     }
 
     /**
+     *Get the list of supported regions for dedicated instances
+     * @param req DescribeExclusiveInstanceRegionsRequest
+     * @return DescribeExclusiveInstanceRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExclusiveInstanceRegionsResponse DescribeExclusiveInstanceRegions(DescribeExclusiveInstanceRegionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExclusiveInstanceRegions", DescribeExclusiveInstanceRegionsResponse.class);
+    }
+
+    /**
      *This API is used to query IP policy details.
      * @param req DescribeIPStrategyRequest
      * @return DescribeIPStrategyResponse

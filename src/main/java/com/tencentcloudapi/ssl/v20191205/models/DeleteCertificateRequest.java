@@ -31,6 +31,13 @@ public class DeleteCertificateRequest extends AbstractModel {
     private String CertificateId;
 
     /**
+    * 
+    */
+    @SerializedName("IsCheckResource")
+    @Expose
+    private Boolean IsCheckResource;
+
+    /**
      * Get Certificate ID 
      * @return CertificateId Certificate ID
      */
@@ -46,6 +53,22 @@ public class DeleteCertificateRequest extends AbstractModel {
         this.CertificateId = CertificateId;
     }
 
+    /**
+     * Get  
+     * @return IsCheckResource 
+     */
+    public Boolean getIsCheckResource() {
+        return this.IsCheckResource;
+    }
+
+    /**
+     * Set 
+     * @param IsCheckResource 
+     */
+    public void setIsCheckResource(Boolean IsCheckResource) {
+        this.IsCheckResource = IsCheckResource;
+    }
+
     public DeleteCertificateRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DeleteCertificateRequest extends AbstractModel {
         if (source.CertificateId != null) {
             this.CertificateId = new String(source.CertificateId);
         }
+        if (source.IsCheckResource != null) {
+            this.IsCheckResource = new Boolean(source.IsCheckResource);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DeleteCertificateRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
+        this.setParamSimple(map, prefix + "IsCheckResource", this.IsCheckResource);
 
     }
 }
