@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GenerateReflectSequenceResponse extends AbstractModel {
 
     /**
-    * The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the identity verification process.
+    * The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the eKYC process.
     */
     @SerializedName("ReflectSequenceUrl")
     @Expose
@@ -45,16 +45,16 @@ public class GenerateReflectSequenceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the identity verification process. 
-     * @return ReflectSequenceUrl The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the identity verification process.
+     * Get The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the eKYC process. 
+     * @return ReflectSequenceUrl The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the eKYC process.
      */
     public String getReflectSequenceUrl() {
         return this.ReflectSequenceUrl;
     }
 
     /**
-     * Set The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the identity verification process.
-     * @param ReflectSequenceUrl The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the identity verification process.
+     * Set The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the eKYC process.
+     * @param ReflectSequenceUrl The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the eKYC process.
      */
     public void setReflectSequenceUrl(String ReflectSequenceUrl) {
         this.ReflectSequenceUrl = ReflectSequenceUrl;

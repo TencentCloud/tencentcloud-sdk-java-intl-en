@@ -24,182 +24,152 @@ import java.util.HashMap;
 public class CompareFaceLivenessRequest extends AbstractModel {
 
     /**
-    * Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
+    * Base64 string of the image for face comparison.
+- The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+- Please use the standard Base64 encoding method (with = padding). Refer to RFC4648 for the encoding specification.
     */
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
 
     /**
-    * Base64 value of videos used for face comparison. 
-The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
+    * Base64 string of the video for liveness detection.
+- The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+-Use standard Base64 encoding (with = padding), following RFC4648.
     */
     @SerializedName("VideoBase64")
     @Expose
     private String VideoBase64;
 
     /**
-    * The liveness detection type. Valid values: `ACTION`, and `SILENT`.
-`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
-Example value: "SILENT"
+    * Liveness detection type.
+-Values:
+ACTION is action mode.
+SILENT is silent mode.
+-Choose one of the two modes to pass in.
     */
     @SerializedName("LivenessType")
     @Expose
     private String LivenessType;
 
     /**
-    * When the "LivenessType" parameter is "ACTION", it must be specified.
-It is used to control the action sequence. Action types: 
-1 (open mouth)
-2 (blink)
-3 (nod)
-4 (shake head). 
-Select one or two from the four actions.
-Example of passing single action parameter: "1".
-Example of passing multiple action parameters: "4,2".
-When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
-Example value: ""
+    * Control the action sequence. Action types include: 1 (open mouth), 2 (blink), 3 (nod), 4 (shake head). Supports one or two actions.
+-Required when the LivenessType parameter is set to ACTION.
+-Single action example: "1".
+-Multiple actions parameter passing example: "4,2".
+-When the LivenessType parameter is set to SILENT, leave it blank.
     */
     @SerializedName("ValidateData")
     @Expose
     private String ValidateData;
 
     /**
-     * Get Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q==" 
-     * @return ImageBase64 Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
+     * Get Base64 string of the image for face comparison.
+- The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+- Please use the standard Base64 encoding method (with = padding). Refer to RFC4648 for the encoding specification. 
+     * @return ImageBase64 Base64 string of the image for face comparison.
+- The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+- Please use the standard Base64 encoding method (with = padding). Refer to RFC4648 for the encoding specification.
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
-     * @param ImageBase64 Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
+     * Set Base64 string of the image for face comparison.
+- The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+- Please use the standard Base64 encoding method (with = padding). Refer to RFC4648 for the encoding specification.
+     * @param ImageBase64 Base64 string of the image for face comparison.
+- The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+- Please use the standard Base64 encoding method (with = padding). Refer to RFC4648 for the encoding specification.
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
     }
 
     /**
-     * Get Base64 value of videos used for face comparison. 
-The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q==" 
-     * @return VideoBase64 Base64 value of videos used for face comparison. 
-The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
+     * Get Base64 string of the video for liveness detection.
+- The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+-Use standard Base64 encoding (with = padding), following RFC4648. 
+     * @return VideoBase64 Base64 string of the video for liveness detection.
+- The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+-Use standard Base64 encoding (with = padding), following RFC4648.
      */
     public String getVideoBase64() {
         return this.VideoBase64;
     }
 
     /**
-     * Set Base64 value of videos used for face comparison. 
-The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
-     * @param VideoBase64 Base64 value of videos used for face comparison. 
-The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
+     * Set Base64 string of the video for liveness detection.
+- The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+-Use standard Base64 encoding (with = padding), following RFC4648.
+     * @param VideoBase64 Base64 string of the video for liveness detection.
+- The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+-Use standard Base64 encoding (with = padding), following RFC4648.
      */
     public void setVideoBase64(String VideoBase64) {
         this.VideoBase64 = VideoBase64;
     }
 
     /**
-     * Get The liveness detection type. Valid values: `ACTION`, and `SILENT`.
-`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
-Example value: "SILENT" 
-     * @return LivenessType The liveness detection type. Valid values: `ACTION`, and `SILENT`.
-`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
-Example value: "SILENT"
+     * Get Liveness detection type.
+-Values:
+ACTION is action mode.
+SILENT is silent mode.
+-Choose one of the two modes to pass in. 
+     * @return LivenessType Liveness detection type.
+-Values:
+ACTION is action mode.
+SILENT is silent mode.
+-Choose one of the two modes to pass in.
      */
     public String getLivenessType() {
         return this.LivenessType;
     }
 
     /**
-     * Set The liveness detection type. Valid values: `ACTION`, and `SILENT`.
-`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
-Example value: "SILENT"
-     * @param LivenessType The liveness detection type. Valid values: `ACTION`, and `SILENT`.
-`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
-Example value: "SILENT"
+     * Set Liveness detection type.
+-Values:
+ACTION is action mode.
+SILENT is silent mode.
+-Choose one of the two modes to pass in.
+     * @param LivenessType Liveness detection type.
+-Values:
+ACTION is action mode.
+SILENT is silent mode.
+-Choose one of the two modes to pass in.
      */
     public void setLivenessType(String LivenessType) {
         this.LivenessType = LivenessType;
     }
 
     /**
-     * Get When the "LivenessType" parameter is "ACTION", it must be specified.
-It is used to control the action sequence. Action types: 
-1 (open mouth)
-2 (blink)
-3 (nod)
-4 (shake head). 
-Select one or two from the four actions.
-Example of passing single action parameter: "1".
-Example of passing multiple action parameters: "4,2".
-When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
-Example value: "" 
-     * @return ValidateData When the "LivenessType" parameter is "ACTION", it must be specified.
-It is used to control the action sequence. Action types: 
-1 (open mouth)
-2 (blink)
-3 (nod)
-4 (shake head). 
-Select one or two from the four actions.
-Example of passing single action parameter: "1".
-Example of passing multiple action parameters: "4,2".
-When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
-Example value: ""
+     * Get Control the action sequence. Action types include: 1 (open mouth), 2 (blink), 3 (nod), 4 (shake head). Supports one or two actions.
+-Required when the LivenessType parameter is set to ACTION.
+-Single action example: "1".
+-Multiple actions parameter passing example: "4,2".
+-When the LivenessType parameter is set to SILENT, leave it blank. 
+     * @return ValidateData Control the action sequence. Action types include: 1 (open mouth), 2 (blink), 3 (nod), 4 (shake head). Supports one or two actions.
+-Required when the LivenessType parameter is set to ACTION.
+-Single action example: "1".
+-Multiple actions parameter passing example: "4,2".
+-When the LivenessType parameter is set to SILENT, leave it blank.
      */
     public String getValidateData() {
         return this.ValidateData;
     }
 
     /**
-     * Set When the "LivenessType" parameter is "ACTION", it must be specified.
-It is used to control the action sequence. Action types: 
-1 (open mouth)
-2 (blink)
-3 (nod)
-4 (shake head). 
-Select one or two from the four actions.
-Example of passing single action parameter: "1".
-Example of passing multiple action parameters: "4,2".
-When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
-Example value: ""
-     * @param ValidateData When the "LivenessType" parameter is "ACTION", it must be specified.
-It is used to control the action sequence. Action types: 
-1 (open mouth)
-2 (blink)
-3 (nod)
-4 (shake head). 
-Select one or two from the four actions.
-Example of passing single action parameter: "1".
-Example of passing multiple action parameters: "4,2".
-When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
-Example value: ""
+     * Set Control the action sequence. Action types include: 1 (open mouth), 2 (blink), 3 (nod), 4 (shake head). Supports one or two actions.
+-Required when the LivenessType parameter is set to ACTION.
+-Single action example: "1".
+-Multiple actions parameter passing example: "4,2".
+-When the LivenessType parameter is set to SILENT, leave it blank.
+     * @param ValidateData Control the action sequence. Action types include: 1 (open mouth), 2 (blink), 3 (nod), 4 (shake head). Supports one or two actions.
+-Required when the LivenessType parameter is set to ACTION.
+-Single action example: "1".
+-Multiple actions parameter passing example: "4,2".
+-When the LivenessType parameter is set to SILENT, leave it blank.
      */
     public void setValidateData(String ValidateData) {
         this.ValidateData = ValidateData;
