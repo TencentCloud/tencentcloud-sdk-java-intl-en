@@ -1,7 +1,7 @@
 ![](https://img.shields.io/maven-central/v/com.tencentcloudapi/tencentcloud-sdk-java-intl-en?label=maven)
 
 # Overview
-Welcome to Tencent Cloud Software Development Kit (SDK) 3.0, a companion tool for the TencentCloud API 3.0 platform. Currently supported products include CVM, VPC, and CBS. All Tencent Cloud services and products will be connected to it in the future. The new SDK version is unified and features the same SDK usage, API call methods, error codes, and returned packet formats for different languages.
+Welcome to Tencent Cloud Software Development Kit (SDK), a companion tool for the TencentCloud API 3.0 platform.
 Tencent Cloud SDK for Java helps Java developers debug and use TencentCloud APIs with ease. This document describes Tencent Cloud SDK for Java and how to quickly use it with code examples provided.
 
 # Dependent Environment
@@ -50,18 +50,18 @@ public class DescribeInstances
         try{
             // Instantiate an authentication object. The Tencent Cloud account `secretId` and `secretKey` need to be passed in as the input parameters
             Credential cred = new Credential("secretId", "secretKey");
-            
+
             // Instantiate the client object of the requested product (with CVM as an example)
             ClientProfile clientProfile = new ClientProfile();
             clientProfile.setSignMethod(ClientProfile.SIGN_TC3_256);
             CvmClient client = new CvmClient(cred, "ap-guangzhou", clientProfile);
-            
+
             // Instantiate a request object
             DescribeInstancesRequest req = new DescribeInstancesRequest();
-            
+
             // Call the API you want to access through the client object. You need to pass in the request object
             DescribeInstancesResponse resp = client.DescribeInstances(req);
-            
+
             // A string return packet in JSON format is output
             System.out.println(DescribeInstancesRequest.toJsonString(resp));
         } catch (TencentCloudSDKException e) {
@@ -69,8 +69,7 @@ public class DescribeInstances
         }
 
     }
-    
-} 
+}
 ```
 
 ## More examples
