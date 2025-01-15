@@ -61,6 +61,17 @@ public class ConfigClient extends AbstractClient{
     }
 
     /**
+     *Account Group access the list of resources.
+     * @param req ListAggregateDiscoveredResourcesRequest
+     * @return ListAggregateDiscoveredResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAggregateDiscoveredResourcesResponse ListAggregateDiscoveredResources(ListAggregateDiscoveredResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListAggregateDiscoveredResources", ListAggregateDiscoveredResourcesResponse.class);
+    }
+
+    /**
      *This API is used to get the rule list.
      * @param req ListConfigRulesRequest
      * @return ListConfigRulesResponse
