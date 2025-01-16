@@ -24,118 +24,164 @@ import java.util.HashMap;
 public class QueryPolicyProductListByCodeRequest extends AbstractModel {
 
     /**
-    * Policy code
+    * Dealer policy code.
     */
     @SerializedName("PolicyCode")
     @Expose
     private String PolicyCode;
 
     /**
-    * Product code
+    * Product level 1 code.
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * Product name
+    * Product level 1 name.
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * Subproduct code
+    * Product level 2 code.
     */
     @SerializedName("SubProductCode")
     @Expose
     private String SubProductCode;
 
     /**
-    * Subproduct name
+    * Product level 2 name.
     */
     @SerializedName("SubProductName")
     @Expose
     private String SubProductName;
 
     /**
-     * Get Policy code 
-     * @return PolicyCode Policy code
+    * Page parameter: current page number. The minimum value is 1.
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
+    * Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200.
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
+     * Get Dealer policy code. 
+     * @return PolicyCode Dealer policy code.
      */
     public String getPolicyCode() {
         return this.PolicyCode;
     }
 
     /**
-     * Set Policy code
-     * @param PolicyCode Policy code
+     * Set Dealer policy code.
+     * @param PolicyCode Dealer policy code.
      */
     public void setPolicyCode(String PolicyCode) {
         this.PolicyCode = PolicyCode;
     }
 
     /**
-     * Get Product code 
-     * @return ProductCode Product code
+     * Get Product level 1 code. 
+     * @return ProductCode Product level 1 code.
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set Product code
-     * @param ProductCode Product code
+     * Set Product level 1 code.
+     * @param ProductCode Product level 1 code.
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get Product name 
-     * @return ProductName Product name
+     * Get Product level 1 name. 
+     * @return ProductName Product level 1 name.
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set Product name
-     * @param ProductName Product name
+     * Set Product level 1 name.
+     * @param ProductName Product level 1 name.
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get Subproduct code 
-     * @return SubProductCode Subproduct code
+     * Get Product level 2 code. 
+     * @return SubProductCode Product level 2 code.
      */
     public String getSubProductCode() {
         return this.SubProductCode;
     }
 
     /**
-     * Set Subproduct code
-     * @param SubProductCode Subproduct code
+     * Set Product level 2 code.
+     * @param SubProductCode Product level 2 code.
      */
     public void setSubProductCode(String SubProductCode) {
         this.SubProductCode = SubProductCode;
     }
 
     /**
-     * Get Subproduct name 
-     * @return SubProductName Subproduct name
+     * Get Product level 2 name. 
+     * @return SubProductName Product level 2 name.
      */
     public String getSubProductName() {
         return this.SubProductName;
     }
 
     /**
-     * Set Subproduct name
-     * @param SubProductName Subproduct name
+     * Set Product level 2 name.
+     * @param SubProductName Product level 2 name.
      */
     public void setSubProductName(String SubProductName) {
         this.SubProductName = SubProductName;
+    }
+
+    /**
+     * Get Page parameter: current page number. The minimum value is 1. 
+     * @return Page Page parameter: current page number. The minimum value is 1.
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set Page parameter: current page number. The minimum value is 1.
+     * @param Page Page parameter: current page number. The minimum value is 1.
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
+    /**
+     * Get Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200. 
+     * @return PageSize Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200.
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200.
+     * @param PageSize Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200.
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
     }
 
     public QueryPolicyProductListByCodeRequest() {
@@ -161,6 +207,12 @@ public class QueryPolicyProductListByCodeRequest extends AbstractModel {
         if (source.SubProductName != null) {
             this.SubProductName = new String(source.SubProductName);
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class QueryPolicyProductListByCodeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
         this.setParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
         this.setParamSimple(map, prefix + "SubProductName", this.SubProductName);
+        this.setParamSimple(map, prefix + "Page", this.Page);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
 
     }
 }

@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class PolicyProductList extends AbstractModel {
 
     /**
-    * Policy code.
+    * Dealer policy code.
     */
     @SerializedName("PolicyCode")
     @Expose
     private String PolicyCode;
 
     /**
-    * Product code, if the return is *, any item under this level is included in the policy product scope.
+    * Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * Product name, if the return is *, any item under this level is included in the policy product scope.
+    * Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * SubProduct code, if the return is *, any item under this level is included in the policy product scope.
+    * Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
     */
     @SerializedName("SubProductCode")
     @Expose
     private String SubProductCode;
 
     /**
-    * SubProduct name, if the return is *, any item under this level is included in the policy product scope.
+    * Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
     */
     @SerializedName("SubProductName")
     @Expose
     private String SubProductName;
 
     /**
-    * Component type code, if the return is *, any item under this level is included in the policy product scope.
+    * Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
     */
     @SerializedName("ComponentTypeCode")
     @Expose
     private String ComponentTypeCode;
 
     /**
-    * Component type name, if the return is *, any item under this level is included in the policy product scope.
+    * Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
     */
     @SerializedName("ComponentTypeName")
     @Expose
     private String ComponentTypeName;
 
     /**
-    * Component code, if the return is *, any item under this level is included in the policy product scope.
+    * Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
     */
     @SerializedName("ComponentCode")
     @Expose
     private String ComponentCode;
 
     /**
-    * Component name, if the return is *, any item under this level is included in the policy product scope.
+    * Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
     */
     @SerializedName("ComponentName")
     @Expose
     private String ComponentName;
 
     /**
-    * Policy effective date.
+    * Policy effective time.
     */
     @SerializedName("StartDate")
     @Expose
     private String StartDate;
 
     /**
-    * Policy expiration date.
+    * Policy expiration time.
     */
     @SerializedName("EndDate")
     @Expose
     private String EndDate;
 
     /**
-     * Get Policy code. 
-     * @return PolicyCode Policy code.
+     * Get Dealer policy code. 
+     * @return PolicyCode Dealer policy code.
      */
     public String getPolicyCode() {
         return this.PolicyCode;
     }
 
     /**
-     * Set Policy code.
-     * @param PolicyCode Policy code.
+     * Set Dealer policy code.
+     * @param PolicyCode Dealer policy code.
      */
     public void setPolicyCode(String PolicyCode) {
         this.PolicyCode = PolicyCode;
     }
 
     /**
-     * Get Product code, if the return is *, any item under this level is included in the policy product scope. 
-     * @return ProductCode Product code, if the return is *, any item under this level is included in the policy product scope.
+     * Get Product level 1 code. If the return value is *, any item at this level is included in the policy product range. 
+     * @return ProductCode Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set Product code, if the return is *, any item under this level is included in the policy product scope.
-     * @param ProductCode Product code, if the return is *, any item under this level is included in the policy product scope.
+     * Set Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
+     * @param ProductCode Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get Product name, if the return is *, any item under this level is included in the policy product scope. 
-     * @return ProductName Product name, if the return is *, any item under this level is included in the policy product scope.
+     * Get Product level 1 name. If the return value is *, any item at this level is included in the policy product range. 
+     * @return ProductName Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set Product name, if the return is *, any item under this level is included in the policy product scope.
-     * @param ProductName Product name, if the return is *, any item under this level is included in the policy product scope.
+     * Set Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
+     * @param ProductName Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get SubProduct code, if the return is *, any item under this level is included in the policy product scope. 
-     * @return SubProductCode SubProduct code, if the return is *, any item under this level is included in the policy product scope.
+     * Get Product level 2 code. If the return value is *, any item at this level is included in the policy product range. 
+     * @return SubProductCode Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
      */
     public String getSubProductCode() {
         return this.SubProductCode;
     }
 
     /**
-     * Set SubProduct code, if the return is *, any item under this level is included in the policy product scope.
-     * @param SubProductCode SubProduct code, if the return is *, any item under this level is included in the policy product scope.
+     * Set Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
+     * @param SubProductCode Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
      */
     public void setSubProductCode(String SubProductCode) {
         this.SubProductCode = SubProductCode;
     }
 
     /**
-     * Get SubProduct name, if the return is *, any item under this level is included in the policy product scope. 
-     * @return SubProductName SubProduct name, if the return is *, any item under this level is included in the policy product scope.
+     * Get Product level 2 name. If the return value is *, any item at this level is included in the policy product range. 
+     * @return SubProductName Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
      */
     public String getSubProductName() {
         return this.SubProductName;
     }
 
     /**
-     * Set SubProduct name, if the return is *, any item under this level is included in the policy product scope.
-     * @param SubProductName SubProduct name, if the return is *, any item under this level is included in the policy product scope.
+     * Set Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
+     * @param SubProductName Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
      */
     public void setSubProductName(String SubProductName) {
         this.SubProductName = SubProductName;
     }
 
     /**
-     * Get Component type code, if the return is *, any item under this level is included in the policy product scope. 
-     * @return ComponentTypeCode Component type code, if the return is *, any item under this level is included in the policy product scope.
+     * Get Product level 3 code. If the return value is *, any item at this level is included in the policy product range. 
+     * @return ComponentTypeCode Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
      */
     public String getComponentTypeCode() {
         return this.ComponentTypeCode;
     }
 
     /**
-     * Set Component type code, if the return is *, any item under this level is included in the policy product scope.
-     * @param ComponentTypeCode Component type code, if the return is *, any item under this level is included in the policy product scope.
+     * Set Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
+     * @param ComponentTypeCode Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
      */
     public void setComponentTypeCode(String ComponentTypeCode) {
         this.ComponentTypeCode = ComponentTypeCode;
     }
 
     /**
-     * Get Component type name, if the return is *, any item under this level is included in the policy product scope. 
-     * @return ComponentTypeName Component type name, if the return is *, any item under this level is included in the policy product scope.
+     * Get Product level 3 name. If the return value is *, any item at this level is included in the policy product range. 
+     * @return ComponentTypeName Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
      */
     public String getComponentTypeName() {
         return this.ComponentTypeName;
     }
 
     /**
-     * Set Component type name, if the return is *, any item under this level is included in the policy product scope.
-     * @param ComponentTypeName Component type name, if the return is *, any item under this level is included in the policy product scope.
+     * Set Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
+     * @param ComponentTypeName Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
      */
     public void setComponentTypeName(String ComponentTypeName) {
         this.ComponentTypeName = ComponentTypeName;
     }
 
     /**
-     * Get Component code, if the return is *, any item under this level is included in the policy product scope. 
-     * @return ComponentCode Component code, if the return is *, any item under this level is included in the policy product scope.
+     * Get Product level 4 code. If the return value is *, any item at this level is included in the policy product range. 
+     * @return ComponentCode Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
      */
     public String getComponentCode() {
         return this.ComponentCode;
     }
 
     /**
-     * Set Component code, if the return is *, any item under this level is included in the policy product scope.
-     * @param ComponentCode Component code, if the return is *, any item under this level is included in the policy product scope.
+     * Set Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
+     * @param ComponentCode Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
      */
     public void setComponentCode(String ComponentCode) {
         this.ComponentCode = ComponentCode;
     }
 
     /**
-     * Get Component name, if the return is *, any item under this level is included in the policy product scope. 
-     * @return ComponentName Component name, if the return is *, any item under this level is included in the policy product scope.
+     * Get Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope. 
+     * @return ComponentName Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
      */
     public String getComponentName() {
         return this.ComponentName;
     }
 
     /**
-     * Set Component name, if the return is *, any item under this level is included in the policy product scope.
-     * @param ComponentName Component name, if the return is *, any item under this level is included in the policy product scope.
+     * Set Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
+     * @param ComponentName Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;
     }
 
     /**
-     * Get Policy effective date. 
-     * @return StartDate Policy effective date.
+     * Get Policy effective time. 
+     * @return StartDate Policy effective time.
      */
     public String getStartDate() {
         return this.StartDate;
     }
 
     /**
-     * Set Policy effective date.
-     * @param StartDate Policy effective date.
+     * Set Policy effective time.
+     * @param StartDate Policy effective time.
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
     /**
-     * Get Policy expiration date. 
-     * @return EndDate Policy expiration date.
+     * Get Policy expiration time. 
+     * @return EndDate Policy expiration time.
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set Policy expiration date.
-     * @param EndDate Policy expiration date.
+     * Set Policy expiration time.
+     * @param EndDate Policy expiration time.
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
