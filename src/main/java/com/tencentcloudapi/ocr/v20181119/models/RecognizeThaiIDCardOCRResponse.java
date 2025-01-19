@@ -115,6 +115,13 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     private String Address;
 
     /**
+    * LaserID in the back of the card.
+    */
+    @SerializedName("LaserID")
+    @Expose
+    private String LaserID;
+
+    /**
     * Identity photo
     */
     @SerializedName("PortraitImage")
@@ -359,6 +366,22 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     }
 
     /**
+     * Get LaserID in the back of the card. 
+     * @return LaserID LaserID in the back of the card.
+     */
+    public String getLaserID() {
+        return this.LaserID;
+    }
+
+    /**
+     * Set LaserID in the back of the card.
+     * @param LaserID LaserID in the back of the card.
+     */
+    public void setLaserID(String LaserID) {
+        this.LaserID = LaserID;
+    }
+
+    /**
      * Get Identity photo 
      * @return PortraitImage Identity photo
      */
@@ -501,6 +524,9 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
         if (source.Address != null) {
             this.Address = new String(source.Address);
         }
+        if (source.LaserID != null) {
+            this.LaserID = new String(source.LaserID);
+        }
         if (source.PortraitImage != null) {
             this.PortraitImage = new String(source.PortraitImage);
         }
@@ -536,6 +562,7 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Religion", this.Religion);
         this.setParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
         this.setParamSimple(map, prefix + "Address", this.Address);
+        this.setParamSimple(map, prefix + "LaserID", this.LaserID);
         this.setParamSimple(map, prefix + "PortraitImage", this.PortraitImage);
         this.setParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);

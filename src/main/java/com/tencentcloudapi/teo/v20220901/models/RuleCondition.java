@@ -25,7 +25,7 @@ public class RuleCondition extends AbstractModel {
 
     /**
     * Operator. Valid values:
-<li>`equals`: Equals</li>
+<li>`equal`: Equal</li>
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
@@ -86,12 +86,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Operator. Valid values:
-<li>`equals`: Equals</li>
+<li>`equal`: Equal</li>
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li> 
      * @return Operator Operator. Valid values:
-<li>`equals`: Equals</li>
+<li>`equal`: Equal</li>
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
@@ -102,12 +102,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Operator. Valid values:
-<li>`equals`: Equals</li>
+<li>`equal`: Equal</li>
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
      * @param Operator Operator. Valid values:
-<li>`equals`: Equals</li>
+<li>`equal`: Equal</li>
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
