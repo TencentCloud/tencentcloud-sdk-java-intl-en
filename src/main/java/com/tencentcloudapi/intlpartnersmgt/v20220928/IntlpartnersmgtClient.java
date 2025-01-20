@@ -172,6 +172,19 @@ Note:This API is used to manually send the invitation link to the customer if th
     }
 
     /**
+     *This API is used to get the URL for downloading the customer bill file by reseller. The download conditions are as follows:
+1. Detailed bills (billDetail and billDetailPack) can be downloaded starting from June 2022; resource bills (billResource and billResourcePack) can be downloaded starting from November 2023.
+2. Bill packages (billDetailPack and billResourcePack) can only be downloaded after billing.
+     * @param req DescribeCustomerBillDownloadUrlRequest
+     * @return DescribeCustomerBillDownloadUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomerBillDownloadUrlResponse DescribeCustomerBillDownloadUrl(DescribeCustomerBillDownloadUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomerBillDownloadUrl", DescribeCustomerBillDownloadUrlResponse.class);
+    }
+
+    /**
      *This API is used to query the total amount of customer bills.
      * @param req DescribeCustomerBillSummaryRequest
      * @return DescribeCustomerBillSummaryResponse

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDisasterRecoverGroupsRequest extends AbstractModel {
 
     /**
-    * ID list of spread placement groups. You can operate up to 100 spread placement groups in each request.
+    * ID list of spread placement groups. You can operate up to 10 spread placement groups in each request.
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeDisasterRecoverGroupsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get ID list of spread placement groups. You can operate up to 100 spread placement groups in each request. 
-     * @return DisasterRecoverGroupIds ID list of spread placement groups. You can operate up to 100 spread placement groups in each request.
+     * Get ID list of spread placement groups. You can operate up to 10 spread placement groups in each request. 
+     * @return DisasterRecoverGroupIds ID list of spread placement groups. You can operate up to 10 spread placement groups in each request.
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
     }
 
     /**
-     * Set ID list of spread placement groups. You can operate up to 100 spread placement groups in each request.
-     * @param DisasterRecoverGroupIds ID list of spread placement groups. You can operate up to 100 spread placement groups in each request.
+     * Set ID list of spread placement groups. You can operate up to 10 spread placement groups in each request.
+     * @param DisasterRecoverGroupIds ID list of spread placement groups. You can operate up to 10 spread placement groups in each request.
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
