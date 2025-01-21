@@ -88,7 +88,10 @@ public enum OcrErrorCode {
      RESOURCEUNAVAILABLE_RESOURCEPACKAGERUNOUT("ResourceUnavailable.ResourcePackageRunOut"),
      
     // Exceptional billing status.
-     RESOURCESSOLDOUT_CHARGESTATUSEXCEPTION("ResourcesSoldOut.ChargeStatusException");
+     RESOURCESSOLDOUT_CHARGESTATUSEXCEPTION("ResourcesSoldOut.ChargeStatusException"),
+     
+    // 
+     UNKNOWNPARAMETER("UnknownParameter");
      
     private String value;
     private OcrErrorCode (String value){

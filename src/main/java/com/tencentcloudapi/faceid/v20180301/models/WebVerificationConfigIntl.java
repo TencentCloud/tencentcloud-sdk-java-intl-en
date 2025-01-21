@@ -145,6 +145,13 @@ The default value is blink. The different action types passed in this parameter 
     private String ActionList;
 
     /**
+    * Control liveness retry number.The value range is 1-99.
+    */
+    @SerializedName("LivenessRetryLimit")
+    @Expose
+    private Long LivenessRetryLimit;
+
+    /**
      * Get When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered. 
      * @return AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
      */
@@ -484,6 +491,22 @@ The default value is blink. The different action types passed in this parameter 
         this.ActionList = ActionList;
     }
 
+    /**
+     * Get Control liveness retry number.The value range is 1-99. 
+     * @return LivenessRetryLimit Control liveness retry number.The value range is 1-99.
+     */
+    public Long getLivenessRetryLimit() {
+        return this.LivenessRetryLimit;
+    }
+
+    /**
+     * Set Control liveness retry number.The value range is 1-99.
+     * @param LivenessRetryLimit Control liveness retry number.The value range is 1-99.
+     */
+    public void setLivenessRetryLimit(Long LivenessRetryLimit) {
+        this.LivenessRetryLimit = LivenessRetryLimit;
+    }
+
     public WebVerificationConfigIntl() {
     }
 
@@ -528,6 +551,9 @@ The default value is blink. The different action types passed in this parameter 
         if (source.ActionList != null) {
             this.ActionList = new String(source.ActionList);
         }
+        if (source.LivenessRetryLimit != null) {
+            this.LivenessRetryLimit = new Long(source.LivenessRetryLimit);
+        }
     }
 
 
@@ -547,6 +573,7 @@ The default value is blink. The different action types passed in this parameter 
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamSimple(map, prefix + "AutoDowngrade", this.AutoDowngrade);
         this.setParamSimple(map, prefix + "ActionList", this.ActionList);
+        this.setParamSimple(map, prefix + "LivenessRetryLimit", this.LivenessRetryLimit);
 
     }
 }
