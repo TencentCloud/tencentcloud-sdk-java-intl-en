@@ -558,6 +558,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to query a security group.
+     * @param req DescribeStreamLinkSecurityGroupRequest
+     * @return DescribeStreamLinkSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkSecurityGroupResponse DescribeStreamLinkSecurityGroup(DescribeStreamLinkSecurityGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamLinkSecurityGroup", DescribeStreamLinkSecurityGroupResponse.class);
+    }
+
+    /**
      *This API is used to query the details of execution status and result of a task submitted in the last 3 days by task ID.
      * @param req DescribeTaskDetailRequest
      * @return DescribeTaskDetailResponse

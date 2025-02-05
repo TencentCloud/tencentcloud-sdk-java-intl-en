@@ -55,6 +55,8 @@ public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractMo
 
     /**
     * Whether it is an audio-only template. 0: video template. 1: audio-only template.
+
+Default value: 0
     */
     @SerializedName("PureAudio")
     @Expose
@@ -140,8 +142,12 @@ public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractMo
     }
 
     /**
-     * Get Whether it is an audio-only template. 0: video template. 1: audio-only template. 
+     * Get Whether it is an audio-only template. 0: video template. 1: audio-only template.
+
+Default value: 0 
      * @return PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.
+
+Default value: 0
      */
     public Long getPureAudio() {
         return this.PureAudio;
@@ -149,7 +155,11 @@ public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractMo
 
     /**
      * Set Whether it is an audio-only template. 0: video template. 1: audio-only template.
+
+Default value: 0
      * @param PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.
+
+Default value: 0
      */
     public void setPureAudio(Long PureAudio) {
         this.PureAudio = PureAudio;

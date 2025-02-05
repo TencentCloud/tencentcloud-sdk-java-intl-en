@@ -224,6 +224,13 @@ This parameter will overwrite the original instance tag list. To add new tags, y
     private String DedicatedClusterId;
 
     /**
+    * Custom metadata.
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private Metadata Metadata;
+
+    /**
      * Get Launch configuration ID 
      * @return LaunchConfigurationId Launch configuration ID
      */
@@ -723,6 +730,22 @@ This parameter will overwrite the original instance tag list. To add new tags, y
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
+    /**
+     * Get Custom metadata. 
+     * @return Metadata Custom metadata.
+     */
+    public Metadata getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set Custom metadata.
+     * @param Metadata Custom metadata.
+     */
+    public void setMetadata(Metadata Metadata) {
+        this.Metadata = Metadata;
+    }
+
     public ModifyLaunchConfigurationAttributesRequest() {
     }
 
@@ -821,6 +844,9 @@ This parameter will overwrite the original instance tag list. To add new tags, y
         if (source.DedicatedClusterId != null) {
             this.DedicatedClusterId = new String(source.DedicatedClusterId);
         }
+        if (source.Metadata != null) {
+            this.Metadata = new Metadata(source.Metadata);
+        }
     }
 
 
@@ -853,6 +879,7 @@ This parameter will overwrite the original instance tag list. To add new tags, y
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+        this.setParamObj(map, prefix + "Metadata.", this.Metadata);
 
     }
 }

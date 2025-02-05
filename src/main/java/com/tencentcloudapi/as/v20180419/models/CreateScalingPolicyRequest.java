@@ -45,7 +45,7 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     private String ScalingPolicyType;
 
     /**
-    * The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+    * The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
     */
     @SerializedName("AdjustmentType")
     @Expose
@@ -69,19 +69,19 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     private Long Cooldown;
 
     /**
-    * Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
+    * Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
     */
     @SerializedName("MetricAlarm")
     @Expose
     private MetricAlarm MetricAlarm;
 
     /**
-    * Predefined monitoring item, which is applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth.</li>
+    * Predefined monitoring item, applicable only to target tracking policies. Valid values:
+<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
     */
     @SerializedName("PredefinedMetricType")
     @Expose
@@ -100,7 +100,7 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     private Long TargetValue;
 
     /**
-    * Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
+    * Instance warm-up period (in seconds). It is only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
     */
     @SerializedName("EstimatedInstanceWarmup")
     @Expose
@@ -172,16 +172,16 @@ Notification group ID, which is the set of user group IDs.
     }
 
     /**
-     * Get The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li> 
-     * @return AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+     * Get The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li> 
+     * @return AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
      */
     public String getAdjustmentType() {
         return this.AdjustmentType;
     }
 
     /**
-     * Set The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
-     * @param AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+     * Set The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+     * @param AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
      */
     public void setAdjustmentType(String AdjustmentType) {
         this.AdjustmentType = AdjustmentType;
@@ -232,52 +232,52 @@ Notification group ID, which is the set of user group IDs.
     }
 
     /**
-     * Get Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`. 
-     * @return MetricAlarm Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
+     * Get Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`. 
+     * @return MetricAlarm Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
      */
     public MetricAlarm getMetricAlarm() {
         return this.MetricAlarm;
     }
 
     /**
-     * Set Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
-     * @param MetricAlarm Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
+     * Set Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
+     * @param MetricAlarm Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
      */
     public void setMetricAlarm(MetricAlarm MetricAlarm) {
         this.MetricAlarm = MetricAlarm;
     }
 
     /**
-     * Get Predefined monitoring item, which is applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth.</li> 
-     * @return PredefinedMetricType Predefined monitoring item, which is applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth.</li>
+     * Get Predefined monitoring item, applicable only to target tracking policies. Valid values:
+<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li> 
+     * @return PredefinedMetricType Predefined monitoring item, applicable only to target tracking policies. Valid values:
+<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
      */
     public String getPredefinedMetricType() {
         return this.PredefinedMetricType;
     }
 
     /**
-     * Set Predefined monitoring item, which is applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth.</li>
-     * @param PredefinedMetricType Predefined monitoring item, which is applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth.</li>
+     * Set Predefined monitoring item, applicable only to target tracking policies. Valid values:
+<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
+     * @param PredefinedMetricType Predefined monitoring item, applicable only to target tracking policies. Valid values:
+<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
      */
     public void setPredefinedMetricType(String PredefinedMetricType) {
         this.PredefinedMetricType = PredefinedMetricType;
@@ -320,16 +320,16 @@ Notification group ID, which is the set of user group IDs.
     }
 
     /**
-     * Get Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300. 
-     * @return EstimatedInstanceWarmup Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
+     * Get Instance warm-up period (in seconds). It is only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300. 
+     * @return EstimatedInstanceWarmup Instance warm-up period (in seconds). It is only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
      */
     public Long getEstimatedInstanceWarmup() {
         return this.EstimatedInstanceWarmup;
     }
 
     /**
-     * Set Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
-     * @param EstimatedInstanceWarmup Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
+     * Set Instance warm-up period (in seconds). It is only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
+     * @param EstimatedInstanceWarmup Instance warm-up period (in seconds). It is only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
      */
     public void setEstimatedInstanceWarmup(Long EstimatedInstanceWarmup) {
         this.EstimatedInstanceWarmup = EstimatedInstanceWarmup;

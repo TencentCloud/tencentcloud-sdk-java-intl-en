@@ -59,6 +59,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ReplaceMode;
 
     /**
+    * Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+    */
+    @SerializedName("AutoUpdateInstanceTags")
+    @Expose
+    private Boolean AutoUpdateInstanceTags;
+
+    /**
      * Get Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default. 
      * @return ReplaceMonitorUnhealthy Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
      */
@@ -150,6 +157,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ReplaceMode = ReplaceMode;
     }
 
+    /**
+     * Get Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency. 
+     * @return AutoUpdateInstanceTags Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+     */
+    public Boolean getAutoUpdateInstanceTags() {
+        return this.AutoUpdateInstanceTags;
+    }
+
+    /**
+     * Set Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+     * @param AutoUpdateInstanceTags Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+     */
+    public void setAutoUpdateInstanceTags(Boolean AutoUpdateInstanceTags) {
+        this.AutoUpdateInstanceTags = AutoUpdateInstanceTags;
+    }
+
     public ServiceSettings() {
     }
 
@@ -170,6 +193,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ReplaceMode != null) {
             this.ReplaceMode = new String(source.ReplaceMode);
         }
+        if (source.AutoUpdateInstanceTags != null) {
+            this.AutoUpdateInstanceTags = new Boolean(source.AutoUpdateInstanceTags);
+        }
     }
 
 
@@ -181,6 +207,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
         this.setParamSimple(map, prefix + "ReplaceLoadBalancerUnhealthy", this.ReplaceLoadBalancerUnhealthy);
         this.setParamSimple(map, prefix + "ReplaceMode", this.ReplaceMode);
+        this.setParamSimple(map, prefix + "AutoUpdateInstanceTags", this.AutoUpdateInstanceTags);
 
     }
 }

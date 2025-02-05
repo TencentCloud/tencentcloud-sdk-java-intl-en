@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class RunMonitorServiceEnabled extends AbstractModel {
 
     /**
-    * Whether to enable the [Tencent Cloud Observability Platform](https://www.tencentcloud.com/document/product/248?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+    * Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
+<li>TRUE: enabled</li>
+<li>FALSE: disabled</li>
 Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -35,14 +35,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean Enabled;
 
     /**
-     * Get Whether to enable the [Tencent Cloud Observability Platform](https://www.tencentcloud.com/document/product/248?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+     * Get Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
+<li>TRUE: enabled</li>
+<li>FALSE: disabled</li>
 Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Enabled Whether to enable the [Tencent Cloud Observability Platform](https://www.tencentcloud.com/document/product/248?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+     * @return Enabled Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
+<li>TRUE: enabled</li>
+<li>FALSE: disabled</li>
 Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -51,14 +51,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable the [Tencent Cloud Observability Platform](https://www.tencentcloud.com/document/product/248?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+     * Set Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
+<li>TRUE: enabled</li>
+<li>FALSE: disabled</li>
 Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Enabled Whether to enable the [Tencent Cloud Observability Platform](https://www.tencentcloud.com/document/product/248?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+     * @param Enabled Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
+<li>TRUE: enabled</li>
+<li>FALSE: disabled</li>
 Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
