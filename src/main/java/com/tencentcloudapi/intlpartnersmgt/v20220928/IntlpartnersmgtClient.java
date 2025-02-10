@@ -65,6 +65,19 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
+     *Description: This API is used by resellers to review applications to become sub-customers. Note: This API is used to apply for the allowlist. If needed, please contact your business representative.
+
+Callable roles: Reseller, Distributer, Second-level reseller
+     * @param req ApproveClientApplyRequest
+     * @return ApproveClientApplyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApproveClientApplyResponse ApproveClientApply(ApproveClientApplyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ApproveClientApply", ApproveClientApplyResponse.class);
+    }
+
+    /**
      *This API is used to create Tencent Cloud customer accounts for distributor/second-level resellers.After the account is created, it will be automatically bound to the partner account.Note:
 1. Create a Tencent Cloud account. The entered email address and mobile phone number need to be verified by the partner for validity.
 2.  Customers need to add personal information when logging in for the first time.
@@ -326,6 +339,19 @@ Note:Reseller need to be allowlisted to use the API, please contact your busines
     public QueryPartnerCreditResponse QueryPartnerCredit(QueryPartnerCreditRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QueryPartnerCredit", QueryPartnerCreditResponse.class);
+    }
+
+    /**
+     *Description: This API is used by resellers to query the list of sub-customers pending review. Note: This API is used to apply for the allowlist. If needed, please contact your business representative.
+
+Callable roles: Reseller, Distributer, Second-level reseller
+     * @param req QueryPendingClientsV2Request
+     * @return QueryPendingClientsV2Response
+     * @throws TencentCloudSDKException
+     */
+    public QueryPendingClientsV2Response QueryPendingClientsV2(QueryPendingClientsV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryPendingClientsV2", QueryPendingClientsV2Response.class);
     }
 
     /**
