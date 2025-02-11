@@ -309,6 +309,19 @@ Note:Reseller need to be allowlisted to use the API, please contact your busines
     }
 
     /**
+     *Description: This API is used for a sub-customer to real-time query its own total credit and remaining credit in USD.
+
+Callable roles: Sub-customer
+     * @param req QueryCustomerBillingQuotaRequest
+     * @return QueryCustomerBillingQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryCustomerBillingQuotaResponse QueryCustomerBillingQuota(QueryCustomerBillingQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryCustomerBillingQuota", QueryCustomerBillingQuotaResponse.class);
+    }
+
+    /**
      *This API is used for a partner to the credits and basic information of cutomers.
      * @param req QueryCustomersCreditRequest
      * @return QueryCustomersCreditResponse
