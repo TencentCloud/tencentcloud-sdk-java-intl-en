@@ -38,6 +38,22 @@ public class SSAIConf extends AbstractModel {
     private ConfigAliasesInfo [] ConfigAliases;
 
     /**
+    * Whether to enable transparent transmission of advertising tags.
+    */
+    @SerializedName("AdMarkerPassthrough")
+    @Expose
+    private Boolean AdMarkerPassthrough;
+
+    /**
+    * How to process tags in advertisements, optional values: [1,2] 
+1: Process all SCTE-35 type tags - all (default) 
+2: SCTE-35enhanced, parse some types.
+    */
+    @SerializedName("SCTE35AdType")
+    @Expose
+    private Long SCTE35AdType;
+
+    /**
     * Default advertising url.
     */
     @SerializedName("SlateAd")
@@ -57,22 +73,6 @@ public class SSAIConf extends AbstractModel {
     @SerializedName("DashMPDLocation")
     @Expose
     private Boolean DashMPDLocation;
-
-    /**
-    * Whether to enable transparent transmission of advertising tags.
-    */
-    @SerializedName("AdMarkerPassthrough")
-    @Expose
-    private Boolean AdMarkerPassthrough;
-
-    /**
-    * How to process tags in advertisements, optional values: [1,2] 
-1: Process all SCTE-35 type tags - all (default) 
-2: SCTE-35enhanced, parse some types.
-    */
-    @SerializedName("SCTE35AdType")
-    @Expose
-    private Long SCTE35AdType;
 
     /**
     * The type of tag that is regarded as an advertisement, optional values: [1,8]
@@ -99,6 +99,20 @@ public class SSAIConf extends AbstractModel {
     @SerializedName("DeliveryRestrictions")
     @Expose
     private Long DeliveryRestrictions;
+
+    /**
+    * Source CDN prefix, needs to start with http:// or https://
+    */
+    @SerializedName("SourceCDNPrefix")
+    @Expose
+    private String SourceCDNPrefix;
+
+    /**
+    * Advertising CDN prefix needs to start with http:// or https://
+    */
+    @SerializedName("AdCDNPrefix")
+    @Expose
+    private String AdCDNPrefix;
 
     /**
      * Get Advertising Decision Server URL (ADS). 
@@ -130,6 +144,46 @@ public class SSAIConf extends AbstractModel {
      */
     public void setConfigAliases(ConfigAliasesInfo [] ConfigAliases) {
         this.ConfigAliases = ConfigAliases;
+    }
+
+    /**
+     * Get Whether to enable transparent transmission of advertising tags. 
+     * @return AdMarkerPassthrough Whether to enable transparent transmission of advertising tags.
+     */
+    public Boolean getAdMarkerPassthrough() {
+        return this.AdMarkerPassthrough;
+    }
+
+    /**
+     * Set Whether to enable transparent transmission of advertising tags.
+     * @param AdMarkerPassthrough Whether to enable transparent transmission of advertising tags.
+     */
+    public void setAdMarkerPassthrough(Boolean AdMarkerPassthrough) {
+        this.AdMarkerPassthrough = AdMarkerPassthrough;
+    }
+
+    /**
+     * Get How to process tags in advertisements, optional values: [1,2] 
+1: Process all SCTE-35 type tags - all (default) 
+2: SCTE-35enhanced, parse some types. 
+     * @return SCTE35AdType How to process tags in advertisements, optional values: [1,2] 
+1: Process all SCTE-35 type tags - all (default) 
+2: SCTE-35enhanced, parse some types.
+     */
+    public Long getSCTE35AdType() {
+        return this.SCTE35AdType;
+    }
+
+    /**
+     * Set How to process tags in advertisements, optional values: [1,2] 
+1: Process all SCTE-35 type tags - all (default) 
+2: SCTE-35enhanced, parse some types.
+     * @param SCTE35AdType How to process tags in advertisements, optional values: [1,2] 
+1: Process all SCTE-35 type tags - all (default) 
+2: SCTE-35enhanced, parse some types.
+     */
+    public void setSCTE35AdType(Long SCTE35AdType) {
+        this.SCTE35AdType = SCTE35AdType;
     }
 
     /**
@@ -178,46 +232,6 @@ public class SSAIConf extends AbstractModel {
      */
     public void setDashMPDLocation(Boolean DashMPDLocation) {
         this.DashMPDLocation = DashMPDLocation;
-    }
-
-    /**
-     * Get Whether to enable transparent transmission of advertising tags. 
-     * @return AdMarkerPassthrough Whether to enable transparent transmission of advertising tags.
-     */
-    public Boolean getAdMarkerPassthrough() {
-        return this.AdMarkerPassthrough;
-    }
-
-    /**
-     * Set Whether to enable transparent transmission of advertising tags.
-     * @param AdMarkerPassthrough Whether to enable transparent transmission of advertising tags.
-     */
-    public void setAdMarkerPassthrough(Boolean AdMarkerPassthrough) {
-        this.AdMarkerPassthrough = AdMarkerPassthrough;
-    }
-
-    /**
-     * Get How to process tags in advertisements, optional values: [1,2] 
-1: Process all SCTE-35 type tags - all (default) 
-2: SCTE-35enhanced, parse some types. 
-     * @return SCTE35AdType How to process tags in advertisements, optional values: [1,2] 
-1: Process all SCTE-35 type tags - all (default) 
-2: SCTE-35enhanced, parse some types.
-     */
-    public Long getSCTE35AdType() {
-        return this.SCTE35AdType;
-    }
-
-    /**
-     * Set How to process tags in advertisements, optional values: [1,2] 
-1: Process all SCTE-35 type tags - all (default) 
-2: SCTE-35enhanced, parse some types.
-     * @param SCTE35AdType How to process tags in advertisements, optional values: [1,2] 
-1: Process all SCTE-35 type tags - all (default) 
-2: SCTE-35enhanced, parse some types.
-     */
-    public void setSCTE35AdType(Long SCTE35AdType) {
-        this.SCTE35AdType = SCTE35AdType;
     }
 
     /**
@@ -300,6 +314,38 @@ public class SSAIConf extends AbstractModel {
         this.DeliveryRestrictions = DeliveryRestrictions;
     }
 
+    /**
+     * Get Source CDN prefix, needs to start with http:// or https:// 
+     * @return SourceCDNPrefix Source CDN prefix, needs to start with http:// or https://
+     */
+    public String getSourceCDNPrefix() {
+        return this.SourceCDNPrefix;
+    }
+
+    /**
+     * Set Source CDN prefix, needs to start with http:// or https://
+     * @param SourceCDNPrefix Source CDN prefix, needs to start with http:// or https://
+     */
+    public void setSourceCDNPrefix(String SourceCDNPrefix) {
+        this.SourceCDNPrefix = SourceCDNPrefix;
+    }
+
+    /**
+     * Get Advertising CDN prefix needs to start with http:// or https:// 
+     * @return AdCDNPrefix Advertising CDN prefix needs to start with http:// or https://
+     */
+    public String getAdCDNPrefix() {
+        return this.AdCDNPrefix;
+    }
+
+    /**
+     * Set Advertising CDN prefix needs to start with http:// or https://
+     * @param AdCDNPrefix Advertising CDN prefix needs to start with http:// or https://
+     */
+    public void setAdCDNPrefix(String AdCDNPrefix) {
+        this.AdCDNPrefix = AdCDNPrefix;
+    }
+
     public SSAIConf() {
     }
 
@@ -317,6 +363,12 @@ public class SSAIConf extends AbstractModel {
                 this.ConfigAliases[i] = new ConfigAliasesInfo(source.ConfigAliases[i]);
             }
         }
+        if (source.AdMarkerPassthrough != null) {
+            this.AdMarkerPassthrough = new Boolean(source.AdMarkerPassthrough);
+        }
+        if (source.SCTE35AdType != null) {
+            this.SCTE35AdType = new Long(source.SCTE35AdType);
+        }
         if (source.SlateAd != null) {
             this.SlateAd = new String(source.SlateAd);
         }
@@ -325,12 +377,6 @@ public class SSAIConf extends AbstractModel {
         }
         if (source.DashMPDLocation != null) {
             this.DashMPDLocation = new Boolean(source.DashMPDLocation);
-        }
-        if (source.AdMarkerPassthrough != null) {
-            this.AdMarkerPassthrough = new Boolean(source.AdMarkerPassthrough);
-        }
-        if (source.SCTE35AdType != null) {
-            this.SCTE35AdType = new Long(source.SCTE35AdType);
         }
         if (source.AdTriggers != null) {
             this.AdTriggers = new Long[source.AdTriggers.length];
@@ -341,6 +387,12 @@ public class SSAIConf extends AbstractModel {
         if (source.DeliveryRestrictions != null) {
             this.DeliveryRestrictions = new Long(source.DeliveryRestrictions);
         }
+        if (source.SourceCDNPrefix != null) {
+            this.SourceCDNPrefix = new String(source.SourceCDNPrefix);
+        }
+        if (source.AdCDNPrefix != null) {
+            this.AdCDNPrefix = new String(source.AdCDNPrefix);
+        }
     }
 
 
@@ -350,13 +402,15 @@ public class SSAIConf extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AdsUrl", this.AdsUrl);
         this.setParamArrayObj(map, prefix + "ConfigAliases.", this.ConfigAliases);
+        this.setParamSimple(map, prefix + "AdMarkerPassthrough", this.AdMarkerPassthrough);
+        this.setParamSimple(map, prefix + "SCTE35AdType", this.SCTE35AdType);
         this.setParamSimple(map, prefix + "SlateAd", this.SlateAd);
         this.setParamSimple(map, prefix + "Threshold", this.Threshold);
         this.setParamSimple(map, prefix + "DashMPDLocation", this.DashMPDLocation);
-        this.setParamSimple(map, prefix + "AdMarkerPassthrough", this.AdMarkerPassthrough);
-        this.setParamSimple(map, prefix + "SCTE35AdType", this.SCTE35AdType);
         this.setParamArraySimple(map, prefix + "AdTriggers.", this.AdTriggers);
         this.setParamSimple(map, prefix + "DeliveryRestrictions", this.DeliveryRestrictions);
+        this.setParamSimple(map, prefix + "SourceCDNPrefix", this.SourceCDNPrefix);
+        this.setParamSimple(map, prefix + "AdCDNPrefix", this.AdCDNPrefix);
 
     }
 }

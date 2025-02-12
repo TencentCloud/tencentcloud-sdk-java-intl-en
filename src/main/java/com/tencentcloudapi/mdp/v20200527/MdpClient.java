@@ -105,6 +105,17 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
+     *CreateStreamPackageSSAIChannel
+     * @param req CreateStreamPackageSSAIChannelRequest
+     * @return CreateStreamPackageSSAIChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamPackageSSAIChannelResponse CreateStreamPackageSSAIChannel(CreateStreamPackageSSAIChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStreamPackageSSAIChannel", CreateStreamPackageSSAIChannelResponse.class);
+    }
+
+    /**
      *Create channel linear assembly Source.
      * @param req CreateStreamPackageSourceRequest
      * @return CreateStreamPackageSourceResponse
@@ -212,6 +223,17 @@ public class MdpClient extends AbstractClient{
     public DeleteStreamPackageLinearAssemblyProgramsResponse DeleteStreamPackageLinearAssemblyPrograms(DeleteStreamPackageLinearAssemblyProgramsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteStreamPackageLinearAssemblyPrograms", DeleteStreamPackageLinearAssemblyProgramsResponse.class);
+    }
+
+    /**
+     *DeleteStreamPackageSSAIChannel
+     * @param req DeleteStreamPackageSSAIChannelRequest
+     * @return DeleteStreamPackageSSAIChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageSSAIChannelResponse DeleteStreamPackageSSAIChannel(DeleteStreamPackageSSAIChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageSSAIChannel", DeleteStreamPackageSSAIChannelResponse.class);
     }
 
     /**
@@ -347,6 +369,28 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
+     *DescribeStreamPackageSSAIChannel
+     * @param req DescribeStreamPackageSSAIChannelRequest
+     * @return DescribeStreamPackageSSAIChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSSAIChannelResponse DescribeStreamPackageSSAIChannel(DescribeStreamPackageSSAIChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSSAIChannel", DescribeStreamPackageSSAIChannelResponse.class);
+    }
+
+    /**
+     *DescribeStreamPackageSSAIChannels
+     * @param req DescribeStreamPackageSSAIChannelsRequest
+     * @return DescribeStreamPackageSSAIChannelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSSAIChannelsResponse DescribeStreamPackageSSAIChannels(DescribeStreamPackageSSAIChannelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSSAIChannels", DescribeStreamPackageSSAIChannelsResponse.class);
+    }
+
+    /**
      *Query channel linear assembly Source information.
      * @param req DescribeStreamPackageSourceRequest
      * @return DescribeStreamPackageSourceResponse
@@ -465,6 +509,17 @@ public class MdpClient extends AbstractClient{
     public ModifyStreamPackageLinearAssemblyProgramResponse ModifyStreamPackageLinearAssemblyProgram(ModifyStreamPackageLinearAssemblyProgramRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyStreamPackageLinearAssemblyProgram", ModifyStreamPackageLinearAssemblyProgramResponse.class);
+    }
+
+    /**
+     *ModifyStreamPackageSSAIChannel
+     * @param req ModifyStreamPackageSSAIChannelRequest
+     * @return ModifyStreamPackageSSAIChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamPackageSSAIChannelResponse ModifyStreamPackageSSAIChannel(ModifyStreamPackageSSAIChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyStreamPackageSSAIChannel", ModifyStreamPackageSSAIChannelResponse.class);
     }
 
     /**

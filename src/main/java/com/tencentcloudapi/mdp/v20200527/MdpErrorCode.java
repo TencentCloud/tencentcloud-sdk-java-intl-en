@@ -48,7 +48,7 @@ public enum MdpErrorCode {
     // Invalid protocol.
      INVALIDPARAMETER_PROTOCOL("InvalidParameter.Protocol"),
      
-    // 
+    // Invalid ad insertion configuration parameters.
      INVALIDPARAMETER_SSAIINFO("InvalidParameter.SSAIInfo"),
      
     // Invalid `Url`.
