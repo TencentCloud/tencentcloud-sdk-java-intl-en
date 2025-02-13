@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class SdkAppIdBuyInfo extends AbstractModel {
 
     /**
-    * Application ID
+    * Application id.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Application Name
+    * Application name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Agent Purchase Count (still within the validity period)
+    * Agent purchase count (still within the validity period).
     */
     @SerializedName("StaffBuyNum")
     @Expose
     private Long StaffBuyNum;
 
     /**
-    * Agent Purchase List (still within the validity period)
+    * Agent purchase list (still within the validity period).
     */
     @SerializedName("StaffBuyList")
     @Expose
@@ -60,71 +60,70 @@ public class SdkAppIdBuyInfo extends AbstractModel {
 
     /**
     * Number of office telephones purchased (still within the validity period).
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SipBuyNum")
     @Expose
     private Long SipBuyNum;
 
     /**
-     * Get Application ID 
-     * @return SdkAppId Application ID
+     * Get Application id. 
+     * @return SdkAppId Application id.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID
-     * @param SdkAppId Application ID
+     * Set Application id.
+     * @param SdkAppId Application id.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Application Name 
-     * @return Name Application Name
+     * Get Application name. 
+     * @return Name Application name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Application Name
-     * @param Name Application Name
+     * Set Application name.
+     * @param Name Application name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Agent Purchase Count (still within the validity period) 
-     * @return StaffBuyNum Agent Purchase Count (still within the validity period)
+     * Get Agent purchase count (still within the validity period). 
+     * @return StaffBuyNum Agent purchase count (still within the validity period).
      */
     public Long getStaffBuyNum() {
         return this.StaffBuyNum;
     }
 
     /**
-     * Set Agent Purchase Count (still within the validity period)
-     * @param StaffBuyNum Agent Purchase Count (still within the validity period)
+     * Set Agent purchase count (still within the validity period).
+     * @param StaffBuyNum Agent purchase count (still within the validity period).
      */
     public void setStaffBuyNum(Long StaffBuyNum) {
         this.StaffBuyNum = StaffBuyNum;
     }
 
     /**
-     * Get Agent Purchase List (still within the validity period) 
-     * @return StaffBuyList Agent Purchase List (still within the validity period)
+     * Get Agent purchase list (still within the validity period). 
+     * @return StaffBuyList Agent purchase list (still within the validity period).
      */
     public StaffBuyInfo [] getStaffBuyList() {
         return this.StaffBuyList;
     }
 
     /**
-     * Set Agent Purchase List (still within the validity period)
-     * @param StaffBuyList Agent Purchase List (still within the validity period)
+     * Set Agent purchase list (still within the validity period).
+     * @param StaffBuyList Agent purchase list (still within the validity period).
      */
     public void setStaffBuyList(StaffBuyInfo [] StaffBuyList) {
         this.StaffBuyList = StaffBuyList;
@@ -147,10 +146,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of office telephones purchased (still within the validity period).
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Number of office telephones purchased (still within the validity period). 
      * @return SipBuyNum Number of office telephones purchased (still within the validity period).
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getSipBuyNum() {
         return this.SipBuyNum;
@@ -158,9 +155,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of office telephones purchased (still within the validity period).
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param SipBuyNum Number of office telephones purchased (still within the validity period).
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSipBuyNum(Long SipBuyNum) {
         this.SipBuyNum = SipBuyNum;

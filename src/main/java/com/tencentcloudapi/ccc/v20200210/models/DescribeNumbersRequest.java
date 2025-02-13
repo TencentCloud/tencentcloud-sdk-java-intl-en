@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeNumbersRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeNumbersRequest extends AbstractModel {
     private Long PageSize;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;

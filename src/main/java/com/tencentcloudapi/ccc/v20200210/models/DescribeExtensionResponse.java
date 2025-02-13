@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeExtensionResponse extends AbstractModel {
 
     /**
-    * Extension
+    * Extension.
     */
     @SerializedName("ExtensionId")
     @Expose
     private String ExtensionId;
 
     /**
-    * Domain name
+    * Domain name.
     */
     @SerializedName("ExtensionDomain")
     @Expose
@@ -66,32 +66,32 @@ public class DescribeExtensionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Extension 
-     * @return ExtensionId Extension
+     * Get Extension. 
+     * @return ExtensionId Extension.
      */
     public String getExtensionId() {
         return this.ExtensionId;
     }
 
     /**
-     * Set Extension
-     * @param ExtensionId Extension
+     * Set Extension.
+     * @param ExtensionId Extension.
      */
     public void setExtensionId(String ExtensionId) {
         this.ExtensionId = ExtensionId;
     }
 
     /**
-     * Get Domain name 
-     * @return ExtensionDomain Domain name
+     * Get Domain name. 
+     * @return ExtensionDomain Domain name.
      */
     public String getExtensionDomain() {
         return this.ExtensionDomain;
     }
 
     /**
-     * Set Domain name
-     * @param ExtensionDomain Domain name
+     * Set Domain name.
+     * @param ExtensionDomain Domain name.
      */
     public void setExtensionDomain(String ExtensionDomain) {
         this.ExtensionDomain = ExtensionDomain;

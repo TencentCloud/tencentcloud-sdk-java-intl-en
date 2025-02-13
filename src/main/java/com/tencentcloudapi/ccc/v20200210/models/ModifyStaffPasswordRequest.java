@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyStaffPasswordRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -38,23 +38,23 @@ public class ModifyStaffPasswordRequest extends AbstractModel {
     private String Email;
 
     /**
-    * The set password 
+    * The set password.
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -77,16 +77,16 @@ public class ModifyStaffPasswordRequest extends AbstractModel {
     }
 
     /**
-     * Get The set password  
-     * @return Password The set password 
+     * Get The set password. 
+     * @return Password The set password.
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set The set password 
-     * @param Password The set password 
+     * Set The set password.
+     * @param Password The set password.
      */
     public void setPassword(String Password) {
         this.Password = Password;

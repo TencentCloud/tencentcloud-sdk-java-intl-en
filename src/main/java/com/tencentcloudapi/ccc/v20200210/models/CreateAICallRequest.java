@@ -77,7 +77,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
     /**
     * Model interface protocol types, currently compatible with three protocol types:
 
-- OpenAI protocol (including GPT, Hunyuan, DeepSeek, etc.):"openai"
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
 - Azure protocol:"azure"
 - Minimax protocol:"minimax"
     */
@@ -89,7 +89,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
     * Model name, such as
 
 - OpenAI protocol
-"gpt-4o-mini","gpt-4o","hunyuan-standard", "hunyuan-turbo","deepseek-chat";
+"gpt-4o-mini","gpt-4o","deepseek-chat";
 
 - Azure protocol
 "gpt-4o-mini", "gpt-4o";
@@ -119,7 +119,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
 
 - OpenAI protocol
 GPT:"https://api.openai.com/v1/"
-Hunyuan:"https://api.hunyuan.cloud.tencent.com/v1"
 Deepseek:"https://api.deepseek.com/v1"
 
 - Azure protocol
@@ -174,7 +173,7 @@ HoaiMy
     private String VoiceType;
 
     /**
-    * List of calling numbers.
+    * Caller number list
     */
     @SerializedName("Callers")
     @Expose
@@ -194,6 +193,13 @@ HoaiMy
     @SerializedName("WelcomeType")
     @Expose
     private Long WelcomeType;
+
+    /**
+    * 0: interruptible by default, 1: high priority and not interruptible.
+    */
+    @SerializedName("WelcomeMessagePriority")
+    @Expose
+    private Long WelcomeMessagePriority;
 
     /**
     * Maximum Waiting Duration (milliseconds), default is 60 seconds, if the user does not speak within this time, the call is automatically terminated
@@ -233,7 +239,7 @@ Currently, the supported languages are as follows. The English name of the langu
     private String [] Languages;
 
     /**
-    * Interrupt AI speech mode, default is 0, 0 indicates the server interrupts automatically, 1 indicates the server does not interrupt, interruption signal sent by the client side.
+    * Interrupt ai speaking mode. default is 0. 0 indicates automatic interruption and 1 indicates no interruption.
     */
     @SerializedName("InterruptMode")
     @Expose
@@ -261,14 +267,14 @@ Currently, the supported languages are as follows. The English name of the langu
     private String EndFunctionDesc;
 
     /**
-    * 
+    * Whether the model supports (or enables) transfer_to_human function calling.
     */
     @SerializedName("TransferFunctionEnable")
     @Expose
     private Boolean TransferFunctionEnable;
 
     /**
-    * 
+    * Takes effect when transferfunctionenable is true: transfer to human configuration.
     */
     @SerializedName("TransferItems")
     @Expose
@@ -289,7 +295,7 @@ Currently, the supported languages are as follows. The English name of the langu
     private String NotifyMessage;
 
     /**
-    * 
+    * Maximum number of times to trigger ai prompt sound, unlimited by default.
     */
     @SerializedName("NotifyMaxCount")
     @Expose
@@ -315,35 +321,6 @@ For configuration, please refer to <a href="https://intl.cloud.tencent.com/docum
 </code></pre>
 
   </div></div><ul>
-<li>Minimax TTS<br>
-For configuration, please refer to the <a href="https://platform.minimaxi.com/document/T2A%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. Note that Minimax TTS has frequency limits, and exceeding the limit may cause response delays, <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit related documentation link</a>.</li>
-</ul>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-        &quot;TTSType&quot;: &quot;minimax&quot;,  // String TTS type,
-        &quot;Model&quot;: &quot;speech-01-turbo&quot;,
-        &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
-        &quot;APIKey&quot;: &quot;eyxxxx&quot;,
-        &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-yujie&quot;,
-        &quot;Speed&quot;: 1.2
-}
-</code></pre>
-</div></div><ul>
-<li>Volcano TTS</li>
-</ul>
-<p>For type of sound quality configuration, refer to the<a href="https://www.volcengine.com/docs/6561/162929" target="_blank">Volcano TTS documentation</a><br>
-TTS Sound Quality List - Voice Technology - Volcano Engine<br>
-Large Model TTS Sound Quality List - Voice Technology - Volcano Engine</p>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-    &quot;TTSType&quot;: &quot;volcengine&quot;,  // Required: String TTS type
-    &quot;AppId&quot; : &quot;xxxxxxxx&quot;,   // Required: String Volcano Engine assigned AppId
-    &quot;Token&quot; : &quot;TY9d4sQXHxxxxxxx&quot;, // Required: String type Volcano Engine access token
-    &quot;Speed&quot; : 1.0,            // Optional parameter: Playback speed, default is 1.0
-    &quot;Volume&quot;: 1.0,            // Optional parameter: Volume, default is 1.0
-    &quot;Cluster&quot; : &quot;volcano_tts&quot;, // Optional parameter: Business cluster, default is volcano_tts
-    &quot;VoiceType&quot; : &quot;zh_male_aojiaobazong_moon_bigtts&quot;   // Sound quality type, default is the sound quality of the large model TTS. If using normal TTS, fill in the corresponding sound quality type. Incorrect sound quality type will result in no sound.
-}
-</code></pre>
 
 </div></div><ul>
 <li>Azure TTS<br>
@@ -381,11 +358,25 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
     private String CustomTTSConfig;
 
     /**
-    * 
+    * Prompt word variable.
     */
     @SerializedName("PromptVariables")
     @Expose
     private Variable [] PromptVariables;
+
+    /**
+    * Automatic speech recognition vad time ranges from 240 to 2000, with a default of 1000, measured in milliseconds. smaller values will make automatic speech recognition segment faster.
+    */
+    @SerializedName("VadSilenceTime")
+    @Expose
+    private Long VadSilenceTime;
+
+    /**
+    * Call content extraction configuration.
+    */
+    @SerializedName("ExtractConfig")
+    @Expose
+    private AICallExtractConfigElement [] ExtractConfig;
 
     /**
      * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
@@ -558,12 +549,12 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
     /**
      * Get Model interface protocol types, currently compatible with three protocol types:
 
-- OpenAI protocol (including GPT, Hunyuan, DeepSeek, etc.):"openai"
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
 - Azure protocol:"azure"
 - Minimax protocol:"minimax" 
      * @return LLMType Model interface protocol types, currently compatible with three protocol types:
 
-- OpenAI protocol (including GPT, Hunyuan, DeepSeek, etc.):"openai"
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
 - Azure protocol:"azure"
 - Minimax protocol:"minimax"
      */
@@ -574,12 +565,12 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
     /**
      * Set Model interface protocol types, currently compatible with three protocol types:
 
-- OpenAI protocol (including GPT, Hunyuan, DeepSeek, etc.):"openai"
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
 - Azure protocol:"azure"
 - Minimax protocol:"minimax"
      * @param LLMType Model interface protocol types, currently compatible with three protocol types:
 
-- OpenAI protocol (including GPT, Hunyuan, DeepSeek, etc.):"openai"
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
 - Azure protocol:"azure"
 - Minimax protocol:"minimax"
      */
@@ -591,7 +582,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
      * Get Model name, such as
 
 - OpenAI protocol
-"gpt-4o-mini","gpt-4o","hunyuan-standard", "hunyuan-turbo","deepseek-chat";
+"gpt-4o-mini","gpt-4o","deepseek-chat";
 
 - Azure protocol
 "gpt-4o-mini", "gpt-4o";
@@ -601,7 +592,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
      * @return Model Model name, such as
 
 - OpenAI protocol
-"gpt-4o-mini","gpt-4o","hunyuan-standard", "hunyuan-turbo","deepseek-chat";
+"gpt-4o-mini","gpt-4o","deepseek-chat";
 
 - Azure protocol
 "gpt-4o-mini", "gpt-4o";
@@ -617,7 +608,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
      * Set Model name, such as
 
 - OpenAI protocol
-"gpt-4o-mini","gpt-4o","hunyuan-standard", "hunyuan-turbo","deepseek-chat";
+"gpt-4o-mini","gpt-4o","deepseek-chat";
 
 - Azure protocol
 "gpt-4o-mini", "gpt-4o";
@@ -627,7 +618,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
      * @param Model Model name, such as
 
 - OpenAI protocol
-"gpt-4o-mini","gpt-4o","hunyuan-standard", "hunyuan-turbo","deepseek-chat";
+"gpt-4o-mini","gpt-4o","deepseek-chat";
 
 - Azure protocol
 "gpt-4o-mini", "gpt-4o";
@@ -684,7 +675,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
 
 - OpenAI protocol
 GPT:"https://api.openai.com/v1/"
-Hunyuan:"https://api.hunyuan.cloud.tencent.com/v1"
 Deepseek:"https://api.deepseek.com/v1"
 
 - Azure protocol
@@ -696,7 +686,6 @@ Deepseek:"https://api.deepseek.com/v1"
 
 - OpenAI protocol
 GPT:"https://api.openai.com/v1/"
-Hunyuan:"https://api.hunyuan.cloud.tencent.com/v1"
 Deepseek:"https://api.deepseek.com/v1"
 
 - Azure protocol
@@ -714,7 +703,6 @@ Deepseek:"https://api.deepseek.com/v1"
 
 - OpenAI protocol
 GPT:"https://api.openai.com/v1/"
-Hunyuan:"https://api.hunyuan.cloud.tencent.com/v1"
 Deepseek:"https://api.deepseek.com/v1"
 
 - Azure protocol
@@ -726,7 +714,6 @@ Deepseek:"https://api.deepseek.com/v1"
 
 - OpenAI protocol
 GPT:"https://api.openai.com/v1/"
-Hunyuan:"https://api.hunyuan.cloud.tencent.com/v1"
 Deepseek:"https://api.deepseek.com/v1"
 
 - Azure protocol
@@ -892,16 +879,16 @@ HoaiMy
     }
 
     /**
-     * Get List of calling numbers. 
-     * @return Callers List of calling numbers.
+     * Get Caller number list 
+     * @return Callers Caller number list
      */
     public String [] getCallers() {
         return this.Callers;
     }
 
     /**
-     * Set List of calling numbers.
-     * @param Callers List of calling numbers.
+     * Set Caller number list
+     * @param Callers Caller number list
      */
     public void setCallers(String [] Callers) {
         this.Callers = Callers;
@@ -941,6 +928,22 @@ HoaiMy
      */
     public void setWelcomeType(Long WelcomeType) {
         this.WelcomeType = WelcomeType;
+    }
+
+    /**
+     * Get 0: interruptible by default, 1: high priority and not interruptible. 
+     * @return WelcomeMessagePriority 0: interruptible by default, 1: high priority and not interruptible.
+     */
+    public Long getWelcomeMessagePriority() {
+        return this.WelcomeMessagePriority;
+    }
+
+    /**
+     * Set 0: interruptible by default, 1: high priority and not interruptible.
+     * @param WelcomeMessagePriority 0: interruptible by default, 1: high priority and not interruptible.
+     */
+    public void setWelcomeMessagePriority(Long WelcomeMessagePriority) {
+        this.WelcomeMessagePriority = WelcomeMessagePriority;
     }
 
     /**
@@ -1068,16 +1071,16 @@ Currently, the supported languages are as follows. The English name of the langu
     }
 
     /**
-     * Get Interrupt AI speech mode, default is 0, 0 indicates the server interrupts automatically, 1 indicates the server does not interrupt, interruption signal sent by the client side. 
-     * @return InterruptMode Interrupt AI speech mode, default is 0, 0 indicates the server interrupts automatically, 1 indicates the server does not interrupt, interruption signal sent by the client side.
+     * Get Interrupt ai speaking mode. default is 0. 0 indicates automatic interruption and 1 indicates no interruption. 
+     * @return InterruptMode Interrupt ai speaking mode. default is 0. 0 indicates automatic interruption and 1 indicates no interruption.
      */
     public Long getInterruptMode() {
         return this.InterruptMode;
     }
 
     /**
-     * Set Interrupt AI speech mode, default is 0, 0 indicates the server interrupts automatically, 1 indicates the server does not interrupt, interruption signal sent by the client side.
-     * @param InterruptMode Interrupt AI speech mode, default is 0, 0 indicates the server interrupts automatically, 1 indicates the server does not interrupt, interruption signal sent by the client side.
+     * Set Interrupt ai speaking mode. default is 0. 0 indicates automatic interruption and 1 indicates no interruption.
+     * @param InterruptMode Interrupt ai speaking mode. default is 0. 0 indicates automatic interruption and 1 indicates no interruption.
      */
     public void setInterruptMode(Long InterruptMode) {
         this.InterruptMode = InterruptMode;
@@ -1132,32 +1135,32 @@ Currently, the supported languages are as follows. The English name of the langu
     }
 
     /**
-     * Get  
-     * @return TransferFunctionEnable 
+     * Get Whether the model supports (or enables) transfer_to_human function calling. 
+     * @return TransferFunctionEnable Whether the model supports (or enables) transfer_to_human function calling.
      */
     public Boolean getTransferFunctionEnable() {
         return this.TransferFunctionEnable;
     }
 
     /**
-     * Set 
-     * @param TransferFunctionEnable 
+     * Set Whether the model supports (or enables) transfer_to_human function calling.
+     * @param TransferFunctionEnable Whether the model supports (or enables) transfer_to_human function calling.
      */
     public void setTransferFunctionEnable(Boolean TransferFunctionEnable) {
         this.TransferFunctionEnable = TransferFunctionEnable;
     }
 
     /**
-     * Get  
-     * @return TransferItems 
+     * Get Takes effect when transferfunctionenable is true: transfer to human configuration. 
+     * @return TransferItems Takes effect when transferfunctionenable is true: transfer to human configuration.
      */
     public AITransferItem [] getTransferItems() {
         return this.TransferItems;
     }
 
     /**
-     * Set 
-     * @param TransferItems 
+     * Set Takes effect when transferfunctionenable is true: transfer to human configuration.
+     * @param TransferItems Takes effect when transferfunctionenable is true: transfer to human configuration.
      */
     public void setTransferItems(AITransferItem [] TransferItems) {
         this.TransferItems = TransferItems;
@@ -1196,16 +1199,16 @@ Currently, the supported languages are as follows. The English name of the langu
     }
 
     /**
-     * Get  
-     * @return NotifyMaxCount 
+     * Get Maximum number of times to trigger ai prompt sound, unlimited by default. 
+     * @return NotifyMaxCount Maximum number of times to trigger ai prompt sound, unlimited by default.
      */
     public Long getNotifyMaxCount() {
         return this.NotifyMaxCount;
     }
 
     /**
-     * Set 
-     * @param NotifyMaxCount 
+     * Set Maximum number of times to trigger ai prompt sound, unlimited by default.
+     * @param NotifyMaxCount Maximum number of times to trigger ai prompt sound, unlimited by default.
      */
     public void setNotifyMaxCount(Long NotifyMaxCount) {
         this.NotifyMaxCount = NotifyMaxCount;
@@ -1231,35 +1234,6 @@ For configuration, please refer to <a href="https://intl.cloud.tencent.com/docum
 </code></pre>
 
   </div></div><ul>
-<li>Minimax TTS<br>
-For configuration, please refer to the <a href="https://platform.minimaxi.com/document/T2A%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. Note that Minimax TTS has frequency limits, and exceeding the limit may cause response delays, <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit related documentation link</a>.</li>
-</ul>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-        &quot;TTSType&quot;: &quot;minimax&quot;,  // String TTS type,
-        &quot;Model&quot;: &quot;speech-01-turbo&quot;,
-        &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
-        &quot;APIKey&quot;: &quot;eyxxxx&quot;,
-        &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-yujie&quot;,
-        &quot;Speed&quot;: 1.2
-}
-</code></pre>
-</div></div><ul>
-<li>Volcano TTS</li>
-</ul>
-<p>For type of sound quality configuration, refer to the<a href="https://www.volcengine.com/docs/6561/162929" target="_blank">Volcano TTS documentation</a><br>
-TTS Sound Quality List - Voice Technology - Volcano Engine<br>
-Large Model TTS Sound Quality List - Voice Technology - Volcano Engine</p>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-    &quot;TTSType&quot;: &quot;volcengine&quot;,  // Required: String TTS type
-    &quot;AppId&quot; : &quot;xxxxxxxx&quot;,   // Required: String Volcano Engine assigned AppId
-    &quot;Token&quot; : &quot;TY9d4sQXHxxxxxxx&quot;, // Required: String type Volcano Engine access token
-    &quot;Speed&quot; : 1.0,            // Optional parameter: Playback speed, default is 1.0
-    &quot;Volume&quot;: 1.0,            // Optional parameter: Volume, default is 1.0
-    &quot;Cluster&quot; : &quot;volcano_tts&quot;, // Optional parameter: Business cluster, default is volcano_tts
-    &quot;VoiceType&quot; : &quot;zh_male_aojiaobazong_moon_bigtts&quot;   // Sound quality type, default is the sound quality of the large model TTS. If using normal TTS, fill in the corresponding sound quality type. Incorrect sound quality type will result in no sound.
-}
-</code></pre>
 
 </div></div><ul>
 <li>Azure TTS<br>
@@ -1310,35 +1284,6 @@ For configuration, please refer to <a href="https://intl.cloud.tencent.com/docum
 </code></pre>
 
   </div></div><ul>
-<li>Minimax TTS<br>
-For configuration, please refer to the <a href="https://platform.minimaxi.com/document/T2A%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. Note that Minimax TTS has frequency limits, and exceeding the limit may cause response delays, <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit related documentation link</a>.</li>
-</ul>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-        &quot;TTSType&quot;: &quot;minimax&quot;,  // String TTS type,
-        &quot;Model&quot;: &quot;speech-01-turbo&quot;,
-        &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
-        &quot;APIKey&quot;: &quot;eyxxxx&quot;,
-        &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-yujie&quot;,
-        &quot;Speed&quot;: 1.2
-}
-</code></pre>
-</div></div><ul>
-<li>Volcano TTS</li>
-</ul>
-<p>For type of sound quality configuration, refer to the<a href="https://www.volcengine.com/docs/6561/162929" target="_blank">Volcano TTS documentation</a><br>
-TTS Sound Quality List - Voice Technology - Volcano Engine<br>
-Large Model TTS Sound Quality List - Voice Technology - Volcano Engine</p>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-    &quot;TTSType&quot;: &quot;volcengine&quot;,  // Required: String TTS type
-    &quot;AppId&quot; : &quot;xxxxxxxx&quot;,   // Required: String Volcano Engine assigned AppId
-    &quot;Token&quot; : &quot;TY9d4sQXHxxxxxxx&quot;, // Required: String type Volcano Engine access token
-    &quot;Speed&quot; : 1.0,            // Optional parameter: Playback speed, default is 1.0
-    &quot;Volume&quot;: 1.0,            // Optional parameter: Volume, default is 1.0
-    &quot;Cluster&quot; : &quot;volcano_tts&quot;, // Optional parameter: Business cluster, default is volcano_tts
-    &quot;VoiceType&quot; : &quot;zh_male_aojiaobazong_moon_bigtts&quot;   // Sound quality type, default is the sound quality of the large model TTS. If using normal TTS, fill in the corresponding sound quality type. Incorrect sound quality type will result in no sound.
-}
-</code></pre>
 
 </div></div><ul>
 <li>Azure TTS<br>
@@ -1395,35 +1340,6 @@ For configuration, please refer to <a href="https://intl.cloud.tencent.com/docum
 </code></pre>
 
   </div></div><ul>
-<li>Minimax TTS<br>
-For configuration, please refer to the <a href="https://platform.minimaxi.com/document/T2A%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. Note that Minimax TTS has frequency limits, and exceeding the limit may cause response delays, <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit related documentation link</a>.</li>
-</ul>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-        &quot;TTSType&quot;: &quot;minimax&quot;,  // String TTS type,
-        &quot;Model&quot;: &quot;speech-01-turbo&quot;,
-        &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
-        &quot;APIKey&quot;: &quot;eyxxxx&quot;,
-        &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-yujie&quot;,
-        &quot;Speed&quot;: 1.2
-}
-</code></pre>
-</div></div><ul>
-<li>Volcano TTS</li>
-</ul>
-<p>For type of sound quality configuration, refer to the<a href="https://www.volcengine.com/docs/6561/162929" target="_blank">Volcano TTS documentation</a><br>
-TTS Sound Quality List - Voice Technology - Volcano Engine<br>
-Large Model TTS Sound Quality List - Voice Technology - Volcano Engine</p>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-    &quot;TTSType&quot;: &quot;volcengine&quot;,  // Required: String TTS type
-    &quot;AppId&quot; : &quot;xxxxxxxx&quot;,   // Required: String Volcano Engine assigned AppId
-    &quot;Token&quot; : &quot;TY9d4sQXHxxxxxxx&quot;, // Required: String type Volcano Engine access token
-    &quot;Speed&quot; : 1.0,            // Optional parameter: Playback speed, default is 1.0
-    &quot;Volume&quot;: 1.0,            // Optional parameter: Volume, default is 1.0
-    &quot;Cluster&quot; : &quot;volcano_tts&quot;, // Optional parameter: Business cluster, default is volcano_tts
-    &quot;VoiceType&quot; : &quot;zh_male_aojiaobazong_moon_bigtts&quot;   // Sound quality type, default is the sound quality of the large model TTS. If using normal TTS, fill in the corresponding sound quality type. Incorrect sound quality type will result in no sound.
-}
-</code></pre>
 
 </div></div><ul>
 <li>Azure TTS<br>
@@ -1474,35 +1390,6 @@ For configuration, please refer to <a href="https://intl.cloud.tencent.com/docum
 </code></pre>
 
   </div></div><ul>
-<li>Minimax TTS<br>
-For configuration, please refer to the <a href="https://platform.minimaxi.com/document/T2A%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. Note that Minimax TTS has frequency limits, and exceeding the limit may cause response delays, <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit related documentation link</a>.</li>
-</ul>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-        &quot;TTSType&quot;: &quot;minimax&quot;,  // String TTS type,
-        &quot;Model&quot;: &quot;speech-01-turbo&quot;,
-        &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
-        &quot;APIKey&quot;: &quot;eyxxxx&quot;,
-        &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-yujie&quot;,
-        &quot;Speed&quot;: 1.2
-}
-</code></pre>
-</div></div><ul>
-<li>Volcano TTS</li>
-</ul>
-<p>For type of sound quality configuration, refer to the<a href="https://www.volcengine.com/docs/6561/162929" target="_blank">Volcano TTS documentation</a><br>
-TTS Sound Quality List - Voice Technology - Volcano Engine<br>
-Large Model TTS Sound Quality List - Voice Technology - Volcano Engine</p>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-    &quot;TTSType&quot;: &quot;volcengine&quot;,  // Required: String TTS type
-    &quot;AppId&quot; : &quot;xxxxxxxx&quot;,   // Required: String Volcano Engine assigned AppId
-    &quot;Token&quot; : &quot;TY9d4sQXHxxxxxxx&quot;, // Required: String type Volcano Engine access token
-    &quot;Speed&quot; : 1.0,            // Optional parameter: Playback speed, default is 1.0
-    &quot;Volume&quot;: 1.0,            // Optional parameter: Volume, default is 1.0
-    &quot;Cluster&quot; : &quot;volcano_tts&quot;, // Optional parameter: Business cluster, default is volcano_tts
-    &quot;VoiceType&quot; : &quot;zh_male_aojiaobazong_moon_bigtts&quot;   // Sound quality type, default is the sound quality of the large model TTS. If using normal TTS, fill in the corresponding sound quality type. Incorrect sound quality type will result in no sound.
-}
-</code></pre>
 
 </div></div><ul>
 <li>Azure TTS<br>
@@ -1540,19 +1427,51 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
     }
 
     /**
-     * Get  
-     * @return PromptVariables 
+     * Get Prompt word variable. 
+     * @return PromptVariables Prompt word variable.
      */
     public Variable [] getPromptVariables() {
         return this.PromptVariables;
     }
 
     /**
-     * Set 
-     * @param PromptVariables 
+     * Set Prompt word variable.
+     * @param PromptVariables Prompt word variable.
      */
     public void setPromptVariables(Variable [] PromptVariables) {
         this.PromptVariables = PromptVariables;
+    }
+
+    /**
+     * Get Automatic speech recognition vad time ranges from 240 to 2000, with a default of 1000, measured in milliseconds. smaller values will make automatic speech recognition segment faster. 
+     * @return VadSilenceTime Automatic speech recognition vad time ranges from 240 to 2000, with a default of 1000, measured in milliseconds. smaller values will make automatic speech recognition segment faster.
+     */
+    public Long getVadSilenceTime() {
+        return this.VadSilenceTime;
+    }
+
+    /**
+     * Set Automatic speech recognition vad time ranges from 240 to 2000, with a default of 1000, measured in milliseconds. smaller values will make automatic speech recognition segment faster.
+     * @param VadSilenceTime Automatic speech recognition vad time ranges from 240 to 2000, with a default of 1000, measured in milliseconds. smaller values will make automatic speech recognition segment faster.
+     */
+    public void setVadSilenceTime(Long VadSilenceTime) {
+        this.VadSilenceTime = VadSilenceTime;
+    }
+
+    /**
+     * Get Call content extraction configuration. 
+     * @return ExtractConfig Call content extraction configuration.
+     */
+    public AICallExtractConfigElement [] getExtractConfig() {
+        return this.ExtractConfig;
+    }
+
+    /**
+     * Set Call content extraction configuration.
+     * @param ExtractConfig Call content extraction configuration.
+     */
+    public void setExtractConfig(AICallExtractConfigElement [] ExtractConfig) {
+        this.ExtractConfig = ExtractConfig;
     }
 
     public CreateAICallRequest() {
@@ -1598,6 +1517,9 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
         }
         if (source.WelcomeType != null) {
             this.WelcomeType = new Long(source.WelcomeType);
+        }
+        if (source.WelcomeMessagePriority != null) {
+            this.WelcomeMessagePriority = new Long(source.WelcomeMessagePriority);
         }
         if (source.MaxDuration != null) {
             this.MaxDuration = new Long(source.MaxDuration);
@@ -1647,6 +1569,15 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
                 this.PromptVariables[i] = new Variable(source.PromptVariables[i]);
             }
         }
+        if (source.VadSilenceTime != null) {
+            this.VadSilenceTime = new Long(source.VadSilenceTime);
+        }
+        if (source.ExtractConfig != null) {
+            this.ExtractConfig = new AICallExtractConfigElement[source.ExtractConfig.length];
+            for (int i = 0; i < source.ExtractConfig.length; i++) {
+                this.ExtractConfig[i] = new AICallExtractConfigElement(source.ExtractConfig[i]);
+            }
+        }
     }
 
 
@@ -1665,6 +1596,7 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
         this.setParamArraySimple(map, prefix + "Callers.", this.Callers);
         this.setParamSimple(map, prefix + "WelcomeMessage", this.WelcomeMessage);
         this.setParamSimple(map, prefix + "WelcomeType", this.WelcomeType);
+        this.setParamSimple(map, prefix + "WelcomeMessagePriority", this.WelcomeMessagePriority);
         this.setParamSimple(map, prefix + "MaxDuration", this.MaxDuration);
         this.setParamArraySimple(map, prefix + "Languages.", this.Languages);
         this.setParamSimple(map, prefix + "InterruptMode", this.InterruptMode);
@@ -1678,6 +1610,8 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
         this.setParamSimple(map, prefix + "NotifyMaxCount", this.NotifyMaxCount);
         this.setParamSimple(map, prefix + "CustomTTSConfig", this.CustomTTSConfig);
         this.setParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
+        this.setParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
+        this.setParamArrayObj(map, prefix + "ExtractConfig.", this.ExtractConfig);
 
     }
 }

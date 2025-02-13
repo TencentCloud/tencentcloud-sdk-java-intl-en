@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteStaffRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Customer service emails, supports up to 200 at a time.
+    * List of customer service emails to be deleted, supports up to 200 at a time.
     */
     @SerializedName("StaffList")
     @Expose
     private String [] StaffList;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Customer service emails, supports up to 200 at a time. 
-     * @return StaffList Customer service emails, supports up to 200 at a time.
+     * Get List of customer service emails to be deleted, supports up to 200 at a time. 
+     * @return StaffList List of customer service emails to be deleted, supports up to 200 at a time.
      */
     public String [] getStaffList() {
         return this.StaffList;
     }
 
     /**
-     * Set Customer service emails, supports up to 200 at a time.
-     * @param StaffList Customer service emails, supports up to 200 at a time.
+     * Set List of customer service emails to be deleted, supports up to 200 at a time.
+     * @param StaffList List of customer service emails to be deleted, supports up to 200 at a time.
      */
     public void setStaffList(String [] StaffList) {
         this.StaffList = StaffList;

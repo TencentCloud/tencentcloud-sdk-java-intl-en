@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribePredictiveDialingCampaignResponse extends AbstractModel {
 
     /**
-    * Task ID.
+    * Task id.
     */
     @SerializedName("CampaignId")
     @Expose
     private Long CampaignId;
 
     /**
-    * Task Name
+    * Task name.
     */
     @SerializedName("Name")
     @Expose
@@ -52,7 +52,7 @@ public class DescribePredictiveDialingCampaignResponse extends AbstractModel {
     private Long SkillGroupId;
 
     /**
-    * Specified IVR ID.
+    * Specified ivr id.
     */
     @SerializedName("IVRId")
     @Expose
@@ -87,14 +87,14 @@ public class DescribePredictiveDialingCampaignResponse extends AbstractModel {
     private Long RetryInterval;
 
     /**
-    * Task start time. Unix timestamp. The task will automatically start after this time.
+    * Task start time. unix timestamp. the task will automatically start after this time.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Task termination time. Unix timestamp. The task will automatically terminate after this time.
+    * Task termination time. unix timestamp. the task will automatically terminate after this time.
     */
     @SerializedName("EndTime")
     @Expose
@@ -108,32 +108,32 @@ public class DescribePredictiveDialingCampaignResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task ID. 
-     * @return CampaignId Task ID.
+     * Get Task id. 
+     * @return CampaignId Task id.
      */
     public Long getCampaignId() {
         return this.CampaignId;
     }
 
     /**
-     * Set Task ID.
-     * @param CampaignId Task ID.
+     * Set Task id.
+     * @param CampaignId Task id.
      */
     public void setCampaignId(Long CampaignId) {
         this.CampaignId = CampaignId;
     }
 
     /**
-     * Get Task Name 
-     * @return Name Task Name
+     * Get Task name. 
+     * @return Name Task name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Task Name
-     * @param Name Task Name
+     * Set Task name.
+     * @param Name Task name.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -172,16 +172,16 @@ public class DescribePredictiveDialingCampaignResponse extends AbstractModel {
     }
 
     /**
-     * Get Specified IVR ID. 
-     * @return IVRId Specified IVR ID.
+     * Get Specified ivr id. 
+     * @return IVRId Specified ivr id.
      */
     public Long getIVRId() {
         return this.IVRId;
     }
 
     /**
-     * Set Specified IVR ID.
-     * @param IVRId Specified IVR ID.
+     * Set Specified ivr id.
+     * @param IVRId Specified ivr id.
      */
     public void setIVRId(Long IVRId) {
         this.IVRId = IVRId;
@@ -252,32 +252,32 @@ public class DescribePredictiveDialingCampaignResponse extends AbstractModel {
     }
 
     /**
-     * Get Task start time. Unix timestamp. The task will automatically start after this time. 
-     * @return StartTime Task start time. Unix timestamp. The task will automatically start after this time.
+     * Get Task start time. unix timestamp. the task will automatically start after this time. 
+     * @return StartTime Task start time. unix timestamp. the task will automatically start after this time.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Task start time. Unix timestamp. The task will automatically start after this time.
-     * @param StartTime Task start time. Unix timestamp. The task will automatically start after this time.
+     * Set Task start time. unix timestamp. the task will automatically start after this time.
+     * @param StartTime Task start time. unix timestamp. the task will automatically start after this time.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Task termination time. Unix timestamp. The task will automatically terminate after this time. 
-     * @return EndTime Task termination time. Unix timestamp. The task will automatically terminate after this time.
+     * Get Task termination time. unix timestamp. the task will automatically terminate after this time. 
+     * @return EndTime Task termination time. unix timestamp. the task will automatically terminate after this time.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Task termination time. Unix timestamp. The task will automatically terminate after this time.
-     * @param EndTime Task termination time. Unix timestamp. The task will automatically terminate after this time.
+     * Set Task termination time. unix timestamp. the task will automatically terminate after this time.
+     * @param EndTime Task termination time. unix timestamp. the task will automatically terminate after this time.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

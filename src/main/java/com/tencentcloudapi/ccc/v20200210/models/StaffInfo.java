@@ -25,7 +25,6 @@ public class StaffInfo extends AbstractModel {
 
     /**
     * Agent name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
@@ -39,8 +38,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Mail;
 
     /**
-    * Agent's Telephone Number
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Agent phone number.
     */
     @SerializedName("Phone")
     @Expose
@@ -48,30 +46,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Agent nickname.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Nick")
     @Expose
     private String Nick;
 
     /**
-    * Agent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Agent id.
     */
     @SerializedName("StaffNumber")
     @Expose
     private String StaffNumber;
 
     /**
-    * User Role ID
+    * User role id.
     */
     @SerializedName("RoleId")
     @Expose
     private Long RoleId;
 
     /**
-    * Affiliated Skill Group List.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Affiliated skill group list.
     */
     @SerializedName("SkillGroupList")
     @Expose
@@ -79,17 +74,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastModifyTimestamp")
     @Expose
     private Long LastModifyTimestamp;
 
     /**
-     * Get Agent name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+    * Agent extension number (starting with 1 to 8, 4 - 6 digits).
+    */
+    @SerializedName("ExtensionNumber")
+    @Expose
+    private String ExtensionNumber;
+
+    /**
+     * Get Agent name. 
      * @return Name Agent name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -97,9 +96,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Agent name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name Agent name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -122,30 +119,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Agent's Telephone Number
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Phone Agent's Telephone Number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Agent phone number. 
+     * @return Phone Agent phone number.
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set Agent's Telephone Number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Phone Agent's Telephone Number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Agent phone number.
+     * @param Phone Agent phone number.
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get Agent nickname.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Agent nickname. 
      * @return Nick Agent nickname.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNick() {
         return this.Nick;
@@ -153,75 +144,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Agent nickname.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Nick Agent nickname.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
     }
 
     /**
-     * Get Agent ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StaffNumber Agent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Agent id. 
+     * @return StaffNumber Agent id.
      */
     public String getStaffNumber() {
         return this.StaffNumber;
     }
 
     /**
-     * Set Agent ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StaffNumber Agent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Agent id.
+     * @param StaffNumber Agent id.
      */
     public void setStaffNumber(String StaffNumber) {
         this.StaffNumber = StaffNumber;
     }
 
     /**
-     * Get User Role ID 
-     * @return RoleId User Role ID
+     * Get User role id. 
+     * @return RoleId User role id.
      */
     public Long getRoleId() {
         return this.RoleId;
     }
 
     /**
-     * Set User Role ID
-     * @param RoleId User Role ID
+     * Set User role id.
+     * @param RoleId User role id.
      */
     public void setRoleId(Long RoleId) {
         this.RoleId = RoleId;
     }
 
     /**
-     * Get Affiliated Skill Group List.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SkillGroupList Affiliated Skill Group List.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Affiliated skill group list. 
+     * @return SkillGroupList Affiliated skill group list.
      */
     public SkillGroupItem [] getSkillGroupList() {
         return this.SkillGroupList;
     }
 
     /**
-     * Set Affiliated Skill Group List.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SkillGroupList Affiliated Skill Group List.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Affiliated skill group list.
+     * @param SkillGroupList Affiliated skill group list.
      */
     public void setSkillGroupList(SkillGroupItem [] SkillGroupList) {
         this.SkillGroupList = SkillGroupList;
     }
 
     /**
-     * Get Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Last modification time. 
      * @return LastModifyTimestamp Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getLastModifyTimestamp() {
         return this.LastModifyTimestamp;
@@ -229,12 +208,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param LastModifyTimestamp Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setLastModifyTimestamp(Long LastModifyTimestamp) {
         this.LastModifyTimestamp = LastModifyTimestamp;
+    }
+
+    /**
+     * Get Agent extension number (starting with 1 to 8, 4 - 6 digits). 
+     * @return ExtensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
+     */
+    public String getExtensionNumber() {
+        return this.ExtensionNumber;
+    }
+
+    /**
+     * Set Agent extension number (starting with 1 to 8, 4 - 6 digits).
+     * @param ExtensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
+     */
+    public void setExtensionNumber(String ExtensionNumber) {
+        this.ExtensionNumber = ExtensionNumber;
     }
 
     public StaffInfo() {
@@ -272,6 +265,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.LastModifyTimestamp != null) {
             this.LastModifyTimestamp = new Long(source.LastModifyTimestamp);
         }
+        if (source.ExtensionNumber != null) {
+            this.ExtensionNumber = new String(source.ExtensionNumber);
+        }
     }
 
 
@@ -287,6 +283,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RoleId", this.RoleId);
         this.setParamArrayObj(map, prefix + "SkillGroupList.", this.SkillGroupList);
         this.setParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
+        this.setParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
 
     }
 }

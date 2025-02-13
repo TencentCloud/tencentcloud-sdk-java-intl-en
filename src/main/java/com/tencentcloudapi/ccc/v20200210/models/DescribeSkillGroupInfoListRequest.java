@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSkillGroupInfoListRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -38,21 +38,21 @@ public class DescribeSkillGroupInfoListRequest extends AbstractModel {
     private Long PageSize;
 
     /**
-    * Page number starting from 0.
+    * <Page number starting from 0.>.
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * Using skill group ID when querying a single skill group.
+    * Using skill group id when querying a single skill group.
     */
     @SerializedName("SkillGroupId")
     @Expose
     private Long SkillGroupId;
 
     /**
-    * Used when querying skill groups with a modified time greater or equal to ModifiedTime.
+    * Used when querying skill groups with a modified time greater or equal to modifiedtime.
     */
     @SerializedName("ModifiedTime")
     @Expose
@@ -66,16 +66,16 @@ public class DescribeSkillGroupInfoListRequest extends AbstractModel {
     private String SkillGroupName;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -98,48 +98,48 @@ public class DescribeSkillGroupInfoListRequest extends AbstractModel {
     }
 
     /**
-     * Get Page number starting from 0. 
-     * @return PageNumber Page number starting from 0.
+     * Get <Page number starting from 0.>. 
+     * @return PageNumber <Page number starting from 0.>.
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set Page number starting from 0.
-     * @param PageNumber Page number starting from 0.
+     * Set <Page number starting from 0.>.
+     * @param PageNumber <Page number starting from 0.>.
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get Using skill group ID when querying a single skill group. 
-     * @return SkillGroupId Using skill group ID when querying a single skill group.
+     * Get Using skill group id when querying a single skill group. 
+     * @return SkillGroupId Using skill group id when querying a single skill group.
      */
     public Long getSkillGroupId() {
         return this.SkillGroupId;
     }
 
     /**
-     * Set Using skill group ID when querying a single skill group.
-     * @param SkillGroupId Using skill group ID when querying a single skill group.
+     * Set Using skill group id when querying a single skill group.
+     * @param SkillGroupId Using skill group id when querying a single skill group.
      */
     public void setSkillGroupId(Long SkillGroupId) {
         this.SkillGroupId = SkillGroupId;
     }
 
     /**
-     * Get Used when querying skill groups with a modified time greater or equal to ModifiedTime. 
-     * @return ModifiedTime Used when querying skill groups with a modified time greater or equal to ModifiedTime.
+     * Get Used when querying skill groups with a modified time greater or equal to modifiedtime. 
+     * @return ModifiedTime Used when querying skill groups with a modified time greater or equal to modifiedtime.
      */
     public Long getModifiedTime() {
         return this.ModifiedTime;
     }
 
     /**
-     * Set Used when querying skill groups with a modified time greater or equal to ModifiedTime.
-     * @param ModifiedTime Used when querying skill groups with a modified time greater or equal to ModifiedTime.
+     * Set Used when querying skill groups with a modified time greater or equal to modifiedtime.
+     * @param ModifiedTime Used when querying skill groups with a modified time greater or equal to modifiedtime.
      */
     public void setModifiedTime(Long ModifiedTime) {
         this.ModifiedTime = ModifiedTime;

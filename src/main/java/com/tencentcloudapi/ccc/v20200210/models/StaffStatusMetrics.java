@@ -31,84 +31,84 @@ public class StaffStatusMetrics extends AbstractModel {
     private String Email;
 
     /**
-    * Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+    * Agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Supplementary Information on Agent Status
+    * Supplementary information on agent status.
     */
     @SerializedName("StatusExtra")
     @Expose
     private StaffStatusExtra StatusExtra;
 
     /**
-    * Total Online duration of the day.
+    * Total online duration of the day.
     */
     @SerializedName("OnlineDuration")
     @Expose
     private Long OnlineDuration;
 
     /**
-    * Total Available duration of the day.
+    * Total available duration of the day.
     */
     @SerializedName("FreeDuration")
     @Expose
     private Long FreeDuration;
 
     /**
-    * Total Busy duration of the day.
+    * Total busy duration of the day.
     */
     @SerializedName("BusyDuration")
     @Expose
     private Long BusyDuration;
 
     /**
-    * Total Not Ready status duration of the day.
+    * Total not ready status duration of the day.
     */
     @SerializedName("NotReadyDuration")
     @Expose
     private Long NotReadyDuration;
 
     /**
-    * Total Break duration of the day.
+    * Total break duration of the day.
     */
     @SerializedName("RestDuration")
     @Expose
     private Long RestDuration;
 
     /**
-    * Total After Call Work duration of the day.
+    * Adjust the total duration of after-call work for the day.
     */
     @SerializedName("AfterCallWorkDuration")
     @Expose
     private Long AfterCallWorkDuration;
 
     /**
-    * Reason for Break.
+    * Reason for break.
     */
     @SerializedName("Reason")
     @Expose
     private String Reason;
 
     /**
-    * Whether to reserve Break status.
+    * Whether to reserve break status.
     */
     @SerializedName("ReserveRest")
     @Expose
     private Boolean ReserveRest;
 
     /**
-    * Whether to reserve Not Ready status.
+    * Whether to reserve not ready status.
     */
     @SerializedName("ReserveNotReady")
     @Expose
     private Boolean ReserveNotReady;
 
     /**
-    * Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+    * Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
     */
     @SerializedName("UseMobileAccept")
     @Expose
@@ -123,7 +123,7 @@ public class StaffStatusMetrics extends AbstractModel {
 
     /**
     * Last online timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastOnlineTimestamp")
     @Expose
@@ -131,7 +131,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last status timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastStatusTimestamp")
     @Expose
@@ -154,192 +154,192 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline 
-     * @return Status Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+     * Get Agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline. 
+     * @return Status Agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
-     * @param Status Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+     * Set Agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline.
+     * @param Status Agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Supplementary Information on Agent Status 
-     * @return StatusExtra Supplementary Information on Agent Status
+     * Get Supplementary information on agent status. 
+     * @return StatusExtra Supplementary information on agent status.
      */
     public StaffStatusExtra getStatusExtra() {
         return this.StatusExtra;
     }
 
     /**
-     * Set Supplementary Information on Agent Status
-     * @param StatusExtra Supplementary Information on Agent Status
+     * Set Supplementary information on agent status.
+     * @param StatusExtra Supplementary information on agent status.
      */
     public void setStatusExtra(StaffStatusExtra StatusExtra) {
         this.StatusExtra = StatusExtra;
     }
 
     /**
-     * Get Total Online duration of the day. 
-     * @return OnlineDuration Total Online duration of the day.
+     * Get Total online duration of the day. 
+     * @return OnlineDuration Total online duration of the day.
      */
     public Long getOnlineDuration() {
         return this.OnlineDuration;
     }
 
     /**
-     * Set Total Online duration of the day.
-     * @param OnlineDuration Total Online duration of the day.
+     * Set Total online duration of the day.
+     * @param OnlineDuration Total online duration of the day.
      */
     public void setOnlineDuration(Long OnlineDuration) {
         this.OnlineDuration = OnlineDuration;
     }
 
     /**
-     * Get Total Available duration of the day. 
-     * @return FreeDuration Total Available duration of the day.
+     * Get Total available duration of the day. 
+     * @return FreeDuration Total available duration of the day.
      */
     public Long getFreeDuration() {
         return this.FreeDuration;
     }
 
     /**
-     * Set Total Available duration of the day.
-     * @param FreeDuration Total Available duration of the day.
+     * Set Total available duration of the day.
+     * @param FreeDuration Total available duration of the day.
      */
     public void setFreeDuration(Long FreeDuration) {
         this.FreeDuration = FreeDuration;
     }
 
     /**
-     * Get Total Busy duration of the day. 
-     * @return BusyDuration Total Busy duration of the day.
+     * Get Total busy duration of the day. 
+     * @return BusyDuration Total busy duration of the day.
      */
     public Long getBusyDuration() {
         return this.BusyDuration;
     }
 
     /**
-     * Set Total Busy duration of the day.
-     * @param BusyDuration Total Busy duration of the day.
+     * Set Total busy duration of the day.
+     * @param BusyDuration Total busy duration of the day.
      */
     public void setBusyDuration(Long BusyDuration) {
         this.BusyDuration = BusyDuration;
     }
 
     /**
-     * Get Total Not Ready status duration of the day. 
-     * @return NotReadyDuration Total Not Ready status duration of the day.
+     * Get Total not ready status duration of the day. 
+     * @return NotReadyDuration Total not ready status duration of the day.
      */
     public Long getNotReadyDuration() {
         return this.NotReadyDuration;
     }
 
     /**
-     * Set Total Not Ready status duration of the day.
-     * @param NotReadyDuration Total Not Ready status duration of the day.
+     * Set Total not ready status duration of the day.
+     * @param NotReadyDuration Total not ready status duration of the day.
      */
     public void setNotReadyDuration(Long NotReadyDuration) {
         this.NotReadyDuration = NotReadyDuration;
     }
 
     /**
-     * Get Total Break duration of the day. 
-     * @return RestDuration Total Break duration of the day.
+     * Get Total break duration of the day. 
+     * @return RestDuration Total break duration of the day.
      */
     public Long getRestDuration() {
         return this.RestDuration;
     }
 
     /**
-     * Set Total Break duration of the day.
-     * @param RestDuration Total Break duration of the day.
+     * Set Total break duration of the day.
+     * @param RestDuration Total break duration of the day.
      */
     public void setRestDuration(Long RestDuration) {
         this.RestDuration = RestDuration;
     }
 
     /**
-     * Get Total After Call Work duration of the day. 
-     * @return AfterCallWorkDuration Total After Call Work duration of the day.
+     * Get Adjust the total duration of after-call work for the day. 
+     * @return AfterCallWorkDuration Adjust the total duration of after-call work for the day.
      */
     public Long getAfterCallWorkDuration() {
         return this.AfterCallWorkDuration;
     }
 
     /**
-     * Set Total After Call Work duration of the day.
-     * @param AfterCallWorkDuration Total After Call Work duration of the day.
+     * Set Adjust the total duration of after-call work for the day.
+     * @param AfterCallWorkDuration Adjust the total duration of after-call work for the day.
      */
     public void setAfterCallWorkDuration(Long AfterCallWorkDuration) {
         this.AfterCallWorkDuration = AfterCallWorkDuration;
     }
 
     /**
-     * Get Reason for Break. 
-     * @return Reason Reason for Break.
+     * Get Reason for break. 
+     * @return Reason Reason for break.
      */
     public String getReason() {
         return this.Reason;
     }
 
     /**
-     * Set Reason for Break.
-     * @param Reason Reason for Break.
+     * Set Reason for break.
+     * @param Reason Reason for break.
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
     }
 
     /**
-     * Get Whether to reserve Break status. 
-     * @return ReserveRest Whether to reserve Break status.
+     * Get Whether to reserve break status. 
+     * @return ReserveRest Whether to reserve break status.
      */
     public Boolean getReserveRest() {
         return this.ReserveRest;
     }
 
     /**
-     * Set Whether to reserve Break status.
-     * @param ReserveRest Whether to reserve Break status.
+     * Set Whether to reserve break status.
+     * @param ReserveRest Whether to reserve break status.
      */
     public void setReserveRest(Boolean ReserveRest) {
         this.ReserveRest = ReserveRest;
     }
 
     /**
-     * Get Whether to reserve Not Ready status. 
-     * @return ReserveNotReady Whether to reserve Not Ready status.
+     * Get Whether to reserve not ready status. 
+     * @return ReserveNotReady Whether to reserve not ready status.
      */
     public Boolean getReserveNotReady() {
         return this.ReserveNotReady;
     }
 
     /**
-     * Set Whether to reserve Not Ready status.
-     * @param ReserveNotReady Whether to reserve Not Ready status.
+     * Set Whether to reserve not ready status.
+     * @param ReserveNotReady Whether to reserve not ready status.
      */
     public void setReserveNotReady(Boolean ReserveNotReady) {
         this.ReserveNotReady = ReserveNotReady;
     }
 
     /**
-     * Get Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always. 
-     * @return UseMobileAccept Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+     * Get Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always. 
+     * @return UseMobileAccept Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
      */
     public Long getUseMobileAccept() {
         return this.UseMobileAccept;
     }
 
     /**
-     * Set Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
-     * @param UseMobileAccept Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+     * Set Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
+     * @param UseMobileAccept Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
      */
     public void setUseMobileAccept(Long UseMobileAccept) {
         this.UseMobileAccept = UseMobileAccept;
@@ -363,9 +363,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Last online timestamp.
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: this field may return null, indicating that no valid values can be obtained. 
      * @return LastOnlineTimestamp Last online timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getLastOnlineTimestamp() {
         return this.LastOnlineTimestamp;
@@ -373,9 +373,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last online timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param LastOnlineTimestamp Last online timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setLastOnlineTimestamp(Long LastOnlineTimestamp) {
         this.LastOnlineTimestamp = LastOnlineTimestamp;
@@ -383,9 +383,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Last status timestamp.
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: this field may return null, indicating that no valid values can be obtained. 
      * @return LastStatusTimestamp Last status timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getLastStatusTimestamp() {
         return this.LastStatusTimestamp;
@@ -393,9 +393,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last status timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param LastStatusTimestamp Last status timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setLastStatusTimestamp(Long LastStatusTimestamp) {
         this.LastStatusTimestamp = LastStatusTimestamp;

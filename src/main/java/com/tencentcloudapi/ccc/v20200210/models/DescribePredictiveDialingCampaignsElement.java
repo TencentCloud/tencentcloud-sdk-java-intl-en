@@ -24,32 +24,28 @@ import java.util.HashMap;
 public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
-    * Task ID
-Note: This field may return null if no valid value is obtained.
+    * <Task id>.
     */
     @SerializedName("CampaignId")
     @Expose
     private Long CampaignId;
 
     /**
-    * Task Name
-Note: This field might return null if no valid values can be obtained.
+    * Task name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Task status 0 - Ready to start, 1 - In progress, 2 - Paused, 3 - Terminated, 4 - Completed.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Task status 0 - ready to start, 1 - in progress, 2 - paused, 3 - terminated, 4 - completed.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Task status reasons 0 - Normal, 1 - Manually ended, 2 - Ended due to overtime.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Task status reasons 0 - normal, 1 - manually ended, 2 - ended due to overtime.
     */
     @SerializedName("StatusReason")
     @Expose
@@ -57,7 +53,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of called numbers.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CalleeCount")
     @Expose
@@ -65,7 +60,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of completed calls.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FinishedCalleeCount")
     @Expose
@@ -73,7 +67,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Running priority of multiple tasks in the same application, from high to low 1 - 5.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Priority")
     @Expose
@@ -81,97 +74,78 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * ID of the used skill group of agents.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SkillGroupId")
     @Expose
     private Long SkillGroupId;
 
     /**
-     * Get Task ID
-Note: This field may return null if no valid value is obtained. 
-     * @return CampaignId Task ID
-Note: This field may return null if no valid value is obtained.
+     * Get <Task id>. 
+     * @return CampaignId <Task id>.
      */
     public Long getCampaignId() {
         return this.CampaignId;
     }
 
     /**
-     * Set Task ID
-Note: This field may return null if no valid value is obtained.
-     * @param CampaignId Task ID
-Note: This field may return null if no valid value is obtained.
+     * Set <Task id>.
+     * @param CampaignId <Task id>.
      */
     public void setCampaignId(Long CampaignId) {
         this.CampaignId = CampaignId;
     }
 
     /**
-     * Get Task Name
-Note: This field might return null if no valid values can be obtained. 
-     * @return Name Task Name
-Note: This field might return null if no valid values can be obtained.
+     * Get Task name. 
+     * @return Name Task name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Task Name
-Note: This field might return null if no valid values can be obtained.
-     * @param Name Task Name
-Note: This field might return null if no valid values can be obtained.
+     * Set Task name.
+     * @param Name Task name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Task status 0 - Ready to start, 1 - In progress, 2 - Paused, 3 - Terminated, 4 - Completed.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Status Task status 0 - Ready to start, 1 - In progress, 2 - Paused, 3 - Terminated, 4 - Completed.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Task status 0 - ready to start, 1 - in progress, 2 - paused, 3 - terminated, 4 - completed. 
+     * @return Status Task status 0 - ready to start, 1 - in progress, 2 - paused, 3 - terminated, 4 - completed.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status 0 - Ready to start, 1 - In progress, 2 - Paused, 3 - Terminated, 4 - Completed.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Status Task status 0 - Ready to start, 1 - In progress, 2 - Paused, 3 - Terminated, 4 - Completed.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Task status 0 - ready to start, 1 - in progress, 2 - paused, 3 - terminated, 4 - completed.
+     * @param Status Task status 0 - ready to start, 1 - in progress, 2 - paused, 3 - terminated, 4 - completed.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Task status reasons 0 - Normal, 1 - Manually ended, 2 - Ended due to overtime.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StatusReason Task status reasons 0 - Normal, 1 - Manually ended, 2 - Ended due to overtime.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Task status reasons 0 - normal, 1 - manually ended, 2 - ended due to overtime. 
+     * @return StatusReason Task status reasons 0 - normal, 1 - manually ended, 2 - ended due to overtime.
      */
     public Long getStatusReason() {
         return this.StatusReason;
     }
 
     /**
-     * Set Task status reasons 0 - Normal, 1 - Manually ended, 2 - Ended due to overtime.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StatusReason Task status reasons 0 - Normal, 1 - Manually ended, 2 - Ended due to overtime.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Task status reasons 0 - normal, 1 - manually ended, 2 - ended due to overtime.
+     * @param StatusReason Task status reasons 0 - normal, 1 - manually ended, 2 - ended due to overtime.
      */
     public void setStatusReason(Long StatusReason) {
         this.StatusReason = StatusReason;
     }
 
     /**
-     * Get Number of called numbers.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Number of called numbers. 
      * @return CalleeCount Number of called numbers.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getCalleeCount() {
         return this.CalleeCount;
@@ -179,19 +153,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of called numbers.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param CalleeCount Number of called numbers.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCalleeCount(Long CalleeCount) {
         this.CalleeCount = CalleeCount;
     }
 
     /**
-     * Get Number of completed calls.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Number of completed calls. 
      * @return FinishedCalleeCount Number of completed calls.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getFinishedCalleeCount() {
         return this.FinishedCalleeCount;
@@ -199,19 +169,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of completed calls.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param FinishedCalleeCount Number of completed calls.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFinishedCalleeCount(Long FinishedCalleeCount) {
         this.FinishedCalleeCount = FinishedCalleeCount;
     }
 
     /**
-     * Get Running priority of multiple tasks in the same application, from high to low 1 - 5.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Running priority of multiple tasks in the same application, from high to low 1 - 5. 
      * @return Priority Running priority of multiple tasks in the same application, from high to low 1 - 5.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getPriority() {
         return this.Priority;
@@ -219,19 +185,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Running priority of multiple tasks in the same application, from high to low 1 - 5.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param Priority Running priority of multiple tasks in the same application, from high to low 1 - 5.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get ID of the used skill group of agents.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get ID of the used skill group of agents. 
      * @return SkillGroupId ID of the used skill group of agents.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getSkillGroupId() {
         return this.SkillGroupId;
@@ -239,9 +201,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set ID of the used skill group of agents.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param SkillGroupId ID of the used skill group of agents.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSkillGroupId(Long SkillGroupId) {
         this.SkillGroupId = SkillGroupId;

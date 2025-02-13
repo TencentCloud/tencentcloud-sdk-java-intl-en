@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class PhoneNumBuyInfo extends AbstractModel {
 
     /**
-    * Telephone Number
+    * Telephone number.
     */
     @SerializedName("PhoneNum")
     @Expose
     private String PhoneNum;
 
     /**
-    * Number type, 0 - Landline | 1 - Virtual Business Number | 2 - ISP Number | 3 - 400 Number.
+    * Number type, 0 - landline | 1 - virtual business number | 2 - ISP number | 3 - 400 number.
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * Call type of the number, 1 - Inbound | 2 - Outbound | 3 - Inbound and outbound.
+    * Call type of the number, 1 - inbound | 2 - outbound | 3 - inbound and outbound.
     */
     @SerializedName("CallType")
     @Expose
@@ -52,62 +52,62 @@ public class PhoneNumBuyInfo extends AbstractModel {
     private Long BuyTime;
 
     /**
-    * End timestamp.
+    * Deadline timestamp.
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * Number status, 1-Normal | 2-Suspended due to non-payment | 4-Admin suspended | 5-Suspended due to violation.
+    * Number status, 1-normal | 2-suspended due to non-payment | 4-admin suspended | 5-suspended due to violation.
     */
     @SerializedName("State")
     @Expose
     private Long State;
 
     /**
-     * Get Telephone Number 
-     * @return PhoneNum Telephone Number
+     * Get Telephone number. 
+     * @return PhoneNum Telephone number.
      */
     public String getPhoneNum() {
         return this.PhoneNum;
     }
 
     /**
-     * Set Telephone Number
-     * @param PhoneNum Telephone Number
+     * Set Telephone number.
+     * @param PhoneNum Telephone number.
      */
     public void setPhoneNum(String PhoneNum) {
         this.PhoneNum = PhoneNum;
     }
 
     /**
-     * Get Number type, 0 - Landline | 1 - Virtual Business Number | 2 - ISP Number | 3 - 400 Number. 
-     * @return Type Number type, 0 - Landline | 1 - Virtual Business Number | 2 - ISP Number | 3 - 400 Number.
+     * Get Number type, 0 - landline | 1 - virtual business number | 2 - ISP number | 3 - 400 number. 
+     * @return Type Number type, 0 - landline | 1 - virtual business number | 2 - ISP number | 3 - 400 number.
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Number type, 0 - Landline | 1 - Virtual Business Number | 2 - ISP Number | 3 - 400 Number.
-     * @param Type Number type, 0 - Landline | 1 - Virtual Business Number | 2 - ISP Number | 3 - 400 Number.
+     * Set Number type, 0 - landline | 1 - virtual business number | 2 - ISP number | 3 - 400 number.
+     * @param Type Number type, 0 - landline | 1 - virtual business number | 2 - ISP number | 3 - 400 number.
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Call type of the number, 1 - Inbound | 2 - Outbound | 3 - Inbound and outbound. 
-     * @return CallType Call type of the number, 1 - Inbound | 2 - Outbound | 3 - Inbound and outbound.
+     * Get Call type of the number, 1 - inbound | 2 - outbound | 3 - inbound and outbound. 
+     * @return CallType Call type of the number, 1 - inbound | 2 - outbound | 3 - inbound and outbound.
      */
     public Long getCallType() {
         return this.CallType;
     }
 
     /**
-     * Set Call type of the number, 1 - Inbound | 2 - Outbound | 3 - Inbound and outbound.
-     * @param CallType Call type of the number, 1 - Inbound | 2 - Outbound | 3 - Inbound and outbound.
+     * Set Call type of the number, 1 - inbound | 2 - outbound | 3 - inbound and outbound.
+     * @param CallType Call type of the number, 1 - inbound | 2 - outbound | 3 - inbound and outbound.
      */
     public void setCallType(Long CallType) {
         this.CallType = CallType;
@@ -130,32 +130,32 @@ public class PhoneNumBuyInfo extends AbstractModel {
     }
 
     /**
-     * Get End timestamp. 
-     * @return EndTime End timestamp.
+     * Get Deadline timestamp. 
+     * @return EndTime Deadline timestamp.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End timestamp.
-     * @param EndTime End timestamp.
+     * Set Deadline timestamp.
+     * @param EndTime Deadline timestamp.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Number status, 1-Normal | 2-Suspended due to non-payment | 4-Admin suspended | 5-Suspended due to violation. 
-     * @return State Number status, 1-Normal | 2-Suspended due to non-payment | 4-Admin suspended | 5-Suspended due to violation.
+     * Get Number status, 1-normal | 2-suspended due to non-payment | 4-admin suspended | 5-suspended due to violation. 
+     * @return State Number status, 1-normal | 2-suspended due to non-payment | 4-admin suspended | 5-suspended due to violation.
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set Number status, 1-Normal | 2-Suspended due to non-payment | 4-Admin suspended | 5-Suspended due to violation.
-     * @param State Number status, 1-Normal | 2-Suspended due to non-payment | 4-Admin suspended | 5-Suspended due to violation.
+     * Set Number status, 1-normal | 2-suspended due to non-payment | 4-admin suspended | 5-suspended due to violation.
+     * @param State Number status, 1-normal | 2-suspended due to non-payment | 4-admin suspended | 5-suspended due to violation.
      */
     public void setState(Long State) {
         this.State = State;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateAutoCalloutTaskRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Task starting timestamp. Unix second-level timestamp.
+    * Task starting timestamp. unix second-level timestamp.
     */
     @SerializedName("NotBefore")
     @Expose
@@ -66,21 +66,21 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     private String Name;
 
     /**
-    * Task description.
+    * <Task description>.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Task stop timestamp. Unix second-level timestamp.
+    * Task stop timestamp. unix second-level timestamp.
     */
     @SerializedName("NotAfter")
     @Expose
     private Long NotAfter;
 
     /**
-    * Maximum attempts, 1-3 times
+    * Maximum attempts, 1-3 times.
     */
     @SerializedName("Tries")
     @Expose
@@ -108,32 +108,32 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     private CalleeAttribute [] CalleeAttributes;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Task starting timestamp. Unix second-level timestamp. 
-     * @return NotBefore Task starting timestamp. Unix second-level timestamp.
+     * Get Task starting timestamp. unix second-level timestamp. 
+     * @return NotBefore Task starting timestamp. unix second-level timestamp.
      */
     public Long getNotBefore() {
         return this.NotBefore;
     }
 
     /**
-     * Set Task starting timestamp. Unix second-level timestamp.
-     * @param NotBefore Task starting timestamp. Unix second-level timestamp.
+     * Set Task starting timestamp. unix second-level timestamp.
+     * @param NotBefore Task starting timestamp. unix second-level timestamp.
      */
     public void setNotBefore(Long NotBefore) {
         this.NotBefore = NotBefore;
@@ -204,48 +204,48 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Task description. 
-     * @return Description Task description.
+     * Get <Task description>. 
+     * @return Description <Task description>.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Task description.
-     * @param Description Task description.
+     * Set <Task description>.
+     * @param Description <Task description>.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Task stop timestamp. Unix second-level timestamp. 
-     * @return NotAfter Task stop timestamp. Unix second-level timestamp.
+     * Get Task stop timestamp. unix second-level timestamp. 
+     * @return NotAfter Task stop timestamp. unix second-level timestamp.
      */
     public Long getNotAfter() {
         return this.NotAfter;
     }
 
     /**
-     * Set Task stop timestamp. Unix second-level timestamp.
-     * @param NotAfter Task stop timestamp. Unix second-level timestamp.
+     * Set Task stop timestamp. unix second-level timestamp.
+     * @param NotAfter Task stop timestamp. unix second-level timestamp.
      */
     public void setNotAfter(Long NotAfter) {
         this.NotAfter = NotAfter;
     }
 
     /**
-     * Get Maximum attempts, 1-3 times 
-     * @return Tries Maximum attempts, 1-3 times
+     * Get Maximum attempts, 1-3 times. 
+     * @return Tries Maximum attempts, 1-3 times.
      */
     public Long getTries() {
         return this.Tries;
     }
 
     /**
-     * Set Maximum attempts, 1-3 times
-     * @param Tries Maximum attempts, 1-3 times
+     * Set Maximum attempts, 1-3 times.
+     * @param Tries Maximum attempts, 1-3 times.
      */
     public void setTries(Long Tries) {
         this.Tries = Tries;

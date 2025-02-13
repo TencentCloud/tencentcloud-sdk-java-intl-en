@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StaffBuyInfo extends AbstractModel {
 
     /**
-    * Number of agents purchased
+    * Number of agents purchased.
     */
     @SerializedName("Num")
     @Expose
@@ -38,31 +38,30 @@ public class StaffBuyInfo extends AbstractModel {
     private Long BuyTime;
 
     /**
-    * End timestamp.
+    * Deadline timestamp.
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * Number of office telephones purchased.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Quantity of office telephones purchased.
     */
     @SerializedName("SipNum")
     @Expose
     private Long SipNum;
 
     /**
-     * Get Number of agents purchased 
-     * @return Num Number of agents purchased
+     * Get Number of agents purchased. 
+     * @return Num Number of agents purchased.
      */
     public Long getNum() {
         return this.Num;
     }
 
     /**
-     * Set Number of agents purchased
-     * @param Num Number of agents purchased
+     * Set Number of agents purchased.
+     * @param Num Number of agents purchased.
      */
     public void setNum(Long Num) {
         this.Num = Num;
@@ -85,36 +84,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get End timestamp. 
-     * @return EndTime End timestamp.
+     * Get Deadline timestamp. 
+     * @return EndTime Deadline timestamp.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End timestamp.
-     * @param EndTime End timestamp.
+     * Set Deadline timestamp.
+     * @param EndTime Deadline timestamp.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Number of office telephones purchased.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SipNum Number of office telephones purchased.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Quantity of office telephones purchased. 
+     * @return SipNum Quantity of office telephones purchased.
      */
     public Long getSipNum() {
         return this.SipNum;
     }
 
     /**
-     * Set Number of office telephones purchased.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SipNum Number of office telephones purchased.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Quantity of office telephones purchased.
+     * @param SipNum Quantity of office telephones purchased.
      */
     public void setSipNum(Long SipNum) {
         this.SipNum = SipNum;

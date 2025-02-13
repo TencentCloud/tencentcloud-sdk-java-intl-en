@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePredictiveDialingCampaignsRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -52,23 +52,23 @@ public class DescribePredictiveDialingCampaignsRequest extends AbstractModel {
     private String Name;
 
     /**
-    * Query task list skill group ID.
+    * Query task list skill group id.
     */
     @SerializedName("SkillGroupId")
     @Expose
     private Long SkillGroupId;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -123,16 +123,16 @@ public class DescribePredictiveDialingCampaignsRequest extends AbstractModel {
     }
 
     /**
-     * Get Query task list skill group ID. 
-     * @return SkillGroupId Query task list skill group ID.
+     * Get Query task list skill group id. 
+     * @return SkillGroupId Query task list skill group id.
      */
     public Long getSkillGroupId() {
         return this.SkillGroupId;
     }
 
     /**
-     * Set Query task list skill group ID.
-     * @param SkillGroupId Query task list skill group ID.
+     * Set Query task list skill group id.
+     * @param SkillGroupId Query task list skill group id.
      */
     public void setSkillGroupId(Long SkillGroupId) {
         this.SkillGroupId = SkillGroupId;

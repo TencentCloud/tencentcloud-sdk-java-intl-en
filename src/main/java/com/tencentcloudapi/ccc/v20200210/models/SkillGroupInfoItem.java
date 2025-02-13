@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SkillGroupInfoItem extends AbstractModel {
 
     /**
-    * Skill group ID.
+    * Skill group id.
     */
     @SerializedName("SkillGroupId")
     @Expose
@@ -38,7 +38,7 @@ public class SkillGroupInfoItem extends AbstractModel {
     private String SkillGroupName;
 
     /**
-    * (Deprecated) Type: IM, TEL, ALL (full media).
+    * (Deprecated) type: im, tel, all (full media).
     */
     @SerializedName("Type")
     @Expose
@@ -46,15 +46,13 @@ public class SkillGroupInfoItem extends AbstractModel {
 
     /**
     * Session allocation policy.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RoutePolicy")
     @Expose
     private String RoutePolicy;
 
     /**
-    * Should the conversation allocation prioritize the last service seat?
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether the session is allocated to the last serviced agent first.
     */
     @SerializedName("UsingLastSeat")
     @Expose
@@ -62,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Maximum concurrency number of single client service (default 1 for telephone type).
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxConcurrency")
     @Expose
@@ -70,39 +67,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastModifyTimestamp")
     @Expose
     private Long LastModifyTimestamp;
 
     /**
-    * Skill group type 0-phone, 1-online, 3-audio, 4-video.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	
     */
     @SerializedName("SkillGroupType")
     @Expose
     private Long SkillGroupType;
 
     /**
-    * Extension number within the skill group
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Intra-Skill group line number.
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-     * Get Skill group ID. 
-     * @return SkillGroupId Skill group ID.
+     * Get Skill group id. 
+     * @return SkillGroupId Skill group id.
      */
     public Long getSkillGroupId() {
         return this.SkillGroupId;
     }
 
     /**
-     * Set Skill group ID.
-     * @param SkillGroupId Skill group ID.
+     * Set Skill group id.
+     * @param SkillGroupId Skill group id.
      */
     public void setSkillGroupId(Long SkillGroupId) {
         this.SkillGroupId = SkillGroupId;
@@ -125,26 +119,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get (Deprecated) Type: IM, TEL, ALL (full media). 
-     * @return Type (Deprecated) Type: IM, TEL, ALL (full media).
+     * Get (Deprecated) type: im, tel, all (full media). 
+     * @return Type (Deprecated) type: im, tel, all (full media).
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set (Deprecated) Type: IM, TEL, ALL (full media).
-     * @param Type (Deprecated) Type: IM, TEL, ALL (full media).
+     * Set (Deprecated) type: im, tel, all (full media).
+     * @param Type (Deprecated) type: im, tel, all (full media).
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Session allocation policy.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Session allocation policy. 
      * @return RoutePolicy Session allocation policy.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getRoutePolicy() {
         return this.RoutePolicy;
@@ -152,39 +144,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Session allocation policy.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param RoutePolicy Session allocation policy.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRoutePolicy(String RoutePolicy) {
         this.RoutePolicy = RoutePolicy;
     }
 
     /**
-     * Get Should the conversation allocation prioritize the last service seat?
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UsingLastSeat Should the conversation allocation prioritize the last service seat?
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether the session is allocated to the last serviced agent first. 
+     * @return UsingLastSeat Whether the session is allocated to the last serviced agent first.
      */
     public Long getUsingLastSeat() {
         return this.UsingLastSeat;
     }
 
     /**
-     * Set Should the conversation allocation prioritize the last service seat?
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UsingLastSeat Should the conversation allocation prioritize the last service seat?
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether the session is allocated to the last serviced agent first.
+     * @param UsingLastSeat Whether the session is allocated to the last serviced agent first.
      */
     public void setUsingLastSeat(Long UsingLastSeat) {
         this.UsingLastSeat = UsingLastSeat;
     }
 
     /**
-     * Get Maximum concurrency number of single client service (default 1 for telephone type).
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Maximum concurrency number of single client service (default 1 for telephone type). 
      * @return MaxConcurrency Maximum concurrency number of single client service (default 1 for telephone type).
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getMaxConcurrency() {
         return this.MaxConcurrency;
@@ -192,19 +176,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Maximum concurrency number of single client service (default 1 for telephone type).
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param MaxConcurrency Maximum concurrency number of single client service (default 1 for telephone type).
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setMaxConcurrency(Long MaxConcurrency) {
         this.MaxConcurrency = MaxConcurrency;
     }
 
     /**
-     * Get Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Last modification time. 
      * @return LastModifyTimestamp Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getLastModifyTimestamp() {
         return this.LastModifyTimestamp;
@@ -212,49 +192,39 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param LastModifyTimestamp Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setLastModifyTimestamp(Long LastModifyTimestamp) {
         this.LastModifyTimestamp = LastModifyTimestamp;
     }
 
     /**
-     * Get Skill group type 0-phone, 1-online, 3-audio, 4-video.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SkillGroupType Skill group type 0-phone, 1-online, 3-audio, 4-video.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	 
+     * @return SkillGroupType Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	
      */
     public Long getSkillGroupType() {
         return this.SkillGroupType;
     }
 
     /**
-     * Set Skill group type 0-phone, 1-online, 3-audio, 4-video.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SkillGroupType Skill group type 0-phone, 1-online, 3-audio, 4-video.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	
+     * @param SkillGroupType Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	
      */
     public void setSkillGroupType(Long SkillGroupType) {
         this.SkillGroupType = SkillGroupType;
     }
 
     /**
-     * Get Extension number within the skill group
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Alias Extension number within the skill group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Intra-Skill group line number. 
+     * @return Alias Intra-Skill group line number.
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set Extension number within the skill group
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Alias Extension number within the skill group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Intra-Skill group line number.
+     * @param Alias Intra-Skill group line number.
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;

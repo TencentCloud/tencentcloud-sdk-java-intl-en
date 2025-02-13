@@ -38,7 +38,7 @@ public class DisableCCCPhoneNumberRequest extends AbstractModel {
     private Long Disabled;
 
     /**
-    * TCCC instance application ID.
+    * TCCC instance application id.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -77,16 +77,16 @@ public class DisableCCCPhoneNumberRequest extends AbstractModel {
     }
 
     /**
-     * Get TCCC instance application ID. 
-     * @return SdkAppId TCCC instance application ID.
+     * Get TCCC instance application id. 
+     * @return SdkAppId TCCC instance application id.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set TCCC instance application ID.
-     * @param SdkAppId TCCC instance application ID.
+     * Set TCCC instance application id.
+     * @param SdkAppId TCCC instance application id.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeAutoCalloutTasksRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Page size
+    * <Page size>.
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * Page number
+    * Page number.
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Page size 
-     * @return PageSize Page size
+     * Get <Page size>. 
+     * @return PageSize <Page size>.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Page size
-     * @param PageSize Page size
+     * Set <Page size>.
+     * @param PageSize <Page size>.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get Page number 
-     * @return PageNumber Page number
+     * Get Page number. 
+     * @return PageNumber Page number.
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set Page number
-     * @param PageNumber Page number
+     * Set Page number.
+     * @param PageNumber Page number.
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;

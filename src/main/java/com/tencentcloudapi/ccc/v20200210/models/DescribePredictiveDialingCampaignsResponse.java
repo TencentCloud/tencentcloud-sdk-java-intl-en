@@ -25,15 +25,13 @@ public class DescribePredictiveDialingCampaignsResponse extends AbstractModel {
 
     /**
     * Total data volume.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Data
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Data.
     */
     @SerializedName("CampaignList")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total data volume.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total data volume. 
      * @return TotalCount Total data volume.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,29 +54,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total data volume.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TotalCount Total data volume.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Data
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CampaignList Data
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Data. 
+     * @return CampaignList Data.
      */
     public DescribePredictiveDialingCampaignsElement [] getCampaignList() {
         return this.CampaignList;
     }
 
     /**
-     * Set Data
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CampaignList Data
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Data.
+     * @param CampaignList Data.
      */
     public void setCampaignList(DescribePredictiveDialingCampaignsElement [] CampaignList) {
         this.CampaignList = CampaignList;

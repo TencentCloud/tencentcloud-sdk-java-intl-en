@@ -25,95 +25,83 @@ public class ServeParticipant extends AbstractModel {
 
     /**
     * Agent email.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Mail")
     @Expose
     private String Mail;
 
     /**
-    * Agent Telephone
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Agent phone number.
     */
     @SerializedName("Phone")
     @Expose
     private String Phone;
 
     /**
-    * Ring timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Ringing timestamp, unix second-level timestamp.
     */
     @SerializedName("RingTimestamp")
     @Expose
     private Long RingTimestamp;
 
     /**
-    * Answer timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Answer timestamp. unix second-level timestamp.
     */
     @SerializedName("AcceptTimestamp")
     @Expose
     private Long AcceptTimestamp;
 
     /**
-    * End timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * End timestamp. unix second-level timestamp.
     */
     @SerializedName("EndedTimestamp")
     @Expose
     private Long EndedTimestamp;
 
     /**
-    * Recording ID, which can be used to index the recording on the agent side
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Recording id can be indexed to the agent side recording.
     */
     @SerializedName("RecordId")
     @Expose
     private String RecordId;
 
     /**
-    * Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Participant type: "staffseat", "outboundseat", "staffphoneseat".
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Transfer Source Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Transfer source agent information.
     */
     @SerializedName("TransferFrom")
     @Expose
     private String TransferFrom;
 
     /**
-    * Transfer source participant type is consistent with the Type value.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Transfer source participant type is consistent with the type value.
     */
     @SerializedName("TransferFromType")
     @Expose
     private String TransferFromType;
 
     /**
-    * Transfer Destination Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Transfer destination agent information.
     */
     @SerializedName("TransferTo")
     @Expose
     private String TransferTo;
 
     /**
-    * Transfer destination participant type is consistent with Type values.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Transfer destination participant type, which is consistent with type values.
     */
     @SerializedName("TransferToType")
     @Expose
     private String TransferToType;
 
     /**
-    * Skill group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Skill group id.
     */
     @SerializedName("SkillGroupId")
     @Expose
@@ -121,15 +109,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Ending status.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EndStatusString")
     @Expose
     private String EndStatusString;
 
     /**
-    * Recording URL.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Recording url.
     */
     @SerializedName("RecordURL")
     @Expose
@@ -137,41 +123,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Participant sequence number, starting from 0.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Sequence")
     @Expose
     private Long Sequence;
 
     /**
-    * Start timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Start timestamp. unix second-level timestamp.
     */
     @SerializedName("StartTimestamp")
     @Expose
     private Long StartTimestamp;
 
     /**
-    * Skill Group name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Skill group name.
     */
     @SerializedName("SkillGroupName")
     @Expose
     private String SkillGroupName;
 
     /**
-    * Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Address of the third-party cos for transferring recording.
     */
     @SerializedName("CustomRecordURL")
     @Expose
     private String CustomRecordURL;
 
     /**
-     * Get Agent email.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Agent email. 
      * @return Mail Agent email.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMail() {
         return this.Mail;
@@ -179,239 +159,191 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Agent email.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Mail Agent email.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMail(String Mail) {
         this.Mail = Mail;
     }
 
     /**
-     * Get Agent Telephone
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Phone Agent Telephone
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Agent phone number. 
+     * @return Phone Agent phone number.
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set Agent Telephone
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Phone Agent Telephone
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Agent phone number.
+     * @param Phone Agent phone number.
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get Ring timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RingTimestamp Ring timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Ringing timestamp, unix second-level timestamp. 
+     * @return RingTimestamp Ringing timestamp, unix second-level timestamp.
      */
     public Long getRingTimestamp() {
         return this.RingTimestamp;
     }
 
     /**
-     * Set Ring timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RingTimestamp Ring timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Ringing timestamp, unix second-level timestamp.
+     * @param RingTimestamp Ringing timestamp, unix second-level timestamp.
      */
     public void setRingTimestamp(Long RingTimestamp) {
         this.RingTimestamp = RingTimestamp;
     }
 
     /**
-     * Get Answer timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AcceptTimestamp Answer timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Answer timestamp. unix second-level timestamp. 
+     * @return AcceptTimestamp Answer timestamp. unix second-level timestamp.
      */
     public Long getAcceptTimestamp() {
         return this.AcceptTimestamp;
     }
 
     /**
-     * Set Answer timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AcceptTimestamp Answer timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Answer timestamp. unix second-level timestamp.
+     * @param AcceptTimestamp Answer timestamp. unix second-level timestamp.
      */
     public void setAcceptTimestamp(Long AcceptTimestamp) {
         this.AcceptTimestamp = AcceptTimestamp;
     }
 
     /**
-     * Get End timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndedTimestamp End timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get End timestamp. unix second-level timestamp. 
+     * @return EndedTimestamp End timestamp. unix second-level timestamp.
      */
     public Long getEndedTimestamp() {
         return this.EndedTimestamp;
     }
 
     /**
-     * Set End timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndedTimestamp End timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set End timestamp. unix second-level timestamp.
+     * @param EndedTimestamp End timestamp. unix second-level timestamp.
      */
     public void setEndedTimestamp(Long EndedTimestamp) {
         this.EndedTimestamp = EndedTimestamp;
     }
 
     /**
-     * Get Recording ID, which can be used to index the recording on the agent side
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RecordId Recording ID, which can be used to index the recording on the agent side
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Recording id can be indexed to the agent side recording. 
+     * @return RecordId Recording id can be indexed to the agent side recording.
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set Recording ID, which can be used to index the recording on the agent side
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RecordId Recording ID, which can be used to index the recording on the agent side
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Recording id can be indexed to the agent side recording.
+     * @param RecordId Recording id can be indexed to the agent side recording.
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;
     }
 
     /**
-     * Get Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Participant type: "staffseat", "outboundseat", "staffphoneseat". 
+     * @return Type Participant type: "staffseat", "outboundseat", "staffphoneseat".
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Participant type: "staffseat", "outboundseat", "staffphoneseat".
+     * @param Type Participant type: "staffseat", "outboundseat", "staffphoneseat".
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Transfer Source Agent Information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferFrom Transfer Source Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Transfer source agent information. 
+     * @return TransferFrom Transfer source agent information.
      */
     public String getTransferFrom() {
         return this.TransferFrom;
     }
 
     /**
-     * Set Transfer Source Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferFrom Transfer Source Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Transfer source agent information.
+     * @param TransferFrom Transfer source agent information.
      */
     public void setTransferFrom(String TransferFrom) {
         this.TransferFrom = TransferFrom;
     }
 
     /**
-     * Get Transfer source participant type is consistent with the Type value.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferFromType Transfer source participant type is consistent with the Type value.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Transfer source participant type is consistent with the type value. 
+     * @return TransferFromType Transfer source participant type is consistent with the type value.
      */
     public String getTransferFromType() {
         return this.TransferFromType;
     }
 
     /**
-     * Set Transfer source participant type is consistent with the Type value.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferFromType Transfer source participant type is consistent with the Type value.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Transfer source participant type is consistent with the type value.
+     * @param TransferFromType Transfer source participant type is consistent with the type value.
      */
     public void setTransferFromType(String TransferFromType) {
         this.TransferFromType = TransferFromType;
     }
 
     /**
-     * Get Transfer Destination Agent Information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferTo Transfer Destination Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Transfer destination agent information. 
+     * @return TransferTo Transfer destination agent information.
      */
     public String getTransferTo() {
         return this.TransferTo;
     }
 
     /**
-     * Set Transfer Destination Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferTo Transfer Destination Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Transfer destination agent information.
+     * @param TransferTo Transfer destination agent information.
      */
     public void setTransferTo(String TransferTo) {
         this.TransferTo = TransferTo;
     }
 
     /**
-     * Get Transfer destination participant type is consistent with Type values.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferToType Transfer destination participant type is consistent with Type values.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Transfer destination participant type, which is consistent with type values. 
+     * @return TransferToType Transfer destination participant type, which is consistent with type values.
      */
     public String getTransferToType() {
         return this.TransferToType;
     }
 
     /**
-     * Set Transfer destination participant type is consistent with Type values.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferToType Transfer destination participant type is consistent with Type values.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Transfer destination participant type, which is consistent with type values.
+     * @param TransferToType Transfer destination participant type, which is consistent with type values.
      */
     public void setTransferToType(String TransferToType) {
         this.TransferToType = TransferToType;
     }
 
     /**
-     * Get Skill group ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SkillGroupId Skill group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Skill group id. 
+     * @return SkillGroupId Skill group id.
      */
     public Long getSkillGroupId() {
         return this.SkillGroupId;
     }
 
     /**
-     * Set Skill group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SkillGroupId Skill group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Skill group id.
+     * @param SkillGroupId Skill group id.
      */
     public void setSkillGroupId(Long SkillGroupId) {
         this.SkillGroupId = SkillGroupId;
     }
 
     /**
-     * Get Ending status.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Ending status. 
      * @return EndStatusString Ending status.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getEndStatusString() {
         return this.EndStatusString;
@@ -419,39 +351,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Ending status.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EndStatusString Ending status.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEndStatusString(String EndStatusString) {
         this.EndStatusString = EndStatusString;
     }
 
     /**
-     * Get Recording URL.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RecordURL Recording URL.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Recording url. 
+     * @return RecordURL Recording url.
      */
     public String getRecordURL() {
         return this.RecordURL;
     }
 
     /**
-     * Set Recording URL.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RecordURL Recording URL.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Recording url.
+     * @param RecordURL Recording url.
      */
     public void setRecordURL(String RecordURL) {
         this.RecordURL = RecordURL;
     }
 
     /**
-     * Get Participant sequence number, starting from 0.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Participant sequence number, starting from 0. 
      * @return Sequence Participant sequence number, starting from 0.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getSequence() {
         return this.Sequence;
@@ -459,69 +383,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Participant sequence number, starting from 0.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Sequence Participant sequence number, starting from 0.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSequence(Long Sequence) {
         this.Sequence = Sequence;
     }
 
     /**
-     * Get Start timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTimestamp Start timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Start timestamp. unix second-level timestamp. 
+     * @return StartTimestamp Start timestamp. unix second-level timestamp.
      */
     public Long getStartTimestamp() {
         return this.StartTimestamp;
     }
 
     /**
-     * Set Start timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTimestamp Start timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Start timestamp. unix second-level timestamp.
+     * @param StartTimestamp Start timestamp. unix second-level timestamp.
      */
     public void setStartTimestamp(Long StartTimestamp) {
         this.StartTimestamp = StartTimestamp;
     }
 
     /**
-     * Get Skill Group name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SkillGroupName Skill Group name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Skill group name. 
+     * @return SkillGroupName Skill group name.
      */
     public String getSkillGroupName() {
         return this.SkillGroupName;
     }
 
     /**
-     * Set Skill Group name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SkillGroupName Skill Group name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Skill group name.
+     * @param SkillGroupName Skill group name.
      */
     public void setSkillGroupName(String SkillGroupName) {
         this.SkillGroupName = SkillGroupName;
     }
 
     /**
-     * Get Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CustomRecordURL Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Address of the third-party cos for transferring recording. 
+     * @return CustomRecordURL Address of the third-party cos for transferring recording.
      */
     public String getCustomRecordURL() {
         return this.CustomRecordURL;
     }
 
     /**
-     * Set Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CustomRecordURL Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Address of the third-party cos for transferring recording.
+     * @param CustomRecordURL Address of the third-party cos for transferring recording.
      */
     public void setCustomRecordURL(String CustomRecordURL) {
         this.CustomRecordURL = CustomRecordURL;

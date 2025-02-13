@@ -39,7 +39,7 @@ public enum CccErrorCode {
     // Agent is busy.
      FAILEDOPERATION_SEATSTATUSBUSY("FailedOperation.SeatStatusBusy"),
      
-    // Number of Uploaded Files exceeds the limit
+    // Number of uploaded files exceeds the limit.
      FAILEDOPERATION_UPLOADFILEOVERFLOW("FailedOperation.UploadFileOverflow"),
      
     // An internal error occurs.
@@ -54,10 +54,10 @@ public enum CccErrorCode {
     // Duplicate address.
      INVALIDPARAMETER_DUPLICATEADDRESS("InvalidParameter.DuplicateAddress"),
      
-    // Duplicate number
+    // Duplicate number.
      INVALIDPARAMETER_DUPLICATEPHONENUMBER("InvalidParameter.DuplicatePhoneNumber"),
      
-    // Duplicate SIP account
+    // Duplicate sip account.
      INVALIDPARAMETER_DUPLICATESIPACCOUNT("InvalidParameter.DuplicateSipAccount"),
      
     // Illegal address.
@@ -72,25 +72,25 @@ public enum CccErrorCode {
     // Invalid address.
      INVALIDPARAMETER_INVALIDADDRESS("InvalidParameter.InvalidAddress"),
      
-    // Invalid IP information.
+    // Invalid ip information.
      INVALIDPARAMETER_INVALIDIP("InvalidParameter.InvalidIP"),
      
-    // Invalid number
+    // Invalid number.
      INVALIDPARAMETER_INVALIDPHONENUMBER("InvalidParameter.InvalidPhoneNumber"),
      
     // Invalid port information.
      INVALIDPARAMETER_INVALIDPORT("InvalidParameter.InvalidPort"),
      
-    // Illegal password. (The length should be no less than 8 digits and must contain upper and lower case letters and numbers.)
+    // Illegal password. (the length should be no less than 8 digits and must contain upper and lower case letters and numbers.).
      INVALIDPARAMETER_SIPACCOUNTPASSWORDFORMAT("InvalidParameter.SipAccountPasswordFormat"),
      
-    // Illegal username (only can contain A-Z,a-z, and number)
+    // Illegal username (only can contain a-z,a-z, and number).
      INVALIDPARAMETER_SIPACCOUNTUSERFORMAT("InvalidParameter.SipAccountUserFormat"),
      
-    // The SIP channel is still in use.
+    // The sip channel is still in use.
      INVALIDPARAMETER_SIPTRUNKINUSED("InvalidParameter.SipTrunkInUsed"),
      
-    // SIP channel information not found
+    // SIP channel information not found.
      INVALIDPARAMETER_SIPTRUNKNOTFOUND("InvalidParameter.SipTrunkNotFound"),
      
     // Invalid Parameter
@@ -99,8 +99,17 @@ public enum CccErrorCode {
     // Account does not exist.
      INVALIDPARAMETERVALUE_ACCOUNTNOTEXIST("InvalidParameterValue.AccountNotExist"),
      
+    // The approval form no. does not exist.
+     INVALIDPARAMETERVALUE_APPLYIDNOTEXIST("InvalidParameterValue.ApplyIDNotExist"),
+     
+    // Error in the status of the review form.
+     INVALIDPARAMETERVALUE_ERRORAPPLYSTATUS("InvalidParameterValue.ErrorApplyStatus"),
+     
     // The SDKAppID does not exist.
      INVALIDPARAMETERVALUE_INSTANCENOTEXIST("InvalidParameterValue.InstanceNotExist"),
+     
+    // Invalid number status.
+     INVALIDPARAMETERVALUE_PHONENUMINVALID("InvalidParameterValue.PhoneNumInvalid"),
      
     // The number has been bound to another account.
      INVALIDPARAMETERVALUE_PHONENUMISBOUNDOTHERACCOUNT("InvalidParameterValue.PhoneNumIsBoundOtherAccount"),
@@ -111,6 +120,9 @@ public enum CccErrorCode {
     // Skill group already exists.
      INVALIDPARAMETERVALUE_SKILLGROUPEXIST("InvalidParameterValue.SkillGroupExist"),
      
+    // The pending review form has exceeded the limit and cannot be submitted for the time being.
+     INVALIDPARAMETERVALUE_WAITINGAPPROVALOVERFLOW("InvalidParameterValue.WaitingApprovalOverflow"),
+     
     // Exceeded quota limit.
      LIMITEXCEEDED("LimitExceeded"),
      
@@ -120,11 +132,17 @@ public enum CccErrorCode {
     // Exceeded quantity limit.
      LIMITEXCEEDED_OUTOFCOUNTLIMIT("LimitExceeded.OutOfCountLimit"),
      
+    // Missing required parameters.
+     MISSINGPARAMETER("MissingParameter"),
+     
     // Not in the allowlist.
      OPERATIONDENIED_NOTINWHITELIST("OperationDenied.NotInWhiteList"),
      
     // The account has been disabled.
      OPERATIONDENIED_UINDISABLED("OperationDenied.UinDisabled"),
+     
+    // The resource does not exist.
+     RESOURCENOTFOUND("ResourceNotFound"),
      
     // Unknown parameter error.
      UNKNOWNPARAMETER("UnknownParameter"),

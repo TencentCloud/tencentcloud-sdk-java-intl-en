@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AutoCalloutTaskInfo extends AbstractModel {
 
     /**
-    * Task Name
+    * Task name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Number of calls.
+    * Number of called parties.
     */
     @SerializedName("CalleeCount")
     @Expose
@@ -52,7 +52,8 @@ public class AutoCalloutTaskInfo extends AbstractModel {
     private Long NotBefore;
 
     /**
-    * End timestamp.
+    * End timestamp
+.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NotAfter")
@@ -67,51 +68,51 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long IvrId;
 
     /**
-    * Task status:
-0 Initial: Task created, calling not started
-1 Running
-2  Completed: All calls in the task are completed
-3 Ending: The task is due, but some calls are still not finished
-4 Ended: Task terminated due to expiration
+    * Task status:.
+0 initial: task creation, call not started.
+1 running.
+2 completed: all calls in the task are completed.
+3 ending: the task has expired, but there are still some calls not ended.
+4 ended: task terminated due to expiration.
     */
     @SerializedName("State")
     @Expose
     private Long State;
 
     /**
-    * Task ID.
+    * <Task id>.
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-     * Get Task Name 
-     * @return Name Task Name
+     * Get Task name. 
+     * @return Name Task name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Task Name
-     * @param Name Task Name
+     * Set Task name.
+     * @param Name Task name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Number of calls. 
-     * @return CalleeCount Number of calls.
+     * Get Number of called parties. 
+     * @return CalleeCount Number of called parties.
      */
     public Long getCalleeCount() {
         return this.CalleeCount;
     }
 
     /**
-     * Set Number of calls.
-     * @param CalleeCount Number of calls.
+     * Set Number of called parties.
+     * @param CalleeCount Number of called parties.
      */
     public void setCalleeCount(Long CalleeCount) {
         this.CalleeCount = CalleeCount;
@@ -150,9 +151,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get End timestamp.
+     * Get End timestamp
+.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return NotAfter End timestamp.
+     * @return NotAfter End timestamp
+.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getNotAfter() {
@@ -160,9 +163,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set End timestamp.
+     * Set End timestamp
+.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param NotAfter End timestamp.
+     * @param NotAfter End timestamp
+.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setNotAfter(Long NotAfter) {
@@ -186,52 +191,52 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Task status:
-0 Initial: Task created, calling not started
-1 Running
-2  Completed: All calls in the task are completed
-3 Ending: The task is due, but some calls are still not finished
-4 Ended: Task terminated due to expiration 
-     * @return State Task status:
-0 Initial: Task created, calling not started
-1 Running
-2  Completed: All calls in the task are completed
-3 Ending: The task is due, but some calls are still not finished
-4 Ended: Task terminated due to expiration
+     * Get Task status:.
+0 initial: task creation, call not started.
+1 running.
+2 completed: all calls in the task are completed.
+3 ending: the task has expired, but there are still some calls not ended.
+4 ended: task terminated due to expiration. 
+     * @return State Task status:.
+0 initial: task creation, call not started.
+1 running.
+2 completed: all calls in the task are completed.
+3 ending: the task has expired, but there are still some calls not ended.
+4 ended: task terminated due to expiration.
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set Task status:
-0 Initial: Task created, calling not started
-1 Running
-2  Completed: All calls in the task are completed
-3 Ending: The task is due, but some calls are still not finished
-4 Ended: Task terminated due to expiration
-     * @param State Task status:
-0 Initial: Task created, calling not started
-1 Running
-2  Completed: All calls in the task are completed
-3 Ending: The task is due, but some calls are still not finished
-4 Ended: Task terminated due to expiration
+     * Set Task status:.
+0 initial: task creation, call not started.
+1 running.
+2 completed: all calls in the task are completed.
+3 ending: the task has expired, but there are still some calls not ended.
+4 ended: task terminated due to expiration.
+     * @param State Task status:.
+0 initial: task creation, call not started.
+1 running.
+2 completed: all calls in the task are completed.
+3 ending: the task has expired, but there are still some calls not ended.
+4 ended: task terminated due to expiration.
      */
     public void setState(Long State) {
         this.State = State;
     }
 
     /**
-     * Get Task ID. 
-     * @return TaskId Task ID.
+     * Get <Task id>. 
+     * @return TaskId <Task id>.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID.
-     * @param TaskId Task ID.
+     * Set <Task id>.
+     * @param TaskId <Task id>.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BindNumberCallOutSkillGroupRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -38,23 +38,23 @@ public class BindNumberCallOutSkillGroupRequest extends AbstractModel {
     private String Number;
 
     /**
-    * Skill group ID list to be bound.
+    * Skill group id list to be bound.
     */
     @SerializedName("SkillGroupIds")
     @Expose
     private Long [] SkillGroupIds;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -77,16 +77,16 @@ public class BindNumberCallOutSkillGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get Skill group ID list to be bound. 
-     * @return SkillGroupIds Skill group ID list to be bound.
+     * Get Skill group id list to be bound. 
+     * @return SkillGroupIds Skill group id list to be bound.
      */
     public Long [] getSkillGroupIds() {
         return this.SkillGroupIds;
     }
 
     /**
-     * Set Skill group ID list to be bound.
-     * @param SkillGroupIds Skill group ID list to be bound.
+     * Set Skill group id list to be bound.
+     * @param SkillGroupIds Skill group id list to be bound.
      */
     public void setSkillGroupIds(Long [] SkillGroupIds) {
         this.SkillGroupIds = SkillGroupIds;

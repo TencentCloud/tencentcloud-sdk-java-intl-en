@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeIvrAudioListResponse extends AbstractModel {
 
     /**
-    * Total number
+    * Total quantity.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * File Information
+    * File information.
     */
     @SerializedName("FileInfo")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeIvrAudioListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number 
-     * @return TotalCount Total number
+     * Get Total quantity. 
+     * @return TotalCount Total quantity.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number
-     * @param TotalCount Total number
+     * Set Total quantity.
+     * @param TotalCount Total quantity.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get File Information 
-     * @return FileInfo File Information
+     * Get File information. 
+     * @return FileInfo File information.
      */
     public AudioFileInfo [] getFileInfo() {
         return this.FileInfo;
     }
 
     /**
-     * Set File Information
-     * @param FileInfo File Information
+     * Set File information.
+     * @param FileInfo File information.
      */
     public void setFileInfo(AudioFileInfo [] FileInfo) {
         this.FileInfo = FileInfo;

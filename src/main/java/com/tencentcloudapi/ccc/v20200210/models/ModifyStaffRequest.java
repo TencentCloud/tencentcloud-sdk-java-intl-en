@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyStaffRequest extends AbstractModel {
 
     /**
-    * Application ID
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -59,14 +59,14 @@ public class ModifyStaffRequest extends AbstractModel {
     private String Nick;
 
     /**
-    * Agent ID
+    * Agent id.
     */
     @SerializedName("StaffNo")
     @Expose
     private String StaffNo;
 
     /**
-    * Bind skill group ID list.
+    * Bind skill group id list.
     */
     @SerializedName("SkillGroupIds")
     @Expose
@@ -80,23 +80,30 @@ public class ModifyStaffRequest extends AbstractModel {
     private Boolean UseMobileCallOut;
 
     /**
-    * Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+    * Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
     */
     @SerializedName("UseMobileAccept")
     @Expose
     private Long UseMobileAccept;
 
     /**
-     * Get Application ID 
-     * @return SdkAppId Application ID
+    * Agent extension number (starting with 1 to 8, 4 - 6 digits).
+    */
+    @SerializedName("ExtensionNumber")
+    @Expose
+    private String ExtensionNumber;
+
+    /**
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID
-     * @param SdkAppId Application ID
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -167,32 +174,32 @@ public class ModifyStaffRequest extends AbstractModel {
     }
 
     /**
-     * Get Agent ID 
-     * @return StaffNo Agent ID
+     * Get Agent id. 
+     * @return StaffNo Agent id.
      */
     public String getStaffNo() {
         return this.StaffNo;
     }
 
     /**
-     * Set Agent ID
-     * @param StaffNo Agent ID
+     * Set Agent id.
+     * @param StaffNo Agent id.
      */
     public void setStaffNo(String StaffNo) {
         this.StaffNo = StaffNo;
     }
 
     /**
-     * Get Bind skill group ID list. 
-     * @return SkillGroupIds Bind skill group ID list.
+     * Get Bind skill group id list. 
+     * @return SkillGroupIds Bind skill group id list.
      */
     public Long [] getSkillGroupIds() {
         return this.SkillGroupIds;
     }
 
     /**
-     * Set Bind skill group ID list.
-     * @param SkillGroupIds Bind skill group ID list.
+     * Set Bind skill group id list.
+     * @param SkillGroupIds Bind skill group id list.
      */
     public void setSkillGroupIds(Long [] SkillGroupIds) {
         this.SkillGroupIds = SkillGroupIds;
@@ -215,19 +222,35 @@ public class ModifyStaffRequest extends AbstractModel {
     }
 
     /**
-     * Get Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always. 
-     * @return UseMobileAccept Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+     * Get Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always. 
+     * @return UseMobileAccept Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
      */
     public Long getUseMobileAccept() {
         return this.UseMobileAccept;
     }
 
     /**
-     * Set Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
-     * @param UseMobileAccept Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+     * Set Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
+     * @param UseMobileAccept Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
      */
     public void setUseMobileAccept(Long UseMobileAccept) {
         this.UseMobileAccept = UseMobileAccept;
+    }
+
+    /**
+     * Get Agent extension number (starting with 1 to 8, 4 - 6 digits). 
+     * @return ExtensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
+     */
+    public String getExtensionNumber() {
+        return this.ExtensionNumber;
+    }
+
+    /**
+     * Set Agent extension number (starting with 1 to 8, 4 - 6 digits).
+     * @param ExtensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
+     */
+    public void setExtensionNumber(String ExtensionNumber) {
+        this.ExtensionNumber = ExtensionNumber;
     }
 
     public ModifyStaffRequest() {
@@ -268,6 +291,9 @@ public class ModifyStaffRequest extends AbstractModel {
         if (source.UseMobileAccept != null) {
             this.UseMobileAccept = new Long(source.UseMobileAccept);
         }
+        if (source.ExtensionNumber != null) {
+            this.ExtensionNumber = new String(source.ExtensionNumber);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class ModifyStaffRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SkillGroupIds.", this.SkillGroupIds);
         this.setParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
         this.setParamSimple(map, prefix + "UseMobileAccept", this.UseMobileAccept);
+        this.setParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
 
     }
 }

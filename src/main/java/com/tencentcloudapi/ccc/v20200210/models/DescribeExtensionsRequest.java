@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeExtensionsRequest extends AbstractModel {
 
     /**
-    * TCCC instance application ID.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Page number (starting from 0)
+    * Page number (starting from 0).
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * Filtering extension number list
+    * Filtering extension number list.
     */
     @SerializedName("ExtensionIds")
     @Expose
     private String [] ExtensionIds;
 
     /**
-    * Page size
+    * Page size.
     */
     @SerializedName("PageSize")
     @Expose
@@ -66,64 +66,64 @@ public class DescribeExtensionsRequest extends AbstractModel {
     private Boolean IsNeedStatus;
 
     /**
-     * Get TCCC instance application ID. 
-     * @return SdkAppId TCCC instance application ID.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set TCCC instance application ID.
-     * @param SdkAppId TCCC instance application ID.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Page number (starting from 0) 
-     * @return PageNumber Page number (starting from 0)
+     * Get Page number (starting from 0). 
+     * @return PageNumber Page number (starting from 0).
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set Page number (starting from 0)
-     * @param PageNumber Page number (starting from 0)
+     * Set Page number (starting from 0).
+     * @param PageNumber Page number (starting from 0).
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get Filtering extension number list 
-     * @return ExtensionIds Filtering extension number list
+     * Get Filtering extension number list. 
+     * @return ExtensionIds Filtering extension number list.
      */
     public String [] getExtensionIds() {
         return this.ExtensionIds;
     }
 
     /**
-     * Set Filtering extension number list
-     * @param ExtensionIds Filtering extension number list
+     * Set Filtering extension number list.
+     * @param ExtensionIds Filtering extension number list.
      */
     public void setExtensionIds(String [] ExtensionIds) {
         this.ExtensionIds = ExtensionIds;
     }
 
     /**
-     * Get Page size 
-     * @return PageSize Page size
+     * Get Page size. 
+     * @return PageSize Page size.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Page size
-     * @param PageSize Page size
+     * Set Page size.
+     * @param PageSize Page size.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

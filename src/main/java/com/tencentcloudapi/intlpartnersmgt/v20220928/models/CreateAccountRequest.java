@@ -87,7 +87,7 @@ Parameter value is not allowed to be 7,380,86.
     private String Extended;
 
     /**
-    * VerifyCode. This field is required. 
+    * VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
     */
     @SerializedName("VerifyCode")
@@ -251,9 +251,9 @@ Parameter value is not allowed to be 7,380,86.
     }
 
     /**
-     * Get VerifyCode. This field is required. 
+     * Get VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters. 
-     * @return VerifyCode VerifyCode. This field is required. 
+     * @return VerifyCode VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
      */
     public String getVerifyCode() {
@@ -261,9 +261,9 @@ Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/
     }
 
     /**
-     * Set VerifyCode. This field is required. 
+     * Set VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
-     * @param VerifyCode VerifyCode. This field is required. 
+     * @param VerifyCode VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
      */
     public void setVerifyCode(String VerifyCode) {

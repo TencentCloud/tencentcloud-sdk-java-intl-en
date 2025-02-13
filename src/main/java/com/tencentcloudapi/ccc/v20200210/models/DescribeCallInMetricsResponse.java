@@ -39,15 +39,13 @@ public class DescribeCallInMetricsResponse extends AbstractModel {
 
     /**
     * Circuit dimension metrics.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NumberMetrics")
     @Expose
     private CallInNumberMetrics [] NumberMetrics;
 
     /**
-    * Skill group dimension metrics
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Skill group dimension metrics.
     */
     @SerializedName("SkillGroupMetrics")
     @Expose
@@ -93,10 +91,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Circuit dimension metrics.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Circuit dimension metrics. 
      * @return NumberMetrics Circuit dimension metrics.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public CallInNumberMetrics [] getNumberMetrics() {
         return this.NumberMetrics;
@@ -104,29 +100,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Circuit dimension metrics.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param NumberMetrics Circuit dimension metrics.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setNumberMetrics(CallInNumberMetrics [] NumberMetrics) {
         this.NumberMetrics = NumberMetrics;
     }
 
     /**
-     * Get Skill group dimension metrics
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SkillGroupMetrics Skill group dimension metrics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Skill group dimension metrics. 
+     * @return SkillGroupMetrics Skill group dimension metrics.
      */
     public CallInSkillGroupMetrics [] getSkillGroupMetrics() {
         return this.SkillGroupMetrics;
     }
 
     /**
-     * Set Skill group dimension metrics
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SkillGroupMetrics Skill group dimension metrics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Skill group dimension metrics.
+     * @param SkillGroupMetrics Skill group dimension metrics.
      */
     public void setSkillGroupMetrics(CallInSkillGroupMetrics [] SkillGroupMetrics) {
         this.SkillGroupMetrics = SkillGroupMetrics;

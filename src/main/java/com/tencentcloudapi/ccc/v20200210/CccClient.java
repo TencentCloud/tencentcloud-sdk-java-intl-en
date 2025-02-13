@@ -39,7 +39,7 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *If you want to stop running agent's individual auto task, then call AbortAgentCruiseDialingCampaign to terminate.
+     *Stop Agent Cruise-style Outbound Call Task
      * @param req AbortAgentCruiseDialingCampaignRequest
      * @return AbortAgentCruiseDialingCampaignResponse
      * @throws TencentCloudSDKException
@@ -50,7 +50,7 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *This API is used to pause predictive dialing campaign
+     *This API is used to pause the predictive outbound call task.
      * @param req AbortPredictiveDialingCampaignRequest
      * @return AbortPredictiveDialingCampaignResponse
      * @throws TencentCloudSDKException
@@ -61,7 +61,7 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *This API is used to assign outbound skill group(s) to your number
+     *This API is used to bind outbound skill group of number.
      * @param req BindNumberCallOutSkillGroupRequest
      * @return BindNumberCallOutSkillGroupResponse
      * @throws TencentCloudSDKException
@@ -72,7 +72,7 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *This API is used to assign an agent to skill group
+     *This API is used to bind the agent's skill group.
      * @param req BindStaffSkillGroupListRequest
      * @return BindStaffSkillGroupListResponse
      * @throws TencentCloudSDKException
@@ -80,6 +80,19 @@ public class CccClient extends AbstractClient{
     public BindStaffSkillGroupListResponse BindStaffSkillGroupList(BindStaffSkillGroupListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "BindStaffSkillGroupList", BindStaffSkillGroupListResponse.class);
+    }
+
+    /**
+     *This API is used to initiate outbound calls using an AI model, limited to owned phone numbers only. Currently, a limited-time free trial of Advanced Agents is available.
+
+Before initiating a call, please ensure your AI model is compatible with OpenAI, Azure, or Minimax protocols, and visit the model provider's website to obtain relevant authentication information. For detailed feature descriptions, please refer to the documentation [Tencent Cloud Contact Center AI Call Platform](https://intl.cloud.tencent.com/document/product/679/112100?from_cn_redirect=1).
+     * @param req CreateAIAgentCallRequest
+     * @return CreateAIAgentCallResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAIAgentCallResponse CreateAIAgentCall(CreateAIAgentCallRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAIAgentCall", CreateAIAgentCallResponse.class);
     }
 
     /**
@@ -107,7 +120,7 @@ Before initiating a call, please ensure your AI model is compatible with OpenAI,
     }
 
     /**
-     *This document shows how to call API to create an individual auto dialing campaign for agent
+     *Agent Cruise-style Outbound Call.
      * @param req CreateAgentCruiseDialingCampaignRequest
      * @return CreateAgentCruiseDialingCampaignResponse
      * @throws TencentCloudSDKException
@@ -170,6 +183,17 @@ Before initiating a call, please ensure your AI model is compatible with OpenAI,
     public CreateIVRSessionResponse CreateIVRSession(CreateIVRSessionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateIVRSession", CreateIVRSessionResponse.class);
+    }
+
+    /**
+     *Create customer's own number access review
+     * @param req CreateOwnNumberApplyRequest
+     * @return CreateOwnNumberApplyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOwnNumberApplyResponse CreateOwnNumberApply(CreateOwnNumberApplyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOwnNumberApply", CreateOwnNumberApplyResponse.class);
     }
 
     /**
@@ -236,6 +260,17 @@ Before initiating a call, please ensure your AI model is compatible with OpenAI,
     public DeleteStaffResponse DeleteStaff(DeleteStaffRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteStaff", DeleteStaffResponse.class);
+    }
+
+    /**
+     *Obtain AI call content extraction result
+     * @param req DescribeAICallExtractResultRequest
+     * @return DescribeAICallExtractResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAICallExtractResultResponse DescribeAICallExtractResult(DescribeAICallExtractResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAICallExtractResult", DescribeAICallExtractResultResponse.class);
     }
 
     /**
@@ -426,7 +461,7 @@ Before initiating a call, please ensure your AI model is compatible with OpenAI,
     }
 
     /**
-     *This API is used to access call detail records by application
+     *This API is used to access telephone consumption statistics by instance.
      * @param req DescribeTelCallInfoRequest
      * @return DescribeTelCallInfoResponse
      * @throws TencentCloudSDKException
@@ -445,6 +480,17 @@ Before initiating a call, please ensure your AI model is compatible with OpenAI,
     public DescribeTelCdrResponse DescribeTelCdr(DescribeTelCdrRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTelCdr", DescribeTelCdrResponse.class);
+    }
+
+    /**
+     *Pull conversation recording for text information
+     * @param req DescribeTelRecordAsrRequest
+     * @return DescribeTelRecordAsrResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTelRecordAsrResponse DescribeTelRecordAsr(DescribeTelRecordAsrRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTelRecordAsr", DescribeTelRecordAsrResponse.class);
     }
 
     /**
@@ -492,7 +538,18 @@ Before initiating a call, please ensure your AI model is compatible with OpenAI,
     }
 
     /**
-     *This API is used to modify  customer service / agent account.
+     *Modify customer's own number approval form
+     * @param req ModifyOwnNumberApplyRequest
+     * @return ModifyOwnNumberApplyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOwnNumberApplyResponse ModifyOwnNumberApply(ModifyOwnNumberApplyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOwnNumberApply", ModifyOwnNumberApplyResponse.class);
+    }
+
+    /**
+     *This API is used to modify the customer service account.
      * @param req ModifyStaffRequest
      * @return ModifyStaffResponse
      * @throws TencentCloudSDKException

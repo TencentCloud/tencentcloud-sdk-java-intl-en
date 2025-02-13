@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class UploadAudioInfo extends AbstractModel {
 
     /**
-    * File Alias (can be duplicated)
+    * File alias (can be duplicated).
     */
     @SerializedName("CustomFileName")
     @Expose
     private String CustomFileName;
 
     /**
-    * Audio File Link (supports mp3 and wav formats, file size not exceeding 5MB)
+    * Audio file link (supports mp3 and wav formats, file size not exceeding 5mb).
     */
     @SerializedName("AudioUrl")
     @Expose
     private String AudioUrl;
 
     /**
-     * Get File Alias (can be duplicated) 
-     * @return CustomFileName File Alias (can be duplicated)
+     * Get File alias (can be duplicated). 
+     * @return CustomFileName File alias (can be duplicated).
      */
     public String getCustomFileName() {
         return this.CustomFileName;
     }
 
     /**
-     * Set File Alias (can be duplicated)
-     * @param CustomFileName File Alias (can be duplicated)
+     * Set File alias (can be duplicated).
+     * @param CustomFileName File alias (can be duplicated).
      */
     public void setCustomFileName(String CustomFileName) {
         this.CustomFileName = CustomFileName;
     }
 
     /**
-     * Get Audio File Link (supports mp3 and wav formats, file size not exceeding 5MB) 
-     * @return AudioUrl Audio File Link (supports mp3 and wav formats, file size not exceeding 5MB)
+     * Get Audio file link (supports mp3 and wav formats, file size not exceeding 5mb). 
+     * @return AudioUrl Audio file link (supports mp3 and wav formats, file size not exceeding 5mb).
      */
     public String getAudioUrl() {
         return this.AudioUrl;
     }
 
     /**
-     * Set Audio File Link (supports mp3 and wav formats, file size not exceeding 5MB)
-     * @param AudioUrl Audio File Link (supports mp3 and wav formats, file size not exceeding 5MB)
+     * Set Audio file link (supports mp3 and wav formats, file size not exceeding 5mb).
+     * @param AudioUrl Audio file link (supports mp3 and wav formats, file size not exceeding 5mb).
      */
     public void setAudioUrl(String AudioUrl) {
         this.AudioUrl = AudioUrl;

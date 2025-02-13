@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class StopAutoCalloutTaskRequest extends AbstractModel {
 
     /**
-    * Call Center Instance ID.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Task ID.
+    * Task id.
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-     * Get Call Center Instance ID. 
-     * @return SdkAppId Call Center Instance ID.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Call Center Instance ID.
-     * @param SdkAppId Call Center Instance ID.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Task ID. 
-     * @return TaskId Task ID.
+     * Get Task id. 
+     * @return TaskId Task id.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID.
-     * @param TaskId Task ID.
+     * Set Task id.
+     * @param TaskId Task id.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

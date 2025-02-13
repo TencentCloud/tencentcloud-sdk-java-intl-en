@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeStaffInfoListRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Page size, upper limit 9,999
+    * Page size, upper limit 9,999.
     */
     @SerializedName("PageSize")
     @Expose
@@ -52,46 +52,46 @@ public class DescribeStaffInfoListRequest extends AbstractModel {
     private String StaffMail;
 
     /**
-    * Use when querying for agents with a modification time greater or equal to ModifiedTime.
+    * Use when querying for agents with a modification time greater or equal to modifiedtime.
     */
     @SerializedName("ModifiedTime")
     @Expose
     private Long ModifiedTime;
 
     /**
-    * Skill group ID.
+    * Skill group id.
     */
     @SerializedName("SkillGroupId")
     @Expose
     private Long SkillGroupId;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Page size, upper limit 9,999 
-     * @return PageSize Page size, upper limit 9,999
+     * Get Page size, upper limit 9,999. 
+     * @return PageSize Page size, upper limit 9,999.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Page size, upper limit 9,999
-     * @param PageSize Page size, upper limit 9,999
+     * Set Page size, upper limit 9,999.
+     * @param PageSize Page size, upper limit 9,999.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -130,32 +130,32 @@ public class DescribeStaffInfoListRequest extends AbstractModel {
     }
 
     /**
-     * Get Use when querying for agents with a modification time greater or equal to ModifiedTime. 
-     * @return ModifiedTime Use when querying for agents with a modification time greater or equal to ModifiedTime.
+     * Get Use when querying for agents with a modification time greater or equal to modifiedtime. 
+     * @return ModifiedTime Use when querying for agents with a modification time greater or equal to modifiedtime.
      */
     public Long getModifiedTime() {
         return this.ModifiedTime;
     }
 
     /**
-     * Set Use when querying for agents with a modification time greater or equal to ModifiedTime.
-     * @param ModifiedTime Use when querying for agents with a modification time greater or equal to ModifiedTime.
+     * Set Use when querying for agents with a modification time greater or equal to modifiedtime.
+     * @param ModifiedTime Use when querying for agents with a modification time greater or equal to modifiedtime.
      */
     public void setModifiedTime(Long ModifiedTime) {
         this.ModifiedTime = ModifiedTime;
     }
 
     /**
-     * Get Skill group ID. 
-     * @return SkillGroupId Skill group ID.
+     * Get Skill group id. 
+     * @return SkillGroupId Skill group id.
      */
     public Long getSkillGroupId() {
         return this.SkillGroupId;
     }
 
     /**
-     * Set Skill group ID.
-     * @param SkillGroupId Skill group ID.
+     * Set Skill group id.
+     * @param SkillGroupId Skill group id.
      */
     public void setSkillGroupId(Long SkillGroupId) {
         this.SkillGroupId = SkillGroupId;

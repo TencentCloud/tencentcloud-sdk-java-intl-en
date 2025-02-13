@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAdminURLResponse extends AbstractModel {
 
     /**
-    * Log-in link.
+    * Log-In link.
     */
     @SerializedName("URL")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAdminURLResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Log-in link. 
-     * @return URL Log-in link.
+     * Get Log-In link. 
+     * @return URL Log-In link.
      */
     public String getURL() {
         return this.URL;
     }
 
     /**
-     * Set Log-in link.
-     * @param URL Log-in link.
+     * Set Log-In link.
+     * @param URL Log-In link.
      */
     public void setURL(String URL) {
         this.URL = URL;

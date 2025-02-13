@@ -31,7 +31,7 @@ public class CallInNumberMetrics extends AbstractModel {
     private String Number;
 
     /**
-    * Line-related metrics.
+    * Line-Related metrics.
     */
     @SerializedName("Metrics")
     @Expose
@@ -61,16 +61,16 @@ public class CallInNumberMetrics extends AbstractModel {
     }
 
     /**
-     * Get Line-related metrics. 
-     * @return Metrics Line-related metrics.
+     * Get Line-Related metrics. 
+     * @return Metrics Line-Related metrics.
      */
     public CallInMetrics getMetrics() {
         return this.Metrics;
     }
 
     /**
-     * Set Line-related metrics.
-     * @param Metrics Line-related metrics.
+     * Set Line-Related metrics.
+     * @param Metrics Line-Related metrics.
      */
     public void setMetrics(CallInMetrics Metrics) {
         this.Metrics = Metrics;

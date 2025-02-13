@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class UploadIvrAudioFailedInfo extends AbstractModel {
 
     /**
-    * Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Filename.
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * Reason for failure
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Reason for failure.
     */
     @SerializedName("FailedMsg")
     @Expose
     private String FailedMsg;
 
     /**
-     * Get Filename
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileName Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Filename. 
+     * @return FileName Filename.
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Filename
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileName Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Filename.
+     * @param FileName Filename.
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get Reason for failure
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FailedMsg Reason for failure
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Reason for failure. 
+     * @return FailedMsg Reason for failure.
      */
     public String getFailedMsg() {
         return this.FailedMsg;
     }
 
     /**
-     * Set Reason for failure
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FailedMsg Reason for failure
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Reason for failure.
+     * @param FailedMsg Reason for failure.
      */
     public void setFailedMsg(String FailedMsg) {
         this.FailedMsg = FailedMsg;

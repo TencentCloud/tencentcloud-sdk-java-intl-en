@@ -38,14 +38,14 @@ public class TelCdrInfo extends AbstractModel {
     private String Callee;
 
     /**
-    * Call initiation timestamp, Unix timestamp.
+    * Call initiation timestamp, unix timestamp.
     */
     @SerializedName("Time")
     @Expose
     private Long Time;
 
     /**
-    * Call direction: 0 - Inbound, 1 - Outbound.
+    * Call direction: 0 - inbound, 1 - outbound.
     */
     @SerializedName("Direction")
     @Expose
@@ -59,82 +59,81 @@ public class TelCdrInfo extends AbstractModel {
     private Long Duration;
 
     /**
-    * Recording Information.
+    * Recording information.
     */
     @SerializedName("RecordURL")
     @Expose
     private String RecordURL;
 
     /**
-    * Recording ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Recording id.
     */
     @SerializedName("RecordId")
     @Expose
     private String RecordId;
 
     /**
-    * Agent Information
+    * Agent information.
     */
     @SerializedName("SeatUser")
     @Expose
     private SeatUserInfo SeatUser;
 
     /**
-    * EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+    * EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call & call | 0 | error | system error.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Outgoing Call	         206	           busy	During the call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Incoming & Outgoing Calls	211    clientError    Client Error
-
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
     */
     @SerializedName("EndStatus")
     @Expose
@@ -148,236 +147,227 @@ Incoming & Outgoing Calls	211    clientError    Client Error
     private String SkillGroup;
 
     /**
-    * Caller's location.
+    * Caller'S location.
     */
     @SerializedName("CallerLocation")
     @Expose
     private String CallerLocation;
 
     /**
-    * Time spent in IVR stage.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Time spent in ivr stage.
     */
     @SerializedName("IVRDuration")
     @Expose
     private Long IVRDuration;
 
     /**
-    * Ring timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Ring timestamp. unix second-level timestamp.
     */
     @SerializedName("RingTimestamp")
     @Expose
     private Long RingTimestamp;
 
     /**
-    * Answer timestamp. UNIX second-Level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Answer timestamp. unix second-level timestamp.
     */
     @SerializedName("AcceptTimestamp")
     @Expose
     private Long AcceptTimestamp;
 
     /**
-    * End timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+    * End timestamp. unix second-level timestamp.
     */
     @SerializedName("EndedTimestamp")
     @Expose
     private Long EndedTimestamp;
 
     /**
-    * IVR key information, e.g. ["1","2","3"]
-Note: this field may return null, indicating that no valid values can be obtained.
+    * IVR key information, e.g. ["1","2","3"].
     */
     @SerializedName("IVRKeyPressed")
     @Expose
     private String [] IVRKeyPressed;
 
     /**
-    * Hanging Up Party seat Seat user Users system system
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Hang-Up side, seat, user, system.
     */
     @SerializedName("HungUpSide")
     @Expose
     private String HungUpSide;
 
     /**
-    * List of Service Participants
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Service participant list.
     */
     @SerializedName("ServeParticipants")
     @Expose
     private ServeParticipant [] ServeParticipants;
 
     /**
-    * Skill group ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Skill group id.
     */
     @SerializedName("SkillGroupId")
     @Expose
     private Long SkillGroupId;
 
     /**
-    * EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+    * EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call & call | 0 | error | system error.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Phone Call Out	         206	           busy	In Call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Phone Call In & Out	211    clientError    Client Error
-
-Note: This field may return null, indicating that no valid values can be obtained.
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
     */
     @SerializedName("EndStatusString")
     @Expose
     private String EndStatusString;
 
     /**
-    * Session start timestamp. UNIX second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Session start timestamp. unix second-level timestamp.
     */
     @SerializedName("StartTimestamp")
     @Expose
     private Long StartTimestamp;
 
     /**
-    * Queue entry time. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Queue entry time. unix second-level timestamp.
     */
     @SerializedName("QueuedTimestamp")
     @Expose
     private Long QueuedTimestamp;
 
     /**
-    * Post-IVR key information (e.g. [{"Key":"1","Label":"Very Satisfied"}])
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Post-IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
     */
     @SerializedName("PostIVRKeyPressed")
     @Expose
     private IVRKeyPressedElement [] PostIVRKeyPressed;
 
     /**
-    * Queue Skill Group ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Queue skill group id.
     */
     @SerializedName("QueuedSkillGroupId")
     @Expose
     private Long QueuedSkillGroupId;
 
     /**
-    * Session ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Session id.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * Caller number protection ID. (Effective when the number protection map feature is activated, and the Caller field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
     */
     @SerializedName("ProtectedCaller")
     @Expose
     private String ProtectedCaller;
 
     /**
-    * Called number protection ID (Effective when the number protection map feature is activated, and the Callee field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
     */
     @SerializedName("ProtectedCallee")
     @Expose
     private String ProtectedCallee;
 
     /**
-    * Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Customer custom data. (user - to - user interface).
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uui")
     @Expose
     private String Uui;
 
     /**
-    * Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Customer custom data. (user - to - user interface).
     */
     @SerializedName("UUI")
     @Expose
     private String UUI;
 
     /**
-    * IVR key information (e.g.?[{"Key":"1","Label":"highly satisfied"}])
-Note: This field may return null, indicating that no valid values can be obtained.
+    * IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
     */
     @SerializedName("IVRKeyPressedEx")
     @Expose
     private IVRKeyPressedElement [] IVRKeyPressedEx;
 
     /**
-    * Access to the ASR text information address of the recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Access to the asr text information address of the recording.
     */
     @SerializedName("AsrUrl")
     @Expose
     private String AsrUrl;
 
     /**
-    * Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * ASRUrl status: complete.
+Completed;.
+Processing.
+Generating.
+NotExists.
+No record (offline asr generation is not enabled or no package is available).
+    */
+    @SerializedName("AsrStatus")
+    @Expose
+    private String AsrStatus;
+
+    /**
+    * Address of the third-party cos for transferring recording.
     */
     @SerializedName("CustomRecordURL")
     @Expose
     private String CustomRecordURL;
 
     /**
-    * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Remarks.
     */
     @SerializedName("Remark")
     @Expose
@@ -385,23 +375,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Queue skill group name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("QueuedSkillGroupName")
     @Expose
     private String QueuedSkillGroupName;
 
     /**
-    * Audio message recording URL during call.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Audio message recording url during call.
     */
     @SerializedName("VoicemailRecordURL")
     @Expose
     private String [] VoicemailRecordURL;
 
     /**
-    * Text Information address of ASR audio message during a call.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Text information address of asr audio message during a call.
     */
     @SerializedName("VoicemailAsrURL")
     @Expose
@@ -440,32 +427,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Call initiation timestamp, Unix timestamp. 
-     * @return Time Call initiation timestamp, Unix timestamp.
+     * Get Call initiation timestamp, unix timestamp. 
+     * @return Time Call initiation timestamp, unix timestamp.
      */
     public Long getTime() {
         return this.Time;
     }
 
     /**
-     * Set Call initiation timestamp, Unix timestamp.
-     * @param Time Call initiation timestamp, Unix timestamp.
+     * Set Call initiation timestamp, unix timestamp.
+     * @param Time Call initiation timestamp, unix timestamp.
      */
     public void setTime(Long Time) {
         this.Time = Time;
     }
 
     /**
-     * Get Call direction: 0 - Inbound, 1 - Outbound. 
-     * @return Direction Call direction: 0 - Inbound, 1 - Outbound.
+     * Get Call direction: 0 - inbound, 1 - outbound. 
+     * @return Direction Call direction: 0 - inbound, 1 - outbound.
      */
     public Long getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set Call direction: 0 - Inbound, 1 - Outbound.
-     * @param Direction Call direction: 0 - Inbound, 1 - Outbound.
+     * Set Call direction: 0 - inbound, 1 - outbound.
+     * @param Direction Call direction: 0 - inbound, 1 - outbound.
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;
@@ -488,280 +475,276 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Recording Information. 
-     * @return RecordURL Recording Information.
+     * Get Recording information. 
+     * @return RecordURL Recording information.
      */
     public String getRecordURL() {
         return this.RecordURL;
     }
 
     /**
-     * Set Recording Information.
-     * @param RecordURL Recording Information.
+     * Set Recording information.
+     * @param RecordURL Recording information.
      */
     public void setRecordURL(String RecordURL) {
         this.RecordURL = RecordURL;
     }
 
     /**
-     * Get Recording ID.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RecordId Recording ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Recording id. 
+     * @return RecordId Recording id.
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set Recording ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RecordId Recording ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Recording id.
+     * @param RecordId Recording id.
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;
     }
 
     /**
-     * Get Agent Information 
-     * @return SeatUser Agent Information
+     * Get Agent information. 
+     * @return SeatUser Agent information.
      */
     public SeatUserInfo getSeatUser() {
         return this.SeatUser;
     }
 
     /**
-     * Set Agent Information
-     * @param SeatUser Agent Information
+     * Set Agent information.
+     * @param SeatUser Agent information.
      */
     public void setSeatUser(SeatUserInfo SeatUser) {
         this.SeatUser = SeatUser;
     }
 
     /**
-     * Get EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+     * Get EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call & call | 0 | error | system error.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Outgoing Call	         206	           busy	During the call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Incoming & Outgoing Calls	211    clientError    Client Error
- 
-     * @return EndStatus EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking. 
+     * @return EndStatus EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call & call | 0 | error | system error.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Outgoing Call	         206	           busy	During the call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Incoming & Outgoing Calls	211    clientError    Client Error
-
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
      */
     public Long getEndStatus() {
         return this.EndStatus;
     }
 
     /**
-     * Set EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+     * Set EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call & call | 0 | error | system error.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Outgoing Call	         206	           busy	During the call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Incoming & Outgoing Calls	211    clientError    Client Error
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
+     * @param EndStatus EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-     * @param EndStatus EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call | 0 | error | system error.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
-
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Outgoing Call	         206	           busy	During the call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Incoming & Outgoing Calls	211    clientError    Client Error
-
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
      */
     public void setEndStatus(Long EndStatus) {
         this.EndStatus = EndStatus;
@@ -784,558 +767,494 @@ Incoming & Outgoing Calls	211    clientError    Client Error
     }
 
     /**
-     * Get Caller's location. 
-     * @return CallerLocation Caller's location.
+     * Get Caller'S location. 
+     * @return CallerLocation Caller'S location.
      */
     public String getCallerLocation() {
         return this.CallerLocation;
     }
 
     /**
-     * Set Caller's location.
-     * @param CallerLocation Caller's location.
+     * Set Caller'S location.
+     * @param CallerLocation Caller'S location.
      */
     public void setCallerLocation(String CallerLocation) {
         this.CallerLocation = CallerLocation;
     }
 
     /**
-     * Get Time spent in IVR stage.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IVRDuration Time spent in IVR stage.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Time spent in ivr stage. 
+     * @return IVRDuration Time spent in ivr stage.
      */
     public Long getIVRDuration() {
         return this.IVRDuration;
     }
 
     /**
-     * Set Time spent in IVR stage.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IVRDuration Time spent in IVR stage.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Time spent in ivr stage.
+     * @param IVRDuration Time spent in ivr stage.
      */
     public void setIVRDuration(Long IVRDuration) {
         this.IVRDuration = IVRDuration;
     }
 
     /**
-     * Get Ring timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RingTimestamp Ring timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Ring timestamp. unix second-level timestamp. 
+     * @return RingTimestamp Ring timestamp. unix second-level timestamp.
      */
     public Long getRingTimestamp() {
         return this.RingTimestamp;
     }
 
     /**
-     * Set Ring timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RingTimestamp Ring timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Ring timestamp. unix second-level timestamp.
+     * @param RingTimestamp Ring timestamp. unix second-level timestamp.
      */
     public void setRingTimestamp(Long RingTimestamp) {
         this.RingTimestamp = RingTimestamp;
     }
 
     /**
-     * Get Answer timestamp. UNIX second-Level timestamp
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AcceptTimestamp Answer timestamp. UNIX second-Level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Answer timestamp. unix second-level timestamp. 
+     * @return AcceptTimestamp Answer timestamp. unix second-level timestamp.
      */
     public Long getAcceptTimestamp() {
         return this.AcceptTimestamp;
     }
 
     /**
-     * Set Answer timestamp. UNIX second-Level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AcceptTimestamp Answer timestamp. UNIX second-Level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Answer timestamp. unix second-level timestamp.
+     * @param AcceptTimestamp Answer timestamp. unix second-level timestamp.
      */
     public void setAcceptTimestamp(Long AcceptTimestamp) {
         this.AcceptTimestamp = AcceptTimestamp;
     }
 
     /**
-     * Get End timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return EndedTimestamp End timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get End timestamp. unix second-level timestamp. 
+     * @return EndedTimestamp End timestamp. unix second-level timestamp.
      */
     public Long getEndedTimestamp() {
         return this.EndedTimestamp;
     }
 
     /**
-     * Set End timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EndedTimestamp End timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set End timestamp. unix second-level timestamp.
+     * @param EndedTimestamp End timestamp. unix second-level timestamp.
      */
     public void setEndedTimestamp(Long EndedTimestamp) {
         this.EndedTimestamp = EndedTimestamp;
     }
 
     /**
-     * Get IVR key information, e.g. ["1","2","3"]
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IVRKeyPressed IVR key information, e.g. ["1","2","3"]
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get IVR key information, e.g. ["1","2","3"]. 
+     * @return IVRKeyPressed IVR key information, e.g. ["1","2","3"].
      */
     public String [] getIVRKeyPressed() {
         return this.IVRKeyPressed;
     }
 
     /**
-     * Set IVR key information, e.g. ["1","2","3"]
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IVRKeyPressed IVR key information, e.g. ["1","2","3"]
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set IVR key information, e.g. ["1","2","3"].
+     * @param IVRKeyPressed IVR key information, e.g. ["1","2","3"].
      */
     public void setIVRKeyPressed(String [] IVRKeyPressed) {
         this.IVRKeyPressed = IVRKeyPressed;
     }
 
     /**
-     * Get Hanging Up Party seat Seat user Users system system
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HungUpSide Hanging Up Party seat Seat user Users system system
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Hang-Up side, seat, user, system. 
+     * @return HungUpSide Hang-Up side, seat, user, system.
      */
     public String getHungUpSide() {
         return this.HungUpSide;
     }
 
     /**
-     * Set Hanging Up Party seat Seat user Users system system
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HungUpSide Hanging Up Party seat Seat user Users system system
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Hang-Up side, seat, user, system.
+     * @param HungUpSide Hang-Up side, seat, user, system.
      */
     public void setHungUpSide(String HungUpSide) {
         this.HungUpSide = HungUpSide;
     }
 
     /**
-     * Get List of Service Participants
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServeParticipants List of Service Participants
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Service participant list. 
+     * @return ServeParticipants Service participant list.
      */
     public ServeParticipant [] getServeParticipants() {
         return this.ServeParticipants;
     }
 
     /**
-     * Set List of Service Participants
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServeParticipants List of Service Participants
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Service participant list.
+     * @param ServeParticipants Service participant list.
      */
     public void setServeParticipants(ServeParticipant [] ServeParticipants) {
         this.ServeParticipants = ServeParticipants;
     }
 
     /**
-     * Get Skill group ID.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SkillGroupId Skill group ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Skill group id. 
+     * @return SkillGroupId Skill group id.
      */
     public Long getSkillGroupId() {
         return this.SkillGroupId;
     }
 
     /**
-     * Set Skill group ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SkillGroupId Skill group ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Skill group id.
+     * @param SkillGroupId Skill group id.
      */
     public void setSkillGroupId(Long SkillGroupId) {
         this.SkillGroupId = SkillGroupId;
     }
 
     /**
-     * Get EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+     * Get EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call & call | 0 | error | system error.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Phone Call Out	         206	           busy	In Call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Phone Call In & Out	211    clientError    Client Error
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking. 
+     * @return EndStatusString EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndStatusString EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call | 0 | error | system error.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
-
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Phone Call Out	         206	           busy	In Call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Phone Call In & Out	211    clientError    Client Error
-
-Note: This field may return null, indicating that no valid values can be obtained.
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
      */
     public String getEndStatusString() {
         return this.EndStatusString;
     }
 
     /**
-     * Set EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+     * Set EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call & call | 0 | error | system error.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Phone Call Out	         206	           busy	In Call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Phone Call In & Out	211    clientError    Client Error
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
+     * @param EndStatusString EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndStatusString EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call | 0 | error | system error.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
-
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Phone Call Out	         206	           busy	In Call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Phone Call In & Out	211    clientError    Client Error
-
-Note: This field may return null, indicating that no valid values can be obtained.
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
      */
     public void setEndStatusString(String EndStatusString) {
         this.EndStatusString = EndStatusString;
     }
 
     /**
-     * Get Session start timestamp. UNIX second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return StartTimestamp Session start timestamp. UNIX second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Session start timestamp. unix second-level timestamp. 
+     * @return StartTimestamp Session start timestamp. unix second-level timestamp.
      */
     public Long getStartTimestamp() {
         return this.StartTimestamp;
     }
 
     /**
-     * Set Session start timestamp. UNIX second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param StartTimestamp Session start timestamp. UNIX second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Session start timestamp. unix second-level timestamp.
+     * @param StartTimestamp Session start timestamp. unix second-level timestamp.
      */
     public void setStartTimestamp(Long StartTimestamp) {
         this.StartTimestamp = StartTimestamp;
     }
 
     /**
-     * Get Queue entry time. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return QueuedTimestamp Queue entry time. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Queue entry time. unix second-level timestamp. 
+     * @return QueuedTimestamp Queue entry time. unix second-level timestamp.
      */
     public Long getQueuedTimestamp() {
         return this.QueuedTimestamp;
     }
 
     /**
-     * Set Queue entry time. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param QueuedTimestamp Queue entry time. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Queue entry time. unix second-level timestamp.
+     * @param QueuedTimestamp Queue entry time. unix second-level timestamp.
      */
     public void setQueuedTimestamp(Long QueuedTimestamp) {
         this.QueuedTimestamp = QueuedTimestamp;
     }
 
     /**
-     * Get Post-IVR key information (e.g. [{"Key":"1","Label":"Very Satisfied"}])
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return PostIVRKeyPressed Post-IVR key information (e.g. [{"Key":"1","Label":"Very Satisfied"}])
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Post-IVR key information (e.g. [{"key":"1","label":"very satisfied"}]). 
+     * @return PostIVRKeyPressed Post-IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
      */
     public IVRKeyPressedElement [] getPostIVRKeyPressed() {
         return this.PostIVRKeyPressed;
     }
 
     /**
-     * Set Post-IVR key information (e.g. [{"Key":"1","Label":"Very Satisfied"}])
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param PostIVRKeyPressed Post-IVR key information (e.g. [{"Key":"1","Label":"Very Satisfied"}])
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Post-IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
+     * @param PostIVRKeyPressed Post-IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
      */
     public void setPostIVRKeyPressed(IVRKeyPressedElement [] PostIVRKeyPressed) {
         this.PostIVRKeyPressed = PostIVRKeyPressed;
     }
 
     /**
-     * Get Queue Skill Group ID.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return QueuedSkillGroupId Queue Skill Group ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Queue skill group id. 
+     * @return QueuedSkillGroupId Queue skill group id.
      */
     public Long getQueuedSkillGroupId() {
         return this.QueuedSkillGroupId;
     }
 
     /**
-     * Set Queue Skill Group ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param QueuedSkillGroupId Queue Skill Group ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Queue skill group id.
+     * @param QueuedSkillGroupId Queue skill group id.
      */
     public void setQueuedSkillGroupId(Long QueuedSkillGroupId) {
         this.QueuedSkillGroupId = QueuedSkillGroupId;
     }
 
     /**
-     * Get Session ID.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SessionId Session ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Session id. 
+     * @return SessionId Session id.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Session ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SessionId Session ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Session id.
+     * @param SessionId Session id.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get Caller number protection ID. (Effective when the number protection map feature is activated, and the Caller field is empty).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProtectedCaller Caller number protection ID. (Effective when the number protection map feature is activated, and the Caller field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty. 
+     * @return ProtectedCaller Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
      */
     public String getProtectedCaller() {
         return this.ProtectedCaller;
     }
 
     /**
-     * Set Caller number protection ID. (Effective when the number protection map feature is activated, and the Caller field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProtectedCaller Caller number protection ID. (Effective when the number protection map feature is activated, and the Caller field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
+     * @param ProtectedCaller Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
      */
     public void setProtectedCaller(String ProtectedCaller) {
         this.ProtectedCaller = ProtectedCaller;
     }
 
     /**
-     * Get Called number protection ID (Effective when the number protection map feature is activated, and the Callee field is empty).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProtectedCallee Called number protection ID (Effective when the number protection map feature is activated, and the Callee field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Called number protection id. effective when the number protection map feature is activated, and the callee field is empty. 
+     * @return ProtectedCallee Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
      */
     public String getProtectedCallee() {
         return this.ProtectedCallee;
     }
 
     /**
-     * Set Called number protection ID (Effective when the number protection map feature is activated, and the Callee field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProtectedCallee Called number protection ID (Effective when the number protection map feature is activated, and the Callee field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
+     * @param ProtectedCallee Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
      */
     public void setProtectedCallee(String ProtectedCallee) {
         this.ProtectedCallee = ProtectedCallee;
     }
 
     /**
-     * Get Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Uui Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Customer custom data. (user - to - user interface).
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Uui Customer custom data. (user - to - user interface).
+Note: this field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     @Deprecated
@@ -1344,10 +1263,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Uui Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Customer custom data. (user - to - user interface).
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Uui Customer custom data. (user - to - user interface).
+Note: this field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     @Deprecated
@@ -1356,110 +1275,124 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UUI Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Customer custom data. (user - to - user interface). 
+     * @return UUI Customer custom data. (user - to - user interface).
      */
     public String getUUI() {
         return this.UUI;
     }
 
     /**
-     * Set Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UUI Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Customer custom data. (user - to - user interface).
+     * @param UUI Customer custom data. (user - to - user interface).
      */
     public void setUUI(String UUI) {
         this.UUI = UUI;
     }
 
     /**
-     * Get IVR key information (e.g.?[{"Key":"1","Label":"highly satisfied"}])
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IVRKeyPressedEx IVR key information (e.g.?[{"Key":"1","Label":"highly satisfied"}])
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get IVR key information (e.g. [{"key":"1","label":"very satisfied"}]). 
+     * @return IVRKeyPressedEx IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
      */
     public IVRKeyPressedElement [] getIVRKeyPressedEx() {
         return this.IVRKeyPressedEx;
     }
 
     /**
-     * Set IVR key information (e.g.?[{"Key":"1","Label":"highly satisfied"}])
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IVRKeyPressedEx IVR key information (e.g.?[{"Key":"1","Label":"highly satisfied"}])
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
+     * @param IVRKeyPressedEx IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
      */
     public void setIVRKeyPressedEx(IVRKeyPressedElement [] IVRKeyPressedEx) {
         this.IVRKeyPressedEx = IVRKeyPressedEx;
     }
 
     /**
-     * Get Access to the ASR text information address of the recording.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AsrUrl Access to the ASR text information address of the recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Access to the asr text information address of the recording. 
+     * @return AsrUrl Access to the asr text information address of the recording.
      */
     public String getAsrUrl() {
         return this.AsrUrl;
     }
 
     /**
-     * Set Access to the ASR text information address of the recording.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AsrUrl Access to the ASR text information address of the recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Access to the asr text information address of the recording.
+     * @param AsrUrl Access to the asr text information address of the recording.
      */
     public void setAsrUrl(String AsrUrl) {
         this.AsrUrl = AsrUrl;
     }
 
     /**
-     * Get Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CustomRecordURL Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ASRUrl status: complete.
+Completed;.
+Processing.
+Generating.
+NotExists.
+No record (offline asr generation is not enabled or no package is available). 
+     * @return AsrStatus ASRUrl status: complete.
+Completed;.
+Processing.
+Generating.
+NotExists.
+No record (offline asr generation is not enabled or no package is available).
+     */
+    public String getAsrStatus() {
+        return this.AsrStatus;
+    }
+
+    /**
+     * Set ASRUrl status: complete.
+Completed;.
+Processing.
+Generating.
+NotExists.
+No record (offline asr generation is not enabled or no package is available).
+     * @param AsrStatus ASRUrl status: complete.
+Completed;.
+Processing.
+Generating.
+NotExists.
+No record (offline asr generation is not enabled or no package is available).
+     */
+    public void setAsrStatus(String AsrStatus) {
+        this.AsrStatus = AsrStatus;
+    }
+
+    /**
+     * Get Address of the third-party cos for transferring recording. 
+     * @return CustomRecordURL Address of the third-party cos for transferring recording.
      */
     public String getCustomRecordURL() {
         return this.CustomRecordURL;
     }
 
     /**
-     * Set Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CustomRecordURL Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Address of the third-party cos for transferring recording.
+     * @param CustomRecordURL Address of the third-party cos for transferring recording.
      */
     public void setCustomRecordURL(String CustomRecordURL) {
         this.CustomRecordURL = CustomRecordURL;
     }
 
     /**
-     * Get Remarks
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Remarks. 
+     * @return Remark Remarks.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Remarks.
+     * @param Remark Remarks.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Queue skill group name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Queue skill group name. 
      * @return QueuedSkillGroupName Queue skill group name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getQueuedSkillGroupName() {
         return this.QueuedSkillGroupName;
@@ -1467,49 +1400,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Queue skill group name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param QueuedSkillGroupName Queue skill group name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQueuedSkillGroupName(String QueuedSkillGroupName) {
         this.QueuedSkillGroupName = QueuedSkillGroupName;
     }
 
     /**
-     * Get Audio message recording URL during call.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoicemailRecordURL Audio message recording URL during call.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Audio message recording url during call. 
+     * @return VoicemailRecordURL Audio message recording url during call.
      */
     public String [] getVoicemailRecordURL() {
         return this.VoicemailRecordURL;
     }
 
     /**
-     * Set Audio message recording URL during call.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoicemailRecordURL Audio message recording URL during call.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Audio message recording url during call.
+     * @param VoicemailRecordURL Audio message recording url during call.
      */
     public void setVoicemailRecordURL(String [] VoicemailRecordURL) {
         this.VoicemailRecordURL = VoicemailRecordURL;
     }
 
     /**
-     * Get Text Information address of ASR audio message during a call.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoicemailAsrURL Text Information address of ASR audio message during a call.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Text information address of asr audio message during a call. 
+     * @return VoicemailAsrURL Text information address of asr audio message during a call.
      */
     public String [] getVoicemailAsrURL() {
         return this.VoicemailAsrURL;
     }
 
     /**
-     * Set Text Information address of ASR audio message during a call.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoicemailAsrURL Text Information address of ASR audio message during a call.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Text information address of asr audio message during a call.
+     * @param VoicemailAsrURL Text information address of asr audio message during a call.
      */
     public void setVoicemailAsrURL(String [] VoicemailAsrURL) {
         this.VoicemailAsrURL = VoicemailAsrURL;
@@ -1628,6 +1551,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AsrUrl != null) {
             this.AsrUrl = new String(source.AsrUrl);
         }
+        if (source.AsrStatus != null) {
+            this.AsrStatus = new String(source.AsrStatus);
+        }
         if (source.CustomRecordURL != null) {
             this.CustomRecordURL = new String(source.CustomRecordURL);
         }
@@ -1687,6 +1613,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UUI", this.UUI);
         this.setParamArrayObj(map, prefix + "IVRKeyPressedEx.", this.IVRKeyPressedEx);
         this.setParamSimple(map, prefix + "AsrUrl", this.AsrUrl);
+        this.setParamSimple(map, prefix + "AsrStatus", this.AsrStatus);
         this.setParamSimple(map, prefix + "CustomRecordURL", this.CustomRecordURL);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "QueuedSkillGroupName", this.QueuedSkillGroupName);

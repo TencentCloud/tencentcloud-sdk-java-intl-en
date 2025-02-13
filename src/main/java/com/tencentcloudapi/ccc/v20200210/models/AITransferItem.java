@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AITransferItem extends AbstractModel {
 
     /**
-    * 
+    * Name of the function calling for transfer to human.
     */
     @SerializedName("TransferFunctionName")
     @Expose
     private String TransferFunctionName;
 
     /**
-    * 
+    * Takes effect when transferfunctionenable is true; the description of transfer_to_human function calling defaults to "transfer to human when the user has to transfer to human (like says transfer to human) or you are instructed to do so.".
     */
     @SerializedName("TransferFunctionDesc")
     @Expose
     private String TransferFunctionDesc;
 
     /**
-    * 
+    * Skill group id for transferring to human agent.
     */
     @SerializedName("TransferSkillGroupId")
     @Expose
     private Long TransferSkillGroupId;
 
     /**
-     * Get  
-     * @return TransferFunctionName 
+     * Get Name of the function calling for transfer to human. 
+     * @return TransferFunctionName Name of the function calling for transfer to human.
      */
     public String getTransferFunctionName() {
         return this.TransferFunctionName;
     }
 
     /**
-     * Set 
-     * @param TransferFunctionName 
+     * Set Name of the function calling for transfer to human.
+     * @param TransferFunctionName Name of the function calling for transfer to human.
      */
     public void setTransferFunctionName(String TransferFunctionName) {
         this.TransferFunctionName = TransferFunctionName;
     }
 
     /**
-     * Get  
-     * @return TransferFunctionDesc 
+     * Get Takes effect when transferfunctionenable is true; the description of transfer_to_human function calling defaults to "transfer to human when the user has to transfer to human (like says transfer to human) or you are instructed to do so.". 
+     * @return TransferFunctionDesc Takes effect when transferfunctionenable is true; the description of transfer_to_human function calling defaults to "transfer to human when the user has to transfer to human (like says transfer to human) or you are instructed to do so.".
      */
     public String getTransferFunctionDesc() {
         return this.TransferFunctionDesc;
     }
 
     /**
-     * Set 
-     * @param TransferFunctionDesc 
+     * Set Takes effect when transferfunctionenable is true; the description of transfer_to_human function calling defaults to "transfer to human when the user has to transfer to human (like says transfer to human) or you are instructed to do so.".
+     * @param TransferFunctionDesc Takes effect when transferfunctionenable is true; the description of transfer_to_human function calling defaults to "transfer to human when the user has to transfer to human (like says transfer to human) or you are instructed to do so.".
      */
     public void setTransferFunctionDesc(String TransferFunctionDesc) {
         this.TransferFunctionDesc = TransferFunctionDesc;
     }
 
     /**
-     * Get  
-     * @return TransferSkillGroupId 
+     * Get Skill group id for transferring to human agent. 
+     * @return TransferSkillGroupId Skill group id for transferring to human agent.
      */
     public Long getTransferSkillGroupId() {
         return this.TransferSkillGroupId;
     }
 
     /**
-     * Set 
-     * @param TransferSkillGroupId 
+     * Set Skill group id for transferring to human agent.
+     * @param TransferSkillGroupId Skill group id for transferring to human agent.
      */
     public void setTransferSkillGroupId(Long TransferSkillGroupId) {
         this.TransferSkillGroupId = TransferSkillGroupId;

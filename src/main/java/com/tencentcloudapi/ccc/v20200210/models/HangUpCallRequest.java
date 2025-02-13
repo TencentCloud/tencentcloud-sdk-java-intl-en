@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class HangUpCallRequest extends AbstractModel {
 
     /**
-    * TCCC instance application ID.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Session ID.
+    * Session id.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-     * Get TCCC instance application ID. 
-     * @return SdkAppId TCCC instance application ID.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set TCCC instance application ID.
-     * @param SdkAppId TCCC instance application ID.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Session ID. 
-     * @return SessionId Session ID.
+     * Get Session id. 
+     * @return SessionId Session id.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Session ID.
-     * @param SessionId Session ID.
+     * Set Session id.
+     * @param SessionId Session id.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

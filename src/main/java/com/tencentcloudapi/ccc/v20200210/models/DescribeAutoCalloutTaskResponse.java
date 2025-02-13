@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAutoCalloutTaskResponse extends AbstractModel {
 
     /**
-    * Task Name
+    * Task name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Task Description.
+    * <Task description>.
     */
     @SerializedName("Description")
     @Expose
@@ -88,32 +88,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Task Name 
-     * @return Name Task Name
+     * Get Task name. 
+     * @return Name Task name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Task Name
-     * @param Name Task Name
+     * Set Task name.
+     * @param Name Task name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Task Description. 
-     * @return Description Task Description.
+     * Get <Task description>. 
+     * @return Description <Task description>.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Task Description.
-     * @param Description Task Description.
+     * Set <Task description>.
+     * @param Description <Task description>.
      */
     public void setDescription(String Description) {
         this.Description = Description;

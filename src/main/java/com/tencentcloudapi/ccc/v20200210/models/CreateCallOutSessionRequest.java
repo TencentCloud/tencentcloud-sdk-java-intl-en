@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateCallOutSessionRequest extends AbstractModel {
 
     /**
-    * Application ID
+    * Application id.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Customer Service User ID usually refers to the customer service email.
+    * Customer service user id usually refers to the customer service email.
     */
     @SerializedName("UserId")
     @Expose
@@ -45,14 +45,14 @@ public class CreateCallOutSessionRequest extends AbstractModel {
     private String Callee;
 
     /**
-    * Caller number (obsolete one and use Callers) must be preceded by 0086.
+    * Caller number (obsolete one and use callers) must be preceded by 0086.
     */
     @SerializedName("Caller")
     @Expose
     private String Caller;
 
     /**
-    * Designated caller number list. If the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
+    * Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
     */
     @SerializedName("Callers")
     @Expose
@@ -80,32 +80,32 @@ public class CreateCallOutSessionRequest extends AbstractModel {
     private String UUI;
 
     /**
-     * Get Application ID 
-     * @return SdkAppId Application ID
+     * Get Application id. 
+     * @return SdkAppId Application id.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID
-     * @param SdkAppId Application ID
+     * Set Application id.
+     * @param SdkAppId Application id.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Customer Service User ID usually refers to the customer service email. 
-     * @return UserId Customer Service User ID usually refers to the customer service email.
+     * Get Customer service user id usually refers to the customer service email. 
+     * @return UserId Customer service user id usually refers to the customer service email.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set Customer Service User ID usually refers to the customer service email.
-     * @param UserId Customer Service User ID usually refers to the customer service email.
+     * Set Customer service user id usually refers to the customer service email.
+     * @param UserId Customer service user id usually refers to the customer service email.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
@@ -128,32 +128,32 @@ public class CreateCallOutSessionRequest extends AbstractModel {
     }
 
     /**
-     * Get Caller number (obsolete one and use Callers) must be preceded by 0086. 
-     * @return Caller Caller number (obsolete one and use Callers) must be preceded by 0086.
+     * Get Caller number (obsolete one and use callers) must be preceded by 0086. 
+     * @return Caller Caller number (obsolete one and use callers) must be preceded by 0086.
      */
     public String getCaller() {
         return this.Caller;
     }
 
     /**
-     * Set Caller number (obsolete one and use Callers) must be preceded by 0086.
-     * @param Caller Caller number (obsolete one and use Callers) must be preceded by 0086.
+     * Set Caller number (obsolete one and use callers) must be preceded by 0086.
+     * @param Caller Caller number (obsolete one and use callers) must be preceded by 0086.
      */
     public void setCaller(String Caller) {
         this.Caller = Caller;
     }
 
     /**
-     * Get Designated caller number list. If the prior number fails, it will automatically switch to the next number that must be preceded by 0086. 
-     * @return Callers Designated caller number list. If the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
+     * Get Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086. 
+     * @return Callers Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
      */
     public String [] getCallers() {
         return this.Callers;
     }
 
     /**
-     * Set Designated caller number list. If the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
-     * @param Callers Designated caller number list. If the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
+     * Set Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
+     * @param Callers Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
      */
     public void setCallers(String [] Callers) {
         this.Callers = Callers;

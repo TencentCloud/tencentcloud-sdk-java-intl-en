@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SkillGroupItem extends AbstractModel {
 
     /**
-    * Skill group ID.
+    * Skill group id.
     */
     @SerializedName("SkillGroupId")
     @Expose
@@ -38,30 +38,30 @@ public class SkillGroupItem extends AbstractModel {
     private String SkillGroupName;
 
     /**
-    * Priority
+    * Priority.
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * Type: IM, TEL, ALL (full media).
+    * Type: im, tel, all (full media).
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Skill group ID. 
-     * @return SkillGroupId Skill group ID.
+     * Get Skill group id. 
+     * @return SkillGroupId Skill group id.
      */
     public Long getSkillGroupId() {
         return this.SkillGroupId;
     }
 
     /**
-     * Set Skill group ID.
-     * @param SkillGroupId Skill group ID.
+     * Set Skill group id.
+     * @param SkillGroupId Skill group id.
      */
     public void setSkillGroupId(Long SkillGroupId) {
         this.SkillGroupId = SkillGroupId;
@@ -84,32 +84,32 @@ public class SkillGroupItem extends AbstractModel {
     }
 
     /**
-     * Get Priority 
-     * @return Priority Priority
+     * Get Priority. 
+     * @return Priority Priority.
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set Priority
-     * @param Priority Priority
+     * Set Priority.
+     * @param Priority Priority.
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get Type: IM, TEL, ALL (full media). 
-     * @return Type Type: IM, TEL, ALL (full media).
+     * Get Type: im, tel, all (full media). 
+     * @return Type Type: im, tel, all (full media).
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type: IM, TEL, ALL (full media).
-     * @param Type Type: IM, TEL, ALL (full media).
+     * Set Type: im, tel, all (full media).
+     * @param Type Type: im, tel, all (full media).
      */
     public void setType(String Type) {
         this.Type = Type;

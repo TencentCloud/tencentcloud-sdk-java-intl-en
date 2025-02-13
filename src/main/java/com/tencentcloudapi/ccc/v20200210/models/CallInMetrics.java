@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CallInMetrics extends AbstractModel {
 
     /**
-    * Number of IVR residency.
+    * Number of ivr residency.
     */
     @SerializedName("IvrCount")
     @Expose
@@ -45,7 +45,7 @@ public class CallInMetrics extends AbstractModel {
     private Long RingCount;
 
     /**
-    * Number in connection.
+    * Number of connections.
     */
     @SerializedName("AcceptCount")
     @Expose
@@ -101,16 +101,16 @@ public class CallInMetrics extends AbstractModel {
     private Long AvgAcceptDuration;
 
     /**
-     * Get Number of IVR residency. 
-     * @return IvrCount Number of IVR residency.
+     * Get Number of ivr residency. 
+     * @return IvrCount Number of ivr residency.
      */
     public Long getIvrCount() {
         return this.IvrCount;
     }
 
     /**
-     * Set Number of IVR residency.
-     * @param IvrCount Number of IVR residency.
+     * Set Number of ivr residency.
+     * @param IvrCount Number of ivr residency.
      */
     public void setIvrCount(Long IvrCount) {
         this.IvrCount = IvrCount;
@@ -149,16 +149,16 @@ public class CallInMetrics extends AbstractModel {
     }
 
     /**
-     * Get Number in connection. 
-     * @return AcceptCount Number in connection.
+     * Get Number of connections. 
+     * @return AcceptCount Number of connections.
      */
     public Long getAcceptCount() {
         return this.AcceptCount;
     }
 
     /**
-     * Set Number in connection.
-     * @param AcceptCount Number in connection.
+     * Set Number of connections.
+     * @param AcceptCount Number of connections.
      */
     public void setAcceptCount(Long AcceptCount) {
         this.AcceptCount = AcceptCount;

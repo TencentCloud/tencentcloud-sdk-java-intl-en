@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class PSTNSessionInfo extends AbstractModel {
 
     /**
-    * Session ID.
+    * Session id.
     */
     @SerializedName("SessionID")
     @Expose
     private String SessionID;
 
     /**
-    * Temporary room ID for session.
+    * Temporary room id for session.
     */
     @SerializedName("RoomID")
     @Expose
@@ -52,14 +52,14 @@ public class PSTNSessionInfo extends AbstractModel {
     private String Callee;
 
     /**
-    * Start time. Unix timestamp.
+    * Start time. unix timestamp.
     */
     @SerializedName("StartTimestamp")
     @Expose
     private String StartTimestamp;
 
     /**
-    * Answer time. Unix timestamp.
+    * Answer time. unix timestamp.
     */
     @SerializedName("AcceptTimestamp")
     @Expose
@@ -73,74 +73,74 @@ public class PSTNSessionInfo extends AbstractModel {
     private String StaffEmail;
 
     /**
-    * Agent ID
+    * Agent id.
     */
     @SerializedName("StaffNumber")
     @Expose
     private String StaffNumber;
 
     /**
-    * Agent Status inProgress Ongoing
+    * Agent status inprogress ongoing.
     */
     @SerializedName("SessionStatus")
     @Expose
     private String SessionStatus;
 
     /**
-    * Session call direction, 0 - Inbound | 1 - Outbound.
+    * Session call direction, 0 - inbound | 1 - outbound.
     */
     @SerializedName("Direction")
     @Expose
     private Long Direction;
 
     /**
-    * Ring time. Unix timestamp.
+    * Ring time. unix timestamp.
     */
     @SerializedName("RingTimestamp")
     @Expose
     private Long RingTimestamp;
 
     /**
-    * Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
+    * Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
     */
     @SerializedName("ProtectedCaller")
     @Expose
     private String ProtectedCaller;
 
     /**
-    * Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
+    * Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
     */
     @SerializedName("ProtectedCallee")
     @Expose
     private String ProtectedCallee;
 
     /**
-     * Get Session ID. 
-     * @return SessionID Session ID.
+     * Get Session id. 
+     * @return SessionID Session id.
      */
     public String getSessionID() {
         return this.SessionID;
     }
 
     /**
-     * Set Session ID.
-     * @param SessionID Session ID.
+     * Set Session id.
+     * @param SessionID Session id.
      */
     public void setSessionID(String SessionID) {
         this.SessionID = SessionID;
     }
 
     /**
-     * Get Temporary room ID for session. 
-     * @return RoomID Temporary room ID for session.
+     * Get Temporary room id for session. 
+     * @return RoomID Temporary room id for session.
      */
     public String getRoomID() {
         return this.RoomID;
     }
 
     /**
-     * Set Temporary room ID for session.
-     * @param RoomID Temporary room ID for session.
+     * Set Temporary room id for session.
+     * @param RoomID Temporary room id for session.
      */
     public void setRoomID(String RoomID) {
         this.RoomID = RoomID;
@@ -179,32 +179,32 @@ public class PSTNSessionInfo extends AbstractModel {
     }
 
     /**
-     * Get Start time. Unix timestamp. 
-     * @return StartTimestamp Start time. Unix timestamp.
+     * Get Start time. unix timestamp. 
+     * @return StartTimestamp Start time. unix timestamp.
      */
     public String getStartTimestamp() {
         return this.StartTimestamp;
     }
 
     /**
-     * Set Start time. Unix timestamp.
-     * @param StartTimestamp Start time. Unix timestamp.
+     * Set Start time. unix timestamp.
+     * @param StartTimestamp Start time. unix timestamp.
      */
     public void setStartTimestamp(String StartTimestamp) {
         this.StartTimestamp = StartTimestamp;
     }
 
     /**
-     * Get Answer time. Unix timestamp. 
-     * @return AcceptTimestamp Answer time. Unix timestamp.
+     * Get Answer time. unix timestamp. 
+     * @return AcceptTimestamp Answer time. unix timestamp.
      */
     public String getAcceptTimestamp() {
         return this.AcceptTimestamp;
     }
 
     /**
-     * Set Answer time. Unix timestamp.
-     * @param AcceptTimestamp Answer time. Unix timestamp.
+     * Set Answer time. unix timestamp.
+     * @param AcceptTimestamp Answer time. unix timestamp.
      */
     public void setAcceptTimestamp(String AcceptTimestamp) {
         this.AcceptTimestamp = AcceptTimestamp;
@@ -227,96 +227,96 @@ public class PSTNSessionInfo extends AbstractModel {
     }
 
     /**
-     * Get Agent ID 
-     * @return StaffNumber Agent ID
+     * Get Agent id. 
+     * @return StaffNumber Agent id.
      */
     public String getStaffNumber() {
         return this.StaffNumber;
     }
 
     /**
-     * Set Agent ID
-     * @param StaffNumber Agent ID
+     * Set Agent id.
+     * @param StaffNumber Agent id.
      */
     public void setStaffNumber(String StaffNumber) {
         this.StaffNumber = StaffNumber;
     }
 
     /**
-     * Get Agent Status inProgress Ongoing 
-     * @return SessionStatus Agent Status inProgress Ongoing
+     * Get Agent status inprogress ongoing. 
+     * @return SessionStatus Agent status inprogress ongoing.
      */
     public String getSessionStatus() {
         return this.SessionStatus;
     }
 
     /**
-     * Set Agent Status inProgress Ongoing
-     * @param SessionStatus Agent Status inProgress Ongoing
+     * Set Agent status inprogress ongoing.
+     * @param SessionStatus Agent status inprogress ongoing.
      */
     public void setSessionStatus(String SessionStatus) {
         this.SessionStatus = SessionStatus;
     }
 
     /**
-     * Get Session call direction, 0 - Inbound | 1 - Outbound. 
-     * @return Direction Session call direction, 0 - Inbound | 1 - Outbound.
+     * Get Session call direction, 0 - inbound | 1 - outbound. 
+     * @return Direction Session call direction, 0 - inbound | 1 - outbound.
      */
     public Long getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set Session call direction, 0 - Inbound | 1 - Outbound.
-     * @param Direction Session call direction, 0 - Inbound | 1 - Outbound.
+     * Set Session call direction, 0 - inbound | 1 - outbound.
+     * @param Direction Session call direction, 0 - inbound | 1 - outbound.
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;
     }
 
     /**
-     * Get Ring time. Unix timestamp. 
-     * @return RingTimestamp Ring time. Unix timestamp.
+     * Get Ring time. unix timestamp. 
+     * @return RingTimestamp Ring time. unix timestamp.
      */
     public Long getRingTimestamp() {
         return this.RingTimestamp;
     }
 
     /**
-     * Set Ring time. Unix timestamp.
-     * @param RingTimestamp Ring time. Unix timestamp.
+     * Set Ring time. unix timestamp.
+     * @param RingTimestamp Ring time. unix timestamp.
      */
     public void setRingTimestamp(Long RingTimestamp) {
         this.RingTimestamp = RingTimestamp;
     }
 
     /**
-     * Get Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty. 
-     * @return ProtectedCaller Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
+     * Get Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty. 
+     * @return ProtectedCaller Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
      */
     public String getProtectedCaller() {
         return this.ProtectedCaller;
     }
 
     /**
-     * Set Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
-     * @param ProtectedCaller Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
+     * Set Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
+     * @param ProtectedCaller Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
      */
     public void setProtectedCaller(String ProtectedCaller) {
         this.ProtectedCaller = ProtectedCaller;
     }
 
     /**
-     * Get Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty. 
-     * @return ProtectedCallee Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
+     * Get Called number protection id. effective when the number protection map feature is activated, and the callee field is empty. 
+     * @return ProtectedCallee Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
      */
     public String getProtectedCallee() {
         return this.ProtectedCallee;
     }
 
     /**
-     * Set Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
-     * @param ProtectedCallee Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
+     * Set Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
+     * @param ProtectedCallee Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
      */
     public void setProtectedCallee(String ProtectedCallee) {
         this.ProtectedCallee = ProtectedCallee;

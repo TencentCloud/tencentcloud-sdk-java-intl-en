@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Task Name
+    * <Task name>.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Called list supporting E.164 or number formats without country code.
+    * Called list supporting e.164 or number formats without country code.
     */
     @SerializedName("Callees")
     @Expose
@@ -87,21 +87,21 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
     private Long RetryInterval;
 
     /**
-    * Task start time. Unix timestamp. The task will automatically start after this time.
+    * Task start time. unix timestamp. the task will automatically start after this time.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Task termination time. Unix timestamp. The task will automatically terminate after this time.
+    * Task termination time. unix timestamp. the task will automatically terminate after this time.
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * Specified IVR ID.
+    * Specified ivr id.
     */
     @SerializedName("IVRId")
     @Expose
@@ -115,48 +115,69 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
     private Long RetryTimes;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Custom variable.
+    */
+    @SerializedName("Variables")
+    @Expose
+    private Variable [] Variables;
+
+    /**
+    * UUI
+    */
+    @SerializedName("UUI")
+    @Expose
+    private String UUI;
+
+    /**
+    * Property of the called.
+    */
+    @SerializedName("CalleeAttributes")
+    @Expose
+    private CalleeAttribute [] CalleeAttributes;
+
+    /**
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Task Name 
-     * @return Name Task Name
+     * Get <Task name>. 
+     * @return Name <Task name>.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Task Name
-     * @param Name Task Name
+     * Set <Task name>.
+     * @param Name <Task name>.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Called list supporting E.164 or number formats without country code. 
-     * @return Callees Called list supporting E.164 or number formats without country code.
+     * Get Called list supporting e.164 or number formats without country code. 
+     * @return Callees Called list supporting e.164 or number formats without country code.
      */
     public String [] getCallees() {
         return this.Callees;
     }
 
     /**
-     * Set Called list supporting E.164 or number formats without country code.
-     * @param Callees Called list supporting E.164 or number formats without country code.
+     * Set Called list supporting e.164 or number formats without country code.
+     * @param Callees Called list supporting e.164 or number formats without country code.
      */
     public void setCallees(String [] Callees) {
         this.Callees = Callees;
@@ -259,48 +280,48 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
     }
 
     /**
-     * Get Task start time. Unix timestamp. The task will automatically start after this time. 
-     * @return StartTime Task start time. Unix timestamp. The task will automatically start after this time.
+     * Get Task start time. unix timestamp. the task will automatically start after this time. 
+     * @return StartTime Task start time. unix timestamp. the task will automatically start after this time.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Task start time. Unix timestamp. The task will automatically start after this time.
-     * @param StartTime Task start time. Unix timestamp. The task will automatically start after this time.
+     * Set Task start time. unix timestamp. the task will automatically start after this time.
+     * @param StartTime Task start time. unix timestamp. the task will automatically start after this time.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Task termination time. Unix timestamp. The task will automatically terminate after this time. 
-     * @return EndTime Task termination time. Unix timestamp. The task will automatically terminate after this time.
+     * Get Task termination time. unix timestamp. the task will automatically terminate after this time. 
+     * @return EndTime Task termination time. unix timestamp. the task will automatically terminate after this time.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Task termination time. Unix timestamp. The task will automatically terminate after this time.
-     * @param EndTime Task termination time. Unix timestamp. The task will automatically terminate after this time.
+     * Set Task termination time. unix timestamp. the task will automatically terminate after this time.
+     * @param EndTime Task termination time. unix timestamp. the task will automatically terminate after this time.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Specified IVR ID. 
-     * @return IVRId Specified IVR ID.
+     * Get Specified ivr id. 
+     * @return IVRId Specified ivr id.
      */
     public Long getIVRId() {
         return this.IVRId;
     }
 
     /**
-     * Set Specified IVR ID.
-     * @param IVRId Specified IVR ID.
+     * Set Specified ivr id.
+     * @param IVRId Specified ivr id.
      */
     public void setIVRId(Long IVRId) {
         this.IVRId = IVRId;
@@ -320,6 +341,54 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
      */
     public void setRetryTimes(Long RetryTimes) {
         this.RetryTimes = RetryTimes;
+    }
+
+    /**
+     * Get Custom variable. 
+     * @return Variables Custom variable.
+     */
+    public Variable [] getVariables() {
+        return this.Variables;
+    }
+
+    /**
+     * Set Custom variable.
+     * @param Variables Custom variable.
+     */
+    public void setVariables(Variable [] Variables) {
+        this.Variables = Variables;
+    }
+
+    /**
+     * Get UUI 
+     * @return UUI UUI
+     */
+    public String getUUI() {
+        return this.UUI;
+    }
+
+    /**
+     * Set UUI
+     * @param UUI UUI
+     */
+    public void setUUI(String UUI) {
+        this.UUI = UUI;
+    }
+
+    /**
+     * Get Property of the called. 
+     * @return CalleeAttributes Property of the called.
+     */
+    public CalleeAttribute [] getCalleeAttributes() {
+        return this.CalleeAttributes;
+    }
+
+    /**
+     * Set Property of the called.
+     * @param CalleeAttributes Property of the called.
+     */
+    public void setCalleeAttributes(CalleeAttribute [] CalleeAttributes) {
+        this.CalleeAttributes = CalleeAttributes;
     }
 
     public CreatePredictiveDialingCampaignRequest() {
@@ -375,6 +444,21 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
         if (source.RetryTimes != null) {
             this.RetryTimes = new Long(source.RetryTimes);
         }
+        if (source.Variables != null) {
+            this.Variables = new Variable[source.Variables.length];
+            for (int i = 0; i < source.Variables.length; i++) {
+                this.Variables[i] = new Variable(source.Variables[i]);
+            }
+        }
+        if (source.UUI != null) {
+            this.UUI = new String(source.UUI);
+        }
+        if (source.CalleeAttributes != null) {
+            this.CalleeAttributes = new CalleeAttribute[source.CalleeAttributes.length];
+            for (int i = 0; i < source.CalleeAttributes.length; i++) {
+                this.CalleeAttributes[i] = new CalleeAttribute(source.CalleeAttributes[i]);
+            }
+        }
     }
 
 
@@ -395,6 +479,9 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "IVRId", this.IVRId);
         this.setParamSimple(map, prefix + "RetryTimes", this.RetryTimes);
+        this.setParamArrayObj(map, prefix + "Variables.", this.Variables);
+        this.setParamSimple(map, prefix + "UUI", this.UUI);
+        this.setParamArrayObj(map, prefix + "CalleeAttributes.", this.CalleeAttributes);
 
     }
 }
