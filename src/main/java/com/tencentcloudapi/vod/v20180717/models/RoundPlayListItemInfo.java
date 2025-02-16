@@ -41,7 +41,14 @@ The file must be in HLS format.
     private String AudioVideoType;
 
     /**
-    * The transcoding template used to generate the transcoding output played. This parameter is required if `AudioVideoType` is `Transcode`.
+    * ID of the program to be played, assigned by the system.
+    */
+    @SerializedName("ItemId")
+    @Expose
+    private String ItemId;
+
+    /**
+    * The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
     */
     @SerializedName("Definition")
     @Expose
@@ -92,16 +99,32 @@ The file must be in HLS format.
     }
 
     /**
-     * Get The transcoding template used to generate the transcoding output played. This parameter is required if `AudioVideoType` is `Transcode`. 
-     * @return Definition The transcoding template used to generate the transcoding output played. This parameter is required if `AudioVideoType` is `Transcode`.
+     * Get ID of the program to be played, assigned by the system. 
+     * @return ItemId ID of the program to be played, assigned by the system.
+     */
+    public String getItemId() {
+        return this.ItemId;
+    }
+
+    /**
+     * Set ID of the program to be played, assigned by the system.
+     * @param ItemId ID of the program to be played, assigned by the system.
+     */
+    public void setItemId(String ItemId) {
+        this.ItemId = ItemId;
+    }
+
+    /**
+     * Get The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`. 
+     * @return Definition The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set The transcoding template used to generate the transcoding output played. This parameter is required if `AudioVideoType` is `Transcode`.
-     * @param Definition The transcoding template used to generate the transcoding output played. This parameter is required if `AudioVideoType` is `Transcode`.
+     * Set The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
+     * @param Definition The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -121,6 +144,9 @@ The file must be in HLS format.
         if (source.AudioVideoType != null) {
             this.AudioVideoType = new String(source.AudioVideoType);
         }
+        if (source.ItemId != null) {
+            this.ItemId = new String(source.ItemId);
+        }
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
@@ -133,6 +159,7 @@ The file must be in HLS format.
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "AudioVideoType", this.AudioVideoType);
+        this.setParamSimple(map, prefix + "ItemId", this.ItemId);
         this.setParamSimple(map, prefix + "Definition", this.Definition);
 
     }
