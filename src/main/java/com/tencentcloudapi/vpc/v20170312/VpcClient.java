@@ -86,6 +86,35 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to apply for one or more Elastic IPv6 (EIPv6) instances.
+
+- EIPv6 is a fixed public IPv6 address that can be independently applied for and held in a Tencent Cloud region, providing a consistent product experience with Elastic IPv4.
+- You can quickly bind an EIPv6 instance to the private IPv6 address of a cloud resource, so as to quickly enable IPv6 public bandwidth for the cloud resource.
+- You can also bind an EIPv6 instance to other cloud resources as needed, so as to shield instance failures.
+     * @param req AllocateIPv6AddressesRequest
+     * @return AllocateIPv6AddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AllocateIPv6AddressesResponse AllocateIPv6Addresses(AllocateIPv6AddressesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AllocateIPv6Addresses", AllocateIPv6AddressesResponse.class);
+    }
+
+    /**
+     *This API is used to allocate IPv6 public network bandwidth for classic elastic public IPv6 addresses.
+
+- Classic elastic public IPv6 addresses only have the private network communication capability by default. They can have the IPv6 public network communication capability and be displayed in the list of Classic Elastic Public IPv6 only after IPv6 public network bandwidth is allocated in the console or by calling this API. 
+- You can allocate public network bandwidth for one or multiple Classic elastic public IPv6 addresses each time.
+     * @param req AllocateIp6AddressesBandwidthRequest
+     * @return AllocateIp6AddressesBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public AllocateIp6AddressesBandwidthResponse AllocateIp6AddressesBandwidth(AllocateIp6AddressesBandwidthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AllocateIp6AddressesBandwidth", AllocateIp6AddressesBandwidthResponse.class);
+    }
+
+    /**
      *This API is used to apply for an IPv6 address for the ENI. <br />
 This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
 * The number of IPs bound with an ENI is limited. For more information, see <a href="/document/product/576/18527">ENI Use Limits</a>.
@@ -169,6 +198,20 @@ This API is completed asynchronously. If you need to query the execution result 
     public AssociateDirectConnectGatewayNatGatewayResponse AssociateDirectConnectGatewayNatGateway(AssociateDirectConnectGatewayNatGatewayRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "AssociateDirectConnectGatewayNatGateway", AssociateDirectConnectGatewayNatGatewayResponse.class);
+    }
+
+    /**
+     *This API is used to bind an EIPv6 instance to the private IPv6 address configured on the CVM or ENI.
+
+- Binding an EIPv6 to the CVM essentially indicates binding the EIPv6 to the private IPv6 address configured on the ENI of the CVM.
+- Before binding an EIPv6 to the private IPv6 of a specified ENI, ensure that the private IPv6 address is unbound before the binding operation is performed.
+     * @param req AssociateIPv6AddressRequest
+     * @return AssociateIPv6AddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateIPv6AddressResponse AssociateIPv6Address(AssociateIPv6AddressRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssociateIPv6Address", AssociateIPv6AddressResponse.class);
     }
 
     /**
@@ -1491,6 +1534,31 @@ A service provider can query all review requests created by any `APPID` under it
     }
 
     /**
+     *This API is used to query detailed information of one or more EIPv6 instances.
+
+- You can query EIPv6 and traditional EIPv6 instance information in a specified region.
+- The system returns a certain number (as specified by the Limit, the default value is 20) of EIPv6 instances of the current user if the parameter is empty.
+     * @param req DescribeIPv6AddressesRequest
+     * @return DescribeIPv6AddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIPv6AddressesResponse DescribeIPv6Addresses(DescribeIPv6AddressesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIPv6Addresses", DescribeIPv6AddressesResponse.class);
+    }
+
+    /**
+     *This API is used to query the detailed information on one or multiple classic elastic public IPv6 instances.
+     * @param req DescribeIp6AddressesRequest
+     * @return DescribeIp6AddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIp6AddressesResponse DescribeIp6Addresses(DescribeIp6AddressesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIp6Addresses", DescribeIp6AddressesResponse.class);
+    }
+
+    /**
      *This API is used to obtain the download link of an IP location database.
 <font color="#FF0000">This API will be discontinued soon and is only available for existing users.</font>
      * @param req DescribeIpGeolocationDatabaseUrlRequest
@@ -2087,6 +2155,20 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API is used to unbind an EIPv6 instance.
+
+- You can unbind EIPv6 instances bound to Cloud Virtual Machine (CVM) or Elastic Network Interface (ENI).
+- Only EIPv6 instances in BIND or BIND_ENI status can be unbound.
+     * @param req DisassociateIPv6AddressRequest
+     * @return DisassociateIPv6AddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateIPv6AddressResponse DisassociateIPv6Address(DisassociateIPv6AddressRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisassociateIPv6Address", DisassociateIPv6AddressResponse.class);
+    }
+
+    /**
      *This API is used to unbind an EIP from a NAT gateway.
      * @param req DisassociateNatGatewayAddressRequest
      * @return DisassociateNatGatewayAddressResponse
@@ -2527,6 +2609,44 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API is used to modify the name of an EIPv6 instance.
+
+- You can modify the name of both EIPv6 and traditional EIPv6 instances.
+     * @param req ModifyIPv6AddressesAttributesRequest
+     * @return ModifyIPv6AddressesAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIPv6AddressesAttributesResponse ModifyIPv6AddressesAttributes(ModifyIPv6AddressesAttributesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyIPv6AddressesAttributes", ModifyIPv6AddressesAttributesResponse.class);
+    }
+
+    /**
+     *This API is used to modify the bandwidth cap of an EIPv6 instance.
+     * @param req ModifyIPv6AddressesBandwidthRequest
+     * @return ModifyIPv6AddressesBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIPv6AddressesBandwidthResponse ModifyIPv6AddressesBandwidth(ModifyIPv6AddressesBandwidthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyIPv6AddressesBandwidth", ModifyIPv6AddressesBandwidthResponse.class);
+    }
+
+    /**
+     *This API is used to adjust the bandwidth limit of a classic elastic public IPv6 instance.
+
+- You can adjust the bandwidth limit of only classic elastic public IPv6 instances.
+- To adjust the bandwidth limit of an elastic public IPv6 instance, call the ModifyIPv6AddressesBandwidth API.
+     * @param req ModifyIp6AddressesBandwidthRequest
+     * @return ModifyIp6AddressesBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIp6AddressesBandwidthResponse ModifyIp6AddressesBandwidth(ModifyIp6AddressesBandwidthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyIp6AddressesBandwidth", ModifyIp6AddressesBandwidthResponse.class);
+    }
+
+    /**
      *This API (ModifyIpv6AddressesAttribute) is used to modify the private IPv6 address attributes of an ENI.
      * @param req ModifyIpv6AddressesAttributeRequest
      * @return ModifyIpv6AddressesAttributeResponse
@@ -2887,6 +3007,34 @@ This API is completed asynchronously. If you need to query the execution result 
     public ReleaseAddressesResponse ReleaseAddresses(ReleaseAddressesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ReleaseAddresses", ReleaseAddressesResponse.class);
+    }
+
+    /**
+     *This API is used to release one or more EIPv6 instances.
+
+- You can release the obtained EIPv6 instances. To use them again, please reapply.
+- Only EIPv6 instances in UNBIND status can be released.
+     * @param req ReleaseIPv6AddressesRequest
+     * @return ReleaseIPv6AddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseIPv6AddressesResponse ReleaseIPv6Addresses(ReleaseIPv6AddressesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReleaseIPv6Addresses", ReleaseIPv6AddressesResponse.class);
+    }
+
+    /**
+     *This API is used to release the IPv6 public network bandwidth of classic elastic public IPv6 instances.
+
+- Classic elastic public IPv6 addresses still have the IPv6 private network communication capability after the public network bandwidth is released.
+- To allocate IPV6 public network bandwidth, call the AllocateIp6AddressesBandwidth API.
+     * @param req ReleaseIp6AddressesBandwidthRequest
+     * @return ReleaseIp6AddressesBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseIp6AddressesBandwidthResponse ReleaseIp6AddressesBandwidth(ReleaseIp6AddressesBandwidthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReleaseIp6AddressesBandwidth", ReleaseIp6AddressesBandwidthResponse.class);
     }
 
     /**
