@@ -38,6 +38,20 @@ public class MediaAiAnalysisDescriptionItem extends AbstractModel {
     private Float Confidence;
 
     /**
+    * Intelligent description title.
+    */
+    @SerializedName("Title")
+    @Expose
+    private String Title;
+
+    /**
+    * Intelligent description keywords.
+    */
+    @SerializedName("Keywords")
+    @Expose
+    private String [] Keywords;
+
+    /**
     * Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -78,6 +92,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Intelligent description title. 
+     * @return Title Intelligent description title.
+     */
+    public String getTitle() {
+        return this.Title;
+    }
+
+    /**
+     * Set Intelligent description title.
+     * @param Title Intelligent description title.
+     */
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
+    /**
+     * Get Intelligent description keywords. 
+     * @return Keywords Intelligent description keywords.
+     */
+    public String [] getKeywords() {
+        return this.Keywords;
+    }
+
+    /**
+     * Set Intelligent description keywords.
+     * @param Keywords Intelligent description keywords.
+     */
+    public void setKeywords(String [] Keywords) {
+        this.Keywords = Keywords;
+    }
+
+    /**
      * Get Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Paragraphs Segmentation result.
@@ -111,6 +157,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Confidence != null) {
             this.Confidence = new Float(source.Confidence);
         }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Keywords != null) {
+            this.Keywords = new String[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new String(source.Keywords[i]);
+            }
+        }
         if (source.Paragraphs != null) {
             this.Paragraphs = new AiParagraphInfo[source.Paragraphs.length];
             for (int i = 0; i < source.Paragraphs.length; i++) {
@@ -126,6 +181,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
+        this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamArrayObj(map, prefix + "Paragraphs.", this.Paragraphs);
 
     }

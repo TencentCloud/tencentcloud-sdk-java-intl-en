@@ -440,6 +440,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *Query Inter-VPC rules
+     * @param req DescribeVpcAcRuleRequest
+     * @return DescribeVpcAcRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcAcRuleResponse DescribeVpcAcRule(DescribeVpcAcRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVpcAcRule", DescribeVpcAcRuleResponse.class);
+    }
+
+    /**
      *This API is used to increase the firewall bandwidth.
      * @param req ExpandCfwVerticalRequest
      * @return ExpandCfwVerticalResponse

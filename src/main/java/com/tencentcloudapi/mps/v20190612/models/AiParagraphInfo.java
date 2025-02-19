@@ -32,6 +32,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Summary;
 
     /**
+    * Segment title.
+    */
+    @SerializedName("Title")
+    @Expose
+    private String Title;
+
+    /**
+    * Segment keywords.
+    */
+    @SerializedName("Keywords")
+    @Expose
+    private String [] Keywords;
+
+    /**
     * Segmentation start time point, in seconds.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -65,6 +79,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setSummary(String Summary) {
         this.Summary = Summary;
+    }
+
+    /**
+     * Get Segment title. 
+     * @return Title Segment title.
+     */
+    public String getTitle() {
+        return this.Title;
+    }
+
+    /**
+     * Set Segment title.
+     * @param Title Segment title.
+     */
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
+    /**
+     * Get Segment keywords. 
+     * @return Keywords Segment keywords.
+     */
+    public String [] getKeywords() {
+        return this.Keywords;
+    }
+
+    /**
+     * Set Segment keywords.
+     * @param Keywords Segment keywords.
+     */
+    public void setKeywords(String [] Keywords) {
+        this.Keywords = Keywords;
     }
 
     /**
@@ -118,6 +164,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Summary != null) {
             this.Summary = new String(source.Summary);
         }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Keywords != null) {
+            this.Keywords = new String[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new String(source.Keywords[i]);
+            }
+        }
         if (source.StartTimeOffset != null) {
             this.StartTimeOffset = new Float(source.StartTimeOffset);
         }
@@ -132,6 +187,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Summary", this.Summary);
+        this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
 
