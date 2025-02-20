@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteDnsRecordsRequest extends AbstractModel {
 
     /**
-    * The site ID of the DNS record to be deleted.
+    * Zone id.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * List of DNS record IDs to be deleted, with a maximum limit of 1000.
+    * List of dns record ids to be deleted, upper limit: 1000.
     */
     @SerializedName("RecordIds")
     @Expose
     private String [] RecordIds;
 
     /**
-     * Get The site ID of the DNS record to be deleted. 
-     * @return ZoneId The site ID of the DNS record to be deleted.
+     * Get Zone id. 
+     * @return ZoneId Zone id.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID of the DNS record to be deleted.
-     * @param ZoneId The site ID of the DNS record to be deleted.
+     * Set Zone id.
+     * @param ZoneId Zone id.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get List of DNS record IDs to be deleted, with a maximum limit of 1000. 
-     * @return RecordIds List of DNS record IDs to be deleted, with a maximum limit of 1000.
+     * Get List of dns record ids to be deleted, upper limit: 1000. 
+     * @return RecordIds List of dns record ids to be deleted, upper limit: 1000.
      */
     public String [] getRecordIds() {
         return this.RecordIds;
     }
 
     /**
-     * Set List of DNS record IDs to be deleted, with a maximum limit of 1000.
-     * @param RecordIds List of DNS record IDs to be deleted, with a maximum limit of 1000.
+     * Set List of dns record ids to be deleted, upper limit: 1000.
+     * @param RecordIds List of dns record ids to be deleted, upper limit: 1000.
      */
     public void setRecordIds(String [] RecordIds) {
         this.RecordIds = RecordIds;

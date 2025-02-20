@@ -38,14 +38,16 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * Metric list. Valid values:
-<li>l7Flow_outFlux: L7 EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: L7 client request traffic;</li>
-<li>l7Flow_flux: L7 total access traffic (including the EdgeOne response traffic and client request traffic);</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: L7 client request bandwidth;</li>
-<li>l7Flow_bandwidth: L7 total access bandwidth (including the EdgeOne response bandwidth and client request bandwidth);</li>
-<li>l7Flow_request: L7 access request count.</li>
+    * Metric list. valid values:.
+<Li>L7Flow_outFlux: l7 edgeone response traffic, unit: byte;</li>.
+<Li>L7Flow_inFlux: l7 client request traffic, unit: byte;</li>.
+<Li>L7Flow_flux: l7 total access traffic (including the edgeone response traffic and client request traffic), unit: byte;</li>.
+<Li>L7Flow_outBandwidth: l7 edgeone response bandwidth, unit: bps;</li>.
+<Li>L7Flow_inBandwidth: l7 client request bandwidth, unit: bps;</li>.
+<Li>L7Flow_bandwidth: l7 total access bandwidth (including the edgeone response bandwidth and client request bandwidth), unit: bps;</li>.
+<Li>L7Flow_request: l7 access request count, unit: times;</li>.
+<Li> l7flow_avgresponsetime: l7 average response time, unit: ms (milliseconds);</li>.
+<Li> l7flow_avgfirstbyteresponsetime: l7 average first byte response time for access, unit: ms.</li>.
     */
     @SerializedName("MetricNames")
     @Expose
@@ -136,44 +138,52 @@ If this parameter is not filled in, the default value is global.
     }
 
     /**
-     * Get Metric list. Valid values:
-<li>l7Flow_outFlux: L7 EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: L7 client request traffic;</li>
-<li>l7Flow_flux: L7 total access traffic (including the EdgeOne response traffic and client request traffic);</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: L7 client request bandwidth;</li>
-<li>l7Flow_bandwidth: L7 total access bandwidth (including the EdgeOne response bandwidth and client request bandwidth);</li>
-<li>l7Flow_request: L7 access request count.</li> 
-     * @return MetricNames Metric list. Valid values:
-<li>l7Flow_outFlux: L7 EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: L7 client request traffic;</li>
-<li>l7Flow_flux: L7 total access traffic (including the EdgeOne response traffic and client request traffic);</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: L7 client request bandwidth;</li>
-<li>l7Flow_bandwidth: L7 total access bandwidth (including the EdgeOne response bandwidth and client request bandwidth);</li>
-<li>l7Flow_request: L7 access request count.</li>
+     * Get Metric list. valid values:.
+<Li>L7Flow_outFlux: l7 edgeone response traffic, unit: byte;</li>.
+<Li>L7Flow_inFlux: l7 client request traffic, unit: byte;</li>.
+<Li>L7Flow_flux: l7 total access traffic (including the edgeone response traffic and client request traffic), unit: byte;</li>.
+<Li>L7Flow_outBandwidth: l7 edgeone response bandwidth, unit: bps;</li>.
+<Li>L7Flow_inBandwidth: l7 client request bandwidth, unit: bps;</li>.
+<Li>L7Flow_bandwidth: l7 total access bandwidth (including the edgeone response bandwidth and client request bandwidth), unit: bps;</li>.
+<Li>L7Flow_request: l7 access request count, unit: times;</li>.
+<Li> l7flow_avgresponsetime: l7 average response time, unit: ms (milliseconds);</li>.
+<Li> l7flow_avgfirstbyteresponsetime: l7 average first byte response time for access, unit: ms.</li>. 
+     * @return MetricNames Metric list. valid values:.
+<Li>L7Flow_outFlux: l7 edgeone response traffic, unit: byte;</li>.
+<Li>L7Flow_inFlux: l7 client request traffic, unit: byte;</li>.
+<Li>L7Flow_flux: l7 total access traffic (including the edgeone response traffic and client request traffic), unit: byte;</li>.
+<Li>L7Flow_outBandwidth: l7 edgeone response bandwidth, unit: bps;</li>.
+<Li>L7Flow_inBandwidth: l7 client request bandwidth, unit: bps;</li>.
+<Li>L7Flow_bandwidth: l7 total access bandwidth (including the edgeone response bandwidth and client request bandwidth), unit: bps;</li>.
+<Li>L7Flow_request: l7 access request count, unit: times;</li>.
+<Li> l7flow_avgresponsetime: l7 average response time, unit: ms (milliseconds);</li>.
+<Li> l7flow_avgfirstbyteresponsetime: l7 average first byte response time for access, unit: ms.</li>.
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set Metric list. Valid values:
-<li>l7Flow_outFlux: L7 EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: L7 client request traffic;</li>
-<li>l7Flow_flux: L7 total access traffic (including the EdgeOne response traffic and client request traffic);</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: L7 client request bandwidth;</li>
-<li>l7Flow_bandwidth: L7 total access bandwidth (including the EdgeOne response bandwidth and client request bandwidth);</li>
-<li>l7Flow_request: L7 access request count.</li>
-     * @param MetricNames Metric list. Valid values:
-<li>l7Flow_outFlux: L7 EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: L7 client request traffic;</li>
-<li>l7Flow_flux: L7 total access traffic (including the EdgeOne response traffic and client request traffic);</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: L7 client request bandwidth;</li>
-<li>l7Flow_bandwidth: L7 total access bandwidth (including the EdgeOne response bandwidth and client request bandwidth);</li>
-<li>l7Flow_request: L7 access request count.</li>
+     * Set Metric list. valid values:.
+<Li>L7Flow_outFlux: l7 edgeone response traffic, unit: byte;</li>.
+<Li>L7Flow_inFlux: l7 client request traffic, unit: byte;</li>.
+<Li>L7Flow_flux: l7 total access traffic (including the edgeone response traffic and client request traffic), unit: byte;</li>.
+<Li>L7Flow_outBandwidth: l7 edgeone response bandwidth, unit: bps;</li>.
+<Li>L7Flow_inBandwidth: l7 client request bandwidth, unit: bps;</li>.
+<Li>L7Flow_bandwidth: l7 total access bandwidth (including the edgeone response bandwidth and client request bandwidth), unit: bps;</li>.
+<Li>L7Flow_request: l7 access request count, unit: times;</li>.
+<Li> l7flow_avgresponsetime: l7 average response time, unit: ms (milliseconds);</li>.
+<Li> l7flow_avgfirstbyteresponsetime: l7 average first byte response time for access, unit: ms.</li>.
+     * @param MetricNames Metric list. valid values:.
+<Li>L7Flow_outFlux: l7 edgeone response traffic, unit: byte;</li>.
+<Li>L7Flow_inFlux: l7 client request traffic, unit: byte;</li>.
+<Li>L7Flow_flux: l7 total access traffic (including the edgeone response traffic and client request traffic), unit: byte;</li>.
+<Li>L7Flow_outBandwidth: l7 edgeone response bandwidth, unit: bps;</li>.
+<Li>L7Flow_inBandwidth: l7 client request bandwidth, unit: bps;</li>.
+<Li>L7Flow_bandwidth: l7 total access bandwidth (including the edgeone response bandwidth and client request bandwidth), unit: bps;</li>.
+<Li>L7Flow_request: l7 access request count, unit: times;</li>.
+<Li> l7flow_avgresponsetime: l7 average response time, unit: ms (milliseconds);</li>.
+<Li> l7flow_avgfirstbyteresponsetime: l7 average first byte response time for access, unit: ms.</li>.
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;

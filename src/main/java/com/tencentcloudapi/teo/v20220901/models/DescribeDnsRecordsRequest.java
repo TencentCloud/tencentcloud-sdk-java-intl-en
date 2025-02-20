@@ -24,216 +24,161 @@ import java.util.HashMap;
 public class DescribeDnsRecordsRequest extends AbstractModel {
 
     /**
-    * The site ID of the DNS record.
+    * Zone id.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The page offset. Default value: 0
+    * Offset of paginated query. default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The paginated query limit. Default value: 20. Maximum value: 1000.
+    * Number limit of paginated query. default value: 20. maximum value: 1000.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * The upper limit of Filters.Values is 20. The detailed filtering conditions are as follows: <li>id: Filter by DNS record ID, supports fuzzy query;</li><li>name: Filter by DNS record name, supports fuzzy query;</li><li>content: Filter by DNS record content, supports fuzzy query;</li><li>type: Filter by DNS record type, does not support fuzzy query. Options:<br> A: Point the domain name to an external IPv4 address, such as 8.8.8.8;<br> AAAA: Point the domain name to an external IPv6 address;<br> CNAME: Point the domain name to another domain name, which then resolves to the final IP address;<br> TXT: Identify and describe the domain name, often used for domain verification and SPF records (anti-spam);<br> NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. Root domains cannot add NS records;<br> CAA: Specify the CA that can issue certificates for this site;<br> SRV: Identify a server using a specific service, commonly used in Microsoft's directory management;<br> MX: Specify the recipient's mail server.</li><li>ttl: Filter by the time-to-live (TTL) of the record, does not support fuzzy query.</li>
+    * Filter conditions. up to 20 values for each filter. detailed filter conditions are as follows: <li>id: filter by dns record id, supports fuzzy search;</li><li>name: filter by dns record name, supports fuzzy search;</li><li>content: filter by dns record content, supports fuzzy search;</li><li>type: filter by dns record type, does not support fuzzy search. valid values:<br>   a: points the domain name to an external ipv4 address, such as 8.8.8.8;<br>   aaaa: points the domain name to an external ipv6 address;<br>   cname: points the domain name to another domain name, which then resolves to the final ip address;<br>   txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);<br>   ns: if you need to delegate the subdomain to another dns service provider, you need to add an ns record. root domain cannot add ns records;<br>   caa: specifies the ca that can issue certificates for this site;<br>   srv: identifies a server using a specific service, commonly used in microsoft's directory management;<br>   mx: specifies the recipient's mail server.</li><li>ttl: filter by resolution effective time, does not support fuzzy search.</li>.
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-    * Sort criteria, with possible values:
-<li>content: DNS record content;</li>
-<li>created-on: DNS record creation time;</li>
-<li>name: DNS record name;</li>
-<li>ttl: Time-to-live (TTL);</li>
-<li>type: DNS record type.</li>
-The default sorting is based on a combination of type and name attributes.
+    * Sorting basis. values include: <li>`content`: dns record content</li><li>`created-on`: dns record creation time</li><li>`name`: dns record name</li><li>`ttl`: cache time</li><li>`type`: dns record type</li> default sorting is by the combination of `type`, `name`.
     */
     @SerializedName("SortBy")
     @Expose
     private String SortBy;
 
     /**
-    * List sorting order, with possible values:
-<li>asc: Ascending order;</li>
-<li>desc: Descending order.</li>
-The default value is asc.
+    * List sort method. values: <li>`asc`: ascending order</li><li>`desc`: sort in descending order</li> default value: `asc`.
     */
     @SerializedName("SortOrder")
     @Expose
     private String SortOrder;
 
     /**
-    * The match mode. Values:
-<li>`all`: Return all records that match the specified filter.</li>
-<li>`any`: Return any record that matches the specified filter.</li>Default value: all.
+    * Match method. values: <li>`all`: return records that match all query conditions</li><li>`any`: return records that match any query condition</li> default value: `all`.
     */
     @SerializedName("Match")
     @Expose
     private String Match;
 
     /**
-     * Get The site ID of the DNS record. 
-     * @return ZoneId The site ID of the DNS record.
+     * Get Zone id. 
+     * @return ZoneId Zone id.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID of the DNS record.
-     * @param ZoneId The site ID of the DNS record.
+     * Set Zone id.
+     * @param ZoneId Zone id.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The page offset. Default value: 0 
-     * @return Offset The page offset. Default value: 0
+     * Get Offset of paginated query. default value: 0. 
+     * @return Offset Offset of paginated query. default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The page offset. Default value: 0
-     * @param Offset The page offset. Default value: 0
+     * Set Offset of paginated query. default value: 0.
+     * @param Offset Offset of paginated query. default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The paginated query limit. Default value: 20. Maximum value: 1000. 
-     * @return Limit The paginated query limit. Default value: 20. Maximum value: 1000.
+     * Get Number limit of paginated query. default value: 20. maximum value: 1000. 
+     * @return Limit Number limit of paginated query. default value: 20. maximum value: 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The paginated query limit. Default value: 20. Maximum value: 1000.
-     * @param Limit The paginated query limit. Default value: 20. Maximum value: 1000.
+     * Set Number limit of paginated query. default value: 20. maximum value: 1000.
+     * @param Limit Number limit of paginated query. default value: 20. maximum value: 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get The upper limit of Filters.Values is 20. The detailed filtering conditions are as follows: <li>id: Filter by DNS record ID, supports fuzzy query;</li><li>name: Filter by DNS record name, supports fuzzy query;</li><li>content: Filter by DNS record content, supports fuzzy query;</li><li>type: Filter by DNS record type, does not support fuzzy query. Options:<br> A: Point the domain name to an external IPv4 address, such as 8.8.8.8;<br> AAAA: Point the domain name to an external IPv6 address;<br> CNAME: Point the domain name to another domain name, which then resolves to the final IP address;<br> TXT: Identify and describe the domain name, often used for domain verification and SPF records (anti-spam);<br> NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. Root domains cannot add NS records;<br> CAA: Specify the CA that can issue certificates for this site;<br> SRV: Identify a server using a specific service, commonly used in Microsoft's directory management;<br> MX: Specify the recipient's mail server.</li><li>ttl: Filter by the time-to-live (TTL) of the record, does not support fuzzy query.</li> 
-     * @return Filters The upper limit of Filters.Values is 20. The detailed filtering conditions are as follows: <li>id: Filter by DNS record ID, supports fuzzy query;</li><li>name: Filter by DNS record name, supports fuzzy query;</li><li>content: Filter by DNS record content, supports fuzzy query;</li><li>type: Filter by DNS record type, does not support fuzzy query. Options:<br> A: Point the domain name to an external IPv4 address, such as 8.8.8.8;<br> AAAA: Point the domain name to an external IPv6 address;<br> CNAME: Point the domain name to another domain name, which then resolves to the final IP address;<br> TXT: Identify and describe the domain name, often used for domain verification and SPF records (anti-spam);<br> NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. Root domains cannot add NS records;<br> CAA: Specify the CA that can issue certificates for this site;<br> SRV: Identify a server using a specific service, commonly used in Microsoft's directory management;<br> MX: Specify the recipient's mail server.</li><li>ttl: Filter by the time-to-live (TTL) of the record, does not support fuzzy query.</li>
+     * Get Filter conditions. up to 20 values for each filter. detailed filter conditions are as follows: <li>id: filter by dns record id, supports fuzzy search;</li><li>name: filter by dns record name, supports fuzzy search;</li><li>content: filter by dns record content, supports fuzzy search;</li><li>type: filter by dns record type, does not support fuzzy search. valid values:<br>   a: points the domain name to an external ipv4 address, such as 8.8.8.8;<br>   aaaa: points the domain name to an external ipv6 address;<br>   cname: points the domain name to another domain name, which then resolves to the final ip address;<br>   txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);<br>   ns: if you need to delegate the subdomain to another dns service provider, you need to add an ns record. root domain cannot add ns records;<br>   caa: specifies the ca that can issue certificates for this site;<br>   srv: identifies a server using a specific service, commonly used in microsoft's directory management;<br>   mx: specifies the recipient's mail server.</li><li>ttl: filter by resolution effective time, does not support fuzzy search.</li>. 
+     * @return Filters Filter conditions. up to 20 values for each filter. detailed filter conditions are as follows: <li>id: filter by dns record id, supports fuzzy search;</li><li>name: filter by dns record name, supports fuzzy search;</li><li>content: filter by dns record content, supports fuzzy search;</li><li>type: filter by dns record type, does not support fuzzy search. valid values:<br>   a: points the domain name to an external ipv4 address, such as 8.8.8.8;<br>   aaaa: points the domain name to an external ipv6 address;<br>   cname: points the domain name to another domain name, which then resolves to the final ip address;<br>   txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);<br>   ns: if you need to delegate the subdomain to another dns service provider, you need to add an ns record. root domain cannot add ns records;<br>   caa: specifies the ca that can issue certificates for this site;<br>   srv: identifies a server using a specific service, commonly used in microsoft's directory management;<br>   mx: specifies the recipient's mail server.</li><li>ttl: filter by resolution effective time, does not support fuzzy search.</li>.
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set The upper limit of Filters.Values is 20. The detailed filtering conditions are as follows: <li>id: Filter by DNS record ID, supports fuzzy query;</li><li>name: Filter by DNS record name, supports fuzzy query;</li><li>content: Filter by DNS record content, supports fuzzy query;</li><li>type: Filter by DNS record type, does not support fuzzy query. Options:<br> A: Point the domain name to an external IPv4 address, such as 8.8.8.8;<br> AAAA: Point the domain name to an external IPv6 address;<br> CNAME: Point the domain name to another domain name, which then resolves to the final IP address;<br> TXT: Identify and describe the domain name, often used for domain verification and SPF records (anti-spam);<br> NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. Root domains cannot add NS records;<br> CAA: Specify the CA that can issue certificates for this site;<br> SRV: Identify a server using a specific service, commonly used in Microsoft's directory management;<br> MX: Specify the recipient's mail server.</li><li>ttl: Filter by the time-to-live (TTL) of the record, does not support fuzzy query.</li>
-     * @param Filters The upper limit of Filters.Values is 20. The detailed filtering conditions are as follows: <li>id: Filter by DNS record ID, supports fuzzy query;</li><li>name: Filter by DNS record name, supports fuzzy query;</li><li>content: Filter by DNS record content, supports fuzzy query;</li><li>type: Filter by DNS record type, does not support fuzzy query. Options:<br> A: Point the domain name to an external IPv4 address, such as 8.8.8.8;<br> AAAA: Point the domain name to an external IPv6 address;<br> CNAME: Point the domain name to another domain name, which then resolves to the final IP address;<br> TXT: Identify and describe the domain name, often used for domain verification and SPF records (anti-spam);<br> NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. Root domains cannot add NS records;<br> CAA: Specify the CA that can issue certificates for this site;<br> SRV: Identify a server using a specific service, commonly used in Microsoft's directory management;<br> MX: Specify the recipient's mail server.</li><li>ttl: Filter by the time-to-live (TTL) of the record, does not support fuzzy query.</li>
+     * Set Filter conditions. up to 20 values for each filter. detailed filter conditions are as follows: <li>id: filter by dns record id, supports fuzzy search;</li><li>name: filter by dns record name, supports fuzzy search;</li><li>content: filter by dns record content, supports fuzzy search;</li><li>type: filter by dns record type, does not support fuzzy search. valid values:<br>   a: points the domain name to an external ipv4 address, such as 8.8.8.8;<br>   aaaa: points the domain name to an external ipv6 address;<br>   cname: points the domain name to another domain name, which then resolves to the final ip address;<br>   txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);<br>   ns: if you need to delegate the subdomain to another dns service provider, you need to add an ns record. root domain cannot add ns records;<br>   caa: specifies the ca that can issue certificates for this site;<br>   srv: identifies a server using a specific service, commonly used in microsoft's directory management;<br>   mx: specifies the recipient's mail server.</li><li>ttl: filter by resolution effective time, does not support fuzzy search.</li>.
+     * @param Filters Filter conditions. up to 20 values for each filter. detailed filter conditions are as follows: <li>id: filter by dns record id, supports fuzzy search;</li><li>name: filter by dns record name, supports fuzzy search;</li><li>content: filter by dns record content, supports fuzzy search;</li><li>type: filter by dns record type, does not support fuzzy search. valid values:<br>   a: points the domain name to an external ipv4 address, such as 8.8.8.8;<br>   aaaa: points the domain name to an external ipv6 address;<br>   cname: points the domain name to another domain name, which then resolves to the final ip address;<br>   txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);<br>   ns: if you need to delegate the subdomain to another dns service provider, you need to add an ns record. root domain cannot add ns records;<br>   caa: specifies the ca that can issue certificates for this site;<br>   srv: identifies a server using a specific service, commonly used in microsoft's directory management;<br>   mx: specifies the recipient's mail server.</li><li>ttl: filter by resolution effective time, does not support fuzzy search.</li>.
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Sort criteria, with possible values:
-<li>content: DNS record content;</li>
-<li>created-on: DNS record creation time;</li>
-<li>name: DNS record name;</li>
-<li>ttl: Time-to-live (TTL);</li>
-<li>type: DNS record type.</li>
-The default sorting is based on a combination of type and name attributes. 
-     * @return SortBy Sort criteria, with possible values:
-<li>content: DNS record content;</li>
-<li>created-on: DNS record creation time;</li>
-<li>name: DNS record name;</li>
-<li>ttl: Time-to-live (TTL);</li>
-<li>type: DNS record type.</li>
-The default sorting is based on a combination of type and name attributes.
+     * Get Sorting basis. values include: <li>`content`: dns record content</li><li>`created-on`: dns record creation time</li><li>`name`: dns record name</li><li>`ttl`: cache time</li><li>`type`: dns record type</li> default sorting is by the combination of `type`, `name`. 
+     * @return SortBy Sorting basis. values include: <li>`content`: dns record content</li><li>`created-on`: dns record creation time</li><li>`name`: dns record name</li><li>`ttl`: cache time</li><li>`type`: dns record type</li> default sorting is by the combination of `type`, `name`.
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set Sort criteria, with possible values:
-<li>content: DNS record content;</li>
-<li>created-on: DNS record creation time;</li>
-<li>name: DNS record name;</li>
-<li>ttl: Time-to-live (TTL);</li>
-<li>type: DNS record type.</li>
-The default sorting is based on a combination of type and name attributes.
-     * @param SortBy Sort criteria, with possible values:
-<li>content: DNS record content;</li>
-<li>created-on: DNS record creation time;</li>
-<li>name: DNS record name;</li>
-<li>ttl: Time-to-live (TTL);</li>
-<li>type: DNS record type.</li>
-The default sorting is based on a combination of type and name attributes.
+     * Set Sorting basis. values include: <li>`content`: dns record content</li><li>`created-on`: dns record creation time</li><li>`name`: dns record name</li><li>`ttl`: cache time</li><li>`type`: dns record type</li> default sorting is by the combination of `type`, `name`.
+     * @param SortBy Sorting basis. values include: <li>`content`: dns record content</li><li>`created-on`: dns record creation time</li><li>`name`: dns record name</li><li>`ttl`: cache time</li><li>`type`: dns record type</li> default sorting is by the combination of `type`, `name`.
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
     }
 
     /**
-     * Get List sorting order, with possible values:
-<li>asc: Ascending order;</li>
-<li>desc: Descending order.</li>
-The default value is asc. 
-     * @return SortOrder List sorting order, with possible values:
-<li>asc: Ascending order;</li>
-<li>desc: Descending order.</li>
-The default value is asc.
+     * Get List sort method. values: <li>`asc`: ascending order</li><li>`desc`: sort in descending order</li> default value: `asc`. 
+     * @return SortOrder List sort method. values: <li>`asc`: ascending order</li><li>`desc`: sort in descending order</li> default value: `asc`.
      */
     public String getSortOrder() {
         return this.SortOrder;
     }
 
     /**
-     * Set List sorting order, with possible values:
-<li>asc: Ascending order;</li>
-<li>desc: Descending order.</li>
-The default value is asc.
-     * @param SortOrder List sorting order, with possible values:
-<li>asc: Ascending order;</li>
-<li>desc: Descending order.</li>
-The default value is asc.
+     * Set List sort method. values: <li>`asc`: ascending order</li><li>`desc`: sort in descending order</li> default value: `asc`.
+     * @param SortOrder List sort method. values: <li>`asc`: ascending order</li><li>`desc`: sort in descending order</li> default value: `asc`.
      */
     public void setSortOrder(String SortOrder) {
         this.SortOrder = SortOrder;
     }
 
     /**
-     * Get The match mode. Values:
-<li>`all`: Return all records that match the specified filter.</li>
-<li>`any`: Return any record that matches the specified filter.</li>Default value: all. 
-     * @return Match The match mode. Values:
-<li>`all`: Return all records that match the specified filter.</li>
-<li>`any`: Return any record that matches the specified filter.</li>Default value: all.
+     * Get Match method. values: <li>`all`: return records that match all query conditions</li><li>`any`: return records that match any query condition</li> default value: `all`. 
+     * @return Match Match method. values: <li>`all`: return records that match all query conditions</li><li>`any`: return records that match any query condition</li> default value: `all`.
      */
     public String getMatch() {
         return this.Match;
     }
 
     /**
-     * Set The match mode. Values:
-<li>`all`: Return all records that match the specified filter.</li>
-<li>`any`: Return any record that matches the specified filter.</li>Default value: all.
-     * @param Match The match mode. Values:
-<li>`all`: Return all records that match the specified filter.</li>
-<li>`any`: Return any record that matches the specified filter.</li>Default value: all.
+     * Set Match method. values: <li>`all`: return records that match all query conditions</li><li>`any`: return records that match any query condition</li> default value: `all`.
+     * @param Match Match method. values: <li>`all`: return records that match all query conditions</li><li>`any`: return records that match any query condition</li> default value: `all`.
      */
     public void setMatch(String Match) {
         this.Match = Match;

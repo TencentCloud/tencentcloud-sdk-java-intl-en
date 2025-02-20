@@ -24,279 +24,204 @@ import java.util.HashMap;
 public class CreateDnsRecordRequest extends AbstractModel {
 
     /**
-    * The site ID of the DNS record.
+    * Zone id.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The DNS record name.If the domain name is in Chinese, Korean, or Japanese, it needs to be converted to Punycode before being entered.
+    * DNS record name. if the domain name is in chinese, korean, or japanese, it needs to be converted to punycode before input.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * DNS record types include:
-
-- A:Points the domain to an external IPv4 address, such as 8.8.8.8.
-- AAAA: Points the domain to an external IPv6 address.
-- MX: Used for mail servers. When multiple MX records exist, the one with the lowest priority value is preferred.
-- CNAME: Points the domain to another domain, which then resolves to the final IP address.
-- TXT: Provides identification and description for the domain, commonly used for domain verification and SPF records (anti-spam).
-- NS: If you need to delegate a subdomain to another DNS service provider, you need to add an NS record. NS records cannot be added to the root domain.
-- CAA: Specifies which Certificate Authorities (CAs) are allowed to issue certificates for the site.
-- SRV: Indicates that a specific server is using a particular service, commonly used in Microsoft's directory management systems.
-
-Different record types, such as SRV and CAA, have specific requirements for the host record name and record value format. For detailed descriptions and format examples of each record type, please refer to: [Introduction to DNS Record Types](https://www.tencentcloud.com/zh/document/product/1145/54764#2f681022-91ab-4a9e-ac3d-0a6c454d954e).
+    * DNS record type. valid values are: <li>a: points the domain name to an external ipv4 address, such as 8.8.8.8;</li><li>aaaa: points the domain name to an external ipv6 address;</li><li>mx: used for email servers. when there are multiple mx records, the lower the priority value, the higher the priority;</li><li>cname: points the domain name to another domain name, which then resolves to the final ip address;</li><li>txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);</li><li>ns: if you need to delegate the subdomain to another dns service provider for resolution, you need to add an ns record. the root domain cannot add ns records;</li><li>caa: specifies the ca that can issue certificates for this site;</li><li>srv: identifies a server using a service, commonly used in microsoft's directory management.</li>.
+Different record types, such as srv and caa records, have different requirements for host record names and record value formats. for detailed descriptions and format examples of each record type, please refer to: [introduction to dns record types](https://intl.cloud.tencent.com/document/product/1552/90453?from_cn_redirect=1#2f681022-91ab-4a9e-ac3d-0a6c454d954e).
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * DNS record content should be filled in according to the corresponding Type value. If the domain name is in Chinese, Korean, or Japanese, it needs to be converted to Punycode before being entered.
+    * DNS record content. fill in the corresponding content according to the type value. if the domain name is in chinese, korean, or japanese, it needs to be converted to punycode before input.
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * DNS record resolution location, if not specified, default to "Default," which means the default resolution location and is effective for all regions.
-- Resolution location configuration is only applicable when the Type (DNS record type) is A, AAAA, or CNAME.
-- Resolution location configuration is only available for Standard and Enterprise packages.
+    * DNS record resolution route. if not specified, the default is default, which means the default resolution route and is effective in all regions.
 
-For the values, please refer to: [Resolution Lines and Corresponding Codes Enumeration](https://www.tencentcloud.com/zh/document/product/1145/67229).
+- resolution route configuration is only applicable when type (dns record type) is a, aaaa, or cname.
+- resolution route configuration is only applicable to standard version and enterprise edition packages. for valid values, please refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
     */
     @SerializedName("Location")
     @Expose
     private String Location;
 
     /**
-    * TTL (in seconds). The smaller the value, the faster the record changes take effect. Default value: 300
+    * Cache time. users can specify a value range of 60-86400. the smaller the value, the faster the modification records will take effect in all regions. default value: 300. unit: seconds.
     */
     @SerializedName("TTL")
     @Expose
     private Long TTL;
 
     /**
-    * DNS record weight can be specified within the range of -1 to 100. Setting the weight to 0 means the record will not be resolved. If not specified, the default value is -1, indicating that no weight is set.
-
-Weight configuration is only applicable when the Type (DNS record type) is A, AAAA, or CNAME.
-
-Note: For the same subdomain, different DNS records on the same resolution line should either all have weights set or none should have weights set.
+    * DNS record weight. users can specify a value range of -1 to 100. a value of 0 means no resolution. if not specified, the default is -1, which means no weight is set. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.<br>note: for the same subdomain, different dns records with the same resolution route should either all have weights set or none have weights set.
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * The MX record priority parameter is only effective when the Type (DNS record type) is MX. The smaller the value, the higher the priority. Users can specify a value in the range of 0 to 50. If not specified, the default value is 0.
+    * MX record priority, which takes effect only when type (dns record type) is mx. the smaller the value, the higher the priority. users can specify a value range of 0–50. the default value is 0 if not specified.
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-     * Get The site ID of the DNS record. 
-     * @return ZoneId The site ID of the DNS record.
+     * Get Zone id. 
+     * @return ZoneId Zone id.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID of the DNS record.
-     * @param ZoneId The site ID of the DNS record.
+     * Set Zone id.
+     * @param ZoneId Zone id.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The DNS record name.If the domain name is in Chinese, Korean, or Japanese, it needs to be converted to Punycode before being entered. 
-     * @return Name The DNS record name.If the domain name is in Chinese, Korean, or Japanese, it needs to be converted to Punycode before being entered.
+     * Get DNS record name. if the domain name is in chinese, korean, or japanese, it needs to be converted to punycode before input. 
+     * @return Name DNS record name. if the domain name is in chinese, korean, or japanese, it needs to be converted to punycode before input.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set The DNS record name.If the domain name is in Chinese, Korean, or Japanese, it needs to be converted to Punycode before being entered.
-     * @param Name The DNS record name.If the domain name is in Chinese, Korean, or Japanese, it needs to be converted to Punycode before being entered.
+     * Set DNS record name. if the domain name is in chinese, korean, or japanese, it needs to be converted to punycode before input.
+     * @param Name DNS record name. if the domain name is in chinese, korean, or japanese, it needs to be converted to punycode before input.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get DNS record types include:
-
-- A:Points the domain to an external IPv4 address, such as 8.8.8.8.
-- AAAA: Points the domain to an external IPv6 address.
-- MX: Used for mail servers. When multiple MX records exist, the one with the lowest priority value is preferred.
-- CNAME: Points the domain to another domain, which then resolves to the final IP address.
-- TXT: Provides identification and description for the domain, commonly used for domain verification and SPF records (anti-spam).
-- NS: If you need to delegate a subdomain to another DNS service provider, you need to add an NS record. NS records cannot be added to the root domain.
-- CAA: Specifies which Certificate Authorities (CAs) are allowed to issue certificates for the site.
-- SRV: Indicates that a specific server is using a particular service, commonly used in Microsoft's directory management systems.
-
-Different record types, such as SRV and CAA, have specific requirements for the host record name and record value format. For detailed descriptions and format examples of each record type, please refer to: [Introduction to DNS Record Types](https://www.tencentcloud.com/zh/document/product/1145/54764#2f681022-91ab-4a9e-ac3d-0a6c454d954e). 
-     * @return Type DNS record types include:
-
-- A:Points the domain to an external IPv4 address, such as 8.8.8.8.
-- AAAA: Points the domain to an external IPv6 address.
-- MX: Used for mail servers. When multiple MX records exist, the one with the lowest priority value is preferred.
-- CNAME: Points the domain to another domain, which then resolves to the final IP address.
-- TXT: Provides identification and description for the domain, commonly used for domain verification and SPF records (anti-spam).
-- NS: If you need to delegate a subdomain to another DNS service provider, you need to add an NS record. NS records cannot be added to the root domain.
-- CAA: Specifies which Certificate Authorities (CAs) are allowed to issue certificates for the site.
-- SRV: Indicates that a specific server is using a particular service, commonly used in Microsoft's directory management systems.
-
-Different record types, such as SRV and CAA, have specific requirements for the host record name and record value format. For detailed descriptions and format examples of each record type, please refer to: [Introduction to DNS Record Types](https://www.tencentcloud.com/zh/document/product/1145/54764#2f681022-91ab-4a9e-ac3d-0a6c454d954e).
+     * Get DNS record type. valid values are: <li>a: points the domain name to an external ipv4 address, such as 8.8.8.8;</li><li>aaaa: points the domain name to an external ipv6 address;</li><li>mx: used for email servers. when there are multiple mx records, the lower the priority value, the higher the priority;</li><li>cname: points the domain name to another domain name, which then resolves to the final ip address;</li><li>txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);</li><li>ns: if you need to delegate the subdomain to another dns service provider for resolution, you need to add an ns record. the root domain cannot add ns records;</li><li>caa: specifies the ca that can issue certificates for this site;</li><li>srv: identifies a server using a service, commonly used in microsoft's directory management.</li>.
+Different record types, such as srv and caa records, have different requirements for host record names and record value formats. for detailed descriptions and format examples of each record type, please refer to: [introduction to dns record types](https://intl.cloud.tencent.com/document/product/1552/90453?from_cn_redirect=1#2f681022-91ab-4a9e-ac3d-0a6c454d954e). 
+     * @return Type DNS record type. valid values are: <li>a: points the domain name to an external ipv4 address, such as 8.8.8.8;</li><li>aaaa: points the domain name to an external ipv6 address;</li><li>mx: used for email servers. when there are multiple mx records, the lower the priority value, the higher the priority;</li><li>cname: points the domain name to another domain name, which then resolves to the final ip address;</li><li>txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);</li><li>ns: if you need to delegate the subdomain to another dns service provider for resolution, you need to add an ns record. the root domain cannot add ns records;</li><li>caa: specifies the ca that can issue certificates for this site;</li><li>srv: identifies a server using a service, commonly used in microsoft's directory management.</li>.
+Different record types, such as srv and caa records, have different requirements for host record names and record value formats. for detailed descriptions and format examples of each record type, please refer to: [introduction to dns record types](https://intl.cloud.tencent.com/document/product/1552/90453?from_cn_redirect=1#2f681022-91ab-4a9e-ac3d-0a6c454d954e).
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set DNS record types include:
-
-- A:Points the domain to an external IPv4 address, such as 8.8.8.8.
-- AAAA: Points the domain to an external IPv6 address.
-- MX: Used for mail servers. When multiple MX records exist, the one with the lowest priority value is preferred.
-- CNAME: Points the domain to another domain, which then resolves to the final IP address.
-- TXT: Provides identification and description for the domain, commonly used for domain verification and SPF records (anti-spam).
-- NS: If you need to delegate a subdomain to another DNS service provider, you need to add an NS record. NS records cannot be added to the root domain.
-- CAA: Specifies which Certificate Authorities (CAs) are allowed to issue certificates for the site.
-- SRV: Indicates that a specific server is using a particular service, commonly used in Microsoft's directory management systems.
-
-Different record types, such as SRV and CAA, have specific requirements for the host record name and record value format. For detailed descriptions and format examples of each record type, please refer to: [Introduction to DNS Record Types](https://www.tencentcloud.com/zh/document/product/1145/54764#2f681022-91ab-4a9e-ac3d-0a6c454d954e).
-     * @param Type DNS record types include:
-
-- A:Points the domain to an external IPv4 address, such as 8.8.8.8.
-- AAAA: Points the domain to an external IPv6 address.
-- MX: Used for mail servers. When multiple MX records exist, the one with the lowest priority value is preferred.
-- CNAME: Points the domain to another domain, which then resolves to the final IP address.
-- TXT: Provides identification and description for the domain, commonly used for domain verification and SPF records (anti-spam).
-- NS: If you need to delegate a subdomain to another DNS service provider, you need to add an NS record. NS records cannot be added to the root domain.
-- CAA: Specifies which Certificate Authorities (CAs) are allowed to issue certificates for the site.
-- SRV: Indicates that a specific server is using a particular service, commonly used in Microsoft's directory management systems.
-
-Different record types, such as SRV and CAA, have specific requirements for the host record name and record value format. For detailed descriptions and format examples of each record type, please refer to: [Introduction to DNS Record Types](https://www.tencentcloud.com/zh/document/product/1145/54764#2f681022-91ab-4a9e-ac3d-0a6c454d954e).
+     * Set DNS record type. valid values are: <li>a: points the domain name to an external ipv4 address, such as 8.8.8.8;</li><li>aaaa: points the domain name to an external ipv6 address;</li><li>mx: used for email servers. when there are multiple mx records, the lower the priority value, the higher the priority;</li><li>cname: points the domain name to another domain name, which then resolves to the final ip address;</li><li>txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);</li><li>ns: if you need to delegate the subdomain to another dns service provider for resolution, you need to add an ns record. the root domain cannot add ns records;</li><li>caa: specifies the ca that can issue certificates for this site;</li><li>srv: identifies a server using a service, commonly used in microsoft's directory management.</li>.
+Different record types, such as srv and caa records, have different requirements for host record names and record value formats. for detailed descriptions and format examples of each record type, please refer to: [introduction to dns record types](https://intl.cloud.tencent.com/document/product/1552/90453?from_cn_redirect=1#2f681022-91ab-4a9e-ac3d-0a6c454d954e).
+     * @param Type DNS record type. valid values are: <li>a: points the domain name to an external ipv4 address, such as 8.8.8.8;</li><li>aaaa: points the domain name to an external ipv6 address;</li><li>mx: used for email servers. when there are multiple mx records, the lower the priority value, the higher the priority;</li><li>cname: points the domain name to another domain name, which then resolves to the final ip address;</li><li>txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);</li><li>ns: if you need to delegate the subdomain to another dns service provider for resolution, you need to add an ns record. the root domain cannot add ns records;</li><li>caa: specifies the ca that can issue certificates for this site;</li><li>srv: identifies a server using a service, commonly used in microsoft's directory management.</li>.
+Different record types, such as srv and caa records, have different requirements for host record names and record value formats. for detailed descriptions and format examples of each record type, please refer to: [introduction to dns record types](https://intl.cloud.tencent.com/document/product/1552/90453?from_cn_redirect=1#2f681022-91ab-4a9e-ac3d-0a6c454d954e).
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get DNS record content should be filled in according to the corresponding Type value. If the domain name is in Chinese, Korean, or Japanese, it needs to be converted to Punycode before being entered. 
-     * @return Content DNS record content should be filled in according to the corresponding Type value. If the domain name is in Chinese, Korean, or Japanese, it needs to be converted to Punycode before being entered.
+     * Get DNS record content. fill in the corresponding content according to the type value. if the domain name is in chinese, korean, or japanese, it needs to be converted to punycode before input. 
+     * @return Content DNS record content. fill in the corresponding content according to the type value. if the domain name is in chinese, korean, or japanese, it needs to be converted to punycode before input.
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set DNS record content should be filled in according to the corresponding Type value. If the domain name is in Chinese, Korean, or Japanese, it needs to be converted to Punycode before being entered.
-     * @param Content DNS record content should be filled in according to the corresponding Type value. If the domain name is in Chinese, Korean, or Japanese, it needs to be converted to Punycode before being entered.
+     * Set DNS record content. fill in the corresponding content according to the type value. if the domain name is in chinese, korean, or japanese, it needs to be converted to punycode before input.
+     * @param Content DNS record content. fill in the corresponding content according to the type value. if the domain name is in chinese, korean, or japanese, it needs to be converted to punycode before input.
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get DNS record resolution location, if not specified, default to "Default," which means the default resolution location and is effective for all regions.
-- Resolution location configuration is only applicable when the Type (DNS record type) is A, AAAA, or CNAME.
-- Resolution location configuration is only available for Standard and Enterprise packages.
+     * Get DNS record resolution route. if not specified, the default is default, which means the default resolution route and is effective in all regions.
 
-For the values, please refer to: [Resolution Lines and Corresponding Codes Enumeration](https://www.tencentcloud.com/zh/document/product/1145/67229). 
-     * @return Location DNS record resolution location, if not specified, default to "Default," which means the default resolution location and is effective for all regions.
-- Resolution location configuration is only applicable when the Type (DNS record type) is A, AAAA, or CNAME.
-- Resolution location configuration is only available for Standard and Enterprise packages.
+- resolution route configuration is only applicable when type (dns record type) is a, aaaa, or cname.
+- resolution route configuration is only applicable to standard version and enterprise edition packages. for valid values, please refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1). 
+     * @return Location DNS record resolution route. if not specified, the default is default, which means the default resolution route and is effective in all regions.
 
-For the values, please refer to: [Resolution Lines and Corresponding Codes Enumeration](https://www.tencentcloud.com/zh/document/product/1145/67229).
+- resolution route configuration is only applicable when type (dns record type) is a, aaaa, or cname.
+- resolution route configuration is only applicable to standard version and enterprise edition packages. for valid values, please refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
      */
     public String getLocation() {
         return this.Location;
     }
 
     /**
-     * Set DNS record resolution location, if not specified, default to "Default," which means the default resolution location and is effective for all regions.
-- Resolution location configuration is only applicable when the Type (DNS record type) is A, AAAA, or CNAME.
-- Resolution location configuration is only available for Standard and Enterprise packages.
+     * Set DNS record resolution route. if not specified, the default is default, which means the default resolution route and is effective in all regions.
 
-For the values, please refer to: [Resolution Lines and Corresponding Codes Enumeration](https://www.tencentcloud.com/zh/document/product/1145/67229).
-     * @param Location DNS record resolution location, if not specified, default to "Default," which means the default resolution location and is effective for all regions.
-- Resolution location configuration is only applicable when the Type (DNS record type) is A, AAAA, or CNAME.
-- Resolution location configuration is only available for Standard and Enterprise packages.
+- resolution route configuration is only applicable when type (dns record type) is a, aaaa, or cname.
+- resolution route configuration is only applicable to standard version and enterprise edition packages. for valid values, please refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
+     * @param Location DNS record resolution route. if not specified, the default is default, which means the default resolution route and is effective in all regions.
 
-For the values, please refer to: [Resolution Lines and Corresponding Codes Enumeration](https://www.tencentcloud.com/zh/document/product/1145/67229).
+- resolution route configuration is only applicable when type (dns record type) is a, aaaa, or cname.
+- resolution route configuration is only applicable to standard version and enterprise edition packages. for valid values, please refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get TTL (in seconds). The smaller the value, the faster the record changes take effect. Default value: 300 
-     * @return TTL TTL (in seconds). The smaller the value, the faster the record changes take effect. Default value: 300
+     * Get Cache time. users can specify a value range of 60-86400. the smaller the value, the faster the modification records will take effect in all regions. default value: 300. unit: seconds. 
+     * @return TTL Cache time. users can specify a value range of 60-86400. the smaller the value, the faster the modification records will take effect in all regions. default value: 300. unit: seconds.
      */
     public Long getTTL() {
         return this.TTL;
     }
 
     /**
-     * Set TTL (in seconds). The smaller the value, the faster the record changes take effect. Default value: 300
-     * @param TTL TTL (in seconds). The smaller the value, the faster the record changes take effect. Default value: 300
+     * Set Cache time. users can specify a value range of 60-86400. the smaller the value, the faster the modification records will take effect in all regions. default value: 300. unit: seconds.
+     * @param TTL Cache time. users can specify a value range of 60-86400. the smaller the value, the faster the modification records will take effect in all regions. default value: 300. unit: seconds.
      */
     public void setTTL(Long TTL) {
         this.TTL = TTL;
     }
 
     /**
-     * Get DNS record weight can be specified within the range of -1 to 100. Setting the weight to 0 means the record will not be resolved. If not specified, the default value is -1, indicating that no weight is set.
-
-Weight configuration is only applicable when the Type (DNS record type) is A, AAAA, or CNAME.
-
-Note: For the same subdomain, different DNS records on the same resolution line should either all have weights set or none should have weights set. 
-     * @return Weight DNS record weight can be specified within the range of -1 to 100. Setting the weight to 0 means the record will not be resolved. If not specified, the default value is -1, indicating that no weight is set.
-
-Weight configuration is only applicable when the Type (DNS record type) is A, AAAA, or CNAME.
-
-Note: For the same subdomain, different DNS records on the same resolution line should either all have weights set or none should have weights set.
+     * Get DNS record weight. users can specify a value range of -1 to 100. a value of 0 means no resolution. if not specified, the default is -1, which means no weight is set. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.<br>note: for the same subdomain, different dns records with the same resolution route should either all have weights set or none have weights set. 
+     * @return Weight DNS record weight. users can specify a value range of -1 to 100. a value of 0 means no resolution. if not specified, the default is -1, which means no weight is set. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.<br>note: for the same subdomain, different dns records with the same resolution route should either all have weights set or none have weights set.
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set DNS record weight can be specified within the range of -1 to 100. Setting the weight to 0 means the record will not be resolved. If not specified, the default value is -1, indicating that no weight is set.
-
-Weight configuration is only applicable when the Type (DNS record type) is A, AAAA, or CNAME.
-
-Note: For the same subdomain, different DNS records on the same resolution line should either all have weights set or none should have weights set.
-     * @param Weight DNS record weight can be specified within the range of -1 to 100. Setting the weight to 0 means the record will not be resolved. If not specified, the default value is -1, indicating that no weight is set.
-
-Weight configuration is only applicable when the Type (DNS record type) is A, AAAA, or CNAME.
-
-Note: For the same subdomain, different DNS records on the same resolution line should either all have weights set or none should have weights set.
+     * Set DNS record weight. users can specify a value range of -1 to 100. a value of 0 means no resolution. if not specified, the default is -1, which means no weight is set. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.<br>note: for the same subdomain, different dns records with the same resolution route should either all have weights set or none have weights set.
+     * @param Weight DNS record weight. users can specify a value range of -1 to 100. a value of 0 means no resolution. if not specified, the default is -1, which means no weight is set. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.<br>note: for the same subdomain, different dns records with the same resolution route should either all have weights set or none have weights set.
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get The MX record priority parameter is only effective when the Type (DNS record type) is MX. The smaller the value, the higher the priority. Users can specify a value in the range of 0 to 50. If not specified, the default value is 0. 
-     * @return Priority The MX record priority parameter is only effective when the Type (DNS record type) is MX. The smaller the value, the higher the priority. Users can specify a value in the range of 0 to 50. If not specified, the default value is 0.
+     * Get MX record priority, which takes effect only when type (dns record type) is mx. the smaller the value, the higher the priority. users can specify a value range of 0–50. the default value is 0 if not specified. 
+     * @return Priority MX record priority, which takes effect only when type (dns record type) is mx. the smaller the value, the higher the priority. users can specify a value range of 0–50. the default value is 0 if not specified.
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set The MX record priority parameter is only effective when the Type (DNS record type) is MX. The smaller the value, the higher the priority. Users can specify a value in the range of 0 to 50. If not specified, the default value is 0.
-     * @param Priority The MX record priority parameter is only effective when the Type (DNS record type) is MX. The smaller the value, the higher the priority. Users can specify a value in the range of 0 to 50. If not specified, the default value is 0.
+     * Set MX record priority, which takes effect only when type (dns record type) is mx. the smaller the value, the higher the priority. users can specify a value range of 0–50. the default value is 0 if not specified.
+     * @param Priority MX record priority, which takes effect only when type (dns record type) is mx. the smaller the value, the higher the priority. users can specify a value range of 0–50. the default value is 0 if not specified.
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;

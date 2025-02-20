@@ -31,8 +31,9 @@ public class DescribeRulesRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
+    * Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
+.
+<Li>Rule-Id: filter by rule id.</li>.
     */
     @SerializedName("Filters")
     @Expose
@@ -55,20 +56,24 @@ public class DescribeRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li> 
-     * @return Filters Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
+     * Get Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
+.
+<Li>Rule-Id: filter by rule id.</li>. 
+     * @return Filters Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
+.
+<Li>Rule-Id: filter by rule id.</li>.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
-     * @param Filters Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
+     * Set Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
+.
+<Li>Rule-Id: filter by rule id.</li>.
+     * @param Filters Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
+.
+<Li>Rule-Id: filter by rule id.</li>.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

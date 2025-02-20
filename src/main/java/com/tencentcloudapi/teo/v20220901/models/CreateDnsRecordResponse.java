@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDnsRecordResponse extends AbstractModel {
 
     /**
-    * The ID of the DNS record.
+    * DNS record id.
     */
     @SerializedName("RecordId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateDnsRecordResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The ID of the DNS record. 
-     * @return RecordId The ID of the DNS record.
+     * Get DNS record id. 
+     * @return RecordId DNS record id.
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set The ID of the DNS record.
-     * @param RecordId The ID of the DNS record.
+     * Set DNS record id.
+     * @param RecordId DNS record id.
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;

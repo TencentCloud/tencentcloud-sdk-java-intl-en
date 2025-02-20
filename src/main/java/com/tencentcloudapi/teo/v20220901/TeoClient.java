@@ -151,6 +151,17 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     }
 
     /**
+     *This API is used to create content identifiers, where you can set descriptions, tags, and other information. It is also necessary to bind an enterprise edition package for billing data statistics. A content identifier can only bind one billing package, while a billing package can bind multiple content identifiers. This feature is only available to the allowlist.
+     * @param req CreateContentIdentifierRequest
+     * @return CreateContentIdentifierResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateContentIdentifierResponse CreateContentIdentifier(CreateContentIdentifierRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateContentIdentifier", CreateContentIdentifierResponse.class);
+    }
+
+    /**
      *This API is used to create a custom response page.
      * @param req CreateCustomizeErrorPageRequest
      * @return CreateCustomizeErrorPageResponse
@@ -162,7 +173,7 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     }
 
     /**
-     *This API is used to create a DNS record.
+     *After creating a site and the site is accessed in NS mode, you can create DNS records through this API.
      * @param req CreateDnsRecordRequest
      * @return CreateDnsRecordResponse
      * @throws TencentCloudSDKException
@@ -214,6 +225,17 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     public CreateL4ProxyRulesResponse CreateL4ProxyRules(CreateL4ProxyRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateL4ProxyRules", CreateL4ProxyRulesResponse.class);
+    }
+
+    /**
+     *This API is used to create rules in the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1). Batch creation is supported.
+     * @param req CreateL7AccRulesRequest
+     * @return CreateL7AccRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateL7AccRulesResponse CreateL7AccRules(CreateL7AccRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateL7AccRules", CreateL7AccRulesResponse.class);
     }
 
     /**
@@ -298,7 +320,7 @@ An entity (a Layer 7 domain name or a Layer 4 proxy instance) under the combinat
     }
 
     /**
-     *This API is used to create a rule in the rule engine.
+     *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [CreateL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115822?from_cn_redirect=1).
      * @param req CreateRuleRequest
      * @return CreateRuleResponse
      * @throws TencentCloudSDKException
@@ -388,6 +410,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
+     *Delete the specified content identifier. This feature is only available to the allowlist.
+     * @param req DeleteContentIdentifierRequest
+     * @return DeleteContentIdentifierResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteContentIdentifierResponse DeleteContentIdentifier(DeleteContentIdentifierRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteContentIdentifier", DeleteContentIdentifierResponse.class);
+    }
+
+    /**
      *This API is used to delete a custom response page.
      * @param req DeleteCustomErrorPageRequest
      * @return DeleteCustomErrorPageResponse
@@ -399,7 +432,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to delete DNS records in batches.
+     *You can use this API to batch delete DNS records.
      * @param req DeleteDnsRecordsRequest
      * @return DeleteDnsRecordsResponse
      * @throws TencentCloudSDKException
@@ -454,6 +487,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
+     *This API is used to delete rules of the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1), supporting batch deletion.
+     * @param req DeleteL7AccRulesRequest
+     * @return DeleteL7AccRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteL7AccRulesResponse DeleteL7AccRules(DeleteL7AccRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteL7AccRules", DeleteL7AccRulesResponse.class);
+    }
+
+    /**
      *This API is used to delete a LoadBalancer. If the LoadBalancer is referenced by other services (for example, Layer-4 proxy), the LoadBalancer cannot be deleted until the reference relationship is removed. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
      * @param req DeleteLoadBalancerRequest
      * @return DeleteLoadBalancerResponse
@@ -487,7 +531,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to batch delete rules from the rule engine.
+     *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DeleteL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115821?from_cn_redirect=1).
      * @param req DeleteRulesRequest
      * @return DeleteRulesResponse
      * @throws TencentCloudSDKException
@@ -619,6 +663,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
+     *Batch query content identifiers, which can be filtered by ID, description, status, or Tag. Deleted content identifiers queried by status are retained for only three months. This feature is only open to the allowlist.
+     * @param req DescribeContentIdentifiersRequest
+     * @return DescribeContentIdentifiersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeContentIdentifiersResponse DescribeContentIdentifiers(DescribeContentIdentifiersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeContentIdentifiers", DescribeContentIdentifiersResponse.class);
+    }
+
+    /**
      *This API is used to query content management quotas.
      * @param req DescribeContentQuotaRequest
      * @return DescribeContentQuotaResponse
@@ -696,7 +751,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to query DNS records. Paging, sorting and filtering are supported.
+     *This API is used to view DNS record information under a site, including DNS record name, record type, and record content. It supports querying specific DNS record information by specifying filter conditions.
      * @param req DescribeDnsRecordsRequest
      * @return DescribeDnsRecordsResponse
      * @throws TencentCloudSDKException
@@ -751,7 +806,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to query detailed domain name configuration.
+     *This API is an old version. EdgeOne has fully upgraded the APIs related to the rule engine. You can obtain detailed configurations of domain names through [DescribeL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115819?from_cn_redirect=1) and [DescribeL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
      * @param req DescribeHostsSettingRequest
      * @return DescribeHostsSettingResponse
      * @throws TencentCloudSDKException
@@ -803,6 +858,28 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DescribeL4ProxyRulesResponse DescribeL4ProxyRules(DescribeL4ProxyRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeL4ProxyRules", DescribeL4ProxyRulesResponse.class);
+    }
+
+    /**
+     *This API is used to query the rule list of the rule engine (https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1).
+     * @param req DescribeL7AccRulesRequest
+     * @return DescribeL7AccRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeL7AccRulesResponse DescribeL7AccRules(DescribeL7AccRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeL7AccRules", DescribeL7AccRulesResponse.class);
+    }
+
+    /**
+     *This API is used to query the global configuration of [Site Acceleration](https://intl.cloud.tencent.com/document/product/1552/96193?from_cn_redirect=1).
+     * @param req DescribeL7AccSettingRequest
+     * @return DescribeL7AccSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeL7AccSettingResponse DescribeL7AccSetting(DescribeL7AccSettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeL7AccSetting", DescribeL7AccSettingResponse.class);
     }
 
     /**
@@ -894,7 +971,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to query the rules in the rule engine.
+     *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DescribeL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
      * @param req DescribeRulesRequest
      * @return DescribeRulesResponse
      * @throws TencentCloudSDKException
@@ -905,7 +982,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to return the list of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.
+     *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [RuleEngineAction](https://intl.cloud.tencent.com/document/product/1552/80721?from_cn_redirect=1#RuleEngineAction).
      * @param req DescribeRulesSettingRequest
      * @return DescribeRulesSettingResponse
      * @throws TencentCloudSDKException
@@ -1018,7 +1095,7 @@ This API is used to query the configuration information of an IP group, includin
     }
 
     /**
-     *This API is used to query the site configuration.
+     *This API is an old version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DescribeL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115819?from_cn_redirect=1).
      * @param req DescribeZoneSettingRequest
      * @return DescribeZoneSettingResponse
      * @throws TencentCloudSDKException
@@ -1227,6 +1304,17 @@ After the environment variables are set, they can be used in the function code. 
     }
 
     /**
+     *Modify content identifier, only description modification is supported. This feature is only open to the allowlist.
+     * @param req ModifyContentIdentifierRequest
+     * @return ModifyContentIdentifierResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyContentIdentifierResponse ModifyContentIdentifier(ModifyContentIdentifierRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyContentIdentifier", ModifyContentIdentifierResponse.class);
+    }
+
+    /**
      *This API is used to modify a custom response page.
      * @param req ModifyCustomErrorPageRequest
      * @return ModifyCustomErrorPageResponse
@@ -1238,7 +1326,7 @@ After the environment variables are set, they can be used in the function code. 
     }
 
     /**
-     *You can use this interface to batch modify DNS records.
+     *This API is used to bulk modify DNS records.
      * @param req ModifyDnsRecordsRequest
      * @return ModifyDnsRecordsResponse
      * @throws TencentCloudSDKException
@@ -1249,7 +1337,7 @@ After the environment variables are set, they can be used in the function code. 
     }
 
     /**
-     *You can use this interface to batch modify the status of DNS records, enabling and disabling records in bulk.
+     *You can batch modify the status of DNS records through this API, enabling and disabling records in bulk.
      * @param req ModifyDnsRecordsStatusRequest
      * @return ModifyDnsRecordsStatusResponse
      * @throws TencentCloudSDKException
@@ -1350,6 +1438,28 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     }
 
     /**
+     *This API is used to modify rules in the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1), supporting only one rule modification per request.
+     * @param req ModifyL7AccRuleRequest
+     * @return ModifyL7AccRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyL7AccRuleResponse ModifyL7AccRule(ModifyL7AccRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyL7AccRule", ModifyL7AccRuleResponse.class);
+    }
+
+    /**
+     *This API is used to modify the global configuration of [Site Acceleration](https://intl.cloud.tencent.com/document/product/1552/96193?from_cn_redirect=1).
+     * @param req ModifyL7AccSettingRequest
+     * @return ModifyL7AccSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyL7AccSettingResponse ModifyL7AccSetting(ModifyL7AccSettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyL7AccSetting", ModifyL7AccSettingResponse.class);
+    }
+
+    /**
      *This API is used to modify LoadBalancer configuration. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
      * @param req ModifyLoadBalancerRequest
      * @return ModifyLoadBalancerResponse
@@ -1394,7 +1504,7 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     }
 
     /**
-     *This API is used to modify a rule in the rule engine.
+     *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [ModifyL7AccRule](https://intl.cloud.tencent.com/document/product/1552/115818?from_cn_redirect=1).
      * @param req ModifyRuleRequest
      * @return ModifyRuleResponse
      * @throws TencentCloudSDKException
@@ -1438,7 +1548,7 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     }
 
     /**
-     *This API is used to modify the site configuration.
+     *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [ModifyL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115817?from_cn_redirect=1).
      * @param req ModifyZoneSettingRequest
      * @return ModifyZoneSettingResponse
      * @throws TencentCloudSDKException
