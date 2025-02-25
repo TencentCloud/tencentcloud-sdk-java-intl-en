@@ -95,14 +95,16 @@ Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/
     private String VerifyCode;
 
     /**
-    * Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+    * Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_01".
     */
     @SerializedName("TradeOne")
     @Expose
     private String TradeOne;
 
     /**
-    * Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+    * Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_0101"
     */
     @SerializedName("TradeTwo")
     @Expose
@@ -285,32 +287,40 @@ Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/
     }
 
     /**
-     * Get Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181). 
-     * @return TradeOne Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+     * Get Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_01". 
+     * @return TradeOne Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_01".
      */
     public String getTradeOne() {
         return this.TradeOne;
     }
 
     /**
-     * Set Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181).
-     * @param TradeOne Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+     * Set Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_01".
+     * @param TradeOne Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_01".
      */
     public void setTradeOne(String TradeOne) {
         this.TradeOne = TradeOne;
     }
 
     /**
-     * Get Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181). 
-     * @return TradeTwo Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+     * Get Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_0101" 
+     * @return TradeTwo Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_0101"
      */
     public String getTradeTwo() {
         return this.TradeTwo;
     }
 
     /**
-     * Set Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181).
-     * @param TradeTwo Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+     * Set Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_0101"
+     * @param TradeTwo Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_0101"
      */
     public void setTradeTwo(String TradeTwo) {
         this.TradeTwo = TradeTwo;
