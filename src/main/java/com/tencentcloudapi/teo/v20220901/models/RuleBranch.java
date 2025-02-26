@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class RuleBranch extends AbstractModel {
 
     /**
-    * [Match condition].
-](Https://Cloud.Tencent.Com/Document/Product/1552/90438#33f65828-C6c6-4b66-A011-25a20b548d5d).
+    * [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
     */
     @SerializedName("Condition")
     @Expose
@@ -48,20 +47,16 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     private RuleEngineSubRule [] SubRules;
 
     /**
-     * Get [Match condition].
-](Https://Cloud.Tencent.Com/Document/Product/1552/90438#33f65828-C6c6-4b66-A011-25a20b548d5d). 
-     * @return Condition [Match condition].
-](Https://Cloud.Tencent.Com/Document/Product/1552/90438#33f65828-C6c6-4b66-A011-25a20b548d5d).
+     * Get [Match condition](https://www.tencentcloud.com/document/product/1145/54759). 
+     * @return Condition [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set [Match condition].
-](Https://Cloud.Tencent.Com/Document/Product/1552/90438#33f65828-C6c6-4b66-A011-25a20b548d5d).
-     * @param Condition [Match condition].
-](Https://Cloud.Tencent.Com/Document/Product/1552/90438#33f65828-C6c6-4b66-A011-25a20b548d5d).
+     * Set [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
+     * @param Condition [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;

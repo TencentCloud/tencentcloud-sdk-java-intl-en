@@ -39,6 +39,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to accept an invitation to join a shared unit.
+     * @param req AcceptJoinShareUnitInvitationRequest
+     * @return AcceptJoinShareUnitInvitationResponse
+     * @throws TencentCloudSDKException
+     */
+    public AcceptJoinShareUnitInvitationResponse AcceptJoinShareUnitInvitation(AcceptJoinShareUnitInvitationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AcceptJoinShareUnitInvitation", AcceptJoinShareUnitInvitationResponse.class);
+    }
+
+    /**
      *This API is used to add SAML signing certificates.
      * @param req AddExternalSAMLIdPCertificateRequest
      * @return AddExternalSAMLIdPCertificateResponse
@@ -69,6 +80,39 @@ public class OrganizationClient extends AbstractClient{
     public AddPermissionPolicyToRoleConfigurationResponse AddPermissionPolicyToRoleConfiguration(AddPermissionPolicyToRoleConfigurationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "AddPermissionPolicyToRoleConfiguration", AddPermissionPolicyToRoleConfigurationResponse.class);
+    }
+
+    /**
+     *This API is used to create a shared unit.
+     * @param req AddShareUnitRequest
+     * @return AddShareUnitResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddShareUnitResponse AddShareUnit(AddShareUnitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddShareUnit", AddShareUnitResponse.class);
+    }
+
+    /**
+     *This API is used to add a shared unit member.
+     * @param req AddShareUnitMembersRequest
+     * @return AddShareUnitMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddShareUnitMembersResponse AddShareUnitMembers(AddShareUnitMembersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddShareUnitMembers", AddShareUnitMembersResponse.class);
+    }
+
+    /**
+     *This API is used to add resources to a shared unit.
+     * @param req AddShareUnitResourcesRequest
+     * @return AddShareUnitResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddShareUnitResourcesResponse AddShareUnitResources(AddShareUnitResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddShareUnitResources", AddShareUnitResourcesResponse.class);
     }
 
     /**
@@ -380,6 +424,39 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a shared unit.
+     * @param req DeleteShareUnitRequest
+     * @return DeleteShareUnitResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteShareUnitResponse DeleteShareUnit(DeleteShareUnitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteShareUnit", DeleteShareUnitResponse.class);
+    }
+
+    /**
+     *This API is used to delete a shared unit member.
+     * @param req DeleteShareUnitMembersRequest
+     * @return DeleteShareUnitMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteShareUnitMembersResponse DeleteShareUnitMembers(DeleteShareUnitMembersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteShareUnitMembers", DeleteShareUnitMembersResponse.class);
+    }
+
+    /**
+     *This API is used to delete shared unit resources.
+     * @param req DeleteShareUnitResourcesRequest
+     * @return DeleteShareUnitResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteShareUnitResourcesResponse DeleteShareUnitResources(DeleteShareUnitResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteShareUnitResources", DeleteShareUnitResourcesResponse.class);
+    }
+
+    /**
      *This API is used to delete a user.
      * @param req DeleteUserRequest
      * @return DeleteUserResponse
@@ -476,6 +553,50 @@ public class OrganizationClient extends AbstractClient{
     public DescribeOrganizationNodesResponse DescribeOrganizationNodes(DescribeOrganizationNodesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeOrganizationNodes", DescribeOrganizationNodesResponse.class);
+    }
+
+    /**
+     *This API is used to obtain a list of shareable regions.
+     * @param req DescribeShareAreasRequest
+     * @return DescribeShareAreasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShareAreasResponse DescribeShareAreas(DescribeShareAreasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeShareAreas", DescribeShareAreasResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the member list of a shared unit.
+     * @param req DescribeShareUnitMembersRequest
+     * @return DescribeShareUnitMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShareUnitMembersResponse DescribeShareUnitMembers(DescribeShareUnitMembersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeShareUnitMembers", DescribeShareUnitMembersResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the resource list of a shared unit.
+     * @param req DescribeShareUnitResourcesRequest
+     * @return DescribeShareUnitResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShareUnitResourcesResponse DescribeShareUnitResources(DescribeShareUnitResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeShareUnitResources", DescribeShareUnitResourcesResponse.class);
+    }
+
+    /**
+     *This API is used to obtain a list of shared units.
+     * @param req DescribeShareUnitsRequest
+     * @return DescribeShareUnitsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShareUnitsResponse DescribeShareUnits(DescribeShareUnitsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeShareUnits", DescribeShareUnitsResponse.class);
     }
 
     /**
@@ -820,6 +941,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to reject an invitation to join a shared unit.
+     * @param req RejectJoinShareUnitInvitationRequest
+     * @return RejectJoinShareUnitInvitationResponse
+     * @throws TencentCloudSDKException
+     */
+    public RejectJoinShareUnitInvitationResponse RejectJoinShareUnitInvitation(RejectJoinShareUnitInvitationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RejectJoinShareUnitInvitation", RejectJoinShareUnitInvitationResponse.class);
+    }
+
+    /**
      *This API is used to remove SAML signing certificates.
      * @param req RemoveExternalSAMLIdPCertificateRequest
      * @return RemoveExternalSAMLIdPCertificateResponse
@@ -949,6 +1081,17 @@ public class OrganizationClient extends AbstractClient{
     public UpdateSCIMSynchronizationStatusResponse UpdateSCIMSynchronizationStatus(UpdateSCIMSynchronizationStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateSCIMSynchronizationStatus", UpdateSCIMSynchronizationStatusResponse.class);
+    }
+
+    /**
+     *This API is used to update a shared unit.
+     * @param req UpdateShareUnitRequest
+     * @return UpdateShareUnitResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateShareUnitResponse UpdateShareUnit(UpdateShareUnitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateShareUnit", UpdateShareUnitResponse.class);
     }
 
     /**

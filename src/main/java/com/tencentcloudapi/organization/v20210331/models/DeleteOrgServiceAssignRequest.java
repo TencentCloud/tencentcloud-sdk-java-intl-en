@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class DeleteOrgServiceAssignRequest extends AbstractModel {
 
     /**
-    * Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-    */
-    @SerializedName("ServiceId")
-    @Expose
-    private Long ServiceId;
-
-    /**
     * Uin of the delegated admin.
     */
     @SerializedName("MemberUin")
@@ -38,20 +31,11 @@ public class DeleteOrgServiceAssignRequest extends AbstractModel {
     private Long MemberUin;
 
     /**
-     * Get Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1). 
-     * @return ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-     */
-    public Long getServiceId() {
-        return this.ServiceId;
-    }
-
-    /**
-     * Set Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-     * @param ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-     */
-    public void setServiceId(Long ServiceId) {
-        this.ServiceId = ServiceId;
-    }
+    * Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+    */
+    @SerializedName("ServiceId")
+    @Expose
+    private Long ServiceId;
 
     /**
      * Get Uin of the delegated admin. 
@@ -69,6 +53,22 @@ public class DeleteOrgServiceAssignRequest extends AbstractModel {
         this.MemberUin = MemberUin;
     }
 
+    /**
+     * Get Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1). 
+     * @return ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+     */
+    public Long getServiceId() {
+        return this.ServiceId;
+    }
+
+    /**
+     * Set Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+     * @param ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+     */
+    public void setServiceId(Long ServiceId) {
+        this.ServiceId = ServiceId;
+    }
+
     public DeleteOrgServiceAssignRequest() {
     }
 
@@ -77,11 +77,11 @@ public class DeleteOrgServiceAssignRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteOrgServiceAssignRequest(DeleteOrgServiceAssignRequest source) {
-        if (source.ServiceId != null) {
-            this.ServiceId = new Long(source.ServiceId);
-        }
         if (source.MemberUin != null) {
             this.MemberUin = new Long(source.MemberUin);
+        }
+        if (source.ServiceId != null) {
+            this.ServiceId = new Long(source.ServiceId);
         }
     }
 
@@ -90,8 +90,8 @@ public class DeleteOrgServiceAssignRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "MemberUin", this.MemberUin);
+        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
 
     }
 }

@@ -1,5 +1,8 @@
 package com.tencentcloudapi.organization.v20210331;
 public enum OrganizationErrorCode {
+    // Operation failed.
+     FAILEDOPERATION("FailedOperation"),
+     
     // The application already exists.
      FAILEDOPERATION_APPLYEXIST("FailedOperation.ApplyExist"),
      
@@ -63,6 +66,9 @@ public enum OrganizationErrorCode {
     // There are shared resources with other organization members or from other organization members.
      FAILEDOPERATION_EXISTOTHERORGANIZATIONMEMBERSHARED("FailedOperation.ExistOtherOrganizationMemberShared"),
      
+    // There are shared members not in the organization.
+     FAILEDOPERATION_EXISTSHAREMEMBERNOTINORGANIZATION("FailedOperation.ExistShareMemberNotInOrganization"),
+     
     // Errors occurred when account's regional attributes are obtained.
      FAILEDOPERATION_GETACCOUNTREGION("FailedOperation.GetAccountRegion"),
      
@@ -80,6 +86,9 @@ public enum OrganizationErrorCode {
      
     // Members of the CIC user group exceed the limit.
      FAILEDOPERATION_GROUPUSERCOUNTOVERUPPERLIMIT("FailedOperation.GroupUserCountOverUpperLimit"),
+     
+    // The shared unit has different shared resource types.
+     FAILEDOPERATION_HASDIFFERENTRESOURCETYPE("FailedOperation.HasDifferentResourceType"),
      
     // The CIC service has been activated.
      FAILEDOPERATION_IDENTITYCENTERALREADYOPEN("FailedOperation.IdentityCenterAlreadyOpen"),
@@ -225,6 +234,9 @@ public enum OrganizationErrorCode {
     // The invitation has already been sent before.
      FAILEDOPERATION_RESENTINVITATION("FailedOperation.ReSentInvitation"),
      
+    // Resources exceed the maximum upper limit.
+     FAILEDOPERATION_RESOURCEOVERLIMIT("FailedOperation.ResourceOverLimit"),
+     
     // The permission authorization already exists.
      FAILEDOPERATION_ROLECONFIGURATIONAUTHORIZATIONALREADYEXIST("FailedOperation.RoleConfigurationAuthorizationAlreadyExist"),
      
@@ -252,11 +264,26 @@ public enum OrganizationErrorCode {
     // Failed to generate the SCIM key.
      FAILEDOPERATION_SCIMCREDENTIALGENERATEERROR("FailedOperation.ScimCredentialGenerateError"),
      
+    // The shared region does not exist.
+     FAILEDOPERATION_SHAREAREANOTEXIST("FailedOperation.ShareAreaNotExist"),
+     
+    // The shared member does not exist.
+     FAILEDOPERATION_SHAREMEMBERNOTEXIST("FailedOperation.ShareMemberNotExist"),
+     
     // The member is using a shared resource.
      FAILEDOPERATION_SHARERESOURCEMEMBERINUSE("FailedOperation.ShareResourceMemberInUse"),
      
+    // The shared resource does not exist.
+     FAILEDOPERATION_SHARERESOURCENOTEXIST("FailedOperation.ShareResourceNotExist"),
+     
+    // The shared resource type does not exist.
+     FAILEDOPERATION_SHARERESOURCETYPENOTEXIST("FailedOperation.ShareResourceTypeNotExist"),
+     
     // Shared unit is not empty.
      FAILEDOPERATION_SHAREUNITNOTEMPTY("FailedOperation.ShareUnitNotEmpty"),
+     
+    // The shared unit does not exist.
+     FAILEDOPERATION_SHAREUNITNOTEXIST("FailedOperation.ShareUnitNotExist"),
      
     // The UIN does not belong to the organization.
      FAILEDOPERATION_SOMEUINSNOTINORGANIZATION("FailedOperation.SomeUinsNotInOrganization"),
@@ -465,6 +492,18 @@ public enum OrganizationErrorCode {
     // The number of SCIM keys exceeds the limit.
      LIMITEXCEEDED_SCIMCREDENTIALLIMITEXCEEDED("LimitExceeded.ScimCredentialLimitExceeded"),
      
+    // The number of shared members for this operation exceeds the upper limit.
+     LIMITEXCEEDED_SHAREUNITMEMBEROVERLIMIT("LimitExceeded.ShareUnitMemberOverLimit"),
+     
+    // The number of shared resources for this operation exceeds the upper limit.
+     LIMITEXCEEDED_SHAREUNITRESOURCEOVERLIMIT("LimitExceeded.ShareUnitResourceOverLimit"),
+     
+    // Operation denied.
+     OPERATIONDENIED("OperationDenied"),
+     
+    // The resource does not exist.
+     RESOURCENOTFOUND("ResourceNotFound"),
+     
     // The authorizable member identity does not exist.
      RESOURCENOTFOUND_MEMBERIDENTITYNOTEXIST("ResourceNotFound.MemberIdentityNotExist"),
      
@@ -527,6 +566,9 @@ public enum OrganizationErrorCode {
      
     // The X509 certificate does not exist.
      RESOURCENOTFOUND_X509CERTIFICATENOTFOUND("ResourceNotFound.X509CertificateNotFound"),
+     
+    // Resources are unavailable.
+     RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
     // The operation is not supported.
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
@@ -600,6 +642,9 @@ public enum OrganizationErrorCode {
     // The member does not support voluntary exit.
      UNSUPPORTEDOPERATION_MEMBERNOTALLOWQUIT("UnsupportedOperation.MemberNotAllowQuit"),
      
+    // The member does not support the operation.
+     UNSUPPORTEDOPERATION_MEMBERUNSUPPORTEDOPERATION("UnsupportedOperation.MemberUnsupportedOperation"),
+     
     // There is an ongoing order.
      UNSUPPORTEDOPERATION_ORDERINPROGRESSEXISTED("UnsupportedOperation.OrderInProgressExisted"),
      
@@ -613,7 +658,10 @@ public enum OrganizationErrorCode {
      UNSUPPORTEDOPERATION_PAYEREXISTACCOUNTLEVELDISCOUNTINHERIT("UnsupportedOperation.PayerExistAccountLevelDiscountInherit"),
      
     // Pay-on-behalf is not supported for second-level reseller customers exist.
-     UNSUPPORTEDOPERATION_SECONDARYDISTRIBUTORSUBCLIENTEXISTED("UnsupportedOperation.SecondaryDistributorSubClientExisted");
+     UNSUPPORTEDOPERATION_SECONDARYDISTRIBUTORSUBCLIENTEXISTED("UnsupportedOperation.SecondaryDistributorSubClientExisted"),
+     
+    // Sharing with other organizational members is not supported.
+     UNSUPPORTEDOPERATION_SHARINGTOOTHERORGANIZATIONMEMBER("UnsupportedOperation.SharingToOtherOrganizationMember");
      
     private String value;
     private OrganizationErrorCode (String value){

@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class CreateOrgServiceAssignRequest extends AbstractModel {
 
     /**
-    * Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-    */
-    @SerializedName("ServiceId")
-    @Expose
-    private Long ServiceId;
-
-    /**
     * Uin list of the delegated admins, including up to 20 items.
     */
     @SerializedName("MemberUins")
     @Expose
     private Long [] MemberUins;
+
+    /**
+    * Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+    */
+    @SerializedName("ServiceId")
+    @Expose
+    private Long ServiceId;
 
     /**
     * Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members). Default value: 1.
@@ -59,22 +59,6 @@ public class CreateOrgServiceAssignRequest extends AbstractModel {
     private Long [] ManagementScopeNodeIds;
 
     /**
-     * Get Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1). 
-     * @return ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-     */
-    public Long getServiceId() {
-        return this.ServiceId;
-    }
-
-    /**
-     * Set Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-     * @param ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-     */
-    public void setServiceId(Long ServiceId) {
-        this.ServiceId = ServiceId;
-    }
-
-    /**
      * Get Uin list of the delegated admins, including up to 20 items. 
      * @return MemberUins Uin list of the delegated admins, including up to 20 items.
      */
@@ -88,6 +72,22 @@ public class CreateOrgServiceAssignRequest extends AbstractModel {
      */
     public void setMemberUins(Long [] MemberUins) {
         this.MemberUins = MemberUins;
+    }
+
+    /**
+     * Get Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1). 
+     * @return ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+     */
+    public Long getServiceId() {
+        return this.ServiceId;
+    }
+
+    /**
+     * Set Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+     * @param ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+     */
+    public void setServiceId(Long ServiceId) {
+        this.ServiceId = ServiceId;
     }
 
     /**
@@ -146,14 +146,14 @@ public class CreateOrgServiceAssignRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateOrgServiceAssignRequest(CreateOrgServiceAssignRequest source) {
-        if (source.ServiceId != null) {
-            this.ServiceId = new Long(source.ServiceId);
-        }
         if (source.MemberUins != null) {
             this.MemberUins = new Long[source.MemberUins.length];
             for (int i = 0; i < source.MemberUins.length; i++) {
                 this.MemberUins[i] = new Long(source.MemberUins[i]);
             }
+        }
+        if (source.ServiceId != null) {
+            this.ServiceId = new Long(source.ServiceId);
         }
         if (source.ManagementScope != null) {
             this.ManagementScope = new Long(source.ManagementScope);
@@ -177,8 +177,8 @@ public class CreateOrgServiceAssignRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamArraySimple(map, prefix + "MemberUins.", this.MemberUins);
+        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "ManagementScope", this.ManagementScope);
         this.setParamArraySimple(map, prefix + "ManagementScopeUins.", this.ManagementScopeUins);
         this.setParamArraySimple(map, prefix + "ManagementScopeNodeIds.", this.ManagementScopeNodeIds);
