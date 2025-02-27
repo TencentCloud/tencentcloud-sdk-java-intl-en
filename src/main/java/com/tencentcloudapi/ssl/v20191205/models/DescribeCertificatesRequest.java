@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeCertificatesRequest extends AbstractModel {
 
     /**
-    * Pagination offset, starting from 0
+    * Pagination offset, starting from 0. default is 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of entries per page. Default value: `20`. Maximum value: `1000`.
+    * Number of items per page. default is 10. maximum value is 1000; values exceeding 1000 will be treated as 1000.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
+    * Search keywords, supporting fuzzy match by certificate id, remark name, and certificate domain name.
     */
     @SerializedName("SearchKey")
     @Expose
@@ -59,14 +59,14 @@ public class DescribeCertificatesRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * Sorting by expiration time. `DESC`: descending; `ASC`: ascending
+    * Default sorting is by certificate application time in descending order. Sort by expiration date if the following values are passed: DESC for descending order of certificate expiration time, ASC for ascending order.
     */
     @SerializedName("ExpirationSort")
     @Expose
     private String ExpirationSort;
 
     /**
-    * Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
+    * Certificate status: 0=under review, 1=approved, 2=review failed, 3=expired, 4=dns record added, 5=enterprise certificate, pending submission, 6=order cancellation in progress, 7=canceled, 8=documents submitted, pending upload of confirmation letter, 9=certificate revocation in progress, 10=revoked, 11=reissue in progress, 12=pending upload of revocation confirmation letter, 13=free certificate pending document submission, 14=refunded, 15=certificate migration in progress.
     */
     @SerializedName("CertificateStatus")
     @Expose
@@ -122,48 +122,69 @@ public class DescribeCertificatesRequest extends AbstractModel {
     private Long Hostable;
 
     /**
-     * Get Pagination offset, starting from 0 
-     * @return Offset Pagination offset, starting from 0
+    * Filter certificates with specified tags.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tags [] Tags;
+
+    /**
+    * Whether to filter certificates pending issue: 1 for filtering, 0 and null for no filtering.
+    */
+    @SerializedName("IsPendingIssue")
+    @Expose
+    private Long IsPendingIssue;
+
+    /**
+    * Filter certificates by the specified certificate id, only supports certificate ids with permission.
+    */
+    @SerializedName("CertIds")
+    @Expose
+    private String [] CertIds;
+
+    /**
+     * Get Pagination offset, starting from 0. default is 0. 
+     * @return Offset Pagination offset, starting from 0. default is 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset, starting from 0
-     * @param Offset Pagination offset, starting from 0
+     * Set Pagination offset, starting from 0. default is 0.
+     * @param Offset Pagination offset, starting from 0. default is 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of entries per page. Default value: `20`. Maximum value: `1000`. 
-     * @return Limit Number of entries per page. Default value: `20`. Maximum value: `1000`.
+     * Get Number of items per page. default is 10. maximum value is 1000; values exceeding 1000 will be treated as 1000. 
+     * @return Limit Number of items per page. default is 10. maximum value is 1000; values exceeding 1000 will be treated as 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries per page. Default value: `20`. Maximum value: `1000`.
-     * @param Limit Number of entries per page. Default value: `20`. Maximum value: `1000`.
+     * Set Number of items per page. default is 10. maximum value is 1000; values exceeding 1000 will be treated as 1000.
+     * @param Limit Number of items per page. default is 10. maximum value is 1000; values exceeding 1000 will be treated as 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs 
-     * @return SearchKey Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
+     * Get Search keywords, supporting fuzzy match by certificate id, remark name, and certificate domain name. 
+     * @return SearchKey Search keywords, supporting fuzzy match by certificate id, remark name, and certificate domain name.
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
-     * @param SearchKey Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
+     * Set Search keywords, supporting fuzzy match by certificate id, remark name, and certificate domain name.
+     * @param SearchKey Search keywords, supporting fuzzy match by certificate id, remark name, and certificate domain name.
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
@@ -202,32 +223,32 @@ public class DescribeCertificatesRequest extends AbstractModel {
     }
 
     /**
-     * Get Sorting by expiration time. `DESC`: descending; `ASC`: ascending 
-     * @return ExpirationSort Sorting by expiration time. `DESC`: descending; `ASC`: ascending
+     * Get Default sorting is by certificate application time in descending order. Sort by expiration date if the following values are passed: DESC for descending order of certificate expiration time, ASC for ascending order. 
+     * @return ExpirationSort Default sorting is by certificate application time in descending order. Sort by expiration date if the following values are passed: DESC for descending order of certificate expiration time, ASC for ascending order.
      */
     public String getExpirationSort() {
         return this.ExpirationSort;
     }
 
     /**
-     * Set Sorting by expiration time. `DESC`: descending; `ASC`: ascending
-     * @param ExpirationSort Sorting by expiration time. `DESC`: descending; `ASC`: ascending
+     * Set Default sorting is by certificate application time in descending order. Sort by expiration date if the following values are passed: DESC for descending order of certificate expiration time, ASC for ascending order.
+     * @param ExpirationSort Default sorting is by certificate application time in descending order. Sort by expiration date if the following values are passed: DESC for descending order of certificate expiration time, ASC for ascending order.
      */
     public void setExpirationSort(String ExpirationSort) {
         this.ExpirationSort = ExpirationSort;
     }
 
     /**
-     * Get Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate. 
-     * @return CertificateStatus Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
+     * Get Certificate status: 0=under review, 1=approved, 2=review failed, 3=expired, 4=dns record added, 5=enterprise certificate, pending submission, 6=order cancellation in progress, 7=canceled, 8=documents submitted, pending upload of confirmation letter, 9=certificate revocation in progress, 10=revoked, 11=reissue in progress, 12=pending upload of revocation confirmation letter, 13=free certificate pending document submission, 14=refunded, 15=certificate migration in progress. 
+     * @return CertificateStatus Certificate status: 0=under review, 1=approved, 2=review failed, 3=expired, 4=dns record added, 5=enterprise certificate, pending submission, 6=order cancellation in progress, 7=canceled, 8=documents submitted, pending upload of confirmation letter, 9=certificate revocation in progress, 10=revoked, 11=reissue in progress, 12=pending upload of revocation confirmation letter, 13=free certificate pending document submission, 14=refunded, 15=certificate migration in progress.
      */
     public Long [] getCertificateStatus() {
         return this.CertificateStatus;
     }
 
     /**
-     * Set Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
-     * @param CertificateStatus Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
+     * Set Certificate status: 0=under review, 1=approved, 2=review failed, 3=expired, 4=dns record added, 5=enterprise certificate, pending submission, 6=order cancellation in progress, 7=canceled, 8=documents submitted, pending upload of confirmation letter, 9=certificate revocation in progress, 10=revoked, 11=reissue in progress, 12=pending upload of revocation confirmation letter, 13=free certificate pending document submission, 14=refunded, 15=certificate migration in progress.
+     * @param CertificateStatus Certificate status: 0=under review, 1=approved, 2=review failed, 3=expired, 4=dns record added, 5=enterprise certificate, pending submission, 6=order cancellation in progress, 7=canceled, 8=documents submitted, pending upload of confirmation letter, 9=certificate revocation in progress, 10=revoked, 11=reissue in progress, 12=pending upload of revocation confirmation letter, 13=free certificate pending document submission, 14=refunded, 15=certificate migration in progress.
      */
     public void setCertificateStatus(Long [] CertificateStatus) {
         this.CertificateStatus = CertificateStatus;
@@ -345,6 +366,54 @@ public class DescribeCertificatesRequest extends AbstractModel {
         this.Hostable = Hostable;
     }
 
+    /**
+     * Get Filter certificates with specified tags. 
+     * @return Tags Filter certificates with specified tags.
+     */
+    public Tags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Filter certificates with specified tags.
+     * @param Tags Filter certificates with specified tags.
+     */
+    public void setTags(Tags [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get Whether to filter certificates pending issue: 1 for filtering, 0 and null for no filtering. 
+     * @return IsPendingIssue Whether to filter certificates pending issue: 1 for filtering, 0 and null for no filtering.
+     */
+    public Long getIsPendingIssue() {
+        return this.IsPendingIssue;
+    }
+
+    /**
+     * Set Whether to filter certificates pending issue: 1 for filtering, 0 and null for no filtering.
+     * @param IsPendingIssue Whether to filter certificates pending issue: 1 for filtering, 0 and null for no filtering.
+     */
+    public void setIsPendingIssue(Long IsPendingIssue) {
+        this.IsPendingIssue = IsPendingIssue;
+    }
+
+    /**
+     * Get Filter certificates by the specified certificate id, only supports certificate ids with permission. 
+     * @return CertIds Filter certificates by the specified certificate id, only supports certificate ids with permission.
+     */
+    public String [] getCertIds() {
+        return this.CertIds;
+    }
+
+    /**
+     * Set Filter certificates by the specified certificate id, only supports certificate ids with permission.
+     * @param CertIds Filter certificates by the specified certificate id, only supports certificate ids with permission.
+     */
+    public void setCertIds(String [] CertIds) {
+        this.CertIds = CertIds;
+    }
+
     public DescribeCertificatesRequest() {
     }
 
@@ -398,6 +467,21 @@ public class DescribeCertificatesRequest extends AbstractModel {
         if (source.Hostable != null) {
             this.Hostable = new Long(source.Hostable);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tags(source.Tags[i]);
+            }
+        }
+        if (source.IsPendingIssue != null) {
+            this.IsPendingIssue = new Long(source.IsPendingIssue);
+        }
+        if (source.CertIds != null) {
+            this.CertIds = new String[source.CertIds.length];
+            for (int i = 0; i < source.CertIds.length; i++) {
+                this.CertIds[i] = new String(source.CertIds[i]);
+            }
+        }
     }
 
 
@@ -419,6 +503,9 @@ public class DescribeCertificatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsSM", this.IsSM);
         this.setParamSimple(map, prefix + "FilterExpiring", this.FilterExpiring);
         this.setParamSimple(map, prefix + "Hostable", this.Hostable);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "IsPendingIssue", this.IsPendingIssue);
+        this.setParamArraySimple(map, prefix + "CertIds.", this.CertIds);
 
     }
 }

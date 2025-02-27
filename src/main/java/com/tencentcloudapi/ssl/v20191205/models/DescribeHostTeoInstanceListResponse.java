@@ -24,8 +24,8 @@ import java.util.HashMap;
 public class DescribeHostTeoInstanceListResponse extends AbstractModel {
 
     /**
-    * The list of EDGEONE instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Teo instance list. if no value is obtained, an empty array is returned.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceList")
     @Expose
@@ -46,20 +46,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The list of EDGEONE instances.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceList The list of EDGEONE instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Teo instance list. if no value is obtained, an empty array is returned.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceList Teo instance list. if no value is obtained, an empty array is returned.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public TeoInstanceDetail [] getInstanceList() {
         return this.InstanceList;
     }
 
     /**
-     * Set The list of EDGEONE instances.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceList The list of EDGEONE instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Teo instance list. if no value is obtained, an empty array is returned.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param InstanceList Teo instance list. if no value is obtained, an empty array is returned.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceList(TeoInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;

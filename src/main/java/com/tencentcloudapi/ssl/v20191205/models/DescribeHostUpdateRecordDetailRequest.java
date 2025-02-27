@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeHostUpdateRecordDetailRequest extends AbstractModel {
 
     /**
-    * One-click update record ID
+    * Deployment record id, which is the record id returned by calling the UpdateCertificateInstance api, or the record id returned by calling the UpdateCertificateRecordRollback rollback api.
     */
     @SerializedName("DeployRecordId")
     @Expose
     private String DeployRecordId;
 
     /**
-    * Number per page, 10 by default.
+    * Number of items per page. the default is 10. the maximum value is 200.
     */
     @SerializedName("Limit")
     @Expose
     private String Limit;
 
     /**
-    * Paging offset, starting from 0
+    * Pagination offset, starting from 0. default is 0.
     */
     @SerializedName("Offset")
     @Expose
     private String Offset;
 
     /**
-     * Get One-click update record ID 
-     * @return DeployRecordId One-click update record ID
+     * Get Deployment record id, which is the record id returned by calling the UpdateCertificateInstance api, or the record id returned by calling the UpdateCertificateRecordRollback rollback api. 
+     * @return DeployRecordId Deployment record id, which is the record id returned by calling the UpdateCertificateInstance api, or the record id returned by calling the UpdateCertificateRecordRollback rollback api.
      */
     public String getDeployRecordId() {
         return this.DeployRecordId;
     }
 
     /**
-     * Set One-click update record ID
-     * @param DeployRecordId One-click update record ID
+     * Set Deployment record id, which is the record id returned by calling the UpdateCertificateInstance api, or the record id returned by calling the UpdateCertificateRecordRollback rollback api.
+     * @param DeployRecordId Deployment record id, which is the record id returned by calling the UpdateCertificateInstance api, or the record id returned by calling the UpdateCertificateRecordRollback rollback api.
      */
     public void setDeployRecordId(String DeployRecordId) {
         this.DeployRecordId = DeployRecordId;
     }
 
     /**
-     * Get Number per page, 10 by default. 
-     * @return Limit Number per page, 10 by default.
+     * Get Number of items per page. the default is 10. the maximum value is 200. 
+     * @return Limit Number of items per page. the default is 10. the maximum value is 200.
      */
     public String getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number per page, 10 by default.
-     * @param Limit Number per page, 10 by default.
+     * Set Number of items per page. the default is 10. the maximum value is 200.
+     * @param Limit Number of items per page. the default is 10. the maximum value is 200.
      */
     public void setLimit(String Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Paging offset, starting from 0 
-     * @return Offset Paging offset, starting from 0
+     * Get Pagination offset, starting from 0. default is 0. 
+     * @return Offset Pagination offset, starting from 0. default is 0.
      */
     public String getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Paging offset, starting from 0
-     * @param Offset Paging offset, starting from 0
+     * Set Pagination offset, starting from 0. default is 0.
+     * @param Offset Pagination offset, starting from 0. default is 0.
      */
     public void setOffset(String Offset) {
         this.Offset = Offset;

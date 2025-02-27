@@ -59,7 +59,7 @@ public class UploadCertificateRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * 
+    * Certificate Usage/Source, such as CLB, CDN, WAF, LIVE, DDOS.
     */
     @SerializedName("CertificateUse")
     @Expose
@@ -73,7 +73,7 @@ public class UploadCertificateRequest extends AbstractModel {
     private Tags [] Tags;
 
     /**
-    * Whether a certificate can be repeatedly uploaded.
+    * Whether to allow duplicate upload of the same certificate, true: allow uploading certificates with the same fingerprint; false: do not allow uploading certificates with the same fingerprint. default value: true.
     */
     @SerializedName("Repeatable")
     @Expose
@@ -160,16 +160,16 @@ public class UploadCertificateRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return CertificateUse 
+     * Get Certificate Usage/Source, such as CLB, CDN, WAF, LIVE, DDOS. 
+     * @return CertificateUse Certificate Usage/Source, such as CLB, CDN, WAF, LIVE, DDOS.
      */
     public String getCertificateUse() {
         return this.CertificateUse;
     }
 
     /**
-     * Set 
-     * @param CertificateUse 
+     * Set Certificate Usage/Source, such as CLB, CDN, WAF, LIVE, DDOS.
+     * @param CertificateUse Certificate Usage/Source, such as CLB, CDN, WAF, LIVE, DDOS.
      */
     public void setCertificateUse(String CertificateUse) {
         this.CertificateUse = CertificateUse;
@@ -192,16 +192,16 @@ public class UploadCertificateRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether a certificate can be repeatedly uploaded. 
-     * @return Repeatable Whether a certificate can be repeatedly uploaded.
+     * Get Whether to allow duplicate upload of the same certificate, true: allow uploading certificates with the same fingerprint; false: do not allow uploading certificates with the same fingerprint. default value: true. 
+     * @return Repeatable Whether to allow duplicate upload of the same certificate, true: allow uploading certificates with the same fingerprint; false: do not allow uploading certificates with the same fingerprint. default value: true.
      */
     public Boolean getRepeatable() {
         return this.Repeatable;
     }
 
     /**
-     * Set Whether a certificate can be repeatedly uploaded.
-     * @param Repeatable Whether a certificate can be repeatedly uploaded.
+     * Set Whether to allow duplicate upload of the same certificate, true: allow uploading certificates with the same fingerprint; false: do not allow uploading certificates with the same fingerprint. default value: true.
+     * @param Repeatable Whether to allow duplicate upload of the same certificate, true: allow uploading certificates with the same fingerprint; false: do not allow uploading certificates with the same fingerprint. default value: true.
      */
     public void setRepeatable(Boolean Repeatable) {
         this.Repeatable = Repeatable;

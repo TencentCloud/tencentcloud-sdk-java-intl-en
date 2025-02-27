@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeBillDetailResponse extends AbstractModel {
 
     /**
-    * Data details
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Data details.
     */
     @SerializedName("DetailSet")
     @Expose
     private CustomerBillDetailData [] DetailSet;
 
     /**
-    * Total number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total number of entries.
     */
     @SerializedName("Total")
     @Expose
@@ -47,40 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Data details
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DetailSet Data details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Data details. 
+     * @return DetailSet Data details.
      */
     public CustomerBillDetailData [] getDetailSet() {
         return this.DetailSet;
     }
 
     /**
-     * Set Data details
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DetailSet Data details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Data details.
+     * @param DetailSet Data details.
      */
     public void setDetailSet(CustomerBillDetailData [] DetailSet) {
         this.DetailSet = DetailSet;
     }
 
     /**
-     * Get Total number of data entries
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Total Total number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total number of entries. 
+     * @return Total Total number of entries.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Total Total number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total number of entries.
+     * @param Total Total number of entries.
      */
     public void setTotal(Long Total) {
         this.Total = Total;

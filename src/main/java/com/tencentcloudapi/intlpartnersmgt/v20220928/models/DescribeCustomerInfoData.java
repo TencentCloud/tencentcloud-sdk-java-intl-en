@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class DescribeCustomerInfoData extends AbstractModel {
 
     /**
-    * Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
+    * Sub-Account uin.
     */
     @SerializedName("CustomerUin")
     @Expose
     private String CustomerUin;
 
     /**
-    * Email Note: This field may return null, indicating that no valid values can be obtained.
+    * Contact email.
     */
     @SerializedName("Email")
     @Expose
     private String Email;
 
     /**
-    * Mobile number Note: This field may return null, indicating that no valid values can be obtained.
+    * Contact phone number.
     */
     @SerializedName("Phone")
     @Expose
     private String Phone;
 
     /**
-    * Remarks Note: This field may return null, indicating that no valid values can be obtained.
+    * Remarks.
     */
     @SerializedName("Mark")
     @Expose
     private String Mark;
 
     /**
-    * Displayed name Note: This field may return null, indicating that no valid values can be obtained.
+    * Display name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Binding time Note: This field may return null, indicating that no valid values can be obtained.
+    * Binding time.
     */
     @SerializedName("BindTime")
     @Expose
@@ -67,119 +67,118 @@ public class DescribeCustomerInfoData extends AbstractModel {
 
     /**
     * Account status
-0: Normal
-1: Forcibly mandatory (this function is not supported yet)
-2. Mandatory arrears
-Note: The return value may be null, indicating that no valid data can be obtained.
+.
+0: normal.
+1: forcibly mandatory (this function is not supported yet).
+2: mandatory arrears. 
     */
     @SerializedName("AccountStatus")
     @Expose
     private String AccountStatus;
 
     /**
-    * Identity verification status
--1: Files not uploaded
-0: Not submitted for review
-1: Under review
-2: Review error
-3: Approved
-Note: The return value may be null, indicating that no valid data can be obtained.
+    * Identity verification status.
+-1: files not uploaded.
+0: not submitted for review.
+1: under review.
+2: review error.
+3: approved.
     */
     @SerializedName("AuthStatus")
     @Expose
     private String AuthStatus;
 
     /**
-     * Get Customer UIN Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CustomerUin Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Sub-Account uin. 
+     * @return CustomerUin Sub-Account uin.
      */
     public String getCustomerUin() {
         return this.CustomerUin;
     }
 
     /**
-     * Set Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CustomerUin Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Sub-Account uin.
+     * @param CustomerUin Sub-Account uin.
      */
     public void setCustomerUin(String CustomerUin) {
         this.CustomerUin = CustomerUin;
     }
 
     /**
-     * Get Email Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Email Email Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Contact email. 
+     * @return Email Contact email.
      */
     public String getEmail() {
         return this.Email;
     }
 
     /**
-     * Set Email Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Email Email Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Contact email.
+     * @param Email Contact email.
      */
     public void setEmail(String Email) {
         this.Email = Email;
     }
 
     /**
-     * Get Mobile number Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Phone Mobile number Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Contact phone number. 
+     * @return Phone Contact phone number.
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set Mobile number Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Phone Mobile number Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Contact phone number.
+     * @param Phone Contact phone number.
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get Remarks Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Mark Remarks Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Remarks. 
+     * @return Mark Remarks.
      */
     public String getMark() {
         return this.Mark;
     }
 
     /**
-     * Set Remarks Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Mark Remarks Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Remarks.
+     * @param Mark Remarks.
      */
     public void setMark(String Mark) {
         this.Mark = Mark;
     }
 
     /**
-     * Get Displayed name Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name Displayed name Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Display name. 
+     * @return Name Display name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Displayed name Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name Displayed name Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Display name.
+     * @param Name Display name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Binding time Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BindTime Binding time Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Binding time. 
+     * @return BindTime Binding time.
      */
     public String getBindTime() {
         return this.BindTime;
     }
 
     /**
-     * Set Binding time Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BindTime Binding time Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Binding time.
+     * @param BindTime Binding time.
      */
     public void setBindTime(String BindTime) {
         this.BindTime = BindTime;
@@ -187,15 +186,15 @@ Note: The return value may be null, indicating that no valid data can be obtaine
 
     /**
      * Get Account status
-0: Normal
-1: Forcibly mandatory (this function is not supported yet)
-2. Mandatory arrears
-Note: The return value may be null, indicating that no valid data can be obtained. 
+.
+0: normal.
+1: forcibly mandatory (this function is not supported yet).
+2: mandatory arrears.  
      * @return AccountStatus Account status
-0: Normal
-1: Forcibly mandatory (this function is not supported yet)
-2. Mandatory arrears
-Note: The return value may be null, indicating that no valid data can be obtained.
+.
+0: normal.
+1: forcibly mandatory (this function is not supported yet).
+2: mandatory arrears. 
      */
     public String getAccountStatus() {
         return this.AccountStatus;
@@ -203,55 +202,51 @@ Note: The return value may be null, indicating that no valid data can be obtaine
 
     /**
      * Set Account status
-0: Normal
-1: Forcibly mandatory (this function is not supported yet)
-2. Mandatory arrears
-Note: The return value may be null, indicating that no valid data can be obtained.
+.
+0: normal.
+1: forcibly mandatory (this function is not supported yet).
+2: mandatory arrears. 
      * @param AccountStatus Account status
-0: Normal
-1: Forcibly mandatory (this function is not supported yet)
-2. Mandatory arrears
-Note: The return value may be null, indicating that no valid data can be obtained.
+.
+0: normal.
+1: forcibly mandatory (this function is not supported yet).
+2: mandatory arrears. 
      */
     public void setAccountStatus(String AccountStatus) {
         this.AccountStatus = AccountStatus;
     }
 
     /**
-     * Get Identity verification status
--1: Files not uploaded
-0: Not submitted for review
-1: Under review
-2: Review error
-3: Approved
-Note: The return value may be null, indicating that no valid data can be obtained. 
-     * @return AuthStatus Identity verification status
--1: Files not uploaded
-0: Not submitted for review
-1: Under review
-2: Review error
-3: Approved
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Get Identity verification status.
+-1: files not uploaded.
+0: not submitted for review.
+1: under review.
+2: review error.
+3: approved. 
+     * @return AuthStatus Identity verification status.
+-1: files not uploaded.
+0: not submitted for review.
+1: under review.
+2: review error.
+3: approved.
      */
     public String getAuthStatus() {
         return this.AuthStatus;
     }
 
     /**
-     * Set Identity verification status
--1: Files not uploaded
-0: Not submitted for review
-1: Under review
-2: Review error
-3: Approved
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param AuthStatus Identity verification status
--1: Files not uploaded
-0: Not submitted for review
-1: Under review
-2: Review error
-3: Approved
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Set Identity verification status.
+-1: files not uploaded.
+0: not submitted for review.
+1: under review.
+2: review error.
+3: approved.
+     * @param AuthStatus Identity verification status.
+-1: files not uploaded.
+0: not submitted for review.
+1: under review.
+2: review error.
+3: approved.
      */
     public void setAuthStatus(String AuthStatus) {
         this.AuthStatus = AuthStatus;

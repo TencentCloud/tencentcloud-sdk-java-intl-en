@@ -45,7 +45,11 @@ public class SetUserBlockedByStrRoomIdRequest extends AbstractModel {
     private String UserId;
 
     /**
-    * Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
+    * Controls the activation state of audio and video.
+0: Enable audio and video,
+1: Disable audio and video,
+2: Disable audio only,
+3: Disable video only.
     */
     @SerializedName("IsMute")
     @Expose
@@ -100,16 +104,32 @@ public class SetUserBlockedByStrRoomIdRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to disable the user’s audio and video. 0: Enable; 1: Disable. 
-     * @return IsMute Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
+     * Get Controls the activation state of audio and video.
+0: Enable audio and video,
+1: Disable audio and video,
+2: Disable audio only,
+3: Disable video only. 
+     * @return IsMute Controls the activation state of audio and video.
+0: Enable audio and video,
+1: Disable audio and video,
+2: Disable audio only,
+3: Disable video only.
      */
     public Long getIsMute() {
         return this.IsMute;
     }
 
     /**
-     * Set Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
-     * @param IsMute Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
+     * Set Controls the activation state of audio and video.
+0: Enable audio and video,
+1: Disable audio and video,
+2: Disable audio only,
+3: Disable video only.
+     * @param IsMute Controls the activation state of audio and video.
+0: Enable audio and video,
+1: Disable audio and video,
+2: Disable audio only,
+3: Disable video only.
      */
     public void setIsMute(Long IsMute) {
         this.IsMute = IsMute;

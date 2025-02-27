@@ -31,7 +31,8 @@ public class DeleteCertificateResponse extends AbstractModel {
     private Boolean DeleteResult;
 
     /**
-    * 
+    * Asynchronous deletion task id.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskId")
     @Expose
@@ -61,16 +62,20 @@ public class DeleteCertificateResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get Asynchronous deletion task id.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return TaskId Asynchronous deletion task id.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set Asynchronous deletion task id.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param TaskId Asynchronous deletion task id.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

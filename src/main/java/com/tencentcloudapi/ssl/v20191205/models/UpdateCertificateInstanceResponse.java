@@ -24,22 +24,23 @@ import java.util.HashMap;
 public class UpdateCertificateInstanceResponse extends AbstractModel {
 
     /**
-    * Cloud resource deployment task ID
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Task id, DeployRecordId of 0 indicates that the task is in progress. repeatedly requesting this api, when DeployRecordId returned is greater than 0, it indicates that the task is created successfully. if not created successfully, an exception will be thrown.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DeployRecordId")
     @Expose
     private Long DeployRecordId;
 
     /**
-    * Deployment status. 1 indicates that the deployment succeeded, and 0 indicates that the deployment failed.
+    * Status of the task; 1 indicates successful creation; 0 indicates that there is a task being updated currently, and no new update task has been created; the returned value DeployRecordId is the task id being updated.
     */
     @SerializedName("DeployStatus")
     @Expose
     private Long DeployStatus;
 
     /**
-    * 
+    * Task Progress Details.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateSyncProgress")
     @Expose
@@ -53,52 +54,56 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String RequestId;
 
     /**
-     * Get Cloud resource deployment task ID
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return DeployRecordId Cloud resource deployment task ID
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Task id, DeployRecordId of 0 indicates that the task is in progress. repeatedly requesting this api, when DeployRecordId returned is greater than 0, it indicates that the task is created successfully. if not created successfully, an exception will be thrown.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DeployRecordId Task id, DeployRecordId of 0 indicates that the task is in progress. repeatedly requesting this api, when DeployRecordId returned is greater than 0, it indicates that the task is created successfully. if not created successfully, an exception will be thrown.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getDeployRecordId() {
         return this.DeployRecordId;
     }
 
     /**
-     * Set Cloud resource deployment task ID
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param DeployRecordId Cloud resource deployment task ID
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Task id, DeployRecordId of 0 indicates that the task is in progress. repeatedly requesting this api, when DeployRecordId returned is greater than 0, it indicates that the task is created successfully. if not created successfully, an exception will be thrown.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DeployRecordId Task id, DeployRecordId of 0 indicates that the task is in progress. repeatedly requesting this api, when DeployRecordId returned is greater than 0, it indicates that the task is created successfully. if not created successfully, an exception will be thrown.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDeployRecordId(Long DeployRecordId) {
         this.DeployRecordId = DeployRecordId;
     }
 
     /**
-     * Get Deployment status. 1 indicates that the deployment succeeded, and 0 indicates that the deployment failed. 
-     * @return DeployStatus Deployment status. 1 indicates that the deployment succeeded, and 0 indicates that the deployment failed.
+     * Get Status of the task; 1 indicates successful creation; 0 indicates that there is a task being updated currently, and no new update task has been created; the returned value DeployRecordId is the task id being updated. 
+     * @return DeployStatus Status of the task; 1 indicates successful creation; 0 indicates that there is a task being updated currently, and no new update task has been created; the returned value DeployRecordId is the task id being updated.
      */
     public Long getDeployStatus() {
         return this.DeployStatus;
     }
 
     /**
-     * Set Deployment status. 1 indicates that the deployment succeeded, and 0 indicates that the deployment failed.
-     * @param DeployStatus Deployment status. 1 indicates that the deployment succeeded, and 0 indicates that the deployment failed.
+     * Set Status of the task; 1 indicates successful creation; 0 indicates that there is a task being updated currently, and no new update task has been created; the returned value DeployRecordId is the task id being updated.
+     * @param DeployStatus Status of the task; 1 indicates successful creation; 0 indicates that there is a task being updated currently, and no new update task has been created; the returned value DeployRecordId is the task id being updated.
      */
     public void setDeployStatus(Long DeployStatus) {
         this.DeployStatus = DeployStatus;
     }
 
     /**
-     * Get  
-     * @return UpdateSyncProgress 
+     * Get Task Progress Details.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return UpdateSyncProgress Task Progress Details.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public UpdateSyncProgress [] getUpdateSyncProgress() {
         return this.UpdateSyncProgress;
     }
 
     /**
-     * Set 
-     * @param UpdateSyncProgress 
+     * Set Task Progress Details.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param UpdateSyncProgress Task Progress Details.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateSyncProgress(UpdateSyncProgress [] UpdateSyncProgress) {
         this.UpdateSyncProgress = UpdateSyncProgress;

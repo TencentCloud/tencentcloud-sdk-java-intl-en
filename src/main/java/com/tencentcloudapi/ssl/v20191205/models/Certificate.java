@@ -38,16 +38,14 @@ public class Certificate extends AbstractModel {
     private String [] DnsNames;
 
     /**
-    * The root certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Root certificate id.
     */
     @SerializedName("CertCaId")
     @Expose
     private String CertCaId;
 
     /**
-    * The authentication type. Valid values: `UNIDIRECTIONAL` (one-way authentication) and `MUTUAL` (two-way authentication).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Certificate authentication mode: unidirectional one-way authentication, mutual mutual authentication.
     */
     @SerializedName("SSLMode")
     @Expose
@@ -86,40 +84,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The root certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CertCaId The root certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Root certificate id. 
+     * @return CertCaId Root certificate id.
      */
     public String getCertCaId() {
         return this.CertCaId;
     }
 
     /**
-     * Set The root certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CertCaId The root certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Root certificate id.
+     * @param CertCaId Root certificate id.
      */
     public void setCertCaId(String CertCaId) {
         this.CertCaId = CertCaId;
     }
 
     /**
-     * Get The authentication type. Valid values: `UNIDIRECTIONAL` (one-way authentication) and `MUTUAL` (two-way authentication).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SSLMode The authentication type. Valid values: `UNIDIRECTIONAL` (one-way authentication) and `MUTUAL` (two-way authentication).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Certificate authentication mode: unidirectional one-way authentication, mutual mutual authentication. 
+     * @return SSLMode Certificate authentication mode: unidirectional one-way authentication, mutual mutual authentication.
      */
     public String getSSLMode() {
         return this.SSLMode;
     }
 
     /**
-     * Set The authentication type. Valid values: `UNIDIRECTIONAL` (one-way authentication) and `MUTUAL` (two-way authentication).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SSLMode The authentication type. Valid values: `UNIDIRECTIONAL` (one-way authentication) and `MUTUAL` (two-way authentication).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Certificate authentication mode: unidirectional one-way authentication, mutual mutual authentication.
+     * @param SSLMode Certificate authentication mode: unidirectional one-way authentication, mutual mutual authentication.
      */
     public void setSSLMode(String SSLMode) {
         this.SSLMode = SSLMode;

@@ -52,6 +52,13 @@ public class RecognizeThaiPinkCardResponse extends AbstractModel {
     private String EnName;
 
     /**
+    * Surname in Thai
+    */
+    @SerializedName("ThaiSurName")
+    @Expose
+    private String ThaiSurName;
+
+    /**
     * Date of birth in Thai
     */
     @SerializedName("ThaiDOB")
@@ -205,6 +212,22 @@ public class RecognizeThaiPinkCardResponse extends AbstractModel {
      */
     public void setEnName(String EnName) {
         this.EnName = EnName;
+    }
+
+    /**
+     * Get Surname in Thai 
+     * @return ThaiSurName Surname in Thai
+     */
+    public String getThaiSurName() {
+        return this.ThaiSurName;
+    }
+
+    /**
+     * Set Surname in Thai
+     * @param ThaiSurName Surname in Thai
+     */
+    public void setThaiSurName(String ThaiSurName) {
+        this.ThaiSurName = ThaiSurName;
     }
 
     /**
@@ -439,6 +462,9 @@ public class RecognizeThaiPinkCardResponse extends AbstractModel {
         if (source.EnName != null) {
             this.EnName = new String(source.EnName);
         }
+        if (source.ThaiSurName != null) {
+            this.ThaiSurName = new String(source.ThaiSurName);
+        }
         if (source.ThaiDOB != null) {
             this.ThaiDOB = new String(source.ThaiDOB);
         }
@@ -489,6 +515,7 @@ public class RecognizeThaiPinkCardResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "IDNumber", this.IDNumber);
         this.setParamSimple(map, prefix + "ThaiName", this.ThaiName);
         this.setParamSimple(map, prefix + "EnName", this.EnName);
+        this.setParamSimple(map, prefix + "ThaiSurName", this.ThaiSurName);
         this.setParamSimple(map, prefix + "ThaiDOB", this.ThaiDOB);
         this.setParamSimple(map, prefix + "EnDOB", this.EnDOB);
         this.setParamSimple(map, prefix + "PhotoNumber", this.PhotoNumber);

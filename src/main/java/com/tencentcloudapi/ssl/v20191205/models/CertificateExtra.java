@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class CertificateExtra extends AbstractModel {
 
     /**
-    * Number of domain names which can be associated with the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Quantity of configurable domain names for the certificate.
     */
     @SerializedName("DomainNumber")
     @Expose
     private String DomainNumber;
 
     /**
-    * Original certificate ID
+    * Renew the original certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginCertificateId")
@@ -48,7 +47,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ReplacedBy;
 
     /**
-    * New ID of the new certificate
+    * Reissue certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReplacedFor")
@@ -56,7 +55,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ReplacedFor;
 
     /**
-    * Certificate ID of the new order
+    * Renewal certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RenewOrder")
@@ -64,45 +63,39 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RenewOrder;
 
     /**
-    * Whether the certificate is a Chinese SM certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether it is a China SM certificate.
     */
     @SerializedName("SMCert")
     @Expose
     private Long SMCert;
 
     /**
-    * Company type
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Company type, valid values: 1 (individual); 2 (company).
     */
     @SerializedName("CompanyType")
     @Expose
     private Long CompanyType;
 
     /**
-     * Get Number of domain names which can be associated with the certificate
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DomainNumber Number of domain names which can be associated with the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Quantity of configurable domain names for the certificate. 
+     * @return DomainNumber Quantity of configurable domain names for the certificate.
      */
     public String getDomainNumber() {
         return this.DomainNumber;
     }
 
     /**
-     * Set Number of domain names which can be associated with the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DomainNumber Number of domain names which can be associated with the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Quantity of configurable domain names for the certificate.
+     * @param DomainNumber Quantity of configurable domain names for the certificate.
      */
     public void setDomainNumber(String DomainNumber) {
         this.DomainNumber = DomainNumber;
     }
 
     /**
-     * Get Original certificate ID
+     * Get Renew the original certificate id.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OriginCertificateId Original certificate ID
+     * @return OriginCertificateId Renew the original certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getOriginCertificateId() {
@@ -110,9 +103,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Original certificate ID
+     * Set Renew the original certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OriginCertificateId Original certificate ID
+     * @param OriginCertificateId Renew the original certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOriginCertificateId(String OriginCertificateId) {
@@ -140,9 +133,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get New ID of the new certificate
+     * Get Reissue certificate id.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ReplacedFor New ID of the new certificate
+     * @return ReplacedFor Reissue certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getReplacedFor() {
@@ -150,9 +143,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set New ID of the new certificate
+     * Set Reissue certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ReplacedFor New ID of the new certificate
+     * @param ReplacedFor Reissue certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setReplacedFor(String ReplacedFor) {
@@ -160,9 +153,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Certificate ID of the new order
+     * Get Renewal certificate id.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RenewOrder Certificate ID of the new order
+     * @return RenewOrder Renewal certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getRenewOrder() {
@@ -170,9 +163,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Certificate ID of the new order
+     * Set Renewal certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RenewOrder Certificate ID of the new order
+     * @param RenewOrder Renewal certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRenewOrder(String RenewOrder) {
@@ -180,40 +173,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the certificate is a Chinese SM certificate.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SMCert Whether the certificate is a Chinese SM certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether it is a China SM certificate. 
+     * @return SMCert Whether it is a China SM certificate.
      */
     public Long getSMCert() {
         return this.SMCert;
     }
 
     /**
-     * Set Whether the certificate is a Chinese SM certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SMCert Whether the certificate is a Chinese SM certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether it is a China SM certificate.
+     * @param SMCert Whether it is a China SM certificate.
      */
     public void setSMCert(Long SMCert) {
         this.SMCert = SMCert;
     }
 
     /**
-     * Get Company type
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CompanyType Company type
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Company type, valid values: 1 (individual); 2 (company). 
+     * @return CompanyType Company type, valid values: 1 (individual); 2 (company).
      */
     public Long getCompanyType() {
         return this.CompanyType;
     }
 
     /**
-     * Set Company type
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CompanyType Company type
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Company type, valid values: 1 (individual); 2 (company).
+     * @param CompanyType Company type, valid values: 1 (individual); 2 (company).
      */
     public void setCompanyType(Long CompanyType) {
         this.CompanyType = CompanyType;

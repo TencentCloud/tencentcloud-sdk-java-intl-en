@@ -24,69 +24,129 @@ import java.util.HashMap;
 public class UpdateRecordDetails extends AbstractModel {
 
     /**
-    * Deployment resource type
+    * Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * Deployment resource detail list
+    * The update details of the cloud resource.
     */
     @SerializedName("List")
     @Expose
     private UpdateRecordDetail [] List;
 
     /**
-    * Total deployment resource count
+    * The update of the total number of cloud resources.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get Deployment resource type 
-     * @return ResourceType Deployment resource type
+     * Get Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb. 
+     * @return ResourceType Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Deployment resource type
-     * @param ResourceType Deployment resource type
+     * Set Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
+     * @param ResourceType Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get Deployment resource detail list 
-     * @return List Deployment resource detail list
+     * Get The update details of the cloud resource. 
+     * @return List The update details of the cloud resource.
      */
     public UpdateRecordDetail [] getList() {
         return this.List;
     }
 
     /**
-     * Set Deployment resource detail list
-     * @param List Deployment resource detail list
+     * Set The update details of the cloud resource.
+     * @param List The update details of the cloud resource.
      */
     public void setList(UpdateRecordDetail [] List) {
         this.List = List;
     }
 
     /**
-     * Get Total deployment resource count 
-     * @return TotalCount Total deployment resource count
+     * Get The update of the total number of cloud resources. 
+     * @return TotalCount The update of the total number of cloud resources.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total deployment resource count
-     * @param TotalCount Total deployment resource count
+     * Set The update of the total number of cloud resources.
+     * @param TotalCount The update of the total number of cloud resources.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

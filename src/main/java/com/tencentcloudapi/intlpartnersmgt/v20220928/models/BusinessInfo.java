@@ -24,158 +24,138 @@ import java.util.HashMap;
 public class BusinessInfo extends AbstractModel {
 
     /**
-    * ProductNote: This field may return null, indicating that no valid values can be obtained.
+    * Product name.
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-    * Product codeNote: This field may return null, indicating that no valid values can be obtained.
+    * Product code.
     */
     @SerializedName("BusinessCode")
     @Expose
     private String BusinessCode;
 
     /**
-    * Original price
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Original price.
     */
     @SerializedName("OriginalCost")
     @Expose
     private String OriginalCost;
 
     /**
-    * Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Voucher amount.
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+    * RI deduction.
     */
     @SerializedName("RICost")
     @Expose
     private String RICost;
 
     /**
-    * Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total amount.
     */
     @SerializedName("TotalCost")
     @Expose
     private String TotalCost;
 
     /**
-     * Get ProductNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return BusinessCodeName ProductNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Product name. 
+     * @return BusinessCodeName Product name.
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * Set ProductNote: This field may return null, indicating that no valid values can be obtained.
-     * @param BusinessCodeName ProductNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Product name.
+     * @param BusinessCodeName Product name.
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * Get Product codeNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return BusinessCode Product codeNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Product code. 
+     * @return BusinessCode Product code.
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set Product codeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param BusinessCode Product codeNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Product code.
+     * @param BusinessCode Product code.
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get Original price
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginalCost Original price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Original price. 
+     * @return OriginalCost Original price.
      */
     public String getOriginalCost() {
         return this.OriginalCost;
     }
 
     /**
-     * Set Original price
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginalCost Original price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Original price.
+     * @param OriginalCost Original price.
      */
     public void setOriginalCost(String OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoucherPayAmount Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Voucher amount. 
+     * @return VoucherPayAmount Voucher amount.
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoucherPayAmount Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Voucher amount.
+     * @param VoucherPayAmount Voucher amount.
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RICost Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get RI deduction. 
+     * @return RICost RI deduction.
      */
     public String getRICost() {
         return this.RICost;
     }
 
     /**
-     * Set Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RICost Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set RI deduction.
+     * @param RICost RI deduction.
      */
     public void setRICost(String RICost) {
         this.RICost = RICost;
     }
 
     /**
-     * Get Total amount
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCost Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total amount. 
+     * @return TotalCost Total amount.
      */
     public String getTotalCost() {
         return this.TotalCost;
     }
 
     /**
-     * Set Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCost Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total amount.
+     * @param TotalCost Total amount.
      */
     public void setTotalCost(String TotalCost) {
         this.TotalCost = TotalCost;

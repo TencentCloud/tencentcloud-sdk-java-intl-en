@@ -31,7 +31,7 @@ public class DescribeCustomerBillSummaryRequest extends AbstractModel {
     private Long CustomerUin;
 
     /**
-    * The queried month in “YYYY-MM” format, such as 2023-01.
+    * The queried month in "YYYY-MM" format, such as 2023-01.
     */
     @SerializedName("Month")
     @Expose
@@ -105,16 +105,16 @@ public class DescribeCustomerBillSummaryRequest extends AbstractModel {
     }
 
     /**
-     * Get The queried month in “YYYY-MM” format, such as 2023-01. 
-     * @return Month The queried month in “YYYY-MM” format, such as 2023-01.
+     * Get The queried month in "YYYY-MM" format, such as 2023-01. 
+     * @return Month The queried month in "YYYY-MM" format, such as 2023-01.
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set The queried month in “YYYY-MM” format, such as 2023-01.
-     * @param Month The queried month in “YYYY-MM” format, such as 2023-01.
+     * Set The queried month in "YYYY-MM" format, such as 2023-01.
+     * @param Month The queried month in "YYYY-MM" format, such as 2023-01.
      */
     public void setMonth(String Month) {
         this.Month = Month;

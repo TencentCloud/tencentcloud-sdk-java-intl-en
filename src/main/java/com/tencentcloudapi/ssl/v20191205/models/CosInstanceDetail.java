@@ -21,108 +21,136 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CdnInstanceDetail extends AbstractModel {
+public class CosInstanceDetail extends AbstractModel {
 
     /**
-    * The domain.
+    * Domain name.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * The ID of the deployed certificate.
+    * Bound certificate id.
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-    * Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
+    * ENABLED: domain name online status.
+DISABLED: domain name offline status.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Domain billing status, where on indicates enable and off indicates disable.
+    * bucket name.
     */
-    @SerializedName("HttpsBillingSwitch")
+    @SerializedName("Bucket")
     @Expose
-    private String HttpsBillingSwitch;
+    private String Bucket;
 
     /**
-     * Get The domain. 
-     * @return Domain The domain.
+    * bucket region.
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+     * Get Domain name. 
+     * @return Domain Domain name.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set The domain.
-     * @param Domain The domain.
+     * Set Domain name.
+     * @param Domain Domain name.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get The ID of the deployed certificate. 
-     * @return CertId The ID of the deployed certificate.
+     * Get Bound certificate id. 
+     * @return CertId Bound certificate id.
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set The ID of the deployed certificate.
-     * @param CertId The ID of the deployed certificate.
+     * Set Bound certificate id.
+     * @param CertId Bound certificate id.
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed. 
-     * @return Status Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
+     * Get ENABLED: domain name online status.
+DISABLED: domain name offline status. 
+     * @return Status ENABLED: domain name online status.
+DISABLED: domain name offline status.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
-     * @param Status Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
+     * Set ENABLED: domain name online status.
+DISABLED: domain name offline status.
+     * @param Status ENABLED: domain name online status.
+DISABLED: domain name offline status.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Domain billing status, where on indicates enable and off indicates disable. 
-     * @return HttpsBillingSwitch Domain billing status, where on indicates enable and off indicates disable.
+     * Get bucket name. 
+     * @return Bucket bucket name.
      */
-    public String getHttpsBillingSwitch() {
-        return this.HttpsBillingSwitch;
+    public String getBucket() {
+        return this.Bucket;
     }
 
     /**
-     * Set Domain billing status, where on indicates enable and off indicates disable.
-     * @param HttpsBillingSwitch Domain billing status, where on indicates enable and off indicates disable.
+     * Set bucket name.
+     * @param Bucket bucket name.
      */
-    public void setHttpsBillingSwitch(String HttpsBillingSwitch) {
-        this.HttpsBillingSwitch = HttpsBillingSwitch;
+    public void setBucket(String Bucket) {
+        this.Bucket = Bucket;
     }
 
-    public CdnInstanceDetail() {
+    /**
+     * Get bucket region. 
+     * @return Region bucket region.
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set bucket region.
+     * @param Region bucket region.
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    public CosInstanceDetail() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CdnInstanceDetail(CdnInstanceDetail source) {
+    public CosInstanceDetail(CosInstanceDetail source) {
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
@@ -132,8 +160,11 @@ public class CdnInstanceDetail extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
-        if (source.HttpsBillingSwitch != null) {
-            this.HttpsBillingSwitch = new String(source.HttpsBillingSwitch);
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
         }
     }
 
@@ -145,7 +176,8 @@ public class CdnInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "CertId", this.CertId);
         this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "HttpsBillingSwitch", this.HttpsBillingSwitch);
+        this.setParamSimple(map, prefix + "Bucket", this.Bucket);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

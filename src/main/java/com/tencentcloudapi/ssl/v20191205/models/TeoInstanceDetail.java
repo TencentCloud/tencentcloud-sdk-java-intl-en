@@ -46,7 +46,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ZoneId;
 
     /**
-    * The status of the domain.
+    * Domain status.
+`Deployed`: deployed;.
+`Processing`: deploying;.
+`Applying`: applying;.
+`Failed`: application failed;.
+`Issued`: binding failed.
     */
     @SerializedName("Status")
     @Expose
@@ -105,16 +110,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The status of the domain. 
-     * @return Status The status of the domain.
+     * Get Domain status.
+`Deployed`: deployed;.
+`Processing`: deploying;.
+`Applying`: applying;.
+`Failed`: application failed;.
+`Issued`: binding failed. 
+     * @return Status Domain status.
+`Deployed`: deployed;.
+`Processing`: deploying;.
+`Applying`: applying;.
+`Failed`: application failed;.
+`Issued`: binding failed.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The status of the domain.
-     * @param Status The status of the domain.
+     * Set Domain status.
+`Deployed`: deployed;.
+`Processing`: deploying;.
+`Applying`: applying;.
+`Failed`: application failed;.
+`Issued`: binding failed.
+     * @param Status Domain status.
+`Deployed`: deployed;.
+`Processing`: deploying;.
+`Applying`: applying;.
+`Failed`: application failed;.
+`Issued`: binding failed.
      */
     public void setStatus(String Status) {
         this.Status = Status;

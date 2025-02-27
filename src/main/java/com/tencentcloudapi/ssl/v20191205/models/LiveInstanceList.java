@@ -39,6 +39,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private LiveInstanceDetail [] InstanceList;
 
     /**
+    * Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Error")
+    @Expose
+    private String Error;
+
+    /**
      * Get The total number of LIVE instances in this region.	 
      * @return TotalCount The total number of LIVE instances in this region.	
      */
@@ -74,6 +82,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.InstanceList = InstanceList;
     }
 
+    /**
+     * Get Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Error Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Error Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setError(String Error) {
+        this.Error = Error;
+    }
+
     public LiveInstanceList() {
     }
 
@@ -91,6 +119,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.InstanceList[i] = new LiveInstanceDetail(source.InstanceList[i]);
             }
         }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
     }
 
 
@@ -100,6 +131,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
+        this.setParamSimple(map, prefix + "Error", this.Error);
 
     }
 }

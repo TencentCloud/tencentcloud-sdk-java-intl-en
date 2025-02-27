@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ApplyCertificateResponse extends AbstractModel {
 
     /**
-    * Certificate ID
+    * The newly applied certificate id.
     */
     @SerializedName("CertificateId")
     @Expose
@@ -38,16 +38,16 @@ public class ApplyCertificateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Certificate ID 
-     * @return CertificateId Certificate ID
+     * Get The newly applied certificate id. 
+     * @return CertificateId The newly applied certificate id.
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set Certificate ID
-     * @param CertificateId Certificate ID
+     * Set The newly applied certificate id.
+     * @param CertificateId The newly applied certificate id.
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCertificateBindResourceTaskDetailRequest extends AbstractModel {
 
     /**
-    * The task ID, which is required to query the result of associated cloud resources.
+    * Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,37 +38,49 @@ public class DescribeCertificateBindResourceTaskDetailRequest extends AbstractMo
     private String Limit;
 
     /**
-    * The current offset.
+    * Current offset, default is 0.
     */
     @SerializedName("Offset")
     @Expose
     private String Offset;
 
     /**
-    * The types of the resources to be queried. If no value is passed in, all types of resources will be queried.
+    * Result detail of queried resource type. if not provided, all will be queried. valid values include:.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
     */
     @SerializedName("ResourceTypes")
     @Expose
     private String [] ResourceTypes;
 
     /**
-    * The regions of the resources to be queried. Only CLB, TKE, WAF, APIGATEWAY, and TCB resources support the query by region.
+    * Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
     */
     @SerializedName("Regions")
     @Expose
     private String [] Regions;
 
     /**
-     * Get The task ID, which is required to query the result of associated cloud resources. 
-     * @return TaskId The task ID, which is required to query the result of associated cloud resources.
+     * Get Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask. 
+     * @return TaskId Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The task ID, which is required to query the result of associated cloud resources.
-     * @param TaskId The task ID, which is required to query the result of associated cloud resources.
+     * Set Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
+     * @param TaskId Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -91,48 +103,96 @@ public class DescribeCertificateBindResourceTaskDetailRequest extends AbstractMo
     }
 
     /**
-     * Get The current offset. 
-     * @return Offset The current offset.
+     * Get Current offset, default is 0. 
+     * @return Offset Current offset, default is 0.
      */
     public String getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The current offset.
-     * @param Offset The current offset.
+     * Set Current offset, default is 0.
+     * @param Offset Current offset, default is 0.
      */
     public void setOffset(String Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The types of the resources to be queried. If no value is passed in, all types of resources will be queried. 
-     * @return ResourceTypes The types of the resources to be queried. If no value is passed in, all types of resources will be queried.
+     * Get Result detail of queried resource type. if not provided, all will be queried. valid values include:.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb. 
+     * @return ResourceTypes Result detail of queried resource type. if not provided, all will be queried. valid values include:.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
      */
     public String [] getResourceTypes() {
         return this.ResourceTypes;
     }
 
     /**
-     * Set The types of the resources to be queried. If no value is passed in, all types of resources will be queried.
-     * @param ResourceTypes The types of the resources to be queried. If no value is passed in, all types of resources will be queried.
+     * Set Result detail of queried resource type. if not provided, all will be queried. valid values include:.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
+     * @param ResourceTypes Result detail of queried resource type. if not provided, all will be queried. valid values include:.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
      */
     public void setResourceTypes(String [] ResourceTypes) {
         this.ResourceTypes = ResourceTypes;
     }
 
     /**
-     * Get The regions of the resources to be queried. Only CLB, TKE, WAF, APIGATEWAY, and TCB resources support the query by region. 
-     * @return Regions The regions of the resources to be queried. Only CLB, TKE, WAF, APIGATEWAY, and TCB resources support the query by region.
+     * Get Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support. 
+     * @return Regions Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
      */
     public String [] getRegions() {
         return this.Regions;
     }
 
     /**
-     * Set The regions of the resources to be queried. Only CLB, TKE, WAF, APIGATEWAY, and TCB resources support the query by region.
-     * @param Regions The regions of the resources to be queried. Only CLB, TKE, WAF, APIGATEWAY, and TCB resources support the query by region.
+     * Set Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
+     * @param Regions Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
      */
     public void setRegions(String [] Regions) {
         this.Regions = Regions;

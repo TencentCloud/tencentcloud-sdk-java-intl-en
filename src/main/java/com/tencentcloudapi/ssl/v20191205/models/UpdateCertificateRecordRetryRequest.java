@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class UpdateCertificateRecordRetryRequest extends AbstractModel {
 
     /**
-    * To-be-redeployed record ID
+    * Record ID for pending retry deployment, which can be obtained through UpdateCertificateInstance. if this parameter is not provided, DeployRecordDetailId must be provided.
     */
     @SerializedName("DeployRecordId")
     @Expose
     private Long DeployRecordId;
 
     /**
-    * To-be-redeployed record detail ID
+    * Detail ID for pending retry deployment record, which can be obtained through the DescribeHostUpdateRecordDetail api. if this parameter is not provided, DeployRecordId must be provided.
     */
     @SerializedName("DeployRecordDetailId")
     @Expose
     private Long DeployRecordDetailId;
 
     /**
-     * Get To-be-redeployed record ID 
-     * @return DeployRecordId To-be-redeployed record ID
+     * Get Record ID for pending retry deployment, which can be obtained through UpdateCertificateInstance. if this parameter is not provided, DeployRecordDetailId must be provided. 
+     * @return DeployRecordId Record ID for pending retry deployment, which can be obtained through UpdateCertificateInstance. if this parameter is not provided, DeployRecordDetailId must be provided.
      */
     public Long getDeployRecordId() {
         return this.DeployRecordId;
     }
 
     /**
-     * Set To-be-redeployed record ID
-     * @param DeployRecordId To-be-redeployed record ID
+     * Set Record ID for pending retry deployment, which can be obtained through UpdateCertificateInstance. if this parameter is not provided, DeployRecordDetailId must be provided.
+     * @param DeployRecordId Record ID for pending retry deployment, which can be obtained through UpdateCertificateInstance. if this parameter is not provided, DeployRecordDetailId must be provided.
      */
     public void setDeployRecordId(Long DeployRecordId) {
         this.DeployRecordId = DeployRecordId;
     }
 
     /**
-     * Get To-be-redeployed record detail ID 
-     * @return DeployRecordDetailId To-be-redeployed record detail ID
+     * Get Detail ID for pending retry deployment record, which can be obtained through the DescribeHostUpdateRecordDetail api. if this parameter is not provided, DeployRecordId must be provided. 
+     * @return DeployRecordDetailId Detail ID for pending retry deployment record, which can be obtained through the DescribeHostUpdateRecordDetail api. if this parameter is not provided, DeployRecordId must be provided.
      */
     public Long getDeployRecordDetailId() {
         return this.DeployRecordDetailId;
     }
 
     /**
-     * Set To-be-redeployed record detail ID
-     * @param DeployRecordDetailId To-be-redeployed record detail ID
+     * Set Detail ID for pending retry deployment record, which can be obtained through the DescribeHostUpdateRecordDetail api. if this parameter is not provided, DeployRecordId must be provided.
+     * @param DeployRecordDetailId Detail ID for pending retry deployment record, which can be obtained through the DescribeHostUpdateRecordDetail api. if this parameter is not provided, DeployRecordId must be provided.
      */
     public void setDeployRecordDetailId(Long DeployRecordDetailId) {
         this.DeployRecordDetailId = DeployRecordDetailId;

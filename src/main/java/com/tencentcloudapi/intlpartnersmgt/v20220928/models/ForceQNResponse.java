@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class ForceQNResponse extends AbstractModel {
 
     /**
-    * Status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Status (deprecated).
     */
     @SerializedName("C")
     @Expose
     private Long C;
 
     /**
-    * msg
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Msg (deprecated).
     */
     @SerializedName("M")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return C Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Status (deprecated). 
+     * @return C Status (deprecated).
      * @deprecated
      */
     @Deprecated
@@ -59,10 +55,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param C Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Status (deprecated).
+     * @param C Status (deprecated).
      * @deprecated
      */
     @Deprecated
@@ -71,10 +65,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get msg
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return M msg
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Msg (deprecated). 
+     * @return M Msg (deprecated).
      * @deprecated
      */
     @Deprecated
@@ -83,10 +75,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set msg
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param M msg
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Msg (deprecated).
+     * @param M Msg (deprecated).
      * @deprecated
      */
     @Deprecated

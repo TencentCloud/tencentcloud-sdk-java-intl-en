@@ -24,69 +24,84 @@ import java.util.HashMap;
 public class UpdateSyncProgress extends AbstractModel {
 
     /**
-    * 
+    * Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * 
+    * Region result list.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateSyncProgressRegions")
     @Expose
     private UpdateSyncProgressRegion [] UpdateSyncProgressRegions;
 
     /**
-    * 
+    * Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get  
-     * @return ResourceType 
+     * Get Resource type.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ResourceType Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 
-     * @param ResourceType 
+     * Set Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ResourceType Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get  
-     * @return UpdateSyncProgressRegions 
+     * Get Region result list.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return UpdateSyncProgressRegions Region result list.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public UpdateSyncProgressRegion [] getUpdateSyncProgressRegions() {
         return this.UpdateSyncProgressRegions;
     }
 
     /**
-     * Set 
-     * @param UpdateSyncProgressRegions 
+     * Set Region result list.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param UpdateSyncProgressRegions Region result list.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateSyncProgressRegions(UpdateSyncProgressRegion [] UpdateSyncProgressRegions) {
         this.UpdateSyncProgressRegions = UpdateSyncProgressRegions;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Status Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Status Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

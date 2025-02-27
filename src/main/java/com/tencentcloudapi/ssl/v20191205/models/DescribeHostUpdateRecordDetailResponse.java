@@ -24,40 +24,40 @@ import java.util.HashMap;
 public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
 
     /**
-    * Total count
-Note: This field may return null, indicating that no valid value can be obtained.
+    * If the total number cannot be obtained, return 0.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Certificate deployment record list
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Certificate deployment record list; returns an empty array if no value is obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RecordDetailList")
     @Expose
     private UpdateRecordDetails [] RecordDetailList;
 
     /**
-    * Total successful deployments
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Total number of successes; returns 0 if unavailable.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SuccessTotalCount")
     @Expose
     private Long SuccessTotalCount;
 
     /**
-    * Total failed deployments
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Total number of failures. if it cannot be obtained, return 0.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FailedTotalCount")
     @Expose
     private Long FailedTotalCount;
 
     /**
-    * Total running deployments
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Total number of deployments in progress; returns 0 if unavailable.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RunningTotalCount")
     @Expose
@@ -71,100 +71,100 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String RequestId;
 
     /**
-     * Get Total count
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return TotalCount Total count
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get If the total number cannot be obtained, return 0.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return TotalCount If the total number cannot be obtained, return 0.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total count
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param TotalCount Total count
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set If the total number cannot be obtained, return 0.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param TotalCount If the total number cannot be obtained, return 0.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Certificate deployment record list
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return RecordDetailList Certificate deployment record list
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Certificate deployment record list; returns an empty array if no value is obtained.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return RecordDetailList Certificate deployment record list; returns an empty array if no value is obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public UpdateRecordDetails [] getRecordDetailList() {
         return this.RecordDetailList;
     }
 
     /**
-     * Set Certificate deployment record list
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param RecordDetailList Certificate deployment record list
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Certificate deployment record list; returns an empty array if no value is obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param RecordDetailList Certificate deployment record list; returns an empty array if no value is obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRecordDetailList(UpdateRecordDetails [] RecordDetailList) {
         this.RecordDetailList = RecordDetailList;
     }
 
     /**
-     * Get Total successful deployments
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SuccessTotalCount Total successful deployments
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Total number of successes; returns 0 if unavailable.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SuccessTotalCount Total number of successes; returns 0 if unavailable.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getSuccessTotalCount() {
         return this.SuccessTotalCount;
     }
 
     /**
-     * Set Total successful deployments
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SuccessTotalCount Total successful deployments
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Total number of successes; returns 0 if unavailable.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SuccessTotalCount Total number of successes; returns 0 if unavailable.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSuccessTotalCount(Long SuccessTotalCount) {
         this.SuccessTotalCount = SuccessTotalCount;
     }
 
     /**
-     * Get Total failed deployments
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return FailedTotalCount Total failed deployments
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Total number of failures. if it cannot be obtained, return 0.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return FailedTotalCount Total number of failures. if it cannot be obtained, return 0.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getFailedTotalCount() {
         return this.FailedTotalCount;
     }
 
     /**
-     * Set Total failed deployments
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param FailedTotalCount Total failed deployments
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Total number of failures. if it cannot be obtained, return 0.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param FailedTotalCount Total number of failures. if it cannot be obtained, return 0.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFailedTotalCount(Long FailedTotalCount) {
         this.FailedTotalCount = FailedTotalCount;
     }
 
     /**
-     * Get Total running deployments
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return RunningTotalCount Total running deployments
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Total number of deployments in progress; returns 0 if unavailable.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return RunningTotalCount Total number of deployments in progress; returns 0 if unavailable.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getRunningTotalCount() {
         return this.RunningTotalCount;
     }
 
     /**
-     * Set Total running deployments
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param RunningTotalCount Total running deployments
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Total number of deployments in progress; returns 0 if unavailable.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param RunningTotalCount Total number of deployments in progress; returns 0 if unavailable.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRunningTotalCount(Long RunningTotalCount) {
         this.RunningTotalCount = RunningTotalCount;

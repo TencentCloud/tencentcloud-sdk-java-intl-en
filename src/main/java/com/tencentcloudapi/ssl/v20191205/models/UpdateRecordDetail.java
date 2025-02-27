@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class UpdateRecordDetail extends AbstractModel {
 
     /**
-    * Detail record ID
+    * Update detail record id.
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * New certificate ID
+    * New and old certificate update - new certificate id.
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-    * Old certificate ID
+    * Old and new certificate update - old certificate id.
     */
     @SerializedName("OldCertId")
     @Expose
@@ -53,7 +53,19 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String [] Domains;
 
     /**
-    * Deployment resource type
+    * Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
     */
     @SerializedName("ResourceType")
     @Expose
@@ -68,7 +80,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String Region;
 
     /**
-    * Deployment status
+    * Deployment status. valid values:.
+0: To be deployed.
+1: Deployment successful.
+2: Deployment failed.
+3: Deploying.
+4: Rollback succeeded.
+5: Rollback failure.
+6: No resource, no need for deployment.
     */
     @SerializedName("Status")
     @Expose
@@ -193,48 +212,56 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String TCBType;
 
     /**
-     * Get Detail record ID 
-     * @return Id Detail record ID
+    * Listener url (only for CLB).
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
+     * Get Update detail record id. 
+     * @return Id Update detail record id.
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Detail record ID
-     * @param Id Detail record ID
+     * Set Update detail record id.
+     * @param Id Update detail record id.
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get New certificate ID 
-     * @return CertId New certificate ID
+     * Get New and old certificate update - new certificate id. 
+     * @return CertId New and old certificate update - new certificate id.
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set New certificate ID
-     * @param CertId New certificate ID
+     * Set New and old certificate update - new certificate id.
+     * @param CertId New and old certificate update - new certificate id.
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get Old certificate ID 
-     * @return OldCertId Old certificate ID
+     * Get Old and new certificate update - old certificate id. 
+     * @return OldCertId Old and new certificate update - old certificate id.
      */
     public String getOldCertId() {
         return this.OldCertId;
     }
 
     /**
-     * Set Old certificate ID
-     * @param OldCertId Old certificate ID
+     * Set Old and new certificate update - old certificate id.
+     * @param OldCertId Old and new certificate update - old certificate id.
      */
     public void setOldCertId(String OldCertId) {
         this.OldCertId = OldCertId;
@@ -261,16 +288,64 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Deployment resource type 
-     * @return ResourceType Deployment resource type
+     * Get Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb. 
+     * @return ResourceType Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Deployment resource type
-     * @param ResourceType Deployment resource type
+     * Set Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
+     * @param ResourceType Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -297,16 +372,44 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Deployment status 
-     * @return Status Deployment status
+     * Get Deployment status. valid values:.
+0: To be deployed.
+1: Deployment successful.
+2: Deployment failed.
+3: Deploying.
+4: Rollback succeeded.
+5: Rollback failure.
+6: No resource, no need for deployment. 
+     * @return Status Deployment status. valid values:.
+0: To be deployed.
+1: Deployment successful.
+2: Deployment failed.
+3: Deploying.
+4: Rollback succeeded.
+5: Rollback failure.
+6: No resource, no need for deployment.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Deployment status
-     * @param Status Deployment status
+     * Set Deployment status. valid values:.
+0: To be deployed.
+1: Deployment successful.
+2: Deployment failed.
+3: Deploying.
+4: Rollback succeeded.
+5: Rollback failure.
+6: No resource, no need for deployment.
+     * @param Status Deployment status. valid values:.
+0: To be deployed.
+1: Deployment successful.
+2: Deployment failed.
+3: Deploying.
+4: Rollback succeeded.
+5: Rollback failure.
+6: No resource, no need for deployment.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -604,6 +707,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.TCBType = TCBType;
     }
 
+    /**
+     * Get Listener url (only for CLB).
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Url Listener url (only for CLB).
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set Listener url (only for CLB).
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Url Listener url (only for CLB).
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
     public UpdateRecordDetail() {
     }
 
@@ -681,6 +804,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.TCBType != null) {
             this.TCBType = new String(source.TCBType);
         }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
     }
 
 
@@ -710,6 +836,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "SecretName", this.SecretName);
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "TCBType", this.TCBType);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

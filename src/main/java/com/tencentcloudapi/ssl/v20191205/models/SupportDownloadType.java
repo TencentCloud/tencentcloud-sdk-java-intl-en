@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class SupportDownloadType extends AbstractModel {
 
     /**
-    * 
+    * Whether the available format of nginx can be downloaded.
     */
     @SerializedName("NGINX")
     @Expose
     private Boolean NGINX;
 
     /**
-    * 
+    * Whether the available format of apache can be downloaded.
     */
     @SerializedName("APACHE")
     @Expose
     private Boolean APACHE;
 
     /**
-    * 
+    * Whether the available format of tomcat can be downloaded.
     */
     @SerializedName("TOMCAT")
     @Expose
     private Boolean TOMCAT;
 
     /**
-    * 
+    * Whether the available format of iis can be downloaded.
     */
     @SerializedName("IIS")
     @Expose
     private Boolean IIS;
 
     /**
-    * 
+    * Indicates whether the jks format can be downloaded.
     */
     @SerializedName("JKS")
     @Expose
     private Boolean JKS;
 
     /**
-    * 
+    * Indicates whether other formats can be downloaded.
     */
     @SerializedName("OTHER")
     @Expose
     private Boolean OTHER;
 
     /**
-    * 
+    * Indicates whether the root certificate can be downloaded.
     */
     @SerializedName("ROOT")
     @Expose
     private Boolean ROOT;
 
     /**
-     * Get  
-     * @return NGINX 
+     * Get Whether the available format of nginx can be downloaded. 
+     * @return NGINX Whether the available format of nginx can be downloaded.
      */
     public Boolean getNGINX() {
         return this.NGINX;
     }
 
     /**
-     * Set 
-     * @param NGINX 
+     * Set Whether the available format of nginx can be downloaded.
+     * @param NGINX Whether the available format of nginx can be downloaded.
      */
     public void setNGINX(Boolean NGINX) {
         this.NGINX = NGINX;
     }
 
     /**
-     * Get  
-     * @return APACHE 
+     * Get Whether the available format of apache can be downloaded. 
+     * @return APACHE Whether the available format of apache can be downloaded.
      */
     public Boolean getAPACHE() {
         return this.APACHE;
     }
 
     /**
-     * Set 
-     * @param APACHE 
+     * Set Whether the available format of apache can be downloaded.
+     * @param APACHE Whether the available format of apache can be downloaded.
      */
     public void setAPACHE(Boolean APACHE) {
         this.APACHE = APACHE;
     }
 
     /**
-     * Get  
-     * @return TOMCAT 
+     * Get Whether the available format of tomcat can be downloaded. 
+     * @return TOMCAT Whether the available format of tomcat can be downloaded.
      */
     public Boolean getTOMCAT() {
         return this.TOMCAT;
     }
 
     /**
-     * Set 
-     * @param TOMCAT 
+     * Set Whether the available format of tomcat can be downloaded.
+     * @param TOMCAT Whether the available format of tomcat can be downloaded.
      */
     public void setTOMCAT(Boolean TOMCAT) {
         this.TOMCAT = TOMCAT;
     }
 
     /**
-     * Get  
-     * @return IIS 
+     * Get Whether the available format of iis can be downloaded. 
+     * @return IIS Whether the available format of iis can be downloaded.
      */
     public Boolean getIIS() {
         return this.IIS;
     }
 
     /**
-     * Set 
-     * @param IIS 
+     * Set Whether the available format of iis can be downloaded.
+     * @param IIS Whether the available format of iis can be downloaded.
      */
     public void setIIS(Boolean IIS) {
         this.IIS = IIS;
     }
 
     /**
-     * Get  
-     * @return JKS 
+     * Get Indicates whether the jks format can be downloaded. 
+     * @return JKS Indicates whether the jks format can be downloaded.
      */
     public Boolean getJKS() {
         return this.JKS;
     }
 
     /**
-     * Set 
-     * @param JKS 
+     * Set Indicates whether the jks format can be downloaded.
+     * @param JKS Indicates whether the jks format can be downloaded.
      */
     public void setJKS(Boolean JKS) {
         this.JKS = JKS;
     }
 
     /**
-     * Get  
-     * @return OTHER 
+     * Get Indicates whether other formats can be downloaded. 
+     * @return OTHER Indicates whether other formats can be downloaded.
      */
     public Boolean getOTHER() {
         return this.OTHER;
     }
 
     /**
-     * Set 
-     * @param OTHER 
+     * Set Indicates whether other formats can be downloaded.
+     * @param OTHER Indicates whether other formats can be downloaded.
      */
     public void setOTHER(Boolean OTHER) {
         this.OTHER = OTHER;
     }
 
     /**
-     * Get  
-     * @return ROOT 
+     * Get Indicates whether the root certificate can be downloaded. 
+     * @return ROOT Indicates whether the root certificate can be downloaded.
      */
     public Boolean getROOT() {
         return this.ROOT;
     }
 
     /**
-     * Set 
-     * @param ROOT 
+     * Set Indicates whether the root certificate can be downloaded.
+     * @param ROOT Indicates whether the root certificate can be downloaded.
      */
     public void setROOT(Boolean ROOT) {
         this.ROOT = ROOT;

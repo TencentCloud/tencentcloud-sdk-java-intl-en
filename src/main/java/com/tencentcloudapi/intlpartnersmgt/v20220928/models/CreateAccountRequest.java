@@ -80,19 +80,19 @@ Parameter value is not allowed to be 7,380,86.
     private String Area;
 
     /**
-    * Extension field, which is left empty by default.
-    */
-    @SerializedName("Extended")
-    @Expose
-    private String Extended;
-
-    /**
     * VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
     */
     @SerializedName("VerifyCode")
     @Expose
     private String VerifyCode;
+
+    /**
+    * Extension field, which is left empty by default.
+    */
+    @SerializedName("Extended")
+    @Expose
+    private String Extended;
 
     /**
     * Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
@@ -251,22 +251,6 @@ Parameter value is not allowed to be 7,380,86.
     }
 
     /**
-     * Get Extension field, which is left empty by default. 
-     * @return Extended Extension field, which is left empty by default.
-     */
-    public String getExtended() {
-        return this.Extended;
-    }
-
-    /**
-     * Set Extension field, which is left empty by default.
-     * @param Extended Extension field, which is left empty by default.
-     */
-    public void setExtended(String Extended) {
-        this.Extended = Extended;
-    }
-
-    /**
      * Get VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters. 
      * @return VerifyCode VerifyCode. This parameter is required. 
@@ -284,6 +268,22 @@ Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/
      */
     public void setVerifyCode(String VerifyCode) {
         this.VerifyCode = VerifyCode;
+    }
+
+    /**
+     * Get Extension field, which is left empty by default. 
+     * @return Extended Extension field, which is left empty by default.
+     */
+    public String getExtended() {
+        return this.Extended;
+    }
+
+    /**
+     * Set Extension field, which is left empty by default.
+     * @param Extended Extension field, which is left empty by default.
+     */
+    public void setExtended(String Extended) {
+        this.Extended = Extended;
     }
 
     /**
@@ -355,11 +355,11 @@ such as "kghy_0101"
         if (source.Area != null) {
             this.Area = new String(source.Area);
         }
-        if (source.Extended != null) {
-            this.Extended = new String(source.Extended);
-        }
         if (source.VerifyCode != null) {
             this.VerifyCode = new String(source.VerifyCode);
+        }
+        if (source.Extended != null) {
+            this.Extended = new String(source.Extended);
         }
         if (source.TradeOne != null) {
             this.TradeOne = new String(source.TradeOne);
@@ -381,8 +381,8 @@ such as "kghy_0101"
         this.setParamSimple(map, prefix + "PhoneNum", this.PhoneNum);
         this.setParamSimple(map, prefix + "CountryCode", this.CountryCode);
         this.setParamSimple(map, prefix + "Area", this.Area);
-        this.setParamSimple(map, prefix + "Extended", this.Extended);
         this.setParamSimple(map, prefix + "VerifyCode", this.VerifyCode);
+        this.setParamSimple(map, prefix + "Extended", this.Extended);
         this.setParamSimple(map, prefix + "TradeOne", this.TradeOne);
         this.setParamSimple(map, prefix + "TradeTwo", this.TradeTwo);
 

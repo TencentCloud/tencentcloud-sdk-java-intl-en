@@ -21,99 +21,115 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TeoInstanceList extends AbstractModel {
+public class COSInstanceList extends AbstractModel {
 
     /**
-    * The list of EDGEONE instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Region.
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * Instance details.
     */
     @SerializedName("InstanceList")
     @Expose
-    private TeoInstanceDetail [] InstanceList;
+    private CosInstanceDetail [] InstanceList;
 
     /**
-    * The total number of EDGEONE instances.	
+    * Total number under the region.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Whether to query exceptions.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Error message.
     */
     @SerializedName("Error")
     @Expose
     private String Error;
 
     /**
-     * Get The list of EDGEONE instances.	
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceList The list of EDGEONE instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Region. 
+     * @return Region Region.
      */
-    public TeoInstanceDetail [] getInstanceList() {
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set Region.
+     * @param Region Region.
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get Instance details. 
+     * @return InstanceList Instance details.
+     */
+    public CosInstanceDetail [] getInstanceList() {
         return this.InstanceList;
     }
 
     /**
-     * Set The list of EDGEONE instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceList The list of EDGEONE instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance details.
+     * @param InstanceList Instance details.
      */
-    public void setInstanceList(TeoInstanceDetail [] InstanceList) {
+    public void setInstanceList(CosInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
     }
 
     /**
-     * Get The total number of EDGEONE instances.	 
-     * @return TotalCount The total number of EDGEONE instances.	
+     * Get Total number under the region. 
+     * @return TotalCount Total number under the region.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The total number of EDGEONE instances.	
-     * @param TotalCount The total number of EDGEONE instances.	
+     * Set Total number under the region.
+     * @param TotalCount Total number under the region.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Whether to query exceptions.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Error Whether to query exceptions.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Error message. 
+     * @return Error Error message.
      */
     public String getError() {
         return this.Error;
     }
 
     /**
-     * Set Whether to query exceptions.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Error Whether to query exceptions.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Error message.
+     * @param Error Error message.
      */
     public void setError(String Error) {
         this.Error = Error;
     }
 
-    public TeoInstanceList() {
+    public COSInstanceList() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TeoInstanceList(TeoInstanceList source) {
+    public COSInstanceList(COSInstanceList source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
         if (source.InstanceList != null) {
-            this.InstanceList = new TeoInstanceDetail[source.InstanceList.length];
+            this.InstanceList = new CosInstanceDetail[source.InstanceList.length];
             for (int i = 0; i < source.InstanceList.length; i++) {
-                this.InstanceList[i] = new TeoInstanceDetail(source.InstanceList[i]);
+                this.InstanceList[i] = new CosInstanceDetail(source.InstanceList[i]);
             }
         }
         if (source.TotalCount != null) {
@@ -129,6 +145,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "Error", this.Error);
