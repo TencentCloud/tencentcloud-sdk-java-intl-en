@@ -149,6 +149,21 @@ If you currently use a password to log in, you will no longer be able to do so a
     }
 
     /**
+     *This API is used to create an instance launch template.
+
+An instance launch template contains the configuration information required to create an instance, including instance type, data/system disk type and size, and security group, etc.
+
+When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it’s not specified, the default template version is used.
+     * @param req CreateLaunchTemplateRequest
+     * @return CreateLaunchTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLaunchTemplateResponse CreateLaunchTemplate(CreateLaunchTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLaunchTemplate", CreateLaunchTemplateResponse.class);
+    }
+
+    /**
      *This API is used to create an instance launch template based on the specified template ID and the corresponding template version number. The default version number will be used when no template version numbers are specified. Each instance launch template can have up to 30 version numbers.
      * @param req CreateLaunchTemplateVersionRequest
      * @return CreateLaunchTemplateVersionResponse
