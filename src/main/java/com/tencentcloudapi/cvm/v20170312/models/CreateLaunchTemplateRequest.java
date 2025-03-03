@@ -211,6 +211,20 @@ false (default value): send a normal request and create instance(s) if all the r
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
+    * 
+    */
+    @SerializedName("DisableApiTermination")
+    @Expose
+    private Boolean DisableApiTermination;
+
+    /**
+    * Instance launch template tag description list. By specifying the TemplateTag parameter, you can bind tags to the instance launch template.
+    */
+    @SerializedName("LaunchTemplateTagSpecification")
+    @Expose
+    private TagSpecification [] LaunchTemplateTagSpecification;
+
+    /**
      * Get Instance launch template name. It can include 2-128 characters. 
      * @return LaunchTemplateName Instance launch template name. It can include 2-128 characters.
      */
@@ -646,6 +660,38 @@ false (default value): send a normal request and create instance(s) if all the r
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
+    /**
+     * Get  
+     * @return DisableApiTermination 
+     */
+    public Boolean getDisableApiTermination() {
+        return this.DisableApiTermination;
+    }
+
+    /**
+     * Set 
+     * @param DisableApiTermination 
+     */
+    public void setDisableApiTermination(Boolean DisableApiTermination) {
+        this.DisableApiTermination = DisableApiTermination;
+    }
+
+    /**
+     * Get Instance launch template tag description list. By specifying the TemplateTag parameter, you can bind tags to the instance launch template. 
+     * @return LaunchTemplateTagSpecification Instance launch template tag description list. By specifying the TemplateTag parameter, you can bind tags to the instance launch template.
+     */
+    public TagSpecification [] getLaunchTemplateTagSpecification() {
+        return this.LaunchTemplateTagSpecification;
+    }
+
+    /**
+     * Set Instance launch template tag description list. By specifying the TemplateTag parameter, you can bind tags to the instance launch template.
+     * @param LaunchTemplateTagSpecification Instance launch template tag description list. By specifying the TemplateTag parameter, you can bind tags to the instance launch template.
+     */
+    public void setLaunchTemplateTagSpecification(TagSpecification [] LaunchTemplateTagSpecification) {
+        this.LaunchTemplateTagSpecification = LaunchTemplateTagSpecification;
+    }
+
     public CreateLaunchTemplateRequest() {
     }
 
@@ -744,6 +790,15 @@ false (default value): send a normal request and create instance(s) if all the r
         if (source.InstanceChargePrepaid != null) {
             this.InstanceChargePrepaid = new InstanceChargePrepaid(source.InstanceChargePrepaid);
         }
+        if (source.DisableApiTermination != null) {
+            this.DisableApiTermination = new Boolean(source.DisableApiTermination);
+        }
+        if (source.LaunchTemplateTagSpecification != null) {
+            this.LaunchTemplateTagSpecification = new TagSpecification[source.LaunchTemplateTagSpecification.length];
+            for (int i = 0; i < source.LaunchTemplateTagSpecification.length; i++) {
+                this.LaunchTemplateTagSpecification[i] = new TagSpecification(source.LaunchTemplateTagSpecification[i]);
+            }
+        }
     }
 
 
@@ -777,6 +832,8 @@ false (default value): send a normal request and create instance(s) if all the r
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+        this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+        this.setParamArrayObj(map, prefix + "LaunchTemplateTagSpecification.", this.LaunchTemplateTagSpecification);
 
     }
 }

@@ -153,7 +153,7 @@ If you currently use a password to log in, you will no longer be able to do so a
 
 An instance launch template contains the configuration information required to create an instance, including instance type, data/system disk type and size, and security group, etc.
 
-When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it’s not specified, the default template version is used.
+When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it's not specified, the default template version is used.
      * @param req CreateLaunchTemplateRequest
      * @return CreateLaunchTemplateResponse
      * @throws TencentCloudSDKException
