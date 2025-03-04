@@ -52,6 +52,16 @@ public class DescribeDisasterRecoverGroupsRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * <li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li>`tag-value` - String - Optional - Filter by the tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. Replace `tag-key` with the actual tag keys.</li>
+Each request can have up to 10 `Filters` and 5 `Filters.Values`.
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get ID list of spread placement groups. You can operate up to 10 spread placement groups in each request. 
      * @return DisasterRecoverGroupIds ID list of spread placement groups. You can operate up to 10 spread placement groups in each request.
      */
@@ -115,6 +125,34 @@ public class DescribeDisasterRecoverGroupsRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get <li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li>`tag-value` - String - Optional - Filter by the tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. Replace `tag-key` with the actual tag keys.</li>
+Each request can have up to 10 `Filters` and 5 `Filters.Values`. 
+     * @return Filters <li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li>`tag-value` - String - Optional - Filter by the tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. Replace `tag-key` with the actual tag keys.</li>
+Each request can have up to 10 `Filters` and 5 `Filters.Values`.
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li>`tag-value` - String - Optional - Filter by the tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. Replace `tag-key` with the actual tag keys.</li>
+Each request can have up to 10 `Filters` and 5 `Filters.Values`.
+     * @param Filters <li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li>`tag-value` - String - Optional - Filter by the tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. Replace `tag-key` with the actual tag keys.</li>
+Each request can have up to 10 `Filters` and 5 `Filters.Values`.
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeDisasterRecoverGroupsRequest() {
     }
 
@@ -138,6 +176,12 @@ public class DescribeDisasterRecoverGroupsRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -149,6 +193,7 @@ public class DescribeDisasterRecoverGroupsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

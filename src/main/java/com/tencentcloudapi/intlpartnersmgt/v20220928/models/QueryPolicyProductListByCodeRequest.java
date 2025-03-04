@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class QueryPolicyProductListByCodeRequest extends AbstractModel {
 
     /**
-    * Dealer policy code.
+    * Policy code.
     */
     @SerializedName("PolicyCode")
     @Expose
     private String PolicyCode;
 
     /**
-    * Product level 1 code.
+    * The code of the ProductName field in the  bill data.
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * Product level 1 name.
+    * The ProductName field value in the billing data.
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * Product level 2 code.
+    * The code of the SubProductName field in the  bill data.
     */
     @SerializedName("SubProductCode")
     @Expose
     private String SubProductCode;
 
     /**
-    * Product level 2 name.
+    * The SubProductName field value in the billing data.
     */
     @SerializedName("SubProductName")
     @Expose
@@ -73,80 +73,80 @@ public class QueryPolicyProductListByCodeRequest extends AbstractModel {
     private Long PageSize;
 
     /**
-     * Get Dealer policy code. 
-     * @return PolicyCode Dealer policy code.
+     * Get Policy code. 
+     * @return PolicyCode Policy code.
      */
     public String getPolicyCode() {
         return this.PolicyCode;
     }
 
     /**
-     * Set Dealer policy code.
-     * @param PolicyCode Dealer policy code.
+     * Set Policy code.
+     * @param PolicyCode Policy code.
      */
     public void setPolicyCode(String PolicyCode) {
         this.PolicyCode = PolicyCode;
     }
 
     /**
-     * Get Product level 1 code. 
-     * @return ProductCode Product level 1 code.
+     * Get The code of the ProductName field in the  bill data. 
+     * @return ProductCode The code of the ProductName field in the  bill data.
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set Product level 1 code.
-     * @param ProductCode Product level 1 code.
+     * Set The code of the ProductName field in the  bill data.
+     * @param ProductCode The code of the ProductName field in the  bill data.
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get Product level 1 name. 
-     * @return ProductName Product level 1 name.
+     * Get The ProductName field value in the billing data. 
+     * @return ProductName The ProductName field value in the billing data.
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set Product level 1 name.
-     * @param ProductName Product level 1 name.
+     * Set The ProductName field value in the billing data.
+     * @param ProductName The ProductName field value in the billing data.
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get Product level 2 code. 
-     * @return SubProductCode Product level 2 code.
+     * Get The code of the SubProductName field in the  bill data. 
+     * @return SubProductCode The code of the SubProductName field in the  bill data.
      */
     public String getSubProductCode() {
         return this.SubProductCode;
     }
 
     /**
-     * Set Product level 2 code.
-     * @param SubProductCode Product level 2 code.
+     * Set The code of the SubProductName field in the  bill data.
+     * @param SubProductCode The code of the SubProductName field in the  bill data.
      */
     public void setSubProductCode(String SubProductCode) {
         this.SubProductCode = SubProductCode;
     }
 
     /**
-     * Get Product level 2 name. 
-     * @return SubProductName Product level 2 name.
+     * Get The SubProductName field value in the billing data. 
+     * @return SubProductName The SubProductName field value in the billing data.
      */
     public String getSubProductName() {
         return this.SubProductName;
     }
 
     /**
-     * Set Product level 2 name.
-     * @param SubProductName Product level 2 name.
+     * Set The SubProductName field value in the billing data.
+     * @param SubProductName The SubProductName field value in the billing data.
      */
     public void setSubProductName(String SubProductName) {
         this.SubProductName = SubProductName;

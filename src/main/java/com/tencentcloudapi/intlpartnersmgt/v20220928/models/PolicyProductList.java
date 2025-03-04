@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class PolicyProductList extends AbstractModel {
 
     /**
-    * Dealer policy code.
+    *  Policy code.
     */
     @SerializedName("PolicyCode")
     @Expose
     private String PolicyCode;
 
     /**
-    * Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
+    * The code of the ProductName field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
+    * The ProductName field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
+    * The code of the SubProduct field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
     */
     @SerializedName("SubProductCode")
     @Expose
     private String SubProductCode;
 
     /**
-    * Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
+    * The SubProduct field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
     */
     @SerializedName("SubProductName")
     @Expose
     private String SubProductName;
 
     /**
-    * Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
+    * The code of the ComponentType field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
     */
     @SerializedName("ComponentTypeCode")
     @Expose
     private String ComponentTypeCode;
 
     /**
-    * Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
+    * The ComponentType field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
     */
     @SerializedName("ComponentTypeName")
     @Expose
     private String ComponentTypeName;
 
     /**
-    * Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
+    * The code of the Component field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
     */
     @SerializedName("ComponentCode")
     @Expose
     private String ComponentCode;
 
     /**
-    * Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
+    * The Component field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
     */
     @SerializedName("ComponentName")
     @Expose
@@ -101,144 +101,144 @@ public class PolicyProductList extends AbstractModel {
     private String EndDate;
 
     /**
-     * Get Dealer policy code. 
-     * @return PolicyCode Dealer policy code.
+     * Get  Policy code. 
+     * @return PolicyCode  Policy code.
      */
     public String getPolicyCode() {
         return this.PolicyCode;
     }
 
     /**
-     * Set Dealer policy code.
-     * @param PolicyCode Dealer policy code.
+     * Set  Policy code.
+     * @param PolicyCode  Policy code.
      */
     public void setPolicyCode(String PolicyCode) {
         this.PolicyCode = PolicyCode;
     }
 
     /**
-     * Get Product level 1 code. If the return value is *, any item at this level is included in the policy product range. 
-     * @return ProductCode Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
+     * Get The code of the ProductName field in the  bill data. If the return value is *, any item at this level is included in the policy product range. 
+     * @return ProductCode The code of the ProductName field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
-     * @param ProductCode Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
+     * Set The code of the ProductName field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+     * @param ProductCode The code of the ProductName field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get Product level 1 name. If the return value is *, any item at this level is included in the policy product range. 
-     * @return ProductName Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
+     * Get The ProductName field value in the billing data. If the return value is *, any item at this level is included in the policy product range. 
+     * @return ProductName The ProductName field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
-     * @param ProductName Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
+     * Set The ProductName field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+     * @param ProductName The ProductName field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get Product level 2 code. If the return value is *, any item at this level is included in the policy product range. 
-     * @return SubProductCode Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
+     * Get The code of the SubProduct field in the  bill data. If the return value is *, any item at this level is included in the policy product range. 
+     * @return SubProductCode The code of the SubProduct field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
      */
     public String getSubProductCode() {
         return this.SubProductCode;
     }
 
     /**
-     * Set Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
-     * @param SubProductCode Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
+     * Set The code of the SubProduct field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+     * @param SubProductCode The code of the SubProduct field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
      */
     public void setSubProductCode(String SubProductCode) {
         this.SubProductCode = SubProductCode;
     }
 
     /**
-     * Get Product level 2 name. If the return value is *, any item at this level is included in the policy product range. 
-     * @return SubProductName Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
+     * Get The SubProduct field value in the billing data. If the return value is *, any item at this level is included in the policy product range. 
+     * @return SubProductName The SubProduct field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
      */
     public String getSubProductName() {
         return this.SubProductName;
     }
 
     /**
-     * Set Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
-     * @param SubProductName Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
+     * Set The SubProduct field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+     * @param SubProductName The SubProduct field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
      */
     public void setSubProductName(String SubProductName) {
         this.SubProductName = SubProductName;
     }
 
     /**
-     * Get Product level 3 code. If the return value is *, any item at this level is included in the policy product range. 
-     * @return ComponentTypeCode Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
+     * Get The code of the ComponentType field in the  bill data. If the return value is *, any item at this level is included in the policy product range. 
+     * @return ComponentTypeCode The code of the ComponentType field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
      */
     public String getComponentTypeCode() {
         return this.ComponentTypeCode;
     }
 
     /**
-     * Set Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
-     * @param ComponentTypeCode Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
+     * Set The code of the ComponentType field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+     * @param ComponentTypeCode The code of the ComponentType field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
      */
     public void setComponentTypeCode(String ComponentTypeCode) {
         this.ComponentTypeCode = ComponentTypeCode;
     }
 
     /**
-     * Get Product level 3 name. If the return value is *, any item at this level is included in the policy product range. 
-     * @return ComponentTypeName Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
+     * Get The ComponentType field value in the billing data. If the return value is *, any item at this level is included in the policy product range. 
+     * @return ComponentTypeName The ComponentType field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
      */
     public String getComponentTypeName() {
         return this.ComponentTypeName;
     }
 
     /**
-     * Set Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
-     * @param ComponentTypeName Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
+     * Set The ComponentType field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+     * @param ComponentTypeName The ComponentType field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
      */
     public void setComponentTypeName(String ComponentTypeName) {
         this.ComponentTypeName = ComponentTypeName;
     }
 
     /**
-     * Get Product level 4 code. If the return value is *, any item at this level is included in the policy product range. 
-     * @return ComponentCode Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
+     * Get The code of the Component field in the  bill data. If the return value is *, any item at this level is included in the policy product range. 
+     * @return ComponentCode The code of the Component field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
      */
     public String getComponentCode() {
         return this.ComponentCode;
     }
 
     /**
-     * Set Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
-     * @param ComponentCode Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
+     * Set The code of the Component field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+     * @param ComponentCode The code of the Component field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
      */
     public void setComponentCode(String ComponentCode) {
         this.ComponentCode = ComponentCode;
     }
 
     /**
-     * Get Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope. 
-     * @return ComponentName Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
+     * Get The Component field value in the billing data. If the return value is *, any item at this level is included in the policy product range. 
+     * @return ComponentName The Component field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
      */
     public String getComponentName() {
         return this.ComponentName;
     }
 
     /**
-     * Set Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
-     * @param ComponentName Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
+     * Set The Component field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+     * @param ComponentName The Component field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;
