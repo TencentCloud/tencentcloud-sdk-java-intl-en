@@ -45,7 +45,7 @@ public class EndpointInfo extends AbstractModel {
     private EndpointAuthInfo AuthInfo;
 
     /**
-    * Endpoint protocol.
+    * Endpoint protocol, supports `HLS`, `CMAF`, `CMAF-HLS`.
     */
     @SerializedName("Protocol")
     @Expose
@@ -102,6 +102,20 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
     private String CustomUrlParam;
 
     /**
+    * DRM switch. If it is turned on, only CMAF will take effect.
+    */
+    @SerializedName("DRMEnabled")
+    @Expose
+    private Boolean DRMEnabled;
+
+    /**
+    * DRM configuration information.
+    */
+    @SerializedName("DRMInfo")
+    @Expose
+    private DRMInfo DRMInfo;
+
+    /**
      * Get Endpoint name. 
      * @return Name Endpoint name.
      */
@@ -150,16 +164,16 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
     }
 
     /**
-     * Get Endpoint protocol. 
-     * @return Protocol Endpoint protocol.
+     * Get Endpoint protocol, supports `HLS`, `CMAF`, `CMAF-HLS`. 
+     * @return Protocol Endpoint protocol, supports `HLS`, `CMAF`, `CMAF-HLS`.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Endpoint protocol.
-     * @param Protocol Endpoint protocol.
+     * Set Endpoint protocol, supports `HLS`, `CMAF`, `CMAF-HLS`.
+     * @param Protocol Endpoint protocol, supports `HLS`, `CMAF`, `CMAF-HLS`.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -281,6 +295,38 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
         this.CustomUrlParam = CustomUrlParam;
     }
 
+    /**
+     * Get DRM switch. If it is turned on, only CMAF will take effect. 
+     * @return DRMEnabled DRM switch. If it is turned on, only CMAF will take effect.
+     */
+    public Boolean getDRMEnabled() {
+        return this.DRMEnabled;
+    }
+
+    /**
+     * Set DRM switch. If it is turned on, only CMAF will take effect.
+     * @param DRMEnabled DRM switch. If it is turned on, only CMAF will take effect.
+     */
+    public void setDRMEnabled(Boolean DRMEnabled) {
+        this.DRMEnabled = DRMEnabled;
+    }
+
+    /**
+     * Get DRM configuration information. 
+     * @return DRMInfo DRM configuration information.
+     */
+    public DRMInfo getDRMInfo() {
+        return this.DRMInfo;
+    }
+
+    /**
+     * Set DRM configuration information.
+     * @param DRMInfo DRM configuration information.
+     */
+    public void setDRMInfo(DRMInfo DRMInfo) {
+        this.DRMInfo = DRMInfo;
+    }
+
     public EndpointInfo() {
     }
 
@@ -322,6 +368,12 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
         if (source.CustomUrlParam != null) {
             this.CustomUrlParam = new String(source.CustomUrlParam);
         }
+        if (source.DRMEnabled != null) {
+            this.DRMEnabled = new Boolean(source.DRMEnabled);
+        }
+        if (source.DRMInfo != null) {
+            this.DRMInfo = new DRMInfo(source.DRMInfo);
+        }
     }
 
 
@@ -340,6 +392,8 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
         this.setParamObj(map, prefix + "SSAIInfo.", this.SSAIInfo);
         this.setParamSimple(map, prefix + "CustomUrlParamIndex", this.CustomUrlParamIndex);
         this.setParamSimple(map, prefix + "CustomUrlParam", this.CustomUrlParam);
+        this.setParamSimple(map, prefix + "DRMEnabled", this.DRMEnabled);
+        this.setParamObj(map, prefix + "DRMInfo.", this.DRMInfo);
 
     }
 }

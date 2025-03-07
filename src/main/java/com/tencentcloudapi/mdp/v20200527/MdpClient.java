@@ -39,6 +39,17 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
+     *Linear Assembly channel is bound to CDN playback domain name.
+     * @param req BindLinearAssemblyCDNDomainWithChannelRequest
+     * @return BindLinearAssemblyCDNDomainWithChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindLinearAssemblyCDNDomainWithChannelResponse BindLinearAssemblyCDNDomainWithChannel(BindLinearAssemblyCDNDomainWithChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindLinearAssemblyCDNDomainWithChannel", BindLinearAssemblyCDNDomainWithChannelResponse.class);
+    }
+
+    /**
      *This API is used to bind an LVB domain name to a channel.
      * @param req BindNewLVBDomainWithChannelRequest
      * @return BindNewLVBDomainWithChannelResponse
@@ -256,6 +267,28 @@ public class MdpClient extends AbstractClient{
     public DeleteStreamPackageSourceLocationResponse DeleteStreamPackageSourceLocation(DeleteStreamPackageSourceLocationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteStreamPackageSourceLocation", DeleteStreamPackageSourceLocationResponse.class);
+    }
+
+    /**
+     *Query the CDN domain name associated with the LinearAssembly channel.
+     * @param req DescribeLinearAssemblyCDNDomainWithChannelRequest
+     * @return DescribeLinearAssemblyCDNDomainWithChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLinearAssemblyCDNDomainWithChannelResponse DescribeLinearAssemblyCDNDomainWithChannel(DescribeLinearAssemblyCDNDomainWithChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLinearAssemblyCDNDomainWithChannel", DescribeLinearAssemblyCDNDomainWithChannelResponse.class);
+    }
+
+    /**
+     *Query the CDN domain names associated with all LinearAssembly channels.
+     * @param req DescribeLinearAssemblyCDNDomainWithChannelsRequest
+     * @return DescribeLinearAssemblyCDNDomainWithChannelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLinearAssemblyCDNDomainWithChannelsResponse DescribeLinearAssemblyCDNDomainWithChannels(DescribeLinearAssemblyCDNDomainWithChannelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLinearAssemblyCDNDomainWithChannels", DescribeLinearAssemblyCDNDomainWithChannelsResponse.class);
     }
 
     /**
@@ -575,6 +608,17 @@ public class MdpClient extends AbstractClient{
     public UnbindCdnDomainWithChannelResponse UnbindCdnDomainWithChannel(UnbindCdnDomainWithChannelRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnbindCdnDomainWithChannel", UnbindCdnDomainWithChannelResponse.class);
+    }
+
+    /**
+     *Unbind LinearAssembly channel with CDN domain name.
+     * @param req UnbindLinearAssemblyCDNDomainWithChannelRequest
+     * @return UnbindLinearAssemblyCDNDomainWithChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindLinearAssemblyCDNDomainWithChannelResponse UnbindLinearAssemblyCDNDomainWithChannel(UnbindLinearAssemblyCDNDomainWithChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnbindLinearAssemblyCDNDomainWithChannel", UnbindLinearAssemblyCDNDomainWithChannelResponse.class);
     }
 
 }

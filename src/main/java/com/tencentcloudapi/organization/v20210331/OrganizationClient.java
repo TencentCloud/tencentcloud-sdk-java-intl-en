@@ -61,6 +61,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add an organization member's mailbox.
+     * @param req AddOrganizationMemberEmailRequest
+     * @return AddOrganizationMemberEmailResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddOrganizationMemberEmailResponse AddOrganizationMemberEmail(AddOrganizationMemberEmailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddOrganizationMemberEmail", AddOrganizationMemberEmailResponse.class);
+    }
+
+    /**
      *This API is used to add an organization node.
      * @param req AddOrganizationNodeRequest
      * @return AddOrganizationNodeResponse
@@ -520,6 +531,17 @@ public class OrganizationClient extends AbstractClient{
     public DescribeOrganizationMemberAuthIdentitiesResponse DescribeOrganizationMemberAuthIdentities(DescribeOrganizationMemberAuthIdentitiesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeOrganizationMemberAuthIdentities", DescribeOrganizationMemberAuthIdentitiesResponse.class);
+    }
+
+    /**
+     *This API is used to query detailed information about member mailbox binding.
+     * @param req DescribeOrganizationMemberEmailBindRequest
+     * @return DescribeOrganizationMemberEmailBindResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationMemberEmailBindResponse DescribeOrganizationMemberEmailBind(DescribeOrganizationMemberEmailBindRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOrganizationMemberEmailBind", DescribeOrganizationMemberEmailBindResponse.class);
     }
 
     /**
@@ -985,6 +1007,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to resend an email for activating the member's bound mailbox.
+     * @param req SendOrgMemberAccountBindEmailRequest
+     * @return SendOrgMemberAccountBindEmailResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendOrgMemberAccountBindEmailResponse SendOrgMemberAccountBindEmail(SendOrgMemberAccountBindEmailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SendOrgMemberAccountBindEmail", SendOrgMemberAccountBindEmailResponse.class);
+    }
+
+    /**
      *This API is used to configure the SAML identity provider information.
      * @param req SetExternalSAMLIdentityProviderRequest
      * @return SetExternalSAMLIdentityProviderResponse
@@ -1037,6 +1070,17 @@ public class OrganizationClient extends AbstractClient{
     public UpdateOrganizationMemberResponse UpdateOrganizationMember(UpdateOrganizationMemberRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateOrganizationMember", UpdateOrganizationMemberResponse.class);
+    }
+
+    /**
+     *This API is used to modify the mailbox of a bound member.
+     * @param req UpdateOrganizationMemberEmailBindRequest
+     * @return UpdateOrganizationMemberEmailBindResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOrganizationMemberEmailBindResponse UpdateOrganizationMemberEmailBind(UpdateOrganizationMemberEmailBindRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateOrganizationMemberEmailBind", UpdateOrganizationMemberEmailBindResponse.class);
     }
 
     /**

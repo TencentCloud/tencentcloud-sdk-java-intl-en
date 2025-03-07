@@ -766,6 +766,20 @@ When a template is created, it defaults to Version 1. You can use `CreateLaunchT
     }
 
     /**
+     *This API is used to modify the renewal flag of monthly subscription instances.
+
+* After an instance is marked as auto-renewal, it will be automatically renewed for one month each time it expires.
+* Batch operations are supported. The maximum number of instances for each request is 100.* You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
+     * @param req ModifyInstancesRenewFlagRequest
+     * @return ModifyInstancesRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstancesRenewFlagResponse ModifyInstancesRenewFlag(ModifyInstancesRenewFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstancesRenewFlag", ModifyInstancesRenewFlagResponse.class);
+    }
+
+    /**
      *This API is used to modify the VPC attributes of an instance, such as the VPC IP address.
 * This action will shut down the instance, and restart it after the modification is completed.
 * To migrate an instance to another VPC/subnet, specify the new VPC and subnet directly. Make sure that the instance to migrate is not bound to an [ENI](https://intl.cloud.tencent.com/document/product/576?from_cn_redirect=1) or [CLB](https://intl.cloud.tencent.com/document/product/214?from_cn_redirect=1) instances.
