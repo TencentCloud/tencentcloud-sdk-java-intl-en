@@ -735,9 +735,7 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *产品重构优化，这几个接口已经没有调用了
-
-This API is used to remove the specified check item from the allowlist.
+     *This API is used to remove the specified check item from the allowlist.
      * @param req DeleteCompliancePolicyItemFromWhitelistRequest
      * @return DeleteCompliancePolicyItemFromWhitelistResponse
      * @throws TencentCloudSDKException

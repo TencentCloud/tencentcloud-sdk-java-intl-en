@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CardInfo extends AbstractModel {
 
     /**
-    * Hong Kong ID Card
+    * Hong Kong ID (China) Card
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HKIDCard")
@@ -88,7 +88,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private PhilippinesUMID PhilippinesUMID;
 
     /**
-    * ID Cards of Hong Kong, Macao and Taiwan (China), and International Passport
+    * ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InternationalIDPassport")
@@ -128,7 +128,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private SingaporeIDCard SingaporeIDCard;
 
     /**
-    * Macao ID Card
+    * Macao (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MacaoIDCard")
@@ -136,7 +136,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private MacaoIDCard MacaoIDCard;
 
     /**
-    * TaiWan ID Card
+    * TaiWan (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaiWanIDCard")
@@ -192,9 +192,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private PakistanDrivingLicense PakistanDrivingLicense;
 
     /**
-     * Get Hong Kong ID Card
+     * Get Hong Kong ID (China) Card
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HKIDCard Hong Kong ID Card
+     * @return HKIDCard Hong Kong ID (China) Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public HKIDCard getHKIDCard() {
@@ -202,9 +202,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Hong Kong ID Card
+     * Set Hong Kong ID (China) Card
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HKIDCard Hong Kong ID Card
+     * @param HKIDCard Hong Kong ID (China) Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHKIDCard(HKIDCard HKIDCard) {
@@ -352,9 +352,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get ID Cards of Hong Kong, Macao and Taiwan (China), and International Passport
+     * Get ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InternationalIDPassport ID Cards of Hong Kong, Macao and Taiwan (China), and International Passport
+     * @return InternationalIDPassport ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public InternationalIDPassport getInternationalIDPassport() {
@@ -362,9 +362,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set ID Cards of Hong Kong, Macao and Taiwan (China), and International Passport
+     * Set ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InternationalIDPassport ID Cards of Hong Kong, Macao and Taiwan (China), and International Passport
+     * @param InternationalIDPassport ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInternationalIDPassport(InternationalIDPassport InternationalIDPassport) {
@@ -452,9 +452,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Macao ID Card
+     * Get Macao (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MacaoIDCard Macao ID Card
+     * @return MacaoIDCard Macao (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MacaoIDCard getMacaoIDCard() {
@@ -462,9 +462,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Macao ID Card
+     * Set Macao (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MacaoIDCard Macao ID Card
+     * @param MacaoIDCard Macao (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMacaoIDCard(MacaoIDCard MacaoIDCard) {
@@ -472,9 +472,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get TaiWan ID Card
+     * Get TaiWan (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaiWanIDCard TaiWan ID Card
+     * @return TaiWanIDCard TaiWan (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TaiWanIDCard getTaiWanIDCard() {
@@ -482,9 +482,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set TaiWan ID Card
+     * Set TaiWan (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaiWanIDCard TaiWan ID Card
+     * @param TaiWanIDCard TaiWan (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTaiWanIDCard(TaiWanIDCard TaiWanIDCard) {
