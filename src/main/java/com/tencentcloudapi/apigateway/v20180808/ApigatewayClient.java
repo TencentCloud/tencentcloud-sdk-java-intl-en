@@ -545,6 +545,17 @@ To make authentication and throttling for a service take effect, you need to bin
     }
 
     /**
+     *This API is used to obtain the network configuration list of a dedicated instance.
+     * @param req DescribeInstancesNetworkConfigRequest
+     * @return DescribeInstancesNetworkConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesNetworkConfigResponse DescribeInstancesNetworkConfig(DescribeInstancesNetworkConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstancesNetworkConfig", DescribeInstancesNetworkConfigResponse.class);
+    }
+
+    /**
      *This API is used to search for logs.
      * @param req DescribeLogSearchRequest
      * @return DescribeLogSearchResponse
