@@ -113,6 +113,27 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
     private Long SegmentRate;
 
     /**
+    * 
+    */
+    @SerializedName("EmotionCategory")
+    @Expose
+    private String EmotionCategory;
+
+    /**
+    * 
+    */
+    @SerializedName("EmotionIntensity")
+    @Expose
+    private Long EmotionIntensity;
+
+    /**
+    * 
+    */
+    @SerializedName("FastVoiceType")
+    @Expose
+    private String FastVoiceType;
+
+    /**
      * Get The source text for synthesizing speech, which is encoded in UTF-8.
 It can contain up to 150 Chinese characters (a full-width punctuation as a Chinese character) or 500 letters ( a half-width punctuation as a letter). 
      * @return Text The source text for synthesizing speech, which is encoded in UTF-8.
@@ -324,6 +345,54 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
         this.SegmentRate = SegmentRate;
     }
 
+    /**
+     * Get  
+     * @return EmotionCategory 
+     */
+    public String getEmotionCategory() {
+        return this.EmotionCategory;
+    }
+
+    /**
+     * Set 
+     * @param EmotionCategory 
+     */
+    public void setEmotionCategory(String EmotionCategory) {
+        this.EmotionCategory = EmotionCategory;
+    }
+
+    /**
+     * Get  
+     * @return EmotionIntensity 
+     */
+    public Long getEmotionIntensity() {
+        return this.EmotionIntensity;
+    }
+
+    /**
+     * Set 
+     * @param EmotionIntensity 
+     */
+    public void setEmotionIntensity(Long EmotionIntensity) {
+        this.EmotionIntensity = EmotionIntensity;
+    }
+
+    /**
+     * Get  
+     * @return FastVoiceType 
+     */
+    public String getFastVoiceType() {
+        return this.FastVoiceType;
+    }
+
+    /**
+     * Set 
+     * @param FastVoiceType 
+     */
+    public void setFastVoiceType(String FastVoiceType) {
+        this.FastVoiceType = FastVoiceType;
+    }
+
     public TextToVoiceRequest() {
     }
 
@@ -368,6 +437,15 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
         if (source.SegmentRate != null) {
             this.SegmentRate = new Long(source.SegmentRate);
         }
+        if (source.EmotionCategory != null) {
+            this.EmotionCategory = new String(source.EmotionCategory);
+        }
+        if (source.EmotionIntensity != null) {
+            this.EmotionIntensity = new Long(source.EmotionIntensity);
+        }
+        if (source.FastVoiceType != null) {
+            this.FastVoiceType = new String(source.FastVoiceType);
+        }
     }
 
 
@@ -387,6 +465,9 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "EnableSubtitle", this.EnableSubtitle);
         this.setParamSimple(map, prefix + "SegmentRate", this.SegmentRate);
+        this.setParamSimple(map, prefix + "EmotionCategory", this.EmotionCategory);
+        this.setParamSimple(map, prefix + "EmotionIntensity", this.EmotionIntensity);
+        this.setParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
 
     }
 }

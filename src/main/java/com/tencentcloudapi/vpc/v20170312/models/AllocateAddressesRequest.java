@@ -136,6 +136,13 @@ Whether the Anycast EIP can be bound to CLB instances.
     private String DedicatedClusterId;
 
     /**
+    * 
+    */
+    @SerializedName("IsDedicatedAddressPool")
+    @Expose
+    private Boolean IsDedicatedAddressPool;
+
+    /**
     * Network egress. It defaults to `center_egress1`.
     */
     @SerializedName("Egress")
@@ -449,6 +456,22 @@ Whether the Anycast EIP can be bound to CLB instances.
     }
 
     /**
+     * Get  
+     * @return IsDedicatedAddressPool 
+     */
+    public Boolean getIsDedicatedAddressPool() {
+        return this.IsDedicatedAddressPool;
+    }
+
+    /**
+     * Set 
+     * @param IsDedicatedAddressPool 
+     */
+    public void setIsDedicatedAddressPool(Boolean IsDedicatedAddressPool) {
+        this.IsDedicatedAddressPool = IsDedicatedAddressPool;
+    }
+
+    /**
      * Get Network egress. It defaults to `center_egress1`. 
      * @return Egress Network egress. It defaults to `center_egress1`.
      */
@@ -549,6 +572,9 @@ Whether the Anycast EIP can be bound to CLB instances.
         if (source.DedicatedClusterId != null) {
             this.DedicatedClusterId = new String(source.DedicatedClusterId);
         }
+        if (source.IsDedicatedAddressPool != null) {
+            this.IsDedicatedAddressPool = new Boolean(source.IsDedicatedAddressPool);
+        }
         if (source.Egress != null) {
             this.Egress = new String(source.Egress);
         }
@@ -578,6 +604,7 @@ Whether the Anycast EIP can be bound to CLB instances.
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         this.setParamSimple(map, prefix + "AddressName", this.AddressName);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+        this.setParamSimple(map, prefix + "IsDedicatedAddressPool", this.IsDedicatedAddressPool);
         this.setParamSimple(map, prefix + "Egress", this.Egress);
         this.setParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
