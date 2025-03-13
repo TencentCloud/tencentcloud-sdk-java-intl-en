@@ -462,7 +462,18 @@ When a template is created, it defaults to Version 1. You can use `CreateLaunchT
     }
 
     /**
-     *This API is used to describe reserved instance (RI) offerings. Currently, RIs are only offered to beta users.
+     *This API is used to list the reserved instances purchased by the user.
+     * @param req DescribeReservedInstancesRequest
+     * @return DescribeReservedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReservedInstancesResponse DescribeReservedInstances(DescribeReservedInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReservedInstances", DescribeReservedInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to describe reserved instance (RI) offerings.
      * @param req DescribeReservedInstancesConfigInfosRequest
      * @return DescribeReservedInstancesConfigInfosResponse
      * @throws TencentCloudSDKException

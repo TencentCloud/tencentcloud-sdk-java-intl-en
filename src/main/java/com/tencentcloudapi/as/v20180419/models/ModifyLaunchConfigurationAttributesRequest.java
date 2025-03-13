@@ -88,8 +88,9 @@ When the public outbound network bandwidth is 0 Mbps, assigning a public IP is n
 
     /**
     * Instance billing mode. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -388,11 +389,13 @@ When the public outbound network bandwidth is 0 Mbps, assigning a public IP is n
 
     /**
      * Get Instance billing mode. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance 
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li> 
      * @return InstanceChargeType Instance billing mode. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
@@ -400,11 +403,13 @@ When the public outbound network bandwidth is 0 Mbps, assigning a public IP is n
 
     /**
      * Set Instance billing mode. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
      * @param InstanceChargeType Instance billing mode. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;

@@ -963,7 +963,7 @@ public enum CvmErrorCode {
     // The user does not have permissions to operate the current instance.
      UNSUPPORTEDOPERATION_INVALIDINSTANCESOWNER("UnsupportedOperation.InvalidInstancesOwner"),
      
-    // The current operation is only supported for Tencent Cloud International users.
+    // The current operation is supported only for Tencent Cloud users.
      UNSUPPORTEDOPERATION_INVALIDPERMISSIONNONINTERNATIONALACCOUNT("UnsupportedOperation.InvalidPermissionNonInternationalAccount"),
      
     // Encrypted disks are not available in the selected regions.

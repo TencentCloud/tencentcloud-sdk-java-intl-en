@@ -75,14 +75,14 @@ Valid value: `Linux`.
     private String ProductDescription;
 
     /**
-    * Upfront total cost, in USD.
+    * Discount price for subsequent total cost, in USD/hr.
     */
     @SerializedName("DiscountUsagePrice")
     @Expose
     private Float DiscountUsagePrice;
 
     /**
-    * Discount price for subsequent total cost, in USD/hr.
+    * Discount price for upfront total cost, in USD.
     */
     @SerializedName("DiscountFixedPrice")
     @Expose
@@ -209,32 +209,32 @@ Valid value: `Linux`.
     }
 
     /**
-     * Get Upfront total cost, in USD. 
-     * @return DiscountUsagePrice Upfront total cost, in USD.
+     * Get Discount price for subsequent total cost, in USD/hr. 
+     * @return DiscountUsagePrice Discount price for subsequent total cost, in USD/hr.
      */
     public Float getDiscountUsagePrice() {
         return this.DiscountUsagePrice;
     }
 
     /**
-     * Set Upfront total cost, in USD.
-     * @param DiscountUsagePrice Upfront total cost, in USD.
+     * Set Discount price for subsequent total cost, in USD/hr.
+     * @param DiscountUsagePrice Discount price for subsequent total cost, in USD/hr.
      */
     public void setDiscountUsagePrice(Float DiscountUsagePrice) {
         this.DiscountUsagePrice = DiscountUsagePrice;
     }
 
     /**
-     * Get Discount price for subsequent total cost, in USD/hr. 
-     * @return DiscountFixedPrice Discount price for subsequent total cost, in USD/hr.
+     * Get Discount price for upfront total cost, in USD. 
+     * @return DiscountFixedPrice Discount price for upfront total cost, in USD.
      */
     public Float getDiscountFixedPrice() {
         return this.DiscountFixedPrice;
     }
 
     /**
-     * Set Discount price for subsequent total cost, in USD/hr.
-     * @param DiscountFixedPrice Discount price for subsequent total cost, in USD/hr.
+     * Set Discount price for upfront total cost, in USD.
+     * @param DiscountFixedPrice Discount price for upfront total cost, in USD.
      */
     public void setDiscountFixedPrice(Float DiscountFixedPrice) {
         this.DiscountFixedPrice = DiscountFixedPrice;
