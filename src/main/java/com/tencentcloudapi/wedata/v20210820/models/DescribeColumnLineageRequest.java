@@ -24,7 +24,11 @@ import java.util.HashMap;
 public class DescribeColumnLineageRequest extends AbstractModel {
 
     /**
-    * Query Direction, INPUT, OUTPUT, BOTH enumerated values
+    * Enumeration value of query direction.
+
+- INPUT
+- OUTPUT
+- BOTH
     */
     @SerializedName("Direction")
     @Expose
@@ -66,16 +70,32 @@ public class DescribeColumnLineageRequest extends AbstractModel {
     private Boolean IgnoreTemp;
 
     /**
-     * Get Query Direction, INPUT, OUTPUT, BOTH enumerated values 
-     * @return Direction Query Direction, INPUT, OUTPUT, BOTH enumerated values
+     * Get Enumeration value of query direction.
+
+- INPUT
+- OUTPUT
+- BOTH 
+     * @return Direction Enumeration value of query direction.
+
+- INPUT
+- OUTPUT
+- BOTH
      */
     public String getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set Query Direction, INPUT, OUTPUT, BOTH enumerated values
-     * @param Direction Query Direction, INPUT, OUTPUT, BOTH enumerated values
+     * Set Enumeration value of query direction.
+
+- INPUT
+- OUTPUT
+- BOTH
+     * @param Direction Enumeration value of query direction.
+
+- INPUT
+- OUTPUT
+- BOTH
      */
     public void setDirection(String Direction) {
         this.Direction = Direction;
