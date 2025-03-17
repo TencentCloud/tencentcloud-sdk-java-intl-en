@@ -31,7 +31,7 @@ public class DescribeBillDetailRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Quantity, maximum is 100
+    * Quantity, maximum is 300
     */
     @SerializedName("Limit")
     @Expose
@@ -173,16 +173,16 @@ Note: To query the product codes used in the current month, call <a href="https:
     }
 
     /**
-     * Get Quantity, maximum is 100 
-     * @return Limit Quantity, maximum is 100
+     * Get Quantity, maximum is 300 
+     * @return Limit Quantity, maximum is 300
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Quantity, maximum is 100
-     * @param Limit Quantity, maximum is 100
+     * Set Quantity, maximum is 300
+     * @param Limit Quantity, maximum is 300
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
