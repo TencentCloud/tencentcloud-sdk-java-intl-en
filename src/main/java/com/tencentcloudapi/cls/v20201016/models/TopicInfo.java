@@ -159,6 +159,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean IsWebTracking;
 
     /**
+    * 
+    */
+    @SerializedName("Extends")
+    @Expose
+    private TopicExtendInfo Extends;
+
+    /**
      * Get Logset ID 
      * @return LogsetId Logset ID
      */
@@ -482,6 +489,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.IsWebTracking = IsWebTracking;
     }
 
+    /**
+     * Get  
+     * @return Extends 
+     */
+    public TopicExtendInfo getExtends() {
+        return this.Extends;
+    }
+
+    /**
+     * Set 
+     * @param Extends 
+     */
+    public void setExtends(TopicExtendInfo Extends) {
+        this.Extends = Extends;
+    }
+
     public TopicInfo() {
     }
 
@@ -547,6 +570,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.IsWebTracking != null) {
             this.IsWebTracking = new Boolean(source.IsWebTracking);
         }
+        if (source.Extends != null) {
+            this.Extends = new TopicExtendInfo(source.Extends);
+        }
     }
 
 
@@ -572,6 +598,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
         this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
+        this.setParamObj(map, prefix + "Extends.", this.Extends);
 
     }
 }

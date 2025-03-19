@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyParamTemplateRequest extends AbstractModel {
 
     /**
-    * ID of the source parameter template.
+    * Source parameter template ID, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
     */
     @SerializedName("TemplateId")
     @Expose
@@ -52,16 +52,16 @@ public class ModifyParamTemplateRequest extends AbstractModel {
     private InstanceParam [] ParamList;
 
     /**
-     * Get ID of the source parameter template. 
-     * @return TemplateId ID of the source parameter template.
+     * Get Source parameter template ID, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1). 
+     * @return TemplateId Source parameter template ID, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set ID of the source parameter template.
-     * @param TemplateId ID of the source parameter template.
+     * Set Source parameter template ID, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
+     * @param TemplateId Source parameter template ID, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

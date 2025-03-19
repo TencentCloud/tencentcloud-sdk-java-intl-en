@@ -285,6 +285,17 @@ Note: The API request may fail due to network instability or other exceptions. I
     }
 
     /**
+     *Querying orders
+     * @param req DescribeDealsByCondRequest
+     * @return DescribeDealsByCondResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDealsByCondResponse DescribeDealsByCond(DescribeDealsByCondRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDealsByCond", DescribeDealsByCondResponse.class);
+    }
+
+    /**
      *This API is used to query COS usage details.
      * @param req DescribeDosageCosDetailByDateRequest
      * @return DescribeDosageCosDetailByDateResponse

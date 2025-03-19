@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ResourceTypeRegions extends AbstractModel {
 
     /**
-    * Cloud resource type
+    * Cloud resource types, which support clb, waf, api gateway, cos, tke, tse, and tcb.
     */
     @SerializedName("ResourceType")
     @Expose
@@ -38,16 +38,16 @@ public class ResourceTypeRegions extends AbstractModel {
     private String [] Regions;
 
     /**
-     * Get Cloud resource type 
-     * @return ResourceType Cloud resource type
+     * Get Cloud resource types, which support clb, waf, api gateway, cos, tke, tse, and tcb. 
+     * @return ResourceType Cloud resource types, which support clb, waf, api gateway, cos, tke, tse, and tcb.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Cloud resource type
-     * @param ResourceType Cloud resource type
+     * Set Cloud resource types, which support clb, waf, api gateway, cos, tke, tse, and tcb.
+     * @param ResourceType Cloud resource types, which support clb, waf, api gateway, cos, tke, tse, and tcb.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

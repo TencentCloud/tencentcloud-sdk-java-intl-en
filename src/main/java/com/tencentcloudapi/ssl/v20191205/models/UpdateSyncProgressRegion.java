@@ -24,92 +24,117 @@ import java.util.HashMap;
 public class UpdateSyncProgressRegion extends AbstractModel {
 
     /**
-    * 
+    * Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 
+    * Total number
+.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * Quantity of executions completed.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OffsetCount")
     @Expose
     private Long OffsetCount;
 
     /**
-    * 
+    * Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get  
-     * @return Region 
+     * Get Resource type.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Region Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 
-     * @param Region 
+     * Set Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Region Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get Total number
+.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return TotalCount Total number
+.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set Total number
+.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param TotalCount Total number
+.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return OffsetCount 
+     * Get Quantity of executions completed.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return OffsetCount Quantity of executions completed.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getOffsetCount() {
         return this.OffsetCount;
     }
 
     /**
-     * Set 
-     * @param OffsetCount 
+     * Set Quantity of executions completed.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param OffsetCount Quantity of executions completed.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOffsetCount(Long OffsetCount) {
         this.OffsetCount = OffsetCount;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Status Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Status Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

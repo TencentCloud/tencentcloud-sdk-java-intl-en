@@ -74,24 +74,26 @@ Note: When resolution adaption is enabled, `Width` cannot be smaller than `Heigh
     private String ResolutionAdaptive;
 
     /**
-    * Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+    * Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+    * Maximum value of the video stream height (or short edge) in px. Value range: 0 and [128, 4,096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
     */
     @SerializedName("Height")
     @Expose
@@ -117,28 +119,24 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String GopUnit;
 
     /**
-    * Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
-<li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
-<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
-<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
-<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+    * Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
+<li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: Fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
 
 <li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
 Default value: black.
-Note: Only stretch and black are supported for adaptive bitrate streaming.
     */
     @SerializedName("FillType")
     @Expose
     private String FillType;
 
     /**
-    * Control factor for constant video bitrate. Value range: [0, 51].
-If this parameter is specified, the bitrate control mode for the CRF will be used for transcoding (the video bitrate will no longer take effect).
-It is recommended not to specify this parameter if there are no special requirements.
-
-Note:
-If Mode is set to ABR, the Vcrf value does not need to be configured.
-If Mode is set to CBR, the Vcrf value does not need to be configured.
+    * Specifies the constant bitrate control factor for the video. Value range: [0, 51]. Leaving this parameter blank sets it to "Automatic". It is recommended not to specify this parameter unless necessary.
+If the Mode parameter is set to VBR and the Vcrf value is also configured, MPS will process the video in VBR mode, considering both Vcrf and Bitrate parameters to balance video quality, bitrate, transcoding efficiency, and file size.
+If the Mode parameter is set to CRF, the Bitrate setting will be invalid, and encoding will be based on the Vcrf value.
+If the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
 Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Vcrf")
@@ -146,8 +144,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long Vcrf;
 
     /**
-    * Average segment duration. Value range: (0-10], unit: second
-Default value: 10
+    * Average segment duration. Value range: (0-10], unit: second.
+This parameter will be set to automatic if not specified. The segment duration will be automatically selected based on the GOP and other characteristics of the video.
 Note: It can be used only in the container format of hls.
 Note: This field may return null, indicating that no valid value can be obtained.
     */
@@ -157,13 +155,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * HLS segment type. Valid values:
-<li>0: HLS+TS segment.</li>
-<li>2: HLS+TS byte range.</li>
-<li>7: HLS+MP4 segment.</li>
-<li>5: HLS+MP4 byte range.</li>
+<li>0: HLS+TS segment</li>
+<li>2: HLS+TS byte range</li>
+<li>7: HLS+MP4 segment</li>
+<li>5: HLS+MP4 byte range</li>
 Default value: 0
 
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field is used for normal/TSC transcoding settings and does not apply to adaptive bitrate streaming. To configure the segment type for adaptive bitrate streaming, use the outer field.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("SegmentType")
     @Expose
@@ -285,12 +284,57 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long Compress;
 
     /**
-    * Special segment configuration
+    * Segment duration at startup.
 Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("SegmentSpecificInfo")
     @Expose
     private SegmentSpecificInfo SegmentSpecificInfo;
+
+    /**
+    * Whether the template enables scenario-based settings. 
+0: disable. 
+1: enable 
+ 
+Default value: 0	
+	
+Note: The values of SceneType and CompressType fields only take effect when this field value is 1.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ScenarioBased")
+    @Expose
+    private Long ScenarioBased;
+
+    /**
+    * Video scenario. Valid values: 
+normal: General transcoding scenario: General transcoding and compression scenario.
+pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+Default value: normal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private String SceneType;
+
+    /**
+    * Transcoding policy. Valid values: 
+ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+Default value: standard_compress. 
+Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("CompressType")
+    @Expose
+    private String CompressType;
 
     /**
      * Get Encoding format for video streams. Optional values:
@@ -445,72 +489,80 @@ Note: When resolution adaption is enabled, `Width` cannot be smaller than `Heigh
     }
 
     /**
-     * Get Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0. 
-     * @return Width Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+     * Get Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680. 
+     * @return Width Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+     * Set Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
-     * @param Width Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+     * @param Width Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0. 
-     * @return Height Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+     * Get Maximum value of the video stream height (or short edge) in px. Value range: 0 and [128, 4,096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680. 
+     * @return Height Maximum value of the video stream height (or short edge) in px. Value range: 0 and [128, 4,096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+     * Set Maximum value of the video stream height (or short edge) in px. Value range: 0 and [128, 4,096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
-     * @param Height Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+     * @param Height Maximum value of the video stream height (or short edge) in px. Value range: 0 and [128, 4,096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
@@ -569,69 +621,59 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
-<li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
-<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
-<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
-<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+     * Get Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
+<li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: Fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
+
+<li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
+Default value: black. 
+     * @return FillType Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
+<li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: Fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
 
 <li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
 Default value: black.
-Note: Only stretch and black are supported for adaptive bitrate streaming. 
-     * @return FillType Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
-<li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
-<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
-<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
-<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
-
-<li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
-Default value: black.
-Note: Only stretch and black are supported for adaptive bitrate streaming.
      */
     public String getFillType() {
         return this.FillType;
     }
 
     /**
-     * Set Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
-<li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
-<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
-<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
-<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+     * Set Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
+<li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: Fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
 
 <li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
 Default value: black.
-Note: Only stretch and black are supported for adaptive bitrate streaming.
-     * @param FillType Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
-<li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
-<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
-<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
-<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+     * @param FillType Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
+<li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: Fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
 
 <li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
 Default value: black.
-Note: Only stretch and black are supported for adaptive bitrate streaming.
      */
     public void setFillType(String FillType) {
         this.FillType = FillType;
     }
 
     /**
-     * Get Control factor for constant video bitrate. Value range: [0, 51].
-If this parameter is specified, the bitrate control mode for the CRF will be used for transcoding (the video bitrate will no longer take effect).
-It is recommended not to specify this parameter if there are no special requirements.
-
-Note:
-If Mode is set to ABR, the Vcrf value does not need to be configured.
-If Mode is set to CBR, the Vcrf value does not need to be configured.
+     * Get Specifies the constant bitrate control factor for the video. Value range: [0, 51]. Leaving this parameter blank sets it to "Automatic". It is recommended not to specify this parameter unless necessary.
+If the Mode parameter is set to VBR and the Vcrf value is also configured, MPS will process the video in VBR mode, considering both Vcrf and Bitrate parameters to balance video quality, bitrate, transcoding efficiency, and file size.
+If the Mode parameter is set to CRF, the Bitrate setting will be invalid, and encoding will be based on the Vcrf value.
+If the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
 Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Vcrf Control factor for constant video bitrate. Value range: [0, 51].
-If this parameter is specified, the bitrate control mode for the CRF will be used for transcoding (the video bitrate will no longer take effect).
-It is recommended not to specify this parameter if there are no special requirements.
-
-Note:
-If Mode is set to ABR, the Vcrf value does not need to be configured.
-If Mode is set to CBR, the Vcrf value does not need to be configured.
+     * @return Vcrf Specifies the constant bitrate control factor for the video. Value range: [0, 51]. Leaving this parameter blank sets it to "Automatic". It is recommended not to specify this parameter unless necessary.
+If the Mode parameter is set to VBR and the Vcrf value is also configured, MPS will process the video in VBR mode, considering both Vcrf and Bitrate parameters to balance video quality, bitrate, transcoding efficiency, and file size.
+If the Mode parameter is set to CRF, the Bitrate setting will be invalid, and encoding will be based on the Vcrf value.
+If the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getVcrf() {
@@ -639,21 +681,15 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Set Control factor for constant video bitrate. Value range: [0, 51].
-If this parameter is specified, the bitrate control mode for the CRF will be used for transcoding (the video bitrate will no longer take effect).
-It is recommended not to specify this parameter if there are no special requirements.
-
-Note:
-If Mode is set to ABR, the Vcrf value does not need to be configured.
-If Mode is set to CBR, the Vcrf value does not need to be configured.
+     * Set Specifies the constant bitrate control factor for the video. Value range: [0, 51]. Leaving this parameter blank sets it to "Automatic". It is recommended not to specify this parameter unless necessary.
+If the Mode parameter is set to VBR and the Vcrf value is also configured, MPS will process the video in VBR mode, considering both Vcrf and Bitrate parameters to balance video quality, bitrate, transcoding efficiency, and file size.
+If the Mode parameter is set to CRF, the Bitrate setting will be invalid, and encoding will be based on the Vcrf value.
+If the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Vcrf Control factor for constant video bitrate. Value range: [0, 51].
-If this parameter is specified, the bitrate control mode for the CRF will be used for transcoding (the video bitrate will no longer take effect).
-It is recommended not to specify this parameter if there are no special requirements.
-
-Note:
-If Mode is set to ABR, the Vcrf value does not need to be configured.
-If Mode is set to CBR, the Vcrf value does not need to be configured.
+     * @param Vcrf Specifies the constant bitrate control factor for the video. Value range: [0, 51]. Leaving this parameter blank sets it to "Automatic". It is recommended not to specify this parameter unless necessary.
+If the Mode parameter is set to VBR and the Vcrf value is also configured, MPS will process the video in VBR mode, considering both Vcrf and Bitrate parameters to balance video quality, bitrate, transcoding efficiency, and file size.
+If the Mode parameter is set to CRF, the Bitrate setting will be invalid, and encoding will be based on the Vcrf value.
+If the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setVcrf(Long Vcrf) {
@@ -661,12 +697,12 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Average segment duration. Value range: (0-10], unit: second
-Default value: 10
+     * Get Average segment duration. Value range: (0-10], unit: second.
+This parameter will be set to automatic if not specified. The segment duration will be automatically selected based on the GOP and other characteristics of the video.
 Note: It can be used only in the container format of hls.
 Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return HlsTime Average segment duration. Value range: (0-10], unit: second
-Default value: 10
+     * @return HlsTime Average segment duration. Value range: (0-10], unit: second.
+This parameter will be set to automatic if not specified. The segment duration will be automatically selected based on the GOP and other characteristics of the video.
 Note: It can be used only in the container format of hls.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
@@ -675,12 +711,12 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Set Average segment duration. Value range: (0-10], unit: second
-Default value: 10
+     * Set Average segment duration. Value range: (0-10], unit: second.
+This parameter will be set to automatic if not specified. The segment duration will be automatically selected based on the GOP and other characteristics of the video.
 Note: It can be used only in the container format of hls.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param HlsTime Average segment duration. Value range: (0-10], unit: second
-Default value: 10
+     * @param HlsTime Average segment duration. Value range: (0-10], unit: second.
+This parameter will be set to automatic if not specified. The segment duration will be automatically selected based on the GOP and other characteristics of the video.
 Note: It can be used only in the container format of hls.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
@@ -690,21 +726,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get HLS segment type. Valid values:
-<li>0: HLS+TS segment.</li>
-<li>2: HLS+TS byte range.</li>
-<li>7: HLS+MP4 segment.</li>
-<li>5: HLS+MP4 byte range.</li>
+<li>0: HLS+TS segment</li>
+<li>2: HLS+TS byte range</li>
+<li>7: HLS+MP4 segment</li>
+<li>5: HLS+MP4 byte range</li>
 Default value: 0
 
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field is used for normal/TSC transcoding settings and does not apply to adaptive bitrate streaming. To configure the segment type for adaptive bitrate streaming, use the outer field.
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return SegmentType HLS segment type. Valid values:
-<li>0: HLS+TS segment.</li>
-<li>2: HLS+TS byte range.</li>
-<li>7: HLS+MP4 segment.</li>
-<li>5: HLS+MP4 byte range.</li>
+<li>0: HLS+TS segment</li>
+<li>2: HLS+TS byte range</li>
+<li>7: HLS+MP4 segment</li>
+<li>5: HLS+MP4 byte range</li>
 Default value: 0
 
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field is used for normal/TSC transcoding settings and does not apply to adaptive bitrate streaming. To configure the segment type for adaptive bitrate streaming, use the outer field.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getSegmentType() {
         return this.SegmentType;
@@ -712,21 +750,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set HLS segment type. Valid values:
-<li>0: HLS+TS segment.</li>
-<li>2: HLS+TS byte range.</li>
-<li>7: HLS+MP4 segment.</li>
-<li>5: HLS+MP4 byte range.</li>
+<li>0: HLS+TS segment</li>
+<li>2: HLS+TS byte range</li>
+<li>7: HLS+MP4 segment</li>
+<li>5: HLS+MP4 byte range</li>
 Default value: 0
 
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field is used for normal/TSC transcoding settings and does not apply to adaptive bitrate streaming. To configure the segment type for adaptive bitrate streaming, use the outer field.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param SegmentType HLS segment type. Valid values:
-<li>0: HLS+TS segment.</li>
-<li>2: HLS+TS byte range.</li>
-<li>7: HLS+MP4 segment.</li>
-<li>5: HLS+MP4 byte range.</li>
+<li>0: HLS+TS segment</li>
+<li>2: HLS+TS byte range</li>
+<li>7: HLS+MP4 segment</li>
+<li>5: HLS+MP4 byte range</li>
 Default value: 0
 
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field is used for normal/TSC transcoding settings and does not apply to adaptive bitrate streaming. To configure the segment type for adaptive bitrate streaming, use the outer field.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSegmentType(Long SegmentType) {
         this.SegmentType = SegmentType;
@@ -1061,9 +1101,9 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Special segment configuration
+     * Get Segment duration at startup.
 Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SegmentSpecificInfo Special segment configuration
+     * @return SegmentSpecificInfo Segment duration at startup.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public SegmentSpecificInfo getSegmentSpecificInfo() {
@@ -1071,13 +1111,157 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Set Special segment configuration
+     * Set Segment duration at startup.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SegmentSpecificInfo Special segment configuration
+     * @param SegmentSpecificInfo Segment duration at startup.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSegmentSpecificInfo(SegmentSpecificInfo SegmentSpecificInfo) {
         this.SegmentSpecificInfo = SegmentSpecificInfo;
+    }
+
+    /**
+     * Get Whether the template enables scenario-based settings. 
+0: disable. 
+1: enable 
+ 
+Default value: 0	
+	
+Note: The values of SceneType and CompressType fields only take effect when this field value is 1.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return ScenarioBased Whether the template enables scenario-based settings. 
+0: disable. 
+1: enable 
+ 
+Default value: 0	
+	
+Note: The values of SceneType and CompressType fields only take effect when this field value is 1.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Long getScenarioBased() {
+        return this.ScenarioBased;
+    }
+
+    /**
+     * Set Whether the template enables scenario-based settings. 
+0: disable. 
+1: enable 
+ 
+Default value: 0	
+	
+Note: The values of SceneType and CompressType fields only take effect when this field value is 1.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ScenarioBased Whether the template enables scenario-based settings. 
+0: disable. 
+1: enable 
+ 
+Default value: 0	
+	
+Note: The values of SceneType and CompressType fields only take effect when this field value is 1.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setScenarioBased(Long ScenarioBased) {
+        this.ScenarioBased = ScenarioBased;
+    }
+
+    /**
+     * Get Video scenario. Valid values: 
+normal: General transcoding scenario: General transcoding and compression scenario.
+pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+Default value: normal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SceneType Video scenario. Valid values: 
+normal: General transcoding scenario: General transcoding and compression scenario.
+pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+Default value: normal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set Video scenario. Valid values: 
+normal: General transcoding scenario: General transcoding and compression scenario.
+pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+Default value: normal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SceneType Video scenario. Valid values: 
+normal: General transcoding scenario: General transcoding and compression scenario.
+pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+Default value: normal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setSceneType(String SceneType) {
+        this.SceneType = SceneType;
+    }
+
+    /**
+     * Get Transcoding policy. Valid values: 
+ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+Default value: standard_compress. 
+Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return CompressType Transcoding policy. Valid values: 
+ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+Default value: standard_compress. 
+Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getCompressType() {
+        return this.CompressType;
+    }
+
+    /**
+     * Set Transcoding policy. Valid values: 
+ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+Default value: standard_compress. 
+Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param CompressType Transcoding policy. Valid values: 
+ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+Default value: standard_compress. 
+Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setCompressType(String CompressType) {
+        this.CompressType = CompressType;
     }
 
     public VideoTemplateInfo() {
@@ -1160,6 +1344,15 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.SegmentSpecificInfo != null) {
             this.SegmentSpecificInfo = new SegmentSpecificInfo(source.SegmentSpecificInfo);
         }
+        if (source.ScenarioBased != null) {
+            this.ScenarioBased = new Long(source.ScenarioBased);
+        }
+        if (source.SceneType != null) {
+            this.SceneType = new String(source.SceneType);
+        }
+        if (source.CompressType != null) {
+            this.CompressType = new String(source.CompressType);
+        }
     }
 
 
@@ -1191,6 +1384,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "RawPts", this.RawPts);
         this.setParamSimple(map, prefix + "Compress", this.Compress);
         this.setParamObj(map, prefix + "SegmentSpecificInfo.", this.SegmentSpecificInfo);
+        this.setParamSimple(map, prefix + "ScenarioBased", this.ScenarioBased);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
+        this.setParamSimple(map, prefix + "CompressType", this.CompressType);
 
     }
 }

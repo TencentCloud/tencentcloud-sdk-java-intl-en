@@ -41,7 +41,7 @@ public class DescribeNetworkInterfacesRequest extends AbstractModel {
 <li>`network-interface-description` - String - ENI instance description. </li>
 <li>`address-ip` - String - Private IPv4 address. A single IP will be fuzzily matched with the suffix, while multiple IPs will be exactly matched. It can be used with `ip-exact-match` to query and exactly match a single IP. </li>
 <li>`ip-exact-match` - Boolean - Exact match by private IPv4 address. The first value will be returned if multiple values are found. </li>
-<li>`tag-key` - String - u200dOptional - u200dTag key. See Example 2 to learn more details. </li>
+<li>`tag-key` - String - Optional - Tag key. See Example 2 to learn more details. </li>
 <li>`tag:tag-key` - String - Optional - Tag key-value pair. The `tag-key` should be replaced with a specific tag key. See Example 2 to learn more details. </li>
 <li>`is-primary` - Boolean - Optional - Filter based on whether it is a primary ENI. Values: `true`, `false`. If this parameter is not specified, filter the both. </li>
 <li>`eni-type` - String - Optional - Filter by ENI type. Values: `0` (Secondary ENI), `1` (Primary ENI), `2` (Relayed ENI) </li>
@@ -94,7 +94,7 @@ public class DescribeNetworkInterfacesRequest extends AbstractModel {
 <li>`network-interface-description` - String - ENI instance description. </li>
 <li>`address-ip` - String - Private IPv4 address. A single IP will be fuzzily matched with the suffix, while multiple IPs will be exactly matched. It can be used with `ip-exact-match` to query and exactly match a single IP. </li>
 <li>`ip-exact-match` - Boolean - Exact match by private IPv4 address. The first value will be returned if multiple values are found. </li>
-<li>`tag-key` - String - u200dOptional - u200dTag key. See Example 2 to learn more details. </li>
+<li>`tag-key` - String - Optional - Tag key. See Example 2 to learn more details. </li>
 <li>`tag:tag-key` - String - Optional - Tag key-value pair. The `tag-key` should be replaced with a specific tag key. See Example 2 to learn more details. </li>
 <li>`is-primary` - Boolean - Optional - Filter based on whether it is a primary ENI. Values: `true`, `false`. If this parameter is not specified, filter the both. </li>
 <li>`eni-type` - String - Optional - Filter by ENI type. Values: `0` (Secondary ENI), `1` (Primary ENI), `2` (Relayed ENI) </li>
@@ -111,7 +111,7 @@ public class DescribeNetworkInterfacesRequest extends AbstractModel {
 <li>`network-interface-description` - String - ENI instance description. </li>
 <li>`address-ip` - String - Private IPv4 address. A single IP will be fuzzily matched with the suffix, while multiple IPs will be exactly matched. It can be used with `ip-exact-match` to query and exactly match a single IP. </li>
 <li>`ip-exact-match` - Boolean - Exact match by private IPv4 address. The first value will be returned if multiple values are found. </li>
-<li>`tag-key` - String - u200dOptional - u200dTag key. See Example 2 to learn more details. </li>
+<li>`tag-key` - String - Optional - Tag key. See Example 2 to learn more details. </li>
 <li>`tag:tag-key` - String - Optional - Tag key-value pair. The `tag-key` should be replaced with a specific tag key. See Example 2 to learn more details. </li>
 <li>`is-primary` - Boolean - Optional - Filter based on whether it is a primary ENI. Values: `true`, `false`. If this parameter is not specified, filter the both. </li>
 <li>`eni-type` - String - Optional - Filter by ENI type. Values: `0` (Secondary ENI), `1` (Primary ENI), `2` (Relayed ENI) </li>
@@ -134,7 +134,7 @@ public class DescribeNetworkInterfacesRequest extends AbstractModel {
 <li>`network-interface-description` - String - ENI instance description. </li>
 <li>`address-ip` - String - Private IPv4 address. A single IP will be fuzzily matched with the suffix, while multiple IPs will be exactly matched. It can be used with `ip-exact-match` to query and exactly match a single IP. </li>
 <li>`ip-exact-match` - Boolean - Exact match by private IPv4 address. The first value will be returned if multiple values are found. </li>
-<li>`tag-key` - String - u200dOptional - u200dTag key. See Example 2 to learn more details. </li>
+<li>`tag-key` - String - Optional - Tag key. See Example 2 to learn more details. </li>
 <li>`tag:tag-key` - String - Optional - Tag key-value pair. The `tag-key` should be replaced with a specific tag key. See Example 2 to learn more details. </li>
 <li>`is-primary` - Boolean - Optional - Filter based on whether it is a primary ENI. Values: `true`, `false`. If this parameter is not specified, filter the both. </li>
 <li>`eni-type` - String - Optional - Filter by ENI type. Values: `0` (Secondary ENI), `1` (Primary ENI), `2` (Relayed ENI) </li>
@@ -151,7 +151,7 @@ public class DescribeNetworkInterfacesRequest extends AbstractModel {
 <li>`network-interface-description` - String - ENI instance description. </li>
 <li>`address-ip` - String - Private IPv4 address. A single IP will be fuzzily matched with the suffix, while multiple IPs will be exactly matched. It can be used with `ip-exact-match` to query and exactly match a single IP. </li>
 <li>`ip-exact-match` - Boolean - Exact match by private IPv4 address. The first value will be returned if multiple values are found. </li>
-<li>`tag-key` - String - u200dOptional - u200dTag key. See Example 2 to learn more details. </li>
+<li>`tag-key` - String - Optional - Tag key. See Example 2 to learn more details. </li>
 <li>`tag:tag-key` - String - Optional - Tag key-value pair. The `tag-key` should be replaced with a specific tag key. See Example 2 to learn more details. </li>
 <li>`is-primary` - Boolean - Optional - Filter based on whether it is a primary ENI. Values: `true`, `false`. If this parameter is not specified, filter the both. </li>
 <li>`eni-type` - String - Optional - Filter by ENI type. Values: `0` (Secondary ENI), `1` (Primary ENI), `2` (Relayed ENI) </li>

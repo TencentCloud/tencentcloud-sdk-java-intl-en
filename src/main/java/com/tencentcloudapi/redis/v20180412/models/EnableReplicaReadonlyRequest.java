@@ -24,46 +24,61 @@ import java.util.HashMap;
 public class EnableReplicaReadonlyRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Account routing policy. If `master` or `replication` is entered, it means to route to the master or replica node; if this parameter is left empty, it means to write into the master node and read from the replica node by default.
+    * Read-only routing policy.
+- master: read-only routing to the primary node.
+- replication: read-only routing to the secondary node.
+- Default policy: writing to the primary node and reading from the secondary node.
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
     private String [] ReadonlyPolicy;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
+     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Account routing policy. If `master` or `replication` is entered, it means to route to the master or replica node; if this parameter is left empty, it means to write into the master node and read from the replica node by default. 
-     * @return ReadonlyPolicy Account routing policy. If `master` or `replication` is entered, it means to route to the master or replica node; if this parameter is left empty, it means to write into the master node and read from the replica node by default.
+     * Get Read-only routing policy.
+- master: read-only routing to the primary node.
+- replication: read-only routing to the secondary node.
+- Default policy: writing to the primary node and reading from the secondary node. 
+     * @return ReadonlyPolicy Read-only routing policy.
+- master: read-only routing to the primary node.
+- replication: read-only routing to the secondary node.
+- Default policy: writing to the primary node and reading from the secondary node.
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set Account routing policy. If `master` or `replication` is entered, it means to route to the master or replica node; if this parameter is left empty, it means to write into the master node and read from the replica node by default.
-     * @param ReadonlyPolicy Account routing policy. If `master` or `replication` is entered, it means to route to the master or replica node; if this parameter is left empty, it means to write into the master node and read from the replica node by default.
+     * Set Read-only routing policy.
+- master: read-only routing to the primary node.
+- replication: read-only routing to the secondary node.
+- Default policy: writing to the primary node and reading from the secondary node.
+     * @param ReadonlyPolicy Read-only routing policy.
+- master: read-only routing to the primary node.
+- replication: read-only routing to the secondary node.
+- Default policy: writing to the primary node and reading from the secondary node.
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;

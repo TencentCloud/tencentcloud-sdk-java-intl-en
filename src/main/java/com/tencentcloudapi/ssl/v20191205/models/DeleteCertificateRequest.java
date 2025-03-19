@@ -31,6 +31,13 @@ public class DeleteCertificateRequest extends AbstractModel {
     private String CertificateId;
 
     /**
+    * When deleting, check whether the certificate is associated with cloud resources. By default, no check is performed. if you choose to check (the authorization service role SSL_QCSLinkedRoleInReplaceLoadCertificate is required), the deletion will become asynchronous, and the API will return an asynchronous task id. you need to use the DescribeDeleteCertificatesTaskResult API to check whether the deletion is successful.
+    */
+    @SerializedName("IsCheckResource")
+    @Expose
+    private Boolean IsCheckResource;
+
+    /**
      * Get Certificate ID 
      * @return CertificateId Certificate ID
      */
@@ -46,6 +53,22 @@ public class DeleteCertificateRequest extends AbstractModel {
         this.CertificateId = CertificateId;
     }
 
+    /**
+     * Get When deleting, check whether the certificate is associated with cloud resources. By default, no check is performed. if you choose to check (the authorization service role SSL_QCSLinkedRoleInReplaceLoadCertificate is required), the deletion will become asynchronous, and the API will return an asynchronous task id. you need to use the DescribeDeleteCertificatesTaskResult API to check whether the deletion is successful. 
+     * @return IsCheckResource When deleting, check whether the certificate is associated with cloud resources. By default, no check is performed. if you choose to check (the authorization service role SSL_QCSLinkedRoleInReplaceLoadCertificate is required), the deletion will become asynchronous, and the API will return an asynchronous task id. you need to use the DescribeDeleteCertificatesTaskResult API to check whether the deletion is successful.
+     */
+    public Boolean getIsCheckResource() {
+        return this.IsCheckResource;
+    }
+
+    /**
+     * Set When deleting, check whether the certificate is associated with cloud resources. By default, no check is performed. if you choose to check (the authorization service role SSL_QCSLinkedRoleInReplaceLoadCertificate is required), the deletion will become asynchronous, and the API will return an asynchronous task id. you need to use the DescribeDeleteCertificatesTaskResult API to check whether the deletion is successful.
+     * @param IsCheckResource When deleting, check whether the certificate is associated with cloud resources. By default, no check is performed. if you choose to check (the authorization service role SSL_QCSLinkedRoleInReplaceLoadCertificate is required), the deletion will become asynchronous, and the API will return an asynchronous task id. you need to use the DescribeDeleteCertificatesTaskResult API to check whether the deletion is successful.
+     */
+    public void setIsCheckResource(Boolean IsCheckResource) {
+        this.IsCheckResource = IsCheckResource;
+    }
+
     public DeleteCertificateRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DeleteCertificateRequest extends AbstractModel {
         if (source.CertificateId != null) {
             this.CertificateId = new String(source.CertificateId);
         }
+        if (source.IsCheckResource != null) {
+            this.IsCheckResource = new Boolean(source.IsCheckResource);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DeleteCertificateRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
+        this.setParamSimple(map, prefix + "IsCheckResource", this.IsCheckResource);
 
     }
 }

@@ -24,6 +24,16 @@ import java.util.HashMap;
 public class CcnInstance extends AbstractModel {
 
     /**
+    * The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
     * The ID of the associated instance.
     */
     @SerializedName("InstanceId")
@@ -36,16 +46,6 @@ public class CcnInstance extends AbstractModel {
     @SerializedName("InstanceRegion")
     @Expose
     private String InstanceRegion;
-
-    /**
-    * The type of the associated instance. Available values are:
-<li>`VPC`: VPC</li>
-<li>`DIRECTCONNECT`: Direct Connect</li>
-<li>`BMVPC`: BM VPC</li>
-    */
-    @SerializedName("InstanceType")
-    @Expose
-    private String InstanceType;
 
     /**
     * Description
@@ -61,6 +61,34 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
+
+    /**
+     * Get The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li> 
+     * @return InstanceType The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
+     * @param InstanceType The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
 
     /**
      * Get The ID of the associated instance. 
@@ -92,34 +120,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      */
     public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;
-    }
-
-    /**
-     * Get The type of the associated instance. Available values are:
-<li>`VPC`: VPC</li>
-<li>`DIRECTCONNECT`: Direct Connect</li>
-<li>`BMVPC`: BM VPC</li> 
-     * @return InstanceType The type of the associated instance. Available values are:
-<li>`VPC`: VPC</li>
-<li>`DIRECTCONNECT`: Direct Connect</li>
-<li>`BMVPC`: BM VPC</li>
-     */
-    public String getInstanceType() {
-        return this.InstanceType;
-    }
-
-    /**
-     * Set The type of the associated instance. Available values are:
-<li>`VPC`: VPC</li>
-<li>`DIRECTCONNECT`: Direct Connect</li>
-<li>`BMVPC`: BM VPC</li>
-     * @param InstanceType The type of the associated instance. Available values are:
-<li>`VPC`: VPC</li>
-<li>`DIRECTCONNECT`: Direct Connect</li>
-<li>`BMVPC`: BM VPC</li>
-     */
-    public void setInstanceType(String InstanceType) {
-        this.InstanceType = InstanceType;
     }
 
     /**
@@ -166,14 +166,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CcnInstance(CcnInstance source) {
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
         if (source.InstanceRegion != null) {
             this.InstanceRegion = new String(source.InstanceRegion);
-        }
-        if (source.InstanceType != null) {
-            this.InstanceType = new String(source.InstanceType);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -188,9 +188,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
-        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
 

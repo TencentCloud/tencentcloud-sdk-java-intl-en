@@ -269,6 +269,13 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     private String GopSizeUnits;
 
     /**
+    * Color space setting.
+    */
+    @SerializedName("ColorSpaceSettings")
+    @Expose
+    private ColorSpaceSetting ColorSpaceSettings;
+
+    /**
      * Get Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits 
      * @return Name Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits
      */
@@ -840,6 +847,22 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         this.GopSizeUnits = GopSizeUnits;
     }
 
+    /**
+     * Get Color space setting. 
+     * @return ColorSpaceSettings Color space setting.
+     */
+    public ColorSpaceSetting getColorSpaceSettings() {
+        return this.ColorSpaceSettings;
+    }
+
+    /**
+     * Set Color space setting.
+     * @param ColorSpaceSettings Color space setting.
+     */
+    public void setColorSpaceSettings(ColorSpaceSetting ColorSpaceSettings) {
+        this.ColorSpaceSettings = ColorSpaceSettings;
+    }
+
     public AVTemplate() {
     }
 
@@ -956,6 +979,9 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         if (source.GopSizeUnits != null) {
             this.GopSizeUnits = new String(source.GopSizeUnits);
         }
+        if (source.ColorSpaceSettings != null) {
+            this.ColorSpaceSettings = new ColorSpaceSetting(source.ColorSpaceSettings);
+        }
     }
 
 
@@ -997,6 +1023,7 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         this.setParamArrayObj(map, prefix + "VideoEnhanceSettings.", this.VideoEnhanceSettings);
         this.setParamSimple(map, prefix + "GopSize", this.GopSize);
         this.setParamSimple(map, prefix + "GopSizeUnits", this.GopSizeUnits);
+        this.setParamObj(map, prefix + "ColorSpaceSettings.", this.ColorSpaceSettings);
 
     }
 }

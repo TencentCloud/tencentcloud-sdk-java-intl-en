@@ -31,7 +31,7 @@ public class DescribeAutoCalloutTasksResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Task list.
+    * <Task list>.
     */
     @SerializedName("Tasks")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeAutoCalloutTasksResponse extends AbstractModel {
     }
 
     /**
-     * Get Task list. 
-     * @return Tasks Task list.
+     * Get <Task list>. 
+     * @return Tasks <Task list>.
      */
     public AutoCalloutTaskInfo [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set Task list.
-     * @param Tasks Task list.
+     * Set <Task list>.
+     * @param Tasks <Task list>.
      */
     public void setTasks(AutoCalloutTaskInfo [] Tasks) {
         this.Tasks = Tasks;

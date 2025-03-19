@@ -194,7 +194,6 @@ public class CfwClient extends AbstractClient{
 
     /**
      *This API is used to get blocked IP data.
-
      * @param req DescribeBlockByIpTimesListRequest
      * @return DescribeBlockByIpTimesListResponse
      * @throws TencentCloudSDKException
@@ -438,6 +437,17 @@ public class CfwClient extends AbstractClient{
     public DescribeUnHandleEventTabListResponse DescribeUnHandleEventTabList(DescribeUnHandleEventTabListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeUnHandleEventTabList", DescribeUnHandleEventTabListResponse.class);
+    }
+
+    /**
+     *Query Inter-VPC rules
+     * @param req DescribeVpcAcRuleRequest
+     * @return DescribeVpcAcRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcAcRuleResponse DescribeVpcAcRule(DescribeVpcAcRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVpcAcRule", DescribeVpcAcRuleResponse.class);
     }
 
     /**

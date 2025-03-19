@@ -182,19 +182,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *云护航计费产品已下线
-
-This API is used to confirm the receipt after using the cloud escort service.
-     * @param req CreateCloudProtectServiceOrderRecordRequest
-     * @return CreateCloudProtectServiceOrderRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateCloudProtectServiceOrderRecordResponse CreateCloudProtectServiceOrderRecord(CreateCloudProtectServiceOrderRecordRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateCloudProtectServiceOrderRecord", CreateCloudProtectServiceOrderRecordResponse.class);
-    }
-
-    /**
      *This API is used to create emergency vulnerability scan tasks.
      * @param req CreateEmergencyVulScanRequest
      * @return CreateEmergencyVulScanResponse
@@ -1309,7 +1296,9 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
-     *This API is used to display the list of network attack logs in pagination.
+     *DescribeAttackEvents 代替
+
+This API is used to display the list of network attack logs in pagination.
      * @param req DescribeAttackLogsRequest
      * @return DescribeAttackLogsResponse
      * @throws TencentCloudSDKException
@@ -1320,7 +1309,9 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
-     *This API is used to backtrack attacks.
+     *已废弃
+
+This API is used to backtrack attacks.
      * @param req DescribeAttackSourceRequest
      * @return DescribeAttackSourceResponse
      * @throws TencentCloudSDKException
@@ -1331,7 +1322,9 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
-     *This API is used to query attack backtracking events.
+     *已废弃
+
+This API is used to query attack backtracking events.
      * @param req DescribeAttackSourceEventsRequest
      * @return DescribeAttackSourceEventsResponse
      * @throws TencentCloudSDKException
@@ -1738,20 +1731,9 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
-     *云护航计费产品已下线
+     *接口已无效
 
-This API is used to query the list of cloud escort service orders.
-     * @param req DescribeCloudProtectServiceOrderListRequest
-     * @return DescribeCloudProtectServiceOrderListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudProtectServiceOrderListResponse DescribeCloudProtectServiceOrderList(DescribeCloudProtectServiceOrderListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudProtectServiceOrderList", DescribeCloudProtectServiceOrderListResponse.class);
-    }
-
-    /**
-     *This API is used to obtain the data of the component statistics list.
+This API is used to obtain the data of the component statistics list.
      * @param req DescribeComponentStatisticsRequest
      * @return DescribeComponentStatisticsResponse
      * @throws TencentCloudSDKException
@@ -2026,7 +2008,9 @@ This API is used to query the list of cloud escort service orders.
     }
 
     /**
-     *This API is used to obtain the index list.
+     *接口已废弃
+
+This API is used to obtain the index list.
      * @param req DescribeIndexListRequest
      * @return DescribeIndexListResponse
      * @throws TencentCloudSDKException
@@ -3159,7 +3143,9 @@ This API is used to query the list of cloud escort service orders.
     }
 
     /**
-     *This API is used to obtain the summary of security protection statuses.
+     *接口已无效
+
+This API is used to obtain the summary of security protection statuses.
      * @param req DescribeSecurityProtectionStatRequest
      * @return DescribeSecurityProtectionStatResponse
      * @throws TencentCloudSDKException

@@ -31,8 +31,7 @@ public class DescribeCustomerBillDetailResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * Data details
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Data detailsNote: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DetailSet")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data details
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DetailSet Data details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Data detailsNote: This field may return null, indicating that no valid values can be obtained. 
+     * @return DetailSet Data detailsNote: This field may return null, indicating that no valid values can be obtained.
      */
     public BillDetailData [] getDetailSet() {
         return this.DetailSet;
     }
 
     /**
-     * Set Data details
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DetailSet Data details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Data detailsNote: This field may return null, indicating that no valid values can be obtained.
+     * @param DetailSet Data detailsNote: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDetailSet(BillDetailData [] DetailSet) {
         this.DetailSet = DetailSet;

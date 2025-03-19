@@ -24,140 +24,115 @@ import java.util.HashMap;
 public class BusinessSummaryOverviewItem extends AbstractModel {
 
     /**
-    * Product code
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Product code.
     */
     @SerializedName("BusinessCode")
     @Expose
     private String BusinessCode;
 
     /**
-    * Product name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Product name.
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-    * List price accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List price, keep 8 decimal places.
     */
     @SerializedName("OriginalCost")
     @Expose
     private String OriginalCost;
 
     /**
-    * The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Voucher payment amount, keep 8 decimal places.
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Consumption amount, keep 8 decimal places.
     */
     @SerializedName("TotalCost")
     @Expose
     private String TotalCost;
 
     /**
-     * Get Product code
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BusinessCode Product code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Product code. 
+     * @return BusinessCode Product code.
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set Product code
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BusinessCode Product code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Product code.
+     * @param BusinessCode Product code.
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get Product name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BusinessCodeName Product name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Product name. 
+     * @return BusinessCodeName Product name.
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * Set Product name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BusinessCodeName Product name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Product name.
+     * @param BusinessCodeName Product name.
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * Get List price accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginalCost List price accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List price, keep 8 decimal places. 
+     * @return OriginalCost List price, keep 8 decimal places.
      */
     public String getOriginalCost() {
         return this.OriginalCost;
     }
 
     /**
-     * Set List price accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginalCost List price accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List price, keep 8 decimal places.
+     * @param OriginalCost List price, keep 8 decimal places.
      */
     public void setOriginalCost(String OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Voucher payment amount, keep 8 decimal places. 
+     * @return VoucherPayAmount Voucher payment amount, keep 8 decimal places.
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Voucher payment amount, keep 8 decimal places.
+     * @param VoucherPayAmount Voucher payment amount, keep 8 decimal places.
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCost Consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Consumption amount, keep 8 decimal places. 
+     * @return TotalCost Consumption amount, keep 8 decimal places.
      */
     public String getTotalCost() {
         return this.TotalCost;
     }
 
     /**
-     * Set Consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCost Consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Consumption amount, keep 8 decimal places.
+     * @param TotalCost Consumption amount, keep 8 decimal places.
      */
     public void setTotalCost(String TotalCost) {
         this.TotalCost = TotalCost;

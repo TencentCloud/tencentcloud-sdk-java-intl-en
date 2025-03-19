@@ -31,7 +31,7 @@ public class DescribeSlowLogResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Due to the naming irregularity of this parameter. It is recommended to use the parameter InstanceSlowLogDetail instead. Details of slow queries.
+    * Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named.
     */
     @SerializedName("InstanceSlowlogDetail")
     @Expose
@@ -68,16 +68,16 @@ public class DescribeSlowLogResponse extends AbstractModel {
     }
 
     /**
-     * Get Due to the naming irregularity of this parameter. It is recommended to use the parameter InstanceSlowLogDetail instead. Details of slow queries. 
-     * @return InstanceSlowlogDetail Due to the naming irregularity of this parameter. It is recommended to use the parameter InstanceSlowLogDetail instead. Details of slow queries.
+     * Get Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named. 
+     * @return InstanceSlowlogDetail Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named.
      */
     public InstanceSlowlogDetail [] getInstanceSlowlogDetail() {
         return this.InstanceSlowlogDetail;
     }
 
     /**
-     * Set Due to the naming irregularity of this parameter. It is recommended to use the parameter InstanceSlowLogDetail instead. Details of slow queries.
-     * @param InstanceSlowlogDetail Due to the naming irregularity of this parameter. It is recommended to use the parameter InstanceSlowLogDetail instead. Details of slow queries.
+     * Set Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named.
+     * @param InstanceSlowlogDetail Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named.
      */
     public void setInstanceSlowlogDetail(InstanceSlowlogDetail [] InstanceSlowlogDetail) {
         this.InstanceSlowlogDetail = InstanceSlowlogDetail;

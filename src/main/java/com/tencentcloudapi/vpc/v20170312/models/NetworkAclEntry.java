@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class NetworkAclEntry extends AbstractModel {
 
     /**
-    * Modification time.
-    */
-    @SerializedName("ModifyTime")
-    @Expose
-    private String ModifyTime;
-
-    /**
     * Protocol. Valid values: TCP, UDP, ICMP, ALL.
     */
     @SerializedName("Protocol")
@@ -73,20 +66,11 @@ public class NetworkAclEntry extends AbstractModel {
     private String Description;
 
     /**
-     * Get Modification time. 
-     * @return ModifyTime Modification time.
-     */
-    public String getModifyTime() {
-        return this.ModifyTime;
-    }
-
-    /**
-     * Set Modification time.
-     * @param ModifyTime Modification time.
-     */
-    public void setModifyTime(String ModifyTime) {
-        this.ModifyTime = ModifyTime;
-    }
+    * Modification time.
+    */
+    @SerializedName("ModifyTime")
+    @Expose
+    private String ModifyTime;
 
     /**
      * Get Protocol. Valid values: TCP, UDP, ICMP, ALL. 
@@ -184,6 +168,22 @@ public class NetworkAclEntry extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get Modification time. 
+     * @return ModifyTime Modification time.
+     */
+    public String getModifyTime() {
+        return this.ModifyTime;
+    }
+
+    /**
+     * Set Modification time.
+     * @param ModifyTime Modification time.
+     */
+    public void setModifyTime(String ModifyTime) {
+        this.ModifyTime = ModifyTime;
+    }
+
     public NetworkAclEntry() {
     }
 
@@ -192,9 +192,6 @@ public class NetworkAclEntry extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public NetworkAclEntry(NetworkAclEntry source) {
-        if (source.ModifyTime != null) {
-            this.ModifyTime = new String(source.ModifyTime);
-        }
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
@@ -213,6 +210,9 @@ public class NetworkAclEntry extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
     }
 
 
@@ -220,13 +220,13 @@ public class NetworkAclEntry extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
         this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
 
     }
 }

@@ -52,8 +52,7 @@ public class QueryCreditAllocationHistoryData extends AbstractModel {
     private Float AllocatedCredit;
 
     /**
-    * Available credits after allocation
-Note: The return value may be null, indicating that no valid data can be obtained.
+    * Available credits after allocation.
     */
     @SerializedName("ClientCreditAfter")
     @Expose
@@ -124,20 +123,16 @@ Note: The return value may be null, indicating that no valid data can be obtaine
     }
 
     /**
-     * Get Available credits after allocation
-Note: The return value may be null, indicating that no valid data can be obtained. 
-     * @return ClientCreditAfter Available credits after allocation
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Get Available credits after allocation. 
+     * @return ClientCreditAfter Available credits after allocation.
      */
     public Float getClientCreditAfter() {
         return this.ClientCreditAfter;
     }
 
     /**
-     * Set Available credits after allocation
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param ClientCreditAfter Available credits after allocation
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Set Available credits after allocation.
+     * @param ClientCreditAfter Available credits after allocation.
      */
     public void setClientCreditAfter(Float ClientCreditAfter) {
         this.ClientCreditAfter = ClientCreditAfter;

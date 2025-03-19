@@ -62,7 +62,6 @@ public class CmqClient extends AbstractClient{
 
     /**
      *This API is used to create a queue.
-
      * @param req CreateQueueRequest
      * @return CreateQueueResponse
      * @throws TencentCloudSDKException

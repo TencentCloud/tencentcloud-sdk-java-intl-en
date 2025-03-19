@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateIVRSessionRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -38,7 +38,7 @@ public class CreateIVRSessionRequest extends AbstractModel {
     private String Callee;
 
     /**
-    * Specified IVR Id. Currently, it supports inbound and automatic outbound types
+    * Specified ivr id. currently, it supports inbound and automatic outbound types.
     */
     @SerializedName("IVRId")
     @Expose
@@ -52,30 +52,30 @@ public class CreateIVRSessionRequest extends AbstractModel {
     private String [] Callers;
 
     /**
-    * Custom variable
+    * Custom variable.
     */
     @SerializedName("Variables")
     @Expose
     private Variable [] Variables;
 
     /**
-    * User Data
+    * User data.
     */
     @SerializedName("UUI")
     @Expose
     private String UUI;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -98,16 +98,16 @@ public class CreateIVRSessionRequest extends AbstractModel {
     }
 
     /**
-     * Get Specified IVR Id. Currently, it supports inbound and automatic outbound types 
-     * @return IVRId Specified IVR Id. Currently, it supports inbound and automatic outbound types
+     * Get Specified ivr id. currently, it supports inbound and automatic outbound types. 
+     * @return IVRId Specified ivr id. currently, it supports inbound and automatic outbound types.
      */
     public Long getIVRId() {
         return this.IVRId;
     }
 
     /**
-     * Set Specified IVR Id. Currently, it supports inbound and automatic outbound types
-     * @param IVRId Specified IVR Id. Currently, it supports inbound and automatic outbound types
+     * Set Specified ivr id. currently, it supports inbound and automatic outbound types.
+     * @param IVRId Specified ivr id. currently, it supports inbound and automatic outbound types.
      */
     public void setIVRId(Long IVRId) {
         this.IVRId = IVRId;
@@ -130,32 +130,32 @@ public class CreateIVRSessionRequest extends AbstractModel {
     }
 
     /**
-     * Get Custom variable 
-     * @return Variables Custom variable
+     * Get Custom variable. 
+     * @return Variables Custom variable.
      */
     public Variable [] getVariables() {
         return this.Variables;
     }
 
     /**
-     * Set Custom variable
-     * @param Variables Custom variable
+     * Set Custom variable.
+     * @param Variables Custom variable.
      */
     public void setVariables(Variable [] Variables) {
         this.Variables = Variables;
     }
 
     /**
-     * Get User Data 
-     * @return UUI User Data
+     * Get User data. 
+     * @return UUI User data.
      */
     public String getUUI() {
         return this.UUI;
     }
 
     /**
-     * Set User Data
-     * @param UUI User Data
+     * Set User data.
+     * @param UUI User data.
      */
     public void setUUI(String UUI) {
         this.UUI = UUI;

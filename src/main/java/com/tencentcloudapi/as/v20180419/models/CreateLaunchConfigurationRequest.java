@@ -38,7 +38,7 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
     private String ImageId;
 
     /**
-    * Project ID of the launch configuration. The default project is used if it’s left blank.
+    * Project ID of the launch configuration. The default project is used if it is left blank.
 Note that this project ID is not the same as the project ID of the scaling group. 
     */
     @SerializedName("ProjectId")
@@ -220,6 +220,20 @@ Note: This field is default to empty
     private String ImageFamily;
 
     /**
+    * CDC ID.
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
+
+    /**
+    * Custom metadata.
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private Metadata Metadata;
+
+    /**
      * Get Display name of the launch configuration, which can contain letters, digits, underscores and hyphens (-), and dots. Up to of 60 bytes allowed.. 
      * @return LaunchConfigurationName Display name of the launch configuration, which can contain letters, digits, underscores and hyphens (-), and dots. Up to of 60 bytes allowed..
      */
@@ -252,9 +266,9 @@ Note: This field is default to empty
     }
 
     /**
-     * Get Project ID of the launch configuration. The default project is used if it’s left blank.
+     * Get Project ID of the launch configuration. The default project is used if it is left blank.
 Note that this project ID is not the same as the project ID of the scaling group.  
-     * @return ProjectId Project ID of the launch configuration. The default project is used if it’s left blank.
+     * @return ProjectId Project ID of the launch configuration. The default project is used if it is left blank.
 Note that this project ID is not the same as the project ID of the scaling group. 
      */
     public Long getProjectId() {
@@ -262,9 +276,9 @@ Note that this project ID is not the same as the project ID of the scaling group
     }
 
     /**
-     * Set Project ID of the launch configuration. The default project is used if it’s left blank.
+     * Set Project ID of the launch configuration. The default project is used if it is left blank.
 Note that this project ID is not the same as the project ID of the scaling group. 
-     * @param ProjectId Project ID of the launch configuration. The default project is used if it’s left blank.
+     * @param ProjectId Project ID of the launch configuration. The default project is used if it is left blank.
 Note that this project ID is not the same as the project ID of the scaling group. 
      */
     public void setProjectId(Long ProjectId) {
@@ -691,6 +705,38 @@ Note: This field is default to empty
         this.ImageFamily = ImageFamily;
     }
 
+    /**
+     * Get CDC ID. 
+     * @return DedicatedClusterId CDC ID.
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set CDC ID.
+     * @param DedicatedClusterId CDC ID.
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
+    /**
+     * Get Custom metadata. 
+     * @return Metadata Custom metadata.
+     */
+    public Metadata getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set Custom metadata.
+     * @param Metadata Custom metadata.
+     */
+    public void setMetadata(Metadata Metadata) {
+        this.Metadata = Metadata;
+    }
+
     public CreateLaunchConfigurationRequest() {
     }
 
@@ -795,6 +841,12 @@ Note: This field is default to empty
         if (source.ImageFamily != null) {
             this.ImageFamily = new String(source.ImageFamily);
         }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
+        if (source.Metadata != null) {
+            this.Metadata = new Metadata(source.Metadata);
+        }
     }
 
 
@@ -828,6 +880,8 @@ Note: This field is default to empty
         this.setParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
         this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+        this.setParamObj(map, prefix + "Metadata.", this.Metadata);
 
     }
 }

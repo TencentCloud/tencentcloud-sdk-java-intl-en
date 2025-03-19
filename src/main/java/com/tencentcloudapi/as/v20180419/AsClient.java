@@ -794,9 +794,7 @@ When scale-in protection is enabled, the instance will not be removed in scale-i
     }
 
     /**
-     *已有替代接口ModifyLaunchConfiguration。该接口存在覆盖参数风险，目前官网已隐藏
-
-There is a replacement API: ModifyLaunchConfiguration. This API carries the risk of parameter overwriting, and it has currently been hidden on the official website.
+     *There is a replacement API: ModifyLaunchConfiguration. This API carries the risk of parameter overwriting, and it has currently been hidden on the official website.
 This API (UpgradeLaunchConfiguration) is used to upgrade the launch configuration.
 * This API is used to upgrade the launch configuration, adopting an "entirely overwrite" approach. Regardless of previous parameter settings, they will be uniformly replaced with new configurations as specified in the interface parameters. For non-mandatory fields, if not filled in, default values will be assigned.
 * After upgrading and modifying the launch configuration, existing instances that have been scaled out using this configuration will not undergo any changes. Subsequently, newly added instances using this upgraded launch configuration will be scaled out according to the new configuration.
@@ -810,10 +808,9 @@ This API (UpgradeLaunchConfiguration) is used to upgrade the launch configuratio
     }
 
     /**
-     *This API (UpgradeLifecycleHook) is used to upgrade a lifecycle hook.
+     *This API is used to upgrade the lifecycle hook.
 
-* This API is used to upgrade a lifecycle hook in a "completely overriding" manner, i.e., it uniformly sets a new configuration according to the API parameters regardless of the original parameters. If optional fields are left empty, their default values will be used.
-
+* This API is used to upgrade the lifecycle hook, adopting a "comprehensive overwrite" style. Regardless of how the previous parameters were set, it uniformly uses the new configurations for API parameters. For optional fields, if they are not filled in, default values will be used.
      * @param req UpgradeLifecycleHookRequest
      * @return UpgradeLifecycleHookResponse
      * @throws TencentCloudSDKException

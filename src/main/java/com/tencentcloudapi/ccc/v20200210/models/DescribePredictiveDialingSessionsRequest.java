@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribePredictiveDialingSessionsRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Generated task ID.
+    * Generated task id.
     */
     @SerializedName("CampaignId")
     @Expose
     private Long CampaignId;
 
     /**
-    * Page size, maximum of 1000
+    * Page size, maximum of 1000.
     */
     @SerializedName("PageSize")
     @Expose
@@ -52,48 +52,48 @@ public class DescribePredictiveDialingSessionsRequest extends AbstractModel {
     private Long PageNumber;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Generated task ID. 
-     * @return CampaignId Generated task ID.
+     * Get Generated task id. 
+     * @return CampaignId Generated task id.
      */
     public Long getCampaignId() {
         return this.CampaignId;
     }
 
     /**
-     * Set Generated task ID.
-     * @param CampaignId Generated task ID.
+     * Set Generated task id.
+     * @param CampaignId Generated task id.
      */
     public void setCampaignId(Long CampaignId) {
         this.CampaignId = CampaignId;
     }
 
     /**
-     * Get Page size, maximum of 1000 
-     * @return PageSize Page size, maximum of 1000
+     * Get Page size, maximum of 1000. 
+     * @return PageSize Page size, maximum of 1000.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Page size, maximum of 1000
-     * @param PageSize Page size, maximum of 1000
+     * Set Page size, maximum of 1000.
+     * @param PageSize Page size, maximum of 1000.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

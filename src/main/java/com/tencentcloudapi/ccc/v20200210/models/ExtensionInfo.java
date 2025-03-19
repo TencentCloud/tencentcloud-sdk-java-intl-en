@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExtensionInfo extends AbstractModel {
 
     /**
-    * Instance ID.
+    * Instance id.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -38,7 +38,7 @@ public class ExtensionInfo extends AbstractModel {
     private String FullExtensionId;
 
     /**
-    * Extension
+    * Extension.
     */
     @SerializedName("ExtensionId")
     @Expose
@@ -59,7 +59,7 @@ public class ExtensionInfo extends AbstractModel {
     private String ExtensionName;
 
     /**
-    * Creation Time
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -73,7 +73,7 @@ public class ExtensionInfo extends AbstractModel {
     private Long ModifyTime;
 
     /**
-    * Telephone status (0 Offline, 100 Free, 200 Busy).
+    * Telephone status (0 offline, 100 free, 200 busy).
     */
     @SerializedName("Status")
     @Expose
@@ -87,30 +87,30 @@ public class ExtensionInfo extends AbstractModel {
     private Boolean Register;
 
     /**
-    * Bind Agent Email
+    * Bind agent email.
     */
     @SerializedName("Relation")
     @Expose
     private String Relation;
 
     /**
-    * Bind Agent Name
+    * Bind agent name.
     */
     @SerializedName("RelationName")
     @Expose
     private String RelationName;
 
     /**
-     * Get Instance ID. 
-     * @return SdkAppId Instance ID.
+     * Get Instance id. 
+     * @return SdkAppId Instance id.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Instance ID.
-     * @param SdkAppId Instance ID.
+     * Set Instance id.
+     * @param SdkAppId Instance id.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -133,16 +133,16 @@ public class ExtensionInfo extends AbstractModel {
     }
 
     /**
-     * Get Extension 
-     * @return ExtensionId Extension
+     * Get Extension. 
+     * @return ExtensionId Extension.
      */
     public String getExtensionId() {
         return this.ExtensionId;
     }
 
     /**
-     * Set Extension
-     * @param ExtensionId Extension
+     * Set Extension.
+     * @param ExtensionId Extension.
      */
     public void setExtensionId(String ExtensionId) {
         this.ExtensionId = ExtensionId;
@@ -181,16 +181,16 @@ public class ExtensionInfo extends AbstractModel {
     }
 
     /**
-     * Get Creation Time 
-     * @return CreateTime Creation Time
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation Time
-     * @param CreateTime Creation Time
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
@@ -213,16 +213,16 @@ public class ExtensionInfo extends AbstractModel {
     }
 
     /**
-     * Get Telephone status (0 Offline, 100 Free, 200 Busy). 
-     * @return Status Telephone status (0 Offline, 100 Free, 200 Busy).
+     * Get Telephone status (0 offline, 100 free, 200 busy). 
+     * @return Status Telephone status (0 offline, 100 free, 200 busy).
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Telephone status (0 Offline, 100 Free, 200 Busy).
-     * @param Status Telephone status (0 Offline, 100 Free, 200 Busy).
+     * Set Telephone status (0 offline, 100 free, 200 busy).
+     * @param Status Telephone status (0 offline, 100 free, 200 busy).
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -245,32 +245,32 @@ public class ExtensionInfo extends AbstractModel {
     }
 
     /**
-     * Get Bind Agent Email 
-     * @return Relation Bind Agent Email
+     * Get Bind agent email. 
+     * @return Relation Bind agent email.
      */
     public String getRelation() {
         return this.Relation;
     }
 
     /**
-     * Set Bind Agent Email
-     * @param Relation Bind Agent Email
+     * Set Bind agent email.
+     * @param Relation Bind agent email.
      */
     public void setRelation(String Relation) {
         this.Relation = Relation;
     }
 
     /**
-     * Get Bind Agent Name 
-     * @return RelationName Bind Agent Name
+     * Get Bind agent name. 
+     * @return RelationName Bind agent name.
      */
     public String getRelationName() {
         return this.RelationName;
     }
 
     /**
-     * Set Bind Agent Name
-     * @param RelationName Bind Agent Name
+     * Set Bind agent name.
+     * @param RelationName Bind agent name.
      */
     public void setRelationName(String RelationName) {
         this.RelationName = RelationName;

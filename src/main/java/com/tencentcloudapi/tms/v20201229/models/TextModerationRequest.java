@@ -59,6 +59,13 @@ public class TextModerationRequest extends AbstractModel {
     private Device Device;
 
     /**
+    * This field Indicates the original language of the content.The enumeration values are ("en", "zh", ""), where en means English, zh means Chinese, and an empty string means the default language is Chinese. It is recommended to enter "en" only when the language of the content is clearly "English".
+    */
+    @SerializedName("SourceLanguage")
+    @Expose
+    private String SourceLanguage;
+
+    /**
      * Get This field indicates the text content of the object to be moderated. The text needs to be encoded in utf-8 format and encrypted with Base64. It can contain up to 10,000 characters, calculated by unicode encoding. 
      * @return Content This field indicates the text content of the object to be moderated. The text needs to be encoded in utf-8 format and encrypted with Base64. It can contain up to 10,000 characters, calculated by unicode encoding.
      */
@@ -138,6 +145,22 @@ public class TextModerationRequest extends AbstractModel {
         this.Device = Device;
     }
 
+    /**
+     * Get This field Indicates the original language of the content.The enumeration values are ("en", "zh", ""), where en means English, zh means Chinese, and an empty string means the default language is Chinese. It is recommended to enter "en" only when the language of the content is clearly "English". 
+     * @return SourceLanguage This field Indicates the original language of the content.The enumeration values are ("en", "zh", ""), where en means English, zh means Chinese, and an empty string means the default language is Chinese. It is recommended to enter "en" only when the language of the content is clearly "English".
+     */
+    public String getSourceLanguage() {
+        return this.SourceLanguage;
+    }
+
+    /**
+     * Set This field Indicates the original language of the content.The enumeration values are ("en", "zh", ""), where en means English, zh means Chinese, and an empty string means the default language is Chinese. It is recommended to enter "en" only when the language of the content is clearly "English".
+     * @param SourceLanguage This field Indicates the original language of the content.The enumeration values are ("en", "zh", ""), where en means English, zh means Chinese, and an empty string means the default language is Chinese. It is recommended to enter "en" only when the language of the content is clearly "English".
+     */
+    public void setSourceLanguage(String SourceLanguage) {
+        this.SourceLanguage = SourceLanguage;
+    }
+
     public TextModerationRequest() {
     }
 
@@ -161,6 +184,9 @@ public class TextModerationRequest extends AbstractModel {
         if (source.Device != null) {
             this.Device = new Device(source.Device);
         }
+        if (source.SourceLanguage != null) {
+            this.SourceLanguage = new String(source.SourceLanguage);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class TextModerationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataId", this.DataId);
         this.setParamObj(map, prefix + "User.", this.User);
         this.setParamObj(map, prefix + "Device.", this.Device);
+        this.setParamSimple(map, prefix + "SourceLanguage", this.SourceLanguage);
 
     }
 }

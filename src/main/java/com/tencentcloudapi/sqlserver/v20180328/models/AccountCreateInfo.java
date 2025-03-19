@@ -52,7 +52,7 @@ public class AccountCreateInfo extends AbstractModel {
     private String Remark;
 
     /**
-    * Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
+    * Whether it is an admin account. Valid values: true (it is an admin account when the instance is a single-node type and AccountType is L0; when the instance is a two-node type and AccountType is L1), false (it is a standard account when AccountType is L3)
     */
     @SerializedName("IsAdmin")
     @Expose
@@ -71,6 +71,13 @@ public class AccountCreateInfo extends AbstractModel {
     @SerializedName("AccountType")
     @Expose
     private String AccountType;
+
+    /**
+    * Whether CAM authentication is enabled
+    */
+    @SerializedName("IsCam")
+    @Expose
+    private Boolean IsCam;
 
     /**
      * Get Instance username 
@@ -137,16 +144,16 @@ public class AccountCreateInfo extends AbstractModel {
     }
 
     /**
-     * Get Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.) 
-     * @return IsAdmin Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
+     * Get Whether it is an admin account. Valid values: true (it is an admin account when the instance is a single-node type and AccountType is L0; when the instance is a two-node type and AccountType is L1), false (it is a standard account when AccountType is L3) 
+     * @return IsAdmin Whether it is an admin account. Valid values: true (it is an admin account when the instance is a single-node type and AccountType is L0; when the instance is a two-node type and AccountType is L1), false (it is a standard account when AccountType is L3)
      */
     public Boolean getIsAdmin() {
         return this.IsAdmin;
     }
 
     /**
-     * Set Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
-     * @param IsAdmin Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
+     * Set Whether it is an admin account. Valid values: true (it is an admin account when the instance is a single-node type and AccountType is L0; when the instance is a two-node type and AccountType is L1), false (it is a standard account when AccountType is L3)
+     * @param IsAdmin Whether it is an admin account. Valid values: true (it is an admin account when the instance is a single-node type and AccountType is L0; when the instance is a two-node type and AccountType is L1), false (it is a standard account when AccountType is L3)
      */
     public void setIsAdmin(Boolean IsAdmin) {
         this.IsAdmin = IsAdmin;
@@ -184,6 +191,22 @@ public class AccountCreateInfo extends AbstractModel {
         this.AccountType = AccountType;
     }
 
+    /**
+     * Get Whether CAM authentication is enabled 
+     * @return IsCam Whether CAM authentication is enabled
+     */
+    public Boolean getIsCam() {
+        return this.IsCam;
+    }
+
+    /**
+     * Set Whether CAM authentication is enabled
+     * @param IsCam Whether CAM authentication is enabled
+     */
+    public void setIsCam(Boolean IsCam) {
+        this.IsCam = IsCam;
+    }
+
     public AccountCreateInfo() {
     }
 
@@ -216,6 +239,9 @@ public class AccountCreateInfo extends AbstractModel {
         if (source.AccountType != null) {
             this.AccountType = new String(source.AccountType);
         }
+        if (source.IsCam != null) {
+            this.IsCam = new Boolean(source.IsCam);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class AccountCreateInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
         this.setParamSimple(map, prefix + "Authentication", this.Authentication);
         this.setParamSimple(map, prefix + "AccountType", this.AccountType);
+        this.setParamSimple(map, prefix + "IsCam", this.IsCam);
 
     }
 }

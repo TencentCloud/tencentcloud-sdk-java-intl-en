@@ -315,6 +315,9 @@ public enum RedisErrorCode {
     // The instance version is too low.
      UNSUPPORTEDOPERATION_LIMITPROXYVERSION("UnsupportedOperation.LimitProxyVersion"),
      
+    // The instance version is too low.
+     UNSUPPORTEDOPERATION_LOWVERSION("UnsupportedOperation.LowVersion"),
+     
     // Only Cluster Edition instances support backup exporting.
      UNSUPPORTEDOPERATION_ONLYCLUSTERINSTANCECANEXPORTBACKUP("UnsupportedOperation.OnlyClusterInstanceCanExportBackup");
      

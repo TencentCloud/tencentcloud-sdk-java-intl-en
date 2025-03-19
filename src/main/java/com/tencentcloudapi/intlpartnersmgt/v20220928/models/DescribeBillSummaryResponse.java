@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBillSummaryResponse extends AbstractModel {
 
     /**
-    * Detailed summary by billing dimensionNote: This field may return null, indicating that no valid values can be obtained.
+    * Detailed summary by billing dimension.
     */
     @SerializedName("SummaryDetail")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeBillSummaryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Detailed summary by billing dimensionNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return SummaryDetail Detailed summary by billing dimensionNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Detailed summary by billing dimension. 
+     * @return SummaryDetail Detailed summary by billing dimension.
      */
     public SummaryDetails [] getSummaryDetail() {
         return this.SummaryDetail;
     }
 
     /**
-     * Set Detailed summary by billing dimensionNote: This field may return null, indicating that no valid values can be obtained.
-     * @param SummaryDetail Detailed summary by billing dimensionNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Detailed summary by billing dimension.
+     * @param SummaryDetail Detailed summary by billing dimension.
      */
     public void setSummaryDetail(SummaryDetails [] SummaryDetail) {
         this.SummaryDetail = SummaryDetail;

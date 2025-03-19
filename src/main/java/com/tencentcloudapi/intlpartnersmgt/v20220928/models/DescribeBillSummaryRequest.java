@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBillSummaryRequest extends AbstractModel {
 
     /**
-    * Bill month in the format of "yyyy-mm".
+    * The month to which the bill belongs, formatted as YYYY-MM.
     */
     @SerializedName("Month")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeBillSummaryRequest extends AbstractModel {
     private String [] TagKey;
 
     /**
-     * Get Bill month in the format of "yyyy-mm". 
-     * @return Month Bill month in the format of "yyyy-mm".
+     * Get The month to which the bill belongs, formatted as YYYY-MM. 
+     * @return Month The month to which the bill belongs, formatted as YYYY-MM.
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set Bill month in the format of "yyyy-mm".
-     * @param Month Bill month in the format of "yyyy-mm".
+     * Set The month to which the bill belongs, formatted as YYYY-MM.
+     * @param Month The month to which the bill belongs, formatted as YYYY-MM.
      */
     public void setMonth(String Month) {
         this.Month = Month;

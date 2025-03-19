@@ -295,9 +295,7 @@ cdn-waf: web protection capability on CDN
     private String SniHost;
 
     /**
-    * Whether to enable XFF reset
-0: disable
-1: enable
+    * Whether to enable XFF reset. 0: disable; 1: enable.
     */
     @SerializedName("XFFReset")
     @Expose
@@ -325,11 +323,60 @@ cdn-waf: web protection capability on CDN
     private Long ProxyBuffer;
 
     /**
-    * 0: disable probe test; 1: enable probe test. The test is enabled by default.
+    * Whether to enable the test. 0: disable; 1: enable. The test is enabled by default.
     */
     @SerializedName("ProbeStatus")
     @Expose
     private Long ProbeStatus;
+
+    /**
+    * Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+    */
+    @SerializedName("GmType")
+    @Expose
+    private Long GmType;
+
+    /**
+    * SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+    */
+    @SerializedName("GmCertType")
+    @Expose
+    private Long GmCertType;
+
+    /**
+    * When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+    */
+    @SerializedName("GmCert")
+    @Expose
+    private String GmCert;
+
+    /**
+    * When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+    */
+    @SerializedName("GmPrivateKey")
+    @Expose
+    private String GmPrivateKey;
+
+    /**
+    * When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+    */
+    @SerializedName("GmEncCert")
+    @Expose
+    private String GmEncCert;
+
+    /**
+    * When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+    */
+    @SerializedName("GmEncPrivateKey")
+    @Expose
+    private String GmEncPrivateKey;
+
+    /**
+    * When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+    */
+    @SerializedName("GmSSLId")
+    @Expose
+    private String GmSSLId;
 
     /**
      * Get Domain requiring protection 
@@ -1020,24 +1067,16 @@ cdn-waf: web protection capability on CDN
     }
 
     /**
-     * Get Whether to enable XFF reset
-0: disable
-1: enable 
-     * @return XFFReset Whether to enable XFF reset
-0: disable
-1: enable
+     * Get Whether to enable XFF reset. 0: disable; 1: enable. 
+     * @return XFFReset Whether to enable XFF reset. 0: disable; 1: enable.
      */
     public Long getXFFReset() {
         return this.XFFReset;
     }
 
     /**
-     * Set Whether to enable XFF reset
-0: disable
-1: enable
-     * @param XFFReset Whether to enable XFF reset
-0: disable
-1: enable
+     * Set Whether to enable XFF reset. 0: disable; 1: enable.
+     * @param XFFReset Whether to enable XFF reset. 0: disable; 1: enable.
      */
     public void setXFFReset(Long XFFReset) {
         this.XFFReset = XFFReset;
@@ -1092,19 +1131,131 @@ cdn-waf: web protection capability on CDN
     }
 
     /**
-     * Get 0: disable probe test; 1: enable probe test. The test is enabled by default. 
-     * @return ProbeStatus 0: disable probe test; 1: enable probe test. The test is enabled by default.
+     * Get Whether to enable the test. 0: disable; 1: enable. The test is enabled by default. 
+     * @return ProbeStatus Whether to enable the test. 0: disable; 1: enable. The test is enabled by default.
      */
     public Long getProbeStatus() {
         return this.ProbeStatus;
     }
 
     /**
-     * Set 0: disable probe test; 1: enable probe test. The test is enabled by default.
-     * @param ProbeStatus 0: disable probe test; 1: enable probe test. The test is enabled by default.
+     * Set Whether to enable the test. 0: disable; 1: enable. The test is enabled by default.
+     * @param ProbeStatus Whether to enable the test. 0: disable; 1: enable. The test is enabled by default.
      */
     public void setProbeStatus(Long ProbeStatus) {
         this.ProbeStatus = ProbeStatus;
+    }
+
+    /**
+     * Get Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access. 
+     * @return GmType Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+     */
+    public Long getGmType() {
+        return this.GmType;
+    }
+
+    /**
+     * Set Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+     * @param GmType Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+     */
+    public void setGmType(Long GmType) {
+        this.GmType = GmType;
+    }
+
+    /**
+     * Get SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate. 
+     * @return GmCertType SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+     */
+    public Long getGmCertType() {
+        return this.GmCertType;
+    }
+
+    /**
+     * Set SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+     * @param GmCertType SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+     */
+    public void setGmCertType(Long GmCertType) {
+        this.GmCertType = GmCertType;
+    }
+
+    /**
+     * Get When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate. 
+     * @return GmCert When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+     */
+    public String getGmCert() {
+        return this.GmCert;
+    }
+
+    /**
+     * Set When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+     * @param GmCert When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+     */
+    public void setGmCert(String GmCert) {
+        this.GmCert = GmCert;
+    }
+
+    /**
+     * Get When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate. 
+     * @return GmPrivateKey When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+     */
+    public String getGmPrivateKey() {
+        return this.GmPrivateKey;
+    }
+
+    /**
+     * Set When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+     * @param GmPrivateKey When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+     */
+    public void setGmPrivateKey(String GmPrivateKey) {
+        this.GmPrivateKey = GmPrivateKey;
+    }
+
+    /**
+     * Get When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate. 
+     * @return GmEncCert When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+     */
+    public String getGmEncCert() {
+        return this.GmEncCert;
+    }
+
+    /**
+     * Set When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+     * @param GmEncCert When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+     */
+    public void setGmEncCert(String GmEncCert) {
+        this.GmEncCert = GmEncCert;
+    }
+
+    /**
+     * Get When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate. 
+     * @return GmEncPrivateKey When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+     */
+    public String getGmEncPrivateKey() {
+        return this.GmEncPrivateKey;
+    }
+
+    /**
+     * Set When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+     * @param GmEncPrivateKey When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+     */
+    public void setGmEncPrivateKey(String GmEncPrivateKey) {
+        this.GmEncPrivateKey = GmEncPrivateKey;
+    }
+
+    /**
+     * Get When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform. 
+     * @return GmSSLId When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+     */
+    public String getGmSSLId() {
+        return this.GmSSLId;
+    }
+
+    /**
+     * Set When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+     * @param GmSSLId When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+     */
+    public void setGmSSLId(String GmSSLId) {
+        this.GmSSLId = GmSSLId;
     }
 
     public AddSpartaProtectionRequest() {
@@ -1247,6 +1398,27 @@ cdn-waf: web protection capability on CDN
         if (source.ProbeStatus != null) {
             this.ProbeStatus = new Long(source.ProbeStatus);
         }
+        if (source.GmType != null) {
+            this.GmType = new Long(source.GmType);
+        }
+        if (source.GmCertType != null) {
+            this.GmCertType = new Long(source.GmCertType);
+        }
+        if (source.GmCert != null) {
+            this.GmCert = new String(source.GmCert);
+        }
+        if (source.GmPrivateKey != null) {
+            this.GmPrivateKey = new String(source.GmPrivateKey);
+        }
+        if (source.GmEncCert != null) {
+            this.GmEncCert = new String(source.GmEncCert);
+        }
+        if (source.GmEncPrivateKey != null) {
+            this.GmEncPrivateKey = new String(source.GmEncPrivateKey);
+        }
+        if (source.GmSSLId != null) {
+            this.GmSSLId = new String(source.GmSSLId);
+        }
     }
 
 
@@ -1292,6 +1464,13 @@ cdn-waf: web protection capability on CDN
         this.setParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
         this.setParamSimple(map, prefix + "ProxyBuffer", this.ProxyBuffer);
         this.setParamSimple(map, prefix + "ProbeStatus", this.ProbeStatus);
+        this.setParamSimple(map, prefix + "GmType", this.GmType);
+        this.setParamSimple(map, prefix + "GmCertType", this.GmCertType);
+        this.setParamSimple(map, prefix + "GmCert", this.GmCert);
+        this.setParamSimple(map, prefix + "GmPrivateKey", this.GmPrivateKey);
+        this.setParamSimple(map, prefix + "GmEncCert", this.GmEncCert);
+        this.setParamSimple(map, prefix + "GmEncPrivateKey", this.GmEncPrivateKey);
+        this.setParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
 
     }
 }

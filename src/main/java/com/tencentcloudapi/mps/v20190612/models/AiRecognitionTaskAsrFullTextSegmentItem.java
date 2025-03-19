@@ -52,6 +52,13 @@ public class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel {
     private String Text;
 
     /**
+    * Word timestamp information.
+    */
+    @SerializedName("Wordlist")
+    @Expose
+    private WordResult [] Wordlist;
+
+    /**
      * Get Confidence of a recognition segment. Value range: 0-100. 
      * @return Confidence Confidence of a recognition segment. Value range: 0-100.
      */
@@ -115,6 +122,22 @@ public class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel {
         this.Text = Text;
     }
 
+    /**
+     * Get Word timestamp information. 
+     * @return Wordlist Word timestamp information.
+     */
+    public WordResult [] getWordlist() {
+        return this.Wordlist;
+    }
+
+    /**
+     * Set Word timestamp information.
+     * @param Wordlist Word timestamp information.
+     */
+    public void setWordlist(WordResult [] Wordlist) {
+        this.Wordlist = Wordlist;
+    }
+
     public AiRecognitionTaskAsrFullTextSegmentItem() {
     }
 
@@ -135,6 +158,12 @@ public class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel {
         if (source.Text != null) {
             this.Text = new String(source.Text);
         }
+        if (source.Wordlist != null) {
+            this.Wordlist = new WordResult[source.Wordlist.length];
+            for (int i = 0; i < source.Wordlist.length; i++) {
+                this.Wordlist[i] = new WordResult(source.Wordlist[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         this.setParamSimple(map, prefix + "Text", this.Text);
+        this.setParamArrayObj(map, prefix + "Wordlist.", this.Wordlist);
 
     }
 }

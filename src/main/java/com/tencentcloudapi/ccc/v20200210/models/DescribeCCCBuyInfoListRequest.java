@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeCCCBuyInfoListRequest extends AbstractModel {
 
     /**
-    * Application ID list, query all applications when not transmitted.
+    * Application id list, query all applications when not transmitted.
     */
     @SerializedName("SdkAppIds")
     @Expose
     private Long [] SdkAppIds;
 
     /**
-     * Get Application ID list, query all applications when not transmitted. 
-     * @return SdkAppIds Application ID list, query all applications when not transmitted.
+     * Get Application id list, query all applications when not transmitted. 
+     * @return SdkAppIds Application id list, query all applications when not transmitted.
      */
     public Long [] getSdkAppIds() {
         return this.SdkAppIds;
     }
 
     /**
-     * Set Application ID list, query all applications when not transmitted.
-     * @param SdkAppIds Application ID list, query all applications when not transmitted.
+     * Set Application id list, query all applications when not transmitted.
+     * @param SdkAppIds Application id list, query all applications when not transmitted.
      */
     public void setSdkAppIds(Long [] SdkAppIds) {
         this.SdkAppIds = SdkAppIds;

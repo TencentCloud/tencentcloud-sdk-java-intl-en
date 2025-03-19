@@ -24,6 +24,9 @@ public enum TmsErrorCode {
     // The text in the request is in the incorrect format (base64-encoded text is required).
      INVALIDPARAMETERVALUE_ERRTEXTCONTENTTYPE("InvalidParameterValue.ErrTextContentType"),
      
+    // 
+     REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
+     
     // Operation not authorized/No valid package/The account is overdue
      UNAUTHORIZEDOPERATION_UNAUTHORIZED("UnauthorizedOperation.Unauthorized");
      

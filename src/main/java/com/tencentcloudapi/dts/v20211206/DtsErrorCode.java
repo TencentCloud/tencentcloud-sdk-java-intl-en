@@ -30,6 +30,9 @@ public enum DtsErrorCode {
     // This operation cannot be performed due to a status conflict.
      FAILEDOPERATION_STATUSINCONFLICT("FailedOperation.StatusInConflict"),
      
+    // 
+     FAILEDOPERATION_USERNOTAUTHED("FailedOperation.UserNotAuthed"),
+     
     // An internal error occurred.
      INTERNALERROR("InternalError"),
      
@@ -47,6 +50,9 @@ public enum DtsErrorCode {
      
     // Migration tasks are in conflict.
      INTERNALERROR_DUPLICATEJOB("InternalError.DuplicateJob"),
+     
+    // HTTP request error.
+     INTERNALERROR_EXECHTTPREQUESTERROR("InternalError.ExecHttpRequestError"),
      
     // An internal error occurred.
      INTERNALERROR_INTERNALERRORERROR("InternalError.InternalErrorError"),
@@ -122,6 +128,9 @@ public enum DtsErrorCode {
      
     // The account balance is insufficient.
      OPERATIONDENIED_NOTENOUGHMONEYERROR("OperationDenied.NotEnoughMoneyError"),
+     
+    // This operation cannot be performed.
+     OPERATIONDENIED_OPERATIONDENIED("OperationDenied.OperationDenied"),
      
     // The operation was denied.
      OPERATIONDENIED_OPERATIONDENIEDERROR("OperationDenied.OperationDeniedError"),

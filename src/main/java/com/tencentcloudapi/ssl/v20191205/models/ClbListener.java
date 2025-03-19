@@ -52,24 +52,21 @@ public class ClbListener extends AbstractModel {
     private String Protocol;
 
     /**
-    * The information of the certificate bound to the listener.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Data of certificate bound to the listener.
     */
     @SerializedName("Certificate")
     @Expose
     private Certificate Certificate;
 
     /**
-    * The list of the listener rules.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of listener rules.
     */
     @SerializedName("Rules")
     @Expose
     private ClbListenerRule [] Rules;
 
     /**
-    * The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Domain list not matched.
     */
     @SerializedName("NoMatchDomains")
     @Expose
@@ -140,60 +137,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The information of the certificate bound to the listener.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Certificate The information of the certificate bound to the listener.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Data of certificate bound to the listener. 
+     * @return Certificate Data of certificate bound to the listener.
      */
     public Certificate getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set The information of the certificate bound to the listener.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Certificate The information of the certificate bound to the listener.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Data of certificate bound to the listener.
+     * @param Certificate Data of certificate bound to the listener.
      */
     public void setCertificate(Certificate Certificate) {
         this.Certificate = Certificate;
     }
 
     /**
-     * Get The list of the listener rules.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Rules The list of the listener rules.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of listener rules. 
+     * @return Rules List of listener rules.
      */
     public ClbListenerRule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set The list of the listener rules.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Rules The list of the listener rules.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of listener rules.
+     * @param Rules List of listener rules.
      */
     public void setRules(ClbListenerRule [] Rules) {
         this.Rules = Rules;
     }
 
     /**
-     * Get The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NoMatchDomains The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Domain list not matched. 
+     * @return NoMatchDomains Domain list not matched.
      */
     public String [] getNoMatchDomains() {
         return this.NoMatchDomains;
     }
 
     /**
-     * Set The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NoMatchDomains The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Domain list not matched.
+     * @param NoMatchDomains Domain list not matched.
      */
     public void setNoMatchDomains(String [] NoMatchDomains) {
         this.NoMatchDomains = NoMatchDomains;

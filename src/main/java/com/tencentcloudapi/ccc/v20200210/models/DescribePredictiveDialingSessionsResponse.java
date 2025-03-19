@@ -31,7 +31,7 @@ public class DescribePredictiveDialingSessionsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * List of session IDs for a call. You can access detailed call bills in batches through https://intl.cloud.tencent.com/document/product/679/47714.?from_cn_redirect=1
+    * List of session ids for a call. you can access detailed call bills in batches through https://intl.cloud.tencent.com/document/product/679/47714.?from_cn_redirect=1.
     */
     @SerializedName("SessionList")
     @Expose
@@ -61,16 +61,16 @@ public class DescribePredictiveDialingSessionsResponse extends AbstractModel {
     }
 
     /**
-     * Get List of session IDs for a call. You can access detailed call bills in batches through https://intl.cloud.tencent.com/document/product/679/47714.?from_cn_redirect=1 
-     * @return SessionList List of session IDs for a call. You can access detailed call bills in batches through https://intl.cloud.tencent.com/document/product/679/47714.?from_cn_redirect=1
+     * Get List of session ids for a call. you can access detailed call bills in batches through https://intl.cloud.tencent.com/document/product/679/47714.?from_cn_redirect=1. 
+     * @return SessionList List of session ids for a call. you can access detailed call bills in batches through https://intl.cloud.tencent.com/document/product/679/47714.?from_cn_redirect=1.
      */
     public String [] getSessionList() {
         return this.SessionList;
     }
 
     /**
-     * Set List of session IDs for a call. You can access detailed call bills in batches through https://intl.cloud.tencent.com/document/product/679/47714.?from_cn_redirect=1
-     * @param SessionList List of session IDs for a call. You can access detailed call bills in batches through https://intl.cloud.tencent.com/document/product/679/47714.?from_cn_redirect=1
+     * Set List of session ids for a call. you can access detailed call bills in batches through https://intl.cloud.tencent.com/document/product/679/47714.?from_cn_redirect=1.
+     * @param SessionList List of session ids for a call. you can access detailed call bills in batches through https://intl.cloud.tencent.com/document/product/679/47714.?from_cn_redirect=1.
      */
     public void setSessionList(String [] SessionList) {
         this.SessionList = SessionList;

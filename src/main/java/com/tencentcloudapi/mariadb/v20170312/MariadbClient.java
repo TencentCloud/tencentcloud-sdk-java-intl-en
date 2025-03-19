@@ -251,7 +251,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     }
 
     /**
-     *This API is used to obtain a temp u200drollback instance.
+     *This API is used to obtain a temp rollback instance.
      * @param req DescribeDBTmpInstancesRequest
      * @return DescribeDBTmpInstancesResponse
      * @throws TencentCloudSDKException

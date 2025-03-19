@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BindStaffSkillGroupListRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -38,7 +38,7 @@ public class BindStaffSkillGroupListRequest extends AbstractModel {
     private String StaffEmail;
 
     /**
-    * Bound skill group list
+    * Bound skill group list.
     */
     @SerializedName("SkillGroupList")
     @Expose
@@ -52,16 +52,16 @@ public class BindStaffSkillGroupListRequest extends AbstractModel {
     private StaffSkillGroupList [] StaffSkillGroupList;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -84,8 +84,8 @@ public class BindStaffSkillGroupListRequest extends AbstractModel {
     }
 
     /**
-     * Get Bound skill group list 
-     * @return SkillGroupList Bound skill group list
+     * Get Bound skill group list. 
+     * @return SkillGroupList Bound skill group list.
      * @deprecated
      */
     @Deprecated
@@ -94,8 +94,8 @@ public class BindStaffSkillGroupListRequest extends AbstractModel {
     }
 
     /**
-     * Set Bound skill group list
-     * @param SkillGroupList Bound skill group list
+     * Set Bound skill group list.
+     * @param SkillGroupList Bound skill group list.
      * @deprecated
      */
     @Deprecated

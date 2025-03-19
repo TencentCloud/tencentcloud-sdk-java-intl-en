@@ -105,6 +105,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a live recording template.
+     * @param req CreateLiveRecordTemplateRequest
+     * @return CreateLiveRecordTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(CreateLiveRecordTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLiveRecordTemplate", CreateLiveRecordTemplateResponse.class);
+    }
+
+    /**
      *This API is used to create image samples for video processing operations such as content recognition and inappropriate information detection with the help of technologies such as facial feature positioning.
      * @param req CreatePersonSampleRequest
      * @return CreatePersonSampleResponse
@@ -294,6 +305,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to delete a live recording template.
+     * @param req DeleteLiveRecordTemplateRequest
+     * @return DeleteLiveRecordTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveRecordTemplateResponse DeleteLiveRecordTemplate(DeleteLiveRecordTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLiveRecordTemplate", DeleteLiveRecordTemplateResponse.class);
+    }
+
+    /**
      *This API is used to delete image samples by image ID.
      * @param req DeletePersonSampleRequest
      * @return DeletePersonSampleResponse
@@ -459,6 +481,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to get a live recording template.
+     * @param req DescribeLiveRecordTemplatesRequest
+     * @return DescribeLiveRecordTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(DescribeLiveRecordTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveRecordTemplates", DescribeLiveRecordTemplatesResponse.class);
+    }
+
+    /**
      *This API is used to get the metadata of media, such as video image width/height, codec, length, and frame rate.
      * @param req DescribeMediaMetaDataRequest
      * @return DescribeMediaMetaDataResponse
@@ -522,6 +555,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(DescribeSnapshotByTimeOffsetTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSnapshotByTimeOffsetTemplates", DescribeSnapshotByTimeOffsetTemplatesResponse.class);
+    }
+
+    /**
+     *This API is used to query a security group.
+     * @param req DescribeStreamLinkSecurityGroupRequest
+     * @return DescribeStreamLinkSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkSecurityGroupResponse DescribeStreamLinkSecurityGroup(DescribeStreamLinkSecurityGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamLinkSecurityGroup", DescribeStreamLinkSecurityGroupResponse.class);
     }
 
     /**
@@ -750,6 +794,17 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     }
 
     /**
+     *This API is used to modify a live recording template.
+     * @param req ModifyLiveRecordTemplateRequest
+     * @return ModifyLiveRecordTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(ModifyLiveRecordTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLiveRecordTemplate", ModifyLiveRecordTemplateResponse.class);
+    }
+
+    /**
      *This API is used to modify image samples by image ID. You can use it to modify the name and description of an image sample and add/delete/reset facial features or tags. There must be at least one image left after the deletion of facial features; otherwise, please reset instead of delete the facial features.
      * @param req ModifyPersonSampleRequest
      * @return ModifyPersonSampleResponse
@@ -859,6 +914,19 @@ Instead of initiating a video processing task, this API is used to help generate
     public ParseNotificationResponse ParseNotification(ParseNotificationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ParseNotification", ParseNotificationResponse.class);
+    }
+
+    /**
+     *This API is used to initiate image processing. Its features include:
+1. Format conversion;
+2. Image enhancement;
+     * @param req ProcessImageRequest
+     * @return ProcessImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ProcessImageResponse ProcessImage(ProcessImageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ProcessImage", ProcessImageResponse.class);
     }
 
     /**

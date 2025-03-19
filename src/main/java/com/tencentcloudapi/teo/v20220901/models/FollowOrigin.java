@@ -33,28 +33,25 @@ public class FollowOrigin extends AbstractModel {
     private String Switch;
 
     /**
-    * Whether to cache when an origin server does not return the Cache-Control header. This field is required when Switch is on; otherwise, it is ineffective. Valid values:
-<li>on: Cache.</li>
-<li>off: Do not cache.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Whether to cache when an origin server does not return the cache-control header. this field is required when switch is on; when switch is off, this field is not required and will be ineffective if filled. valid values:.
+<Li>On: cache;</li>.
+<Li>Off: do not cache.</li>.
     */
     @SerializedName("DefaultCache")
     @Expose
     private String DefaultCache;
 
     /**
-    * Whether to use the default caching policy when an origin server does not return the Cache-Control header. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheTime is not 0, this field should be off. Valid values:
-<li>on: Use the default caching policy.</li>
-<li>off: Do not use the default caching policy.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Whether to use the default caching policy when an origin server does not return the cache-control header. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachetime is not 0, this field should be off. valid values:.
+<Li>On: use the default caching policy.</li>.
+<Li>Off: do not use the default caching policy.</li>.
     */
     @SerializedName("DefaultCacheStrategy")
     @Expose
     private String DefaultCacheStrategy;
 
     /**
-    * The default cache time in seconds when an origin server does not return the Cache-Control header. The value ranges from 0 to 315360000. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheStrategy is on, this field should be 0.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * The default cache time in seconds when an origin server does not return the cache-control header. the value ranges from 0 to 315360000. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachestrategy is on, this field should be 0.
     */
     @SerializedName("DefaultCacheTime")
     @Expose
@@ -85,76 +82,64 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get Whether to cache when an origin server does not return the Cache-Control header. This field is required when Switch is on; otherwise, it is ineffective. Valid values:
-<li>on: Cache.</li>
-<li>off: Do not cache.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return DefaultCache Whether to cache when an origin server does not return the Cache-Control header. This field is required when Switch is on; otherwise, it is ineffective. Valid values:
-<li>on: Cache.</li>
-<li>off: Do not cache.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Whether to cache when an origin server does not return the cache-control header. this field is required when switch is on; when switch is off, this field is not required and will be ineffective if filled. valid values:.
+<Li>On: cache;</li>.
+<Li>Off: do not cache.</li>. 
+     * @return DefaultCache Whether to cache when an origin server does not return the cache-control header. this field is required when switch is on; when switch is off, this field is not required and will be ineffective if filled. valid values:.
+<Li>On: cache;</li>.
+<Li>Off: do not cache.</li>.
      */
     public String getDefaultCache() {
         return this.DefaultCache;
     }
 
     /**
-     * Set Whether to cache when an origin server does not return the Cache-Control header. This field is required when Switch is on; otherwise, it is ineffective. Valid values:
-<li>on: Cache.</li>
-<li>off: Do not cache.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param DefaultCache Whether to cache when an origin server does not return the Cache-Control header. This field is required when Switch is on; otherwise, it is ineffective. Valid values:
-<li>on: Cache.</li>
-<li>off: Do not cache.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Whether to cache when an origin server does not return the cache-control header. this field is required when switch is on; when switch is off, this field is not required and will be ineffective if filled. valid values:.
+<Li>On: cache;</li>.
+<Li>Off: do not cache.</li>.
+     * @param DefaultCache Whether to cache when an origin server does not return the cache-control header. this field is required when switch is on; when switch is off, this field is not required and will be ineffective if filled. valid values:.
+<Li>On: cache;</li>.
+<Li>Off: do not cache.</li>.
      */
     public void setDefaultCache(String DefaultCache) {
         this.DefaultCache = DefaultCache;
     }
 
     /**
-     * Get Whether to use the default caching policy when an origin server does not return the Cache-Control header. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheTime is not 0, this field should be off. Valid values:
-<li>on: Use the default caching policy.</li>
-<li>off: Do not use the default caching policy.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return DefaultCacheStrategy Whether to use the default caching policy when an origin server does not return the Cache-Control header. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheTime is not 0, this field should be off. Valid values:
-<li>on: Use the default caching policy.</li>
-<li>off: Do not use the default caching policy.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Whether to use the default caching policy when an origin server does not return the cache-control header. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachetime is not 0, this field should be off. valid values:.
+<Li>On: use the default caching policy.</li>.
+<Li>Off: do not use the default caching policy.</li>. 
+     * @return DefaultCacheStrategy Whether to use the default caching policy when an origin server does not return the cache-control header. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachetime is not 0, this field should be off. valid values:.
+<Li>On: use the default caching policy.</li>.
+<Li>Off: do not use the default caching policy.</li>.
      */
     public String getDefaultCacheStrategy() {
         return this.DefaultCacheStrategy;
     }
 
     /**
-     * Set Whether to use the default caching policy when an origin server does not return the Cache-Control header. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheTime is not 0, this field should be off. Valid values:
-<li>on: Use the default caching policy.</li>
-<li>off: Do not use the default caching policy.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param DefaultCacheStrategy Whether to use the default caching policy when an origin server does not return the Cache-Control header. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheTime is not 0, this field should be off. Valid values:
-<li>on: Use the default caching policy.</li>
-<li>off: Do not use the default caching policy.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Whether to use the default caching policy when an origin server does not return the cache-control header. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachetime is not 0, this field should be off. valid values:.
+<Li>On: use the default caching policy.</li>.
+<Li>Off: do not use the default caching policy.</li>.
+     * @param DefaultCacheStrategy Whether to use the default caching policy when an origin server does not return the cache-control header. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachetime is not 0, this field should be off. valid values:.
+<Li>On: use the default caching policy.</li>.
+<Li>Off: do not use the default caching policy.</li>.
      */
     public void setDefaultCacheStrategy(String DefaultCacheStrategy) {
         this.DefaultCacheStrategy = DefaultCacheStrategy;
     }
 
     /**
-     * Get The default cache time in seconds when an origin server does not return the Cache-Control header. The value ranges from 0 to 315360000. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheStrategy is on, this field should be 0.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return DefaultCacheTime The default cache time in seconds when an origin server does not return the Cache-Control header. The value ranges from 0 to 315360000. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheStrategy is on, this field should be 0.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get The default cache time in seconds when an origin server does not return the cache-control header. the value ranges from 0 to 315360000. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachestrategy is on, this field should be 0. 
+     * @return DefaultCacheTime The default cache time in seconds when an origin server does not return the cache-control header. the value ranges from 0 to 315360000. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachestrategy is on, this field should be 0.
      */
     public Long getDefaultCacheTime() {
         return this.DefaultCacheTime;
     }
 
     /**
-     * Set The default cache time in seconds when an origin server does not return the Cache-Control header. The value ranges from 0 to 315360000. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheStrategy is on, this field should be 0.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param DefaultCacheTime The default cache time in seconds when an origin server does not return the Cache-Control header. The value ranges from 0 to 315360000. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheStrategy is on, this field should be 0.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set The default cache time in seconds when an origin server does not return the cache-control header. the value ranges from 0 to 315360000. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachestrategy is on, this field should be 0.
+     * @param DefaultCacheTime The default cache time in seconds when an origin server does not return the cache-control header. the value ranges from 0 to 315360000. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachestrategy is on, this field should be 0.
      */
     public void setDefaultCacheTime(Long DefaultCacheTime) {
         this.DefaultCacheTime = DefaultCacheTime;

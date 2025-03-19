@@ -38,7 +38,9 @@ public class StartInstanceRefreshRequest extends AbstractModel {
     private RefreshSettings RefreshSettings;
 
     /**
-    * Refresh mode, currently, only rolling updates are supported, with the default value being ROLLING_UPDATE_RESET.
+    * Refresh mode. Valid values:
+<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
     */
     @SerializedName("RefreshMode")
     @Expose
@@ -77,16 +79,24 @@ public class StartInstanceRefreshRequest extends AbstractModel {
     }
 
     /**
-     * Get Refresh mode, currently, only rolling updates are supported, with the default value being ROLLING_UPDATE_RESET. 
-     * @return RefreshMode Refresh mode, currently, only rolling updates are supported, with the default value being ROLLING_UPDATE_RESET.
+     * Get Refresh mode. Valid values:
+<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li> 
+     * @return RefreshMode Refresh mode. Valid values:
+<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
      */
     public String getRefreshMode() {
         return this.RefreshMode;
     }
 
     /**
-     * Set Refresh mode, currently, only rolling updates are supported, with the default value being ROLLING_UPDATE_RESET.
-     * @param RefreshMode Refresh mode, currently, only rolling updates are supported, with the default value being ROLLING_UPDATE_RESET.
+     * Set Refresh mode. Valid values:
+<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
+     * @param RefreshMode Refresh mode. Valid values:
+<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
      */
     public void setRefreshMode(String RefreshMode) {
         this.RefreshMode = RefreshMode;

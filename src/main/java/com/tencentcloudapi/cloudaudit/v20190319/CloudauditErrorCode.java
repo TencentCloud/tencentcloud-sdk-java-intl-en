@@ -18,6 +18,12 @@ public enum CloudauditErrorCode {
     // Failed to pull the COS bucket list
      FAILEDOPERATION_GETCOSBUCKETLISTFAILED("FailedOperation.GetCosBucketListFailed"),
      
+    // 
+     FAILEDOPERATION_MEMBERNOTAUDITROLE("FailedOperation.MemberNotAuditRole"),
+     
+    // 
+     FAILEDOPERATION_MEMBERNOTINORGANIZATION("FailedOperation.MemberNotInOrganization"),
+     
     // Internal error.
      INTERNALERROR("InternalError"),
      
@@ -144,8 +150,14 @@ public enum CloudauditErrorCode {
     // The tracking set does not exist.
      RESOURCENOTFOUND_AUDITNOTEXIST("ResourceNotFound.AuditNotExist"),
      
+    // 
+     RESOURCENOTFOUND_COSNOTEXIST("ResourceNotFound.CosNotExist"),
+     
     // The role doesn’t exist.
-     RESOURCENOTFOUND_ROLENOTEXIST("ResourceNotFound.RoleNotExist");
+     RESOURCENOTFOUND_ROLENOTEXIST("ResourceNotFound.RoleNotExist"),
+     
+    // 
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation");
      
     private String value;
     private CloudauditErrorCode (String value){

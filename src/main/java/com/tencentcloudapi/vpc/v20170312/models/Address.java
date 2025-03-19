@@ -101,7 +101,7 @@ public class Address extends AbstractModel {
     private Boolean IsEipDirectConnection;
 
     /**
-    * IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
+    * EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public IP), `EIP` (elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (anti-DDoS EIP).
     */
     @SerializedName("AddressType")
     @Expose
@@ -186,7 +186,8 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String InstanceType;
 
     /**
-    * 
+    * Static single-line IP network egress
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("Egress")
     @Expose
@@ -200,18 +201,37 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String AntiDDoSPackageId;
 
     /**
-    * 
+    * Indicates whether the current EIP is auto-renewed. This field is displayed only for EIPs with monthly prepaid bandwidth. Valid values are as follows:
+<li>NOTIFY_AND_MANUAL_RENEW: Normal renewal</li><li>NOTIFY_AND_AUTO_RENEW: Automatic renewal</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: No renewal upon expiration</li>
+
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-    * 
+    * Indicates the ID of the Bandwidth Package associated with the current public IP. If the public IP is not billed by Bandwidth Package, this field is empty.
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
+
+    /**
+    * Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
+Note: This field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("UnVpcId")
+    @Expose
+    private String UnVpcId;
+
+    /**
+    * Indicates the unique ID of the CDC.
+Note: This field may return 'null', indicating that no valid value was found.
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
 
     /**
      * Get `EIP` `ID`, the unique ID of the `EIP`. 
@@ -390,16 +410,16 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP). 
-     * @return AddressType IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
+     * Get EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public IP), `EIP` (elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (anti-DDoS EIP). 
+     * @return AddressType EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public IP), `EIP` (elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (anti-DDoS EIP).
      */
     public String getAddressType() {
         return this.AddressType;
     }
 
     /**
-     * Set IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
-     * @param AddressType IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
+     * Set EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public IP), `EIP` (elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (anti-DDoS EIP).
+     * @param AddressType EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public IP), `EIP` (elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (anti-DDoS EIP).
      */
     public void setAddressType(String AddressType) {
         this.AddressType = AddressType;
@@ -610,16 +630,20 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return Egress 
+     * Get Static single-line IP network egress
+Note: This field may return null, indicating that no valid value was found. 
+     * @return Egress Static single-line IP network egress
+Note: This field may return null, indicating that no valid value was found.
      */
     public String getEgress() {
         return this.Egress;
     }
 
     /**
-     * Set 
-     * @param Egress 
+     * Set Static single-line IP network egress
+Note: This field may return null, indicating that no valid value was found.
+     * @param Egress Static single-line IP network egress
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setEgress(String Egress) {
         this.Egress = Egress;
@@ -642,35 +666,87 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return RenewFlag 
+     * Get Indicates whether the current EIP is auto-renewed. This field is displayed only for EIPs with monthly prepaid bandwidth. Valid values are as follows:
+<li>NOTIFY_AND_MANUAL_RENEW: Normal renewal</li><li>NOTIFY_AND_AUTO_RENEW: Automatic renewal</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: No renewal upon expiration</li>
+ 
+     * @return RenewFlag Indicates whether the current EIP is auto-renewed. This field is displayed only for EIPs with monthly prepaid bandwidth. Valid values are as follows:
+<li>NOTIFY_AND_MANUAL_RENEW: Normal renewal</li><li>NOTIFY_AND_AUTO_RENEW: Automatic renewal</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: No renewal upon expiration</li>
+
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 
-     * @param RenewFlag 
+     * Set Indicates whether the current EIP is auto-renewed. This field is displayed only for EIPs with monthly prepaid bandwidth. Valid values are as follows:
+<li>NOTIFY_AND_MANUAL_RENEW: Normal renewal</li><li>NOTIFY_AND_AUTO_RENEW: Automatic renewal</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: No renewal upon expiration</li>
+
+     * @param RenewFlag Indicates whether the current EIP is auto-renewed. This field is displayed only for EIPs with monthly prepaid bandwidth. Valid values are as follows:
+<li>NOTIFY_AND_MANUAL_RENEW: Normal renewal</li><li>NOTIFY_AND_AUTO_RENEW: Automatic renewal</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: No renewal upon expiration</li>
+
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get  
-     * @return BandwidthPackageId 
+     * Get Indicates the ID of the Bandwidth Package associated with the current public IP. If the public IP is not billed by Bandwidth Package, this field is empty.
+Note: This field may return null, indicating that no valid value was found. 
+     * @return BandwidthPackageId Indicates the ID of the Bandwidth Package associated with the current public IP. If the public IP is not billed by Bandwidth Package, this field is empty.
+Note: This field may return null, indicating that no valid value was found.
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * Set 
-     * @param BandwidthPackageId 
+     * Set Indicates the ID of the Bandwidth Package associated with the current public IP. If the public IP is not billed by Bandwidth Package, this field is empty.
+Note: This field may return null, indicating that no valid value was found.
+     * @param BandwidthPackageId Indicates the ID of the Bandwidth Package associated with the current public IP. If the public IP is not billed by Bandwidth Package, this field is empty.
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;
+    }
+
+    /**
+     * Get Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
+Note: This field may return null, indicating that no valid value was found. 
+     * @return UnVpcId Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public String getUnVpcId() {
+        return this.UnVpcId;
+    }
+
+    /**
+     * Set Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
+Note: This field may return null, indicating that no valid value was found.
+     * @param UnVpcId Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public void setUnVpcId(String UnVpcId) {
+        this.UnVpcId = UnVpcId;
+    }
+
+    /**
+     * Get Indicates the unique ID of the CDC.
+Note: This field may return 'null', indicating that no valid value was found. 
+     * @return DedicatedClusterId Indicates the unique ID of the CDC.
+Note: This field may return 'null', indicating that no valid value was found.
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set Indicates the unique ID of the CDC.
+Note: This field may return 'null', indicating that no valid value was found.
+     * @param DedicatedClusterId Indicates the unique ID of the CDC.
+Note: This field may return 'null', indicating that no valid value was found.
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
     }
 
     public Address() {
@@ -759,6 +835,12 @@ Note: this field may return `null`, indicating that no valid value was found.
         if (source.BandwidthPackageId != null) {
             this.BandwidthPackageId = new String(source.BandwidthPackageId);
         }
+        if (source.UnVpcId != null) {
+            this.UnVpcId = new String(source.UnVpcId);
+        }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
     }
 
 
@@ -791,6 +873,8 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
+        this.setParamSimple(map, prefix + "UnVpcId", this.UnVpcId);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
 
     }
 }

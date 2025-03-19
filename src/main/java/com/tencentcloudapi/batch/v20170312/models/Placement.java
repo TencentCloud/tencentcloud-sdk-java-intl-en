@@ -45,13 +45,6 @@ public class Placement extends AbstractModel {
     private String [] HostIds;
 
     /**
-    * IPs of the hosts to create CVMs
-    */
-    @SerializedName("HostIps")
-    @Expose
-    private String [] HostIps;
-
-    /**
     * The ID of the CDH to which the instance belongs, only used as an output parameter.
     */
     @SerializedName("HostId")
@@ -107,22 +100,6 @@ public class Placement extends AbstractModel {
     }
 
     /**
-     * Get IPs of the hosts to create CVMs 
-     * @return HostIps IPs of the hosts to create CVMs
-     */
-    public String [] getHostIps() {
-        return this.HostIps;
-    }
-
-    /**
-     * Set IPs of the hosts to create CVMs
-     * @param HostIps IPs of the hosts to create CVMs
-     */
-    public void setHostIps(String [] HostIps) {
-        this.HostIps = HostIps;
-    }
-
-    /**
      * Get The ID of the CDH to which the instance belongs, only used as an output parameter. 
      * @return HostId The ID of the CDH to which the instance belongs, only used as an output parameter.
      */
@@ -158,12 +135,6 @@ public class Placement extends AbstractModel {
                 this.HostIds[i] = new String(source.HostIds[i]);
             }
         }
-        if (source.HostIps != null) {
-            this.HostIps = new String[source.HostIps.length];
-            for (int i = 0; i < source.HostIps.length; i++) {
-                this.HostIps[i] = new String(source.HostIps[i]);
-            }
-        }
         if (source.HostId != null) {
             this.HostId = new String(source.HostId);
         }
@@ -177,7 +148,6 @@ public class Placement extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArraySimple(map, prefix + "HostIds.", this.HostIds);
-        this.setParamArraySimple(map, prefix + "HostIps.", this.HostIps);
         this.setParamSimple(map, prefix + "HostId", this.HostId);
 
     }

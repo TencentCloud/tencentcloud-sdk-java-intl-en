@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAgentCruiseDialingCampaignResponse extends AbstractModel {
 
     /**
-    * Generated task ID.
+    * Generated task id.
     */
     @SerializedName("CampaignId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAgentCruiseDialingCampaignResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Generated task ID. 
-     * @return CampaignId Generated task ID.
+     * Get Generated task id. 
+     * @return CampaignId Generated task id.
      */
     public Long getCampaignId() {
         return this.CampaignId;
     }
 
     /**
-     * Set Generated task ID.
-     * @param CampaignId Generated task ID.
+     * Set Generated task id.
+     * @param CampaignId Generated task id.
      */
     public void setCampaignId(Long CampaignId) {
         this.CampaignId = CampaignId;

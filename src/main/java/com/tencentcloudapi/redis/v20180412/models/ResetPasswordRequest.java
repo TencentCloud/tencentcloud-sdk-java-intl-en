@@ -24,69 +24,79 @@ import java.util.HashMap;
 public class ResetPasswordRequest extends AbstractModel {
 
     /**
-    * Redis instance ID
+    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
+    * Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
+    * Whether to switch to a password-free instance.
+- false: Switch to a non-password-free instance.
+- true: Switch to a password-free instance. Default value: false.
     */
     @SerializedName("NoAuth")
     @Expose
     private Boolean NoAuth;
 
     /**
-     * Get Redis instance ID 
-     * @return InstanceId Redis instance ID
+     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
+     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Redis instance ID
-     * @param InstanceId Redis instance ID
+     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases) 
-     * @return Password Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
+     * Get Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases. 
+     * @return Password Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
-     * @param Password Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
+     * Set Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
+     * @param Password Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false. 
-     * @return NoAuth Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
+     * Get Whether to switch to a password-free instance.
+- false: Switch to a non-password-free instance.
+- true: Switch to a password-free instance. Default value: false. 
+     * @return NoAuth Whether to switch to a password-free instance.
+- false: Switch to a non-password-free instance.
+- true: Switch to a password-free instance. Default value: false.
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
-     * @param NoAuth Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
+     * Set Whether to switch to a password-free instance.
+- false: Switch to a non-password-free instance.
+- true: Switch to a password-free instance. Default value: false.
+     * @param NoAuth Whether to switch to a password-free instance.
+- false: Switch to a non-password-free instance.
+- true: Switch to a password-free instance. Default value: false.
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;

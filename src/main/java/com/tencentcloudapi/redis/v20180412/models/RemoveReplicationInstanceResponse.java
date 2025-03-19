@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RemoveReplicationInstanceResponse extends AbstractModel {
 
     /**
-    * Async task ID
+    * Asynchronous task ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class RemoveReplicationInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async task ID 
-     * @return TaskId Async task ID
+     * Get Asynchronous task ID. 
+     * @return TaskId Asynchronous task ID.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Async task ID
-     * @param TaskId Async task ID
+     * Set Asynchronous task ID.
+     * @param TaskId Asynchronous task ID.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

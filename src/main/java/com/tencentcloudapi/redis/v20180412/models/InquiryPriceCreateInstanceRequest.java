@@ -24,7 +24,16 @@ import java.util.HashMap;
 public class InquiryPriceCreateInstanceRequest extends AbstractModel {
 
     /**
-    * Instance type. Valid values: `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture).
+    * Instance type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
     */
     @SerializedName("TypeId")
     @Expose
@@ -53,7 +62,9 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     private Long Period;
 
     /**
-    * Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+    * Billing mode.
+- 0: pay-as-you-go.
+- 1: monthly subscription.
     */
     @SerializedName("BillingMode")
     @Expose
@@ -67,21 +78,23 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     private Long ZoneId;
 
     /**
-    * Instance shard quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, Redis 2.8 standalone edition, and Redis 4.0 standard architecture.
+    * Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
     */
     @SerializedName("RedisShardNum")
     @Expose
     private Long RedisShardNum;
 
     /**
-    * Instance replica quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
+    * Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
     */
     @SerializedName("RedisReplicasNum")
     @Expose
     private Long RedisReplicasNum;
 
     /**
-    * Whether to support read-only replicas. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
+    * Whether replica read-only is supported. For the standard architecture of Redis 2.8 and CKV, this parameter does not need to be configured.
+- true: Replica read-only is not required.
+- false: Replica read-only is required.
     */
     @SerializedName("ReplicasReadonly")
     @Expose
@@ -95,23 +108,62 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     private String ZoneName;
 
     /**
-    * Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+    * Deployment mode.
+- local: local disk. This is the default value.
+- cloud: cloud disk.
+- cdc: CDC.
     */
     @SerializedName("ProductVersion")
     @Expose
     private String ProductVersion;
 
     /**
-     * Get Instance type. Valid values: `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture). 
-     * @return TypeId Instance type. Valid values: `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture).
+     * Get Instance type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture). 
+     * @return TypeId Instance type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
      */
     public Long getTypeId() {
         return this.TypeId;
     }
 
     /**
-     * Set Instance type. Valid values: `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture).
-     * @param TypeId Instance type. Valid values: `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture).
+     * Set Instance type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
+     * @param TypeId Instance type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;
@@ -170,16 +222,24 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     }
 
     /**
-     * Get Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). 
-     * @return BillingMode Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+     * Get Billing mode.
+- 0: pay-as-you-go.
+- 1: monthly subscription. 
+     * @return BillingMode Billing mode.
+- 0: pay-as-you-go.
+- 1: monthly subscription.
      */
     public Long getBillingMode() {
         return this.BillingMode;
     }
 
     /**
-     * Set Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
-     * @param BillingMode Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+     * Set Billing mode.
+- 0: pay-as-you-go.
+- 1: monthly subscription.
+     * @param BillingMode Billing mode.
+- 0: pay-as-you-go.
+- 1: monthly subscription.
      */
     public void setBillingMode(Long BillingMode) {
         this.BillingMode = BillingMode;
@@ -202,48 +262,56 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     }
 
     /**
-     * Get Instance shard quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, Redis 2.8 standalone edition, and Redis 4.0 standard architecture. 
-     * @return RedisShardNum Instance shard quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, Redis 2.8 standalone edition, and Redis 4.0 standard architecture.
+     * Get Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified. 
+     * @return RedisShardNum Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set Instance shard quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, Redis 2.8 standalone edition, and Redis 4.0 standard architecture.
-     * @param RedisShardNum Instance shard quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, Redis 2.8 standalone edition, and Redis 4.0 standard architecture.
+     * Set Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
+     * @param RedisShardNum Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
     /**
-     * Get Instance replica quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition. 
-     * @return RedisReplicasNum Instance replica quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
+     * Get Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured. 
+     * @return RedisReplicasNum Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
      */
     public Long getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
     /**
-     * Set Instance replica quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
-     * @param RedisReplicasNum Instance replica quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
+     * Set Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
+     * @param RedisReplicasNum Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
      */
     public void setRedisReplicasNum(Long RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;
     }
 
     /**
-     * Get Whether to support read-only replicas. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition. 
-     * @return ReplicasReadonly Whether to support read-only replicas. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
+     * Get Whether replica read-only is supported. For the standard architecture of Redis 2.8 and CKV, this parameter does not need to be configured.
+- true: Replica read-only is not required.
+- false: Replica read-only is required. 
+     * @return ReplicasReadonly Whether replica read-only is supported. For the standard architecture of Redis 2.8 and CKV, this parameter does not need to be configured.
+- true: Replica read-only is not required.
+- false: Replica read-only is required.
      */
     public Boolean getReplicasReadonly() {
         return this.ReplicasReadonly;
     }
 
     /**
-     * Set Whether to support read-only replicas. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
-     * @param ReplicasReadonly Whether to support read-only replicas. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
+     * Set Whether replica read-only is supported. For the standard architecture of Redis 2.8 and CKV, this parameter does not need to be configured.
+- true: Replica read-only is not required.
+- false: Replica read-only is required.
+     * @param ReplicasReadonly Whether replica read-only is supported. For the standard architecture of Redis 2.8 and CKV, this parameter does not need to be configured.
+- true: Replica read-only is not required.
+- false: Replica read-only is required.
      */
     public void setReplicasReadonly(Boolean ReplicasReadonly) {
         this.ReplicasReadonly = ReplicasReadonly;
@@ -266,16 +334,28 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     }
 
     /**
-     * Get Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition) 
-     * @return ProductVersion Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+     * Get Deployment mode.
+- local: local disk. This is the default value.
+- cloud: cloud disk.
+- cdc: CDC. 
+     * @return ProductVersion Deployment mode.
+- local: local disk. This is the default value.
+- cloud: cloud disk.
+- cdc: CDC.
      */
     public String getProductVersion() {
         return this.ProductVersion;
     }
 
     /**
-     * Set Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
-     * @param ProductVersion Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+     * Set Deployment mode.
+- local: local disk. This is the default value.
+- cloud: cloud disk.
+- cdc: CDC.
+     * @param ProductVersion Deployment mode.
+- local: local disk. This is the default value.
+- cloud: cloud disk.
+- cdc: CDC.
      */
     public void setProductVersion(String ProductVersion) {
         this.ProductVersion = ProductVersion;

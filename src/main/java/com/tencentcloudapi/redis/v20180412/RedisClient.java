@@ -39,7 +39,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add replication group members.
+     *This API is used to add an instance member to the global replication group.
      * @param req AddReplicationInstanceRequest
      * @return AddReplicationInstanceResponse
      * @throws TencentCloudSDKException
@@ -50,7 +50,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to enable public network access.
+     *This API is used to enable public network access for instances.
      * @param req AllocateWanAddressRequest
      * @return AllocateWanAddressResponse
      * @throws TencentCloudSDKException
@@ -61,7 +61,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to apply a parameter template to instances.
+     *This API is used to apply parameter templates to instances.
      * @param req ApplyParamsTemplateRequest
      * @return ApplyParamsTemplateResponse
      * @throws TencentCloudSDKException
@@ -72,7 +72,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to bind a security group to instances in batches.
+     *This API is used to bind a security group to one or more database instances. When you create an instance without configuring a security group, it is recommended to bind a security group through this API.
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -83,7 +83,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the role of an instance in a replication group.
+     *This API is used to change the role of an instance in a replication group.
      * @param req ChangeInstanceRoleRequest
      * @return ChangeInstanceRoleResponse
      * @throws TencentCloudSDKException
@@ -116,7 +116,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to eliminate an instance in the recycle bin immediately.
+     *This API is used to immediately terminate instances in the recycle bin.
      * @param req CleanUpInstanceRequest
      * @return CleanUpInstanceResponse
      * @throws TencentCloudSDKException
@@ -127,7 +127,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to clear the data of a Redis instance.
+     *This API is used to clear instance data.
      * @param req ClearInstanceRequest
      * @return ClearInstanceResponse
      * @throws TencentCloudSDKException
@@ -149,7 +149,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to disable SSL.
+     *This API is used to disable SSL encryption and authentication.
      * @param req CloseSSLRequest
      * @return CloseSSLResponse
      * @throws TencentCloudSDKException
@@ -160,7 +160,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to customize the account for accessing the instance.
+     *This API is used to customize the account for accessing instances.
      * @param req CreateInstanceAccountRequest
      * @return CreateInstanceAccountResponse
      * @throws TencentCloudSDKException
@@ -204,7 +204,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete an instance sub-account.
+     *This API is used to delete instance sub-accounts.
      * @param req DeleteInstanceAccountRequest
      * @return DeleteInstanceAccountResponse
      * @throws TencentCloudSDKException
@@ -226,7 +226,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to remove replication group members. Note: The API is being deprecated. Please use RemoveReplicationInstance instead.
+     *This API is used to remove a replication group member. Note: This API is being deprecated. Use [RemoveReplicationInstance](https://intl.cloud.tencent.com/document/product/239/90099?from_cn_redirect=1) instead.
      * @param req DeleteReplicationInstanceRequest
      * @return DeleteReplicationInstanceResponse
      * @throws TencentCloudSDKException
@@ -245,6 +245,17 @@ public class RedisClient extends AbstractClient{
     public DescribeAutoBackupConfigResponse DescribeAutoBackupConfig(DescribeAutoBackupConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAutoBackupConfig", DescribeAutoBackupConfigResponse.class);
+    }
+
+    /**
+     *This API is used to query the backup details of an instance.
+     * @param req DescribeBackupDetailRequest
+     * @return DescribeBackupDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupDetailResponse DescribeBackupDetail(DescribeBackupDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupDetail", DescribeBackupDetailResponse.class);
     }
 
     /**
@@ -281,7 +292,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API has been disused. It was used to query the list of Redis instance information.
+     *This API is used to query the list of Redis instances. It is now deprecated.
      * @param req DescribeCommonDBInstancesRequest
      * @return DescribeCommonDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -300,6 +311,17 @@ public class RedisClient extends AbstractClient{
     public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDBSecurityGroups", DescribeDBSecurityGroupsResponse.class);
+    }
+
+    /**
+     *This API is used to query the supported regions for global replication.
+     * @param req DescribeGlobalReplicationAreaRequest
+     * @return DescribeGlobalReplicationAreaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGlobalReplicationAreaResponse DescribeGlobalReplicationArea(DescribeGlobalReplicationAreaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGlobalReplicationArea", DescribeGlobalReplicationAreaResponse.class);
     }
 
     /**
@@ -325,7 +347,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the DTS task details of an instance.
+     *This API is used to query instance DTS information.
      * @param req DescribeInstanceDTSInfoRequest
      * @return DescribeInstanceDTSInfoResponse
      * @throws TencentCloudSDKException
@@ -355,6 +377,17 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceEventsResponse DescribeInstanceEvents(DescribeInstanceEventsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstanceEvents", DescribeInstanceEventsResponse.class);
+    }
+
+    /**
+     *This API is used to query the instance log shipping configuration.
+     * @param req DescribeInstanceLogDeliveryRequest
+     * @return DescribeInstanceLogDeliveryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceLogDeliveryResponse DescribeInstanceLogDelivery(DescribeInstanceLogDeliveryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceLogDelivery", DescribeInstanceLogDeliveryResponse.class);
     }
 
     /**
@@ -391,7 +424,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the hot key of an instance.
+     *This API is used to query instance hot keys.
      * @param req DescribeInstanceMonitorHotKeyRequest
      * @return DescribeInstanceMonitorHotKeyResponse
      * @throws TencentCloudSDKException
@@ -413,7 +446,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the distribution of instance access duration.
+     *This API is used to query the time distribution of instance access.
      * @param req DescribeInstanceMonitorTookDistRequest
      * @return DescribeInstanceMonitorTookDistResponse
      * @throws TencentCloudSDKException
@@ -501,6 +534,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query or calculate bandwidth specifications.
+     * @param req DescribeInstanceSpecBandwidthRequest
+     * @return DescribeInstanceSpecBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceSpecBandwidthResponse DescribeInstanceSpecBandwidth(DescribeInstanceSpecBandwidthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceSpecBandwidth", DescribeInstanceSpecBandwidthResponse.class);
+    }
+
+    /**
      *This API (DescribeInstanceSupportFeature) is used to query the supported features of the instance.
      * @param req DescribeInstanceSupportFeatureRequest
      * @return DescribeInstanceSupportFeatureResponse
@@ -534,7 +578,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query instance maintenance window. The maintenance window specifies a time period during which compatible version upgrade, architecture upgrade, backend maintenance, and other operations can be performed to avoid affecting business.
+     *This API is used to query the instance maintenance window. Instances that require the version or architecture upgrade will undergo time switching during the maintenance window.
      * @param req DescribeMaintenanceWindowRequest
      * @return DescribeMaintenanceWindowResponse
      * @throws TencentCloudSDKException
@@ -578,7 +622,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the security group information of a project.
+     *This API is used to query project security group information.
      * @param req DescribeProjectSecurityGroupRequest
      * @return DescribeProjectSecurityGroupResponse
      * @throws TencentCloudSDKException
@@ -611,6 +655,28 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the overview information of a dedicated Redis cluster.
+     * @param req DescribeRedisClusterOverviewRequest
+     * @return DescribeRedisClusterOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedisClusterOverviewResponse DescribeRedisClusterOverview(DescribeRedisClusterOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRedisClusterOverview", DescribeRedisClusterOverviewResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of dedicated Redis clusters.
+     * @param req DescribeRedisClustersRequest
+     * @return DescribeRedisClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedisClustersResponse DescribeRedisClusters(DescribeRedisClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRedisClusters", DescribeRedisClustersResponse.class);
+    }
+
+    /**
      *This API is used to query a replication group.
      * @param req DescribeReplicationGroupRequest
      * @return DescribeReplicationGroupResponse
@@ -619,6 +685,17 @@ public class RedisClient extends AbstractClient{
     public DescribeReplicationGroupResponse DescribeReplicationGroup(DescribeReplicationGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeReplicationGroup", DescribeReplicationGroupResponse.class);
+    }
+
+    /**
+     *This API is used to query replication group information.
+     * @param req DescribeReplicationGroupInstanceRequest
+     * @return DescribeReplicationGroupInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReplicationGroupInstanceResponse DescribeReplicationGroupInstance(DescribeReplicationGroupInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReplicationGroupInstance", DescribeReplicationGroupInstanceResponse.class);
     }
 
     /**
@@ -655,7 +732,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the task list information of a specified instance.
+     *This API is used to query the task list data for the last 30 days.
      * @param req DescribeTaskListRequest
      * @return DescribeTaskListResponse
      * @throws TencentCloudSDKException
@@ -666,7 +743,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query slow queries of a Tendis instance.
+     *This API is used to query the slow query logs of a Tendis instance.
      * @param req DescribeTendisSlowLogRequest
      * @return DescribeTendisSlowLogResponse
      * @throws TencentCloudSDKException
@@ -677,7 +754,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to terminate a pay-as-you-go instance.
+     *This API is used to terminate pay-as-you-go instances.
      * @param req DestroyPostpaidInstanceRequest
      * @return DestroyPostpaidInstanceResponse
      * @throws TencentCloudSDKException
@@ -688,7 +765,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to return a monthly subscribed instance.
+     *This API is used to return Redis instances with monthly subscription.
      * @param req DestroyPrepaidInstanceRequest
      * @return DestroyPrepaidInstanceResponse
      * @throws TencentCloudSDKException
@@ -710,7 +787,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to unbind a security group from instances in batches.
+     *This API is used to unbind security groups from instances in batches.
      * @param req DisassociateSecurityGroupsRequest
      * @return DisassociateSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -732,7 +809,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the price for purchasing an instance.
+     *This API is used to query the price of new instances.
      * @param req InquiryPriceCreateInstanceRequest
      * @return InquiryPriceCreateInstanceResponse
      * @throws TencentCloudSDKException
@@ -743,7 +820,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the price for scaling an instance.
+     *This API is used to query the price for instance scale-out.
      * @param req InquiryPriceUpgradeInstanceRequest
      * @return InquiryPriceUpgradeInstanceResponse
      * @throws TencentCloudSDKException
@@ -754,7 +831,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to simulate the failure.
+     *This API is used to simulate a fault.
      * @param req KillMasterGroupRequest
      * @return KillMasterGroupResponse
      * @throws TencentCloudSDKException
@@ -776,7 +853,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the access password for an instance.
+     *This API is used to change the instance access password. Due to a spelling error in the original API name, it has been corrected to [ModifyInstancePassword](https://intl.cloud.tencent.com/document/product/239/111555?from_cn_redirect=1). It is recommended to use the corrected API.
      * @param req ModfiyInstancePasswordRequest
      * @return ModfiyInstancePasswordResponse
      * @throws TencentCloudSDKException
@@ -820,7 +897,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the security groups bound to an instance.
+     *This API is used to modify the original security group list of an instance.
      * @param req ModifyDBInstanceSecurityGroupsRequest
      * @return ModifyDBInstanceSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -842,7 +919,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify an instance sub-account.
+     *This API is used to modify the instance sub-account.
      * @param req ModifyInstanceAccountRequest
      * @return ModifyInstanceAccountResponse
      * @throws TencentCloudSDKException
@@ -875,7 +952,18 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the parameters of TencentDB for Redis instances
+     *This API is used to enable or disable the shipping of instance logs to CLS.
+     * @param req ModifyInstanceLogDeliveryRequest
+     * @return ModifyInstanceLogDeliveryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceLogDeliveryResponse ModifyInstanceLogDelivery(ModifyInstanceLogDeliveryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceLogDelivery", ModifyInstanceLogDeliveryResponse.class);
+    }
+
+    /**
+     *This API is used to modify the parameter configuration of a Redis instance.
      * @param req ModifyInstanceParamsRequest
      * @return ModifyInstanceParamsResponse
      * @throws TencentCloudSDKException
@@ -886,7 +974,18 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to set instance input mode.
+     *This API is used to change the instance access password.
+     * @param req ModifyInstancePasswordRequest
+     * @return ModifyInstancePasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstancePasswordResponse ModifyInstancePassword(ModifyInstancePasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstancePassword", ModifyInstancePasswordResponse.class);
+    }
+
+    /**
+     *This API is used to set the instance input mode.
      * @param req ModifyInstanceReadOnlyRequest
      * @return ModifyInstanceReadOnlyResponse
      * @throws TencentCloudSDKException
@@ -897,7 +996,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the instance maintenance time. The maintenance time specifies a time period during which compatible version upgrade, architecture upgrade, backend maintenance, and other operations can be performed to avoid affecting business. Note: if the compatible version upgrade or architecture upgrade task has been initiated for an instance, its maintenance time cannot be modified.
+     *This API is used to modify the time of instance maintenance window. Instances that require the version or architecture upgrade will undergo time switching during the maintenance window. Note: If the version or architecture upgrade has been initiated for an instance, its maintenance window cannot be modified.
      * @param req ModifyMaintenanceWindowRequest
      * @return ModifyMaintenanceWindowResponse
      * @throws TencentCloudSDKException
@@ -919,7 +1018,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify a parameter template.
+     *This API is used to modify the parameter template.
      * @param req ModifyParamTemplateRequest
      * @return ModifyParamTemplateResponse
      * @throws TencentCloudSDKException
@@ -930,7 +1029,18 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to enable SSL.
+     *This API is used to modify replication group information.
+     * @param req ModifyReplicationGroupRequest
+     * @return ModifyReplicationGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyReplicationGroupResponse ModifyReplicationGroup(ModifyReplicationGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyReplicationGroup", ModifyReplicationGroupResponse.class);
+    }
+
+    /**
+     *This API is used to enable SSL encryption and authentication.
      * @param req OpenSSLRequest
      * @return OpenSSLResponse
      * @throws TencentCloudSDKException
@@ -952,7 +1062,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to remove a member from a replication group.
+     *This API is used to remove instances from a replication group.
      * @param req RemoveReplicationInstanceRequest
      * @return RemoveReplicationInstanceResponse
      * @throws TencentCloudSDKException
@@ -974,7 +1084,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to reset a password.
+     *This API is used to reset the instance access password.
      * @param req ResetPasswordRequest
      * @return ResetPasswordResponse
      * @throws TencentCloudSDKException
@@ -996,7 +1106,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to deisolate an instance.
+     *This API is used to deisolate instances.
      * @param req StartupInstanceRequest
      * @return StartupInstanceResponse
      * @throws TencentCloudSDKException
@@ -1018,7 +1128,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to swap the VIPs of instances for instance disaster recovery switch in scenarios where cross-AZ disaster recovery is supported through DTS. After the VIPs of the source and target instances are swapped, the target instance can be written into and the DTS sync task between them will be disconnected.
+     *This API is used to swap the VIPs of instances for disaster recovery in DTS-based cross-AZ disaster recovery scenarios. After the swapping, the target instance becomes writable, the VIPs of the source and target instances are swapped, and the DTS synchronization task between the source and target instances is disconnected.
      * @param req SwitchInstanceVipRequest
      * @return SwitchInstanceVipResponse
      * @throws TencentCloudSDKException
@@ -1029,7 +1139,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to simulate the failure of a proxy node.
+     *This API is used to simulate the fault of a Proxy node.
      * @param req SwitchProxyRequest
      * @return SwitchProxyResponse
      * @throws TencentCloudSDKException
@@ -1040,7 +1150,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the instance configuration.
+     *This API is used to change the configuration specifications of an instance.
      * @param req UpgradeInstanceRequest
      * @return UpgradeInstanceResponse
      * @throws TencentCloudSDKException
@@ -1051,7 +1161,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to upgrade the instance to a later version or to upgrade the current standard architecture to the cluster architecture.
+     *This API is used to upgrade the current instance to a later version or upgrade the current standard architecture to a cluster architecture.
      * @param req UpgradeInstanceVersionRequest
      * @return UpgradeInstanceVersionResponse
      * @throws TencentCloudSDKException
@@ -1062,7 +1172,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to upgrade instance proxy version.
+     *This API is used to upgrade the instance Proxy version.
      * @param req UpgradeProxyVersionRequest
      * @return UpgradeProxyVersionResponse
      * @throws TencentCloudSDKException
@@ -1073,7 +1183,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to upgrade instance minor version.
+     *This API is used to upgrade the minor version of an instance.
      * @param req UpgradeSmallVersionRequest
      * @return UpgradeSmallVersionResponse
      * @throws TencentCloudSDKException
@@ -1084,7 +1194,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to upgrade an instance to support multi-AZ deployment.
+     *This API is used to upgrade an instance to support multiple AZs.
      * @param req UpgradeVersionToMultiAvailabilityZonesRequest
      * @return UpgradeVersionToMultiAvailabilityZonesResponse
      * @throws TencentCloudSDKException

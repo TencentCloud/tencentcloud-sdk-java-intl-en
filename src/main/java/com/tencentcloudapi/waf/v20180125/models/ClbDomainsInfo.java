@@ -131,6 +131,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Note;
 
     /**
+    * Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Labels")
+    @Expose
+    private String [] Labels;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -390,6 +398,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Note = Note;
     }
 
+    /**
+     * Get Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Labels Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Labels Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLabels(String [] Labels) {
+        this.Labels = Labels;
+    }
+
     public ClbDomainsInfo() {
     }
 
@@ -446,6 +474,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Note != null) {
             this.Note = new String(source.Note);
         }
+        if (source.Labels != null) {
+            this.Labels = new String[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new String(source.Labels[i]);
+            }
+        }
     }
 
 
@@ -467,6 +501,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CdcClusters", this.CdcClusters);
         this.setParamSimple(map, prefix + "CloudType", this.CloudType);
         this.setParamSimple(map, prefix + "Note", this.Note);
+        this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
 
     }
 }

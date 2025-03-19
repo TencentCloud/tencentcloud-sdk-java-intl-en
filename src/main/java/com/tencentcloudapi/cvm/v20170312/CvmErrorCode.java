@@ -255,6 +255,9 @@ public enum CvmErrorCode {
     // Invalid VPC IP address format.
      INVALIDPARAMETER_INVALIDIPFORMAT("InvalidParameter.InvalidIpFormat"),
      
+    // The specified KMS key ID is invalid.
+     INVALIDPARAMETER_INVALIDKMSKEYID("InvalidParameter.InvalidKmsKeyId"),
+     
     // `ImageIds` and `Filters` cannot be specified at the same time.
      INVALIDPARAMETER_INVALIDPARAMETERCOEXISTIMAGEIDSFILTERS("InvalidParameter.InvalidParameterCoexistImageIdsFilters"),
      
@@ -446,6 +449,9 @@ public enum CvmErrorCode {
      
     // Invalid IP address.
      INVALIDPARAMETERVALUE_INVALIDIPFORMAT("InvalidParameterValue.InvalidIpFormat"),
+     
+    // Incorrect format of instance launch template description.
+     INVALIDPARAMETERVALUE_INVALIDLAUNCHTEMPLATEDESCRIPTION("InvalidParameterValue.InvalidLaunchTemplateDescription"),
      
     // Incorrect format of instance launch template name.
      INVALIDPARAMETERVALUE_INVALIDLAUNCHTEMPLATENAME("InvalidParameterValue.InvalidLaunchTemplateName"),
@@ -957,7 +963,7 @@ public enum CvmErrorCode {
     // The user does not have permissions to operate the current instance.
      UNSUPPORTEDOPERATION_INVALIDINSTANCESOWNER("UnsupportedOperation.InvalidInstancesOwner"),
      
-    // The current operation is only supported for Tencent Cloud International users.
+    // The current operation is supported only for Tencent Cloud users.
      UNSUPPORTEDOPERATION_INVALIDPERMISSIONNONINTERNATIONALACCOUNT("UnsupportedOperation.InvalidPermissionNonInternationalAccount"),
      
     // Encrypted disks are not available in the selected regions.
@@ -1052,6 +1058,9 @@ public enum CvmErrorCode {
      
     // Configuration adjustment of the same type is not supported for instances with no charges when shut down.
      UNSUPPORTEDOPERATION_STOPPEDMODESTOPCHARGINGSAMEFAMILY("UnsupportedOperation.StoppedModeStopChargingSameFamily"),
+     
+    // The specified image does not support synchronization to an encrypted custom image.
+     UNSUPPORTEDOPERATION_SYNCENCRYPTIMAGENOTSUPPORT("UnsupportedOperation.SyncEncryptImageNotSupport"),
      
     // 
      UNSUPPORTEDOPERATION_SYSTEMDISKTYPE("UnsupportedOperation.SystemDiskType"),

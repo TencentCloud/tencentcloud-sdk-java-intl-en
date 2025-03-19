@@ -24,22 +24,22 @@ import java.util.HashMap;
 public class CreateRoundPlayRequest extends AbstractModel {
 
     /**
-    * The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+    * The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * The files on the list.
-<li>Array length limit: 100.</li>
+    * The program list.
+<Li>Array length limit: 100.</li>.
     */
     @SerializedName("RoundPlaylist")
     @Expose
     private RoundPlayListItemInfo [] RoundPlaylist;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
     */
     @SerializedName("SubAppId")
     @Expose
@@ -53,69 +53,83 @@ public class CreateRoundPlayRequest extends AbstractModel {
     private String Name;
 
     /**
-    * The playlist description (not longer than 256 characters).
+    * The playlist description, length limit: 256 characters.
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-    * Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value: Loop.
+    * Play mode, optional values:.
+<Li>Loop: loop the playlist;</li>.
+<Li>Linear: single play, stop playback after the single play finishes.</li>.
+Default value: loop.
     */
     @SerializedName("PlayBackMode")
     @Expose
     private String PlayBackMode;
 
     /**
-     * Get The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=). 
-     * @return StartTime The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+    * Playlist unique identifier id, with a length limit of 64 characters, only allowing uppercase and lowercase english letters (a-za-z), digits (0-9) and hyphens (-). if there is a playlist with the same roundplayid, return the error invalidparametervalue.roundplayalreadyexists. the default value is empty, which means it is system-assigned.
+    */
+    @SerializedName("RoundPlayId")
+    @Expose
+    private String RoundPlayId;
+
+    /**
+    * Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playlist will stop playing after expiration. "9999-12-31t23:59:59+08:00" means it does not expire. default value: 9999-12-31t23:59:59+08:00.
+    */
+    @SerializedName("ExpiredTime")
+    @Expose
+    private String ExpiredTime;
+
+    /**
+     * Get The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). 
+     * @return StartTime The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
-     * @param StartTime The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+     * Set The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+     * @param StartTime The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get The files on the list.
-<li>Array length limit: 100.</li> 
-     * @return RoundPlaylist The files on the list.
-<li>Array length limit: 100.</li>
+     * Get The program list.
+<Li>Array length limit: 100.</li>. 
+     * @return RoundPlaylist The program list.
+<Li>Array length limit: 100.</li>.
      */
     public RoundPlayListItemInfo [] getRoundPlaylist() {
         return this.RoundPlaylist;
     }
 
     /**
-     * Set The files on the list.
-<li>Array length limit: 100.</li>
-     * @param RoundPlaylist The files on the list.
-<li>Array length limit: 100.</li>
+     * Set The program list.
+<Li>Array length limit: 100.</li>.
+     * @param RoundPlaylist The program list.
+<Li>Array length limit: 100.</li>.
      */
     public void setRoundPlaylist(RoundPlayListItemInfo [] RoundPlaylist) {
         this.RoundPlaylist = RoundPlaylist;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>. 
+     * @return SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+     * @param SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -138,47 +152,79 @@ Default value: Loop.
     }
 
     /**
-     * Get The playlist description (not longer than 256 characters). 
-     * @return Desc The playlist description (not longer than 256 characters).
+     * Get The playlist description, length limit: 256 characters. 
+     * @return Desc The playlist description, length limit: 256 characters.
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set The playlist description (not longer than 256 characters).
-     * @param Desc The playlist description (not longer than 256 characters).
+     * Set The playlist description, length limit: 256 characters.
+     * @param Desc The playlist description, length limit: 256 characters.
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value: Loop. 
-     * @return PlayBackMode Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value: Loop.
+     * Get Play mode, optional values:.
+<Li>Loop: loop the playlist;</li>.
+<Li>Linear: single play, stop playback after the single play finishes.</li>.
+Default value: loop. 
+     * @return PlayBackMode Play mode, optional values:.
+<Li>Loop: loop the playlist;</li>.
+<Li>Linear: single play, stop playback after the single play finishes.</li>.
+Default value: loop.
      */
     public String getPlayBackMode() {
         return this.PlayBackMode;
     }
 
     /**
-     * Set Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value: Loop.
-     * @param PlayBackMode Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value: Loop.
+     * Set Play mode, optional values:.
+<Li>Loop: loop the playlist;</li>.
+<Li>Linear: single play, stop playback after the single play finishes.</li>.
+Default value: loop.
+     * @param PlayBackMode Play mode, optional values:.
+<Li>Loop: loop the playlist;</li>.
+<Li>Linear: single play, stop playback after the single play finishes.</li>.
+Default value: loop.
      */
     public void setPlayBackMode(String PlayBackMode) {
         this.PlayBackMode = PlayBackMode;
+    }
+
+    /**
+     * Get Playlist unique identifier id, with a length limit of 64 characters, only allowing uppercase and lowercase english letters (a-za-z), digits (0-9) and hyphens (-). if there is a playlist with the same roundplayid, return the error invalidparametervalue.roundplayalreadyexists. the default value is empty, which means it is system-assigned. 
+     * @return RoundPlayId Playlist unique identifier id, with a length limit of 64 characters, only allowing uppercase and lowercase english letters (a-za-z), digits (0-9) and hyphens (-). if there is a playlist with the same roundplayid, return the error invalidparametervalue.roundplayalreadyexists. the default value is empty, which means it is system-assigned.
+     */
+    public String getRoundPlayId() {
+        return this.RoundPlayId;
+    }
+
+    /**
+     * Set Playlist unique identifier id, with a length limit of 64 characters, only allowing uppercase and lowercase english letters (a-za-z), digits (0-9) and hyphens (-). if there is a playlist with the same roundplayid, return the error invalidparametervalue.roundplayalreadyexists. the default value is empty, which means it is system-assigned.
+     * @param RoundPlayId Playlist unique identifier id, with a length limit of 64 characters, only allowing uppercase and lowercase english letters (a-za-z), digits (0-9) and hyphens (-). if there is a playlist with the same roundplayid, return the error invalidparametervalue.roundplayalreadyexists. the default value is empty, which means it is system-assigned.
+     */
+    public void setRoundPlayId(String RoundPlayId) {
+        this.RoundPlayId = RoundPlayId;
+    }
+
+    /**
+     * Get Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playlist will stop playing after expiration. "9999-12-31t23:59:59+08:00" means it does not expire. default value: 9999-12-31t23:59:59+08:00. 
+     * @return ExpiredTime Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playlist will stop playing after expiration. "9999-12-31t23:59:59+08:00" means it does not expire. default value: 9999-12-31t23:59:59+08:00.
+     */
+    public String getExpiredTime() {
+        return this.ExpiredTime;
+    }
+
+    /**
+     * Set Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playlist will stop playing after expiration. "9999-12-31t23:59:59+08:00" means it does not expire. default value: 9999-12-31t23:59:59+08:00.
+     * @param ExpiredTime Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playlist will stop playing after expiration. "9999-12-31t23:59:59+08:00" means it does not expire. default value: 9999-12-31t23:59:59+08:00.
+     */
+    public void setExpiredTime(String ExpiredTime) {
+        this.ExpiredTime = ExpiredTime;
     }
 
     public CreateRoundPlayRequest() {
@@ -210,6 +256,12 @@ Default value: Loop.
         if (source.PlayBackMode != null) {
             this.PlayBackMode = new String(source.PlayBackMode);
         }
+        if (source.RoundPlayId != null) {
+            this.RoundPlayId = new String(source.RoundPlayId);
+        }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new String(source.ExpiredTime);
+        }
     }
 
 
@@ -223,6 +275,8 @@ Default value: Loop.
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "PlayBackMode", this.PlayBackMode);
+        this.setParamSimple(map, prefix + "RoundPlayId", this.RoundPlayId);
+        this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
 
     }
 }

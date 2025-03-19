@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeCallInMetricsRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Whether to return skill group dimension information or not (the default is "Yes").
+    * Whether to return skill group dimension information or not (the default is "yes").
     */
     @SerializedName("EnabledSkillGroup")
     @Expose
     private Boolean EnabledSkillGroup;
 
     /**
-    * Whether to return line dimension information or not (the default is "No").
+    * Whether to return line dimension information or not (the default is "no").
     */
     @SerializedName("EnabledNumber")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeCallInMetricsRequest extends AbstractModel {
     private Long [] GroupIdList;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Whether to return skill group dimension information or not (the default is "Yes"). 
-     * @return EnabledSkillGroup Whether to return skill group dimension information or not (the default is "Yes").
+     * Get Whether to return skill group dimension information or not (the default is "yes"). 
+     * @return EnabledSkillGroup Whether to return skill group dimension information or not (the default is "yes").
      */
     public Boolean getEnabledSkillGroup() {
         return this.EnabledSkillGroup;
     }
 
     /**
-     * Set Whether to return skill group dimension information or not (the default is "Yes").
-     * @param EnabledSkillGroup Whether to return skill group dimension information or not (the default is "Yes").
+     * Set Whether to return skill group dimension information or not (the default is "yes").
+     * @param EnabledSkillGroup Whether to return skill group dimension information or not (the default is "yes").
      */
     public void setEnabledSkillGroup(Boolean EnabledSkillGroup) {
         this.EnabledSkillGroup = EnabledSkillGroup;
     }
 
     /**
-     * Get Whether to return line dimension information or not (the default is "No"). 
-     * @return EnabledNumber Whether to return line dimension information or not (the default is "No").
+     * Get Whether to return line dimension information or not (the default is "no"). 
+     * @return EnabledNumber Whether to return line dimension information or not (the default is "no").
      */
     public Boolean getEnabledNumber() {
         return this.EnabledNumber;
     }
 
     /**
-     * Set Whether to return line dimension information or not (the default is "No").
-     * @param EnabledNumber Whether to return line dimension information or not (the default is "No").
+     * Set Whether to return line dimension information or not (the default is "no").
+     * @param EnabledNumber Whether to return line dimension information or not (the default is "no").
      */
     public void setEnabledNumber(Boolean EnabledNumber) {
         this.EnabledNumber = EnabledNumber;

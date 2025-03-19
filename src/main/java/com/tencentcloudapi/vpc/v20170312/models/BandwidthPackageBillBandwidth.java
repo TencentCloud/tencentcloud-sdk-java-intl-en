@@ -28,13 +28,13 @@ public class BandwidthPackageBillBandwidth extends AbstractModel {
     */
     @SerializedName("BandwidthUsage")
     @Expose
-    private Long BandwidthUsage;
+    private Float BandwidthUsage;
 
     /**
      * Get Current billable usage, in Mbps 
      * @return BandwidthUsage Current billable usage, in Mbps
      */
-    public Long getBandwidthUsage() {
+    public Float getBandwidthUsage() {
         return this.BandwidthUsage;
     }
 
@@ -42,7 +42,7 @@ public class BandwidthPackageBillBandwidth extends AbstractModel {
      * Set Current billable usage, in Mbps
      * @param BandwidthUsage Current billable usage, in Mbps
      */
-    public void setBandwidthUsage(Long BandwidthUsage) {
+    public void setBandwidthUsage(Float BandwidthUsage) {
         this.BandwidthUsage = BandwidthUsage;
     }
 
@@ -55,7 +55,7 @@ public class BandwidthPackageBillBandwidth extends AbstractModel {
      */
     public BandwidthPackageBillBandwidth(BandwidthPackageBillBandwidth source) {
         if (source.BandwidthUsage != null) {
-            this.BandwidthUsage = new Long(source.BandwidthUsage);
+            this.BandwidthUsage = new Float(source.BandwidthUsage);
         }
     }
 

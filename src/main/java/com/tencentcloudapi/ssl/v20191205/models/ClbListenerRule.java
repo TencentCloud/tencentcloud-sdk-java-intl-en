@@ -45,20 +45,25 @@ public class ClbListenerRule extends AbstractModel {
     private Boolean IsMatch;
 
     /**
-    * The certificates associated with the rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Certificate data bound to the rule.
     */
     @SerializedName("Certificate")
     @Expose
     private Certificate Certificate;
 
     /**
-    * The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Domain list not matched.
     */
     @SerializedName("NoMatchDomains")
     @Expose
     private String [] NoMatchDomains;
+
+    /**
+    * Rule binding path.
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
 
     /**
      * Get The rule ID. 
@@ -109,43 +114,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The certificates associated with the rule.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Certificate The certificates associated with the rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Certificate data bound to the rule. 
+     * @return Certificate Certificate data bound to the rule.
      */
     public Certificate getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set The certificates associated with the rule.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Certificate The certificates associated with the rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Certificate data bound to the rule.
+     * @param Certificate Certificate data bound to the rule.
      */
     public void setCertificate(Certificate Certificate) {
         this.Certificate = Certificate;
     }
 
     /**
-     * Get The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NoMatchDomains The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Domain list not matched. 
+     * @return NoMatchDomains Domain list not matched.
      */
     public String [] getNoMatchDomains() {
         return this.NoMatchDomains;
     }
 
     /**
-     * Set The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NoMatchDomains The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Domain list not matched.
+     * @param NoMatchDomains Domain list not matched.
      */
     public void setNoMatchDomains(String [] NoMatchDomains) {
         this.NoMatchDomains = NoMatchDomains;
+    }
+
+    /**
+     * Get Rule binding path. 
+     * @return Url Rule binding path.
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set Rule binding path.
+     * @param Url Rule binding path.
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
     }
 
     public ClbListenerRule() {
@@ -174,6 +187,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.NoMatchDomains[i] = new String(source.NoMatchDomains[i]);
             }
         }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
     }
 
 
@@ -186,6 +202,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsMatch", this.IsMatch);
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamArraySimple(map, prefix + "NoMatchDomains.", this.NoMatchDomains);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

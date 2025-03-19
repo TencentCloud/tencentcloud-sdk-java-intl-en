@@ -38,7 +38,7 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
     private String PolicyType;
 
     /**
-    * List of member financial permission IDs. `7` indicates paying, which is the default value.
+    * Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1, 2 and 7 are required.
     */
     @SerializedName("PermissionIds")
     @Expose
@@ -133,16 +133,16 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
     }
 
     /**
-     * Get List of member financial permission IDs. `7` indicates paying, which is the default value. 
-     * @return PermissionIds List of member financial permission IDs. `7` indicates paying, which is the default value.
+     * Get Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1, 2 and 7 are required. 
+     * @return PermissionIds Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1, 2 and 7 are required.
      */
     public Long [] getPermissionIds() {
         return this.PermissionIds;
     }
 
     /**
-     * Set List of member financial permission IDs. `7` indicates paying, which is the default value.
-     * @param PermissionIds List of member financial permission IDs. `7` indicates paying, which is the default value.
+     * Set Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1, 2 and 7 are required.
+     * @param PermissionIds Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1, 2 and 7 are required.
      */
     public void setPermissionIds(Long [] PermissionIds) {
         this.PermissionIds = PermissionIds;

@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class CreateAccountRequest extends AbstractModel {
 
     /**
-    * Account type of a new customer. Valid values: `personal`, `company`.
+    * Account type of a new customer.
+Valid values: `personal`, `company`.
     */
     @SerializedName("AccountType")
     @Expose
@@ -32,14 +33,14 @@ public class CreateAccountRequest extends AbstractModel {
 
     /**
     * Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
     */
     @SerializedName("Mail")
     @Expose
     private String Mail;
 
     /**
-    * Account password
+    * Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
     */
@@ -55,25 +56,36 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
     private String ConfirmPassword;
 
     /**
-    * Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+    * Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
+The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
     */
     @SerializedName("PhoneNum")
     @Expose
     private String PhoneNum;
 
     /**
-    * Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+    * Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
+Parameter value is not allowed to be 7,380,86.
     */
     @SerializedName("CountryCode")
     @Expose
     private String CountryCode;
 
     /**
-    * Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+    * Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
     */
     @SerializedName("Area")
     @Expose
     private String Area;
+
+    /**
+    * VerifyCode. This parameter is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
+    */
+    @SerializedName("VerifyCode")
+    @Expose
+    private String VerifyCode;
 
     /**
     * Extension field, which is left empty by default.
@@ -83,23 +95,36 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
     private String Extended;
 
     /**
-    * Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+    * Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_01".
     */
-    @SerializedName("VerifyCode")
+    @SerializedName("TradeOne")
     @Expose
-    private String VerifyCode;
+    private String TradeOne;
 
     /**
-     * Get Account type of a new customer. Valid values: `personal`, `company`. 
-     * @return AccountType Account type of a new customer. Valid values: `personal`, `company`.
+    * Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_0101"
+    */
+    @SerializedName("TradeTwo")
+    @Expose
+    private String TradeTwo;
+
+    /**
+     * Get Account type of a new customer.
+Valid values: `personal`, `company`. 
+     * @return AccountType Account type of a new customer.
+Valid values: `personal`, `company`.
      */
     public String getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set Account type of a new customer. Valid values: `personal`, `company`.
-     * @param AccountType Account type of a new customer. Valid values: `personal`, `company`.
+     * Set Account type of a new customer.
+Valid values: `personal`, `company`.
+     * @param AccountType Account type of a new customer.
+Valid values: `personal`, `company`.
      */
     public void setAccountType(String AccountType) {
         this.AccountType = AccountType;
@@ -107,9 +132,9 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
 
     /**
      * Get Registered email address, which should be valid and correct.
-For example, account@qq.com. 
+such as "account@qq.com" 
      * @return Mail Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
      */
     public String getMail() {
         return this.Mail;
@@ -117,19 +142,19 @@ For example, account@qq.com.
 
     /**
      * Set Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
      * @param Mail Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
      */
     public void setMail(String Mail) {
         this.Mail = Mail;
     }
 
     /**
-     * Get Account password
+     * Get Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed. 
-     * @return Password Account password
+     * @return Password Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
      */
@@ -138,10 +163,10 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
     }
 
     /**
-     * Set Account password
+     * Set Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
-     * @param Password Account password
+     * @param Password Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
      */
@@ -166,51 +191,83 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
     }
 
     /**
-     * Get Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number. 
-     * @return PhoneNum Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+     * Get Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
+The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number. 
+     * @return PhoneNum Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
+The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
      */
     public String getPhoneNum() {
         return this.PhoneNum;
     }
 
     /**
-     * Set Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
-     * @param PhoneNum Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+     * Set Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
+The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+     * @param PhoneNum Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
+The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
      */
     public void setPhoneNum(String PhoneNum) {
         this.PhoneNum = PhoneNum;
     }
 
     /**
-     * Get Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852". 
-     * @return CountryCode Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+     * Get Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
+Parameter value is not allowed to be 7,380,86. 
+     * @return CountryCode Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
+Parameter value is not allowed to be 7,380,86.
      */
     public String getCountryCode() {
         return this.CountryCode;
     }
 
     /**
-     * Set Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
-     * @param CountryCode Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+     * Set Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
+Parameter value is not allowed to be 7,380,86.
+     * @param CountryCode Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
+Parameter value is not allowed to be 7,380,86.
      */
     public void setCountryCode(String CountryCode) {
         this.CountryCode = CountryCode;
     }
 
     /**
-     * Get Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`. 
-     * @return Area Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+     * Get Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`. 
+     * @return Area Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
-     * @param Area Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+     * Set Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
+     * @param Area Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
      */
     public void setArea(String Area) {
         this.Area = Area;
+    }
+
+    /**
+     * Get VerifyCode. This parameter is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters. 
+     * @return VerifyCode VerifyCode. This parameter is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
+     */
+    public String getVerifyCode() {
+        return this.VerifyCode;
+    }
+
+    /**
+     * Set VerifyCode. This parameter is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
+     * @param VerifyCode VerifyCode. This parameter is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
+     */
+    public void setVerifyCode(String VerifyCode) {
+        this.VerifyCode = VerifyCode;
     }
 
     /**
@@ -230,19 +287,43 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
     }
 
     /**
-     * Get Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it. 
-     * @return VerifyCode Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+     * Get Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_01". 
+     * @return TradeOne Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_01".
      */
-    public String getVerifyCode() {
-        return this.VerifyCode;
+    public String getTradeOne() {
+        return this.TradeOne;
     }
 
     /**
-     * Set Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
-     * @param VerifyCode Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+     * Set Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_01".
+     * @param TradeOne Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_01".
      */
-    public void setVerifyCode(String VerifyCode) {
-        this.VerifyCode = VerifyCode;
+    public void setTradeOne(String TradeOne) {
+        this.TradeOne = TradeOne;
+    }
+
+    /**
+     * Get Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_0101" 
+     * @return TradeTwo Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_0101"
+     */
+    public String getTradeTwo() {
+        return this.TradeTwo;
+    }
+
+    /**
+     * Set Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_0101"
+     * @param TradeTwo Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_0101"
+     */
+    public void setTradeTwo(String TradeTwo) {
+        this.TradeTwo = TradeTwo;
     }
 
     public CreateAccountRequest() {
@@ -274,11 +355,17 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
         if (source.Area != null) {
             this.Area = new String(source.Area);
         }
+        if (source.VerifyCode != null) {
+            this.VerifyCode = new String(source.VerifyCode);
+        }
         if (source.Extended != null) {
             this.Extended = new String(source.Extended);
         }
-        if (source.VerifyCode != null) {
-            this.VerifyCode = new String(source.VerifyCode);
+        if (source.TradeOne != null) {
+            this.TradeOne = new String(source.TradeOne);
+        }
+        if (source.TradeTwo != null) {
+            this.TradeTwo = new String(source.TradeTwo);
         }
     }
 
@@ -294,8 +381,10 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
         this.setParamSimple(map, prefix + "PhoneNum", this.PhoneNum);
         this.setParamSimple(map, prefix + "CountryCode", this.CountryCode);
         this.setParamSimple(map, prefix + "Area", this.Area);
-        this.setParamSimple(map, prefix + "Extended", this.Extended);
         this.setParamSimple(map, prefix + "VerifyCode", this.VerifyCode);
+        this.setParamSimple(map, prefix + "Extended", this.Extended);
+        this.setParamSimple(map, prefix + "TradeOne", this.TradeOne);
+        this.setParamSimple(map, prefix + "TradeTwo", this.TradeTwo);
 
     }
 }

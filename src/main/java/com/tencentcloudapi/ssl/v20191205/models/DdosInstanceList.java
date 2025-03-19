@@ -31,12 +31,18 @@ public class DdosInstanceList extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * The list of DDOS instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+    * DDOS instance details.	
     */
     @SerializedName("InstanceList")
     @Expose
     private DdosInstanceDetail [] InstanceList;
+
+    /**
+    * Whether to query exceptions.
+    */
+    @SerializedName("Error")
+    @Expose
+    private String Error;
 
     /**
      * Get The total number of DDOS instances in this region.	 
@@ -55,23 +61,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The list of DDOS instances.	
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceList The list of DDOS instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get DDOS instance details.	 
+     * @return InstanceList DDOS instance details.	
      */
     public DdosInstanceDetail [] getInstanceList() {
         return this.InstanceList;
     }
 
     /**
-     * Set The list of DDOS instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceList The list of DDOS instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set DDOS instance details.	
+     * @param InstanceList DDOS instance details.	
      */
     public void setInstanceList(DdosInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
+    }
+
+    /**
+     * Get Whether to query exceptions. 
+     * @return Error Whether to query exceptions.
+     */
+    public String getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set Whether to query exceptions.
+     * @param Error Whether to query exceptions.
+     */
+    public void setError(String Error) {
+        this.Error = Error;
     }
 
     public DdosInstanceList() {
@@ -91,6 +109,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.InstanceList[i] = new DdosInstanceDetail(source.InstanceList[i]);
             }
         }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
     }
 
 
@@ -100,6 +121,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
+        this.setParamSimple(map, prefix + "Error", this.Error);
 
     }
 }

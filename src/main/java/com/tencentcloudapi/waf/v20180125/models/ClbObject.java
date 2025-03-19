@@ -186,6 +186,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ObjectFlowMode;
 
     /**
+    * VPC ID in numerical format
+
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NumericalVpcId")
+    @Expose
+    private Long NumericalVpcId;
+
+    /**
      * Get Object ID 
      * @return ObjectId Object ID
      */
@@ -569,6 +578,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ObjectFlowMode = ObjectFlowMode;
     }
 
+    /**
+     * Get VPC ID in numerical format
+
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NumericalVpcId VPC ID in numerical format
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getNumericalVpcId() {
+        return this.NumericalVpcId;
+    }
+
+    /**
+     * Set VPC ID in numerical format
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NumericalVpcId VPC ID in numerical format
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setNumericalVpcId(Long NumericalVpcId) {
+        this.NumericalVpcId = NumericalVpcId;
+    }
+
     public ClbObject() {
     }
 
@@ -655,6 +688,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ObjectFlowMode != null) {
             this.ObjectFlowMode = new Long(source.ObjectFlowMode);
         }
+        if (source.NumericalVpcId != null) {
+            this.NumericalVpcId = new Long(source.NumericalVpcId);
+        }
     }
 
 
@@ -684,6 +720,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BotStatus", this.BotStatus);
         this.setParamSimple(map, prefix + "ApiStatus", this.ApiStatus);
         this.setParamSimple(map, prefix + "ObjectFlowMode", this.ObjectFlowMode);
+        this.setParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
 
     }
 }

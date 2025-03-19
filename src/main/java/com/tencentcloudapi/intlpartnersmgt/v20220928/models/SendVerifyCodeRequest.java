@@ -25,6 +25,7 @@ public class SendVerifyCodeRequest extends AbstractModel {
 
     /**
     * Country code.
+Parameter value is not allowed to be 7,380,86.
     */
     @SerializedName("CountryCode")
     @Expose
@@ -32,14 +33,17 @@ public class SendVerifyCodeRequest extends AbstractModel {
 
     /**
     * Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
     */
     @SerializedName("PhoneNum")
     @Expose
     private String PhoneNum;
 
     /**
-     * Get Country code. 
+     * Get Country code.
+Parameter value is not allowed to be 7,380,86. 
      * @return CountryCode Country code.
+Parameter value is not allowed to be 7,380,86.
      */
     public String getCountryCode() {
         return this.CountryCode;
@@ -47,15 +51,19 @@ public class SendVerifyCodeRequest extends AbstractModel {
 
     /**
      * Set Country code.
+Parameter value is not allowed to be 7,380,86.
      * @param CountryCode Country code.
+Parameter value is not allowed to be 7,380,86.
      */
     public void setCountryCode(String CountryCode) {
         this.CountryCode = CountryCode;
     }
 
     /**
-     * Get Mobile number. 
+     * Get Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number. 
      * @return PhoneNum Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
      */
     public String getPhoneNum() {
         return this.PhoneNum;
@@ -63,7 +71,9 @@ public class SendVerifyCodeRequest extends AbstractModel {
 
     /**
      * Set Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
      * @param PhoneNum Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
      */
     public void setPhoneNum(String PhoneNum) {
         this.PhoneNum = PhoneNum;

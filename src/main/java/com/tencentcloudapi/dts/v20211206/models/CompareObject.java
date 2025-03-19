@@ -40,8 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CompareObjectItem [] ObjectItems;
 
     /**
-    * Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Advanced object types, such as account, index, shardkey, schema.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AdvancedObjects")
     @Expose
@@ -88,20 +87,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AdvancedObjects Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Advanced object types, such as account, index, shardkey, schema.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AdvancedObjects Advanced object types, such as account, index, shardkey, schema.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getAdvancedObjects() {
         return this.AdvancedObjects;
     }
 
     /**
-     * Set Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AdvancedObjects Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Advanced object types, such as account, index, shardkey, schema.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AdvancedObjects Advanced object types, such as account, index, shardkey, schema.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAdvancedObjects(String [] AdvancedObjects) {
         this.AdvancedObjects = AdvancedObjects;

@@ -890,6 +890,17 @@ This API is used to get the information of custom and [preset](https://intl.clou
     }
 
     /**
+     *Query current playlist of the round play.
+     * @param req DescribeCurrentPlaylistRequest
+     * @return DescribeCurrentPlaylistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCurrentPlaylistResponse DescribeCurrentPlaylist(DescribeCurrentPlaylistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCurrentPlaylist", DescribeCurrentPlaylistResponse.class);
+    }
+
+    /**
      *This API is used to query the download links of playback statistics files.
 * You can query the download links of playback statistics files in the past year. The start and end dates for query cannot be more than 90 days apart.
 * Every day, VOD will analyze CDN request logs of the previous day and then generate a playback statistics file.
@@ -1410,6 +1421,17 @@ If event notification is used, the type of event notification is [Video editing 
     public ForbidMediaDistributionResponse ForbidMediaDistribution(ForbidMediaDistributionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ForbidMediaDistribution", ForbidMediaDistributionResponse.class);
+    }
+
+    /**
+     *Operate the current play list . Supported operations include:<li> Insert: Insert a playing program into the current playlist.</li><li> Delete: Remove a playing program from the playlist.</li>
+     * @param req HandleCurrentPlaylistRequest
+     * @return HandleCurrentPlaylistResponse
+     * @throws TencentCloudSDKException
+     */
+    public HandleCurrentPlaylistResponse HandleCurrentPlaylist(HandleCurrentPlaylistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "HandleCurrentPlaylist", HandleCurrentPlaylistResponse.class);
     }
 
     /**

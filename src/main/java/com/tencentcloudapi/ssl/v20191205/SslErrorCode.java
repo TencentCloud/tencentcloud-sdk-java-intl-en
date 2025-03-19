@@ -12,6 +12,9 @@ public enum SslErrorCode {
     // You do not have permission to perform this operation.
      FAILEDOPERATION_AUTHERROR("FailedOperation.AuthError"),
      
+    // Cannot be deleted when there are unbound cloud resources.
+     FAILEDOPERATION_BOUNDRESOURCES("FailedOperation.BoundResources"),
+     
     // A CAM authentication error occurred.
      FAILEDOPERATION_CAMAUTHORIZEDFAIL("FailedOperation.CAMAuthorizedFail"),
      
@@ -26,6 +29,9 @@ public enum SslErrorCode {
      
     // Failed to get order information. Try again later.
      FAILEDOPERATION_CANNOTGETORDER("FailedOperation.CannotGetOrder"),
+     
+    // Note: the uploaded certificate content does not conform to the standard format of ca certificates. please check whether the certificate type is incorrect.
+     FAILEDOPERATION_CERTIFICATECAERROR("FailedOperation.CertificateCaError"),
      
     // This operation can be performed only when the record status is Complete.
      FAILEDOPERATION_CERTIFICATEDEPLOYDETAILROLLBACKSTATUSINVALID("FailedOperation.CertificateDeployDetailRollbackStatusInvalid"),
@@ -66,6 +72,9 @@ public enum SslErrorCode {
     // The certificate is invalid.
      FAILEDOPERATION_CERTIFICATEINVALID("FailedOperation.CertificateInvalid"),
      
+    // Note: the certificate content and private key do not match. please check (pay attention to whether there are extra spaces).
+     FAILEDOPERATION_CERTIFICATEMATCHERROR("FailedOperation.CertificateMatchError"),
+     
     // The certificate and the private key do not match.
      FAILEDOPERATION_CERTIFICATEMISMATCH("FailedOperation.CertificateMismatch"),
      
@@ -81,14 +90,23 @@ public enum SslErrorCode {
     // The certificate does not exist, or the review cannot be canceled.
      FAILEDOPERATION_CERTIFICATENOTFOUNDORCANTCANCEL("FailedOperation.CertificateNotFoundOrCantCancel"),
      
+    // Parsing failed. check if the certificate meets the standard and pay attention to whether there are extra spaces.
+     FAILEDOPERATION_CERTIFICATEPARSEERROR("FailedOperation.CertificateParseError"),
+     
     // You cannot re-submit a review application for a certificate in this status.
      FAILEDOPERATION_CERTIFICATESTATUSNOTALLOWRESUBMIT("FailedOperation.CertificateStatusNotAllowResubmit"),
+     
+    // The cert associated with the cloud resource query task id is invalid.
+     FAILEDOPERATION_CERTIFICATESYNCTASKIDINVALID("FailedOperation.CertificateSyncTaskIdInvalid"),
      
     // The confirmation letter file cannot exceed 1.4 MB.
      FAILEDOPERATION_CONFIRMLETTERTOOLARGE("FailedOperation.ConfirmLetterTooLarge"),
      
     // The confirmation letter file cannot be smaller than 1 KB.
      FAILEDOPERATION_CONFIRMLETTERTOOSMALL("FailedOperation.ConfirmLetterTooSmall"),
+     
+    // Cannot be deleted when the free cert application time has not exceeded 1 hour.
+     FAILEDOPERATION_DELETEFAILEDTIMENOTUP("FailedOperation.DeleteFailedTimeNotUp"),
      
     // The certificate is associated with a Tencent Cloud resource and cannot be deleted.
      FAILEDOPERATION_DELETERESOURCEFAILED("FailedOperation.DeleteResourceFailed"),
@@ -138,6 +156,9 @@ public enum SslErrorCode {
     // The benefit package does not exist.
      FAILEDOPERATION_PACKAGENOTFOUND("FailedOperation.PackageNotFound"),
      
+    // Cannot perform deletion when the renewed cert has not been issued.
+     FAILEDOPERATION_RENEWNOTISSUED("FailedOperation.RenewNotIssued"),
+     
     // The role does not exist. Please authorize the role first.
      FAILEDOPERATION_ROLENOTFOUNDAUTHORIZATION("FailedOperation.RoleNotFoundAuthorization"),
      
@@ -176,6 +197,9 @@ public enum SslErrorCode {
      
     // Invalid parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
+    // Intermediate certificate inconsistent.
+     INVALIDPARAMETERVALUE_INTERMEDIATECERTNOTSAME("InvalidParameterValue.IntermediateCertNotSame"),
      
     // The API rate limit is reached.
      LIMITEXCEEDED_RATELIMITEXCEEDED("LimitExceeded.RateLimitExceeded"),

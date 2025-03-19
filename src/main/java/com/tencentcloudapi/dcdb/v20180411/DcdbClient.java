@@ -150,6 +150,17 @@ Note: Accounts with the same username but different hosts are different accounts
     }
 
     /**
+     *This API is used to create an online DDL job.
+     * @param req CreateOnlineDDLJobRequest
+     * @return CreateOnlineDDLJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOnlineDDLJobResponse CreateOnlineDDLJob(CreateOnlineDDLJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOnlineDDLJob", CreateOnlineDDLJobResponse.class);
+    }
+
+    /**
      *This API is used to delete a TencentDB account, which is uniquely identified by username and host.
      * @param req DeleteAccountRequest
      * @return DeleteAccountResponse

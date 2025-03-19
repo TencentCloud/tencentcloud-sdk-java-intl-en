@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class DescribeInstanceMonitorTopNCmdRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
+    * Time range.
+- 1: real-time.
+- 2: last 30 minutes.
+- 3: last 6 hours.
+- 4: last 24 hours.
     */
     @SerializedName("SpanType")
     @Expose
     private Long SpanType;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours 
-     * @return SpanType Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
+     * Get Time range.
+- 1: real-time.
+- 2: last 30 minutes.
+- 3: last 6 hours.
+- 4: last 24 hours. 
+     * @return SpanType Time range.
+- 1: real-time.
+- 2: last 30 minutes.
+- 3: last 6 hours.
+- 4: last 24 hours.
      */
     public Long getSpanType() {
         return this.SpanType;
     }
 
     /**
-     * Set Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
-     * @param SpanType Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
+     * Set Time range.
+- 1: real-time.
+- 2: last 30 minutes.
+- 3: last 6 hours.
+- 4: last 24 hours.
+     * @param SpanType Time range.
+- 1: real-time.
+- 2: last 30 minutes.
+- 3: last 6 hours.
+- 4: last 24 hours.
      */
     public void setSpanType(Long SpanType) {
         this.SpanType = SpanType;

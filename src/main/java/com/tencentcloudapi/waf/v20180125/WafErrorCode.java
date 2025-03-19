@@ -12,6 +12,9 @@ public enum WafErrorCode {
     // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      
+    // CKafka internal error.
+     FAILEDOPERATION_CKAFKAINTERNALERROR("FailedOperation.CKafkaInternalError"),
+     
     // Failed to call the CLS API.
      FAILEDOPERATION_CLSDBOPERATIONFAILED("FailedOperation.CLSDBOperationFailed"),
      

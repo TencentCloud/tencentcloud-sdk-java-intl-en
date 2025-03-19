@@ -38,8 +38,7 @@ public class ClbInstanceDetail extends AbstractModel {
     private String LoadBalancerName;
 
     /**
-    * The list of CLB listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CLB listener list.
     */
     @SerializedName("Listeners")
     @Expose
@@ -78,20 +77,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The list of CLB listeners.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Listeners The list of CLB listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CLB listener list. 
+     * @return Listeners CLB listener list.
      */
     public ClbListener [] getListeners() {
         return this.Listeners;
     }
 
     /**
-     * Set The list of CLB listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Listeners The list of CLB listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CLB listener list.
+     * @param Listeners CLB listener list.
      */
     public void setListeners(ClbListener [] Listeners) {
         this.Listeners = Listeners;

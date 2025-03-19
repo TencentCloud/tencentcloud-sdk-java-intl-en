@@ -108,6 +108,13 @@ public class CreateCSRRequest extends AbstractModel {
     private String Remark;
 
     /**
+    * 
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tags [] Tags;
+
+    /**
      * Get The domain. 
      * @return Domain The domain.
      */
@@ -299,6 +306,22 @@ public class CreateCSRRequest extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get  
+     * @return Tags 
+     */
+    public Tags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 
+     * @param Tags 
+     */
+    public void setTags(Tags [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateCSRRequest() {
     }
 
@@ -343,6 +366,12 @@ public class CreateCSRRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tags(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -362,6 +391,7 @@ public class CreateCSRRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Generate", this.Generate);
         this.setParamSimple(map, prefix + "KeyPassword", this.KeyPassword);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

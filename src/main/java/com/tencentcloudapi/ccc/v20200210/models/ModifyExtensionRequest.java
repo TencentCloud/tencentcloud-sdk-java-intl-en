@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyExtensionRequest extends AbstractModel {
 
     /**
-    * TCCC instance application ID.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Extension
+    * Extension.
     */
     @SerializedName("ExtensionId")
     @Expose
@@ -59,32 +59,32 @@ public class ModifyExtensionRequest extends AbstractModel {
     private String Relation;
 
     /**
-     * Get TCCC instance application ID. 
-     * @return SdkAppId TCCC instance application ID.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set TCCC instance application ID.
-     * @param SdkAppId TCCC instance application ID.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Extension 
-     * @return ExtensionId Extension
+     * Get Extension. 
+     * @return ExtensionId Extension.
      */
     public String getExtensionId() {
         return this.ExtensionId;
     }
 
     /**
-     * Set Extension
-     * @param ExtensionId Extension
+     * Set Extension.
+     * @param ExtensionId Extension.
      */
     public void setExtensionId(String ExtensionId) {
         this.ExtensionId = ExtensionId;

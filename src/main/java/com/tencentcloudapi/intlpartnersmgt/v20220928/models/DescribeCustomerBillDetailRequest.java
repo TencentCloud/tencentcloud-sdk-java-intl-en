@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeCustomerBillDetailRequest extends AbstractModel {
 
     /**
-    * Customer UIN
+    * Sub-account UIN
     */
     @SerializedName("CustomerUin")
     @Expose
     private Long CustomerUin;
 
     /**
-    * The queried month in "YYYY-MM" format, such as 2023-01.
+    * Inquiry month, in the format of YYYY-MM, such as 2023-01
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-    * Page parameter: Indicates the number of entries per page. Value range: [1, 200]
+    * Page parameter: number of entries per page. Value range: [1, 200]
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * Page parameter: Indicates the current page number. The minimum value is 1.
+    * Page parameter: current page number. The minimum value is 1.
     */
     @SerializedName("Page")
     @Expose
@@ -53,8 +53,8 @@ public class DescribeCustomerBillDetailRequest extends AbstractModel {
 
     /**
     * Billing mode. Valid values:
-`prePay` (Monthly subscription)
-`postPay` (Pay-as-you-go)
+prePay (Monthly subscription)
+postPay (Pay-As-You-Go resources)
     */
     @SerializedName("PayMode")
     @Expose
@@ -62,31 +62,31 @@ public class DescribeCustomerBillDetailRequest extends AbstractModel {
 
     /**
     * Transaction type. Valid values:
-`prepay_purchase` (Purchase)
-`prepay_renew` (Renewal)
-`prepay_modify` (Upgrade/Downgrade)
-`prepay_return` ( Monthly subscription refund)
-`postpay_deduct` (Pay-as-you-go)
-`postpay_deduct_h` (Hourly settlement)
-`postpay_deduct_d` (Daily settlement)
-`postpay_deduct_m` (Monthly settlement)
-`offline_deduct` (Offline project deduction)
-`online_deduct` (Offline product deduction)
-`recon_deduct` (Adjustment - deduction)
-`recon_increase` (Adjustment - compensation)
-`ripay_purchase` (One-off RI Fee)
-`postpay_deduct_s` (Spot)
-`ri_hour_pay` (Hourly RI fee)
-`prePurchase` (New monthly subscription)
-`preRenew` (Monthly subscription renewal)
-`preUpgrade` (Upgrade/Downgrade)
-`preDowngrade` (Upgrade/Downgrade)
-`svp_hour_pay` (Hourly Savings Plan fee)
-`recon_guarantee` (Minimum spend deduction)
-`pre_purchase` (New monthly subscription)
-`pre_renew` (Monthly subscription renewal)
-`pre_upgrade` (Upgrade/Downgrade)
-`pre_downgrade` (Upgrade/Downgrade)
+prepay_purchase (Purchase)
+prepay_renew (Renewal)
+prepay_modify (Upgrade/Downgrade)
+prepay_return ( Monthly subscription refund)
+postpay_deduct (Pay-as-you-go)
+postpay_deduct_h (Hourly settlement)
+postpay_deduct_d (Daily settlement)
+postpay_deduct_m (Monthly settlement)
+offline_deduct (Offline project deduction)
+online_deduct (Offline product deduction)
+recon_deduct (Adjustment - deduction)
+recon_increase (Adjustment - compensation)
+ripay_purchase (One-off RI Fee)
+postpay_deduct_s (Spot)
+ri_hour_pay (Hourly RI fee)
+prePurchase (New monthly subscription)
+preRenew (Monthly subscription renewal)
+preUpgrade (Upgrade/Downgrade)
+preDowngrade (Upgrade/Downgrade)
+svp_hour_pay (Hourly Savings Plan fee)
+recon_guarantee (Minimum spend deduction)
+pre_purchase (New monthly subscription)
+pre_renew (Monthly subscription renewal)
+pre_upgrade (Upgrade/Downgrade)
+pre_downgrade (Upgrade/Downgrade)
     */
     @SerializedName("ActionType")
     @Expose
@@ -94,73 +94,73 @@ public class DescribeCustomerBillDetailRequest extends AbstractModel {
 
     /**
     * Payment status
-`0`: N/A
-`1`: Paid
-`2`: Unpaid
+0: not distinguished
+1: paid
+2: unpaid
     */
     @SerializedName("IsConfirmed")
     @Expose
     private String IsConfirmed;
 
     /**
-     * Get Customer UIN 
-     * @return CustomerUin Customer UIN
+     * Get Sub-account UIN 
+     * @return CustomerUin Sub-account UIN
      */
     public Long getCustomerUin() {
         return this.CustomerUin;
     }
 
     /**
-     * Set Customer UIN
-     * @param CustomerUin Customer UIN
+     * Set Sub-account UIN
+     * @param CustomerUin Sub-account UIN
      */
     public void setCustomerUin(Long CustomerUin) {
         this.CustomerUin = CustomerUin;
     }
 
     /**
-     * Get The queried month in "YYYY-MM" format, such as 2023-01. 
-     * @return Month The queried month in "YYYY-MM" format, such as 2023-01.
+     * Get Inquiry month, in the format of YYYY-MM, such as 2023-01 
+     * @return Month Inquiry month, in the format of YYYY-MM, such as 2023-01
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set The queried month in "YYYY-MM" format, such as 2023-01.
-     * @param Month The queried month in "YYYY-MM" format, such as 2023-01.
+     * Set Inquiry month, in the format of YYYY-MM, such as 2023-01
+     * @param Month Inquiry month, in the format of YYYY-MM, such as 2023-01
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get Page parameter: Indicates the number of entries per page. Value range: [1, 200] 
-     * @return PageSize Page parameter: Indicates the number of entries per page. Value range: [1, 200]
+     * Get Page parameter: number of entries per page. Value range: [1, 200] 
+     * @return PageSize Page parameter: number of entries per page. Value range: [1, 200]
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Page parameter: Indicates the number of entries per page. Value range: [1, 200]
-     * @param PageSize Page parameter: Indicates the number of entries per page. Value range: [1, 200]
+     * Set Page parameter: number of entries per page. Value range: [1, 200]
+     * @param PageSize Page parameter: number of entries per page. Value range: [1, 200]
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get Page parameter: Indicates the current page number. The minimum value is 1. 
-     * @return Page Page parameter: Indicates the current page number. The minimum value is 1.
+     * Get Page parameter: current page number. The minimum value is 1. 
+     * @return Page Page parameter: current page number. The minimum value is 1.
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set Page parameter: Indicates the current page number. The minimum value is 1.
-     * @param Page Page parameter: Indicates the current page number. The minimum value is 1.
+     * Set Page parameter: current page number. The minimum value is 1.
+     * @param Page Page parameter: current page number. The minimum value is 1.
      */
     public void setPage(Long Page) {
         this.Page = Page;
@@ -168,11 +168,11 @@ public class DescribeCustomerBillDetailRequest extends AbstractModel {
 
     /**
      * Get Billing mode. Valid values:
-`prePay` (Monthly subscription)
-`postPay` (Pay-as-you-go) 
+prePay (Monthly subscription)
+postPay (Pay-As-You-Go resources) 
      * @return PayMode Billing mode. Valid values:
-`prePay` (Monthly subscription)
-`postPay` (Pay-as-you-go)
+prePay (Monthly subscription)
+postPay (Pay-As-You-Go resources)
      */
     public String getPayMode() {
         return this.PayMode;
@@ -180,11 +180,11 @@ public class DescribeCustomerBillDetailRequest extends AbstractModel {
 
     /**
      * Set Billing mode. Valid values:
-`prePay` (Monthly subscription)
-`postPay` (Pay-as-you-go)
+prePay (Monthly subscription)
+postPay (Pay-As-You-Go resources)
      * @param PayMode Billing mode. Valid values:
-`prePay` (Monthly subscription)
-`postPay` (Pay-as-you-go)
+prePay (Monthly subscription)
+postPay (Pay-As-You-Go resources)
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
@@ -192,57 +192,57 @@ public class DescribeCustomerBillDetailRequest extends AbstractModel {
 
     /**
      * Get Transaction type. Valid values:
-`prepay_purchase` (Purchase)
-`prepay_renew` (Renewal)
-`prepay_modify` (Upgrade/Downgrade)
-`prepay_return` ( Monthly subscription refund)
-`postpay_deduct` (Pay-as-you-go)
-`postpay_deduct_h` (Hourly settlement)
-`postpay_deduct_d` (Daily settlement)
-`postpay_deduct_m` (Monthly settlement)
-`offline_deduct` (Offline project deduction)
-`online_deduct` (Offline product deduction)
-`recon_deduct` (Adjustment - deduction)
-`recon_increase` (Adjustment - compensation)
-`ripay_purchase` (One-off RI Fee)
-`postpay_deduct_s` (Spot)
-`ri_hour_pay` (Hourly RI fee)
-`prePurchase` (New monthly subscription)
-`preRenew` (Monthly subscription renewal)
-`preUpgrade` (Upgrade/Downgrade)
-`preDowngrade` (Upgrade/Downgrade)
-`svp_hour_pay` (Hourly Savings Plan fee)
-`recon_guarantee` (Minimum spend deduction)
-`pre_purchase` (New monthly subscription)
-`pre_renew` (Monthly subscription renewal)
-`pre_upgrade` (Upgrade/Downgrade)
-`pre_downgrade` (Upgrade/Downgrade) 
+prepay_purchase (Purchase)
+prepay_renew (Renewal)
+prepay_modify (Upgrade/Downgrade)
+prepay_return ( Monthly subscription refund)
+postpay_deduct (Pay-as-you-go)
+postpay_deduct_h (Hourly settlement)
+postpay_deduct_d (Daily settlement)
+postpay_deduct_m (Monthly settlement)
+offline_deduct (Offline project deduction)
+online_deduct (Offline product deduction)
+recon_deduct (Adjustment - deduction)
+recon_increase (Adjustment - compensation)
+ripay_purchase (One-off RI Fee)
+postpay_deduct_s (Spot)
+ri_hour_pay (Hourly RI fee)
+prePurchase (New monthly subscription)
+preRenew (Monthly subscription renewal)
+preUpgrade (Upgrade/Downgrade)
+preDowngrade (Upgrade/Downgrade)
+svp_hour_pay (Hourly Savings Plan fee)
+recon_guarantee (Minimum spend deduction)
+pre_purchase (New monthly subscription)
+pre_renew (Monthly subscription renewal)
+pre_upgrade (Upgrade/Downgrade)
+pre_downgrade (Upgrade/Downgrade) 
      * @return ActionType Transaction type. Valid values:
-`prepay_purchase` (Purchase)
-`prepay_renew` (Renewal)
-`prepay_modify` (Upgrade/Downgrade)
-`prepay_return` ( Monthly subscription refund)
-`postpay_deduct` (Pay-as-you-go)
-`postpay_deduct_h` (Hourly settlement)
-`postpay_deduct_d` (Daily settlement)
-`postpay_deduct_m` (Monthly settlement)
-`offline_deduct` (Offline project deduction)
-`online_deduct` (Offline product deduction)
-`recon_deduct` (Adjustment - deduction)
-`recon_increase` (Adjustment - compensation)
-`ripay_purchase` (One-off RI Fee)
-`postpay_deduct_s` (Spot)
-`ri_hour_pay` (Hourly RI fee)
-`prePurchase` (New monthly subscription)
-`preRenew` (Monthly subscription renewal)
-`preUpgrade` (Upgrade/Downgrade)
-`preDowngrade` (Upgrade/Downgrade)
-`svp_hour_pay` (Hourly Savings Plan fee)
-`recon_guarantee` (Minimum spend deduction)
-`pre_purchase` (New monthly subscription)
-`pre_renew` (Monthly subscription renewal)
-`pre_upgrade` (Upgrade/Downgrade)
-`pre_downgrade` (Upgrade/Downgrade)
+prepay_purchase (Purchase)
+prepay_renew (Renewal)
+prepay_modify (Upgrade/Downgrade)
+prepay_return ( Monthly subscription refund)
+postpay_deduct (Pay-as-you-go)
+postpay_deduct_h (Hourly settlement)
+postpay_deduct_d (Daily settlement)
+postpay_deduct_m (Monthly settlement)
+offline_deduct (Offline project deduction)
+online_deduct (Offline product deduction)
+recon_deduct (Adjustment - deduction)
+recon_increase (Adjustment - compensation)
+ripay_purchase (One-off RI Fee)
+postpay_deduct_s (Spot)
+ri_hour_pay (Hourly RI fee)
+prePurchase (New monthly subscription)
+preRenew (Monthly subscription renewal)
+preUpgrade (Upgrade/Downgrade)
+preDowngrade (Upgrade/Downgrade)
+svp_hour_pay (Hourly Savings Plan fee)
+recon_guarantee (Minimum spend deduction)
+pre_purchase (New monthly subscription)
+pre_renew (Monthly subscription renewal)
+pre_upgrade (Upgrade/Downgrade)
+pre_downgrade (Upgrade/Downgrade)
      */
     public String getActionType() {
         return this.ActionType;
@@ -250,57 +250,57 @@ public class DescribeCustomerBillDetailRequest extends AbstractModel {
 
     /**
      * Set Transaction type. Valid values:
-`prepay_purchase` (Purchase)
-`prepay_renew` (Renewal)
-`prepay_modify` (Upgrade/Downgrade)
-`prepay_return` ( Monthly subscription refund)
-`postpay_deduct` (Pay-as-you-go)
-`postpay_deduct_h` (Hourly settlement)
-`postpay_deduct_d` (Daily settlement)
-`postpay_deduct_m` (Monthly settlement)
-`offline_deduct` (Offline project deduction)
-`online_deduct` (Offline product deduction)
-`recon_deduct` (Adjustment - deduction)
-`recon_increase` (Adjustment - compensation)
-`ripay_purchase` (One-off RI Fee)
-`postpay_deduct_s` (Spot)
-`ri_hour_pay` (Hourly RI fee)
-`prePurchase` (New monthly subscription)
-`preRenew` (Monthly subscription renewal)
-`preUpgrade` (Upgrade/Downgrade)
-`preDowngrade` (Upgrade/Downgrade)
-`svp_hour_pay` (Hourly Savings Plan fee)
-`recon_guarantee` (Minimum spend deduction)
-`pre_purchase` (New monthly subscription)
-`pre_renew` (Monthly subscription renewal)
-`pre_upgrade` (Upgrade/Downgrade)
-`pre_downgrade` (Upgrade/Downgrade)
+prepay_purchase (Purchase)
+prepay_renew (Renewal)
+prepay_modify (Upgrade/Downgrade)
+prepay_return ( Monthly subscription refund)
+postpay_deduct (Pay-as-you-go)
+postpay_deduct_h (Hourly settlement)
+postpay_deduct_d (Daily settlement)
+postpay_deduct_m (Monthly settlement)
+offline_deduct (Offline project deduction)
+online_deduct (Offline product deduction)
+recon_deduct (Adjustment - deduction)
+recon_increase (Adjustment - compensation)
+ripay_purchase (One-off RI Fee)
+postpay_deduct_s (Spot)
+ri_hour_pay (Hourly RI fee)
+prePurchase (New monthly subscription)
+preRenew (Monthly subscription renewal)
+preUpgrade (Upgrade/Downgrade)
+preDowngrade (Upgrade/Downgrade)
+svp_hour_pay (Hourly Savings Plan fee)
+recon_guarantee (Minimum spend deduction)
+pre_purchase (New monthly subscription)
+pre_renew (Monthly subscription renewal)
+pre_upgrade (Upgrade/Downgrade)
+pre_downgrade (Upgrade/Downgrade)
      * @param ActionType Transaction type. Valid values:
-`prepay_purchase` (Purchase)
-`prepay_renew` (Renewal)
-`prepay_modify` (Upgrade/Downgrade)
-`prepay_return` ( Monthly subscription refund)
-`postpay_deduct` (Pay-as-you-go)
-`postpay_deduct_h` (Hourly settlement)
-`postpay_deduct_d` (Daily settlement)
-`postpay_deduct_m` (Monthly settlement)
-`offline_deduct` (Offline project deduction)
-`online_deduct` (Offline product deduction)
-`recon_deduct` (Adjustment - deduction)
-`recon_increase` (Adjustment - compensation)
-`ripay_purchase` (One-off RI Fee)
-`postpay_deduct_s` (Spot)
-`ri_hour_pay` (Hourly RI fee)
-`prePurchase` (New monthly subscription)
-`preRenew` (Monthly subscription renewal)
-`preUpgrade` (Upgrade/Downgrade)
-`preDowngrade` (Upgrade/Downgrade)
-`svp_hour_pay` (Hourly Savings Plan fee)
-`recon_guarantee` (Minimum spend deduction)
-`pre_purchase` (New monthly subscription)
-`pre_renew` (Monthly subscription renewal)
-`pre_upgrade` (Upgrade/Downgrade)
-`pre_downgrade` (Upgrade/Downgrade)
+prepay_purchase (Purchase)
+prepay_renew (Renewal)
+prepay_modify (Upgrade/Downgrade)
+prepay_return ( Monthly subscription refund)
+postpay_deduct (Pay-as-you-go)
+postpay_deduct_h (Hourly settlement)
+postpay_deduct_d (Daily settlement)
+postpay_deduct_m (Monthly settlement)
+offline_deduct (Offline project deduction)
+online_deduct (Offline product deduction)
+recon_deduct (Adjustment - deduction)
+recon_increase (Adjustment - compensation)
+ripay_purchase (One-off RI Fee)
+postpay_deduct_s (Spot)
+ri_hour_pay (Hourly RI fee)
+prePurchase (New monthly subscription)
+preRenew (Monthly subscription renewal)
+preUpgrade (Upgrade/Downgrade)
+preDowngrade (Upgrade/Downgrade)
+svp_hour_pay (Hourly Savings Plan fee)
+recon_guarantee (Minimum spend deduction)
+pre_purchase (New monthly subscription)
+pre_renew (Monthly subscription renewal)
+pre_upgrade (Upgrade/Downgrade)
+pre_downgrade (Upgrade/Downgrade)
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
@@ -308,13 +308,13 @@ public class DescribeCustomerBillDetailRequest extends AbstractModel {
 
     /**
      * Get Payment status
-`0`: N/A
-`1`: Paid
-`2`: Unpaid 
+0: not distinguished
+1: paid
+2: unpaid 
      * @return IsConfirmed Payment status
-`0`: N/A
-`1`: Paid
-`2`: Unpaid
+0: not distinguished
+1: paid
+2: unpaid
      */
     public String getIsConfirmed() {
         return this.IsConfirmed;
@@ -322,13 +322,13 @@ public class DescribeCustomerBillDetailRequest extends AbstractModel {
 
     /**
      * Set Payment status
-`0`: N/A
-`1`: Paid
-`2`: Unpaid
+0: not distinguished
+1: paid
+2: unpaid
      * @param IsConfirmed Payment status
-`0`: N/A
-`1`: Paid
-`2`: Unpaid
+0: not distinguished
+1: paid
+2: unpaid
      */
     public void setIsConfirmed(String IsConfirmed) {
         this.IsConfirmed = IsConfirmed;

@@ -24,69 +24,79 @@ import java.util.HashMap;
 public class ChangeInstanceRoleRequest extends AbstractModel {
 
     /**
-    * Replication group ID
+    * Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * Instance ID
+    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance role. Valid values: `rw` (read-write), `r`( read-only).
+    * Instance role.
+- rw: read/write.
+- r: read-only.
     */
     @SerializedName("InstanceRole")
     @Expose
     private String InstanceRole;
 
     /**
-     * Get Replication group ID 
-     * @return GroupId Replication group ID
+     * Get Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it. 
+     * @return GroupId Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Replication group ID
-     * @param GroupId Replication group ID
+     * Set Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
+     * @param GroupId Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
+     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance role. Valid values: `rw` (read-write), `r`( read-only). 
-     * @return InstanceRole Instance role. Valid values: `rw` (read-write), `r`( read-only).
+     * Get Instance role.
+- rw: read/write.
+- r: read-only. 
+     * @return InstanceRole Instance role.
+- rw: read/write.
+- r: read-only.
      */
     public String getInstanceRole() {
         return this.InstanceRole;
     }
 
     /**
-     * Set Instance role. Valid values: `rw` (read-write), `r`( read-only).
-     * @param InstanceRole Instance role. Valid values: `rw` (read-write), `r`( read-only).
+     * Set Instance role.
+- rw: read/write.
+- r: read-only.
+     * @param InstanceRole Instance role.
+- rw: read/write.
+- r: read-only.
      */
     public void setInstanceRole(String InstanceRole) {
         this.InstanceRole = InstanceRole;

@@ -24,140 +24,115 @@ import java.util.HashMap;
 public class ActionSummaryOverviewItem extends AbstractModel {
 
     /**
-    * Transaction type code
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Transaction type code.
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-    * Transaction type name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Transaction type name.
     */
     @SerializedName("ActionTypeName")
     @Expose
     private String ActionTypeName;
 
     /**
-    * The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Actual total consumption, up to 8 decimal places.
     */
     @SerializedName("OriginalCost")
     @Expose
     private String OriginalCost;
 
     /**
-    * The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Voucher payment amount, up to 8 decimal places.
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total consumption, up to 8 decimal places.
     */
     @SerializedName("TotalCost")
     @Expose
     private String TotalCost;
 
     /**
-     * Get Transaction type code
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ActionType Transaction type code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Transaction type code. 
+     * @return ActionType Transaction type code.
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set Transaction type code
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ActionType Transaction type code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Transaction type code.
+     * @param ActionType Transaction type code.
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get Transaction type name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ActionTypeName Transaction type name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Transaction type name. 
+     * @return ActionTypeName Transaction type name.
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
     }
 
     /**
-     * Set Transaction type name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ActionTypeName Transaction type name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Transaction type name.
+     * @param ActionTypeName Transaction type name.
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;
     }
 
     /**
-     * Get The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginalCost The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Actual total consumption, up to 8 decimal places. 
+     * @return OriginalCost Actual total consumption, up to 8 decimal places.
      */
     public String getOriginalCost() {
         return this.OriginalCost;
     }
 
     /**
-     * Set The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginalCost The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Actual total consumption, up to 8 decimal places.
+     * @param OriginalCost Actual total consumption, up to 8 decimal places.
      */
     public void setOriginalCost(String OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Voucher payment amount, up to 8 decimal places. 
+     * @return VoucherPayAmount Voucher payment amount, up to 8 decimal places.
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Voucher payment amount, up to 8 decimal places.
+     * @param VoucherPayAmount Voucher payment amount, up to 8 decimal places.
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCost Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total consumption, up to 8 decimal places. 
+     * @return TotalCost Total consumption, up to 8 decimal places.
      */
     public String getTotalCost() {
         return this.TotalCost;
     }
 
     /**
-     * Set Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCost Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total consumption, up to 8 decimal places.
+     * @param TotalCost Total consumption, up to 8 decimal places.
      */
     public void setTotalCost(String TotalCost) {
         this.TotalCost = TotalCost;

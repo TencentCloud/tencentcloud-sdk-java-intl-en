@@ -6,6 +6,27 @@ public enum IntlpartnersmgtErrorCode {
     // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      
+    // The account balance is insufficient.
+     FAILEDOPERATION_BALANCEINSUFFICIENT("FailedOperation.BalanceInsufficient"),
+     
+    // The account is a group account and cannot be bound as a sub-customer.
+     FAILEDOPERATION_BINDORGANIZATIONACCOUNT("FailedOperation.BindOrganizationAccount"),
+     
+    // The sub-customer balance is less than zero.
+     FAILEDOPERATION_CLIENTBALANCEISLESSOREQUALZERO("FailedOperation.ClientBalanceIsLessOrEqualZero"),
+     
+    // The sub-customer has purchased an sp package.
+     FAILEDOPERATION_CLIENTBUYSP("FailedOperation.ClientBuySP"),
+     
+    // The sub-customer has created a shared unit.
+     FAILEDOPERATION_CLIENTCREATESHAREUNIT("FailedOperation.ClientCreateShareUnit"),
+     
+    // The sub-customer has joined a shared unit.
+     FAILEDOPERATION_CLIENTJOINSHAREUNIT("FailedOperation.ClientJoinShareUnit"),
+     
+    // The user has not applied to become a sub-customer.
+     FAILEDOPERATION_CLIENTNOTAPPLY("FailedOperation.ClientNotApply"),
+     
     // 
      FAILEDOPERATION_EXCEEDMAXBINDCOUNT("FailedOperation.ExceedMaxBindCount"),
      
@@ -15,17 +36,29 @@ public enum IntlpartnersmgtErrorCode {
     // The number of registered accounts for the current mobile number has reached the maximum limit. Please change the phone number and try again.
      FAILEDOPERATION_PHONEBINDUPPER("FailedOperation.PhoneBindUpper"),
      
+    // The interval between sending invitation links is less than three minutes. Please try again later.
+     FAILEDOPERATION_SENDMAILLIMIT180("FailedOperation.SendMailLimit180"),
+     
     // Verification codes are sent too frequently. Please try again later.
      FAILEDOPERATION_SENDVERIFYCODELIMIT("FailedOperation.SendVerifyCodeLimit"),
      
     // The interval for sending SMS verification codes should be greater than 60 seconds. Please try again later.
      FAILEDOPERATION_SENDVERIFYCODELIMIT60("FailedOperation.SendVerifyCodeLimit60"),
      
+    // The primary industry id and secondary industry id do not match.
+     FAILEDOPERATION_TRADEINFOINCORRECT("FailedOperation.TradeInfoIncorrect"),
+     
+    // Tencent cloud ka account cannot become a sub-customer.
+     FAILEDOPERATION_UINALREADYKA("FailedOperation.UinAlreadyKA"),
+     
     // Invalid UIN
      FAILEDOPERATION_UININVALID("FailedOperation.UinInvalid"),
      
     // UIN is not a reseller.
      FAILEDOPERATION_UINNOTAGENT("FailedOperation.UinNotAgent"),
+     
+    // UIN is a non-reseller (master reseller, reseller, sub-reseller) account.
+     FAILEDOPERATION_UINNOTRESELLER("FailedOperation.UinNotReseller"),
      
     // Incorrect verification code.
      FAILEDOPERATION_VERIFICATIONCODEILLEGAL("FailedOperation.VerificationCodeIllegal"),
@@ -102,11 +135,23 @@ public enum IntlpartnersmgtErrorCode {
     // InvalidParameterValue.PhoneNumEmpty
      INVALIDPARAMETERVALUE_PHONENUMEMPTY("InvalidParameterValue.PhoneNumEmpty"),
      
+    // The primary industry id or secondary industry id is empty.
+     INVALIDPARAMETERVALUE_TRADEINFOEMPTY("InvalidParameterValue.TradeInfoEmpty"),
+     
+    // The user has become a sub-customer of another reseller.
+     INVALIDPARAMETERVALUE_UINALREADYCLIENT("InvalidParameterValue.UinAlreadyClient"),
+     
+    // The user is a sub-account.
+     INVALIDPARAMETERVALUE_UINISSUBACCOUNT("InvalidParameterValue.UinIsSubAccount"),
+     
     // Invalid UinList. Array length value: 1-50.
      INVALIDPARAMETERVALUE_UINLIST("InvalidParameterValue.UinList"),
      
     // The current region does not support creating a Tencent Cloud International account.
      INVALIDPARAMETERVALUE_UNSUPPORTAREA("InvalidParameterValue.UnSupportArea"),
+     
+    // 
+     INVALIDPARAMETERVALUE_VOUCHERAMOUNTOUTOFRANGE("InvalidParameterValue.VoucherAmountOutOfRange"),
      
     // Missing parameter
      MISSINGPARAMETER("MissingParameter"),

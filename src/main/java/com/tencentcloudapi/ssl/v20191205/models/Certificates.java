@@ -24,1477 +24,1731 @@ import java.util.HashMap;
 public class Certificates extends AbstractModel {
 
     /**
-    * User UIN
-Note: this field may return null, indicating that no valid values can be obtained.
+    * User uin.
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * Project ID
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Project id.
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * Certificate source
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Certificate source:.
+trustasia.
+upload.
+wosign.
+sheca.
     */
     @SerializedName("From")
     @Expose
     private String From;
 
     /**
-    * The certificate plan type. Valid values:
-null: Certificates uploaded by users (no plan type)
-`1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Certificate package type:.
+Null: user uploads a certificate (without package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise edition (ev pro),. 
+4: securesite enhanced (ev). 
+5: securesite enterprise professional edition (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov) cert. 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain name (ev) ssl certificate.
+25: wotrus domain name cert.
+26: wotrus domain name multiple domain name cert.
+27: wotrus domain name wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi - domain name certificate.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi - domain name certificate.
+33: wotrus - national cryptography domain - type certificate.
+34: wotrus-national cryptography domain certificate (multiple domain names).
+35: wotrus-national cryptography domain certificate (wildcard).
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus - enhanced national cryptography certificate.
+41: wotrus - enhanced national cryptography certificate (multiple domain names).
+42: trustasia - domain name type certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: DNSPod - enhanced (ev) ssl certificate.
+47: DNSPod - enhanced (ev) multiple domain names ssl certificate.
+48: DNSPod - domain name-based (dv) ssl certificate.
+49: DNSPod - domain name-based (dv) wildcard ssl certificate.
+50: DNSPod - domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional edition multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional edition multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise wildcard (ov).
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise pro multiple domain names (ov pro).
+93: securesite enterprise multiple domain names (ov).
+94: securesite enhanced pro multiple domain names (ev pro).
+95: securesite enhanced multiple domain names (ev).
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise ov ssl certificate for multiple domain names.
+100: cfca ov wildcard ssl certificate.
+101: cfca enhanced (ev) ssl certificate.
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-    * Certificate type. `CA`: client certificate; `SVR`: server certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Certificate type. ca = client certificate; svr = server certificate.
     */
     @SerializedName("CertificateType")
     @Expose
     private String CertificateType;
 
     /**
-    * Issuer
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Certificate product name.
     */
     @SerializedName("ProductZhName")
     @Expose
     private String ProductZhName;
 
     /**
-    * Primary domain name
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Primary domain name.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Alias
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Remark name.
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = dns record added automatically, 5 = enterprise certificate, pending documentation submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending documentation submission, 14 = certificate refunded, 15 = certificate migration in progress.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Extended information of the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Certificate extended information.
     */
     @SerializedName("CertificateExtra")
     @Expose
     private CertificateExtra CertificateExtra;
 
     /**
-    * Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Vulnerability scanning status: INACTIVE = not enabled, ACTIVE = enabled.
     */
     @SerializedName("VulnerabilityStatus")
     @Expose
     private String VulnerabilityStatus;
 
     /**
-    * Status information
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Status information.
     */
     @SerializedName("StatusMsg")
     @Expose
     private String StatusMsg;
 
     /**
-    * Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Validation type: DNS_AUTO = automatic dns validation, DNS = manual dns validation, FILE = file verification, DNS_PROXY = dns proxy validation, FILE_PROXY = file proxy verification.
     */
     @SerializedName("VerifyType")
     @Expose
     private String VerifyType;
 
     /**
-    * Time when the certificate takes effect
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Certificate validation time.
     */
     @SerializedName("CertBeginTime")
     @Expose
     private String CertBeginTime;
 
     /**
-    * Time when the certificate expires
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Certificate expiration time.
     */
     @SerializedName("CertEndTime")
     @Expose
     private String CertEndTime;
 
     /**
-    * Validity period of the certificate, in months
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Certificate validity period (month).
     */
     @SerializedName("ValidityPeriod")
     @Expose
     private String ValidityPeriod;
 
     /**
-    * Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Creation time.
     */
     @SerializedName("InsertTime")
     @Expose
     private String InsertTime;
 
     /**
-    * Certificate ID
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Certificate id.
     */
     @SerializedName("CertificateId")
     @Expose
     private String CertificateId;
 
     /**
-    * Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Multiple domain names contained in the certificate (including the primary domain name).
     */
     @SerializedName("SubjectAltName")
     @Expose
     private String [] SubjectAltName;
 
     /**
-    * Certificate type name
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Certificate type name.
     */
     @SerializedName("PackageTypeName")
     @Expose
     private String PackageTypeName;
 
     /**
-    * Status description
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Status name.
     */
     @SerializedName("StatusName")
     @Expose
     private String StatusName;
 
     /**
-    * Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies whether the customer is a vip customer. true indicates yes and false indicates no.
     */
     @SerializedName("IsVip")
     @Expose
     private Boolean IsVip;
 
     /**
-    * Whether the certificate is a DV certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies whether it is a dv version certificate. true indicates yes and false indicates no.
     */
     @SerializedName("IsDv")
     @Expose
     private Boolean IsDv;
 
     /**
-    * Whether the certificate is a wildcard certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies whether it is a wildcard domain name certificate. true indicates yes and false indicates no.
     */
     @SerializedName("IsWildcard")
     @Expose
     private Boolean IsWildcard;
 
     /**
-    * Whether the vulnerability scanning feature is enabled
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Whether the vulnerability scanning feature is enabled.
     */
     @SerializedName("IsVulnerability")
     @Expose
     private Boolean IsVulnerability;
 
     /**
-    * Whether it can be renewed 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Whether it is renewable.
     */
     @SerializedName("RenewAble")
     @Expose
     private Boolean RenewAble;
 
     /**
-    * Project information
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Project information.
     */
     @SerializedName("ProjectInfo")
     @Expose
     private ProjectInfo ProjectInfo;
 
     /**
-    * Associated Tencent Cloud services. Currently, this parameter is unavailable.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Associated cloud resources are temporarily unavailable.
     */
     @SerializedName("BoundResource")
     @Expose
     private String [] BoundResource;
 
     /**
-    * Whether the certificate can be deployed
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Whether it can be deployed.
     */
     @SerializedName("Deployable")
     @Expose
     private Boolean Deployable;
 
     /**
-    * List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Tag list.
     */
     @SerializedName("Tags")
     @Expose
     private Tags [] Tags;
 
     /**
-    * Whether the expiration notification was ignored
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether expiration notice has been ignored.
     */
     @SerializedName("IsIgnore")
     @Expose
     private Boolean IsIgnore;
 
     /**
-    * Whether the certificate is a Chinese SM certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether it is a China SM certificate.
     */
     @SerializedName("IsSM")
     @Expose
     private Boolean IsSM;
 
     /**
-    * Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Certificate algorithm.
     */
     @SerializedName("EncryptAlgorithm")
     @Expose
     private String EncryptAlgorithm;
 
     /**
-    * Encryption algorithm of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Encryption algorithm for upload ca certificate.
     */
     @SerializedName("CAEncryptAlgorithms")
     @Expose
     private String [] CAEncryptAlgorithms;
 
     /**
-    * Expiration time of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Expiration time for upload ca certificate.
     */
     @SerializedName("CAEndTimes")
     @Expose
     private String [] CAEndTimes;
 
     /**
-    * Generic name of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Common name of the upload ca certificate.
     */
     @SerializedName("CACommonNames")
     @Expose
     private String [] CACommonNames;
 
     /**
-    * Prereview information of the certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Certificate prereview information.
     */
     @SerializedName("PreAuditInfo")
     @Expose
     private PreAuditInfo PreAuditInfo;
 
     /**
-    * Whether auto-renewal is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Whether to auto-renew.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Hosting status: 0, hosting; 5, resource replacement; 10, hosting completed; -1, not hosted. 
     */
     @SerializedName("HostingStatus")
     @Expose
     private Long HostingStatus;
 
     /**
-    * The hosting completion time.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Hosting completion time.
     */
     @SerializedName("HostingCompleteTime")
     @Expose
     private String HostingCompleteTime;
 
     /**
-    * The hosted new certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Manage the new certificate id.
     */
     @SerializedName("HostingRenewCertId")
     @Expose
     private String HostingRenewCertId;
 
     /**
-    * Existing renewed certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Existing renewal certificate id.
     */
     @SerializedName("HasRenewOrder")
     @Expose
     private String HasRenewOrder;
 
     /**
-    * Whether the original certificate is deleted when a certificate is reissued.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Indicates whether the original certificate is deleted during reissue.
     */
     @SerializedName("ReplaceOriCertIsDelete")
     @Expose
     private Boolean ReplaceOriCertIsDelete;
 
     /**
-    * Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Indicates whether it is about to expire. a certificate is about to expire if it will expire within 30 days.
     */
     @SerializedName("IsExpiring")
     @Expose
     private Boolean IsExpiring;
 
     /**
-    * Validation expiration time for the addition of the DV certificate
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Add validation expiration date for DV certificate
     */
     @SerializedName("DVAuthDeadline")
     @Expose
     private String DVAuthDeadline;
 
     /**
-    * Domain name validation pass time
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Domain verification passed time.
     */
     @SerializedName("ValidationPassedTime")
     @Expose
     private String ValidationPassedTime;
 
     /**
-    * Multiple domain names with which the certificate is associated
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Multiple domain names associated with the certificate.
     */
     @SerializedName("CertSANs")
     @Expose
     private String [] CertSANs;
 
     /**
-    * Domain name validation rejection information
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Domain verification rejection information.
     */
     @SerializedName("AwaitingValidationMsg")
     @Expose
     private String AwaitingValidationMsg;
 
     /**
-    * Whether downloading is allowed
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Whether to allow downloading.
     */
     @SerializedName("AllowDownload")
     @Expose
     private Boolean AllowDownload;
 
     /**
-    * 
+    * Whether all certificate domain names are managed and resolved by dnspod.
     */
     @SerializedName("IsDNSPODResolve")
     @Expose
     private Boolean IsDNSPODResolve;
 
     /**
-    * 
+    * Whether the certificate is purchased with benefit points.
     */
     @SerializedName("IsPackage")
     @Expose
     private Boolean IsPackage;
 
     /**
-    * 
+    * Whether there is a private key password.
     */
     @SerializedName("KeyPasswordCustomFlag")
     @Expose
     private Boolean KeyPasswordCustomFlag;
 
     /**
-    * 
+    * Types of web servers supported for download: nginx, apache, iis, tomcat, jks, root, other.
     */
     @SerializedName("SupportDownloadType")
     @Expose
     private SupportDownloadType SupportDownloadType;
 
     /**
-     * Get User UIN
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OwnerUin User UIN
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Certificate revocation completion time.
+    */
+    @SerializedName("CertRevokedTime")
+    @Expose
+    private String CertRevokedTime;
+
+    /**
+    * Hosted resource type list.
+    */
+    @SerializedName("HostingResourceTypes")
+    @Expose
+    private String [] HostingResourceTypes;
+
+    /**
+    * Managed configuration information.
+    */
+    @SerializedName("HostingConfig")
+    @Expose
+    private HostingConfig HostingConfig;
+
+    /**
+     * Get User uin. 
+     * @return OwnerUin User uin.
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set User UIN
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OwnerUin User UIN
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set User uin.
+     * @param OwnerUin User uin.
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get Project ID
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectId Project ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Project id. 
+     * @return ProjectId Project id.
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProjectId Project ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Project id.
+     * @param ProjectId Project id.
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Certificate source
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return From Certificate source
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Certificate source:.
+trustasia.
+upload.
+wosign.
+sheca. 
+     * @return From Certificate source:.
+trustasia.
+upload.
+wosign.
+sheca.
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set Certificate source
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param From Certificate source
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Certificate source:.
+trustasia.
+upload.
+wosign.
+sheca.
+     * @param From Certificate source:.
+trustasia.
+upload.
+wosign.
+sheca.
      */
     public void setFrom(String From) {
         this.From = From;
     }
 
     /**
-     * Get The certificate plan type. Valid values:
-null: Certificates uploaded by users (no plan type)
-`1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PackageType The certificate plan type. Valid values:
-null: Certificates uploaded by users (no plan type)
-`1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Certificate package type:.
+Null: user uploads a certificate (without package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise edition (ev pro),. 
+4: securesite enhanced (ev). 
+5: securesite enterprise professional edition (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov) cert. 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain name (ev) ssl certificate.
+25: wotrus domain name cert.
+26: wotrus domain name multiple domain name cert.
+27: wotrus domain name wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi - domain name certificate.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi - domain name certificate.
+33: wotrus - national cryptography domain - type certificate.
+34: wotrus-national cryptography domain certificate (multiple domain names).
+35: wotrus-national cryptography domain certificate (wildcard).
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus - enhanced national cryptography certificate.
+41: wotrus - enhanced national cryptography certificate (multiple domain names).
+42: trustasia - domain name type certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: DNSPod - enhanced (ev) ssl certificate.
+47: DNSPod - enhanced (ev) multiple domain names ssl certificate.
+48: DNSPod - domain name-based (dv) ssl certificate.
+49: DNSPod - domain name-based (dv) wildcard ssl certificate.
+50: DNSPod - domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional edition multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional edition multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise wildcard (ov).
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise pro multiple domain names (ov pro).
+93: securesite enterprise multiple domain names (ov).
+94: securesite enhanced pro multiple domain names (ev pro).
+95: securesite enhanced multiple domain names (ev).
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise ov ssl certificate for multiple domain names.
+100: cfca ov wildcard ssl certificate.
+101: cfca enhanced (ev) ssl certificate. 
+     * @return PackageType Certificate package type:.
+Null: user uploads a certificate (without package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise edition (ev pro),. 
+4: securesite enhanced (ev). 
+5: securesite enterprise professional edition (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov) cert. 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain name (ev) ssl certificate.
+25: wotrus domain name cert.
+26: wotrus domain name multiple domain name cert.
+27: wotrus domain name wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi - domain name certificate.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi - domain name certificate.
+33: wotrus - national cryptography domain - type certificate.
+34: wotrus-national cryptography domain certificate (multiple domain names).
+35: wotrus-national cryptography domain certificate (wildcard).
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus - enhanced national cryptography certificate.
+41: wotrus - enhanced national cryptography certificate (multiple domain names).
+42: trustasia - domain name type certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: DNSPod - enhanced (ev) ssl certificate.
+47: DNSPod - enhanced (ev) multiple domain names ssl certificate.
+48: DNSPod - domain name-based (dv) ssl certificate.
+49: DNSPod - domain name-based (dv) wildcard ssl certificate.
+50: DNSPod - domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional edition multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional edition multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise wildcard (ov).
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise pro multiple domain names (ov pro).
+93: securesite enterprise multiple domain names (ov).
+94: securesite enhanced pro multiple domain names (ev pro).
+95: securesite enhanced multiple domain names (ev).
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise ov ssl certificate for multiple domain names.
+100: cfca ov wildcard ssl certificate.
+101: cfca enhanced (ev) ssl certificate.
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set The certificate plan type. Valid values:
-null: Certificates uploaded by users (no plan type)
-`1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PackageType The certificate plan type. Valid values:
-null: Certificates uploaded by users (no plan type)
-`1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Certificate package type:.
+Null: user uploads a certificate (without package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise edition (ev pro),. 
+4: securesite enhanced (ev). 
+5: securesite enterprise professional edition (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov) cert. 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain name (ev) ssl certificate.
+25: wotrus domain name cert.
+26: wotrus domain name multiple domain name cert.
+27: wotrus domain name wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi - domain name certificate.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi - domain name certificate.
+33: wotrus - national cryptography domain - type certificate.
+34: wotrus-national cryptography domain certificate (multiple domain names).
+35: wotrus-national cryptography domain certificate (wildcard).
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus - enhanced national cryptography certificate.
+41: wotrus - enhanced national cryptography certificate (multiple domain names).
+42: trustasia - domain name type certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: DNSPod - enhanced (ev) ssl certificate.
+47: DNSPod - enhanced (ev) multiple domain names ssl certificate.
+48: DNSPod - domain name-based (dv) ssl certificate.
+49: DNSPod - domain name-based (dv) wildcard ssl certificate.
+50: DNSPod - domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional edition multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional edition multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise wildcard (ov).
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise pro multiple domain names (ov pro).
+93: securesite enterprise multiple domain names (ov).
+94: securesite enhanced pro multiple domain names (ev pro).
+95: securesite enhanced multiple domain names (ev).
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise ov ssl certificate for multiple domain names.
+100: cfca ov wildcard ssl certificate.
+101: cfca enhanced (ev) ssl certificate.
+     * @param PackageType Certificate package type:.
+Null: user uploads a certificate (without package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise edition (ev pro),. 
+4: securesite enhanced (ev). 
+5: securesite enterprise professional edition (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov) cert. 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain name (ev) ssl certificate.
+25: wotrus domain name cert.
+26: wotrus domain name multiple domain name cert.
+27: wotrus domain name wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi - domain name certificate.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi - domain name certificate.
+33: wotrus - national cryptography domain - type certificate.
+34: wotrus-national cryptography domain certificate (multiple domain names).
+35: wotrus-national cryptography domain certificate (wildcard).
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus - enhanced national cryptography certificate.
+41: wotrus - enhanced national cryptography certificate (multiple domain names).
+42: trustasia - domain name type certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: DNSPod - enhanced (ev) ssl certificate.
+47: DNSPod - enhanced (ev) multiple domain names ssl certificate.
+48: DNSPod - domain name-based (dv) ssl certificate.
+49: DNSPod - domain name-based (dv) wildcard ssl certificate.
+50: DNSPod - domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional edition multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional edition multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise wildcard (ov).
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise pro multiple domain names (ov pro).
+93: securesite enterprise multiple domain names (ov).
+94: securesite enhanced pro multiple domain names (ev pro).
+95: securesite enhanced multiple domain names (ev).
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise ov ssl certificate for multiple domain names.
+100: cfca ov wildcard ssl certificate.
+101: cfca enhanced (ev) ssl certificate.
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get Certificate type. `CA`: client certificate; `SVR`: server certificate
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Certificate type. ca = client certificate; svr = server certificate. 
+     * @return CertificateType Certificate type. ca = client certificate; svr = server certificate.
      */
     public String getCertificateType() {
         return this.CertificateType;
     }
 
     /**
-     * Set Certificate type. `CA`: client certificate; `SVR`: server certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Certificate type. ca = client certificate; svr = server certificate.
+     * @param CertificateType Certificate type. ca = client certificate; svr = server certificate.
      */
     public void setCertificateType(String CertificateType) {
         this.CertificateType = CertificateType;
     }
 
     /**
-     * Get Issuer
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProductZhName Issuer
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Certificate product name. 
+     * @return ProductZhName Certificate product name.
      */
     public String getProductZhName() {
         return this.ProductZhName;
     }
 
     /**
-     * Set Issuer
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProductZhName Issuer
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Certificate product name.
+     * @param ProductZhName Certificate product name.
      */
     public void setProductZhName(String ProductZhName) {
         this.ProductZhName = ProductZhName;
     }
 
     /**
-     * Get Primary domain name
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Domain Primary domain name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Primary domain name. 
+     * @return Domain Primary domain name.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Primary domain name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Domain Primary domain name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Primary domain name.
+     * @param Domain Primary domain name.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Alias
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Alias Alias
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Remark name. 
+     * @return Alias Remark name.
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set Alias
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Alias Alias
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Remark name.
+     * @param Alias Remark name.
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = dns record added automatically, 5 = enterprise certificate, pending documentation submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending documentation submission, 14 = certificate refunded, 15 = certificate migration in progress. 
+     * @return Status Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = dns record added automatically, 5 = enterprise certificate, pending documentation submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending documentation submission, 14 = certificate refunded, 15 = certificate migration in progress.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = dns record added automatically, 5 = enterprise certificate, pending documentation submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending documentation submission, 14 = certificate refunded, 15 = certificate migration in progress.
+     * @param Status Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = dns record added automatically, 5 = enterprise certificate, pending documentation submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending documentation submission, 14 = certificate refunded, 15 = certificate migration in progress.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Extended information of the certificate
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CertificateExtra Extended information of the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Certificate extended information. 
+     * @return CertificateExtra Certificate extended information.
      */
     public CertificateExtra getCertificateExtra() {
         return this.CertificateExtra;
     }
 
     /**
-     * Set Extended information of the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CertificateExtra Extended information of the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Certificate extended information.
+     * @param CertificateExtra Certificate extended information.
      */
     public void setCertificateExtra(CertificateExtra CertificateExtra) {
         this.CertificateExtra = CertificateExtra;
     }
 
     /**
-     * Get Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return VulnerabilityStatus Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability scanning status: INACTIVE = not enabled, ACTIVE = enabled. 
+     * @return VulnerabilityStatus Vulnerability scanning status: INACTIVE = not enabled, ACTIVE = enabled.
      */
     public String getVulnerabilityStatus() {
         return this.VulnerabilityStatus;
     }
 
     /**
-     * Set Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param VulnerabilityStatus Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability scanning status: INACTIVE = not enabled, ACTIVE = enabled.
+     * @param VulnerabilityStatus Vulnerability scanning status: INACTIVE = not enabled, ACTIVE = enabled.
      */
     public void setVulnerabilityStatus(String VulnerabilityStatus) {
         this.VulnerabilityStatus = VulnerabilityStatus;
     }
 
     /**
-     * Get Status information
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StatusMsg Status information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Status information. 
+     * @return StatusMsg Status information.
      */
     public String getStatusMsg() {
         return this.StatusMsg;
     }
 
     /**
-     * Set Status information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StatusMsg Status information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Status information.
+     * @param StatusMsg Status information.
      */
     public void setStatusMsg(String StatusMsg) {
         this.StatusMsg = StatusMsg;
     }
 
     /**
-     * Get Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return VerifyType Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Validation type: DNS_AUTO = automatic dns validation, DNS = manual dns validation, FILE = file verification, DNS_PROXY = dns proxy validation, FILE_PROXY = file proxy verification. 
+     * @return VerifyType Validation type: DNS_AUTO = automatic dns validation, DNS = manual dns validation, FILE = file verification, DNS_PROXY = dns proxy validation, FILE_PROXY = file proxy verification.
      */
     public String getVerifyType() {
         return this.VerifyType;
     }
 
     /**
-     * Set Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param VerifyType Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Validation type: DNS_AUTO = automatic dns validation, DNS = manual dns validation, FILE = file verification, DNS_PROXY = dns proxy validation, FILE_PROXY = file proxy verification.
+     * @param VerifyType Validation type: DNS_AUTO = automatic dns validation, DNS = manual dns validation, FILE = file verification, DNS_PROXY = dns proxy validation, FILE_PROXY = file proxy verification.
      */
     public void setVerifyType(String VerifyType) {
         this.VerifyType = VerifyType;
     }
 
     /**
-     * Get Time when the certificate takes effect
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CertBeginTime Time when the certificate takes effect
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Certificate validation time. 
+     * @return CertBeginTime Certificate validation time.
      */
     public String getCertBeginTime() {
         return this.CertBeginTime;
     }
 
     /**
-     * Set Time when the certificate takes effect
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CertBeginTime Time when the certificate takes effect
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Certificate validation time.
+     * @param CertBeginTime Certificate validation time.
      */
     public void setCertBeginTime(String CertBeginTime) {
         this.CertBeginTime = CertBeginTime;
     }
 
     /**
-     * Get Time when the certificate expires
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CertEndTime Time when the certificate expires
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Certificate expiration time. 
+     * @return CertEndTime Certificate expiration time.
      */
     public String getCertEndTime() {
         return this.CertEndTime;
     }
 
     /**
-     * Set Time when the certificate expires
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CertEndTime Time when the certificate expires
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Certificate expiration time.
+     * @param CertEndTime Certificate expiration time.
      */
     public void setCertEndTime(String CertEndTime) {
         this.CertEndTime = CertEndTime;
     }
 
     /**
-     * Get Validity period of the certificate, in months
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ValidityPeriod Validity period of the certificate, in months
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Certificate validity period (month). 
+     * @return ValidityPeriod Certificate validity period (month).
      */
     public String getValidityPeriod() {
         return this.ValidityPeriod;
     }
 
     /**
-     * Set Validity period of the certificate, in months
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ValidityPeriod Validity period of the certificate, in months
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Certificate validity period (month).
+     * @param ValidityPeriod Certificate validity period (month).
      */
     public void setValidityPeriod(String ValidityPeriod) {
         this.ValidityPeriod = ValidityPeriod;
     }
 
     /**
-     * Get Creation time
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return InsertTime Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Creation time. 
+     * @return InsertTime Creation time.
      */
     public String getInsertTime() {
         return this.InsertTime;
     }
 
     /**
-     * Set Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param InsertTime Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Creation time.
+     * @param InsertTime Creation time.
      */
     public void setInsertTime(String InsertTime) {
         this.InsertTime = InsertTime;
     }
 
     /**
-     * Get Certificate ID
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CertificateId Certificate ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Certificate id. 
+     * @return CertificateId Certificate id.
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set Certificate ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CertificateId Certificate ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Certificate id.
+     * @param CertificateId Certificate id.
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
     }
 
     /**
-     * Get Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SubjectAltName Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Multiple domain names contained in the certificate (including the primary domain name). 
+     * @return SubjectAltName Multiple domain names contained in the certificate (including the primary domain name).
      */
     public String [] getSubjectAltName() {
         return this.SubjectAltName;
     }
 
     /**
-     * Set Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SubjectAltName Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Multiple domain names contained in the certificate (including the primary domain name).
+     * @param SubjectAltName Multiple domain names contained in the certificate (including the primary domain name).
      */
     public void setSubjectAltName(String [] SubjectAltName) {
         this.SubjectAltName = SubjectAltName;
     }
 
     /**
-     * Get Certificate type name
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PackageTypeName Certificate type name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Certificate type name. 
+     * @return PackageTypeName Certificate type name.
      */
     public String getPackageTypeName() {
         return this.PackageTypeName;
     }
 
     /**
-     * Set Certificate type name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PackageTypeName Certificate type name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Certificate type name.
+     * @param PackageTypeName Certificate type name.
      */
     public void setPackageTypeName(String PackageTypeName) {
         this.PackageTypeName = PackageTypeName;
     }
 
     /**
-     * Get Status description
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StatusName Status description
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Status name. 
+     * @return StatusName Status name.
      */
     public String getStatusName() {
         return this.StatusName;
     }
 
     /**
-     * Set Status description
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StatusName Status description
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Status name.
+     * @param StatusName Status name.
      */
     public void setStatusName(String StatusName) {
         this.StatusName = StatusName;
     }
 
     /**
-     * Get Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsVip Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether the customer is a vip customer. true indicates yes and false indicates no. 
+     * @return IsVip Specifies whether the customer is a vip customer. true indicates yes and false indicates no.
      */
     public Boolean getIsVip() {
         return this.IsVip;
     }
 
     /**
-     * Set Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsVip Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether the customer is a vip customer. true indicates yes and false indicates no.
+     * @param IsVip Specifies whether the customer is a vip customer. true indicates yes and false indicates no.
      */
     public void setIsVip(Boolean IsVip) {
         this.IsVip = IsVip;
     }
 
     /**
-     * Get Whether the certificate is a DV certificate
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsDv Whether the certificate is a DV certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether it is a dv version certificate. true indicates yes and false indicates no. 
+     * @return IsDv Specifies whether it is a dv version certificate. true indicates yes and false indicates no.
      */
     public Boolean getIsDv() {
         return this.IsDv;
     }
 
     /**
-     * Set Whether the certificate is a DV certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsDv Whether the certificate is a DV certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether it is a dv version certificate. true indicates yes and false indicates no.
+     * @param IsDv Specifies whether it is a dv version certificate. true indicates yes and false indicates no.
      */
     public void setIsDv(Boolean IsDv) {
         this.IsDv = IsDv;
     }
 
     /**
-     * Get Whether the certificate is a wildcard certificate
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsWildcard Whether the certificate is a wildcard certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether it is a wildcard domain name certificate. true indicates yes and false indicates no. 
+     * @return IsWildcard Specifies whether it is a wildcard domain name certificate. true indicates yes and false indicates no.
      */
     public Boolean getIsWildcard() {
         return this.IsWildcard;
     }
 
     /**
-     * Set Whether the certificate is a wildcard certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsWildcard Whether the certificate is a wildcard certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether it is a wildcard domain name certificate. true indicates yes and false indicates no.
+     * @param IsWildcard Specifies whether it is a wildcard domain name certificate. true indicates yes and false indicates no.
      */
     public void setIsWildcard(Boolean IsWildcard) {
         this.IsWildcard = IsWildcard;
     }
 
     /**
-     * Get Whether the vulnerability scanning feature is enabled
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsVulnerability Whether the vulnerability scanning feature is enabled
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Whether the vulnerability scanning feature is enabled. 
+     * @return IsVulnerability Whether the vulnerability scanning feature is enabled.
      */
     public Boolean getIsVulnerability() {
         return this.IsVulnerability;
     }
 
     /**
-     * Set Whether the vulnerability scanning feature is enabled
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsVulnerability Whether the vulnerability scanning feature is enabled
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Whether the vulnerability scanning feature is enabled.
+     * @param IsVulnerability Whether the vulnerability scanning feature is enabled.
      */
     public void setIsVulnerability(Boolean IsVulnerability) {
         this.IsVulnerability = IsVulnerability;
     }
 
     /**
-     * Get Whether it can be renewed 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return RenewAble Whether it can be renewed 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Whether it is renewable. 
+     * @return RenewAble Whether it is renewable.
      */
     public Boolean getRenewAble() {
         return this.RenewAble;
     }
 
     /**
-     * Set Whether it can be renewed 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param RenewAble Whether it can be renewed 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Whether it is renewable.
+     * @param RenewAble Whether it is renewable.
      */
     public void setRenewAble(Boolean RenewAble) {
         this.RenewAble = RenewAble;
     }
 
     /**
-     * Get Project information
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectInfo Project information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Project information. 
+     * @return ProjectInfo Project information.
      */
     public ProjectInfo getProjectInfo() {
         return this.ProjectInfo;
     }
 
     /**
-     * Set Project information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProjectInfo Project information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Project information.
+     * @param ProjectInfo Project information.
      */
     public void setProjectInfo(ProjectInfo ProjectInfo) {
         this.ProjectInfo = ProjectInfo;
     }
 
     /**
-     * Get Associated Tencent Cloud services. Currently, this parameter is unavailable.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return BoundResource Associated Tencent Cloud services. Currently, this parameter is unavailable.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Associated cloud resources are temporarily unavailable. 
+     * @return BoundResource Associated cloud resources are temporarily unavailable.
      */
     public String [] getBoundResource() {
         return this.BoundResource;
     }
 
     /**
-     * Set Associated Tencent Cloud services. Currently, this parameter is unavailable.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param BoundResource Associated Tencent Cloud services. Currently, this parameter is unavailable.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Associated cloud resources are temporarily unavailable.
+     * @param BoundResource Associated cloud resources are temporarily unavailable.
      */
     public void setBoundResource(String [] BoundResource) {
         this.BoundResource = BoundResource;
     }
 
     /**
-     * Get Whether the certificate can be deployed
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Deployable Whether the certificate can be deployed
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Whether it can be deployed. 
+     * @return Deployable Whether it can be deployed.
      */
     public Boolean getDeployable() {
         return this.Deployable;
     }
 
     /**
-     * Set Whether the certificate can be deployed
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Deployable Whether the certificate can be deployed
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Whether it can be deployed.
+     * @param Deployable Whether it can be deployed.
      */
     public void setDeployable(Boolean Deployable) {
         this.Deployable = Deployable;
     }
 
     /**
-     * Get List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Tags List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Tag list. 
+     * @return Tags Tag list.
      */
     public Tags [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Tags List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Tag list.
+     * @param Tags Tag list.
      */
     public void setTags(Tags [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Whether the expiration notification was ignored
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsIgnore Whether the expiration notification was ignored
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether expiration notice has been ignored. 
+     * @return IsIgnore Whether expiration notice has been ignored.
      */
     public Boolean getIsIgnore() {
         return this.IsIgnore;
     }
 
     /**
-     * Set Whether the expiration notification was ignored
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsIgnore Whether the expiration notification was ignored
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether expiration notice has been ignored.
+     * @param IsIgnore Whether expiration notice has been ignored.
      */
     public void setIsIgnore(Boolean IsIgnore) {
         this.IsIgnore = IsIgnore;
     }
 
     /**
-     * Get Whether the certificate is a Chinese SM certificate
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsSM Whether the certificate is a Chinese SM certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether it is a China SM certificate. 
+     * @return IsSM Whether it is a China SM certificate.
      */
     public Boolean getIsSM() {
         return this.IsSM;
     }
 
     /**
-     * Set Whether the certificate is a Chinese SM certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsSM Whether the certificate is a Chinese SM certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether it is a China SM certificate.
+     * @param IsSM Whether it is a China SM certificate.
      */
     public void setIsSM(Boolean IsSM) {
         this.IsSM = IsSM;
     }
 
     /**
-     * Get Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EncryptAlgorithm Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Certificate algorithm. 
+     * @return EncryptAlgorithm Certificate algorithm.
      */
     public String getEncryptAlgorithm() {
         return this.EncryptAlgorithm;
     }
 
     /**
-     * Set Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EncryptAlgorithm Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Certificate algorithm.
+     * @param EncryptAlgorithm Certificate algorithm.
      */
     public void setEncryptAlgorithm(String EncryptAlgorithm) {
         this.EncryptAlgorithm = EncryptAlgorithm;
     }
 
     /**
-     * Get Encryption algorithm of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CAEncryptAlgorithms Encryption algorithm of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Encryption algorithm for upload ca certificate. 
+     * @return CAEncryptAlgorithms Encryption algorithm for upload ca certificate.
      */
     public String [] getCAEncryptAlgorithms() {
         return this.CAEncryptAlgorithms;
     }
 
     /**
-     * Set Encryption algorithm of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CAEncryptAlgorithms Encryption algorithm of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Encryption algorithm for upload ca certificate.
+     * @param CAEncryptAlgorithms Encryption algorithm for upload ca certificate.
      */
     public void setCAEncryptAlgorithms(String [] CAEncryptAlgorithms) {
         this.CAEncryptAlgorithms = CAEncryptAlgorithms;
     }
 
     /**
-     * Get Expiration time of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CAEndTimes Expiration time of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Expiration time for upload ca certificate. 
+     * @return CAEndTimes Expiration time for upload ca certificate.
      */
     public String [] getCAEndTimes() {
         return this.CAEndTimes;
     }
 
     /**
-     * Set Expiration time of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CAEndTimes Expiration time of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Expiration time for upload ca certificate.
+     * @param CAEndTimes Expiration time for upload ca certificate.
      */
     public void setCAEndTimes(String [] CAEndTimes) {
         this.CAEndTimes = CAEndTimes;
     }
 
     /**
-     * Get Generic name of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CACommonNames Generic name of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Common name of the upload ca certificate. 
+     * @return CACommonNames Common name of the upload ca certificate.
      */
     public String [] getCACommonNames() {
         return this.CACommonNames;
     }
 
     /**
-     * Set Generic name of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CACommonNames Generic name of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Common name of the upload ca certificate.
+     * @param CACommonNames Common name of the upload ca certificate.
      */
     public void setCACommonNames(String [] CACommonNames) {
         this.CACommonNames = CACommonNames;
     }
 
     /**
-     * Get Prereview information of the certificate
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PreAuditInfo Prereview information of the certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Certificate prereview information. 
+     * @return PreAuditInfo Certificate prereview information.
      */
     public PreAuditInfo getPreAuditInfo() {
         return this.PreAuditInfo;
     }
 
     /**
-     * Set Prereview information of the certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PreAuditInfo Prereview information of the certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Certificate prereview information.
+     * @param PreAuditInfo Certificate prereview information.
      */
     public void setPreAuditInfo(PreAuditInfo PreAuditInfo) {
         this.PreAuditInfo = PreAuditInfo;
     }
 
     /**
-     * Get Whether auto-renewal is enabled.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return AutoRenewFlag Whether auto-renewal is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Whether to auto-renew. 
+     * @return AutoRenewFlag Whether to auto-renew.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Whether auto-renewal is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param AutoRenewFlag Whether auto-renewal is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Whether to auto-renew.
+     * @param AutoRenewFlag Whether to auto-renew.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostingStatus The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Hosting status: 0, hosting; 5, resource replacement; 10, hosting completed; -1, not hosted.  
+     * @return HostingStatus Hosting status: 0, hosting; 5, resource replacement; 10, hosting completed; -1, not hosted. 
      */
     public Long getHostingStatus() {
         return this.HostingStatus;
     }
 
     /**
-     * Set The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostingStatus The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Hosting status: 0, hosting; 5, resource replacement; 10, hosting completed; -1, not hosted. 
+     * @param HostingStatus Hosting status: 0, hosting; 5, resource replacement; 10, hosting completed; -1, not hosted. 
      */
     public void setHostingStatus(Long HostingStatus) {
         this.HostingStatus = HostingStatus;
     }
 
     /**
-     * Get The hosting completion time.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostingCompleteTime The hosting completion time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Hosting completion time. 
+     * @return HostingCompleteTime Hosting completion time.
      */
     public String getHostingCompleteTime() {
         return this.HostingCompleteTime;
     }
 
     /**
-     * Set The hosting completion time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostingCompleteTime The hosting completion time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Hosting completion time.
+     * @param HostingCompleteTime Hosting completion time.
      */
     public void setHostingCompleteTime(String HostingCompleteTime) {
         this.HostingCompleteTime = HostingCompleteTime;
     }
 
     /**
-     * Get The hosted new certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostingRenewCertId The hosted new certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Manage the new certificate id. 
+     * @return HostingRenewCertId Manage the new certificate id.
      */
     public String getHostingRenewCertId() {
         return this.HostingRenewCertId;
     }
 
     /**
-     * Set The hosted new certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostingRenewCertId The hosted new certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Manage the new certificate id.
+     * @param HostingRenewCertId Manage the new certificate id.
      */
     public void setHostingRenewCertId(String HostingRenewCertId) {
         this.HostingRenewCertId = HostingRenewCertId;
     }
 
     /**
-     * Get Existing renewed certificate ID
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return HasRenewOrder Existing renewed certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Existing renewal certificate id. 
+     * @return HasRenewOrder Existing renewal certificate id.
      */
     public String getHasRenewOrder() {
         return this.HasRenewOrder;
     }
 
     /**
-     * Set Existing renewed certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param HasRenewOrder Existing renewed certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Existing renewal certificate id.
+     * @param HasRenewOrder Existing renewal certificate id.
      */
     public void setHasRenewOrder(String HasRenewOrder) {
         this.HasRenewOrder = HasRenewOrder;
     }
 
     /**
-     * Get Whether the original certificate is deleted when a certificate is reissued.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ReplaceOriCertIsDelete Whether the original certificate is deleted when a certificate is reissued.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Indicates whether the original certificate is deleted during reissue. 
+     * @return ReplaceOriCertIsDelete Indicates whether the original certificate is deleted during reissue.
      */
     public Boolean getReplaceOriCertIsDelete() {
         return this.ReplaceOriCertIsDelete;
     }
 
     /**
-     * Set Whether the original certificate is deleted when a certificate is reissued.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ReplaceOriCertIsDelete Whether the original certificate is deleted when a certificate is reissued.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Indicates whether the original certificate is deleted during reissue.
+     * @param ReplaceOriCertIsDelete Indicates whether the original certificate is deleted during reissue.
      */
     public void setReplaceOriCertIsDelete(Boolean ReplaceOriCertIsDelete) {
         this.ReplaceOriCertIsDelete = ReplaceOriCertIsDelete;
     }
 
     /**
-     * Get Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return IsExpiring Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Indicates whether it is about to expire. a certificate is about to expire if it will expire within 30 days. 
+     * @return IsExpiring Indicates whether it is about to expire. a certificate is about to expire if it will expire within 30 days.
      */
     public Boolean getIsExpiring() {
         return this.IsExpiring;
     }
 
     /**
-     * Set Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param IsExpiring Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Indicates whether it is about to expire. a certificate is about to expire if it will expire within 30 days.
+     * @param IsExpiring Indicates whether it is about to expire. a certificate is about to expire if it will expire within 30 days.
      */
     public void setIsExpiring(Boolean IsExpiring) {
         this.IsExpiring = IsExpiring;
     }
 
     /**
-     * Get Validation expiration time for the addition of the DV certificate
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return DVAuthDeadline Validation expiration time for the addition of the DV certificate
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Add validation expiration date for DV certificate 
+     * @return DVAuthDeadline Add validation expiration date for DV certificate
      */
     public String getDVAuthDeadline() {
         return this.DVAuthDeadline;
     }
 
     /**
-     * Set Validation expiration time for the addition of the DV certificate
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param DVAuthDeadline Validation expiration time for the addition of the DV certificate
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Add validation expiration date for DV certificate
+     * @param DVAuthDeadline Add validation expiration date for DV certificate
      */
     public void setDVAuthDeadline(String DVAuthDeadline) {
         this.DVAuthDeadline = DVAuthDeadline;
     }
 
     /**
-     * Get Domain name validation pass time
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ValidationPassedTime Domain name validation pass time
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Domain verification passed time. 
+     * @return ValidationPassedTime Domain verification passed time.
      */
     public String getValidationPassedTime() {
         return this.ValidationPassedTime;
     }
 
     /**
-     * Set Domain name validation pass time
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ValidationPassedTime Domain name validation pass time
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Domain verification passed time.
+     * @param ValidationPassedTime Domain verification passed time.
      */
     public void setValidationPassedTime(String ValidationPassedTime) {
         this.ValidationPassedTime = ValidationPassedTime;
     }
 
     /**
-     * Get Multiple domain names with which the certificate is associated
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CertSANs Multiple domain names with which the certificate is associated
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Multiple domain names associated with the certificate. 
+     * @return CertSANs Multiple domain names associated with the certificate.
      */
     public String [] getCertSANs() {
         return this.CertSANs;
     }
 
     /**
-     * Set Multiple domain names with which the certificate is associated
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CertSANs Multiple domain names with which the certificate is associated
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Multiple domain names associated with the certificate.
+     * @param CertSANs Multiple domain names associated with the certificate.
      */
     public void setCertSANs(String [] CertSANs) {
         this.CertSANs = CertSANs;
     }
 
     /**
-     * Get Domain name validation rejection information
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return AwaitingValidationMsg Domain name validation rejection information
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Domain verification rejection information. 
+     * @return AwaitingValidationMsg Domain verification rejection information.
      */
     public String getAwaitingValidationMsg() {
         return this.AwaitingValidationMsg;
     }
 
     /**
-     * Set Domain name validation rejection information
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param AwaitingValidationMsg Domain name validation rejection information
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Domain verification rejection information.
+     * @param AwaitingValidationMsg Domain verification rejection information.
      */
     public void setAwaitingValidationMsg(String AwaitingValidationMsg) {
         this.AwaitingValidationMsg = AwaitingValidationMsg;
     }
 
     /**
-     * Get Whether downloading is allowed
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return AllowDownload Whether downloading is allowed
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Whether to allow downloading. 
+     * @return AllowDownload Whether to allow downloading.
      */
     public Boolean getAllowDownload() {
         return this.AllowDownload;
     }
 
     /**
-     * Set Whether downloading is allowed
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param AllowDownload Whether downloading is allowed
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Whether to allow downloading.
+     * @param AllowDownload Whether to allow downloading.
      */
     public void setAllowDownload(Boolean AllowDownload) {
         this.AllowDownload = AllowDownload;
     }
 
     /**
-     * Get  
-     * @return IsDNSPODResolve 
+     * Get Whether all certificate domain names are managed and resolved by dnspod. 
+     * @return IsDNSPODResolve Whether all certificate domain names are managed and resolved by dnspod.
      */
     public Boolean getIsDNSPODResolve() {
         return this.IsDNSPODResolve;
     }
 
     /**
-     * Set 
-     * @param IsDNSPODResolve 
+     * Set Whether all certificate domain names are managed and resolved by dnspod.
+     * @param IsDNSPODResolve Whether all certificate domain names are managed and resolved by dnspod.
      */
     public void setIsDNSPODResolve(Boolean IsDNSPODResolve) {
         this.IsDNSPODResolve = IsDNSPODResolve;
     }
 
     /**
-     * Get  
-     * @return IsPackage 
+     * Get Whether the certificate is purchased with benefit points. 
+     * @return IsPackage Whether the certificate is purchased with benefit points.
      */
     public Boolean getIsPackage() {
         return this.IsPackage;
     }
 
     /**
-     * Set 
-     * @param IsPackage 
+     * Set Whether the certificate is purchased with benefit points.
+     * @param IsPackage Whether the certificate is purchased with benefit points.
      */
     public void setIsPackage(Boolean IsPackage) {
         this.IsPackage = IsPackage;
     }
 
     /**
-     * Get  
-     * @return KeyPasswordCustomFlag 
+     * Get Whether there is a private key password. 
+     * @return KeyPasswordCustomFlag Whether there is a private key password.
      */
     public Boolean getKeyPasswordCustomFlag() {
         return this.KeyPasswordCustomFlag;
     }
 
     /**
-     * Set 
-     * @param KeyPasswordCustomFlag 
+     * Set Whether there is a private key password.
+     * @param KeyPasswordCustomFlag Whether there is a private key password.
      */
     public void setKeyPasswordCustomFlag(Boolean KeyPasswordCustomFlag) {
         this.KeyPasswordCustomFlag = KeyPasswordCustomFlag;
     }
 
     /**
-     * Get  
-     * @return SupportDownloadType 
+     * Get Types of web servers supported for download: nginx, apache, iis, tomcat, jks, root, other. 
+     * @return SupportDownloadType Types of web servers supported for download: nginx, apache, iis, tomcat, jks, root, other.
      */
     public SupportDownloadType getSupportDownloadType() {
         return this.SupportDownloadType;
     }
 
     /**
-     * Set 
-     * @param SupportDownloadType 
+     * Set Types of web servers supported for download: nginx, apache, iis, tomcat, jks, root, other.
+     * @param SupportDownloadType Types of web servers supported for download: nginx, apache, iis, tomcat, jks, root, other.
      */
     public void setSupportDownloadType(SupportDownloadType SupportDownloadType) {
         this.SupportDownloadType = SupportDownloadType;
+    }
+
+    /**
+     * Get Certificate revocation completion time. 
+     * @return CertRevokedTime Certificate revocation completion time.
+     */
+    public String getCertRevokedTime() {
+        return this.CertRevokedTime;
+    }
+
+    /**
+     * Set Certificate revocation completion time.
+     * @param CertRevokedTime Certificate revocation completion time.
+     */
+    public void setCertRevokedTime(String CertRevokedTime) {
+        this.CertRevokedTime = CertRevokedTime;
+    }
+
+    /**
+     * Get Hosted resource type list. 
+     * @return HostingResourceTypes Hosted resource type list.
+     */
+    public String [] getHostingResourceTypes() {
+        return this.HostingResourceTypes;
+    }
+
+    /**
+     * Set Hosted resource type list.
+     * @param HostingResourceTypes Hosted resource type list.
+     */
+    public void setHostingResourceTypes(String [] HostingResourceTypes) {
+        this.HostingResourceTypes = HostingResourceTypes;
+    }
+
+    /**
+     * Get Managed configuration information. 
+     * @return HostingConfig Managed configuration information.
+     */
+    public HostingConfig getHostingConfig() {
+        return this.HostingConfig;
+    }
+
+    /**
+     * Set Managed configuration information.
+     * @param HostingConfig Managed configuration information.
+     */
+    public void setHostingConfig(HostingConfig HostingConfig) {
+        this.HostingConfig = HostingConfig;
     }
 
     public Certificates() {
@@ -1685,6 +1939,18 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.SupportDownloadType != null) {
             this.SupportDownloadType = new SupportDownloadType(source.SupportDownloadType);
         }
+        if (source.CertRevokedTime != null) {
+            this.CertRevokedTime = new String(source.CertRevokedTime);
+        }
+        if (source.HostingResourceTypes != null) {
+            this.HostingResourceTypes = new String[source.HostingResourceTypes.length];
+            for (int i = 0; i < source.HostingResourceTypes.length; i++) {
+                this.HostingResourceTypes[i] = new String(source.HostingResourceTypes[i]);
+            }
+        }
+        if (source.HostingConfig != null) {
+            this.HostingConfig = new HostingConfig(source.HostingConfig);
+        }
     }
 
 
@@ -1745,6 +2011,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "IsPackage", this.IsPackage);
         this.setParamSimple(map, prefix + "KeyPasswordCustomFlag", this.KeyPasswordCustomFlag);
         this.setParamObj(map, prefix + "SupportDownloadType.", this.SupportDownloadType);
+        this.setParamSimple(map, prefix + "CertRevokedTime", this.CertRevokedTime);
+        this.setParamArraySimple(map, prefix + "HostingResourceTypes.", this.HostingResourceTypes);
+        this.setParamObj(map, prefix + "HostingConfig.", this.HostingConfig);
 
     }
 }

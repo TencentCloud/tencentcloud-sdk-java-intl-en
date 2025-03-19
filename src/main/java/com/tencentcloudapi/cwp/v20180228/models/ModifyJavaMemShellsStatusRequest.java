@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class ModifyJavaMemShellsStatusRequest extends AbstractModel {
 
     /**
-    * Event ID Array
-    */
-    @SerializedName("Ids")
-    @Expose
-    private Long [] Ids;
-
-    /**
     * Target Processing Status: 0 - Pending, 1 - Allowlisted, 2 - Deleted, 3 - Ignored, 4 - Manually Processed
     */
     @SerializedName("Status")
@@ -38,20 +31,11 @@ public class ModifyJavaMemShellsStatusRequest extends AbstractModel {
     private Long Status;
 
     /**
-     * Get Event ID Array 
-     * @return Ids Event ID Array
-     */
-    public Long [] getIds() {
-        return this.Ids;
-    }
-
-    /**
-     * Set Event ID Array
-     * @param Ids Event ID Array
-     */
-    public void setIds(Long [] Ids) {
-        this.Ids = Ids;
-    }
+    * Event ID Array
+    */
+    @SerializedName("Ids")
+    @Expose
+    private Long [] Ids;
 
     /**
      * Get Target Processing Status: 0 - Pending, 1 - Allowlisted, 2 - Deleted, 3 - Ignored, 4 - Manually Processed 
@@ -69,6 +53,22 @@ public class ModifyJavaMemShellsStatusRequest extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get Event ID Array 
+     * @return Ids Event ID Array
+     */
+    public Long [] getIds() {
+        return this.Ids;
+    }
+
+    /**
+     * Set Event ID Array
+     * @param Ids Event ID Array
+     */
+    public void setIds(Long [] Ids) {
+        this.Ids = Ids;
+    }
+
     public ModifyJavaMemShellsStatusRequest() {
     }
 
@@ -77,14 +77,14 @@ public class ModifyJavaMemShellsStatusRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyJavaMemShellsStatusRequest(ModifyJavaMemShellsStatusRequest source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
         if (source.Ids != null) {
             this.Ids = new Long[source.Ids.length];
             for (int i = 0; i < source.Ids.length; i++) {
                 this.Ids[i] = new Long(source.Ids[i]);
             }
-        }
-        if (source.Status != null) {
-            this.Status = new Long(source.Status);
         }
     }
 
@@ -93,8 +93,8 @@ public class ModifyJavaMemShellsStatusRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Ids.", this.Ids);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArraySimple(map, prefix + "Ids.", this.Ids);
 
     }
 }

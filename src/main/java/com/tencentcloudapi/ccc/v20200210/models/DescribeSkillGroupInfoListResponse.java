@@ -31,7 +31,7 @@ public class DescribeSkillGroupInfoListResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Skill Group Information List.
+    * Skill group information list.
     */
     @SerializedName("SkillGroupList")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeSkillGroupInfoListResponse extends AbstractModel {
     }
 
     /**
-     * Get Skill Group Information List. 
-     * @return SkillGroupList Skill Group Information List.
+     * Get Skill group information list. 
+     * @return SkillGroupList Skill group information list.
      */
     public SkillGroupInfoItem [] getSkillGroupList() {
         return this.SkillGroupList;
     }
 
     /**
-     * Set Skill Group Information List.
-     * @param SkillGroupList Skill Group Information List.
+     * Set Skill group information list.
+     * @param SkillGroupList Skill group information list.
      */
     public void setSkillGroupList(SkillGroupInfoItem [] SkillGroupList) {
         this.SkillGroupList = SkillGroupList;

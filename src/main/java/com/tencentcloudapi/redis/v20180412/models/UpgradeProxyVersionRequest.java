@@ -24,92 +24,102 @@ import java.util.HashMap;
 public class UpgradeProxyVersionRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * The current proxy version
+    * Current Proxy version.
     */
     @SerializedName("CurrentProxyVersion")
     @Expose
     private String CurrentProxyVersion;
 
     /**
-    * Upgradeable redis version
+    * Upgradable Redis version.
     */
     @SerializedName("UpgradeProxyVersion")
     @Expose
     private String UpgradeProxyVersion;
 
     /**
-    * `1` (upgrade immediately), `0` (upgrade during maintenance time)
+    * Specifies whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
     */
     @SerializedName("InstanceTypeUpgradeNow")
     @Expose
     private Long InstanceTypeUpgradeNow;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
+     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get The current proxy version 
-     * @return CurrentProxyVersion The current proxy version
+     * Get Current Proxy version. 
+     * @return CurrentProxyVersion Current Proxy version.
      */
     public String getCurrentProxyVersion() {
         return this.CurrentProxyVersion;
     }
 
     /**
-     * Set The current proxy version
-     * @param CurrentProxyVersion The current proxy version
+     * Set Current Proxy version.
+     * @param CurrentProxyVersion Current Proxy version.
      */
     public void setCurrentProxyVersion(String CurrentProxyVersion) {
         this.CurrentProxyVersion = CurrentProxyVersion;
     }
 
     /**
-     * Get Upgradeable redis version 
-     * @return UpgradeProxyVersion Upgradeable redis version
+     * Get Upgradable Redis version. 
+     * @return UpgradeProxyVersion Upgradable Redis version.
      */
     public String getUpgradeProxyVersion() {
         return this.UpgradeProxyVersion;
     }
 
     /**
-     * Set Upgradeable redis version
-     * @param UpgradeProxyVersion Upgradeable redis version
+     * Set Upgradable Redis version.
+     * @param UpgradeProxyVersion Upgradable Redis version.
      */
     public void setUpgradeProxyVersion(String UpgradeProxyVersion) {
         this.UpgradeProxyVersion = UpgradeProxyVersion;
     }
 
     /**
-     * Get `1` (upgrade immediately), `0` (upgrade during maintenance time) 
-     * @return InstanceTypeUpgradeNow `1` (upgrade immediately), `0` (upgrade during maintenance time)
+     * Get Specifies whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window. 
+     * @return InstanceTypeUpgradeNow Specifies whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
      */
     public Long getInstanceTypeUpgradeNow() {
         return this.InstanceTypeUpgradeNow;
     }
 
     /**
-     * Set `1` (upgrade immediately), `0` (upgrade during maintenance time)
-     * @param InstanceTypeUpgradeNow `1` (upgrade immediately), `0` (upgrade during maintenance time)
+     * Set Specifies whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
+     * @param InstanceTypeUpgradeNow Specifies whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
      */
     public void setInstanceTypeUpgradeNow(Long InstanceTypeUpgradeNow) {
         this.InstanceTypeUpgradeNow = InstanceTypeUpgradeNow;

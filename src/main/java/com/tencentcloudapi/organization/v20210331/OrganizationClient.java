@@ -39,6 +39,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to accept an invitation to join a shared unit.
+     * @param req AcceptJoinShareUnitInvitationRequest
+     * @return AcceptJoinShareUnitInvitationResponse
+     * @throws TencentCloudSDKException
+     */
+    public AcceptJoinShareUnitInvitationResponse AcceptJoinShareUnitInvitation(AcceptJoinShareUnitInvitationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AcceptJoinShareUnitInvitation", AcceptJoinShareUnitInvitationResponse.class);
+    }
+
+    /**
      *This API is used to add SAML signing certificates.
      * @param req AddExternalSAMLIdPCertificateRequest
      * @return AddExternalSAMLIdPCertificateResponse
@@ -47,6 +58,17 @@ public class OrganizationClient extends AbstractClient{
     public AddExternalSAMLIdPCertificateResponse AddExternalSAMLIdPCertificate(AddExternalSAMLIdPCertificateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "AddExternalSAMLIdPCertificate", AddExternalSAMLIdPCertificateResponse.class);
+    }
+
+    /**
+     *This API is used to add an organization member's mailbox.
+     * @param req AddOrganizationMemberEmailRequest
+     * @return AddOrganizationMemberEmailResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddOrganizationMemberEmailResponse AddOrganizationMemberEmail(AddOrganizationMemberEmailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddOrganizationMemberEmail", AddOrganizationMemberEmailResponse.class);
     }
 
     /**
@@ -69,6 +91,39 @@ public class OrganizationClient extends AbstractClient{
     public AddPermissionPolicyToRoleConfigurationResponse AddPermissionPolicyToRoleConfiguration(AddPermissionPolicyToRoleConfigurationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "AddPermissionPolicyToRoleConfiguration", AddPermissionPolicyToRoleConfigurationResponse.class);
+    }
+
+    /**
+     *This API is used to create a shared unit.
+     * @param req AddShareUnitRequest
+     * @return AddShareUnitResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddShareUnitResponse AddShareUnit(AddShareUnitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddShareUnit", AddShareUnitResponse.class);
+    }
+
+    /**
+     *This API is used to add a shared unit member.
+     * @param req AddShareUnitMembersRequest
+     * @return AddShareUnitMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddShareUnitMembersResponse AddShareUnitMembers(AddShareUnitMembersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddShareUnitMembers", AddShareUnitMembersResponse.class);
+    }
+
+    /**
+     *This API is used to add resources to a shared unit.
+     * @param req AddShareUnitResourcesRequest
+     * @return AddShareUnitResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddShareUnitResourcesResponse AddShareUnitResources(AddShareUnitResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddShareUnitResources", AddShareUnitResourcesResponse.class);
     }
 
     /**
@@ -138,6 +193,28 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create an organization.
+     * @param req CreateOrganizationRequest
+     * @return CreateOrganizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrganizationResponse CreateOrganization(CreateOrganizationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOrganization", CreateOrganizationResponse.class);
+    }
+
+    /**
+     *This API is used to add an organization identity.
+     * @param req CreateOrganizationIdentityRequest
+     * @return CreateOrganizationIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrganizationIdentityResponse CreateOrganizationIdentity(CreateOrganizationIdentityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOrganizationIdentity", CreateOrganizationIdentityResponse.class);
+    }
+
+    /**
      *This API is used to create an organization member.
      * @param req CreateOrganizationMemberRequest
      * @return CreateOrganizationMemberResponse
@@ -149,7 +226,18 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create an organization member access policy.
+     *This API is used to add organization member access authorization.
+     * @param req CreateOrganizationMemberAuthIdentityRequest
+     * @return CreateOrganizationMemberAuthIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrganizationMemberAuthIdentityResponse CreateOrganizationMemberAuthIdentity(CreateOrganizationMemberAuthIdentityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOrganizationMemberAuthIdentity", CreateOrganizationMemberAuthIdentityResponse.class);
+    }
+
+    /**
+     *This API is used to create an organization member access authorization policy.
      * @param req CreateOrganizationMemberPolicyRequest
      * @return CreateOrganizationMemberPolicyResponse
      * @throws TencentCloudSDKException
@@ -157,6 +245,17 @@ public class OrganizationClient extends AbstractClient{
     public CreateOrganizationMemberPolicyResponse CreateOrganizationMemberPolicy(CreateOrganizationMemberPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateOrganizationMemberPolicy", CreateOrganizationMemberPolicyResponse.class);
+    }
+
+    /**
+     *This API is used to create an organization member access policy.
+     * @param req CreateOrganizationMembersPolicyRequest
+     * @return CreateOrganizationMembersPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrganizationMembersPolicyResponse CreateOrganizationMembersPolicy(CreateOrganizationMembersPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOrganizationMembersPolicy", CreateOrganizationMembersPolicyResponse.class);
     }
 
     /**
@@ -179,6 +278,17 @@ public class OrganizationClient extends AbstractClient{
     public CreateRoleConfigurationResponse CreateRoleConfiguration(CreateRoleConfigurationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateRoleConfiguration", CreateRoleConfigurationResponse.class);
+    }
+
+    /**
+     *This API is used to create a SCIM key.
+     * @param req CreateSCIMCredentialRequest
+     * @return CreateSCIMCredentialResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSCIMCredentialResponse CreateSCIMCredential(CreateSCIMCredentialRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSCIMCredential", CreateSCIMCredentialResponse.class);
     }
 
     /**
@@ -226,6 +336,39 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete an organization.
+     * @param req DeleteOrganizationRequest
+     * @return DeleteOrganizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOrganizationResponse DeleteOrganization(DeleteOrganizationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOrganization", DeleteOrganizationResponse.class);
+    }
+
+    /**
+     *This API is used to delete an organization identity.
+     * @param req DeleteOrganizationIdentityRequest
+     * @return DeleteOrganizationIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOrganizationIdentityResponse DeleteOrganizationIdentity(DeleteOrganizationIdentityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOrganizationIdentity", DeleteOrganizationIdentityResponse.class);
+    }
+
+    /**
+     *This API is used to delete organization member access authorization.
+     * @param req DeleteOrganizationMemberAuthIdentityRequest
+     * @return DeleteOrganizationMemberAuthIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOrganizationMemberAuthIdentityResponse DeleteOrganizationMemberAuthIdentity(DeleteOrganizationMemberAuthIdentityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOrganizationMemberAuthIdentity", DeleteOrganizationMemberAuthIdentityResponse.class);
+    }
+
+    /**
      *This API is used to remove a member account from the organization, rather than delete the account.
      * @param req DeleteOrganizationMembersRequest
      * @return DeleteOrganizationMembersResponse
@@ -234,6 +377,17 @@ public class OrganizationClient extends AbstractClient{
     public DeleteOrganizationMembersResponse DeleteOrganizationMembers(DeleteOrganizationMembersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteOrganizationMembers", DeleteOrganizationMembersResponse.class);
+    }
+
+    /**
+     *This API is used to delete an organization member access policy.
+     * @param req DeleteOrganizationMembersPolicyRequest
+     * @return DeleteOrganizationMembersPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOrganizationMembersPolicyResponse DeleteOrganizationMembersPolicy(DeleteOrganizationMembersPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOrganizationMembersPolicy", DeleteOrganizationMembersPolicyResponse.class);
     }
 
     /**
@@ -270,6 +424,50 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a SCIM key.
+     * @param req DeleteSCIMCredentialRequest
+     * @return DeleteSCIMCredentialResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSCIMCredentialResponse DeleteSCIMCredential(DeleteSCIMCredentialRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSCIMCredential", DeleteSCIMCredentialResponse.class);
+    }
+
+    /**
+     *This API is used to delete a shared unit.
+     * @param req DeleteShareUnitRequest
+     * @return DeleteShareUnitResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteShareUnitResponse DeleteShareUnit(DeleteShareUnitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteShareUnit", DeleteShareUnitResponse.class);
+    }
+
+    /**
+     *This API is used to delete a shared unit member.
+     * @param req DeleteShareUnitMembersRequest
+     * @return DeleteShareUnitMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteShareUnitMembersResponse DeleteShareUnitMembers(DeleteShareUnitMembersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteShareUnitMembers", DeleteShareUnitMembersResponse.class);
+    }
+
+    /**
+     *This API is used to delete shared unit resources.
+     * @param req DeleteShareUnitResourcesRequest
+     * @return DeleteShareUnitResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteShareUnitResourcesResponse DeleteShareUnitResources(DeleteShareUnitResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteShareUnitResources", DeleteShareUnitResourcesResponse.class);
+    }
+
+    /**
      *This API is used to delete a user.
      * @param req DeleteUserRequest
      * @return DeleteUserResponse
@@ -292,7 +490,7 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
-     *This API is used to obtain the CAM Identity Center service information.
+     *This API is used to obtain TCO Identity Center service information.
      * @param req DescribeIdentityCenterRequest
      * @return DescribeIdentityCenterResponse
      * @throws TencentCloudSDKException
@@ -336,6 +534,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query detailed information about member mailbox binding.
+     * @param req DescribeOrganizationMemberEmailBindRequest
+     * @return DescribeOrganizationMemberEmailBindResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationMemberEmailBindResponse DescribeOrganizationMemberEmailBind(DescribeOrganizationMemberEmailBindRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOrganizationMemberEmailBind", DescribeOrganizationMemberEmailBindResponse.class);
+    }
+
+    /**
      *This API is used to get the list of authorization policies of an organization member.
      * @param req DescribeOrganizationMemberPoliciesRequest
      * @return DescribeOrganizationMemberPoliciesResponse
@@ -366,6 +575,50 @@ public class OrganizationClient extends AbstractClient{
     public DescribeOrganizationNodesResponse DescribeOrganizationNodes(DescribeOrganizationNodesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeOrganizationNodes", DescribeOrganizationNodesResponse.class);
+    }
+
+    /**
+     *This API is used to obtain a list of shareable regions.
+     * @param req DescribeShareAreasRequest
+     * @return DescribeShareAreasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShareAreasResponse DescribeShareAreas(DescribeShareAreasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeShareAreas", DescribeShareAreasResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the member list of a shared unit.
+     * @param req DescribeShareUnitMembersRequest
+     * @return DescribeShareUnitMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShareUnitMembersResponse DescribeShareUnitMembers(DescribeShareUnitMembersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeShareUnitMembers", DescribeShareUnitMembersResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the resource list of a shared unit.
+     * @param req DescribeShareUnitResourcesRequest
+     * @return DescribeShareUnitResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShareUnitResourcesResponse DescribeShareUnitResources(DescribeShareUnitResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeShareUnitResources", DescribeShareUnitResourcesResponse.class);
+    }
+
+    /**
+     *This API is used to obtain a list of shared units.
+     * @param req DescribeShareUnitsRequest
+     * @return DescribeShareUnitsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShareUnitsResponse DescribeShareUnits(DescribeShareUnitsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeShareUnits", DescribeShareUnitsResponse.class);
     }
 
     /**
@@ -421,6 +674,17 @@ public class OrganizationClient extends AbstractClient{
     public GetRoleConfigurationResponse GetRoleConfiguration(GetRoleConfigurationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetRoleConfiguration", GetRoleConfigurationResponse.class);
+    }
+
+    /**
+     *This API is used to query SCIM synchronization status.
+     * @param req GetSCIMSynchronizationStatusRequest
+     * @return GetSCIMSynchronizationStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSCIMSynchronizationStatusResponse GetSCIMSynchronizationStatus(GetSCIMSynchronizationStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetSCIMSynchronizationStatus", GetSCIMSynchronizationStatusResponse.class);
     }
 
     /**
@@ -611,6 +875,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the user SCIM key list.
+     * @param req ListSCIMCredentialsRequest
+     * @return ListSCIMCredentialsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListSCIMCredentialsResponse ListSCIMCredentials(ListSCIMCredentialsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListSCIMCredentials", ListSCIMCredentialsResponse.class);
+    }
+
+    /**
      *This API is used to query the async task list.
      * @param req ListTasksRequest
      * @return ListTasksResponse
@@ -655,7 +930,7 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
-     *This API is used to activate the CIC service.
+     *This API is used to activate Identity Center service (CIC).
      * @param req OpenIdentityCenterRequest
      * @return OpenIdentityCenterResponse
      * @throws TencentCloudSDKException
@@ -674,6 +949,28 @@ public class OrganizationClient extends AbstractClient{
     public ProvisionRoleConfigurationResponse ProvisionRoleConfiguration(ProvisionRoleConfigurationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ProvisionRoleConfiguration", ProvisionRoleConfigurationResponse.class);
+    }
+
+    /**
+     *This API is used to exit an organization.
+     * @param req QuitOrganizationRequest
+     * @return QuitOrganizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public QuitOrganizationResponse QuitOrganization(QuitOrganizationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QuitOrganization", QuitOrganizationResponse.class);
+    }
+
+    /**
+     *This API is used to reject an invitation to join a shared unit.
+     * @param req RejectJoinShareUnitInvitationRequest
+     * @return RejectJoinShareUnitInvitationResponse
+     * @throws TencentCloudSDKException
+     */
+    public RejectJoinShareUnitInvitationResponse RejectJoinShareUnitInvitation(RejectJoinShareUnitInvitationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RejectJoinShareUnitInvitation", RejectJoinShareUnitInvitationResponse.class);
     }
 
     /**
@@ -710,6 +1007,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to resend an email for activating the member's bound mailbox.
+     * @param req SendOrgMemberAccountBindEmailRequest
+     * @return SendOrgMemberAccountBindEmailResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendOrgMemberAccountBindEmailResponse SendOrgMemberAccountBindEmail(SendOrgMemberAccountBindEmailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SendOrgMemberAccountBindEmail", SendOrgMemberAccountBindEmailResponse.class);
+    }
+
+    /**
      *This API is used to configure the SAML identity provider information.
      * @param req SetExternalSAMLIdentityProviderRequest
      * @return SetExternalSAMLIdentityProviderResponse
@@ -721,6 +1029,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify a custom policy for permission configurations.
+     * @param req UpdateCustomPolicyForRoleConfigurationRequest
+     * @return UpdateCustomPolicyForRoleConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCustomPolicyForRoleConfigurationResponse UpdateCustomPolicyForRoleConfiguration(UpdateCustomPolicyForRoleConfigurationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateCustomPolicyForRoleConfiguration", UpdateCustomPolicyForRoleConfigurationResponse.class);
+    }
+
+    /**
      *This API is used to modify user group information.
      * @param req UpdateGroupRequest
      * @return UpdateGroupResponse
@@ -729,6 +1048,39 @@ public class OrganizationClient extends AbstractClient{
     public UpdateGroupResponse UpdateGroup(UpdateGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateGroup", UpdateGroupResponse.class);
+    }
+
+    /**
+     *This API is used to update an organization identity.
+     * @param req UpdateOrganizationIdentityRequest
+     * @return UpdateOrganizationIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOrganizationIdentityResponse UpdateOrganizationIdentity(UpdateOrganizationIdentityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateOrganizationIdentity", UpdateOrganizationIdentityResponse.class);
+    }
+
+    /**
+     *This API is used to update organization member information.
+     * @param req UpdateOrganizationMemberRequest
+     * @return UpdateOrganizationMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOrganizationMemberResponse UpdateOrganizationMember(UpdateOrganizationMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateOrganizationMember", UpdateOrganizationMemberResponse.class);
+    }
+
+    /**
+     *This API is used to modify the mailbox of a bound member.
+     * @param req UpdateOrganizationMemberEmailBindRequest
+     * @return UpdateOrganizationMemberEmailBindResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOrganizationMemberEmailBindResponse UpdateOrganizationMemberEmailBind(UpdateOrganizationMemberEmailBindRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateOrganizationMemberEmailBind", UpdateOrganizationMemberEmailBindResponse.class);
     }
 
     /**
@@ -751,6 +1103,39 @@ public class OrganizationClient extends AbstractClient{
     public UpdateRoleConfigurationResponse UpdateRoleConfiguration(UpdateRoleConfigurationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateRoleConfiguration", UpdateRoleConfigurationResponse.class);
+    }
+
+    /**
+     *This API is used to enable or disable a SCIM key.
+     * @param req UpdateSCIMCredentialStatusRequest
+     * @return UpdateSCIMCredentialStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateSCIMCredentialStatusResponse UpdateSCIMCredentialStatus(UpdateSCIMCredentialStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateSCIMCredentialStatus", UpdateSCIMCredentialStatusResponse.class);
+    }
+
+    /**
+     *This API is used to enable or disable user SCIM synchronization.
+     * @param req UpdateSCIMSynchronizationStatusRequest
+     * @return UpdateSCIMSynchronizationStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateSCIMSynchronizationStatusResponse UpdateSCIMSynchronizationStatus(UpdateSCIMSynchronizationStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateSCIMSynchronizationStatus", UpdateSCIMSynchronizationStatusResponse.class);
+    }
+
+    /**
+     *This API is used to update a shared unit.
+     * @param req UpdateShareUnitRequest
+     * @return UpdateShareUnitResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateShareUnitResponse UpdateShareUnit(UpdateShareUnitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateShareUnit", UpdateShareUnitResponse.class);
     }
 
     /**

@@ -31,8 +31,7 @@ public class ClbInstanceList extends AbstractModel {
     private String Region;
 
     /**
-    * The list of CLB instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CLB instance details.
     */
     @SerializedName("InstanceList")
     @Expose
@@ -44,6 +43,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * Whether to query exceptions.
+    */
+    @SerializedName("Error")
+    @Expose
+    private String Error;
 
     /**
      * Get The region. 
@@ -62,20 +68,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The list of CLB instances.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceList The list of CLB instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CLB instance details. 
+     * @return InstanceList CLB instance details.
      */
     public ClbInstanceDetail [] getInstanceList() {
         return this.InstanceList;
     }
 
     /**
-     * Set The list of CLB instances.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceList The list of CLB instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CLB instance details.
+     * @param InstanceList CLB instance details.
      */
     public void setInstanceList(ClbInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
@@ -95,6 +97,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get Whether to query exceptions. 
+     * @return Error Whether to query exceptions.
+     */
+    public String getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set Whether to query exceptions.
+     * @param Error Whether to query exceptions.
+     */
+    public void setError(String Error) {
+        this.Error = Error;
     }
 
     public ClbInstanceList() {
@@ -117,6 +135,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
     }
 
 
@@ -127,6 +148,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Error", this.Error);
 
     }
 }

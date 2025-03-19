@@ -55,8 +55,7 @@ public class TmsClient extends AbstractClient{
 ### Use limits
 - The submitted texts can not be longer than 10,000 unicode characters.
 - English letters, digits and Chinese characters are supported for moderation.
-- The API request frequency limit: **1,000 times/second**. 
-
+- The API request frequency limit: **1,000 times/second**.
      * @param req TextModerationRequest
      * @return TextModerationResponse
      * @throws TencentCloudSDKException

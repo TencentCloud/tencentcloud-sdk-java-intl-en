@@ -28,7 +28,7 @@ public class AddOnSubtitle extends AbstractModel {
 <li>`subtitle-stream`: Add a subtitle track.</li>
 <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -36,23 +36,32 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The subtitle file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Subtitle")
     @Expose
     private MediaInputInfo Subtitle;
 
     /**
+    * Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SubtitleName")
+    @Expose
+    private String SubtitleName;
+
+    /**
      * Get The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
 <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Type The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
 <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
@@ -63,12 +72,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`subtitle-stream`: Add a subtitle track.</li>
 <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Type The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
 <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -76,9 +85,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The subtitle file.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Subtitle The subtitle file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MediaInputInfo getSubtitle() {
         return this.Subtitle;
@@ -86,12 +95,36 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The subtitle file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Subtitle The subtitle file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubtitle(MediaInputInfo Subtitle) {
         this.Subtitle = Subtitle;
+    }
+
+    /**
+     * Get Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SubtitleName Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getSubtitleName() {
+        return this.SubtitleName;
+    }
+
+    /**
+     * Set Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SubtitleName Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setSubtitleName(String SubtitleName) {
+        this.SubtitleName = SubtitleName;
     }
 
     public AddOnSubtitle() {
@@ -108,6 +141,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (source.Subtitle != null) {
             this.Subtitle = new MediaInputInfo(source.Subtitle);
         }
+        if (source.SubtitleName != null) {
+            this.SubtitleName = new String(source.SubtitleName);
+        }
     }
 
 
@@ -117,6 +153,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "Subtitle.", this.Subtitle);
+        this.setParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
 
     }
 }

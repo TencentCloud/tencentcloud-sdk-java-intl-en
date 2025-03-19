@@ -182,7 +182,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Get Number of Tencent Cloud machines 
      * @return TencentCloudMachineCnt Number of Tencent Cloud machines
+     * @deprecated
      */
+    @Deprecated
     public Long getTencentCloudMachineCnt() {
         return this.TencentCloudMachineCnt;
     }
@@ -190,7 +192,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Set Number of Tencent Cloud machines
      * @param TencentCloudMachineCnt Number of Tencent Cloud machines
+     * @deprecated
      */
+    @Deprecated
     public void setTencentCloudMachineCnt(Long TencentCloudMachineCnt) {
         this.TencentCloudMachineCnt = TencentCloudMachineCnt;
     }
@@ -198,7 +202,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Get Number of Alibaba Cloud machines 
      * @return AliCloudMachineCnt Number of Alibaba Cloud machines
+     * @deprecated
      */
+    @Deprecated
     public Long getAliCloudMachineCnt() {
         return this.AliCloudMachineCnt;
     }
@@ -206,7 +212,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Set Number of Alibaba Cloud machines
      * @param AliCloudMachineCnt Number of Alibaba Cloud machines
+     * @deprecated
      */
+    @Deprecated
     public void setAliCloudMachineCnt(Long AliCloudMachineCnt) {
         this.AliCloudMachineCnt = AliCloudMachineCnt;
     }
@@ -214,7 +222,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Get Number of Baidu Cloud machines 
      * @return BaiduCloudMachineCnt Number of Baidu Cloud machines
+     * @deprecated
      */
+    @Deprecated
     public Long getBaiduCloudMachineCnt() {
         return this.BaiduCloudMachineCnt;
     }
@@ -222,7 +232,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Set Number of Baidu Cloud machines
      * @param BaiduCloudMachineCnt Number of Baidu Cloud machines
+     * @deprecated
      */
+    @Deprecated
     public void setBaiduCloudMachineCnt(Long BaiduCloudMachineCnt) {
         this.BaiduCloudMachineCnt = BaiduCloudMachineCnt;
     }
@@ -230,7 +242,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Get Number of IDC machines 
      * @return IDCMachineCnt Number of IDC machines
+     * @deprecated
      */
+    @Deprecated
     public Long getIDCMachineCnt() {
         return this.IDCMachineCnt;
     }
@@ -238,7 +252,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Set Number of IDC machines
      * @param IDCMachineCnt Number of IDC machines
+     * @deprecated
      */
+    @Deprecated
     public void setIDCMachineCnt(Long IDCMachineCnt) {
         this.IDCMachineCnt = IDCMachineCnt;
     }
@@ -246,7 +262,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Get Number of machines from other cloud service vendors 
      * @return OtherCloudMachineCnt Number of machines from other cloud service vendors
+     * @deprecated
      */
+    @Deprecated
     public Long getOtherCloudMachineCnt() {
         return this.OtherCloudMachineCnt;
     }
@@ -254,7 +272,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Set Number of machines from other cloud service vendors
      * @param OtherCloudMachineCnt Number of machines from other cloud service vendors
+     * @deprecated
      */
+    @Deprecated
     public void setOtherCloudMachineCnt(Long OtherCloudMachineCnt) {
         this.OtherCloudMachineCnt = OtherCloudMachineCnt;
     }

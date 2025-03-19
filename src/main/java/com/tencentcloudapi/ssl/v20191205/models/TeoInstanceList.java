@@ -39,6 +39,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long TotalCount;
 
     /**
+    * Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Error")
+    @Expose
+    private String Error;
+
+    /**
      * Get The list of EDGEONE instances.	
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return InstanceList The list of EDGEONE instances.	
@@ -74,6 +82,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.TotalCount = TotalCount;
     }
 
+    /**
+     * Get Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Error Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Error Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setError(String Error) {
+        this.Error = Error;
+    }
+
     public TeoInstanceList() {
     }
 
@@ -91,6 +119,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
     }
 
 
@@ -100,6 +131,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Error", this.Error);
 
     }
 }

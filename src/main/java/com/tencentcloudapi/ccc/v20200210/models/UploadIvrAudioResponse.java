@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class UploadIvrAudioResponse extends AbstractModel {
 
     /**
-    * List of failed uploads
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of files that failed to be uploaded.
     */
     @SerializedName("FailedFileList")
     @Expose
     private UploadIvrAudioFailedInfo [] FailedFileList;
 
     /**
-    * List of successful uploads
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of successfully uploaded files.
     */
     @SerializedName("SuccessFileList")
     @Expose
@@ -47,40 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of failed uploads
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FailedFileList List of failed uploads
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of files that failed to be uploaded. 
+     * @return FailedFileList List of files that failed to be uploaded.
      */
     public UploadIvrAudioFailedInfo [] getFailedFileList() {
         return this.FailedFileList;
     }
 
     /**
-     * Set List of failed uploads
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FailedFileList List of failed uploads
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of files that failed to be uploaded.
+     * @param FailedFileList List of files that failed to be uploaded.
      */
     public void setFailedFileList(UploadIvrAudioFailedInfo [] FailedFileList) {
         this.FailedFileList = FailedFileList;
     }
 
     /**
-     * Get List of successful uploads
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SuccessFileList List of successful uploads
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of successfully uploaded files. 
+     * @return SuccessFileList List of successfully uploaded files.
      */
     public AudioFileInfo [] getSuccessFileList() {
         return this.SuccessFileList;
     }
 
     /**
-     * Set List of successful uploads
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SuccessFileList List of successful uploads
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of successfully uploaded files.
+     * @param SuccessFileList List of successfully uploaded files.
      */
     public void setSuccessFileList(AudioFileInfo [] SuccessFileList) {
         this.SuccessFileList = SuccessFileList;

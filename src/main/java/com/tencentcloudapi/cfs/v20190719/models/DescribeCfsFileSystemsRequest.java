@@ -45,6 +45,27 @@ public class DescribeCfsFileSystemsRequest extends AbstractModel {
     private String SubnetId;
 
     /**
+    * 
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 
+    */
+    @SerializedName("CreationToken")
+    @Expose
+    private String CreationToken;
+
+    /**
      * Get File system ID 
      * @return FileSystemId File system ID
      */
@@ -92,6 +113,54 @@ public class DescribeCfsFileSystemsRequest extends AbstractModel {
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get  
+     * @return Offset 
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 
+     * @param Offset 
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get  
+     * @return Limit 
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 
+     * @param Limit 
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get  
+     * @return CreationToken 
+     */
+    public String getCreationToken() {
+        return this.CreationToken;
+    }
+
+    /**
+     * Set 
+     * @param CreationToken 
+     */
+    public void setCreationToken(String CreationToken) {
+        this.CreationToken = CreationToken;
+    }
+
     public DescribeCfsFileSystemsRequest() {
     }
 
@@ -109,6 +178,15 @@ public class DescribeCfsFileSystemsRequest extends AbstractModel {
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.CreationToken != null) {
+            this.CreationToken = new String(source.CreationToken);
+        }
     }
 
 
@@ -119,6 +197,9 @@ public class DescribeCfsFileSystemsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "CreationToken", this.CreationToken);
 
     }
 }

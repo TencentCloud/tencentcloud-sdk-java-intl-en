@@ -38,7 +38,7 @@ public class Tag extends AbstractModel {
     private String Value;
 
     /**
-    * Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+    * Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceType")
@@ -78,9 +78,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+     * Get Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ResourceType Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+     * @return ResourceType Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getResourceType() {
@@ -88,9 +88,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+     * Set Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ResourceType Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+     * @param ResourceType Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResourceType(String ResourceType) {

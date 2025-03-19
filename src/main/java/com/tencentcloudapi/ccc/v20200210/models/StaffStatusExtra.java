@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class StaffStatusExtra extends AbstractModel {
 
     /**
-    * IM - Text | TEL - Cell phone | ALL - Full media.
+    * IM - text | tel - cell phone | all - full media.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * IN - Inbound | OUT - Outbound.
+    * IN - inbound | out - outbound.
     */
     @SerializedName("Direct")
     @Expose
     private String Direct;
 
     /**
-     * Get IM - Text | TEL - Cell phone | ALL - Full media. 
-     * @return Type IM - Text | TEL - Cell phone | ALL - Full media.
+     * Get IM - text | tel - cell phone | all - full media. 
+     * @return Type IM - text | tel - cell phone | all - full media.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set IM - Text | TEL - Cell phone | ALL - Full media.
-     * @param Type IM - Text | TEL - Cell phone | ALL - Full media.
+     * Set IM - text | tel - cell phone | all - full media.
+     * @param Type IM - text | tel - cell phone | all - full media.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get IN - Inbound | OUT - Outbound. 
-     * @return Direct IN - Inbound | OUT - Outbound.
+     * Get IN - inbound | out - outbound. 
+     * @return Direct IN - inbound | out - outbound.
      */
     public String getDirect() {
         return this.Direct;
     }
 
     /**
-     * Set IN - Inbound | OUT - Outbound.
-     * @param Direct IN - Inbound | OUT - Outbound.
+     * Set IN - inbound | out - outbound.
+     * @param Direct IN - inbound | out - outbound.
      */
     public void setDirect(String Direct) {
         this.Direct = Direct;

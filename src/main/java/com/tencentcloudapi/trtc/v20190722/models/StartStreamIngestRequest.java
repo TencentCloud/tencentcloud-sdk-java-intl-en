@@ -123,6 +123,13 @@ Source URL. Example value: https://a.b/test.mp4
     private Long MaxDuration;
 
     /**
+    * Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+    */
+    @SerializedName("Volume")
+    @Expose
+    private Long Volume;
+
+    /**
      * Get TRTC's [SdkAppId](https://intl.cloud.tencent.com/document/product/647/46351?from_cn_redirect=1#sdkappid), the same as the SdkAppId corresponding to the Record room. 
      * @return SdkAppId TRTC's [SdkAppId](https://intl.cloud.tencent.com/document/product/647/46351?from_cn_redirect=1#sdkappid), the same as the SdkAppId corresponding to the Record room.
      */
@@ -362,6 +369,22 @@ Source URL. Example value: https://a.b/test.mp4
         this.MaxDuration = MaxDuration;
     }
 
+    /**
+     * Get Volume. Valid value range: [0, 100], default value is 100, indicating the original volume. 
+     * @return Volume Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+     */
+    public Long getVolume() {
+        return this.Volume;
+    }
+
+    /**
+     * Set Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+     * @param Volume Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+     */
+    public void setVolume(Long Volume) {
+        this.Volume = Volume;
+    }
+
     public StartStreamIngestRequest() {
     }
 
@@ -415,6 +438,9 @@ Source URL. Example value: https://a.b/test.mp4
         if (source.MaxDuration != null) {
             this.MaxDuration = new Long(source.MaxDuration);
         }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
     }
 
 
@@ -436,6 +462,7 @@ Source URL. Example value: https://a.b/test.mp4
         this.setParamSimple(map, prefix + "AutoPush", this.AutoPush);
         this.setParamSimple(map, prefix + "RepeatNum", this.RepeatNum);
         this.setParamSimple(map, prefix + "MaxDuration", this.MaxDuration);
+        this.setParamSimple(map, prefix + "Volume", this.Volume);
 
     }
 }

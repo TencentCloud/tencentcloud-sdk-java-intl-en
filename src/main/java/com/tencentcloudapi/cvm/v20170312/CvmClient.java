@@ -111,7 +111,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     }
 
     /**
-     *This API is used to create a [spread placement group](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1). After you create one, you can specify it for an instance when you [create the instance](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1), 
+     *This API is used to create a [spread placement group](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1). After you create one, you can specify it for an instance when you [create the instance](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1),
      * @param req CreateDisasterRecoverGroupRequest
      * @return CreateDisasterRecoverGroupResponse
      * @throws TencentCloudSDKException
@@ -146,6 +146,21 @@ If you currently use a password to log in, you will no longer be able to do so a
     public CreateKeyPairResponse CreateKeyPair(CreateKeyPairRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateKeyPair", CreateKeyPairResponse.class);
+    }
+
+    /**
+     *This API is used to create an instance launch template.
+
+An instance launch template contains the configuration information required to create an instance, including instance type, data/system disk type and size, and security group, etc.
+
+When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it's not specified, the default template version is used.
+     * @param req CreateLaunchTemplateRequest
+     * @return CreateLaunchTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLaunchTemplateResponse CreateLaunchTemplate(CreateLaunchTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLaunchTemplate", CreateLaunchTemplateResponse.class);
     }
 
     /**
@@ -447,7 +462,18 @@ If you currently use a password to log in, you will no longer be able to do so a
     }
 
     /**
-     *This API is used to describe reserved instance (RI) offerings. Currently, RIs are only offered to beta users.
+     *This API is used to list the reserved instances purchased by the user.
+     * @param req DescribeReservedInstancesRequest
+     * @return DescribeReservedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReservedInstancesResponse DescribeReservedInstances(DescribeReservedInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReservedInstances", DescribeReservedInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to describe reserved instance (RI) offerings.
      * @param req DescribeReservedInstancesConfigInfosRequest
      * @return DescribeReservedInstancesConfigInfosResponse
      * @throws TencentCloudSDKException
@@ -748,6 +774,20 @@ If you currently use a password to log in, you will no longer be able to do so a
     public ModifyInstancesProjectResponse ModifyInstancesProject(ModifyInstancesProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInstancesProject", ModifyInstancesProjectResponse.class);
+    }
+
+    /**
+     *This API is used to modify the renewal flag of monthly subscription instances.
+
+* After an instance is marked as auto-renewal, it will be automatically renewed for one month each time it expires.
+* Batch operations are supported. The maximum number of instances for each request is 100.* You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
+     * @param req ModifyInstancesRenewFlagRequest
+     * @return ModifyInstancesRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstancesRenewFlagResponse ModifyInstancesRenewFlag(ModifyInstancesRenewFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstancesRenewFlag", ModifyInstancesRenewFlagResponse.class);
     }
 
     /**

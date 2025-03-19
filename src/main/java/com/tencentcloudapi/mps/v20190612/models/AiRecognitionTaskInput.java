@@ -31,6 +31,13 @@ public class AiRecognitionTaskInput extends AbstractModel {
     private Long Definition;
 
     /**
+    * User extension field, which does not need to be filled in for general scenarios.
+    */
+    @SerializedName("UserExtPara")
+    @Expose
+    private String UserExtPara;
+
+    /**
      * Get Intelligent video recognition template ID. 
      * @return Definition Intelligent video recognition template ID.
      */
@@ -46,6 +53,22 @@ public class AiRecognitionTaskInput extends AbstractModel {
         this.Definition = Definition;
     }
 
+    /**
+     * Get User extension field, which does not need to be filled in for general scenarios. 
+     * @return UserExtPara User extension field, which does not need to be filled in for general scenarios.
+     */
+    public String getUserExtPara() {
+        return this.UserExtPara;
+    }
+
+    /**
+     * Set User extension field, which does not need to be filled in for general scenarios.
+     * @param UserExtPara User extension field, which does not need to be filled in for general scenarios.
+     */
+    public void setUserExtPara(String UserExtPara) {
+        this.UserExtPara = UserExtPara;
+    }
+
     public AiRecognitionTaskInput() {
     }
 
@@ -57,6 +80,9 @@ public class AiRecognitionTaskInput extends AbstractModel {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
+        if (source.UserExtPara != null) {
+            this.UserExtPara = new String(source.UserExtPara);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class AiRecognitionTaskInput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "UserExtPara", this.UserExtPara);
 
     }
 }

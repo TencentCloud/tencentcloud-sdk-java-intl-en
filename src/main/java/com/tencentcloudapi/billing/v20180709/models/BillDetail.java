@@ -31,7 +31,7 @@ public class BillDetail extends AbstractModel {
     private String BusinessCodeName;
 
     /**
-    * Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+    * Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
     */
     @SerializedName("ProductCodeName")
     @Expose
@@ -266,6 +266,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ReserveDetail;
 
     /**
+    * the discount object for the current consumption item, such as official website discount, user discount, and event discount.
+    */
+    @SerializedName("DiscountObject")
+    @Expose
+    private String DiscountObject;
+
+    /**
+    * the discount type for the current consumption item, such as discount and contract price.
+
+    */
+    @SerializedName("DiscountType")
+    @Expose
+    private String DiscountType;
+
+    /**
+    * supplementary description of the discount type, such as 0.2.
+    */
+    @SerializedName("DiscountContent")
+    @Expose
+    private String DiscountContent;
+
+    /**
      * Get Product name: The name of a Tencent Cloud product purchased by the user, such as CVM. 
      * @return BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      */
@@ -282,16 +304,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1. 
-     * @return ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+     * Get Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1. 
+     * @return ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * Set Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
-     * @param ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+     * Set Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
+     * @param ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
@@ -825,6 +847,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ReserveDetail = ReserveDetail;
     }
 
+    /**
+     * Get the discount object for the current consumption item, such as official website discount, user discount, and event discount. 
+     * @return DiscountObject the discount object for the current consumption item, such as official website discount, user discount, and event discount.
+     */
+    public String getDiscountObject() {
+        return this.DiscountObject;
+    }
+
+    /**
+     * Set the discount object for the current consumption item, such as official website discount, user discount, and event discount.
+     * @param DiscountObject the discount object for the current consumption item, such as official website discount, user discount, and event discount.
+     */
+    public void setDiscountObject(String DiscountObject) {
+        this.DiscountObject = DiscountObject;
+    }
+
+    /**
+     * Get the discount type for the current consumption item, such as discount and contract price.
+ 
+     * @return DiscountType the discount type for the current consumption item, such as discount and contract price.
+
+     */
+    public String getDiscountType() {
+        return this.DiscountType;
+    }
+
+    /**
+     * Set the discount type for the current consumption item, such as discount and contract price.
+
+     * @param DiscountType the discount type for the current consumption item, such as discount and contract price.
+
+     */
+    public void setDiscountType(String DiscountType) {
+        this.DiscountType = DiscountType;
+    }
+
+    /**
+     * Get supplementary description of the discount type, such as 0.2. 
+     * @return DiscountContent supplementary description of the discount type, such as 0.2.
+     */
+    public String getDiscountContent() {
+        return this.DiscountContent;
+    }
+
+    /**
+     * Set supplementary description of the discount type, such as 0.2.
+     * @param DiscountContent supplementary description of the discount type, such as 0.2.
+     */
+    public void setDiscountContent(String DiscountContent) {
+        this.DiscountContent = DiscountContent;
+    }
+
     public BillDetail() {
     }
 
@@ -944,6 +1018,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ReserveDetail != null) {
             this.ReserveDetail = new String(source.ReserveDetail);
         }
+        if (source.DiscountObject != null) {
+            this.DiscountObject = new String(source.DiscountObject);
+        }
+        if (source.DiscountType != null) {
+            this.DiscountType = new String(source.DiscountType);
+        }
+        if (source.DiscountContent != null) {
+            this.DiscountContent = new String(source.DiscountContent);
+        }
     }
 
 
@@ -985,6 +1068,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RegionType", this.RegionType);
         this.setParamSimple(map, prefix + "RegionTypeName", this.RegionTypeName);
         this.setParamSimple(map, prefix + "ReserveDetail", this.ReserveDetail);
+        this.setParamSimple(map, prefix + "DiscountObject", this.DiscountObject);
+        this.setParamSimple(map, prefix + "DiscountType", this.DiscountType);
+        this.setParamSimple(map, prefix + "DiscountContent", this.DiscountContent);
 
     }
 }

@@ -136,21 +136,23 @@ public class BillDetailComponent extends AbstractModel {
     private String VoucherPayAmount;
 
     /**
-    * Cash credit: The amount paid from the user’s cash account
+    * Cash credit: The amount paid from the user's cash account
+
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * Free credit: The amount paid with the user’s free credit
+    * Free credit: The amount paid with the user's free credit
+
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+    * Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -233,6 +235,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("ComponentConfig")
     @Expose
     private BillDetailComponentConfig [] ComponentConfig;
+
+    /**
+    * The tax rate.
+    */
+    @SerializedName("TaxRate")
+    @Expose
+    private String TaxRate;
+
+    /**
+    * The tax amount.
+    */
+    @SerializedName("TaxAmount")
+    @Expose
+    private String TaxAmount;
+
+    /**
+    * The currency used for the settlement of a component.
+    */
+    @SerializedName("Currency")
+    @Expose
+    private String Currency;
 
     /**
      * Get Component type: The component type of a product or service purchased, such as CVM instance components including CPU and memory. 
@@ -495,48 +518,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cash credit: The amount paid from the user’s cash account 
-     * @return CashPayAmount Cash credit: The amount paid from the user’s cash account
+     * Get Cash credit: The amount paid from the user's cash account
+ 
+     * @return CashPayAmount Cash credit: The amount paid from the user's cash account
+
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set Cash credit: The amount paid from the user’s cash account
-     * @param CashPayAmount Cash credit: The amount paid from the user’s cash account
+     * Set Cash credit: The amount paid from the user's cash account
+
+     * @param CashPayAmount Cash credit: The amount paid from the user's cash account
+
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get Free credit: The amount paid with the user’s free credit 
-     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit
+     * Get Free credit: The amount paid with the user's free credit
+ 
+     * @return IncentivePayAmount Free credit: The amount paid with the user's free credit
+
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set Free credit: The amount paid with the user’s free credit
-     * @param IncentivePayAmount Free credit: The amount paid with the user’s free credit
+     * Set Free credit: The amount paid with the user's free credit
+
+     * @param IncentivePayAmount Free credit: The amount paid with the user's free credit
+
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
@@ -726,6 +757,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ComponentConfig = ComponentConfig;
     }
 
+    /**
+     * Get The tax rate. 
+     * @return TaxRate The tax rate.
+     */
+    public String getTaxRate() {
+        return this.TaxRate;
+    }
+
+    /**
+     * Set The tax rate.
+     * @param TaxRate The tax rate.
+     */
+    public void setTaxRate(String TaxRate) {
+        this.TaxRate = TaxRate;
+    }
+
+    /**
+     * Get The tax amount. 
+     * @return TaxAmount The tax amount.
+     */
+    public String getTaxAmount() {
+        return this.TaxAmount;
+    }
+
+    /**
+     * Set The tax amount.
+     * @param TaxAmount The tax amount.
+     */
+    public void setTaxAmount(String TaxAmount) {
+        this.TaxAmount = TaxAmount;
+    }
+
+    /**
+     * Get The currency used for the settlement of a component. 
+     * @return Currency The currency used for the settlement of a component.
+     */
+    public String getCurrency() {
+        return this.Currency;
+    }
+
+    /**
+     * Set The currency used for the settlement of a component.
+     * @param Currency The currency used for the settlement of a component.
+     */
+    public void setCurrency(String Currency) {
+        this.Currency = Currency;
+    }
+
     public BillDetailComponent() {
     }
 
@@ -827,6 +906,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.ComponentConfig[i] = new BillDetailComponentConfig(source.ComponentConfig[i]);
             }
         }
+        if (source.TaxRate != null) {
+            this.TaxRate = new String(source.TaxRate);
+        }
+        if (source.TaxAmount != null) {
+            this.TaxAmount = new String(source.TaxAmount);
+        }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
+        }
     }
 
 
@@ -864,6 +952,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "OriginalCostWithSP", this.OriginalCostWithSP);
         this.setParamSimple(map, prefix + "BlendedDiscount", this.BlendedDiscount);
         this.setParamArrayObj(map, prefix + "ComponentConfig.", this.ComponentConfig);
+        this.setParamSimple(map, prefix + "TaxRate", this.TaxRate);
+        this.setParamSimple(map, prefix + "TaxAmount", this.TaxAmount);
+        this.setParamSimple(map, prefix + "Currency", this.Currency);
 
     }
 }

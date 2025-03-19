@@ -46,18 +46,18 @@ Global domain name, that is, global.
     private Long ActionType;
 
     /**
-    * valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
-    */
-    @SerializedName("ValidTS")
-    @Expose
-    private Long ValidTS;
-
-    /**
     * Rule ID
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
+
+    /**
+    * valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
+    */
+    @SerializedName("ValidTS")
+    @Expose
+    private Long ValidTS;
 
     /**
     * Instance ID
@@ -154,22 +154,6 @@ Global domain name, that is, global.
     }
 
     /**
-     * Get valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00. 
-     * @return ValidTS valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
-     */
-    public Long getValidTS() {
-        return this.ValidTS;
-    }
-
-    /**
-     * Set valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
-     * @param ValidTS valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
-     */
-    public void setValidTS(Long ValidTS) {
-        this.ValidTS = ValidTS;
-    }
-
-    /**
      * Get Rule ID 
      * @return RuleId Rule ID
      */
@@ -183,6 +167,26 @@ Global domain name, that is, global.
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
+    }
+
+    /**
+     * Get valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00. 
+     * @return ValidTS valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
+     * @deprecated
+     */
+    @Deprecated
+    public Long getValidTS() {
+        return this.ValidTS;
+    }
+
+    /**
+     * Set valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
+     * @param ValidTS valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
+     * @deprecated
+     */
+    @Deprecated
+    public void setValidTS(Long ValidTS) {
+        this.ValidTS = ValidTS;
     }
 
     /**
@@ -301,11 +305,11 @@ Global domain name, that is, global.
         if (source.ActionType != null) {
             this.ActionType = new Long(source.ActionType);
         }
-        if (source.ValidTS != null) {
-            this.ValidTS = new Long(source.ValidTS);
-        }
         if (source.RuleId != null) {
             this.RuleId = new Long(source.RuleId);
+        }
+        if (source.ValidTS != null) {
+            this.ValidTS = new Long(source.ValidTS);
         }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
@@ -335,8 +339,8 @@ Global domain name, that is, global.
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
-        this.setParamSimple(map, prefix + "ValidTS", this.ValidTS);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "ValidTS", this.ValidTS);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Edition", this.Edition);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);

@@ -46,6 +46,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String Region;
 
     /**
+    * Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Error")
+    @Expose
+    private String Error;
+
+    /**
      * Get TSE instance details
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return InstanceList TSE instance details
@@ -97,6 +105,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.Region = Region;
     }
 
+    /**
+     * Get Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Error Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Error Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setError(String Error) {
+        this.Error = Error;
+    }
+
     public TSEInstanceList() {
     }
 
@@ -117,6 +145,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
     }
 
 
@@ -127,6 +158,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Error", this.Error);
 
     }
 }

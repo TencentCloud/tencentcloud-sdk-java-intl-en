@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeAgentCruiseDialingCampaignResponse extends AbstractModel {
 
     /**
-    * Task Name
+    * Task name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Agent Account
+    * Agent account.
     */
     @SerializedName("Agent")
     @Expose
     private String Agent;
 
     /**
-    * Single-round Concurrent Call Volume 1-20
+    * Single-Round concurrent call volume 1-20.
     */
     @SerializedName("ConcurrencyNumber")
     @Expose
     private Long ConcurrencyNumber;
 
     /**
-    * Task start time. Unix timestamp. The task will automatically start after this time.
+    * Task start time. unix timestamp. the task will automatically start after this time.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Task termination time. Unix timestamp. The task will automatically terminate after this time.
+    * Task termination time. unix timestamp. the task will automatically terminate after this time.
     */
     @SerializedName("EndTime")
     @Expose
@@ -66,28 +66,28 @@ public class DescribeAgentCruiseDialingCampaignResponse extends AbstractModel {
     private Long CallOrder;
 
     /**
-    * Caller Custom Data, Maximum Length 1024
+    * Caller custom data, maximum length 1024.
     */
     @SerializedName("UUI")
     @Expose
     private String UUI;
 
     /**
-    * Task status 0 Not started 1 Running 2 Completed 3 Terminated
+    * Task status 0 not started 1 running 2 completed 3 terminated.
     */
     @SerializedName("State")
     @Expose
     private Long State;
 
     /**
-    * Total number of called parties
+    * Total number of called parties.
     */
     @SerializedName("TotalCalleeCount")
     @Expose
     private Long TotalCalleeCount;
 
     /**
-    * Number of called parties
+    * Number of calls made and received.
     */
     @SerializedName("CalledCalleeCount")
     @Expose
@@ -101,80 +101,80 @@ public class DescribeAgentCruiseDialingCampaignResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task Name 
-     * @return Name Task Name
+     * Get Task name. 
+     * @return Name Task name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Task Name
-     * @param Name Task Name
+     * Set Task name.
+     * @param Name Task name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Agent Account 
-     * @return Agent Agent Account
+     * Get Agent account. 
+     * @return Agent Agent account.
      */
     public String getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set Agent Account
-     * @param Agent Agent Account
+     * Set Agent account.
+     * @param Agent Agent account.
      */
     public void setAgent(String Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get Single-round Concurrent Call Volume 1-20 
-     * @return ConcurrencyNumber Single-round Concurrent Call Volume 1-20
+     * Get Single-Round concurrent call volume 1-20. 
+     * @return ConcurrencyNumber Single-Round concurrent call volume 1-20.
      */
     public Long getConcurrencyNumber() {
         return this.ConcurrencyNumber;
     }
 
     /**
-     * Set Single-round Concurrent Call Volume 1-20
-     * @param ConcurrencyNumber Single-round Concurrent Call Volume 1-20
+     * Set Single-Round concurrent call volume 1-20.
+     * @param ConcurrencyNumber Single-Round concurrent call volume 1-20.
      */
     public void setConcurrencyNumber(Long ConcurrencyNumber) {
         this.ConcurrencyNumber = ConcurrencyNumber;
     }
 
     /**
-     * Get Task start time. Unix timestamp. The task will automatically start after this time. 
-     * @return StartTime Task start time. Unix timestamp. The task will automatically start after this time.
+     * Get Task start time. unix timestamp. the task will automatically start after this time. 
+     * @return StartTime Task start time. unix timestamp. the task will automatically start after this time.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Task start time. Unix timestamp. The task will automatically start after this time.
-     * @param StartTime Task start time. Unix timestamp. The task will automatically start after this time.
+     * Set Task start time. unix timestamp. the task will automatically start after this time.
+     * @param StartTime Task start time. unix timestamp. the task will automatically start after this time.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Task termination time. Unix timestamp. The task will automatically terminate after this time. 
-     * @return EndTime Task termination time. Unix timestamp. The task will automatically terminate after this time.
+     * Get Task termination time. unix timestamp. the task will automatically terminate after this time. 
+     * @return EndTime Task termination time. unix timestamp. the task will automatically terminate after this time.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Task termination time. Unix timestamp. The task will automatically terminate after this time.
-     * @param EndTime Task termination time. Unix timestamp. The task will automatically terminate after this time.
+     * Set Task termination time. unix timestamp. the task will automatically terminate after this time.
+     * @param EndTime Task termination time. unix timestamp. the task will automatically terminate after this time.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
@@ -197,64 +197,64 @@ public class DescribeAgentCruiseDialingCampaignResponse extends AbstractModel {
     }
 
     /**
-     * Get Caller Custom Data, Maximum Length 1024 
-     * @return UUI Caller Custom Data, Maximum Length 1024
+     * Get Caller custom data, maximum length 1024. 
+     * @return UUI Caller custom data, maximum length 1024.
      */
     public String getUUI() {
         return this.UUI;
     }
 
     /**
-     * Set Caller Custom Data, Maximum Length 1024
-     * @param UUI Caller Custom Data, Maximum Length 1024
+     * Set Caller custom data, maximum length 1024.
+     * @param UUI Caller custom data, maximum length 1024.
      */
     public void setUUI(String UUI) {
         this.UUI = UUI;
     }
 
     /**
-     * Get Task status 0 Not started 1 Running 2 Completed 3 Terminated 
-     * @return State Task status 0 Not started 1 Running 2 Completed 3 Terminated
+     * Get Task status 0 not started 1 running 2 completed 3 terminated. 
+     * @return State Task status 0 not started 1 running 2 completed 3 terminated.
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set Task status 0 Not started 1 Running 2 Completed 3 Terminated
-     * @param State Task status 0 Not started 1 Running 2 Completed 3 Terminated
+     * Set Task status 0 not started 1 running 2 completed 3 terminated.
+     * @param State Task status 0 not started 1 running 2 completed 3 terminated.
      */
     public void setState(Long State) {
         this.State = State;
     }
 
     /**
-     * Get Total number of called parties 
-     * @return TotalCalleeCount Total number of called parties
+     * Get Total number of called parties. 
+     * @return TotalCalleeCount Total number of called parties.
      */
     public Long getTotalCalleeCount() {
         return this.TotalCalleeCount;
     }
 
     /**
-     * Set Total number of called parties
-     * @param TotalCalleeCount Total number of called parties
+     * Set Total number of called parties.
+     * @param TotalCalleeCount Total number of called parties.
      */
     public void setTotalCalleeCount(Long TotalCalleeCount) {
         this.TotalCalleeCount = TotalCalleeCount;
     }
 
     /**
-     * Get Number of called parties 
-     * @return CalledCalleeCount Number of called parties
+     * Get Number of calls made and received. 
+     * @return CalledCalleeCount Number of calls made and received.
      */
     public Long getCalledCalleeCount() {
         return this.CalledCalleeCount;
     }
 
     /**
-     * Set Number of called parties
-     * @param CalledCalleeCount Number of called parties
+     * Set Number of calls made and received.
+     * @param CalledCalleeCount Number of calls made and received.
      */
     public void setCalledCalleeCount(Long CalledCalleeCount) {
         this.CalledCalleeCount = CalledCalleeCount;

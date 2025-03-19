@@ -31,7 +31,7 @@ public class DescribeCertificateOperateLogsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number of requested logs. The default value is 20.
+    * Number of requested logs, 20 by default, with a maximum value of 1000. if it exceeds 1000, it will be treated as 1000.
     */
     @SerializedName("Limit")
     @Expose
@@ -68,16 +68,16 @@ public class DescribeCertificateOperateLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of requested logs. The default value is 20. 
-     * @return Limit Number of requested logs. The default value is 20.
+     * Get Number of requested logs, 20 by default, with a maximum value of 1000. if it exceeds 1000, it will be treated as 1000. 
+     * @return Limit Number of requested logs, 20 by default, with a maximum value of 1000. if it exceeds 1000, it will be treated as 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of requested logs. The default value is 20.
-     * @param Limit Number of requested logs. The default value is 20.
+     * Set Number of requested logs, 20 by default, with a maximum value of 1000. if it exceeds 1000, it will be treated as 1000.
+     * @param Limit Number of requested logs, 20 by default, with a maximum value of 1000. if it exceeds 1000, it will be treated as 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

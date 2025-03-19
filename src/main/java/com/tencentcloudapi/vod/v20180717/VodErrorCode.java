@@ -249,6 +249,9 @@ public enum VodErrorCode {
     // Incorrect parameter value: incorrect `ExpireTime` format.
      INVALIDPARAMETERVALUE_EXPIRETIME("InvalidParameterValue.ExpireTime"),
      
+    // Incorrect `expiretime`.
+     INVALIDPARAMETERVALUE_EXPIREDTIME("InvalidParameterValue.ExpiredTime"),
+     
     // Incorrect parameter value: the same face already exists.
      INVALIDPARAMETERVALUE_FACEDUPLICATE("InvalidParameterValue.FaceDuplicate"),
      
@@ -314,6 +317,9 @@ public enum VodErrorCode {
      
     // Invalid parameter: image watermarking template.
      INVALIDPARAMETERVALUE_IMAGETEMPLATE("InvalidParameterValue.ImageTemplate"),
+     
+    // Index parameter error.
+     INVALIDPARAMETERVALUE_INDEX("InvalidParameterValue.Index"),
      
     // Invalid `Interval` value
      INVALIDPARAMETERVALUE_INTERVAL("InvalidParameterValue.Interval"),
@@ -432,6 +438,15 @@ public enum VodErrorCode {
     // Incorrect parameter value: the value of the `ReviewWallSwitch` parameter is invalid.
      INVALIDPARAMETERVALUE_REVIEWWALLSWITCH("InvalidParameterValue.ReviewWallSwitch"),
      
+    // A playlist with the same id already exists.
+     INVALIDPARAMETERVALUE_ROUNDPLAYALREADYEXISTS("InvalidParameterValue.RoundPlayAlreadyExists"),
+     
+    // RoundPlayId parameter error.
+     INVALIDPARAMETERVALUE_ROUNDPLAYID("InvalidParameterValue.RoundPlayId"),
+     
+    // RoundPlaylist parameter length error.
+     INVALIDPARAMETERVALUE_ROUNDPLAYLIST("InvalidParameterValue.RoundPlaylist"),
+     
     // Incorrect parameter value: RowCount.
      INVALIDPARAMETERVALUE_ROWCOUNT("InvalidParameterValue.RowCount"),
      
@@ -495,7 +510,7 @@ public enum VodErrorCode {
     // Invalid stream ID.
      INVALIDPARAMETERVALUE_STREAMIDS("InvalidParameterValue.StreamIds"),
      
-    // Incorrect parameter value: subapplication ID
+    // Incorrect parameter value: application id.
      INVALIDPARAMETERVALUE_SUBAPPID("InvalidParameterValue.SubAppId"),
      
     // Incorrect parameter value: the value of the `SubtitleFormat` parameter is invalid.
@@ -599,6 +614,15 @@ public enum VodErrorCode {
      
     // Limit exceeded: the total number of new and old timestamps exceeds the limit.
      LIMITEXCEEDED_KEYFRAMEDESCCOUNTREACHMAX("LimitExceeded.KeyFrameDescCountReachMax"),
+     
+    // Playlist length too large.
+     LIMITEXCEEDED_PLAYLIST("LimitExceeded.PlayList"),
+     
+    // Exceeds broadcast playlist total limit.
+     LIMITEXCEEDED_ROUNDPLAYS("LimitExceeded.RoundPlays"),
+     
+    // Running broadcast playlists exceed maximum quantity.
+     LIMITEXCEEDED_RUNNINGROUNDPLAYS("LimitExceeded.RunningRoundPlays"),
      
     // Limit exceeded: the total number of new and old tags exceeds the limit.
      LIMITEXCEEDED_TAGCOUNTREACHMAX("LimitExceeded.TagCountReachMax"),

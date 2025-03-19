@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class UpdateCCCSkillGroupRequest extends AbstractModel {
 
     /**
-    * Application ID (required).
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Skill group ID.
+    * Skill group id.
     */
     @SerializedName("SkillGroupID")
     @Expose
@@ -45,7 +45,7 @@ public class UpdateCCCSkillGroupRequest extends AbstractModel {
     private String SkillGroupName;
 
     /**
-    * Modified maximum concurrency and the maximum synchronization is 2.
+    * Modified maximum concurrency, with the maximum synchronization being 2.
     */
     @SerializedName("MaxConcurrency")
     @Expose
@@ -59,32 +59,32 @@ public class UpdateCCCSkillGroupRequest extends AbstractModel {
     private Boolean RingAll;
 
     /**
-     * Get Application ID (required). 
-     * @return SdkAppId Application ID (required).
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required).
-     * @param SdkAppId Application ID (required).
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Skill group ID. 
-     * @return SkillGroupID Skill group ID.
+     * Get Skill group id. 
+     * @return SkillGroupID Skill group id.
      */
     public Long getSkillGroupID() {
         return this.SkillGroupID;
     }
 
     /**
-     * Set Skill group ID.
-     * @param SkillGroupID Skill group ID.
+     * Set Skill group id.
+     * @param SkillGroupID Skill group id.
      */
     public void setSkillGroupID(Long SkillGroupID) {
         this.SkillGroupID = SkillGroupID;
@@ -107,16 +107,16 @@ public class UpdateCCCSkillGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get Modified maximum concurrency and the maximum synchronization is 2. 
-     * @return MaxConcurrency Modified maximum concurrency and the maximum synchronization is 2.
+     * Get Modified maximum concurrency, with the maximum synchronization being 2. 
+     * @return MaxConcurrency Modified maximum concurrency, with the maximum synchronization being 2.
      */
     public Long getMaxConcurrency() {
         return this.MaxConcurrency;
     }
 
     /**
-     * Set Modified maximum concurrency and the maximum synchronization is 2.
-     * @param MaxConcurrency Modified maximum concurrency and the maximum synchronization is 2.
+     * Set Modified maximum concurrency, with the maximum synchronization being 2.
+     * @param MaxConcurrency Modified maximum concurrency, with the maximum synchronization being 2.
      */
     public void setMaxConcurrency(Long MaxConcurrency) {
         this.MaxConcurrency = MaxConcurrency;

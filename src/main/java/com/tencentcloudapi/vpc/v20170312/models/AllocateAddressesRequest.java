@@ -91,6 +91,13 @@ public class AllocateAddressesRequest extends AbstractModel {
     private String AnycastZone;
 
     /**
+    * 
+    */
+    @SerializedName("VipCluster")
+    @Expose
+    private String [] VipCluster;
+
+    /**
     * <b>**[Disused]**</b>
 Whether the Anycast EIP can be bound to CLB instances.
 <ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
@@ -120,6 +127,20 @@ Whether the Anycast EIP can be bound to CLB instances.
     @SerializedName("AddressName")
     @Expose
     private String AddressName;
+
+    /**
+    * 
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
+
+    /**
+    * 
+    */
+    @SerializedName("IsDedicatedAddressPool")
+    @Expose
+    private Boolean IsDedicatedAddressPool;
 
     /**
     * Network egress. It defaults to `center_egress1`.
@@ -327,6 +348,22 @@ Whether the Anycast EIP can be bound to CLB instances.
     }
 
     /**
+     * Get  
+     * @return VipCluster 
+     */
+    public String [] getVipCluster() {
+        return this.VipCluster;
+    }
+
+    /**
+     * Set 
+     * @param VipCluster 
+     */
+    public void setVipCluster(String [] VipCluster) {
+        this.VipCluster = VipCluster;
+    }
+
+    /**
      * Get <b>**[Disused]**</b>
 Whether the Anycast EIP can be bound to CLB instances.
 <ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
@@ -400,6 +437,38 @@ Whether the Anycast EIP can be bound to CLB instances.
      */
     public void setAddressName(String AddressName) {
         this.AddressName = AddressName;
+    }
+
+    /**
+     * Get  
+     * @return DedicatedClusterId 
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set 
+     * @param DedicatedClusterId 
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
+    /**
+     * Get  
+     * @return IsDedicatedAddressPool 
+     */
+    public Boolean getIsDedicatedAddressPool() {
+        return this.IsDedicatedAddressPool;
+    }
+
+    /**
+     * Set 
+     * @param IsDedicatedAddressPool 
+     */
+    public void setIsDedicatedAddressPool(Boolean IsDedicatedAddressPool) {
+        this.IsDedicatedAddressPool = IsDedicatedAddressPool;
     }
 
     /**
@@ -479,6 +548,12 @@ Whether the Anycast EIP can be bound to CLB instances.
         if (source.AnycastZone != null) {
             this.AnycastZone = new String(source.AnycastZone);
         }
+        if (source.VipCluster != null) {
+            this.VipCluster = new String[source.VipCluster.length];
+            for (int i = 0; i < source.VipCluster.length; i++) {
+                this.VipCluster[i] = new String(source.VipCluster[i]);
+            }
+        }
         if (source.ApplicableForCLB != null) {
             this.ApplicableForCLB = new Boolean(source.ApplicableForCLB);
         }
@@ -493,6 +568,12 @@ Whether the Anycast EIP can be bound to CLB instances.
         }
         if (source.AddressName != null) {
             this.AddressName = new String(source.AddressName);
+        }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
+        if (source.IsDedicatedAddressPool != null) {
+            this.IsDedicatedAddressPool = new Boolean(source.IsDedicatedAddressPool);
         }
         if (source.Egress != null) {
             this.Egress = new String(source.Egress);
@@ -517,10 +598,13 @@ Whether the Anycast EIP can be bound to CLB instances.
         this.setParamObj(map, prefix + "AddressChargePrepaid.", this.AddressChargePrepaid);
         this.setParamSimple(map, prefix + "AddressType", this.AddressType);
         this.setParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
+        this.setParamArraySimple(map, prefix + "VipCluster.", this.VipCluster);
         this.setParamSimple(map, prefix + "ApplicableForCLB", this.ApplicableForCLB);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         this.setParamSimple(map, prefix + "AddressName", this.AddressName);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+        this.setParamSimple(map, prefix + "IsDedicatedAddressPool", this.IsDedicatedAddressPool);
         this.setParamSimple(map, prefix + "Egress", this.Egress);
         this.setParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);

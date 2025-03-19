@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class ClearInstanceRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
+    * Instance access password.
+- Password-free access: No configuration is required.
+- Password authentication: The password is required. It cannot start with a forward slash (/) and should contain 8 to 64 characters, including at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
+     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Redis instance password (this parameter is required for password-enabled instances but not for password-free instances) 
-     * @return Password Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
+     * Get Instance access password.
+- Password-free access: No configuration is required.
+- Password authentication: The password is required. It cannot start with a forward slash (/) and should contain 8 to 64 characters, including at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/). 
+     * @return Password Instance access password.
+- Password-free access: No configuration is required.
+- Password authentication: The password is required. It cannot start with a forward slash (/) and should contain 8 to 64 characters, including at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
-     * @param Password Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
+     * Set Instance access password.
+- Password-free access: No configuration is required.
+- Password authentication: The password is required. It cannot start with a forward slash (/) and should contain 8 to 64 characters, including at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+     * @param Password Instance access password.
+- Password-free access: No configuration is required.
+- Password authentication: The password is required. It cannot start with a forward slash (/) and should contain 8 to 64 characters, including at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
      */
     public void setPassword(String Password) {
         this.Password = Password;

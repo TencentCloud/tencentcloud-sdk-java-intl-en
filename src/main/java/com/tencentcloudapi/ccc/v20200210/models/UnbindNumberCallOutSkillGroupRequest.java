@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UnbindNumberCallOutSkillGroupRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -38,23 +38,23 @@ public class UnbindNumberCallOutSkillGroupRequest extends AbstractModel {
     private String Number;
 
     /**
-    * List of skill group IDs to be unbound.
+    * List of skill group ids to be unbound.
     */
     @SerializedName("SkillGroupIds")
     @Expose
     private Long [] SkillGroupIds;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -77,16 +77,16 @@ public class UnbindNumberCallOutSkillGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get List of skill group IDs to be unbound. 
-     * @return SkillGroupIds List of skill group IDs to be unbound.
+     * Get List of skill group ids to be unbound. 
+     * @return SkillGroupIds List of skill group ids to be unbound.
      */
     public Long [] getSkillGroupIds() {
         return this.SkillGroupIds;
     }
 
     /**
-     * Set List of skill group IDs to be unbound.
-     * @param SkillGroupIds List of skill group IDs to be unbound.
+     * Set List of skill group ids to be unbound.
+     * @param SkillGroupIds List of skill group ids to be unbound.
      */
     public void setSkillGroupIds(Long [] SkillGroupIds) {
         this.SkillGroupIds = SkillGroupIds;

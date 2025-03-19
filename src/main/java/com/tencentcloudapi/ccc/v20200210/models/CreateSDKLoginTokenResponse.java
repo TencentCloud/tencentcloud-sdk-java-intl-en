@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateSDKLoginTokenResponse extends AbstractModel {
 
     /**
-    * SDK log-in Token.
+    * SDK log-in token.
     */
     @SerializedName("Token")
     @Expose
     private String Token;
 
     /**
-    * Expiry timestamp. Unix timestamp.
+    * Expiry timestamp. unix timestamp.
     */
     @SerializedName("ExpiredTime")
     @Expose
     private Long ExpiredTime;
 
     /**
-    * The path in which the SDK is loaded will change with its release.
+    * The path in which the sdk is loaded will change with its release.
     */
     @SerializedName("SdkURL")
     @Expose
@@ -52,48 +52,48 @@ public class CreateSDKLoginTokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get SDK log-in Token. 
-     * @return Token SDK log-in Token.
+     * Get SDK log-in token. 
+     * @return Token SDK log-in token.
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set SDK log-in Token.
-     * @param Token SDK log-in Token.
+     * Set SDK log-in token.
+     * @param Token SDK log-in token.
      */
     public void setToken(String Token) {
         this.Token = Token;
     }
 
     /**
-     * Get Expiry timestamp. Unix timestamp. 
-     * @return ExpiredTime Expiry timestamp. Unix timestamp.
+     * Get Expiry timestamp. unix timestamp. 
+     * @return ExpiredTime Expiry timestamp. unix timestamp.
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set Expiry timestamp. Unix timestamp.
-     * @param ExpiredTime Expiry timestamp. Unix timestamp.
+     * Set Expiry timestamp. unix timestamp.
+     * @param ExpiredTime Expiry timestamp. unix timestamp.
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get The path in which the SDK is loaded will change with its release. 
-     * @return SdkURL The path in which the SDK is loaded will change with its release.
+     * Get The path in which the sdk is loaded will change with its release. 
+     * @return SdkURL The path in which the sdk is loaded will change with its release.
      */
     public String getSdkURL() {
         return this.SdkURL;
     }
 
     /**
-     * Set The path in which the SDK is loaded will change with its release.
-     * @param SdkURL The path in which the SDK is loaded will change with its release.
+     * Set The path in which the sdk is loaded will change with its release.
+     * @param SdkURL The path in which the sdk is loaded will change with its release.
      */
     public void setSdkURL(String SdkURL) {
         this.SdkURL = SdkURL;

@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class RunMonitorServiceEnabled extends AbstractModel {
 
     /**
-    * Whether to enable the [Cloud Monitor](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) service. Value range: <br><li>TRUE: Cloud Monitor is enabled <br><li>FALSE: Cloud Monitor is disabled <br><br>Default value: TRUE. |
+    * Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
+<li>TRUE: enabled</li>
+<li>FALSE: disabled</li>
+Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Enabled")
@@ -32,9 +35,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean Enabled;
 
     /**
-     * Get Whether to enable the [Cloud Monitor](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) service. Value range: <br><li>TRUE: Cloud Monitor is enabled <br><li>FALSE: Cloud Monitor is disabled <br><br>Default value: TRUE. |
+     * Get Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
+<li>TRUE: enabled</li>
+<li>FALSE: disabled</li>
+Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Enabled Whether to enable the [Cloud Monitor](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) service. Value range: <br><li>TRUE: Cloud Monitor is enabled <br><li>FALSE: Cloud Monitor is disabled <br><br>Default value: TRUE. |
+     * @return Enabled Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
+<li>TRUE: enabled</li>
+<li>FALSE: disabled</li>
+Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getEnabled() {
@@ -42,9 +51,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable the [Cloud Monitor](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) service. Value range: <br><li>TRUE: Cloud Monitor is enabled <br><li>FALSE: Cloud Monitor is disabled <br><br>Default value: TRUE. |
+     * Set Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
+<li>TRUE: enabled</li>
+<li>FALSE: disabled</li>
+Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Enabled Whether to enable the [Cloud Monitor](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) service. Value range: <br><li>TRUE: Cloud Monitor is enabled <br><li>FALSE: Cloud Monitor is disabled <br><br>Default value: TRUE. |
+     * @param Enabled Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
+<li>TRUE: enabled</li>
+<li>FALSE: disabled</li>
+Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEnabled(Boolean Enabled) {

@@ -1315,6 +1315,28 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query task details for reports.
+     * @param req DescribeReportTaskDetailRequest
+     * @return DescribeReportTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReportTaskDetailResponse DescribeReportTaskDetail(DescribeReportTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReportTaskDetail", DescribeReportTaskDetailResponse.class);
+    }
+
+    /**
+     *This API is used to query the task submission list.
+     * @param req DescribeReportTaskListRequest
+     * @return DescribeReportTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReportTaskListResponse DescribeReportTaskList(DescribeReportTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReportTaskList", DescribeReportTaskListResponse.class);
+    }
+
+    /**
      *Retrieve resource management directory tree
      * @param req DescribeResourceManagePathTreesRequest
      * @return DescribeResourceManagePathTreesResponse

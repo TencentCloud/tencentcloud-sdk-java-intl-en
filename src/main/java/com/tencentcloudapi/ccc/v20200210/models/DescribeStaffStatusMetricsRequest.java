@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeStaffStatusMetricsRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Filter agent list. By default, do not pass all returned agent information.
+    * Filter agent list. by default, do not pass all returned agent information.
     */
     @SerializedName("StaffList")
     @Expose
     private String [] StaffList;
 
     /**
-    * Filter skill group ID list.
+    * Filter skill group id list.
     */
     @SerializedName("GroupIdList")
     @Expose
     private Long [] GroupIdList;
 
     /**
-    * Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+    * Filter agent status list agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline . 
     */
     @SerializedName("StatusList")
     @Expose
     private String [] StatusList;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Filter agent list. By default, do not pass all returned agent information. 
-     * @return StaffList Filter agent list. By default, do not pass all returned agent information.
+     * Get Filter agent list. by default, do not pass all returned agent information. 
+     * @return StaffList Filter agent list. by default, do not pass all returned agent information.
      */
     public String [] getStaffList() {
         return this.StaffList;
     }
 
     /**
-     * Set Filter agent list. By default, do not pass all returned agent information.
-     * @param StaffList Filter agent list. By default, do not pass all returned agent information.
+     * Set Filter agent list. by default, do not pass all returned agent information.
+     * @param StaffList Filter agent list. by default, do not pass all returned agent information.
      */
     public void setStaffList(String [] StaffList) {
         this.StaffList = StaffList;
     }
 
     /**
-     * Get Filter skill group ID list. 
-     * @return GroupIdList Filter skill group ID list.
+     * Get Filter skill group id list. 
+     * @return GroupIdList Filter skill group id list.
      */
     public Long [] getGroupIdList() {
         return this.GroupIdList;
     }
 
     /**
-     * Set Filter skill group ID list.
-     * @param GroupIdList Filter skill group ID list.
+     * Set Filter skill group id list.
+     * @param GroupIdList Filter skill group id list.
      */
     public void setGroupIdList(Long [] GroupIdList) {
         this.GroupIdList = GroupIdList;
     }
 
     /**
-     * Get Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline 
-     * @return StatusList Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+     * Get Filter agent status list agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline .  
+     * @return StatusList Filter agent status list agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline . 
      */
     public String [] getStatusList() {
         return this.StatusList;
     }
 
     /**
-     * Set Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
-     * @param StatusList Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+     * Set Filter agent status list agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline . 
+     * @param StatusList Filter agent status list agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline . 
      */
     public void setStatusList(String [] StatusList) {
         this.StatusList = StatusList;

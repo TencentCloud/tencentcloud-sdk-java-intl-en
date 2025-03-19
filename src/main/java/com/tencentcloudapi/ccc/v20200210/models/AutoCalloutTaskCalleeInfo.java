@@ -31,14 +31,14 @@ public class AutoCalloutTaskCalleeInfo extends AbstractModel {
     private String Callee;
 
     /**
-    * Call status 0 - Initial, 1 - Answered, 2 - Unanswered, 3 - Calling, 4 - Pending Retry.
+    * Call status 0 - initial, 1 - answered, 2 - unanswered, 3 - calling, 4 - pending retry.
     */
     @SerializedName("State")
     @Expose
     private Long State;
 
     /**
-    * List of session IDs.
+    * List of session ids.
     */
     @SerializedName("Sessions")
     @Expose
@@ -61,32 +61,32 @@ public class AutoCalloutTaskCalleeInfo extends AbstractModel {
     }
 
     /**
-     * Get Call status 0 - Initial, 1 - Answered, 2 - Unanswered, 3 - Calling, 4 - Pending Retry. 
-     * @return State Call status 0 - Initial, 1 - Answered, 2 - Unanswered, 3 - Calling, 4 - Pending Retry.
+     * Get Call status 0 - initial, 1 - answered, 2 - unanswered, 3 - calling, 4 - pending retry. 
+     * @return State Call status 0 - initial, 1 - answered, 2 - unanswered, 3 - calling, 4 - pending retry.
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set Call status 0 - Initial, 1 - Answered, 2 - Unanswered, 3 - Calling, 4 - Pending Retry.
-     * @param State Call status 0 - Initial, 1 - Answered, 2 - Unanswered, 3 - Calling, 4 - Pending Retry.
+     * Set Call status 0 - initial, 1 - answered, 2 - unanswered, 3 - calling, 4 - pending retry.
+     * @param State Call status 0 - initial, 1 - answered, 2 - unanswered, 3 - calling, 4 - pending retry.
      */
     public void setState(Long State) {
         this.State = State;
     }
 
     /**
-     * Get List of session IDs. 
-     * @return Sessions List of session IDs.
+     * Get List of session ids. 
+     * @return Sessions List of session ids.
      */
     public String [] getSessions() {
         return this.Sessions;
     }
 
     /**
-     * Set List of session IDs.
-     * @param Sessions List of session IDs.
+     * Set List of session ids.
+     * @param Sessions List of session ids.
      */
     public void setSessions(String [] Sessions) {
         this.Sessions = Sessions;

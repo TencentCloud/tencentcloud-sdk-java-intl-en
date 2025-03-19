@@ -39,14 +39,13 @@ public class SeatUserInfo extends AbstractModel {
 
     /**
     * Worker number.
-Note: This field may return null, indicating that no valid value could be obtained.
     */
     @SerializedName("StaffNumber")
     @Expose
     private String StaffNumber;
 
     /**
-    * Agent's Telephone Number (With 0086 Prefix)
+    * Agent'S telephone number (with 0086 prefix).
     */
     @SerializedName("Phone")
     @Expose
@@ -60,30 +59,35 @@ Note: This field may return null, indicating that no valid value could be obtain
     private String Nick;
 
     /**
-    * User ID
+    * User id.
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * List of skill groups associated with the seat
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of skill groups associated with the agent.
     */
     @SerializedName("SkillGroupNameList")
     @Expose
     private String [] SkillGroupNameList;
 
     /**
-    * 1: Admin.
-2: Quality inspector.
-3: Ordinary agent.
-else: Custom Role ID.
-Note: This field may return null, indicating that no valid value could be obtained.
+    * 1: admin.
+2: quality inspector.
+3: ordinary agent.
+Else: custom role id.
     */
     @SerializedName("Role")
     @Expose
     private Long Role;
+
+    /**
+    * Agent extension number (starting with 1 to 8, 4 - 6 digits).
+    */
+    @SerializedName("ExtensionNumber")
+    @Expose
+    private String ExtensionNumber;
 
     /**
      * Get Agent name. 
@@ -118,10 +122,8 @@ Note: This field may return null, indicating that no valid value could be obtain
     }
 
     /**
-     * Get Worker number.
-Note: This field may return null, indicating that no valid value could be obtained. 
+     * Get Worker number. 
      * @return StaffNumber Worker number.
-Note: This field may return null, indicating that no valid value could be obtained.
      */
     public String getStaffNumber() {
         return this.StaffNumber;
@@ -129,25 +131,23 @@ Note: This field may return null, indicating that no valid value could be obtain
 
     /**
      * Set Worker number.
-Note: This field may return null, indicating that no valid value could be obtained.
      * @param StaffNumber Worker number.
-Note: This field may return null, indicating that no valid value could be obtained.
      */
     public void setStaffNumber(String StaffNumber) {
         this.StaffNumber = StaffNumber;
     }
 
     /**
-     * Get Agent's Telephone Number (With 0086 Prefix) 
-     * @return Phone Agent's Telephone Number (With 0086 Prefix)
+     * Get Agent'S telephone number (with 0086 prefix). 
+     * @return Phone Agent'S telephone number (with 0086 prefix).
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set Agent's Telephone Number (With 0086 Prefix)
-     * @param Phone Agent's Telephone Number (With 0086 Prefix)
+     * Set Agent'S telephone number (with 0086 prefix).
+     * @param Phone Agent'S telephone number (with 0086 prefix).
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
@@ -170,71 +170,79 @@ Note: This field may return null, indicating that no valid value could be obtain
     }
 
     /**
-     * Get User ID 
-     * @return UserId User ID
+     * Get User id. 
+     * @return UserId User id.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set User ID
-     * @param UserId User ID
+     * Set User id.
+     * @param UserId User id.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get List of skill groups associated with the seat
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SkillGroupNameList List of skill groups associated with the seat
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of skill groups associated with the agent. 
+     * @return SkillGroupNameList List of skill groups associated with the agent.
      */
     public String [] getSkillGroupNameList() {
         return this.SkillGroupNameList;
     }
 
     /**
-     * Set List of skill groups associated with the seat
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SkillGroupNameList List of skill groups associated with the seat
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of skill groups associated with the agent.
+     * @param SkillGroupNameList List of skill groups associated with the agent.
      */
     public void setSkillGroupNameList(String [] SkillGroupNameList) {
         this.SkillGroupNameList = SkillGroupNameList;
     }
 
     /**
-     * Get 1: Admin.
-2: Quality inspector.
-3: Ordinary agent.
-else: Custom Role ID.
-Note: This field may return null, indicating that no valid value could be obtained. 
-     * @return Role 1: Admin.
-2: Quality inspector.
-3: Ordinary agent.
-else: Custom Role ID.
-Note: This field may return null, indicating that no valid value could be obtained.
+     * Get 1: admin.
+2: quality inspector.
+3: ordinary agent.
+Else: custom role id. 
+     * @return Role 1: admin.
+2: quality inspector.
+3: ordinary agent.
+Else: custom role id.
      */
     public Long getRole() {
         return this.Role;
     }
 
     /**
-     * Set 1: Admin.
-2: Quality inspector.
-3: Ordinary agent.
-else: Custom Role ID.
-Note: This field may return null, indicating that no valid value could be obtained.
-     * @param Role 1: Admin.
-2: Quality inspector.
-3: Ordinary agent.
-else: Custom Role ID.
-Note: This field may return null, indicating that no valid value could be obtained.
+     * Set 1: admin.
+2: quality inspector.
+3: ordinary agent.
+Else: custom role id.
+     * @param Role 1: admin.
+2: quality inspector.
+3: ordinary agent.
+Else: custom role id.
      */
     public void setRole(Long Role) {
         this.Role = Role;
+    }
+
+    /**
+     * Get Agent extension number (starting with 1 to 8, 4 - 6 digits). 
+     * @return ExtensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
+     */
+    public String getExtensionNumber() {
+        return this.ExtensionNumber;
+    }
+
+    /**
+     * Set Agent extension number (starting with 1 to 8, 4 - 6 digits).
+     * @param ExtensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
+     */
+    public void setExtensionNumber(String ExtensionNumber) {
+        this.ExtensionNumber = ExtensionNumber;
     }
 
     public SeatUserInfo() {
@@ -272,6 +280,9 @@ Note: This field may return null, indicating that no valid value could be obtain
         if (source.Role != null) {
             this.Role = new Long(source.Role);
         }
+        if (source.ExtensionNumber != null) {
+            this.ExtensionNumber = new String(source.ExtensionNumber);
+        }
     }
 
 
@@ -287,6 +298,7 @@ Note: This field may return null, indicating that no valid value could be obtain
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamArraySimple(map, prefix + "SkillGroupNameList.", this.SkillGroupNameList);
         this.setParamSimple(map, prefix + "Role", this.Role);
+        this.setParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
 
     }
 }

@@ -31,14 +31,14 @@ public class CalleeAttribute extends AbstractModel {
     private String Callee;
 
     /**
-    * Associate data.
+    * Accompanying data.
     */
     @SerializedName("UUI")
     @Expose
     private String UUI;
 
     /**
-    * Parameter
+    * Parameter.
     */
     @SerializedName("Variables")
     @Expose
@@ -61,32 +61,32 @@ public class CalleeAttribute extends AbstractModel {
     }
 
     /**
-     * Get Associate data. 
-     * @return UUI Associate data.
+     * Get Accompanying data. 
+     * @return UUI Accompanying data.
      */
     public String getUUI() {
         return this.UUI;
     }
 
     /**
-     * Set Associate data.
-     * @param UUI Associate data.
+     * Set Accompanying data.
+     * @param UUI Accompanying data.
      */
     public void setUUI(String UUI) {
         this.UUI = UUI;
     }
 
     /**
-     * Get Parameter 
-     * @return Variables Parameter
+     * Get Parameter. 
+     * @return Variables Parameter.
      */
     public Variable [] getVariables() {
         return this.Variables;
     }
 
     /**
-     * Set Parameter
-     * @param Variables Parameter
+     * Set Parameter.
+     * @param Variables Parameter.
      */
     public void setVariables(Variable [] Variables) {
         this.Variables = Variables;

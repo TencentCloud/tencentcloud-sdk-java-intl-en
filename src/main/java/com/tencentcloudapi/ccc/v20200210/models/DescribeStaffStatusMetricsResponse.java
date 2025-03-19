@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeStaffStatusMetricsResponse extends AbstractModel {
 
     /**
-    * Real-time information on agent status.
+    * Real-Time information on agent status.
     */
     @SerializedName("Metrics")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeStaffStatusMetricsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Real-time information on agent status. 
-     * @return Metrics Real-time information on agent status.
+     * Get Real-Time information on agent status. 
+     * @return Metrics Real-Time information on agent status.
      */
     public StaffStatusMetrics [] getMetrics() {
         return this.Metrics;
     }
 
     /**
-     * Set Real-time information on agent status.
-     * @param Metrics Real-time information on agent status.
+     * Set Real-Time information on agent status.
+     * @param Metrics Real-Time information on agent status.
      */
     public void setMetrics(StaffStatusMetrics [] Metrics) {
         this.Metrics = Metrics;

@@ -450,7 +450,7 @@ public enum TkeErrorCode {
     // The iage OS is not supported.
      INVALIDPARAMETER_OSNOTSUPPORT("InvalidParameter.OsNotSupport"),
      
-    // Invalid parameter.
+    // Parameter error.
      INVALIDPARAMETER_PARAM("InvalidParameter.Param"),
      
     // The PROM instance does not exist.
@@ -516,7 +516,7 @@ public enum TkeErrorCode {
     // Abnormal cluster status.
      RESOURCEUNAVAILABLE_CLUSTERINABNORMALSTAT("ResourceUnavailable.ClusterInAbnormalStat"),
      
-    // The cluster’s status does support this operation.
+    // The cluster status does not support this operation.
      RESOURCEUNAVAILABLE_CLUSTERSTATE("ResourceUnavailable.ClusterState"),
      
     // The node pool is in an abnormal status.

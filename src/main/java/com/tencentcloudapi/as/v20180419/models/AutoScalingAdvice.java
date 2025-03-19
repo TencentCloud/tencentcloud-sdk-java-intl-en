@@ -31,10 +31,10 @@ public class AutoScalingAdvice extends AbstractModel {
     private String AutoScalingGroupId;
 
     /**
-    * Scaling group warning level. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>WARNING: Warning<br>
-<li>CRITICAL: Serious warning<br>
+    * Scaling group warning level. Valid values:
+<li>NORMAL: normal.</li>
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
     */
     @SerializedName("Level")
     @Expose
@@ -64,28 +64,28 @@ public class AutoScalingAdvice extends AbstractModel {
     }
 
     /**
-     * Get Scaling group warning level. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>WARNING: Warning<br>
-<li>CRITICAL: Serious warning<br> 
-     * @return Level Scaling group warning level. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>WARNING: Warning<br>
-<li>CRITICAL: Serious warning<br>
+     * Get Scaling group warning level. Valid values:
+<li>NORMAL: normal.</li>
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li> 
+     * @return Level Scaling group warning level. Valid values:
+<li>NORMAL: normal.</li>
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Scaling group warning level. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>WARNING: Warning<br>
-<li>CRITICAL: Serious warning<br>
-     * @param Level Scaling group warning level. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>WARNING: Warning<br>
-<li>CRITICAL: Serious warning<br>
+     * Set Scaling group warning level. Valid values:
+<li>NORMAL: normal.</li>
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
+     * @param Level Scaling group warning level. Valid values:
+<li>NORMAL: normal.</li>
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
      */
     public void setLevel(String Level) {
         this.Level = Level;

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyInstanceAccountRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Sub-account name. If the root account is to be modified, enter `root`.
+    * Sub-account name. If you want to change it to the root account, fill in root.
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * Sub-account password
+    * Sub-account password.
     */
     @SerializedName("AccountPassword")
     @Expose
@@ -52,69 +52,76 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
     private String Remark;
 
     /**
-    * Routing policy. Valid values: master (master node); replication (replica node)
+    * Account read/write routing policy.
+- master: primary node.
+- replication: secondary node.
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
     private String [] ReadonlyPolicy;
 
     /**
-    * Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
+    * Sub-account read/write policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
     */
     @SerializedName("Privilege")
     @Expose
     private String Privilege;
 
     /**
-    * true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
+    * Whether to switch the root account to a password-free account. This applies only to the root account. Sub-accounts do not support password-free access.
+- true: Switch the root account to a password-free account.
+- false: Do not switch it.
     */
     @SerializedName("NoAuth")
     @Expose
     private Boolean NoAuth;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
+     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Sub-account name. If the root account is to be modified, enter `root`. 
-     * @return AccountName Sub-account name. If the root account is to be modified, enter `root`.
+     * Get Sub-account name. If you want to change it to the root account, fill in root. 
+     * @return AccountName Sub-account name. If you want to change it to the root account, fill in root.
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set Sub-account name. If the root account is to be modified, enter `root`.
-     * @param AccountName Sub-account name. If the root account is to be modified, enter `root`.
+     * Set Sub-account name. If you want to change it to the root account, fill in root.
+     * @param AccountName Sub-account name. If you want to change it to the root account, fill in root.
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get Sub-account password 
-     * @return AccountPassword Sub-account password
+     * Get Sub-account password. 
+     * @return AccountPassword Sub-account password.
      */
     public String getAccountPassword() {
         return this.AccountPassword;
     }
 
     /**
-     * Set Sub-account password
-     * @param AccountPassword Sub-account password
+     * Set Sub-account password.
+     * @param AccountPassword Sub-account password.
      */
     public void setAccountPassword(String AccountPassword) {
         this.AccountPassword = AccountPassword;
@@ -137,48 +144,76 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get Routing policy. Valid values: master (master node); replication (replica node) 
-     * @return ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
+     * Get Account read/write routing policy.
+- master: primary node.
+- replication: secondary node. 
+     * @return ReadonlyPolicy Account read/write routing policy.
+- master: primary node.
+- replication: secondary node.
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set Routing policy. Valid values: master (master node); replication (replica node)
-     * @param ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
+     * Set Account read/write routing policy.
+- master: primary node.
+- replication: secondary node.
+     * @param ReadonlyPolicy Account read/write routing policy.
+- master: primary node.
+- replication: secondary node.
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;
     }
 
     /**
-     * Get Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write). 
-     * @return Privilege Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
+     * Get Sub-account read/write policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write. 
+     * @return Privilege Sub-account read/write policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
-     * @param Privilege Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
+     * Set Sub-account read/write policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
+     * @param Privilege Sub-account read/write policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
     }
 
     /**
-     * Get true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free. 
-     * @return NoAuth true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
+     * Get Whether to switch the root account to a password-free account. This applies only to the root account. Sub-accounts do not support password-free access.
+- true: Switch the root account to a password-free account.
+- false: Do not switch it. 
+     * @return NoAuth Whether to switch the root account to a password-free account. This applies only to the root account. Sub-accounts do not support password-free access.
+- true: Switch the root account to a password-free account.
+- false: Do not switch it.
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
-     * @param NoAuth true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
+     * Set Whether to switch the root account to a password-free account. This applies only to the root account. Sub-accounts do not support password-free access.
+- true: Switch the root account to a password-free account.
+- false: Do not switch it.
+     * @param NoAuth Whether to switch the root account to a password-free account. This applies only to the root account. Sub-accounts do not support password-free access.
+- true: Switch the root account to a password-free account.
+- false: Do not switch it.
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;

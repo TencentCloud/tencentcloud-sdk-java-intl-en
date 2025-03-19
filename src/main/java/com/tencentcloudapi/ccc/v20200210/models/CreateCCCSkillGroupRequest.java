@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCCCSkillGroupRequest extends AbstractModel {
 
     /**
-    * Application ID (required).
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -38,31 +38,31 @@ public class CreateCCCSkillGroupRequest extends AbstractModel {
     private String SkillGroupName;
 
     /**
-    * Skill group type 0-Cell phone, 1-Online, 3-Audio, 4-Video.
+    * Skill group type 0-cell phone, 1-online, 3-audio, 4-video.
     */
     @SerializedName("SkillGroupType")
     @Expose
     private Long SkillGroupType;
 
     /**
-    * The maximum number of people received by the skill group (the maximum number of people that one seat in this skill group can receive) is set to 1 by default. 1. If the skill group type is online, the maximum could be set to one and above.
-2. If the skill group type is phone, audio, or video, then the maximum must be 1
+    * The maximum number of people received by the skill group (the maximum number of people that one agent in this skill group can receive) is set to 1 by default. if the skill group type is online, the maximum can be set to one or more.
+2. if the skill group type is phone, audio, or video, then the reception limit must be 1.
     */
     @SerializedName("MaxConcurrency")
     @Expose
     private Long MaxConcurrency;
 
     /**
-     * Get Application ID (required). 
-     * @return SdkAppId Application ID (required).
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required).
-     * @param SdkAppId Application ID (required).
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -85,36 +85,36 @@ public class CreateCCCSkillGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get Skill group type 0-Cell phone, 1-Online, 3-Audio, 4-Video. 
-     * @return SkillGroupType Skill group type 0-Cell phone, 1-Online, 3-Audio, 4-Video.
+     * Get Skill group type 0-cell phone, 1-online, 3-audio, 4-video. 
+     * @return SkillGroupType Skill group type 0-cell phone, 1-online, 3-audio, 4-video.
      */
     public Long getSkillGroupType() {
         return this.SkillGroupType;
     }
 
     /**
-     * Set Skill group type 0-Cell phone, 1-Online, 3-Audio, 4-Video.
-     * @param SkillGroupType Skill group type 0-Cell phone, 1-Online, 3-Audio, 4-Video.
+     * Set Skill group type 0-cell phone, 1-online, 3-audio, 4-video.
+     * @param SkillGroupType Skill group type 0-cell phone, 1-online, 3-audio, 4-video.
      */
     public void setSkillGroupType(Long SkillGroupType) {
         this.SkillGroupType = SkillGroupType;
     }
 
     /**
-     * Get The maximum number of people received by the skill group (the maximum number of people that one seat in this skill group can receive) is set to 1 by default. 1. If the skill group type is online, the maximum could be set to one and above.
-2. If the skill group type is phone, audio, or video, then the maximum must be 1 
-     * @return MaxConcurrency The maximum number of people received by the skill group (the maximum number of people that one seat in this skill group can receive) is set to 1 by default. 1. If the skill group type is online, the maximum could be set to one and above.
-2. If the skill group type is phone, audio, or video, then the maximum must be 1
+     * Get The maximum number of people received by the skill group (the maximum number of people that one agent in this skill group can receive) is set to 1 by default. if the skill group type is online, the maximum can be set to one or more.
+2. if the skill group type is phone, audio, or video, then the reception limit must be 1. 
+     * @return MaxConcurrency The maximum number of people received by the skill group (the maximum number of people that one agent in this skill group can receive) is set to 1 by default. if the skill group type is online, the maximum can be set to one or more.
+2. if the skill group type is phone, audio, or video, then the reception limit must be 1.
      */
     public Long getMaxConcurrency() {
         return this.MaxConcurrency;
     }
 
     /**
-     * Set The maximum number of people received by the skill group (the maximum number of people that one seat in this skill group can receive) is set to 1 by default. 1. If the skill group type is online, the maximum could be set to one and above.
-2. If the skill group type is phone, audio, or video, then the maximum must be 1
-     * @param MaxConcurrency The maximum number of people received by the skill group (the maximum number of people that one seat in this skill group can receive) is set to 1 by default. 1. If the skill group type is online, the maximum could be set to one and above.
-2. If the skill group type is phone, audio, or video, then the maximum must be 1
+     * Set The maximum number of people received by the skill group (the maximum number of people that one agent in this skill group can receive) is set to 1 by default. if the skill group type is online, the maximum can be set to one or more.
+2. if the skill group type is phone, audio, or video, then the reception limit must be 1.
+     * @param MaxConcurrency The maximum number of people received by the skill group (the maximum number of people that one agent in this skill group can receive) is set to 1 by default. if the skill group type is online, the maximum can be set to one or more.
+2. if the skill group type is phone, audio, or video, then the reception limit must be 1.
      */
     public void setMaxConcurrency(Long MaxConcurrency) {
         this.MaxConcurrency = MaxConcurrency;

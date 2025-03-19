@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribePrivateZoneListRequest extends AbstractModel {
 
     /**
-    * Pagination offset, starting from 0
+    * Pagination offset, starting from 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of entries per page. Maximum value: 100. Default value: 20
+    * Pagination limit. Maximum value: 100. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Filter parameter
+    * Filter parameters.
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get Pagination offset, starting from 0 
-     * @return Offset Pagination offset, starting from 0
+     * Get Pagination offset, starting from 0. 
+     * @return Offset Pagination offset, starting from 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset, starting from 0
-     * @param Offset Pagination offset, starting from 0
+     * Set Pagination offset, starting from 0.
+     * @param Offset Pagination offset, starting from 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of entries per page. Maximum value: 100. Default value: 20 
-     * @return Limit Number of entries per page. Maximum value: 100. Default value: 20
+     * Get Pagination limit. Maximum value: 100. Default value: 20. 
+     * @return Limit Pagination limit. Maximum value: 100. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries per page. Maximum value: 100. Default value: 20
-     * @param Limit Number of entries per page. Maximum value: 100. Default value: 20
+     * Set Pagination limit. Maximum value: 100. Default value: 20.
+     * @param Limit Pagination limit. Maximum value: 100. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Filter parameter 
-     * @return Filters Filter parameter
+     * Get Filter parameters. 
+     * @return Filters Filter parameters.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter parameter
-     * @param Filters Filter parameter
+     * Set Filter parameters.
+     * @param Filters Filter parameters.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

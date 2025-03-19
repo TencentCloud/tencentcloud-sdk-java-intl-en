@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class UpdateCertificateInstanceRequest extends AbstractModel {
 
     /**
-    * One-click update old certificate ID
+    * The old certificate id for one-click update. by querying the cloud resources bound to this certificate id, and then updating these cloud resources with the new certificate.
     */
     @SerializedName("OldCertificateId")
     @Expose
     private String OldCertificateId;
 
     /**
-    * Type of the resource that needs to be deployed. The following parameter values are optional: clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, and tcb.
+    * Resource types that need to be deployed, with optional parameter values (lowercase): clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, tcb, tse, cos.
     */
     @SerializedName("ResourceTypes")
     @Expose
     private String [] ResourceTypes;
 
     /**
-    * One-click update new certificate ID
+    * New certificate id for one-click update. if this parameter is not provided, the public key certificate and private key certificate must be provided.
     */
     @SerializedName("CertificateId")
     @Expose
@@ -52,104 +52,104 @@ public class UpdateCertificateInstanceRequest extends AbstractModel {
     private String [] Regions;
 
     /**
-    * List of regions for which cloud resources need to be deployed
+    * List of regions where cloud resources need to be deployed. the cloud resource type of the supported region must be passed. valid values: clb, tke, apigateway, waf, tcb, tse, cos.
     */
     @SerializedName("ResourceTypesRegions")
     @Expose
     private ResourceTypeRegions [] ResourceTypesRegions;
 
     /**
-    * Public key of the certificate. If the public key of the certificate is uploaded, CertificateId does not need to be uploaded.
+    * If a public key certificate is uploaded, the private key certificate must also be uploaded, and the CertificateId does not need to be transmitted.
     */
     @SerializedName("CertificatePublicKey")
     @Expose
     private String CertificatePublicKey;
 
     /**
-    * Private key of the certificate. If the public key of the certificate is uploaded, the private key of the certificate is required.
+    * If a private key certificate is uploaded, then a public key certificate must be uploaded; CertificateId is not required.
     */
     @SerializedName("CertificatePrivateKey")
     @Expose
     private String CertificatePrivateKey;
 
     /**
-    * Whether an expiration reminder is ignored for the old certificate. 0: The notification is not ignored. 1: The notification is ignored.
+    * Whether to ignore expiration reminder for old certificate  0: do not ignore the notification. 1: ignore the notification, ignore the expiration reminder of OldCertificateId.
     */
     @SerializedName("ExpiringNotificationSwitch")
     @Expose
     private Long ExpiringNotificationSwitch;
 
     /**
-    * Whether repeated uploading of the same certificate is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
+    * It specifies whether the same certificate is allowed to be uploaded repeatedly. If the public key and private key certificates are selected for upload, this parameter can be configured. If there are duplicate certificates, the update task will fail.
     */
     @SerializedName("Repeatable")
     @Expose
     private Boolean Repeatable;
 
     /**
-    * Whether downloading is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
+    * Whether to allow downloading. If you choose to upload a public/private key certificate, this parameter can be configured.
     */
     @SerializedName("AllowDownload")
     @Expose
     private Boolean AllowDownload;
 
     /**
-    * Tag list. If the public key of the certificate is uploaded, this parameter can be configured.
+    * Tag list. If you choose to upload a public/private key certificate, you can configure this parameter.
     */
     @SerializedName("Tags")
     @Expose
     private Tags [] Tags;
 
     /**
-    * Project ID. If the public key of the certificate is uploaded, this parameter can be configured.
+    * Project id. If you choose to upload a public/private key certificate, you can configure this parameter.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-     * Get One-click update old certificate ID 
-     * @return OldCertificateId One-click update old certificate ID
+     * Get The old certificate id for one-click update. by querying the cloud resources bound to this certificate id, and then updating these cloud resources with the new certificate. 
+     * @return OldCertificateId The old certificate id for one-click update. by querying the cloud resources bound to this certificate id, and then updating these cloud resources with the new certificate.
      */
     public String getOldCertificateId() {
         return this.OldCertificateId;
     }
 
     /**
-     * Set One-click update old certificate ID
-     * @param OldCertificateId One-click update old certificate ID
+     * Set The old certificate id for one-click update. by querying the cloud resources bound to this certificate id, and then updating these cloud resources with the new certificate.
+     * @param OldCertificateId The old certificate id for one-click update. by querying the cloud resources bound to this certificate id, and then updating these cloud resources with the new certificate.
      */
     public void setOldCertificateId(String OldCertificateId) {
         this.OldCertificateId = OldCertificateId;
     }
 
     /**
-     * Get Type of the resource that needs to be deployed. The following parameter values are optional: clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, and tcb. 
-     * @return ResourceTypes Type of the resource that needs to be deployed. The following parameter values are optional: clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, and tcb.
+     * Get Resource types that need to be deployed, with optional parameter values (lowercase): clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, tcb, tse, cos. 
+     * @return ResourceTypes Resource types that need to be deployed, with optional parameter values (lowercase): clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, tcb, tse, cos.
      */
     public String [] getResourceTypes() {
         return this.ResourceTypes;
     }
 
     /**
-     * Set Type of the resource that needs to be deployed. The following parameter values are optional: clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, and tcb.
-     * @param ResourceTypes Type of the resource that needs to be deployed. The following parameter values are optional: clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, and tcb.
+     * Set Resource types that need to be deployed, with optional parameter values (lowercase): clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, tcb, tse, cos.
+     * @param ResourceTypes Resource types that need to be deployed, with optional parameter values (lowercase): clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, tcb, tse, cos.
      */
     public void setResourceTypes(String [] ResourceTypes) {
         this.ResourceTypes = ResourceTypes;
     }
 
     /**
-     * Get One-click update new certificate ID 
-     * @return CertificateId One-click update new certificate ID
+     * Get New certificate id for one-click update. if this parameter is not provided, the public key certificate and private key certificate must be provided. 
+     * @return CertificateId New certificate id for one-click update. if this parameter is not provided, the public key certificate and private key certificate must be provided.
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set One-click update new certificate ID
-     * @param CertificateId One-click update new certificate ID
+     * Set New certificate id for one-click update. if this parameter is not provided, the public key certificate and private key certificate must be provided.
+     * @param CertificateId New certificate id for one-click update. if this parameter is not provided, the public key certificate and private key certificate must be provided.
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
@@ -176,128 +176,128 @@ public class UpdateCertificateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get List of regions for which cloud resources need to be deployed 
-     * @return ResourceTypesRegions List of regions for which cloud resources need to be deployed
+     * Get List of regions where cloud resources need to be deployed. the cloud resource type of the supported region must be passed. valid values: clb, tke, apigateway, waf, tcb, tse, cos. 
+     * @return ResourceTypesRegions List of regions where cloud resources need to be deployed. the cloud resource type of the supported region must be passed. valid values: clb, tke, apigateway, waf, tcb, tse, cos.
      */
     public ResourceTypeRegions [] getResourceTypesRegions() {
         return this.ResourceTypesRegions;
     }
 
     /**
-     * Set List of regions for which cloud resources need to be deployed
-     * @param ResourceTypesRegions List of regions for which cloud resources need to be deployed
+     * Set List of regions where cloud resources need to be deployed. the cloud resource type of the supported region must be passed. valid values: clb, tke, apigateway, waf, tcb, tse, cos.
+     * @param ResourceTypesRegions List of regions where cloud resources need to be deployed. the cloud resource type of the supported region must be passed. valid values: clb, tke, apigateway, waf, tcb, tse, cos.
      */
     public void setResourceTypesRegions(ResourceTypeRegions [] ResourceTypesRegions) {
         this.ResourceTypesRegions = ResourceTypesRegions;
     }
 
     /**
-     * Get Public key of the certificate. If the public key of the certificate is uploaded, CertificateId does not need to be uploaded. 
-     * @return CertificatePublicKey Public key of the certificate. If the public key of the certificate is uploaded, CertificateId does not need to be uploaded.
+     * Get If a public key certificate is uploaded, the private key certificate must also be uploaded, and the CertificateId does not need to be transmitted. 
+     * @return CertificatePublicKey If a public key certificate is uploaded, the private key certificate must also be uploaded, and the CertificateId does not need to be transmitted.
      */
     public String getCertificatePublicKey() {
         return this.CertificatePublicKey;
     }
 
     /**
-     * Set Public key of the certificate. If the public key of the certificate is uploaded, CertificateId does not need to be uploaded.
-     * @param CertificatePublicKey Public key of the certificate. If the public key of the certificate is uploaded, CertificateId does not need to be uploaded.
+     * Set If a public key certificate is uploaded, the private key certificate must also be uploaded, and the CertificateId does not need to be transmitted.
+     * @param CertificatePublicKey If a public key certificate is uploaded, the private key certificate must also be uploaded, and the CertificateId does not need to be transmitted.
      */
     public void setCertificatePublicKey(String CertificatePublicKey) {
         this.CertificatePublicKey = CertificatePublicKey;
     }
 
     /**
-     * Get Private key of the certificate. If the public key of the certificate is uploaded, the private key of the certificate is required. 
-     * @return CertificatePrivateKey Private key of the certificate. If the public key of the certificate is uploaded, the private key of the certificate is required.
+     * Get If a private key certificate is uploaded, then a public key certificate must be uploaded; CertificateId is not required. 
+     * @return CertificatePrivateKey If a private key certificate is uploaded, then a public key certificate must be uploaded; CertificateId is not required.
      */
     public String getCertificatePrivateKey() {
         return this.CertificatePrivateKey;
     }
 
     /**
-     * Set Private key of the certificate. If the public key of the certificate is uploaded, the private key of the certificate is required.
-     * @param CertificatePrivateKey Private key of the certificate. If the public key of the certificate is uploaded, the private key of the certificate is required.
+     * Set If a private key certificate is uploaded, then a public key certificate must be uploaded; CertificateId is not required.
+     * @param CertificatePrivateKey If a private key certificate is uploaded, then a public key certificate must be uploaded; CertificateId is not required.
      */
     public void setCertificatePrivateKey(String CertificatePrivateKey) {
         this.CertificatePrivateKey = CertificatePrivateKey;
     }
 
     /**
-     * Get Whether an expiration reminder is ignored for the old certificate. 0: The notification is not ignored. 1: The notification is ignored. 
-     * @return ExpiringNotificationSwitch Whether an expiration reminder is ignored for the old certificate. 0: The notification is not ignored. 1: The notification is ignored.
+     * Get Whether to ignore expiration reminder for old certificate  0: do not ignore the notification. 1: ignore the notification, ignore the expiration reminder of OldCertificateId. 
+     * @return ExpiringNotificationSwitch Whether to ignore expiration reminder for old certificate  0: do not ignore the notification. 1: ignore the notification, ignore the expiration reminder of OldCertificateId.
      */
     public Long getExpiringNotificationSwitch() {
         return this.ExpiringNotificationSwitch;
     }
 
     /**
-     * Set Whether an expiration reminder is ignored for the old certificate. 0: The notification is not ignored. 1: The notification is ignored.
-     * @param ExpiringNotificationSwitch Whether an expiration reminder is ignored for the old certificate. 0: The notification is not ignored. 1: The notification is ignored.
+     * Set Whether to ignore expiration reminder for old certificate  0: do not ignore the notification. 1: ignore the notification, ignore the expiration reminder of OldCertificateId.
+     * @param ExpiringNotificationSwitch Whether to ignore expiration reminder for old certificate  0: do not ignore the notification. 1: ignore the notification, ignore the expiration reminder of OldCertificateId.
      */
     public void setExpiringNotificationSwitch(Long ExpiringNotificationSwitch) {
         this.ExpiringNotificationSwitch = ExpiringNotificationSwitch;
     }
 
     /**
-     * Get Whether repeated uploading of the same certificate is allowed. If the public key of the certificate is uploaded, this parameter can be configured. 
-     * @return Repeatable Whether repeated uploading of the same certificate is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
+     * Get It specifies whether the same certificate is allowed to be uploaded repeatedly. If the public key and private key certificates are selected for upload, this parameter can be configured. If there are duplicate certificates, the update task will fail. 
+     * @return Repeatable It specifies whether the same certificate is allowed to be uploaded repeatedly. If the public key and private key certificates are selected for upload, this parameter can be configured. If there are duplicate certificates, the update task will fail.
      */
     public Boolean getRepeatable() {
         return this.Repeatable;
     }
 
     /**
-     * Set Whether repeated uploading of the same certificate is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
-     * @param Repeatable Whether repeated uploading of the same certificate is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
+     * Set It specifies whether the same certificate is allowed to be uploaded repeatedly. If the public key and private key certificates are selected for upload, this parameter can be configured. If there are duplicate certificates, the update task will fail.
+     * @param Repeatable It specifies whether the same certificate is allowed to be uploaded repeatedly. If the public key and private key certificates are selected for upload, this parameter can be configured. If there are duplicate certificates, the update task will fail.
      */
     public void setRepeatable(Boolean Repeatable) {
         this.Repeatable = Repeatable;
     }
 
     /**
-     * Get Whether downloading is allowed. If the public key of the certificate is uploaded, this parameter can be configured. 
-     * @return AllowDownload Whether downloading is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
+     * Get Whether to allow downloading. If you choose to upload a public/private key certificate, this parameter can be configured. 
+     * @return AllowDownload Whether to allow downloading. If you choose to upload a public/private key certificate, this parameter can be configured.
      */
     public Boolean getAllowDownload() {
         return this.AllowDownload;
     }
 
     /**
-     * Set Whether downloading is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
-     * @param AllowDownload Whether downloading is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
+     * Set Whether to allow downloading. If you choose to upload a public/private key certificate, this parameter can be configured.
+     * @param AllowDownload Whether to allow downloading. If you choose to upload a public/private key certificate, this parameter can be configured.
      */
     public void setAllowDownload(Boolean AllowDownload) {
         this.AllowDownload = AllowDownload;
     }
 
     /**
-     * Get Tag list. If the public key of the certificate is uploaded, this parameter can be configured. 
-     * @return Tags Tag list. If the public key of the certificate is uploaded, this parameter can be configured.
+     * Get Tag list. If you choose to upload a public/private key certificate, you can configure this parameter. 
+     * @return Tags Tag list. If you choose to upload a public/private key certificate, you can configure this parameter.
      */
     public Tags [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag list. If the public key of the certificate is uploaded, this parameter can be configured.
-     * @param Tags Tag list. If the public key of the certificate is uploaded, this parameter can be configured.
+     * Set Tag list. If you choose to upload a public/private key certificate, you can configure this parameter.
+     * @param Tags Tag list. If you choose to upload a public/private key certificate, you can configure this parameter.
      */
     public void setTags(Tags [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Project ID. If the public key of the certificate is uploaded, this parameter can be configured. 
-     * @return ProjectId Project ID. If the public key of the certificate is uploaded, this parameter can be configured.
+     * Get Project id. If you choose to upload a public/private key certificate, you can configure this parameter. 
+     * @return ProjectId Project id. If you choose to upload a public/private key certificate, you can configure this parameter.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID. If the public key of the certificate is uploaded, this parameter can be configured.
-     * @param ProjectId Project ID. If the public key of the certificate is uploaded, this parameter can be configured.
+     * Set Project id. If you choose to upload a public/private key certificate, you can configure this parameter.
+     * @param ProjectId Project id. If you choose to upload a public/private key certificate, you can configure this parameter.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

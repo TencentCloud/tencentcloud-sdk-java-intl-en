@@ -32,6 +32,9 @@ MYS: Malaysia
 SGP: Singapore
 JPN: Japan
 TWN:Taiwan
+BGD:Bangladesh 
+NGA:Nigeria
+PAK:Pakistan
 AUTO: Automatic Identification
     */
     @SerializedName("Nationality")
@@ -91,6 +94,9 @@ MYS: Malaysia
 SGP: Singapore
 JPN: Japan
 TWN:Taiwan
+BGD:Bangladesh 
+NGA:Nigeria
+PAK:Pakistan
 AUTO: Automatic Identification 
      * @return Nationality Please select the country code of ID document.
 IDN: Indonesia
@@ -100,6 +106,9 @@ MYS: Malaysia
 SGP: Singapore
 JPN: Japan
 TWN:Taiwan
+BGD:Bangladesh 
+NGA:Nigeria
+PAK:Pakistan
 AUTO: Automatic Identification
      */
     public String getNationality() {
@@ -115,6 +124,9 @@ MYS: Malaysia
 SGP: Singapore
 JPN: Japan
 TWN:Taiwan
+BGD:Bangladesh 
+NGA:Nigeria
+PAK:Pakistan
 AUTO: Automatic Identification
      * @param Nationality Please select the country code of ID document.
 IDN: Indonesia
@@ -124,6 +136,9 @@ MYS: Malaysia
 SGP: Singapore
 JPN: Japan
 TWN:Taiwan
+BGD:Bangladesh 
+NGA:Nigeria
+PAK:Pakistan
 AUTO: Automatic Identification
      */
     public void setNationality(String Nationality) {

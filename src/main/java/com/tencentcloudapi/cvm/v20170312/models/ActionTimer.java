@@ -48,6 +48,32 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Externals Externals;
 
     /**
+    * Timer ID.
+    */
+    @SerializedName("ActionTimerId")
+    @Expose
+    private String ActionTimerId;
+
+    /**
+    * Timer status. Valid values:
+
+UNDO: Not triggered.
+DOING: Triggering.
+DONE: Triggered already.
+
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * Instance ID corresponding to a timer.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get Timer action. Valid value: `TerminateInstances`.
 Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return TimerAction Timer action. Valid value: `TerminateInstances`.
@@ -107,6 +133,74 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.Externals = Externals;
     }
 
+    /**
+     * Get Timer ID. 
+     * @return ActionTimerId Timer ID.
+     */
+    public String getActionTimerId() {
+        return this.ActionTimerId;
+    }
+
+    /**
+     * Set Timer ID.
+     * @param ActionTimerId Timer ID.
+     */
+    public void setActionTimerId(String ActionTimerId) {
+        this.ActionTimerId = ActionTimerId;
+    }
+
+    /**
+     * Get Timer status. Valid values:
+
+UNDO: Not triggered.
+DOING: Triggering.
+DONE: Triggered already.
+ 
+     * @return Status Timer status. Valid values:
+
+UNDO: Not triggered.
+DOING: Triggering.
+DONE: Triggered already.
+
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Timer status. Valid values:
+
+UNDO: Not triggered.
+DOING: Triggering.
+DONE: Triggered already.
+
+     * @param Status Timer status. Valid values:
+
+UNDO: Not triggered.
+DOING: Triggering.
+DONE: Triggered already.
+
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get Instance ID corresponding to a timer. 
+     * @return InstanceId Instance ID corresponding to a timer.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Instance ID corresponding to a timer.
+     * @param InstanceId Instance ID corresponding to a timer.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public ActionTimer() {
     }
 
@@ -124,6 +218,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.Externals != null) {
             this.Externals = new Externals(source.Externals);
         }
+        if (source.ActionTimerId != null) {
+            this.ActionTimerId = new String(source.ActionTimerId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -134,6 +237,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "TimerAction", this.TimerAction);
         this.setParamSimple(map, prefix + "ActionTime", this.ActionTime);
         this.setParamObj(map, prefix + "Externals.", this.Externals);
+        this.setParamSimple(map, prefix + "ActionTimerId", this.ActionTimerId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

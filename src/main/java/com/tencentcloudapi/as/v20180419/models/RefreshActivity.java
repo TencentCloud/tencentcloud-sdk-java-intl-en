@@ -67,14 +67,24 @@ Note: This field may return null, indicating that no valid value can be obtained
     private RefreshSettings RefreshSettings;
 
     /**
-    * Refresh activity type. Valid values: <br><li>NORMAL: Normal refresh activity.</li> <li>ROLLBACK: Rollback refresh activity.
+    * Refresh activity type. Valid values:
+<li>NORMAL: normal refresh activity.</li>
+<li>ROLLBACK: rollback refresh activity.</li>
     */
     @SerializedName("ActivityType")
     @Expose
     private String ActivityType;
 
     /**
-    * Refresh activity status. Valid values: <br><li>INIT: Initializing.</li> <li>RUNNING: Running.</li> <li>SUCCESSFUL: Activity successful.</li> <li>FAILED_PAUSE: Paused due to a failed refresh batch.</li> <li>AUTO_PAUSE: Automatically paused according to pause policy.</li> <li>MANUAL_PAUSE: Manually paused.</li> <li>CANCELLED: Activity canceled.</li> <li>FAILED: Activity failed.
+    * Refresh activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>FAILED_PAUSE: paused due to the failure of a refresh batch.</li>
+<li>AUTO_PAUSE: automatically paused due to the pause policy.</li>
+<li>MANUAL_PAUSE: manually paused.</li>
+<li>CANCELLED: canceled.</li>
+<li>FAILED: failed.</li>
     */
     @SerializedName("Status")
     @Expose
@@ -213,32 +223,72 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Refresh activity type. Valid values: <br><li>NORMAL: Normal refresh activity.</li> <li>ROLLBACK: Rollback refresh activity. 
-     * @return ActivityType Refresh activity type. Valid values: <br><li>NORMAL: Normal refresh activity.</li> <li>ROLLBACK: Rollback refresh activity.
+     * Get Refresh activity type. Valid values:
+<li>NORMAL: normal refresh activity.</li>
+<li>ROLLBACK: rollback refresh activity.</li> 
+     * @return ActivityType Refresh activity type. Valid values:
+<li>NORMAL: normal refresh activity.</li>
+<li>ROLLBACK: rollback refresh activity.</li>
      */
     public String getActivityType() {
         return this.ActivityType;
     }
 
     /**
-     * Set Refresh activity type. Valid values: <br><li>NORMAL: Normal refresh activity.</li> <li>ROLLBACK: Rollback refresh activity.
-     * @param ActivityType Refresh activity type. Valid values: <br><li>NORMAL: Normal refresh activity.</li> <li>ROLLBACK: Rollback refresh activity.
+     * Set Refresh activity type. Valid values:
+<li>NORMAL: normal refresh activity.</li>
+<li>ROLLBACK: rollback refresh activity.</li>
+     * @param ActivityType Refresh activity type. Valid values:
+<li>NORMAL: normal refresh activity.</li>
+<li>ROLLBACK: rollback refresh activity.</li>
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;
     }
 
     /**
-     * Get Refresh activity status. Valid values: <br><li>INIT: Initializing.</li> <li>RUNNING: Running.</li> <li>SUCCESSFUL: Activity successful.</li> <li>FAILED_PAUSE: Paused due to a failed refresh batch.</li> <li>AUTO_PAUSE: Automatically paused according to pause policy.</li> <li>MANUAL_PAUSE: Manually paused.</li> <li>CANCELLED: Activity canceled.</li> <li>FAILED: Activity failed. 
-     * @return Status Refresh activity status. Valid values: <br><li>INIT: Initializing.</li> <li>RUNNING: Running.</li> <li>SUCCESSFUL: Activity successful.</li> <li>FAILED_PAUSE: Paused due to a failed refresh batch.</li> <li>AUTO_PAUSE: Automatically paused according to pause policy.</li> <li>MANUAL_PAUSE: Manually paused.</li> <li>CANCELLED: Activity canceled.</li> <li>FAILED: Activity failed.
+     * Get Refresh activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>FAILED_PAUSE: paused due to the failure of a refresh batch.</li>
+<li>AUTO_PAUSE: automatically paused due to the pause policy.</li>
+<li>MANUAL_PAUSE: manually paused.</li>
+<li>CANCELLED: canceled.</li>
+<li>FAILED: failed.</li> 
+     * @return Status Refresh activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>FAILED_PAUSE: paused due to the failure of a refresh batch.</li>
+<li>AUTO_PAUSE: automatically paused due to the pause policy.</li>
+<li>MANUAL_PAUSE: manually paused.</li>
+<li>CANCELLED: canceled.</li>
+<li>FAILED: failed.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Refresh activity status. Valid values: <br><li>INIT: Initializing.</li> <li>RUNNING: Running.</li> <li>SUCCESSFUL: Activity successful.</li> <li>FAILED_PAUSE: Paused due to a failed refresh batch.</li> <li>AUTO_PAUSE: Automatically paused according to pause policy.</li> <li>MANUAL_PAUSE: Manually paused.</li> <li>CANCELLED: Activity canceled.</li> <li>FAILED: Activity failed.
-     * @param Status Refresh activity status. Valid values: <br><li>INIT: Initializing.</li> <li>RUNNING: Running.</li> <li>SUCCESSFUL: Activity successful.</li> <li>FAILED_PAUSE: Paused due to a failed refresh batch.</li> <li>AUTO_PAUSE: Automatically paused according to pause policy.</li> <li>MANUAL_PAUSE: Manually paused.</li> <li>CANCELLED: Activity canceled.</li> <li>FAILED: Activity failed.
+     * Set Refresh activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>FAILED_PAUSE: paused due to the failure of a refresh batch.</li>
+<li>AUTO_PAUSE: automatically paused due to the pause policy.</li>
+<li>MANUAL_PAUSE: manually paused.</li>
+<li>CANCELLED: canceled.</li>
+<li>FAILED: failed.</li>
+     * @param Status Refresh activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>FAILED_PAUSE: paused due to the failure of a refresh batch.</li>
+<li>AUTO_PAUSE: automatically paused due to the pause policy.</li>
+<li>MANUAL_PAUSE: manually paused.</li>
+<li>CANCELLED: canceled.</li>
+<li>FAILED: failed.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

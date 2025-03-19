@@ -39,7 +39,7 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to archive keys. The archived keys can only be used for decryption but not encryption.
+     *This API is used to archive keys.The archived keys can only be used for decryption but not encryption.
      * @param req ArchiveKeyRequest
      * @return ArchiveKeyResponse
      * @throws TencentCloudSDKException

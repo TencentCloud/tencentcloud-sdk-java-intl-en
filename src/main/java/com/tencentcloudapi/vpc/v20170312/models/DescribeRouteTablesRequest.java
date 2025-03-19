@@ -58,6 +58,13 @@ public class DescribeRouteTablesRequest extends AbstractModel {
     private String Limit;
 
     /**
+    * 
+    */
+    @SerializedName("NeedRouterInfo")
+    @Expose
+    private Boolean NeedRouterInfo;
+
+    /**
      * Get Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
 <li>route-table-id - String - (Filter condition) Route table instance ID.</li>
 <li>route-table-name - String - (Filter condition) Route table name.</li>
@@ -145,6 +152,22 @@ public class DescribeRouteTablesRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get  
+     * @return NeedRouterInfo 
+     */
+    public Boolean getNeedRouterInfo() {
+        return this.NeedRouterInfo;
+    }
+
+    /**
+     * Set 
+     * @param NeedRouterInfo 
+     */
+    public void setNeedRouterInfo(Boolean NeedRouterInfo) {
+        this.NeedRouterInfo = NeedRouterInfo;
+    }
+
     public DescribeRouteTablesRequest() {
     }
 
@@ -171,6 +194,9 @@ public class DescribeRouteTablesRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new String(source.Limit);
         }
+        if (source.NeedRouterInfo != null) {
+            this.NeedRouterInfo = new Boolean(source.NeedRouterInfo);
+        }
     }
 
 
@@ -182,6 +208,7 @@ public class DescribeRouteTablesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RouteTableIds.", this.RouteTableIds);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "NeedRouterInfo", this.NeedRouterInfo);
 
     }
 }

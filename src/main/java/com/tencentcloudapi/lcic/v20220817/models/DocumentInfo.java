@@ -161,6 +161,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Preview;
 
     /**
+    * Document resolution.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Resolution")
+    @Expose
+    private String Resolution;
+
+    /**
+    * Minimum resolution of a transcoded document, consistent with the parameters provided when the document is created.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MinScaleResolution")
+    @Expose
+    private String MinScaleResolution;
+
+    /**
      * Get The document ID. Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DocumentId The document ID. Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -480,6 +494,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Preview = Preview;
     }
 
+    /**
+     * Get Document resolution.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Resolution Document resolution.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getResolution() {
+        return this.Resolution;
+    }
+
+    /**
+     * Set Document resolution.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Resolution Document resolution.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setResolution(String Resolution) {
+        this.Resolution = Resolution;
+    }
+
+    /**
+     * Get Minimum resolution of a transcoded document, consistent with the parameters provided when the document is created.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MinScaleResolution Minimum resolution of a transcoded document, consistent with the parameters provided when the document is created.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getMinScaleResolution() {
+        return this.MinScaleResolution;
+    }
+
+    /**
+     * Set Minimum resolution of a transcoded document, consistent with the parameters provided when the document is created.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MinScaleResolution Minimum resolution of a transcoded document, consistent with the parameters provided when the document is created.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMinScaleResolution(String MinScaleResolution) {
+        this.MinScaleResolution = MinScaleResolution;
+    }
+
     public DocumentInfo() {
     }
 
@@ -545,6 +591,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Preview != null) {
             this.Preview = new String(source.Preview);
         }
+        if (source.Resolution != null) {
+            this.Resolution = new String(source.Resolution);
+        }
+        if (source.MinScaleResolution != null) {
+            this.MinScaleResolution = new String(source.MinScaleResolution);
+        }
     }
 
 
@@ -571,6 +623,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "Cover", this.Cover);
         this.setParamSimple(map, prefix + "Preview", this.Preview);
+        this.setParamSimple(map, prefix + "Resolution", this.Resolution);
+        this.setParamSimple(map, prefix + "MinScaleResolution", this.MinScaleResolution);
 
     }
 }

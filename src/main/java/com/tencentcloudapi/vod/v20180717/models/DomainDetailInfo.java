@@ -89,6 +89,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private DomainQUICConfig QUICConfig;
 
     /**
+    * 
+    */
+    @SerializedName("IPFilterPolicy")
+    @Expose
+    private IPFilterPolicy IPFilterPolicy;
+
+    /**
+    * Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -252,6 +267,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.QUICConfig = QUICConfig;
     }
 
+    /**
+     * Get  
+     * @return IPFilterPolicy 
+     */
+    public IPFilterPolicy getIPFilterPolicy() {
+        return this.IPFilterPolicy;
+    }
+
+    /**
+     * Set 
+     * @param IPFilterPolicy 
+     */
+    public void setIPFilterPolicy(IPFilterPolicy IPFilterPolicy) {
+        this.IPFilterPolicy = IPFilterPolicy;
+    }
+
+    /**
+     * Get Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li> 
+     * @return Type Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+     * @param Type Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public DomainDetailInfo() {
     }
 
@@ -287,6 +338,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.QUICConfig != null) {
             this.QUICConfig = new DomainQUICConfig(source.QUICConfig);
         }
+        if (source.IPFilterPolicy != null) {
+            this.IPFilterPolicy = new IPFilterPolicy(source.IPFilterPolicy);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -302,6 +359,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "RefererAuthPolicy.", this.RefererAuthPolicy);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamObj(map, prefix + "QUICConfig.", this.QUICConfig);
+        this.setParamObj(map, prefix + "IPFilterPolicy.", this.IPFilterPolicy);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

@@ -171,6 +171,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ResourceId;
 
     /**
+    * CLB WAF or SaaS WAF mode.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MicroVersion")
+    @Expose
+    private String MicroVersion;
+
+    /**
      * Get Time interval
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TimeSpan Time interval
@@ -614,6 +622,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ResourceId = ResourceId;
     }
 
+    /**
+     * Get CLB WAF or SaaS WAF mode.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MicroVersion CLB WAF or SaaS WAF mode.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getMicroVersion() {
+        return this.MicroVersion;
+    }
+
+    /**
+     * Set CLB WAF or SaaS WAF mode.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MicroVersion CLB WAF or SaaS WAF mode.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMicroVersion(String MicroVersion) {
+        this.MicroVersion = MicroVersion;
+    }
+
     public GoodsDetailNew() {
     }
 
@@ -664,6 +692,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
+        if (source.MicroVersion != null) {
+            this.MicroVersion = new String(source.MicroVersion);
+        }
     }
 
 
@@ -683,6 +714,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CurDeadline", this.CurDeadline);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "MicroVersion", this.MicroVersion);
 
     }
 }

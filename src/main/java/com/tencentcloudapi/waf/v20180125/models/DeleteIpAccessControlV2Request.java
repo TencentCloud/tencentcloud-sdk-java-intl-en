@@ -31,14 +31,14 @@ public class DeleteIpAccessControlV2Request extends AbstractModel {
     private String Domain;
 
     /**
-    * Rule ID list, which supports deletion in batches.
+    * Rule ID list. Batch deletion is supported. This parameter does not need to be specified when DeleteAll is true.
     */
     @SerializedName("RuleIds")
     @Expose
     private Long [] RuleIds;
 
     /**
-    * Whether to delete all IP blocklists/allowlists under the corresponding domain. True indicates deleting all; false indicates only deleting a specified IP list.
+    * Whether to delete all IP blocklists/allowlists under the corresponding domain name. true: delete all lists; false: delete only the specified lists. Batch protection is not supported.
     */
     @SerializedName("DeleteAll")
     @Expose
@@ -52,7 +52,7 @@ public class DeleteIpAccessControlV2Request extends AbstractModel {
     private String SourceType;
 
     /**
-    * IP allowlist/blocklist type. 40: IP allowlist; 42: IP blocklist.
+    * IP blocklist/allowlist type. 40: IP allowlist; 42: IP blocklist. This parameter should be passed in when DeleteAll is true.
     */
     @SerializedName("ActionType")
     @Expose
@@ -75,32 +75,32 @@ public class DeleteIpAccessControlV2Request extends AbstractModel {
     }
 
     /**
-     * Get Rule ID list, which supports deletion in batches. 
-     * @return RuleIds Rule ID list, which supports deletion in batches.
+     * Get Rule ID list. Batch deletion is supported. This parameter does not need to be specified when DeleteAll is true. 
+     * @return RuleIds Rule ID list. Batch deletion is supported. This parameter does not need to be specified when DeleteAll is true.
      */
     public Long [] getRuleIds() {
         return this.RuleIds;
     }
 
     /**
-     * Set Rule ID list, which supports deletion in batches.
-     * @param RuleIds Rule ID list, which supports deletion in batches.
+     * Set Rule ID list. Batch deletion is supported. This parameter does not need to be specified when DeleteAll is true.
+     * @param RuleIds Rule ID list. Batch deletion is supported. This parameter does not need to be specified when DeleteAll is true.
      */
     public void setRuleIds(Long [] RuleIds) {
         this.RuleIds = RuleIds;
     }
 
     /**
-     * Get Whether to delete all IP blocklists/allowlists under the corresponding domain. True indicates deleting all; false indicates only deleting a specified IP list. 
-     * @return DeleteAll Whether to delete all IP blocklists/allowlists under the corresponding domain. True indicates deleting all; false indicates only deleting a specified IP list.
+     * Get Whether to delete all IP blocklists/allowlists under the corresponding domain name. true: delete all lists; false: delete only the specified lists. Batch protection is not supported. 
+     * @return DeleteAll Whether to delete all IP blocklists/allowlists under the corresponding domain name. true: delete all lists; false: delete only the specified lists. Batch protection is not supported.
      */
     public Boolean getDeleteAll() {
         return this.DeleteAll;
     }
 
     /**
-     * Set Whether to delete all IP blocklists/allowlists under the corresponding domain. True indicates deleting all; false indicates only deleting a specified IP list.
-     * @param DeleteAll Whether to delete all IP blocklists/allowlists under the corresponding domain. True indicates deleting all; false indicates only deleting a specified IP list.
+     * Set Whether to delete all IP blocklists/allowlists under the corresponding domain name. true: delete all lists; false: delete only the specified lists. Batch protection is not supported.
+     * @param DeleteAll Whether to delete all IP blocklists/allowlists under the corresponding domain name. true: delete all lists; false: delete only the specified lists. Batch protection is not supported.
      */
     public void setDeleteAll(Boolean DeleteAll) {
         this.DeleteAll = DeleteAll;
@@ -123,16 +123,16 @@ public class DeleteIpAccessControlV2Request extends AbstractModel {
     }
 
     /**
-     * Get IP allowlist/blocklist type. 40: IP allowlist; 42: IP blocklist. 
-     * @return ActionType IP allowlist/blocklist type. 40: IP allowlist; 42: IP blocklist.
+     * Get IP blocklist/allowlist type. 40: IP allowlist; 42: IP blocklist. This parameter should be passed in when DeleteAll is true. 
+     * @return ActionType IP blocklist/allowlist type. 40: IP allowlist; 42: IP blocklist. This parameter should be passed in when DeleteAll is true.
      */
     public Long getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set IP allowlist/blocklist type. 40: IP allowlist; 42: IP blocklist.
-     * @param ActionType IP allowlist/blocklist type. 40: IP allowlist; 42: IP blocklist.
+     * Set IP blocklist/allowlist type. 40: IP allowlist; 42: IP blocklist. This parameter should be passed in when DeleteAll is true.
+     * @param ActionType IP blocklist/allowlist type. 40: IP allowlist; 42: IP blocklist. This parameter should be passed in when DeleteAll is true.
      */
     public void setActionType(Long ActionType) {
         this.ActionType = ActionType;

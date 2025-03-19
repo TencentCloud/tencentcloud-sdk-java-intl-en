@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateStaffRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -38,23 +38,23 @@ public class CreateStaffRequest extends AbstractModel {
     private SeatUserInfo [] Staffs;
 
     /**
-    * Whether to send a password mail or not (the default is true)
+    * Whether to send a password mail or not (the default is true).
     */
     @SerializedName("SendPassword")
     @Expose
     private Boolean SendPassword;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -77,16 +77,16 @@ public class CreateStaffRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to send a password mail or not (the default is true) 
-     * @return SendPassword Whether to send a password mail or not (the default is true)
+     * Get Whether to send a password mail or not (the default is true). 
+     * @return SendPassword Whether to send a password mail or not (the default is true).
      */
     public Boolean getSendPassword() {
         return this.SendPassword;
     }
 
     /**
-     * Set Whether to send a password mail or not (the default is true)
-     * @param SendPassword Whether to send a password mail or not (the default is true)
+     * Set Whether to send a password mail or not (the default is true).
+     * @param SendPassword Whether to send a password mail or not (the default is true).
      */
     public void setSendPassword(Boolean SendPassword) {
         this.SendPassword = SendPassword;

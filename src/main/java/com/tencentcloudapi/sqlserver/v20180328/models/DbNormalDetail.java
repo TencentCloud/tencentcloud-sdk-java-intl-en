@@ -271,7 +271,9 @@ public class DbNormalDetail extends AbstractModel {
     /**
      * Get Whether full-text indexes are enabled. Valid values: `0` (no), `1` (yes) 
      * @return IsFulltextEnabled Whether full-text indexes are enabled. Valid values: `0` (no), `1` (yes)
+     * @deprecated
      */
+    @Deprecated
     public String getIsFulltextEnabled() {
         return this.IsFulltextEnabled;
     }
@@ -279,7 +281,9 @@ public class DbNormalDetail extends AbstractModel {
     /**
      * Set Whether full-text indexes are enabled. Valid values: `0` (no), `1` (yes)
      * @param IsFulltextEnabled Whether full-text indexes are enabled. Valid values: `0` (no), `1` (yes)
+     * @deprecated
      */
+    @Deprecated
     public void setIsFulltextEnabled(String IsFulltextEnabled) {
         this.IsFulltextEnabled = IsFulltextEnabled;
     }

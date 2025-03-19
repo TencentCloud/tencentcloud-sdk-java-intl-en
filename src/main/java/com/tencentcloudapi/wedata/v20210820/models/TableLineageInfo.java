@@ -232,6 +232,22 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String DatabaseId;
 
     /**
+    * Data source.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DataFromType")
+    @Expose
+    private String DataFromType;
+
+    /**
+    * Collection id.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CollectJobId")
+    @Expose
+    private String CollectJobId;
+
+    /**
      * Get Metadata Type
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return MetastoreType Metadata Type
@@ -751,6 +767,46 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.DatabaseId = DatabaseId;
     }
 
+    /**
+     * Get Data source.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DataFromType Data source.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDataFromType() {
+        return this.DataFromType;
+    }
+
+    /**
+     * Set Data source.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DataFromType Data source.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDataFromType(String DataFromType) {
+        this.DataFromType = DataFromType;
+    }
+
+    /**
+     * Get Collection id.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CollectJobId Collection id.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCollectJobId() {
+        return this.CollectJobId;
+    }
+
+    /**
+     * Set Collection id.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CollectJobId Collection id.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCollectJobId(String CollectJobId) {
+        this.CollectJobId = CollectJobId;
+    }
+
     public TableLineageInfo() {
     }
 
@@ -846,6 +902,12 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.DatabaseId != null) {
             this.DatabaseId = new String(source.DatabaseId);
         }
+        if (source.DataFromType != null) {
+            this.DataFromType = new String(source.DataFromType);
+        }
+        if (source.CollectJobId != null) {
+            this.CollectJobId = new String(source.CollectJobId);
+        }
     }
 
 
@@ -879,6 +941,8 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "DatasourceName", this.DatasourceName);
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         this.setParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
+        this.setParamSimple(map, prefix + "DataFromType", this.DataFromType);
+        this.setParamSimple(map, prefix + "CollectJobId", this.CollectJobId);
 
     }
 }

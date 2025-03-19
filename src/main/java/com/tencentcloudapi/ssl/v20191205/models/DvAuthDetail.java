@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DvAuthDetail extends AbstractModel {
 
     /**
-    * DV authentication key
+    * Certificate domain name verification record key.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DvAuthKey")
@@ -32,7 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DvAuthKey;
 
     /**
-    * DV authentication value
+    * Certificate domain name verification record value.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DvAuthValue")
@@ -40,7 +40,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DvAuthValue;
 
     /**
-    * Domain name of the DV authentication value
+    * Certificate domain name verification domain value.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DvAuthDomain")
@@ -48,7 +48,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DvAuthDomain;
 
     /**
-    * Path of the DV authentication value
+    * Certificate domain name verification file path, used only for file and file_proxy.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DvAuthPath")
@@ -56,7 +56,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DvAuthPath;
 
     /**
-    * DV authentication sub-domain name
+    * Certificate domain name verification subdomain.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DvAuthKeySubDomain")
@@ -64,7 +64,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DvAuthKeySubDomain;
 
     /**
-    * DV authentication information
+    * Certificate domain verification information; multiple domain verifications use this field.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DvAuths")
@@ -72,9 +72,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private DvAuths [] DvAuths;
 
     /**
-     * Get DV authentication key
+     * Get Certificate domain name verification record key.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DvAuthKey DV authentication key
+     * @return DvAuthKey Certificate domain name verification record key.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDvAuthKey() {
@@ -82,9 +82,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set DV authentication key
+     * Set Certificate domain name verification record key.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DvAuthKey DV authentication key
+     * @param DvAuthKey Certificate domain name verification record key.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDvAuthKey(String DvAuthKey) {
@@ -92,9 +92,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get DV authentication value
+     * Get Certificate domain name verification record value.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DvAuthValue DV authentication value
+     * @return DvAuthValue Certificate domain name verification record value.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDvAuthValue() {
@@ -102,9 +102,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set DV authentication value
+     * Set Certificate domain name verification record value.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DvAuthValue DV authentication value
+     * @param DvAuthValue Certificate domain name verification record value.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDvAuthValue(String DvAuthValue) {
@@ -112,9 +112,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Domain name of the DV authentication value
+     * Get Certificate domain name verification domain value.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DvAuthDomain Domain name of the DV authentication value
+     * @return DvAuthDomain Certificate domain name verification domain value.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDvAuthDomain() {
@@ -122,9 +122,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Domain name of the DV authentication value
+     * Set Certificate domain name verification domain value.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DvAuthDomain Domain name of the DV authentication value
+     * @param DvAuthDomain Certificate domain name verification domain value.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDvAuthDomain(String DvAuthDomain) {
@@ -132,9 +132,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Path of the DV authentication value
+     * Get Certificate domain name verification file path, used only for file and file_proxy.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DvAuthPath Path of the DV authentication value
+     * @return DvAuthPath Certificate domain name verification file path, used only for file and file_proxy.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDvAuthPath() {
@@ -142,9 +142,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Path of the DV authentication value
+     * Set Certificate domain name verification file path, used only for file and file_proxy.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DvAuthPath Path of the DV authentication value
+     * @param DvAuthPath Certificate domain name verification file path, used only for file and file_proxy.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDvAuthPath(String DvAuthPath) {
@@ -152,9 +152,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get DV authentication sub-domain name
+     * Get Certificate domain name verification subdomain.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DvAuthKeySubDomain DV authentication sub-domain name
+     * @return DvAuthKeySubDomain Certificate domain name verification subdomain.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDvAuthKeySubDomain() {
@@ -162,9 +162,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set DV authentication sub-domain name
+     * Set Certificate domain name verification subdomain.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DvAuthKeySubDomain DV authentication sub-domain name
+     * @param DvAuthKeySubDomain Certificate domain name verification subdomain.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDvAuthKeySubDomain(String DvAuthKeySubDomain) {
@@ -172,9 +172,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get DV authentication information
+     * Get Certificate domain verification information; multiple domain verifications use this field.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DvAuths DV authentication information
+     * @return DvAuths Certificate domain verification information; multiple domain verifications use this field.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public DvAuths [] getDvAuths() {
@@ -182,9 +182,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set DV authentication information
+     * Set Certificate domain verification information; multiple domain verifications use this field.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DvAuths DV authentication information
+     * @param DvAuths Certificate domain verification information; multiple domain verifications use this field.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDvAuths(DvAuths [] DvAuths) {

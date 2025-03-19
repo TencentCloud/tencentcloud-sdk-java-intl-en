@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeProtectedTelCdrRequest extends AbstractModel {
 
     /**
-    * Start timestamp. Unix second-level timestamp.
+    * Start timestamp. unix second-level timestamp.
     */
     @SerializedName("StartTimeStamp")
     @Expose
     private Long StartTimeStamp;
 
     /**
-    * End timestamp. Unix second-level timestamp.
+    * End timestamp. unix second-level timestamp.
     */
     @SerializedName("EndTimeStamp")
     @Expose
     private Long EndTimeStamp;
 
     /**
-    * For the Application ID, go to https://console.cloud.tencent.com/ccc.
+    * For the application id, you can check https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -59,48 +59,48 @@ public class DescribeProtectedTelCdrRequest extends AbstractModel {
     private Long PageNumber;
 
     /**
-     * Get Start timestamp. Unix second-level timestamp. 
-     * @return StartTimeStamp Start timestamp. Unix second-level timestamp.
+     * Get Start timestamp. unix second-level timestamp. 
+     * @return StartTimeStamp Start timestamp. unix second-level timestamp.
      */
     public Long getStartTimeStamp() {
         return this.StartTimeStamp;
     }
 
     /**
-     * Set Start timestamp. Unix second-level timestamp.
-     * @param StartTimeStamp Start timestamp. Unix second-level timestamp.
+     * Set Start timestamp. unix second-level timestamp.
+     * @param StartTimeStamp Start timestamp. unix second-level timestamp.
      */
     public void setStartTimeStamp(Long StartTimeStamp) {
         this.StartTimeStamp = StartTimeStamp;
     }
 
     /**
-     * Get End timestamp. Unix second-level timestamp. 
-     * @return EndTimeStamp End timestamp. Unix second-level timestamp.
+     * Get End timestamp. unix second-level timestamp. 
+     * @return EndTimeStamp End timestamp. unix second-level timestamp.
      */
     public Long getEndTimeStamp() {
         return this.EndTimeStamp;
     }
 
     /**
-     * Set End timestamp. Unix second-level timestamp.
-     * @param EndTimeStamp End timestamp. Unix second-level timestamp.
+     * Set End timestamp. unix second-level timestamp.
+     * @param EndTimeStamp End timestamp. unix second-level timestamp.
      */
     public void setEndTimeStamp(Long EndTimeStamp) {
         this.EndTimeStamp = EndTimeStamp;
     }
 
     /**
-     * Get For the Application ID, go to https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId For the Application ID, go to https://console.cloud.tencent.com/ccc.
+     * Get For the application id, you can check https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId For the application id, you can check https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set For the Application ID, go to https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId For the Application ID, go to https://console.cloud.tencent.com/ccc.
+     * Set For the application id, you can check https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId For the application id, you can check https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;

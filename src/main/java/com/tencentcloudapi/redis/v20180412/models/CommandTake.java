@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CommandTake extends AbstractModel {
 
     /**
-    * Command
+    * Command name.
     */
     @SerializedName("Cmd")
     @Expose
     private String Cmd;
 
     /**
-    * Duration
+    * Time consumed. Unit: ms.
     */
     @SerializedName("Took")
     @Expose
     private Long Took;
 
     /**
-     * Get Command 
-     * @return Cmd Command
+     * Get Command name. 
+     * @return Cmd Command name.
      */
     public String getCmd() {
         return this.Cmd;
     }
 
     /**
-     * Set Command
-     * @param Cmd Command
+     * Set Command name.
+     * @param Cmd Command name.
      */
     public void setCmd(String Cmd) {
         this.Cmd = Cmd;
     }
 
     /**
-     * Get Duration 
-     * @return Took Duration
+     * Get Time consumed. Unit: ms. 
+     * @return Took Time consumed. Unit: ms.
      */
     public Long getTook() {
         return this.Took;
     }
 
     /**
-     * Set Duration
-     * @param Took Duration
+     * Set Time consumed. Unit: ms.
+     * @param Took Time consumed. Unit: ms.
      */
     public void setTook(Long Took) {
         this.Took = Took;

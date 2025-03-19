@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstanceMonitorTookDistResponse extends AbstractModel {
 
     /**
-    * Latency distribution information
+    * Latency distribution information.
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeInstanceMonitorTookDistResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Latency distribution information 
-     * @return Data Latency distribution information
+     * Get Latency distribution information. 
+     * @return Data Latency distribution information.
      */
     public DelayDistribution [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Latency distribution information
-     * @param Data Latency distribution information
+     * Set Latency distribution information.
+     * @param Data Latency distribution information.
      */
     public void setData(DelayDistribution [] Data) {
         this.Data = Data;

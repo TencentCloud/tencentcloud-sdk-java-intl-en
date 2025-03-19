@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCallOutSessionResponse extends AbstractModel {
 
     /**
-    * Newly created session ID.
+    * Newly created session id.
     */
     @SerializedName("SessionId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateCallOutSessionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Newly created session ID. 
-     * @return SessionId Newly created session ID.
+     * Get Newly created session id. 
+     * @return SessionId Newly created session id.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Newly created session ID.
-     * @param SessionId Newly created session ID.
+     * Set Newly created session id.
+     * @param SessionId Newly created session id.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

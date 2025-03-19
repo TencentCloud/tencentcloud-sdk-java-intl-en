@@ -32,14 +32,14 @@ public class DescribeSlowLogRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Start time for prequerying a slow log
+    * Start time for pre-querying slow query logs, with a maximum query span of 30 days.
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * End time for prequerying a slow log
+    * End time for pre-querying slow query logs, with a maximum query span of 30 days.
     */
     @SerializedName("EndTime")
     @Expose
@@ -53,7 +53,7 @@ public class DescribeSlowLogRequest extends AbstractModel {
     private Long MinQueryTime;
 
     /**
-    * Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
+    * Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -95,32 +95,32 @@ public class DescribeSlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get Start time for prequerying a slow log 
-     * @return BeginTime Start time for prequerying a slow log
+     * Get Start time for pre-querying slow query logs, with a maximum query span of 30 days. 
+     * @return BeginTime Start time for pre-querying slow query logs, with a maximum query span of 30 days.
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set Start time for prequerying a slow log
-     * @param BeginTime Start time for prequerying a slow log
+     * Set Start time for pre-querying slow query logs, with a maximum query span of 30 days.
+     * @param BeginTime Start time for pre-querying slow query logs, with a maximum query span of 30 days.
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get End time for prequerying a slow log 
-     * @return EndTime End time for prequerying a slow log
+     * Get End time for pre-querying slow query logs, with a maximum query span of 30 days. 
+     * @return EndTime End time for pre-querying slow query logs, with a maximum query span of 30 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time for prequerying a slow log
-     * @param EndTime End time for prequerying a slow log
+     * Set End time for pre-querying slow query logs, with a maximum query span of 30 days.
+     * @param EndTime End time for pre-querying slow query logs, with a maximum query span of 30 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -143,16 +143,16 @@ public class DescribeSlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000]. 
-     * @return Limit Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
+     * Get Number of slow query logs displayed per page. Default value: 20. Maximum value: 100. 
+     * @return Limit Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
-     * @param Limit Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
+     * Set Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
+     * @param Limit Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

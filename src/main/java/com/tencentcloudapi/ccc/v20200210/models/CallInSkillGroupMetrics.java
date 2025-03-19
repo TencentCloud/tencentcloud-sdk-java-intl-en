@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CallInSkillGroupMetrics extends AbstractModel {
 
     /**
-    * Skill group ID.
+    * Skill group id.
     */
     @SerializedName("SkillGroupId")
     @Expose
@@ -45,16 +45,16 @@ public class CallInSkillGroupMetrics extends AbstractModel {
     private String Name;
 
     /**
-     * Get Skill group ID. 
-     * @return SkillGroupId Skill group ID.
+     * Get Skill group id. 
+     * @return SkillGroupId Skill group id.
      */
     public Long getSkillGroupId() {
         return this.SkillGroupId;
     }
 
     /**
-     * Set Skill group ID.
-     * @param SkillGroupId Skill group ID.
+     * Set Skill group id.
+     * @param SkillGroupId Skill group id.
      */
     public void setSkillGroupId(Long SkillGroupId) {
         this.SkillGroupId = SkillGroupId;

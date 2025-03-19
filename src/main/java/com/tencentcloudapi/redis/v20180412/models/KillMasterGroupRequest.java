@@ -38,7 +38,8 @@ public class KillMasterGroupRequest extends AbstractModel {
     private String Password;
 
     /**
-    * Shard ID of a sharded cluster
+    * Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
+ **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
     */
     @SerializedName("ShardIds")
     @Expose
@@ -77,16 +78,20 @@ public class KillMasterGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get Shard ID of a sharded cluster 
-     * @return ShardIds Shard ID of a sharded cluster
+     * Get Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
+ **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1). 
+     * @return ShardIds Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
+ **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
      */
     public Long [] getShardIds() {
         return this.ShardIds;
     }
 
     /**
-     * Set Shard ID of a sharded cluster
-     * @param ShardIds Shard ID of a sharded cluster
+     * Set Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
+ **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
+     * @param ShardIds Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
+ **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
      */
     public void setShardIds(Long [] ShardIds) {
         this.ShardIds = ShardIds;

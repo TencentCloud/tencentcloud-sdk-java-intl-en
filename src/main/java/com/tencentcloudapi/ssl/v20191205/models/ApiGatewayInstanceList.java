@@ -31,8 +31,7 @@ public class ApiGatewayInstanceList extends AbstractModel {
     private String Region;
 
     /**
-    * The list of APIGATEWAY instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+    * API gateway instance details.	
     */
     @SerializedName("InstanceList")
     @Expose
@@ -44,6 +43,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * Whether to query exceptions.
+    */
+    @SerializedName("Error")
+    @Expose
+    private String Error;
 
     /**
      * Get The region. 
@@ -62,20 +68,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The list of APIGATEWAY instances.	
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceList The list of APIGATEWAY instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get API gateway instance details.	 
+     * @return InstanceList API gateway instance details.	
      */
     public ApiGatewayInstanceDetail [] getInstanceList() {
         return this.InstanceList;
     }
 
     /**
-     * Set The list of APIGATEWAY instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceList The list of APIGATEWAY instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set API gateway instance details.	
+     * @param InstanceList API gateway instance details.	
      */
     public void setInstanceList(ApiGatewayInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
@@ -95,6 +97,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get Whether to query exceptions. 
+     * @return Error Whether to query exceptions.
+     */
+    public String getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set Whether to query exceptions.
+     * @param Error Whether to query exceptions.
+     */
+    public void setError(String Error) {
+        this.Error = Error;
     }
 
     public ApiGatewayInstanceList() {
@@ -117,6 +135,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
     }
 
 
@@ -127,6 +148,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Error", this.Error);
 
     }
 }

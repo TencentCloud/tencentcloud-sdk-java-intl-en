@@ -281,7 +281,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String NodeUniqueID;
 
     /**
-    * ID for u200dthe general node
+    * ID for the general node
     */
     @SerializedName("HostID")
     @Expose
@@ -963,16 +963,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get ID for u200dthe general node 
-     * @return HostID ID for u200dthe general node
+     * Get ID for the general node 
+     * @return HostID ID for the general node
      */
     public String getHostID() {
         return this.HostID;
     }
 
     /**
-     * Set ID for u200dthe general node
-     * @param HostID ID for u200dthe general node
+     * Set ID for the general node
+     * @param HostID ID for the general node
      */
     public void setHostID(String HostID) {
         this.HostID = HostID;

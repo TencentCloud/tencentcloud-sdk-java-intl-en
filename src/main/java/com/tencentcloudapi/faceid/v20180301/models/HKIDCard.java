@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class HKIDCard extends AbstractModel {
 
     /**
-    * 
+    * Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+Example:  SAN, Nan
     */
     @SerializedName("CnName")
     @Expose
@@ -106,16 +108,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CurrentIssueDate;
 
     /**
-     * Get  
-     * @return CnName 
+     * Get Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+Example:  SAN, Nan 
+     * @return CnName Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+Example:  SAN, Nan
      */
     public String getCnName() {
         return this.CnName;
     }
 
     /**
-     * Set 
-     * @param CnName 
+     * Set Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+Example:  SAN, Nan
+     * @param CnName Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+Example:  SAN, Nan
      */
     public void setCnName(String CnName) {
         this.CnName = CnName;

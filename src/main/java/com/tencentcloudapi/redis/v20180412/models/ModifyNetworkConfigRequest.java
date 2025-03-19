@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyNetworkConfigRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -49,25 +49,29 @@ public class ModifyNetworkConfigRequest extends AbstractModel {
     private String Vip;
 
     /**
-    * VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+    * VPC ID after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the VPC name next to the associated network in the **Network Information** area to obtain the VPC ID.
+
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+    * ID of the subnet to which the VPC belongs after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the subnet name next to the associated network in the **Network Information** area to obtain the subnet ID.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Retention period of the original private IPv4 address
-- Unit: Days.
-- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
-
-**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+    * Retention duration of the original private IPv4 address.
+- Unit: day.
+- Valid values: 0, 1, 2, 3, 7, and 15.
+**Note**: If the retention duration is not set or set to 0, the original network address will be released immediately.
     */
     @SerializedName("Recycle")
     @Expose
@@ -81,16 +85,16 @@ public class ModifyNetworkConfigRequest extends AbstractModel {
     private Long VPort;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
+     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -145,64 +149,80 @@ public class ModifyNetworkConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`. 
-     * @return VpcId VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+     * Get VPC ID after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the VPC name next to the associated network in the **Network Information** area to obtain the VPC ID.
+ 
+     * @return VpcId VPC ID after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the VPC name next to the associated network in the **Network Information** area to obtain the VPC ID.
+
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
-     * @param VpcId VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+     * Set VPC ID after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the VPC name next to the associated network in the **Network Information** area to obtain the VPC ID.
+
+     * @param VpcId VPC ID after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the VPC name next to the associated network in the **Network Information** area to obtain the VPC ID.
+
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`. 
-     * @return SubnetId Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+     * Get ID of the subnet to which the VPC belongs after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the subnet name next to the associated network in the **Network Information** area to obtain the subnet ID. 
+     * @return SubnetId ID of the subnet to which the VPC belongs after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the subnet name next to the associated network in the **Network Information** area to obtain the subnet ID.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
-     * @param SubnetId Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+     * Set ID of the subnet to which the VPC belongs after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the subnet name next to the associated network in the **Network Information** area to obtain the subnet ID.
+     * @param SubnetId ID of the subnet to which the VPC belongs after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the subnet name next to the associated network in the **Network Information** area to obtain the subnet ID.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Retention period of the original private IPv4 address
-- Unit: Days.
-- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
-
-**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1). 
-     * @return Recycle Retention period of the original private IPv4 address
-- Unit: Days.
-- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
-
-**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+     * Get Retention duration of the original private IPv4 address.
+- Unit: day.
+- Valid values: 0, 1, 2, 3, 7, and 15.
+**Note**: If the retention duration is not set or set to 0, the original network address will be released immediately. 
+     * @return Recycle Retention duration of the original private IPv4 address.
+- Unit: day.
+- Valid values: 0, 1, 2, 3, 7, and 15.
+**Note**: If the retention duration is not set or set to 0, the original network address will be released immediately.
      */
     public Long getRecycle() {
         return this.Recycle;
     }
 
     /**
-     * Set Retention period of the original private IPv4 address
-- Unit: Days.
-- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
-
-**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
-     * @param Recycle Retention period of the original private IPv4 address
-- Unit: Days.
-- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
-
-**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+     * Set Retention duration of the original private IPv4 address.
+- Unit: day.
+- Valid values: 0, 1, 2, 3, 7, and 15.
+**Note**: If the retention duration is not set or set to 0, the original network address will be released immediately.
+     * @param Recycle Retention duration of the original private IPv4 address.
+- Unit: day.
+- Valid values: 0, 1, 2, 3, 7, and 15.
+**Note**: If the retention duration is not set or set to 0, the original network address will be released immediately.
      */
     public void setRecycle(Long Recycle) {
         this.Recycle = Recycle;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeUserClbWafRegionsRequest extends AbstractModel {
 
     /**
-    * 
+    * Traffic source. The default value is clb if not specified. clb: Cloud Load Balancer; tsegw: cloud-native API gateway; scf: Serverless Cloud Function; apisix: other gateways on Tencent Cloud.
     */
     @SerializedName("AlbType")
     @Expose
     private String AlbType;
 
     /**
-     * Get  
-     * @return AlbType 
+     * Get Traffic source. The default value is clb if not specified. clb: Cloud Load Balancer; tsegw: cloud-native API gateway; scf: Serverless Cloud Function; apisix: other gateways on Tencent Cloud. 
+     * @return AlbType Traffic source. The default value is clb if not specified. clb: Cloud Load Balancer; tsegw: cloud-native API gateway; scf: Serverless Cloud Function; apisix: other gateways on Tencent Cloud.
      */
     public String getAlbType() {
         return this.AlbType;
     }
 
     /**
-     * Set 
-     * @param AlbType 
+     * Set Traffic source. The default value is clb if not specified. clb: Cloud Load Balancer; tsegw: cloud-native API gateway; scf: Serverless Cloud Function; apisix: other gateways on Tencent Cloud.
+     * @param AlbType Traffic source. The default value is clb if not specified. clb: Cloud Load Balancer; tsegw: cloud-native API gateway; scf: Serverless Cloud Function; apisix: other gateways on Tencent Cloud.
      */
     public void setAlbType(String AlbType) {
         this.AlbType = AlbType;

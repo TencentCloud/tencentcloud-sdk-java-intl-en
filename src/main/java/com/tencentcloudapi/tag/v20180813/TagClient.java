@@ -39,6 +39,17 @@ public class TagClient extends AbstractClient{
     }
 
     /**
+     *Creates a project
+     * @param req AddProjectRequest
+     * @return AddProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddProjectResponse AddProject(AddProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddProject", AddProjectResponse.class);
+    }
+
+    /**
      *This API is used to associate resources with tags.
      * @param req AddResourceTagRequest
      * @return AddResourceTagResponse

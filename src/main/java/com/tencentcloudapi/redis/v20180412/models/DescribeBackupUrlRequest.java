@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBackupUrlRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,11 +38,11 @@ public class DescribeBackupUrlRequest extends AbstractModel {
     private String BackupId;
 
     /**
-    * Type of the network restriction for downloading backup files. If this parameter is not configured, the user-defined configuration will be used.
-
-- `NoLimit`: Backup files can be downloaded over both public and private networks.
-- `LimitOnlyIntranet`: Backup files can be downloaded only at private network addresses auto-assigned by Tencent Cloud.
-- `Customize`: Backup files can be downloaded only in the customized VPC.
+    * Limit type of the network from which you can download backup files. If this parameter is not configured, the user-defined configuration will be used.
+- NoLimit: There is no limit. Backup files can be downloaded from both Tencent Cloud private and public networks.
+- LimitOnlyIntranet: Backup files can be downloaded 
+ only from the private IP address automatically assigned by Tencent Cloud.
+- Customize: Backup files can be downloaded from the user-defined VPC.
     */
     @SerializedName("LimitType")
     @Expose
@@ -56,10 +56,9 @@ public class DescribeBackupUrlRequest extends AbstractModel {
     private String VpcComparisonSymbol;
 
     /**
-    * Whether backups can be downloaded at the custom `LimitIp` address.
-
-- `In` (default value): Download is allowed for the custom IP.
-- `NotIn`: Download is not allowed for the custom IP.
+    * Whether backup files can be downloaded from the custom IP address specified by LimitIp.
+- In: yes. This is the default value.
+- NotIn: no.
     */
     @SerializedName("IpComparisonSymbol")
     @Expose
@@ -80,16 +79,16 @@ public class DescribeBackupUrlRequest extends AbstractModel {
     private String [] LimitIp;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
+     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -112,32 +111,32 @@ public class DescribeBackupUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get Type of the network restriction for downloading backup files. If this parameter is not configured, the user-defined configuration will be used.
-
-- `NoLimit`: Backup files can be downloaded over both public and private networks.
-- `LimitOnlyIntranet`: Backup files can be downloaded only at private network addresses auto-assigned by Tencent Cloud.
-- `Customize`: Backup files can be downloaded only in the customized VPC. 
-     * @return LimitType Type of the network restriction for downloading backup files. If this parameter is not configured, the user-defined configuration will be used.
-
-- `NoLimit`: Backup files can be downloaded over both public and private networks.
-- `LimitOnlyIntranet`: Backup files can be downloaded only at private network addresses auto-assigned by Tencent Cloud.
-- `Customize`: Backup files can be downloaded only in the customized VPC.
+     * Get Limit type of the network from which you can download backup files. If this parameter is not configured, the user-defined configuration will be used.
+- NoLimit: There is no limit. Backup files can be downloaded from both Tencent Cloud private and public networks.
+- LimitOnlyIntranet: Backup files can be downloaded 
+ only from the private IP address automatically assigned by Tencent Cloud.
+- Customize: Backup files can be downloaded from the user-defined VPC. 
+     * @return LimitType Limit type of the network from which you can download backup files. If this parameter is not configured, the user-defined configuration will be used.
+- NoLimit: There is no limit. Backup files can be downloaded from both Tencent Cloud private and public networks.
+- LimitOnlyIntranet: Backup files can be downloaded 
+ only from the private IP address automatically assigned by Tencent Cloud.
+- Customize: Backup files can be downloaded from the user-defined VPC.
      */
     public String getLimitType() {
         return this.LimitType;
     }
 
     /**
-     * Set Type of the network restriction for downloading backup files. If this parameter is not configured, the user-defined configuration will be used.
-
-- `NoLimit`: Backup files can be downloaded over both public and private networks.
-- `LimitOnlyIntranet`: Backup files can be downloaded only at private network addresses auto-assigned by Tencent Cloud.
-- `Customize`: Backup files can be downloaded only in the customized VPC.
-     * @param LimitType Type of the network restriction for downloading backup files. If this parameter is not configured, the user-defined configuration will be used.
-
-- `NoLimit`: Backup files can be downloaded over both public and private networks.
-- `LimitOnlyIntranet`: Backup files can be downloaded only at private network addresses auto-assigned by Tencent Cloud.
-- `Customize`: Backup files can be downloaded only in the customized VPC.
+     * Set Limit type of the network from which you can download backup files. If this parameter is not configured, the user-defined configuration will be used.
+- NoLimit: There is no limit. Backup files can be downloaded from both Tencent Cloud private and public networks.
+- LimitOnlyIntranet: Backup files can be downloaded 
+ only from the private IP address automatically assigned by Tencent Cloud.
+- Customize: Backup files can be downloaded from the user-defined VPC.
+     * @param LimitType Limit type of the network from which you can download backup files. If this parameter is not configured, the user-defined configuration will be used.
+- NoLimit: There is no limit. Backup files can be downloaded from both Tencent Cloud private and public networks.
+- LimitOnlyIntranet: Backup files can be downloaded 
+ only from the private IP address automatically assigned by Tencent Cloud.
+- Customize: Backup files can be downloaded from the user-defined VPC.
      */
     public void setLimitType(String LimitType) {
         this.LimitType = LimitType;
@@ -160,28 +159,24 @@ public class DescribeBackupUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether backups can be downloaded at the custom `LimitIp` address.
-
-- `In` (default value): Download is allowed for the custom IP.
-- `NotIn`: Download is not allowed for the custom IP. 
-     * @return IpComparisonSymbol Whether backups can be downloaded at the custom `LimitIp` address.
-
-- `In` (default value): Download is allowed for the custom IP.
-- `NotIn`: Download is not allowed for the custom IP.
+     * Get Whether backup files can be downloaded from the custom IP address specified by LimitIp.
+- In: yes. This is the default value.
+- NotIn: no. 
+     * @return IpComparisonSymbol Whether backup files can be downloaded from the custom IP address specified by LimitIp.
+- In: yes. This is the default value.
+- NotIn: no.
      */
     public String getIpComparisonSymbol() {
         return this.IpComparisonSymbol;
     }
 
     /**
-     * Set Whether backups can be downloaded at the custom `LimitIp` address.
-
-- `In` (default value): Download is allowed for the custom IP.
-- `NotIn`: Download is not allowed for the custom IP.
-     * @param IpComparisonSymbol Whether backups can be downloaded at the custom `LimitIp` address.
-
-- `In` (default value): Download is allowed for the custom IP.
-- `NotIn`: Download is not allowed for the custom IP.
+     * Set Whether backup files can be downloaded from the custom IP address specified by LimitIp.
+- In: yes. This is the default value.
+- NotIn: no.
+     * @param IpComparisonSymbol Whether backup files can be downloaded from the custom IP address specified by LimitIp.
+- In: yes. This is the default value.
+- NotIn: no.
      */
     public void setIpComparisonSymbol(String IpComparisonSymbol) {
         this.IpComparisonSymbol = IpComparisonSymbol;

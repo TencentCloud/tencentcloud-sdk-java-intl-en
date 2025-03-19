@@ -24,69 +24,79 @@ import java.util.HashMap;
 public class DeleteReplicationInstanceRequest extends AbstractModel {
 
     /**
-    * Replication group ID.
+    * Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * Instance ID.
+    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Data synchronization type. Valid values: true (Strong synchronization is required.) and false (Strong synchronization is not required. This value applies only to primary instance deletion.)
+    * Data synchronization type.
+- true: Strong synchronization is required.
+- false: Strong synchronization is not required, and only the primary instance can be deleted.
     */
     @SerializedName("SyncType")
     @Expose
     private Boolean SyncType;
 
     /**
-     * Get Replication group ID. 
-     * @return GroupId Replication group ID.
+     * Get Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it. 
+     * @return GroupId Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Replication group ID.
-     * @param GroupId Replication group ID.
+     * Set Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
+     * @param GroupId Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
+     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Data synchronization type. Valid values: true (Strong synchronization is required.) and false (Strong synchronization is not required. This value applies only to primary instance deletion.) 
-     * @return SyncType Data synchronization type. Valid values: true (Strong synchronization is required.) and false (Strong synchronization is not required. This value applies only to primary instance deletion.)
+     * Get Data synchronization type.
+- true: Strong synchronization is required.
+- false: Strong synchronization is not required, and only the primary instance can be deleted. 
+     * @return SyncType Data synchronization type.
+- true: Strong synchronization is required.
+- false: Strong synchronization is not required, and only the primary instance can be deleted.
      */
     public Boolean getSyncType() {
         return this.SyncType;
     }
 
     /**
-     * Set Data synchronization type. Valid values: true (Strong synchronization is required.) and false (Strong synchronization is not required. This value applies only to primary instance deletion.)
-     * @param SyncType Data synchronization type. Valid values: true (Strong synchronization is required.) and false (Strong synchronization is not required. This value applies only to primary instance deletion.)
+     * Set Data synchronization type.
+- true: Strong synchronization is required.
+- false: Strong synchronization is not required, and only the primary instance can be deleted.
+     * @param SyncType Data synchronization type.
+- true: Strong synchronization is required.
+- false: Strong synchronization is not required, and only the primary instance can be deleted.
      */
     public void setSyncType(Boolean SyncType) {
         this.SyncType = SyncType;

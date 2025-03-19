@@ -24,35 +24,36 @@ import java.util.HashMap;
 public class Action extends AbstractModel {
 
     /**
-    * Common feature operations. The options for this category include:
-<li> Access URL overriding (AccessUrlRedirect);</li>
-<li> Origin URL overriding (UpstreamUrlRedirect);</li>
-<li> QUIC;</li>
-<li> WebSocket;</li>
-<li> Video dragging (VideoSeek);</li>
-<li> Token authentication (Authentication);</li>
-<li> Custom CacheKey (CacheKey);</li>
-<li> Node caching TTL (Cache);</li>
-<li> Browser caching TTL (MaxAge);</li>
-<li> Offline caching (OfflineCache);</li>
-<li> Smart routing (SmartRouting);</li>
-<li> Range-based origin pull (RangeOriginPull);</li>
-<li> HTTP/2 origin pull (UpstreamHttp2);</li>
-<li> Host header overriding (HostHeader);</li>
-<li> Forced HTTPS (ForceRedirect);</li>
-<li> HTTPS origin pull (OriginPullProtocol);</li>
-<li> Cache pre-refresh (CachePrefresh);</li>
-<li> Smart compression (Compression);</li>
-<li> Hsts;</li>
-<li> ClientIpHeader;</li>
-<li> SslTlsSecureConf;</li>
-<li> OcspStapling;</li>
-<li> HTTP/2 access (Http2);</li>
-<li> Redirection during origin pull (UpstreamFollowRedirect);</li>
-<li> Modifying origin server (Origin);</li>
-<li> Layer 7 origin pull timeout (HTTPUpstreamTimeout);</li>
-<li> HTTP response (HttpResponse).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Common feature operations. the options for this category include:.
+<Li>Access url rewrite (`accessurlredirect`).</li>.
+<Li> origin url overriding (upstreamurlredirect);</li>.
+<Li> quic;</li>.
+<Li> websocket;</li>.
+<Li> video dragging (videoseek);</li>.
+<Li> token authentication (authentication);</li>.
+<Li> custom cachekey (cachekey);</li>.
+<Li> node caching ttl (cache);</li>.
+<Li> browser cache ttl (maxage);</li>.
+<Li> offline caching (offlinecache);</li>.
+<Li> smart acceleration (smartrouting);</li>.
+<Li> range-based origin pull (rangeoriginpull);</li>.
+<Li> http/2 origin pull (upstreamhttp2);</li>.
+<Li> host header overriding (hostheader);</li>.
+<Li> force https (forceredirect);</li>.
+<Li> https origin pull (originpullprotocol);</li>.
+<Li>`ResponseSpeedLimit`: single connection download speed limit.</li>.
+<Li>`CachePrefresh`: cache prefresh.</li>.
+<Li>`Compression`: smart compression.</li>.
+<Li>Hsts;</Li>.
+<Li>ClientIpHeader;</Li>.
+<Li> ssltlssecureconf;</li>.
+<Li> ocspstapling;</li>.
+<Li> http/2 access (http2);</li>.
+<Li> redirection during origin pull (upstreamfollowredirect);</li>.
+<Li> modifying origin server (origin);</li>.
+<Li> layer 7 origin pull timeout (httpupstreamtimeout).</li>.
+<Li> http response (httpresponse).</li>.
+Note: this field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("NormalAction")
     @Expose
@@ -79,128 +80,132 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CodeAction CodeAction;
 
     /**
-     * Get Common feature operations. The options for this category include:
-<li> Access URL overriding (AccessUrlRedirect);</li>
-<li> Origin URL overriding (UpstreamUrlRedirect);</li>
-<li> QUIC;</li>
-<li> WebSocket;</li>
-<li> Video dragging (VideoSeek);</li>
-<li> Token authentication (Authentication);</li>
-<li> Custom CacheKey (CacheKey);</li>
-<li> Node caching TTL (Cache);</li>
-<li> Browser caching TTL (MaxAge);</li>
-<li> Offline caching (OfflineCache);</li>
-<li> Smart routing (SmartRouting);</li>
-<li> Range-based origin pull (RangeOriginPull);</li>
-<li> HTTP/2 origin pull (UpstreamHttp2);</li>
-<li> Host header overriding (HostHeader);</li>
-<li> Forced HTTPS (ForceRedirect);</li>
-<li> HTTPS origin pull (OriginPullProtocol);</li>
-<li> Cache pre-refresh (CachePrefresh);</li>
-<li> Smart compression (Compression);</li>
-<li> Hsts;</li>
-<li> ClientIpHeader;</li>
-<li> SslTlsSecureConf;</li>
-<li> OcspStapling;</li>
-<li> HTTP/2 access (Http2);</li>
-<li> Redirection during origin pull (UpstreamFollowRedirect);</li>
-<li> Modifying origin server (Origin);</li>
-<li> Layer 7 origin pull timeout (HTTPUpstreamTimeout);</li>
-<li> HTTP response (HttpResponse).</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NormalAction Common feature operations. The options for this category include:
-<li> Access URL overriding (AccessUrlRedirect);</li>
-<li> Origin URL overriding (UpstreamUrlRedirect);</li>
-<li> QUIC;</li>
-<li> WebSocket;</li>
-<li> Video dragging (VideoSeek);</li>
-<li> Token authentication (Authentication);</li>
-<li> Custom CacheKey (CacheKey);</li>
-<li> Node caching TTL (Cache);</li>
-<li> Browser caching TTL (MaxAge);</li>
-<li> Offline caching (OfflineCache);</li>
-<li> Smart routing (SmartRouting);</li>
-<li> Range-based origin pull (RangeOriginPull);</li>
-<li> HTTP/2 origin pull (UpstreamHttp2);</li>
-<li> Host header overriding (HostHeader);</li>
-<li> Forced HTTPS (ForceRedirect);</li>
-<li> HTTPS origin pull (OriginPullProtocol);</li>
-<li> Cache pre-refresh (CachePrefresh);</li>
-<li> Smart compression (Compression);</li>
-<li> Hsts;</li>
-<li> ClientIpHeader;</li>
-<li> SslTlsSecureConf;</li>
-<li> OcspStapling;</li>
-<li> HTTP/2 access (Http2);</li>
-<li> Redirection during origin pull (UpstreamFollowRedirect);</li>
-<li> Modifying origin server (Origin);</li>
-<li> Layer 7 origin pull timeout (HTTPUpstreamTimeout);</li>
-<li> HTTP response (HttpResponse).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Common feature operations. the options for this category include:.
+<Li>Access url rewrite (`accessurlredirect`).</li>.
+<Li> origin url overriding (upstreamurlredirect);</li>.
+<Li> quic;</li>.
+<Li> websocket;</li>.
+<Li> video dragging (videoseek);</li>.
+<Li> token authentication (authentication);</li>.
+<Li> custom cachekey (cachekey);</li>.
+<Li> node caching ttl (cache);</li>.
+<Li> browser cache ttl (maxage);</li>.
+<Li> offline caching (offlinecache);</li>.
+<Li> smart acceleration (smartrouting);</li>.
+<Li> range-based origin pull (rangeoriginpull);</li>.
+<Li> http/2 origin pull (upstreamhttp2);</li>.
+<Li> host header overriding (hostheader);</li>.
+<Li> force https (forceredirect);</li>.
+<Li> https origin pull (originpullprotocol);</li>.
+<Li>`ResponseSpeedLimit`: single connection download speed limit.</li>.
+<Li>`CachePrefresh`: cache prefresh.</li>.
+<Li>`Compression`: smart compression.</li>.
+<Li>Hsts;</Li>.
+<Li>ClientIpHeader;</Li>.
+<Li> ssltlssecureconf;</li>.
+<Li> ocspstapling;</li>.
+<Li> http/2 access (http2);</li>.
+<Li> redirection during origin pull (upstreamfollowredirect);</li>.
+<Li> modifying origin server (origin);</li>.
+<Li> layer 7 origin pull timeout (httpupstreamtimeout).</li>.
+<Li> http response (httpresponse).</li>.
+Note: this field may return null, which indicates a failure to obtain a valid value. 
+     * @return NormalAction Common feature operations. the options for this category include:.
+<Li>Access url rewrite (`accessurlredirect`).</li>.
+<Li> origin url overriding (upstreamurlredirect);</li>.
+<Li> quic;</li>.
+<Li> websocket;</li>.
+<Li> video dragging (videoseek);</li>.
+<Li> token authentication (authentication);</li>.
+<Li> custom cachekey (cachekey);</li>.
+<Li> node caching ttl (cache);</li>.
+<Li> browser cache ttl (maxage);</li>.
+<Li> offline caching (offlinecache);</li>.
+<Li> smart acceleration (smartrouting);</li>.
+<Li> range-based origin pull (rangeoriginpull);</li>.
+<Li> http/2 origin pull (upstreamhttp2);</li>.
+<Li> host header overriding (hostheader);</li>.
+<Li> force https (forceredirect);</li>.
+<Li> https origin pull (originpullprotocol);</li>.
+<Li>`ResponseSpeedLimit`: single connection download speed limit.</li>.
+<Li>`CachePrefresh`: cache prefresh.</li>.
+<Li>`Compression`: smart compression.</li>.
+<Li>Hsts;</Li>.
+<Li>ClientIpHeader;</Li>.
+<Li> ssltlssecureconf;</li>.
+<Li> ocspstapling;</li>.
+<Li> http/2 access (http2);</li>.
+<Li> redirection during origin pull (upstreamfollowredirect);</li>.
+<Li> modifying origin server (origin);</li>.
+<Li> layer 7 origin pull timeout (httpupstreamtimeout).</li>.
+<Li> http response (httpresponse).</li>.
+Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public NormalAction getNormalAction() {
         return this.NormalAction;
     }
 
     /**
-     * Set Common feature operations. The options for this category include:
-<li> Access URL overriding (AccessUrlRedirect);</li>
-<li> Origin URL overriding (UpstreamUrlRedirect);</li>
-<li> QUIC;</li>
-<li> WebSocket;</li>
-<li> Video dragging (VideoSeek);</li>
-<li> Token authentication (Authentication);</li>
-<li> Custom CacheKey (CacheKey);</li>
-<li> Node caching TTL (Cache);</li>
-<li> Browser caching TTL (MaxAge);</li>
-<li> Offline caching (OfflineCache);</li>
-<li> Smart routing (SmartRouting);</li>
-<li> Range-based origin pull (RangeOriginPull);</li>
-<li> HTTP/2 origin pull (UpstreamHttp2);</li>
-<li> Host header overriding (HostHeader);</li>
-<li> Forced HTTPS (ForceRedirect);</li>
-<li> HTTPS origin pull (OriginPullProtocol);</li>
-<li> Cache pre-refresh (CachePrefresh);</li>
-<li> Smart compression (Compression);</li>
-<li> Hsts;</li>
-<li> ClientIpHeader;</li>
-<li> SslTlsSecureConf;</li>
-<li> OcspStapling;</li>
-<li> HTTP/2 access (Http2);</li>
-<li> Redirection during origin pull (UpstreamFollowRedirect);</li>
-<li> Modifying origin server (Origin);</li>
-<li> Layer 7 origin pull timeout (HTTPUpstreamTimeout);</li>
-<li> HTTP response (HttpResponse).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NormalAction Common feature operations. The options for this category include:
-<li> Access URL overriding (AccessUrlRedirect);</li>
-<li> Origin URL overriding (UpstreamUrlRedirect);</li>
-<li> QUIC;</li>
-<li> WebSocket;</li>
-<li> Video dragging (VideoSeek);</li>
-<li> Token authentication (Authentication);</li>
-<li> Custom CacheKey (CacheKey);</li>
-<li> Node caching TTL (Cache);</li>
-<li> Browser caching TTL (MaxAge);</li>
-<li> Offline caching (OfflineCache);</li>
-<li> Smart routing (SmartRouting);</li>
-<li> Range-based origin pull (RangeOriginPull);</li>
-<li> HTTP/2 origin pull (UpstreamHttp2);</li>
-<li> Host header overriding (HostHeader);</li>
-<li> Forced HTTPS (ForceRedirect);</li>
-<li> HTTPS origin pull (OriginPullProtocol);</li>
-<li> Cache pre-refresh (CachePrefresh);</li>
-<li> Smart compression (Compression);</li>
-<li> Hsts;</li>
-<li> ClientIpHeader;</li>
-<li> SslTlsSecureConf;</li>
-<li> OcspStapling;</li>
-<li> HTTP/2 access (Http2);</li>
-<li> Redirection during origin pull (UpstreamFollowRedirect);</li>
-<li> Modifying origin server (Origin);</li>
-<li> Layer 7 origin pull timeout (HTTPUpstreamTimeout);</li>
-<li> HTTP response (HttpResponse).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Common feature operations. the options for this category include:.
+<Li>Access url rewrite (`accessurlredirect`).</li>.
+<Li> origin url overriding (upstreamurlredirect);</li>.
+<Li> quic;</li>.
+<Li> websocket;</li>.
+<Li> video dragging (videoseek);</li>.
+<Li> token authentication (authentication);</li>.
+<Li> custom cachekey (cachekey);</li>.
+<Li> node caching ttl (cache);</li>.
+<Li> browser cache ttl (maxage);</li>.
+<Li> offline caching (offlinecache);</li>.
+<Li> smart acceleration (smartrouting);</li>.
+<Li> range-based origin pull (rangeoriginpull);</li>.
+<Li> http/2 origin pull (upstreamhttp2);</li>.
+<Li> host header overriding (hostheader);</li>.
+<Li> force https (forceredirect);</li>.
+<Li> https origin pull (originpullprotocol);</li>.
+<Li>`ResponseSpeedLimit`: single connection download speed limit.</li>.
+<Li>`CachePrefresh`: cache prefresh.</li>.
+<Li>`Compression`: smart compression.</li>.
+<Li>Hsts;</Li>.
+<Li>ClientIpHeader;</Li>.
+<Li> ssltlssecureconf;</li>.
+<Li> ocspstapling;</li>.
+<Li> http/2 access (http2);</li>.
+<Li> redirection during origin pull (upstreamfollowredirect);</li>.
+<Li> modifying origin server (origin);</li>.
+<Li> layer 7 origin pull timeout (httpupstreamtimeout).</li>.
+<Li> http response (httpresponse).</li>.
+Note: this field may return null, which indicates a failure to obtain a valid value.
+     * @param NormalAction Common feature operations. the options for this category include:.
+<Li>Access url rewrite (`accessurlredirect`).</li>.
+<Li> origin url overriding (upstreamurlredirect);</li>.
+<Li> quic;</li>.
+<Li> websocket;</li>.
+<Li> video dragging (videoseek);</li>.
+<Li> token authentication (authentication);</li>.
+<Li> custom cachekey (cachekey);</li>.
+<Li> node caching ttl (cache);</li>.
+<Li> browser cache ttl (maxage);</li>.
+<Li> offline caching (offlinecache);</li>.
+<Li> smart acceleration (smartrouting);</li>.
+<Li> range-based origin pull (rangeoriginpull);</li>.
+<Li> http/2 origin pull (upstreamhttp2);</li>.
+<Li> host header overriding (hostheader);</li>.
+<Li> force https (forceredirect);</li>.
+<Li> https origin pull (originpullprotocol);</li>.
+<Li>`ResponseSpeedLimit`: single connection download speed limit.</li>.
+<Li>`CachePrefresh`: cache prefresh.</li>.
+<Li>`Compression`: smart compression.</li>.
+<Li>Hsts;</Li>.
+<Li>ClientIpHeader;</Li>.
+<Li> ssltlssecureconf;</li>.
+<Li> ocspstapling;</li>.
+<Li> http/2 access (http2);</li>.
+<Li> redirection during origin pull (upstreamfollowredirect);</li>.
+<Li> modifying origin server (origin);</li>.
+<Li> layer 7 origin pull timeout (httpupstreamtimeout).</li>.
+<Li> http response (httpresponse).</li>.
+Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public void setNormalAction(NormalAction NormalAction) {
         this.NormalAction = NormalAction;

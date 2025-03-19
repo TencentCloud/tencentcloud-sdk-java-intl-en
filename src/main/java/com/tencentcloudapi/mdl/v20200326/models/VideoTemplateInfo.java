@@ -165,6 +165,13 @@ Note: This field may return `null`, indicating that no valid value was found.
     private VideoEnhanceSetting [] VideoEnhanceSettings;
 
     /**
+    * Color space setting.
+    */
+    @SerializedName("ColorSpaceSettings")
+    @Expose
+    private ColorSpaceSetting ColorSpaceSettings;
+
+    /**
      * Get Video transcoding template name, which can contain 1-20 letters and digits. 
      * @return Name Video transcoding template name, which can contain 1-20 letters and digits.
      */
@@ -488,6 +495,22 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.VideoEnhanceSettings = VideoEnhanceSettings;
     }
 
+    /**
+     * Get Color space setting. 
+     * @return ColorSpaceSettings Color space setting.
+     */
+    public ColorSpaceSetting getColorSpaceSettings() {
+        return this.ColorSpaceSettings;
+    }
+
+    /**
+     * Set Color space setting.
+     * @param ColorSpaceSettings Color space setting.
+     */
+    public void setColorSpaceSettings(ColorSpaceSetting ColorSpaceSettings) {
+        this.ColorSpaceSettings = ColorSpaceSettings;
+    }
+
     public VideoTemplateInfo() {
     }
 
@@ -559,6 +582,9 @@ Note: This field may return `null`, indicating that no valid value was found.
                 this.VideoEnhanceSettings[i] = new VideoEnhanceSetting(source.VideoEnhanceSettings[i]);
             }
         }
+        if (source.ColorSpaceSettings != null) {
+            this.ColorSpaceSettings = new ColorSpaceSetting(source.ColorSpaceSettings);
+        }
     }
 
 
@@ -586,6 +612,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamObj(map, prefix + "VideoCodecDetails.", this.VideoCodecDetails);
         this.setParamSimple(map, prefix + "VideoEnhanceEnabled", this.VideoEnhanceEnabled);
         this.setParamArrayObj(map, prefix + "VideoEnhanceSettings.", this.VideoEnhanceSettings);
+        this.setParamObj(map, prefix + "ColorSpaceSettings.", this.ColorSpaceSettings);
 
     }
 }

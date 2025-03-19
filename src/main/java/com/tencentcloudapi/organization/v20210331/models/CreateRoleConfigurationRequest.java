@@ -31,28 +31,28 @@ public class CreateRoleConfigurationRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Access configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
+    * Permission configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
     */
     @SerializedName("RoleConfigurationName")
     @Expose
     private String RoleConfigurationName;
 
     /**
-    * Access configuration description, which contains up to 1024 characters.
+    * Permission configuration description, which contains up to 1,024 characters.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours). Default value: 3600 (1 hour).
+    * Session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours). Default: 3600 (1 hour).
     */
     @SerializedName("SessionDuration")
     @Expose
     private Long SessionDuration;
 
     /**
-    * Initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page. The default is null, which indicates navigating to the home page of the Tencent Cloud console.
+    * Initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page. The default value is empty, representing a redirection to the home page of the Tencent Cloud console.
     */
     @SerializedName("RelayState")
     @Expose
@@ -75,64 +75,64 @@ public class CreateRoleConfigurationRequest extends AbstractModel {
     }
 
     /**
-     * Get Access configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-). 
-     * @return RoleConfigurationName Access configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
+     * Get Permission configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-). 
+     * @return RoleConfigurationName Permission configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
      */
     public String getRoleConfigurationName() {
         return this.RoleConfigurationName;
     }
 
     /**
-     * Set Access configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
-     * @param RoleConfigurationName Access configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
+     * Set Permission configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
+     * @param RoleConfigurationName Permission configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
      */
     public void setRoleConfigurationName(String RoleConfigurationName) {
         this.RoleConfigurationName = RoleConfigurationName;
     }
 
     /**
-     * Get Access configuration description, which contains up to 1024 characters. 
-     * @return Description Access configuration description, which contains up to 1024 characters.
+     * Get Permission configuration description, which contains up to 1,024 characters. 
+     * @return Description Permission configuration description, which contains up to 1,024 characters.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Access configuration description, which contains up to 1024 characters.
-     * @param Description Access configuration description, which contains up to 1024 characters.
+     * Set Permission configuration description, which contains up to 1,024 characters.
+     * @param Description Permission configuration description, which contains up to 1,024 characters.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours). Default value: 3600 (1 hour). 
-     * @return SessionDuration Session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours). Default value: 3600 (1 hour).
+     * Get Session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours). Default: 3600 (1 hour). 
+     * @return SessionDuration Session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours). Default: 3600 (1 hour).
      */
     public Long getSessionDuration() {
         return this.SessionDuration;
     }
 
     /**
-     * Set Session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours). Default value: 3600 (1 hour).
-     * @param SessionDuration Session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours). Default value: 3600 (1 hour).
+     * Set Session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours). Default: 3600 (1 hour).
+     * @param SessionDuration Session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours). Default: 3600 (1 hour).
      */
     public void setSessionDuration(Long SessionDuration) {
         this.SessionDuration = SessionDuration;
     }
 
     /**
-     * Get Initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page. The default is null, which indicates navigating to the home page of the Tencent Cloud console. 
-     * @return RelayState Initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page. The default is null, which indicates navigating to the home page of the Tencent Cloud console.
+     * Get Initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page. The default value is empty, representing a redirection to the home page of the Tencent Cloud console. 
+     * @return RelayState Initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page. The default value is empty, representing a redirection to the home page of the Tencent Cloud console.
      */
     public String getRelayState() {
         return this.RelayState;
     }
 
     /**
-     * Set Initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page. The default is null, which indicates navigating to the home page of the Tencent Cloud console.
-     * @param RelayState Initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page. The default is null, which indicates navigating to the home page of the Tencent Cloud console.
+     * Set Initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page. The default value is empty, representing a redirection to the home page of the Tencent Cloud console.
+     * @param RelayState Initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page. The default value is empty, representing a redirection to the home page of the Tencent Cloud console.
      */
     public void setRelayState(String RelayState) {
         this.RelayState = RelayState;

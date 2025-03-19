@@ -24,32 +24,28 @@ import java.util.HashMap;
 public class CustomerBillDetailData extends AbstractModel {
 
     /**
-    * Reseller account
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Distributor account.
     */
     @SerializedName("PayerAccountId")
     @Expose
     private Long PayerAccountId;
 
     /**
-    * Customer account
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Sub-Customer account.
     */
     @SerializedName("OwnerAccountId")
     @Expose
     private Long OwnerAccountId;
 
     /**
-    * Operator account
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Operator account.
     */
     @SerializedName("OperatorAccountId")
     @Expose
     private Long OperatorAccountId;
 
     /**
-    * Product name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Product name.
     */
     @SerializedName("ProductName")
     @Expose
@@ -57,285 +53,248 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Billing mode
-`Monthly subscription` (Monthly subscription)
-`Pay-As-You-Go resources` (Pay-as-you-go)
-`Standard RI` (Reserved instance)
-Note: This field may return null, indicating that no valid values can be obtained.
+.
+Monthly subscription.
+Pay-As-You-Go resources.
+Standard ri reserved instances.
     */
     @SerializedName("BillingMode")
     @Expose
     private String BillingMode;
 
     /**
-    * Project name
+    * Project name.
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * Resource region
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Resource region.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Resource AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Resource availability zone.
     */
     @SerializedName("AvailabilityZone")
     @Expose
     private String AvailabilityZone;
 
     /**
-    * Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance id.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Subproduct name
+    * Sub-Product name
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubProductName")
     @Expose
     private String SubProductName;
 
     /**
-    * Settlement type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Settlement type.
     */
     @SerializedName("TransactionType")
     @Expose
     private String TransactionType;
 
     /**
-    * Transaction ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Transaction flow id.
     */
     @SerializedName("TransactionId")
     @Expose
     private String TransactionId;
 
     /**
-    * Settlement time
+    * Settlement time.
 
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TransactionTime")
     @Expose
     private String TransactionTime;
 
     /**
-    * Start time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Resource start time.
     */
     @SerializedName("UsageStartTime")
     @Expose
     private String UsageStartTime;
 
     /**
-    * End time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Resource end time.
     */
     @SerializedName("UsageEndTime")
     @Expose
     private String UsageEndTime;
 
     /**
-    * Component
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Component.
     */
     @SerializedName("ComponentType")
     @Expose
     private String ComponentType;
 
     /**
-    * Component name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Component name.
     */
     @SerializedName("ComponentName")
     @Expose
     private String ComponentName;
 
     /**
-    * Component list price
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Component list price.
     */
     @SerializedName("ComponentListPrice")
     @Expose
     private String ComponentListPrice;
 
     /**
-    * Price unit
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Price unit.
     */
     @SerializedName("ComponentPriceMeasurementUnit")
     @Expose
     private String ComponentPriceMeasurementUnit;
 
     /**
-    * Component usage
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Component usage.
     */
     @SerializedName("ComponentUsage")
     @Expose
     private String ComponentUsage;
 
     /**
-    * Component usage unit
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Component usage unit.
     */
     @SerializedName("ComponentUsageUnit")
     @Expose
     private String ComponentUsageUnit;
 
     /**
-    * Resource usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Resource usage duration.
     */
     @SerializedName("UsageDuration")
     @Expose
     private String UsageDuration;
 
     /**
-    * Duration unit
-Note: This field may return null, indicating that no valid values can be obtained.
+    * duration unit.
     */
     @SerializedName("DurationUnit")
     @Expose
     private String DurationUnit;
 
     /**
-    * Original cost
-Original cost = component list price * component usage * usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total original price.
+Original cost = component list price * component usage * usage duration.
     */
     @SerializedName("OriginalCost")
     @Expose
     private String OriginalCost;
 
     /**
-    * Currency
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Currency.
     */
     @SerializedName("Currency")
     @Expose
     private String Currency;
 
     /**
-    * Total cost = discounted total - voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+    * = Total Amount After Discount - Voucher Deduction
     */
     @SerializedName("TotalCost")
     @Expose
     private String TotalCost;
 
     /**
-    * ID
-Note: The return value may be null, indicating that no valid data can be obtained.
+    * Id identifier.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+    * Tag information.
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-     * Get Reseller account
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PayerAccountId Reseller account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Distributor account. 
+     * @return PayerAccountId Distributor account.
      */
     public Long getPayerAccountId() {
         return this.PayerAccountId;
     }
 
     /**
-     * Set Reseller account
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PayerAccountId Reseller account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Distributor account.
+     * @param PayerAccountId Distributor account.
      */
     public void setPayerAccountId(Long PayerAccountId) {
         this.PayerAccountId = PayerAccountId;
     }
 
     /**
-     * Get Customer account
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OwnerAccountId Customer account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Sub-Customer account. 
+     * @return OwnerAccountId Sub-Customer account.
      */
     public Long getOwnerAccountId() {
         return this.OwnerAccountId;
     }
 
     /**
-     * Set Customer account
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OwnerAccountId Customer account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Sub-Customer account.
+     * @param OwnerAccountId Sub-Customer account.
      */
     public void setOwnerAccountId(Long OwnerAccountId) {
         this.OwnerAccountId = OwnerAccountId;
     }
 
     /**
-     * Get Operator account
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OperatorAccountId Operator account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Operator account. 
+     * @return OperatorAccountId Operator account.
      */
     public Long getOperatorAccountId() {
         return this.OperatorAccountId;
     }
 
     /**
-     * Set Operator account
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OperatorAccountId Operator account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Operator account.
+     * @param OperatorAccountId Operator account.
      */
     public void setOperatorAccountId(Long OperatorAccountId) {
         this.OperatorAccountId = OperatorAccountId;
     }
 
     /**
-     * Get Product name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProductName Product name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Product name. 
+     * @return ProductName Product name.
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set Product name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProductName Product name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Product name.
+     * @param ProductName Product name.
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
@@ -343,15 +302,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Billing mode
-`Monthly subscription` (Monthly subscription)
-`Pay-As-You-Go resources` (Pay-as-you-go)
-`Standard RI` (Reserved instance)
-Note: This field may return null, indicating that no valid values can be obtained. 
+.
+Monthly subscription.
+Pay-As-You-Go resources.
+Standard ri reserved instances. 
      * @return BillingMode Billing mode
-`Monthly subscription` (Monthly subscription)
-`Pay-As-You-Go resources` (Pay-as-you-go)
-`Standard RI` (Reserved instance)
-Note: This field may return null, indicating that no valid values can be obtained.
+.
+Monthly subscription.
+Pay-As-You-Go resources.
+Standard ri reserved instances.
      */
     public String getBillingMode() {
         return this.BillingMode;
@@ -359,507 +318,423 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Billing mode
-`Monthly subscription` (Monthly subscription)
-`Pay-As-You-Go resources` (Pay-as-you-go)
-`Standard RI` (Reserved instance)
-Note: This field may return null, indicating that no valid values can be obtained.
+.
+Monthly subscription.
+Pay-As-You-Go resources.
+Standard ri reserved instances.
      * @param BillingMode Billing mode
-`Monthly subscription` (Monthly subscription)
-`Pay-As-You-Go resources` (Pay-as-you-go)
-`Standard RI` (Reserved instance)
-Note: This field may return null, indicating that no valid values can be obtained.
+.
+Monthly subscription.
+Pay-As-You-Go resources.
+Standard ri reserved instances.
      */
     public void setBillingMode(String BillingMode) {
         this.BillingMode = BillingMode;
     }
 
     /**
-     * Get Project name
+     * Get Project name.
+.
+ 
+     * @return ProjectName Project name.
+.
 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectName Project name
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set Project name
+     * Set Project name.
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProjectName Project name
+     * @param ProjectName Project name.
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get Resource region
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Region Resource region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Resource region. 
+     * @return Region Resource region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Resource region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Region Resource region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Resource region.
+     * @param Region Resource region.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Resource AZ
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AvailabilityZone Resource AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Resource availability zone. 
+     * @return AvailabilityZone Resource availability zone.
      */
     public String getAvailabilityZone() {
         return this.AvailabilityZone;
     }
 
     /**
-     * Set Resource AZ
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AvailabilityZone Resource AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Resource availability zone.
+     * @param AvailabilityZone Resource availability zone.
      */
     public void setAvailabilityZone(String AvailabilityZone) {
         this.AvailabilityZone = AvailabilityZone;
     }
 
     /**
-     * Get Instance ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance id. 
+     * @return InstanceId Instance id.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance id.
+     * @param InstanceId Instance id.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Subproduct name
+     * Get Sub-Product name
+.
+ 
+     * @return SubProductName Sub-Product name
+.
 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubProductName Subproduct name
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSubProductName() {
         return this.SubProductName;
     }
 
     /**
-     * Set Subproduct name
+     * Set Sub-Product name
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubProductName Subproduct name
+     * @param SubProductName Sub-Product name
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubProductName(String SubProductName) {
         this.SubProductName = SubProductName;
     }
 
     /**
-     * Get Settlement type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransactionType Settlement type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Settlement type. 
+     * @return TransactionType Settlement type.
      */
     public String getTransactionType() {
         return this.TransactionType;
     }
 
     /**
-     * Set Settlement type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransactionType Settlement type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Settlement type.
+     * @param TransactionType Settlement type.
      */
     public void setTransactionType(String TransactionType) {
         this.TransactionType = TransactionType;
     }
 
     /**
-     * Get Transaction ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransactionId Transaction ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Transaction flow id. 
+     * @return TransactionId Transaction flow id.
      */
     public String getTransactionId() {
         return this.TransactionId;
     }
 
     /**
-     * Set Transaction ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransactionId Transaction ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Transaction flow id.
+     * @param TransactionId Transaction flow id.
      */
     public void setTransactionId(String TransactionId) {
         this.TransactionId = TransactionId;
     }
 
     /**
-     * Get Settlement time
+     * Get Settlement time.
+ 
+     * @return TransactionTime Settlement time.
 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransactionTime Settlement time
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTransactionTime() {
         return this.TransactionTime;
     }
 
     /**
-     * Set Settlement time
+     * Set Settlement time.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransactionTime Settlement time
+     * @param TransactionTime Settlement time.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTransactionTime(String TransactionTime) {
         this.TransactionTime = TransactionTime;
     }
 
     /**
-     * Get Start time of resource use
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UsageStartTime Start time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Resource start time. 
+     * @return UsageStartTime Resource start time.
      */
     public String getUsageStartTime() {
         return this.UsageStartTime;
     }
 
     /**
-     * Set Start time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UsageStartTime Start time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Resource start time.
+     * @param UsageStartTime Resource start time.
      */
     public void setUsageStartTime(String UsageStartTime) {
         this.UsageStartTime = UsageStartTime;
     }
 
     /**
-     * Get End time of resource use
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UsageEndTime End time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Resource end time. 
+     * @return UsageEndTime Resource end time.
      */
     public String getUsageEndTime() {
         return this.UsageEndTime;
     }
 
     /**
-     * Set End time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UsageEndTime End time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Resource end time.
+     * @param UsageEndTime Resource end time.
      */
     public void setUsageEndTime(String UsageEndTime) {
         this.UsageEndTime = UsageEndTime;
     }
 
     /**
-     * Get Component
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ComponentType Component
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Component. 
+     * @return ComponentType Component.
      */
     public String getComponentType() {
         return this.ComponentType;
     }
 
     /**
-     * Set Component
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ComponentType Component
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Component.
+     * @param ComponentType Component.
      */
     public void setComponentType(String ComponentType) {
         this.ComponentType = ComponentType;
     }
 
     /**
-     * Get Component name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ComponentName Component name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Component name. 
+     * @return ComponentName Component name.
      */
     public String getComponentName() {
         return this.ComponentName;
     }
 
     /**
-     * Set Component name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ComponentName Component name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Component name.
+     * @param ComponentName Component name.
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;
     }
 
     /**
-     * Get Component list price
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ComponentListPrice Component list price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Component list price. 
+     * @return ComponentListPrice Component list price.
      */
     public String getComponentListPrice() {
         return this.ComponentListPrice;
     }
 
     /**
-     * Set Component list price
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ComponentListPrice Component list price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Component list price.
+     * @param ComponentListPrice Component list price.
      */
     public void setComponentListPrice(String ComponentListPrice) {
         this.ComponentListPrice = ComponentListPrice;
     }
 
     /**
-     * Get Price unit
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ComponentPriceMeasurementUnit Price unit
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Price unit. 
+     * @return ComponentPriceMeasurementUnit Price unit.
      */
     public String getComponentPriceMeasurementUnit() {
         return this.ComponentPriceMeasurementUnit;
     }
 
     /**
-     * Set Price unit
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ComponentPriceMeasurementUnit Price unit
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Price unit.
+     * @param ComponentPriceMeasurementUnit Price unit.
      */
     public void setComponentPriceMeasurementUnit(String ComponentPriceMeasurementUnit) {
         this.ComponentPriceMeasurementUnit = ComponentPriceMeasurementUnit;
     }
 
     /**
-     * Get Component usage
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ComponentUsage Component usage
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Component usage. 
+     * @return ComponentUsage Component usage.
      */
     public String getComponentUsage() {
         return this.ComponentUsage;
     }
 
     /**
-     * Set Component usage
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ComponentUsage Component usage
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Component usage.
+     * @param ComponentUsage Component usage.
      */
     public void setComponentUsage(String ComponentUsage) {
         this.ComponentUsage = ComponentUsage;
     }
 
     /**
-     * Get Component usage unit
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ComponentUsageUnit Component usage unit
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Component usage unit. 
+     * @return ComponentUsageUnit Component usage unit.
      */
     public String getComponentUsageUnit() {
         return this.ComponentUsageUnit;
     }
 
     /**
-     * Set Component usage unit
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ComponentUsageUnit Component usage unit
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Component usage unit.
+     * @param ComponentUsageUnit Component usage unit.
      */
     public void setComponentUsageUnit(String ComponentUsageUnit) {
         this.ComponentUsageUnit = ComponentUsageUnit;
     }
 
     /**
-     * Get Resource usage duration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UsageDuration Resource usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Resource usage duration. 
+     * @return UsageDuration Resource usage duration.
      */
     public String getUsageDuration() {
         return this.UsageDuration;
     }
 
     /**
-     * Set Resource usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UsageDuration Resource usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Resource usage duration.
+     * @param UsageDuration Resource usage duration.
      */
     public void setUsageDuration(String UsageDuration) {
         this.UsageDuration = UsageDuration;
     }
 
     /**
-     * Get Duration unit
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DurationUnit Duration unit
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get duration unit. 
+     * @return DurationUnit duration unit.
      */
     public String getDurationUnit() {
         return this.DurationUnit;
     }
 
     /**
-     * Set Duration unit
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DurationUnit Duration unit
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set duration unit.
+     * @param DurationUnit duration unit.
      */
     public void setDurationUnit(String DurationUnit) {
         this.DurationUnit = DurationUnit;
     }
 
     /**
-     * Get Original cost
-Original cost = component list price * component usage * usage duration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginalCost Original cost
-Original cost = component list price * component usage * usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total original price.
+Original cost = component list price * component usage * usage duration. 
+     * @return OriginalCost Total original price.
+Original cost = component list price * component usage * usage duration.
      */
     public String getOriginalCost() {
         return this.OriginalCost;
     }
 
     /**
-     * Set Original cost
-Original cost = component list price * component usage * usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginalCost Original cost
-Original cost = component list price * component usage * usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total original price.
+Original cost = component list price * component usage * usage duration.
+     * @param OriginalCost Total original price.
+Original cost = component list price * component usage * usage duration.
      */
     public void setOriginalCost(String OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get Currency
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Currency Currency
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Currency. 
+     * @return Currency Currency.
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set Currency
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Currency Currency
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Currency.
+     * @param Currency Currency.
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;
     }
 
     /**
-     * Get Total cost = discounted total - voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCost Total cost = discounted total - voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get = Total Amount After Discount - Voucher Deduction 
+     * @return TotalCost = Total Amount After Discount - Voucher Deduction
      */
     public String getTotalCost() {
         return this.TotalCost;
     }
 
     /**
-     * Set Total cost = discounted total - voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCost Total cost = discounted total - voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set = Total Amount After Discount - Voucher Deduction
+     * @param TotalCost = Total Amount After Discount - Voucher Deduction
      */
     public void setTotalCost(String TotalCost) {
         this.TotalCost = TotalCost;
     }
 
     /**
-     * Get ID
-Note: The return value may be null, indicating that no valid data can be obtained. 
-     * @return Id ID
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Get Id identifier. 
+     * @return Id Id identifier.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set ID
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param Id ID
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Set Id identifier.
+     * @param Id Id identifier.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Tag informationNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag information. 
+     * @return Tags Tag information.
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag informationNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Tag information.
+     * @param Tags Tag information.
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;

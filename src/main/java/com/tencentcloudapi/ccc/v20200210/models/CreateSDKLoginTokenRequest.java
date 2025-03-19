@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSDKLoginTokenRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -38,23 +38,23 @@ public class CreateSDKLoginTokenRequest extends AbstractModel {
     private String SeatUserId;
 
     /**
-    * Whether the generated token is for one-time verification?
+    * Whether the generated token is for one-time verification?.
     */
     @SerializedName("OnlyOnce")
     @Expose
     private Boolean OnlyOnce;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -77,16 +77,16 @@ public class CreateSDKLoginTokenRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether the generated token is for one-time verification? 
-     * @return OnlyOnce Whether the generated token is for one-time verification?
+     * Get Whether the generated token is for one-time verification?. 
+     * @return OnlyOnce Whether the generated token is for one-time verification?.
      */
     public Boolean getOnlyOnce() {
         return this.OnlyOnce;
     }
 
     /**
-     * Set Whether the generated token is for one-time verification?
-     * @param OnlyOnce Whether the generated token is for one-time verification?
+     * Set Whether the generated token is for one-time verification?.
+     * @param OnlyOnce Whether the generated token is for one-time verification?.
      */
     public void setOnlyOnce(Boolean OnlyOnce) {
         this.OnlyOnce = OnlyOnce;

@@ -75,15 +75,18 @@ Default value: 0.
     private String Comment;
 
     /**
-    * Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+    * Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
+When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
     */
     @SerializedName("PureAudio")
     @Expose
@@ -230,48 +233,60 @@ Default value: 0.
     }
 
     /**
-     * Get Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+     * Get Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
-1. StreamInfos.N.Video.Codec cannot be copy.
-2. StreamInfos.N.Video.Fps cannot be null. 
-     * @return PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
-1. StreamInfos.N.RemoveVideo=1
-2. StreamInfos.N.RemoveAudio=0
-3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
+When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo. 
+     * @return PureAudio Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+When the value is 0.
+1. StreamInfos.N.Video.Codec cannot be copy.
+2. StreamInfos.N.Video.Fps cannot be null.
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
      */
     public Long getPureAudio() {
         return this.PureAudio;
     }
 
     /**
-     * Set Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+     * Set Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
+When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
-     * @param PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
+     * @param PureAudio Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
+When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
      */
     public void setPureAudio(Long PureAudio) {
         this.PureAudio = PureAudio;

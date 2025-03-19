@@ -66,7 +66,7 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel {
     private Long SecondaryPrivateIpAddressCount;
 
     /**
-    * IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
+    * IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` (Default).
     */
     @SerializedName("QosLevel")
     @Expose
@@ -99,6 +99,13 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel {
     @SerializedName("AttachType")
     @Expose
     private Long AttachType;
+
+    /**
+    * 
+    */
+    @SerializedName("ClientToken")
+    @Expose
+    private String ClientToken;
 
     /**
      * Get The ID of the VPC instance. You can obtain the parameter value from the `VpcId` field in the returned result of the `DescribeVpcs` API. 
@@ -197,16 +204,16 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel {
     }
 
     /**
-     * Get IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default). 
-     * @return QosLevel IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
+     * Get IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` (Default). 
+     * @return QosLevel IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` (Default).
      */
     public String getQosLevel() {
         return this.QosLevel;
     }
 
     /**
-     * Set IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
-     * @param QosLevel IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
+     * Set IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` (Default).
+     * @param QosLevel IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` (Default).
      */
     public void setQosLevel(String QosLevel) {
         this.QosLevel = QosLevel;
@@ -276,6 +283,22 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel {
         this.AttachType = AttachType;
     }
 
+    /**
+     * Get  
+     * @return ClientToken 
+     */
+    public String getClientToken() {
+        return this.ClientToken;
+    }
+
+    /**
+     * Set 
+     * @param ClientToken 
+     */
+    public void setClientToken(String ClientToken) {
+        this.ClientToken = ClientToken;
+    }
+
     public CreateAndAttachNetworkInterfaceRequest() {
     }
 
@@ -326,6 +349,9 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel {
         if (source.AttachType != null) {
             this.AttachType = new Long(source.AttachType);
         }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
     }
 
 
@@ -344,6 +370,7 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NetworkInterfaceDescription", this.NetworkInterfaceDescription);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "AttachType", this.AttachType);
+        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
 
     }
 }

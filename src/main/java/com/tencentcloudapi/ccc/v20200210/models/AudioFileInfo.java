@@ -24,112 +24,92 @@ import java.util.HashMap;
 public class AudioFileInfo extends AbstractModel {
 
     /**
-    * File ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File id.
     */
     @SerializedName("FileId")
     @Expose
     private Long FileId;
 
     /**
-    * File alias
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File alias.
     */
     @SerializedName("CustomFileName")
     @Expose
     private String CustomFileName;
 
     /**
-    * Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Filename.
     */
     @SerializedName("AudioFileName")
     @Expose
     private String AudioFileName;
 
     /**
-    * Review status, 0-Not reviewed, 1-Approved, 2-Rejected
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Review status: 0 - unreviewed, 1 - approved, 2 - rejected.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get File ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileId File ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File id. 
+     * @return FileId File id.
      */
     public Long getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set File ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileId File ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File id.
+     * @param FileId File id.
      */
     public void setFileId(Long FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get File alias
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CustomFileName File alias
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File alias. 
+     * @return CustomFileName File alias.
      */
     public String getCustomFileName() {
         return this.CustomFileName;
     }
 
     /**
-     * Set File alias
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CustomFileName File alias
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File alias.
+     * @param CustomFileName File alias.
      */
     public void setCustomFileName(String CustomFileName) {
         this.CustomFileName = CustomFileName;
     }
 
     /**
-     * Get Filename
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AudioFileName Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Filename. 
+     * @return AudioFileName Filename.
      */
     public String getAudioFileName() {
         return this.AudioFileName;
     }
 
     /**
-     * Set Filename
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioFileName Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Filename.
+     * @param AudioFileName Filename.
      */
     public void setAudioFileName(String AudioFileName) {
         this.AudioFileName = AudioFileName;
     }
 
     /**
-     * Get Review status, 0-Not reviewed, 1-Approved, 2-Rejected
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Review status, 0-Not reviewed, 1-Approved, 2-Rejected
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Review status: 0 - unreviewed, 1 - approved, 2 - rejected. 
+     * @return Status Review status: 0 - unreviewed, 1 - approved, 2 - rejected.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Review status, 0-Not reviewed, 1-Approved, 2-Rejected
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Review status, 0-Not reviewed, 1-Approved, 2-Rejected
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Review status: 0 - unreviewed, 1 - approved, 2 - rejected.
+     * @param Status Review status: 0 - unreviewed, 1 - approved, 2 - rejected.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

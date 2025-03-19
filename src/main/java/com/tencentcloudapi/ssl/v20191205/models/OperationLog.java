@@ -38,6 +38,64 @@ public class OperationLog extends AbstractModel {
     private String CreatedOn;
 
     /**
+    * Root account.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
+
+    /**
+    * Sub-Account.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SubAccountUin")
+    @Expose
+    private String SubAccountUin;
+
+    /**
+    * Certificate id.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CertId")
+    @Expose
+    private String CertId;
+
+    /**
+    * Each operation type corresponds to a specific operation description. the following is a textual explanation of each operation type and its description:.
+1. apply: indicates applying for a free cert.
+2. delete: indicates a deletion.
+3. download - represents the download operation.
+4. upload: indicates an upload operation.
+5. revoke: indicates revoking a cert.
+6. cancelRevoke - indicates canceling the revocation operation.
+7. updateAlias - indicates updating the remark information.
+8. changeProject - indicates assigning the certificate to a certain project.
+9. uploadConfirmLetter - indicates uploading the confirmation letter.
+10. cancel - indicates canceling the order operation.
+11. replace - specifies reissuing a certificate.
+12. downloadConfirmLetter - specifies downloading a certificate revocation confirmation letter.
+13. editRevokeLetter - specifies uploading a certificate revocation confirmation letter.
+14. renewVIP - specifies renewing a paid certificate.
+15. applyVIP - specifies applying for a paid certificate.
+16. submitInfo - specifies submitting documentation.
+17. downloadConfirmLetter - specifies downloading the confirmation letter template.
+18. uploadFromYunAPI - indicates uploading via the cloud api.
+19. transferIn - indicates the certificate transfer to operation.
+20. transferOut - indicates the certificate transfer operation.
+21. refund - indicates applying for a refund.
+22. multiYearsRenew - indicates multi-year auto-renewal.
+23. modifyDownloadLimit - indicates modifying the download limit switch.
+24. issued - indicates certificate issuance.
+25. domainValidationPassed - indicates domain verification completed.
+26. Resubmit - indicates reapplying for a certificate.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get Action performed on logs 
      * @return Action Action performed on logs
      */
@@ -69,6 +127,190 @@ public class OperationLog extends AbstractModel {
         this.CreatedOn = CreatedOn;
     }
 
+    /**
+     * Get Root account.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Uin Root account.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * Set Root account.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Uin Root account.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
+    /**
+     * Get Sub-Account.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SubAccountUin Sub-Account.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSubAccountUin() {
+        return this.SubAccountUin;
+    }
+
+    /**
+     * Set Sub-Account.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SubAccountUin Sub-Account.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSubAccountUin(String SubAccountUin) {
+        this.SubAccountUin = SubAccountUin;
+    }
+
+    /**
+     * Get Certificate id.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return CertId Certificate id.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCertId() {
+        return this.CertId;
+    }
+
+    /**
+     * Set Certificate id.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param CertId Certificate id.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCertId(String CertId) {
+        this.CertId = CertId;
+    }
+
+    /**
+     * Get Each operation type corresponds to a specific operation description. the following is a textual explanation of each operation type and its description:.
+1. apply: indicates applying for a free cert.
+2. delete: indicates a deletion.
+3. download - represents the download operation.
+4. upload: indicates an upload operation.
+5. revoke: indicates revoking a cert.
+6. cancelRevoke - indicates canceling the revocation operation.
+7. updateAlias - indicates updating the remark information.
+8. changeProject - indicates assigning the certificate to a certain project.
+9. uploadConfirmLetter - indicates uploading the confirmation letter.
+10. cancel - indicates canceling the order operation.
+11. replace - specifies reissuing a certificate.
+12. downloadConfirmLetter - specifies downloading a certificate revocation confirmation letter.
+13. editRevokeLetter - specifies uploading a certificate revocation confirmation letter.
+14. renewVIP - specifies renewing a paid certificate.
+15. applyVIP - specifies applying for a paid certificate.
+16. submitInfo - specifies submitting documentation.
+17. downloadConfirmLetter - specifies downloading the confirmation letter template.
+18. uploadFromYunAPI - indicates uploading via the cloud api.
+19. transferIn - indicates the certificate transfer to operation.
+20. transferOut - indicates the certificate transfer operation.
+21. refund - indicates applying for a refund.
+22. multiYearsRenew - indicates multi-year auto-renewal.
+23. modifyDownloadLimit - indicates modifying the download limit switch.
+24. issued - indicates certificate issuance.
+25. domainValidationPassed - indicates domain verification completed.
+26. Resubmit - indicates reapplying for a certificate.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Type Each operation type corresponds to a specific operation description. the following is a textual explanation of each operation type and its description:.
+1. apply: indicates applying for a free cert.
+2. delete: indicates a deletion.
+3. download - represents the download operation.
+4. upload: indicates an upload operation.
+5. revoke: indicates revoking a cert.
+6. cancelRevoke - indicates canceling the revocation operation.
+7. updateAlias - indicates updating the remark information.
+8. changeProject - indicates assigning the certificate to a certain project.
+9. uploadConfirmLetter - indicates uploading the confirmation letter.
+10. cancel - indicates canceling the order operation.
+11. replace - specifies reissuing a certificate.
+12. downloadConfirmLetter - specifies downloading a certificate revocation confirmation letter.
+13. editRevokeLetter - specifies uploading a certificate revocation confirmation letter.
+14. renewVIP - specifies renewing a paid certificate.
+15. applyVIP - specifies applying for a paid certificate.
+16. submitInfo - specifies submitting documentation.
+17. downloadConfirmLetter - specifies downloading the confirmation letter template.
+18. uploadFromYunAPI - indicates uploading via the cloud api.
+19. transferIn - indicates the certificate transfer to operation.
+20. transferOut - indicates the certificate transfer operation.
+21. refund - indicates applying for a refund.
+22. multiYearsRenew - indicates multi-year auto-renewal.
+23. modifyDownloadLimit - indicates modifying the download limit switch.
+24. issued - indicates certificate issuance.
+25. domainValidationPassed - indicates domain verification completed.
+26. Resubmit - indicates reapplying for a certificate.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Each operation type corresponds to a specific operation description. the following is a textual explanation of each operation type and its description:.
+1. apply: indicates applying for a free cert.
+2. delete: indicates a deletion.
+3. download - represents the download operation.
+4. upload: indicates an upload operation.
+5. revoke: indicates revoking a cert.
+6. cancelRevoke - indicates canceling the revocation operation.
+7. updateAlias - indicates updating the remark information.
+8. changeProject - indicates assigning the certificate to a certain project.
+9. uploadConfirmLetter - indicates uploading the confirmation letter.
+10. cancel - indicates canceling the order operation.
+11. replace - specifies reissuing a certificate.
+12. downloadConfirmLetter - specifies downloading a certificate revocation confirmation letter.
+13. editRevokeLetter - specifies uploading a certificate revocation confirmation letter.
+14. renewVIP - specifies renewing a paid certificate.
+15. applyVIP - specifies applying for a paid certificate.
+16. submitInfo - specifies submitting documentation.
+17. downloadConfirmLetter - specifies downloading the confirmation letter template.
+18. uploadFromYunAPI - indicates uploading via the cloud api.
+19. transferIn - indicates the certificate transfer to operation.
+20. transferOut - indicates the certificate transfer operation.
+21. refund - indicates applying for a refund.
+22. multiYearsRenew - indicates multi-year auto-renewal.
+23. modifyDownloadLimit - indicates modifying the download limit switch.
+24. issued - indicates certificate issuance.
+25. domainValidationPassed - indicates domain verification completed.
+26. Resubmit - indicates reapplying for a certificate.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Type Each operation type corresponds to a specific operation description. the following is a textual explanation of each operation type and its description:.
+1. apply: indicates applying for a free cert.
+2. delete: indicates a deletion.
+3. download - represents the download operation.
+4. upload: indicates an upload operation.
+5. revoke: indicates revoking a cert.
+6. cancelRevoke - indicates canceling the revocation operation.
+7. updateAlias - indicates updating the remark information.
+8. changeProject - indicates assigning the certificate to a certain project.
+9. uploadConfirmLetter - indicates uploading the confirmation letter.
+10. cancel - indicates canceling the order operation.
+11. replace - specifies reissuing a certificate.
+12. downloadConfirmLetter - specifies downloading a certificate revocation confirmation letter.
+13. editRevokeLetter - specifies uploading a certificate revocation confirmation letter.
+14. renewVIP - specifies renewing a paid certificate.
+15. applyVIP - specifies applying for a paid certificate.
+16. submitInfo - specifies submitting documentation.
+17. downloadConfirmLetter - specifies downloading the confirmation letter template.
+18. uploadFromYunAPI - indicates uploading via the cloud api.
+19. transferIn - indicates the certificate transfer to operation.
+20. transferOut - indicates the certificate transfer operation.
+21. refund - indicates applying for a refund.
+22. multiYearsRenew - indicates multi-year auto-renewal.
+23. modifyDownloadLimit - indicates modifying the download limit switch.
+24. issued - indicates certificate issuance.
+25. domainValidationPassed - indicates domain verification completed.
+26. Resubmit - indicates reapplying for a certificate.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public OperationLog() {
     }
 
@@ -83,6 +325,18 @@ public class OperationLog extends AbstractModel {
         if (source.CreatedOn != null) {
             this.CreatedOn = new String(source.CreatedOn);
         }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.SubAccountUin != null) {
+            this.SubAccountUin = new String(source.SubAccountUin);
+        }
+        if (source.CertId != null) {
+            this.CertId = new String(source.CertId);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -92,6 +346,10 @@ public class OperationLog extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamSimple(map, prefix + "CertId", this.CertId);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

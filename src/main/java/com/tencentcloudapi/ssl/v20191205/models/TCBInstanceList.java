@@ -39,6 +39,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private TCBEnvironments [] Environments;
 
     /**
+    * Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Error")
+    @Expose
+    private String Error;
+
+    /**
      * Get The region. 
      * @return Region The region.
      */
@@ -74,6 +82,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Environments = Environments;
     }
 
+    /**
+     * Get Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Error Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Error Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setError(String Error) {
+        this.Error = Error;
+    }
+
     public TCBInstanceList() {
     }
 
@@ -91,6 +119,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.Environments[i] = new TCBEnvironments(source.Environments[i]);
             }
         }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
     }
 
 
@@ -100,6 +131,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamArrayObj(map, prefix + "Environments.", this.Environments);
+        this.setParamSimple(map, prefix + "Error", this.Error);
 
     }
 }

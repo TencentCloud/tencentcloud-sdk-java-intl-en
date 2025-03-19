@@ -31,7 +31,7 @@ public class BillResourceSummary extends AbstractModel {
     private String BusinessCodeName;
 
     /**
-    * Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+    * Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
     */
     @SerializedName("ProductCodeName")
     @Expose
@@ -157,7 +157,7 @@ public class BillResourceSummary extends AbstractModel {
     private String ReduceType;
 
     /**
-    * Total amount after discount
+    * Total amount after discount (Including Tax):  = Total Amount After Discount (Excluding Tax) + TaxAmount
     */
     @SerializedName("RealTotalCost")
     @Expose
@@ -171,21 +171,23 @@ public class BillResourceSummary extends AbstractModel {
     private String VoucherPayAmount;
 
     /**
-    * Cash credit: The amount paid from the user’s cash account
+    * Cash credit: The amount paid from the user's cash account
+
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * Free credit: The amount paid with the user’s free credit
+    * Free credit: The amount paid with the user's free credit
+
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+    * Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -313,16 +315,16 @@ public class BillResourceSummary extends AbstractModel {
     }
 
     /**
-     * Get Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1. 
-     * @return ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+     * Get Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t. 
+     * @return ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * Set Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
-     * @param ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+     * Set Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
+     * @param ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
@@ -601,16 +603,16 @@ public class BillResourceSummary extends AbstractModel {
     }
 
     /**
-     * Get Total amount after discount 
-     * @return RealTotalCost Total amount after discount
+     * Get Total amount after discount (Including Tax):  = Total Amount After Discount (Excluding Tax) + TaxAmount 
+     * @return RealTotalCost Total amount after discount (Including Tax):  = Total Amount After Discount (Excluding Tax) + TaxAmount
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set Total amount after discount
-     * @param RealTotalCost Total amount after discount
+     * Set Total amount after discount (Including Tax):  = Total Amount After Discount (Excluding Tax) + TaxAmount
+     * @param RealTotalCost Total amount after discount (Including Tax):  = Total Amount After Discount (Excluding Tax) + TaxAmount
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
@@ -633,48 +635,56 @@ public class BillResourceSummary extends AbstractModel {
     }
 
     /**
-     * Get Cash credit: The amount paid from the user’s cash account 
-     * @return CashPayAmount Cash credit: The amount paid from the user’s cash account
+     * Get Cash credit: The amount paid from the user's cash account
+ 
+     * @return CashPayAmount Cash credit: The amount paid from the user's cash account
+
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set Cash credit: The amount paid from the user’s cash account
-     * @param CashPayAmount Cash credit: The amount paid from the user’s cash account
+     * Set Cash credit: The amount paid from the user's cash account
+
+     * @param CashPayAmount Cash credit: The amount paid from the user's cash account
+
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get Free credit: The amount paid with the user’s free credit 
-     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit
+     * Get Free credit: The amount paid with the user's free credit
+ 
+     * @return IncentivePayAmount Free credit: The amount paid with the user's free credit
+
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set Free credit: The amount paid with the user’s free credit
-     * @param IncentivePayAmount Free credit: The amount paid with the user’s free credit
+     * Set Free credit: The amount paid with the user's free credit
+
+     * @param IncentivePayAmount Free credit: The amount paid with the user's free credit
+
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;

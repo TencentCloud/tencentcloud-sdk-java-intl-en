@@ -94,7 +94,18 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a business intelligence service instance.
+     *This API is used to create basic edition instances (cloud disk).
+     * @param req CreateBasicDBInstancesRequest
+     * @return CreateBasicDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBasicDBInstancesResponse CreateBasicDBInstances(CreateBasicDBInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBasicDBInstances", CreateBasicDBInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to create business intelligence service instances (cloud disk).
      * @param req CreateBusinessDBInstancesRequest
      * @return CreateBusinessDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -116,7 +127,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a high-availability instance of cloud disk edition.
+     *This API is used to create high-availability instances (cloud disk).
      * @param req CreateCloudDBInstancesRequest
      * @return CreateCloudDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -127,7 +138,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add a read-only replica instance of cloud disk edition.
+     *This API is used to create read-only instances (cloud disk).
      * @param req CreateCloudReadOnlyDBInstancesRequest
      * @return CreateCloudReadOnlyDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -149,7 +160,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create an instance.
+     *This API is used to create high-availability instances (local disk)
      * @param req CreateDBInstancesRequest
      * @return CreateDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -179,6 +190,17 @@ public class SqlserverClient extends AbstractClient{
     public CreateMigrationResponse CreateMigration(CreateMigrationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateMigration", CreateMigrationResponse.class);
+    }
+
+    /**
+     *This API is used to create read-only instances (local disk).
+     * @param req CreateReadOnlyDBInstancesRequest
+     * @return CreateReadOnlyDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReadOnlyDBInstancesResponse CreateReadOnlyDBInstances(CreateReadOnlyDBInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateReadOnlyDBInstances", CreateReadOnlyDBInstancesResponse.class);
     }
 
     /**
@@ -501,6 +523,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the time range available for rollback by time point.
+     * @param req DescribeRestoreTimeRangeRequest
+     * @return DescribeRestoreTimeRangeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRestoreTimeRangeResponse DescribeRestoreTimeRange(DescribeRestoreTimeRangeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRestoreTimeRange", DescribeRestoreTimeRangeResponse.class);
+    }
+
+    /**
      *This API is used to query the time range available for instance rollback.
      * @param req DescribeRollbackTimeRequest
      * @return DescribeRollbackTimeResponse
@@ -686,6 +719,17 @@ public class SqlserverClient extends AbstractClient{
     public ModifyDBRemarkResponse ModifyDBRemark(ModifyDBRemarkRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDBRemark", ModifyDBRemarkResponse.class);
+    }
+
+    /**
+     *This API is used to enable or disable the read-only feature of the replica server.
+     * @param req ModifyDReadableRequest
+     * @return ModifyDReadableResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDReadableResponse ModifyDReadable(ModifyDReadableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDReadable", ModifyDReadableResponse.class);
     }
 
     /**

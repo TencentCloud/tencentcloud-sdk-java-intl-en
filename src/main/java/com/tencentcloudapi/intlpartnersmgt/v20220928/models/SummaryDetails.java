@@ -24,191 +24,161 @@ import java.util.HashMap;
 public class SummaryDetails extends AbstractModel {
 
     /**
-    * Product information list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Product information list.
     */
     @SerializedName("Business")
     @Expose
     private BusinessInfo [] Business;
 
     /**
-    * Original price
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Original price.
     */
     @SerializedName("OriginalCost")
     @Expose
     private String OriginalCost;
 
     /**
-    * Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Voucher amount.
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+    * RI deduction.
     */
     @SerializedName("RICost")
     @Expose
     private String RICost;
 
     /**
-    * Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <TOTAL_AMOUNT>.
     */
     @SerializedName("TotalCost")
     @Expose
     private String TotalCost;
 
     /**
-    * Summary key by classification dimension Note: This field may return null, indicating that no valid values can be obtained.
+    * Classification dimension summary key.
     */
     @SerializedName("GroupKey")
     @Expose
     private String GroupKey;
 
     /**
-    *  Summary value by classification dimension
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Summary value by classification dimension.
     */
     @SerializedName("GroupValue")
     @Expose
     private String GroupValue;
 
     /**
-     * Get Product information list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Business Product information list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Product information list. 
+     * @return Business Product information list.
      */
     public BusinessInfo [] getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set Product information list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Business Product information list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Product information list.
+     * @param Business Product information list.
      */
     public void setBusiness(BusinessInfo [] Business) {
         this.Business = Business;
     }
 
     /**
-     * Get Original price
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginalCost Original price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Original price. 
+     * @return OriginalCost Original price.
      */
     public String getOriginalCost() {
         return this.OriginalCost;
     }
 
     /**
-     * Set Original price
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginalCost Original price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Original price.
+     * @param OriginalCost Original price.
      */
     public void setOriginalCost(String OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoucherPayAmount Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Voucher amount. 
+     * @return VoucherPayAmount Voucher amount.
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoucherPayAmount Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Voucher amount.
+     * @param VoucherPayAmount Voucher amount.
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RICost Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get RI deduction. 
+     * @return RICost RI deduction.
      */
     public String getRICost() {
         return this.RICost;
     }
 
     /**
-     * Set Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RICost Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set RI deduction.
+     * @param RICost RI deduction.
      */
     public void setRICost(String RICost) {
         this.RICost = RICost;
     }
 
     /**
-     * Get Total amount
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCost Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <TOTAL_AMOUNT>. 
+     * @return TotalCost <TOTAL_AMOUNT>.
      */
     public String getTotalCost() {
         return this.TotalCost;
     }
 
     /**
-     * Set Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCost Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <TOTAL_AMOUNT>.
+     * @param TotalCost <TOTAL_AMOUNT>.
      */
     public void setTotalCost(String TotalCost) {
         this.TotalCost = TotalCost;
     }
 
     /**
-     * Get Summary key by classification dimension Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupKey Summary key by classification dimension Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Classification dimension summary key. 
+     * @return GroupKey Classification dimension summary key.
      */
     public String getGroupKey() {
         return this.GroupKey;
     }
 
     /**
-     * Set Summary key by classification dimension Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupKey Summary key by classification dimension Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Classification dimension summary key.
+     * @param GroupKey Classification dimension summary key.
      */
     public void setGroupKey(String GroupKey) {
         this.GroupKey = GroupKey;
     }
 
     /**
-     * Get  Summary value by classification dimension
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupValue  Summary value by classification dimension
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Summary value by classification dimension. 
+     * @return GroupValue Summary value by classification dimension.
      */
     public String getGroupValue() {
         return this.GroupValue;
     }
 
     /**
-     * Set  Summary value by classification dimension
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupValue  Summary value by classification dimension
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Summary value by classification dimension.
+     * @param GroupValue Summary value by classification dimension.
      */
     public void setGroupValue(String GroupValue) {
         this.GroupValue = GroupValue;

@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class CreateAgentCruiseDialingCampaignRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Task Name
+    * Task name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Agent Account
+    * Agent account.
     */
     @SerializedName("Agent")
     @Expose
     private String Agent;
 
     /**
-    * Single-round Concurrent Call Volume 1-20
+    * Single-Round concurrent call volume 1-20.
     */
     @SerializedName("ConcurrencyNumber")
     @Expose
     private Long ConcurrencyNumber;
 
     /**
-    * Task start time. Unix timestamp. The task will automatically start after this time.
+    * Task start time. unix timestamp. the task will automatically start after this time.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Task termination time. Unix timestamp. The task will automatically terminate after this time.
+    * Task termination time. unix timestamp. the task will automatically terminate after this time.
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * Called list supporting E.164 or number formats without country code.
+    * Called list supporting e.164 or number formats without country code.
     */
     @SerializedName("Callees")
     @Expose
@@ -87,119 +87,119 @@ public class CreateAgentCruiseDialingCampaignRequest extends AbstractModel {
     private Long CallOrder;
 
     /**
-    * Caller Custom Data, Maximum Length 1024
+    * Caller custom data, maximum length 1024.
     */
     @SerializedName("UUI")
     @Expose
     private String UUI;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Task Name 
-     * @return Name Task Name
+     * Get Task name. 
+     * @return Name Task name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Task Name
-     * @param Name Task Name
+     * Set Task name.
+     * @param Name Task name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Agent Account 
-     * @return Agent Agent Account
+     * Get Agent account. 
+     * @return Agent Agent account.
      */
     public String getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set Agent Account
-     * @param Agent Agent Account
+     * Set Agent account.
+     * @param Agent Agent account.
      */
     public void setAgent(String Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get Single-round Concurrent Call Volume 1-20 
-     * @return ConcurrencyNumber Single-round Concurrent Call Volume 1-20
+     * Get Single-Round concurrent call volume 1-20. 
+     * @return ConcurrencyNumber Single-Round concurrent call volume 1-20.
      */
     public Long getConcurrencyNumber() {
         return this.ConcurrencyNumber;
     }
 
     /**
-     * Set Single-round Concurrent Call Volume 1-20
-     * @param ConcurrencyNumber Single-round Concurrent Call Volume 1-20
+     * Set Single-Round concurrent call volume 1-20.
+     * @param ConcurrencyNumber Single-Round concurrent call volume 1-20.
      */
     public void setConcurrencyNumber(Long ConcurrencyNumber) {
         this.ConcurrencyNumber = ConcurrencyNumber;
     }
 
     /**
-     * Get Task start time. Unix timestamp. The task will automatically start after this time. 
-     * @return StartTime Task start time. Unix timestamp. The task will automatically start after this time.
+     * Get Task start time. unix timestamp. the task will automatically start after this time. 
+     * @return StartTime Task start time. unix timestamp. the task will automatically start after this time.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Task start time. Unix timestamp. The task will automatically start after this time.
-     * @param StartTime Task start time. Unix timestamp. The task will automatically start after this time.
+     * Set Task start time. unix timestamp. the task will automatically start after this time.
+     * @param StartTime Task start time. unix timestamp. the task will automatically start after this time.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Task termination time. Unix timestamp. The task will automatically terminate after this time. 
-     * @return EndTime Task termination time. Unix timestamp. The task will automatically terminate after this time.
+     * Get Task termination time. unix timestamp. the task will automatically terminate after this time. 
+     * @return EndTime Task termination time. unix timestamp. the task will automatically terminate after this time.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Task termination time. Unix timestamp. The task will automatically terminate after this time.
-     * @param EndTime Task termination time. Unix timestamp. The task will automatically terminate after this time.
+     * Set Task termination time. unix timestamp. the task will automatically terminate after this time.
+     * @param EndTime Task termination time. unix timestamp. the task will automatically terminate after this time.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Called list supporting E.164 or number formats without country code. 
-     * @return Callees Called list supporting E.164 or number formats without country code.
+     * Get Called list supporting e.164 or number formats without country code. 
+     * @return Callees Called list supporting e.164 or number formats without country code.
      */
     public String [] getCallees() {
         return this.Callees;
     }
 
     /**
-     * Set Called list supporting E.164 or number formats without country code.
-     * @param Callees Called list supporting E.164 or number formats without country code.
+     * Set Called list supporting e.164 or number formats without country code.
+     * @param Callees Called list supporting e.164 or number formats without country code.
      */
     public void setCallees(String [] Callees) {
         this.Callees = Callees;
@@ -238,16 +238,16 @@ public class CreateAgentCruiseDialingCampaignRequest extends AbstractModel {
     }
 
     /**
-     * Get Caller Custom Data, Maximum Length 1024 
-     * @return UUI Caller Custom Data, Maximum Length 1024
+     * Get Caller custom data, maximum length 1024. 
+     * @return UUI Caller custom data, maximum length 1024.
      */
     public String getUUI() {
         return this.UUI;
     }
 
     /**
-     * Set Caller Custom Data, Maximum Length 1024
-     * @param UUI Caller Custom Data, Maximum Length 1024
+     * Set Caller custom data, maximum length 1024.
+     * @param UUI Caller custom data, maximum length 1024.
      */
     public void setUUI(String UUI) {
         this.UUI = UUI;

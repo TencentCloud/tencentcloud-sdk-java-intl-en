@@ -96,7 +96,9 @@ Note: The number of tasks that can be submitted is limited by the quota of a bil
     /**
      * Get Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters. 
      * @return EncodeUrl Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
+     * @deprecated
      */
+    @Deprecated
     public Boolean getEncodeUrl() {
         return this.EncodeUrl;
     }
@@ -104,7 +106,9 @@ Note: The number of tasks that can be submitted is limited by the quota of a bil
     /**
      * Set Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
      * @param EncodeUrl Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
+     * @deprecated
      */
+    @Deprecated
     public void setEncodeUrl(Boolean EncodeUrl) {
         this.EncodeUrl = EncodeUrl;
     }

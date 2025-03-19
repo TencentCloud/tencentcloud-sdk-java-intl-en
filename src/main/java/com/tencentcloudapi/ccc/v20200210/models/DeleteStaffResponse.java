@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DeleteStaffResponse extends AbstractModel {
 
     /**
-    * List of customer service staff that can't be deleted when being online.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * List of customer service staff that cannot be deleted when they are online.
     */
     @SerializedName("OnlineStaffList")
     @Expose
@@ -39,20 +38,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of customer service staff that can't be deleted when being online.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OnlineStaffList List of customer service staff that can't be deleted when being online.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get List of customer service staff that cannot be deleted when they are online. 
+     * @return OnlineStaffList List of customer service staff that cannot be deleted when they are online.
      */
     public String [] getOnlineStaffList() {
         return this.OnlineStaffList;
     }
 
     /**
-     * Set List of customer service staff that can't be deleted when being online.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OnlineStaffList List of customer service staff that can't be deleted when being online.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set List of customer service staff that cannot be deleted when they are online.
+     * @param OnlineStaffList List of customer service staff that cannot be deleted when they are online.
      */
     public void setOnlineStaffList(String [] OnlineStaffList) {
         this.OnlineStaffList = OnlineStaffList;

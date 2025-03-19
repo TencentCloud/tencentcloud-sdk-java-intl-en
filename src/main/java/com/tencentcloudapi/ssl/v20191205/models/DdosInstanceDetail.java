@@ -45,8 +45,7 @@ public class DdosInstanceDetail extends AbstractModel {
     private String Protocol;
 
     /**
-    * The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Certificate id.
     */
     @SerializedName("CertId")
     @Expose
@@ -108,20 +107,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CertId The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Certificate id. 
+     * @return CertId Certificate id.
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CertId The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Certificate id.
+     * @param CertId Certificate id.
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;

@@ -66,7 +66,11 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
     /**
     * Parameter information of input streams for transcoding to adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+
+Note:
+
+1. The frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+2. When modifying substream information, all field values must be fully modified and added; otherwise, fields not filled in will use default values.
     */
     @SerializedName("StreamInfos")
     @Expose
@@ -80,15 +84,18 @@ Note: the frame rate of each stream must be consistent; otherwise, the frame rat
     private String Comment;
 
     /**
-    * Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+    * Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
+When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
     */
     @SerializedName("PureAudio")
     @Expose
@@ -208,9 +215,17 @@ Note: The HLS segment format for adaptive bitrate streaming is based on this fie
 
     /**
      * Get Parameter information of input streams for transcoding to adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate. 
+
+Note:
+
+1. The frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+2. When modifying substream information, all field values must be fully modified and added; otherwise, fields not filled in will use default values. 
      * @return StreamInfos Parameter information of input streams for transcoding to adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+
+Note:
+
+1. The frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+2. When modifying substream information, all field values must be fully modified and added; otherwise, fields not filled in will use default values.
      */
     public AdaptiveStreamTemplate [] getStreamInfos() {
         return this.StreamInfos;
@@ -218,9 +233,17 @@ Note: the frame rate of each stream must be consistent; otherwise, the frame rat
 
     /**
      * Set Parameter information of input streams for transcoding to adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+
+Note:
+
+1. The frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+2. When modifying substream information, all field values must be fully modified and added; otherwise, fields not filled in will use default values.
      * @param StreamInfos Parameter information of input streams for transcoding to adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+
+Note:
+
+1. The frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+2. When modifying substream information, all field values must be fully modified and added; otherwise, fields not filled in will use default values.
      */
     public void setStreamInfos(AdaptiveStreamTemplate [] StreamInfos) {
         this.StreamInfos = StreamInfos;
@@ -243,48 +266,60 @@ Note: the frame rate of each stream must be consistent; otherwise, the frame rat
     }
 
     /**
-     * Get Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+     * Get Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
-1. StreamInfos.N.Video.Codec cannot be copy.
-2. StreamInfos.N.Video.Fps cannot be null. 
-     * @return PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
-1. StreamInfos.N.RemoveVideo=1
-2. StreamInfos.N.RemoveAudio=0
-3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
+When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo. 
+     * @return PureAudio Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+When the value is 0.
+1. StreamInfos.N.Video.Codec cannot be copy.
+2. StreamInfos.N.Video.Fps cannot be null.
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
      */
     public Long getPureAudio() {
         return this.PureAudio;
     }
 
     /**
-     * Set Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+     * Set Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
+When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
-     * @param PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
+     * @param PureAudio Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
+When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
      */
     public void setPureAudio(Long PureAudio) {
         this.PureAudio = PureAudio;

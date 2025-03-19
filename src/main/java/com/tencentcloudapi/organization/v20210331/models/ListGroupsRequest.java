@@ -80,6 +80,13 @@ public class ListGroupsRequest extends AbstractModel {
     private String SortType;
 
     /**
+    * Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
      * Get Space ID. 
      * @return ZoneId Space ID.
      */
@@ -207,6 +214,22 @@ public class ListGroupsRequest extends AbstractModel {
         this.SortType = SortType;
     }
 
+    /**
+     * Get Pagination offset. Do not use it together with NextToken, prioritizing using NextToken. 
+     * @return Offset Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
+     * @param Offset Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public ListGroupsRequest() {
     }
 
@@ -242,6 +265,9 @@ public class ListGroupsRequest extends AbstractModel {
         if (source.SortType != null) {
             this.SortType = new String(source.SortType);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class ListGroupsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "FilterUsers.", this.FilterUsers);
         this.setParamSimple(map, prefix + "SortField", this.SortField);
         this.setParamSimple(map, prefix + "SortType", this.SortType);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

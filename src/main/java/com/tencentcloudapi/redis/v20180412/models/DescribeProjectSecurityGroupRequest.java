@@ -24,46 +24,61 @@ import java.util.HashMap;
 public class DescribeProjectSecurityGroupRequest extends AbstractModel {
 
     /**
-    * 0: default project; -1: all projects; >0: specified project
+    * Project ID for query.
+- 0: default project.
+- -1: all projects.
+- Greater than 0: specific project. Log in to the [project management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Security group ID
+    * Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter **InstanceSecurityGroupsDetail** of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-     * Get 0: default project; -1: all projects; >0: specified project 
-     * @return ProjectId 0: default project; -1: all projects; >0: specified project
+     * Get Project ID for query.
+- 0: default project.
+- -1: all projects.
+- Greater than 0: specific project. Log in to the [project management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**. 
+     * @return ProjectId Project ID for query.
+- 0: default project.
+- -1: all projects.
+- Greater than 0: specific project. Log in to the [project management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 0: default project; -1: all projects; >0: specified project
-     * @param ProjectId 0: default project; -1: all projects; >0: specified project
+     * Set Project ID for query.
+- 0: default project.
+- -1: all projects.
+- Greater than 0: specific project. Log in to the [project management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
+     * @param ProjectId Project ID for query.
+- 0: default project.
+- -1: all projects.
+- Greater than 0: specific project. Log in to the [project management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Security group ID 
-     * @return SecurityGroupId Security group ID
+     * Get Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter **InstanceSecurityGroupsDetail** of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1). 
+     * @return SecurityGroupId Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter **InstanceSecurityGroupsDetail** of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set Security group ID
-     * @param SecurityGroupId Security group ID
+     * Set Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter **InstanceSecurityGroupsDetail** of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
+     * @param SecurityGroupId Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter **InstanceSecurityGroupsDetail** of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;

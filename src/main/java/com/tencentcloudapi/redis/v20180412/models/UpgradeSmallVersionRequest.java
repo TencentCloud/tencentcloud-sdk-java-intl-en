@@ -24,92 +24,102 @@ import java.util.HashMap;
 public class UpgradeSmallVersionRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * The current redis version
+    * Current Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
     */
     @SerializedName("CurrentRedisVersion")
     @Expose
     private String CurrentRedisVersion;
 
     /**
-    * Upgradeable redis version
+    * Upgraded Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
     */
     @SerializedName("UpgradeRedisVersion")
     @Expose
     private String UpgradeRedisVersion;
 
     /**
-    * `1` (upgrade immediately), `0` (upgrade during maintenance time)
+    * Whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
     */
     @SerializedName("InstanceTypeUpgradeNow")
     @Expose
     private Long InstanceTypeUpgradeNow;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
+     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get The current redis version 
-     * @return CurrentRedisVersion The current redis version
+     * Get Current Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710). 
+     * @return CurrentRedisVersion Current Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
      */
     public String getCurrentRedisVersion() {
         return this.CurrentRedisVersion;
     }
 
     /**
-     * Set The current redis version
-     * @param CurrentRedisVersion The current redis version
+     * Set Current Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
+     * @param CurrentRedisVersion Current Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
      */
     public void setCurrentRedisVersion(String CurrentRedisVersion) {
         this.CurrentRedisVersion = CurrentRedisVersion;
     }
 
     /**
-     * Get Upgradeable redis version 
-     * @return UpgradeRedisVersion Upgradeable redis version
+     * Get Upgraded Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710). 
+     * @return UpgradeRedisVersion Upgraded Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
      */
     public String getUpgradeRedisVersion() {
         return this.UpgradeRedisVersion;
     }
 
     /**
-     * Set Upgradeable redis version
-     * @param UpgradeRedisVersion Upgradeable redis version
+     * Set Upgraded Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
+     * @param UpgradeRedisVersion Upgraded Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
      */
     public void setUpgradeRedisVersion(String UpgradeRedisVersion) {
         this.UpgradeRedisVersion = UpgradeRedisVersion;
     }
 
     /**
-     * Get `1` (upgrade immediately), `0` (upgrade during maintenance time) 
-     * @return InstanceTypeUpgradeNow `1` (upgrade immediately), `0` (upgrade during maintenance time)
+     * Get Whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window. 
+     * @return InstanceTypeUpgradeNow Whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
      */
     public Long getInstanceTypeUpgradeNow() {
         return this.InstanceTypeUpgradeNow;
     }
 
     /**
-     * Set `1` (upgrade immediately), `0` (upgrade during maintenance time)
-     * @param InstanceTypeUpgradeNow `1` (upgrade immediately), `0` (upgrade during maintenance time)
+     * Set Whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
+     * @param InstanceTypeUpgradeNow Whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
      */
     public void setInstanceTypeUpgradeNow(Long InstanceTypeUpgradeNow) {
         this.InstanceTypeUpgradeNow = InstanceTypeUpgradeNow;

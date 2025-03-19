@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class PackageBuyInfo extends AbstractModel {
 
     /**
-    * Package ID.
+    * Package id.
     */
     @SerializedName("PackageId")
     @Expose
     private String PackageId;
 
     /**
-    * Package type, 0 - Outbound call package | 1 - 400 inbound call package.
+    * Package type, 0 - outbound call package | 1 - 400 inbound call package.
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * Total package.
+    * <TOTAL_PACKAGE>.
     */
     @SerializedName("CapacitySize")
     @Expose
     private Long CapacitySize;
 
     /**
-    * Remaining package.
+    * Remaining package balance.
     */
     @SerializedName("CapacityRemain")
     @Expose
@@ -59,71 +59,71 @@ public class PackageBuyInfo extends AbstractModel {
     private Long BuyTime;
 
     /**
-    * End timestamp.
+    * Deadline timestamp.
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-     * Get Package ID. 
-     * @return PackageId Package ID.
+     * Get Package id. 
+     * @return PackageId Package id.
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set Package ID.
-     * @param PackageId Package ID.
+     * Set Package id.
+     * @param PackageId Package id.
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get Package type, 0 - Outbound call package | 1 - 400 inbound call package. 
-     * @return Type Package type, 0 - Outbound call package | 1 - 400 inbound call package.
+     * Get Package type, 0 - outbound call package | 1 - 400 inbound call package. 
+     * @return Type Package type, 0 - outbound call package | 1 - 400 inbound call package.
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Package type, 0 - Outbound call package | 1 - 400 inbound call package.
-     * @param Type Package type, 0 - Outbound call package | 1 - 400 inbound call package.
+     * Set Package type, 0 - outbound call package | 1 - 400 inbound call package.
+     * @param Type Package type, 0 - outbound call package | 1 - 400 inbound call package.
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Total package. 
-     * @return CapacitySize Total package.
+     * Get <TOTAL_PACKAGE>. 
+     * @return CapacitySize <TOTAL_PACKAGE>.
      */
     public Long getCapacitySize() {
         return this.CapacitySize;
     }
 
     /**
-     * Set Total package.
-     * @param CapacitySize Total package.
+     * Set <TOTAL_PACKAGE>.
+     * @param CapacitySize <TOTAL_PACKAGE>.
      */
     public void setCapacitySize(Long CapacitySize) {
         this.CapacitySize = CapacitySize;
     }
 
     /**
-     * Get Remaining package. 
-     * @return CapacityRemain Remaining package.
+     * Get Remaining package balance. 
+     * @return CapacityRemain Remaining package balance.
      */
     public Long getCapacityRemain() {
         return this.CapacityRemain;
     }
 
     /**
-     * Set Remaining package.
-     * @param CapacityRemain Remaining package.
+     * Set Remaining package balance.
+     * @param CapacityRemain Remaining package balance.
      */
     public void setCapacityRemain(Long CapacityRemain) {
         this.CapacityRemain = CapacityRemain;
@@ -146,16 +146,16 @@ public class PackageBuyInfo extends AbstractModel {
     }
 
     /**
-     * Get End timestamp. 
-     * @return EndTime End timestamp.
+     * Get Deadline timestamp. 
+     * @return EndTime Deadline timestamp.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End timestamp.
-     * @param EndTime End timestamp.
+     * Set Deadline timestamp.
+     * @param EndTime Deadline timestamp.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StartupInstanceResponse extends AbstractModel {
 
     /**
-    * Task ID
+    * This parameter has been deprecated. Determine whether the instance has been deisolated based on the status obtained through the instance query API.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class StartupInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task ID 
-     * @return TaskId Task ID
+     * Get This parameter has been deprecated. Determine whether the instance has been deisolated based on the status obtained through the instance query API. 
+     * @return TaskId This parameter has been deprecated. Determine whether the instance has been deisolated based on the status obtained through the instance query API.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID
-     * @param TaskId Task ID
+     * Set This parameter has been deprecated. Determine whether the instance has been deisolated based on the status obtained through the instance query API.
+     * @param TaskId This parameter has been deprecated. Determine whether the instance has been deisolated based on the status obtained through the instance query API.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

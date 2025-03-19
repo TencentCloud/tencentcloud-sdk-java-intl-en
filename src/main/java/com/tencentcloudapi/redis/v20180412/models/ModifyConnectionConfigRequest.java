@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyConnectionConfigRequest extends AbstractModel {
 
     /**
-    * Instance ID, which can contain 12 to 36 characters.
+    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,23 +38,25 @@ public class ModifyConnectionConfigRequest extends AbstractModel {
     private Long Bandwidth;
 
     /**
-    * Total number of connections of a single shard.When read-only replicas are not enabled, the lower limit is 10,000, and the upper limit is 40,000.When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is 10,000 × (the number of read-only replicas + 3).
+    * Total number of connections per shard.
+- When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
+- When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
     */
     @SerializedName("ClientLimit")
     @Expose
     private Long ClientLimit;
 
     /**
-     * Get Instance ID, which can contain 12 to 36 characters. 
-     * @return InstanceId Instance ID, which can contain 12 to 36 characters.
+     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
+     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID, which can contain 12 to 36 characters.
-     * @param InstanceId Instance ID, which can contain 12 to 36 characters.
+     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -77,16 +79,24 @@ public class ModifyConnectionConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get Total number of connections of a single shard.When read-only replicas are not enabled, the lower limit is 10,000, and the upper limit is 40,000.When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is 10,000 × (the number of read-only replicas + 3). 
-     * @return ClientLimit Total number of connections of a single shard.When read-only replicas are not enabled, the lower limit is 10,000, and the upper limit is 40,000.When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is 10,000 × (the number of read-only replicas + 3).
+     * Get Total number of connections per shard.
+- When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
+- When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3). 
+     * @return ClientLimit Total number of connections per shard.
+- When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
+- When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
      */
     public Long getClientLimit() {
         return this.ClientLimit;
     }
 
     /**
-     * Set Total number of connections of a single shard.When read-only replicas are not enabled, the lower limit is 10,000, and the upper limit is 40,000.When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is 10,000 × (the number of read-only replicas + 3).
-     * @param ClientLimit Total number of connections of a single shard.When read-only replicas are not enabled, the lower limit is 10,000, and the upper limit is 40,000.When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is 10,000 × (the number of read-only replicas + 3).
+     * Set Total number of connections per shard.
+- When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
+- When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+     * @param ClientLimit Total number of connections per shard.
+- When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
+- When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
      */
     public void setClientLimit(Long ClientLimit) {
         this.ClientLimit = ClientLimit;

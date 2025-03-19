@@ -24,140 +24,115 @@ import java.util.HashMap;
 public class RegionSummaryOverviewItem extends AbstractModel {
 
     /**
-    * Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Region id.
     */
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
 
     /**
-    * Region name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Region name.
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-    * The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Actual total consumption, up to 8 decimal places.
     */
     @SerializedName("OriginalCost")
     @Expose
     private String OriginalCost;
 
     /**
-    * The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Voucher payment amount, up to 8 decimal places.
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total consumption, up to 8 decimal places.
     */
     @SerializedName("TotalCost")
     @Expose
     private String TotalCost;
 
     /**
-     * Get Region ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegionId Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Region id. 
+     * @return RegionId Region id.
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RegionId Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Region id.
+     * @param RegionId Region id.
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get Region name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegionName Region name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Region name. 
+     * @return RegionName Region name.
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set Region name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RegionName Region name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Region name.
+     * @param RegionName Region name.
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginalCost The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Actual total consumption, up to 8 decimal places. 
+     * @return OriginalCost Actual total consumption, up to 8 decimal places.
      */
     public String getOriginalCost() {
         return this.OriginalCost;
     }
 
     /**
-     * Set The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginalCost The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Actual total consumption, up to 8 decimal places.
+     * @param OriginalCost Actual total consumption, up to 8 decimal places.
      */
     public void setOriginalCost(String OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Voucher payment amount, up to 8 decimal places. 
+     * @return VoucherPayAmount Voucher payment amount, up to 8 decimal places.
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Voucher payment amount, up to 8 decimal places.
+     * @param VoucherPayAmount Voucher payment amount, up to 8 decimal places.
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCost Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total consumption, up to 8 decimal places. 
+     * @return TotalCost Total consumption, up to 8 decimal places.
      */
     public String getTotalCost() {
         return this.TotalCost;
     }
 
     /**
-     * Set Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCost Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total consumption, up to 8 decimal places.
+     * @param TotalCost Total consumption, up to 8 decimal places.
      */
     public void setTotalCost(String TotalCost) {
         this.TotalCost = TotalCost;

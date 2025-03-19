@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class GetFaceIdResultIntlRequest extends AbstractModel {
 
     /**
-    * The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+    * The ID of the SDK-based selfie verification process, which is generated when the `GetFaceIdTokenIntl` API is called.	
     */
     @SerializedName("SdkToken")
     @Expose
     private String SdkToken;
 
     /**
-     * Get The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	 
-     * @return SdkToken The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+     * Get The ID of the SDK-based selfie verification process, which is generated when the `GetFaceIdTokenIntl` API is called.	 
+     * @return SdkToken The ID of the SDK-based selfie verification process, which is generated when the `GetFaceIdTokenIntl` API is called.	
      */
     public String getSdkToken() {
         return this.SdkToken;
     }
 
     /**
-     * Set The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
-     * @param SdkToken The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+     * Set The ID of the SDK-based selfie verification process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+     * @param SdkToken The ID of the SDK-based selfie verification process, which is generated when the `GetFaceIdTokenIntl` API is called.	
      */
     public void setSdkToken(String SdkToken) {
         this.SdkToken = SdkToken;

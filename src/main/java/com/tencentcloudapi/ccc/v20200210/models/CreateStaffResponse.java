@@ -25,7 +25,6 @@ public class CreateStaffResponse extends AbstractModel {
 
     /**
     * Error agent list and error information.
-Note: This field may return null, indicating that no valid value could be obtained.
     */
     @SerializedName("ErrorStaffList")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid value could be obtain
     private String RequestId;
 
     /**
-     * Get Error agent list and error information.
-Note: This field may return null, indicating that no valid value could be obtained. 
+     * Get Error agent list and error information. 
      * @return ErrorStaffList Error agent list and error information.
-Note: This field may return null, indicating that no valid value could be obtained.
      */
     public ErrStaffItem [] getErrorStaffList() {
         return this.ErrorStaffList;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid value could be obtain
 
     /**
      * Set Error agent list and error information.
-Note: This field may return null, indicating that no valid value could be obtained.
      * @param ErrorStaffList Error agent list and error information.
-Note: This field may return null, indicating that no valid value could be obtained.
      */
     public void setErrorStaffList(ErrStaffItem [] ErrorStaffList) {
         this.ErrorStaffList = ErrorStaffList;

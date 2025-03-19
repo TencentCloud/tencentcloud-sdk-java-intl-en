@@ -59,6 +59,13 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel {
     private String LegalPerson;
 
     /**
+    * 
+    */
+    @SerializedName("LegalPersonId")
+    @Expose
+    private String LegalPersonId;
+
+    /**
     * (Fuzzy match) Issuing authority.
     */
     @SerializedName("IssuingAuthority")
@@ -227,6 +234,22 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel {
      */
     public void setLegalPerson(String LegalPerson) {
         this.LegalPerson = LegalPerson;
+    }
+
+    /**
+     * Get  
+     * @return LegalPersonId 
+     */
+    public String getLegalPersonId() {
+        return this.LegalPersonId;
+    }
+
+    /**
+     * Set 
+     * @param LegalPersonId 
+     */
+    public void setLegalPersonId(String LegalPersonId) {
+        this.LegalPersonId = LegalPersonId;
     }
 
     /**
@@ -460,6 +483,9 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel {
         if (source.LegalPerson != null) {
             this.LegalPerson = new String(source.LegalPerson);
         }
+        if (source.LegalPersonId != null) {
+            this.LegalPersonId = new String(source.LegalPersonId);
+        }
         if (source.IssuingAuthority != null) {
             this.IssuingAuthority = new String(source.IssuingAuthority);
         }
@@ -511,6 +537,7 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Company", this.Company);
         this.setParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
         this.setParamSimple(map, prefix + "LegalPerson", this.LegalPerson);
+        this.setParamSimple(map, prefix + "LegalPersonId", this.LegalPersonId);
         this.setParamSimple(map, prefix + "IssuingAuthority", this.IssuingAuthority);
         this.setParamSimple(map, prefix + "BusinessAddress", this.BusinessAddress);
         this.setParamSimple(map, prefix + "PostCode", this.PostCode);

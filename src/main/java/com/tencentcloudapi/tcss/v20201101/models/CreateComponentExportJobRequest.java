@@ -31,13 +31,6 @@ public class CreateComponentExportJobRequest extends AbstractModel {
     private String ImageID;
 
     /**
-    * Export field
-    */
-    @SerializedName("ExportField")
-    @Expose
-    private String [] ExportField;
-
-    /**
     * Number of results to be returned. Default value: `10000`. Maximum value: `10000`.
     */
     @SerializedName("Limit")
@@ -74,6 +67,13 @@ public class CreateComponentExportJobRequest extends AbstractModel {
     private String Order;
 
     /**
+    * Export field
+    */
+    @SerializedName("ExportField")
+    @Expose
+    private String [] ExportField;
+
+    /**
      * Get Image ID 
      * @return ImageID Image ID
      */
@@ -87,22 +87,6 @@ public class CreateComponentExportJobRequest extends AbstractModel {
      */
     public void setImageID(String ImageID) {
         this.ImageID = ImageID;
-    }
-
-    /**
-     * Get Export field 
-     * @return ExportField Export field
-     */
-    public String [] getExportField() {
-        return this.ExportField;
-    }
-
-    /**
-     * Set Export field
-     * @param ExportField Export field
-     */
-    public void setExportField(String [] ExportField) {
-        this.ExportField = ExportField;
     }
 
     /**
@@ -189,6 +173,22 @@ public class CreateComponentExportJobRequest extends AbstractModel {
         this.Order = Order;
     }
 
+    /**
+     * Get Export field 
+     * @return ExportField Export field
+     */
+    public String [] getExportField() {
+        return this.ExportField;
+    }
+
+    /**
+     * Set Export field
+     * @param ExportField Export field
+     */
+    public void setExportField(String [] ExportField) {
+        this.ExportField = ExportField;
+    }
+
     public CreateComponentExportJobRequest() {
     }
 
@@ -199,12 +199,6 @@ public class CreateComponentExportJobRequest extends AbstractModel {
     public CreateComponentExportJobRequest(CreateComponentExportJobRequest source) {
         if (source.ImageID != null) {
             this.ImageID = new String(source.ImageID);
-        }
-        if (source.ExportField != null) {
-            this.ExportField = new String[source.ExportField.length];
-            for (int i = 0; i < source.ExportField.length; i++) {
-                this.ExportField[i] = new String(source.ExportField[i]);
-            }
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
@@ -224,6 +218,12 @@ public class CreateComponentExportJobRequest extends AbstractModel {
         if (source.Order != null) {
             this.Order = new String(source.Order);
         }
+        if (source.ExportField != null) {
+            this.ExportField = new String[source.ExportField.length];
+            for (int i = 0; i < source.ExportField.length; i++) {
+                this.ExportField[i] = new String(source.ExportField[i]);
+            }
+        }
     }
 
 
@@ -232,12 +232,12 @@ public class CreateComponentExportJobRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageID", this.ImageID);
-        this.setParamArraySimple(map, prefix + "ExportField.", this.ExportField);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "By", this.By);
         this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamArraySimple(map, prefix + "ExportField.", this.ExportField);
 
     }
 }

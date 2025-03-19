@@ -40,6 +40,7 @@ public class IntlpartnersmgtClient extends AbstractClient{
 
     /**
      *This API is used to allocate credit pools to second-level resellers by distributors.
+Callable roles: Distributor
      * @param req AllocateCreditPoolRequest
      * @return AllocateCreditPoolResponse
      * @throws TencentCloudSDKException
@@ -55,6 +56,8 @@ public class IntlpartnersmgtClient extends AbstractClient{
 2. The customer's service will be suspended when its available credit is set to 0, so caution should be exercised with this operation.
 3. To prevent the customer from making new purchases without affecting their use of previously purchased products, the partner can set their available credit to 0 after obtaining the non-stop feature privilege from the channel manager.
 4. The set credit is an increment of the current available credit and cannot exceed the remaining allocable credit. Setting the credit to a negative value indicates that it will be repossessed. The available credit can be set to 0 at the minimum.
+
+Callable roles: Distributor, Second-level reseller, Reseller
      * @param req AllocateCustomerCreditRequest
      * @return AllocateCustomerCreditResponse
      * @throws TencentCloudSDKException
@@ -65,7 +68,25 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create Tencent Cloud customer accounts for first-level resellers/second-level resellers. After the account is created, it will be automatically bound to the partner account.Note:1. Create a Tencent Cloud account. The entered email address and mobile phone number need to be verified by the partner for validity.2. Customers need to add personal information when logging in for the first time.3. This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
+     *Description: This API is used by resellers to review applications to become sub-customers. Note: This API is used to apply for the allowlist. If needed, please contact your business representative.
+
+Callable roles: Reseller, Distributer, Second-level reseller
+     * @param req ApproveClientApplyRequest
+     * @return ApproveClientApplyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApproveClientApplyResponse ApproveClientApply(ApproveClientApplyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ApproveClientApply", ApproveClientApplyResponse.class);
+    }
+
+    /**
+     *This API is used to create Tencent Cloud customer accounts for distributor/second-level resellers.After the account is created, it will be automatically bound to the partner account.Note:
+1. Create a Tencent Cloud account. The entered email address and mobile phone number need to be verified by the partner for validity.
+2. Customers need to add personal information when logging in for the first time.
+3. This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
+
+Callable roles: Distributor, Second-level reseller, Reseller
      * @param req CreateAccountRequest
      * @return CreateAccountResponse
      * @throws TencentCloudSDKException
@@ -76,7 +97,26 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query bill details by customers.
+     *This API is used to apply for the allowlist. If needed, please contact your business representative.Directions:
+1.This API is used to create an invitation link, which you can send to a specified email address.
+2.Customer need to click the invitation link in the email, fill in and submit the required information.
+3.You can review the customer's application in customer management  after submission.
+
+Note:This API is used to manually send the invitation link to the customer if the specified email does not receive it.
+
+Callable roles: Distributor, Second-level reseller, Reseller
+     * @param req CreateAndSendClientInvitationMailRequest
+     * @return CreateAndSendClientInvitationMailResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAndSendClientInvitationMailResponse CreateAndSendClientInvitationMail(CreateAndSendClientInvitationMailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAndSendClientInvitationMail", CreateAndSendClientInvitationMailResponse.class);
+    }
+
+    /**
+     *Description: End-customer queries its own bill details.
+Callable role: End-customer.
      * @param req DescribeBillDetailRequest
      * @return DescribeBillDetailResponse
      * @throws TencentCloudSDKException
@@ -87,7 +127,8 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
-     *This API is used to download billing files and return billing file URLs by customers.
+     *Description: This API is used to download billing files and return billing file URLs for sub-customers.
+Callable role: Enb-customer.
      * @param req DescribeBillDownloadUrlRequest
      * @return DescribeBillDownloadUrlResponse
      * @throws TencentCloudSDKException
@@ -98,7 +139,8 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
-     *External API for the L1 billing of the customer billing center
+     *Description: External API for L1 billing of Sub-customer billing center.
+Callable role: End-customer.
      * @param req DescribeBillSummaryRequest
      * @return DescribeBillSummaryResponse
      * @throws TencentCloudSDKException
@@ -110,6 +152,7 @@ public class IntlpartnersmgtClient extends AbstractClient{
 
     /**
      *This API is used to obtain the total amount of customer bills by payment mode.
+Callable roles: Distributor, Second-level reseller, Reseller
      * @param req DescribeBillSummaryByPayModeRequest
      * @return DescribeBillSummaryByPayModeResponse
      * @throws TencentCloudSDKException
@@ -120,7 +163,8 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
-     *This API is used to obtain the total amount of customer bills by product.
+     *Description: Obtain the summarized value of sub - account bills by product dimension.
+Callable roles: Distributor, Second-level reseller, Reseller
      * @param req DescribeBillSummaryByProductRequest
      * @return DescribeBillSummaryByProductResponse
      * @throws TencentCloudSDKException
@@ -131,7 +175,8 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
-     *This API is used to obtain the total amount of customer bills by region.
+     *Description: Obtain the summarized value of sub - account bills by region through API.
+Callable roles: Distributor, Second-level reseller, Reseller
      * @param req DescribeBillSummaryByRegionRequest
      * @return DescribeBillSummaryByRegionResponse
      * @throws TencentCloudSDKException
@@ -143,6 +188,7 @@ public class IntlpartnersmgtClient extends AbstractClient{
 
     /**
      *This API is used to query the customer bill details by resellers.
+Callable roles: Distributor, Second-level reseller, Reseller
      * @param req DescribeCustomerBillDetailRequest
      * @return DescribeCustomerBillDetailResponse
      * @throws TencentCloudSDKException
@@ -153,7 +199,21 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the URL for downloading the customer bill file by reseller. The download conditions are as follows:
+1. Detailed bills (billDetail and billDetailPack) can be downloaded starting from June 2022; resource bills (billResource and billResourcePack) can be downloaded starting from November 2023.
+2. Bill packages (billDetailPack and billResourcePack) can only be downloaded after billing.
+     * @param req DescribeCustomerBillDownloadUrlRequest
+     * @return DescribeCustomerBillDownloadUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomerBillDownloadUrlResponse DescribeCustomerBillDownloadUrl(DescribeCustomerBillDownloadUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomerBillDownloadUrl", DescribeCustomerBillDownloadUrlResponse.class);
+    }
+
+    /**
      *This API is used to query the total amount of customer bills.
+Callable roles: Distributor, Second-level reseller, Reseller
      * @param req DescribeCustomerBillSummaryRequest
      * @return DescribeCustomerBillSummaryResponse
      * @throws TencentCloudSDKException
@@ -165,6 +225,8 @@ public class IntlpartnersmgtClient extends AbstractClient{
 
     /**
      *This API is used to query the customer information.
+
+Callable roles: Distributor, Reseller
      * @param req DescribeCustomerInfoRequest
      * @return DescribeCustomerInfoResponse
      * @throws TencentCloudSDKException
@@ -186,6 +248,19 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
+     *Forced Service Suspension settings and cancellation can be used only after the reseller is whitelisted.
+
+Callable roles: Distributor, Second-level reseller, Reseller
+     * @param req ForceQNRequest
+     * @return ForceQNResponse
+     * @throws TencentCloudSDKException
+     */
+    public ForceQNResponse ForceQN(ForceQNRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ForceQN", ForceQNResponse.class);
+    }
+
+    /**
      *This API is used to obtain country/region codes.
      * @param req GetCountryCodesRequest
      * @return GetCountryCodesResponse
@@ -197,7 +272,22 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query industry information, including layer-1 industry and layer-2 industry.
+
+Callable roles: Distributor, Second-level reseller, Reseller,End-customer
+     * @param req GetTradeConfigListRequest
+     * @return GetTradeConfigListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTradeConfigListResponse GetTradeConfigList(GetTradeConfigListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTradeConfigList", GetTradeConfigListResponse.class);
+    }
+
+    /**
      *This API is used to modify customer remarks.
+
+Callable roles: Distributor, Second-level reseller, Reseller
      * @param req ModifyClientRemarkRequest
      * @return ModifyClientRemarkResponse
      * @throws TencentCloudSDKException
@@ -209,6 +299,7 @@ public class IntlpartnersmgtClient extends AbstractClient{
 
     /**
      *This API is used to query the account verification status.
+Callable roles: Distributor, Reseller
      * @param req QueryAccountVerificationStatusRequest
      * @return QueryAccountVerificationStatusResponse
      * @throws TencentCloudSDKException
@@ -220,6 +311,7 @@ public class IntlpartnersmgtClient extends AbstractClient{
 
     /**
      *This API is used to query all the credit allocation records of a single customer.
+Callable roles: Distributor, Second-level reseller, Reseller
      * @param req QueryCreditAllocationHistoryRequest
      * @return QueryCreditAllocationHistoryResponse
      * @throws TencentCloudSDKException
@@ -231,6 +323,7 @@ public class IntlpartnersmgtClient extends AbstractClient{
 
     /**
      *This API is used to query the credit of users in the list.
+Callable roles: Distributor, Second-level reseller, Reseller
      * @param req QueryCreditByUinListRequest
      * @return QueryCreditByUinListResponse
      * @throws TencentCloudSDKException
@@ -241,18 +334,22 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query customer credits.
-     * @param req QueryCreditQuotaRequest
-     * @return QueryCreditQuotaResponse
+     *Description: This API is used for a sub-customer to real-time query its own total credit and remaining credit in USD.
+
+Callable roles: Sub-customer
+     * @param req QueryCustomerBillingQuotaRequest
+     * @return QueryCustomerBillingQuotaResponse
      * @throws TencentCloudSDKException
      */
-    public QueryCreditQuotaResponse QueryCreditQuota(QueryCreditQuotaRequest req) throws TencentCloudSDKException{
+    public QueryCustomerBillingQuotaResponse QueryCustomerBillingQuota(QueryCustomerBillingQuotaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "QueryCreditQuota", QueryCreditQuotaResponse.class);
+        return this.internalRequest(req, "QueryCustomerBillingQuota", QueryCustomerBillingQuotaResponse.class);
     }
 
     /**
      *This API is used for a partner to the credits and basic information of cutomers.
+
+Callable roles: Distributor, Second-level reseller, Reseller
      * @param req QueryCustomersCreditRequest
      * @return QueryCustomersCreditResponse
      * @throws TencentCloudSDKException
@@ -264,6 +361,7 @@ public class IntlpartnersmgtClient extends AbstractClient{
 
     /**
      *This API is used to query the credits of direct customers.
+Callable roles: Distributor, Second-level reseller, Reseller
      * @param req QueryDirectCustomersCreditRequest
      * @return QueryDirectCustomersCreditResponse
      * @throws TencentCloudSDKException
@@ -275,6 +373,8 @@ public class IntlpartnersmgtClient extends AbstractClient{
 
     /**
      *This API is used for a partner to query its own total credit, available credit, and used credit in USD.
+
+Callable roles: Distributor, Second-level reseller, Reseller
      * @param req QueryPartnerCreditRequest
      * @return QueryPartnerCreditResponse
      * @throws TencentCloudSDKException
@@ -285,7 +385,33 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the voucher quota based on the customer UIN.
+     *Description: This API is used by resellers to query the list of sub-customers pending review. Note: This API is used to apply for the allowlist. If needed, please contact your business representative.
+
+Callable roles: Reseller, Distributer, Second-level reseller
+     * @param req QueryPendingClientsV2Request
+     * @return QueryPendingClientsV2Response
+     * @throws TencentCloudSDKException
+     */
+    public QueryPendingClientsV2Response QueryPendingClientsV2(QueryPendingClientsV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryPendingClientsV2", QueryPendingClientsV2Response.class);
+    }
+
+    /**
+     *This API is used to query the product list information within the specified policy range. To call this API, contact your business manager to apply for adding it to the allowlist.
+Callable roles: Distributor, Second-level reseller, Reseller
+     * @param req QueryPolicyProductListByCodeRequest
+     * @return QueryPolicyProductListByCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryPolicyProductListByCodeResponse QueryPolicyProductListByCode(QueryPolicyProductListByCodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryPolicyProductListByCode", QueryPolicyProductListByCodeResponse.class);
+    }
+
+    /**
+     *This API is used by primary/secondary resellers to query the voucher quota based on the customer UIN.
+Callable roles: Reseller, Distributor, Second-level reseller
      * @param req QueryVoucherAmountByUinRequest
      * @return QueryVoucherAmountByUinResponse
      * @throws TencentCloudSDKException
@@ -296,7 +422,8 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the voucher list based on the customer UIN.
+     *This API is used by primary/secondary resellers to query the voucher list based on the customer UIN.
+Callable roles: Reseller, Distributor, Second-level reseller
      * @param req QueryVoucherListByUinRequest
      * @return QueryVoucherListByUinResponse
      * @throws TencentCloudSDKException
@@ -307,7 +434,8 @@ public class IntlpartnersmgtClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the voucher quota pool.
+     *This API is used by primary/secondary resellers to query the voucher quota pool.
+Callable roles: Distributor, First-level reseller, Second-level reseller
      * @param req QueryVoucherPoolRequest
      * @return QueryVoucherPoolResponse
      * @throws TencentCloudSDKException
@@ -319,6 +447,8 @@ public class IntlpartnersmgtClient extends AbstractClient{
 
     /**
      *This API is used to send a verification code for account registration.
+
+Callable roles: Distributor, Second-level reseller, Reseller,End-customer
      * @param req SendVerifyCodeRequest
      * @return SendVerifyCodeResponse
      * @throws TencentCloudSDKException

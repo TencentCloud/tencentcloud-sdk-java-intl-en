@@ -43,6 +43,7 @@ Example value: false
 1: OCR+living detection & face comparison;
 2: Living detection & face comparison;
 3: Living detection;
+4: OCR;
 The default value is 2.
 Example value: 3
     */
@@ -60,7 +61,7 @@ Example value: 3
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.IndonesiaDrivingLicense:Indonesia driving license
 11.ThailandIDCard: Thailand ID card
 12.ThailandDrivingLicense: Thailand driving license
@@ -70,8 +71,8 @@ Example value: 3
 16.JapanIDCard: Japan ID card
 17.JapanDrivingLicense: Japan driving license
 18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland ID card
-20.MacaoIDCard: Macao ID card
+19.MainlandIDCard: Mainland (China) ID card
+20.MacaoIDCard: Macao (China) ID card
 Example: HKIDCard
     */
     @SerializedName("IDCardType")
@@ -144,6 +145,13 @@ The default value is blink. The different action types passed in this parameter 
     private String ActionList;
 
     /**
+    * Control liveness retry number.The value range is 1-99.
+    */
+    @SerializedName("LivenessRetryLimit")
+    @Expose
+    private Long LivenessRetryLimit;
+
+    /**
      * Get When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered. 
      * @return AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
      */
@@ -184,12 +192,14 @@ Example value: false
 1: OCR+living detection & face comparison;
 2: Living detection & face comparison;
 3: Living detection;
+4: OCR;
 The default value is 2.
 Example value: 3 
      * @return CheckMode Detection mode, parameter values are as follows:
 1: OCR+living detection & face comparison;
 2: Living detection & face comparison;
 3: Living detection;
+4: OCR;
 The default value is 2.
 Example value: 3
      */
@@ -202,12 +212,14 @@ Example value: 3
 1: OCR+living detection & face comparison;
 2: Living detection & face comparison;
 3: Living detection;
+4: OCR;
 The default value is 2.
 Example value: 3
      * @param CheckMode Detection mode, parameter values are as follows:
 1: OCR+living detection & face comparison;
 2: Living detection & face comparison;
 3: Living detection;
+4: OCR;
 The default value is 2.
 Example value: 3
      */
@@ -225,7 +237,7 @@ Example value: 3
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.IndonesiaDrivingLicense:Indonesia driving license
 11.ThailandIDCard: Thailand ID card
 12.ThailandDrivingLicense: Thailand driving license
@@ -235,8 +247,8 @@ Example value: 3
 16.JapanIDCard: Japan ID card
 17.JapanDrivingLicense: Japan driving license
 18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland ID card
-20.MacaoIDCard: Macao ID card
+19.MainlandIDCard: Mainland (China) ID card
+20.MacaoIDCard: Macao (China) ID card
 Example: HKIDCard 
      * @return IDCardType The type of lisence used for verification. The following types are supported.
 1.HKIDCard: Hong Kong (China) ID card
@@ -247,7 +259,7 @@ Example: HKIDCard
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.IndonesiaDrivingLicense:Indonesia driving license
 11.ThailandIDCard: Thailand ID card
 12.ThailandDrivingLicense: Thailand driving license
@@ -257,8 +269,8 @@ Example: HKIDCard
 16.JapanIDCard: Japan ID card
 17.JapanDrivingLicense: Japan driving license
 18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland ID card
-20.MacaoIDCard: Macao ID card
+19.MainlandIDCard: Mainland (China) ID card
+20.MacaoIDCard: Macao (China) ID card
 Example: HKIDCard
      */
     public String getIDCardType() {
@@ -275,7 +287,7 @@ Example: HKIDCard
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.IndonesiaDrivingLicense:Indonesia driving license
 11.ThailandIDCard: Thailand ID card
 12.ThailandDrivingLicense: Thailand driving license
@@ -285,8 +297,8 @@ Example: HKIDCard
 16.JapanIDCard: Japan ID card
 17.JapanDrivingLicense: Japan driving license
 18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland ID card
-20.MacaoIDCard: Macao ID card
+19.MainlandIDCard: Mainland (China) ID card
+20.MacaoIDCard: Macao (China) ID card
 Example: HKIDCard
      * @param IDCardType The type of lisence used for verification. The following types are supported.
 1.HKIDCard: Hong Kong (China) ID card
@@ -297,7 +309,7 @@ Example: HKIDCard
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.IndonesiaDrivingLicense:Indonesia driving license
 11.ThailandIDCard: Thailand ID card
 12.ThailandDrivingLicense: Thailand driving license
@@ -307,8 +319,8 @@ Example: HKIDCard
 16.JapanIDCard: Japan ID card
 17.JapanDrivingLicense: Japan driving license
 18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland ID card
-20.MacaoIDCard: Macao ID card
+19.MainlandIDCard: Mainland (China) ID card
+20.MacaoIDCard: Macao (China) ID card
 Example: HKIDCard
      */
     public void setIDCardType(String IDCardType) {
@@ -479,6 +491,22 @@ The default value is blink. The different action types passed in this parameter 
         this.ActionList = ActionList;
     }
 
+    /**
+     * Get Control liveness retry number.The value range is 1-99. 
+     * @return LivenessRetryLimit Control liveness retry number.The value range is 1-99.
+     */
+    public Long getLivenessRetryLimit() {
+        return this.LivenessRetryLimit;
+    }
+
+    /**
+     * Set Control liveness retry number.The value range is 1-99.
+     * @param LivenessRetryLimit Control liveness retry number.The value range is 1-99.
+     */
+    public void setLivenessRetryLimit(Long LivenessRetryLimit) {
+        this.LivenessRetryLimit = LivenessRetryLimit;
+    }
+
     public WebVerificationConfigIntl() {
     }
 
@@ -523,6 +551,9 @@ The default value is blink. The different action types passed in this parameter 
         if (source.ActionList != null) {
             this.ActionList = new String(source.ActionList);
         }
+        if (source.LivenessRetryLimit != null) {
+            this.LivenessRetryLimit = new Long(source.LivenessRetryLimit);
+        }
     }
 
 
@@ -542,6 +573,7 @@ The default value is blink. The different action types passed in this parameter 
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamSimple(map, prefix + "AutoDowngrade", this.AutoDowngrade);
         this.setParamSimple(map, prefix + "ActionList", this.ActionList);
+        this.setParamSimple(map, prefix + "LivenessRetryLimit", this.LivenessRetryLimit);
 
     }
 }

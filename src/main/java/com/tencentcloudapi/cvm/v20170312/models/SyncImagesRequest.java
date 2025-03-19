@@ -63,6 +63,24 @@ Default value: false.
     private Boolean ImageSetRequired;
 
     /**
+    * Whether to synchronize as an encrypted custom image.
+Default value is `false`.
+Synchronization to an encrypted custom image is only supported within the same region.
+    */
+    @SerializedName("Encrypt")
+    @Expose
+    private Boolean Encrypt;
+
+    /**
+    * KMS key ID used when synchronizing to an encrypted custom image. 
+This parameter is valid only synchronizing to an encrypted image.
+If KmsKeyId is not specified, the default CBS cloud product KMS key is used.
+    */
+    @SerializedName("KmsKeyId")
+    @Expose
+    private String KmsKeyId;
+
+    /**
      * Get Image ID list. You can obtain the image IDs in the following ways:<br><li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain the image IDs in the [Image console](https://console.cloud.tencent.com/cvm/image).<br>The image IDs should meet the following requirement:</li><li>The image ID should correspond to an image in the `NORMAL` state.</li>For more information on image status, see [Image Data Table](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image). 
      * @return ImageIds Image ID list. You can obtain the image IDs in the following ways:<br><li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain the image IDs in the [Image console](https://console.cloud.tencent.com/cvm/image).<br>The image IDs should meet the following requirement:</li><li>The image ID should correspond to an image in the `NORMAL` state.</li>For more information on image status, see [Image Data Table](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image).
      */
@@ -158,6 +176,54 @@ Default value: false.
         this.ImageSetRequired = ImageSetRequired;
     }
 
+    /**
+     * Get Whether to synchronize as an encrypted custom image.
+Default value is `false`.
+Synchronization to an encrypted custom image is only supported within the same region. 
+     * @return Encrypt Whether to synchronize as an encrypted custom image.
+Default value is `false`.
+Synchronization to an encrypted custom image is only supported within the same region.
+     */
+    public Boolean getEncrypt() {
+        return this.Encrypt;
+    }
+
+    /**
+     * Set Whether to synchronize as an encrypted custom image.
+Default value is `false`.
+Synchronization to an encrypted custom image is only supported within the same region.
+     * @param Encrypt Whether to synchronize as an encrypted custom image.
+Default value is `false`.
+Synchronization to an encrypted custom image is only supported within the same region.
+     */
+    public void setEncrypt(Boolean Encrypt) {
+        this.Encrypt = Encrypt;
+    }
+
+    /**
+     * Get KMS key ID used when synchronizing to an encrypted custom image. 
+This parameter is valid only synchronizing to an encrypted image.
+If KmsKeyId is not specified, the default CBS cloud product KMS key is used. 
+     * @return KmsKeyId KMS key ID used when synchronizing to an encrypted custom image. 
+This parameter is valid only synchronizing to an encrypted image.
+If KmsKeyId is not specified, the default CBS cloud product KMS key is used.
+     */
+    public String getKmsKeyId() {
+        return this.KmsKeyId;
+    }
+
+    /**
+     * Set KMS key ID used when synchronizing to an encrypted custom image. 
+This parameter is valid only synchronizing to an encrypted image.
+If KmsKeyId is not specified, the default CBS cloud product KMS key is used.
+     * @param KmsKeyId KMS key ID used when synchronizing to an encrypted custom image. 
+This parameter is valid only synchronizing to an encrypted image.
+If KmsKeyId is not specified, the default CBS cloud product KMS key is used.
+     */
+    public void setKmsKeyId(String KmsKeyId) {
+        this.KmsKeyId = KmsKeyId;
+    }
+
     public SyncImagesRequest() {
     }
 
@@ -187,6 +253,12 @@ Default value: false.
         if (source.ImageSetRequired != null) {
             this.ImageSetRequired = new Boolean(source.ImageSetRequired);
         }
+        if (source.Encrypt != null) {
+            this.Encrypt = new Boolean(source.Encrypt);
+        }
+        if (source.KmsKeyId != null) {
+            this.KmsKeyId = new String(source.KmsKeyId);
+        }
     }
 
 
@@ -199,6 +271,8 @@ Default value: false.
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
         this.setParamSimple(map, prefix + "ImageSetRequired", this.ImageSetRequired);
+        this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
+        this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
 
     }
 }

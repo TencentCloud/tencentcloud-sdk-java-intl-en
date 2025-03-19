@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class OldVip extends AbstractModel {
 
     /**
-    * 
+    * Unrecovered old IP addresses
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 
+    * IP recovery time
     */
     @SerializedName("RecycleTime")
     @Expose
     private String RecycleTime;
 
     /**
-    * 
+    * Old IP retention time (hours)
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OldIpRetainTime")
     @Expose
     private Long OldIpRetainTime;
 
     /**
-     * Get  
-     * @return Vip 
+     * Get Unrecovered old IP addresses 
+     * @return Vip Unrecovered old IP addresses
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 
-     * @param Vip 
+     * Set Unrecovered old IP addresses
+     * @param Vip Unrecovered old IP addresses
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get  
-     * @return RecycleTime 
+     * Get IP recovery time 
+     * @return RecycleTime IP recovery time
      */
     public String getRecycleTime() {
         return this.RecycleTime;
     }
 
     /**
-     * Set 
-     * @param RecycleTime 
+     * Set IP recovery time
+     * @param RecycleTime IP recovery time
      */
     public void setRecycleTime(String RecycleTime) {
         this.RecycleTime = RecycleTime;
     }
 
     /**
-     * Get  
-     * @return OldIpRetainTime 
+     * Get Old IP retention time (hours)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OldIpRetainTime Old IP retention time (hours)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getOldIpRetainTime() {
         return this.OldIpRetainTime;
     }
 
     /**
-     * Set 
-     * @param OldIpRetainTime 
+     * Set Old IP retention time (hours)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OldIpRetainTime Old IP retention time (hours)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOldIpRetainTime(Long OldIpRetainTime) {
         this.OldIpRetainTime = OldIpRetainTime;

@@ -48,7 +48,7 @@ Setting it to `true` will clear the hostname settings, which means that CVM newl
 
     /**
     * Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
     */
     @SerializedName("ClearInstanceNameSettings")
     @Expose
@@ -69,6 +69,13 @@ If true is filled in, it indicates that the instance tag list should be cleared.
     @SerializedName("ClearInstanceTags")
     @Expose
     private Boolean ClearInstanceTags;
+
+    /**
+    * Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
+    */
+    @SerializedName("ClearMetadata")
+    @Expose
+    private Boolean ClearMetadata;
 
     /**
      * Get Launch configuration ID 
@@ -128,9 +135,9 @@ Setting it to `true` will clear the hostname settings, which means that CVM newl
 
     /**
      * Get Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format. 
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format. 
      * @return ClearInstanceNameSettings Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
      */
     public Boolean getClearInstanceNameSettings() {
         return this.ClearInstanceNameSettings;
@@ -138,9 +145,9 @@ Setting it to `true` will clear the instance name settings, which means that CVM
 
     /**
      * Set Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
      * @param ClearInstanceNameSettings Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
      */
     public void setClearInstanceNameSettings(Boolean ClearInstanceNameSettings) {
         this.ClearInstanceNameSettings = ClearInstanceNameSettings;
@@ -186,6 +193,22 @@ If true is filled in, it indicates that the instance tag list should be cleared.
         this.ClearInstanceTags = ClearInstanceTags;
     }
 
+    /**
+     * Get Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata. 
+     * @return ClearMetadata Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
+     */
+    public Boolean getClearMetadata() {
+        return this.ClearMetadata;
+    }
+
+    /**
+     * Set Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
+     * @param ClearMetadata Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
+     */
+    public void setClearMetadata(Boolean ClearMetadata) {
+        this.ClearMetadata = ClearMetadata;
+    }
+
     public ClearLaunchConfigurationAttributesRequest() {
     }
 
@@ -212,6 +235,9 @@ If true is filled in, it indicates that the instance tag list should be cleared.
         if (source.ClearInstanceTags != null) {
             this.ClearInstanceTags = new Boolean(source.ClearInstanceTags);
         }
+        if (source.ClearMetadata != null) {
+            this.ClearMetadata = new Boolean(source.ClearMetadata);
+        }
     }
 
 
@@ -225,6 +251,7 @@ If true is filled in, it indicates that the instance tag list should be cleared.
         this.setParamSimple(map, prefix + "ClearInstanceNameSettings", this.ClearInstanceNameSettings);
         this.setParamSimple(map, prefix + "ClearDisasterRecoverGroupIds", this.ClearDisasterRecoverGroupIds);
         this.setParamSimple(map, prefix + "ClearInstanceTags", this.ClearInstanceTags);
+        this.setParamSimple(map, prefix + "ClearMetadata", this.ClearMetadata);
 
     }
 }

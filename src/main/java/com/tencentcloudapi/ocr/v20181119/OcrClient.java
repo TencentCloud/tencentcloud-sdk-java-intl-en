@@ -234,6 +234,17 @@ A maximum of 10 requests can be initiated per second for this API.
     }
 
     /**
+     *This interface supports identification of the front and back of Brazilian driver's license. The identification fields include name, driver's license category, number, validity period, etc.
+     * @param req RecognizeBrazilDriverLicenseOCRRequest
+     * @return RecognizeBrazilDriverLicenseOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeBrazilDriverLicenseOCRResponse RecognizeBrazilDriverLicenseOCR(RecognizeBrazilDriverLicenseOCRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RecognizeBrazilDriverLicenseOCR", RecognizeBrazilDriverLicenseOCRResponse.class);
+    }
+
+    /**
      *This API is used to recognize various types of invoices or tickets in an image or PDF file. You can also specify a type. 14 types of standard expense reimbursement invoices are supported, including value-added tax (VAT) invoice (special, general, roll, blockchain, and toll), fully digitalized electronic invoice (special and general), non-tax revenue invoice (general receipt and general payment voucher), quota invoice, general machine-printed invoice, car sales invoice (motor vehicle sales invoice and used car invoice), train ticket, taxi receipt, itinerary/receipt of e-ticket for air transportation, bus ticket, ship ticket, toll receipt, and medical invoice (inpatient and outpatient). This API can also be used for intelligent recognition of other types of invoices. To try now, click [here](https://intl.cloud.tencent.com/product/ocr?from_cn_redirect=1).
 
 A maximum of 5 requests can be initiated per second for this API.
@@ -527,6 +538,20 @@ A maximum of 10 requests can be initiated per second for this API.
     }
 
     /**
+     *This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
+Currently, this API is not generally available. For more information, please [contact your sales rep](https://intl.cloud.tencent.com/about/connect?from_cn_redirect=1).
+
+A maximum of 5 requests can be initiated per second for this API.
+     * @param req RecognizeThaiPinkCardRequest
+     * @return RecognizeThaiPinkCardResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeThaiPinkCardResponse RecognizeThaiPinkCard(RecognizeThaiPinkCardRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RecognizeThaiPinkCard", RecognizeThaiPinkCardResponse.class);
+    }
+
+    /**
      *This API is used to recognize various types of seals, including invoice seals and finance seals. It is suitable for scenarios such as official document and invoice/ticket OCR.
 
 A maximum of 5 requests can be initiated per second for this API.
@@ -550,6 +575,19 @@ A maximum of 10 requests can be initiated per second for this API.
     public SmartStructuralOCRV2Response SmartStructuralOCRV2(SmartStructuralOCRV2Request req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SmartStructuralOCRV2", SmartStructuralOCRV2Response.class);
+    }
+
+    /**
+     *This API is used to recognize fields from cards, documents, bills, forms, contracts, and other structured information. It is flexible and efficient to use, without any configuration required. This API is suitable for recognizing structured information.
+
+A maximum of 10 requests can be initiated per second for this API.
+     * @param req SmartStructuralProRequest
+     * @return SmartStructuralProResponse
+     * @throws TencentCloudSDKException
+     */
+    public SmartStructuralProResponse SmartStructuralPro(SmartStructuralProRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SmartStructuralPro", SmartStructuralProResponse.class);
     }
 
     /**

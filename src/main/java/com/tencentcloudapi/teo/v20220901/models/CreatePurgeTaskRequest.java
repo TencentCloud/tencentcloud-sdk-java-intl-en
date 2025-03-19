@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class CreatePurgeTaskRequest extends AbstractModel {
 
     /**
-    * ID of the site.
+    * Zone id.
+.
+If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -72,16 +74,24 @@ Note that if it’s enabled, the purging is based on the converted URLs.
     private CacheTag CacheTag;
 
     /**
-     * Get ID of the site. 
-     * @return ZoneId ID of the site.
+     * Get Zone id.
+.
+If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account. 
+     * @return ZoneId Zone id.
+.
+If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site.
-     * @param ZoneId ID of the site.
+     * Set Zone id.
+.
+If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
+     * @param ZoneId Zone id.
+.
+If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;

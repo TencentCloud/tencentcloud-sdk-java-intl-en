@@ -59,21 +59,21 @@ public class DescribeHostTeoInstanceListRequest extends AbstractModel {
     private String OldCertificateId;
 
     /**
-    * The pagination offset, starting from 0.
+    * Paging offset. default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The number of instances on each page. Default value: 10.	
+    * Number of items per page. default: 10. maximum value: 200.	
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Whether the query is asynchronous.
+    * Asynchronous or not. 1 means yes, 0 means no. default: 0.
     */
     @SerializedName("AsyncCache")
     @Expose
@@ -98,7 +98,9 @@ public class DescribeHostTeoInstanceListRequest extends AbstractModel {
     /**
      * Get The type of resource for certificate deployment. 
      * @return ResourceType The type of resource for certificate deployment.
+     * @deprecated
      */
+    @Deprecated
     public String getResourceType() {
         return this.ResourceType;
     }
@@ -106,7 +108,9 @@ public class DescribeHostTeoInstanceListRequest extends AbstractModel {
     /**
      * Set The type of resource for certificate deployment.
      * @param ResourceType The type of resource for certificate deployment.
+     * @deprecated
      */
+    @Deprecated
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
@@ -160,48 +164,48 @@ public class DescribeHostTeoInstanceListRequest extends AbstractModel {
     }
 
     /**
-     * Get The pagination offset, starting from 0. 
-     * @return Offset The pagination offset, starting from 0.
+     * Get Paging offset. default value: 0. 
+     * @return Offset Paging offset. default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The pagination offset, starting from 0.
-     * @param Offset The pagination offset, starting from 0.
+     * Set Paging offset. default value: 0.
+     * @param Offset Paging offset. default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The number of instances on each page. Default value: 10.	 
-     * @return Limit The number of instances on each page. Default value: 10.	
+     * Get Number of items per page. default: 10. maximum value: 200.	 
+     * @return Limit Number of items per page. default: 10. maximum value: 200.	
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of instances on each page. Default value: 10.	
-     * @param Limit The number of instances on each page. Default value: 10.	
+     * Set Number of items per page. default: 10. maximum value: 200.	
+     * @param Limit Number of items per page. default: 10. maximum value: 200.	
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Whether the query is asynchronous. 
-     * @return AsyncCache Whether the query is asynchronous.
+     * Get Asynchronous or not. 1 means yes, 0 means no. default: 0. 
+     * @return AsyncCache Asynchronous or not. 1 means yes, 0 means no. default: 0.
      */
     public Long getAsyncCache() {
         return this.AsyncCache;
     }
 
     /**
-     * Set Whether the query is asynchronous.
-     * @param AsyncCache Whether the query is asynchronous.
+     * Set Asynchronous or not. 1 means yes, 0 means no. default: 0.
+     * @param AsyncCache Asynchronous or not. 1 means yes, 0 means no. default: 0.
      */
     public void setAsyncCache(Long AsyncCache) {
         this.AsyncCache = AsyncCache;

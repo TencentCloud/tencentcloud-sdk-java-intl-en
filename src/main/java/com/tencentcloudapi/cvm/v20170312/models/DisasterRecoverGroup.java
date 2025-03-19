@@ -78,6 +78,13 @@ Note: This field may return null, indicating that no valid value is found.
     private String CreateTime;
 
     /**
+    * List of tags associated with the placement group.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get ID of a spread placement group. 
      * @return DisasterRecoverGroupId ID of a spread placement group.
      */
@@ -209,6 +216,22 @@ Note: This field may return null, indicating that no valid value is found.
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get List of tags associated with the placement group. 
+     * @return Tags List of tags associated with the placement group.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set List of tags associated with the placement group.
+     * @param Tags List of tags associated with the placement group.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DisasterRecoverGroup() {
     }
 
@@ -241,6 +264,12 @@ Note: This field may return null, indicating that no valid value is found.
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -255,6 +284,7 @@ Note: This field may return null, indicating that no valid value is found.
         this.setParamSimple(map, prefix + "CurrentNum", this.CurrentNum);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

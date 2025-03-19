@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class SecurityGroupsInboundAndOutbound extends AbstractModel {
 
     /**
-    * Identify whether the IP and port for accessing the database are allowed
+    * Whether the inbound and outbound IP addresses and ports of the database are allowed.
+- ACCEPT: allowed.
+- DROP: disallowed.
     */
     @SerializedName("Action")
     @Expose
@@ -52,16 +54,24 @@ public class SecurityGroupsInboundAndOutbound extends AbstractModel {
     private String Proto;
 
     /**
-     * Get Identify whether the IP and port for accessing the database are allowed 
-     * @return Action Identify whether the IP and port for accessing the database are allowed
+     * Get Whether the inbound and outbound IP addresses and ports of the database are allowed.
+- ACCEPT: allowed.
+- DROP: disallowed. 
+     * @return Action Whether the inbound and outbound IP addresses and ports of the database are allowed.
+- ACCEPT: allowed.
+- DROP: disallowed.
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Identify whether the IP and port for accessing the database are allowed
-     * @param Action Identify whether the IP and port for accessing the database are allowed
+     * Set Whether the inbound and outbound IP addresses and ports of the database are allowed.
+- ACCEPT: allowed.
+- DROP: disallowed.
+     * @param Action Whether the inbound and outbound IP addresses and ports of the database are allowed.
+- ACCEPT: allowed.
+- DROP: disallowed.
      */
     public void setAction(String Action) {
         this.Action = Action;

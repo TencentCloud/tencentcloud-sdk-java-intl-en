@@ -26,7 +26,7 @@ public class GetFaceIdTokenIntlRequest extends AbstractModel {
     /**
     * The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Liveness detection and face comparison.
+`compare`: Selfie verification.
 Default value: `liveness`.
     */
     @SerializedName("CheckMode")
@@ -78,11 +78,11 @@ The default value is blink. The different action types passed in this parameter 
     /**
      * Get The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Liveness detection and face comparison.
+`compare`: Selfie verification.
 Default value: `liveness`. 
      * @return CheckMode The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Liveness detection and face comparison.
+`compare`: Selfie verification.
 Default value: `liveness`.
      */
     public String getCheckMode() {
@@ -92,11 +92,11 @@ Default value: `liveness`.
     /**
      * Set The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Liveness detection and face comparison.
+`compare`: Selfie verification.
 Default value: `liveness`.
      * @param CheckMode The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Liveness detection and face comparison.
+`compare`: Selfie verification.
 Default value: `liveness`.
      */
     public void setCheckMode(String CheckMode) {

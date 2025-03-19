@@ -45,6 +45,20 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
     private String ClientToken;
 
     /**
+    * 
+    */
+    @SerializedName("Affinity")
+    @Expose
+    private Long Affinity;
+
+    /**
+    * List of tag description. By specifying this parameter, the tag can be bound to the placement group.
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification [] TagSpecification;
+
+    /**
      * Get Name of the spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters. 
      * @return Name Name of the spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
      */
@@ -92,6 +106,38 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
         this.ClientToken = ClientToken;
     }
 
+    /**
+     * Get  
+     * @return Affinity 
+     */
+    public Long getAffinity() {
+        return this.Affinity;
+    }
+
+    /**
+     * Set 
+     * @param Affinity 
+     */
+    public void setAffinity(Long Affinity) {
+        this.Affinity = Affinity;
+    }
+
+    /**
+     * Get List of tag description. By specifying this parameter, the tag can be bound to the placement group. 
+     * @return TagSpecification List of tag description. By specifying this parameter, the tag can be bound to the placement group.
+     */
+    public TagSpecification [] getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set List of tag description. By specifying this parameter, the tag can be bound to the placement group.
+     * @param TagSpecification List of tag description. By specifying this parameter, the tag can be bound to the placement group.
+     */
+    public void setTagSpecification(TagSpecification [] TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
     public CreateDisasterRecoverGroupRequest() {
     }
 
@@ -109,6 +155,15 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.Affinity != null) {
+            this.Affinity = new Long(source.Affinity);
+        }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
+            }
+        }
     }
 
 
@@ -119,6 +174,8 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "Affinity", this.Affinity);
+        this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

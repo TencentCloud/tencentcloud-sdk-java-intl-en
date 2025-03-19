@@ -24,56 +24,62 @@ import java.util.HashMap;
 public class ApplyCertificateRequest extends AbstractModel {
 
     /**
-    * Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
+    * Certificate domain validation methods:
+
+DNS_AUTO: Automatically add domain DNS validation. Requires the user's domain to be hosted on 'Cloud DNS' and associated with the same Tencent Cloud account as the certificate application.
+
+DNS: Manually add domain DNS validation. Requires the user to manually add the validation value at their domain's DNS service provider.
+
+FILE: Manually add domain file validation. Requires the user to manually add a specified path file in the root directory of the domain site for file validation. Either HTTP or HTTPS validation will suffice; the domain site must be accessible by overseas CA institutions. The specific access whitelist is: 64.78.193.238, 216.168.247.9, 216.168.249.9, 54.189.196.217.
     */
     @SerializedName("DvAuthMethod")
     @Expose
     private String DvAuthMethod;
 
     /**
-    * Domain name
+    * The domain bound to the certificate.
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * Project ID
+    * The project ID associated with the certificate. Default is 0 (default project)
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Certificate type. Currently, the only supported value is 2, which indicates TrustAsia TLS RSA CA.
+    * Certificate type, optional, currently only type 83 is supported. 83 = trustasia c1 dv free.
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-    * Email address
+    * The email associated with the certificate order, By default, it uses the Tencent Cloud account email. If it does not exist, a fixed email address will be used.
     */
     @SerializedName("ContactEmail")
     @Expose
     private String ContactEmail;
 
     /**
-    * Mobile number
+    * The mobile phone number associated with the certificate. If it does not exist, a fixed mobile phone number will be used.
     */
     @SerializedName("ContactPhone")
     @Expose
     private String ContactPhone;
 
     /**
-    * Validity period. The default value is 12 months, which is the only supported value currently.
+    * Certificate valid period, 3 months by default, currently only 3 months is supported.
     */
     @SerializedName("ValidityPeriod")
     @Expose
     private String ValidityPeriod;
 
     /**
-    * Encryption algorithm. RSA and ECC are supported.
+    * Encryption algorithm, values can be ECC or RSA, default is RSA.
     */
     @SerializedName("CsrEncryptAlgo")
     @Expose
@@ -87,170 +93,194 @@ public class ApplyCertificateRequest extends AbstractModel {
     private String CsrKeyParameter;
 
     /**
-    * CSR encryption password
+    * Private key password, currently only used when generating jks, pfx format certificates; private key certificates of other formats are not encrypted.
     */
     @SerializedName("CsrKeyPassword")
     @Expose
     private String CsrKeyPassword;
 
     /**
-    * Alias
+    * Certificate alias.
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * Original certificate ID, which is used to apply for a new certificate.
+    * Old certificate id, used for certificate renewal (the certificate valid period is within 30 days and not expired), a renewal relationship will be established, which can be hosted; not providing it means applying for a new certificate.
     */
     @SerializedName("OldCertificateId")
     @Expose
     private String OldCertificateId;
 
     /**
-    * Benefit package ID, which is used to expand the free certificate package
+    * Benefit package ID, used for free certificate expansion package, the free certificate expansion package has been discontinued.
     */
     @SerializedName("PackageId")
     @Expose
     private String PackageId;
 
     /**
-    * Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+    * Whether to delete the automatic domain name verification record after issuance, which is fasle by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
     */
     @SerializedName("DeleteDnsAutoRecord")
     @Expose
     private Boolean DeleteDnsAutoRecord;
 
     /**
-    * 
+    * Other domains bound to the certificate, to be opened. This parameter is not currently supported.
     */
     @SerializedName("DnsNames")
     @Expose
     private String [] DnsNames;
 
     /**
-     * Get Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation. 
-     * @return DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
+     * Get Certificate domain validation methods:
+
+DNS_AUTO: Automatically add domain DNS validation. Requires the user's domain to be hosted on 'Cloud DNS' and associated with the same Tencent Cloud account as the certificate application.
+
+DNS: Manually add domain DNS validation. Requires the user to manually add the validation value at their domain's DNS service provider.
+
+FILE: Manually add domain file validation. Requires the user to manually add a specified path file in the root directory of the domain site for file validation. Either HTTP or HTTPS validation will suffice; the domain site must be accessible by overseas CA institutions. The specific access whitelist is: 64.78.193.238, 216.168.247.9, 216.168.249.9, 54.189.196.217. 
+     * @return DvAuthMethod Certificate domain validation methods:
+
+DNS_AUTO: Automatically add domain DNS validation. Requires the user's domain to be hosted on 'Cloud DNS' and associated with the same Tencent Cloud account as the certificate application.
+
+DNS: Manually add domain DNS validation. Requires the user to manually add the validation value at their domain's DNS service provider.
+
+FILE: Manually add domain file validation. Requires the user to manually add a specified path file in the root directory of the domain site for file validation. Either HTTP or HTTPS validation will suffice; the domain site must be accessible by overseas CA institutions. The specific access whitelist is: 64.78.193.238, 216.168.247.9, 216.168.249.9, 54.189.196.217.
      */
     public String getDvAuthMethod() {
         return this.DvAuthMethod;
     }
 
     /**
-     * Set Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
-     * @param DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
+     * Set Certificate domain validation methods:
+
+DNS_AUTO: Automatically add domain DNS validation. Requires the user's domain to be hosted on 'Cloud DNS' and associated with the same Tencent Cloud account as the certificate application.
+
+DNS: Manually add domain DNS validation. Requires the user to manually add the validation value at their domain's DNS service provider.
+
+FILE: Manually add domain file validation. Requires the user to manually add a specified path file in the root directory of the domain site for file validation. Either HTTP or HTTPS validation will suffice; the domain site must be accessible by overseas CA institutions. The specific access whitelist is: 64.78.193.238, 216.168.247.9, 216.168.249.9, 54.189.196.217.
+     * @param DvAuthMethod Certificate domain validation methods:
+
+DNS_AUTO: Automatically add domain DNS validation. Requires the user's domain to be hosted on 'Cloud DNS' and associated with the same Tencent Cloud account as the certificate application.
+
+DNS: Manually add domain DNS validation. Requires the user to manually add the validation value at their domain's DNS service provider.
+
+FILE: Manually add domain file validation. Requires the user to manually add a specified path file in the root directory of the domain site for file validation. Either HTTP or HTTPS validation will suffice; the domain site must be accessible by overseas CA institutions. The specific access whitelist is: 64.78.193.238, 216.168.247.9, 216.168.249.9, 54.189.196.217.
      */
     public void setDvAuthMethod(String DvAuthMethod) {
         this.DvAuthMethod = DvAuthMethod;
     }
 
     /**
-     * Get Domain name 
-     * @return DomainName Domain name
+     * Get The domain bound to the certificate. 
+     * @return DomainName The domain bound to the certificate.
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set Domain name
-     * @param DomainName Domain name
+     * Set The domain bound to the certificate.
+     * @param DomainName The domain bound to the certificate.
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get The project ID associated with the certificate. Default is 0 (default project) 
+     * @return ProjectId The project ID associated with the certificate. Default is 0 (default project)
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set The project ID associated with the certificate. Default is 0 (default project)
+     * @param ProjectId The project ID associated with the certificate. Default is 0 (default project)
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Certificate type. Currently, the only supported value is 2, which indicates TrustAsia TLS RSA CA. 
-     * @return PackageType Certificate type. Currently, the only supported value is 2, which indicates TrustAsia TLS RSA CA.
+     * Get Certificate type, optional, currently only type 83 is supported. 83 = trustasia c1 dv free. 
+     * @return PackageType Certificate type, optional, currently only type 83 is supported. 83 = trustasia c1 dv free.
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set Certificate type. Currently, the only supported value is 2, which indicates TrustAsia TLS RSA CA.
-     * @param PackageType Certificate type. Currently, the only supported value is 2, which indicates TrustAsia TLS RSA CA.
+     * Set Certificate type, optional, currently only type 83 is supported. 83 = trustasia c1 dv free.
+     * @param PackageType Certificate type, optional, currently only type 83 is supported. 83 = trustasia c1 dv free.
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get Email address 
-     * @return ContactEmail Email address
+     * Get The email associated with the certificate order, By default, it uses the Tencent Cloud account email. If it does not exist, a fixed email address will be used. 
+     * @return ContactEmail The email associated with the certificate order, By default, it uses the Tencent Cloud account email. If it does not exist, a fixed email address will be used.
      */
     public String getContactEmail() {
         return this.ContactEmail;
     }
 
     /**
-     * Set Email address
-     * @param ContactEmail Email address
+     * Set The email associated with the certificate order, By default, it uses the Tencent Cloud account email. If it does not exist, a fixed email address will be used.
+     * @param ContactEmail The email associated with the certificate order, By default, it uses the Tencent Cloud account email. If it does not exist, a fixed email address will be used.
      */
     public void setContactEmail(String ContactEmail) {
         this.ContactEmail = ContactEmail;
     }
 
     /**
-     * Get Mobile number 
-     * @return ContactPhone Mobile number
+     * Get The mobile phone number associated with the certificate. If it does not exist, a fixed mobile phone number will be used. 
+     * @return ContactPhone The mobile phone number associated with the certificate. If it does not exist, a fixed mobile phone number will be used.
      */
     public String getContactPhone() {
         return this.ContactPhone;
     }
 
     /**
-     * Set Mobile number
-     * @param ContactPhone Mobile number
+     * Set The mobile phone number associated with the certificate. If it does not exist, a fixed mobile phone number will be used.
+     * @param ContactPhone The mobile phone number associated with the certificate. If it does not exist, a fixed mobile phone number will be used.
      */
     public void setContactPhone(String ContactPhone) {
         this.ContactPhone = ContactPhone;
     }
 
     /**
-     * Get Validity period. The default value is 12 months, which is the only supported value currently. 
-     * @return ValidityPeriod Validity period. The default value is 12 months, which is the only supported value currently.
+     * Get Certificate valid period, 3 months by default, currently only 3 months is supported. 
+     * @return ValidityPeriod Certificate valid period, 3 months by default, currently only 3 months is supported.
      */
     public String getValidityPeriod() {
         return this.ValidityPeriod;
     }
 
     /**
-     * Set Validity period. The default value is 12 months, which is the only supported value currently.
-     * @param ValidityPeriod Validity period. The default value is 12 months, which is the only supported value currently.
+     * Set Certificate valid period, 3 months by default, currently only 3 months is supported.
+     * @param ValidityPeriod Certificate valid period, 3 months by default, currently only 3 months is supported.
      */
     public void setValidityPeriod(String ValidityPeriod) {
         this.ValidityPeriod = ValidityPeriod;
     }
 
     /**
-     * Get Encryption algorithm. RSA and ECC are supported. 
-     * @return CsrEncryptAlgo Encryption algorithm. RSA and ECC are supported.
+     * Get Encryption algorithm, values can be ECC or RSA, default is RSA. 
+     * @return CsrEncryptAlgo Encryption algorithm, values can be ECC or RSA, default is RSA.
      */
     public String getCsrEncryptAlgo() {
         return this.CsrEncryptAlgo;
     }
 
     /**
-     * Set Encryption algorithm. RSA and ECC are supported.
-     * @param CsrEncryptAlgo Encryption algorithm. RSA and ECC are supported.
+     * Set Encryption algorithm, values can be ECC or RSA, default is RSA.
+     * @param CsrEncryptAlgo Encryption algorithm, values can be ECC or RSA, default is RSA.
      */
     public void setCsrEncryptAlgo(String CsrEncryptAlgo) {
         this.CsrEncryptAlgo = CsrEncryptAlgo;
@@ -273,96 +303,96 @@ public class ApplyCertificateRequest extends AbstractModel {
     }
 
     /**
-     * Get CSR encryption password 
-     * @return CsrKeyPassword CSR encryption password
+     * Get Private key password, currently only used when generating jks, pfx format certificates; private key certificates of other formats are not encrypted. 
+     * @return CsrKeyPassword Private key password, currently only used when generating jks, pfx format certificates; private key certificates of other formats are not encrypted.
      */
     public String getCsrKeyPassword() {
         return this.CsrKeyPassword;
     }
 
     /**
-     * Set CSR encryption password
-     * @param CsrKeyPassword CSR encryption password
+     * Set Private key password, currently only used when generating jks, pfx format certificates; private key certificates of other formats are not encrypted.
+     * @param CsrKeyPassword Private key password, currently only used when generating jks, pfx format certificates; private key certificates of other formats are not encrypted.
      */
     public void setCsrKeyPassword(String CsrKeyPassword) {
         this.CsrKeyPassword = CsrKeyPassword;
     }
 
     /**
-     * Get Alias 
-     * @return Alias Alias
+     * Get Certificate alias. 
+     * @return Alias Certificate alias.
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set Alias
-     * @param Alias Alias
+     * Set Certificate alias.
+     * @param Alias Certificate alias.
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get Original certificate ID, which is used to apply for a new certificate. 
-     * @return OldCertificateId Original certificate ID, which is used to apply for a new certificate.
+     * Get Old certificate id, used for certificate renewal (the certificate valid period is within 30 days and not expired), a renewal relationship will be established, which can be hosted; not providing it means applying for a new certificate. 
+     * @return OldCertificateId Old certificate id, used for certificate renewal (the certificate valid period is within 30 days and not expired), a renewal relationship will be established, which can be hosted; not providing it means applying for a new certificate.
      */
     public String getOldCertificateId() {
         return this.OldCertificateId;
     }
 
     /**
-     * Set Original certificate ID, which is used to apply for a new certificate.
-     * @param OldCertificateId Original certificate ID, which is used to apply for a new certificate.
+     * Set Old certificate id, used for certificate renewal (the certificate valid period is within 30 days and not expired), a renewal relationship will be established, which can be hosted; not providing it means applying for a new certificate.
+     * @param OldCertificateId Old certificate id, used for certificate renewal (the certificate valid period is within 30 days and not expired), a renewal relationship will be established, which can be hosted; not providing it means applying for a new certificate.
      */
     public void setOldCertificateId(String OldCertificateId) {
         this.OldCertificateId = OldCertificateId;
     }
 
     /**
-     * Get Benefit package ID, which is used to expand the free certificate package 
-     * @return PackageId Benefit package ID, which is used to expand the free certificate package
+     * Get Benefit package ID, used for free certificate expansion package, the free certificate expansion package has been discontinued. 
+     * @return PackageId Benefit package ID, used for free certificate expansion package, the free certificate expansion package has been discontinued.
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set Benefit package ID, which is used to expand the free certificate package
-     * @param PackageId Benefit package ID, which is used to expand the free certificate package
+     * Set Benefit package ID, used for free certificate expansion package, the free certificate expansion package has been discontinued.
+     * @param PackageId Benefit package ID, used for free certificate expansion package, the free certificate expansion package has been discontinued.
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type. 
-     * @return DeleteDnsAutoRecord Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+     * Get Whether to delete the automatic domain name verification record after issuance, which is fasle by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type. 
+     * @return DeleteDnsAutoRecord Whether to delete the automatic domain name verification record after issuance, which is fasle by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
      */
     public Boolean getDeleteDnsAutoRecord() {
         return this.DeleteDnsAutoRecord;
     }
 
     /**
-     * Set Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
-     * @param DeleteDnsAutoRecord Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+     * Set Whether to delete the automatic domain name verification record after issuance, which is fasle by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+     * @param DeleteDnsAutoRecord Whether to delete the automatic domain name verification record after issuance, which is fasle by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
      */
     public void setDeleteDnsAutoRecord(Boolean DeleteDnsAutoRecord) {
         this.DeleteDnsAutoRecord = DeleteDnsAutoRecord;
     }
 
     /**
-     * Get  
-     * @return DnsNames 
+     * Get Other domains bound to the certificate, to be opened. This parameter is not currently supported. 
+     * @return DnsNames Other domains bound to the certificate, to be opened. This parameter is not currently supported.
      */
     public String [] getDnsNames() {
         return this.DnsNames;
     }
 
     /**
-     * Set 
-     * @param DnsNames 
+     * Set Other domains bound to the certificate, to be opened. This parameter is not currently supported.
+     * @param DnsNames Other domains bound to the certificate, to be opened. This parameter is not currently supported.
      */
     public void setDnsNames(String [] DnsNames) {
         this.DnsNames = DnsNames;

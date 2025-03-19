@@ -52,7 +52,7 @@ public class UpgradeInstanceRequest extends AbstractModel {
     private Long RedisReplicasNum;
 
     /**
-    * Additional information for adding replicas for multi-AZ instances, including replica AZ and type (`NodeType` is `1`). This parameter is not required for single-AZ instances.
+    * Node information set when you add a replica for multi-AZ instances, including the ID and AZ information of the replica. This parameter is not required for non-multi-AZ instances.
     */
     @SerializedName("NodeSet")
     @Expose
@@ -123,16 +123,16 @@ public class UpgradeInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Additional information for adding replicas for multi-AZ instances, including replica AZ and type (`NodeType` is `1`). This parameter is not required for single-AZ instances. 
-     * @return NodeSet Additional information for adding replicas for multi-AZ instances, including replica AZ and type (`NodeType` is `1`). This parameter is not required for single-AZ instances.
+     * Get Node information set when you add a replica for multi-AZ instances, including the ID and AZ information of the replica. This parameter is not required for non-multi-AZ instances. 
+     * @return NodeSet Node information set when you add a replica for multi-AZ instances, including the ID and AZ information of the replica. This parameter is not required for non-multi-AZ instances.
      */
     public RedisNodeInfo [] getNodeSet() {
         return this.NodeSet;
     }
 
     /**
-     * Set Additional information for adding replicas for multi-AZ instances, including replica AZ and type (`NodeType` is `1`). This parameter is not required for single-AZ instances.
-     * @param NodeSet Additional information for adding replicas for multi-AZ instances, including replica AZ and type (`NodeType` is `1`). This parameter is not required for single-AZ instances.
+     * Set Node information set when you add a replica for multi-AZ instances, including the ID and AZ information of the replica. This parameter is not required for non-multi-AZ instances.
+     * @param NodeSet Node information set when you add a replica for multi-AZ instances, including the ID and AZ information of the replica. This parameter is not required for non-multi-AZ instances.
      */
     public void setNodeSet(RedisNodeInfo [] NodeSet) {
         this.NodeSet = NodeSet;

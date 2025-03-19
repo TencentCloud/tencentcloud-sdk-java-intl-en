@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeTelCdrRequest extends AbstractModel {
 
     /**
-    * Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
+    * Start timestamp, unix timestamp in seconds. supports up to the past 180 days.
     */
     @SerializedName("StartTimeStamp")
     @Expose
     private Long StartTimeStamp;
 
     /**
-    * End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
+    * End timestamp, unix timestamp in seconds. the range between the end time and start time is less than 90 days.
     */
     @SerializedName("EndTimeStamp")
     @Expose
     private Long EndTimeStamp;
 
     /**
-    * Instance ID (deprecated).
+    * Instance id (deprecated).
     */
     @SerializedName("InstanceId")
     @Expose
@@ -59,7 +59,7 @@ public class DescribeTelCdrRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -73,61 +73,61 @@ public class DescribeTelCdrRequest extends AbstractModel {
     private Long PageSize;
 
     /**
-    * Page number (required), starting from 0.
+    * <Page number (required), starting from 0.>.
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * Filter by Phone Number.
+    * Filter by phone number.
     */
     @SerializedName("Phones")
     @Expose
     private String [] Phones;
 
     /**
-    * Filter by SessionId.
+    * Filter by sessionid.
     */
     @SerializedName("SessionIds")
     @Expose
     private String [] SessionIds;
 
     /**
-     * Get Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days. 
-     * @return StartTimeStamp Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
+     * Get Start timestamp, unix timestamp in seconds. supports up to the past 180 days. 
+     * @return StartTimeStamp Start timestamp, unix timestamp in seconds. supports up to the past 180 days.
      */
     public Long getStartTimeStamp() {
         return this.StartTimeStamp;
     }
 
     /**
-     * Set Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
-     * @param StartTimeStamp Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
+     * Set Start timestamp, unix timestamp in seconds. supports up to the past 180 days.
+     * @param StartTimeStamp Start timestamp, unix timestamp in seconds. supports up to the past 180 days.
      */
     public void setStartTimeStamp(Long StartTimeStamp) {
         this.StartTimeStamp = StartTimeStamp;
     }
 
     /**
-     * Get End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days. 
-     * @return EndTimeStamp End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
+     * Get End timestamp, unix timestamp in seconds. the range between the end time and start time is less than 90 days. 
+     * @return EndTimeStamp End timestamp, unix timestamp in seconds. the range between the end time and start time is less than 90 days.
      */
     public Long getEndTimeStamp() {
         return this.EndTimeStamp;
     }
 
     /**
-     * Set End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
-     * @param EndTimeStamp End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
+     * Set End timestamp, unix timestamp in seconds. the range between the end time and start time is less than 90 days.
+     * @param EndTimeStamp End timestamp, unix timestamp in seconds. the range between the end time and start time is less than 90 days.
      */
     public void setEndTimeStamp(Long EndTimeStamp) {
         this.EndTimeStamp = EndTimeStamp;
     }
 
     /**
-     * Get Instance ID (deprecated). 
-     * @return InstanceId Instance ID (deprecated).
+     * Get Instance id (deprecated). 
+     * @return InstanceId Instance id (deprecated).
      * @deprecated
      */
     @Deprecated
@@ -136,8 +136,8 @@ public class DescribeTelCdrRequest extends AbstractModel {
     }
 
     /**
-     * Set Instance ID (deprecated).
-     * @param InstanceId Instance ID (deprecated).
+     * Set Instance id (deprecated).
+     * @param InstanceId Instance id (deprecated).
      * @deprecated
      */
     @Deprecated
@@ -178,16 +178,16 @@ public class DescribeTelCdrRequest extends AbstractModel {
     }
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -210,48 +210,48 @@ public class DescribeTelCdrRequest extends AbstractModel {
     }
 
     /**
-     * Get Page number (required), starting from 0. 
-     * @return PageNumber Page number (required), starting from 0.
+     * Get <Page number (required), starting from 0.>. 
+     * @return PageNumber <Page number (required), starting from 0.>.
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set Page number (required), starting from 0.
-     * @param PageNumber Page number (required), starting from 0.
+     * Set <Page number (required), starting from 0.>.
+     * @param PageNumber <Page number (required), starting from 0.>.
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get Filter by Phone Number. 
-     * @return Phones Filter by Phone Number.
+     * Get Filter by phone number. 
+     * @return Phones Filter by phone number.
      */
     public String [] getPhones() {
         return this.Phones;
     }
 
     /**
-     * Set Filter by Phone Number.
-     * @param Phones Filter by Phone Number.
+     * Set Filter by phone number.
+     * @param Phones Filter by phone number.
      */
     public void setPhones(String [] Phones) {
         this.Phones = Phones;
     }
 
     /**
-     * Get Filter by SessionId. 
-     * @return SessionIds Filter by SessionId.
+     * Get Filter by sessionid. 
+     * @return SessionIds Filter by sessionid.
      */
     public String [] getSessionIds() {
         return this.SessionIds;
     }
 
     /**
-     * Set Filter by SessionId.
-     * @param SessionIds Filter by SessionId.
+     * Set Filter by sessionid.
+     * @param SessionIds Filter by sessionid.
      */
     public void setSessionIds(String [] SessionIds) {
         this.SessionIds = SessionIds;

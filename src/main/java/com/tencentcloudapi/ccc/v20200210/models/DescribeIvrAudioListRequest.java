@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeIvrAudioListRequest extends AbstractModel {
 
     /**
-    * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Page size, upper limit 50
+    * Page size, upper limit 50.
     */
     @SerializedName("PageSize")
     @Expose
@@ -45,53 +45,53 @@ public class DescribeIvrAudioListRequest extends AbstractModel {
     private Long PageNumber;
 
     /**
-    * File alias
+    * File alias.
     */
     @SerializedName("CustomFileName")
     @Expose
     private String [] CustomFileName;
 
     /**
-    * Filename
+    * Filename.
     */
     @SerializedName("AudioFileName")
     @Expose
     private String [] AudioFileName;
 
     /**
-    * File ID
+    * File id.
     */
     @SerializedName("FileId")
     @Expose
     private Long [] FileId;
 
     /**
-     * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Page size, upper limit 50 
-     * @return PageSize Page size, upper limit 50
+     * Get Page size, upper limit 50. 
+     * @return PageSize Page size, upper limit 50.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Page size, upper limit 50
-     * @param PageSize Page size, upper limit 50
+     * Set Page size, upper limit 50.
+     * @param PageSize Page size, upper limit 50.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -114,48 +114,48 @@ public class DescribeIvrAudioListRequest extends AbstractModel {
     }
 
     /**
-     * Get File alias 
-     * @return CustomFileName File alias
+     * Get File alias. 
+     * @return CustomFileName File alias.
      */
     public String [] getCustomFileName() {
         return this.CustomFileName;
     }
 
     /**
-     * Set File alias
-     * @param CustomFileName File alias
+     * Set File alias.
+     * @param CustomFileName File alias.
      */
     public void setCustomFileName(String [] CustomFileName) {
         this.CustomFileName = CustomFileName;
     }
 
     /**
-     * Get Filename 
-     * @return AudioFileName Filename
+     * Get Filename. 
+     * @return AudioFileName Filename.
      */
     public String [] getAudioFileName() {
         return this.AudioFileName;
     }
 
     /**
-     * Set Filename
-     * @param AudioFileName Filename
+     * Set Filename.
+     * @param AudioFileName Filename.
      */
     public void setAudioFileName(String [] AudioFileName) {
         this.AudioFileName = AudioFileName;
     }
 
     /**
-     * Get File ID 
-     * @return FileId File ID
+     * Get File id. 
+     * @return FileId File id.
      */
     public Long [] getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set File ID
-     * @param FileId File ID
+     * Set File id.
+     * @param FileId File id.
      */
     public void setFileId(Long [] FileId) {
         this.FileId = FileId;

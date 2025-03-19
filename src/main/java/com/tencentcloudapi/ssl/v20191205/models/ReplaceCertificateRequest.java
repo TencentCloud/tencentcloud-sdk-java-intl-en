@@ -38,14 +38,14 @@ public class ReplaceCertificateRequest extends AbstractModel {
     private String ValidType;
 
     /**
-    * Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
+    * Type. `Original`: original certificate CSR; `Upload`: uploaded manually; `Online`: generated online. The default value is original.
     */
     @SerializedName("CsrType")
     @Expose
     private String CsrType;
 
     /**
-    * CSR content
+    * CSR content, required when uploading manually.
     */
     @SerializedName("CsrContent")
     @Expose
@@ -113,32 +113,32 @@ This parameter is available for selection only when the value of `CsrType` is `O
     }
 
     /**
-     * Get Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original. 
-     * @return CsrType Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
+     * Get Type. `Original`: original certificate CSR; `Upload`: uploaded manually; `Online`: generated online. The default value is original. 
+     * @return CsrType Type. `Original`: original certificate CSR; `Upload`: uploaded manually; `Online`: generated online. The default value is original.
      */
     public String getCsrType() {
         return this.CsrType;
     }
 
     /**
-     * Set Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
-     * @param CsrType Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
+     * Set Type. `Original`: original certificate CSR; `Upload`: uploaded manually; `Online`: generated online. The default value is original.
+     * @param CsrType Type. `Original`: original certificate CSR; `Upload`: uploaded manually; `Online`: generated online. The default value is original.
      */
     public void setCsrType(String CsrType) {
         this.CsrType = CsrType;
     }
 
     /**
-     * Get CSR content 
-     * @return CsrContent CSR content
+     * Get CSR content, required when uploading manually. 
+     * @return CsrContent CSR content, required when uploading manually.
      */
     public String getCsrContent() {
         return this.CsrContent;
     }
 
     /**
-     * Set CSR content
-     * @param CsrContent CSR content
+     * Set CSR content, required when uploading manually.
+     * @param CsrContent CSR content, required when uploading manually.
      */
     public void setCsrContent(String CsrContent) {
         this.CsrContent = CsrContent;

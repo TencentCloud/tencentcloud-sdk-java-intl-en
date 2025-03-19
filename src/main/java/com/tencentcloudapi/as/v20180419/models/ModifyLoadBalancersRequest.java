@@ -45,9 +45,9 @@ public class ModifyLoadBalancersRequest extends AbstractModel {
     private ForwardLoadBalancer [] ForwardLoadBalancers;
 
     /**
-    * CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
-<br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
-<br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
+    * CLB verification policy. Valid values: ALL and DIFF. Default value: ALL.
+<li>ALL: The CLB passes the verification only when all CLB parameters are valid. Otherwise, a verification error occurs.</li>
+<li>DIFF: The CLB passes the verification only when the CLB parameters with changes are valid. Otherwise, a verification error occurs.</li>
     */
     @SerializedName("LoadBalancersCheckPolicy")
     @Expose
@@ -102,24 +102,24 @@ public class ModifyLoadBalancersRequest extends AbstractModel {
     }
 
     /**
-     * Get CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
-<br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
-<br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails. 
-     * @return LoadBalancersCheckPolicy CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
-<br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
-<br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
+     * Get CLB verification policy. Valid values: ALL and DIFF. Default value: ALL.
+<li>ALL: The CLB passes the verification only when all CLB parameters are valid. Otherwise, a verification error occurs.</li>
+<li>DIFF: The CLB passes the verification only when the CLB parameters with changes are valid. Otherwise, a verification error occurs.</li> 
+     * @return LoadBalancersCheckPolicy CLB verification policy. Valid values: ALL and DIFF. Default value: ALL.
+<li>ALL: The CLB passes the verification only when all CLB parameters are valid. Otherwise, a verification error occurs.</li>
+<li>DIFF: The CLB passes the verification only when the CLB parameters with changes are valid. Otherwise, a verification error occurs.</li>
      */
     public String getLoadBalancersCheckPolicy() {
         return this.LoadBalancersCheckPolicy;
     }
 
     /**
-     * Set CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
-<br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
-<br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
-     * @param LoadBalancersCheckPolicy CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
-<br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
-<br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
+     * Set CLB verification policy. Valid values: ALL and DIFF. Default value: ALL.
+<li>ALL: The CLB passes the verification only when all CLB parameters are valid. Otherwise, a verification error occurs.</li>
+<li>DIFF: The CLB passes the verification only when the CLB parameters with changes are valid. Otherwise, a verification error occurs.</li>
+     * @param LoadBalancersCheckPolicy CLB verification policy. Valid values: ALL and DIFF. Default value: ALL.
+<li>ALL: The CLB passes the verification only when all CLB parameters are valid. Otherwise, a verification error occurs.</li>
+<li>DIFF: The CLB passes the verification only when the CLB parameters with changes are valid. Otherwise, a verification error occurs.</li>
      */
     public void setLoadBalancersCheckPolicy(String LoadBalancersCheckPolicy) {
         this.LoadBalancersCheckPolicy = LoadBalancersCheckPolicy;

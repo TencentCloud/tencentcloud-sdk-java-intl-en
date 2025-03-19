@@ -140,7 +140,7 @@ When the value of `IdCardType` is `IndonesiaIDCard`:
 - BerlakuHingga (string): Expiry date.
 - IssuedDate (string): Issue date.
 
-(5) A passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+(5) A passport issued in Hong Kong (China) /Macao (China) /Taiwan (China) or other countries/regions
 When the value of `IdCardType` is `MLIDPassport`:
 - FullName (string): Full name.
 - Surname (string): Surname.
@@ -356,7 +356,7 @@ When the value of `IdCardType` is `IndonesiaIDCard`:
 - BerlakuHingga (string): Expiry date.
 - IssuedDate (string): Issue date.
 
-(5) A passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+(5) A passport issued in Hong Kong (China) /Macao (China) /Taiwan (China) or other countries/regions
 When the value of `IdCardType` is `MLIDPassport`:
 - FullName (string): Full name.
 - Surname (string): Surname.
@@ -453,7 +453,7 @@ When the value of `IdCardType` is `IndonesiaIDCard`:
 - BerlakuHingga (string): Expiry date.
 - IssuedDate (string): Issue date.
 
-(5) A passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+(5) A passport issued in Hong Kong (China) /Macao (China) /Taiwan (China) or other countries/regions
 When the value of `IdCardType` is `MLIDPassport`:
 - FullName (string): Full name.
 - Surname (string): Surname.
@@ -556,7 +556,7 @@ When the value of `IdCardType` is `IndonesiaIDCard`:
 - BerlakuHingga (string): Expiry date.
 - IssuedDate (string): Issue date.
 
-(5) A passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+(5) A passport issued in Hong Kong (China) /Macao (China) /Taiwan (China) or other countries/regions
 When the value of `IdCardType` is `MLIDPassport`:
 - FullName (string): Full name.
 - Surname (string): Surname.
@@ -653,7 +653,7 @@ When the value of `IdCardType` is `IndonesiaIDCard`:
 - BerlakuHingga (string): Expiry date.
 - IssuedDate (string): Issue date.
 
-(5) A passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+(5) A passport issued in Hong Kong (China) /Macao (China) /Taiwan (China) or other countries/regions
 When the value of `IdCardType` is `MLIDPassport`:
 - FullName (string): Full name.
 - Surname (string): Surname.

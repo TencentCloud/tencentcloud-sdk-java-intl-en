@@ -38,14 +38,14 @@ public class CdnInstanceDetail extends AbstractModel {
     private String CertId;
 
     /**
-    * The status of the domain.
+    * Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * The billing status of the domain.
+    * Domain billing status, where on indicates enable and off indicates disable.
     */
     @SerializedName("HttpsBillingSwitch")
     @Expose
@@ -84,32 +84,32 @@ public class CdnInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get The status of the domain. 
-     * @return Status The status of the domain.
+     * Get Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed. 
+     * @return Status Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The status of the domain.
-     * @param Status The status of the domain.
+     * Set Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
+     * @param Status Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The billing status of the domain. 
-     * @return HttpsBillingSwitch The billing status of the domain.
+     * Get Domain billing status, where on indicates enable and off indicates disable. 
+     * @return HttpsBillingSwitch Domain billing status, where on indicates enable and off indicates disable.
      */
     public String getHttpsBillingSwitch() {
         return this.HttpsBillingSwitch;
     }
 
     /**
-     * Set The billing status of the domain.
-     * @param HttpsBillingSwitch The billing status of the domain.
+     * Set Domain billing status, where on indicates enable and off indicates disable.
+     * @param HttpsBillingSwitch Domain billing status, where on indicates enable and off indicates disable.
      */
     public void setHttpsBillingSwitch(String HttpsBillingSwitch) {
         this.HttpsBillingSwitch = HttpsBillingSwitch;

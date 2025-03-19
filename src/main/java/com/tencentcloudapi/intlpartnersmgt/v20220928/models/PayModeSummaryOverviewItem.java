@@ -24,168 +24,138 @@ import java.util.HashMap;
 public class PayModeSummaryOverviewItem extends AbstractModel {
 
     /**
-    * Billing mode
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Payment mode.
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * Billing mode name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Payment mode name.
     */
     @SerializedName("PayModeName")
     @Expose
     private String PayModeName;
 
     /**
-    * The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Actual total consumption, up to 8 decimal places.
     */
     @SerializedName("OriginalCost")
     @Expose
     private String OriginalCost;
 
     /**
-    * Bill details in each payment mode
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Bill details in each payment mode.
     */
     @SerializedName("Detail")
     @Expose
     private ActionSummaryOverviewItem [] Detail;
 
     /**
-    * The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Voucher payment amount, up to 8 decimal places.
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total consumption, up to 8 decimal places.
     */
     @SerializedName("TotalCost")
     @Expose
     private String TotalCost;
 
     /**
-     * Get Billing mode
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PayMode Billing mode
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Payment mode. 
+     * @return PayMode Payment mode.
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PayMode Billing mode
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Payment mode.
+     * @param PayMode Payment mode.
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Billing mode name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PayModeName Billing mode name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Payment mode name. 
+     * @return PayModeName Payment mode name.
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set Billing mode name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PayModeName Billing mode name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Payment mode name.
+     * @param PayModeName Payment mode name.
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
     }
 
     /**
-     * Get The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginalCost The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Actual total consumption, up to 8 decimal places. 
+     * @return OriginalCost Actual total consumption, up to 8 decimal places.
      */
     public String getOriginalCost() {
         return this.OriginalCost;
     }
 
     /**
-     * Set The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginalCost The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Actual total consumption, up to 8 decimal places.
+     * @param OriginalCost Actual total consumption, up to 8 decimal places.
      */
     public void setOriginalCost(String OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get Bill details in each payment mode
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Detail Bill details in each payment mode
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Bill details in each payment mode. 
+     * @return Detail Bill details in each payment mode.
      */
     public ActionSummaryOverviewItem [] getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set Bill details in each payment mode
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Detail Bill details in each payment mode
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Bill details in each payment mode.
+     * @param Detail Bill details in each payment mode.
      */
     public void setDetail(ActionSummaryOverviewItem [] Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Voucher payment amount, up to 8 decimal places. 
+     * @return VoucherPayAmount Voucher payment amount, up to 8 decimal places.
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Voucher payment amount, up to 8 decimal places.
+     * @param VoucherPayAmount Voucher payment amount, up to 8 decimal places.
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCost Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total consumption, up to 8 decimal places. 
+     * @return TotalCost Total consumption, up to 8 decimal places.
      */
     public String getTotalCost() {
         return this.TotalCost;
     }
 
     /**
-     * Set Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCost Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total consumption, up to 8 decimal places.
+     * @param TotalCost Total consumption, up to 8 decimal places.
      */
     public void setTotalCost(String TotalCost) {
         this.TotalCost = TotalCost;

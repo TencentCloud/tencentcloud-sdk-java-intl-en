@@ -38,6 +38,13 @@ public class TendisNodes extends AbstractModel {
     private String NodeRole;
 
     /**
+    * AZ ID.	
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private Long ZoneId;
+
+    /**
      * Get Node ID 
      * @return NodeId Node ID
      */
@@ -69,6 +76,22 @@ public class TendisNodes extends AbstractModel {
         this.NodeRole = NodeRole;
     }
 
+    /**
+     * Get AZ ID.	 
+     * @return ZoneId AZ ID.	
+     */
+    public Long getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set AZ ID.	
+     * @param ZoneId AZ ID.	
+     */
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
     public TendisNodes() {
     }
 
@@ -83,6 +106,9 @@ public class TendisNodes extends AbstractModel {
         if (source.NodeRole != null) {
             this.NodeRole = new String(source.NodeRole);
         }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class TendisNodes extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);
         this.setParamSimple(map, prefix + "NodeRole", this.NodeRole);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
 
     }
 }
