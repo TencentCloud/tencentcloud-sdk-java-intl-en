@@ -97,3 +97,8 @@ System.setProperty("https.proxyPort", "Real proxy port");
 
 Or, set it in the startup parameters when running the program.
 
+# Compliance Notice
+
+Please prioritize using the ​default domain names configured in the SDK for each product. If using other domains, note that ​overseas domains may pose ​data compliance risks.
+
+
