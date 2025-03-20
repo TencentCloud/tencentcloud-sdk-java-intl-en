@@ -1,48 +1,48 @@
 package com.tencentcloudapi.dbbrain.v20191016;
 public enum DbbrainErrorCode {
-    // Error with CAM signature/authentication.
+     /* Error with CAM signature/authentication. */
      AUTHFAILURE("AuthFailure"),
      
-    // Operation failed.
+     /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
-    // 
+     /*  */
      FAILEDOPERATION_SEGMENTLOADING("FailedOperation.SegmentLoading"),
      
-    // Internal error.
+     /* Internal error. */
      INTERNALERROR("InternalError"),
      
-    // Incorrect parameter.
+     /* Incorrect parameter. */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // Incorrect parameter value.
+     /* Incorrect parameter value. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // The quota limit is exceeded.
+     /* The quota limit is exceeded. */
      LIMITEXCEEDED("LimitExceeded"),
      
-    // Missing parameter.
+     /* Missing parameter. */
      MISSINGPARAMETER("MissingParameter"),
      
-    // Operation denied.
+     /* Operation denied. */
      OPERATIONDENIED("OperationDenied"),
      
-    // Error with CAM authentication.
+     /* Error with CAM authentication. */
      OPERATIONDENIED_USERHASNOSTRATEGY("OperationDenied.UserHasNoStrategy"),
      
-    // The number of requests exceeds the frequency limit.
+     /* The number of requests exceeds the frequency limit. */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
-    // The resource does not exist.
+     /* The resource does not exist. */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-    // The operation is unauthorized.
+     /* The operation is unauthorized. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-    // Unknown parameter.
+     /* Unknown parameter. */
      UNKNOWNPARAMETER("UnknownParameter"),
      
-    // Unsupported operation.
+     /* Unsupported operation. */
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

@@ -1,93 +1,93 @@
 package com.tencentcloudapi.chdfs.v20201112;
 public enum ChdfsErrorCode {
-    // Operation failed.
+     /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
-    // The permission group has been bound.
+     /* The permission group has been bound. */
      FAILEDOPERATION_ACCESSGROUPBOUND("FailedOperation.AccessGroupBound"),
      
-    // The account balance is insufficient.
+     /* The account balance is insufficient. */
      FAILEDOPERATION_ACCOUNTINSUFFICIENTBALANCE("FailedOperation.AccountInsufficientBalance"),
      
-    // The account identity is not verified.
+     /* The account identity is not verified. */
      FAILEDOPERATION_ACCOUNTUNAUTHENTICATED("FailedOperation.AccountUnauthenticated"),
      
-    // The file system is not empty.
+     /* The file system is not empty. */
      FAILEDOPERATION_FILESYSTEMNOTEMPTY("FailedOperation.FileSystemNotEmpty"),
      
-    // The file system capacity after change is smaller than the currently used capacity.
+     /* The file system capacity after change is smaller than the currently used capacity. */
      FAILEDOPERATION_QUOTALESSTHANCURRENTUSED("FailedOperation.QuotaLessThanCurrentUsed"),
      
-    // Internal error.
+     /* Internal error. */
      INTERNALERROR("InternalError"),
      
-    // Incorrect parameter.
+     /* Incorrect parameter. */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // Incorrect parameter value.
+     /* Incorrect parameter value. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // Incorrect parameter value: AccessGroupId.
+     /* Incorrect parameter value: AccessGroupId. */
      INVALIDPARAMETERVALUE_INVALIDACCESSGROUPID("InvalidParameterValue.InvalidAccessGroupId"),
      
-    // Incorrect parameter value: AccessGroupName.
+     /* Incorrect parameter value: AccessGroupName. */
      INVALIDPARAMETERVALUE_INVALIDACCESSGROUPNAME("InvalidParameterValue.InvalidAccessGroupName"),
      
-    // Incorrect parameter value: `Address` of the permission rule.
+     /* Incorrect parameter value: `Address` of the permission rule. */
      INVALIDPARAMETERVALUE_INVALIDACCESSRULEADDRESS("InvalidParameterValue.InvalidAccessRuleAddress"),
      
-    // Incorrect parameter value: CapacityQuota.
+     /* Incorrect parameter value: CapacityQuota. */
      INVALIDPARAMETERVALUE_INVALIDCAPACITYQUOTA("InvalidParameterValue.InvalidCapacityQuota"),
      
-    // Incorrect parameter value: Description.
+     /* Incorrect parameter value: Description. */
      INVALIDPARAMETERVALUE_INVALIDDESCRIPTION("InvalidParameterValue.InvalidDescription"),
      
-    // Incorrect parameter value: FileSystemId.
+     /* Incorrect parameter value: FileSystemId. */
      INVALIDPARAMETERVALUE_INVALIDFILESYSTEMID("InvalidParameterValue.InvalidFileSystemId"),
      
-    // Incorrect parameter value: FileSystemName.
+     /* Incorrect parameter value: FileSystemName. */
      INVALIDPARAMETERVALUE_INVALIDFILESYSTEMNAME("InvalidParameterValue.InvalidFileSystemName"),
      
-    // Incorrect parameter value: MountPointId.
+     /* Incorrect parameter value: MountPointId. */
      INVALIDPARAMETERVALUE_INVALIDMOUNTPOINTID("InvalidParameterValue.InvalidMountPointId"),
      
-    // Incorrect parameter value: MountPointName.
+     /* Incorrect parameter value: MountPointName. */
      INVALIDPARAMETERVALUE_INVALIDMOUNTPOINTNAME("InvalidParameterValue.InvalidMountPointName"),
      
-    // Incorrect parameter value: VpcId.
+     /* Incorrect parameter value: VpcId. */
      INVALIDPARAMETERVALUE_INVALIDVPCID("InvalidParameterValue.InvalidVpcId"),
      
-    // The quota limit is exceeded.
+     /* The quota limit is exceeded. */
      LIMITEXCEEDED("LimitExceeded"),
      
-    // Missing parameter.
+     /* Missing parameter. */
      MISSINGPARAMETER("MissingParameter"),
      
-    // The resource is in use.
+     /* The resource is in use. */
      RESOURCEINUSE("ResourceInUse"),
      
-    // The resource does not exist.
+     /* The resource does not exist. */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-    // The permission group does not exist.
+     /* The permission group does not exist. */
      RESOURCENOTFOUND_ACCESSGROUPNOTEXISTS("ResourceNotFound.AccessGroupNotExists"),
      
-    // The permission rule does not exist.
+     /* The permission rule does not exist. */
      RESOURCENOTFOUND_ACCESSRULENOTEXISTS("ResourceNotFound.AccessRuleNotExists"),
      
-    // The file system does not exist.
+     /* The file system does not exist. */
      RESOURCENOTFOUND_FILESYSTEMNOTEXISTS("ResourceNotFound.FileSystemNotExists"),
      
-    // The mount point does not exist.
+     /* The mount point does not exist. */
      RESOURCENOTFOUND_MOUNTPOINTNOTEXISTS("ResourceNotFound.MountPointNotExists"),
      
-    // The VPC does not exist.
+     /* The VPC does not exist. */
      RESOURCENOTFOUND_VPCNOTEXISTS("ResourceNotFound.VpcNotExists"),
      
-    // The resource is unavailable.
+     /* The resource is unavailable. */
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-    // Unauthorized operation.
+     /* Unauthorized operation. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation");
      
     private String value;

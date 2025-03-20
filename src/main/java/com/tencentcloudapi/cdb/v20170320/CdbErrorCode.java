@@ -1,528 +1,528 @@
 package com.tencentcloudapi.cdb.v20170320;
 public enum CdbErrorCode {
-    // CAM signature/authentication error.
+     /* CAM signature/authentication error. */
      AUTHFAILURE("AuthFailure"),
      
-    // Invalid authorization
+     /* Invalid authorization */
      AUTHFAILURE_INVALIDAUTHORIZATION("AuthFailure.InvalidAuthorization"),
      
-    // The sub-account has no permissions.
+     /* The sub-account has no permissions. */
      AUTHFAILURE_SUBACCOUNTDENIED("AuthFailure.SubAccountDenied"),
      
-    // Backend or process error.
+     /* Backend or process error. */
      CDBERROR("CdbError"),
      
-    // Backup error.
+     /* Backup error. */
      CDBERROR_BACKUPERROR("CdbError.BackupError"),
      
-    // Backend database error.
+     /* Backend database error. */
      CDBERROR_DATABASEERROR("CdbError.DatabaseError"),
      
-    // Import task error.
+     /* Import task error. */
      CDBERROR_IMPORTERROR("CdbError.ImportError"),
      
-    // Backend task error.
+     /* Backend task error. */
      CDBERROR_TASKERROR("CdbError.TaskError"),
      
-    // Operation failed.
+     /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
-    // Async task exception.
+     /* Async task exception. */
      FAILEDOPERATION_ASYNCTASKSTATUSERROR("FailedOperation.AsyncTaskStatusError"),
      
-    // Failed to lock the instance while performing exclusive operations. Please try again later.
+     /* Failed to lock the instance while performing exclusive operations. Please try again later. */
      FAILEDOPERATION_CDBINSTANCELOCKFAILERROR("FailedOperation.CdbInstanceLockFailError"),
      
-    // Creation failed. Please check whether the user already exists.
+     /* Creation failed. Please check whether the user already exists. */
      FAILEDOPERATION_CREATEACCOUNTERROR("FailedOperation.CreateAccountError"),
      
-    // Failed to create the audit rule.
+     /* Failed to create the audit rule. */
      FAILEDOPERATION_CREATEAUDITFAILERROR("FailedOperation.CreateAuditFailError"),
      
-    // Failed to assign an exclusive VIP to the read-only replica.
+     /* Failed to assign an exclusive VIP to the read-only replica. */
      FAILEDOPERATION_CREATEROVIPERROR("FailedOperation.CreateRoVipError"),
      
-    // Database operation failed.
+     /* Database operation failed. */
      FAILEDOPERATION_DBOPERATIONACTIONERROR("FailedOperation.DBOperationActionError"),
      
-    // Failed to query database proxy.
+     /* Failed to query database proxy. */
      FAILEDOPERATION_DESCRIBEPROXYGROUPERROR("FailedOperation.DescribeProxyGroupError"),
      
-    // Unsupported operation
+     /* Unsupported operation */
      FAILEDOPERATION_FAILEDOPERATIONERROR("FailedOperation.FailedOperationError"),
      
-    // An error occurred while obtaining permissions.
+     /* An error occurred while obtaining permissions. */
      FAILEDOPERATION_GETPRIVILEGEERROR("FailedOperation.GetPrivilegeError"),
      
-    // Query failed.
+     /* Query failed. */
      FAILEDOPERATION_INSTANCEQUERYERROR("FailedOperation.InstanceQueryError"),
      
-    // An error occurred due to instance task conflict.
+     /* An error occurred due to instance task conflict. */
      FAILEDOPERATION_INSTANCETASKCONFLICTERROR("FailedOperation.InstanceTaskConflictError"),
      
-    // Failed to deserialize JSON.
+     /* Failed to deserialize JSON. */
      FAILEDOPERATION_JSONUNMARSHALERROR("FailedOperation.JsonUnmarshalError"),
      
-    // 
+     /*  */
      FAILEDOPERATION_LOGCONTENTOVERLIMIT("FailedOperation.LogContentOverLimit"),
      
-    // No policy modification detected
+     /* No policy modification detected */
      FAILEDOPERATION_NOTCHANGESTRATEGY("FailedOperation.NotChangeStrategy"),
      
-    // It is not a read-only instance with delayed replication enabled.
+     /* It is not a read-only instance with delayed replication enabled. */
      FAILEDOPERATION_NOTDELAYRO("FailedOperation.NotDelayRo"),
      
-    // The instance has an operation in progress. Try again later.
+     /* The instance has an operation in progress. Try again later. */
      FAILEDOPERATION_OPERATIONINCONFLICTERR("FailedOperation.OperationInConflictErr"),
      
-    // The executed operation to modify permissions is invalid. You can refer to product documentation for more information about permissions that can be modified for this instance. If you have any questions, please contact customer service.
+     /* The executed operation to modify permissions is invalid. You can refer to product documentation for more information about permissions that can be modified for this instance. If you have any questions, please contact customer service. */
      FAILEDOPERATION_PRIVILEGEDATAILLEGAL("FailedOperation.PrivilegeDataIllegal"),
      
-    // Database proxy in an exceptional status.
+     /* Database proxy in an exceptional status. */
      FAILEDOPERATION_PROXYGROUPSTATUSERROR("FailedOperation.ProxyGroupStatusError"),
      
-    // Failed to query the audit task
+     /* Failed to query the audit task */
      FAILEDOPERATION_QUERYAUDITTASKFAILERROR("FailedOperation.QueryAuditTaskFailError"),
      
-    // Log query failed.
+     /* Log query failed. */
      FAILEDOPERATION_QUERYLOGERROR("FailedOperation.QueryLogError"),
      
-    // Cross-region deserialization failed for the high-availability service.
+     /* Cross-region deserialization failed for the high-availability service. */
      FAILEDOPERATION_REMOTECALLUNMARSHALERROR("FailedOperation.RemoteCallUnmarshalError"),
      
-    // The proxy is being created or already exists. You cannot create it again.
+     /* The proxy is being created or already exists. You cannot create it again. */
      FAILEDOPERATION_REPEATCREATEPROXYERROR("FailedOperation.RepeatCreateProxyError"),
      
-    // Exception with the backend request for the service. Please contact customer service.
+     /* Exception with the backend request for the service. Please contact customer service. */
      FAILEDOPERATION_RESPONSEVALUEERROR("FailedOperation.ResponseValueError"),
      
-    // The result set size of queried logs exceeds the limit. Please select a shorter time range.
+     /* The result set size of queried logs exceeds the limit. Please select a shorter time range. */
      FAILEDOPERATION_RESULTSETOVERLIMIT("FailedOperation.ResultSetOverLimit"),
      
-    // Failed to initiate the operation. Please try again later. If the operation remains unsuccessful, please contact customer service.
+     /* Failed to initiate the operation. Please try again later. If the operation remains unsuccessful, please contact customer service. */
      FAILEDOPERATION_STARTFLOWERROR("FailedOperation.StartFlowError"),
      
-    // Task status conflict.
+     /* Task status conflict. */
      FAILEDOPERATION_STATUSCONFLICT("FailedOperation.StatusConflict"),
      
-    // Failed to submit the task. Please try again later. If the submission remains unsuccessful, please contact customer service.
+     /* Failed to submit the task. Please try again later. If the submission remains unsuccessful, please contact customer service. */
      FAILEDOPERATION_SUBMITASYNCTASKERROR("FailedOperation.SubmitAsyncTaskError"),
      
-    // The query timed out.
+     /* The query timed out. */
      FAILEDOPERATION_TIMEOUTERROR("FailedOperation.TimeoutError"),
      
-    // This type of operations cannot be performed.
+     /* This type of operations cannot be performed. */
      FAILEDOPERATION_TYPEINCONFLICT("FailedOperation.TypeInConflict"),
      
-    // The IP has been occupied.
+     /* The IP has been occupied. */
      FAILEDOPERATION_VPCIPINUSEERROR("FailedOperation.VpcIpInUseError"),
      
-    // Invalid IP address
+     /* Invalid IP address */
      FAILEDOPERATION_VPCIPINVALIDERROR("FailedOperation.VpcIpInvalidError"),
      
-    // The IP doesn’t exist in the subnet.
+     /* The IP doesn’t exist in the subnet. */
      FAILEDOPERATION_VPCIPNOTINSUBNETERROR("FailedOperation.VpcIpNotInSubnetError"),
      
-    // An internal error occurred.
+     /* An internal error occurred. */
      INTERNALERROR("InternalError"),
      
-    // An error occurred while querying async tasks.
+     /* An error occurred while querying async tasks. */
      INTERNALERROR_ASYNCREQUESTERROR("InternalError.AsyncRequestError"),
      
-    // Failed to query the audit log
+     /* Failed to query the audit log */
      INTERNALERROR_AUDITDESCRIBELOGERROR("InternalError.AuditDescribeLogError"),
      
-    // An error occurred in the internal service of the audit service.
+     /* An error occurred in the internal service of the audit service. */
      INTERNALERROR_AUDITERROR("InternalError.AuditError"),
      
-    // Internal exception of the audit service.
+     /* Internal exception of the audit service. */
      INTERNALERROR_AUDITOSSLOGICERROR("InternalError.AuditOssLogicError"),
      
-    // Authentication failed.
+     /* Authentication failed. */
      INTERNALERROR_AUTHERROR("InternalError.AuthError"),
      
-    // Authentication failed.
+     /* Authentication failed. */
      INTERNALERROR_CAUTHERROR("InternalError.CauthError"),
      
-    // Internal system error.
+     /* Internal system error. */
      INTERNALERROR_CDBCGWERROR("InternalError.CdbCgwError"),
      
-    // System error.
+     /* System error. */
      INTERNALERROR_CDBERROR("InternalError.CdbError"),
      
-    // Failed to obtain file information.
+     /* Failed to obtain file information. */
      INTERNALERROR_COSERROR("InternalError.CosError"),
      
-    // Database exception
+     /* Database exception */
      INTERNALERROR_DBERROR("InternalError.DBError"),
      
-    // Database operation failed.
+     /* Database operation failed. */
      INTERNALERROR_DBOPERATIONERROR("InternalError.DBOperationError"),
      
-    // The database record does not exist.
+     /* The database record does not exist. */
      INTERNALERROR_DBRECORDNOTEXISTERROR("InternalError.DBRecordNotExistError"),
      
-    // Internal database error.
+     /* Internal database error. */
      INTERNALERROR_DATABASEACCESSERROR("InternalError.DatabaseAccessError"),
      
-    // Internal system error.
+     /* Internal system error. */
      INTERNALERROR_DESERROR("InternalError.DesError"),
      
-    // Security group operation error.
+     /* Security group operation error. */
      INTERNALERROR_DFWERROR("InternalError.DfwError"),
      
-    // SQL statement error
+     /* SQL statement error */
      INTERNALERROR_EXESQLERROR("InternalError.ExeSqlError"),
      
-    // Failed to execute the HTTP request
+     /* Failed to execute the HTTP request */
      INTERNALERROR_EXECHTTPREQUESTERROR("InternalError.ExecHttpRequestError"),
      
-    // Failed to execute SQL statement
+     /* Failed to execute SQL statement */
      INTERNALERROR_EXECUTESQLERROR("InternalError.ExecuteSQLError"),
      
-    // File transfer exception
+     /* File transfer exception */
      INTERNALERROR_FTPERROR("InternalError.FtpError"),
      
-    // Exceptional HTTP request
+     /* Exceptional HTTP request */
      INTERNALERROR_HTTPERROR("InternalError.HttpError"),
      
-    // Request failed.
+     /* Request failed. */
      INTERNALERROR_HTTPREQUESTERROR("InternalError.HttpRequestError"),
      
-    // Import failed
+     /* Import failed */
      INTERNALERROR_IMPORTERROR("InternalError.ImportError"),
      
-    // Internal service error
+     /* Internal service error */
      INTERNALERROR_INNERCOMMONERROR("InternalError.InnerCommonError"),
      
-    // Internal service error. Please contact customer service.
+     /* Internal service error. Please contact customer service. */
      INTERNALERROR_INTERNALASSERTERROR("InternalError.InternalAssertError"),
      
-    // An exception occurred while executing the request.
+     /* An exception occurred while executing the request. */
      INTERNALERROR_INTERNALHTTPSERVERERROR("InternalError.InternalHttpServerError"),
      
-    // The backend failed to request the service. Please contact customer service.
+     /* The backend failed to request the service. Please contact customer service. */
      INTERNALERROR_INTERNALREQUESTERROR("InternalError.InternalRequestError"),
      
-    // An error occurred while accessing internal service.
+     /* An error occurred while accessing internal service. */
      INTERNALERROR_INTERNALSERVICEERRORERR("InternalError.InternalServiceErrorErr"),
      
-    // Failed to parse JSON.
+     /* Failed to parse JSON. */
      INTERNALERROR_JSONERROR("InternalError.JSONError"),
      
-    // Failed to enable encryption
+     /* Failed to enable encryption */
      INTERNALERROR_KMSERROR("InternalError.KmsError"),
      
-    // Network error
+     /* Network error */
      INTERNALERROR_NETWORKERROR("InternalError.NetworkError"),
      
-    // An error occurred in TencentDB for MySQL High-Availability Edition database service.
+     /* An error occurred in TencentDB for MySQL High-Availability Edition database service. */
      INTERNALERROR_OSSERROR("InternalError.OssError"),
      
-    // Parameter error
+     /* Parameter error */
      INTERNALERROR_PARAMERROR("InternalError.ParamError"),
      
-    // Regular expression compilation error.
+     /* Regular expression compilation error. */
      INTERNALERROR_REGEXPCOMPILEERROR("InternalError.RegexpCompileError"),
      
-    // The resource does not match.
+     /* The resource does not match. */
      INTERNALERROR_RESOURCENOTMATCH("InternalError.ResourceNotMatch"),
      
-    // The resource is not unique.
+     /* The resource is not unique. */
      INTERNALERROR_RESOURCENOTUNIQUE("InternalError.ResourceNotUnique"),
      
-    // Security group error
+     /* Security group error */
      INTERNALERROR_SECURITYGROUPERROR("InternalError.SecurityGroupError"),
      
-    // Internal error of the system.
+     /* Internal error of the system. */
      INTERNALERROR_SERVERERROR("InternalError.ServerError"),
      
-    // An exception occurred in the internal service.
+     /* An exception occurred in the internal service. */
      INTERNALERROR_SERVICEERROR("InternalError.ServiceError"),
      
-    // Failed to modify the tag. Please try again later.
+     /* Failed to modify the tag. Please try again later. */
      INTERNALERROR_TAGERROR("InternalError.TagError"),
      
-    // Task exception
+     /* Task exception */
      INTERNALERROR_TASKERROR("InternalError.TaskError"),
      
-    // Async task error.
+     /* Async task error. */
      INTERNALERROR_TASKFRAMEERROR("InternalError.TaskFrameError"),
      
-    // Time window error
+     /* Time window error */
      INTERNALERROR_TIMEWINDOWERROR("InternalError.TimeWindowError"),
      
-    // Transaction system error.
+     /* Transaction system error. */
      INTERNALERROR_TRADEERROR("InternalError.TradeError"),
      
-    // Operation failed
+     /* Operation failed */
      INTERNALERROR_TRANSACTIONBEGINERROR("InternalError.TransactionBeginError"),
      
-    // Unknown error
+     /* Unknown error */
      INTERNALERROR_UNDEFINEDERROR("InternalError.UndefinedError"),
      
-    // Unknown error
+     /* Unknown error */
      INTERNALERROR_UNKNOWNERROR("InternalError.UnknownError"),
      
-    // VPC or subnet error.
+     /* VPC or subnet error. */
      INTERNALERROR_VPCERROR("InternalError.VpcError"),
      
-    // Parameter error.
+     /* Parameter error. */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // This API was not found.
+     /* This API was not found. */
      INVALIDPARAMETER_CONTROLLERNOTFOUNDERROR("InvalidParameter.ControllerNotFoundError"),
      
-    // There are resources in the placement group.
+     /* There are resources in the placement group. */
      INVALIDPARAMETER_DEPLOYGROUPNOTEMPTY("InvalidParameter.DeployGroupNotEmpty"),
      
-    // Parameter exception.
+     /* Parameter exception. */
      INVALIDPARAMETER_EXCEPTIONPARAM("InvalidParameter.ExceptionParam"),
      
-    // The instance is not found.
+     /* The instance is not found. */
      INVALIDPARAMETER_INSTANCENAMENOTFOUND("InvalidParameter.InstanceNameNotFound"),
      
-    // The instance does not exist.
+     /* The instance does not exist. */
      INVALIDPARAMETER_INSTANCENOTFOUND("InvalidParameter.InstanceNotFound"),
      
-    // The async task does not exist.
+     /* The async task does not exist. */
      INVALIDPARAMETER_INVALIDASYNCREQUESTID("InvalidParameter.InvalidAsyncRequestId"),
      
-    // Invalid name.
+     /* Invalid name. */
      INVALIDPARAMETER_INVALIDNAME("InvalidParameter.InvalidName"),
      
-    // Invalid parameter value
+     /* Invalid parameter value */
      INVALIDPARAMETER_INVALIDPARAMETERERROR("InvalidParameter.InvalidParameterError"),
      
-    // Failed to deserialize JSON.
+     /* Failed to deserialize JSON. */
      INVALIDPARAMETER_JSONUNMARSHALERROR("InvalidParameter.JsonUnmarshalError"),
      
-    // The quota of placement group resources has been exceeded.
+     /* The quota of placement group resources has been exceeded. */
      INVALIDPARAMETER_OVERDEPLOYGROUPQUOTA("InvalidParameter.OverDeployGroupQuota"),
      
-    // The resource already exists.
+     /* The resource already exists. */
      INVALIDPARAMETER_RESOURCEEXISTS("InvalidParameter.ResourceExists"),
      
-    // The resource does not exist.
+     /* The resource does not exist. */
      INVALIDPARAMETER_RESOURCENOTEXISTS("InvalidParameter.ResourceNotExists"),
      
-    // The resource is not found.
+     /* The resource is not found. */
      INVALIDPARAMETER_RESOURCENOTFOUND("InvalidParameter.ResourceNotFound"),
      
-    // Invalid parameter value
+     /* Invalid parameter value */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // The account description contains special characters.
+     /* The account description contains special characters. */
      INVALIDPARAMETERVALUE_ACCOUNTDESCRIPTIONCHARACTERERROR("InvalidParameterValue.AccountDescriptionCharacterError"),
      
-    // The account description should not exceed 255 characters.
+     /* The account description should not exceed 255 characters. */
      INVALIDPARAMETERVALUE_ACCOUNTDESCRIPTIONLENGTHERROR("InvalidParameterValue.AccountDescriptionLengthError"),
      
-    // Incorrect format of the `host` parameter in the account.
+     /* Incorrect format of the `host` parameter in the account. */
      INVALIDPARAMETERVALUE_ACCOUNTHOSTRULEERROR("InvalidParameterValue.AccountHostRuleError"),
      
-    // The account password contains invalid characters.
+     /* The account password contains invalid characters. */
      INVALIDPARAMETERVALUE_ACCOUNTPASSWORDCHARACTERERROR("InvalidParameterValue.AccountPasswordCharacterError"),
      
-    // The account password is too long or too short.
+     /* The account password is too long or too short. */
      INVALIDPARAMETERVALUE_ACCOUNTPASSWORDLENGTHERROR("InvalidParameterValue.AccountPasswordLengthError"),
      
-    // The password format is incorrect. It should contain 8 to 64 characters and must contain at least two character sets of the following: letters, digits, and special symbols (_+-&=!@#$%^*()).
+     /* The password format is incorrect. It should contain 8 to 64 characters and must contain at least two character sets of the following: letters, digits, and special symbols (_+-&=!@#$%^*()). */
      INVALIDPARAMETERVALUE_ACCOUNTPASSWORDRULEERROR("InvalidParameterValue.AccountPasswordRuleError"),
      
-    // Data conversion failed.
+     /* Data conversion failed. */
      INVALIDPARAMETERVALUE_DATACONVERTERROR("InvalidParameterValue.DataConvertError"),
      
-    // Invalid parameter value
+     /* Invalid parameter value */
      INVALIDPARAMETERVALUE_INVALIDPARAMETERVALUEERROR("InvalidParameterValue.InvalidParameterValueError"),
      
-    // Incorrect format of the account username.
+     /* Incorrect format of the account username. */
      INVALIDPARAMETERVALUE_USERNAMERULEERROR("InvalidParameterValue.UserNameRuleError"),
      
-    // The account does not exist.
+     /* The account does not exist. */
      INVALIDPARAMETERVALUE_USERNOTEXISTERROR("InvalidParameterValue.UserNotExistError"),
      
-    // No root account found.
+     /* No root account found. */
      INVALIDPARAMETERVALUE_VERIFYACCOUNTNOROOTERROR("InvalidParameterValue.VerifyAccountNoRootError"),
      
-    // Invalid account password.
+     /* Invalid account password. */
      INVALIDPARAMETERVALUE_VERIFYACCOUNTPASSWORDERROR("InvalidParameterValue.VerifyAccountPasswordError"),
      
-    // The account does not have the GRANT permission.
+     /* The account does not have the GRANT permission. */
      INVALIDPARAMETERVALUE_VERIFYACCOUNTPRIVERROR("InvalidParameterValue.VerifyAccountPrivError"),
      
-    // The quota limit has been reached.
+     /* The quota limit has been reached. */
      LIMITEXCEEDED("LimitExceeded"),
      
-    // Missing parameter
+     /* Missing parameter */
      MISSINGPARAMETER("MissingParameter"),
      
-    // Account-related parameters are missing.
+     /* Account-related parameters are missing. */
      MISSINGPARAMETER_ACCOUNTMISSINGPARAMETERERROR("MissingParameter.AccountMissingParameterError"),
      
-    // Required parameters are missing.
+     /* Required parameters are missing. */
      MISSINGPARAMETER_MISSINGPARAMERROR("MissingParameter.MissingParamError"),
      
-    // Operation denied.
+     /* Operation denied. */
      OPERATIONDENIED("OperationDenied"),
      
-    // The Tencent Cloud account is not allowed to perform the operation due to insufficient permissions.
+     /* The Tencent Cloud account is not allowed to perform the operation due to insufficient permissions. */
      OPERATIONDENIED_ACCOUNTOPERATIONDENIED("OperationDenied.AccountOperationDenied"),
      
-    // The instance is performing another task.
+     /* The instance is performing another task. */
      OPERATIONDENIED_ACTIONINPROCESS("OperationDenied.ActionInProcess"),
      
-    // Unsupported operation.
+     /* Unsupported operation. */
      OPERATIONDENIED_ACTIONNOTSUPPORT("OperationDenied.ActionNotSupport"),
      
-    // The audit policies conflict.
+     /* The audit policies conflict. */
      OPERATIONDENIED_AUDITPOLICYCONFLICTERROR("OperationDenied.AuditPolicyConflictError"),
      
-    // The audit policy already exists.
+     /* The audit policy already exists. */
      OPERATIONDENIED_AUDITPOLICYEXISTERROR("OperationDenied.AuditPolicyExistError"),
      
-    // The number of audit policies exceeds the limit.
+     /* The number of audit policies exceeds the limit. */
      OPERATIONDENIED_AUDITPOLICYOVERQUOTAERROR("OperationDenied.AuditPolicyOverQuotaError"),
      
-    // The audit rule has been associated.
+     /* The audit rule has been associated. */
      OPERATIONDENIED_AUDITRULEHASBIND("OperationDenied.AuditRuleHasBind"),
      
-    // The audit rule does not exist.
+     /* The audit rule does not exist. */
      OPERATIONDENIED_AUDITRULENOTEXISTERROR("OperationDenied.AuditRuleNotExistError"),
      
-    // Exceptional audit status.
+     /* Exceptional audit status. */
      OPERATIONDENIED_AUDITSTATUSERROR("OperationDenied.AuditStatusError"),
      
-    // The audit tasks conflict.
+     /* The audit tasks conflict. */
      OPERATIONDENIED_AUDITTASKCONFLICTERROR("OperationDenied.AuditTaskConflictError"),
      
-    // The operation is not allowed as the RO group contains an invalid read-only instance.
+     /* The operation is not allowed as the RO group contains an invalid read-only instance. */
      OPERATIONDENIED_CONFLICTROSTATUS("OperationDenied.ConflictRoStatus"),
      
-    // The configuration of read-only group is being modified. Please do not make repeated requests.
+     /* The configuration of read-only group is being modified. Please do not make repeated requests. */
      OPERATIONDENIED_CONFLICTSTATUS("OperationDenied.ConflictStatus"),
      
-    // You have enabled the compliance audit feature of DBbrain, so you cannot enable the rule-based audit.
+     /* You have enabled the compliance audit feature of DBbrain, so you cannot enable the rule-based audit. */
      OPERATIONDENIED_DBBRAINPOLICYCONFLICT("OperationDenied.DBBrainPolicyConflict"),
      
-    // The operation is not allowed during the delayed replication.
+     /* The operation is not allowed during the delayed replication. */
      OPERATIONDENIED_DELAYREPLICATIONRUNNING("OperationDenied.DelayReplicationRunning"),
      
-    // The root account cannot be deleted.
+     /* The root account cannot be deleted. */
      OPERATIONDENIED_DELETEROOTACCOUNTERROR("OperationDenied.DeleteRootAccountError"),
      
-    // This instance needs permissions to use this feature.
+     /* This instance needs permissions to use this feature. */
      OPERATIONDENIED_FUNCTIONDENIED("OperationDenied.FunctionDenied"),
      
-    // The current instance type does not support this operation.
+     /* The current instance type does not support this operation. */
      OPERATIONDENIED_INSTTYPENOTSUPPORT("OperationDenied.InstTypeNotSupport"),
      
-    // Instance locks are in conflict. Please try again later.
+     /* Instance locks are in conflict. Please try again later. */
      OPERATIONDENIED_INSTANCELOCKERCONFLICT("OperationDenied.InstanceLockerConflict"),
      
-    // Exceptional instance status
+     /* Exceptional instance status */
      OPERATIONDENIED_INSTANCESTATUSERROR("OperationDenied.InstanceStatusError"),
      
-    // Delayed replication is not allowed because the instance is executing another task.
+     /* Delayed replication is not allowed because the instance is executing another task. */
      OPERATIONDENIED_INSTANCETASKRUNNING("OperationDenied.InstanceTaskRunning"),
      
-    // Abnormal instance task status.
+     /* Abnormal instance task status. */
      OPERATIONDENIED_INSTANCETASKSTATUSERROR("OperationDenied.InstanceTaskStatusError"),
      
-    // The instance does not support this operation.
+     /* The instance does not support this operation. */
      OPERATIONDENIED_INSTANCEUNSUPPORTEDOPERATEERROR("OperationDenied.InstanceUnsupportedOperateError"),
      
-    // Basic instances do not support this operation (feature).
+     /* Basic instances do not support this operation (feature). */
      OPERATIONDENIED_NOTSUPPORTBASIC("OperationDenied.NotSupportBasic"),
      
-    // The host information of the local root account cannot be modified.
+     /* The host information of the local root account cannot be modified. */
      OPERATIONDENIED_NOTSUPPORTMODIFYLOCALROOTHOSTERROR("OperationDenied.NotSupportModifyLocalRootHostError"),
      
-    // Operation denied
+     /* Operation denied */
      OPERATIONDENIED_OPERATIONDENIEDERROR("OperationDenied.OperationDeniedError"),
      
-    // There are other orders being submitted. Please try again later.
+     /* There are other orders being submitted. Please try again later. */
      OPERATIONDENIED_OTHERODERINPROCESS("OperationDenied.OtherOderInProcess"),
      
-    // The number of the proxy addresses exceeds the limit.
+     /* The number of the proxy addresses exceeds the limit. */
      OPERATIONDENIED_PROXYADDRESSLIMITERROR("OperationDenied.ProxyAddressLimitError"),
      
-    // Proxy address is not found.
+     /* Proxy address is not found. */
      OPERATIONDENIED_PROXYADDRESSNOTFUND("OperationDenied.ProxyAddressNotFund"),
      
-    // The number of the proxy nodes exceeds the limit.
+     /* The number of the proxy nodes exceeds the limit. */
      OPERATIONDENIED_PROXYNODECOUNTLIMITERROR("OperationDenied.ProxyNodeCountLimitError"),
      
-    // This operation is not allowed during database proxy upgrade task.
+     /* This operation is not allowed during database proxy upgrade task. */
      OPERATIONDENIED_PROXYUPGRADETASKSTATUSERROR("OperationDenied.ProxyUpgradeTaskStatusError"),
      
-    // Failed to query the audit log
+     /* Failed to query the audit log */
      OPERATIONDENIED_QUERYAUDITLOGSERROR("OperationDenied.QueryAuditLogsError"),
      
-    // The resource was not found.
+     /* The resource was not found. */
      OPERATIONDENIED_RESOURCENOTFOUNDERROR("OperationDenied.ResourceNotFoundError"),
      
-    // The resource was not found.
+     /* The resource was not found. */
      OPERATIONDENIED_RESOURCENOTFUNDERROR("OperationDenied.ResourceNotFundError"),
      
-    // The maximum number of results has been reached. Please narrow down your query.
+     /* The maximum number of results has been reached. Please narrow down your query. */
      OPERATIONDENIED_RESULTOVERLIMIT("OperationDenied.ResultOverLimit"),
      
-    // The Tencent Cloud sub-account is not allowed to perform the operation due to insufficient permissions.
+     /* The Tencent Cloud sub-account is not allowed to perform the operation due to insufficient permissions. */
      OPERATIONDENIED_SUBACCOUNTOPERATIONDENIED("OperationDenied.SubAccountOperationDenied"),
      
-    // This instance is not refundable.
+     /* This instance is not refundable. */
      OPERATIONDENIED_UNSUPPORTREFUNDERROR("OperationDenied.UnSupportRefundError"),
      
-    // Creating a proxy address is not supported.
+     /* Creating a proxy address is not supported. */
      OPERATIONDENIED_UNSUPPORTCREATEADDRESSERROR("OperationDenied.UnsupportCreateAddressError"),
      
-    // The audit feature cannot be enabled.
+     /* The audit feature cannot be enabled. */
      OPERATIONDENIED_UNSUPPORTOPENAUDITERROR("OperationDenied.UnsupportOpenAuditError"),
      
-    // This account is not authorized to access the requested resource.
+     /* This account is not authorized to access the requested resource. */
      OPERATIONDENIED_USERHASNOSTRATEGY("OperationDenied.UserHasNoStrategy"),
      
-    // Incorrect password or verification failed.
+     /* Incorrect password or verification failed. */
      OPERATIONDENIED_WRONGPASSWORD("OperationDenied.WrongPassword"),
      
-    // The backend task status is invalid.
+     /* The backend task status is invalid. */
      OPERATIONDENIED_WRONGSTATUS("OperationDenied.WrongStatus"),
      
-    // Limit exceeded.
+     /* Limit exceeded. */
      OVERQUOTA("OverQuota"),
      
-    // The resource is occupied.
+     /* The resource is occupied. */
      RESOURCEINUSE("ResourceInUse"),
      
-    // Insufficient resource.
+     /* Insufficient resource. */
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
-    // The resource does not exist.
+     /* The resource does not exist. */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-    // The instance cannot be found. Please check whether your instance status is normal.
+     /* The instance cannot be found. Please check whether your instance status is normal. */
      RESOURCENOTFOUND_CDBINSTANCENOTFOUNDERROR("ResourceNotFound.CdbInstanceNotFoundError"),
      
-    // High-availability instance doesn’t exist.
+     /* High-availability instance doesn’t exist. */
      RESOURCENOTFOUND_INSTANCENOTFOUNDERROR("ResourceNotFound.InstanceNotFoundError"),
      
-    // The instance does not exist.
+     /* The instance does not exist. */
      RESOURCENOTFOUND_INSTANCENOTFUNDERROR("ResourceNotFound.InstanceNotFundError"),
      
-    // The resource is unavailable.
+     /* The resource is unavailable. */
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-    // Verification failed. Insufficient permissions.
+     /* Verification failed. Insufficient permissions. */
      UNAUTHORIZEDOPERATION_NOTENOUGHPRIVILEGES("UnauthorizedOperation.NotEnoughPrivileges"),
      
-    // Unsupported operation.
+     /* Unsupported operation. */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
-    // The current operation is not supported for instances with no resource usage limit.
+     /* The current operation is not supported for instances with no resource usage limit. */
      UNSUPPORTEDOPERATION_NOTSUPPORTNORMALINSTANCE("UnsupportedOperation.NotSupportNormalInstance"),
      
-    // Unsupported permission.
+     /* Unsupported permission. */
      UNSUPPORTEDOPERATION_PRIVILEGESUNSUPPORTEDERROR("UnsupportedOperation.PrivilegesUnsupportedError");
      
     private String value;

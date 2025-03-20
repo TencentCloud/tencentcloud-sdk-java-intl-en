@@ -1,57 +1,57 @@
 package com.tencentcloudapi.tke.v20220501;
 public enum TkeErrorCode {
-    // Operation failed.
+     /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
-    // Internal error.
+     /* Internal error. */
      INTERNALERROR("InternalError"),
      
-    // db error.
+     /* db error. */
      INTERNALERROR_DB("InternalError.Db"),
      
-    // DB error.
+     /* DB error. */
      INTERNALERROR_DBAFFECTIVEDROWS("InternalError.DbAffectivedRows"),
      
-    // Record not found.
+     /* Record not found. */
      INTERNALERROR_DBRECORDNOTFOUND("InternalError.DbRecordNotFound"),
      
-    // Initializing Master failed.
+     /* Initializing Master failed. */
      INTERNALERROR_INITMASTERFAILED("InternalError.InitMasterFailed"),
      
-    // Param error.
+     /* Param error. */
      INTERNALERROR_PARAM("InternalError.Param"),
      
-    // Public clusters do not support node expansion.
+     /* Public clusters do not support node expansion. */
      INTERNALERROR_PUBLICCLUSTEROPNOTSUPPORT("InternalError.PublicClusterOpNotSupport"),
      
-    // Internal error.
+     /* Internal error. */
      INTERNALERROR_UNEXCEPTEDINTERNAL("InternalError.UnexceptedInternal"),
      
-    // Unknown internal error.
+     /* Unknown internal error. */
      INTERNALERROR_UNEXPECTEDINTERNAL("InternalError.UnexpectedInternal"),
      
-    // Parameter error.
+     /* Parameter error. */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // The cluster ID does not exist.
+     /* The cluster ID does not exist. */
      INVALIDPARAMETER_CLUSTERNOTFOUND("InvalidParameter.ClusterNotFound"),
      
-    // Parameter error.
+     /* Parameter error. */
      INVALIDPARAMETER_PARAM("InvalidParameter.Param"),
      
-    // Operation denied.
+     /* Operation denied. */
      OPERATIONDENIED("OperationDenied"),
      
-    // The resource is occupied.
+     /* The resource is occupied. */
      RESOURCEINUSE("ResourceInUse"),
      
-    // The resource does not exist.
+     /* The resource does not exist. */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-    // The cluster does not exist.
+     /* The cluster does not exist. */
      RESOURCENOTFOUND_CLUSTERNOTFOUND("ResourceNotFound.ClusterNotFound"),
      
-    // The cluster status does not support this operation.
+     /* The cluster status does not support this operation. */
      RESOURCEUNAVAILABLE_CLUSTERSTATE("ResourceUnavailable.ClusterState");
      
     private String value;

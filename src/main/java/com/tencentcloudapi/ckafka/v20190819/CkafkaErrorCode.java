@@ -1,90 +1,90 @@
 package com.tencentcloudapi.ckafka.v20190819;
 public enum CkafkaErrorCode {
-    // CAM signature/authentication error.
+     /* CAM signature/authentication error. */
      AUTHFAILURE("AuthFailure"),
      
-    // DryRun operation, which means the DryRun parameter is passed in yet the request will still be successful.
+     /* DryRun operation, which means the DryRun parameter is passed in yet the request will still be successful. */
      DRYRUNOPERATION("DryRunOperation"),
      
-    // Operation failed.
+     /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
-    // Internal error.
+     /* Internal error. */
      INTERNALERROR("InternalError"),
      
-    // Invalid parameter.
+     /* Invalid parameter. */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // The topic name is duplicate.
+     /* The topic name is duplicate. */
      INVALIDPARAMETER_TOPICEXIST("InvalidParameter.TopicExist"),
      
-    // Invalid parameter value.
+     /* Invalid parameter value. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // The instance does not exist.
+     /* The instance does not exist. */
      INVALIDPARAMETERVALUE_INSTANCENOTEXIST("InvalidParameterValue.InstanceNotExist"),
      
-    // The parameter is required.
+     /* The parameter is required. */
      INVALIDPARAMETERVALUE_NOTALLOWEDEMPTY("InvalidParameterValue.NotAllowedEmpty"),
      
-    // The parameter already exists.
+     /* The parameter already exists. */
      INVALIDPARAMETERVALUE_REPETITIONVALUE("InvalidParameterValue.RepetitionValue"),
      
-    // Invalid subnet ID.
+     /* Invalid subnet ID. */
      INVALIDPARAMETERVALUE_SUBNETIDINVALID("InvalidParameterValue.SubnetIdInvalid"),
      
-    // The subnet is not in the zone.
+     /* The subnet is not in the zone. */
      INVALIDPARAMETERVALUE_SUBNETNOTBELONGTOZONE("InvalidParameterValue.SubnetNotBelongToZone"),
      
-    // Invalid VPC ID.
+     /* Invalid VPC ID. */
      INVALIDPARAMETERVALUE_VPCIDINVALID("InvalidParameterValue.VpcIdInvalid"),
      
-    // The value of the `Action` parameter is incorrect.
+     /* The value of the `Action` parameter is incorrect. */
      INVALIDPARAMETERVALUE_WRONGACTION("InvalidParameterValue.WrongAction"),
      
-    // The zone is not supported.
+     /* The zone is not supported. */
      INVALIDPARAMETERVALUE_ZONENOTSUPPORT("InvalidParameterValue.ZoneNotSupport"),
      
-    // The quota limit has been reached.
+     /* The quota limit has been reached. */
      LIMITEXCEEDED("LimitExceeded"),
      
-    // Missing parameter
+     /* Missing parameter */
      MISSINGPARAMETER("MissingParameter"),
      
-    // Operation denied.
+     /* Operation denied. */
      OPERATIONDENIED("OperationDenied"),
      
-    // Task paused.
+     /* Task paused. */
      OPERATIONDENIED_RESOURCETASKPAUSED("OperationDenied.ResourceTaskPaused"),
      
-    // The number of requests exceeds the frequency limit.
+     /* The number of requests exceeds the frequency limit. */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
-    // The resource is occupied.
+     /* The resource is occupied. */
      RESOURCEINUSE("ResourceInUse"),
      
-    // The resource does not exist.
+     /* The resource does not exist. */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-    // The resource is unavailable.
+     /* The resource is unavailable. */
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-    // Disk resources are unavailable on the broker.
+     /* Disk resources are unavailable on the broker. */
      RESOURCEUNAVAILABLE_KAFKASTORAGEERROR("ResourceUnavailable.KafkaStorageError"),
      
-    // Unauthorized operation.
+     /* Unauthorized operation. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-    // Unknown parameter error.
+     /* Unknown parameter error. */
      UNKNOWNPARAMETER("UnknownParameter"),
      
-    // Unsupported operation.
+     /* Unsupported operation. */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
-    // The batch instance deletion limit is reached.
+     /* The batch instance deletion limit is reached. */
      UNSUPPORTEDOPERATION_BATCHDELINSTANCELIMIT("UnsupportedOperation.BatchDelInstanceLimit"),
      
-    // Oss rejected the operation.
+     /* Oss rejected the operation. */
      UNSUPPORTEDOPERATION_OSSREJECT("UnsupportedOperation.OssReject");
      
     private String value;

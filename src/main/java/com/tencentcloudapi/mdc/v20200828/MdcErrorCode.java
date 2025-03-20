@@ -1,69 +1,69 @@
 package com.tencentcloudapi.mdc.v20200828;
 public enum MdcErrorCode {
-    // Internal error.
+     /* Internal error. */
      INTERNALERROR("InternalError"),
      
-    // Invalid parameter.
+     /* Invalid parameter. */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // Invalid `EndTime`.
+     /* Invalid `EndTime`. */
      INVALIDPARAMETER_ENDTIME("InvalidParameter.EndTime"),
      
-    // The quantity exceeds the limit.
+     /* The quantity exceeds the limit. */
      INVALIDPARAMETER_EXCEEDEDQUANTITYLIMIT("InvalidParameter.ExceededQuantityLimit"),
      
-    // Invalid ID.
+     /* Invalid ID. */
      INVALIDPARAMETER_ID("InvalidParameter.Id"),
      
-    // Invalid input.
+     /* Invalid input. */
      INVALIDPARAMETER_INPUT("InvalidParameter.Input"),
      
-    // Invalid `InputOutputId`.
+     /* Invalid `InputOutputId`. */
      INVALIDPARAMETER_INPUTOUTPUTID("InvalidParameter.InputOutputId"),
      
-    // Invalid maximum bandwidth value.
+     /* Invalid maximum bandwidth value. */
      INVALIDPARAMETER_MAXBANDWIDTH("InvalidParameter.MaxBandwidth"),
      
-    // Invalid `Name`.
+     /* Invalid `Name`. */
      INVALIDPARAMETER_NAME("InvalidParameter.Name"),
      
-    // No information found.
+     /* No information found. */
      INVALIDPARAMETER_NOTFOUND("InvalidParameter.NotFound"),
      
-    // Invalid `Output`.
+     /* Invalid `Output`. */
      INVALIDPARAMETER_OUTPUT("InvalidParameter.Output"),
      
-    // Invalid `OutputGroups` value
+     /* Invalid `OutputGroups` value */
      INVALIDPARAMETER_OUTPUTGROUPS("InvalidParameter.OutputGroups"),
      
-    // Invalid `OutputId`.
+     /* Invalid `OutputId`. */
      INVALIDPARAMETER_OUTPUTID("InvalidParameter.OutputId"),
      
-    // Invalid `PageNum`.
+     /* Invalid `PageNum`. */
      INVALIDPARAMETER_PAGENUM("InvalidParameter.PageNum"),
      
-    // Invalid `PageSize`.
+     /* Invalid `PageSize`. */
      INVALIDPARAMETER_PAGESIZE("InvalidParameter.PageSize"),
      
-    // Invalid `Period`.
+     /* Invalid `Period`. */
      INVALIDPARAMETER_PERIOD("InvalidParameter.Period"),
      
-    // Invalid `Pipeline`.
+     /* Invalid `Pipeline`. */
      INVALIDPARAMETER_PIPELINE("InvalidParameter.Pipeline"),
      
-    // Invalid `Protocol`.
+     /* Invalid `Protocol`. */
      INVALIDPARAMETER_PROTOCOL("InvalidParameter.Protocol"),
      
-    // Invalid `SortType`.
+     /* Invalid `SortType`. */
      INVALIDPARAMETER_SORTTYPE("InvalidParameter.SortType"),
      
-    // Invalid `StartTime`.
+     /* Invalid `StartTime`. */
      INVALIDPARAMETER_STARTTIME("InvalidParameter.StartTime"),
      
-    // Unexpected status.
+     /* Unexpected status. */
      INVALIDPARAMETER_STATE("InvalidParameter.State"),
      
-    // Invalid `Type`.
+     /* Invalid `Type`. */
      INVALIDPARAMETER_TYPE("InvalidParameter.Type");
      
     private String value;

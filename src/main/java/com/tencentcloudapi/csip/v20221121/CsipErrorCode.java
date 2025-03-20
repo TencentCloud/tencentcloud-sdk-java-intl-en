@@ -1,72 +1,72 @@
 package com.tencentcloudapi.csip.v20221121;
 public enum CsipErrorCode {
-    // CAM signature/authentication error.
+     /* CAM signature/authentication error. */
      AUTHFAILURE("AuthFailure"),
      
-    // The request would have succeeded, but the DryRun parameter was used.
+     /* The request would have succeeded, but the DryRun parameter was used. */
      DRYRUNOPERATION("DryRunOperation"),
      
-    // Operation failed.
+     /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
-    // An internal error occurs.
+     /* An internal error occurs. */
      INTERNALERROR("InternalError"),
      
-    // 
+     /*  */
      INVALIDFILTER("InvalidFilter"),
      
-    // The parameter is incorrect.
+     /* The parameter is incorrect. */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // Decrypt error
+     /* Decrypt error */
      INVALIDPARAMETER_DECRYPTERROR("InvalidParameter.DecryptError"),
      
-    // Invalid parameter value.
+     /* Invalid parameter value. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // The quota limit is reached.
+     /* The quota limit is reached. */
      LIMITEXCEEDED("LimitExceeded"),
      
-    // Missing parameters.
+     /* Missing parameters. */
      MISSINGPARAMETER("MissingParameter"),
      
-    // Operation denied.
+     /* Operation denied. */
      OPERATIONDENIED("OperationDenied"),
      
-    // 
+     /*  */
      REGIONERROR("RegionError"),
      
-    // Too many requests.
+     /* Too many requests. */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
-    // Occupied resource
+     /* Occupied resource */
      RESOURCEINUSE("ResourceInUse"),
      
-    // Resources are insufficient.
+     /* Resources are insufficient. */
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
-    // The resource doesn't exist.
+     /* The resource doesn't exist. */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-    // The resource is unavailable
+     /* The resource is unavailable */
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-    // The resources have been sold out.
+     /* The resources have been sold out. */
      RESOURCESSOLDOUT("ResourcesSoldOut"),
      
-    // The operation is unauthorized.
+     /* The operation is unauthorized. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-    // 
+     /*  */
      UNAUTHORIZEDOPERATION_CLOUDAUDIT("UnauthorizedOperation.CloudAudit"),
      
-    // 
+     /*  */
      UNAUTHORIZEDOPERATION_COS("UnauthorizedOperation.Cos"),
      
-    // The parameter is unknown.
+     /* The parameter is unknown. */
      UNKNOWNPARAMETER("UnknownParameter"),
      
-    // The operation is not supported.
+     /* The operation is not supported. */
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

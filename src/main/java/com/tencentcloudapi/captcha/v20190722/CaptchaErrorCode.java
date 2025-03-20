@@ -1,15 +1,15 @@
 package com.tencentcloudapi.captcha.v20190722;
 public enum CaptchaErrorCode {
-    // Internal error.
+     /* Internal error. */
      INTERNALERROR("InternalError"),
      
-    // Missing parameter.
+     /* Missing parameter. */
      MISSINGPARAMETER("MissingParameter"),
      
-    // Authentication failed.
+     /* Authentication failed. */
      UNAUTHORIZEDOPERATION_ERRAUTH("UnauthorizedOperation.ErrAuth"),
      
-    // Operation not authorized/No valid package/The account is overdue
+     /* Operation not authorized/No valid package/The account is overdue */
      UNAUTHORIZEDOPERATION_UNAUTHORIZED("UnauthorizedOperation.Unauthorized");
      
     private String value;

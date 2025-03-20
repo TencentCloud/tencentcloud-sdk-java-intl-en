@@ -1,18 +1,18 @@
 package com.tencentcloudapi.config.v20220802;
 public enum ConfigErrorCode {
-    // Internal error.
+     /* Internal error. */
      INTERNALERROR("InternalError"),
      
-    // Parameter error.
+     /* Parameter error. */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // Account group does not exist.
+     /* Account group does not exist. */
      RESOURCENOTFOUND_ACCOUNTGROUPISNOTEXIST("ResourceNotFound.AccountGroupIsNotExist"),
      
-    // The resource does not exist.
+     /* The resource does not exist. */
      RESOURCENOTFOUND_RESOURCENOTEXIST("ResourceNotFound.ResourceNotExist"),
      
-    // The rule does not exist.
+     /* The rule does not exist. */
      RESOURCENOTFOUND_RULEISNOTEXIST("ResourceNotFound.RuleIsNotExist");
      
     private String value;

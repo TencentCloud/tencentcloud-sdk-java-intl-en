@@ -1,6 +1,6 @@
 package com.tencentcloudapi.tem.v20201221;
 public enum TemErrorCode {
-    // Failed to create the service.
+     /* Failed to create the service. */
      INTERNALERROR_CREATESERVICEERROR("InternalError.CreateServiceError");
      
     private String value;
