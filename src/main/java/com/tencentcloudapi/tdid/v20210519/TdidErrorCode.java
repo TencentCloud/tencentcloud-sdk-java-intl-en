@@ -1,51 +1,51 @@
 package com.tencentcloudapi.tdid.v20210519;
 public enum TdidErrorCode {
-     /* CAM signature/authentication error. */
+    // CAM signature/authentication error.
      AUTHFAILURE("AuthFailure"),
      
-     /* Operation failed. */
+    // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      
-     /* Insufficient permissions. */
+    // Insufficient permissions.
      FAILEDOPERATION_INVALIDAUTH("FailedOperation.InvalidAuth"),
      
-     /* Operation failed. */
+    // Operation failed.
      FAILEDOPERATION_OPERATIONEXCEPTION("FailedOperation.OperationException"),
      
-     /* Internal error. */
+    // Internal error.
      INTERNALERROR("InternalError"),
      
-     /* Server error. */
+    // Server error.
      INTERNALERROR_SERVEREXCEPTION("InternalError.ServerException"),
      
-     /* Internal service error. */
+    // Internal service error.
      INTERNALERROR_SERVICEERROR("InternalError.ServiceError"),
      
-     /* Service error. */
+    // Service error.
      INTERNALERROR_SERVICEPANIC("InternalError.ServicePanic"),
      
-     /* Unknown error. */
+    // Unknown error.
      INTERNALERROR_UNKNOWNERROR("InternalError.UnknownError"),
      
-     /* Invalid parameter. */
+    // Invalid parameter.
      INVALIDPARAMETER("InvalidParameter"),
      
-     /* Invalid parameter value. */
+    // Invalid parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /* Parameter error. */
+    // Parameter error.
      INVALIDPARAMETERVALUE_ILLEGALVALUE("InvalidParameterValue.IllegalValue"),
      
-     /* Missing parameter. */
+    // Missing parameter.
      MISSINGPARAMETER("MissingParameter"),
      
-     /* The resource doesn’t exist. */
+    // The resource doesn’t exist.
      RESOURCENOTFOUND("ResourceNotFound"),
      
-     /* The resource is unavailable. */
+    // The resource is unavailable.
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-     /* Unsupported operation. */
+    // Unsupported operation.
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

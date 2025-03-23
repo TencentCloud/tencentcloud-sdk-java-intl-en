@@ -1,114 +1,114 @@
 package com.tencentcloudapi.vclm.v20240523;
 public enum VclmErrorCode {
-     /* CAM signature/authentication error. */
+    // CAM signature/authentication error.
      AUTHFAILURE("AuthFailure"),
      
-     /* Failed to detect human body keypoints. */
+    // Failed to detect human body keypoints.
      FAILEDOPERATION_BODYJOINTSFAIL("FailedOperation.BodyJointsFail"),
      
-     /* Driving failed. */
+    // Driving failed.
      FAILEDOPERATION_DRIVERFAILED("FailedOperation.DriverFailed"),
      
-     /* The face box is too small and cannot be used for face detection. */
+    // The face box is too small and cannot be used for face detection.
      FAILEDOPERATION_FACESIZETOOSMALL("FailedOperation.FaceSizeTooSmall"),
      
-     /* The human body in the image is obscured or incomplete. Please upload another image. */
+    // The human body in the image is obscured or incomplete. Please upload another image.
      FAILEDOPERATION_IMAGEBODYJOINSUNDETECTED("FailedOperation.ImageBodyJoinsUndetected"),
      
-     /* The height of the body (from head to ankle) in the input image accounts for less than half of the image height. */
+    // The height of the body (from head to ankle) in the input image accounts for less than half of the image height.
      FAILEDOPERATION_IMAGEBODYSMALL("FailedOperation.ImageBodySmall"),
      
-     /* No human body is detected in the input image. */
+    // No human body is detected in the input image.
      FAILEDOPERATION_IMAGECHECKNOBODY("FailedOperation.ImageCheckNoBody"),
      
-     /* Image decoding failed. */
+    // Image decoding failed.
      FAILEDOPERATION_IMAGEDECODEFAILED("FailedOperation.ImageDecodeFailed"),
      
-     /* Failed to detect the face in the input image. */
+    // Failed to detect the face in the input image.
      FAILEDOPERATION_IMAGEDETECTFACEFAILED("FailedOperation.ImageDetectFaceFailed"),
      
-     /* Face detection failed. */
+    // Face detection failed.
      FAILEDOPERATION_IMAGEFACEDETECTFAILED("FailedOperation.ImageFaceDetectFailed"),
      
-     /* Multiple human faces are detected in the input image. */
+    // Multiple human faces are detected in the input image.
      FAILEDOPERATION_IMAGEMANYPEOPLE("FailedOperation.ImageManyPeople"),
      
-     /* The image file is not supported. */
+    // The image file is not supported.
      FAILEDOPERATION_IMAGENOTSUPPORTED("FailedOperation.ImageNotSupported"),
      
-     /* The aspect ratio of the input image is not within the range of 1:1.2 to 1:2. */
+    // The aspect ratio of the input image is not within the range of 1:1.2 to 1:2.
      FAILEDOPERATION_IMAGERADIOEXCCEED("FailedOperation.ImageRadioExcceed"),
      
-     /* The image aspect ratio exceeds the limit. */
+    // The image aspect ratio exceeds the limit.
      FAILEDOPERATION_IMAGERATIOEXCCEED("FailedOperation.ImageRatioExcceed"),
      
-     /* The image resolution is too high. */
+    // The image resolution is too high.
      FAILEDOPERATION_IMAGERESOLUTIONEXCEED("FailedOperation.ImageResolutionExceed"),
      
-     /* The size of the image after base64 encoding exceeds the upper limit. */
+    // The size of the image after base64 encoding exceeds the upper limit.
      FAILEDOPERATION_IMAGESIZEEXCEED("FailedOperation.ImageSizeExceed"),
      
-     /* Internal service error. Please try again. */
+    // Internal service error. Please try again.
      FAILEDOPERATION_INNERERROR("FailedOperation.InnerError"),
      
-     /* The task does not exist. */
+    // The task does not exist.
      FAILEDOPERATION_JOBNOTFOUND("FailedOperation.JobNotFound"),
      
-     /* Too many tasks are in queue. Please try again later. */
+    // Too many tasks are in queue. Please try again later.
      FAILEDOPERATION_JOBQUEUEFULL("FailedOperation.JobQueueFull"),
      
-     /* The core joints are not detected. */
+    // The core joints are not detected.
      FAILEDOPERATION_KEYPOINTUNDETECTED("FailedOperation.KeyPointUndetected"),
      
-     /* Failed to pass the content review. */
+    // Failed to pass the content review.
      FAILEDOPERATION_MODERATIONFAILED("FailedOperation.ModerationFailed"),
      
-     /* No face is detected in the first frame of the template video. */
+    // No face is detected in the first frame of the template video.
      FAILEDOPERATION_TEMPLATEFIRSTFRAMENOTDETECTFACE("FailedOperation.TemplateFirstFrameNotDetectFace"),
      
-     /* The template video contains frames with no human body detected. */
+    // The template video contains frames with no human body detected.
      FAILEDOPERATION_TEMPLATENOTDETECTBODY("FailedOperation.TemplateNotDetectBody"),
      
-     /* Internal error. */
+    // Internal error.
      INTERNALERROR("InternalError"),
      
-     /* Parameter error. */
+    // Parameter error.
      INVALIDPARAMETER("InvalidParameter"),
      
-     /* The template does not exist. */
+    // The template does not exist.
      INVALIDPARAMETER_TEMPLATENOTEXISTED("InvalidParameter.TemplateNotExisted"),
      
-     /* Invalid parameter value. */
+    // Invalid parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /* The resolution is not supported. */
+    // The resolution is not supported.
      INVALIDPARAMETERVALUE_INVALIDVIDEORESOLUTION("InvalidParameterValue.InvalidVideoResolution"),
      
-     /* The image contains no human face. */
+    // The image contains no human face.
      INVALIDPARAMETERVALUE_NOFACEINPHOTO("InvalidParameterValue.NoFaceInPhoto"),
      
-     /* Parameter field or value is invalid. */
+    // Parameter field or value is invalid.
      INVALIDPARAMETERVALUE_PARAMETERVALUEERROR("InvalidParameterValue.ParameterValueError"),
      
-     /* The quota limit is exceeded. */
+    // The quota limit is exceeded.
      LIMITEXCEEDED("LimitExceeded"),
      
-     /* Operation denied. */
+    // Operation denied.
      OPERATIONDENIED("OperationDenied"),
      
-     /* Too many and frequent requests.  */
+    // Too many and frequent requests. 
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
-     /* The number of submitted tasks exceeds the maximum number of concurrent tasks. */
+    // The number of submitted tasks exceeds the maximum number of concurrent tasks.
      REQUESTLIMITEXCEEDED_JOBNUMEXCEED("RequestLimitExceeded.JobNumExceed"),
      
-     /* The resource does not exist. */
+    // The resource does not exist.
      RESOURCENOTFOUND("ResourceNotFound"),
      
-     /* Unauthorized operation. */
+    // Unauthorized operation.
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-     /* The operation is not supported. */
+    // The operation is not supported.
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

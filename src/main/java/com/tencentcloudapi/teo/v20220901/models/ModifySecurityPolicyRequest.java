@@ -24,122 +24,138 @@ import java.util.HashMap;
 public class ModifySecurityPolicyRequest extends AbstractModel {
 
     /**
-    * The site ID.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Security configuration.
+    * Security policy configuration. <li>When the `CustomRule` in the `SecurityPolicy` parameter is set, the `AclConfg` and `IpTableConfg` in the `SecurityConfig` parameter will be ignored;</li> <li>when the `ManagedRule` in the `SecurityPolicy` parameter is set, the `WafConfig` in the `SecurityConfig` parameter will be ignored.</li> <li>For custom rules and managed rule policy configuration, using `SecurityPolicy` parameter to configure settings is recommended.</li>
     */
     @SerializedName("SecurityConfig")
     @Expose
     private SecurityConfig SecurityConfig;
 
     /**
-    * Subdomain/application name.
+    * Security policy configuration. The parameter is recommended to use for custom policies and managed rule configurations of web protection, it supports configuring security policies with expression grammar.	
+    */
+    @SerializedName("SecurityPolicy")
+    @Expose
+    private SecurityPolicy SecurityPolicy;
 
-Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
+    /**
+    * `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
     */
     @SerializedName("Entity")
     @Expose
     private String Entity;
 
     /**
-    * Specifies the policy template ID, or the site's global policy.
-- To configure a policy template, specify the policy template ID.
-- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+    * Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+    */
+    @SerializedName("Host")
+    @Expose
+    private String Host;
 
-Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
+    /**
+    * Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Security configuration. 
-     * @return SecurityConfig Security configuration.
+     * Get Security policy configuration. <li>When the `CustomRule` in the `SecurityPolicy` parameter is set, the `AclConfg` and `IpTableConfg` in the `SecurityConfig` parameter will be ignored;</li> <li>when the `ManagedRule` in the `SecurityPolicy` parameter is set, the `WafConfig` in the `SecurityConfig` parameter will be ignored.</li> <li>For custom rules and managed rule policy configuration, using `SecurityPolicy` parameter to configure settings is recommended.</li> 
+     * @return SecurityConfig Security policy configuration. <li>When the `CustomRule` in the `SecurityPolicy` parameter is set, the `AclConfg` and `IpTableConfg` in the `SecurityConfig` parameter will be ignored;</li> <li>when the `ManagedRule` in the `SecurityPolicy` parameter is set, the `WafConfig` in the `SecurityConfig` parameter will be ignored.</li> <li>For custom rules and managed rule policy configuration, using `SecurityPolicy` parameter to configure settings is recommended.</li>
      */
     public SecurityConfig getSecurityConfig() {
         return this.SecurityConfig;
     }
 
     /**
-     * Set Security configuration.
-     * @param SecurityConfig Security configuration.
+     * Set Security policy configuration. <li>When the `CustomRule` in the `SecurityPolicy` parameter is set, the `AclConfg` and `IpTableConfg` in the `SecurityConfig` parameter will be ignored;</li> <li>when the `ManagedRule` in the `SecurityPolicy` parameter is set, the `WafConfig` in the `SecurityConfig` parameter will be ignored.</li> <li>For custom rules and managed rule policy configuration, using `SecurityPolicy` parameter to configure settings is recommended.</li>
+     * @param SecurityConfig Security policy configuration. <li>When the `CustomRule` in the `SecurityPolicy` parameter is set, the `AclConfg` and `IpTableConfg` in the `SecurityConfig` parameter will be ignored;</li> <li>when the `ManagedRule` in the `SecurityPolicy` parameter is set, the `WafConfig` in the `SecurityConfig` parameter will be ignored.</li> <li>For custom rules and managed rule policy configuration, using `SecurityPolicy` parameter to configure settings is recommended.</li>
      */
     public void setSecurityConfig(SecurityConfig SecurityConfig) {
         this.SecurityConfig = SecurityConfig;
     }
 
     /**
-     * Get Subdomain/application name.
+     * Get Security policy configuration. The parameter is recommended to use for custom policies and managed rule configurations of web protection, it supports configuring security policies with expression grammar.	 
+     * @return SecurityPolicy Security policy configuration. The parameter is recommended to use for custom policies and managed rule configurations of web protection, it supports configuring security policies with expression grammar.	
+     */
+    public SecurityPolicy getSecurityPolicy() {
+        return this.SecurityPolicy;
+    }
 
-Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time. 
-     * @return Entity Subdomain/application name.
+    /**
+     * Set Security policy configuration. The parameter is recommended to use for custom policies and managed rule configurations of web protection, it supports configuring security policies with expression grammar.	
+     * @param SecurityPolicy Security policy configuration. The parameter is recommended to use for custom policies and managed rule configurations of web protection, it supports configuring security policies with expression grammar.	
+     */
+    public void setSecurityPolicy(SecurityPolicy SecurityPolicy) {
+        this.SecurityPolicy = SecurityPolicy;
+    }
 
-Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
+    /**
+     * Get `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	 
+     * @return Entity `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
      */
     public String getEntity() {
         return this.Entity;
     }
 
     /**
-     * Set Subdomain/application name.
-
-Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
-     * @param Entity Subdomain/application name.
-
-Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
+     * Set `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
+     * @param Entity `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
      */
     public void setEntity(String Entity) {
         this.Entity = Entity;
     }
 
     /**
-     * Get Specifies the policy template ID, or the site's global policy.
-- To configure a policy template, specify the policy template ID.
-- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+     * Get Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name. 
+     * @return Host Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+     */
+    public String getHost() {
+        return this.Host;
+    }
 
-Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time. 
-     * @return TemplateId Specifies the policy template ID, or the site's global policy.
-- To configure a policy template, specify the policy template ID.
-- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+    /**
+     * Set Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+     * @param Host Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+     */
+    public void setHost(String Host) {
+        this.Host = Host;
+    }
 
-Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
+    /**
+     * Get Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`. 
+     * @return TemplateId Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Specifies the policy template ID, or the site's global policy.
-- To configure a policy template, specify the policy template ID.
-- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
-
-Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
-     * @param TemplateId Specifies the policy template ID, or the site's global policy.
-- To configure a policy template, specify the policy template ID.
-- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
-
-Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
+     * Set Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
+     * @param TemplateId Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
@@ -159,8 +175,14 @@ Note: When this parameter is used, the Entity parameter will not take effect. Do
         if (source.SecurityConfig != null) {
             this.SecurityConfig = new SecurityConfig(source.SecurityConfig);
         }
+        if (source.SecurityPolicy != null) {
+            this.SecurityPolicy = new SecurityPolicy(source.SecurityPolicy);
+        }
         if (source.Entity != null) {
             this.Entity = new String(source.Entity);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
         }
         if (source.TemplateId != null) {
             this.TemplateId = new String(source.TemplateId);
@@ -174,7 +196,9 @@ Note: When this parameter is used, the Entity parameter will not take effect. Do
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamObj(map, prefix + "SecurityConfig.", this.SecurityConfig);
+        this.setParamObj(map, prefix + "SecurityPolicy.", this.SecurityPolicy);
         this.setParamSimple(map, prefix + "Entity", this.Entity);
+        this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }

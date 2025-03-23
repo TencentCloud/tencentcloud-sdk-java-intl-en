@@ -1,261 +1,261 @@
 package com.tencentcloudapi.faceid.v20180301;
 public enum FaceidErrorCode {
-     /* CAM signature/authentication error. */
+    // CAM signature/authentication error.
      AUTHFAILURE_INVALIDAUTHORIZATION("AuthFailure.InvalidAuthorization"),
      
-     /* No motions of eye closing are detected. */
+    // No motions of eye closing are detected.
      FAILEDOPERATION_ACTIONCLOSEEYE("FailedOperation.ActionCloseEye"),
      
-     /* The face is too close to the screen. */
+    // The face is too close to the screen.
      FAILEDOPERATION_ACTIONFACECLOSE("FailedOperation.ActionFaceClose"),
      
-     /* The face is too far from the screen. */
+    // The face is too far from the screen.
      FAILEDOPERATION_ACTIONFACEFAR("FailedOperation.ActionFaceFar"),
      
-     /* The face is too far left from the screen. */
+    // The face is too far left from the screen.
      FAILEDOPERATION_ACTIONFACELEFT("FailedOperation.ActionFaceLeft"),
      
-     /* The face is too far right from the screen. */
+    // The face is too far right from the screen.
      FAILEDOPERATION_ACTIONFACERIGHT("FailedOperation.ActionFaceRight"),
      
-     /* No movement is detected. */
+    // No movement is detected.
      FAILEDOPERATION_ACTIONFIRSTACTION("FailedOperation.ActionFirstAction"),
      
-     /* The lighting is too dim. */
+    // The lighting is too dim.
      FAILEDOPERATION_ACTIONLIGHTDARK("FailedOperation.ActionLightDark"),
      
-     /* The lighting is too strong. */
+    // The lighting is too strong.
      FAILEDOPERATION_ACTIONLIGHTSTRONG("FailedOperation.ActionLightStrong"),
      
-     /* Failed to detect a full face. */
+    // Failed to detect a full face.
      FAILEDOPERATION_ACTIONNODETECTFACE("FailedOperation.ActionNodetectFace"),
      
-     /* No motions of mouth opening are detected. */
+    // No motions of mouth opening are detected.
      FAILEDOPERATION_ACTIONOPENMOUTH("FailedOperation.ActionOpenMouth"),
      
-     /* Comparison failed. */
+    // Comparison failed.
      FAILEDOPERATION_COMPAREFAIL("FailedOperation.CompareFail"),
      
-     /* The comparison similarity did not reach the passing standard. */
+    // The comparison similarity did not reach the passing standard.
      FAILEDOPERATION_COMPARELOWSIMILARITY("FailedOperation.CompareLowSimilarity"),
      
-     /* Error calling the comparison engine API. */
+    // Error calling the comparison engine API.
      FAILEDOPERATION_COMPARESYSTEMERROR("FailedOperation.CompareSystemError"),
      
-     /* The video compression failed. Please try again or reduce the size of the input video. */
+    // The video compression failed. Please try again or reduce the size of the input video.
      FAILEDOPERATION_COMPRESSVIDEOERROR("FailedOperation.CompressVideoError"),
      
-     /* The face in the picture is blocked, please upload a picture without any blockage */
+    // The face in the picture is blocked, please upload a picture without any blockage
      FAILEDOPERATION_COVEREDFACE("FailedOperation.CoveredFace"),
      
-     /* The service engine call failed, please try again */
+    // The service engine call failed, please try again
      FAILEDOPERATION_DETECTENGINESYSTEMERROR("FailedOperation.DetectEngineSystemError"),
      
-     /* File download failed. */
+    // File download failed.
      FAILEDOPERATION_DOWNLOADERROR("FailedOperation.DownLoadError"),
      
-     /* File download timed out. */
+    // File download timed out.
      FAILEDOPERATION_DOWNLOADTIMEOUTERROR("FailedOperation.DownLoadTimeoutError"),
      
-     /* The image is blurry. */
+    // The image is blurry.
      FAILEDOPERATION_IMAGEBLUR("FailedOperation.ImageBlur"),
      
-     /* Image decoding failed. */
+    // Image decoding failed.
      FAILEDOPERATION_IMAGEDECODEFAILED("FailedOperation.ImageDecodeFailed"),
      
-     /* The image is too large. */
+    // The image is too large.
      FAILEDOPERATION_IMAGESIZETOOLARGE("FailedOperation.ImageSizeTooLarge"),
      
-     /* No complete face was detected. Please enter a complete face image. */
+    // No complete face was detected. Please enter a complete face image.
      FAILEDOPERATION_INCOMPLETEFACE("FailedOperation.IncompleteFace"),
      
-     /* Multiple faces are detected. */
+    // Multiple faces are detected.
      FAILEDOPERATION_LIFEPHOTODETECTFACES("FailedOperation.LifePhotoDetectFaces"),
      
-     /* Real person comparison failed. */
+    // Real person comparison failed.
      FAILEDOPERATION_LIFEPHOTODETECTFAKE("FailedOperation.LifePhotoDetectFake"),
      
-     /* Failed to detect a full face. */
+    // Failed to detect a full face.
      FAILEDOPERATION_LIFEPHOTODETECTNOFACES("FailedOperation.LifePhotoDetectNoFaces"),
      
-     /* The resolution of the image passed in is too low. Please upload a new one. */
+    // The resolution of the image passed in is too low. Please upload a new one.
      FAILEDOPERATION_LIFEPHOTOPOORQUALITY("FailedOperation.LifePhotoPoorQuality"),
      
-     /* The image passed in is too large or too small. */
+    // The image passed in is too large or too small.
      FAILEDOPERATION_LIFEPHOTOSIZEERROR("FailedOperation.LifePhotoSizeError"),
      
-     /* The face is not fully exposed. */
+    // The face is not fully exposed.
      FAILEDOPERATION_LIPFACEINCOMPLETE("FailedOperation.LipFaceIncomplete"),
      
-     /* The lip movement range is too small. */
+    // The lip movement range is too small.
      FAILEDOPERATION_LIPMOVESMALL("FailedOperation.LipMoveSmall"),
      
-     /* Failed to pull the video. Please try again. */
+    // Failed to pull the video. Please try again.
      FAILEDOPERATION_LIPNETFAILED("FailedOperation.LipNetFailed"),
      
-     /* The video is empty or its size is inappropriate. The recording duration should be about 6 seconds. */
+    // The video is empty or its size is inappropriate. The recording duration should be about 6 seconds.
      FAILEDOPERATION_LIPSIZEERROR("FailedOperation.LipSizeError"),
      
-     /* The video format is incorrect. */
+    // The video format is incorrect.
      FAILEDOPERATION_LIPVIDEOINVALID("FailedOperation.LipVideoInvalid"),
      
-     /* The video definition is too low. */
+    // The video definition is too low.
      FAILEDOPERATION_LIPVIDEOQUAILITY("FailedOperation.LipVideoQuaility"),
      
-     /* No sound is detected. */
+    // No sound is detected.
      FAILEDOPERATION_LIPVOICEDETECT("FailedOperation.LipVoiceDetect"),
      
-     /* The volume of the video is too low. */
+    // The volume of the video is too low.
      FAILEDOPERATION_LIPVOICELOW("FailedOperation.LipVoiceLow"),
      
-     /* Speech recognition failed. */
+    // Speech recognition failed.
      FAILEDOPERATION_LIPVOICERECOGNIZE("FailedOperation.LipVoiceRecognize"),
      
-     /* Face detection failed. Unable to extract the photo for comparison. */
+    // Face detection failed. Unable to extract the photo for comparison.
      FAILEDOPERATION_LIVESSBESTFRAMEERROR("FailedOperation.LivessBestFrameError"),
      
-     /* Liveness detection failed. */
+    // Liveness detection failed.
      FAILEDOPERATION_LIVESSDETECTFAIL("FailedOperation.LivessDetectFail"),
      
-     /* Suspected spoofed recording. */
+    // Suspected spoofed recording.
      FAILEDOPERATION_LIVESSDETECTFAKE("FailedOperation.LivessDetectFake"),
      
-     /* Error calling the liveness engine API. */
+    // Error calling the liveness engine API.
      FAILEDOPERATION_LIVESSSYSTEMERROR("FailedOperation.LivessSystemError"),
      
-     /* Video-based real person detection failed. */
+    // Video-based real person detection failed.
      FAILEDOPERATION_LIVESSUNKNOWNERROR("FailedOperation.LivessUnknownError"),
      
-     /* The image quality is too poor, please check the image quality */
+    // The image quality is too poor, please check the image quality
      FAILEDOPERATION_POORIMAGEQUALITY("FailedOperation.PoorImageQuality"),
      
-     /* Real person detection failed. */
+    // Real person detection failed.
      FAILEDOPERATION_SILENTDETECTFAIL("FailedOperation.SilentDetectFail"),
      
-     /* Eye detection failed. */
+    // Eye detection failed.
      FAILEDOPERATION_SILENTEYELIVEFAIL("FailedOperation.SilentEyeLiveFail"),
      
-     /* No face is detected in the video. */
+    // No face is detected in the video.
      FAILEDOPERATION_SILENTFACEDETECTFAIL("FailedOperation.SilentFaceDetectFail"),
      
-     /* Low face quality. */
+    // Low face quality.
      FAILEDOPERATION_SILENTFACEQUALITYFAIL("FailedOperation.SilentFaceQualityFail"),
      
-     /* A face mask is detected. */
+    // A face mask is detected.
      FAILEDOPERATION_SILENTFACEWITHMASKFAIL("FailedOperation.SilentFaceWithMaskFail"),
      
-     /* Mouth detection failed. */
+    // Mouth detection failed.
      FAILEDOPERATION_SILENTMOUTHLIVEFAIL("FailedOperation.SilentMouthLiveFail"),
      
-     /* Multiple faces are detected in the video. */
+    // Multiple faces are detected in the video.
      FAILEDOPERATION_SILENTMULTIFACEFAIL("FailedOperation.SilentMultiFaceFail"),
      
-     /* The video might be spoofed. */
+    // The video might be spoofed.
      FAILEDOPERATION_SILENTPICTURELIVEFAIL("FailedOperation.SilentPictureLiveFail"),
      
-     /* Real person detection did not reach the passing standard. */
+    // Real person detection did not reach the passing standard.
      FAILEDOPERATION_SILENTTHRESHOLD("FailedOperation.SilentThreshold"),
      
-     /* The video is too short. Please capture a video longer than 2 seconds. */
+    // The video is too short. Please capture a video longer than 2 seconds.
      FAILEDOPERATION_SILENTTOOSHORT("FailedOperation.SilentTooShort"),
      
-     /* Unknown error. */
+    // Unknown error.
      FAILEDOPERATION_UNKNOWERROR("FailedOperation.UnKnowError"),
      
-     /* Unknown internal error. */
+    // Unknown internal error.
      FAILEDOPERATION_UNKNOWN("FailedOperation.UnKnown"),
      
-     /* The service is not activated. */
+    // The service is not activated.
      FAILEDOPERATION_UNOPENERROR("FailedOperation.UnOpenError"),
      
-     /* Video decoding abnormality */
+    // Video decoding abnormality
      FAILEDOPERATION_VIDEODECODEFAILED("FailedOperation.VideoDecodeFailed"),
      
-     /*  */
+    // 
      FAILEDOPERATION_VIDEODURATIONEXCEEDED("FailedOperation.VideoDurationExceeded"),
      
-     /* Internal error. */
+    // Internal error.
      INTERNALERROR("InternalError"),
      
-     /* The lighting is too dim. */
+    // The lighting is too dim.
      INTERNALERROR_ACTIONLIGHTDARK("InternalError.ActionLightDark"),
      
-     /* The lighting is too strong. */
+    // The lighting is too strong.
      INTERNALERROR_ACTIONLIGHTSTRONG("InternalError.ActionLightStrong"),
      
-     /* Failed to detect a full face. */
+    // Failed to detect a full face.
      INTERNALERROR_ACTIONNODETECTFACE("InternalError.ActionNodetectFace"),
      
-     /* The similarity did not reach the passing standard. */
+    // The similarity did not reach the passing standard.
      INTERNALERROR_COMPARELOWSIMILARITY("InternalError.CompareLowSimilarity"),
      
-     /* The resolution of the image passed in is too low. Please upload a new one. */
+    // The resolution of the image passed in is too low. Please upload a new one.
      INTERNALERROR_LIFEPHOTOPOORQUALITY("InternalError.LifePhotoPoorQuality"),
      
-     /* The image passed in is too large or too small. */
+    // The image passed in is too large or too small.
      INTERNALERROR_LIFEPHOTOSIZEERROR("InternalError.LifePhotoSizeError"),
      
-     /* Unknown internal error. */
+    // Unknown internal error.
      INTERNALERROR_UNKNOWN("InternalError.UnKnown"),
      
-     /* Invalid parameter. */
+    // Invalid parameter.
      INVALIDPARAMETER("InvalidParameter"),
      
-     /* Image decoding failed. */
+    // Image decoding failed.
      INVALIDPARAMETER_ENGINEIMAGEDECODEFAILED("InvalidParameter.EngineImageDecodeFailed"),
      
-     /* Incorrect parameter value. */
+    // Incorrect parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /* BizToken expired. */
+    // BizToken expired.
      INVALIDPARAMETERVALUE_BIZTOKENEXPIRED("InvalidParameterValue.BizTokenExpired"),
      
-     /* Invalid BizToken. */
+    // Invalid BizToken.
      INVALIDPARAMETERVALUE_BIZTOKENILLEGAL("InvalidParameterValue.BizTokenIllegal"),
      
-     /* The image file content size is abnormal. */
+    // The image file content size is abnormal.
      INVALIDPARAMETERVALUE_INVALIDFILECONTENTSIZE("InvalidParameterValue.InvalidFileContentSize"),
      
-     /* Parameter value is wrong. */
+    // Parameter value is wrong.
      INVALIDPARAMETERVALUE_INVALIDPARAMETERVALUELIMIT("InvalidParameterValue.InvalidParameterValueLimit"),
      
-     /* Operation denied. */
+    // Operation denied.
      OPERATIONDENIED("OperationDenied"),
      
-     /* The resource is unavailable. */
+    // The resource is unavailable.
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-     /* Image file download failed. */
+    // Image file download failed.
      RESOURCEUNAVAILABLE_IMAGEDOWNLOADERROR("ResourceUnavailable.ImageDownloadError"),
      
-     /* The account is in arrears. */
+    // The account is in arrears.
      RESOURCEUNAVAILABLE_INARREARS("ResourceUnavailable.InArrears"),
      
-     /* The account has exhausted the resource package for this service. */
+    // The account has exhausted the resource package for this service.
      RESOURCEUNAVAILABLE_RESOURCEPACKAGERUNOUT("ResourceUnavailable.ResourcePackageRunOut"),
      
-     /* Unauthorized operation. */
+    // Unauthorized operation.
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-     /* Service activation exception. */
+    // Service activation exception.
      UNAUTHORIZEDOPERATION_ACTIVATEERROR("UnauthorizedOperation.ActivateError"),
      
-     /* Activating the service. */
+    // Activating the service.
      UNAUTHORIZEDOPERATION_ACTIVATING("UnauthorizedOperation.Activating"),
      
-     /* The account is in arrears. */
+    // The account is in arrears.
      UNAUTHORIZEDOPERATION_ARREARS("UnauthorizedOperation.Arrears"),
      
-     /* The billing status is abnormal. */
+    // The billing status is abnormal.
      UNAUTHORIZEDOPERATION_CHARGESTATUSEXCEPTION("UnauthorizedOperation.ChargeStatusException"),
      
-     /* Identity verification has not been completed for the account. */
+    // Identity verification has not been completed for the account.
      UNAUTHORIZEDOPERATION_NONAUTHORIZE("UnauthorizedOperation.NonAuthorize"),
      
-     /* The service has not been activated. */
+    // The service has not been activated.
      UNAUTHORIZEDOPERATION_NONACTIVATED("UnauthorizedOperation.Nonactivated"),
      
-     /* Unsupported operation. */
+    // Unsupported operation.
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

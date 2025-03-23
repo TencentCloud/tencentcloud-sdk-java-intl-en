@@ -100,6 +100,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private SlowPostConfig SlowPostConfig;
 
     /**
+    * Detect the length limit configuration, output parameter only.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+    */
+    @SerializedName("DetectLengthLimitConfig")
+    @Expose
+    private DetectLengthLimitConfig DetectLengthLimitConfig;
+
+    /**
      * Get Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return WafConfig Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
@@ -283,6 +291,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.SlowPostConfig = SlowPostConfig;
     }
 
+    /**
+     * Get Detect the length limit configuration, output parameter only.
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return DetectLengthLimitConfig Detect the length limit configuration, output parameter only.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     */
+    public DetectLengthLimitConfig getDetectLengthLimitConfig() {
+        return this.DetectLengthLimitConfig;
+    }
+
+    /**
+     * Set Detect the length limit configuration, output parameter only.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param DetectLengthLimitConfig Detect the length limit configuration, output parameter only.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     */
+    public void setDetectLengthLimitConfig(DetectLengthLimitConfig DetectLengthLimitConfig) {
+        this.DetectLengthLimitConfig = DetectLengthLimitConfig;
+    }
+
     public SecurityConfig() {
     }
 
@@ -321,6 +349,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.SlowPostConfig != null) {
             this.SlowPostConfig = new SlowPostConfig(source.SlowPostConfig);
         }
+        if (source.DetectLengthLimitConfig != null) {
+            this.DetectLengthLimitConfig = new DetectLengthLimitConfig(source.DetectLengthLimitConfig);
+        }
     }
 
 
@@ -338,6 +369,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamObj(map, prefix + "DropPageConfig.", this.DropPageConfig);
         this.setParamObj(map, prefix + "TemplateConfig.", this.TemplateConfig);
         this.setParamObj(map, prefix + "SlowPostConfig.", this.SlowPostConfig);
+        this.setParamObj(map, prefix + "DetectLengthLimitConfig.", this.DetectLengthLimitConfig);
 
     }
 }

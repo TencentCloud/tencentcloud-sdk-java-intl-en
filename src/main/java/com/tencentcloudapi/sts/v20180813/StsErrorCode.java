@@ -1,81 +1,81 @@
 package com.tencentcloudapi.sts.v20180813;
 public enum StsErrorCode {
-     /* Invalid key. */
+    // Invalid key.
      AUTHFAILURE_ACCESSKEYILLEGAL("AuthFailure.AccessKeyIllegal"),
      
-     /* Database error. */
+    // Database error.
      INTERNALERROR_DBERROR("InternalError.DbError"),
      
-     /* Encryption failed. */
+    // Encryption failed.
      INTERNALERROR_ENCRYPTERROR("InternalError.EncryptError"),
      
-     /* Failed to get the `appid`. */
+    // Failed to get the `appid`.
      INTERNALERROR_GETAPPIDERROR("InternalError.GetAppIdError"),
      
-     /* Failed to get the role. */
+    // Failed to get the role.
      INTERNALERROR_GETROLEERROR("InternalError.GetRoleError"),
      
-     /* Failed to obtain the token. */
+    // Failed to obtain the token.
      INTERNALERROR_GETSEEDTOKENERROR("InternalError.GetSeedTokenError"),
      
-     /* Invalid role. */
+    // Invalid role.
      INTERNALERROR_ILLEGALROLE("InternalError.IllegalRole"),
      
-     /* pb packaging failed. */
+    // pb packaging failed.
      INTERNALERROR_PBSERIALIZEERROR("InternalError.PbSerializeError"),
      
-     /* Internal system error, such as network error. */
+    // Internal system error, such as network error.
      INTERNALERROR_SYSTEMERROR("InternalError.SystemError"),
      
-     /* Unknown error. */
+    // Unknown error.
      INTERNALERROR_UNKNOWNERROR("InternalError.UnknownError"),
      
-     /* This type of key is not supported. */
+    // This type of key is not supported.
      INVALIDPARAMETER_ACCESSKEYNOTSUPPORT("InvalidParameter.AccessKeyNotSupport"),
      
-     /* The account does not exist or is unavailable. */
+    // The account does not exist or is unavailable.
      INVALIDPARAMETER_ACCOUNTNOTAVALIABLE("InvalidParameter.AccountNotAvaliable"),
      
-     /* The extension policy is too large. */
+    // The extension policy is too large.
      INVALIDPARAMETER_EXTENDSTRATEGYOVERSIZE("InvalidParameter.ExtendStrategyOverSize"),
      
-     /* Unauthorized access to the resource. */
+    // Unauthorized access to the resource.
      INVALIDPARAMETER_GRANTOTHERRESOURCE("InvalidParameter.GrantOtherResource"),
      
-     /* Frequency limit exceeded. */
+    // Frequency limit exceeded.
      INVALIDPARAMETER_OVERLIMIT("InvalidParameter.OverLimit"),
      
-     /* The expiration time exceeds the threshold. */
+    // The expiration time exceeds the threshold.
      INVALIDPARAMETER_OVERTIMEERROR("InvalidParameter.OverTimeError"),
      
-     /* Invalid parameter. */
+    // Invalid parameter.
      INVALIDPARAMETER_PARAMERROR("InvalidParameter.ParamError"),
      
-     /* The policy is too long. */
+    // The policy is too long.
      INVALIDPARAMETER_POLICYTOOLONG("InvalidParameter.PolicyTooLong"),
      
-     /* Six-segment resource description error. */
+    // Six-segment resource description error.
      INVALIDPARAMETER_RESOUCEERROR("InvalidParameter.ResouceError"),
      
-     /* Policy syntax error. */
+    // Policy syntax error.
      INVALIDPARAMETER_STRATEGYFORMATERROR("InvalidParameter.StrategyFormatError"),
      
-     /* Invalid policy. */
+    // Invalid policy.
      INVALIDPARAMETER_STRATEGYINVALID("InvalidParameter.StrategyInvalid"),
      
-     /* Invalid temporary code. */
+    // Invalid temporary code.
      INVALIDPARAMETER_TEMPCODENOTAVALIABLE("InvalidParameter.TempCodeNotAvaliable"),
      
-     /* WebIdentityToken parameter error */
+    // WebIdentityToken parameter error
      INVALIDPARAMETER_WEBIDENTITYTOKENERROR("InvalidParameter.WebIdentityTokenError"),
      
-     /* The role corresponding to the account does not exist. */
+    // The role corresponding to the account does not exist.
      RESOURCENOTFOUND_ROLENOTFOUND("ResourceNotFound.RoleNotFound"),
      
-     /* Unauthorized operation. */
+    // Unauthorized operation.
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-     /* Unsupported operation. */
+    // Unsupported operation.
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

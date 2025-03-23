@@ -1,57 +1,57 @@
 package com.tencentcloudapi.antiddos.v20200309;
 public enum AntiddosErrorCode {
-     /* CAM signature/authentication error. */
+    // CAM signature/authentication error.
      AUTHFAILURE("AuthFailure"),
      
-     /* The DryRun operation means that the request will be successful, but an extra DryRun parameter is passed. */
+    // The DryRun operation means that the request will be successful, but an extra DryRun parameter is passed.
      DRYRUNOPERATION("DryRunOperation"),
      
-     /* Operation failed. */
+    // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      
-     /* Internal error. Please try again later. */
+    // Internal error. Please try again later.
      INTERNALERROR("InternalError"),
      
-     /* Parameter error. */
+    // Parameter error.
      INVALIDPARAMETER("InvalidParameter"),
      
-     /* Invalid parameter value. */
+    // Invalid parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /* The quota limit should not be exceeded. */
+    // The quota limit should not be exceeded.
      LIMITEXCEEDED("LimitExceeded"),
      
-     /* Missing parameters. Please check and try again. */
+    // Missing parameters. Please check and try again.
      MISSINGPARAMETER("MissingParameter"),
      
-     /* Operation denied. */
+    // Operation denied.
      OPERATIONDENIED("OperationDenied"),
      
-     /* The number of requests should not exceed the frequency limit. */
+    // The number of requests should not exceed the frequency limit.
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
-     /* The resource is occupied. */
+    // The resource is occupied.
      RESOURCEINUSE("ResourceInUse"),
      
-     /* Insufficient resource. */
+    // Insufficient resource.
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
-     /* The resource does not exist. Please try again later. */
+    // The resource does not exist. Please try again later.
      RESOURCENOTFOUND("ResourceNotFound"),
      
-     /* The resource is unavailable. */
+    // The resource is unavailable.
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-     /* The resources have been sold out. */
+    // The resources have been sold out.
      RESOURCESSOLDOUT("ResourcesSoldOut"),
      
-     /* The operation is unauthorized. */
+    // The operation is unauthorized.
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-     /* Unknown parameter error. Please check and try again. */
+    // Unknown parameter error. Please check and try again.
      UNKNOWNPARAMETER("UnknownParameter"),
      
-     /* Unsupported operation. */
+    // Unsupported operation.
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

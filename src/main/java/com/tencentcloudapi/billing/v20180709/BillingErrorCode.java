@@ -1,51 +1,51 @@
 package com.tencentcloudapi.billing.v20180709;
 public enum BillingErrorCode {
-     /* No permission. */
+    // No permission.
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
      
-     /* Operation failed. */
+    // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      
-     /* Invalid App ID. */
+    // Invalid App ID.
      FAILEDOPERATION_INVALIDAPPID("FailedOperation.InvalidAppId"),
      
-     /* Payment failed. Please contact Tencent Cloud to resolve this issue. */
+    // Payment failed. Please contact Tencent Cloud to resolve this issue.
      FAILEDOPERATION_PAYPRICEERROR("FailedOperation.PayPriceError"),
      
-     /* Failed to get the number of data entries. */
+    // Failed to get the number of data entries.
      FAILEDOPERATION_QUERYCOUNTFAILED("FailedOperation.QueryCountFailed"),
      
-     /* Summary is being built. Please try again later. */
+    // Summary is being built. Please try again later.
      FAILEDOPERATION_SUMMARYDATANOTREADY("FailedOperation.SummaryDataNotReady"),
      
-     /* This cost allocation tag key does not exist. */
+    // This cost allocation tag key does not exist.
      FAILEDOPERATION_TAGKEYNOTEXIST("FailedOperation.TagKeyNotExist"),
      
-     /* Internal error. */
+    // Internal error.
      INTERNALERROR("InternalError"),
      
-     /* Gateway error. */
+    // Gateway error.
      INTERNALERROR_GATEWAYERROR("InternalError.GatewayError"),
      
-     /* An internal system error occurred. */
+    // An internal system error occurred.
      INTERNALERROR_INTERNALERROR("InternalError.InternalError"),
      
-     /* Undefined exception. */
+    // Undefined exception.
      INTERNALERROR_UNKNOWNERROR("InternalError.UnknownError"),
      
-     /* Invalid parameter. */
+    // Invalid parameter.
      INVALIDPARAMETER("InvalidParameter"),
      
-     /* A parameter error occurred. */
+    // A parameter error occurred.
      INVALIDPARAMETER_INVALIDPARAMETER("InvalidParameter.InvalidParameter"),
      
-     /* Invalid parameter value. */
+    // Invalid parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /* The account does not have CAM permission. */
+    // The account does not have CAM permission.
      UNAUTHORIZEDOPERATION_CAMNOAUTH("UnauthorizedOperation.CamNoAuth"),
      
-     /* Operation unsupported. */
+    // Operation unsupported.
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

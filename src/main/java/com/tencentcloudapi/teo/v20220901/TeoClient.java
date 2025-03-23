@@ -1018,6 +1018,17 @@ This API is used to query the configuration information of an IP group, includin
     }
 
     /**
+     *This API is used to query the web and security protection configurations.
+     * @param req DescribeSecurityPolicyRequest
+     * @return DescribeSecurityPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityPolicyResponse DescribeSecurityPolicy(DescribeSecurityPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityPolicy", DescribeSecurityPolicyResponse.class);
+    }
+
+    /**
      *This API is used to query bindings of a policy template.
      * @param req DescribeSecurityTemplateBindingsRequest
      * @return DescribeSecurityTemplateBindingsResponse

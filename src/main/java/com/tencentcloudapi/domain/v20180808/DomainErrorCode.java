@@ -1,207 +1,207 @@
 package com.tencentcloudapi.domain.v20180808;
 public enum DomainErrorCode {
-     /* Operation failed. */
+    // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      
-     /* Domain name query failed. Please try this feature again later. */
+    // Domain name query failed. Please try this feature again later.
      FAILEDOPERATION_CHECKDOMAINFAILED("FailedOperation.CheckDomainFailed"),
      
-     /* Failed to create the registrant profile. */
+    // Failed to create the registrant profile.
      FAILEDOPERATION_CREATETEMPLATEFAILED("FailedOperation.CreateTemplateFailed"),
      
-     /* Failed to get the domain information. Please try again later. */
+    // Failed to get the domain information. Please try again later.
      FAILEDOPERATION_DESCRIBEDOMAINLISTFAILED("FailedOperation.DescribeDomainListFailed"),
      
-     /* Failed to query the registrant profile. */
+    // Failed to query the registrant profile.
      FAILEDOPERATION_DESCRIBETEMPLATEFAILED("FailedOperation.DescribeTemplateFailed"),
      
-     /* Failed to get the domain price list. */
+    // Failed to get the domain price list.
      FAILEDOPERATION_DOMAINPRICELISTFAILED("FailedOperation.DomainPriceListFailed"),
      
-     /* Domain registration failed. Please try again later. */
+    // Domain registration failed. Please try again later.
      FAILEDOPERATION_REGISTERDOMAIN("FailedOperation.RegisterDomain"),
      
-     /* Domain registration failed. Please try again later. */
+    // Domain registration failed. Please try again later.
      FAILEDOPERATION_REGISTERDOMAINFAILED("FailedOperation.RegisterDomainFailed"),
      
-     /* Domain renewal failed. Please try again later. */
+    // Domain renewal failed. Please try again later.
      FAILEDOPERATION_RENEWDOMAINFAILED("FailedOperation.RenewDomainFailed"),
      
-     /* Failed to modify the DNS server. Enter a correct DNS server address. */
+    // Failed to modify the DNS server. Enter a correct DNS server address.
      FAILEDOPERATION_SETDOMAINDNSFAILED("FailedOperation.SetDomainDnsFailed"),
      
-     /* The number of registrant profiles has reached the maximum number allowed. Delete a profile and try again. */
+    // The number of registrant profiles has reached the maximum number allowed. Delete a profile and try again.
      FAILEDOPERATION_TEMPLATEMAXNUMFAILED("FailedOperation.TemplateMaxNumFailed"),
      
-     /* Failed to transfer the domain in. Please try again later. */
+    // Failed to transfer the domain in. Please try again later.
      FAILEDOPERATION_TRANSFERINDOMAINFAILED("FailedOperation.TransferInDomainFailed"),
      
-     /* Internal error. */
+    // Internal error.
      INTERNALERROR("InternalError"),
      
-     /* Failed to add the mobile number or email address. */
+    // Failed to add the mobile number or email address.
      INTERNALERROR_ADDPHONEEMAILERR("InternalError.AddPhoneEmailErr"),
      
-     /* Failed to get check data. */
+    // Failed to get check data.
      INTERNALERROR_CHECKDNAVAILABLEERR("InternalError.CheckDnAvailableErr"),
      
-     /* Failed to verify the verification code. */
+    // Failed to verify the verification code.
      INTERNALERROR_CHECKVERIFYCODEERR("InternalError.CheckVerifyCodeErr"),
      
-     /* Failed to delete the mobile number or email address. */
+    // Failed to delete the mobile number or email address.
      INTERNALERROR_DELETEPHONEEMAILVERIFYERR("InternalError.DeletePhoneEmailVerifyErr"),
      
-     /* Failed to delete the registrant profile. */
+    // Failed to delete the registrant profile.
      INTERNALERROR_DELETETEMPLATEERR("InternalError.DeleteTemplateErr"),
      
-     /* Failed to query the domain information. */
+    // Failed to query the domain information.
      INTERNALERROR_DESCRIBEDOMAININFOERR("InternalError.DescribeDomainInfoErr"),
      
-     /* Failed to query the "My domains" list. */
+    // Failed to query the "My domains" list.
      INTERNALERROR_DESCRIBEDOMAINLISTERR("InternalError.DescribeDomainListErr"),
      
-     /* Failed to get the list of verified mobile numbers and email addresses. */
+    // Failed to get the list of verified mobile numbers and email addresses.
      INTERNALERROR_DESCRIBEPHONEEMAILLISTERR("InternalError.DescribePhoneEmailListErr"),
      
-     /* Failed to get the details of the registrant profile. */
+    // Failed to get the details of the registrant profile.
      INTERNALERROR_DESCRIBETEMPLATEERR("InternalError.DescribeTemplateErr"),
      
-     /* Network error. Please try again later. */
+    // Network error. Please try again later.
      INTERNALERROR_DOMAININTERNALERROR("InternalError.DomainInternalError"),
      
-     /* Domain transfer failed. */
+    // Domain transfer failed.
      INTERNALERROR_DOMAINTRANSFERERR("InternalError.DomainTransferErr"),
      
-     /* Forbidden request. */
+    // Forbidden request.
      INTERNALERROR_FORBIDDENREQUEST("InternalError.ForbiddenRequest"),
      
-     /* Error in converting to JSON. */
+    // Error in converting to JSON.
      INTERNALERROR_JSONMARSHAL("InternalError.JsonMarshal"),
      
-     /* Method mismatch. */
+    // Method mismatch.
      INTERNALERROR_METHODNOTMATCH("InternalError.MethodNotMatch"),
      
-     /* Login is required. */
+    // Login is required.
      INTERNALERROR_NEEDLOGIN("InternalError.NeedLogin"),
      
-     /* Failed to read the body. */
+    // Failed to read the body.
      INTERNALERROR_READBODYERROR("InternalError.ReadBodyError"),
      
-     /* Failed to send a verification code. */
+    // Failed to send a verification code.
      INTERNALERROR_SENDVERIFYCODEERR("InternalError.SendVerifyCodeErr"),
      
-     /* Failed to set auto-renewal for domains. */
+    // Failed to set auto-renewal for domains.
      INTERNALERROR_SETDOMAINAUTORENEWERR("InternalError.SetDomainAutoRenewErr"),
      
-     /* Failed to cancel transfer prohibition for domains. */
+    // Failed to cancel transfer prohibition for domains.
      INTERNALERROR_SETTRANSFERPROHIBITEDERR("InternalError.SetTransferProhibitedErr"),
      
-     /* Failed to cancel update prohibition for domains. */
+    // Failed to cancel update prohibition for domains.
      INTERNALERROR_SETUPDATEPROHIBITEDERR("InternalError.SetUpdateProhibitedErr"),
      
-     /* The mobile number or email address has already been verified. */
+    // The mobile number or email address has already been verified.
      INTERNALERROR_VERIFIEDPHONEEMAILERR("InternalError.VerifiedPhoneEmailErr"),
      
-     /* Incorrect verification code. */
+    // Incorrect verification code.
      INTERNALERROR_VERIFYCODEERR("InternalError.VerifyCodeErr"),
      
-     /* Invalid parameter. */
+    // Invalid parameter.
      INVALIDPARAMETER("InvalidParameter"),
      
-     /* Incorrect qualification information. */
+    // Incorrect qualification information.
      INVALIDPARAMETER_CERTIFICATECODEISINVALID("InvalidParameter.CertificateCodeIsInvalid"),
      
-     /* Incorrect qualification photo. */
+    // Incorrect qualification photo.
      INVALIDPARAMETER_CERTIFICATEIMAGEISINVALID("InvalidParameter.CertificateImageIsInvalid"),
      
-     /* You have no permission to customize DNS servers. */
+    // You have no permission to customize DNS servers.
      INVALIDPARAMETER_CUSTOMDNSNOTALLOWED("InvalidParameter.CustomDnsNotAllowed"),
      
-     /* The domain is empty or incorrect. */
+    // The domain is empty or incorrect.
      INVALIDPARAMETER_DOMAINNAMEISINVALID("InvalidParameter.DomainNameIsInvalid"),
      
-     /* The email address is empty or incorrect. */
+    // The email address is empty or incorrect.
      INVALIDPARAMETER_EMAILISINVALID("InvalidParameter.EmailIsInvalid"),
      
-     /* The first name is empty or incorrect. */
+    // The first name is empty or incorrect.
      INVALIDPARAMETER_FIRSTNAMEISINVALID("InvalidParameter.FirstNameIsInvalid"),
      
-     /* The last name is empty or incorrect. */
+    // The last name is empty or incorrect.
      INVALIDPARAMETER_LASTNAMEISINVALID("InvalidParameter.LastNameIsInvalid"),
      
-     /* The contact person is empty or incorrect. */
+    // The contact person is empty or incorrect.
      INVALIDPARAMETER_NAMEISINVALID("InvalidParameter.NameIsInvalid"),
      
-     /* The registrant is empty or incorrect. */
+    // The registrant is empty or incorrect.
      INVALIDPARAMETER_ORGISINVALID("InvalidParameter.OrgIsInvalid"),
      
-     /* Invalid package ID. */
+    // Invalid package ID.
      INVALIDPARAMETER_PACKAGERESOURCEIDINVALID("InvalidParameter.PackageResourceIdInvalid"),
      
-     /* Invalid request type. */
+    // Invalid request type.
      INVALIDPARAMETER_REPTYPEISINVALID("InvalidParameter.RepTypeIsInvalid"),
      
-     /* Incorrect address. Please enter a correct one. */
+    // Incorrect address. Please enter a correct one.
      INVALIDPARAMETER_STREETISINVALID("InvalidParameter.StreetIsInvalid"),
      
-     /* The mobile number is empty or invalid. */
+    // The mobile number is empty or invalid.
      INVALIDPARAMETER_TELEPHONEISINVALID("InvalidParameter.TelephoneIsInvalid"),
      
-     /* The number of domains cannot exceed 4,000. */
+    // The number of domains cannot exceed 4,000.
      INVALIDPARAMETER_UPTO4000("InvalidParameter.UpTo4000"),
      
-     /* The user type is empty or invalid. */
+    // The user type is empty or invalid.
      INVALIDPARAMETER_USERTYPEISINVALID("InvalidParameter.UserTypeIsInvalid"),
      
-     /* The zip code is empty or invalid. */
+    // The zip code is empty or invalid.
      INVALIDPARAMETER_ZIPCODEISINVALID("InvalidParameter.ZipCodeIsInvalid"),
      
-     /* Invalid parameter value. */
+    // Invalid parameter value.
      INVALIDPARAMETERVALUE_INVALIDPARAMETERFORMAT("InvalidParameterValue.InvalidParameterFormat"),
      
-     /* Missing parameter. */
+    // Missing parameter.
      MISSINGPARAMETER("MissingParameter"),
      
-     /* The route is not defined. */
+    // The route is not defined.
      MISSINGPARAMETER_ACTIONNOTFOUND("MissingParameter.ActionNotFound"),
      
-     /* The domain cannot be empty. */
+    // The domain cannot be empty.
      MISSINGPARAMETER_DOMAINISEMPTY("MissingParameter.DomainIsEmpty"),
      
-     /* The request data cannot be empty. */
+    // The request data cannot be empty.
      MISSINGPARAMETER_REPDATAISNONE("MissingParameter.RepDataIsNone"),
      
-     /* The profile ID is empty or invalid. */
+    // The profile ID is empty or invalid.
      MISSINGPARAMETER_TEMPLATEIDISEMPTY("MissingParameter.TemplateIdIsEmpty"),
      
-     /* This profile already exists. */
+    // This profile already exists.
      MISSINGPARAMETER_TEMPLATEIDISEXIST("MissingParameter.TemplateIdIsExist"),
      
-     /* Too many tasks are being executed. Please submit new ones later. */
+    // Too many tasks are being executed. Please submit new ones later.
      RESOURCEINSUFFICIENT_OVERWORK("ResourceInsufficient.Overwork"),
      
-     /* The resource doesn’t exist. */
+    // The resource doesn’t exist.
      RESOURCENOTFOUND("ResourceNotFound"),
      
-     /* The identity is not verified for the profile. */
+    // The identity is not verified for the profile.
      RESOURCENOTFOUND_APPROVEDTEMPLATENOTFOUND("ResourceNotFound.ApprovedTemplateNotFound"),
      
-     /* The domain address is incorrect. Please enter a correct one. */
+    // The domain address is incorrect. Please enter a correct one.
      RESOURCENOTFOUND_DOMAINNOTFOUND("ResourceNotFound.DomainNotFound"),
      
-     /* The profile information is incorrect. Please set information correctly. */
+    // The profile information is incorrect. Please set information correctly.
      RESOURCENOTFOUND_TEMPLATENOTFOUND("ResourceNotFound.TemplateNotFound"),
      
-     /* Unable to perform this operation because an operation of the same type is in progress for this domain. */
+    // Unable to perform this operation because an operation of the same type is in progress for this domain.
      RESOURCEUNAVAILABLE_DOMAINISMODIFYINGDNS("ResourceUnavailable.DomainIsModifyingDNS"),
      
-     /* This operation is unavailable under the current domain status. */
+    // This operation is unavailable under the current domain status.
      UNSUPPORTEDOPERATION_MODIFYDOMAININFOOPERATEUNSUPPORTED("UnsupportedOperation.ModifyDomainInfoOperateUnsupported"),
      
-     /* Modification is unavailable under the current domain status. */
+    // Modification is unavailable under the current domain status.
      UNSUPPORTEDOPERATION_MODIFYDOMAININFOUNSUPPORTED("UnsupportedOperation.ModifyDomainInfoUnsupported"),
      
-     /* Modification is unavailable under the current domain status. */
+    // Modification is unavailable under the current domain status.
      UNSUPPORTEDOPERATION_MODIFYDOMAINUNSUPPORTED("UnsupportedOperation.ModifyDomainUnsupported");
      
     private String value;

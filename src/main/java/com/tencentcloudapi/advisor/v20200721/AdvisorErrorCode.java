@@ -1,24 +1,24 @@
 package com.tencentcloudapi.advisor.v20200721;
 public enum AdvisorErrorCode {
-     /* Internal error */
+    // Internal error
      INTERNALERROR("InternalError"),
      
-     /* The dependent db encountered an error. */
+    // The dependent db encountered an error.
      INTERNALERROR_DEPENDSDB("InternalError.DependsDb"),
      
-     /* System error */
+    // System error
      INTERNALERROR_SYSTEM("InternalError.System"),
      
-     /* Parameter error */
+    // Parameter error
      INVALIDPARAMETER("InvalidParameter"),
      
-     /* Parameter error */
+    // Parameter error
      INVALIDPARAMETER_PARAMERROR("InvalidParameter.ParamError"),
      
-     /* Parameter value error */
+    // Parameter value error
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /* The resource does not exist. */
+    // The resource does not exist.
      RESOURCENOTFOUND("ResourceNotFound");
      
     private String value;

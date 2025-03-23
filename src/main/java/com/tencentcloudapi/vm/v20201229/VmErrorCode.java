@@ -1,60 +1,60 @@
 package com.tencentcloudapi.vm.v20201229;
 public enum VmErrorCode {
-     /* A CAM signature/authentication error occurred. */
+    // A CAM signature/authentication error occurred.
      AUTHFAILURE("AuthFailure"),
      
-     /* DryRun operation, which means the DryRun parameter is passed in yet the request will still be successful. */
+    // DryRun operation, which means the DryRun parameter is passed in yet the request will still be successful.
      DRYRUNOPERATION("DryRunOperation"),
      
-     /* Operation failed. */
+    // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      
-     /* Internal error. */
+    // Internal error.
      INTERNALERROR("InternalError"),
      
-     /* Parameter error. */
+    // Parameter error.
      INVALIDPARAMETER("InvalidParameter"),
      
-     /* Invalid parameter value. */
+    // Invalid parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /* The quota limit has been reached. */
+    // The quota limit has been reached.
      LIMITEXCEEDED("LimitExceeded"),
      
-     /* Missing parameter. */
+    // Missing parameter.
      MISSINGPARAMETER("MissingParameter"),
      
-     /* Operation denied. */
+    // Operation denied.
      OPERATIONDENIED("OperationDenied"),
      
-     /* The number of requests exceeds the frequency limit. */
+    // The number of requests exceeds the frequency limit.
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
-     /* The resource is occupied. */
+    // The resource is occupied.
      RESOURCEINUSE("ResourceInUse"),
      
-     /* Insufficient resource. */
+    // Insufficient resource.
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
-     /* The resource doesn’t exist. */
+    // The resource doesn’t exist.
      RESOURCENOTFOUND("ResourceNotFound"),
      
-     /* The resource is unavailable. */
+    // The resource is unavailable.
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-     /* The resources have been sold out. */
+    // The resources have been sold out.
      RESOURCESSOLDOUT("ResourcesSoldOut"),
      
-     /* Unauthorized operation. */
+    // Unauthorized operation.
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-     /*  */
+    // 
      UNAUTHORIZEDOPERATION_UNAUTHORIZED("UnauthorizedOperation.Unauthorized"),
      
-     /* Unknown parameter error. */
+    // Unknown parameter error.
      UNKNOWNPARAMETER("UnknownParameter"),
      
-     /* Unsupported operation. */
+    // Unsupported operation.
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

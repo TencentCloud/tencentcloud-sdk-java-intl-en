@@ -1,222 +1,222 @@
 package com.tencentcloudapi.tcsas.v20250106;
 public enum TcsasErrorCode {
-     /* CAM signature/authentication error. */
+    // CAM signature/authentication error.
      AUTHFAILURE("AuthFailure"),
      
-     /* Operation failed. */
+    // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      
-     /* FailedOperation.AppAlreadyBindAudit */
+    // FailedOperation.AppAlreadyBindAudit
      FAILEDOPERATION_APPALREADYBINDAUDIT("FailedOperation.AppAlreadyBindAudit"),
      
-     /* FailedOperation.AppAlreadyBindMiniProgram */
+    // FailedOperation.AppAlreadyBindMiniProgram
      FAILEDOPERATION_APPALREADYBINDMINIPROGRAM("FailedOperation.AppAlreadyBindMiniProgram"),
      
-     /* FailedOperation.ApplicationNameAlreadyExisted */
+    // FailedOperation.ApplicationNameAlreadyExisted
      FAILEDOPERATION_APPLICATIONNAMEALREADYEXISTED("FailedOperation.ApplicationNameAlreadyExisted"),
      
-     /* FailedOperation.ApplicationNumberExceedLimit */
+    // FailedOperation.ApplicationNumberExceedLimit
      FAILEDOPERATION_APPLICATIONNUMBEREXCEEDLIMIT("FailedOperation.ApplicationNumberExceedLimit"),
      
-     /* FailedOperation.ExistMNPApprovalRecord */
+    // FailedOperation.ExistMNPApprovalRecord
      FAILEDOPERATION_EXISTMNPAPPROVALRECORD("FailedOperation.ExistMNPApprovalRecord"),
      
-     /* FailedOperation.ExistRepeatDomainUrl */
+    // FailedOperation.ExistRepeatDomainUrl
      FAILEDOPERATION_EXISTREPEATDOMAINURL("FailedOperation.ExistRepeatDomainUrl"),
      
-     /* FailedOperation.ExistSensitiveAPI */
+    // FailedOperation.ExistSensitiveAPI
      FAILEDOPERATION_EXISTSENSITIVEAPI("FailedOperation.ExistSensitiveAPI"),
      
-     /* FailedOperation.FileDownloadFailed */
+    // FailedOperation.FileDownloadFailed
      FAILEDOPERATION_FILEDOWNLOADFAILED("FailedOperation.FileDownloadFailed"),
      
-     /* FailedOperation.GetOperateResourceFailed */
+    // FailedOperation.GetOperateResourceFailed
      FAILEDOPERATION_GETOPERATERESOURCEFAILED("FailedOperation.GetOperateResourceFailed"),
      
-     /* FailedOperation.LoginAuthFailed */
+    // FailedOperation.LoginAuthFailed
      FAILEDOPERATION_LOGINAUTHFAILED("FailedOperation.LoginAuthFailed"),
      
-     /* FailedOperation.MNPNumberExceedLimit */
+    // FailedOperation.MNPNumberExceedLimit
      FAILEDOPERATION_MNPNUMBEREXCEEDLIMIT("FailedOperation.MNPNumberExceedLimit"),
      
-     /* FailedOperation.MNPOnlineVersionNotExist */
+    // FailedOperation.MNPOnlineVersionNotExist
      FAILEDOPERATION_MNPONLINEVERSIONNOTEXIST("FailedOperation.MNPOnlineVersionNotExist"),
      
-     /* FailedOperation.MNPReleaseNumberExceedLimit */
+    // FailedOperation.MNPReleaseNumberExceedLimit
      FAILEDOPERATION_MNPRELEASENUMBEREXCEEDLIMIT("FailedOperation.MNPReleaseNumberExceedLimit"),
      
-     /* FailedOperation.MNPTeamAssociatedApplicationTeamNotCreateApplication */
+    // FailedOperation.MNPTeamAssociatedApplicationTeamNotCreateApplication
      FAILEDOPERATION_MNPTEAMASSOCIATEDAPPLICATIONTEAMNOTCREATEAPPLICATION("FailedOperation.MNPTeamAssociatedApplicationTeamNotCreateApplication"),
      
-     /* FailedOperation.MNPTeamNotAssociatedApplicationTeam */
+    // FailedOperation.MNPTeamNotAssociatedApplicationTeam
      FAILEDOPERATION_MNPTEAMNOTASSOCIATEDAPPLICATIONTEAM("FailedOperation.MNPTeamNotAssociatedApplicationTeam"),
      
-     /* FailedOperation.MNPVersionReleased */
+    // FailedOperation.MNPVersionReleased
      FAILEDOPERATION_MNPVERSIONRELEASED("FailedOperation.MNPVersionReleased"),
      
-     /* FailedOperation.MiniProgramIconAnalysisFailed */
+    // FailedOperation.MiniProgramIconAnalysisFailed
      FAILEDOPERATION_MINIPROGRAMICONANALYSISFAILED("FailedOperation.MiniProgramIconAnalysisFailed"),
      
-     /* FailedOperation.NoAccessPermission */
+    // FailedOperation.NoAccessPermission
      FAILEDOPERATION_NOACCESSPERMISSION("FailedOperation.NoAccessPermission"),
      
-     /* FailedOperation.OnlyReleasePlatformApprovedMNPVersion */
+    // FailedOperation.OnlyReleasePlatformApprovedMNPVersion
      FAILEDOPERATION_ONLYRELEASEPLATFORMAPPROVEDMNPVERSION("FailedOperation.OnlyReleasePlatformApprovedMNPVersion"),
      
-     /* FailedOperation.OperationsTeamNoMiniProgramPermission */
+    // FailedOperation.OperationsTeamNoMiniProgramPermission
      FAILEDOPERATION_OPERATIONSTEAMNOMINIPROGRAMPERMISSION("FailedOperation.OperationsTeamNoMiniProgramPermission"),
      
-     /* FailedOperation.PackageAlreadyExpired */
+    // FailedOperation.PackageAlreadyExpired
      FAILEDOPERATION_PACKAGEALREADYEXPIRED("FailedOperation.PackageAlreadyExpired"),
      
-     /* FailedOperation.RecordNotFound */
+    // FailedOperation.RecordNotFound
      FAILEDOPERATION_RECORDNOTFOUND("FailedOperation.RecordNotFound"),
      
-     /* FailedOperation.ReleaseMNPVersionNeedGreaterThanOnlineVersion */
+    // FailedOperation.ReleaseMNPVersionNeedGreaterThanOnlineVersion
      FAILEDOPERATION_RELEASEMNPVERSIONNEEDGREATERTHANONLINEVERSION("FailedOperation.ReleaseMNPVersionNeedGreaterThanOnlineVersion"),
      
-     /* FailedOperation.RequestParamAnalysisFailed */
+    // FailedOperation.RequestParamAnalysisFailed
      FAILEDOPERATION_REQUESTPARAMANALYSISFAILED("FailedOperation.RequestParamAnalysisFailed"),
      
-     /* FailedOperation.ShowcaseVersionAlreadyExist */
+    // FailedOperation.ShowcaseVersionAlreadyExist
      FAILEDOPERATION_SHOWCASEVERSIONALREADYEXIST("FailedOperation.ShowcaseVersionAlreadyExist"),
      
-     /* FailedOperation.SystemError */
+    // FailedOperation.SystemError
      FAILEDOPERATION_SYSTEMERROR("FailedOperation.SystemError"),
      
-     /* FailedOperation.UnableOperateAdminAccount */
+    // FailedOperation.UnableOperateAdminAccount
      FAILEDOPERATION_UNABLEOPERATEADMINACCOUNT("FailedOperation.UnableOperateAdminAccount"),
      
-     /* Internal error. */
+    // Internal error.
      INTERNALERROR("InternalError"),
      
-     /* Incorrect parameter. */
+    // Incorrect parameter.
      INVALIDPARAMETER("InvalidParameter"),
      
-     /* Invalid parameter value. */
+    // Invalid parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /* InvalidParameterValue.AppPackageNameNotConfig */
+    // InvalidParameterValue.AppPackageNameNotConfig
      INVALIDPARAMETERVALUE_APPPACKAGENAMENOTCONFIG("InvalidParameterValue.AppPackageNameNotConfig"),
      
-     /* InvalidParameterValue.ExistMismatchParameterType */
+    // InvalidParameterValue.ExistMismatchParameterType
      INVALIDPARAMETERVALUE_EXISTMISMATCHPARAMETERTYPE("InvalidParameterValue.ExistMismatchParameterType"),
      
-     /* InvalidParameterValue.ExistTeamName */
+    // InvalidParameterValue.ExistTeamName
      INVALIDPARAMETERVALUE_EXISTTEAMNAME("InvalidParameterValue.ExistTeamName"),
      
-     /* InvalidParameterValue.ExistUserAccount */
+    // InvalidParameterValue.ExistUserAccount
      INVALIDPARAMETERVALUE_EXISTUSERACCOUNT("InvalidParameterValue.ExistUserAccount"),
      
-     /* InvalidParameterValue.InvalidAccountType */
+    // InvalidParameterValue.InvalidAccountType
      INVALIDPARAMETERVALUE_INVALIDACCOUNTTYPE("InvalidParameterValue.InvalidAccountType"),
      
-     /* InvalidParameterValue.InvalidAppPackageNameLayout */
+    // InvalidParameterValue.InvalidAppPackageNameLayout
      INVALIDPARAMETERVALUE_INVALIDAPPPACKAGENAMELAYOUT("InvalidParameterValue.InvalidAppPackageNameLayout"),
      
-     /* InvalidParameterValue.InvalidApplicationId */
+    // InvalidParameterValue.InvalidApplicationId
      INVALIDPARAMETERVALUE_INVALIDAPPLICATIONID("InvalidParameterValue.InvalidApplicationId"),
      
-     /* InvalidParameterValue.InvalidApplicationIntro */
+    // InvalidParameterValue.InvalidApplicationIntro
      INVALIDPARAMETERVALUE_INVALIDAPPLICATIONINTRO("InvalidParameterValue.InvalidApplicationIntro"),
      
-     /* InvalidParameterValue.InvalidApplicationName */
+    // InvalidParameterValue.InvalidApplicationName
      INVALIDPARAMETERVALUE_INVALIDAPPLICATIONNAME("InvalidParameterValue.InvalidApplicationName"),
      
-     /* InvalidParameterValue.InvalidApplicationRemark */
+    // InvalidParameterValue.InvalidApplicationRemark
      INVALIDPARAMETERVALUE_INVALIDAPPLICATIONREMARK("InvalidParameterValue.InvalidApplicationRemark"),
      
-     /* InvalidParameterValue.InvalidApplyAction */
+    // InvalidParameterValue.InvalidApplyAction
      INVALIDPARAMETERVALUE_INVALIDAPPLYACTION("InvalidParameterValue.InvalidApplyAction"),
      
-     /* InvalidParameterValue.InvalidApprovalNo */
+    // InvalidParameterValue.InvalidApprovalNo
      INVALIDPARAMETERVALUE_INVALIDAPPROVALNO("InvalidParameterValue.InvalidApprovalNo"),
      
-     /* InvalidParameterValue.InvalidApprovalNote */
+    // InvalidParameterValue.InvalidApprovalNote
      INVALIDPARAMETERVALUE_INVALIDAPPROVALNOTE("InvalidParameterValue.InvalidApprovalNote"),
      
-     /* InvalidParameterValue.InvalidMNPIcon */
+    // InvalidParameterValue.InvalidMNPIcon
      INVALIDPARAMETERVALUE_INVALIDMNPICON("InvalidParameterValue.InvalidMNPIcon"),
      
-     /* InvalidParameterValue.InvalidMNPId */
+    // InvalidParameterValue.InvalidMNPId
      INVALIDPARAMETERVALUE_INVALIDMNPID("InvalidParameterValue.InvalidMNPId"),
      
-     /* InvalidParameterValue.InvalidMNPIntro */
+    // InvalidParameterValue.InvalidMNPIntro
      INVALIDPARAMETERVALUE_INVALIDMNPINTRO("InvalidParameterValue.InvalidMNPIntro"),
      
-     /* InvalidParameterValue.InvalidMNPName */
+    // InvalidParameterValue.InvalidMNPName
      INVALIDPARAMETERVALUE_INVALIDMNPNAME("InvalidParameterValue.InvalidMNPName"),
      
-     /* InvalidParameterValue.InvalidMNPType */
+    // InvalidParameterValue.InvalidMNPType
      INVALIDPARAMETERVALUE_INVALIDMNPTYPE("InvalidParameterValue.InvalidMNPType"),
      
-     /* InvalidParameterValue.InvalidMNPVersion */
+    // InvalidParameterValue.InvalidMNPVersion
      INVALIDPARAMETERVALUE_INVALIDMNPVERSION("InvalidParameterValue.InvalidMNPVersion"),
      
-     /* InvalidParameterValue.InvalidMNPVersionId */
+    // InvalidParameterValue.InvalidMNPVersionId
      INVALIDPARAMETERVALUE_INVALIDMNPVERSIONID("InvalidParameterValue.InvalidMNPVersionId"),
      
-     /* InvalidParameterValue.InvalidMNPVersionIntro */
+    // InvalidParameterValue.InvalidMNPVersionIntro
      INVALIDPARAMETERVALUE_INVALIDMNPVERSIONINTRO("InvalidParameterValue.InvalidMNPVersionIntro"),
      
-     /* InvalidParameterValue.InvalidMNPVersionTaskId */
+    // InvalidParameterValue.InvalidMNPVersionTaskId
      INVALIDPARAMETERVALUE_INVALIDMNPVERSIONTASKID("InvalidParameterValue.InvalidMNPVersionTaskId"),
      
-     /* InvalidParameterValue.InvalidMiniAppId */
+    // InvalidParameterValue.InvalidMiniAppId
      INVALIDPARAMETERVALUE_INVALIDMINIAPPID("InvalidParameterValue.InvalidMiniAppId"),
      
-     /* InvalidParameterValue.InvalidPlatformId */
+    // InvalidParameterValue.InvalidPlatformId
      INVALIDPARAMETERVALUE_INVALIDPLATFORMID("InvalidParameterValue.InvalidPlatformId"),
      
-     /* InvalidParameterValue.InvalidRoleId */
+    // InvalidParameterValue.InvalidRoleId
      INVALIDPARAMETERVALUE_INVALIDROLEID("InvalidParameterValue.InvalidRoleId"),
      
-     /* InvalidParameterValue.InvalidTeamId */
+    // InvalidParameterValue.InvalidTeamId
      INVALIDPARAMETERVALUE_INVALIDTEAMID("InvalidParameterValue.InvalidTeamId"),
      
-     /* InvalidParameterValue.InvalidUserId */
+    // InvalidParameterValue.InvalidUserId
      INVALIDPARAMETERVALUE_INVALIDUSERID("InvalidParameterValue.InvalidUserId"),
      
-     /* InvalidParameterValue.InvalidUserName */
+    // InvalidParameterValue.InvalidUserName
      INVALIDPARAMETERVALUE_INVALIDUSERNAME("InvalidParameterValue.InvalidUserName"),
      
-     /* InvalidParameterValue.MNPApprovalStatusError */
+    // InvalidParameterValue.MNPApprovalStatusError
      INVALIDPARAMETERVALUE_MNPAPPROVALSTATUSERROR("InvalidParameterValue.MNPApprovalStatusError"),
      
-     /* InvalidParameterValue.MNPFileSizExceedLimit */
+    // InvalidParameterValue.MNPFileSizExceedLimit
      INVALIDPARAMETERVALUE_MNPFILESIZEXCEEDLIMIT("InvalidParameterValue.MNPFileSizExceedLimit"),
      
-     /* InvalidParameterValue.MNPTypeNumberExceedLimit */
+    // InvalidParameterValue.MNPTypeNumberExceedLimit
      INVALIDPARAMETERVALUE_MNPTYPENUMBEREXCEEDLIMIT("InvalidParameterValue.MNPTypeNumberExceedLimit"),
      
-     /* InvalidParameterValue.MNPVersionIsNotPlatformPhase */
+    // InvalidParameterValue.MNPVersionIsNotPlatformPhase
      INVALIDPARAMETERVALUE_MNPVERSIONISNOTPLATFORMPHASE("InvalidParameterValue.MNPVersionIsNotPlatformPhase"),
      
-     /* InvalidParameterValue.MiniProgramNameAlreadyExist */
+    // InvalidParameterValue.MiniProgramNameAlreadyExist
      INVALIDPARAMETERVALUE_MINIPROGRAMNAMEALREADYEXIST("InvalidParameterValue.MiniProgramNameAlreadyExist"),
      
-     /* InvalidParameterValue.ProcessApplicationAndApprovalApplicationMismatch */
+    // InvalidParameterValue.ProcessApplicationAndApprovalApplicationMismatch
      INVALIDPARAMETERVALUE_PROCESSAPPLICATIONANDAPPROVALAPPLICATIONMISMATCH("InvalidParameterValue.ProcessApplicationAndApprovalApplicationMismatch"),
      
-     /* InvalidParameterValue.ProcessApprovalItemIsEmpty */
+    // InvalidParameterValue.ProcessApprovalItemIsEmpty
      INVALIDPARAMETERVALUE_PROCESSAPPROVALITEMISEMPTY("InvalidParameterValue.ProcessApprovalItemIsEmpty"),
      
-     /* InvalidParameterValue.ProcessMNPApprovalStatusError */
+    // InvalidParameterValue.ProcessMNPApprovalStatusError
      INVALIDPARAMETERVALUE_PROCESSMNPAPPROVALSTATUSERROR("InvalidParameterValue.ProcessMNPApprovalStatusError"),
      
-     /* InvalidParameterValue.QueryParameterLengthExceedLimit */
+    // InvalidParameterValue.QueryParameterLengthExceedLimit
      INVALIDPARAMETERVALUE_QUERYPARAMETERLENGTHEXCEEDLIMIT("InvalidParameterValue.QueryParameterLengthExceedLimit"),
      
-     /* Missing required parameters. */
+    // Missing required parameters.
      MISSINGPARAMETER("MissingParameter"),
      
-     /* MissingParameter.LoginInfoNotFound */
+    // MissingParameter.LoginInfoNotFound
      MISSINGPARAMETER_LOGININFONOTFOUND("MissingParameter.LoginInfoNotFound"),
      
-     /* ResourceNotFound.NotFoundPurchasedPackage */
+    // ResourceNotFound.NotFoundPurchasedPackage
      RESOURCENOTFOUND_NOTFOUNDPURCHASEDPACKAGE("ResourceNotFound.NotFoundPurchasedPackage"),
      
-     /* Unknow parameter error. */
+    // Unknow parameter error.
      UNKNOWNPARAMETER("UnknownParameter");
      
     private String value;

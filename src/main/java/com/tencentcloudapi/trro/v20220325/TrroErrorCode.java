@@ -1,24 +1,24 @@
 package com.tencentcloudapi.trro.v20220325;
 public enum TrroErrorCode {
-     /* Operation failed. */
+    // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      
-     /* Internal error. */
+    // Internal error.
      INTERNALERROR("InternalError"),
      
-     /* Parameter error. */
+    // Parameter error.
      INVALIDPARAMETER("InvalidParameter"),
      
-     /* Parameter value error. */
+    // Parameter value error.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /* Missing required parameters. */
+    // Missing required parameters.
      MISSINGPARAMETER("MissingParameter"),
      
-     /* Operation denied. */
+    // Operation denied.
      OPERATIONDENIED("OperationDenied"),
      
-     /* The resource does not exist. */
+    // The resource does not exist.
      RESOURCENOTFOUND("ResourceNotFound");
      
     private String value;

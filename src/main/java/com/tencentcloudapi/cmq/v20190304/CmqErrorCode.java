@@ -1,33 +1,33 @@
 package com.tencentcloudapi.cmq.v20190304;
 public enum CmqErrorCode {
-     /* Operation failed. */
+    // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      
-     /* The operation is in progress. Please try again later. */
+    // The operation is in progress. Please try again later.
      FAILEDOPERATION_TRYLATER("FailedOperation.TryLater"),
      
-     /* Invalid parameter. */
+    // Invalid parameter.
      INVALIDPARAMETER("InvalidParameter"),
      
-     /* The task ID does not exist. */
+    // The task ID does not exist.
      INVALIDPARAMETERVALUE_NOTASKID("InvalidParameterValue.NoTaskId"),
      
-     /* The quota limit is exceeded. */
+    // The quota limit is exceeded.
      LIMITEXCEEDED("LimitExceeded"),
      
-     /* The resource is in use. */
+    // The resource is in use.
      RESOURCEINUSE("ResourceInUse"),
      
-     /* The resource does not exist. */
+    // The resource does not exist.
      RESOURCENOTFOUND("ResourceNotFound"),
      
-     /* The resource is unavailable. */
+    // The resource is unavailable.
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-     /* The resources have been sold out. */
+    // The resources have been sold out.
      RESOURCESSOLDOUT("ResourcesSoldOut"),
      
-     /* Unauthorized operation. */
+    // Unauthorized operation.
      UNAUTHORIZEDOPERATION("UnauthorizedOperation");
      
     private String value;
