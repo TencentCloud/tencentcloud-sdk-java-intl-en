@@ -1,690 +1,690 @@
 package com.tencentcloudapi.scf.v20180416;
 public enum ScfErrorCode {
-    // Operation failed.
+     /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
-    // Failed to create the API gateway trigger.
+     /* Failed to create the API gateway trigger. */
      FAILEDOPERATION_APIGATEWAY("FailedOperation.ApiGateway"),
      
-    // Failed to create the trigger.
+     /* Failed to create the trigger. */
      FAILEDOPERATION_APIGW("FailedOperation.Apigw"),
      
-    // This operation is not supported by the current async event status. Please try again later.
+     /* This operation is not supported by the current async event status. Please try again later. */
      FAILEDOPERATION_ASYNCEVENTSTATUS("FailedOperation.AsyncEventStatus"),
      
-    // Login information verification failed and token verification failed.
+     /* Login information verification failed and token verification failed. */
      FAILEDOPERATION_AUTHFAILURE("FailedOperation.AuthFailure"),
      
-    // Failed to query the role information.
+     /* Failed to query the role information. */
      FAILEDOPERATION_CALLROLEFAILED("FailedOperation.CallRoleFailed"),
      
-    // CopyAsyncRun parameter error
+     /* CopyAsyncRun parameter error */
      FAILEDOPERATION_COPYASYNCRUN("FailedOperation.CopyAsyncRun"),
      
-    // Failed to replicate the function.
+     /* Failed to replicate the function. */
      FAILEDOPERATION_COPYFAILED("FailedOperation.CopyFailed"),
      
-    // Replication to this region is not supported.
+     /* Replication to this region is not supported. */
      FAILEDOPERATION_COPYFUNCTION("FailedOperation.CopyFunction"),
      
-    // Failed to operate on the COS resources.
+     /* Failed to operate on the COS resources. */
      FAILEDOPERATION_COS("FailedOperation.Cos"),
      
-    // Failed to create the alias.
+     /* Failed to create the alias. */
      FAILEDOPERATION_CREATEALIAS("FailedOperation.CreateAlias"),
      
-    // Failed to create the namespace.
+     /* Failed to create the namespace. */
      FAILEDOPERATION_CREATENAMESPACE("FailedOperation.CreateNamespace"),
      
-    // This operation is not supported in the current function state.
+     /* This operation is not supported in the current function state. */
      FAILEDOPERATION_CREATETRIGGER("FailedOperation.CreateTrigger"),
      
-    // This operation cannot be performed in the current debugging status.
+     /* This operation cannot be performed in the current debugging status. */
      FAILEDOPERATION_DEBUGMODESTATUS("FailedOperation.DebugModeStatus"),
      
-    // Failed to delete the alias.
+     /* Failed to delete the alias. */
      FAILEDOPERATION_DELETEALIAS("FailedOperation.DeleteAlias"),
      
-    // This operation cannot be performed in the current function status. Please try again when the function is in normal status.
+     /* This operation cannot be performed in the current function status. Please try again when the function is in normal status. */
      FAILEDOPERATION_DELETEFUNCTION("FailedOperation.DeleteFunction"),
      
-    // Failed to delete the layer version.
+     /* Failed to delete the layer version. */
      FAILEDOPERATION_DELETELAYERVERSION("FailedOperation.DeleteLayerVersion"),
      
-    // The default namespace cannot be deleted.
+     /* The default namespace cannot be deleted. */
      FAILEDOPERATION_DELETENAMESPACE("FailedOperation.DeleteNamespace"),
      
-    // Failed to delete the trigger.
+     /* Failed to delete the trigger. */
      FAILEDOPERATION_DELETETRIGGER("FailedOperation.DeleteTrigger"),
      
-    // You cannot update code in the current function state. Please try again when the state is normal.
+     /* You cannot update code in the current function state. Please try again when the state is normal. */
      FAILEDOPERATION_FUNCTIONNAMESTATUSERROR("FailedOperation.FunctionNameStatusError"),
      
-    // Operation failed. The function is deploying.
+     /* Operation failed. The function is deploying. */
      FAILEDOPERATION_FUNCTIONSTATUSERROR("FailedOperation.FunctionStatusError"),
      
-    // This operation cannot be performed in the current function version status. Please try again when the version is in normal status.
+     /* This operation cannot be performed in the current function version status. Please try again when the version is in normal status. */
      FAILEDOPERATION_FUNCTIONVERSIONSTATUSNOTACTIVE("FailedOperation.FunctionVersionStatusNotActive"),
      
-    // Failed to get the alias information.
+     /* Failed to get the alias information. */
      FAILEDOPERATION_GETALIAS("FailedOperation.GetAlias"),
      
-    // Failed to get the function code address.
+     /* Failed to get the function code address. */
      FAILEDOPERATION_GETFUNCTIONADDRESS("FailedOperation.GetFunctionAddress"),
      
-    // The current account or namespace is in arrears. Please try again when it becomes available.
+     /* The current account or namespace is in arrears. Please try again when it becomes available. */
      FAILEDOPERATION_INSUFFICIENTBALANCE("FailedOperation.InsufficientBalance"),
      
-    // Failed to invoke the function.
+     /* Failed to invoke the function. */
      FAILEDOPERATION_INVOKEFUNCTION("FailedOperation.InvokeFunction"),
      
-    // Operation conflict.
+     /* Operation conflict. */
      FAILEDOPERATION_OPERATIONCONFLICT("FailedOperation.OperationConflict"),
      
-    // Failed to create the scheduled provisioned concurrency scaling action
+     /* Failed to create the scheduled provisioned concurrency scaling action */
      FAILEDOPERATION_PROVISIONCREATETIMER("FailedOperation.ProvisionCreateTimer"),
      
-    // Failed to delete the scheduled provisioned concurrency scaling action
+     /* Failed to delete the scheduled provisioned concurrency scaling action */
      FAILEDOPERATION_PROVISIONDELETETIMER("FailedOperation.ProvisionDeleteTimer"),
      
-    // Running out of available provisioned concurrency quota
+     /* Running out of available provisioned concurrency quota */
      FAILEDOPERATION_PROVISIONEDEXCEEDAVAILABLE("FailedOperation.ProvisionedExceedAvailable"),
      
-    // The provisioned concurrency exceeds the limit.
+     /* The provisioned concurrency exceeds the limit. */
      FAILEDOPERATION_PROVISIONEDEXCEEDRESERVED("FailedOperation.ProvisionedExceedReserved"),
      
-    // The function version already has a provisioned concurrency setting task in progress. Please try again later.
+     /* The function version already has a provisioned concurrency setting task in progress. Please try again later. */
      FAILEDOPERATION_PROVISIONEDINPROGRESS("FailedOperation.ProvisionedInProgress"),
      
-    // Failed to publish the layer version.
+     /* Failed to publish the layer version. */
      FAILEDOPERATION_PUBLISHLAYERVERSION("FailedOperation.PublishLayerVersion"),
      
-    // You cannot publish a version in the current function state. Please try again when the state is normal.
+     /* You cannot publish a version in the current function state. Please try again when the state is normal. */
      FAILEDOPERATION_PUBLISHVERSION("FailedOperation.PublishVersion"),
      
-    // 
+     /*  */
      FAILEDOPERATION_QUERYERROR("FailedOperation.QueryError"),
      
-    // The value of ReservedExceedTotal exceeds the limit.
+     /* The value of ReservedExceedTotal exceeds the limit. */
      FAILEDOPERATION_RESERVEDEXCEEDTOTAL("FailedOperation.ReservedExceedTotal"),
      
-    // The function already has a reserved concurrency setting task in progress. Please try again later.
+     /* The function already has a reserved concurrency setting task in progress. Please try again later. */
      FAILEDOPERATION_RESERVEDINPROGRESS("FailedOperation.ReservedInProgress"),
      
-    // ServiceClosed. Please check and try again.
+     /* ServiceClosed. Please check and try again. */
      FAILEDOPERATION_SERVICECLOSED("FailedOperation.ServiceClosed"),
      
-    // This topic does not exsit.
+     /* This topic does not exsit. */
      FAILEDOPERATION_TOPICNOTEXIST("FailedOperation.TopicNotExist"),
      
-    // The user already has a concurrency quota setting task in progress. Please try again later.
+     /* The user already has a concurrency quota setting task in progress. Please try again later. */
      FAILEDOPERATION_TOTALCONCURRENCYMEMORYINPROGRESS("FailedOperation.TotalConcurrencyMemoryInProgress"),
      
-    // The specified service has not been activated. Please submit a ticket for activation.
+     /* The specified service has not been activated. Please submit a ticket for activation. */
      FAILEDOPERATION_UNOPENEDSERVICE("FailedOperation.UnOpenedService"),
      
-    // Failed to update the alias.
+     /* Failed to update the alias. */
      FAILEDOPERATION_UPDATEALIAS("FailedOperation.UpdateAlias"),
      
-    // You cannot update code in the current function state. Please try again when the state is normal.
+     /* You cannot update code in the current function state. Please try again when the state is normal. */
      FAILEDOPERATION_UPDATEFUNCTIONCODE("FailedOperation.UpdateFunctionCode"),
      
-    // Failed to update the status
+     /* Failed to update the status */
      FAILEDOPERATION_UPDATESTATUS("FailedOperation.UpdateStatus"),
      
-    // The new status is the same as the previous one.
+     /* The new status is the same as the previous one. */
      FAILEDOPERATION_UPDATETRIGGERSTATUS("FailedOperation.UpdateTriggerStatus"),
      
-    // Internal error.
+     /* Internal error. */
      INTERNALERROR("InternalError"),
      
-    // Internal errors occurred during the creation of the apigw trigger.
+     /* Internal errors occurred during the creation of the apigw trigger. */
      INTERNALERROR_APIGATEWAY("InternalError.ApiGateway"),
      
-    // ckafka API failure.
+     /* ckafka API failure. */
      INTERNALERROR_CKAFKA("InternalError.Ckafka"),
      
-    // Failed to delete the cmq trigger.
+     /* Failed to delete the cmq trigger. */
      INTERNALERROR_CMQ("InternalError.Cmq"),
      
-    // Failed to update the trigger.
+     /* Failed to update the trigger. */
      INTERNALERROR_COS("InternalError.Cos"),
      
-    // ES error.
+     /* ES error. */
      INTERNALERROR_ES("InternalError.ES"),
      
-    // Internal service error
+     /* Internal service error */
      INTERNALERROR_EXCEPTION("InternalError.Exception"),
      
-    // Internal system error.
+     /* Internal system error. */
      INTERNALERROR_SYSTEM("InternalError.System"),
      
-    // Log parameter error
+     /* Log parameter error */
      INVALIDPARAMETER_CLS("InvalidParameter.Cls"),
      
-    // The value of `FunctionName` does not conform to the specification. Please fix it and try again. For more information, please visit https://tencentcs.com/5jXKFnBW.
+     /* The value of `FunctionName` does not conform to the specification. Please fix it and try again. For more information, please visit https://tencentcs.com/5jXKFnBW. */
      INVALIDPARAMETER_FUNCTIONNAME("InvalidParameter.FunctionName"),
      
-    // Function creation parameter error.
+     /* Function creation parameter error. */
      INVALIDPARAMETER_PARAMERROR("InvalidParameter.ParamError"),
      
-    // Invalid request parameter.
+     /* Invalid request parameter. */
      INVALIDPARAMETER_PAYLOAD("InvalidParameter.Payload"),
      
-    // Request size 
+     /* Request size  */
      INVALIDPARAMETER_REQUESTTOOLARGE("InvalidParameter.RequestTooLarge"),
      
-    // RoleCheck parameter error
+     /* RoleCheck parameter error */
      INVALIDPARAMETER_ROLECHECK("InvalidParameter.RoleCheck"),
      
-    // Incorrect `RoutingConfig` parameter.
+     /* Incorrect `RoutingConfig` parameter. */
      INVALIDPARAMETER_ROUTINGCONFIG("InvalidParameter.RoutingConfig"),
      
-    // Incorrect parameter value.
+     /* Incorrect parameter value. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // Invalid `Action` value. For more information, go to https://tencentcs.com/5jXKFnBW.
+     /* Invalid `Action` value. For more information, go to https://tencentcs.com/5jXKFnBW. */
      INVALIDPARAMETERVALUE_ACTION("InvalidParameterValue.Action"),
      
-    // Incorrect `AdditionalVersionWeights` parameter.
+     /* Incorrect `AdditionalVersionWeights` parameter. */
      INVALIDPARAMETERVALUE_ADDITIONALVERSIONWEIGHTS("InvalidParameterValue.AdditionalVersionWeights"),
      
-    // The default alias cannot be deleted. Please check and try again.
+     /* The default alias cannot be deleted. Please check and try again. */
      INVALIDPARAMETERVALUE_ALIAS("InvalidParameterValue.Alias"),
      
-    // ApiGateway parameter error.
+     /* ApiGateway parameter error. */
      INVALIDPARAMETERVALUE_APIGATEWAY("InvalidParameterValue.ApiGateway"),
      
-    // The value of Args is incorrect.
+     /* The value of Args is incorrect. */
      INVALIDPARAMETERVALUE_ARGS("InvalidParameterValue.Args"),
      
-    // The parameter for async retry configuration of the function is invalid.
+     /* The parameter for async retry configuration of the function is invalid. */
      INVALIDPARAMETERVALUE_ASYNCTRIGGERCONFIG("InvalidParameterValue.AsyncTriggerConfig"),
      
-    // Cdn error.
+     /* Cdn error. */
      INVALIDPARAMETERVALUE_CDN("InvalidParameterValue.Cdn"),
      
-    // Ckafka error.
+     /* Ckafka error. */
      INVALIDPARAMETERVALUE_CKAFKA("InvalidParameterValue.Ckafka"),
      
-    // Function running parameter error
+     /* Function running parameter error */
      INVALIDPARAMETERVALUE_CLIENTCONTEXT("InvalidParameterValue.ClientContext"),
      
-    // Cmq error.
+     /* Cmq error. */
      INVALIDPARAMETERVALUE_CMQ("InvalidParameterValue.Cmq"),
      
-    // Code error.
+     /* Code error. */
      INVALIDPARAMETERVALUE_CODE("InvalidParameterValue.Code"),
      
-    // CodeSecret error.
+     /* CodeSecret error. */
      INVALIDPARAMETERVALUE_CODESECRET("InvalidParameterValue.CodeSecret"),
      
-    // CodeSource error.
+     /* CodeSource error. */
      INVALIDPARAMETERVALUE_CODESOURCE("InvalidParameterValue.CodeSource"),
      
-    // The value of Command[Entrypoint] is incorrect.
+     /* The value of Command[Entrypoint] is incorrect. */
      INVALIDPARAMETERVALUE_COMMAND("InvalidParameterValue.Command"),
      
-    // Incorrect `CompatibleRuntimes` parameter.
+     /* Incorrect `CompatibleRuntimes` parameter. */
      INVALIDPARAMETERVALUE_COMPATIBLERUNTIMES("InvalidParameterValue.CompatibleRuntimes"),
      
-    // Incorrect `Content` parameter.
+     /* Incorrect `Content` parameter. */
      INVALIDPARAMETERVALUE_CONTENT("InvalidParameterValue.Content"),
      
-    // Cos error.
+     /* Cos error. */
      INVALIDPARAMETERVALUE_COS("InvalidParameterValue.Cos"),
      
-    // Invalid CosBucketName.
+     /* Invalid CosBucketName. */
      INVALIDPARAMETERVALUE_COSBUCKETNAME("InvalidParameterValue.CosBucketName"),
      
-    // The value of CosBucketRegion is invalid. Please modify and try again. See: https://tencentcs.com/5jXKFnBW
+     /* The value of CosBucketRegion is invalid. Please modify and try again. See: https://tencentcs.com/5jXKFnBW */
      INVALIDPARAMETERVALUE_COSBUCKETREGION("InvalidParameterValue.CosBucketRegion"),
      
-    // COS notification rule conflict
+     /* COS notification rule conflict */
      INVALIDPARAMETERVALUE_COSNOTIFYRULECONFLICT("InvalidParameterValue.CosNotifyRuleConflict"),
      
-    // Invalid CosObjectName.
+     /* Invalid CosObjectName. */
      INVALIDPARAMETERVALUE_COSOBJECTNAME("InvalidParameterValue.CosObjectName"),
      
-    // CustomArgument exceeds the length limit.
+     /* CustomArgument exceeds the length limit. */
      INVALIDPARAMETERVALUE_CUSTOMARGUMENT("InvalidParameterValue.CustomArgument"),
      
-    // DateTime error.
+     /* DateTime error. */
      INVALIDPARAMETERVALUE_DATETIME("InvalidParameterValue.DateTime"),
      
-    // Failed to create the default namespace.
+     /* Failed to create the default namespace. */
      INVALIDPARAMETERVALUE_DEFAULTNAMESPACE("InvalidParameterValue.DefaultNamespace"),
      
-    // The code parameter of the function template corresponding with the DemoID is error.
+     /* The code parameter of the function template corresponding with the DemoID is error. */
      INVALIDPARAMETERVALUE_DEMO("InvalidParameterValue.Demo"),
      
-    // The DemoId does not exist.
+     /* The DemoId does not exist. */
      INVALIDPARAMETERVALUE_DEMOID("InvalidParameterValue.DemoId"),
      
-    // Description error.
+     /* Description error. */
      INVALIDPARAMETERVALUE_DESCRIPTION("InvalidParameterValue.Description"),
      
-    // The configuration of the environment variable DNS[OS_NAMESERVER] is incorrect.
+     /* The configuration of the environment variable DNS[OS_NAMESERVER] is incorrect. */
      INVALIDPARAMETERVALUE_DNSINFO("InvalidParameterValue.DnsInfo"),
      
-    // The value of `Enable` does not conform to the specification. Please fix it and try again. For more information, please visit https://tencentcs.com/5jXKFnBW.
+     /* The value of `Enable` does not conform to the specification. Please fix it and try again. For more information, please visit https://tencentcs.com/5jXKFnBW. */
      INVALIDPARAMETERVALUE_ENABLE("InvalidParameterValue.Enable"),
      
-    // Environment error.
+     /* Environment error. */
      INVALIDPARAMETERVALUE_ENVIRONMENT("InvalidParameterValue.Environment"),
      
-    // Filters parameter error.
+     /* Filters parameter error. */
      INVALIDPARAMETERVALUE_FILTERS("InvalidParameterValue.Filters"),
      
-    // The value of `FunctionName` is incorrect. See https://tencentcs.com/5jXKFnBW
+     /* The value of `FunctionName` is incorrect. See https://tencentcs.com/5jXKFnBW */
      INVALIDPARAMETERVALUE_FUNCTION("InvalidParameterValue.Function"),
      
-    // The function does not exist.
+     /* The function does not exist. */
      INVALIDPARAMETERVALUE_FUNCTIONNAME("InvalidParameterValue.FunctionName"),
      
-    // Request ID error
+     /* Request ID error */
      INVALIDPARAMETERVALUE_FUNCTIONREQUESTID("InvalidParameterValue.FunctionRequestId"),
      
-    // FunctionType error
+     /* FunctionType error */
      INVALIDPARAMETERVALUE_FUNCTIONTYPE("InvalidParameterValue.FunctionType"),
      
-    // The format of GitBranch is incorrect. 
+     /* The format of GitBranch is incorrect.  */
      INVALIDPARAMETERVALUE_GITBRANCH("InvalidParameterValue.GitBranch"),
      
-    // The format of GitDirectory is incorrect.
+     /* The format of GitDirectory is incorrect. */
      INVALIDPARAMETERVALUE_GITDIRECTORY("InvalidParameterValue.GitDirectory"),
      
-    // The format of GitPassword is incorrect.
+     /* The format of GitPassword is incorrect. */
      INVALIDPARAMETERVALUE_GITPASSWORD("InvalidParameterValue.GitPassword"),
      
-    // The format of GitUrl is incorrect.
+     /* The format of GitUrl is incorrect. */
      INVALIDPARAMETERVALUE_GITURL("InvalidParameterValue.GitUrl"),
      
-    // The format of GitUserName is incorrect.
+     /* The format of GitUserName is incorrect. */
      INVALIDPARAMETERVALUE_GITUSERNAME("InvalidParameterValue.GitUserName"),
      
-    // Handler error.
+     /* Handler error. */
      INVALIDPARAMETERVALUE_HANDLER("InvalidParameterValue.Handler"),
      
-    // ImageType error
+     /* ImageType error */
      INVALIDPARAMETERVALUE_IMAGETYPE("InvalidParameterValue.ImageType"),
      
-    // The input of imageUri is incorrect.
+     /* The input of imageUri is incorrect. */
      INVALIDPARAMETERVALUE_IMAGEURI("InvalidParameterValue.ImageUri"),
      
-    // Invalid InlineZipFile.
+     /* Invalid InlineZipFile. */
      INVALIDPARAMETERVALUE_INLINEZIPFILE("InvalidParameterValue.InlineZipFile"),
      
-    // The `InvokeType` value does not conform to the specification. Please fix it and try again.
+     /* The `InvokeType` value does not conform to the specification. Please fix it and try again. */
      INVALIDPARAMETERVALUE_INVOKETYPE("InvalidParameterValue.InvokeType"),
      
-    // Incorrect `LayerName` parameter.
+     /* Incorrect `LayerName` parameter. */
      INVALIDPARAMETERVALUE_LAYERNAME("InvalidParameterValue.LayerName"),
      
-    // Limit error.
+     /* Limit error. */
      INVALIDPARAMETERVALUE_LIMIT("InvalidParameterValue.Limit"),
      
-    // The parameter exceeds the length limit.
+     /* The parameter exceeds the length limit. */
      INVALIDPARAMETERVALUE_LIMITEXCEEDED("InvalidParameterValue.LimitExceeded"),
      
-    // MinCapacity parameter input error.
+     /* MinCapacity parameter input error. */
      INVALIDPARAMETERVALUE_MINCAPACITY("InvalidParameterValue.MinCapacity"),
      
-    // Incorrect `Name` parameter.
+     /* Incorrect `Name` parameter. */
      INVALIDPARAMETERVALUE_NAME("InvalidParameterValue.Name"),
      
-    // Namespace error.
+     /* Namespace error. */
      INVALIDPARAMETERVALUE_NAMESPACE("InvalidParameterValue.Namespace"),
      
-    // Incorrect Namespace. A namespace contains up to 30 characters of letters, digits, hyphens (-), and underscores (_).
+     /* Incorrect Namespace. A namespace contains up to 30 characters of letters, digits, hyphens (-), and underscores (_). */
      INVALIDPARAMETERVALUE_NAMESPACEINVALID("InvalidParameterValue.NamespaceInvalid"),
      
-    // Invalid offset.
+     /* Invalid offset. */
      INVALIDPARAMETERVALUE_OFFSET("InvalidParameterValue.Offset"),
      
-    // Order error.
+     /* Order error. */
      INVALIDPARAMETERVALUE_ORDER("InvalidParameterValue.Order"),
      
-    // The value of `OrderBy` does not conform to the specification. Please fix it and try again. For more information, please visit https://tencentcs.com/5jXKFnBW.
+     /* The value of `OrderBy` does not conform to the specification. Please fix it and try again. For more information, please visit https://tencentcs.com/5jXKFnBW. */
      INVALIDPARAMETERVALUE_ORDERBY("InvalidParameterValue.OrderBy"),
      
-    // The input parameter is not in the standard JSON format.
+     /* The input parameter is not in the standard JSON format. */
      INVALIDPARAMETERVALUE_PARAM("InvalidParameterValue.Param"),
      
-    // Cron expression of the scheduled action already exists
+     /* Cron expression of the scheduled action already exists */
      INVALIDPARAMETERVALUE_PROVISIONTRIGGERCRONCONFIGDUPLICATE("InvalidParameterValue.ProvisionTriggerCronConfigDuplicate"),
      
-    // TriggerName input parameter error
+     /* TriggerName input parameter error */
      INVALIDPARAMETERVALUE_PROVISIONTRIGGERNAME("InvalidParameterValue.ProvisionTriggerName"),
      
-    // TriggerName already exists
+     /* TriggerName already exists */
      INVALIDPARAMETERVALUE_PROVISIONTRIGGERNAMEDUPLICATE("InvalidParameterValue.ProvisionTriggerNameDuplicate"),
      
-    // ProvisionType input parameter error
+     /* ProvisionType input parameter error */
      INVALIDPARAMETERVALUE_PROVISIONTYPE("InvalidParameterValue.ProvisionType"),
      
-    // Unsupported function version.
+     /* Unsupported function version. */
      INVALIDPARAMETERVALUE_QUALIFIER("InvalidParameterValue.Qualifier"),
      
-    // Version parameter error
+     /* Version parameter error */
      INVALIDPARAMETERVALUE_QUERYVERSION("InvalidParameterValue.QueryVersion"),
      
-    // The value Enterprise Edition image ID [RegistryId] is incorrect.
+     /* The value Enterprise Edition image ID [RegistryId] is incorrect. */
      INVALIDPARAMETERVALUE_REGISTRYID("InvalidParameterValue.RegistryId"),
      
-    // Invalid RetCode
+     /* Invalid RetCode */
      INVALIDPARAMETERVALUE_RETCODE("InvalidParameterValue.RetCode"),
      
-    // The value of `RoutingConfig` does not conform to the specification. Please fix it and try again. For more information, please visit https://tencentcs.com/5jXKFnBW.
+     /* The value of `RoutingConfig` does not conform to the specification. Please fix it and try again. For more information, please visit https://tencentcs.com/5jXKFnBW. */
      INVALIDPARAMETERVALUE_ROUTINGCONFIG("InvalidParameterValue.RoutingConfig"),
      
-    // Runtime error.
+     /* Runtime error. */
      INVALIDPARAMETERVALUE_RUNTIME("InvalidParameterValue.Runtime"),
      
-    // The searchkey is not `Keyword`, `Tag`, or `Runtime`.
+     /* The searchkey is not `Keyword`, `Tag`, or `Runtime`. */
      INVALIDPARAMETERVALUE_SEARCHKEY("InvalidParameterValue.SearchKey"),
      
-    // SecretInfo error
+     /* SecretInfo error */
      INVALIDPARAMETERVALUE_SECRETINFO("InvalidParameterValue.SecretInfo"),
      
-    // Invalid ServiceName.
+     /* Invalid ServiceName. */
      INVALIDPARAMETERVALUE_SERVICENAME("InvalidParameterValue.ServiceName"),
      
-    // The value of `Stamp` does not meet the specification. Please fix it and try again.
+     /* The value of `Stamp` does not meet the specification. Please fix it and try again. */
      INVALIDPARAMETERVALUE_STAMP("InvalidParameterValue.Stamp"),
      
-    // The start time is incorrect.
+     /* The start time is incorrect. */
      INVALIDPARAMETERVALUE_STARTTIME("InvalidParameterValue.StartTime"),
      
-    // You need to specify both the start time and the end time.
+     /* You need to specify both the start time and the end time. */
      INVALIDPARAMETERVALUE_STARTTIMEORENDTIME("InvalidParameterValue.StartTimeOrEndTime"),
      
-    // The `Status` value does not conform to the specification. Please fix it and try again.
+     /* The `Status` value does not conform to the specification. Please fix it and try again. */
      INVALIDPARAMETERVALUE_STATUS("InvalidParameterValue.Status"),
      
-    // Invalid TempCosObjectName.
+     /* Invalid TempCosObjectName. */
      INVALIDPARAMETERVALUE_TEMPCOSOBJECTNAME("InvalidParameterValue.TempCosObjectName"),
      
-    // TrackingTarget parameter error
+     /* TrackingTarget parameter error */
      INVALIDPARAMETERVALUE_TRACKINGTARGET("InvalidParameterValue.TrackingTarget"),
      
-    // TriggerCronConfig input parameter error
+     /* TriggerCronConfig input parameter error */
      INVALIDPARAMETERVALUE_TRIGGERCRONCONFIG("InvalidParameterValue.TriggerCronConfig"),
      
-    // The interval of triggering specified in TriggerCronConfig is smaller than the specified value.
+     /* The interval of triggering specified in TriggerCronConfig is smaller than the specified value. */
      INVALIDPARAMETERVALUE_TRIGGERCRONCONFIGTIMEINTERVAL("InvalidParameterValue.TriggerCronConfigTimeInterval"),
      
-    // TriggerDesc error.
+     /* TriggerDesc error. */
      INVALIDPARAMETERVALUE_TRIGGERDESC("InvalidParameterValue.TriggerDesc"),
      
-    // TriggerName error.
+     /* TriggerName error. */
      INVALIDPARAMETERVALUE_TRIGGERNAME("InvalidParameterValue.TriggerName"),
      
-    // TriggerProvisionedConcurrencyNum input parameter error
+     /* TriggerProvisionedConcurrencyNum input parameter error */
      INVALIDPARAMETERVALUE_TRIGGERPROVISIONEDCONCURRENCYNUM("InvalidParameterValue.TriggerProvisionedConcurrencyNum"),
      
-    // Type error.
+     /* Type error. */
      INVALIDPARAMETERVALUE_TYPE("InvalidParameterValue.Type"),
      
-    // A non-standard zip file was detected. Please recompress and try again.
+     /* A non-standard zip file was detected. Please recompress and try again. */
      INVALIDPARAMETERVALUE_ZIPFILE("InvalidParameterValue.ZipFile"),
      
-    // Failed to Base64-decode the compressed file: `Incorrect padding`. Please fix it and try again.
+     /* Failed to Base64-decode the compressed file: `Incorrect padding`. Please fix it and try again. */
      INVALIDPARAMETERVALUE_ZIPFILEBASE64BINASCIIERROR("InvalidParameterValue.ZipFileBase64BinasciiError"),
      
-    // The number of aliases exceeds the upper limit.
+     /* The number of aliases exceeds the upper limit. */
      LIMITEXCEEDED_ALIAS("LimitExceeded.Alias"),
      
-    // The Cdn usage exceeds the upper limit.
+     /* The Cdn usage exceeds the upper limit. */
      LIMITEXCEEDED_CDN("LimitExceeded.Cdn"),
      
-    // Reached the upper limit of function versions enabling image acceleration
+     /* Reached the upper limit of function versions enabling image acceleration */
      LIMITEXCEEDED_CONTAINERIMAGEACCELERATE("LimitExceeded.ContainerImageAccelerate"),
      
-    // Reached the upper limit of function versions enabling image acceleration
+     /* Reached the upper limit of function versions enabling image acceleration */
      LIMITEXCEEDED_CONTAINERIMAGEACCELERATEQUOTA("LimitExceeded.ContainerImageAccelerateQuota"),
      
-    // If the number of functions exceeds the upper limit, you can apply for an increase by [submitting a ticket](https://intl.cloud.tencent.com/act/event/Online_service?from=scf%7Cindex?from_cn_redirect=1).
+     /* If the number of functions exceeds the upper limit, you can apply for an increase by [submitting a ticket](https://intl.cloud.tencent.com/act/event/Online_service?from=scf%7Cindex?from_cn_redirect=1). */
      LIMITEXCEEDED_FUNCTION("LimitExceeded.Function"),
      
-    // The number of functions under the same topic exceeds the upper limit.
+     /* The number of functions under the same topic exceeds the upper limit. */
      LIMITEXCEEDED_FUNCTIONONTOPIC("LimitExceeded.FunctionOnTopic"),
      
-    // The value of `FunctionProvisionedConcurrencyMemory` has reached the upper limit. You can submit a ticket to increase it at https://mc.tencent.com/dI7DzbBV.
+     /* The value of `FunctionProvisionedConcurrencyMemory` has reached the upper limit. You can submit a ticket to increase it at https://mc.tencent.com/dI7DzbBV. */
      LIMITEXCEEDED_FUNCTIONPROVISIONEDCONCURRENCYMEMORY("LimitExceeded.FunctionProvisionedConcurrencyMemory"),
      
-    // The function's reserved concurrency memory has exceeded the limit.
+     /* The function's reserved concurrency memory has exceeded the limit. */
      LIMITEXCEEDED_FUNCTIONRESERVEDCONCURRENCYMEMORY("LimitExceeded.FunctionReservedConcurrencyMemory"),
      
-    // The value of `FunctionTotalProvisionedConcurrencyMemory` has reached the upper limit. You can submit a ticket to increase it at https://mc.tencent.com/dI7DzbBV.
+     /* The value of `FunctionTotalProvisionedConcurrencyMemory` has reached the upper limit. You can submit a ticket to increase it at https://mc.tencent.com/dI7DzbBV. */
      LIMITEXCEEDED_FUNCTIONTOTALPROVISIONEDCONCURRENCYMEMORY("LimitExceeded.FunctionTotalProvisionedConcurrencyMemory"),
      
-    // The total amount of provisioned concurrency of the function has exceeded the limit.
+     /* The total amount of provisioned concurrency of the function has exceeded the limit. */
      LIMITEXCEEDED_FUNCTIONTOTALPROVISIONEDCONCURRENCYNUM("LimitExceeded.FunctionTotalProvisionedConcurrencyNum"),
      
-    // The number of layer versions exceeds the upper limit.
+     /* The number of layer versions exceeds the upper limit. */
      LIMITEXCEEDED_LAYERVERSIONS("LimitExceeded.LayerVersions"),
      
-    // 
+     /*  */
      LIMITEXCEEDED_LAYERS("LimitExceeded.Layers"),
      
-    // Reached the upper limit of dynamic scaling.
+     /* Reached the upper limit of dynamic scaling. */
      LIMITEXCEEDED_MAXCAPACITY("LimitExceeded.MaxCapacity"),
      
-    // The memory exceeds the upper limit.
+     /* The memory exceeds the upper limit. */
      LIMITEXCEEDED_MEMORY("LimitExceeded.Memory"),
      
-    // The message retention period in the async retry configuration of the function exceeds the limit.
+     /* The message retention period in the async retry configuration of the function exceeds the limit. */
      LIMITEXCEEDED_MSGTTL("LimitExceeded.MsgTTL"),
      
-    // If the number of namespaces exceeds the upper limit, you can apply for an increase by [submitting a ticket](https://intl.cloud.tencent.com/act/event/Online_service?from=scf%7Cindex?from_cn_redirect=1).
+     /* If the number of namespaces exceeds the upper limit, you can apply for an increase by [submitting a ticket](https://intl.cloud.tencent.com/act/event/Online_service?from=scf%7Cindex?from_cn_redirect=1). */
      LIMITEXCEEDED_NAMESPACE("LimitExceeded.Namespace"),
      
-    // Offset exceeds the upper limit.
+     /* Offset exceeds the upper limit. */
      LIMITEXCEEDED_OFFSET("LimitExceeded.Offset"),
      
-    // The number of provisioned concurrency specified for the scheduled action is too large.
+     /* The number of provisioned concurrency specified for the scheduled action is too large. */
      LIMITEXCEEDED_PROVISIONTRIGGERACTION("LimitExceeded.ProvisionTriggerAction"),
      
-    // The interval of triggering is too short.
+     /* The interval of triggering is too short. */
      LIMITEXCEEDED_PROVISIONTRIGGERINTERVAL("LimitExceeded.ProvisionTriggerInterval"),
      
-    // Reached the upper limit of quota
+     /* Reached the upper limit of quota */
      LIMITEXCEEDED_QUOTA("LimitExceeded.Quota"),
      
-    // The number of retry attempts in the async retry configuration of the function exceeds the limit.
+     /* The number of retry attempts in the async retry configuration of the function exceeds the limit. */
      LIMITEXCEEDED_RETRYNUM("LimitExceeded.RetryNum"),
      
-    // Timeout exceeds the upper limit.
+     /* Timeout exceeds the upper limit. */
      LIMITEXCEEDED_TIMEOUT("LimitExceeded.Timeout"),
      
-    // The account concurrency memory has exceeded the limit.
+     /* The account concurrency memory has exceeded the limit. */
      LIMITEXCEEDED_TOTALCONCURRENCYMEMORY("LimitExceeded.TotalConcurrencyMemory"),
      
-    // If the number of triggers exceeds the upper limit, you can apply for an increase by [submitting a ticket](https://intl.cloud.tencent.com/act/event/Online_service?from=scf%7Cindex?from_cn_redirect=1).
+     /* If the number of triggers exceeds the upper limit, you can apply for an increase by [submitting a ticket](https://intl.cloud.tencent.com/act/event/Online_service?from=scf%7Cindex?from_cn_redirect=1). */
      LIMITEXCEEDED_TRIGGER("LimitExceeded.Trigger"),
      
-    // The value of `UserTotalConcurrencyMemory` has reached the upper limit. You can submit a ticket to increase it at https://tencentcs.com/7Fixwt63.
+     /* The value of `UserTotalConcurrencyMemory` has reached the upper limit. You can submit a ticket to increase it at https://tencentcs.com/7Fixwt63. */
      LIMITEXCEEDED_USERTOTALCONCURRENCYMEMORY("LimitExceeded.UserTotalConcurrencyMemory"),
      
-    // Missing parameter.
+     /* Missing parameter. */
      MISSINGPARAMETER("MissingParameter"),
      
-    // This account has been isolated.
+     /* This account has been isolated. */
      OPERATIONDENIED_ACCOUNTISOLATE("OperationDenied.AccountIsolate"),
      
-    // 
+     /*  */
      OPERATIONDENIED_ACCOUNTNOTEXISTS("OperationDenied.AccountNotExists"),
      
-    // The resource is in use.
+     /* The resource is in use. */
      RESOURCEINUSE("ResourceInUse"),
      
-    // The alias is in use.
+     /* The alias is in use. */
      RESOURCEINUSE_ALIAS("ResourceInUse.Alias"),
      
-    // Cdn is in use.
+     /* Cdn is in use. */
      RESOURCEINUSE_CDN("ResourceInUse.Cdn"),
      
-    // Cmq is in use.
+     /* Cmq is in use. */
      RESOURCEINUSE_CMQ("ResourceInUse.Cmq"),
      
-    // Cos is in use.
+     /* Cos is in use. */
      RESOURCEINUSE_COS("ResourceInUse.Cos"),
      
-    // This FunctionName already exists.
+     /* This FunctionName already exists. */
      RESOURCEINUSE_FUNCTIONNAME("ResourceInUse.FunctionName"),
      
-    // The layer version is in use.
+     /* The layer version is in use. */
      RESOURCEINUSE_LAYERVERSION("ResourceInUse.LayerVersion"),
      
-    // This Namespace already exists.
+     /* This Namespace already exists. */
      RESOURCEINUSE_NAMESPACE("ResourceInUse.Namespace"),
      
-    // This TriggerName already exists.
+     /* This TriggerName already exists. */
      RESOURCEINUSE_TRIGGER("ResourceInUse.Trigger"),
      
-    // This TriggerName already exists.
+     /* This TriggerName already exists. */
      RESOURCEINUSE_TRIGGERNAME("ResourceInUse.TriggerName"),
      
-    // Insufficient COS resources.
+     /* Insufficient COS resources. */
      RESOURCEINSUFFICIENT_COS("ResourceInsufficient.COS"),
      
-    // The resource does not exist.
+     /* The resource does not exist. */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-    // The alias does not exist.
+     /* The alias does not exist. */
      RESOURCENOTFOUND_ALIAS("ResourceNotFound.Alias"),
      
-    // The specified `AsyncEvent` was not found. Please create it and try again.
+     /* The specified `AsyncEvent` was not found. Please create it and try again. */
      RESOURCENOTFOUND_ASYNCEVENT("ResourceNotFound.AsyncEvent"),
      
-    // The tag key does not exist.
+     /* The tag key does not exist. */
      RESOURCENOTFOUND_ATTACHEDTAGKEYNOTFOUND("ResourceNotFound.AttachedTagKeyNotFound"),
      
-    // Cdn does not exist.
+     /* Cdn does not exist. */
      RESOURCENOTFOUND_CDN("ResourceNotFound.Cdn"),
      
-    // Ckafka does not exist.
+     /* Ckafka does not exist. */
      RESOURCENOTFOUND_CKAFKA("ResourceNotFound.Ckafka"),
      
-    // Cmq does not exist.
+     /* Cmq does not exist. */
      RESOURCENOTFOUND_CMQ("ResourceNotFound.Cmq"),
      
-    // Cos does not exist.
+     /* Cos does not exist. */
      RESOURCENOTFOUND_COS("ResourceNotFound.Cos"),
      
-    // The function does not exist.
+     /* The function does not exist. */
      RESOURCENOTFOUND_FUNCTION("ResourceNotFound.Function"),
      
-    // The function does not exist.
+     /* The function does not exist. */
      RESOURCENOTFOUND_FUNCTIONNAME("ResourceNotFound.FunctionName"),
      
-    // The function version does not exist.
+     /* The function version does not exist. */
      RESOURCENOTFOUND_FUNCTIONVERSION("ResourceNotFound.FunctionVersion"),
      
-    // Failed to find the specified `ImageConfig`. Please create it first.
+     /* Failed to find the specified `ImageConfig`. Please create it first. */
      RESOURCENOTFOUND_IMAGECONFIG("ResourceNotFound.ImageConfig"),
      
-    // The layer does not exist.
+     /* The layer does not exist. */
      RESOURCENOTFOUND_LAYER("ResourceNotFound.Layer"),
      
-    // The layer version does not exist.
+     /* The layer version does not exist. */
      RESOURCENOTFOUND_LAYERVERSION("ResourceNotFound.LayerVersion"),
      
-    // Namespace does not exist.
+     /* Namespace does not exist. */
      RESOURCENOTFOUND_NAMESPACE("ResourceNotFound.Namespace"),
      
-    // The version does not exist.
+     /* The version does not exist. */
      RESOURCENOTFOUND_QUALIFIER("ResourceNotFound.Qualifier"),
      
-    // The role does not exist.
+     /* The role does not exist. */
      RESOURCENOTFOUND_ROLECHECK("ResourceNotFound.RoleCheck"),
      
-    // Timer does not exist.
+     /* Timer does not exist. */
      RESOURCENOTFOUND_TIMER("ResourceNotFound.Timer"),
      
-    // The concurrency memory quota resource was not found.
+     /* The concurrency memory quota resource was not found. */
      RESOURCENOTFOUND_TOTALCONCURRENCYMEMORY("ResourceNotFound.TotalConcurrencyMemory"),
      
-    // The trigger does not exist.
+     /* The trigger does not exist. */
      RESOURCENOTFOUND_TRIGGER("ResourceNotFound.Trigger"),
      
-    // The version does not exist.
+     /* The version does not exist. */
      RESOURCENOTFOUND_VERSION("ResourceNotFound.Version"),
      
-    // Your balance is insufficient. Please top up first.
+     /* Your balance is insufficient. Please top up first. */
      RESOURCEUNAVAILABLE_INSUFFICIENTBALANCE("ResourceUnavailable.InsufficientBalance"),
      
-    // Unauthorized operation.
+     /* Unauthorized operation. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-    // CAM authentication failed.
+     /* CAM authentication failed. */
      UNAUTHORIZEDOPERATION_CAM("UnauthorizedOperation.CAM"),
      
-    // You do not have permissions to access the code.
+     /* You do not have permissions to access the code. */
      UNAUTHORIZEDOPERATION_CODESECRET("UnauthorizedOperation.CodeSecret"),
      
-    // You do not have permissions.
+     /* You do not have permissions. */
      UNAUTHORIZEDOPERATION_CREATETRIGGER("UnauthorizedOperation.CreateTrigger"),
      
-    // Unauthorized operation.
+     /* Unauthorized operation. */
      UNAUTHORIZEDOPERATION_DELETEFUNCTION("UnauthorizedOperation.DeleteFunction"),
      
-    // You do not have permissions.
+     /* You do not have permissions. */
      UNAUTHORIZEDOPERATION_DELETETRIGGER("UnauthorizedOperation.DeleteTrigger"),
      
-    // This API is not called from the console.
+     /* This API is not called from the console. */
      UNAUTHORIZEDOPERATION_NOTMC("UnauthorizedOperation.NotMC"),
      
-    // Region error.
+     /* Region error. */
      UNAUTHORIZEDOPERATION_REGION("UnauthorizedOperation.Region"),
      
-    // Not authorized to access your COS resources.
+     /* Not authorized to access your COS resources. */
      UNAUTHORIZEDOPERATION_ROLE("UnauthorizedOperation.Role"),
      
-    // The `Appid` of TempCos is not consistent with the APPID of the request account.
+     /* The `Appid` of TempCos is not consistent with the APPID of the request account. */
      UNAUTHORIZEDOPERATION_TEMPCOSAPPID("UnauthorizedOperation.TempCosAppid"),
      
-    // Operation failed.
+     /* Operation failed. */
      UNAUTHORIZEDOPERATION_UPDATEFUNCTIONCODE("UnauthorizedOperation.UpdateFunctionCode"),
      
-    // You are not authorized for the operation.
+     /* You are not authorized for the operation. */
      UNAUTHORIZEDOPERATION_UPDATETRIGGERSTATUS("UnauthorizedOperation.UpdateTriggerStatus"),
      
-    // Unsupported operation.
+     /* Unsupported operation. */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
-    // The resource is bound to an alias, and the current operation cannot be performed. Please unbind the alias and try again.
+     /* The resource is bound to an alias, and the current operation cannot be performed. Please unbind the alias and try again. */
      UNSUPPORTEDOPERATION_ALIASBIND("UnsupportedOperation.AliasBind"),
      
-    // Cdn is not supported.
+     /* Cdn is not supported. */
      UNSUPPORTEDOPERATION_CDN("UnsupportedOperation.Cdn"),
      
-    // 
+     /*  */
      UNSUPPORTEDOPERATION_COPYFUNCTION("UnsupportedOperation.CopyFunction"),
      
-    // Cos operation is not supported.
+     /* Cos operation is not supported. */
      UNSUPPORTEDOPERATION_COS("UnsupportedOperation.Cos"),
      
-    // The specified EipFixed does not exist.
+     /* The specified EipFixed does not exist. */
      UNSUPPORTEDOPERATION_EIPFIXED("UnsupportedOperation.EipFixed"),
      
-    // Unsupported region.
+     /* Unsupported region. */
      UNSUPPORTEDOPERATION_NOTSUPPORTREGION("UnsupportedOperation.NotSupportRegion"),
      
-    // 
+     /*  */
      UNSUPPORTEDOPERATION_PUBLISHVERSION("UnsupportedOperation.PublishVersion"),
      
-    // This region is not supported.
+     /* This region is not supported. */
      UNSUPPORTEDOPERATION_REGION("UnsupportedOperation.Region"),
      
-    // Trigger operation is not supported.
+     /* Trigger operation is not supported. */
      UNSUPPORTEDOPERATION_TRIGGER("UnsupportedOperation.Trigger"),
      
-    // The specified configuration is not supported. Please modify and try again.
+     /* The specified configuration is not supported. Please modify and try again. */
      UNSUPPORTEDOPERATION_UPDATEFUNCTIONEVENTINVOKECONFIG("UnsupportedOperation.UpdateFunctionEventInvokeConfig"),
      
-    // The specified VpcConfig does not exist.
+     /* The specified VpcConfig does not exist. */
      UNSUPPORTEDOPERATION_VPCCONFIG("UnsupportedOperation.VpcConfig");
      
     private String value;

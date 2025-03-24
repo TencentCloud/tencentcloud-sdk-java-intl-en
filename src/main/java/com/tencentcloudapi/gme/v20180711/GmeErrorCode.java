@@ -1,90 +1,90 @@
 package com.tencentcloudapi.gme.v20180711;
 public enum GmeErrorCode {
-    // Operation failed.
+     /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
-    // Operation not allowed as your account is in arrears.
+     /* Operation not allowed as your account is in arrears. */
      FAILEDOPERATION_USERFEENEGATIVE("FailedOperation.UserFeeNegative"),
      
-    // Internal error.
+     /* Internal error. */
      INTERNALERROR("InternalError"),
      
-    // Incorrect parameter.
+     /* Incorrect parameter. */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // Invalid date.
+     /* Invalid date. */
      INVALIDPARAMETER_DATEINVALID("InvalidParameter.DateInvalid"),
      
-    // The entered query date range is longer than 60 days.
+     /* The entered query date range is longer than 60 days. */
      INVALIDPARAMETER_DATEOUTOFSIXTYDAYS("InvalidParameter.DateOutOfSixtyDays"),
      
-    // Incorrect tag.
+     /* Incorrect tag. */
      INVALIDPARAMETER_TAGKEY("InvalidParameter.TagKey"),
      
-    // Incorrect query time range.
+     /* Incorrect query time range. */
      INVALIDPARAMETER_TIMERANGEERROR("InvalidParameter.TimeRangeError"),
      
-    // Invalid BizId.(SDKAppid)
+     /* Invalid BizId.(SDKAppid) */
      INVALIDPARAMETERVALUE_INVALIDBIZID("InvalidParameterValue.InvalidBizId"),
      
-    // Invalid RecordMode.
+     /* Invalid RecordMode. */
      INVALIDPARAMETERVALUE_INVALIDRECORDMODE("InvalidParameterValue.InvalidRecordMode"),
      
-    // Invalid RoomId.
+     /* Invalid RoomId. */
      INVALIDPARAMETERVALUE_INVALIDROOMID("InvalidParameterValue.InvalidRoomId"),
      
-    // Incorrect blocklist/allowlist format.
+     /* Incorrect blocklist/allowlist format. */
      INVALIDPARAMETERVALUE_INVALIDSUBSCRIBERECORDUSERIDS("InvalidParameterValue.InvalidSubscribeRecordUserIds"),
      
-    // The number of entries on the allowlist exceeds 20.
+     /* The number of entries on the allowlist exceeds 20. */
      INVALIDPARAMETERVALUE_INVALIDSUBSCRIBEUSERIDS("InvalidParameterValue.InvalidSubscribeUserIds"),
      
-    // Invalid taskid.
+     /* Invalid taskid. */
      INVALIDPARAMETERVALUE_INVALIDTASKID("InvalidParameterValue.InvalidTaskId"),
      
-    // The number of entries on the blocklist exceeds 20.
+     /* The number of entries on the blocklist exceeds 20. */
      INVALIDPARAMETERVALUE_INVALIDUNSUBSCRIBEUSERIDS("InvalidParameterValue.InvalidUNSubscribeUserIds"),
      
-    // The number of created applications has reached the upper limit.
+     /* The number of created applications has reached the upper limit. */
      LIMITEXCEEDED_APPLICATION("LimitExceeded.Application"),
      
-    // Parameter missing.
+     /* Parameter missing. */
      MISSINGPARAMETER("MissingParameter"),
      
-    // Operation denied.
+     /* Operation denied. */
      OPERATIONDENIED("OperationDenied"),
      
-    // The task already exists.
+     /* The task already exists. */
      RESOURCEINUSE_TASKINUSE("ResourceInUse.TaskInUse"),
      
-    // The resource does not exist.
+     /* The resource does not exist. */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-    // Incorrect application ID.
+     /* Incorrect application ID. */
      RESOURCENOTFOUND_BIZIDISNOTFOUND("ResourceNotFound.BizidIsNotFound"),
      
-    // The room does not exist.
+     /* The room does not exist. */
      RESOURCENOTFOUND_ROOMNOTFOUND("ResourceNotFound.RoomNotFound"),
      
-    // The task ID does not exist.
+     /* The task ID does not exist. */
      RESOURCENOTFOUND_TASKNOTFOUND("ResourceNotFound.TaskNotFound"),
      
-    // Unauthorized operation.
+     /* Unauthorized operation. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-    // Application creation is not authorized.
+     /* Application creation is not authorized. */
      UNAUTHORIZEDOPERATION_CREATEAPPDENIED("UnauthorizedOperation.CreateAppDenied"),
      
-    // Unverified user.
+     /* Unverified user. */
      UNAUTHORIZEDOPERATION_UNREALNAMEAUTH("UnauthorizedOperation.UnRealNameAuth"),
      
-    // Unknown parameter error.
+     /* Unknown parameter error. */
      UNKNOWNPARAMETER("UnknownParameter"),
      
-    // Operation unsupported.
+     /* Operation unsupported. */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
-    // The recording service is not activated.
+     /* The recording service is not activated. */
      UNSUPPORTEDOPERATION_SERVICENOTOPENED("UnsupportedOperation.ServiceNotOpened");
      
     private String value;

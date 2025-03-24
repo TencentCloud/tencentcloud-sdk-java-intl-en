@@ -1,57 +1,57 @@
 package com.tencentcloudapi.mdp.v20200527;
 public enum MdpErrorCode {
-    // Internal error.
+     /* Internal error. */
      INTERNALERROR("InternalError"),
      
-    // Invalid `ActionType`.
+     /* Invalid `ActionType`. */
      INVALIDPARAMETER_ACTIONTYPE("InvalidParameter.ActionType"),
      
-    // Incorrect authentication configuration.
+     /* Incorrect authentication configuration. */
      INVALIDPARAMETER_AUTHINFO("InvalidParameter.AuthInfo"),
      
-    // Invalid `CacheInfo` value
+     /* Invalid `CacheInfo` value */
      INVALIDPARAMETER_CACHEINFO("InvalidParameter.CacheInfo"),
      
-    // Invalid CDN playback domain name.
+     /* Invalid CDN playback domain name. */
      INVALIDPARAMETER_CDNDOMAIN("InvalidParameter.CdnDomain"),
      
-    // Invalid `ChannelId`.
+     /* Invalid `ChannelId`. */
      INVALIDPARAMETER_CHANNELID("InvalidParameter.ChannelId"),
      
-    // The quantity exceeds the limit.
+     /* The quantity exceeds the limit. */
      INVALIDPARAMETER_EXCEEDEDQUANTITYLIMIT("InvalidParameter.ExceededQuantityLimit"),
      
-    // Invalid `Id`.
+     /* Invalid `Id`. */
      INVALIDPARAMETER_ID("InvalidParameter.Id"),
      
-    // Invalid `LvbDomain`.
+     /* Invalid `LvbDomain`. */
      INVALIDPARAMETER_LVBDOMAIN("InvalidParameter.LvbDomain"),
      
-    // Invalid name.
+     /* Invalid name. */
      INVALIDPARAMETER_NAME("InvalidParameter.Name"),
      
-    // Failed to find the channel/input/output.
+     /* Failed to find the channel/input/output. */
      INVALIDPARAMETER_NOTFOUND("InvalidParameter.NotFound"),
      
-    // 
+     /*  */
      INVALIDPARAMETER_OUTPUTGROUPS("InvalidParameter.OutputGroups"),
      
-    // Invalid `PageNum`.
+     /* Invalid `PageNum`. */
      INVALIDPARAMETER_PAGENUM("InvalidParameter.PageNum"),
      
-    // Invalid `PageSize`.
+     /* Invalid `PageSize`. */
      INVALIDPARAMETER_PAGESIZE("InvalidParameter.PageSize"),
      
-    // Invalid `Points` value
+     /* Invalid `Points` value */
      INVALIDPARAMETER_POINTS("InvalidParameter.Points"),
      
-    // Invalid protocol.
+     /* Invalid protocol. */
      INVALIDPARAMETER_PROTOCOL("InvalidParameter.Protocol"),
      
-    // Invalid ad insertion configuration parameters.
+     /* Invalid ad insertion configuration parameters. */
      INVALIDPARAMETER_SSAIINFO("InvalidParameter.SSAIInfo"),
      
-    // Invalid `Url`.
+     /* Invalid `Url`. */
      INVALIDPARAMETER_URL("InvalidParameter.Url");
      
     private String value;

@@ -1,33 +1,33 @@
 package com.tencentcloudapi.controlcenter.v20230110;
 public enum ControlcenterErrorCode {
-    // Required baseline item in Account Factory is not configured.
+     /* Required baseline item in Account Factory is not configured. */
      FAILEDOPERATION_AFREQUIREDITEMNOTSELECT("FailedOperation.AFRequiredItemNotSelect"),
      
-    // The number of accounts to which baselines are applied in Account Factory exceeds the limit.
+     /* The number of accounts to which baselines are applied in Account Factory exceeds the limit. */
      FAILEDOPERATION_ACCOUNTFACTORYMEMBERUINNUMEXCEED("FailedOperation.AccountFactoryMemberUinNumExceed"),
      
-    // The user is deploying account baseline. It cannot be deployed repeatedly.
+     /* The user is deploying account baseline. It cannot be deployed repeatedly. */
      FAILEDOPERATION_ACCOUNTFACTORYTASKISDEPLOYING("FailedOperation.AccountFactoryTaskIsDeploying"),
      
-    // Control Center service is not enabled.
+     /* Control Center service is not enabled. */
      FAILEDOPERATION_CONTROLCENTERNOTOPEN("FailedOperation.ControlCenterNotOpen"),
      
-    // Database operation exception.
+     /* Database operation exception. */
      FAILEDOPERATION_DBOPERATIONERROR("FailedOperation.DBOperationError"),
      
-    // The feature item to depend on is not deployed.
+     /* The feature item to depend on is not deployed. */
      FAILEDOPERATION_DEPENDONITEMNOTDEPLOY("FailedOperation.DependOnItemNotDeploy"),
      
-    // Remote call failed.
+     /* Remote call failed. */
      FAILEDOPERATION_REMOTECALLERROR("FailedOperation.RemoteCallError"),
      
-    // User baseline configuration data does not exist.
+     /* User baseline configuration data does not exist. */
      RESOURCENOTFOUND_ACCOUNTFACTORYBASELINENOTEXIST("ResourceNotFound.AccountFactoryBaselineNotExist"),
      
-    // The baseline item deployed by the user is not configured.
+     /* The baseline item deployed by the user is not configured. */
      RESOURCENOTFOUND_ACCOUNTFACTORYITEMNOTCONFIG("ResourceNotFound.AccountFactoryItemNotConfig"),
      
-    // Account Factory baseline does not exist.
+     /* Account Factory baseline does not exist. */
      RESOURCENOTFOUND_ACCOUNTFACTORYITEMNOTEXIST("ResourceNotFound.AccountFactoryItemNotExist");
      
     private String value;

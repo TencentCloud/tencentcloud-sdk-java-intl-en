@@ -1,36 +1,36 @@
 package com.tencentcloudapi.gwlb.v20240906;
 public enum GwlbErrorCode {
-    // Operation failed.
+     /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
-    // FailedOperation.ResourceInOperating
+     /* FailedOperation.ResourceInOperating */
      FAILEDOPERATION_RESOURCEINOPERATING("FailedOperation.ResourceInOperating"),
      
-    // Internal error.
+     /* Internal error. */
      INTERNALERROR("InternalError"),
      
-    // Parameter error.
+     /* Parameter error. */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // InvalidParameter.FormatError
+     /* InvalidParameter.FormatError */
      INVALIDPARAMETER_FORMATERROR("InvalidParameter.FormatError"),
      
-    // InvalidParameter.RegionNotFound
+     /* InvalidParameter.RegionNotFound */
      INVALIDPARAMETER_REGIONNOTFOUND("InvalidParameter.RegionNotFound"),
      
-    // Invalid parameter value.
+     /* Invalid parameter value. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // The same value exists.
+     /* The same value exists. */
      INVALIDPARAMETERVALUE_DUPLICATE("InvalidParameterValue.Duplicate"),
      
-    // InvalidParameterValue.Length
+     /* InvalidParameterValue.Length */
      INVALIDPARAMETERVALUE_LENGTH("InvalidParameterValue.Length"),
      
-    // The quota limit is exceeded.
+     /* The quota limit is exceeded. */
      LIMITEXCEEDED("LimitExceeded"),
      
-    // Unauthorized operation.
+     /* Unauthorized operation. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation");
      
     private String value;

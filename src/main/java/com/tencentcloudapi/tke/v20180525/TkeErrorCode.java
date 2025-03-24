@@ -1,549 +1,549 @@
 package com.tencentcloudapi.tke.v20180525;
 public enum TkeErrorCode {
-    // CAM signature/authentication error.
+     /* CAM signature/authentication error. */
      AUTHFAILURE("AuthFailure"),
      
-    // Operation failed.
+     /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
-    // Failed to obtain user authentication information.
+     /* Failed to obtain user authentication information. */
      FAILEDOPERATION_ACCOUNTCOMMON("FailedOperation.AccountCommon"),
      
-    // The account is not verified.
+     /* The account is not verified. */
      FAILEDOPERATION_ACCOUNTUSERNOTAUTHENTICATED("FailedOperation.AccountUserNotAuthenticated"),
      
-    // Failed to add VPC-CNI Subnet.
+     /* Failed to add VPC-CNI Subnet. */
      FAILEDOPERATION_ADDVPCCNISUBNETSFAILED("FailedOperation.AddVpcCniSubnetsFailed"),
      
-    // An error occurs while creating scaling group resources.
+     /* An error occurs while creating scaling group resources. */
      FAILEDOPERATION_ASCOMMON("FailedOperation.AsCommon"),
      
-    // Not authorized to access this API
+     /* Not authorized to access this API */
      FAILEDOPERATION_CAMNOAUTH("FailedOperation.CamNoAuth"),
      
-    // The cluster cannot be deleted.
+     /* The cluster cannot be deleted. */
      FAILEDOPERATION_CLUSTERFORBIDDENTODELETE("FailedOperation.ClusterForbiddenToDelete"),
      
-    // The cluster is not found.
+     /* The cluster is not found. */
      FAILEDOPERATION_CLUSTERNOTFOUND("FailedOperation.ClusterNotFound"),
      
-    // Cluster status error.
+     /* Cluster status error. */
      FAILEDOPERATION_CLUSTERSTATE("FailedOperation.ClusterState"),
      
-    // The version of the cluster node is too old.
+     /* The version of the cluster node is too old. */
      FAILEDOPERATION_CLUSTERUPGRADENODEVERSION("FailedOperation.ClusterUpgradeNodeVersion"),
      
-    // Internal client error.
+     /* Internal client error. */
      FAILEDOPERATION_COMPONENTCLIENTCOMMON("FailedOperation.ComponentClientCommon"),
      
-    // Internal HTTP client error.
+     /* Internal HTTP client error. */
      FAILEDOPERATION_COMPONENTCLIENTHTTP("FailedOperation.ComponentClientHttp"),
      
-    // Internal HTTP decapsulation failed.
+     /* Internal HTTP decapsulation failed. */
      FAILEDOPERATION_COMPONENTCLIENTUNPACK("FailedOperation.ComponentClientUnpack"),
      
-    // Failed to request (HTTP request) other Tencent Cloud services.
+     /* Failed to request (HTTP request) other Tencent Cloud services. */
      FAILEDOPERATION_COMPONENTCLINETHTTP("FailedOperation.ComponentClinetHttp"),
      
-    // Failed to create CLS Client.
+     /* Failed to create CLS Client. */
      FAILEDOPERATION_CREATECLSCLIENT("FailedOperation.CreateClsClient"),
      
-    // Failed to create CLS collection configuration.
+     /* Failed to create CLS collection configuration. */
      FAILEDOPERATION_CREATECLSCONFIG("FailedOperation.CreateClsConfig"),
      
-    // Failed to create CLS index.
+     /* Failed to create CLS index. */
      FAILEDOPERATION_CREATECLSINDEX("FailedOperation.CreateClsIndex"),
      
-    // Failed to create the CLS log set.
+     /* Failed to create the CLS log set. */
      FAILEDOPERATION_CREATECLSLOGSET("FailedOperation.CreateClsLogSet"),
      
-    // Failed to create CLS machine group.
+     /* Failed to create CLS machine group. */
      FAILEDOPERATION_CREATECLSMACHINEGROUP("FailedOperation.CreateClsMachineGroup"),
      
-    // Failed to create CLS topic.
+     /* Failed to create CLS topic. */
      FAILEDOPERATION_CREATECLSTOPIC("FailedOperation.CreateClsTopic"),
      
-    // Failed to create the node due to a CVM error
+     /* Failed to create the node due to a CVM error */
      FAILEDOPERATION_CVMCOMMON("FailedOperation.CvmCommon"),
      
-    // CVM Termination Protection is enabled, and it cannot be removed.
+     /* CVM Termination Protection is enabled, and it cannot be removed. */
      FAILEDOPERATION_CVMDELETIONPROTECTION("FailedOperation.CvmDeletionProtection"),
      
-    // Some of the specified CVMs are not found.
+     /* Some of the specified CVMs are not found. */
      FAILEDOPERATION_CVMNUMBERNOTMATCH("FailedOperation.CvmNumberNotMatch"),
      
-    // The CVM does not match the VPC ID.
+     /* The CVM does not match the VPC ID. */
      FAILEDOPERATION_CVMVPCIDNOTMATCH("FailedOperation.CvmVpcidNotMatch"),
      
-    // Database error.
+     /* Database error. */
      FAILEDOPERATION_DB("FailedOperation.Db"),
      
-    // Record not found.
+     /* Record not found. */
      FAILEDOPERATION_DBRECORDNOTFOUND("FailedOperation.DbRecordNotFound"),
      
-    // Failed to obtain security group quota.
+     /* Failed to obtain security group quota. */
      FAILEDOPERATION_DFWGETUSGQUOTA("FailedOperation.DfwGetUSGQuota"),
      
-    // Failed to enable the VPC-CNI mode.
+     /* Failed to enable the VPC-CNI mode. */
      FAILEDOPERATION_ENABLEVPCCNIFAILED("FailedOperation.EnableVPCCNIFailed"),
      
-    // Failed to obtain CLS collection configuration.
+     /* Failed to obtain CLS collection configuration. */
      FAILEDOPERATION_GETCLSCONFIG("FailedOperation.GetClsConfig"),
      
-    // Failed to obtain the machine group bound to the CLS collection configuration.
+     /* Failed to obtain the machine group bound to the CLS collection configuration. */
      FAILEDOPERATION_GETCLSCONFIGMACHINEGROUPS("FailedOperation.GetClsConfigMachineGroups"),
      
-    // Failed to obtain CLS index configuration.
+     /* Failed to obtain CLS index configuration. */
      FAILEDOPERATION_GETCLSINDEX("FailedOperation.GetClsIndex"),
      
-    // Failed to query the topic set.
+     /* Failed to query the topic set. */
      FAILEDOPERATION_GETCLSLOGSET("FailedOperation.GetClsLogSet"),
      
-    // Failed to obtain the CLS machine group.
+     /* Failed to obtain the CLS machine group. */
      FAILEDOPERATION_GETCLSMACHINEGROUP("FailedOperation.GetClsMachineGroup"),
      
-    // Failed to obtain the collection configuration bound to the CLS machine group.
+     /* Failed to obtain the collection configuration bound to the CLS machine group. */
      FAILEDOPERATION_GETCLSMACHINEGROUPCONFIGS("FailedOperation.GetClsMachineGroupConfigs"),
      
-    // Failed to obtain CLS log topic.
+     /* Failed to obtain CLS log topic. */
      FAILEDOPERATION_GETCLSTOPIC("FailedOperation.GetClsTopic"),
      
-    // Failed to create the Kubernetes client.
+     /* Failed to create the Kubernetes client. */
      FAILEDOPERATION_K8SCLIENTBUILDERROR("FailedOperation.K8sClientBuildError"),
      
-    // Failed to connect to the customer Kubernetes cluster.
+     /* Failed to connect to the customer Kubernetes cluster. */
      FAILEDOPERATION_KUBECLIENTCONNECTION("FailedOperation.KubeClientConnection"),
      
-    // Kubernetes API error.
+     /* Kubernetes API error. */
      FAILEDOPERATION_KUBECOMMON("FailedOperation.KubeCommon"),
      
-    // Failed to create the Kubernetes client.
+     /* Failed to create the Kubernetes client. */
      FAILEDOPERATION_KUBERNETESCLIENTBUILDERROR("FailedOperation.KubernetesClientBuildError"),
      
-    // An error occurs while creating the cluster client.
+     /* An error occurs while creating the cluster client. */
      FAILEDOPERATION_KUBERNETESCREATEOPERATIONERROR("FailedOperation.KubernetesCreateOperationError"),
      
-    // Kubernetes Delete operation error.
+     /* Kubernetes Delete operation error. */
      FAILEDOPERATION_KUBERNETESDELETEOPERATIONERROR("FailedOperation.KubernetesDeleteOperationError"),
      
-    // 
+     /*  */
      FAILEDOPERATION_KUBERNETESGETOPERATIONERROR("FailedOperation.KubernetesGetOperationError"),
      
-    // Unknown Kubernetes error.
+     /* Unknown Kubernetes error. */
      FAILEDOPERATION_KUBERNETESINTERNAL("FailedOperation.KubernetesInternal"),
      
-    // Failed to obtain the kubernetes resource list.
+     /* Failed to obtain the kubernetes resource list. */
      FAILEDOPERATION_KUBERNETESLISTOPERATIONERROR("FailedOperation.KubernetesListOperationError"),
      
-    // Kubernetes is not found.
+     /* Kubernetes is not found. */
      FAILEDOPERATION_KUBERNETESRESOURCENOTFOUND("FailedOperation.KubernetesResourceNotFound"),
      
-    // An unknown error occurs while calling the underlying CLB.
+     /* An unknown error occurs while calling the underlying CLB. */
      FAILEDOPERATION_LBCOMMON("FailedOperation.LbCommon"),
      
-    // Failed to modify CLS collection configuration.
+     /* Failed to modify CLS collection configuration. */
      FAILEDOPERATION_MODIFYCLSCONFIG("FailedOperation.ModifyClsConfig"),
      
-    // Failed to modify CLS index.
+     /* Failed to modify CLS index. */
      FAILEDOPERATION_MODIFYCLSINDEX("FailedOperation.ModifyClsIndex"),
      
-    // Failed to modify CLS log topic.
+     /* Failed to modify CLS log topic. */
      FAILEDOPERATION_MODIFYCLSTOPIC("FailedOperation.ModifyClsTopic"),
      
-    // Network extension error.
+     /* Network extension error. */
      FAILEDOPERATION_NETWORKSCALEERROR("FailedOperation.NetworkScaleError"),
      
-    // The node has a secondary ENI.
+     /* The node has a secondary ENI. */
      FAILEDOPERATION_NODEEXISTSSECONDARYNETWORKINTERFACE("FailedOperation.NodeExistsSecondaryNetworkInterface"),
      
-    // The image OS is not supported.
+     /* The image OS is not supported. */
      FAILEDOPERATION_OSNOTSUPPORT("FailedOperation.OsNotSupport"),
      
-    // Invalid parameter.
+     /* Invalid parameter. */
      FAILEDOPERATION_PARAM("FailedOperation.Param"),
      
-    // GPE error.
+     /* GPE error. */
      FAILEDOPERATION_POLICYSERVERCOMMONERROR("FailedOperation.PolicyServerCommonError"),
      
-    // Reached the quota limit.
+     /* Reached the quota limit. */
      FAILEDOPERATION_QUOTAMAXCLSLIMIT("FailedOperation.QuotaMaxClsLimit"),
      
-    // Reached the quota limit.
+     /* Reached the quota limit. */
      FAILEDOPERATION_QUOTAMAXNODLIMIT("FailedOperation.QuotaMaxNodLimit"),
      
-    // Insufficient security group quota.
+     /* Insufficient security group quota. */
      FAILEDOPERATION_QUOTAUSGLIMIT("FailedOperation.QuotaUSGLimit"),
      
-    // The sub-account does not have the required RBAC permissions.
+     /* The sub-account does not have the required RBAC permissions. */
      FAILEDOPERATION_RBACFORBIDDEN("FailedOperation.RBACForbidden"),
      
-    // Record not found.
+     /* Record not found. */
      FAILEDOPERATION_RECORDNOTFOUND("FailedOperation.RecordNotFound"),
      
-    // Tag error
+     /* Tag error */
      FAILEDOPERATION_TAGCOMMON("FailedOperation.TagCommon"),
      
-    // A same task is in progress.
+     /* A same task is in progress. */
      FAILEDOPERATION_TASKALREADYRUNNING("FailedOperation.TaskAlreadyRunning"),
      
-    // This operation is not supported when the task is in the current status.
+     /* This operation is not supported when the task is in the current status. */
      FAILEDOPERATION_TASKLIFESTATEERROR("FailedOperation.TaskLifeStateError"),
      
-    // No task found.
+     /* No task found. */
      FAILEDOPERATION_TASKNOTFOUND("FailedOperation.TaskNotFound"),
      
-    // Query failed.
+     /* Query failed. */
      FAILEDOPERATION_TRADECOMMON("FailedOperation.TradeCommon"),
      
-    // Unexpected error.
+     /* Unexpected error. */
      FAILEDOPERATION_UNEXPECTEDERROR("FailedOperation.UnexpectedError"),
      
-    // Unknown VPC error.
+     /* Unknown VPC error. */
      FAILEDOPERATION_VPCUNEXPECTEDERROR("FailedOperation.VPCUnexpectedError"),
      
-    // VPC error.
+     /* VPC error. */
      FAILEDOPERATION_VPCCOMMON("FailedOperation.VpcCommon"),
      
-    // VPC record not found.
+     /* VPC record not found. */
      FAILEDOPERATION_VPCRECODRNOTFOUND("FailedOperation.VpcRecodrNotFound"),
      
-    // Allowlist error.
+     /* Allowlist error. */
      FAILEDOPERATION_WHITELISTUNEXPECTEDERROR("FailedOperation.WhitelistUnexpectedError"),
      
-    // Internal error.
+     /* Internal error. */
      INTERNALERROR("InternalError"),
      
-    // Failed to obtain the user authentication information
+     /* Failed to obtain the user authentication information */
      INTERNALERROR_ACCOUNTCOMMON("InternalError.AccountCommon"),
      
-    // Account not verified.
+     /* Account not verified. */
      INTERNALERROR_ACCOUNTUSERNOTAUTHENTICATED("InternalError.AccountUserNotAuthenticated"),
      
-    // Error creating scaling group resource.
+     /* Error creating scaling group resource. */
      INTERNALERROR_ASCOMMON("InternalError.AsCommon"),
      
-    // You do not have permissions.
+     /* You do not have permissions. */
      INTERNALERROR_CAMNOAUTH("InternalError.CamNoAuth"),
      
-    // CIDR conflicts with the CIDR of another cluster.
+     /* CIDR conflicts with the CIDR of another cluster. */
      INTERNALERROR_CIDRCONFLICTWITHOTHERCLUSTER("InternalError.CidrConflictWithOtherCluster"),
      
-    // CIDR conflicts with another route.
+     /* CIDR conflicts with another route. */
      INTERNALERROR_CIDRCONFLICTWITHOTHERROUTE("InternalError.CidrConflictWithOtherRoute"),
      
-    // CIDR conflicts with VPC.
+     /* CIDR conflicts with VPC. */
      INTERNALERROR_CIDRCONFLICTWITHVPCCIDR("InternalError.CidrConflictWithVpcCidr"),
      
-    // CIDR conflicts with global route.
+     /* CIDR conflicts with global route. */
      INTERNALERROR_CIDRCONFLICTWITHVPCGLOBALROUTE("InternalError.CidrConflictWithVpcGlobalRoute"),
      
-    // Invalid CIDR.
+     /* Invalid CIDR. */
      INTERNALERROR_CIDRINVALI("InternalError.CidrInvali"),
      
-    // Invalid CIDR mask.
+     /* Invalid CIDR mask. */
      INTERNALERROR_CIDRMASKSIZEOUTOFRANGE("InternalError.CidrMaskSizeOutOfRange"),
      
-    // Cluster not found.
+     /* Cluster not found. */
      INTERNALERROR_CLUSTERNOTFOUND("InternalError.ClusterNotFound"),
      
-    // Cluster status error.
+     /* Cluster status error. */
      INTERNALERROR_CLUSTERSTATE("InternalError.ClusterState"),
      
-    // The version of the cluster node is outdated.
+     /* The version of the cluster node is outdated. */
      INTERNALERROR_CLUSTERUPGRADENODEVERSION("InternalError.ClusterUpgradeNodeVersion"),
      
-    // Command execution timeout.
+     /* Command execution timeout. */
      INTERNALERROR_CMDTIMEOUT("InternalError.CmdTimeout"),
      
-    // Internal HTTP client error
+     /* Internal HTTP client error */
      INTERNALERROR_COMPONENTCLIENTHTTP("InternalError.ComponentClientHttp"),
      
-    // Error while requesting (HTTP) other Tencent Cloud services
+     /* Error while requesting (HTTP) other Tencent Cloud services */
      INTERNALERROR_COMPONENTCLINETHTTP("InternalError.ComponentClinetHttp"),
      
-    // Failed to create cluster.
+     /* Failed to create cluster. */
      INTERNALERROR_CREATEMASTERFAILED("InternalError.CreateMasterFailed"),
      
-    // Error in node creation.
+     /* Error in node creation. */
      INTERNALERROR_CVMCOMMON("InternalError.CvmCommon"),
      
-    // CVM does not exist.
+     /* CVM does not exist. */
      INTERNALERROR_CVMNOTFOUND("InternalError.CvmNotFound"),
      
-    // Some of the CVMs cannot be found
+     /* Some of the CVMs cannot be found */
      INTERNALERROR_CVMNUMBERNOTMATCH("InternalError.CvmNumberNotMatch"),
      
-    // Exceptional CVM status.
+     /* Exceptional CVM status. */
      INTERNALERROR_CVMSTATUS("InternalError.CvmStatus"),
      
-    // DB error.
+     /* DB error. */
      INTERNALERROR_DB("InternalError.Db"),
      
-    // Database error.
+     /* Database error. */
      INTERNALERROR_DBAFFECTIVEDROWS("InternalError.DbAffectivedRows"),
      
-    // Record not found.
+     /* Record not found. */
      INTERNALERROR_DBRECORDNOTFOUND("InternalError.DbRecordNotFound"),
      
-    // Failed to obtain total number of current security groups.
+     /* Failed to obtain total number of current security groups. */
      INTERNALERROR_DFWGETUSGCOUNT("InternalError.DfwGetUSGCount"),
      
-    // Failed to obtain security group quota.
+     /* Failed to obtain security group quota. */
      INTERNALERROR_DFWGETUSGQUOTA("InternalError.DfwGetUSGQuota"),
      
-    // Empty clusters are not supported.
+     /* Empty clusters are not supported. */
      INTERNALERROR_EMPTYCLUSTERNOTSUPPORT("InternalError.EmptyClusterNotSupport"),
      
-    // Image not found.
+     /* Image not found. */
      INTERNALERROR_IMAGEIDNOTFOUND("InternalError.ImageIdNotFound"),
      
-    // Failed to initialize Master.
+     /* Failed to initialize Master. */
      INTERNALERROR_INITMASTERFAILED("InternalError.InitMasterFailed"),
      
-    // Invalid CIDR.
+     /* Invalid CIDR. */
      INTERNALERROR_INVALIDPRIVATENETWORKCIDR("InternalError.InvalidPrivateNetworkCidr"),
      
-    // Failed to connect to the user’s Kubernetes cluster.
+     /* Failed to connect to the user’s Kubernetes cluster. */
      INTERNALERROR_KUBECLIENTCONNECTION("InternalError.KubeClientConnection"),
      
-    // Kubernetes API error.
+     /* Kubernetes API error. */
      INTERNALERROR_KUBECOMMON("InternalError.KubeCommon"),
      
-    // Failed to create the kubernetes client.
+     /* Failed to create the kubernetes client. */
      INTERNALERROR_KUBERNETESCLIENTBUILDERROR("InternalError.KubernetesClientBuildError"),
      
-    // Failed to create the kubernetes resource.
+     /* Failed to create the kubernetes resource. */
      INTERNALERROR_KUBERNETESCREATEOPERATIONERROR("InternalError.KubernetesCreateOperationError"),
      
-    // Failed to delete the kubernetes resource.
+     /* Failed to delete the kubernetes resource. */
      INTERNALERROR_KUBERNETESDELETEOPERATIONERROR("InternalError.KubernetesDeleteOperationError"),
      
-    // Failed to obtain the kubernetes resources
+     /* Failed to obtain the kubernetes resources */
      INTERNALERROR_KUBERNETESGETOPERATIONERROR("InternalError.KubernetesGetOperationError"),
      
-    // Unknown Kubernetes error
+     /* Unknown Kubernetes error */
      INTERNALERROR_KUBERNETESINTERNAL("InternalError.KubernetesInternal"),
      
-    // Failed to obtain the kubernetes resource list.
+     /* Failed to obtain the kubernetes resource list. */
      INTERNALERROR_KUBERNETESLISTOPERATIONERROR("InternalError.KubernetesListOperationError"),
      
-    // Kubernetes Patch operation failed.
+     /* Kubernetes Patch operation failed. */
      INTERNALERROR_KUBERNETESPATCHOPERATIONERROR("InternalError.KubernetesPatchOperationError"),
      
-    // An error occurs while calling the underlying CLB
+     /* An error occurs while calling the underlying CLB */
      INTERNALERROR_LBCOMMON("InternalError.LbCommon"),
      
-    // Image OS not supported.
+     /* Image OS not supported. */
      INTERNALERROR_OSNOTSUPPORT("InternalError.OsNotSupport"),
      
-    // Parameter error.
+     /* Parameter error. */
      INTERNALERROR_PARAM("InternalError.Param"),
      
-    // Pod not found
+     /* Pod not found */
      INTERNALERROR_PODNOTFOUND("InternalError.PodNotFound"),
      
-    // Cluster does not support the current operation.
+     /* Cluster does not support the current operation. */
      INTERNALERROR_PUBLICCLUSTEROPNOTSUPPORT("InternalError.PublicClusterOpNotSupport"),
      
-    // Quota limit exceeded.
+     /* Quota limit exceeded. */
      INTERNALERROR_QUOTAMAXCLSLIMIT("InternalError.QuotaMaxClsLimit"),
      
-    // Quota limit exceeded.
+     /* Quota limit exceeded. */
      INTERNALERROR_QUOTAMAXNODLIMIT("InternalError.QuotaMaxNodLimit"),
      
-    // Quota limit exceeded.
+     /* Quota limit exceeded. */
      INTERNALERROR_QUOTAMAXRTLIMIT("InternalError.QuotaMaxRtLimit"),
      
-    // Insufficient security group quota.
+     /* Insufficient security group quota. */
      INTERNALERROR_QUOTAUSGLIMIT("InternalError.QuotaUSGLimit"),
      
-    // Resource already exists.
+     /* Resource already exists. */
      INTERNALERROR_RESOURCEEXISTALREADY("InternalError.ResourceExistAlready"),
      
-    // Route table is not empty.
+     /* Route table is not empty. */
      INTERNALERROR_ROUTETABLENOTEMPTY("InternalError.RouteTableNotEmpty"),
      
-    // Route table does not exist.
+     /* Route table does not exist. */
      INTERNALERROR_ROUTETABLENOTFOUND("InternalError.RouteTableNotFound"),
      
-    // A same task is in progress.
+     /* A same task is in progress. */
      INTERNALERROR_TASKALREADYRUNNING("InternalError.TaskAlreadyRunning"),
      
-    // Failed to create the task.
+     /* Failed to create the task. */
      INTERNALERROR_TASKCREATEFAILED("InternalError.TaskCreateFailed"),
      
-    // The task in the current state does not support this operation.
+     /* The task in the current state does not support this operation. */
      INTERNALERROR_TASKLIFESTATEERROR("InternalError.TaskLifeStateError"),
      
-    // No task found
+     /* No task found */
      INTERNALERROR_TASKNOTFOUND("InternalError.TaskNotFound"),
      
-    // Billing error.
+     /* Billing error. */
      INTERNALERROR_TRADECOMMON("InternalError.TradeCommon"),
      
-    // Insufficient account balance.
+     /* Insufficient account balance. */
      INTERNALERROR_TRADEINSUFFICIENTBALANCE("InternalError.TradeInsufficientBalance"),
      
-    // Internal error.
+     /* Internal error. */
      INTERNALERROR_UNEXCEPTEDINTERNAL("InternalError.UnexceptedInternal"),
      
-    // Unknown internal error.
+     /* Unknown internal error. */
      INTERNALERROR_UNEXPECTEDINTERNAL("InternalError.UnexpectedInternal"),
      
-    // Unknown VPC error
+     /* Unknown VPC error */
      INTERNALERROR_VPCUNEXPECTEDERROR("InternalError.VPCUnexpectedError"),
      
-    // VPC error
+     /* VPC error */
      INTERNALERROR_VPCCOMMON("InternalError.VpcCommon"),
      
-    // Peering connection does not exist
+     /* Peering connection does not exist */
      INTERNALERROR_VPCPEERNOTFOUND("InternalError.VpcPeerNotFound"),
      
-    // VPC record not found
+     /* VPC record not found */
      INTERNALERROR_VPCRECODRNOTFOUND("InternalError.VpcRecodrNotFound"),
      
-    // VstationError.
+     /* VstationError. */
      INTERNALERROR_VSTATIONERROR("InternalError.VstationError"),
      
-    // Unknown allowlist error
+     /* Unknown allowlist error */
      INTERNALERROR_WHITELISTUNEXPECTEDERROR("InternalError.WhitelistUnexpectedError"),
      
-    // Parameter error.
+     /* Parameter error. */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // Auto scaling group creation parameter error.
+     /* Auto scaling group creation parameter error. */
      INVALIDPARAMETER_ASCOMMONERROR("InvalidParameter.AsCommonError"),
      
-    // Invalid CIDR block mask (valid range: 10 to 24).
+     /* Invalid CIDR block mask (valid range: 10 to 24). */
      INVALIDPARAMETER_CIDRMASKSIZEOUTOFRANGE("InvalidParameter.CIDRMaskSizeOutOfRange"),
      
-    // The CIDR block conflicts with the CIDR blocks of other clusters.
+     /* The CIDR block conflicts with the CIDR blocks of other clusters. */
      INVALIDPARAMETER_CIDRCONFLICTWITHOTHERCLUSTER("InvalidParameter.CidrConflictWithOtherCluster"),
      
-    // The route to create conflicts with existing routes.
+     /* The route to create conflicts with existing routes. */
      INVALIDPARAMETER_CIDRCONFLICTWITHOTHERROUTE("InvalidParameter.CidrConflictWithOtherRoute"),
      
-    // The CIDR block conflicts with the VPC’s CIDR block.
+     /* The CIDR block conflicts with the VPC’s CIDR block. */
      INVALIDPARAMETER_CIDRCONFLICTWITHVPCCIDR("InvalidParameter.CidrConflictWithVpcCidr"),
      
-    // The created route conflicts with the existing global route under the VPC.
+     /* The created route conflicts with the existing global route under the VPC. */
      INVALIDPARAMETER_CIDRCONFLICTWITHVPCGLOBALROUTE("InvalidParameter.CidrConflictWithVpcGlobalRoute"),
      
-    // Invalid CIDR block.
+     /* Invalid CIDR block. */
      INVALIDPARAMETER_CIDRINVALI("InvalidParameter.CidrInvali"),
      
-    // Parameter error. The CIDR block does not meet the specification.
+     /* Parameter error. The CIDR block does not meet the specification. */
      INVALIDPARAMETER_CIDRINVALID("InvalidParameter.CidrInvalid"),
      
-    // The CIDR block is not in the route table.
+     /* The CIDR block is not in the route table. */
      INVALIDPARAMETER_CIDROUTOFROUTETABLE("InvalidParameter.CidrOutOfRouteTable"),
      
-    // The cluster ID does not exist.
+     /* The cluster ID does not exist. */
      INVALIDPARAMETER_CLUSTERNOTFOUND("InvalidParameter.ClusterNotFound"),
      
-    // Next hop address is already associated with a CIDR block.
+     /* Next hop address is already associated with a CIDR block. */
      INVALIDPARAMETER_GATEWAYALREADYASSOCIATEDCIDR("InvalidParameter.GatewayAlreadyAssociatedCidr"),
      
-    // Invalid private CIDR block.
+     /* Invalid private CIDR block. */
      INVALIDPARAMETER_INVALIDPRIVATENETWORKCIDR("InvalidParameter.InvalidPrivateNetworkCIDR"),
      
-    // The iage OS is not supported.
+     /* The iage OS is not supported. */
      INVALIDPARAMETER_OSNOTSUPPORT("InvalidParameter.OsNotSupport"),
      
-    // Parameter error.
+     /* Parameter error. */
      INVALIDPARAMETER_PARAM("InvalidParameter.Param"),
      
-    // The PROM instance does not exist.
+     /* The PROM instance does not exist. */
      INVALIDPARAMETER_PROMINSTANCENOTFOUND("InvalidParameter.PromInstanceNotFound"),
      
-    // Route table is not empty.
+     /* Route table is not empty. */
      INVALIDPARAMETER_ROUTETABLENOTEMPTY("InvalidParameter.RouteTableNotEmpty"),
      
-    // Invalid subnet.
+     /* Invalid subnet. */
      INVALIDPARAMETER_SUBNETINVALIDERROR("InvalidParameter.SubnetInvalidError"),
      
-    // The subnet does not exist.
+     /* The subnet does not exist. */
      INVALIDPARAMETER_SUBNETNOTEXIST("InvalidParameter.SubnetNotExist"),
      
-    // In customer creation parameters, k8s version, runtime version, or tke-eni-agent version do not support the chosen operating system's CgroupV2.
+     /* In customer creation parameters, k8s version, runtime version, or tke-eni-agent version do not support the chosen operating system's CgroupV2. */
      INVALIDPARAMETER_VERSIONNOTSUPPORTCGROUPV2("InvalidParameter.VersionNotSupportCgroupV2"),
      
-    // Quota limit is exceeded.
+     /* Quota limit is exceeded. */
      LIMITEXCEEDED("LimitExceeded"),
      
-    // Missing parameter.
+     /* Missing parameter. */
      MISSINGPARAMETER("MissingParameter"),
      
-    // Operation denied.
+     /* Operation denied. */
      OPERATIONDENIED("OperationDenied"),
      
-    // The cluster is under deletion protection and cannot be deleted.
+     /* The cluster is under deletion protection and cannot be deleted. */
      OPERATIONDENIED_CLUSTERINDELETIONPROTECTION("OperationDenied.ClusterInDeletionProtection"),
      
-    // The resource is occupied.
+     /* The resource is occupied. */
      RESOURCEINUSE("ResourceInUse"),
      
-    // A running Pod exists.
+     /* A running Pod exists. */
      RESOURCEINUSE_EXISTRUNNINGPOD("ResourceInUse.ExistRunningPod"),
      
-    // The resource already exists.
+     /* The resource already exists. */
      RESOURCEINUSE_RESOURCEEXISTALREADY("ResourceInUse.ResourceExistAlready"),
      
-    // The subnet already exists.
+     /* The subnet already exists. */
      RESOURCEINUSE_SUBNETALREADYEXIST("ResourceInUse.SubnetAlreadyExist"),
      
-    // Insufficient CVM resources.
+     /* Insufficient CVM resources. */
      RESOURCEINSUFFICIENT_SPECIFIEDINSTANCETYPE("ResourceInsufficient.SpecifiedInstanceType"),
      
-    // The resource does not exist.
+     /* The resource does not exist. */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-    // The scaling group does not exist.
+     /* The scaling group does not exist. */
      RESOURCENOTFOUND_ASASGNOTEXIST("ResourceNotFound.AsAsgNotExist"),
      
-    // The cluster does not exist.
+     /* The cluster does not exist. */
      RESOURCENOTFOUND_CLUSTERNOTFOUND("ResourceNotFound.ClusterNotFound"),
      
-    // The specified resource is not found in the Kubernetes cluster.
+     /* The specified resource is not found in the Kubernetes cluster. */
      RESOURCENOTFOUND_KUBERESOURCENOTFOUND("ResourceNotFound.KubeResourceNotFound"),
      
-    // The kubernetes resource does not exist.
+     /* The kubernetes resource does not exist. */
      RESOURCENOTFOUND_KUBERNETESRESOURCENOTFOUND("ResourceNotFound.KubernetesResourceNotFound"),
      
-    // Resource is unavailable
+     /* Resource is unavailable */
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-    // Abnormal cluster status.
+     /* Abnormal cluster status. */
      RESOURCEUNAVAILABLE_CLUSTERINABNORMALSTAT("ResourceUnavailable.ClusterInAbnormalStat"),
      
-    // The cluster status does not support this operation.
+     /* The cluster status does not support this operation. */
      RESOURCEUNAVAILABLE_CLUSTERSTATE("ResourceUnavailable.ClusterState"),
      
-    // The node pool is in an abnormal status.
+     /* The node pool is in an abnormal status. */
      RESOURCEUNAVAILABLE_NODEPOOLSTATENOTNORMAL("ResourceUnavailable.NodePoolStateNotNormal"),
      
-    // Unauthorized operation.
+     /* Unauthorized operation. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-    // The API has no CAM permissions.
+     /* The API has no CAM permissions. */
      UNAUTHORIZEDOPERATION_CAMNOAUTH("UnauthorizedOperation.CamNoAuth"),
      
-    // Unknown parameter.
+     /* Unknown parameter. */
      UNKNOWNPARAMETER("UnknownParameter"),
      
-    // Unsupported operation.
+     /* Unsupported operation. */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
-    // Failed to enable CA because AS is disabled.
+     /* Failed to enable CA because AS is disabled. */
      UNSUPPORTEDOPERATION_CAENABLEFAILED("UnsupportedOperation.CaEnableFailed"),
      
-    // The VPC-CNI mode is not supported.
+     /* The VPC-CNI mode is not supported. */
      UNSUPPORTEDOPERATION_CLUSTERNOTSUITENABLEVPCCNI("UnsupportedOperation.ClusterNotSuitEnableVPCCNI"),
      
-    // The user is not in the allowlist.
+     /* The user is not in the allowlist. */
      UNSUPPORTEDOPERATION_NOTINWHITELIST("UnsupportedOperation.NotInWhitelist"),
      
-    // Virtual nodes cannot be installed.
+     /* Virtual nodes cannot be installed. */
      UNSUPPORTEDOPERATION_NOTSUPPORTINSTALLVIRTUALKUBELET("UnsupportedOperation.NotSupportInstallVirtualKubelet");
      
     private String value;

@@ -1,219 +1,219 @@
 package com.tencentcloudapi.ciam.v20210420;
 public enum CiamErrorCode {
-    // A CAM signature/authentication error occurred.
+     /* A CAM signature/authentication error occurred. */
      AUTHFAILURE("AuthFailure"),
      
-    // `DryRun` Operation. It means that the request would have succeeded, but the `DryRun` parameter was used.
+     /* `DryRun` Operation. It means that the request would have succeeded, but the `DryRun` parameter was used. */
      DRYRUNOPERATION("DryRunOperation"),
      
-    // The operation failed.
+     /* The operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
-    // FailedOperation.AccountNotFound
+     /* FailedOperation.AccountNotFound */
      FAILEDOPERATION_ACCOUNTNOTFOUND("FailedOperation.AccountNotFound"),
      
-    // FailedOperation.AddUsersToUserGroup
+     /* FailedOperation.AddUsersToUserGroup */
      FAILEDOPERATION_ADDUSERSTOUSERGROUP("FailedOperation.AddUsersToUserGroup"),
      
-    // FailedOperation.AppIdIsNull
+     /* FailedOperation.AppIdIsNull */
      FAILEDOPERATION_APPIDISNULL("FailedOperation.AppIdIsNull"),
      
-    // FailedOperation.AppIdNotExited
+     /* FailedOperation.AppIdNotExited */
      FAILEDOPERATION_APPIDNOTEXITED("FailedOperation.AppIdNotExited"),
      
-    // FailedOperation.AppIdNotFound
+     /* FailedOperation.AppIdNotFound */
      FAILEDOPERATION_APPIDNOTFOUND("FailedOperation.AppIdNotFound"),
      
-    // FailedOperation.AppNotExited
+     /* FailedOperation.AppNotExited */
      FAILEDOPERATION_APPNOTEXITED("FailedOperation.AppNotExited"),
      
-    // FailedOperation.AuthListFailed
+     /* FailedOperation.AuthListFailed */
      FAILEDOPERATION_AUTHLISTFAILED("FailedOperation.AuthListFailed"),
      
-    // FailedOperation.ChildOrgNodeWithUsersCannotBeDeleted
+     /* FailedOperation.ChildOrgNodeWithUsersCannotBeDeleted */
      FAILEDOPERATION_CHILDORGNODEWITHUSERSCANNOTBEDELETED("FailedOperation.ChildOrgNodeWithUsersCannotBeDeleted"),
      
-    // FailedOperation.CreateOrgNodeFailure
+     /* FailedOperation.CreateOrgNodeFailure */
      FAILEDOPERATION_CREATEORGNODEFAILURE("FailedOperation.CreateOrgNodeFailure"),
      
-    // FailedOperation.CreateUserFailure
+     /* FailedOperation.CreateUserFailure */
      FAILEDOPERATION_CREATEUSERFAILURE("FailedOperation.CreateUserFailure"),
      
-    // FailedOperation.CreateUserGroupFailure
+     /* FailedOperation.CreateUserGroupFailure */
      FAILEDOPERATION_CREATEUSERGROUPFAILURE("FailedOperation.CreateUserGroupFailure"),
      
-    // FailedOperation.CustomizedParentOrgNodeIdExisted
+     /* FailedOperation.CustomizedParentOrgNodeIdExisted */
      FAILEDOPERATION_CUSTOMIZEDPARENTORGNODEIDEXISTED("FailedOperation.CustomizedParentOrgNodeIdExisted"),
      
-    // FailedOperation.DeleteOrgNodeFailure
+     /* FailedOperation.DeleteOrgNodeFailure */
      FAILEDOPERATION_DELETEORGNODEFAILURE("FailedOperation.DeleteOrgNodeFailure"),
      
-    // FailedOperation.DeleteUserException
+     /* FailedOperation.DeleteUserException */
      FAILEDOPERATION_DELETEUSEREXCEPTION("FailedOperation.DeleteUserException"),
      
-    // FailedOperation.DeleteUserFailure
+     /* FailedOperation.DeleteUserFailure */
      FAILEDOPERATION_DELETEUSERFAILURE("FailedOperation.DeleteUserFailure"),
      
-    // FailedOperation.DeleteUserGroupFailure
+     /* FailedOperation.DeleteUserGroupFailure */
      FAILEDOPERATION_DELETEUSERGROUPFAILURE("FailedOperation.DeleteUserGroupFailure"),
      
-    // FailedOperation.DescribeOrgNodeFailure
+     /* FailedOperation.DescribeOrgNodeFailure */
      FAILEDOPERATION_DESCRIBEORGNODEFAILURE("FailedOperation.DescribeOrgNodeFailure"),
      
-    // FailedOperation.ExpectFieldsNotFound
+     /* FailedOperation.ExpectFieldsNotFound */
      FAILEDOPERATION_EXPECTFIELDSNOTFOUND("FailedOperation.ExpectFieldsNotFound"),
      
-    // FailedOperation.GroupIdNotFound
+     /* FailedOperation.GroupIdNotFound */
      FAILEDOPERATION_GROUPIDNOTFOUND("FailedOperation.GroupIdNotFound"),
      
-    // The tenant is invalid.
+     /* The tenant is invalid. */
      FAILEDOPERATION_INVALIDTENANT("FailedOperation.InvalidTenant"),
      
-    // FailedOperation.ListAllUserGroupsFailure
+     /* FailedOperation.ListAllUserGroupsFailure */
      FAILEDOPERATION_LISTALLUSERGROUPSFAILURE("FailedOperation.ListAllUserGroupsFailure"),
      
-    // FailedOperation.ListMatchedUserInfoFailure
+     /* FailedOperation.ListMatchedUserInfoFailure */
      FAILEDOPERATION_LISTMATCHEDUSERINFOFAILURE("FailedOperation.ListMatchedUserInfoFailure"),
      
-    // FailedOperation.ListUserGroupsOfUserFailure
+     /* FailedOperation.ListUserGroupsOfUserFailure */
      FAILEDOPERATION_LISTUSERGROUPSOFUSERFAILURE("FailedOperation.ListUserGroupsOfUserFailure"),
      
-    // FailedOperation.ListUsersInOrgNodeFailure
+     /* FailedOperation.ListUsersInOrgNodeFailure */
      FAILEDOPERATION_LISTUSERSINORGNODEFAILURE("FailedOperation.ListUsersInOrgNodeFailure"),
      
-    // FailedOperation.ListUsersInUserGroupFailure
+     /* FailedOperation.ListUsersInUserGroupFailure */
      FAILEDOPERATION_LISTUSERSINUSERGROUPFAILURE("FailedOperation.ListUsersInUserGroupFailure"),
      
-    // FailedOperation.ModifyApplicationDisplayNameIsNull
+     /* FailedOperation.ModifyApplicationDisplayNameIsNull */
      FAILEDOPERATION_MODIFYAPPLICATIONDISPLAYNAMEISNULL("FailedOperation.ModifyApplicationDisplayNameIsNull"),
      
-    // FailedOperation.OrgNodeIdNotExist
+     /* FailedOperation.OrgNodeIdNotExist */
      FAILEDOPERATION_ORGNODEIDNOTEXIST("FailedOperation.OrgNodeIdNotExist"),
      
-    // FailedOperation.OrgNodeNotExist
+     /* FailedOperation.OrgNodeNotExist */
      FAILEDOPERATION_ORGNODENOTEXIST("FailedOperation.OrgNodeNotExist"),
      
-    // FailedOperation.OrgNodeRootCannotBeDeleted
+     /* FailedOperation.OrgNodeRootCannotBeDeleted */
      FAILEDOPERATION_ORGNODEROOTCANNOTBEDELETED("FailedOperation.OrgNodeRootCannotBeDeleted"),
      
-    // FailedOperation.OrgNodeWithUsersCannotBeDeleted
+     /* FailedOperation.OrgNodeWithUsersCannotBeDeleted */
      FAILEDOPERATION_ORGNODEWITHUSERSCANNOTBEDELETED("FailedOperation.OrgNodeWithUsersCannotBeDeleted"),
      
-    // FailedOperation.PageParameterIsNotPaired
+     /* FailedOperation.PageParameterIsNotPaired */
      FAILEDOPERATION_PAGEPARAMETERISNOTPAIRED("FailedOperation.PageParameterIsNotPaired"),
      
-    // FailedOperation.ParentOrgNodeIdNotFound
+     /* FailedOperation.ParentOrgNodeIdNotFound */
      FAILEDOPERATION_PARENTORGNODEIDNOTFOUND("FailedOperation.ParentOrgNodeIdNotFound"),
      
-    // FailedOperation.ParentOrgNodeIsEmpty
+     /* FailedOperation.ParentOrgNodeIsEmpty */
      FAILEDOPERATION_PARENTORGNODEISEMPTY("FailedOperation.ParentOrgNodeIsEmpty"),
      
-    // FailedOperation.PersonNotFound
+     /* FailedOperation.PersonNotFound */
      FAILEDOPERATION_PERSONNOTFOUND("FailedOperation.PersonNotFound"),
      
-    // FailedOperation.RemoveUsersFromUserGroupFailure
+     /* FailedOperation.RemoveUsersFromUserGroupFailure */
      FAILEDOPERATION_REMOVEUSERSFROMUSERGROUPFAILURE("FailedOperation.RemoveUsersFromUserGroupFailure"),
      
-    // FailedOperation.RepeatedAuthorizationException
+     /* FailedOperation.RepeatedAuthorizationException */
      FAILEDOPERATION_REPEATEDAUTHORIZATIONEXCEPTION("FailedOperation.RepeatedAuthorizationException"),
      
-    // FailedOperation.RepeatedUnauthorizationException
+     /* FailedOperation.RepeatedUnauthorizationException */
      FAILEDOPERATION_REPEATEDUNAUTHORIZATIONEXCEPTION("FailedOperation.RepeatedUnauthorizationException"),
      
-    // FailedOperation.TimeFormatIsIllegal
+     /* FailedOperation.TimeFormatIsIllegal */
      FAILEDOPERATION_TIMEFORMATISILLEGAL("FailedOperation.TimeFormatIsIllegal"),
      
-    // FailedOperation.UserAlreadyExistedInUserGroup
+     /* FailedOperation.UserAlreadyExistedInUserGroup */
      FAILEDOPERATION_USERALREADYEXISTEDINUSERGROUP("FailedOperation.UserAlreadyExistedInUserGroup"),
      
-    // FailedOperation.UserExpriationTimeIsIllegal
+     /* FailedOperation.UserExpriationTimeIsIllegal */
      FAILEDOPERATION_USEREXPRIATIONTIMEISILLEGAL("FailedOperation.UserExpriationTimeIsIllegal"),
      
-    // FailedOperation.UserGroupNotExisted
+     /* FailedOperation.UserGroupNotExisted */
      FAILEDOPERATION_USERGROUPNOTEXISTED("FailedOperation.UserGroupNotExisted"),
      
-    // FailedOperation.UserIdNotFound
+     /* FailedOperation.UserIdNotFound */
      FAILEDOPERATION_USERIDNOTFOUND("FailedOperation.UserIdNotFound"),
      
-    // FailedOperation.UserInfoSortAttributeCodeIsIllegal
+     /* FailedOperation.UserInfoSortAttributeCodeIsIllegal */
      FAILEDOPERATION_USERINFOSORTATTRIBUTECODEISILLEGAL("FailedOperation.UserInfoSortAttributeCodeIsIllegal"),
      
-    // FailedOperation.UserNameExisted
+     /* FailedOperation.UserNameExisted */
      FAILEDOPERATION_USERNAMEEXISTED("FailedOperation.UserNameExisted"),
      
-    // FailedOperation.UserNotExistedInUserGroup
+     /* FailedOperation.UserNotExistedInUserGroup */
      FAILEDOPERATION_USERNOTEXISTEDINUSERGROUP("FailedOperation.UserNotExistedInUserGroup"),
      
-    // FailedOperation.UserPhoneExisted
+     /* FailedOperation.UserPhoneExisted */
      FAILEDOPERATION_USERPHONEEXISTED("FailedOperation.UserPhoneExisted"),
      
-    // An internal error occurred.
+     /* An internal error occurred. */
      INTERNALERROR("InternalError"),
      
-    // The parameter is incorrect.
+     /* The parameter is incorrect. */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // InvalidParameter.AttributeValueValidFailure
+     /* InvalidParameter.AttributeValueValidFailure */
      INVALIDPARAMETER_ATTRIBUTEVALUEVALIDFAILURE("InvalidParameter.AttributeValueValidFailure"),
      
-    // InvalidParameter.DataTypeNotMatch
+     /* InvalidParameter.DataTypeNotMatch */
      INVALIDPARAMETER_DATATYPENOTMATCH("InvalidParameter.DataTypeNotMatch"),
      
-    // InvalidParameter.ParameterIsIllegal
+     /* InvalidParameter.ParameterIsIllegal */
      INVALIDPARAMETER_PARAMETERISILLEGAL("InvalidParameter.ParameterIsIllegal"),
      
-    // InvalidParameter.ParameterTypeIsIllegal
+     /* InvalidParameter.ParameterTypeIsIllegal */
      INVALIDPARAMETER_PARAMETERTYPEISILLEGAL("InvalidParameter.ParameterTypeIsIllegal"),
      
-    // InvalidParameter.PasswordIsIllegal
+     /* InvalidParameter.PasswordIsIllegal */
      INVALIDPARAMETER_PASSWORDISILLEGAL("InvalidParameter.PasswordIsIllegal"),
      
-    // The parameter value is incorrect.
+     /* The parameter value is incorrect. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // The quota limit is exceeded.
+     /* The quota limit is exceeded. */
      LIMITEXCEEDED("LimitExceeded"),
      
-    // The parameter is missing.
+     /* The parameter is missing. */
      MISSINGPARAMETER("MissingParameter"),
      
-    // The operation was denied.
+     /* The operation was denied. */
      OPERATIONDENIED("OperationDenied"),
      
-    // OperationDenied.DataTypeIsIllegal
+     /* OperationDenied.DataTypeIsIllegal */
      OPERATIONDENIED_DATATYPEISILLEGAL("OperationDenied.DataTypeIsIllegal"),
      
-    // OperationDenied.UinNotExisted
+     /* OperationDenied.UinNotExisted */
      OPERATIONDENIED_UINNOTEXISTED("OperationDenied.UinNotExisted"),
      
-    // The number of requests exceeds the frequency limit.
+     /* The number of requests exceeds the frequency limit. */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
-    // The resource is in use.
+     /* The resource is in use. */
      RESOURCEINUSE("ResourceInUse"),
      
-    // The resource is insufficient.
+     /* The resource is insufficient. */
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
-    // The resource does not exist.
+     /* The resource does not exist. */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-    // The resource is unavailable.
+     /* The resource is unavailable. */
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-    // The resources have been sold out.
+     /* The resources have been sold out. */
      RESOURCESSOLDOUT("ResourcesSoldOut"),
      
-    // The operation is unauthorized.
+     /* The operation is unauthorized. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-    // The service is not activated.
+     /* The service is not activated. */
      UNAUTHORIZEDOPERATION_TENANTNOTACTIVATED("UnauthorizedOperation.TenantNotActivated"),
      
-    // The parameter is unknown.
+     /* The parameter is unknown. */
      UNKNOWNPARAMETER("UnknownParameter"),
      
-    // The operation is not supported.
+     /* The operation is not supported. */
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

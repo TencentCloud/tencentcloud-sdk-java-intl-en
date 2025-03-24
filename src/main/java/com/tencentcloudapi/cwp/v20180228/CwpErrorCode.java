@@ -1,132 +1,132 @@
 package com.tencentcloudapi.cwp.v20180228;
 public enum CwpErrorCode {
-    // CAM signature/authentication error.
+     /* CAM signature/authentication error. */
      AUTHFAILURE("AuthFailure"),
      
-    // Authentication for the current user failed.
+     /* Authentication for the current user failed. */
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
      
-    // Operation failed.
+     /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
-    // Failed to invoke the API service.
+     /* Failed to invoke the API service. */
      FAILEDOPERATION_APISERVERFAIL("FailedOperation.APIServerFail"),
      
-    // The client is offline.
+     /* The client is offline. */
      FAILEDOPERATION_AGENTOFFLINE("FailedOperation.AgentOffline"),
      
-    // Failed to export the file.
+     /* Failed to export the file. */
      FAILEDOPERATION_EXPORT("FailedOperation.Export"),
      
-    // Insufficient available licenses, missing 1 license. Purchase a new license.
+     /* Insufficient available licenses, missing 1 license. Purchase a new license. */
      FAILEDOPERATION_LICENSEEXCEEDED("FailedOperation.LicenseExceeded"),
      
-    // Uninstall the host.
+     /* Uninstall the host. */
      FAILEDOPERATION_MACHINEDELETE("FailedOperation.MachineDelete"),
      
-    // No Pro Edition host.
+     /* No Pro Edition host. */
      FAILEDOPERATION_NOPROFESSIONHOST("FailedOperation.NoProfessionHost"),
      
-    // Isolation of multiple hosts partially or completely failed.
+     /* Isolation of multiple hosts partially or completely failed. */
      FAILEDOPERATION_PARTSEPARATE("FailedOperation.PartSeparate"),
      
-    // Failed to respond to the Trojan.
+     /* Failed to respond to the Trojan. */
      FAILEDOPERATION_RECOVER("FailedOperation.Recover"),
      
-    // Failed to double-check the vulnerability.
+     /* Failed to double-check the vulnerability. */
      FAILEDOPERATION_RESCANVUL("FailedOperation.RescanVul"),
      
-    // Isolation of a single host failed.
+     /* Isolation of a single host failed. */
      FAILEDOPERATION_SINGLESEPARATE("FailedOperation.SingleSeparate"),
      
-    // The maximum number for baseline policy creation is exceeded.
+     /* The maximum number for baseline policy creation is exceeded. */
      FAILEDOPERATION_TOOMANYSTRATEGY("FailedOperation.TooManyStrategy"),
      
-    // Internal error
+     /* Internal error */
      INTERNALERROR("InternalError"),
      
-    // Failed to manipulate the data.
+     /* Failed to manipulate the data. */
      INTERNALERROR_MAINDBFAIL("InternalError.MainDBFail"),
      
-    // Incorrect parameter.
+     /* Incorrect parameter. */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // Incorrect time range format.
+     /* Incorrect time range format. */
      INVALIDPARAMETER_DATERANGE("InvalidParameter.DateRange"),
      
-    // Invalid request.
+     /* Invalid request. */
      INVALIDPARAMETER_ILLEGALREQUEST("InvalidParameter.IllegalRequest"),
      
-    // Incorrect parameter format.
+     /* Incorrect parameter format. */
      INVALIDPARAMETER_INVALIDFORMAT("InvalidParameter.InvalidFormat"),
      
-    // The IP format is invalid.
+     /* The IP format is invalid. */
      INVALIDPARAMETER_IPNOVALID("InvalidParameter.IpNoValid"),
      
-    // Missing parameter.
+     /* Missing parameter. */
      INVALIDPARAMETER_MISSINGPARAMETER("InvalidParameter.MissingParameter"),
      
-    // The name already exists.
+     /* The name already exists. */
      INVALIDPARAMETER_NAMEHASREPETITION("InvalidParameter.NameHasRepetition"),
      
-    // Incorrect parameter parsing.
+     /* Incorrect parameter parsing. */
      INVALIDPARAMETER_PARSINGERROR("InvalidParameter.ParsingError"),
      
-    // Invalid port format.
+     /* Invalid port format. */
      INVALIDPARAMETER_PORTNOVALID("InvalidParameter.PortNoValid"),
      
-    // The regular expression parameter format is incorrect.
+     /* The regular expression parameter format is incorrect. */
      INVALIDPARAMETER_REGEXRULEERROR("InvalidParameter.RegexRuleError"),
      
-    // Process name/target IP/target port cannot be left blank simultaneously.
+     /* Process name/target IP/target port cannot be left blank simultaneously. */
      INVALIDPARAMETER_REVERSHELLKEYFIELDALLEMPTY("InvalidParameter.ReverShellKeyFieldAllEmpty"),
      
-    // Rule-based API with duplicate hosts.
+     /* Rule-based API with duplicate hosts. */
      INVALIDPARAMETER_RULEHOSTDUPLICATEERR("InvalidParameter.RuleHostDuplicateErr"),
      
-    // Rule-based API with incorrect host IPs.
+     /* Rule-based API with incorrect host IPs. */
      INVALIDPARAMETER_RULEHOSTIPERR("InvalidParameter.RuleHostipErr"),
      
-    // Invalid parameter value.
+     /* Invalid parameter value. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // The tag name cannot exceed 15 characters.
+     /* The tag name cannot exceed 15 characters. */
      INVALIDPARAMETERVALUE_TAGNAMELENGTHLIMIT("InvalidParameterValue.TagNameLengthLimit"),
      
-    // The quota limit is exceeded.
+     /* The quota limit is exceeded. */
      LIMITEXCEEDED("LimitExceeded"),
      
-    // The maximum number for batch addition is exceeded.
+     /* The maximum number for batch addition is exceeded. */
      LIMITEXCEEDED_AREAQUOTA("LimitExceeded.AreaQuota"),
      
-    // Missing parameter error.
+     /* Missing parameter error. */
      MISSINGPARAMETER("MissingParameter"),
      
-    // The operation was denied.
+     /* The operation was denied. */
      OPERATIONDENIED("OperationDenied"),
      
-    // The resource is occupied.
+     /* The resource is occupied. */
      RESOURCEINUSE("ResourceInUse"),
      
-    // Insufficient resources.
+     /* Insufficient resources. */
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
-    // The resource does not exist.
+     /* The resource does not exist. */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-    // The scanning machine does not exist.
+     /* The scanning machine does not exist. */
      RESOURCENOTFOUND_MACHINENOTFOUND("ResourceNotFound.MachineNotFound"),
      
-    // The resource is not available.
+     /* The resource is not available. */
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-    // Unauthorized operation.
+     /* Unauthorized operation. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-    // Unknow parameter error.
+     /* Unknow parameter error. */
      UNKNOWNPARAMETER("UnknownParameter"),
      
-    // The operation is not supported.
+     /* The operation is not supported. */
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

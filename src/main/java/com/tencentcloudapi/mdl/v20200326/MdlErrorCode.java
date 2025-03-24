@@ -1,90 +1,90 @@
 package com.tencentcloudapi.mdl.v20200326;
 public enum MdlErrorCode {
-    // Internal error.
+     /* Internal error. */
      INTERNALERROR("InternalError"),
      
-    // Invalid parameter.
+     /* Invalid parameter. */
      INVALIDPARAMETER("InvalidParameter"),
      
-    // Audio/Video transcoding template error
+     /* Audio/Video transcoding template error */
      INVALIDPARAMETER_AVTEMPLATES("InvalidParameter.AVTemplates"),
      
-    // `Channel` already associated.
+     /* `Channel` already associated. */
      INVALIDPARAMETER_ALREADYASSOCIATEDCHANNEL("InvalidParameter.AlreadyAssociatedChannel"),
      
-    // `Input` already associated.
+     /* `Input` already associated. */
      INVALIDPARAMETER_ALREADYASSOCIATEDINPUT("InvalidParameter.AlreadyAssociatedInput"),
      
-    // Invalid `AttachedInputs`.
+     /* Invalid `AttachedInputs`. */
      INVALIDPARAMETER_ATTACHEDINPUTS("InvalidParameter.AttachedInputs"),
      
-    // Incorrect audio transcoding template.
+     /* Incorrect audio transcoding template. */
      INVALIDPARAMETER_AUDIOTEMPLATES("InvalidParameter.AudioTemplates"),
      
-    // Channel ID error.
+     /* Channel ID error. */
      INVALIDPARAMETER_CHANNELID("InvalidParameter.ChannelId"),
      
-    // Invalid `EndTime`.
+     /* Invalid `EndTime`. */
      INVALIDPARAMETER_ENDTIME("InvalidParameter.EndTime"),
      
-    // The quantity exceeds the limit.
+     /* The quantity exceeds the limit. */
      INVALIDPARAMETER_EXCEEDEDQUANTITYLIMIT("InvalidParameter.ExceededQuantityLimit"),
      
-    // 
+     /*  */
      INVALIDPARAMETER_FRAMECAPTURETEMPLATES("InvalidParameter.FrameCaptureTemplates"),
      
-    // Invalid `Id`.
+     /* Invalid `Id`. */
      INVALIDPARAMETER_ID("InvalidParameter.Id"),
      
-    // Watermark image configuration error.
+     /* Watermark image configuration error. */
      INVALIDPARAMETER_IMAGESETTINGS("InvalidParameter.ImageSettings"),
      
-    // Invalid `InputSettings`.
+     /* Invalid `InputSettings`. */
      INVALIDPARAMETER_INPUTSETTINGS("InvalidParameter.InputSettings"),
      
-    // Invalid `Name`.
+     /* Invalid `Name`. */
      INVALIDPARAMETER_NAME("InvalidParameter.Name"),
      
-    // Not found.
+     /* Not found. */
      INVALIDPARAMETER_NOTFOUND("InvalidParameter.NotFound"),
      
-    // Callback key format error.
+     /* Callback key format error. */
      INVALIDPARAMETER_NOTIFYKEY("InvalidParameter.NotifyKey"),
      
-    // Callback URL format error.
+     /* Callback URL format error. */
      INVALIDPARAMETER_NOTIFYURL("InvalidParameter.NotifyUrl"),
      
-    // Invalid `OutputGroups`.
+     /* Invalid `OutputGroups`. */
      INVALIDPARAMETER_OUTPUTGROUPS("InvalidParameter.OutputGroups"),
      
-    // Page number error.
+     /* Page number error. */
      INVALIDPARAMETER_PAGENUM("InvalidParameter.PageNum"),
      
-    // Invalid `Plan` parameter
+     /* Invalid `Plan` parameter */
      INVALIDPARAMETER_PLAN("InvalidParameter.Plan"),
      
-    // Invalid `SecurityGroups`.
+     /* Invalid `SecurityGroups`. */
      INVALIDPARAMETER_SECURITYGROUPS("InvalidParameter.SecurityGroups"),
      
-    // Invalid `StartTime`.
+     /* Invalid `StartTime`. */
      INVALIDPARAMETER_STARTTIME("InvalidParameter.StartTime"),
      
-    // Exceptional status.
+     /* Exceptional status. */
      INVALIDPARAMETER_STATE("InvalidParameter.State"),
      
-    // Incorrect status.
+     /* Incorrect status. */
      INVALIDPARAMETER_STATEERROR("InvalidParameter.StateError"),
      
-    // Watermark text configuration error.
+     /* Watermark text configuration error. */
      INVALIDPARAMETER_TEXTSETTINGS("InvalidParameter.TextSettings"),
      
-    // Invalid `Type`.
+     /* Invalid `Type`. */
      INVALIDPARAMETER_TYPE("InvalidParameter.Type"),
      
-    // Incorrect video transcoding template.
+     /* Incorrect video transcoding template. */
      INVALIDPARAMETER_VIDEOTEMPLATES("InvalidParameter.VideoTemplates"),
      
-    // Invalid `Whitelist`.
+     /* Invalid `Whitelist`. */
      INVALIDPARAMETER_WHITELIST("InvalidParameter.Whitelist");
      
     private String value;
