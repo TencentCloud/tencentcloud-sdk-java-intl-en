@@ -378,6 +378,17 @@ When a template is created, it defaults to Version 1. You can use `CreateLaunchT
     }
 
     /**
+     *This API is used to obtain the attributes of specified instances. Currently, it supports querying the custom data UserData of instances.
+     * @param req DescribeInstancesAttributesRequest
+     * @return DescribeInstancesAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesAttributesResponse DescribeInstancesAttributes(DescribeInstancesAttributesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstancesAttributes", DescribeInstancesAttributesResponse.class);
+    }
+
+    /**
      *This API is used to query limitations on operations on an instance.
 
 * Currently you can use this API to query the maximum number of times you can modify the configuration of an instance.
