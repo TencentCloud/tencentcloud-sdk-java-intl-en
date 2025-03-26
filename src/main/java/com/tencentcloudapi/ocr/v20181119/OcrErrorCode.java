@@ -12,6 +12,9 @@ public enum OcrErrorCode {
      /* Recognition by the engine timed out. */
      FAILEDOPERATION_ENGINERECOGNIZETIMEOUT("FailedOperation.EngineRecognizeTimeout"),
      
+     /*  */
+     FAILEDOPERATION_FIELDEXCEPTION("FailedOperation.FieldException"),
+     
      /* The ID card information (ID number, name, etc.) is invalid. */
      FAILEDOPERATION_IDCARDINFOILLEGAL("FailedOperation.IdCardInfoIllegal"),
      
@@ -38,6 +41,9 @@ public enum OcrErrorCode {
      
      /* The image is too large. Please see the description of image size limit in the output parameters. */
      FAILEDOPERATION_IMAGESIZETOOLARGE("FailedOperation.ImageSizeTooLarge"),
+     
+     /*  */
+     FAILEDOPERATION_INCONSISTENCYBETWEENMRZANDVRZ("FailedOperation.InconsistencyBetweenMRZAndVRZ"),
      
      /* The input language is not supported. */
      FAILEDOPERATION_LANGUAGENOTSUPPORT("FailedOperation.LanguageNotSupport"),

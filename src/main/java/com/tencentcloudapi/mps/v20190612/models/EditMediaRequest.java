@@ -71,7 +71,7 @@ Note: If this parameter is not empty, the task is a video compositing task. Othe
     private TaskNotifyConfig TaskNotifyConfig;
 
     /**
-    * Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+    * Task priority. The higher the value, the higher the priority. Value range: -10 - 10. If this parameter is left empty, 0 will be used.
     */
     @SerializedName("TasksPriority")
     @Expose
@@ -208,16 +208,16 @@ Note: If this parameter is not empty, the task is a video compositing task. Othe
     }
 
     /**
-     * Get Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used. 
-     * @return TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+     * Get Task priority. The higher the value, the higher the priority. Value range: -10 - 10. If this parameter is left empty, 0 will be used. 
+     * @return TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10 - 10. If this parameter is left empty, 0 will be used.
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
-     * @param TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+     * Set Task priority. The higher the value, the higher the priority. Value range: -10 - 10. If this parameter is left empty, 0 will be used.
+     * @param TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10 - 10. If this parameter is left empty, 0 will be used.
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
