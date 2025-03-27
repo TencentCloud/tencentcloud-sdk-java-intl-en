@@ -7,7 +7,7 @@ Tencent Cloud SDK for Java helps Java developers debug and use TencentCloud APIs
 # Dependent Environment
 1. Dependent environment: JDK 7 or higher.
 2. Activate your product in the Tencent Cloud Console.
-3. Get the `SecretID`, `SecretKey`, and endpoint. The general format of endpoint is `\*.tencentcloudapi.com`. For example, the endpoint of CVM is `cvm.tencentcloudapi.com`. For more information, please see the documentation of the specified product.
+3. Get the `SecretID`, `SecretKey`, and endpoint. The general format of endpoint is `\*.intl.tencentcloudapi.com`. For example, the endpoint of CVM is `cvm.intl.tencentcloudapi.com`. For more information, please see the documentation of the specified product.
 
 # Installation
 Before installing Tencent Cloud SDK for Java and using TencentCloud API, apply for security credentials in the Tencent Cloud Console. Security credential consists of `SecretID` and `SecretKey`. `SecretID` is for identifying the API requester. `SecretKey` is a key used for signature string encryption and authentication by the server. Please keep your `SecretKey` private and do not disclose it to others.
