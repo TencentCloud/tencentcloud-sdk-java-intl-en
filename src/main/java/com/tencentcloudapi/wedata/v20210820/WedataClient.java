@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.wedata.v20210820.models.*;
 
 public class WedataClient extends AbstractClient{
-    private static String endpoint = "wedata.tencentcloudapi.com";
+    private static String endpoint = "wedata.intl.tencentcloudapi.com";
     private static String service = "wedata";
     private static String version = "2021-08-20";
     

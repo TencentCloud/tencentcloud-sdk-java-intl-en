@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.rum.v20210622.models.*;
 
 public class RumClient extends AbstractClient{
-    private static String endpoint = "rum.tencentcloudapi.com";
+    private static String endpoint = "rum.intl.tencentcloudapi.com";
     private static String service = "rum";
     private static String version = "2021-06-22";
     

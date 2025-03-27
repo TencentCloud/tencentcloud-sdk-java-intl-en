@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.tcsas.v20250106.models.*;
 
 public class TcsasClient extends AbstractClient{
-    private static String endpoint = "tcsas.tencentcloudapi.com";
+    private static String endpoint = "tcsas.intl.tencentcloudapi.com";
     private static String service = "tcsas";
     private static String version = "2025-01-06";
     

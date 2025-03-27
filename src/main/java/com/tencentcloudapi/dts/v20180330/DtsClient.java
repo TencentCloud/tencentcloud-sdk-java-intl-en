@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.dts.v20180330.models.*;
 
 public class DtsClient extends AbstractClient{
-    private static String endpoint = "dts.tencentcloudapi.com";
+    private static String endpoint = "dts.intl.tencentcloudapi.com";
     private static String service = "dts";
     private static String version = "2018-03-30";
     

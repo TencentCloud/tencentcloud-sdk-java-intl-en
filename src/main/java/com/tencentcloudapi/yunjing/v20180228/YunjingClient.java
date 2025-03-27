@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.yunjing.v20180228.models.*;
 
 public class YunjingClient extends AbstractClient{
-    private static String endpoint = "yunjing.tencentcloudapi.com";
+    private static String endpoint = "yunjing.intl.tencentcloudapi.com";
     private static String service = "yunjing";
     private static String version = "2018-02-28";
     

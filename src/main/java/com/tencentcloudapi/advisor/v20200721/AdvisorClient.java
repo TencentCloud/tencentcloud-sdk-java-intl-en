@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.advisor.v20200721.models.*;
 
 public class AdvisorClient extends AbstractClient{
-    private static String endpoint = "advisor.tencentcloudapi.com";
+    private static String endpoint = "advisor.intl.tencentcloudapi.com";
     private static String service = "advisor";
     private static String version = "2020-07-21";
     

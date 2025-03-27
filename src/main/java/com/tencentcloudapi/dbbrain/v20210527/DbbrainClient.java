@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.dbbrain.v20210527.models.*;
 
 public class DbbrainClient extends AbstractClient{
-    private static String endpoint = "dbbrain.tencentcloudapi.com";
+    private static String endpoint = "dbbrain.intl.tencentcloudapi.com";
     private static String service = "dbbrain";
     private static String version = "2021-05-27";
     

@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.cls.v20201016.models.*;
 
 public class ClsClient extends AbstractClient{
-    private static String endpoint = "cls.tencentcloudapi.com";
+    private static String endpoint = "cls.intl.tencentcloudapi.com";
     private static String service = "cls";
     private static String version = "2020-10-16";
     

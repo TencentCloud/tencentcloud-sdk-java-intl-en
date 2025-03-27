@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.mps.v20190612.models.*;
 
 public class MpsClient extends AbstractClient{
-    private static String endpoint = "mps.tencentcloudapi.com";
+    private static String endpoint = "mps.intl.tencentcloudapi.com";
     private static String service = "mps";
     private static String version = "2019-06-12";
     

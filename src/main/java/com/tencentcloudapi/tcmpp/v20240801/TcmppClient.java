@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.tcmpp.v20240801.models.*;
 
 public class TcmppClient extends AbstractClient{
-    private static String endpoint = "tcmpp.tencentcloudapi.com";
+    private static String endpoint = "tcmpp.intl.tencentcloudapi.com";
     private static String service = "tcmpp";
     private static String version = "2024-08-01";
     

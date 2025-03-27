@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.eiam.v20210420.models.*;
 
 public class EiamClient extends AbstractClient{
-    private static String endpoint = "eiam.tencentcloudapi.com";
+    private static String endpoint = "eiam.intl.tencentcloudapi.com";
     private static String service = "eiam";
     private static String version = "2021-04-20";
     

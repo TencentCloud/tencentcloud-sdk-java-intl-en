@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.ecm.v20190719.models.*;
 
 public class EcmClient extends AbstractClient{
-    private static String endpoint = "ecm.tencentcloudapi.com";
+    private static String endpoint = "ecm.intl.tencentcloudapi.com";
     private static String service = "ecm";
     private static String version = "2019-07-19";
     

@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.iai.v20200303.models.*;
 
 public class IaiClient extends AbstractClient{
-    private static String endpoint = "iai.tencentcloudapi.com";
+    private static String endpoint = "iai.intl.tencentcloudapi.com";
     private static String service = "iai";
     private static String version = "2020-03-03";
     

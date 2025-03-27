@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.eb.v20210416.models.*;
 
 public class EbClient extends AbstractClient{
-    private static String endpoint = "eb.tencentcloudapi.com";
+    private static String endpoint = "eb.intl.tencentcloudapi.com";
     private static String service = "eb";
     private static String version = "2021-04-16";
     

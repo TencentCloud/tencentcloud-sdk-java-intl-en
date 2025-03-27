@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.trtc.v20190722.models.*;
 
 public class TrtcClient extends AbstractClient{
-    private static String endpoint = "trtc.tencentcloudapi.com";
+    private static String endpoint = "trtc.intl.tencentcloudapi.com";
     private static String service = "trtc";
     private static String version = "2019-07-22";
     

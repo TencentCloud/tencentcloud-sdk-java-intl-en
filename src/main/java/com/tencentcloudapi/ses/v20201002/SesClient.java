@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.ses.v20201002.models.*;
 
 public class SesClient extends AbstractClient{
-    private static String endpoint = "ses.tencentcloudapi.com";
+    private static String endpoint = "ses.intl.tencentcloudapi.com";
     private static String service = "ses";
     private static String version = "2020-10-02";
     

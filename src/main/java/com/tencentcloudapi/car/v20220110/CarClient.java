@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.car.v20220110.models.*;
 
 public class CarClient extends AbstractClient{
-    private static String endpoint = "car.tencentcloudapi.com";
+    private static String endpoint = "car.intl.tencentcloudapi.com";
     private static String service = "car";
     private static String version = "2022-01-10";
     

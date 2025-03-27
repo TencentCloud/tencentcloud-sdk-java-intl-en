@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.dms.v20200819.models.*;
 
 public class DmsClient extends AbstractClient{
-    private static String endpoint = "dms.tencentcloudapi.com";
+    private static String endpoint = "dms.intl.tencentcloudapi.com";
     private static String service = "dms";
     private static String version = "2020-08-19";
     

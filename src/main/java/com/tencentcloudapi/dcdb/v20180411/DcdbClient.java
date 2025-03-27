@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.dcdb.v20180411.models.*;
 
 public class DcdbClient extends AbstractClient{
-    private static String endpoint = "dcdb.tencentcloudapi.com";
+    private static String endpoint = "dcdb.intl.tencentcloudapi.com";
     private static String service = "dcdb";
     private static String version = "2018-04-11";
     

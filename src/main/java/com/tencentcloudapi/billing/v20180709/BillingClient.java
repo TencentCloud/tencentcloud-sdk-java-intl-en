@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.billing.v20180709.models.*;
 
 public class BillingClient extends AbstractClient{
-    private static String endpoint = "billing.tencentcloudapi.com";
+    private static String endpoint = "billing.intl.tencentcloudapi.com";
     private static String service = "billing";
     private static String version = "2018-07-09";
     

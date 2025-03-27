@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.ciam.v20220331.models.*;
 
 public class CiamClient extends AbstractClient{
-    private static String endpoint = "ciam.tencentcloudapi.com";
+    private static String endpoint = "ciam.intl.tencentcloudapi.com";
     private static String service = "ciam";
     private static String version = "2022-03-31";
     

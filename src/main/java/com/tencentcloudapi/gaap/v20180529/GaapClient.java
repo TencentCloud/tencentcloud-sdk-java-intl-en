@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.gaap.v20180529.models.*;
 
 public class GaapClient extends AbstractClient{
-    private static String endpoint = "gaap.tencentcloudapi.com";
+    private static String endpoint = "gaap.intl.tencentcloudapi.com";
     private static String service = "gaap";
     private static String version = "2018-05-29";
     

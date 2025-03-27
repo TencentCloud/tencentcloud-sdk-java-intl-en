@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.gme.v20180711.models.*;
 
 public class GmeClient extends AbstractClient{
-    private static String endpoint = "gme.tencentcloudapi.com";
+    private static String endpoint = "gme.intl.tencentcloudapi.com";
     private static String service = "gme";
     private static String version = "2018-07-11";
     

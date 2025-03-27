@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.tat.v20201028.models.*;
 
 public class TatClient extends AbstractClient{
-    private static String endpoint = "tat.tencentcloudapi.com";
+    private static String endpoint = "tat.intl.tencentcloudapi.com";
     private static String service = "tat";
     private static String version = "2020-10-28";
     

@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.captcha.v20190722.models.*;
 
 public class CaptchaClient extends AbstractClient{
-    private static String endpoint = "captcha.tencentcloudapi.com";
+    private static String endpoint = "captcha.intl.tencentcloudapi.com";
     private static String service = "captcha";
     private static String version = "2019-07-22";
     

@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.as.v20180419.models.*;
 
 public class AsClient extends AbstractClient{
-    private static String endpoint = "as.tencentcloudapi.com";
+    private static String endpoint = "as.intl.tencentcloudapi.com";
     private static String service = "as";
     private static String version = "2018-04-19";
     

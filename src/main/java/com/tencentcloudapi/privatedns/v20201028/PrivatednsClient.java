@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.privatedns.v20201028.models.*;
 
 public class PrivatednsClient extends AbstractClient{
-    private static String endpoint = "privatedns.tencentcloudapi.com";
+    private static String endpoint = "privatedns.intl.tencentcloudapi.com";
     private static String service = "privatedns";
     private static String version = "2020-10-28";
     

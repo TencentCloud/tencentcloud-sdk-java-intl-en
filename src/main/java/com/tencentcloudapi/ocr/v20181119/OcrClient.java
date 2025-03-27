@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.ocr.v20181119.models.*;
 
 public class OcrClient extends AbstractClient{
-    private static String endpoint = "ocr.tencentcloudapi.com";
+    private static String endpoint = "ocr.intl.tencentcloudapi.com";
     private static String service = "ocr";
     private static String version = "2018-11-19";
     

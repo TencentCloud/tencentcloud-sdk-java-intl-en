@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.vod.v20180717.models.*;
 
 public class VodClient extends AbstractClient{
-    private static String endpoint = "vod.tencentcloudapi.com";
+    private static String endpoint = "vod.intl.tencentcloudapi.com";
     private static String service = "vod";
     private static String version = "2018-07-17";
     

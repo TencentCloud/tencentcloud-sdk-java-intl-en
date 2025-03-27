@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.mdc.v20200828.models.*;
 
 public class MdcClient extends AbstractClient{
-    private static String endpoint = "mdc.tencentcloudapi.com";
+    private static String endpoint = "mdc.intl.tencentcloudapi.com";
     private static String service = "mdc";
     private static String version = "2020-08-28";
     

@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.trro.v20220325.models.*;
 
 public class TrroClient extends AbstractClient{
-    private static String endpoint = "trro.tencentcloudapi.com";
+    private static String endpoint = "trro.intl.tencentcloudapi.com";
     private static String service = "trro";
     private static String version = "2022-03-25";
     

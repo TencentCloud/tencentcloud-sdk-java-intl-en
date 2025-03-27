@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.cdwdoris.v20211228.models.*;
 
 public class CdwdorisClient extends AbstractClient{
-    private static String endpoint = "cdwdoris.tencentcloudapi.com";
+    private static String endpoint = "cdwdoris.intl.tencentcloudapi.com";
     private static String service = "cdwdoris";
     private static String version = "2021-12-28";
     

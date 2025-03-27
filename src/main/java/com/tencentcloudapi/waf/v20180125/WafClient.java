@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.waf.v20180125.models.*;
 
 public class WafClient extends AbstractClient{
-    private static String endpoint = "waf.tencentcloudapi.com";
+    private static String endpoint = "waf.intl.tencentcloudapi.com";
     private static String service = "waf";
     private static String version = "2018-01-25";
     

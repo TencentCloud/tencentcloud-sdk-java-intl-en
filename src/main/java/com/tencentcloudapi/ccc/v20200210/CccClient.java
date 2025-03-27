@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.ccc.v20200210.models.*;
 
 public class CccClient extends AbstractClient{
-    private static String endpoint = "ccc.tencentcloudapi.com";
+    private static String endpoint = "ccc.intl.tencentcloudapi.com";
     private static String service = "ccc";
     private static String version = "2020-02-10";
     

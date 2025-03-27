@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.aiart.v20221229.models.*;
 
 public class AiartClient extends AbstractClient{
-    private static String endpoint = "aiart.tencentcloudapi.com";
+    private static String endpoint = "aiart.intl.tencentcloudapi.com";
     private static String service = "aiart";
     private static String version = "2022-12-29";
     

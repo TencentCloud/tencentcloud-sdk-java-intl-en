@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.facefusion.v20220927.models.*;
 
 public class FacefusionClient extends AbstractClient{
-    private static String endpoint = "facefusion.tencentcloudapi.com";
+    private static String endpoint = "facefusion.intl.tencentcloudapi.com";
     private static String service = "facefusion";
     private static String version = "2022-09-27";
     

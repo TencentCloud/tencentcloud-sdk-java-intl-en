@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.mongodb.v20190725.models.*;
 
 public class MongodbClient extends AbstractClient{
-    private static String endpoint = "mongodb.tencentcloudapi.com";
+    private static String endpoint = "mongodb.intl.tencentcloudapi.com";
     private static String service = "mongodb";
     private static String version = "2019-07-25";
     

@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.config.v20220802.models.*;
 
 public class ConfigClient extends AbstractClient{
-    private static String endpoint = "config.tencentcloudapi.com";
+    private static String endpoint = "config.intl.tencentcloudapi.com";
     private static String service = "config";
     private static String version = "2022-08-02";
     

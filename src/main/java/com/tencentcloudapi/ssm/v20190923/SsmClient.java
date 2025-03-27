@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.ssm.v20190923.models.*;
 
 public class SsmClient extends AbstractClient{
-    private static String endpoint = "ssm.tencentcloudapi.com";
+    private static String endpoint = "ssm.intl.tencentcloudapi.com";
     private static String service = "ssm";
     private static String version = "2019-09-23";
     

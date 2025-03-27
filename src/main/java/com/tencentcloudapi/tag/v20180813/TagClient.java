@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.tag.v20180813.models.*;
 
 public class TagClient extends AbstractClient{
-    private static String endpoint = "tag.tencentcloudapi.com";
+    private static String endpoint = "tag.intl.tencentcloudapi.com";
     private static String service = "tag";
     private static String version = "2018-08-13";
     

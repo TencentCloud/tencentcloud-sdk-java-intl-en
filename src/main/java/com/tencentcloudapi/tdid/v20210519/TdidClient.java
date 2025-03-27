@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.tdid.v20210519.models.*;
 
 public class TdidClient extends AbstractClient{
-    private static String endpoint = "tdid.tencentcloudapi.com";
+    private static String endpoint = "tdid.intl.tencentcloudapi.com";
     private static String service = "tdid";
     private static String version = "2021-05-19";
     

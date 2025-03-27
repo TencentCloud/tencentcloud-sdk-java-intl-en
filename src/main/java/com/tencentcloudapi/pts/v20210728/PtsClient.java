@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.pts.v20210728.models.*;
 
 public class PtsClient extends AbstractClient{
-    private static String endpoint = "pts.tencentcloudapi.com";
+    private static String endpoint = "pts.intl.tencentcloudapi.com";
     private static String service = "pts";
     private static String version = "2021-07-28";
     

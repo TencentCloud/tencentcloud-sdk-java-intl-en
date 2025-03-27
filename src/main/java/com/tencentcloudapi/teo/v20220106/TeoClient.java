@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.teo.v20220106.models.*;
 
 public class TeoClient extends AbstractClient{
-    private static String endpoint = "teo.tencentcloudapi.com";
+    private static String endpoint = "teo.intl.tencentcloudapi.com";
     private static String service = "teo";
     private static String version = "2022-01-06";
     

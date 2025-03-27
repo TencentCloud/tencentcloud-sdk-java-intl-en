@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.tcaplusdb.v20190823.models.*;
 
 public class TcaplusdbClient extends AbstractClient{
-    private static String endpoint = "tcaplusdb.tencentcloudapi.com";
+    private static String endpoint = "tcaplusdb.intl.tencentcloudapi.com";
     private static String service = "tcaplusdb";
     private static String version = "2019-08-23";
     

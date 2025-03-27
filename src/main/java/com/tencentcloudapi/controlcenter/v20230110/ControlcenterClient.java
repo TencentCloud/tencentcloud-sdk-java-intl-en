@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.controlcenter.v20230110.models.*;
 
 public class ControlcenterClient extends AbstractClient{
-    private static String endpoint = "controlcenter.tencentcloudapi.com";
+    private static String endpoint = "controlcenter.intl.tencentcloudapi.com";
     private static String service = "controlcenter";
     private static String version = "2023-01-10";
     

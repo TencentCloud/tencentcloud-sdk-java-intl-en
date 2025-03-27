@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.mariadb.v20170312.models.*;
 
 public class MariadbClient extends AbstractClient{
-    private static String endpoint = "mariadb.tencentcloudapi.com";
+    private static String endpoint = "mariadb.intl.tencentcloudapi.com";
     private static String service = "mariadb";
     private static String version = "2017-03-12";
     

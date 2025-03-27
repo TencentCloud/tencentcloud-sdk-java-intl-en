@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.rce.v20201103.models.*;
 
 public class RceClient extends AbstractClient{
-    private static String endpoint = "rce.tencentcloudapi.com";
+    private static String endpoint = "rce.intl.tencentcloudapi.com";
     private static String service = "rce";
     private static String version = "2020-11-03";
     

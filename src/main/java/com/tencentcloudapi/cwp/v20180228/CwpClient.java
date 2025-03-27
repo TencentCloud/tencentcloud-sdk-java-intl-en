@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.cwp.v20180228.models.*;
 
 public class CwpClient extends AbstractClient{
-    private static String endpoint = "cwp.tencentcloudapi.com";
+    private static String endpoint = "cwp.intl.tencentcloudapi.com";
     private static String service = "cwp";
     private static String version = "2018-02-28";
     

@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.dataintegration.v20220613.models.*;
 
 public class DataintegrationClient extends AbstractClient{
-    private static String endpoint = "dataintegration.tencentcloudapi.com";
+    private static String endpoint = "dataintegration.intl.tencentcloudapi.com";
     private static String service = "dataintegration";
     private static String version = "2022-06-13";
     

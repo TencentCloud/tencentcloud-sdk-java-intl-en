@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.dayu.v20180709.models.*;
 
 public class DayuClient extends AbstractClient{
-    private static String endpoint = "dayu.tencentcloudapi.com";
+    private static String endpoint = "dayu.intl.tencentcloudapi.com";
     private static String service = "dayu";
     private static String version = "2018-07-09";
     

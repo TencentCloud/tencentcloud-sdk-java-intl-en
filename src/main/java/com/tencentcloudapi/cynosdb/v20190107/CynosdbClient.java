@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.cynosdb.v20190107.models.*;
 
 public class CynosdbClient extends AbstractClient{
-    private static String endpoint = "cynosdb.tencentcloudapi.com";
+    private static String endpoint = "cynosdb.intl.tencentcloudapi.com";
     private static String service = "cynosdb";
     private static String version = "2019-01-07";
     

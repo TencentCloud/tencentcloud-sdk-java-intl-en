@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.cloudaudit.v20190319.models.*;
 
 public class CloudauditClient extends AbstractClient{
-    private static String endpoint = "cloudaudit.tencentcloudapi.com";
+    private static String endpoint = "cloudaudit.intl.tencentcloudapi.com";
     private static String service = "cloudaudit";
     private static String version = "2019-03-19";
     

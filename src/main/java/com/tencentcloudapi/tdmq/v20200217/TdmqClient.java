@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.tdmq.v20200217.models.*;
 
 public class TdmqClient extends AbstractClient{
-    private static String endpoint = "tdmq.tencentcloudapi.com";
+    private static String endpoint = "tdmq.intl.tencentcloudapi.com";
     private static String service = "tdmq";
     private static String version = "2020-02-17";
     

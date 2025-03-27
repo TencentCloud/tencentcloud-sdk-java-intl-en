@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.faceid.v20180301.models.*;
 
 public class FaceidClient extends AbstractClient{
-    private static String endpoint = "faceid.tencentcloudapi.com";
+    private static String endpoint = "faceid.intl.tencentcloudapi.com";
     private static String service = "faceid";
     private static String version = "2018-03-01";
     

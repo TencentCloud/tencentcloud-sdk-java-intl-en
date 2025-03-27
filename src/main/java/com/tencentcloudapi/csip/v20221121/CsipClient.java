@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.csip.v20221121.models.*;
 
 public class CsipClient extends AbstractClient{
-    private static String endpoint = "csip.tencentcloudapi.com";
+    private static String endpoint = "csip.intl.tencentcloudapi.com";
     private static String service = "csip";
     private static String version = "2022-11-21";
     

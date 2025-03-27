@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.tchd.v20230306.models.*;
 
 public class TchdClient extends AbstractClient{
-    private static String endpoint = "tchd.tencentcloudapi.com";
+    private static String endpoint = "tchd.intl.tencentcloudapi.com";
     private static String service = "tchd";
     private static String version = "2023-03-06";
     

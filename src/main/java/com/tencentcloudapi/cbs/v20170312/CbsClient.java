@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.cbs.v20170312.models.*;
 
 public class CbsClient extends AbstractClient{
-    private static String endpoint = "cbs.tencentcloudapi.com";
+    private static String endpoint = "cbs.intl.tencentcloudapi.com";
     private static String service = "cbs";
     private static String version = "2017-03-12";
     

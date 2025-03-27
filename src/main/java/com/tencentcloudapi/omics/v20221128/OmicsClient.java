@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.omics.v20221128.models.*;
 
 public class OmicsClient extends AbstractClient{
-    private static String endpoint = "omics.tencentcloudapi.com";
+    private static String endpoint = "omics.intl.tencentcloudapi.com";
     private static String service = "omics";
     private static String version = "2022-11-28";
     

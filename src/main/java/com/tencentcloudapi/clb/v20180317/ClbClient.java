@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.clb.v20180317.models.*;
 
 public class ClbClient extends AbstractClient{
-    private static String endpoint = "clb.tencentcloudapi.com";
+    private static String endpoint = "clb.intl.tencentcloudapi.com";
     private static String service = "clb";
     private static String version = "2018-03-17";
     

@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.intlpartnersmgt.v20220928.models.*;
 
 public class IntlpartnersmgtClient extends AbstractClient{
-    private static String endpoint = "intlpartnersmgt.tencentcloudapi.com";
+    private static String endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
     private static String service = "intlpartnersmgt";
     private static String version = "2022-09-28";
     

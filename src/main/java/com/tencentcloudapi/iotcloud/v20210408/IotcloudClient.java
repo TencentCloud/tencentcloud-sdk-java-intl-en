@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.iotcloud.v20210408.models.*;
 
 public class IotcloudClient extends AbstractClient{
-    private static String endpoint = "iotcloud.tencentcloudapi.com";
+    private static String endpoint = "iotcloud.intl.tencentcloudapi.com";
     private static String service = "iotcloud";
     private static String version = "2021-04-08";
     

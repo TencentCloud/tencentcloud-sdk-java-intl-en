@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.ims.v20201229.models.*;
 
 public class ImsClient extends AbstractClient{
-    private static String endpoint = "ims.tencentcloudapi.com";
+    private static String endpoint = "ims.intl.tencentcloudapi.com";
     private static String service = "ims";
     private static String version = "2020-12-29";
     

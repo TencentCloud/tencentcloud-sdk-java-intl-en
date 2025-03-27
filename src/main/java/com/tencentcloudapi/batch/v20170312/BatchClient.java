@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.batch.v20170312.models.*;
 
 public class BatchClient extends AbstractClient{
-    private static String endpoint = "batch.tencentcloudapi.com";
+    private static String endpoint = "batch.intl.tencentcloudapi.com";
     private static String service = "batch";
     private static String version = "2017-03-12";
     

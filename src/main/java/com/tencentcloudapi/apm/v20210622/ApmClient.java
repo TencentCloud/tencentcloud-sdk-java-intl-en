@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.apm.v20210622.models.*;
 
 public class ApmClient extends AbstractClient{
-    private static String endpoint = "apm.tencentcloudapi.com";
+    private static String endpoint = "apm.intl.tencentcloudapi.com";
     private static String service = "apm";
     private static String version = "2021-06-22";
     

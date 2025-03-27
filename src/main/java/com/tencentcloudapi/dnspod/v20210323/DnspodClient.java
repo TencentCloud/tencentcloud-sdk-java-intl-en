@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.dnspod.v20210323.models.*;
 
 public class DnspodClient extends AbstractClient{
-    private static String endpoint = "dnspod.tencentcloudapi.com";
+    private static String endpoint = "dnspod.intl.tencentcloudapi.com";
     private static String service = "dnspod";
     private static String version = "2021-03-23";
     

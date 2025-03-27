@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.ams.v20201229.models.*;
 
 public class AmsClient extends AbstractClient{
-    private static String endpoint = "ams.tencentcloudapi.com";
+    private static String endpoint = "ams.intl.tencentcloudapi.com";
     private static String service = "ams";
     private static String version = "2020-12-29";
     

@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.tts.v20190823.models.*;
 
 public class TtsClient extends AbstractClient{
-    private static String endpoint = "tts.tencentcloudapi.com";
+    private static String endpoint = "tts.intl.tencentcloudapi.com";
     private static String service = "tts";
     private static String version = "2019-08-23";
     

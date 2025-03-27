@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.cdc.v20201214.models.*;
 
 public class CdcClient extends AbstractClient{
-    private static String endpoint = "cdc.tencentcloudapi.com";
+    private static String endpoint = "cdc.intl.tencentcloudapi.com";
     private static String service = "cdc";
     private static String version = "2020-12-14";
     

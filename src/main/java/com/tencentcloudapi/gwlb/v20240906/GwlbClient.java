@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.gwlb.v20240906.models.*;
 
 public class GwlbClient extends AbstractClient{
-    private static String endpoint = "gwlb.tencentcloudapi.com";
+    private static String endpoint = "gwlb.intl.tencentcloudapi.com";
     private static String service = "gwlb";
     private static String version = "2024-09-06";
     

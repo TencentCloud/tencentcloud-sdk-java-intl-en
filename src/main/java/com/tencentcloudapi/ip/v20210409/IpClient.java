@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.ip.v20210409.models.*;
 
 public class IpClient extends AbstractClient{
-    private static String endpoint = "ip.tencentcloudapi.com";
+    private static String endpoint = "ip.intl.tencentcloudapi.com";
     private static String service = "ip";
     private static String version = "2021-04-09";
     

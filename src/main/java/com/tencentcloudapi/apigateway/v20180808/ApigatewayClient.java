@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.apigateway.v20180808.models.*;
 
 public class ApigatewayClient extends AbstractClient{
-    private static String endpoint = "apigateway.tencentcloudapi.com";
+    private static String endpoint = "apigateway.intl.tencentcloudapi.com";
     private static String service = "apigateway";
     private static String version = "2018-08-08";
     

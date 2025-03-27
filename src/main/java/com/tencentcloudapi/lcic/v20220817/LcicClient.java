@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.lcic.v20220817.models.*;
 
 public class LcicClient extends AbstractClient{
-    private static String endpoint = "lcic.tencentcloudapi.com";
+    private static String endpoint = "lcic.intl.tencentcloudapi.com";
     private static String service = "lcic";
     private static String version = "2022-08-17";
     

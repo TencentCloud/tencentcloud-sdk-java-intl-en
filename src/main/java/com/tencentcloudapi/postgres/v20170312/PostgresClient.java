@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.postgres.v20170312.models.*;
 
 public class PostgresClient extends AbstractClient{
-    private static String endpoint = "postgres.tencentcloudapi.com";
+    private static String endpoint = "postgres.intl.tencentcloudapi.com";
     private static String service = "postgres";
     private static String version = "2017-03-12";
     

@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.antiddos.v20200309.models.*;
 
 public class AntiddosClient extends AbstractClient{
-    private static String endpoint = "antiddos.tencentcloudapi.com";
+    private static String endpoint = "antiddos.intl.tencentcloudapi.com";
     private static String service = "antiddos";
     private static String version = "2020-03-09";
     

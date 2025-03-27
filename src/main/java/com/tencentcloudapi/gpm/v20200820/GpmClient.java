@@ -26,7 +26,7 @@ import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.gpm.v20200820.models.*;
 
 public class GpmClient extends AbstractClient{
-    private static String endpoint = "gpm.tencentcloudapi.com";
+    private static String endpoint = "gpm.intl.tencentcloudapi.com";
     private static String service = "gpm";
     private static String version = "2020-08-20";
     
