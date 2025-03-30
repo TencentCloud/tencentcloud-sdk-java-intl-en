@@ -104,6 +104,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ScheduleQualityControlTaskResult QualityControlTask;
 
     /**
+    * Smart subtitle task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SmartSubtitlesTask")
+    @Expose
+    private ScheduleSmartSubtitleTaskResult SmartSubtitlesTask;
+
+    /**
      * Get The result of a transcoding task.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TranscodeTask The result of a transcoding task.
@@ -303,6 +311,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.QualityControlTask = QualityControlTask;
     }
 
+    /**
+     * Get Smart subtitle task output.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SmartSubtitlesTask Smart subtitle task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public ScheduleSmartSubtitleTaskResult getSmartSubtitlesTask() {
+        return this.SmartSubtitlesTask;
+    }
+
+    /**
+     * Set Smart subtitle task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SmartSubtitlesTask Smart subtitle task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setSmartSubtitlesTask(ScheduleSmartSubtitleTaskResult SmartSubtitlesTask) {
+        this.SmartSubtitlesTask = SmartSubtitlesTask;
+    }
+
     public ActivityResItem() {
     }
 
@@ -341,6 +369,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.QualityControlTask != null) {
             this.QualityControlTask = new ScheduleQualityControlTaskResult(source.QualityControlTask);
         }
+        if (source.SmartSubtitlesTask != null) {
+            this.SmartSubtitlesTask = new ScheduleSmartSubtitleTaskResult(source.SmartSubtitlesTask);
+        }
     }
 
 
@@ -358,6 +389,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "ReviewTask.", this.ReviewTask);
         this.setParamObj(map, prefix + "AnalysisTask.", this.AnalysisTask);
         this.setParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
+        this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
 
     }
 }

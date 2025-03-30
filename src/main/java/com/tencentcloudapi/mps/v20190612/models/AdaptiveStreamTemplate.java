@@ -56,6 +56,15 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     private Long RemoveVideo;
 
     /**
+    * List of audio parameter information.
+The parameter array has a maximum length of 64.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("AudioList")
+    @Expose
+    private AudioTemplateInfo [] AudioList;
+
+    /**
      * Get Audio parameter information. 
      * @return Audio Audio parameter information.
      */
@@ -135,6 +144,30 @@ public class AdaptiveStreamTemplate extends AbstractModel {
         this.RemoveVideo = RemoveVideo;
     }
 
+    /**
+     * Get List of audio parameter information.
+The parameter array has a maximum length of 64.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return AudioList List of audio parameter information.
+The parameter array has a maximum length of 64.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public AudioTemplateInfo [] getAudioList() {
+        return this.AudioList;
+    }
+
+    /**
+     * Set List of audio parameter information.
+The parameter array has a maximum length of 64.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param AudioList List of audio parameter information.
+The parameter array has a maximum length of 64.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setAudioList(AudioTemplateInfo [] AudioList) {
+        this.AudioList = AudioList;
+    }
+
     public AdaptiveStreamTemplate() {
     }
 
@@ -155,6 +188,12 @@ public class AdaptiveStreamTemplate extends AbstractModel {
         if (source.RemoveVideo != null) {
             this.RemoveVideo = new Long(source.RemoveVideo);
         }
+        if (source.AudioList != null) {
+            this.AudioList = new AudioTemplateInfo[source.AudioList.length];
+            for (int i = 0; i < source.AudioList.length; i++) {
+                this.AudioList[i] = new AudioTemplateInfo(source.AudioList[i]);
+            }
+        }
     }
 
 
@@ -166,6 +205,7 @@ public class AdaptiveStreamTemplate extends AbstractModel {
         this.setParamObj(map, prefix + "Video.", this.Video);
         this.setParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
         this.setParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
+        this.setParamArrayObj(map, prefix + "AudioList.", this.AudioList);
 
     }
 }

@@ -83,6 +83,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a smart subtitle hotword lexicon.
+     * @param req CreateAsrHotwordsRequest
+     * @return CreateAsrHotwordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAsrHotwordsResponse CreateAsrHotwords(CreateAsrHotwordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAsrHotwords", CreateAsrHotwordsResponse.class);
+    }
+
+    /**
      *This API is used to create a custom content moderation template. Up to 50 templates can be created in total.
      * @param req CreateContentReviewTemplateRequest
      * @return CreateContentReviewTemplateResponse
@@ -168,6 +179,17 @@ Note: A scheme is disabled upon creation. You need to manually enable it.
     public CreateScheduleResponse CreateSchedule(CreateScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateSchedule", CreateScheduleResponse.class);
+    }
+
+    /**
+     *This API is used to create a custom smart subtitle template.
+     * @param req CreateSmartSubtitleTemplateRequest
+     * @return CreateSmartSubtitleTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSmartSubtitleTemplateResponse CreateSmartSubtitleTemplate(CreateSmartSubtitleTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSmartSubtitleTemplate", CreateSmartSubtitleTemplateResponse.class);
     }
 
     /**
@@ -283,6 +305,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to delete a smart subtitle hotword lexicon.
+     * @param req DeleteAsrHotwordsRequest
+     * @return DeleteAsrHotwordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAsrHotwordsResponse DeleteAsrHotwords(DeleteAsrHotwordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAsrHotwords", DeleteAsrHotwordsResponse.class);
+    }
+
+    /**
      *This API is used to delete a custom content moderation template.
      * @param req DeleteContentReviewTemplateRequest
      * @return DeleteContentReviewTemplateResponse
@@ -357,6 +390,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteScheduleResponse DeleteSchedule(DeleteScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSchedule", DeleteScheduleResponse.class);
+    }
+
+    /**
+     *This API is used to delete a user-defined smart subtitle template.
+     * @param req DeleteSmartSubtitleTemplateRequest
+     * @return DeleteSmartSubtitleTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSmartSubtitleTemplateResponse DeleteSmartSubtitleTemplate(DeleteSmartSubtitleTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSmartSubtitleTemplate", DeleteSmartSubtitleTemplateResponse.class);
     }
 
     /**
@@ -459,6 +503,28 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to query a smart subtitle hotword lexicon.
+     * @param req DescribeAsrHotwordsRequest
+     * @return DescribeAsrHotwordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAsrHotwordsResponse DescribeAsrHotwords(DescribeAsrHotwordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAsrHotwords", DescribeAsrHotwordsResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the hotword lexicon list.
+     * @param req DescribeAsrHotwordsListRequest
+     * @return DescribeAsrHotwordsListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAsrHotwordsListResponse DescribeAsrHotwordsList(DescribeAsrHotwordsListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAsrHotwordsList", DescribeAsrHotwordsListResponse.class);
+    }
+
+    /**
      *This API is used to query content moderation templates by template ID. Both custom and preset templates that match the template IDs passed in will be returned.
      * @param req DescribeContentReviewTemplatesRequest
      * @return DescribeContentReviewTemplatesResponse
@@ -544,6 +610,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeSchedulesResponse DescribeSchedules(DescribeSchedulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSchedules", DescribeSchedulesResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the list of smart subtitle templates based on template unique identifier. The returned result includes all matching user-defined smart subtitle templates and system preset smart subtitle templates.
+     * @param req DescribeSmartSubtitleTemplatesRequest
+     * @return DescribeSmartSubtitleTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSmartSubtitleTemplatesResponse DescribeSmartSubtitleTemplates(DescribeSmartSubtitleTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSmartSubtitleTemplates", DescribeSmartSubtitleTemplatesResponse.class);
     }
 
     /**
@@ -772,6 +849,17 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     }
 
     /**
+     *This API is used to update a smart subtitle hotword lexicon.
+     * @param req ModifyAsrHotwordsRequest
+     * @return ModifyAsrHotwordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAsrHotwordsResponse ModifyAsrHotwords(ModifyAsrHotwordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAsrHotwords", ModifyAsrHotwordsResponse.class);
+    }
+
+    /**
      *This API is used to modify a custom content moderation template.
      * @param req ModifyContentReviewTemplateRequest
      * @return ModifyContentReviewTemplateResponse
@@ -846,6 +934,17 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyScheduleResponse ModifySchedule(ModifyScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySchedule", ModifyScheduleResponse.class);
+    }
+
+    /**
+     *This API is used to modify a user-defined smart subtitle template.
+     * @param req ModifySmartSubtitleTemplateRequest
+     * @return ModifySmartSubtitleTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySmartSubtitleTemplateResponse ModifySmartSubtitleTemplate(ModifySmartSubtitleTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySmartSubtitleTemplate", ModifySmartSubtitleTemplateResponse.class);
     }
 
     /**
@@ -949,18 +1048,19 @@ HTTP callbacks are supported for live stream processing events. Notifications ca
     }
 
     /**
-     *This API is used to initiate a processing task for video URLs or media files in Cloud Object Storage (COS). Features include:
-1. Video transcoding (standard transcoding, TSC transcoding, and audio/video enhancement);
-2. Animated image generating;
-3. Screenshot taking at specified time points;
-4. Sampled screenshot taking;
-5. Sprite screenshot taking;
-6. Transcoding to adaptive bitrate streaming;
-7. Intelligent auditing (porn detection and sensitive information detection);
-8. Intelligent analysis (tagging, classification, thumbnail generating, frame-by-frame tagging, video splitting, highlights generating, opening and closing segments recognition, and game timestamping);
-9. Intelligent identification (face, full text, text keyword, full speech, speech keyword, speech translation, and object recognition);
-
+     *This API is used to initiate a processing task for video URLs or media files in COS. Features include:
+1. Video transcoding (standard transcoding, TSC transcoding, and audio/video enhancement).
+2. Video-to-GIF conversion.
+3. Time point screenshot of videos.
+4. Sampled screenshot of videos.
+5. Image sprite of videos.
+6. Adaptive bitrate stream conversion for videos.
+7. Intelligent content moderation (pornography detection and sensitive information detection).
+8. Intelligent content analysis (tag, category, cover, frame tag, video splitting, highlight, opening and ending clips, and game tracking).
+9. Intelligent content recognition (human face, full text, text keyword, full speech, speech keyword, speech translation, and object).
 10. Media quality inspection (live stream format diagnosis, audio and video content detection (jitter, blur, low light, overexposure, black and white edges, black and white screens, screen glitch, noise, mosaic, QR code, and more), and no-reference scoring).
+
+11. Smart subtitle (full speech, speech hotword, and speech translation).
      * @param req ProcessMediaRequest
      * @return ProcessMediaResponse
      * @throws TencentCloudSDKException

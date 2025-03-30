@@ -25,22 +25,23 @@ public class Activity extends AbstractModel {
 
     /**
     * Atomic task type.
-<li>input: start node.</li>
-<li>output: termination node.</li>
-<li>action-trans: transcoding.</li>
-<li>action-samplesnapshot: sampled screenshot taking.</li>
-<li>action-AIAnalysis: analysis.</li>
-<li>action-AIRecognition: recognition.</li>
-<li>action-aiReview: auditing.</li>
-<li>action-animated-graphics: animated image generating.</li>
-<li>action-image-sprite: sprite image generating.</li>
-<li>action-snapshotByTimeOffset: time point screenshot taking.</li>
-<li>action-adaptive-substream: adaptive bitrate streaming.</li>
-<li>action-AIQualityControl: media quality inspection.</li>
+<li>input: start node</li>
+<li>output: end node</li>
+<li>action-trans: transcoding</li>
+<li>action-samplesnapshot: sampled screenshot</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: conversion to GIF</li>
+<li>action-image-sprite: image sprite</li>
+<li>action-snapshotByTimeOffset: time point screenshot</li>
+<li>action-adaptive-substream: adaptive bitrate stream</li>
+<li>action-AIQualityControl: media quality inspection</li>
+<li>action-SmartSubtitles: smart subtitle</li>
 
 
 
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ActivityType")
     @Expose
@@ -64,39 +65,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Atomic task type.
-<li>input: start node.</li>
-<li>output: termination node.</li>
-<li>action-trans: transcoding.</li>
-<li>action-samplesnapshot: sampled screenshot taking.</li>
-<li>action-AIAnalysis: analysis.</li>
-<li>action-AIRecognition: recognition.</li>
-<li>action-aiReview: auditing.</li>
-<li>action-animated-graphics: animated image generating.</li>
-<li>action-image-sprite: sprite image generating.</li>
-<li>action-snapshotByTimeOffset: time point screenshot taking.</li>
-<li>action-adaptive-substream: adaptive bitrate streaming.</li>
-<li>action-AIQualityControl: media quality inspection.</li>
+<li>input: start node</li>
+<li>output: end node</li>
+<li>action-trans: transcoding</li>
+<li>action-samplesnapshot: sampled screenshot</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: conversion to GIF</li>
+<li>action-image-sprite: image sprite</li>
+<li>action-snapshotByTimeOffset: time point screenshot</li>
+<li>action-adaptive-substream: adaptive bitrate stream</li>
+<li>action-AIQualityControl: media quality inspection</li>
+<li>action-SmartSubtitles: smart subtitle</li>
 
 
 
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ActivityType Atomic task type.
-<li>input: start node.</li>
-<li>output: termination node.</li>
-<li>action-trans: transcoding.</li>
-<li>action-samplesnapshot: sampled screenshot taking.</li>
-<li>action-AIAnalysis: analysis.</li>
-<li>action-AIRecognition: recognition.</li>
-<li>action-aiReview: auditing.</li>
-<li>action-animated-graphics: animated image generating.</li>
-<li>action-image-sprite: sprite image generating.</li>
-<li>action-snapshotByTimeOffset: time point screenshot taking.</li>
-<li>action-adaptive-substream: adaptive bitrate streaming.</li>
-<li>action-AIQualityControl: media quality inspection.</li>
+<li>input: start node</li>
+<li>output: end node</li>
+<li>action-trans: transcoding</li>
+<li>action-samplesnapshot: sampled screenshot</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: conversion to GIF</li>
+<li>action-image-sprite: image sprite</li>
+<li>action-snapshotByTimeOffset: time point screenshot</li>
+<li>action-adaptive-substream: adaptive bitrate stream</li>
+<li>action-AIQualityControl: media quality inspection</li>
+<li>action-SmartSubtitles: smart subtitle</li>
 
 
 
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getActivityType() {
         return this.ActivityType;
@@ -104,39 +107,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Atomic task type.
-<li>input: start node.</li>
-<li>output: termination node.</li>
-<li>action-trans: transcoding.</li>
-<li>action-samplesnapshot: sampled screenshot taking.</li>
-<li>action-AIAnalysis: analysis.</li>
-<li>action-AIRecognition: recognition.</li>
-<li>action-aiReview: auditing.</li>
-<li>action-animated-graphics: animated image generating.</li>
-<li>action-image-sprite: sprite image generating.</li>
-<li>action-snapshotByTimeOffset: time point screenshot taking.</li>
-<li>action-adaptive-substream: adaptive bitrate streaming.</li>
-<li>action-AIQualityControl: media quality inspection.</li>
+<li>input: start node</li>
+<li>output: end node</li>
+<li>action-trans: transcoding</li>
+<li>action-samplesnapshot: sampled screenshot</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: conversion to GIF</li>
+<li>action-image-sprite: image sprite</li>
+<li>action-snapshotByTimeOffset: time point screenshot</li>
+<li>action-adaptive-substream: adaptive bitrate stream</li>
+<li>action-AIQualityControl: media quality inspection</li>
+<li>action-SmartSubtitles: smart subtitle</li>
 
 
 
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ActivityType Atomic task type.
-<li>input: start node.</li>
-<li>output: termination node.</li>
-<li>action-trans: transcoding.</li>
-<li>action-samplesnapshot: sampled screenshot taking.</li>
-<li>action-AIAnalysis: analysis.</li>
-<li>action-AIRecognition: recognition.</li>
-<li>action-aiReview: auditing.</li>
-<li>action-animated-graphics: animated image generating.</li>
-<li>action-image-sprite: sprite image generating.</li>
-<li>action-snapshotByTimeOffset: time point screenshot taking.</li>
-<li>action-adaptive-substream: adaptive bitrate streaming.</li>
-<li>action-AIQualityControl: media quality inspection.</li>
+<li>input: start node</li>
+<li>output: end node</li>
+<li>action-trans: transcoding</li>
+<li>action-samplesnapshot: sampled screenshot</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: conversion to GIF</li>
+<li>action-image-sprite: image sprite</li>
+<li>action-snapshotByTimeOffset: time point screenshot</li>
+<li>action-adaptive-substream: adaptive bitrate stream</li>
+<li>action-AIQualityControl: media quality inspection</li>
+<li>action-SmartSubtitles: smart subtitle</li>
 
 
 
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;

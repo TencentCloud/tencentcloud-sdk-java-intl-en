@@ -110,6 +110,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private MediaVideoStreamItem [] VideoStreamSet;
 
     /**
+    * Enhancement items used for video transcoding. Descriptions of enhancement items:
+<li>hdr: HDR configuration</li>
+<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
+<li>video_super_resolution: 	super-resolution configuration</li>
+<li>repair: comprehensive enhancement configuration</li>
+<li>denoise: video denoising configuration</li>
+<Li>color_enhance: color enhancement configuration</li>
+<Li>scratch: scratch removal configuration</li>
+<li>artifact: artifact (glitch) removal configuration</li>
+<li>sharp: detail enhancement configuration</li>
+<Li>low_light: low-light enhancement configuration</li>
+<Li>face_enhance: face enhancement configuration</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("CallBackExtInfo")
+    @Expose
+    private String CallBackExtInfo;
+
+    /**
      * Get Target bucket of an output file. 
      * @return OutputStorage Target bucket of an output file.
      */
@@ -309,6 +328,70 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.VideoStreamSet = VideoStreamSet;
     }
 
+    /**
+     * Get Enhancement items used for video transcoding. Descriptions of enhancement items:
+<li>hdr: HDR configuration</li>
+<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
+<li>video_super_resolution: 	super-resolution configuration</li>
+<li>repair: comprehensive enhancement configuration</li>
+<li>denoise: video denoising configuration</li>
+<Li>color_enhance: color enhancement configuration</li>
+<Li>scratch: scratch removal configuration</li>
+<li>artifact: artifact (glitch) removal configuration</li>
+<li>sharp: detail enhancement configuration</li>
+<Li>low_light: low-light enhancement configuration</li>
+<Li>face_enhance: face enhancement configuration</li>
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return CallBackExtInfo Enhancement items used for video transcoding. Descriptions of enhancement items:
+<li>hdr: HDR configuration</li>
+<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
+<li>video_super_resolution: 	super-resolution configuration</li>
+<li>repair: comprehensive enhancement configuration</li>
+<li>denoise: video denoising configuration</li>
+<Li>color_enhance: color enhancement configuration</li>
+<Li>scratch: scratch removal configuration</li>
+<li>artifact: artifact (glitch) removal configuration</li>
+<li>sharp: detail enhancement configuration</li>
+<Li>low_light: low-light enhancement configuration</li>
+<Li>face_enhance: face enhancement configuration</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getCallBackExtInfo() {
+        return this.CallBackExtInfo;
+    }
+
+    /**
+     * Set Enhancement items used for video transcoding. Descriptions of enhancement items:
+<li>hdr: HDR configuration</li>
+<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
+<li>video_super_resolution: 	super-resolution configuration</li>
+<li>repair: comprehensive enhancement configuration</li>
+<li>denoise: video denoising configuration</li>
+<Li>color_enhance: color enhancement configuration</li>
+<Li>scratch: scratch removal configuration</li>
+<li>artifact: artifact (glitch) removal configuration</li>
+<li>sharp: detail enhancement configuration</li>
+<Li>low_light: low-light enhancement configuration</li>
+<Li>face_enhance: face enhancement configuration</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param CallBackExtInfo Enhancement items used for video transcoding. Descriptions of enhancement items:
+<li>hdr: HDR configuration</li>
+<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
+<li>video_super_resolution: 	super-resolution configuration</li>
+<li>repair: comprehensive enhancement configuration</li>
+<li>denoise: video denoising configuration</li>
+<Li>color_enhance: color enhancement configuration</li>
+<Li>scratch: scratch removal configuration</li>
+<li>artifact: artifact (glitch) removal configuration</li>
+<li>sharp: detail enhancement configuration</li>
+<Li>low_light: low-light enhancement configuration</li>
+<Li>face_enhance: face enhancement configuration</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setCallBackExtInfo(String CallBackExtInfo) {
+        this.CallBackExtInfo = CallBackExtInfo;
+    }
+
     public MediaTranscodeItem() {
     }
 
@@ -359,6 +442,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.VideoStreamSet[i] = new MediaVideoStreamItem(source.VideoStreamSet[i]);
             }
         }
+        if (source.CallBackExtInfo != null) {
+            this.CallBackExtInfo = new String(source.CallBackExtInfo);
+        }
     }
 
 
@@ -378,6 +464,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Md5", this.Md5);
         this.setParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
         this.setParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
+        this.setParamSimple(map, prefix + "CallBackExtInfo", this.CallBackExtInfo);
 
     }
 }

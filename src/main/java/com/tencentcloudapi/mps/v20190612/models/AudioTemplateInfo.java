@@ -78,6 +78,15 @@ Default value: 2.
     private Long AudioChannel;
 
     /**
+    * Merge audio track information.
+This field only takes effec in adaptive bitrate transcoding.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("TrackChannelInfo")
+    @Expose
+    private AudioTrackChannelInfo TrackChannelInfo;
+
+    /**
      * Get Audio stream encoding format.
 When audio transcoding is not needed, the value is:
 <li>copy.</li>
@@ -245,6 +254,30 @@ Default value: 2.
         this.AudioChannel = AudioChannel;
     }
 
+    /**
+     * Get Merge audio track information.
+This field only takes effec in adaptive bitrate transcoding.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return TrackChannelInfo Merge audio track information.
+This field only takes effec in adaptive bitrate transcoding.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public AudioTrackChannelInfo getTrackChannelInfo() {
+        return this.TrackChannelInfo;
+    }
+
+    /**
+     * Set Merge audio track information.
+This field only takes effec in adaptive bitrate transcoding.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param TrackChannelInfo Merge audio track information.
+This field only takes effec in adaptive bitrate transcoding.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setTrackChannelInfo(AudioTrackChannelInfo TrackChannelInfo) {
+        this.TrackChannelInfo = TrackChannelInfo;
+    }
+
     public AudioTemplateInfo() {
     }
 
@@ -265,6 +298,9 @@ Default value: 2.
         if (source.AudioChannel != null) {
             this.AudioChannel = new Long(source.AudioChannel);
         }
+        if (source.TrackChannelInfo != null) {
+            this.TrackChannelInfo = new AudioTrackChannelInfo(source.TrackChannelInfo);
+        }
     }
 
 
@@ -276,6 +312,7 @@ Default value: 2.
         this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
+        this.setParamObj(map, prefix + "TrackChannelInfo.", this.TrackChannelInfo);
 
     }
 }

@@ -24,9 +24,12 @@ import java.util.HashMap;
 public class DrmInfo extends AbstractModel {
 
     /**
-    * The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Encryption type.
+<li>simpleaes: AES-128 encryption</li>
+<li> widevine</li>
+<li>fairplay: not supported for DASH streams</li>
+<li> playready</li>
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -41,24 +44,43 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private SimpleAesDrm SimpleAesDrm;
 
     /**
-     * Get The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Type The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Information about FairPlay, WideVine, and PlayReady encryption.
+    */
+    @SerializedName("SpekeDrm")
+    @Expose
+    private SpekeDrm SpekeDrm;
+
+    /**
+     * Get Encryption type.
+<li>simpleaes: AES-128 encryption</li>
+<li> widevine</li>
+<li>fairplay: not supported for DASH streams</li>
+<li> playready</li>
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Type Encryption type.
+<li>simpleaes: AES-128 encryption</li>
+<li> widevine</li>
+<li>fairplay: not supported for DASH streams</li>
+<li> playready</li>
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Type The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Encryption type.
+<li>simpleaes: AES-128 encryption</li>
+<li> widevine</li>
+<li>fairplay: not supported for DASH streams</li>
+<li> playready</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Type Encryption type.
+<li>simpleaes: AES-128 encryption</li>
+<li> widevine</li>
+<li>fairplay: not supported for DASH streams</li>
+<li> playready</li>
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -84,6 +106,22 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.SimpleAesDrm = SimpleAesDrm;
     }
 
+    /**
+     * Get Information about FairPlay, WideVine, and PlayReady encryption. 
+     * @return SpekeDrm Information about FairPlay, WideVine, and PlayReady encryption.
+     */
+    public SpekeDrm getSpekeDrm() {
+        return this.SpekeDrm;
+    }
+
+    /**
+     * Set Information about FairPlay, WideVine, and PlayReady encryption.
+     * @param SpekeDrm Information about FairPlay, WideVine, and PlayReady encryption.
+     */
+    public void setSpekeDrm(SpekeDrm SpekeDrm) {
+        this.SpekeDrm = SpekeDrm;
+    }
+
     public DrmInfo() {
     }
 
@@ -98,6 +136,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (source.SimpleAesDrm != null) {
             this.SimpleAesDrm = new SimpleAesDrm(source.SimpleAesDrm);
         }
+        if (source.SpekeDrm != null) {
+            this.SpekeDrm = new SpekeDrm(source.SpekeDrm);
+        }
     }
 
 
@@ -107,6 +148,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "SimpleAesDrm.", this.SimpleAesDrm);
+        this.setParamObj(map, prefix + "SpekeDrm.", this.SpekeDrm);
 
     }
 }

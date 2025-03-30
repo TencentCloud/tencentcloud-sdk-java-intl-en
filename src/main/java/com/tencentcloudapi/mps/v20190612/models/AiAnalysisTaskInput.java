@@ -31,9 +31,13 @@ public class AiAnalysisTaskInput extends AbstractModel {
     private Long Definition;
 
     /**
-    * An extended parameter, whose value is a stringfied JSON.
-Note: This parameter is for customers with special requirements. It needs to be customized offline.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Additional parameter. Its value is a serialized JSON string.
+Note: This parameter is used to meet customization requirements. References:
+Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
+Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
+Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ExtendedParameter")
     @Expose
@@ -56,24 +60,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get An extended parameter, whose value is a stringfied JSON.
-Note: This parameter is for customers with special requirements. It needs to be customized offline.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExtendedParameter An extended parameter, whose value is a stringfied JSON.
-Note: This parameter is for customers with special requirements. It needs to be customized offline.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Additional parameter. Its value is a serialized JSON string.
+Note: This parameter is used to meet customization requirements. References:
+Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
+Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
+Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return ExtendedParameter Additional parameter. Its value is a serialized JSON string.
+Note: This parameter is used to meet customization requirements. References:
+Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
+Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
+Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getExtendedParameter() {
         return this.ExtendedParameter;
     }
 
     /**
-     * Set An extended parameter, whose value is a stringfied JSON.
-Note: This parameter is for customers with special requirements. It needs to be customized offline.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExtendedParameter An extended parameter, whose value is a stringfied JSON.
-Note: This parameter is for customers with special requirements. It needs to be customized offline.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Additional parameter. Its value is a serialized JSON string.
+Note: This parameter is used to meet customization requirements. References:
+Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
+Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
+Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ExtendedParameter Additional parameter. Its value is a serialized JSON string.
+Note: This parameter is used to meet customization requirements. References:
+Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
+Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
+Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setExtendedParameter(String ExtendedParameter) {
         this.ExtendedParameter = ExtendedParameter;

@@ -95,6 +95,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AiQualityControlTaskInput QualityControlTask;
 
     /**
+    * Smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SmartSubtitlesTask")
+    @Expose
+    private SmartSubtitlesTaskInput SmartSubtitlesTask;
+
+    /**
      * Get A transcoding task. 
      * @return TranscodeTask A transcoding task.
      */
@@ -258,6 +266,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.QualityControlTask = QualityControlTask;
     }
 
+    /**
+     * Get Smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SmartSubtitlesTask Smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public SmartSubtitlesTaskInput getSmartSubtitlesTask() {
+        return this.SmartSubtitlesTask;
+    }
+
+    /**
+     * Set Smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SmartSubtitlesTask Smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setSmartSubtitlesTask(SmartSubtitlesTaskInput SmartSubtitlesTask) {
+        this.SmartSubtitlesTask = SmartSubtitlesTask;
+    }
+
     public ActivityPara() {
     }
 
@@ -296,6 +324,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.QualityControlTask != null) {
             this.QualityControlTask = new AiQualityControlTaskInput(source.QualityControlTask);
         }
+        if (source.SmartSubtitlesTask != null) {
+            this.SmartSubtitlesTask = new SmartSubtitlesTaskInput(source.SmartSubtitlesTask);
+        }
     }
 
 
@@ -313,6 +344,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
+        this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
 
     }
 }

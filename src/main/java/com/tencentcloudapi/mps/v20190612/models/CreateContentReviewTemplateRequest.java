@@ -38,21 +38,21 @@ public class CreateContentReviewTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
-    * Control parameter for porn information
+    * Control parameter for a pornography detection task.
     */
     @SerializedName("PornConfigure")
     @Expose
     private PornConfigureInfo PornConfigure;
 
     /**
-    * Control parameter for terrorism information
+    * Control parameter for a violence detection task.
     */
     @SerializedName("TerrorismConfigure")
     @Expose
     private TerrorismConfigureInfo TerrorismConfigure;
 
     /**
-    * Control parameter for politically sensitive information
+    * Control parameter for a sensitive content detection task.
     */
     @SerializedName("PoliticalConfigure")
     @Expose
@@ -108,48 +108,48 @@ Note: this parameter is not supported yet.
     }
 
     /**
-     * Get Control parameter for porn information 
-     * @return PornConfigure Control parameter for porn information
+     * Get Control parameter for a pornography detection task. 
+     * @return PornConfigure Control parameter for a pornography detection task.
      */
     public PornConfigureInfo getPornConfigure() {
         return this.PornConfigure;
     }
 
     /**
-     * Set Control parameter for porn information
-     * @param PornConfigure Control parameter for porn information
+     * Set Control parameter for a pornography detection task.
+     * @param PornConfigure Control parameter for a pornography detection task.
      */
     public void setPornConfigure(PornConfigureInfo PornConfigure) {
         this.PornConfigure = PornConfigure;
     }
 
     /**
-     * Get Control parameter for terrorism information 
-     * @return TerrorismConfigure Control parameter for terrorism information
+     * Get Control parameter for a violence detection task. 
+     * @return TerrorismConfigure Control parameter for a violence detection task.
      */
     public TerrorismConfigureInfo getTerrorismConfigure() {
         return this.TerrorismConfigure;
     }
 
     /**
-     * Set Control parameter for terrorism information
-     * @param TerrorismConfigure Control parameter for terrorism information
+     * Set Control parameter for a violence detection task.
+     * @param TerrorismConfigure Control parameter for a violence detection task.
      */
     public void setTerrorismConfigure(TerrorismConfigureInfo TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get Control parameter for politically sensitive information 
-     * @return PoliticalConfigure Control parameter for politically sensitive information
+     * Get Control parameter for a sensitive content detection task. 
+     * @return PoliticalConfigure Control parameter for a sensitive content detection task.
      */
     public PoliticalConfigureInfo getPoliticalConfigure() {
         return this.PoliticalConfigure;
     }
 
     /**
-     * Set Control parameter for politically sensitive information
-     * @param PoliticalConfigure Control parameter for politically sensitive information
+     * Set Control parameter for a sensitive content detection task.
+     * @param PoliticalConfigure Control parameter for a sensitive content detection task.
      */
     public void setPoliticalConfigure(PoliticalConfigureInfo PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;

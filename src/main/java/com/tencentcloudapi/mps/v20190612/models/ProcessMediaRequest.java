@@ -134,6 +134,30 @@ Note 3: The trigger configured for an orchestration is for automatically startin
     private String TaskType;
 
     /**
+    * Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
+    * Smart subtitle task.
+    */
+    @SerializedName("SmartSubtitlesTask")
+    @Expose
+    private SmartSubtitlesTaskInput SmartSubtitlesTask;
+
+    /**
+    * Whether to skip metadata acquisition. Valid values:
+0: do not skip
+1: skip
+Default value: 0		
+    */
+    @SerializedName("SkipMateData")
+    @Expose
+    private Long SkipMateData;
+
+    /**
      * Get The information of the file to process. 
      * @return InputInfo The information of the file to process.
      */
@@ -405,6 +429,66 @@ Note 3: The trigger configured for an orchestration is for automatically startin
         this.TaskType = TaskType;
     }
 
+    /**
+     * Get Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID. 
+     * @return ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     * @param ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
+     * Get Smart subtitle task. 
+     * @return SmartSubtitlesTask Smart subtitle task.
+     */
+    public SmartSubtitlesTaskInput getSmartSubtitlesTask() {
+        return this.SmartSubtitlesTask;
+    }
+
+    /**
+     * Set Smart subtitle task.
+     * @param SmartSubtitlesTask Smart subtitle task.
+     */
+    public void setSmartSubtitlesTask(SmartSubtitlesTaskInput SmartSubtitlesTask) {
+        this.SmartSubtitlesTask = SmartSubtitlesTask;
+    }
+
+    /**
+     * Get Whether to skip metadata acquisition. Valid values:
+0: do not skip
+1: skip
+Default value: 0		 
+     * @return SkipMateData Whether to skip metadata acquisition. Valid values:
+0: do not skip
+1: skip
+Default value: 0		
+     */
+    public Long getSkipMateData() {
+        return this.SkipMateData;
+    }
+
+    /**
+     * Set Whether to skip metadata acquisition. Valid values:
+0: do not skip
+1: skip
+Default value: 0		
+     * @param SkipMateData Whether to skip metadata acquisition. Valid values:
+0: do not skip
+1: skip
+Default value: 0		
+     */
+    public void setSkipMateData(Long SkipMateData) {
+        this.SkipMateData = SkipMateData;
+    }
+
     public ProcessMediaRequest() {
     }
 
@@ -455,6 +539,15 @@ Note 3: The trigger configured for an orchestration is for automatically startin
         if (source.TaskType != null) {
             this.TaskType = new String(source.TaskType);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.SmartSubtitlesTask != null) {
+            this.SmartSubtitlesTask = new SmartSubtitlesTaskInput(source.SmartSubtitlesTask);
+        }
+        if (source.SkipMateData != null) {
+            this.SkipMateData = new Long(source.SkipMateData);
+        }
     }
 
 
@@ -476,6 +569,9 @@ Note 3: The trigger configured for an orchestration is for automatically startin
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
+        this.setParamSimple(map, prefix + "SkipMateData", this.SkipMateData);
 
     }
 }

@@ -99,6 +99,13 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String EndTime;
 
     /**
+    * Specifies the character ID.
+    */
+    @SerializedName("PersonId")
+    @Expose
+    private String PersonId;
+
+    /**
      * Get  
      * @return Confidence 
      */
@@ -278,6 +285,22 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get Specifies the character ID. 
+     * @return PersonId Specifies the character ID.
+     */
+    public String getPersonId() {
+        return this.PersonId;
+    }
+
+    /**
+     * Set Specifies the character ID.
+     * @param PersonId Specifies the character ID.
+     */
+    public void setPersonId(String PersonId) {
+        this.PersonId = PersonId;
+    }
+
     public SegmentRecognitionItem() {
     }
 
@@ -319,6 +342,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
     }
 
 
@@ -336,6 +362,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "PersonId", this.PersonId);
 
     }
 }

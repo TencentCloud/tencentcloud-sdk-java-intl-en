@@ -106,6 +106,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ScheduleQualityControlTaskResult AiQualityControlTaskResult;
 
     /**
+    * Execution result of the smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SmartSubtitlesTaskResult")
+    @Expose
+    private SmartSubtitlesResult [] SmartSubtitlesTaskResult;
+
+    /**
      * Get The media processing task ID. 
      * @return TaskId The media processing task ID.
      */
@@ -301,6 +309,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.AiQualityControlTaskResult = AiQualityControlTaskResult;
     }
 
+    /**
+     * Get Execution result of the smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SmartSubtitlesTaskResult Execution result of the smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public SmartSubtitlesResult [] getSmartSubtitlesTaskResult() {
+        return this.SmartSubtitlesTaskResult;
+    }
+
+    /**
+     * Set Execution result of the smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SmartSubtitlesTaskResult Execution result of the smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setSmartSubtitlesTaskResult(SmartSubtitlesResult [] SmartSubtitlesTaskResult) {
+        this.SmartSubtitlesTaskResult = SmartSubtitlesTaskResult;
+    }
+
     public WorkflowTask() {
     }
 
@@ -354,6 +382,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AiQualityControlTaskResult != null) {
             this.AiQualityControlTaskResult = new ScheduleQualityControlTaskResult(source.AiQualityControlTaskResult);
         }
+        if (source.SmartSubtitlesTaskResult != null) {
+            this.SmartSubtitlesTaskResult = new SmartSubtitlesResult[source.SmartSubtitlesTaskResult.length];
+            for (int i = 0; i < source.SmartSubtitlesTaskResult.length; i++) {
+                this.SmartSubtitlesTaskResult[i] = new SmartSubtitlesResult(source.SmartSubtitlesTaskResult[i]);
+            }
+        }
     }
 
 
@@ -372,6 +406,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "AiAnalysisResultSet.", this.AiAnalysisResultSet);
         this.setParamArrayObj(map, prefix + "AiRecognitionResultSet.", this.AiRecognitionResultSet);
         this.setParamObj(map, prefix + "AiQualityControlTaskResult.", this.AiQualityControlTaskResult);
+        this.setParamArrayObj(map, prefix + "SmartSubtitlesTaskResult.", this.SmartSubtitlesTaskResult);
 
     }
 }
