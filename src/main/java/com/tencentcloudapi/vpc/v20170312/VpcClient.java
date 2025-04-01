@@ -2118,6 +2118,17 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API is used to disable enabled subnet routes.
+     * @param req DisableRoutesRequest
+     * @return DisableRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableRoutesResponse DisableRoutes(DisableRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableRoutes", DisableRoutesResponse.class);
+    }
+
+    /**
      *This API is used to disable specified snapshot policies.
      * @param req DisableSnapshotPoliciesRequest
      * @return DisableSnapshotPoliciesResponse
@@ -2255,6 +2266,18 @@ This API is used to verify whether there will be conflict with an existing route
     public EnableGatewayFlowMonitorResponse EnableGatewayFlowMonitor(EnableGatewayFlowMonitorRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "EnableGatewayFlowMonitor", EnableGatewayFlowMonitorResponse.class);
+    }
+
+    /**
+     *This API is used to enable disabled subnet routes.<br />
+The API is used to verify whether the enabled route conflicts with existing routes. If they conflict, the new route cannot be enabled and will result in a failure. When a route conflict occurs, you need to first disable the conflicting route before you can enable the new one.
+     * @param req EnableRoutesRequest
+     * @return EnableRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableRoutesResponse EnableRoutes(EnableRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableRoutes", EnableRoutesResponse.class);
     }
 
     /**

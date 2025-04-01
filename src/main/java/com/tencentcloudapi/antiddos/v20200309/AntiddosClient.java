@@ -413,19 +413,6 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *接口变更
-
-This API is used to get an Anti-DDoS IP blocklist/allowlist.
-     * @param req DescribeBlackWhiteIpListRequest
-     * @return DescribeBlackWhiteIpListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(DescribeBlackWhiteIpListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeBlackWhiteIpList", DescribeBlackWhiteIpListResponse.class);
-    }
-
-    /**
      *Gets the list of CC protection levels
      * @param req DescribeCCLevelListRequest
      * @return DescribeCCLevelListResponse
@@ -644,19 +631,6 @@ This API is used to get an Anti-DDoS IP blocklist/allowlist.
     public DescribeListPacketFilterConfigResponse DescribeListPacketFilterConfig(DescribeListPacketFilterConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeListPacketFilterConfig", DescribeListPacketFilterConfigResponse.class);
-    }
-
-    /**
-     *接口变更
-
-This API is used to get a list of protection threshold configurations for AI protection switch, protection level, and CC threshold switch.
-     * @param req DescribeListProtectThresholdConfigRequest
-     * @return DescribeListProtectThresholdConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeListProtectThresholdConfigResponse DescribeListProtectThresholdConfig(DescribeListProtectThresholdConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeListProtectThresholdConfig", DescribeListProtectThresholdConfigResponse.class);
     }
 
     /**
