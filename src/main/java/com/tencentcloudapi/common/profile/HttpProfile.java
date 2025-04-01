@@ -98,7 +98,8 @@ public class HttpProfile {
 
     /**
      * For more fine-grained customization of the http client, use Object-type to decouple from okhttp.
-     * If specified, all other configurations(timeout,proxy,...) will have no effect and users should do their setup separately.
+     * If specified, all other configurations(timeout,proxy,...) will have no effect and users should do their setup
+     * separately.
      */
     private Object httpClient;
 
