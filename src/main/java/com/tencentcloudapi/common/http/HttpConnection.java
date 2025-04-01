@@ -26,7 +26,6 @@ import java.io.IOException;
 import java.net.Proxy;
 import java.util.concurrent.TimeUnit;
 
-;
 
 public class HttpConnection {
 
@@ -34,7 +33,7 @@ public class HttpConnection {
     // https://github.com/square/okhttp/issues/3372
     // Creating dispatcher and connectionPool is expensive.
     // Share them between OkHttpClients by singleton's Builder.
-    private static final OkHttpClient clientSingleton = new OkHttpClient();
+    private static OkHttpClient clientSingleton = new OkHttpClient();
     private OkHttpClient client;
 
     public HttpConnection(Integer connTimeout, Integer readTimeout, Integer writeTimeout) {
@@ -138,5 +137,13 @@ public class HttpConnection {
         }
 
         return this.doRequest(request);
+    }
+
+    public static void setHttpClientSingleton(Object client) {
+        clientSingleton = (OkHttpClient) client;
+    }
+
+    public static Object getHttpClientSingleton() {
+        return clientSingleton;
     }
 }
