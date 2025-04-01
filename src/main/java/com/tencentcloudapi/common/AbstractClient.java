@@ -94,6 +94,7 @@ public abstract class AbstractClient {
         this.trySetProxy(this.httpConnection);
         this.trySetSSLSocketFactory(this.httpConnection);
         this.trySetRegionBreaker();
+        this.trySetHttpClient();
         warmup();
     }
 
@@ -336,6 +337,12 @@ public abstract class AbstractClient {
         String ep = profile.getBackupEndpoint();
         if (ep != null && !ep.isEmpty()) {
             this.regionBreaker = new CircuitBreaker();
+        }
+    }
+
+        Object httpClient = profile.getHttpProfile().getHttpClient();
+        if (httpClient != null) {
+            this.httpConnection.setHttpClient(httpClient);
         }
     }
 
