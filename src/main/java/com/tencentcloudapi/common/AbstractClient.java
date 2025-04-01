@@ -340,6 +340,7 @@ public abstract class AbstractClient {
         }
     }
 
+    private void trySetHttpClient() {
         Object httpClient = profile.getHttpProfile().getHttpClient();
         if (httpClient != null) {
             this.httpConnection.setHttpClient(httpClient);
