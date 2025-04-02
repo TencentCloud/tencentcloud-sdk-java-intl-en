@@ -26,8 +26,6 @@ import java.io.IOException;
 import java.net.Proxy;
 import java.util.concurrent.TimeUnit;
 
-;
-
 public class HttpConnection {
 
     // https://stackoverflow.com/questions/31423154/performance-of-a-singleton-instance-okhttpclient
@@ -138,5 +136,13 @@ public class HttpConnection {
         }
 
         return this.doRequest(request);
+    }
+
+    public void setHttpClient(Object httpClient) {
+        client = (OkHttpClient) httpClient;
+    }
+
+    public Object getHttpClient() {
+        return client;
     }
 }
