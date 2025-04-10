@@ -59,6 +59,13 @@ public class QueryCreditAllocationHistoryData extends AbstractModel {
     private Float ClientCreditAfter;
 
     /**
+    * Remark
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get Allocation time 
      * @return AllocatedTime Allocation time
      */
@@ -138,6 +145,22 @@ public class QueryCreditAllocationHistoryData extends AbstractModel {
         this.ClientCreditAfter = ClientCreditAfter;
     }
 
+    /**
+     * Get Remark 
+     * @return Remark Remark
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set Remark
+     * @param Remark Remark
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public QueryCreditAllocationHistoryData() {
     }
 
@@ -161,6 +184,9 @@ public class QueryCreditAllocationHistoryData extends AbstractModel {
         if (source.ClientCreditAfter != null) {
             this.ClientCreditAfter = new Float(source.ClientCreditAfter);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class QueryCreditAllocationHistoryData extends AbstractModel {
         this.setParamSimple(map, prefix + "Credit", this.Credit);
         this.setParamSimple(map, prefix + "AllocatedCredit", this.AllocatedCredit);
         this.setParamSimple(map, prefix + "ClientCreditAfter", this.ClientCreditAfter);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

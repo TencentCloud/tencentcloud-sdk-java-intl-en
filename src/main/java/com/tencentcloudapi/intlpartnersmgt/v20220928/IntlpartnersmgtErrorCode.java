@@ -30,6 +30,9 @@ public enum IntlpartnersmgtErrorCode {
      /*  */
      FAILEDOPERATION_EXCEEDMAXBINDCOUNT("FailedOperation.ExceedMaxBindCount"),
      
+     /* The uin of the second-level reseller is invalid. */
+     FAILEDOPERATION_INVALIDSUBAGENTUIN("FailedOperation.InvalidSubAgentUin"),
+     
      /* FailedOperation.MailIsRegistered */
      FAILEDOPERATION_MAILISREGISTERED("FailedOperation.MailIsRegistered"),
      

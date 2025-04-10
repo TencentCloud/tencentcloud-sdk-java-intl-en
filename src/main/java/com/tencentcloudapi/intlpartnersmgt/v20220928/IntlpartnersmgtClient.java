@@ -422,6 +422,18 @@ Callable roles: Distributor, Second-level reseller, Reseller
     }
 
     /**
+     *This API is used to query the indirect sub-customers of a first-level distributor.
+Invokable role type: first-level reseller.
+     * @param req QueryT1IndirectCustomersDetailRequest
+     * @return QueryT1IndirectCustomersDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryT1IndirectCustomersDetailResponse QueryT1IndirectCustomersDetail(QueryT1IndirectCustomersDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryT1IndirectCustomersDetail", QueryT1IndirectCustomersDetailResponse.class);
+    }
+
+    /**
      *This API is used by primary/secondary resellers to query the voucher quota based on the customer UIN.
 Callable roles: Reseller, Distributor, Second-level reseller
      * @param req QueryVoucherAmountByUinRequest

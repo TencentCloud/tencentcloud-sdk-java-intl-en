@@ -38,6 +38,13 @@ public class AllocateCustomerCreditRequest extends AbstractModel {
     private Long ClientUin;
 
     /**
+    * Remark
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get Specific value of the credit allocated to the customer 
      * @return AddedCredit Specific value of the credit allocated to the customer
      */
@@ -69,6 +76,22 @@ public class AllocateCustomerCreditRequest extends AbstractModel {
         this.ClientUin = ClientUin;
     }
 
+    /**
+     * Get Remark 
+     * @return Remark Remark
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set Remark
+     * @param Remark Remark
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public AllocateCustomerCreditRequest() {
     }
 
@@ -83,6 +106,9 @@ public class AllocateCustomerCreditRequest extends AbstractModel {
         if (source.ClientUin != null) {
             this.ClientUin = new Long(source.ClientUin);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class AllocateCustomerCreditRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AddedCredit", this.AddedCredit);
         this.setParamSimple(map, prefix + "ClientUin", this.ClientUin);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }
