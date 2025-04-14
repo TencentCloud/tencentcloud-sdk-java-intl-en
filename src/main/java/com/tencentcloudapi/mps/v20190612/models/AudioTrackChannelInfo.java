@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class AudioTrackChannelInfo extends AbstractModel {
 
     /**
-    * Whether to enable audio mix. valid values:.
-0: indicates not enabling audio mix.
-1: Indicates enabling audio mix.
+    * Whether to enable the feature of multi-audio track mixing. valid values:
+0: indicates not enabling multi-audio track mix.
+1: Indicates enabling multi-audio track mixing.
 Default value: 0
 
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -36,11 +36,11 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long ChannelsRemix;
 
     /**
-    * Audio track input type. valid values:.
-trask: indicates usage of the audio track id.
-trask_channel: indicates usage of the audio track id and sound channel id.
-Default: trask.
-If the original aduio track is multichannel, recommend using trask_channel.
+    * Set the selector type for the input audio track. valid values:
+Track: indicates the usage of audio track id;.
+Track_channel: indicates the usage of the audio track id and sound channel id.
+Default: track.
+If the original video has multiple channels, it is recommended to use track_channel.
 Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("SelectType")
@@ -56,15 +56,15 @@ Note: This field may return null, indicating that no valid value can be obtained
     private TrackInfo [] InputTrackInfo;
 
     /**
-     * Get Whether to enable audio mix. valid values:.
-0: indicates not enabling audio mix.
-1: Indicates enabling audio mix.
+     * Get Whether to enable the feature of multi-audio track mixing. valid values:
+0: indicates not enabling multi-audio track mix.
+1: Indicates enabling multi-audio track mixing.
 Default value: 0
 
 Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ChannelsRemix Whether to enable audio mix. valid values:.
-0: indicates not enabling audio mix.
-1: Indicates enabling audio mix.
+     * @return ChannelsRemix Whether to enable the feature of multi-audio track mixing. valid values:
+0: indicates not enabling multi-audio track mix.
+1: Indicates enabling multi-audio track mixing.
 Default value: 0
 
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -74,15 +74,15 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Set Whether to enable audio mix. valid values:.
-0: indicates not enabling audio mix.
-1: Indicates enabling audio mix.
+     * Set Whether to enable the feature of multi-audio track mixing. valid values:
+0: indicates not enabling multi-audio track mix.
+1: Indicates enabling multi-audio track mixing.
 Default value: 0
 
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ChannelsRemix Whether to enable audio mix. valid values:.
-0: indicates not enabling audio mix.
-1: Indicates enabling audio mix.
+     * @param ChannelsRemix Whether to enable the feature of multi-audio track mixing. valid values:
+0: indicates not enabling multi-audio track mix.
+1: Indicates enabling multi-audio track mixing.
 Default value: 0
 
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -92,17 +92,17 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Audio track input type. valid values:.
-trask: indicates usage of the audio track id.
-trask_channel: indicates usage of the audio track id and sound channel id.
-Default: trask.
-If the original aduio track is multichannel, recommend using trask_channel.
+     * Get Set the selector type for the input audio track. valid values:
+Track: indicates the usage of audio track id;.
+Track_channel: indicates the usage of the audio track id and sound channel id.
+Default: track.
+If the original video has multiple channels, it is recommended to use track_channel.
 Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SelectType Audio track input type. valid values:.
-trask: indicates usage of the audio track id.
-trask_channel: indicates usage of the audio track id and sound channel id.
-Default: trask.
-If the original aduio track is multichannel, recommend using trask_channel.
+     * @return SelectType Set the selector type for the input audio track. valid values:
+Track: indicates the usage of audio track id;.
+Track_channel: indicates the usage of the audio track id and sound channel id.
+Default: track.
+If the original video has multiple channels, it is recommended to use track_channel.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getSelectType() {
@@ -110,17 +110,17 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Set Audio track input type. valid values:.
-trask: indicates usage of the audio track id.
-trask_channel: indicates usage of the audio track id and sound channel id.
-Default: trask.
-If the original aduio track is multichannel, recommend using trask_channel.
+     * Set Set the selector type for the input audio track. valid values:
+Track: indicates the usage of audio track id;.
+Track_channel: indicates the usage of the audio track id and sound channel id.
+Default: track.
+If the original video has multiple channels, it is recommended to use track_channel.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SelectType Audio track input type. valid values:.
-trask: indicates usage of the audio track id.
-trask_channel: indicates usage of the audio track id and sound channel id.
-Default: trask.
-If the original aduio track is multichannel, recommend using trask_channel.
+     * @param SelectType Set the selector type for the input audio track. valid values:
+Track: indicates the usage of audio track id;.
+Track_channel: indicates the usage of the audio track id and sound channel id.
+Default: track.
+If the original video has multiple channels, it is recommended to use track_channel.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSelectType(String SelectType) {

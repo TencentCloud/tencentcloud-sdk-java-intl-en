@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SpekeDrm extends AbstractModel {
 
     /**
-    * Resource ID.
+    * Resource tagging. the field content is user-customized.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
     */
     @SerializedName("ResourceId")
@@ -32,16 +32,16 @@ It supports 1 to 128 characters consisting of digits, letters, underscores (_), 
     private String ResourceId;
 
     /**
-    * Access address of the DRM vendor.
+    * DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
-Note: Different DRM vendors have different limits on the number of substreams. For example, PallyCon limits the number of substreams to no more than 5, and DRMtoday supports encryption of up to 9 substreams.
+Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
     */
     @SerializedName("KeyServerUrl")
     @Expose
     private String KeyServerUrl;
 
     /**
-    * Initialization vector (32-byte string) for encryption.
+    * Encryption initialization vector (32-byte string). the field content is user-customized.
     */
     @SerializedName("Vector")
     @Expose
@@ -68,9 +68,9 @@ preset1: use different keys for each substream
     private String EncryptionPreset;
 
     /**
-     * Get Resource ID.
+     * Get Resource tagging. the field content is user-customized.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-). 
-     * @return ResourceId Resource ID.
+     * @return ResourceId Resource tagging. the field content is user-customized.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
      */
     public String getResourceId() {
@@ -78,9 +78,9 @@ It supports 1 to 128 characters consisting of digits, letters, underscores (_), 
     }
 
     /**
-     * Set Resource ID.
+     * Set Resource tagging. the field content is user-customized.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
-     * @param ResourceId Resource ID.
+     * @param ResourceId Resource tagging. the field content is user-customized.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
      */
     public void setResourceId(String ResourceId) {
@@ -88,40 +88,40 @@ It supports 1 to 128 characters consisting of digits, letters, underscores (_), 
     }
 
     /**
-     * Get Access address of the DRM vendor.
+     * Get DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
-Note: Different DRM vendors have different limits on the number of substreams. For example, PallyCon limits the number of substreams to no more than 5, and DRMtoday supports encryption of up to 9 substreams. 
-     * @return KeyServerUrl Access address of the DRM vendor.
+Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams. 
+     * @return KeyServerUrl DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
-Note: Different DRM vendors have different limits on the number of substreams. For example, PallyCon limits the number of substreams to no more than 5, and DRMtoday supports encryption of up to 9 substreams.
+Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
      */
     public String getKeyServerUrl() {
         return this.KeyServerUrl;
     }
 
     /**
-     * Set Access address of the DRM vendor.
+     * Set DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
-Note: Different DRM vendors have different limits on the number of substreams. For example, PallyCon limits the number of substreams to no more than 5, and DRMtoday supports encryption of up to 9 substreams.
-     * @param KeyServerUrl Access address of the DRM vendor.
+Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
+     * @param KeyServerUrl DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
-Note: Different DRM vendors have different limits on the number of substreams. For example, PallyCon limits the number of substreams to no more than 5, and DRMtoday supports encryption of up to 9 substreams.
+Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
      */
     public void setKeyServerUrl(String KeyServerUrl) {
         this.KeyServerUrl = KeyServerUrl;
     }
 
     /**
-     * Get Initialization vector (32-byte string) for encryption. 
-     * @return Vector Initialization vector (32-byte string) for encryption.
+     * Get Encryption initialization vector (32-byte string). the field content is user-customized. 
+     * @return Vector Encryption initialization vector (32-byte string). the field content is user-customized.
      */
     public String getVector() {
         return this.Vector;
     }
 
     /**
-     * Set Initialization vector (32-byte string) for encryption.
-     * @param Vector Initialization vector (32-byte string) for encryption.
+     * Set Encryption initialization vector (32-byte string). the field content is user-customized.
+     * @param Vector Encryption initialization vector (32-byte string). the field content is user-customized.
      */
     public void setVector(String Vector) {
         this.Vector = Vector;

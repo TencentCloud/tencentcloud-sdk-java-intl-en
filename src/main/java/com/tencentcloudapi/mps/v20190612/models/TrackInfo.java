@@ -37,11 +37,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Sound channel volume. specifies the volume of the sound channel.
-When the value of AudioChannel is 1, the value length is 1.
-When the value of AudioChannel is 2, the value length is 2.
-When the value of AudioChannel is 6, the length of this value is greater than 2.
-The array value of this parameter has a valid value range of [-60, 6]. among them, -60 indicates mute, 0 indicates keeping the original volume, and 6 means doubling the original volume. the default value is -60.
-Supports 3 decimal places.
+Specifies that when the value of AudioChannel is 1, the length of this array is 1, for example: [6].
+Specifies that when the value of AudioChannel is 2, the array length is 2. for example: [0,6].
+When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
+Specifies the value array of this parameter. the value range is [-60, 6]. among them, -60 indicates mute, 0 indicates keeping the original volume, and 6 indicates doubling the original volume. the default value is -60.
+Note: supports 3 decimal places.
 
 Note: This field may return null, indicating that no valid value can be obtained.
     */
@@ -87,19 +87,19 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Sound channel volume. specifies the volume of the sound channel.
-When the value of AudioChannel is 1, the value length is 1.
-When the value of AudioChannel is 2, the value length is 2.
-When the value of AudioChannel is 6, the length of this value is greater than 2.
-The array value of this parameter has a valid value range of [-60, 6]. among them, -60 indicates mute, 0 indicates keeping the original volume, and 6 means doubling the original volume. the default value is -60.
-Supports 3 decimal places.
+Specifies that when the value of AudioChannel is 1, the length of this array is 1, for example: [6].
+Specifies that when the value of AudioChannel is 2, the array length is 2. for example: [0,6].
+When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
+Specifies the value array of this parameter. the value range is [-60, 6]. among them, -60 indicates mute, 0 indicates keeping the original volume, and 6 indicates doubling the original volume. the default value is -60.
+Note: supports 3 decimal places.
 
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return ChannelVolume Sound channel volume. specifies the volume of the sound channel.
-When the value of AudioChannel is 1, the value length is 1.
-When the value of AudioChannel is 2, the value length is 2.
-When the value of AudioChannel is 6, the length of this value is greater than 2.
-The array value of this parameter has a valid value range of [-60, 6]. among them, -60 indicates mute, 0 indicates keeping the original volume, and 6 means doubling the original volume. the default value is -60.
-Supports 3 decimal places.
+Specifies that when the value of AudioChannel is 1, the length of this array is 1, for example: [6].
+Specifies that when the value of AudioChannel is 2, the array length is 2. for example: [0,6].
+When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
+Specifies the value array of this parameter. the value range is [-60, 6]. among them, -60 indicates mute, 0 indicates keeping the original volume, and 6 indicates doubling the original volume. the default value is -60.
+Note: supports 3 decimal places.
 
 Note: This field may return null, indicating that no valid value can be obtained.
      */
@@ -109,19 +109,19 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Sound channel volume. specifies the volume of the sound channel.
-When the value of AudioChannel is 1, the value length is 1.
-When the value of AudioChannel is 2, the value length is 2.
-When the value of AudioChannel is 6, the length of this value is greater than 2.
-The array value of this parameter has a valid value range of [-60, 6]. among them, -60 indicates mute, 0 indicates keeping the original volume, and 6 means doubling the original volume. the default value is -60.
-Supports 3 decimal places.
+Specifies that when the value of AudioChannel is 1, the length of this array is 1, for example: [6].
+Specifies that when the value of AudioChannel is 2, the array length is 2. for example: [0,6].
+When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
+Specifies the value array of this parameter. the value range is [-60, 6]. among them, -60 indicates mute, 0 indicates keeping the original volume, and 6 indicates doubling the original volume. the default value is -60.
+Note: supports 3 decimal places.
 
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param ChannelVolume Sound channel volume. specifies the volume of the sound channel.
-When the value of AudioChannel is 1, the value length is 1.
-When the value of AudioChannel is 2, the value length is 2.
-When the value of AudioChannel is 6, the length of this value is greater than 2.
-The array value of this parameter has a valid value range of [-60, 6]. among them, -60 indicates mute, 0 indicates keeping the original volume, and 6 means doubling the original volume. the default value is -60.
-Supports 3 decimal places.
+Specifies that when the value of AudioChannel is 1, the length of this array is 1, for example: [6].
+Specifies that when the value of AudioChannel is 2, the array length is 2. for example: [0,6].
+When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
+Specifies the value array of this parameter. the value range is [-60, 6]. among them, -60 indicates mute, 0 indicates keeping the original volume, and 6 indicates doubling the original volume. the default value is -60.
+Note: supports 3 decimal places.
 
 Note: This field may return null, indicating that no valid value can be obtained.
      */
