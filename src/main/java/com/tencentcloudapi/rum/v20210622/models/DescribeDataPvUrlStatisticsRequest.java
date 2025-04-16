@@ -171,6 +171,20 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel {
     private String Env;
 
     /**
+    * 
+    */
+    @SerializedName("GroupByType")
+    @Expose
+    private Long GroupByType;
+
+    /**
+    * 
+    */
+    @SerializedName("IsNewData")
+    @Expose
+    private Long IsNewData;
+
+    /**
      * Get Start time 
      * @return StartTime Start time
      */
@@ -506,6 +520,38 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel {
         this.Env = Env;
     }
 
+    /**
+     * Get  
+     * @return GroupByType 
+     */
+    public Long getGroupByType() {
+        return this.GroupByType;
+    }
+
+    /**
+     * Set 
+     * @param GroupByType 
+     */
+    public void setGroupByType(Long GroupByType) {
+        this.GroupByType = GroupByType;
+    }
+
+    /**
+     * Get  
+     * @return IsNewData 
+     */
+    public Long getIsNewData() {
+        return this.IsNewData;
+    }
+
+    /**
+     * Set 
+     * @param IsNewData 
+     */
+    public void setIsNewData(Long IsNewData) {
+        this.IsNewData = IsNewData;
+    }
+
     public DescribeDataPvUrlStatisticsRequest() {
     }
 
@@ -577,6 +623,12 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel {
         if (source.Env != null) {
             this.Env = new String(source.Env);
         }
+        if (source.GroupByType != null) {
+            this.GroupByType = new Long(source.GroupByType);
+        }
+        if (source.IsNewData != null) {
+            this.IsNewData = new Long(source.IsNewData);
+        }
     }
 
 
@@ -605,6 +657,8 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Os", this.Os);
         this.setParamSimple(map, prefix + "Browser", this.Browser);
         this.setParamSimple(map, prefix + "Env", this.Env);
+        this.setParamSimple(map, prefix + "GroupByType", this.GroupByType);
+        this.setParamSimple(map, prefix + "IsNewData", this.IsNewData);
 
     }
 }

@@ -115,6 +115,20 @@ public class SSAIConf extends AbstractModel {
     private String AdCDNPrefix;
 
     /**
+    * Pre-roll ad decision service address.
+    */
+    @SerializedName("PreRollAdsUrl")
+    @Expose
+    private String PreRollAdsUrl;
+
+    /**
+    * The maximum allowed duration of pre-roll ads, (0, 3600].
+    */
+    @SerializedName("PreRollMaxAllowedDuration")
+    @Expose
+    private Long PreRollMaxAllowedDuration;
+
+    /**
      * Get Advertising Decision Server URL (ADS). 
      * @return AdsUrl Advertising Decision Server URL (ADS).
      */
@@ -346,6 +360,38 @@ public class SSAIConf extends AbstractModel {
         this.AdCDNPrefix = AdCDNPrefix;
     }
 
+    /**
+     * Get Pre-roll ad decision service address. 
+     * @return PreRollAdsUrl Pre-roll ad decision service address.
+     */
+    public String getPreRollAdsUrl() {
+        return this.PreRollAdsUrl;
+    }
+
+    /**
+     * Set Pre-roll ad decision service address.
+     * @param PreRollAdsUrl Pre-roll ad decision service address.
+     */
+    public void setPreRollAdsUrl(String PreRollAdsUrl) {
+        this.PreRollAdsUrl = PreRollAdsUrl;
+    }
+
+    /**
+     * Get The maximum allowed duration of pre-roll ads, (0, 3600]. 
+     * @return PreRollMaxAllowedDuration The maximum allowed duration of pre-roll ads, (0, 3600].
+     */
+    public Long getPreRollMaxAllowedDuration() {
+        return this.PreRollMaxAllowedDuration;
+    }
+
+    /**
+     * Set The maximum allowed duration of pre-roll ads, (0, 3600].
+     * @param PreRollMaxAllowedDuration The maximum allowed duration of pre-roll ads, (0, 3600].
+     */
+    public void setPreRollMaxAllowedDuration(Long PreRollMaxAllowedDuration) {
+        this.PreRollMaxAllowedDuration = PreRollMaxAllowedDuration;
+    }
+
     public SSAIConf() {
     }
 
@@ -393,6 +439,12 @@ public class SSAIConf extends AbstractModel {
         if (source.AdCDNPrefix != null) {
             this.AdCDNPrefix = new String(source.AdCDNPrefix);
         }
+        if (source.PreRollAdsUrl != null) {
+            this.PreRollAdsUrl = new String(source.PreRollAdsUrl);
+        }
+        if (source.PreRollMaxAllowedDuration != null) {
+            this.PreRollMaxAllowedDuration = new Long(source.PreRollMaxAllowedDuration);
+        }
     }
 
 
@@ -411,6 +463,8 @@ public class SSAIConf extends AbstractModel {
         this.setParamSimple(map, prefix + "DeliveryRestrictions", this.DeliveryRestrictions);
         this.setParamSimple(map, prefix + "SourceCDNPrefix", this.SourceCDNPrefix);
         this.setParamSimple(map, prefix + "AdCDNPrefix", this.AdCDNPrefix);
+        this.setParamSimple(map, prefix + "PreRollAdsUrl", this.PreRollAdsUrl);
+        this.setParamSimple(map, prefix + "PreRollMaxAllowedDuration", this.PreRollMaxAllowedDuration);
 
     }
 }

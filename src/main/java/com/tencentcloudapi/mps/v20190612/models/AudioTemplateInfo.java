@@ -73,11 +73,11 @@ Please ensure that the sampling rate of the source audio stream is within the va
 
     /**
     * Audio channel mode. Valid values:
-<li>1: single channel.</li>
-<li>2: dual channel.</li>
-<li>6: 5.1 surround sound.</li>
-When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
-Default value: 2.
+<li>1: mono-channel.</li>
+<li>2: dual-channel.</li>
+<li>6: 5.1 surround sound.
+<li>Default value: 2.
+When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
     */
     @SerializedName("AudioChannel")
     @Expose
@@ -85,7 +85,8 @@ Default value: 2.
 
     /**
     * Merge audio track information.
-This field only takes effec in adaptive bitrate transcoding.
+This field only takes effect in adaptive bitrate transcoding.
+
 Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("TrackChannelInfo")
@@ -250,17 +251,17 @@ Please ensure that the sampling rate of the source audio stream is within the va
 
     /**
      * Get Audio channel mode. Valid values:
-<li>1: single channel.</li>
-<li>2: dual channel.</li>
-<li>6: 5.1 surround sound.</li>
-When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
-Default value: 2. 
+<li>1: mono-channel.</li>
+<li>2: dual-channel.</li>
+<li>6: 5.1 surround sound.
+<li>Default value: 2.
+When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound. 
      * @return AudioChannel Audio channel mode. Valid values:
-<li>1: single channel.</li>
-<li>2: dual channel.</li>
-<li>6: 5.1 surround sound.</li>
-When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
-Default value: 2.
+<li>1: mono-channel.</li>
+<li>2: dual-channel.</li>
+<li>6: 5.1 surround sound.
+<li>Default value: 2.
+When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
      */
     public Long getAudioChannel() {
         return this.AudioChannel;
@@ -268,17 +269,17 @@ Default value: 2.
 
     /**
      * Set Audio channel mode. Valid values:
-<li>1: single channel.</li>
-<li>2: dual channel.</li>
-<li>6: 5.1 surround sound.</li>
-When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
-Default value: 2.
+<li>1: mono-channel.</li>
+<li>2: dual-channel.</li>
+<li>6: 5.1 surround sound.
+<li>Default value: 2.
+When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
      * @param AudioChannel Audio channel mode. Valid values:
-<li>1: single channel.</li>
-<li>2: dual channel.</li>
-<li>6: 5.1 surround sound.</li>
-When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
-Default value: 2.
+<li>1: mono-channel.</li>
+<li>2: dual-channel.</li>
+<li>6: 5.1 surround sound.
+<li>Default value: 2.
+When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
      */
     public void setAudioChannel(Long AudioChannel) {
         this.AudioChannel = AudioChannel;
@@ -286,10 +287,12 @@ Default value: 2.
 
     /**
      * Get Merge audio track information.
-This field only takes effec in adaptive bitrate transcoding.
+This field only takes effect in adaptive bitrate transcoding.
+
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return TrackChannelInfo Merge audio track information.
-This field only takes effec in adaptive bitrate transcoding.
+This field only takes effect in adaptive bitrate transcoding.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public AudioTrackChannelInfo getTrackChannelInfo() {
@@ -298,10 +301,12 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Merge audio track information.
-This field only takes effec in adaptive bitrate transcoding.
+This field only takes effect in adaptive bitrate transcoding.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param TrackChannelInfo Merge audio track information.
-This field only takes effec in adaptive bitrate transcoding.
+This field only takes effect in adaptive bitrate transcoding.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setTrackChannelInfo(AudioTrackChannelInfo TrackChannelInfo) {

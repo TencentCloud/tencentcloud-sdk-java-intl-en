@@ -116,6 +116,13 @@ Currently, fMP4 segments do not support DRM or time shifting.
     private Long EndListTag;
 
     /**
+    * Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+    */
+    @SerializedName("AdMarkupType")
+    @Expose
+    private String AdMarkupType;
+
+    /**
      * Get Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000. 
      * @return SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
      */
@@ -327,6 +334,22 @@ Currently, fMP4 segments do not support DRM or time shifting.
         this.EndListTag = EndListTag;
     }
 
+    /**
+     * Get Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`. 
+     * @return AdMarkupType Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+     */
+    public String getAdMarkupType() {
+        return this.AdMarkupType;
+    }
+
+    /**
+     * Set Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+     * @param AdMarkupType Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+     */
+    public void setAdMarkupType(String AdMarkupType) {
+        this.AdMarkupType = AdMarkupType;
+    }
+
     public HlsRemuxSettingsInfo() {
     }
 
@@ -374,6 +397,9 @@ Currently, fMP4 segments do not support DRM or time shifting.
         if (source.EndListTag != null) {
             this.EndListTag = new Long(source.EndListTag);
         }
+        if (source.AdMarkupType != null) {
+            this.AdMarkupType = new String(source.AdMarkupType);
+        }
     }
 
 
@@ -394,6 +420,7 @@ Currently, fMP4 segments do not support DRM or time shifting.
         this.setParamSimple(map, prefix + "StreamOrder", this.StreamOrder);
         this.setParamSimple(map, prefix + "VideoResolution", this.VideoResolution);
         this.setParamSimple(map, prefix + "EndListTag", this.EndListTag);
+        this.setParamSimple(map, prefix + "AdMarkupType", this.AdMarkupType);
 
     }
 }

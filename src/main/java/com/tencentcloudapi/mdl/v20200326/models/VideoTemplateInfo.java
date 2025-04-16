@@ -45,14 +45,14 @@ public class VideoTemplateInfo extends AbstractModel {
     private Long VideoBitrate;
 
     /**
-    * Video width. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
+    * Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Video height. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
+    * Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
     */
     @SerializedName("Height")
     @Expose
@@ -220,32 +220,32 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Video width. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used. 
-     * @return Width Video width. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
+     * Get Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used. 
+     * @return Width Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Video width. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
-     * @param Width Video width. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
+     * Set Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
+     * @param Width Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Video height. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used. 
-     * @return Height Video height. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
+     * Get Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used. 
+     * @return Height Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Video height. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
-     * @param Height Video height. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
+     * Set Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
+     * @param Height Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
      */
     public void setHeight(Long Height) {
         this.Height = Height;

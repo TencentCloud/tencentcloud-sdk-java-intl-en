@@ -57,7 +57,8 @@ public class AdaptiveStreamTemplate extends AbstractModel {
 
     /**
     * Audio parameter information list.
-The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
+The parameter is only used when merging multiple audio tracks in adaptive bitrate transcoding. the maximum length of the parameter array is 64.
+
 Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("AudioList")
@@ -146,10 +147,12 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Audio parameter information list.
-The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
+The parameter is only used when merging multiple audio tracks in adaptive bitrate transcoding. the maximum length of the parameter array is 64.
+
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return AudioList Audio parameter information list.
-The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
+The parameter is only used when merging multiple audio tracks in adaptive bitrate transcoding. the maximum length of the parameter array is 64.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public AudioTemplateInfo [] getAudioList() {
@@ -158,10 +161,12 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Audio parameter information list.
-The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
+The parameter is only used when merging multiple audio tracks in adaptive bitrate transcoding. the maximum length of the parameter array is 64.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param AudioList Audio parameter information list.
-The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
+The parameter is only used when merging multiple audio tracks in adaptive bitrate transcoding. the maximum length of the parameter array is 64.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setAudioList(AudioTemplateInfo [] AudioList) {

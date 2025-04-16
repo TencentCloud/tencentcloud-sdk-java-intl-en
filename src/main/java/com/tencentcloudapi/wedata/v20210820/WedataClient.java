@@ -1967,6 +1967,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain instance lists.
+     * @param req GetInstanceLogRequest
+     * @return GetInstanceLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetInstanceLogResponse GetInstanceLog(GetInstanceLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetInstanceLog", GetInstanceLogResponse.class);
+    }
+
+    /**
      *Extracting DataInLong Node Field Schema
      * @param req GetIntegrationNodeColumnSchemaRequest
      * @return GetIntegrationNodeColumnSchemaResponse
@@ -2000,6 +2011,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain instance lists.
+     * @param req GetTaskInstanceRequest
+     * @return GetTaskInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTaskInstanceResponse GetTaskInstance(GetTaskInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTaskInstance", GetTaskInstanceResponse.class);
+    }
+
+    /**
      *Batch Termination of Instances by Supplement Plan.
      * @param req KillOpsMakePlanInstancesRequest
      * @return KillOpsMakePlanInstancesResponse
@@ -2019,6 +2041,17 @@ public class WedataClient extends AbstractClient{
     public KillScheduleInstancesResponse KillScheduleInstances(KillScheduleInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "KillScheduleInstances", KillScheduleInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to obtain instance lists.
+     * @param req ListInstancesRequest
+     * @return ListInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListInstancesResponse ListInstances(ListInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListInstances", ListInstancesResponse.class);
     }
 
     /**

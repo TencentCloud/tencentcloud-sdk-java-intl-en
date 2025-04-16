@@ -24,10 +24,10 @@ import java.util.HashMap;
 public class AudioTrackChannelInfo extends AbstractModel {
 
     /**
-    * Whether to enable the feature of multi-audio track mixing. valid values:
-0: indicates not enabling multi-audio track mix.
-1: Indicates enabling multi-audio track mixing.
-Default value: 0
+    * Whether to enable the feature of multi-audio track mixing. Valid values:
+<li>0: To disable the multi-audio track mixing feature.
+<li>1: To enable the multi-audio track mixing feature. 
+<li>Default value: 0.
 
 Note: This field may return null, indicating that no valid value can be obtained.
     */
@@ -36,11 +36,12 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long ChannelsRemix;
 
     /**
-    * Set the selector type for the input audio track. valid values:
-Track: indicates the usage of audio track id;.
-Track_channel: indicates the usage of the audio track id and sound channel id.
-Default: track.
-If the original video has multiple channels, it is recommended to use track_channel.
+    * Set the selector type for the input audio track. Valid values:
+<li>track: indicates the usage of audio track id to identify the track to be used.
+<li>track_channel: indicates the usage of both the audio track id and sound channel id to identify the track and channel to be used.
+<li>Default value: track.
+If the original audio track has multiple sound channels, please use track_channel.
+
 Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("SelectType")
@@ -49,6 +50,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Audio track information.
+
 Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("InputTrackInfo")
@@ -56,16 +58,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     private TrackInfo [] InputTrackInfo;
 
     /**
-     * Get Whether to enable the feature of multi-audio track mixing. valid values:
-0: indicates not enabling multi-audio track mix.
-1: Indicates enabling multi-audio track mixing.
-Default value: 0
+     * Get Whether to enable the feature of multi-audio track mixing. Valid values:
+<li>0: To disable the multi-audio track mixing feature.
+<li>1: To enable the multi-audio track mixing feature. 
+<li>Default value: 0.
 
 Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ChannelsRemix Whether to enable the feature of multi-audio track mixing. valid values:
-0: indicates not enabling multi-audio track mix.
-1: Indicates enabling multi-audio track mixing.
-Default value: 0
+     * @return ChannelsRemix Whether to enable the feature of multi-audio track mixing. Valid values:
+<li>0: To disable the multi-audio track mixing feature.
+<li>1: To enable the multi-audio track mixing feature. 
+<li>Default value: 0.
 
 Note: This field may return null, indicating that no valid value can be obtained.
      */
@@ -74,16 +76,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Set Whether to enable the feature of multi-audio track mixing. valid values:
-0: indicates not enabling multi-audio track mix.
-1: Indicates enabling multi-audio track mixing.
-Default value: 0
+     * Set Whether to enable the feature of multi-audio track mixing. Valid values:
+<li>0: To disable the multi-audio track mixing feature.
+<li>1: To enable the multi-audio track mixing feature. 
+<li>Default value: 0.
 
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ChannelsRemix Whether to enable the feature of multi-audio track mixing. valid values:
-0: indicates not enabling multi-audio track mix.
-1: Indicates enabling multi-audio track mixing.
-Default value: 0
+     * @param ChannelsRemix Whether to enable the feature of multi-audio track mixing. Valid values:
+<li>0: To disable the multi-audio track mixing feature.
+<li>1: To enable the multi-audio track mixing feature. 
+<li>Default value: 0.
 
 Note: This field may return null, indicating that no valid value can be obtained.
      */
@@ -92,17 +94,19 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Set the selector type for the input audio track. valid values:
-Track: indicates the usage of audio track id;.
-Track_channel: indicates the usage of the audio track id and sound channel id.
-Default: track.
-If the original video has multiple channels, it is recommended to use track_channel.
+     * Get Set the selector type for the input audio track. Valid values:
+<li>track: indicates the usage of audio track id to identify the track to be used.
+<li>track_channel: indicates the usage of both the audio track id and sound channel id to identify the track and channel to be used.
+<li>Default value: track.
+If the original audio track has multiple sound channels, please use track_channel.
+
 Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SelectType Set the selector type for the input audio track. valid values:
-Track: indicates the usage of audio track id;.
-Track_channel: indicates the usage of the audio track id and sound channel id.
-Default: track.
-If the original video has multiple channels, it is recommended to use track_channel.
+     * @return SelectType Set the selector type for the input audio track. Valid values:
+<li>track: indicates the usage of audio track id to identify the track to be used.
+<li>track_channel: indicates the usage of both the audio track id and sound channel id to identify the track and channel to be used.
+<li>Default value: track.
+If the original audio track has multiple sound channels, please use track_channel.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getSelectType() {
@@ -110,17 +114,19 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Set Set the selector type for the input audio track. valid values:
-Track: indicates the usage of audio track id;.
-Track_channel: indicates the usage of the audio track id and sound channel id.
-Default: track.
-If the original video has multiple channels, it is recommended to use track_channel.
+     * Set Set the selector type for the input audio track. Valid values:
+<li>track: indicates the usage of audio track id to identify the track to be used.
+<li>track_channel: indicates the usage of both the audio track id and sound channel id to identify the track and channel to be used.
+<li>Default value: track.
+If the original audio track has multiple sound channels, please use track_channel.
+
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SelectType Set the selector type for the input audio track. valid values:
-Track: indicates the usage of audio track id;.
-Track_channel: indicates the usage of the audio track id and sound channel id.
-Default: track.
-If the original video has multiple channels, it is recommended to use track_channel.
+     * @param SelectType Set the selector type for the input audio track. Valid values:
+<li>track: indicates the usage of audio track id to identify the track to be used.
+<li>track_channel: indicates the usage of both the audio track id and sound channel id to identify the track and channel to be used.
+<li>Default value: track.
+If the original audio track has multiple sound channels, please use track_channel.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSelectType(String SelectType) {
@@ -129,8 +135,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Audio track information.
+
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return InputTrackInfo Audio track information.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public TrackInfo [] getInputTrackInfo() {
@@ -139,8 +147,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Audio track information.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param InputTrackInfo Audio track information.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setInputTrackInfo(TrackInfo [] InputTrackInfo) {
