@@ -46,10 +46,9 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String CaptchaMsg;
 
     /**
-    * This parameter returns the result of imperceptible verification. This parameter is not available for Tencent Cloud International yet.
+    * This parameter returns the result of imperceptible verification. 
 `0`: The request is trusted.
 `100`: The request is malicious.
-Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("EvilLevel")
     @Expose
@@ -79,7 +78,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long SubmitCaptchaTime;
 
     /**
-    * Device Risk Category
+    * Device Risk Category.
     */
     @SerializedName("DeviceRiskCategory")
     @Expose
@@ -157,28 +156,24 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get This parameter returns the result of imperceptible verification. This parameter is not available for Tencent Cloud International yet.
+     * Get This parameter returns the result of imperceptible verification. 
+`0`: The request is trusted.
+`100`: The request is malicious. 
+     * @return EvilLevel This parameter returns the result of imperceptible verification. 
 `0`: The request is trusted.
 `100`: The request is malicious.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return EvilLevel This parameter returns the result of imperceptible verification. This parameter is not available for Tencent Cloud International yet.
-`0`: The request is trusted.
-`100`: The request is malicious.
-Note: This field may return `null`, indicating that no valid value was found.
      */
     public Long getEvilLevel() {
         return this.EvilLevel;
     }
 
     /**
-     * Set This parameter returns the result of imperceptible verification. This parameter is not available for Tencent Cloud International yet.
+     * Set This parameter returns the result of imperceptible verification. 
 `0`: The request is trusted.
 `100`: The request is malicious.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param EvilLevel This parameter returns the result of imperceptible verification. This parameter is not available for Tencent Cloud International yet.
+     * @param EvilLevel This parameter returns the result of imperceptible verification. 
 `0`: The request is trusted.
 `100`: The request is malicious.
-Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setEvilLevel(Long EvilLevel) {
         this.EvilLevel = EvilLevel;
@@ -241,16 +236,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Device Risk Category 
-     * @return DeviceRiskCategory Device Risk Category
+     * Get Device Risk Category. 
+     * @return DeviceRiskCategory Device Risk Category.
      */
     public String getDeviceRiskCategory() {
         return this.DeviceRiskCategory;
     }
 
     /**
-     * Set Device Risk Category
-     * @param DeviceRiskCategory Device Risk Category
+     * Set Device Risk Category.
+     * @param DeviceRiskCategory Device Risk Category.
      */
     public void setDeviceRiskCategory(String DeviceRiskCategory) {
         this.DeviceRiskCategory = DeviceRiskCategory;

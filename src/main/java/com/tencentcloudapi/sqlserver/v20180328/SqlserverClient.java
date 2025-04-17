@@ -468,6 +468,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the maintenance time window of an instance based on its instance ID.
+     * @param req DescribeMaintenanceSpanRequest
+     * @return DescribeMaintenanceSpanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMaintenanceSpanResponse DescribeMaintenanceSpan(DescribeMaintenanceSpanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMaintenanceSpan", DescribeMaintenanceSpanResponse.class);
+    }
+
+    /**
      *This API is used to query migration task details.
      * @param req DescribeMigrationDetailRequest
      * @return DescribeMigrationDetailResponse
