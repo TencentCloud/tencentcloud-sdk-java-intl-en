@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel {
 
     /**
-    * The name of the Instance ID for the search.
+    * Searches by instance ID.
     */
     @SerializedName("SearchInstanceId")
     @Expose
     private String SearchInstanceId;
 
     /**
-    * The instance name for the search.
+    * Searches by instance name.
     */
     @SerializedName("SearchInstanceName")
     @Expose
     private String SearchInstanceName;
 
     /**
-    * Pagination parameter. The first page is 0, and the second page is 10.
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Pagination parameter. Pagination step length. It is 10 by default.
+    * Limit.
     */
     @SerializedName("Limit")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeInstancesRequest extends AbstractModel {
     private SearchTags [] SearchTags;
 
     /**
-     * Get The name of the Instance ID for the search. 
-     * @return SearchInstanceId The name of the Instance ID for the search.
+     * Get Searches by instance ID. 
+     * @return SearchInstanceId Searches by instance ID.
      */
     public String getSearchInstanceId() {
         return this.SearchInstanceId;
     }
 
     /**
-     * Set The name of the Instance ID for the search.
-     * @param SearchInstanceId The name of the Instance ID for the search.
+     * Set Searches by instance ID.
+     * @param SearchInstanceId Searches by instance ID.
      */
     public void setSearchInstanceId(String SearchInstanceId) {
         this.SearchInstanceId = SearchInstanceId;
     }
 
     /**
-     * Get The instance name for the search. 
-     * @return SearchInstanceName The instance name for the search.
+     * Get Searches by instance name. 
+     * @return SearchInstanceName Searches by instance name.
      */
     public String getSearchInstanceName() {
         return this.SearchInstanceName;
     }
 
     /**
-     * Set The instance name for the search.
-     * @param SearchInstanceName The instance name for the search.
+     * Set Searches by instance name.
+     * @param SearchInstanceName Searches by instance name.
      */
     public void setSearchInstanceName(String SearchInstanceName) {
         this.SearchInstanceName = SearchInstanceName;
     }
 
     /**
-     * Get Pagination parameter. The first page is 0, and the second page is 10. 
-     * @return Offset Pagination parameter. The first page is 0, and the second page is 10.
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination parameter. The first page is 0, and the second page is 10.
-     * @param Offset Pagination parameter. The first page is 0, and the second page is 10.
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Pagination parameter. Pagination step length. It is 10 by default. 
-     * @return Limit Pagination parameter. Pagination step length. It is 10 by default.
+     * Get Limit. 
+     * @return Limit Limit.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Pagination parameter. Pagination step length. It is 10 by default.
-     * @param Limit Pagination parameter. Pagination step length. It is 10 by default.
+     * Set Limit.
+     * @param Limit Limit.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

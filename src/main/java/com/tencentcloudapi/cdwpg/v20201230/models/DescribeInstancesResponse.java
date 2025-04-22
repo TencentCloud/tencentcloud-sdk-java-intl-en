@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstancesResponse extends AbstractModel {
 
     /**
-    * Total number of instances.
+    * Total count of instances.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
@@ -40,7 +40,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private InstanceInfo [] InstancesList;
 
     /**
-    *  -Note: This field may return null, indicating that no valid values can be obtained.
+    * Error message.
+
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -54,9 +56,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total number of instances.
+     * Get Total count of instances.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number of instances.
+     * @return TotalCount Total count of instances.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
@@ -64,9 +66,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Total number of instances.
+     * Set Total count of instances.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total number of instances.
+     * @param TotalCount Total count of instances.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
@@ -94,16 +96,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  -Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ErrorMsg  -Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Error message.
+
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ErrorMsg Error message.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set  -Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ErrorMsg  -Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Error message.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ErrorMsg Error message.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

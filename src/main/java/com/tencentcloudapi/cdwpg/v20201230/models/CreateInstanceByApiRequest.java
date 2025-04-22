@@ -73,7 +73,7 @@ public class CreateInstanceByApiRequest extends AbstractModel {
     private ResourceSpecNew [] Resources;
 
     /**
-    * Tag list.
+    * Tag list.Deprecated, use TagItems.
     */
     @SerializedName("Tags")
     @Expose
@@ -85,6 +85,13 @@ public class CreateInstanceByApiRequest extends AbstractModel {
     @SerializedName("ProductVersion")
     @Expose
     private String ProductVersion;
+
+    /**
+    *  TagItems list.
+    */
+    @SerializedName("TagItems")
+    @Expose
+    private Tag [] TagItems;
 
     /**
      * Get Instance name. 
@@ -199,16 +206,16 @@ public class CreateInstanceByApiRequest extends AbstractModel {
     }
 
     /**
-     * Get Tag list. 
-     * @return Tags Tag list.
+     * Get Tag list.Deprecated, use TagItems. 
+     * @return Tags Tag list.Deprecated, use TagItems.
      */
     public Tag getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag list.
-     * @param Tags Tag list.
+     * Set Tag list.Deprecated, use TagItems.
+     * @param Tags Tag list.Deprecated, use TagItems.
      */
     public void setTags(Tag Tags) {
         this.Tags = Tags;
@@ -228,6 +235,22 @@ public class CreateInstanceByApiRequest extends AbstractModel {
      */
     public void setProductVersion(String ProductVersion) {
         this.ProductVersion = ProductVersion;
+    }
+
+    /**
+     * Get  TagItems list. 
+     * @return TagItems  TagItems list.
+     */
+    public Tag [] getTagItems() {
+        return this.TagItems;
+    }
+
+    /**
+     * Set  TagItems list.
+     * @param TagItems  TagItems list.
+     */
+    public void setTagItems(Tag [] TagItems) {
+        this.TagItems = TagItems;
     }
 
     public CreateInstanceByApiRequest() {
@@ -268,6 +291,12 @@ public class CreateInstanceByApiRequest extends AbstractModel {
         if (source.ProductVersion != null) {
             this.ProductVersion = new String(source.ProductVersion);
         }
+        if (source.TagItems != null) {
+            this.TagItems = new Tag[source.TagItems.length];
+            for (int i = 0; i < source.TagItems.length; i++) {
+                this.TagItems[i] = new Tag(source.TagItems[i]);
+            }
+        }
     }
 
 
@@ -284,6 +313,7 @@ public class CreateInstanceByApiRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Resources.", this.Resources);
         this.setParamObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
+        this.setParamArrayObj(map, prefix + "TagItems.", this.TagItems);
 
     }
 }

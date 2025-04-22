@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstanceInfoResponse extends AbstractModel {
 
     /**
-    * Instance simple information
+    * Instance description information.
     */
     @SerializedName("SimpleInstanceInfo")
     @Expose
     private SimpleInstanceInfo SimpleInstanceInfo;
 
     /**
-    * Error Message
+    * Error message.
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeInstanceInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Instance simple information 
-     * @return SimpleInstanceInfo Instance simple information
+     * Get Instance description information. 
+     * @return SimpleInstanceInfo Instance description information.
      */
     public SimpleInstanceInfo getSimpleInstanceInfo() {
         return this.SimpleInstanceInfo;
     }
 
     /**
-     * Set Instance simple information
-     * @param SimpleInstanceInfo Instance simple information
+     * Set Instance description information.
+     * @param SimpleInstanceInfo Instance description information.
      */
     public void setSimpleInstanceInfo(SimpleInstanceInfo SimpleInstanceInfo) {
         this.SimpleInstanceInfo = SimpleInstanceInfo;
     }
 
     /**
-     * Get Error Message 
-     * @return ErrorMsg Error Message
+     * Get Error message. 
+     * @return ErrorMsg Error message.
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set Error Message
-     * @param ErrorMsg Error Message
+     * Set Error message.
+     * @param ErrorMsg Error message.
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

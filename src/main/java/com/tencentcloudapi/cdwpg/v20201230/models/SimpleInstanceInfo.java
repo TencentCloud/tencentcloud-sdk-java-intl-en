@@ -32,7 +32,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ID;
 
     /**
-    * Instance Id
+    * Cluster ID.
+
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceId")
@@ -40,7 +41,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String InstanceId;
 
     /**
-    * Instance Name
+    * Cluster name.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceName")
@@ -48,7 +49,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String InstanceName;
 
     /**
-    * Version
+    * Kernel version.
+
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Version")
@@ -56,7 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Version;
 
     /**
-    * Region
+    * Region.
+
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Region")
@@ -64,7 +67,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Region;
 
     /**
-    * Zone
+    * Region.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Zone")
@@ -72,7 +75,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Zone;
 
     /**
-    * User VPC ID
+    * Virtual Private Cloud (VPC).
+
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserVPCID")
@@ -80,7 +84,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String UserVPCID;
 
     /**
-    * User Subnet ID
+    * Subnet.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserSubnetID")
@@ -88,7 +92,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String UserSubnetID;
 
     /**
-    * CreateTime
+    * Start time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
@@ -96,7 +101,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CreateTime;
 
     /**
-    * ExpireTime
+    * Expiration time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExpireTime")
@@ -104,7 +110,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ExpireTime;
 
     /**
-    * Access Infomation
+    * Access address.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AccessInfo")
@@ -112,7 +118,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String AccessInfo;
 
     /**
-    * Renew Flag
+    * Automatic renewal switch. 0 indicates automatic renewal is not enabled, and 1 indicates automatic renewal is enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RenewFlag")
@@ -120,7 +126,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long RenewFlag;
 
     /**
-    * Charge Properties
+    * Billing mode.
+
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ChargeProperties")
@@ -128,7 +135,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ChargeProperties ChargeProperties;
 
     /**
-    * Resources
+    * Resource collection.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Resources")
@@ -136,7 +143,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ResourceInfo [] Resources;
 
     /**
-    * Tags
+    * Tag list.
+
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
@@ -144,7 +152,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Tag [] Tags;
 
     /**
-    * Status
+    * Cluster status.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
@@ -172,9 +180,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance Id
+     * Get Cluster ID.
+
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceId Instance Id
+     * @return InstanceId Cluster ID.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceId() {
@@ -182,9 +192,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Instance Id
+     * Set Cluster ID.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceId Instance Id
+     * @param InstanceId Cluster ID.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceId(String InstanceId) {
@@ -192,9 +204,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance Name
+     * Get Cluster name.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceName Instance Name
+     * @return InstanceName Cluster name.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceName() {
@@ -202,9 +214,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Instance Name
+     * Set Cluster name.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceName Instance Name
+     * @param InstanceName Cluster name.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceName(String InstanceName) {
@@ -212,9 +224,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Version
+     * Get Kernel version.
+
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Version Version
+     * @return Version Kernel version.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVersion() {
@@ -222,9 +236,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Version
+     * Set Kernel version.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Version Version
+     * @param Version Kernel version.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVersion(String Version) {
@@ -232,9 +248,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Region
+     * Get Region.
+
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Region Region
+     * @return Region Region.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRegion() {
@@ -242,9 +260,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Region
+     * Set Region.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Region Region
+     * @param Region Region.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRegion(String Region) {
@@ -252,9 +272,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Zone
+     * Get Region.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Zone Zone
+     * @return Zone Region.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getZone() {
@@ -262,9 +282,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Zone
+     * Set Region.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Zone Zone
+     * @param Zone Region.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setZone(String Zone) {
@@ -272,9 +292,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get User VPC ID
+     * Get Virtual Private Cloud (VPC).
+
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserVPCID User VPC ID
+     * @return UserVPCID Virtual Private Cloud (VPC).
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUserVPCID() {
@@ -282,9 +304,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set User VPC ID
+     * Set Virtual Private Cloud (VPC).
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserVPCID User VPC ID
+     * @param UserVPCID Virtual Private Cloud (VPC).
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUserVPCID(String UserVPCID) {
@@ -292,9 +316,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get User Subnet ID
+     * Get Subnet.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserSubnetID User Subnet ID
+     * @return UserSubnetID Subnet.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUserSubnetID() {
@@ -302,9 +326,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set User Subnet ID
+     * Set Subnet.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserSubnetID User Subnet ID
+     * @param UserSubnetID Subnet.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUserSubnetID(String UserSubnetID) {
@@ -312,9 +336,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get CreateTime
+     * Get Start time.
+
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime CreateTime
+     * @return CreateTime Start time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
@@ -322,9 +348,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set CreateTime
+     * Set Start time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime CreateTime
+     * @param CreateTime Start time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
@@ -332,9 +360,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get ExpireTime
+     * Get Expiration time.
+
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExpireTime ExpireTime
+     * @return ExpireTime Expiration time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExpireTime() {
@@ -342,9 +372,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set ExpireTime
+     * Set Expiration time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExpireTime ExpireTime
+     * @param ExpireTime Expiration time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExpireTime(String ExpireTime) {
@@ -352,9 +384,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Access Infomation
+     * Get Access address.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AccessInfo Access Infomation
+     * @return AccessInfo Access address.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAccessInfo() {
@@ -362,9 +394,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Access Infomation
+     * Set Access address.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AccessInfo Access Infomation
+     * @param AccessInfo Access address.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAccessInfo(String AccessInfo) {
@@ -372,9 +404,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Renew Flag
+     * Get Automatic renewal switch. 0 indicates automatic renewal is not enabled, and 1 indicates automatic renewal is enabled.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RenewFlag Renew Flag
+     * @return RenewFlag Automatic renewal switch. 0 indicates automatic renewal is not enabled, and 1 indicates automatic renewal is enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRenewFlag() {
@@ -382,9 +414,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Renew Flag
+     * Set Automatic renewal switch. 0 indicates automatic renewal is not enabled, and 1 indicates automatic renewal is enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RenewFlag Renew Flag
+     * @param RenewFlag Automatic renewal switch. 0 indicates automatic renewal is not enabled, and 1 indicates automatic renewal is enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRenewFlag(Long RenewFlag) {
@@ -392,9 +424,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Charge Properties
+     * Get Billing mode.
+
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ChargeProperties Charge Properties
+     * @return ChargeProperties Billing mode.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ChargeProperties getChargeProperties() {
@@ -402,9 +436,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Charge Properties
+     * Set Billing mode.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ChargeProperties Charge Properties
+     * @param ChargeProperties Billing mode.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setChargeProperties(ChargeProperties ChargeProperties) {
@@ -412,9 +448,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Resources
+     * Get Resource collection.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Resources Resources
+     * @return Resources Resource collection.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ResourceInfo [] getResources() {
@@ -422,9 +458,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Resources
+     * Set Resource collection.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Resources Resources
+     * @param Resources Resource collection.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResources(ResourceInfo [] Resources) {
@@ -432,9 +468,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Tags
+     * Get Tag list.
+
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tags
+     * @return Tags Tag list.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Tag [] getTags() {
@@ -442,9 +480,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Tags
+     * Set Tag list.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tags
+     * @param Tags Tag list.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(Tag [] Tags) {
@@ -452,9 +492,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Status
+     * Get Cluster status.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status
+     * @return Status Cluster status.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatus() {
@@ -462,9 +502,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Status
+     * Set Cluster status.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status
+     * @param Status Cluster status.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Long Status) {

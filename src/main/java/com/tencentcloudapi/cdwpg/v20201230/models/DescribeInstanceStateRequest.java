@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeInstanceStateRequest extends AbstractModel {
 
     /**
-    *  Instance id
+    *  InstanceId.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get  Instance id 
-     * @return InstanceId  Instance id
+     * Get  InstanceId. 
+     * @return InstanceId  InstanceId.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set  Instance id
-     * @param InstanceId  Instance id
+     * Set  InstanceId.
+     * @param InstanceId  InstanceId.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

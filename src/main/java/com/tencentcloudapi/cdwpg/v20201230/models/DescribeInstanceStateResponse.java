@@ -52,7 +52,7 @@ public class DescribeInstanceStateResponse extends AbstractModel {
     private Float FlowProgress;
 
     /**
-    * Cluster status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceStateDesc")
     @Expose
@@ -152,16 +152,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cluster status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceStateDesc Cluster status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceStateDesc Instance status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceStateDesc() {
         return this.InstanceStateDesc;
     }
 
     /**
-     * Set Cluster status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceStateDesc Cluster status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceStateDesc Instance status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceStateDesc(String InstanceStateDesc) {
         this.InstanceStateDesc = InstanceStateDesc;

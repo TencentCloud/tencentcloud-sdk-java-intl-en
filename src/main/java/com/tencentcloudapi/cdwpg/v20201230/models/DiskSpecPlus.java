@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DiskSpecPlus extends AbstractModel {
 
     /**
-    * Disk Count
+    * Number of disks.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskCount")
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long DiskCount;
 
     /**
-    * Max Disk Size
+    * Maximum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxDiskSize")
@@ -40,7 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MaxDiskSize;
 
     /**
-    * Min Disk Size
+    * Minimum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MinDiskSize")
@@ -48,7 +48,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MinDiskSize;
 
     /**
-    * Disk Type
+    * Disk type.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskType")
@@ -56,7 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DiskType;
 
     /**
-    * Disk Description
+    * Disk type details.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskDesc")
@@ -64,7 +64,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DiskDesc;
 
     /**
-    * Cvm Class
+    * Model type.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CvmClass")
@@ -72,9 +72,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CvmClass;
 
     /**
-     * Get Disk Count
+     * Get Number of disks.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiskCount Disk Count
+     * @return DiskCount Number of disks.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDiskCount() {
@@ -82,9 +82,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Disk Count
+     * Set Number of disks.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiskCount Disk Count
+     * @param DiskCount Number of disks.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskCount(Long DiskCount) {
@@ -92,9 +92,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Max Disk Size
+     * Get Maximum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaxDiskSize Max Disk Size
+     * @return MaxDiskSize Maximum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMaxDiskSize() {
@@ -102,9 +102,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Max Disk Size
+     * Set Maximum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaxDiskSize Max Disk Size
+     * @param MaxDiskSize Maximum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMaxDiskSize(Long MaxDiskSize) {
@@ -112,9 +112,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Min Disk Size
+     * Get Minimum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MinDiskSize Min Disk Size
+     * @return MinDiskSize Minimum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMinDiskSize() {
@@ -122,9 +122,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Min Disk Size
+     * Set Minimum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MinDiskSize Min Disk Size
+     * @param MinDiskSize Minimum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMinDiskSize(Long MinDiskSize) {
@@ -132,9 +132,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Disk Type
+     * Get Disk type.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiskType Disk Type
+     * @return DiskType Disk type.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDiskType() {
@@ -142,9 +142,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Disk Type
+     * Set Disk type.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiskType Disk Type
+     * @param DiskType Disk type.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskType(String DiskType) {
@@ -152,9 +152,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Disk Description
+     * Get Disk type details.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiskDesc Disk Description
+     * @return DiskDesc Disk type details.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDiskDesc() {
@@ -162,9 +162,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Disk Description
+     * Set Disk type details.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiskDesc Disk Description
+     * @param DiskDesc Disk type details.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskDesc(String DiskDesc) {
@@ -172,9 +172,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cvm Class
+     * Get Model type.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CvmClass Cvm Class
+     * @return CvmClass Model type.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCvmClass() {
@@ -182,9 +182,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Cvm Class
+     * Set Model type.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CvmClass Cvm Class
+     * @param CvmClass Model type.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCvmClass(String CvmClass) {

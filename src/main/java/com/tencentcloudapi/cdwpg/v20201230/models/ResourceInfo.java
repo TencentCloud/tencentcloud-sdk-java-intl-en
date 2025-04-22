@@ -48,7 +48,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CBSSpecInfo DiskSpec;
 
     /**
-    * Resource type.
+    * Node type. Valid values: cn and dn.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
@@ -116,9 +116,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Resource type.
+     * Get Node type. Valid values: cn and dn.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Resource type.
+     * @return Type Node type. Valid values: cn and dn.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
@@ -126,9 +126,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Resource type.
+     * Set Node type. Valid values: cn and dn.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Resource type.
+     * @param Type Node type. Valid values: cn and dn.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {

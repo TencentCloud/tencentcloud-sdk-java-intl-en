@@ -25,6 +25,8 @@ public class CBSSpec extends AbstractModel {
 
     /**
     * Disk type.
+
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskType")
     @Expose
@@ -32,6 +34,8 @@ public class CBSSpec extends AbstractModel {
 
     /**
     * Size.
+
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskSize")
     @Expose
@@ -39,14 +43,20 @@ public class CBSSpec extends AbstractModel {
 
     /**
     * Number.
+
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskCount")
     @Expose
     private Long DiskCount;
 
     /**
-     * Get Disk type. 
+     * Get Disk type.
+
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DiskType Disk type.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDiskType() {
         return this.DiskType;
@@ -54,15 +64,23 @@ public class CBSSpec extends AbstractModel {
 
     /**
      * Set Disk type.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param DiskType Disk type.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Size. 
+     * Get Size.
+
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DiskSize Size.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDiskSize() {
         return this.DiskSize;
@@ -70,15 +88,23 @@ public class CBSSpec extends AbstractModel {
 
     /**
      * Set Size.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param DiskSize Size.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Number. 
+     * Get Number.
+
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DiskCount Number.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDiskCount() {
         return this.DiskCount;
@@ -86,7 +112,11 @@ public class CBSSpec extends AbstractModel {
 
     /**
      * Set Number.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param DiskCount Number.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskCount(Long DiskCount) {
         this.DiskCount = DiskCount;

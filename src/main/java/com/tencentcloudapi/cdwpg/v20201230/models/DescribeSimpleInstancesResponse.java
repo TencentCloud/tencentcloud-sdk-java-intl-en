@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSimpleInstancesResponse extends AbstractModel {
 
     /**
-    * Total Count
+    * Total count of instance lists.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long TotalCount;
 
     /**
-    * Instances List
+    * Instance list details.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstancesList")
@@ -40,7 +40,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private InstanceSimpleInfoNew [] InstancesList;
 
     /**
-    *  Error Message
+    * Error message.
+
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ErrorMsg")
@@ -55,9 +56,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total Count
+     * Get Total count of instance lists.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total Count
+     * @return TotalCount Total count of instance lists.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
@@ -65,9 +66,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Total Count
+     * Set Total count of instance lists.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total Count
+     * @param TotalCount Total count of instance lists.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
@@ -75,9 +76,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instances List
+     * Get Instance list details.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstancesList Instances List
+     * @return InstancesList Instance list details.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public InstanceSimpleInfoNew [] getInstancesList() {
@@ -85,9 +86,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Instances List
+     * Set Instance list details.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstancesList Instances List
+     * @param InstancesList Instance list details.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstancesList(InstanceSimpleInfoNew [] InstancesList) {
@@ -95,9 +96,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  Error Message
+     * Get Error message.
+
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ErrorMsg  Error Message
+     * @return ErrorMsg Error message.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getErrorMsg() {
@@ -105,9 +108,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set  Error Message
+     * Set Error message.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ErrorMsg  Error Message
+     * @param ErrorMsg Error message.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setErrorMsg(String ErrorMsg) {

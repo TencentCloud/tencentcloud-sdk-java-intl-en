@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class InstanceNodeGroup extends AbstractModel {
 
     /**
-    * Spec Name
+    * Model.
+
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SpecName")
@@ -32,7 +33,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SpecName;
 
     /**
-    * Data Disk
+    * Disk information.
+
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataDisk")
@@ -40,7 +42,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private DiskSpecPlus DataDisk;
 
     /**
-    * Cvm Count
+    * Number of machines.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CvmCount")
@@ -48,9 +50,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long CvmCount;
 
     /**
-     * Get Spec Name
+     * Get Model.
+
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SpecName Spec Name
+     * @return SpecName Model.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSpecName() {
@@ -58,9 +62,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Spec Name
+     * Set Model.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SpecName Spec Name
+     * @param SpecName Model.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSpecName(String SpecName) {
@@ -68,9 +74,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data Disk
+     * Get Disk information.
+
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataDisk Data Disk
+     * @return DataDisk Disk information.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DiskSpecPlus getDataDisk() {
@@ -78,9 +86,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Data Disk
+     * Set Disk information.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataDisk Data Disk
+     * @param DataDisk Disk information.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataDisk(DiskSpecPlus DataDisk) {
@@ -88,9 +98,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cvm Count
+     * Get Number of machines.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CvmCount Cvm Count
+     * @return CvmCount Number of machines.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCvmCount() {
@@ -98,9 +108,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Cvm Count
+     * Set Number of machines.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CvmCount Cvm Count
+     * @param CvmCount Number of machines.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCvmCount(Long CvmCount) {

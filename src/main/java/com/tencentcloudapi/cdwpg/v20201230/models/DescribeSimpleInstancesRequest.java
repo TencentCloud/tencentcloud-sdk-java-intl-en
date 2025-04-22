@@ -24,120 +24,115 @@ import java.util.HashMap;
 public class DescribeSimpleInstancesRequest extends AbstractModel {
 
     /**
-    * Search Instance Id
+    * Searches by instance ID.
     */
     @SerializedName("SearchInstanceId")
     @Expose
     private String SearchInstanceId;
 
     /**
-    * Search Instance Name
+    * Searches by instance name.
     */
     @SerializedName("SearchInstanceName")
     @Expose
     private String SearchInstanceName;
 
     /**
-    * 	
-Offset
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit
+    * Limit.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Search Tags
+    * Searches by tag list.
     */
     @SerializedName("SearchTags")
     @Expose
     private String [] SearchTags;
 
     /**
-     * Get Search Instance Id 
-     * @return SearchInstanceId Search Instance Id
+     * Get Searches by instance ID. 
+     * @return SearchInstanceId Searches by instance ID.
      */
     public String getSearchInstanceId() {
         return this.SearchInstanceId;
     }
 
     /**
-     * Set Search Instance Id
-     * @param SearchInstanceId Search Instance Id
+     * Set Searches by instance ID.
+     * @param SearchInstanceId Searches by instance ID.
      */
     public void setSearchInstanceId(String SearchInstanceId) {
         this.SearchInstanceId = SearchInstanceId;
     }
 
     /**
-     * Get Search Instance Name 
-     * @return SearchInstanceName Search Instance Name
+     * Get Searches by instance name. 
+     * @return SearchInstanceName Searches by instance name.
      */
     public String getSearchInstanceName() {
         return this.SearchInstanceName;
     }
 
     /**
-     * Set Search Instance Name
-     * @param SearchInstanceName Search Instance Name
+     * Set Searches by instance name.
+     * @param SearchInstanceName Searches by instance name.
      */
     public void setSearchInstanceName(String SearchInstanceName) {
         this.SearchInstanceName = SearchInstanceName;
     }
 
     /**
-     * Get 	
-Offset 
-     * @return Offset 	
-Offset
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 	
-Offset
-     * @param Offset 	
-Offset
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit 
-     * @return Limit Limit
+     * Get Limit. 
+     * @return Limit Limit.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit
-     * @param Limit Limit
+     * Set Limit.
+     * @param Limit Limit.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Search Tags 
-     * @return SearchTags Search Tags
+     * Get Searches by tag list. 
+     * @return SearchTags Searches by tag list.
      */
     public String [] getSearchTags() {
         return this.SearchTags;
     }
 
     /**
-     * Set Search Tags
-     * @param SearchTags Search Tags
+     * Set Searches by tag list.
+     * @param SearchTags Searches by tag list.
      */
     public void setSearchTags(String [] SearchTags) {
         this.SearchTags = SearchTags;

@@ -88,7 +88,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long BackupStatus;
 
     /**
-    * Request Id
+    * Request ID.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RequestId")
@@ -96,7 +96,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-    * Backup Open Status
+    * Indicates whether there is a backup task in the cluster. 1 indicates yes and 0 indicates no.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BackupOpenStatus")
@@ -264,9 +264,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Request Id
+     * Get Request ID.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RequestId Request Id
+     * @return RequestId Request ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRequestId() {
@@ -274,9 +274,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Request Id
+     * Set Request ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RequestId Request Id
+     * @param RequestId Request ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRequestId(String RequestId) {
@@ -284,9 +284,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Backup Open Status
+     * Get Indicates whether there is a backup task in the cluster. 1 indicates yes and 0 indicates no.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BackupOpenStatus Backup Open Status
+     * @return BackupOpenStatus Indicates whether there is a backup task in the cluster. 1 indicates yes and 0 indicates no.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getBackupOpenStatus() {
@@ -294,9 +294,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Backup Open Status
+     * Set Indicates whether there is a backup task in the cluster. 1 indicates yes and 0 indicates no.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BackupOpenStatus Backup Open Status
+     * @param BackupOpenStatus Indicates whether there is a backup task in the cluster. 1 indicates yes and 0 indicates no.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBackupOpenStatus(Long BackupOpenStatus) {
