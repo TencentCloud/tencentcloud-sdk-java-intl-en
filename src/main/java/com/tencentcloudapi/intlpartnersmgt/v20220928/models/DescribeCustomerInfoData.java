@@ -66,8 +66,7 @@ public class DescribeCustomerInfoData extends AbstractModel {
     private String BindTime;
 
     /**
-    * Account status
-.
+    * Account status.
 0: normal.
 1: forcibly mandatory (this function is not supported yet).
 2: mandatory arrears. 
@@ -77,16 +76,56 @@ public class DescribeCustomerInfoData extends AbstractModel {
     private String AccountStatus;
 
     /**
-    * Identity verification status.
--1: files not uploaded.
-0: not submitted for review.
-1: under review.
-2: review error.
-3: approved.
+    * Specifies the identity verification status.
+-999: account information not found.
+-1: file not uploaded.
+0: pending review.
+Under review.
+Error in review: 2.
+3: pass review.
     */
     @SerializedName("AuthStatus")
     @Expose
     private String AuthStatus;
+
+    /**
+    * Real-Name type.
+-1: default value. no such information. 
+0: personal type. 
+1: enterprise type.
+    */
+    @SerializedName("AuthType")
+    @Expose
+    private Long AuthType;
+
+    /**
+    * Specifies the registration time of the cid.
+    */
+    @SerializedName("CidRegisterTime")
+    @Expose
+    private String CidRegisterTime;
+
+    /**
+    * Specifies the registration time of the uin.
+    */
+    @SerializedName("UinRegisterTime")
+    @Expose
+    private String UinRegisterTime;
+
+    /**
+    * Time when real-name authentication passed.
+    */
+    @SerializedName("AuthPassTime")
+    @Expose
+    private String AuthPassTime;
+
+    /**
+    * Whether there is consumption.
+0: no consumption; 1: consumption.
+    */
+    @SerializedName("HasExpense")
+    @Expose
+    private Long HasExpense;
 
     /**
      * Get Sub-Account uin. 
@@ -185,13 +224,11 @@ public class DescribeCustomerInfoData extends AbstractModel {
     }
 
     /**
-     * Get Account status
-.
+     * Get Account status.
 0: normal.
 1: forcibly mandatory (this function is not supported yet).
 2: mandatory arrears.  
-     * @return AccountStatus Account status
-.
+     * @return AccountStatus Account status.
 0: normal.
 1: forcibly mandatory (this function is not supported yet).
 2: mandatory arrears. 
@@ -201,13 +238,11 @@ public class DescribeCustomerInfoData extends AbstractModel {
     }
 
     /**
-     * Set Account status
-.
+     * Set Account status.
 0: normal.
 1: forcibly mandatory (this function is not supported yet).
 2: mandatory arrears. 
-     * @param AccountStatus Account status
-.
+     * @param AccountStatus Account status.
 0: normal.
 1: forcibly mandatory (this function is not supported yet).
 2: mandatory arrears. 
@@ -217,39 +252,139 @@ public class DescribeCustomerInfoData extends AbstractModel {
     }
 
     /**
-     * Get Identity verification status.
--1: files not uploaded.
-0: not submitted for review.
-1: under review.
-2: review error.
-3: approved. 
-     * @return AuthStatus Identity verification status.
--1: files not uploaded.
-0: not submitted for review.
-1: under review.
-2: review error.
-3: approved.
+     * Get Specifies the identity verification status.
+-999: account information not found.
+-1: file not uploaded.
+0: pending review.
+Under review.
+Error in review: 2.
+3: pass review. 
+     * @return AuthStatus Specifies the identity verification status.
+-999: account information not found.
+-1: file not uploaded.
+0: pending review.
+Under review.
+Error in review: 2.
+3: pass review.
      */
     public String getAuthStatus() {
         return this.AuthStatus;
     }
 
     /**
-     * Set Identity verification status.
--1: files not uploaded.
-0: not submitted for review.
-1: under review.
-2: review error.
-3: approved.
-     * @param AuthStatus Identity verification status.
--1: files not uploaded.
-0: not submitted for review.
-1: under review.
-2: review error.
-3: approved.
+     * Set Specifies the identity verification status.
+-999: account information not found.
+-1: file not uploaded.
+0: pending review.
+Under review.
+Error in review: 2.
+3: pass review.
+     * @param AuthStatus Specifies the identity verification status.
+-999: account information not found.
+-1: file not uploaded.
+0: pending review.
+Under review.
+Error in review: 2.
+3: pass review.
      */
     public void setAuthStatus(String AuthStatus) {
         this.AuthStatus = AuthStatus;
+    }
+
+    /**
+     * Get Real-Name type.
+-1: default value. no such information. 
+0: personal type. 
+1: enterprise type. 
+     * @return AuthType Real-Name type.
+-1: default value. no such information. 
+0: personal type. 
+1: enterprise type.
+     */
+    public Long getAuthType() {
+        return this.AuthType;
+    }
+
+    /**
+     * Set Real-Name type.
+-1: default value. no such information. 
+0: personal type. 
+1: enterprise type.
+     * @param AuthType Real-Name type.
+-1: default value. no such information. 
+0: personal type. 
+1: enterprise type.
+     */
+    public void setAuthType(Long AuthType) {
+        this.AuthType = AuthType;
+    }
+
+    /**
+     * Get Specifies the registration time of the cid. 
+     * @return CidRegisterTime Specifies the registration time of the cid.
+     */
+    public String getCidRegisterTime() {
+        return this.CidRegisterTime;
+    }
+
+    /**
+     * Set Specifies the registration time of the cid.
+     * @param CidRegisterTime Specifies the registration time of the cid.
+     */
+    public void setCidRegisterTime(String CidRegisterTime) {
+        this.CidRegisterTime = CidRegisterTime;
+    }
+
+    /**
+     * Get Specifies the registration time of the uin. 
+     * @return UinRegisterTime Specifies the registration time of the uin.
+     */
+    public String getUinRegisterTime() {
+        return this.UinRegisterTime;
+    }
+
+    /**
+     * Set Specifies the registration time of the uin.
+     * @param UinRegisterTime Specifies the registration time of the uin.
+     */
+    public void setUinRegisterTime(String UinRegisterTime) {
+        this.UinRegisterTime = UinRegisterTime;
+    }
+
+    /**
+     * Get Time when real-name authentication passed. 
+     * @return AuthPassTime Time when real-name authentication passed.
+     */
+    public String getAuthPassTime() {
+        return this.AuthPassTime;
+    }
+
+    /**
+     * Set Time when real-name authentication passed.
+     * @param AuthPassTime Time when real-name authentication passed.
+     */
+    public void setAuthPassTime(String AuthPassTime) {
+        this.AuthPassTime = AuthPassTime;
+    }
+
+    /**
+     * Get Whether there is consumption.
+0: no consumption; 1: consumption. 
+     * @return HasExpense Whether there is consumption.
+0: no consumption; 1: consumption.
+     */
+    public Long getHasExpense() {
+        return this.HasExpense;
+    }
+
+    /**
+     * Set Whether there is consumption.
+0: no consumption; 1: consumption.
+     * @param HasExpense Whether there is consumption.
+0: no consumption; 1: consumption.
+     */
+    public void setHasExpense(Long HasExpense) {
+        this.HasExpense = HasExpense;
     }
 
     public DescribeCustomerInfoData() {
@@ -284,6 +419,21 @@ public class DescribeCustomerInfoData extends AbstractModel {
         if (source.AuthStatus != null) {
             this.AuthStatus = new String(source.AuthStatus);
         }
+        if (source.AuthType != null) {
+            this.AuthType = new Long(source.AuthType);
+        }
+        if (source.CidRegisterTime != null) {
+            this.CidRegisterTime = new String(source.CidRegisterTime);
+        }
+        if (source.UinRegisterTime != null) {
+            this.UinRegisterTime = new String(source.UinRegisterTime);
+        }
+        if (source.AuthPassTime != null) {
+            this.AuthPassTime = new String(source.AuthPassTime);
+        }
+        if (source.HasExpense != null) {
+            this.HasExpense = new Long(source.HasExpense);
+        }
     }
 
 
@@ -299,6 +449,11 @@ public class DescribeCustomerInfoData extends AbstractModel {
         this.setParamSimple(map, prefix + "BindTime", this.BindTime);
         this.setParamSimple(map, prefix + "AccountStatus", this.AccountStatus);
         this.setParamSimple(map, prefix + "AuthStatus", this.AuthStatus);
+        this.setParamSimple(map, prefix + "AuthType", this.AuthType);
+        this.setParamSimple(map, prefix + "CidRegisterTime", this.CidRegisterTime);
+        this.setParamSimple(map, prefix + "UinRegisterTime", this.UinRegisterTime);
+        this.setParamSimple(map, prefix + "AuthPassTime", this.AuthPassTime);
+        this.setParamSimple(map, prefix + "HasExpense", this.HasExpense);
 
     }
 }

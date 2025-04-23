@@ -224,9 +224,8 @@ Callable roles: Distributor, Second-level reseller, Reseller
     }
 
     /**
-     *This API is used to query the customer information.
-
-Callable roles: Distributor, Reseller
+     *This API is used to query sub-customer information.
+Invocation roles: reseller, first-level distributor.
      * @param req DescribeCustomerInfoRequest
      * @return DescribeCustomerInfoResponse
      * @throws TencentCloudSDKException
