@@ -125,7 +125,9 @@ public class CreateAIAgentCallRequest extends AbstractModel {
     /**
      * Get Prompt variable. 
      * @return PromptVariables Prompt variable.
+     * @deprecated
      */
+    @Deprecated
     public Variable [] getPromptVariables() {
         return this.PromptVariables;
     }
@@ -133,7 +135,9 @@ public class CreateAIAgentCallRequest extends AbstractModel {
     /**
      * Set Prompt variable.
      * @param PromptVariables Prompt variable.
+     * @deprecated
      */
+    @Deprecated
     public void setPromptVariables(Variable [] PromptVariables) {
         this.PromptVariables = PromptVariables;
     }

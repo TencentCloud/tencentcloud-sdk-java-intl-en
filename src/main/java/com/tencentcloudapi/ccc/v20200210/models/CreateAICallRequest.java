@@ -38,6 +38,47 @@ public class CreateAICallRequest extends AbstractModel {
     private String Callee;
 
     /**
+    * Model interface protocol types, currently compatible with three protocol types:
+
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
+- Azure protocol:"azure"
+- Minimax protocol:"minimax"
+    */
+    @SerializedName("LLMType")
+    @Expose
+    private String LLMType;
+
+    /**
+    * Model API key, for authentication information, please refer to the respective model's official website
+
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+
+- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
+
+- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
+    */
+    @SerializedName("APIKey")
+    @Expose
+    private String APIKey;
+
+    /**
+    * Model interface address
+
+- OpenAI protocol
+GPT:"https://api.openai.com/v1/"
+Deepseek:"https://api.deepseek.com/v1"
+
+- Azure protocol
+ "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
+
+- Minimax protocol
+"https://api.minimax.chat/v1"
+    */
+    @SerializedName("APIUrl")
+    @Expose
+    private String APIUrl;
+
+    /**
     * ## Identity
 You are Kate from the appointment department at Retell Health calling Cindy over the phone to prepare for the annual checkup coming up. You are a pleasant and friendly receptionist caring deeply for the user. You don't provide medical advice but would use the medical knowledge to understand user responses.
 
@@ -75,17 +116,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
     private String SystemPrompt;
 
     /**
-    * Model interface protocol types, currently compatible with three protocol types:
-
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
-    */
-    @SerializedName("LLMType")
-    @Expose
-    private String LLMType;
-
-    /**
     * Model name, such as
 
 - OpenAI protocol
@@ -100,36 +130,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
     @SerializedName("Model")
     @Expose
     private String Model;
-
-    /**
-    * Model API key, for authentication information, please refer to the respective model's official website
-
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
-
-- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
-
-- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
-    */
-    @SerializedName("APIKey")
-    @Expose
-    private String APIKey;
-
-    /**
-    * Model interface address
-
-- OpenAI protocol
-GPT:"https://api.openai.com/v1/"
-Deepseek:"https://api.deepseek.com/v1"
-
-- Azure protocol
- "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
-
-- Minimax protocol
-"https://api.minimax.chat/v1"
-    */
-    @SerializedName("APIUrl")
-    @Expose
-    private String APIUrl;
 
     /**
     * The following voice parameter values are available by default. If you wish to customize the voice type, please leave VoiceType blank and configure it in the CustomTTSConfig parameter.
@@ -411,6 +411,134 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
     }
 
     /**
+     * Get Model interface protocol types, currently compatible with three protocol types:
+
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
+- Azure protocol:"azure"
+- Minimax protocol:"minimax" 
+     * @return LLMType Model interface protocol types, currently compatible with three protocol types:
+
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
+- Azure protocol:"azure"
+- Minimax protocol:"minimax"
+     */
+    public String getLLMType() {
+        return this.LLMType;
+    }
+
+    /**
+     * Set Model interface protocol types, currently compatible with three protocol types:
+
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
+- Azure protocol:"azure"
+- Minimax protocol:"minimax"
+     * @param LLMType Model interface protocol types, currently compatible with three protocol types:
+
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
+- Azure protocol:"azure"
+- Minimax protocol:"minimax"
+     */
+    public void setLLMType(String LLMType) {
+        this.LLMType = LLMType;
+    }
+
+    /**
+     * Get Model API key, for authentication information, please refer to the respective model's official website
+
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+
+- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
+
+- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2) 
+     * @return APIKey Model API key, for authentication information, please refer to the respective model's official website
+
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+
+- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
+
+- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
+     */
+    public String getAPIKey() {
+        return this.APIKey;
+    }
+
+    /**
+     * Set Model API key, for authentication information, please refer to the respective model's official website
+
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+
+- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
+
+- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
+     * @param APIKey Model API key, for authentication information, please refer to the respective model's official website
+
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+
+- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
+
+- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
+     */
+    public void setAPIKey(String APIKey) {
+        this.APIKey = APIKey;
+    }
+
+    /**
+     * Get Model interface address
+
+- OpenAI protocol
+GPT:"https://api.openai.com/v1/"
+Deepseek:"https://api.deepseek.com/v1"
+
+- Azure protocol
+ "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
+
+- Minimax protocol
+"https://api.minimax.chat/v1" 
+     * @return APIUrl Model interface address
+
+- OpenAI protocol
+GPT:"https://api.openai.com/v1/"
+Deepseek:"https://api.deepseek.com/v1"
+
+- Azure protocol
+ "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
+
+- Minimax protocol
+"https://api.minimax.chat/v1"
+     */
+    public String getAPIUrl() {
+        return this.APIUrl;
+    }
+
+    /**
+     * Set Model interface address
+
+- OpenAI protocol
+GPT:"https://api.openai.com/v1/"
+Deepseek:"https://api.deepseek.com/v1"
+
+- Azure protocol
+ "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
+
+- Minimax protocol
+"https://api.minimax.chat/v1"
+     * @param APIUrl Model interface address
+
+- OpenAI protocol
+GPT:"https://api.openai.com/v1/"
+Deepseek:"https://api.deepseek.com/v1"
+
+- Azure protocol
+ "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
+
+- Minimax protocol
+"https://api.minimax.chat/v1"
+     */
+    public void setAPIUrl(String APIUrl) {
+        this.APIUrl = APIUrl;
+    }
+
+    /**
      * Get ## Identity
 You are Kate from the appointment department at Retell Health calling Cindy over the phone to prepare for the annual checkup coming up. You are a pleasant and friendly receptionist caring deeply for the user. You don't provide medical advice but would use the medical knowledge to understand user responses.
 
@@ -547,38 +675,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
     }
 
     /**
-     * Get Model interface protocol types, currently compatible with three protocol types:
-
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax" 
-     * @return LLMType Model interface protocol types, currently compatible with three protocol types:
-
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
-     */
-    public String getLLMType() {
-        return this.LLMType;
-    }
-
-    /**
-     * Set Model interface protocol types, currently compatible with three protocol types:
-
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
-     * @param LLMType Model interface protocol types, currently compatible with three protocol types:
-
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
-     */
-    public void setLLMType(String LLMType) {
-        this.LLMType = LLMType;
-    }
-
-    /**
      * Get Model name, such as
 
 - OpenAI protocol
@@ -628,102 +724,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
      */
     public void setModel(String Model) {
         this.Model = Model;
-    }
-
-    /**
-     * Get Model API key, for authentication information, please refer to the respective model's official website
-
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
-
-- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
-
-- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2) 
-     * @return APIKey Model API key, for authentication information, please refer to the respective model's official website
-
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
-
-- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
-
-- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
-     */
-    public String getAPIKey() {
-        return this.APIKey;
-    }
-
-    /**
-     * Set Model API key, for authentication information, please refer to the respective model's official website
-
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
-
-- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
-
-- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
-     * @param APIKey Model API key, for authentication information, please refer to the respective model's official website
-
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
-
-- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
-
-- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
-     */
-    public void setAPIKey(String APIKey) {
-        this.APIKey = APIKey;
-    }
-
-    /**
-     * Get Model interface address
-
-- OpenAI protocol
-GPT:"https://api.openai.com/v1/"
-Deepseek:"https://api.deepseek.com/v1"
-
-- Azure protocol
- "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
-
-- Minimax protocol
-"https://api.minimax.chat/v1" 
-     * @return APIUrl Model interface address
-
-- OpenAI protocol
-GPT:"https://api.openai.com/v1/"
-Deepseek:"https://api.deepseek.com/v1"
-
-- Azure protocol
- "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
-
-- Minimax protocol
-"https://api.minimax.chat/v1"
-     */
-    public String getAPIUrl() {
-        return this.APIUrl;
-    }
-
-    /**
-     * Set Model interface address
-
-- OpenAI protocol
-GPT:"https://api.openai.com/v1/"
-Deepseek:"https://api.deepseek.com/v1"
-
-- Azure protocol
- "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
-
-- Minimax protocol
-"https://api.minimax.chat/v1"
-     * @param APIUrl Model interface address
-
-- OpenAI protocol
-GPT:"https://api.openai.com/v1/"
-Deepseek:"https://api.deepseek.com/v1"
-
-- Azure protocol
- "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
-
-- Minimax protocol
-"https://api.minimax.chat/v1"
-     */
-    public void setAPIUrl(String APIUrl) {
-        this.APIUrl = APIUrl;
     }
 
     /**
@@ -1429,7 +1429,9 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
     /**
      * Get Prompt word variable. 
      * @return PromptVariables Prompt word variable.
+     * @deprecated
      */
+    @Deprecated
     public Variable [] getPromptVariables() {
         return this.PromptVariables;
     }
@@ -1437,7 +1439,9 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
     /**
      * Set Prompt word variable.
      * @param PromptVariables Prompt word variable.
+     * @deprecated
      */
+    @Deprecated
     public void setPromptVariables(Variable [] PromptVariables) {
         this.PromptVariables = PromptVariables;
     }
@@ -1488,20 +1492,20 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
         if (source.Callee != null) {
             this.Callee = new String(source.Callee);
         }
-        if (source.SystemPrompt != null) {
-            this.SystemPrompt = new String(source.SystemPrompt);
-        }
         if (source.LLMType != null) {
             this.LLMType = new String(source.LLMType);
-        }
-        if (source.Model != null) {
-            this.Model = new String(source.Model);
         }
         if (source.APIKey != null) {
             this.APIKey = new String(source.APIKey);
         }
         if (source.APIUrl != null) {
             this.APIUrl = new String(source.APIUrl);
+        }
+        if (source.SystemPrompt != null) {
+            this.SystemPrompt = new String(source.SystemPrompt);
+        }
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
         }
         if (source.VoiceType != null) {
             this.VoiceType = new String(source.VoiceType);
@@ -1587,11 +1591,11 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "Callee", this.Callee);
-        this.setParamSimple(map, prefix + "SystemPrompt", this.SystemPrompt);
         this.setParamSimple(map, prefix + "LLMType", this.LLMType);
-        this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamSimple(map, prefix + "APIKey", this.APIKey);
         this.setParamSimple(map, prefix + "APIUrl", this.APIUrl);
+        this.setParamSimple(map, prefix + "SystemPrompt", this.SystemPrompt);
+        this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamSimple(map, prefix + "VoiceType", this.VoiceType);
         this.setParamArraySimple(map, prefix + "Callers.", this.Callers);
         this.setParamSimple(map, prefix + "WelcomeMessage", this.WelcomeMessage);

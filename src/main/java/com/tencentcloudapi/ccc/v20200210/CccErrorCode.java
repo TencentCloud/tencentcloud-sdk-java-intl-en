@@ -1,5 +1,11 @@
 package com.tencentcloudapi.ccc.v20200210;
 public enum CccErrorCode {
+     /*  */
+     FAILEDOPERATION_AICONCURRENTNOPACKAGE("FailedOperation.AIConcurrentNoPackage"),
+     
+     /*  */
+     FAILEDOPERATION_AICONCURRENTOVERFREQUENCY("FailedOperation.AIConcurrentOverFrequency"),
+     
      /* Outbound call failure. */
      FAILEDOPERATION_CALLOUTFAILED("FailedOperation.CallOutFailed"),
      
@@ -104,6 +110,9 @@ public enum CccErrorCode {
      
      /* Error in the status of the review form. */
      INVALIDPARAMETERVALUE_ERRORAPPLYSTATUS("InvalidParameterValue.ErrorApplyStatus"),
+     
+     /*  */
+     INVALIDPARAMETERVALUE_EXPERIENCEACCOUNT("InvalidParameterValue.ExperienceAccount"),
      
      /* The SDKAppID does not exist. */
      INVALIDPARAMETERVALUE_INSTANCENOTEXIST("InvalidParameterValue.InstanceNotExist"),

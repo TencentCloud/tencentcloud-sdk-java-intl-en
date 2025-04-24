@@ -25,7 +25,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
 
     /**
     * The network type of the bandwidth package. Default value: `BGP`. Valid values:
-`BGP` 
+`BGP`
 `HIGH_QUALITY_BGP`
     */
     @SerializedName("NetworkType")
@@ -33,10 +33,14 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     private String NetworkType;
 
     /**
-    * The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
-<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
-<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
-<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
+    * The billing mode of the bandwidth package. Default value: `ENHANCED95_POSTPAID_BY_MONTH`. Valid values:
+<li>`ENHANCED95_POSTPAID_BY_MONTH`: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>`PRIMARY_TRAFFIC_POSTPAID_BY_HOUR`: Postpaid - Main Traffic Billing</li>
+<li>`BANDWIDTH_POSTPAID_BY_DAY`: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>`PEAK_BANDWIDTH_POSTPAID_BY_DAY`: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>`TOP5_POSTPAID_BY_MONTH`: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket.</li>
+
+
     */
     @SerializedName("ChargeType")
     @Expose
@@ -50,7 +54,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     private String BandwidthPackageName;
 
     /**
-    * The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
+    * The number of bandwidth packages to create. Valid range: 1-20. It can only be "1" for bill-by-CVM accounts.
     */
     @SerializedName("BandwidthPackageCount")
     @Expose
@@ -85,11 +89,20 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     private Long TimeSpan;
 
     /**
+    *     Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
+    */
+    @SerializedName("Egress")
+    @Expose
+    private String Egress;
+
+    /**
      * Get The network type of the bandwidth package. Default value: `BGP`. Valid values:
-`BGP` 
+`BGP`
 `HIGH_QUALITY_BGP` 
      * @return NetworkType The network type of the bandwidth package. Default value: `BGP`. Valid values:
-`BGP` 
+`BGP`
 `HIGH_QUALITY_BGP`
      */
     public String getNetworkType() {
@@ -98,10 +111,10 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
 
     /**
      * Set The network type of the bandwidth package. Default value: `BGP`. Valid values:
-`BGP` 
+`BGP`
 `HIGH_QUALITY_BGP`
      * @param NetworkType The network type of the bandwidth package. Default value: `BGP`. Valid values:
-`BGP` 
+`BGP`
 `HIGH_QUALITY_BGP`
      */
     public void setNetworkType(String NetworkType) {
@@ -109,28 +122,44 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     }
 
     /**
-     * Get The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
-<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
-<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
-<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li> 
-     * @return ChargeType The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
-<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
-<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
-<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
+     * Get The billing mode of the bandwidth package. Default value: `ENHANCED95_POSTPAID_BY_MONTH`. Valid values:
+<li>`ENHANCED95_POSTPAID_BY_MONTH`: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>`PRIMARY_TRAFFIC_POSTPAID_BY_HOUR`: Postpaid - Main Traffic Billing</li>
+<li>`BANDWIDTH_POSTPAID_BY_DAY`: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>`PEAK_BANDWIDTH_POSTPAID_BY_DAY`: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>`TOP5_POSTPAID_BY_MONTH`: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket.</li>
+
+ 
+     * @return ChargeType The billing mode of the bandwidth package. Default value: `ENHANCED95_POSTPAID_BY_MONTH`. Valid values:
+<li>`ENHANCED95_POSTPAID_BY_MONTH`: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>`PRIMARY_TRAFFIC_POSTPAID_BY_HOUR`: Postpaid - Main Traffic Billing</li>
+<li>`BANDWIDTH_POSTPAID_BY_DAY`: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>`PEAK_BANDWIDTH_POSTPAID_BY_DAY`: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>`TOP5_POSTPAID_BY_MONTH`: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket.</li>
+
+
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
-<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
-<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
-<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
-     * @param ChargeType The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
-<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
-<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
-<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
+     * Set The billing mode of the bandwidth package. Default value: `ENHANCED95_POSTPAID_BY_MONTH`. Valid values:
+<li>`ENHANCED95_POSTPAID_BY_MONTH`: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>`PRIMARY_TRAFFIC_POSTPAID_BY_HOUR`: Postpaid - Main Traffic Billing</li>
+<li>`BANDWIDTH_POSTPAID_BY_DAY`: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>`PEAK_BANDWIDTH_POSTPAID_BY_DAY`: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>`TOP5_POSTPAID_BY_MONTH`: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket.</li>
+
+
+     * @param ChargeType The billing mode of the bandwidth package. Default value: `ENHANCED95_POSTPAID_BY_MONTH`. Valid values:
+<li>`ENHANCED95_POSTPAID_BY_MONTH`: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>`PRIMARY_TRAFFIC_POSTPAID_BY_HOUR`: Postpaid - Main Traffic Billing</li>
+<li>`BANDWIDTH_POSTPAID_BY_DAY`: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>`PEAK_BANDWIDTH_POSTPAID_BY_DAY`: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>`TOP5_POSTPAID_BY_MONTH`: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket.</li>
+
+
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
@@ -153,16 +182,16 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     }
 
     /**
-     * Get The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts. 
-     * @return BandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
+     * Get The number of bandwidth packages to create. Valid range: 1-20. It can only be "1" for bill-by-CVM accounts. 
+     * @return BandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be "1" for bill-by-CVM accounts.
      */
     public Long getBandwidthPackageCount() {
         return this.BandwidthPackageCount;
     }
 
     /**
-     * Set The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
-     * @param BandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
+     * Set The number of bandwidth packages to create. Valid range: 1-20. It can only be "1" for bill-by-CVM accounts.
+     * @param BandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be "1" for bill-by-CVM accounts.
      */
     public void setBandwidthPackageCount(Long BandwidthPackageCount) {
         this.BandwidthPackageCount = BandwidthPackageCount;
@@ -232,6 +261,30 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
         this.TimeSpan = TimeSpan;
     }
 
+    /**
+     * Get     Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+ 
+     * @return Egress     Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
+     */
+    public String getEgress() {
+        return this.Egress;
+    }
+
+    /**
+     * Set     Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
+     * @param Egress     Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
+     */
+    public void setEgress(String Egress) {
+        this.Egress = Egress;
+    }
+
     public CreateBandwidthPackageRequest() {
     }
 
@@ -267,6 +320,9 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
         }
+        if (source.Egress != null) {
+            this.Egress = new String(source.Egress);
+        }
     }
 
 
@@ -282,6 +338,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+        this.setParamSimple(map, prefix + "Egress", this.Egress);
 
     }
 }

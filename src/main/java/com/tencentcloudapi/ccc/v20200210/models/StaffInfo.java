@@ -169,7 +169,9 @@ public class StaffInfo extends AbstractModel {
     /**
      * Get User role id. 
      * @return RoleId User role id.
+     * @deprecated
      */
+    @Deprecated
     public Long getRoleId() {
         return this.RoleId;
     }
@@ -177,7 +179,9 @@ public class StaffInfo extends AbstractModel {
     /**
      * Set User role id.
      * @param RoleId User role id.
+     * @deprecated
      */
+    @Deprecated
     public void setRoleId(Long RoleId) {
         this.RoleId = RoleId;
     }
