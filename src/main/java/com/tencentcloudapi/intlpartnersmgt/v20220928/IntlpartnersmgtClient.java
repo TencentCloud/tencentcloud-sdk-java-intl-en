@@ -247,6 +247,18 @@ Invocation roles: reseller, first-level distributor.
     }
 
     /**
+     *This API is used to download the commission bill file by resellers/agents. The file URL is returned.
+Resellers/Agents can call this API.
+     * @param req DescribeRebateDownloadUrlRequest
+     * @return DescribeRebateDownloadUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRebateDownloadUrlResponse DescribeRebateDownloadUrl(DescribeRebateDownloadUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRebateDownloadUrl", DescribeRebateDownloadUrlResponse.class);
+    }
+
+    /**
      *Forced Service Suspension settings and cancellation can be used only after the reseller is whitelisted.
 
 Callable roles: Distributor, Second-level reseller, Reseller
