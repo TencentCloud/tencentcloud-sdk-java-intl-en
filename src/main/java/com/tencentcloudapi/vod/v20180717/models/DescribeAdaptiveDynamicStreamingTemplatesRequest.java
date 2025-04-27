@@ -24,125 +24,125 @@ import java.util.HashMap;
 public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel {
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Unique ID filter of transcoding to adaptive bitrate streaming templates. Array length limit: 100.
+    * Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
     */
     @SerializedName("Definitions")
     @Expose
     private Long [] Definitions;
 
     /**
-    * Paged offset. Default value: 0.
+    * Pagination offset. default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned entries. Default value: 10. Maximum value: 100.
+    * Number of returned entries. default value: 10. maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+    * Template type filter. valid values:.
+<Li>Preset: system preset template;</li>.
+<Li>Custom: user-defined template.</li>.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>. 
+     * @return SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+     * @param SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Unique ID filter of transcoding to adaptive bitrate streaming templates. Array length limit: 100. 
-     * @return Definitions Unique ID filter of transcoding to adaptive bitrate streaming templates. Array length limit: 100.
+     * Get Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100. 
+     * @return Definitions Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set Unique ID filter of transcoding to adaptive bitrate streaming templates. Array length limit: 100.
-     * @param Definitions Unique ID filter of transcoding to adaptive bitrate streaming templates. Array length limit: 100.
+     * Set Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
+     * @param Definitions Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
     }
 
     /**
-     * Get Paged offset. Default value: 0. 
-     * @return Offset Paged offset. Default value: 0.
+     * Get Pagination offset. default value: 0. 
+     * @return Offset Pagination offset. default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Paged offset. Default value: 0.
-     * @param Offset Paged offset. Default value: 0.
+     * Set Pagination offset. default value: 0.
+     * @param Offset Pagination offset. default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned entries. Default value: 10. Maximum value: 100. 
-     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * Get Number of returned entries. default value: 10. maximum value: 100. 
+     * @return Limit Number of returned entries. default value: 10. maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned entries. Default value: 10. Maximum value: 100.
-     * @param Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * Set Number of returned entries. default value: 10. maximum value: 100.
+     * @param Limit Number of returned entries. default value: 10. maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li> 
-     * @return Type Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+     * Get Template type filter. valid values:.
+<Li>Preset: system preset template;</li>.
+<Li>Custom: user-defined template.</li>. 
+     * @return Type Template type filter. valid values:.
+<Li>Preset: system preset template;</li>.
+<Li>Custom: user-defined template.</li>.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
-     * @param Type Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+     * Set Template type filter. valid values:.
+<Li>Preset: system preset template;</li>.
+<Li>Custom: user-defined template.</li>.
+     * @param Type Template type filter. valid values:.
+<Li>Preset: system preset template;</li>.
+<Li>Custom: user-defined template.</li>.
      */
     public void setType(String Type) {
         this.Type = Type;

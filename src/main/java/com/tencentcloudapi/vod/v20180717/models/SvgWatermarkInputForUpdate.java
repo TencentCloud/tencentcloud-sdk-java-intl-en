@@ -177,7 +177,9 @@ The curly brackets {} represent a large cycle consisting of 4 watermarks A, B, C
 It can be seen that A, B, C, and D are periodically displayed for 5 seconds and hidden for 15 seconds, and the four have a fixed display order. 
 This configuration item is used to describe the periodic configuration of a single watermark.
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public WatermarkCycleConfigForUpdate getCycleConfig() {
         return this.CycleConfig;
     }
@@ -197,7 +199,9 @@ The curly brackets {} represent a large cycle consisting of 4 watermarks A, B, C
 It can be seen that A, B, C, and D are periodically displayed for 5 seconds and hidden for 15 seconds, and the four have a fixed display order. 
 This configuration item is used to describe the periodic configuration of a single watermark.
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setCycleConfig(WatermarkCycleConfigForUpdate CycleConfig) {
         this.CycleConfig = CycleConfig;
     }

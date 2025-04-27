@@ -31,18 +31,18 @@ public class RestoreMediaRequest extends AbstractModel {
     private String [] FileIds;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
     * The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
     */
     @SerializedName("RestoreDay")
     @Expose
     private Long RestoreDay;
+
+    /**
+    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
 
     /**
     * The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
@@ -74,22 +74,6 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
-    /**
      * Get The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days". 
      * @return RestoreDay The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
      */
@@ -103,6 +87,22 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
      */
     public void setRestoreDay(Long RestoreDay) {
         this.RestoreDay = RestoreDay;
+    }
+
+    /**
+     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
+     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -159,11 +159,11 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
                 this.FileIds[i] = new String(source.FileIds[i]);
             }
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
         if (source.RestoreDay != null) {
             this.RestoreDay = new Long(source.RestoreDay);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.RestoreTier != null) {
             this.RestoreTier = new String(source.RestoreTier);
@@ -176,8 +176,8 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "RestoreDay", this.RestoreDay);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "RestoreTier", this.RestoreTier);
 
     }

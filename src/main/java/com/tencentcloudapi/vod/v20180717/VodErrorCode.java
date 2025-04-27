@@ -333,6 +333,9 @@ public enum VodErrorCode {
      /* Invalid `Isps`. */
      INVALIDPARAMETERVALUE_ISPS("InvalidParameterValue.Isps"),
      
+     /*  */
+     INVALIDPARAMETERVALUE_ITEMID("InvalidParameterValue.ItemId"),
+     
      /* Incorrect parameter value: the timestamp content is too long. */
      INVALIDPARAMETERVALUE_KEYFRAMEDESCCONTENTTOOLONG("InvalidParameterValue.KeyFrameDescContentTooLong"),
      
@@ -627,7 +630,7 @@ public enum VodErrorCode {
      /* Limit exceeded: the total number of new and old tags exceeds the limit. */
      LIMITEXCEEDED_TAGCOUNTREACHMAX("LimitExceeded.TagCountReachMax"),
      
-     /* Limit exceeded: The number of templates exceeds the upper limit of 100. If you need more, please[Submit a ticket](https://console.tencentcloud.com/workorder/category)。 */
+     /* Limit exceeded: The number of templates exceeds the upper limit of 100. If you need more, please[Submit a ticket](https://console.tencentcloud.com/workorder/category). */
      LIMITEXCEEDED_TOOMUCHTEMPLATE("LimitExceeded.TooMuchTemplate"),
      
      /* Missing parameter. */

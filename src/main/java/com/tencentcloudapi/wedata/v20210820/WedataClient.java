@@ -39,6 +39,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add a user role to a project.
+     * @param req AddProjectUserRoleRequest
+     * @return AddProjectUserRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddProjectUserRoleResponse AddProjectUserRole(AddProjectUserRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddProjectUserRole", AddProjectUserRoleResponse.class);
+    }
+
+    /**
      *Bulk Create Task Alert Rules
      * @param req BatchCreateIntegrationTaskAlarmsRequest
      * @return BatchCreateIntegrationTaskAlarmsResponse
@@ -1348,6 +1359,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *This API is used to retrieve role list information.
+     * @param req DescribeRoleListRequest
+     * @return DescribeRoleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoleListResponse DescribeRoleList(DescribeRoleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRoleList", DescribeRoleListResponse.class);
+    }
+
+    /**
      *Queries rule details
      * @param req DescribeRuleRequest
      * @return DescribeRuleResponse
@@ -2522,6 +2544,17 @@ Trigger events
     public UnlockIntegrationTaskResponse UnlockIntegrationTask(UnlockIntegrationTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnlockIntegrationTask", UnlockIntegrationTaskResponse.class);
+    }
+
+    /**
+     *This API is used to modify user roles in a project.
+     * @param req UpdateProjectUserRoleRequest
+     * @return UpdateProjectUserRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateProjectUserRoleResponse UpdateProjectUserRole(UpdateProjectUserRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateProjectUserRole", UpdateProjectUserRoleResponse.class);
     }
 
     /**

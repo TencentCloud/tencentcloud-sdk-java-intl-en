@@ -38,6 +38,13 @@ public class CreateSubAppIdRequest extends AbstractModel {
     private String Description;
 
     /**
+    * 
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get Subapplication name. Length limit: 40 characters. 
      * @return Name Subapplication name. Length limit: 40 characters.
      */
@@ -69,6 +76,22 @@ public class CreateSubAppIdRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get  
+     * @return Type 
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 
+     * @param Type 
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public CreateSubAppIdRequest() {
     }
 
@@ -83,6 +106,9 @@ public class CreateSubAppIdRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateSubAppIdRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }
