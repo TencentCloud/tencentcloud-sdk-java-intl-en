@@ -25,11 +25,11 @@ public class InstanceLifeDetailDto extends AbstractModel {
 
     /**
     * Indicates the status of an instance.
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22]  indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
@@ -50,14 +50,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
     * Instance lifecycle phase status.
 
--WAIT_UPSTREAM indicates waiting for event/upstream status.
--WAIT_RUN indicates a waiting for running status.
--RUNNING indicates a running state.
--COMPLETE indicates the final state - completed.
--FAILED indicates the final state - retry on failure.
--EXPIRED indicates the final state - failure.
--SKIP_RUNNING indicates the final state - a branch skipped by the upstream branch node.
--HISTORY indicates compatibility with historical instances.
+-WAIT_UPSTREAM indicates waiting for an event or upstream status.
+-WAIT_RUN indicates waiting for running status.
+-RUNNING indicates the running state.
+-COMPLETE indicates terminal state - completed.
+-FAILED indicates terminal state - retry after failure.
+-EXPIRED indicates terminal state - failure.
+-SKIP_RUNNING indicates terminal state - a branch skipped by the upstream branch node.
+-HISTORY indicates compatibility with historical instances before march 30, 2024. no need to pay attention to this enumeration type for instances afterward.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DetailState")
@@ -74,21 +74,21 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Indicates the status of an instance.
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22]  indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return State Indicates the status of an instance.
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22]  indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
@@ -100,21 +100,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Indicates the status of an instance.
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22]  indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param State Indicates the status of an instance.
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22]  indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
@@ -147,25 +147,25 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * Get Instance lifecycle phase status.
 
--WAIT_UPSTREAM indicates waiting for event/upstream status.
--WAIT_RUN indicates a waiting for running status.
--RUNNING indicates a running state.
--COMPLETE indicates the final state - completed.
--FAILED indicates the final state - retry on failure.
--EXPIRED indicates the final state - failure.
--SKIP_RUNNING indicates the final state - a branch skipped by the upstream branch node.
--HISTORY indicates compatibility with historical instances.
+-WAIT_UPSTREAM indicates waiting for an event or upstream status.
+-WAIT_RUN indicates waiting for running status.
+-RUNNING indicates the running state.
+-COMPLETE indicates terminal state - completed.
+-FAILED indicates terminal state - retry after failure.
+-EXPIRED indicates terminal state - failure.
+-SKIP_RUNNING indicates terminal state - a branch skipped by the upstream branch node.
+-HISTORY indicates compatibility with historical instances before march 30, 2024. no need to pay attention to this enumeration type for instances afterward.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DetailState Instance lifecycle phase status.
 
--WAIT_UPSTREAM indicates waiting for event/upstream status.
--WAIT_RUN indicates a waiting for running status.
--RUNNING indicates a running state.
--COMPLETE indicates the final state - completed.
--FAILED indicates the final state - retry on failure.
--EXPIRED indicates the final state - failure.
--SKIP_RUNNING indicates the final state - a branch skipped by the upstream branch node.
--HISTORY indicates compatibility with historical instances.
+-WAIT_UPSTREAM indicates waiting for an event or upstream status.
+-WAIT_RUN indicates waiting for running status.
+-RUNNING indicates the running state.
+-COMPLETE indicates terminal state - completed.
+-FAILED indicates terminal state - retry after failure.
+-EXPIRED indicates terminal state - failure.
+-SKIP_RUNNING indicates terminal state - a branch skipped by the upstream branch node.
+-HISTORY indicates compatibility with historical instances before march 30, 2024. no need to pay attention to this enumeration type for instances afterward.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDetailState() {
@@ -175,25 +175,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Instance lifecycle phase status.
 
--WAIT_UPSTREAM indicates waiting for event/upstream status.
--WAIT_RUN indicates a waiting for running status.
--RUNNING indicates a running state.
--COMPLETE indicates the final state - completed.
--FAILED indicates the final state - retry on failure.
--EXPIRED indicates the final state - failure.
--SKIP_RUNNING indicates the final state - a branch skipped by the upstream branch node.
--HISTORY indicates compatibility with historical instances.
+-WAIT_UPSTREAM indicates waiting for an event or upstream status.
+-WAIT_RUN indicates waiting for running status.
+-RUNNING indicates the running state.
+-COMPLETE indicates terminal state - completed.
+-FAILED indicates terminal state - retry after failure.
+-EXPIRED indicates terminal state - failure.
+-SKIP_RUNNING indicates terminal state - a branch skipped by the upstream branch node.
+-HISTORY indicates compatibility with historical instances before march 30, 2024. no need to pay attention to this enumeration type for instances afterward.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param DetailState Instance lifecycle phase status.
 
--WAIT_UPSTREAM indicates waiting for event/upstream status.
--WAIT_RUN indicates a waiting for running status.
--RUNNING indicates a running state.
--COMPLETE indicates the final state - completed.
--FAILED indicates the final state - retry on failure.
--EXPIRED indicates the final state - failure.
--SKIP_RUNNING indicates the final state - a branch skipped by the upstream branch node.
--HISTORY indicates compatibility with historical instances.
+-WAIT_UPSTREAM indicates waiting for an event or upstream status.
+-WAIT_RUN indicates waiting for running status.
+-RUNNING indicates the running state.
+-COMPLETE indicates terminal state - completed.
+-FAILED indicates terminal state - retry after failure.
+-EXPIRED indicates terminal state - failure.
+-SKIP_RUNNING indicates terminal state - a branch skipped by the upstream branch node.
+-HISTORY indicates compatibility with historical instances before march 30, 2024. no need to pay attention to this enumeration type for instances afterward.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDetailState(String DetailState) {

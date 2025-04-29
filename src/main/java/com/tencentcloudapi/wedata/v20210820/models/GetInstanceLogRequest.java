@@ -38,7 +38,9 @@ public class GetInstanceLogRequest extends AbstractModel {
     private String InstanceKey;
 
     /**
-    * Lifecycle no.
+    * Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
     */
     @SerializedName("LifeRoundNum")
     @Expose
@@ -108,6 +110,16 @@ The default value is 10000.
     private Long EndLineCount;
 
     /**
+    * Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Use the ExtInfo field value in the returned information from the previous query for the second and subsequent queries.
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
      * Get **Project ID**. 
      * @return ProjectId **Project ID**.
      */
@@ -140,16 +152,24 @@ The default value is 10000.
     }
 
     /**
-     * Get Lifecycle no. 
-     * @return LifeRoundNum Lifecycle no.
+     * Get Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1. 
+     * @return LifeRoundNum Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
      */
     public Long getLifeRoundNum() {
         return this.LifeRoundNum;
     }
 
     /**
-     * Set Lifecycle no.
-     * @param LifeRoundNum Lifecycle no.
+     * Set Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
+     * @param LifeRoundNum Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
      */
     public void setLifeRoundNum(Long LifeRoundNum) {
         this.LifeRoundNum = LifeRoundNum;
@@ -323,6 +343,34 @@ The default value is 10000.
         this.EndLineCount = EndLineCount;
     }
 
+    /**
+     * Get Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Use the ExtInfo field value in the returned information from the previous query for the second and subsequent queries. 
+     * @return ExtInfo Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Use the ExtInfo field value in the returned information from the previous query for the second and subsequent queries.
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Use the ExtInfo field value in the returned information from the previous query for the second and subsequent queries.
+     * @param ExtInfo Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Use the ExtInfo field value in the returned information from the previous query for the second and subsequent queries.
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
+    }
+
     public GetInstanceLogRequest() {
     }
 
@@ -361,6 +409,9 @@ The default value is 10000.
         if (source.EndLineCount != null) {
             this.EndLineCount = new Long(source.EndLineCount);
         }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
     }
 
 
@@ -378,6 +429,7 @@ The default value is 10000.
         this.setParamSimple(map, prefix + "LogLevel", this.LogLevel);
         this.setParamSimple(map, prefix + "StartLineNum", this.StartLineNum);
         this.setParamSimple(map, prefix + "EndLineCount", this.EndLineCount);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
 
     }
 }

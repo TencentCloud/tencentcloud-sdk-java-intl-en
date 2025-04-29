@@ -144,7 +144,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ExecutorGroupName;
 
     /**
-    * Standard data time.
+    * Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CurRunDate")
@@ -152,7 +152,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CurRunDate;
 
     /**
-    * Next standard data time.
+    * Next instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NextCurDate")
@@ -184,7 +184,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long TotalRunNum;
 
     /**
-    * Lifecycle no.
+    * Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. after the user reruns the instance later, the number of the second execution is 1.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LifeRoundNum")
@@ -194,9 +196,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
     * Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic Instance.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceType")
@@ -206,11 +208,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
     * Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21]: skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
@@ -256,11 +258,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     * Instance running trigger type.
 
 -RERUN indicates rerunning.
--ADDITION indicates supplementary recording.
+-ADDITION indicates data replenishment.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN indicates re-run - empty run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates a data replenishment run - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -620,9 +622,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Standard data time.
+     * Get Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CurRunDate Standard data time.
+     * @return CurRunDate Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCurRunDate() {
@@ -630,9 +632,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Standard data time.
+     * Set Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CurRunDate Standard data time.
+     * @param CurRunDate Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCurRunDate(String CurRunDate) {
@@ -640,9 +642,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Next standard data time.
+     * Get Next instance data time.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NextCurDate Next standard data time.
+     * @return NextCurDate Next instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNextCurDate() {
@@ -650,9 +652,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Next standard data time.
+     * Set Next instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NextCurDate Next standard data time.
+     * @param NextCurDate Next instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNextCurDate(String NextCurDate) {
@@ -720,9 +722,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Lifecycle no.
+     * Get Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. after the user reruns the instance later, the number of the second execution is 1.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LifeRoundNum Lifecycle no.
+     * @return LifeRoundNum Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. after the user reruns the instance later, the number of the second execution is 1.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getLifeRoundNum() {
@@ -730,9 +736,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Lifecycle no.
+     * Set Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. after the user reruns the instance later, the number of the second execution is 1.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LifeRoundNum Lifecycle no.
+     * @param LifeRoundNum Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. after the user reruns the instance later, the number of the second execution is 1.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLifeRoundNum(Long LifeRoundNum) {
@@ -742,15 +752,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic Instance.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return InstanceType Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic Instance.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getInstanceType() {
@@ -760,15 +770,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic Instance.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceType Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic Instance.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceType(Long InstanceType) {
@@ -778,22 +788,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21]: skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return InstanceState Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21]: skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
@@ -806,22 +816,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21]: skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceState Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21]: skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
@@ -915,11 +925,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Get Instance running trigger type.
 
 -RERUN indicates rerunning.
--ADDITION indicates supplementary recording.
+-ADDITION indicates data replenishment.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN indicates re-run - empty run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates a data replenishment run - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -928,11 +938,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @return InstanceRunType Instance running trigger type.
 
 -RERUN indicates rerunning.
--ADDITION indicates supplementary recording.
+-ADDITION indicates data replenishment.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN indicates re-run - empty run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates a data replenishment run - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -947,11 +957,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Set Instance running trigger type.
 
 -RERUN indicates rerunning.
--ADDITION indicates supplementary recording.
+-ADDITION indicates data replenishment.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN indicates re-run - empty run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates a data replenishment run - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -960,11 +970,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param InstanceRunType Instance running trigger type.
 
 -RERUN indicates rerunning.
--ADDITION indicates supplementary recording.
+-ADDITION indicates data replenishment.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN indicates re-run - empty run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates a data replenishment run - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.

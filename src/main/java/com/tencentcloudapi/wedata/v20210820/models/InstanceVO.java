@@ -127,7 +127,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TaskCycleType;
 
     /**
-    * Standard data time.
+    * Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CurRunDate")
@@ -174,7 +174,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
     * Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0]Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
 -[1, 19, 22]: running.
@@ -518,9 +518,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Standard data time.
+     * Get Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CurRunDate Standard data time.
+     * @return CurRunDate Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCurRunDate() {
@@ -528,9 +528,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Standard data time.
+     * Set Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CurRunDate Standard data time.
+     * @param CurRunDate Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCurRunDate(String CurRunDate) {
@@ -640,7 +640,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0]Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
 -[1, 19, 22]: running.
@@ -651,7 +651,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return InstanceState Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0]Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
 -[1, 19, 22]: running.
@@ -668,7 +668,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0]Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
 -[1, 19, 22]: running.
@@ -679,7 +679,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceState Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0]Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
 -[1, 19, 22]: running.

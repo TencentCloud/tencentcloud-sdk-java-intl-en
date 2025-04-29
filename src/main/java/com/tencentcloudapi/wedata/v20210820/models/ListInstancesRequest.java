@@ -31,16 +31,16 @@ public class ListInstancesRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-    * Instance plan scheduling time.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
+    * Filter criteria for instance planned scheduling time.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
     */
     @SerializedName("ScheduleTimeFrom")
     @Expose
     private String ScheduleTimeFrom;
 
     /**
-    * Instance plan scheduling time.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+    * Filter criteria for instance planned scheduling time.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
     */
     @SerializedName("ScheduleTimeTo")
     @Expose
@@ -63,12 +63,12 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
     private Long PageSize;
 
     /**
-    * Field used to sort query results.
+    * Sorting field for query results.
 
--SCHEDULE_DATE indicates the planned scheduling time.
--START_TIME indicates the start execution time of an instance.
--END_TIME indicates the execution end time of the instance.
--COST_TIME indicates the execution duration of an instance.
+-SCHEDULE_DATE indicates sorting based on the planned scheduling time.
+-START_TIME indicates sorting by the instance's start execution time.
+-END_TIME indicates sorting based on the instance execution end time.
+-COST_TIME indicates sorting based on instance execution duration.
     */
     @SerializedName("SortColumn")
     @Expose
@@ -87,9 +87,9 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
     /**
     * Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic instance.
     */
     @SerializedName("InstanceType")
     @Expose
@@ -99,10 +99,10 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
     * Instance execution status.
 Support filtering multiple items with an "or" relationship between conditions.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
+-[1, 19, 22] indicate running.
 -[21] indicates skipping running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
@@ -183,16 +183,16 @@ The DescribeNormalIntegrationExecutorGroups API can be used to obtain the list o
     private String [] ExecutorGroupIdList;
 
     /**
-    * **Start time**.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
+    * Instance execution start time filter criteria.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
     */
     @SerializedName("StartTimeFrom")
     @Expose
     private String StartTimeFrom;
 
     /**
-    * **Start time**.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+    * Instance execution start time filter criteria.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
     */
     @SerializedName("StartTimeTo")
     @Expose
@@ -223,40 +223,40 @@ Time zone. specifies the time zone. the default value is UTC+8.
     }
 
     /**
-     * Get Instance plan scheduling time.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss. 
-     * @return ScheduleTimeFrom Instance plan scheduling time.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
+     * Get Filter criteria for instance planned scheduling time.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss. 
+     * @return ScheduleTimeFrom Filter criteria for instance planned scheduling time.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
      */
     public String getScheduleTimeFrom() {
         return this.ScheduleTimeFrom;
     }
 
     /**
-     * Set Instance plan scheduling time.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
-     * @param ScheduleTimeFrom Instance plan scheduling time.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
+     * Set Filter criteria for instance planned scheduling time.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
+     * @param ScheduleTimeFrom Filter criteria for instance planned scheduling time.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
      */
     public void setScheduleTimeFrom(String ScheduleTimeFrom) {
         this.ScheduleTimeFrom = ScheduleTimeFrom;
     }
 
     /**
-     * Get Instance plan scheduling time.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss. 
-     * @return ScheduleTimeTo Instance plan scheduling time.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+     * Get Filter criteria for instance planned scheduling time.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss. 
+     * @return ScheduleTimeTo Filter criteria for instance planned scheduling time.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
      */
     public String getScheduleTimeTo() {
         return this.ScheduleTimeTo;
     }
 
     /**
-     * Set Instance plan scheduling time.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
-     * @param ScheduleTimeTo Instance plan scheduling time.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+     * Set Filter criteria for instance planned scheduling time.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
+     * @param ScheduleTimeTo Filter criteria for instance planned scheduling time.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
      */
     public void setScheduleTimeTo(String ScheduleTimeTo) {
         this.ScheduleTimeTo = ScheduleTimeTo;
@@ -303,36 +303,36 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
     }
 
     /**
-     * Get Field used to sort query results.
+     * Get Sorting field for query results.
 
--SCHEDULE_DATE indicates the planned scheduling time.
--START_TIME indicates the start execution time of an instance.
--END_TIME indicates the execution end time of the instance.
--COST_TIME indicates the execution duration of an instance. 
-     * @return SortColumn Field used to sort query results.
+-SCHEDULE_DATE indicates sorting based on the planned scheduling time.
+-START_TIME indicates sorting by the instance's start execution time.
+-END_TIME indicates sorting based on the instance execution end time.
+-COST_TIME indicates sorting based on instance execution duration. 
+     * @return SortColumn Sorting field for query results.
 
--SCHEDULE_DATE indicates the planned scheduling time.
--START_TIME indicates the start execution time of an instance.
--END_TIME indicates the execution end time of the instance.
--COST_TIME indicates the execution duration of an instance.
+-SCHEDULE_DATE indicates sorting based on the planned scheduling time.
+-START_TIME indicates sorting by the instance's start execution time.
+-END_TIME indicates sorting based on the instance execution end time.
+-COST_TIME indicates sorting based on instance execution duration.
      */
     public String getSortColumn() {
         return this.SortColumn;
     }
 
     /**
-     * Set Field used to sort query results.
+     * Set Sorting field for query results.
 
--SCHEDULE_DATE indicates the planned scheduling time.
--START_TIME indicates the start execution time of an instance.
--END_TIME indicates the execution end time of the instance.
--COST_TIME indicates the execution duration of an instance.
-     * @param SortColumn Field used to sort query results.
+-SCHEDULE_DATE indicates sorting based on the planned scheduling time.
+-START_TIME indicates sorting by the instance's start execution time.
+-END_TIME indicates sorting based on the instance execution end time.
+-COST_TIME indicates sorting based on instance execution duration.
+     * @param SortColumn Sorting field for query results.
 
--SCHEDULE_DATE indicates the planned scheduling time.
--START_TIME indicates the start execution time of an instance.
--END_TIME indicates the execution end time of the instance.
--COST_TIME indicates the execution duration of an instance.
+-SCHEDULE_DATE indicates sorting based on the planned scheduling time.
+-START_TIME indicates sorting by the instance's start execution time.
+-END_TIME indicates sorting based on the instance execution end time.
+-COST_TIME indicates sorting based on instance execution duration.
      */
     public void setSortColumn(String SortColumn) {
         this.SortColumn = SortColumn;
@@ -369,14 +369,14 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
     /**
      * Get Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance. 
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic instance. 
      * @return InstanceType Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic instance.
      */
     public Long getInstanceType() {
         return this.InstanceType;
@@ -385,14 +385,14 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
     /**
      * Set Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic instance.
      * @param InstanceType Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic instance.
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
@@ -402,10 +402,10 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
      * Get Instance execution status.
 Support filtering multiple items with an "or" relationship between conditions.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
+-[1, 19, 22] indicate running.
 -[21] indicates skipping running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
@@ -413,10 +413,10 @@ Support filtering multiple items with an "or" relationship between conditions.
      * @return InstanceStateList Instance execution status.
 Support filtering multiple items with an "or" relationship between conditions.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
+-[1, 19, 22] indicate running.
 -[21] indicates skipping running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
@@ -430,10 +430,10 @@ Support filtering multiple items with an "or" relationship between conditions.
      * Set Instance execution status.
 Support filtering multiple items with an "or" relationship between conditions.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
+-[1, 19, 22] indicate running.
 -[21] indicates skipping running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
@@ -441,10 +441,10 @@ Support filtering multiple items with an "or" relationship between conditions.
      * @param InstanceStateList Instance execution status.
 Support filtering multiple items with an "or" relationship between conditions.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
+-[1, 19, 22] indicate running.
 -[21] indicates skipping running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
@@ -651,40 +651,40 @@ The DescribeNormalIntegrationExecutorGroups API can be used to obtain the list o
     }
 
     /**
-     * Get **Start time**.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss. 
-     * @return StartTimeFrom **Start time**.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
+     * Get Instance execution start time filter criteria.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss. 
+     * @return StartTimeFrom Instance execution start time filter criteria.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
      */
     public String getStartTimeFrom() {
         return this.StartTimeFrom;
     }
 
     /**
-     * Set **Start time**.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
-     * @param StartTimeFrom **Start time**.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
+     * Set Instance execution start time filter criteria.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
+     * @param StartTimeFrom Instance execution start time filter criteria.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
      */
     public void setStartTimeFrom(String StartTimeFrom) {
         this.StartTimeFrom = StartTimeFrom;
     }
 
     /**
-     * Get **Start time**.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss. 
-     * @return StartTimeTo **Start time**.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+     * Get Instance execution start time filter criteria.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss. 
+     * @return StartTimeTo Instance execution start time filter criteria.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
      */
     public String getStartTimeTo() {
         return this.StartTimeTo;
     }
 
     /**
-     * Set **Start time**.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
-     * @param StartTimeTo **Start time**.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+     * Set Instance execution start time filter criteria.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
+     * @param StartTimeTo Instance execution start time filter criteria.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
      */
     public void setStartTimeTo(String StartTimeTo) {
         this.StartTimeTo = StartTimeTo;

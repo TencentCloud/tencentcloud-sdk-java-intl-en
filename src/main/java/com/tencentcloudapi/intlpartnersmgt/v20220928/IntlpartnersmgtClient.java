@@ -433,6 +433,18 @@ Callable roles: Distributor, Second-level reseller, Reseller
     }
 
     /**
+     *This API is used to query information of second-level resellers.
+Invocation Role:Distributor.
+     * @param req QuerySubAgentsDetailV2Request
+     * @return QuerySubAgentsDetailV2Response
+     * @throws TencentCloudSDKException
+     */
+    public QuerySubAgentsDetailV2Response QuerySubAgentsDetailV2(QuerySubAgentsDetailV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QuerySubAgentsDetailV2", QuerySubAgentsDetailV2Response.class);
+    }
+
+    /**
      *This API is used to query the indirect sub-customers of a first-level distributor.
 Invokable role type: first-level reseller.
      * @param req QueryT1IndirectCustomersDetailRequest
