@@ -445,8 +445,8 @@ Invocation Role:Distributor.
     }
 
     /**
-     *This API is used to query the indirect sub-customers of a first-level distributor.
-Invokable role type: first-level reseller.
+     *This API is used to query the indirect sub-customers of a distributor.
+Invokable role type: Distributor
      * @param req QueryT1IndirectCustomersDetailRequest
      * @return QueryT1IndirectCustomersDetailResponse
      * @throws TencentCloudSDKException

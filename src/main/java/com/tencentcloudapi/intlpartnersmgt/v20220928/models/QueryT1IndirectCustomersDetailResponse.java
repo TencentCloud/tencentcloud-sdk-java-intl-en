@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class QueryT1IndirectCustomersDetailResponse extends AbstractModel {
 
     /**
-    * The number of indirect sub-customers of a first-level distributor.
+    * The number of indirect sub-customers of a distributor.
     */
     @SerializedName("Total")
     @Expose
@@ -59,16 +59,16 @@ public class QueryT1IndirectCustomersDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The number of indirect sub-customers of a first-level distributor. 
-     * @return Total The number of indirect sub-customers of a first-level distributor.
+     * Get The number of indirect sub-customers of a distributor. 
+     * @return Total The number of indirect sub-customers of a distributor.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set The number of indirect sub-customers of a first-level distributor.
-     * @param Total The number of indirect sub-customers of a first-level distributor.
+     * Set The number of indirect sub-customers of a distributor.
+     * @param Total The number of indirect sub-customers of a distributor.
      */
     public void setTotal(Long Total) {
         this.Total = Total;
