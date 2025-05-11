@@ -24,178 +24,138 @@ import java.util.HashMap;
 public class ActionTimer extends AbstractModel {
 
     /**
-    * Timer action. Valid value: `TerminateInstances`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Timer action currently only supports terminating one value: TerminateInstances.
     */
     @SerializedName("TimerAction")
     @Expose
     private String TimerAction;
 
     /**
-    * Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Execution time, in standard ISO8601 representation and using UTC time. format: YYYY-MM-DDThh:MM:ssZ. for example, 2018-05-29T11:26:40Z. the execution time must be later than the current time by 5 minutes.
     */
     @SerializedName("ActionTime")
     @Expose
     private String ActionTime;
 
     /**
-    * Extended data
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Extension data. only used as output usage.
     */
     @SerializedName("Externals")
     @Expose
     private Externals Externals;
 
     /**
-    * Timer ID.
+    * Timer ID. only used as output usage.
     */
     @SerializedName("ActionTimerId")
     @Expose
     private String ActionTimerId;
 
     /**
-    * Timer status. Valid values:
-
-UNDO: Not triggered.
-DOING: Triggering.
-DONE: Triggered already.
-
+    * Timer status, for output usage only. value ranges from: <li>UNDO: unexecuted</li> <li>DOING: executing</li> <li>DONE: execution completed.</li>.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Instance ID corresponding to a timer.
+    * Instance ID corresponding to a timer. used only for output.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Timer action. Valid value: `TerminateInstances`.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return TimerAction Timer action. Valid value: `TerminateInstances`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Timer action currently only supports terminating one value: TerminateInstances. 
+     * @return TimerAction Timer action currently only supports terminating one value: TerminateInstances.
      */
     public String getTimerAction() {
         return this.TimerAction;
     }
 
     /**
-     * Set Timer action. Valid value: `TerminateInstances`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param TimerAction Timer action. Valid value: `TerminateInstances`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Timer action currently only supports terminating one value: TerminateInstances.
+     * @param TimerAction Timer action currently only supports terminating one value: TerminateInstances.
      */
     public void setTimerAction(String TimerAction) {
         this.TimerAction = TimerAction;
     }
 
     /**
-     * Get Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return ActionTime Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Execution time, in standard ISO8601 representation and using UTC time. format: YYYY-MM-DDThh:MM:ssZ. for example, 2018-05-29T11:26:40Z. the execution time must be later than the current time by 5 minutes. 
+     * @return ActionTime Execution time, in standard ISO8601 representation and using UTC time. format: YYYY-MM-DDThh:MM:ssZ. for example, 2018-05-29T11:26:40Z. the execution time must be later than the current time by 5 minutes.
      */
     public String getActionTime() {
         return this.ActionTime;
     }
 
     /**
-     * Set Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param ActionTime Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Execution time, in standard ISO8601 representation and using UTC time. format: YYYY-MM-DDThh:MM:ssZ. for example, 2018-05-29T11:26:40Z. the execution time must be later than the current time by 5 minutes.
+     * @param ActionTime Execution time, in standard ISO8601 representation and using UTC time. format: YYYY-MM-DDThh:MM:ssZ. for example, 2018-05-29T11:26:40Z. the execution time must be later than the current time by 5 minutes.
      */
     public void setActionTime(String ActionTime) {
         this.ActionTime = ActionTime;
     }
 
     /**
-     * Get Extended data
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Externals Extended data
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Extension data. only used as output usage. 
+     * @return Externals Extension data. only used as output usage.
      */
     public Externals getExternals() {
         return this.Externals;
     }
 
     /**
-     * Set Extended data
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Externals Extended data
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Extension data. only used as output usage.
+     * @param Externals Extension data. only used as output usage.
      */
     public void setExternals(Externals Externals) {
         this.Externals = Externals;
     }
 
     /**
-     * Get Timer ID. 
-     * @return ActionTimerId Timer ID.
+     * Get Timer ID. only used as output usage. 
+     * @return ActionTimerId Timer ID. only used as output usage.
      */
     public String getActionTimerId() {
         return this.ActionTimerId;
     }
 
     /**
-     * Set Timer ID.
-     * @param ActionTimerId Timer ID.
+     * Set Timer ID. only used as output usage.
+     * @param ActionTimerId Timer ID. only used as output usage.
      */
     public void setActionTimerId(String ActionTimerId) {
         this.ActionTimerId = ActionTimerId;
     }
 
     /**
-     * Get Timer status. Valid values:
-
-UNDO: Not triggered.
-DOING: Triggering.
-DONE: Triggered already.
- 
-     * @return Status Timer status. Valid values:
-
-UNDO: Not triggered.
-DOING: Triggering.
-DONE: Triggered already.
-
+     * Get Timer status, for output usage only. value ranges from: <li>UNDO: unexecuted</li> <li>DOING: executing</li> <li>DONE: execution completed.</li>. 
+     * @return Status Timer status, for output usage only. value ranges from: <li>UNDO: unexecuted</li> <li>DOING: executing</li> <li>DONE: execution completed.</li>.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Timer status. Valid values:
-
-UNDO: Not triggered.
-DOING: Triggering.
-DONE: Triggered already.
-
-     * @param Status Timer status. Valid values:
-
-UNDO: Not triggered.
-DOING: Triggering.
-DONE: Triggered already.
-
+     * Set Timer status, for output usage only. value ranges from: <li>UNDO: unexecuted</li> <li>DOING: executing</li> <li>DONE: execution completed.</li>.
+     * @param Status Timer status, for output usage only. value ranges from: <li>UNDO: unexecuted</li> <li>DOING: executing</li> <li>DONE: execution completed.</li>.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Instance ID corresponding to a timer. 
-     * @return InstanceId Instance ID corresponding to a timer.
+     * Get Instance ID corresponding to a timer. used only for output. 
+     * @return InstanceId Instance ID corresponding to a timer. used only for output.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID corresponding to a timer.
-     * @param InstanceId Instance ID corresponding to a timer.
+     * Set Instance ID corresponding to a timer. used only for output.
+     * @param InstanceId Instance ID corresponding to a timer. used only for output.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

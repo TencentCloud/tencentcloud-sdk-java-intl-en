@@ -24,15 +24,15 @@ import java.util.HashMap;
 public class SystemDisk extends AbstractModel {
 
     /**
-    * System disk type. For the restrictions on the system disk type, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value values:<br>
-<li>LOCAL_BASIC: Local Disk</li>
-<li>LOCAL_SSD: Local SSD</li>
-<li>CLOUD_BASIC: Basic Cloud Disk</li>
-<li>CLOUD_SSD: Cloud SSD</li>
-<li>CLOUD_PREMIUM: Premium Disk</li>
-<li>CLOUD_BSSD: Balanced SSD</li>
-<li>CLOUD_HSSD: Enhanced SSD</li>
-<li>CLOUD_TSSD: Tremendous SSD</li><br>
+    * Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>.
+<Li>LOCAL_BASIC: specifies a local hard disk.</li>.
+<Li>LOCAL_SSD: specifies a local ssd.</li>.
+<Li>CLOUD_BASIC: ordinary cloud disk.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
+<Li>CLOUD_PREMIUM: high-performance cloud block storage.</li>.
+<Li>CLOUD_BSSD: universal type ssd cloud disk</li>.
+<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
+<li>CLOUD_TSSD: ultra-fast SSD cbs</li.
 Default value: Current disk types with inventory available.
     */
     @SerializedName("DiskType")
@@ -40,57 +40,54 @@ Default value: Current disk types with inventory available.
     private String DiskType;
 
     /**
-    * System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+    * Specifies the system disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-    * System disk size; unit: GB; default value: 50 GB.
+    * System disk size; unit: GiB; default value: 50 GiB.
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * ID of the dedicated cluster to which the instance belongs.
+    * Specifies the exclusive cluster ID it belongs to.
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-    * Disk name, with a length of not more than 128 characters.
-
-This parameter is in invite-only testing and is not yet open for use.
-Note: This field may return null, indicating that no valid value is found.
+    * Disk name, which specifies a length not exceeding 128 characters.
     */
     @SerializedName("DiskName")
     @Expose
     private String DiskName;
 
     /**
-     * Get System disk type. For the restrictions on the system disk type, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value values:<br>
-<li>LOCAL_BASIC: Local Disk</li>
-<li>LOCAL_SSD: Local SSD</li>
-<li>CLOUD_BASIC: Basic Cloud Disk</li>
-<li>CLOUD_SSD: Cloud SSD</li>
-<li>CLOUD_PREMIUM: Premium Disk</li>
-<li>CLOUD_BSSD: Balanced SSD</li>
-<li>CLOUD_HSSD: Enhanced SSD</li>
-<li>CLOUD_TSSD: Tremendous SSD</li><br>
+     * Get Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>.
+<Li>LOCAL_BASIC: specifies a local hard disk.</li>.
+<Li>LOCAL_SSD: specifies a local ssd.</li>.
+<Li>CLOUD_BASIC: ordinary cloud disk.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
+<Li>CLOUD_PREMIUM: high-performance cloud block storage.</li>.
+<Li>CLOUD_BSSD: universal type ssd cloud disk</li>.
+<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
+<li>CLOUD_TSSD: ultra-fast SSD cbs</li.
 Default value: Current disk types with inventory available. 
-     * @return DiskType System disk type. For the restrictions on the system disk type, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value values:<br>
-<li>LOCAL_BASIC: Local Disk</li>
-<li>LOCAL_SSD: Local SSD</li>
-<li>CLOUD_BASIC: Basic Cloud Disk</li>
-<li>CLOUD_SSD: Cloud SSD</li>
-<li>CLOUD_PREMIUM: Premium Disk</li>
-<li>CLOUD_BSSD: Balanced SSD</li>
-<li>CLOUD_HSSD: Enhanced SSD</li>
-<li>CLOUD_TSSD: Tremendous SSD</li><br>
+     * @return DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>.
+<Li>LOCAL_BASIC: specifies a local hard disk.</li>.
+<Li>LOCAL_SSD: specifies a local ssd.</li>.
+<Li>CLOUD_BASIC: ordinary cloud disk.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
+<Li>CLOUD_PREMIUM: high-performance cloud block storage.</li>.
+<Li>CLOUD_BSSD: universal type ssd cloud disk</li>.
+<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
+<li>CLOUD_TSSD: ultra-fast SSD cbs</li.
 Default value: Current disk types with inventory available.
      */
     public String getDiskType() {
@@ -98,25 +95,25 @@ Default value: Current disk types with inventory available.
     }
 
     /**
-     * Set System disk type. For the restrictions on the system disk type, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value values:<br>
-<li>LOCAL_BASIC: Local Disk</li>
-<li>LOCAL_SSD: Local SSD</li>
-<li>CLOUD_BASIC: Basic Cloud Disk</li>
-<li>CLOUD_SSD: Cloud SSD</li>
-<li>CLOUD_PREMIUM: Premium Disk</li>
-<li>CLOUD_BSSD: Balanced SSD</li>
-<li>CLOUD_HSSD: Enhanced SSD</li>
-<li>CLOUD_TSSD: Tremendous SSD</li><br>
+     * Set Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>.
+<Li>LOCAL_BASIC: specifies a local hard disk.</li>.
+<Li>LOCAL_SSD: specifies a local ssd.</li>.
+<Li>CLOUD_BASIC: ordinary cloud disk.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
+<Li>CLOUD_PREMIUM: high-performance cloud block storage.</li>.
+<Li>CLOUD_BSSD: universal type ssd cloud disk</li>.
+<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
+<li>CLOUD_TSSD: ultra-fast SSD cbs</li.
 Default value: Current disk types with inventory available.
-     * @param DiskType System disk type. For the restrictions on the system disk type, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value values:<br>
-<li>LOCAL_BASIC: Local Disk</li>
-<li>LOCAL_SSD: Local SSD</li>
-<li>CLOUD_BASIC: Basic Cloud Disk</li>
-<li>CLOUD_SSD: Cloud SSD</li>
-<li>CLOUD_PREMIUM: Premium Disk</li>
-<li>CLOUD_BSSD: Balanced SSD</li>
-<li>CLOUD_HSSD: Enhanced SSD</li>
-<li>CLOUD_TSSD: Tremendous SSD</li><br>
+     * @param DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>.
+<Li>LOCAL_BASIC: specifies a local hard disk.</li>.
+<Li>LOCAL_SSD: specifies a local ssd.</li>.
+<Li>CLOUD_BASIC: ordinary cloud disk.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
+<Li>CLOUD_PREMIUM: high-performance cloud block storage.</li>.
+<Li>CLOUD_BSSD: universal type ssd cloud disk</li>.
+<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
+<li>CLOUD_TSSD: ultra-fast SSD cbs</li.
 Default value: Current disk types with inventory available.
      */
     public void setDiskType(String DiskType) {
@@ -124,80 +121,68 @@ Default value: Current disk types with inventory available.
     }
 
     /**
-     * Get System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`. 
-     * @return DiskId System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+     * Get Specifies the system disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`. 
+     * @return DiskId Specifies the system disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
-     * @param DiskId System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+     * Set Specifies the system disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
+     * @param DiskId Specifies the system disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
     }
 
     /**
-     * Get System disk size; unit: GB; default value: 50 GB. 
-     * @return DiskSize System disk size; unit: GB; default value: 50 GB.
+     * Get System disk size; unit: GiB; default value: 50 GiB. 
+     * @return DiskSize System disk size; unit: GiB; default value: 50 GiB.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set System disk size; unit: GB; default value: 50 GB.
-     * @param DiskSize System disk size; unit: GB; default value: 50 GB.
+     * Set System disk size; unit: GiB; default value: 50 GiB.
+     * @param DiskSize System disk size; unit: GiB; default value: 50 GiB.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get ID of the dedicated cluster to which the instance belongs. 
-     * @return CdcId ID of the dedicated cluster to which the instance belongs.
+     * Get Specifies the exclusive cluster ID it belongs to. 
+     * @return CdcId Specifies the exclusive cluster ID it belongs to.
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set ID of the dedicated cluster to which the instance belongs.
-     * @param CdcId ID of the dedicated cluster to which the instance belongs.
+     * Set Specifies the exclusive cluster ID it belongs to.
+     * @param CdcId Specifies the exclusive cluster ID it belongs to.
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get Disk name, with a length of not more than 128 characters.
-
-This parameter is in invite-only testing and is not yet open for use.
-Note: This field may return null, indicating that no valid value is found. 
-     * @return DiskName Disk name, with a length of not more than 128 characters.
-
-This parameter is in invite-only testing and is not yet open for use.
-Note: This field may return null, indicating that no valid value is found.
+     * Get Disk name, which specifies a length not exceeding 128 characters. 
+     * @return DiskName Disk name, which specifies a length not exceeding 128 characters.
      */
     public String getDiskName() {
         return this.DiskName;
     }
 
     /**
-     * Set Disk name, with a length of not more than 128 characters.
-
-This parameter is in invite-only testing and is not yet open for use.
-Note: This field may return null, indicating that no valid value is found.
-     * @param DiskName Disk name, with a length of not more than 128 characters.
-
-This parameter is in invite-only testing and is not yet open for use.
-Note: This field may return null, indicating that no valid value is found.
+     * Set Disk name, which specifies a length not exceeding 128 characters.
+     * @param DiskName Disk name, which specifies a length not exceeding 128 characters.
      */
     public void setDiskName(String DiskName) {
         this.DiskName = DiskName;

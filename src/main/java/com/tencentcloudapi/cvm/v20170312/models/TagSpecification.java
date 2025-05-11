@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class TagSpecification extends AbstractModel {
 
     /**
-    * Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * Tag pairs
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Tag pair list
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return ResourceType Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key. 
+     * @return ResourceType Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param ResourceType Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
+     * @param ResourceType Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get Tag pairs
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Tags Tag pairs
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Tag pair list 
+     * @return Tags Tag pair list
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag pairs
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Tags Tag pairs
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Tag pair list
+     * @param Tags Tag pair list
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

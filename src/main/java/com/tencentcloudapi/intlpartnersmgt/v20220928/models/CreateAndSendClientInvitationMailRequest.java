@@ -31,6 +31,24 @@ public class CreateAndSendClientInvitationMailRequest extends AbstractModel {
     private String Email;
 
     /**
+    * Invite a role.
+Note: if no value is passed, it defaults to the sub - customer.
+Client: customer.
+SubAgent: second-level reseller.
+    */
+    @SerializedName("InvitationRole")
+    @Expose
+    private String InvitationRole;
+
+    /**
+    * Specifies the application material.
+Note: this field takes effect only in the scenario of inviting a second-level reseller.
+    */
+    @SerializedName("MaterialUrl")
+    @Expose
+    private String MaterialUrl;
+
+    /**
      * Get Email address that receives the customer invitation link. 
      * @return Email Email address that receives the customer invitation link.
      */
@@ -46,6 +64,54 @@ public class CreateAndSendClientInvitationMailRequest extends AbstractModel {
         this.Email = Email;
     }
 
+    /**
+     * Get Invite a role.
+Note: if no value is passed, it defaults to the sub - customer.
+Client: customer.
+SubAgent: second-level reseller. 
+     * @return InvitationRole Invite a role.
+Note: if no value is passed, it defaults to the sub - customer.
+Client: customer.
+SubAgent: second-level reseller.
+     */
+    public String getInvitationRole() {
+        return this.InvitationRole;
+    }
+
+    /**
+     * Set Invite a role.
+Note: if no value is passed, it defaults to the sub - customer.
+Client: customer.
+SubAgent: second-level reseller.
+     * @param InvitationRole Invite a role.
+Note: if no value is passed, it defaults to the sub - customer.
+Client: customer.
+SubAgent: second-level reseller.
+     */
+    public void setInvitationRole(String InvitationRole) {
+        this.InvitationRole = InvitationRole;
+    }
+
+    /**
+     * Get Specifies the application material.
+Note: this field takes effect only in the scenario of inviting a second-level reseller. 
+     * @return MaterialUrl Specifies the application material.
+Note: this field takes effect only in the scenario of inviting a second-level reseller.
+     */
+    public String getMaterialUrl() {
+        return this.MaterialUrl;
+    }
+
+    /**
+     * Set Specifies the application material.
+Note: this field takes effect only in the scenario of inviting a second-level reseller.
+     * @param MaterialUrl Specifies the application material.
+Note: this field takes effect only in the scenario of inviting a second-level reseller.
+     */
+    public void setMaterialUrl(String MaterialUrl) {
+        this.MaterialUrl = MaterialUrl;
+    }
+
     public CreateAndSendClientInvitationMailRequest() {
     }
 
@@ -57,6 +123,12 @@ public class CreateAndSendClientInvitationMailRequest extends AbstractModel {
         if (source.Email != null) {
             this.Email = new String(source.Email);
         }
+        if (source.InvitationRole != null) {
+            this.InvitationRole = new String(source.InvitationRole);
+        }
+        if (source.MaterialUrl != null) {
+            this.MaterialUrl = new String(source.MaterialUrl);
+        }
     }
 
 
@@ -65,6 +137,8 @@ public class CreateAndSendClientInvitationMailRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Email", this.Email);
+        this.setParamSimple(map, prefix + "InvitationRole", this.InvitationRole);
+        this.setParamSimple(map, prefix + "MaterialUrl", this.MaterialUrl);
 
     }
 }

@@ -6,6 +6,9 @@ public enum IntlpartnersmgtErrorCode {
      /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
+     /* The account type is not a corporate account. */
+     FAILEDOPERATION_ACCOUNTTYPENOTCOMPANY("FailedOperation.AccountTypeNotCompany"),
+     
      /* The account balance is insufficient. */
      FAILEDOPERATION_BALANCEINSUFFICIENT("FailedOperation.BalanceInsufficient"),
      
@@ -39,6 +42,21 @@ public enum IntlpartnersmgtErrorCode {
      /* The number of registered accounts for the current mobile number has reached the maximum limit. Please change the phone number and try again. */
      FAILEDOPERATION_PHONEBINDUPPER("FailedOperation.PhoneBindUpper"),
      
+     /* Real-Name pending approval. */
+     FAILEDOPERATION_REALNAMEINAPPROVAL("FailedOperation.RealNameInApproval"),
+     
+     /* User has not completed enterprise identity verification. */
+     FAILEDOPERATION_REALNAMENOTCOMPLETED("FailedOperation.RealNameNotCompleted"),
+     
+     /* Identity audit was rejected. */
+     FAILEDOPERATION_REALNAMEREJECT("FailedOperation.RealNameReject"),
+     
+     /* Illegal real-name type. */
+     FAILEDOPERATION_REALNAMETYPEILLEGAL("FailedOperation.RealNameTypeIllegal"),
+     
+     /* Unsubmitted application for second-level reseller. */
+     FAILEDOPERATION_RESELLERNOTAPPLY("FailedOperation.ResellerNotApply"),
+     
      /* The interval between sending invitation links is less than three minutes. Please try again later. */
      FAILEDOPERATION_SENDMAILLIMIT180("FailedOperation.SendMailLimit180"),
      
@@ -53,6 +71,9 @@ public enum IntlpartnersmgtErrorCode {
      
      /* Tencent cloud ka account cannot become a sub-customer. */
      FAILEDOPERATION_UINALREADYKA("FailedOperation.UinAlreadyKA"),
+     
+     /* The uin has already applied to become a reseller. */
+     FAILEDOPERATION_UINAPPLIEDAGENT("FailedOperation.UinAppliedAgent"),
      
      /* Invalid UIN */
      FAILEDOPERATION_UININVALID("FailedOperation.UinInvalid"),
@@ -141,8 +162,14 @@ public enum IntlpartnersmgtErrorCode {
      /* The primary industry id or secondary industry id is empty. */
      INVALIDPARAMETERVALUE_TRADEINFOEMPTY("InvalidParameterValue.TradeInfoEmpty"),
      
+     /* The user has already applied to become a sub - customer of another reseller. */
+     INVALIDPARAMETERVALUE_UINALREADYAPPLIEDCLIENT("InvalidParameterValue.UinAlreadyAppliedClient"),
+     
      /* The user has become a sub-customer of another reseller. */
      INVALIDPARAMETERVALUE_UINALREADYCLIENT("InvalidParameterValue.UinAlreadyClient"),
+     
+     /* The user has become a second - level reseller of another partner. */
+     INVALIDPARAMETERVALUE_UINALREADYRESELLER("InvalidParameterValue.UinAlreadyReseller"),
      
      /* The user is a sub-account. */
      INVALIDPARAMETERVALUE_UINISSUBACCOUNT("InvalidParameterValue.UinIsSubAccount"),
