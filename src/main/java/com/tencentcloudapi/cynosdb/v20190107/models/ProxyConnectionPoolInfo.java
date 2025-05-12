@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class ProxyConnectionPoolInfo extends AbstractModel {
 
     /**
-    * Connection persistence timeout in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the persistence threshold of the connection pool. the unit is seconds.
     */
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
     private Long ConnectionPoolTimeOut;
 
     /**
-    * Whether the connection pool is enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether the connection pool is enabled.
     */
     @SerializedName("OpenConnectionPool")
     @Expose
     private String OpenConnectionPool;
 
     /**
-    * Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
     */
     @SerializedName("ConnectionPoolType")
     @Expose
     private String ConnectionPoolType;
 
     /**
-     * Get Connection persistence timeout in seconds
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConnectionPoolTimeOut Connection persistence timeout in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the persistence threshold of the connection pool. the unit is seconds. 
+     * @return ConnectionPoolTimeOut Specifies the persistence threshold of the connection pool. the unit is seconds.
      */
     public Long getConnectionPoolTimeOut() {
         return this.ConnectionPoolTimeOut;
     }
 
     /**
-     * Set Connection persistence timeout in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConnectionPoolTimeOut Connection persistence timeout in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the persistence threshold of the connection pool. the unit is seconds.
+     * @param ConnectionPoolTimeOut Specifies the persistence threshold of the connection pool. the unit is seconds.
      */
     public void setConnectionPoolTimeOut(Long ConnectionPoolTimeOut) {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;
     }
 
     /**
-     * Get Whether the connection pool is enabled
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OpenConnectionPool Whether the connection pool is enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether the connection pool is enabled. 
+     * @return OpenConnectionPool Whether the connection pool is enabled.
      */
     public String getOpenConnectionPool() {
         return this.OpenConnectionPool;
     }
 
     /**
-     * Set Whether the connection pool is enabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OpenConnectionPool Whether the connection pool is enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether the connection pool is enabled.
+     * @param OpenConnectionPool Whether the connection pool is enabled.
      */
     public void setOpenConnectionPool(String OpenConnectionPool) {
         this.OpenConnectionPool = OpenConnectionPool;
     }
 
     /**
-     * Get Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConnectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool). 
+     * @return ConnectionPoolType Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
     }
 
     /**
-     * Set Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConnectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
+     * @param ConnectionPoolType Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;

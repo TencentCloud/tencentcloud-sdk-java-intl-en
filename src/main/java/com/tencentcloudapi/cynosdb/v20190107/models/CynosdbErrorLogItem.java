@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CynosdbErrorLogItem extends AbstractModel {
 
     /**
-    * Log timestamp Note: This field may return null, indicating that no valid values can be obtained.
+    * Log timestamp.
     */
     @SerializedName("Timestamp")
     @Expose
     private Long Timestamp;
 
     /**
-    * Log level Note: This field may return null, indicating that no valid values can be obtained.
+    * Log level.
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * Log content Note: This field may return null, indicating that no valid values can be obtained.
+    * Log content.
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get Log timestamp Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Timestamp Log timestamp Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Log timestamp. 
+     * @return Timestamp Log timestamp.
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set Log timestamp Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Timestamp Log timestamp Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Log timestamp.
+     * @param Timestamp Log timestamp.
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get Log level Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Level Log level Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Log level. 
+     * @return Level Log level.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Log level Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Level Log level Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Log level.
+     * @param Level Log level.
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Log content Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Content Log content Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Log content. 
+     * @return Content Log content.
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Log content Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Content Log content Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Log content.
+     * @param Content Log content.
      */
     public void setContent(String Content) {
         this.Content = Content;

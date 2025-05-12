@@ -85,7 +85,9 @@ public class ModifyVipVportRequest extends AbstractModel {
     /**
      * Get Instance group ID 
      * @return InstanceGrpId Instance group ID
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceGrpId() {
         return this.InstanceGrpId;
     }
@@ -93,7 +95,9 @@ public class ModifyVipVportRequest extends AbstractModel {
     /**
      * Set Instance group ID
      * @param InstanceGrpId Instance group ID
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceGrpId(String InstanceGrpId) {
         this.InstanceGrpId = InstanceGrpId;
     }

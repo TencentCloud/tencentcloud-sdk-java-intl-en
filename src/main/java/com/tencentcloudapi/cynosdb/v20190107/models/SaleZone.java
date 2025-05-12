@@ -70,8 +70,7 @@ public class SaleZone extends AbstractModel {
     private String PhysicalZone;
 
     /**
-    * Whether the user has AZ permission
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether the user has AZ permission.
     */
     @SerializedName("HasPermission")
     @Expose
@@ -83,6 +82,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("IsWholeRdmaZone")
     @Expose
     private String IsWholeRdmaZone;
+
+    /**
+    * Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+    */
+    @SerializedName("IsSupportCreateCluster")
+    @Expose
+    private Long IsSupportCreateCluster;
 
     /**
      * Get AZ name 
@@ -197,20 +203,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the user has AZ permission
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HasPermission Whether the user has AZ permission
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether the user has AZ permission. 
+     * @return HasPermission Whether the user has AZ permission.
      */
     public Boolean getHasPermission() {
         return this.HasPermission;
     }
 
     /**
-     * Set Whether the user has AZ permission
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HasPermission Whether the user has AZ permission
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether the user has AZ permission.
+     * @param HasPermission Whether the user has AZ permission.
      */
     public void setHasPermission(Boolean HasPermission) {
         this.HasPermission = HasPermission;
@@ -230,6 +232,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setIsWholeRdmaZone(String IsWholeRdmaZone) {
         this.IsWholeRdmaZone = IsWholeRdmaZone;
+    }
+
+    /**
+     * Get Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed). 
+     * @return IsSupportCreateCluster Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+     */
+    public Long getIsSupportCreateCluster() {
+        return this.IsSupportCreateCluster;
+    }
+
+    /**
+     * Set Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+     * @param IsSupportCreateCluster Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+     */
+    public void setIsSupportCreateCluster(Long IsSupportCreateCluster) {
+        this.IsSupportCreateCluster = IsSupportCreateCluster;
     }
 
     public SaleZone() {
@@ -264,6 +282,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.IsWholeRdmaZone != null) {
             this.IsWholeRdmaZone = new String(source.IsWholeRdmaZone);
         }
+        if (source.IsSupportCreateCluster != null) {
+            this.IsSupportCreateCluster = new Long(source.IsSupportCreateCluster);
+        }
     }
 
 
@@ -279,6 +300,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
         this.setParamSimple(map, prefix + "HasPermission", this.HasPermission);
         this.setParamSimple(map, prefix + "IsWholeRdmaZone", this.IsWholeRdmaZone);
+        this.setParamSimple(map, prefix + "IsSupportCreateCluster", this.IsSupportCreateCluster);
 
     }
 }

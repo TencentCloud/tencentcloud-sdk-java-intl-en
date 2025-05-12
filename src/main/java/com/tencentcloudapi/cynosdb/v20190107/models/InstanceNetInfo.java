@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class InstanceNetInfo extends AbstractModel {
 
     /**
-    * Network type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Network type.
     */
     @SerializedName("InstanceGroupType")
     @Expose
@@ -33,108 +32,93 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Instance group ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceGroupId")
     @Expose
     private String InstanceGroupId;
 
     /**
-    * VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the virtual private cloud ID.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the subnet ID.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Network type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
     */
     @SerializedName("NetType")
     @Expose
     private Long NetType;
 
     /**
-    * VPC IP
-Note: This field may return null, indicating that no valid values can be obtained.
+    * VPC IP.
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * VPC port
-Note: This field may return null, indicating that no valid values can be obtained.
+    * VPC port.
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * Public network domain name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the public network domain name.
     */
     @SerializedName("WanDomain")
     @Expose
     private String WanDomain;
 
     /**
-    * 
+    * Public IP address
     */
     @SerializedName("WanIP")
     @Expose
     private String WanIP;
 
     /**
-    * Public network port
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Public network port.
     */
     @SerializedName("WanPort")
     @Expose
     private Long WanPort;
 
     /**
-    * Public network status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Public network enabled status.
     */
     @SerializedName("WanStatus")
     @Expose
     private String WanStatus;
 
     /**
-     * Get Network type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceGroupType Network type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Network type. 
+     * @return InstanceGroupType Network type.
      */
     public String getInstanceGroupType() {
         return this.InstanceGroupType;
     }
 
     /**
-     * Set Network type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceGroupType Network type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Network type.
+     * @param InstanceGroupType Network type.
      */
     public void setInstanceGroupType(String InstanceGroupType) {
         this.InstanceGroupType = InstanceGroupType;
     }
 
     /**
-     * Get Instance group ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Instance group ID 
      * @return InstanceGroupId Instance group ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceGroupId() {
         return this.InstanceGroupId;
@@ -142,185 +126,151 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Instance group ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceGroupId Instance group ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceGroupId(String InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
     }
 
     /**
-     * Get VPC ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VpcId VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the virtual private cloud ID. 
+     * @return VpcId Specifies the virtual private cloud ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VpcId VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the virtual private cloud ID.
+     * @param VpcId Specifies the virtual private cloud ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubnetId Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the subnet ID. 
+     * @return SubnetId Specifies the subnet ID.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubnetId Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the subnet ID.
+     * @param SubnetId Specifies the subnet ID.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Network type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NetType Network type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network). 
+     * @return NetType Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
      */
     public Long getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set Network type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NetType Network type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
+     * @param NetType Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
      */
     public void setNetType(Long NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get VPC IP
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Vip VPC IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get VPC IP. 
+     * @return Vip VPC IP.
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set VPC IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Vip VPC IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set VPC IP.
+     * @param Vip VPC IP.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get VPC port
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Vport VPC port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get VPC port. 
+     * @return Vport VPC port.
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set VPC port
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Vport VPC port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set VPC port.
+     * @param Vport VPC port.
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get Public network domain name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WanDomain Public network domain name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the public network domain name. 
+     * @return WanDomain Specifies the public network domain name.
      */
     public String getWanDomain() {
         return this.WanDomain;
     }
 
     /**
-     * Set Public network domain name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WanDomain Public network domain name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the public network domain name.
+     * @param WanDomain Specifies the public network domain name.
      */
     public void setWanDomain(String WanDomain) {
         this.WanDomain = WanDomain;
     }
 
     /**
-     * Get  
-     * @return WanIP 
+     * Get Public IP address 
+     * @return WanIP Public IP address
      */
     public String getWanIP() {
         return this.WanIP;
     }
 
     /**
-     * Set 
-     * @param WanIP 
+     * Set Public IP address
+     * @param WanIP Public IP address
      */
     public void setWanIP(String WanIP) {
         this.WanIP = WanIP;
     }
 
     /**
-     * Get Public network port
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WanPort Public network port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Public network port. 
+     * @return WanPort Public network port.
      */
     public Long getWanPort() {
         return this.WanPort;
     }
 
     /**
-     * Set Public network port
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WanPort Public network port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Public network port.
+     * @param WanPort Public network port.
      */
     public void setWanPort(Long WanPort) {
         this.WanPort = WanPort;
     }
 
     /**
-     * Get Public network status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WanStatus Public network status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Public network enabled status. 
+     * @return WanStatus Public network enabled status.
      */
     public String getWanStatus() {
         return this.WanStatus;
     }
 
     /**
-     * Set Public network status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WanStatus Public network status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Public network enabled status.
+     * @param WanStatus Public network enabled status.
      */
     public void setWanStatus(String WanStatus) {
         this.WanStatus = WanStatus;

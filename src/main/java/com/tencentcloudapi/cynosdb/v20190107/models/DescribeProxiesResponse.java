@@ -31,8 +31,7 @@ public class DescribeProxiesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * List of database proxy groups
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of database proxy groups.
     */
     @SerializedName("ProxyGroupInfos")
     @Expose
@@ -70,20 +69,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of database proxy groups
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProxyGroupInfos List of database proxy groups
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of database proxy groups. 
+     * @return ProxyGroupInfos List of database proxy groups.
      */
     public ProxyGroupInfo [] getProxyGroupInfos() {
         return this.ProxyGroupInfos;
     }
 
     /**
-     * Set List of database proxy groups
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProxyGroupInfos List of database proxy groups
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of database proxy groups.
+     * @param ProxyGroupInfos List of database proxy groups.
      */
     public void setProxyGroupInfos(ProxyGroupInfo [] ProxyGroupInfos) {
         this.ProxyGroupInfos = ProxyGroupInfos;

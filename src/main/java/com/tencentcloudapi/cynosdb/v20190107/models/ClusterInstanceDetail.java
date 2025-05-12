@@ -87,50 +87,67 @@ public class ClusterInstanceDetail extends AbstractModel {
     private String InstanceRole;
 
     /**
-    * Execution start time in seconds from 0:00	
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Execution start time (seconds from 0 o'clock).	
     */
     @SerializedName("MaintainStartTime")
     @Expose
     private Long MaintainStartTime;
 
     /**
-    * Duration in seconds	
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the continuous time. the unit is second.	
     */
     @SerializedName("MaintainDuration")
     @Expose
     private Long MaintainDuration;
 
     /**
-    * Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
     */
     @SerializedName("MaintainWeekDays")
     @Expose
     private String [] MaintainWeekDays;
 
     /**
-    * Serverless instance enablement status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * serverless instance substatus.
     */
     @SerializedName("ServerlessStatus")
     @Expose
     private String ServerlessStatus;
 
     /**
-    * 
+    * Instance task information.
     */
     @SerializedName("InstanceTasks")
     @Expose
     private ObjectTask [] InstanceTasks;
 
     /**
-    * 
+    * Instance machine type.
     */
     @SerializedName("InstanceDeviceType")
     @Expose
     private String InstanceDeviceType;
+
+    /**
+    * Instance storage type.
+    */
+    @SerializedName("InstanceStorageType")
+    @Expose
+    private String InstanceStorageType;
+
+    /**
+    * Database type.
+    */
+    @SerializedName("DbMode")
+    @Expose
+    private String DbMode;
+
+    /**
+    * Node list
+    */
+    @SerializedName("NodeList")
+    @Expose
+    private String [] NodeList;
 
     /**
      * Get Instance ID 
@@ -277,115 +294,147 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Execution start time in seconds from 0:00	
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaintainStartTime Execution start time in seconds from 0:00	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Execution start time (seconds from 0 o'clock).	 
+     * @return MaintainStartTime Execution start time (seconds from 0 o'clock).	
      */
     public Long getMaintainStartTime() {
         return this.MaintainStartTime;
     }
 
     /**
-     * Set Execution start time in seconds from 0:00	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaintainStartTime Execution start time in seconds from 0:00	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Execution start time (seconds from 0 o'clock).	
+     * @param MaintainStartTime Execution start time (seconds from 0 o'clock).	
      */
     public void setMaintainStartTime(Long MaintainStartTime) {
         this.MaintainStartTime = MaintainStartTime;
     }
 
     /**
-     * Get Duration in seconds	
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaintainDuration Duration in seconds	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the continuous time. the unit is second.	 
+     * @return MaintainDuration Specifies the continuous time. the unit is second.	
      */
     public Long getMaintainDuration() {
         return this.MaintainDuration;
     }
 
     /**
-     * Set Duration in seconds	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaintainDuration Duration in seconds	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the continuous time. the unit is second.	
+     * @param MaintainDuration Specifies the continuous time. the unit is second.	
      */
     public void setMaintainDuration(Long MaintainDuration) {
         this.MaintainDuration = MaintainDuration;
     }
 
     /**
-     * Get Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaintainWeekDays Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]. 
+     * @return MaintainWeekDays Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
      */
     public String [] getMaintainWeekDays() {
         return this.MaintainWeekDays;
     }
 
     /**
-     * Set Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaintainWeekDays Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+     * @param MaintainWeekDays Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
      */
     public void setMaintainWeekDays(String [] MaintainWeekDays) {
         this.MaintainWeekDays = MaintainWeekDays;
     }
 
     /**
-     * Get Serverless instance enablement status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ServerlessStatus Serverless instance enablement status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get serverless instance substatus. 
+     * @return ServerlessStatus serverless instance substatus.
      */
     public String getServerlessStatus() {
         return this.ServerlessStatus;
     }
 
     /**
-     * Set Serverless instance enablement status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ServerlessStatus Serverless instance enablement status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set serverless instance substatus.
+     * @param ServerlessStatus serverless instance substatus.
      */
     public void setServerlessStatus(String ServerlessStatus) {
         this.ServerlessStatus = ServerlessStatus;
     }
 
     /**
-     * Get  
-     * @return InstanceTasks 
+     * Get Instance task information. 
+     * @return InstanceTasks Instance task information.
      */
     public ObjectTask [] getInstanceTasks() {
         return this.InstanceTasks;
     }
 
     /**
-     * Set 
-     * @param InstanceTasks 
+     * Set Instance task information.
+     * @param InstanceTasks Instance task information.
      */
     public void setInstanceTasks(ObjectTask [] InstanceTasks) {
         this.InstanceTasks = InstanceTasks;
     }
 
     /**
-     * Get  
-     * @return InstanceDeviceType 
+     * Get Instance machine type. 
+     * @return InstanceDeviceType Instance machine type.
      */
     public String getInstanceDeviceType() {
         return this.InstanceDeviceType;
     }
 
     /**
-     * Set 
-     * @param InstanceDeviceType 
+     * Set Instance machine type.
+     * @param InstanceDeviceType Instance machine type.
      */
     public void setInstanceDeviceType(String InstanceDeviceType) {
         this.InstanceDeviceType = InstanceDeviceType;
+    }
+
+    /**
+     * Get Instance storage type. 
+     * @return InstanceStorageType Instance storage type.
+     */
+    public String getInstanceStorageType() {
+        return this.InstanceStorageType;
+    }
+
+    /**
+     * Set Instance storage type.
+     * @param InstanceStorageType Instance storage type.
+     */
+    public void setInstanceStorageType(String InstanceStorageType) {
+        this.InstanceStorageType = InstanceStorageType;
+    }
+
+    /**
+     * Get Database type. 
+     * @return DbMode Database type.
+     */
+    public String getDbMode() {
+        return this.DbMode;
+    }
+
+    /**
+     * Set Database type.
+     * @param DbMode Database type.
+     */
+    public void setDbMode(String DbMode) {
+        this.DbMode = DbMode;
+    }
+
+    /**
+     * Get Node list 
+     * @return NodeList Node list
+     */
+    public String [] getNodeList() {
+        return this.NodeList;
+    }
+
+    /**
+     * Set Node list
+     * @param NodeList Node list
+     */
+    public void setNodeList(String [] NodeList) {
+        this.NodeList = NodeList;
     }
 
     public ClusterInstanceDetail() {
@@ -447,6 +496,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.InstanceDeviceType != null) {
             this.InstanceDeviceType = new String(source.InstanceDeviceType);
         }
+        if (source.InstanceStorageType != null) {
+            this.InstanceStorageType = new String(source.InstanceStorageType);
+        }
+        if (source.DbMode != null) {
+            this.DbMode = new String(source.DbMode);
+        }
+        if (source.NodeList != null) {
+            this.NodeList = new String[source.NodeList.length];
+            for (int i = 0; i < source.NodeList.length; i++) {
+                this.NodeList[i] = new String(source.NodeList[i]);
+            }
+        }
     }
 
 
@@ -469,6 +530,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
         this.setParamArrayObj(map, prefix + "InstanceTasks.", this.InstanceTasks);
         this.setParamSimple(map, prefix + "InstanceDeviceType", this.InstanceDeviceType);
+        this.setParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
+        this.setParamSimple(map, prefix + "DbMode", this.DbMode);
+        this.setParamArraySimple(map, prefix + "NodeList.", this.NodeList);
 
     }
 }

@@ -87,7 +87,7 @@ public class ParamDetail extends AbstractModel {
     private String Min;
 
     /**
-    * Enumerated values of the parameter.  It is null if the parameter is non-enumerated. Note: This field may return null, indicating that no valid values can be obtained.
+    * Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
     */
     @SerializedName("EnumValue")
     @Expose
@@ -115,25 +115,32 @@ public class ParamDetail extends AbstractModel {
     private String MatchValue;
 
     /**
-    * Whether it is a `func` type. Valid values: `true` (yes), `false` (no). Note: This field may return null, indicating that no valid values can be obtained.
+    * true - indicates a formula. false - indicates it is not a formula.
     */
     @SerializedName("IsFunc")
     @Expose
     private Boolean IsFunc;
 
     /**
-    * Formula content returned when `ParamType` is `func`. Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies that when the parameter is set as a formula, Func returns the set formula content.
     */
     @SerializedName("Func")
     @Expose
     private String Func;
 
     /**
-    * Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether the parameter is modifiable.
     */
     @SerializedName("ModifiableInfo")
     @Expose
     private ModifiableInfo ModifiableInfo;
+
+    /**
+    * The default formula style of parameters that support formulas.
+    */
+    @SerializedName("FuncPattern")
+    @Expose
+    private String FuncPattern;
 
     /**
      * Get Parameter name 
@@ -280,16 +287,16 @@ public class ParamDetail extends AbstractModel {
     }
 
     /**
-     * Get Enumerated values of the parameter.  It is null if the parameter is non-enumerated. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EnumValue Enumerated values of the parameter.  It is null if the parameter is non-enumerated. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty. 
+     * @return EnumValue Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
      */
     public String [] getEnumValue() {
         return this.EnumValue;
     }
 
     /**
-     * Set Enumerated values of the parameter.  It is null if the parameter is non-enumerated. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EnumValue Enumerated values of the parameter.  It is null if the parameter is non-enumerated. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
+     * @param EnumValue Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;
@@ -344,51 +351,67 @@ public class ParamDetail extends AbstractModel {
     }
 
     /**
-     * Get Whether it is a `func` type. Valid values: `true` (yes), `false` (no). Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsFunc Whether it is a `func` type. Valid values: `true` (yes), `false` (no). Note: This field may return null, indicating that no valid values can be obtained.
+     * Get true - indicates a formula. false - indicates it is not a formula. 
+     * @return IsFunc true - indicates a formula. false - indicates it is not a formula.
      */
     public Boolean getIsFunc() {
         return this.IsFunc;
     }
 
     /**
-     * Set Whether it is a `func` type. Valid values: `true` (yes), `false` (no). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsFunc Whether it is a `func` type. Valid values: `true` (yes), `false` (no). Note: This field may return null, indicating that no valid values can be obtained.
+     * Set true - indicates a formula. false - indicates it is not a formula.
+     * @param IsFunc true - indicates a formula. false - indicates it is not a formula.
      */
     public void setIsFunc(Boolean IsFunc) {
         this.IsFunc = IsFunc;
     }
 
     /**
-     * Get Formula content returned when `ParamType` is `func`. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Func Formula content returned when `ParamType` is `func`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies that when the parameter is set as a formula, Func returns the set formula content. 
+     * @return Func Specifies that when the parameter is set as a formula, Func returns the set formula content.
      */
     public String getFunc() {
         return this.Func;
     }
 
     /**
-     * Set Formula content returned when `ParamType` is `func`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Func Formula content returned when `ParamType` is `func`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies that when the parameter is set as a formula, Func returns the set formula content.
+     * @param Func Specifies that when the parameter is set as a formula, Func returns the set formula content.
      */
     public void setFunc(String Func) {
         this.Func = Func;
     }
 
     /**
-     * Get Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ModifiableInfo Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether the parameter is modifiable. 
+     * @return ModifiableInfo Whether the parameter is modifiable.
      */
     public ModifiableInfo getModifiableInfo() {
         return this.ModifiableInfo;
     }
 
     /**
-     * Set Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ModifiableInfo Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether the parameter is modifiable.
+     * @param ModifiableInfo Whether the parameter is modifiable.
      */
     public void setModifiableInfo(ModifiableInfo ModifiableInfo) {
         this.ModifiableInfo = ModifiableInfo;
+    }
+
+    /**
+     * Get The default formula style of parameters that support formulas. 
+     * @return FuncPattern The default formula style of parameters that support formulas.
+     */
+    public String getFuncPattern() {
+        return this.FuncPattern;
+    }
+
+    /**
+     * Set The default formula style of parameters that support formulas.
+     * @param FuncPattern The default formula style of parameters that support formulas.
+     */
+    public void setFuncPattern(String FuncPattern) {
+        this.FuncPattern = FuncPattern;
     }
 
     public ParamDetail() {
@@ -450,6 +473,9 @@ public class ParamDetail extends AbstractModel {
         if (source.ModifiableInfo != null) {
             this.ModifiableInfo = new ModifiableInfo(source.ModifiableInfo);
         }
+        if (source.FuncPattern != null) {
+            this.FuncPattern = new String(source.FuncPattern);
+        }
     }
 
 
@@ -473,6 +499,7 @@ public class ParamDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "IsFunc", this.IsFunc);
         this.setParamSimple(map, prefix + "Func", this.Func);
         this.setParamObj(map, prefix + "ModifiableInfo.", this.ModifiableInfo);
+        this.setParamSimple(map, prefix + "FuncPattern", this.FuncPattern);
 
     }
 }

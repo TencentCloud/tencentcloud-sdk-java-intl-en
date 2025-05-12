@@ -101,6 +101,15 @@ public class CynosdbInstanceDetail extends AbstractModel {
     private String StatusDesc;
 
     /**
+    * Serverless instance status. Valid values:
+resume
+pause
+    */
+    @SerializedName("ServerlessStatus")
+    @Expose
+    private String ServerlessStatus;
+
+    /**
     * Database type
     */
     @SerializedName("DbType")
@@ -255,13 +264,11 @@ public class CynosdbInstanceDetail extends AbstractModel {
     private Float MaxCpu;
 
     /**
-    * Serverless instance status. Valid values:
-resume
-pause
+    * Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
     */
-    @SerializedName("ServerlessStatus")
+    @SerializedName("DbMode")
     @Expose
-    private String ServerlessStatus;
+    private String DbMode;
 
     /**
      * Get User `Uin` 
@@ -437,6 +444,30 @@ pause
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
+    }
+
+    /**
+     * Get Serverless instance status. Valid values:
+resume
+pause 
+     * @return ServerlessStatus Serverless instance status. Valid values:
+resume
+pause
+     */
+    public String getServerlessStatus() {
+        return this.ServerlessStatus;
+    }
+
+    /**
+     * Set Serverless instance status. Valid values:
+resume
+pause
+     * @param ServerlessStatus Serverless instance status. Valid values:
+resume
+pause
+     */
+    public void setServerlessStatus(String ServerlessStatus) {
+        this.ServerlessStatus = ServerlessStatus;
     }
 
     /**
@@ -792,27 +823,19 @@ pause
     }
 
     /**
-     * Get Serverless instance status. Valid values:
-resume
-pause 
-     * @return ServerlessStatus Serverless instance status. Valid values:
-resume
-pause
+     * Get Db type: <li>NORMAL</li> <li>SERVERLESS</li>. 
+     * @return DbMode Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
      */
-    public String getServerlessStatus() {
-        return this.ServerlessStatus;
+    public String getDbMode() {
+        return this.DbMode;
     }
 
     /**
-     * Set Serverless instance status. Valid values:
-resume
-pause
-     * @param ServerlessStatus Serverless instance status. Valid values:
-resume
-pause
+     * Set Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
+     * @param DbMode Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
      */
-    public void setServerlessStatus(String ServerlessStatus) {
-        this.ServerlessStatus = ServerlessStatus;
+    public void setDbMode(String DbMode) {
+        this.DbMode = DbMode;
     }
 
     public CynosdbInstanceDetail() {
@@ -855,6 +878,9 @@ pause
         }
         if (source.StatusDesc != null) {
             this.StatusDesc = new String(source.StatusDesc);
+        }
+        if (source.ServerlessStatus != null) {
+            this.ServerlessStatus = new String(source.ServerlessStatus);
         }
         if (source.DbType != null) {
             this.DbType = new String(source.DbType);
@@ -922,8 +948,8 @@ pause
         if (source.MaxCpu != null) {
             this.MaxCpu = new Float(source.MaxCpu);
         }
-        if (source.ServerlessStatus != null) {
-            this.ServerlessStatus = new String(source.ServerlessStatus);
+        if (source.DbMode != null) {
+            this.DbMode = new String(source.DbMode);
         }
     }
 
@@ -943,6 +969,7 @@ pause
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+        this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
@@ -965,7 +992,7 @@ pause
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "MinCpu", this.MinCpu);
         this.setParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
-        this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+        this.setParamSimple(map, prefix + "DbMode", this.DbMode);
 
     }
 }

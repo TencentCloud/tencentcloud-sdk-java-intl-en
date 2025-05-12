@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ErrorLogItemExport extends AbstractModel {
 
     /**
-    * Time Note: This field may return null, indicating that no valid values can be obtained.
+    * Time
     */
     @SerializedName("Timestamp")
     @Expose
     private String Timestamp;
 
     /**
-    * Log level. Valid values: `error`, `warning`, `note`. Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the log level. valid values are note, warning, and error.
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * Log content Note: This field may return null, indicating that no valid values can be obtained.
+    * Log content.
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get Time Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Timestamp Time Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Time 
+     * @return Timestamp Time
      */
     public String getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set Time Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Timestamp Time Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Time
+     * @param Timestamp Time
      */
     public void setTimestamp(String Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get Log level. Valid values: `error`, `warning`, `note`. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Level Log level. Valid values: `error`, `warning`, `note`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the log level. valid values are note, warning, and error. 
+     * @return Level Specifies the log level. valid values are note, warning, and error.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Log level. Valid values: `error`, `warning`, `note`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Level Log level. Valid values: `error`, `warning`, `note`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the log level. valid values are note, warning, and error.
+     * @param Level Specifies the log level. valid values are note, warning, and error.
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Log content Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Content Log content Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Log content. 
+     * @return Content Log content.
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Log content Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Content Log content Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Log content.
+     * @param Content Log content.
      */
     public void setContent(String Content) {
         this.Content = Content;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeProxiesRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
     */
     @SerializedName("ClusterId")
     @Expose
@@ -70,16 +70,16 @@ public class DescribeProxiesRequest extends AbstractModel {
     private QueryParamFilter [] Filters;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111). 
+     * @return ClusterId Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
+     * @param ClusterId Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

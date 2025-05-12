@@ -66,8 +66,7 @@ public class ProxyGroupRwInfo extends AbstractModel {
     private ProxyInstanceWeight [] InstanceWeights;
 
     /**
-    * Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to enable read-write nodes. valid values: yes, no.
     */
     @SerializedName("OpenRw")
     @Expose
@@ -191,20 +190,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OpenRw Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to enable read-write nodes. valid values: yes, no. 
+     * @return OpenRw Whether to enable read-write nodes. valid values: yes, no.
      */
     public String getOpenRw() {
         return this.OpenRw;
     }
 
     /**
-     * Set Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OpenRw Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to enable read-write nodes. valid values: yes, no.
+     * @param OpenRw Whether to enable read-write nodes. valid values: yes, no.
      */
     public void setOpenRw(String OpenRw) {
         this.OpenRw = OpenRw;

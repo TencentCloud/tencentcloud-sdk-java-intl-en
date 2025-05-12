@@ -45,6 +45,13 @@ public class ZoneStockInfo extends AbstractModel {
     private Long StockCount;
 
     /**
+    * Available zone inventory information.
+    */
+    @SerializedName("SlaveZoneStockInfos")
+    @Expose
+    private SlaveZoneStockInfo [] SlaveZoneStockInfos;
+
+    /**
      * Get AZ 
      * @return Zone AZ
      */
@@ -92,6 +99,22 @@ public class ZoneStockInfo extends AbstractModel {
         this.StockCount = StockCount;
     }
 
+    /**
+     * Get Available zone inventory information. 
+     * @return SlaveZoneStockInfos Available zone inventory information.
+     */
+    public SlaveZoneStockInfo [] getSlaveZoneStockInfos() {
+        return this.SlaveZoneStockInfos;
+    }
+
+    /**
+     * Set Available zone inventory information.
+     * @param SlaveZoneStockInfos Available zone inventory information.
+     */
+    public void setSlaveZoneStockInfos(SlaveZoneStockInfo [] SlaveZoneStockInfos) {
+        this.SlaveZoneStockInfos = SlaveZoneStockInfos;
+    }
+
     public ZoneStockInfo() {
     }
 
@@ -109,6 +132,12 @@ public class ZoneStockInfo extends AbstractModel {
         if (source.StockCount != null) {
             this.StockCount = new Long(source.StockCount);
         }
+        if (source.SlaveZoneStockInfos != null) {
+            this.SlaveZoneStockInfos = new SlaveZoneStockInfo[source.SlaveZoneStockInfos.length];
+            for (int i = 0; i < source.SlaveZoneStockInfos.length; i++) {
+                this.SlaveZoneStockInfos[i] = new SlaveZoneStockInfo(source.SlaveZoneStockInfos[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class ZoneStockInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "HasStock", this.HasStock);
         this.setParamSimple(map, prefix + "StockCount", this.StockCount);
+        this.setParamArrayObj(map, prefix + "SlaveZoneStockInfos.", this.SlaveZoneStockInfos);
 
     }
 }

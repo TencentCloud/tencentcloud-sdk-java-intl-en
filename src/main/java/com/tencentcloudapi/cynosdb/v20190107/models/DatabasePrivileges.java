@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DatabasePrivileges extends AbstractModel {
 
     /**
-    * Database
+    * Database.
     */
     @SerializedName("Db")
     @Expose
@@ -38,16 +38,16 @@ public class DatabasePrivileges extends AbstractModel {
     private String [] Privileges;
 
     /**
-     * Get Database 
-     * @return Db Database
+     * Get Database. 
+     * @return Db Database.
      */
     public String getDb() {
         return this.Db;
     }
 
     /**
-     * Set Database
-     * @param Db Database
+     * Set Database.
+     * @param Db Database.
      */
     public void setDb(String Db) {
         this.Db = Db;

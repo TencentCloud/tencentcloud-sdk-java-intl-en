@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class ProxyGroupInfo extends AbstractModel {
 
     /**
-    * Database proxy group
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Database proxy group.
     */
     @SerializedName("ProxyGroup")
     @Expose
     private ProxyGroup ProxyGroup;
 
     /**
-    * Read/write separation information of the database proxy group
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Database proxy group read-write separation information.
     */
     @SerializedName("ProxyGroupRwInfo")
     @Expose
@@ -48,8 +46,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ProxyNodeInfo [] ProxyNodes;
 
     /**
-    * Connection pool information for the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Database proxy connection pool information.
     */
     @SerializedName("ConnectionPool")
     @Expose
@@ -64,48 +61,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private NetAddr [] NetAddrInfos;
 
     /**
-    * Task set of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Database proxy task set.
     */
     @SerializedName("Tasks")
     @Expose
     private ObjectTask [] Tasks;
 
     /**
-     * Get Database proxy group
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProxyGroup Database proxy group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Database proxy group. 
+     * @return ProxyGroup Database proxy group.
      */
     public ProxyGroup getProxyGroup() {
         return this.ProxyGroup;
     }
 
     /**
-     * Set Database proxy group
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProxyGroup Database proxy group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Database proxy group.
+     * @param ProxyGroup Database proxy group.
      */
     public void setProxyGroup(ProxyGroup ProxyGroup) {
         this.ProxyGroup = ProxyGroup;
     }
 
     /**
-     * Get Read/write separation information of the database proxy group
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProxyGroupRwInfo Read/write separation information of the database proxy group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Database proxy group read-write separation information. 
+     * @return ProxyGroupRwInfo Database proxy group read-write separation information.
      */
     public ProxyGroupRwInfo getProxyGroupRwInfo() {
         return this.ProxyGroupRwInfo;
     }
 
     /**
-     * Set Read/write separation information of the database proxy group
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProxyGroupRwInfo Read/write separation information of the database proxy group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Database proxy group read-write separation information.
+     * @param ProxyGroupRwInfo Database proxy group read-write separation information.
      */
     public void setProxyGroupRwInfo(ProxyGroupRwInfo ProxyGroupRwInfo) {
         this.ProxyGroupRwInfo = ProxyGroupRwInfo;
@@ -132,20 +120,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Connection pool information for the database proxy
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConnectionPool Connection pool information for the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Database proxy connection pool information. 
+     * @return ConnectionPool Database proxy connection pool information.
      */
     public ProxyConnectionPoolInfo getConnectionPool() {
         return this.ConnectionPool;
     }
 
     /**
-     * Set Connection pool information for the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConnectionPool Connection pool information for the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Database proxy connection pool information.
+     * @param ConnectionPool Database proxy connection pool information.
      */
     public void setConnectionPool(ProxyConnectionPoolInfo ConnectionPool) {
         this.ConnectionPool = ConnectionPool;
@@ -172,20 +156,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Task set of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tasks Task set of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Database proxy task set. 
+     * @return Tasks Database proxy task set.
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set Task set of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tasks Task set of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Database proxy task set.
+     * @param Tasks Database proxy task set.
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;

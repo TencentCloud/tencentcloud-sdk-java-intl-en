@@ -31,14 +31,14 @@ public class UserHostPrivilege extends AbstractModel {
     private String DbUserName;
 
     /**
-    * Client IP Note: This field may return null, indicating that no valid values can be obtained.
+    * Client IP
     */
     @SerializedName("DbHost")
     @Expose
     private String DbHost;
 
     /**
-    * User permissions Note: This field may return null, indicating that no valid values can be obtained.
+    * User permission
     */
     @SerializedName("DbPrivilege")
     @Expose
@@ -61,32 +61,32 @@ public class UserHostPrivilege extends AbstractModel {
     }
 
     /**
-     * Get Client IP Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DbHost Client IP Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Client IP 
+     * @return DbHost Client IP
      */
     public String getDbHost() {
         return this.DbHost;
     }
 
     /**
-     * Set Client IP Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DbHost Client IP Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Client IP
+     * @param DbHost Client IP
      */
     public void setDbHost(String DbHost) {
         this.DbHost = DbHost;
     }
 
     /**
-     * Get User permissions Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DbPrivilege User permissions Note: This field may return null, indicating that no valid values can be obtained.
+     * Get User permission 
+     * @return DbPrivilege User permission
      */
     public String getDbPrivilege() {
         return this.DbPrivilege;
     }
 
     /**
-     * Set User permissions Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DbPrivilege User permissions Note: This field may return null, indicating that no valid values can be obtained.
+     * Set User permission
+     * @param DbPrivilege User permission
      */
     public void setDbPrivilege(String DbPrivilege) {
         this.DbPrivilege = DbPrivilege;

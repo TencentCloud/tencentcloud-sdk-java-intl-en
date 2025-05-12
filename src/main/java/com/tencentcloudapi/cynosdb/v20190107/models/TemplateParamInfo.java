@@ -38,24 +38,21 @@ public class TemplateParamInfo extends AbstractModel {
     private String Default;
 
     /**
-    * The collection of valid value types when parameter type is `enum`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The collection of optional value types when the parameter type is `enum`.
     */
     @SerializedName("EnumValue")
     @Expose
     private String [] EnumValue;
 
     /**
-    * Maximum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The maximum value when the parameter type is float/integer.
     */
     @SerializedName("Max")
     @Expose
     private String Max;
 
     /**
-    * Minimum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Minimum value when the parameter type is float/integer.
     */
     @SerializedName("Min")
     @Expose
@@ -122,60 +119,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The collection of valid value types when parameter type is `enum`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EnumValue The collection of valid value types when parameter type is `enum`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The collection of optional value types when the parameter type is `enum`. 
+     * @return EnumValue The collection of optional value types when the parameter type is `enum`.
      */
     public String [] getEnumValue() {
         return this.EnumValue;
     }
 
     /**
-     * Set The collection of valid value types when parameter type is `enum`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EnumValue The collection of valid value types when parameter type is `enum`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The collection of optional value types when the parameter type is `enum`.
+     * @param EnumValue The collection of optional value types when the parameter type is `enum`.
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;
     }
 
     /**
-     * Get Maximum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Max Maximum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The maximum value when the parameter type is float/integer. 
+     * @return Max The maximum value when the parameter type is float/integer.
      */
     public String getMax() {
         return this.Max;
     }
 
     /**
-     * Set Maximum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Max Maximum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The maximum value when the parameter type is float/integer.
+     * @param Max The maximum value when the parameter type is float/integer.
      */
     public void setMax(String Max) {
         this.Max = Max;
     }
 
     /**
-     * Get Minimum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Min Minimum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Minimum value when the parameter type is float/integer. 
+     * @return Min Minimum value when the parameter type is float/integer.
      */
     public String getMin() {
         return this.Min;
     }
 
     /**
-     * Set Minimum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Min Minimum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Minimum value when the parameter type is float/integer.
+     * @param Min Minimum value when the parameter type is float/integer.
      */
     public void setMin(String Min) {
         this.Min = Min;

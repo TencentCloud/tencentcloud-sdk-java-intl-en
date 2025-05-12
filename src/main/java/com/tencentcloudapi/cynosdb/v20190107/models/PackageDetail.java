@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class PackageDetail extends AbstractModel {
 
     /**
-    * Account ID of `AppId` Note: This field may return null, indicating that no valid values can be obtained.
+    * AppId account ID.
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+    * The unique ID of the resource package.
     */
     @SerializedName("PackageId")
     @Expose
     private String PackageId;
 
     /**
-    * Instance ID Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * The successfully deducted capacity Note: This field may return null, indicating that no valid values can be obtained.
+    * Successfully deduct capacity.
     */
     @SerializedName("SuccessDeductSpec")
     @Expose
     private Float SuccessDeductSpec;
 
     /**
-    * Used capacity of a resource pack as of now Note: This field may return null, indicating that no valid values can be obtained.
+    * The used capacity of the resource package up to the present.
     */
     @SerializedName("PackageTotalUsedSpec")
     @Expose
     private Float PackageTotalUsedSpec;
 
     /**
-    * Deduction start time Note: This field may return null, indicating that no valid values can be obtained.
+    * Deduction start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Deduction end time Note: This field may return null, indicating that no valid values can be obtained.
+    * Deduction end time.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Extended information Note: This field may return null, indicating that no valid values can be obtained.
+    * Extension Information
     */
     @SerializedName("ExtendInfo")
     @Expose
     private String ExtendInfo;
 
     /**
-     * Get Account ID of `AppId` Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AppId Account ID of `AppId` Note: This field may return null, indicating that no valid values can be obtained.
+     * Get AppId account ID. 
+     * @return AppId AppId account ID.
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set Account ID of `AppId` Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AppId Account ID of `AppId` Note: This field may return null, indicating that no valid values can be obtained.
+     * Set AppId account ID.
+     * @param AppId AppId account ID.
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PackageId The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The unique ID of the resource package. 
+     * @return PackageId The unique ID of the resource package.
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PackageId The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The unique ID of the resource package.
+     * @param PackageId The unique ID of the resource package.
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get Instance ID Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceId Instance ID Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance ID 
+     * @return InstanceId Instance ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceId Instance ID Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance ID
+     * @param InstanceId Instance ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get The successfully deducted capacity Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SuccessDeductSpec The successfully deducted capacity Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Successfully deduct capacity. 
+     * @return SuccessDeductSpec Successfully deduct capacity.
      */
     public Float getSuccessDeductSpec() {
         return this.SuccessDeductSpec;
     }
 
     /**
-     * Set The successfully deducted capacity Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SuccessDeductSpec The successfully deducted capacity Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Successfully deduct capacity.
+     * @param SuccessDeductSpec Successfully deduct capacity.
      */
     public void setSuccessDeductSpec(Float SuccessDeductSpec) {
         this.SuccessDeductSpec = SuccessDeductSpec;
     }
 
     /**
-     * Get Used capacity of a resource pack as of now Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PackageTotalUsedSpec Used capacity of a resource pack as of now Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The used capacity of the resource package up to the present. 
+     * @return PackageTotalUsedSpec The used capacity of the resource package up to the present.
      */
     public Float getPackageTotalUsedSpec() {
         return this.PackageTotalUsedSpec;
     }
 
     /**
-     * Set Used capacity of a resource pack as of now Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PackageTotalUsedSpec Used capacity of a resource pack as of now Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The used capacity of the resource package up to the present.
+     * @param PackageTotalUsedSpec The used capacity of the resource package up to the present.
      */
     public void setPackageTotalUsedSpec(Float PackageTotalUsedSpec) {
         this.PackageTotalUsedSpec = PackageTotalUsedSpec;
     }
 
     /**
-     * Get Deduction start time Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime Deduction start time Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Deduction start time. 
+     * @return StartTime Deduction start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Deduction start time Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTime Deduction start time Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Deduction start time.
+     * @param StartTime Deduction start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Deduction end time Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndTime Deduction end time Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Deduction end time. 
+     * @return EndTime Deduction end time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Deduction end time Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndTime Deduction end time Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Deduction end time.
+     * @param EndTime Deduction end time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Extended information Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExtendInfo Extended information Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Extension Information 
+     * @return ExtendInfo Extension Information
      */
     public String getExtendInfo() {
         return this.ExtendInfo;
     }
 
     /**
-     * Set Extended information Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExtendInfo Extended information Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Extension Information
+     * @param ExtendInfo Extension Information
      */
     public void setExtendInfo(String ExtendInfo) {
         this.ExtendInfo = ExtendInfo;

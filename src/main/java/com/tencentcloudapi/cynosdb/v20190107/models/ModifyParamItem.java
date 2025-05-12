@@ -38,12 +38,18 @@ public class ModifyParamItem extends AbstractModel {
     private String CurrentValue;
 
     /**
-    * Old parameter value, which is used only in output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Old parameter value (useful only in output parameters).
     */
     @SerializedName("OldValue")
     @Expose
     private String OldValue;
+
+    /**
+    * libra component type.
+    */
+    @SerializedName("Component")
+    @Expose
+    private String Component;
 
     /**
      * Get Parameter name 
@@ -78,23 +84,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Old parameter value, which is used only in output parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OldValue Old parameter value, which is used only in output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Old parameter value (useful only in output parameters). 
+     * @return OldValue Old parameter value (useful only in output parameters).
      */
     public String getOldValue() {
         return this.OldValue;
     }
 
     /**
-     * Set Old parameter value, which is used only in output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OldValue Old parameter value, which is used only in output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Old parameter value (useful only in output parameters).
+     * @param OldValue Old parameter value (useful only in output parameters).
      */
     public void setOldValue(String OldValue) {
         this.OldValue = OldValue;
+    }
+
+    /**
+     * Get libra component type. 
+     * @return Component libra component type.
+     */
+    public String getComponent() {
+        return this.Component;
+    }
+
+    /**
+     * Set libra component type.
+     * @param Component libra component type.
+     */
+    public void setComponent(String Component) {
+        this.Component = Component;
     }
 
     public ModifyParamItem() {
@@ -114,6 +132,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.OldValue != null) {
             this.OldValue = new String(source.OldValue);
         }
+        if (source.Component != null) {
+            this.Component = new String(source.Component);
+        }
     }
 
 
@@ -124,6 +145,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ParamName", this.ParamName);
         this.setParamSimple(map, prefix + "CurrentValue", this.CurrentValue);
         this.setParamSimple(map, prefix + "OldValue", this.OldValue);
+        this.setParamSimple(map, prefix + "Component", this.Component);
 
     }
 }

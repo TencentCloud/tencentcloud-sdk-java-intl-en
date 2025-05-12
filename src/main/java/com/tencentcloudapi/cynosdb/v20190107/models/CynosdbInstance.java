@@ -313,8 +313,7 @@ pause
     private String ServerlessStatus;
 
     /**
-    * Prepaid storage ID
-Note: this field may return `null`, indicating that no valid value can be obtained.
+    * Prepayment storage Id.
     */
     @SerializedName("StorageId")
     @Expose
@@ -335,8 +334,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private String PhysicalZone;
 
     /**
-    * Business type
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Business type.
     */
     @SerializedName("BusinessType")
     @Expose
@@ -344,15 +342,13 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Task
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tasks")
     @Expose
     private ObjectTask [] Tasks;
 
     /**
-    * Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to freeze.
     */
     @SerializedName("IsFreeze")
     @Expose
@@ -367,8 +363,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Tag [] ResourceTags;
 
     /**
-    * Source AZ
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Primary AZ.
     */
     @SerializedName("MasterZone")
     @Expose
@@ -383,8 +378,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String [] SlaveZones;
 
     /**
-    * Instance network information
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Network information of the instance.
     */
     @SerializedName("InstanceNetInfo")
     @Expose
@@ -396,6 +390,48 @@ Note: This field may return null, indicating that no valid value can be obtained
     @SerializedName("ResourcePackages")
     @Expose
     private ResourcePackage [] ResourcePackages;
+
+    /**
+    * Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+    */
+    @SerializedName("InstanceIndexMode")
+    @Expose
+    private String InstanceIndexMode;
+
+    /**
+    * Supported capabilities of the existing instance.
+    */
+    @SerializedName("InstanceAbility")
+    @Expose
+    private InstanceAbility InstanceAbility;
+
+    /**
+    * Instance machine type.
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
+    * Specifies the instance storage type.
+    */
+    @SerializedName("InstanceStorageType")
+    @Expose
+    private String InstanceStorageType;
+
+    /**
+    * Unknown field.
+    */
+    @SerializedName("CynosVersionTag")
+    @Expose
+    private String CynosVersionTag;
+
+    /**
+    * Specifies the node information of libradb.
+    */
+    @SerializedName("NodeList")
+    @Expose
+    private String [] NodeList;
 
     /**
      * Get User `Uin` 
@@ -1062,20 +1098,16 @@ pause
     }
 
     /**
-     * Get Prepaid storage ID
-Note: this field may return `null`, indicating that no valid value can be obtained. 
-     * @return StorageId Prepaid storage ID
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Get Prepayment storage Id. 
+     * @return StorageId Prepayment storage Id.
      */
     public String getStorageId() {
         return this.StorageId;
     }
 
     /**
-     * Set Prepaid storage ID
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param StorageId Prepaid storage ID
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Set Prepayment storage Id.
+     * @param StorageId Prepayment storage Id.
      */
     public void setStorageId(String StorageId) {
         this.StorageId = StorageId;
@@ -1114,30 +1146,24 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Business type
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return BusinessType Business type
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Business type. 
+     * @return BusinessType Business type.
      */
     public String getBusinessType() {
         return this.BusinessType;
     }
 
     /**
-     * Set Business type
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param BusinessType Business type
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Business type.
+     * @param BusinessType Business type.
      */
     public void setBusinessType(String BusinessType) {
         this.BusinessType = BusinessType;
     }
 
     /**
-     * Get Task
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Task 
      * @return Tasks Task
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
@@ -1145,29 +1171,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tasks Task
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsFreeze Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to freeze. 
+     * @return IsFreeze Whether to freeze.
      */
     public String getIsFreeze() {
         return this.IsFreeze;
     }
 
     /**
-     * Set Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsFreeze Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to freeze.
+     * @param IsFreeze Whether to freeze.
      */
     public void setIsFreeze(String IsFreeze) {
         this.IsFreeze = IsFreeze;
@@ -1194,20 +1214,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Source AZ
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return MasterZone Source AZ
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Primary AZ. 
+     * @return MasterZone Primary AZ.
      */
     public String getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set Source AZ
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param MasterZone Source AZ
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Primary AZ.
+     * @param MasterZone Primary AZ.
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
@@ -1234,20 +1250,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Instance network information
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return InstanceNetInfo Instance network information
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Network information of the instance. 
+     * @return InstanceNetInfo Network information of the instance.
      */
     public InstanceNetInfo [] getInstanceNetInfo() {
         return this.InstanceNetInfo;
     }
 
     /**
-     * Set Instance network information
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param InstanceNetInfo Instance network information
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Network information of the instance.
+     * @param InstanceNetInfo Network information of the instance.
      */
     public void setInstanceNetInfo(InstanceNetInfo [] InstanceNetInfo) {
         this.InstanceNetInfo = InstanceNetInfo;
@@ -1267,6 +1279,102 @@ Note: This field may return null, indicating that no valid value can be obtained
      */
     public void setResourcePackages(ResourcePackage [] ResourcePackages) {
         this.ResourcePackages = ResourcePackages;
+    }
+
+    /**
+     * Get Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage). 
+     * @return InstanceIndexMode Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+     */
+    public String getInstanceIndexMode() {
+        return this.InstanceIndexMode;
+    }
+
+    /**
+     * Set Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+     * @param InstanceIndexMode Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+     */
+    public void setInstanceIndexMode(String InstanceIndexMode) {
+        this.InstanceIndexMode = InstanceIndexMode;
+    }
+
+    /**
+     * Get Supported capabilities of the existing instance. 
+     * @return InstanceAbility Supported capabilities of the existing instance.
+     */
+    public InstanceAbility getInstanceAbility() {
+        return this.InstanceAbility;
+    }
+
+    /**
+     * Set Supported capabilities of the existing instance.
+     * @param InstanceAbility Supported capabilities of the existing instance.
+     */
+    public void setInstanceAbility(InstanceAbility InstanceAbility) {
+        this.InstanceAbility = InstanceAbility;
+    }
+
+    /**
+     * Get Instance machine type. 
+     * @return DeviceType Instance machine type.
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set Instance machine type.
+     * @param DeviceType Instance machine type.
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
+    }
+
+    /**
+     * Get Specifies the instance storage type. 
+     * @return InstanceStorageType Specifies the instance storage type.
+     */
+    public String getInstanceStorageType() {
+        return this.InstanceStorageType;
+    }
+
+    /**
+     * Set Specifies the instance storage type.
+     * @param InstanceStorageType Specifies the instance storage type.
+     */
+    public void setInstanceStorageType(String InstanceStorageType) {
+        this.InstanceStorageType = InstanceStorageType;
+    }
+
+    /**
+     * Get Unknown field. 
+     * @return CynosVersionTag Unknown field.
+     */
+    public String getCynosVersionTag() {
+        return this.CynosVersionTag;
+    }
+
+    /**
+     * Set Unknown field.
+     * @param CynosVersionTag Unknown field.
+     */
+    public void setCynosVersionTag(String CynosVersionTag) {
+        this.CynosVersionTag = CynosVersionTag;
+    }
+
+    /**
+     * Get Specifies the node information of libradb. 
+     * @return NodeList Specifies the node information of libradb.
+     */
+    public String [] getNodeList() {
+        return this.NodeList;
+    }
+
+    /**
+     * Set Specifies the node information of libradb.
+     * @param NodeList Specifies the node information of libradb.
+     */
+    public void setNodeList(String [] NodeList) {
+        this.NodeList = NodeList;
     }
 
     public CynosdbInstance() {
@@ -1448,6 +1556,27 @@ Note: This field may return null, indicating that no valid value can be obtained
                 this.ResourcePackages[i] = new ResourcePackage(source.ResourcePackages[i]);
             }
         }
+        if (source.InstanceIndexMode != null) {
+            this.InstanceIndexMode = new String(source.InstanceIndexMode);
+        }
+        if (source.InstanceAbility != null) {
+            this.InstanceAbility = new InstanceAbility(source.InstanceAbility);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
+        if (source.InstanceStorageType != null) {
+            this.InstanceStorageType = new String(source.InstanceStorageType);
+        }
+        if (source.CynosVersionTag != null) {
+            this.CynosVersionTag = new String(source.CynosVersionTag);
+        }
+        if (source.NodeList != null) {
+            this.NodeList = new String[source.NodeList.length];
+            for (int i = 0; i < source.NodeList.length; i++) {
+                this.NodeList[i] = new String(source.NodeList[i]);
+            }
+        }
     }
 
 
@@ -1507,6 +1636,12 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
         this.setParamArrayObj(map, prefix + "InstanceNetInfo.", this.InstanceNetInfo);
         this.setParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
+        this.setParamSimple(map, prefix + "InstanceIndexMode", this.InstanceIndexMode);
+        this.setParamObj(map, prefix + "InstanceAbility.", this.InstanceAbility);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
+        this.setParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
+        this.setParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
+        this.setParamArraySimple(map, prefix + "NodeList.", this.NodeList);
 
     }
 }

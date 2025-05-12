@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class TradePrice extends AbstractModel {
 
     /**
-    * The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Resource total price under prepaid mode, excluding discounts. unit: cent.
     */
     @SerializedName("TotalPrice")
     @Expose
@@ -39,24 +38,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Float Discount;
 
     /**
-    * The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
     */
     @SerializedName("TotalPriceDiscount")
     @Expose
     private Long TotalPriceDiscount;
 
     /**
-    * The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Unit resource price in postpaid mode, excluding discounts. unit: cent.
     */
     @SerializedName("UnitPrice")
     @Expose
     private Long UnitPrice;
 
     /**
-    * The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
     */
     @SerializedName("UnitPriceDiscount")
     @Expose
@@ -70,20 +66,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ChargeUnit;
 
     /**
-     * Get The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalPrice The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Resource total price under prepaid mode, excluding discounts. unit: cent. 
+     * @return TotalPrice Resource total price under prepaid mode, excluding discounts. unit: cent.
      */
     public Long getTotalPrice() {
         return this.TotalPrice;
     }
 
     /**
-     * Set The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalPrice The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Resource total price under prepaid mode, excluding discounts. unit: cent.
+     * @param TotalPrice Resource total price under prepaid mode, excluding discounts. unit: cent.
      */
     public void setTotalPrice(Long TotalPrice) {
         this.TotalPrice = TotalPrice;
@@ -106,60 +98,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalPriceDiscount The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount. 
+     * @return TotalPriceDiscount Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
      */
     public Long getTotalPriceDiscount() {
         return this.TotalPriceDiscount;
     }
 
     /**
-     * Set The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalPriceDiscount The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
+     * @param TotalPriceDiscount Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
      */
     public void setTotalPriceDiscount(Long TotalPriceDiscount) {
         this.TotalPriceDiscount = TotalPriceDiscount;
     }
 
     /**
-     * Get The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UnitPrice The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Unit resource price in postpaid mode, excluding discounts. unit: cent. 
+     * @return UnitPrice Unit resource price in postpaid mode, excluding discounts. unit: cent.
      */
     public Long getUnitPrice() {
         return this.UnitPrice;
     }
 
     /**
-     * Set The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UnitPrice The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Unit resource price in postpaid mode, excluding discounts. unit: cent.
+     * @param UnitPrice Unit resource price in postpaid mode, excluding discounts. unit: cent.
      */
     public void setUnitPrice(Long UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UnitPriceDiscount The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount. 
+     * @return UnitPriceDiscount Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
      */
     public Long getUnitPriceDiscount() {
         return this.UnitPriceDiscount;
     }
 
     /**
-     * Set The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UnitPriceDiscount The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
+     * @param UnitPriceDiscount Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
      */
     public void setUnitPriceDiscount(Long UnitPriceDiscount) {
         this.UnitPriceDiscount = UnitPriceDiscount;

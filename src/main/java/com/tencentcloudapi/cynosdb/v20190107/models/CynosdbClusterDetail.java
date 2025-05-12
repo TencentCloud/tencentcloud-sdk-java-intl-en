@@ -52,8 +52,7 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String Zone;
 
     /**
-    * Physical AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Physical availability zone.
     */
     @SerializedName("PhysicalZone")
     @Expose
@@ -85,40 +84,35 @@ pausing
     private String ServerlessStatus;
 
     /**
-    * Storage ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Storage Id.
     */
     @SerializedName("StorageId")
     @Expose
     private String StorageId;
 
     /**
-    * Storage capacity in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Storage size in gb.
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * Maximum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Maximum storage specification, in gb.
     */
     @SerializedName("MaxStorageSize")
     @Expose
     private Long MaxStorageSize;
 
     /**
-    * Minimum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the minimum storage specification, in gb.
     */
     @SerializedName("MinStorageSize")
     @Expose
     private Long MinStorageSize;
 
     /**
-    * Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
     */
     @SerializedName("StoragePayMode")
     @Expose
@@ -174,8 +168,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DbType;
 
     /**
-    * Database type. Valid values: `normal`, `serverless`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
     */
     @SerializedName("DbMode")
     @Expose
@@ -189,8 +182,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DbVersion;
 
     /**
-    * Maximum storage space
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the maximum storage space.
     */
     @SerializedName("StorageLimit")
     @Expose
@@ -225,64 +217,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Addr [] RoAddr;
 
     /**
-    * Features supported by the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Functions supported by the cluster.
     */
     @SerializedName("Ability")
     @Expose
     private Ability Ability;
 
     /**
-    * TDSQL-C version
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the cynos version.
     */
     @SerializedName("CynosVersion")
     @Expose
     private String CynosVersion;
 
     /**
-    * Business type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Business type.
     */
     @SerializedName("BusinessType")
     @Expose
     private String BusinessType;
 
     /**
-    * Whether there is a secondary AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether there is an availability zone.
     */
     @SerializedName("HasSlaveZone")
     @Expose
     private String HasSlaveZone;
 
     /**
-    * Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to freeze.
     */
     @SerializedName("IsFreeze")
     @Expose
     private String IsFreeze;
 
     /**
-    * Task list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task list.
     */
     @SerializedName("Tasks")
     @Expose
     private ObjectTask [] Tasks;
 
     /**
-    * Primary AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Primary AZ.
     */
     @SerializedName("MasterZone")
     @Expose
     private String MasterZone;
 
     /**
-    * Secondary AZ list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Availability zone list.
     */
     @SerializedName("SlaveZones")
     @Expose
@@ -324,80 +308,81 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Tag [] ResourceTags;
 
     /**
-    * Proxy status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Proxy status.
     */
     @SerializedName("ProxyStatus")
     @Expose
     private String ProxyStatus;
 
     /**
-    * Binlog switch. Valid values: `ON`, `OFF`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * binlog switch. valid values: ON, OFF.
     */
     @SerializedName("LogBin")
     @Expose
     private String LogBin;
 
     /**
-    * Whether to skip the transaction
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies whether to skip the transaction.
     */
     @SerializedName("IsSkipTrade")
     @Expose
     private String IsSkipTrade;
 
     /**
-    * PITR type. Valid values: `normal`, `redo_pitr`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * PITR type: valid values: normal, redo_pitr.
     */
     @SerializedName("PitrType")
     @Expose
     private String PitrType;
 
     /**
-    * Whether to enable password complexity
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to enable password complexity.
     */
     @SerializedName("IsOpenPasswordComplexity")
     @Expose
     private String IsOpenPasswordComplexity;
 
     /**
-    * Network type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Network type.
     */
     @SerializedName("NetworkStatus")
     @Expose
     private String NetworkStatus;
 
     /**
-    * Information of the resource pack bound to a cluster Note: This field may return null, indicating that no valid values can be obtained.
+    * The resource package information that is bound to the cluster.	
     */
     @SerializedName("ResourcePackages")
     @Expose
     private ResourcePackage [] ResourcePackages;
 
     /**
-    * The auto-renewal flag. Valid values: `0`: (manual renewal, default), `1` (auto-renewal). Note: This field may return null, indicating that no valid values can be obtained.
+    * Auto-Renewal flag. 1 indicates auto-renewal. 0 indicates non-renewal upon expiration.
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 
+    * Specifies the node network type.
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * 
+    * Secondary availability zone property.
     */
     @SerializedName("SlaveZoneAttr")
     @Expose
     private SlaveZoneAttrItem [] SlaveZoneAttr;
+
+    /**
+    * Version Tag.
+    */
+    @SerializedName("CynosVersionTag")
+    @Expose
+    private String CynosVersionTag;
 
     /**
      * Get Cluster ID 
@@ -464,20 +449,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Physical AZ
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PhysicalZone Physical AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Physical availability zone. 
+     * @return PhysicalZone Physical availability zone.
      */
     public String getPhysicalZone() {
         return this.PhysicalZone;
     }
 
     /**
-     * Set Physical AZ
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PhysicalZone Physical AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Physical availability zone.
+     * @param PhysicalZone Physical availability zone.
      */
     public void setPhysicalZone(String PhysicalZone) {
         this.PhysicalZone = PhysicalZone;
@@ -548,100 +529,80 @@ pausing
     }
 
     /**
-     * Get Storage ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StorageId Storage ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Storage Id. 
+     * @return StorageId Storage Id.
      */
     public String getStorageId() {
         return this.StorageId;
     }
 
     /**
-     * Set Storage ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StorageId Storage ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Storage Id.
+     * @param StorageId Storage Id.
      */
     public void setStorageId(String StorageId) {
         this.StorageId = StorageId;
     }
 
     /**
-     * Get Storage capacity in GB
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Storage Storage capacity in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Storage size in gb. 
+     * @return Storage Storage size in gb.
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Storage capacity in GB
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Storage Storage capacity in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Storage size in gb.
+     * @param Storage Storage size in gb.
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get Maximum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaxStorageSize Maximum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Maximum storage specification, in gb. 
+     * @return MaxStorageSize Maximum storage specification, in gb.
      */
     public Long getMaxStorageSize() {
         return this.MaxStorageSize;
     }
 
     /**
-     * Set Maximum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaxStorageSize Maximum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Maximum storage specification, in gb.
+     * @param MaxStorageSize Maximum storage specification, in gb.
      */
     public void setMaxStorageSize(Long MaxStorageSize) {
         this.MaxStorageSize = MaxStorageSize;
     }
 
     /**
-     * Get Minimum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MinStorageSize Minimum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the minimum storage specification, in gb. 
+     * @return MinStorageSize Specifies the minimum storage specification, in gb.
      */
     public Long getMinStorageSize() {
         return this.MinStorageSize;
     }
 
     /**
-     * Set Minimum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MinStorageSize Minimum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the minimum storage specification, in gb.
+     * @param MinStorageSize Specifies the minimum storage specification, in gb.
      */
     public void setMinStorageSize(Long MinStorageSize) {
         this.MinStorageSize = MinStorageSize;
     }
 
     /**
-     * Get Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StoragePayMode Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go. 
+     * @return StoragePayMode Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
      */
     public Long getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StoragePayMode Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
+     * @param StoragePayMode Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
      */
     public void setStoragePayMode(Long StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
@@ -760,20 +721,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Database type. Valid values: `normal`, `serverless`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DbMode Database type. Valid values: `normal`, `serverless`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Db type: <li>NORMAL</li> <li>SERVERLESS</li>. 
+     * @return DbMode Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set Database type. Valid values: `normal`, `serverless`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DbMode Database type. Valid values: `normal`, `serverless`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
+     * @param DbMode Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
@@ -796,20 +753,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Maximum storage space
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StorageLimit Maximum storage space
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the maximum storage space. 
+     * @return StorageLimit Specifies the maximum storage space.
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set Maximum storage space
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StorageLimit Maximum storage space
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the maximum storage space.
+     * @param StorageLimit Specifies the maximum storage space.
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
@@ -880,160 +833,128 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Features supported by the cluster
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Ability Features supported by the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Functions supported by the cluster. 
+     * @return Ability Functions supported by the cluster.
      */
     public Ability getAbility() {
         return this.Ability;
     }
 
     /**
-     * Set Features supported by the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Ability Features supported by the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Functions supported by the cluster.
+     * @param Ability Functions supported by the cluster.
      */
     public void setAbility(Ability Ability) {
         this.Ability = Ability;
     }
 
     /**
-     * Get TDSQL-C version
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CynosVersion TDSQL-C version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the cynos version. 
+     * @return CynosVersion Specifies the cynos version.
      */
     public String getCynosVersion() {
         return this.CynosVersion;
     }
 
     /**
-     * Set TDSQL-C version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CynosVersion TDSQL-C version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the cynos version.
+     * @param CynosVersion Specifies the cynos version.
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
     }
 
     /**
-     * Get Business type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BusinessType Business type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Business type. 
+     * @return BusinessType Business type.
      */
     public String getBusinessType() {
         return this.BusinessType;
     }
 
     /**
-     * Set Business type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BusinessType Business type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Business type.
+     * @param BusinessType Business type.
      */
     public void setBusinessType(String BusinessType) {
         this.BusinessType = BusinessType;
     }
 
     /**
-     * Get Whether there is a secondary AZ
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HasSlaveZone Whether there is a secondary AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether there is an availability zone. 
+     * @return HasSlaveZone Whether there is an availability zone.
      */
     public String getHasSlaveZone() {
         return this.HasSlaveZone;
     }
 
     /**
-     * Set Whether there is a secondary AZ
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HasSlaveZone Whether there is a secondary AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether there is an availability zone.
+     * @param HasSlaveZone Whether there is an availability zone.
      */
     public void setHasSlaveZone(String HasSlaveZone) {
         this.HasSlaveZone = HasSlaveZone;
     }
 
     /**
-     * Get Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsFreeze Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to freeze. 
+     * @return IsFreeze Whether to freeze.
      */
     public String getIsFreeze() {
         return this.IsFreeze;
     }
 
     /**
-     * Set Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsFreeze Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to freeze.
+     * @param IsFreeze Whether to freeze.
      */
     public void setIsFreeze(String IsFreeze) {
         this.IsFreeze = IsFreeze;
     }
 
     /**
-     * Get Task list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tasks Task list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task list. 
+     * @return Tasks Task list.
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set Task list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tasks Task list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task list.
+     * @param Tasks Task list.
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get Primary AZ
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MasterZone Primary AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Primary AZ. 
+     * @return MasterZone Primary AZ.
      */
     public String getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set Primary AZ
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MasterZone Primary AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Primary AZ.
+     * @param MasterZone Primary AZ.
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
     }
 
     /**
-     * Get Secondary AZ list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SlaveZones Secondary AZ list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Availability zone list. 
+     * @return SlaveZones Availability zone list.
      */
     public String [] getSlaveZones() {
         return this.SlaveZones;
     }
 
     /**
-     * Set Secondary AZ list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SlaveZones Secondary AZ list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Availability zone list.
+     * @param SlaveZones Availability zone list.
      */
     public void setSlaveZones(String [] SlaveZones) {
         this.SlaveZones = SlaveZones;
@@ -1120,187 +1041,179 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Proxy status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProxyStatus Proxy status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Proxy status. 
+     * @return ProxyStatus Proxy status.
      */
     public String getProxyStatus() {
         return this.ProxyStatus;
     }
 
     /**
-     * Set Proxy status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProxyStatus Proxy status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Proxy status.
+     * @param ProxyStatus Proxy status.
      */
     public void setProxyStatus(String ProxyStatus) {
         this.ProxyStatus = ProxyStatus;
     }
 
     /**
-     * Get Binlog switch. Valid values: `ON`, `OFF`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LogBin Binlog switch. Valid values: `ON`, `OFF`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get binlog switch. valid values: ON, OFF. 
+     * @return LogBin binlog switch. valid values: ON, OFF.
      */
     public String getLogBin() {
         return this.LogBin;
     }
 
     /**
-     * Set Binlog switch. Valid values: `ON`, `OFF`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LogBin Binlog switch. Valid values: `ON`, `OFF`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set binlog switch. valid values: ON, OFF.
+     * @param LogBin binlog switch. valid values: ON, OFF.
      */
     public void setLogBin(String LogBin) {
         this.LogBin = LogBin;
     }
 
     /**
-     * Get Whether to skip the transaction
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsSkipTrade Whether to skip the transaction
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether to skip the transaction. 
+     * @return IsSkipTrade Specifies whether to skip the transaction.
      */
     public String getIsSkipTrade() {
         return this.IsSkipTrade;
     }
 
     /**
-     * Set Whether to skip the transaction
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsSkipTrade Whether to skip the transaction
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether to skip the transaction.
+     * @param IsSkipTrade Specifies whether to skip the transaction.
      */
     public void setIsSkipTrade(String IsSkipTrade) {
         this.IsSkipTrade = IsSkipTrade;
     }
 
     /**
-     * Get PITR type. Valid values: `normal`, `redo_pitr`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PitrType PITR type. Valid values: `normal`, `redo_pitr`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get PITR type: valid values: normal, redo_pitr. 
+     * @return PitrType PITR type: valid values: normal, redo_pitr.
      */
     public String getPitrType() {
         return this.PitrType;
     }
 
     /**
-     * Set PITR type. Valid values: `normal`, `redo_pitr`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PitrType PITR type. Valid values: `normal`, `redo_pitr`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set PITR type: valid values: normal, redo_pitr.
+     * @param PitrType PITR type: valid values: normal, redo_pitr.
      */
     public void setPitrType(String PitrType) {
         this.PitrType = PitrType;
     }
 
     /**
-     * Get Whether to enable password complexity
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsOpenPasswordComplexity Whether to enable password complexity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to enable password complexity. 
+     * @return IsOpenPasswordComplexity Whether to enable password complexity.
      */
     public String getIsOpenPasswordComplexity() {
         return this.IsOpenPasswordComplexity;
     }
 
     /**
-     * Set Whether to enable password complexity
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsOpenPasswordComplexity Whether to enable password complexity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to enable password complexity.
+     * @param IsOpenPasswordComplexity Whether to enable password complexity.
      */
     public void setIsOpenPasswordComplexity(String IsOpenPasswordComplexity) {
         this.IsOpenPasswordComplexity = IsOpenPasswordComplexity;
     }
 
     /**
-     * Get Network type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NetworkStatus Network type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Network type. 
+     * @return NetworkStatus Network type.
      */
     public String getNetworkStatus() {
         return this.NetworkStatus;
     }
 
     /**
-     * Set Network type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NetworkStatus Network type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Network type.
+     * @param NetworkStatus Network type.
      */
     public void setNetworkStatus(String NetworkStatus) {
         this.NetworkStatus = NetworkStatus;
     }
 
     /**
-     * Get Information of the resource pack bound to a cluster Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ResourcePackages Information of the resource pack bound to a cluster Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The resource package information that is bound to the cluster.	 
+     * @return ResourcePackages The resource package information that is bound to the cluster.	
      */
     public ResourcePackage [] getResourcePackages() {
         return this.ResourcePackages;
     }
 
     /**
-     * Set Information of the resource pack bound to a cluster Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ResourcePackages Information of the resource pack bound to a cluster Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The resource package information that is bound to the cluster.	
+     * @param ResourcePackages The resource package information that is bound to the cluster.	
      */
     public void setResourcePackages(ResourcePackage [] ResourcePackages) {
         this.ResourcePackages = ResourcePackages;
     }
 
     /**
-     * Get The auto-renewal flag. Valid values: `0`: (manual renewal, default), `1` (auto-renewal). Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RenewFlag The auto-renewal flag. Valid values: `0`: (manual renewal, default), `1` (auto-renewal). Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Auto-Renewal flag. 1 indicates auto-renewal. 0 indicates non-renewal upon expiration. 
+     * @return RenewFlag Auto-Renewal flag. 1 indicates auto-renewal. 0 indicates non-renewal upon expiration.
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set The auto-renewal flag. Valid values: `0`: (manual renewal, default), `1` (auto-renewal). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RenewFlag The auto-renewal flag. Valid values: `0`: (manual renewal, default), `1` (auto-renewal). Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Auto-Renewal flag. 1 indicates auto-renewal. 0 indicates non-renewal upon expiration.
+     * @param RenewFlag Auto-Renewal flag. 1 indicates auto-renewal. 0 indicates non-renewal upon expiration.
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get  
-     * @return NetworkType 
+     * Get Specifies the node network type. 
+     * @return NetworkType Specifies the node network type.
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 
-     * @param NetworkType 
+     * Set Specifies the node network type.
+     * @param NetworkType Specifies the node network type.
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get  
-     * @return SlaveZoneAttr 
+     * Get Secondary availability zone property. 
+     * @return SlaveZoneAttr Secondary availability zone property.
      */
     public SlaveZoneAttrItem [] getSlaveZoneAttr() {
         return this.SlaveZoneAttr;
     }
 
     /**
-     * Set 
-     * @param SlaveZoneAttr 
+     * Set Secondary availability zone property.
+     * @param SlaveZoneAttr Secondary availability zone property.
      */
     public void setSlaveZoneAttr(SlaveZoneAttrItem [] SlaveZoneAttr) {
         this.SlaveZoneAttr = SlaveZoneAttr;
+    }
+
+    /**
+     * Get Version Tag. 
+     * @return CynosVersionTag Version Tag.
+     */
+    public String getCynosVersionTag() {
+        return this.CynosVersionTag;
+    }
+
+    /**
+     * Set Version Tag.
+     * @param CynosVersionTag Version Tag.
+     */
+    public void setCynosVersionTag(String CynosVersionTag) {
+        this.CynosVersionTag = CynosVersionTag;
     }
 
     public CynosdbClusterDetail() {
@@ -1482,6 +1395,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.SlaveZoneAttr[i] = new SlaveZoneAttrItem(source.SlaveZoneAttr[i]);
             }
         }
+        if (source.CynosVersionTag != null) {
+            this.CynosVersionTag = new String(source.CynosVersionTag);
+        }
     }
 
 
@@ -1539,6 +1455,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
         this.setParamArrayObj(map, prefix + "SlaveZoneAttr.", this.SlaveZoneAttr);
+        this.setParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
 
     }
 }

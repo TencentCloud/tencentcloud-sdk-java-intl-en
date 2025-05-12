@@ -24,138 +24,153 @@ import java.util.HashMap;
 public class SalePackageSpec extends AbstractModel {
 
     /**
-    * Region of the resource pack Note: This field may return null, indicating that no valid values can be obtained.
+    * Resource package region of use.
     */
     @SerializedName("PackageRegion")
     @Expose
     private String PackageRegion;
 
     /**
-    * Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the resource package type.
+CCU - compute resource package.
+Storage resource package.
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-    * Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition). Note: This field may return null, indicating that no valid values can be obtained.
+    * Resource pack version.
+base - basic version; common - general version; enterprise - enterprise edition.
     */
     @SerializedName("PackageVersion")
     @Expose
     private String PackageVersion;
 
     /**
-    * Minimum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
+    * Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
     */
     @SerializedName("MinPackageSpec")
     @Expose
     private Float MinPackageSpec;
 
     /**
-    * Maximum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
     */
     @SerializedName("MaxPackageSpec")
     @Expose
     private Float MaxPackageSpec;
 
     /**
-    * Validity period of a resource pack in days Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the resource pack validity period. the measurement unit is day.
     */
     @SerializedName("ExpireDay")
     @Expose
     private Long ExpireDay;
 
     /**
-     * Get Region of the resource pack Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PackageRegion Region of the resource pack Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Resource package region of use. 
+     * @return PackageRegion Resource package region of use.
      */
     public String getPackageRegion() {
         return this.PackageRegion;
     }
 
     /**
-     * Set Region of the resource pack Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PackageRegion Region of the resource pack Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Resource package region of use.
+     * @param PackageRegion Resource package region of use.
      */
     public void setPackageRegion(String PackageRegion) {
         this.PackageRegion = PackageRegion;
     }
 
     /**
-     * Get Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the resource package type.
+CCU - compute resource package.
+Storage resource package. 
+     * @return PackageType Specifies the resource package type.
+CCU - compute resource package.
+Storage resource package.
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the resource package type.
+CCU - compute resource package.
+Storage resource package.
+     * @param PackageType Specifies the resource package type.
+CCU - compute resource package.
+Storage resource package.
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition). Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PackageVersion Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition). Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Resource pack version.
+base - basic version; common - general version; enterprise - enterprise edition. 
+     * @return PackageVersion Resource pack version.
+base - basic version; common - general version; enterprise - enterprise edition.
      */
     public String getPackageVersion() {
         return this.PackageVersion;
     }
 
     /**
-     * Set Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PackageVersion Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition). Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Resource pack version.
+base - basic version; common - general version; enterprise - enterprise edition.
+     * @param PackageVersion Resource pack version.
+base - basic version; common - general version; enterprise - enterprise edition.
      */
     public void setPackageVersion(String PackageVersion) {
         this.PackageVersion = PackageVersion;
     }
 
     /**
-     * Get Minimum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MinPackageSpec Minimum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB. 
+     * @return MinPackageSpec Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
      */
     public Float getMinPackageSpec() {
         return this.MinPackageSpec;
     }
 
     /**
-     * Set Minimum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MinPackageSpec Minimum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
+     * @param MinPackageSpec Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
      */
     public void setMinPackageSpec(Float MinPackageSpec) {
         this.MinPackageSpec = MinPackageSpec;
     }
 
     /**
-     * Get Maximum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaxPackageSpec Maximum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB. 
+     * @return MaxPackageSpec Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
      */
     public Float getMaxPackageSpec() {
         return this.MaxPackageSpec;
     }
 
     /**
-     * Set Maximum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaxPackageSpec Maximum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
+     * @param MaxPackageSpec Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
      */
     public void setMaxPackageSpec(Float MaxPackageSpec) {
         this.MaxPackageSpec = MaxPackageSpec;
     }
 
     /**
-     * Get Validity period of a resource pack in days Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExpireDay Validity period of a resource pack in days Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the resource pack validity period. the measurement unit is day. 
+     * @return ExpireDay Specifies the resource pack validity period. the measurement unit is day.
      */
     public Long getExpireDay() {
         return this.ExpireDay;
     }
 
     /**
-     * Set Validity period of a resource pack in days Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExpireDay Validity period of a resource pack in days Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the resource pack validity period. the measurement unit is day.
+     * @param ExpireDay Specifies the resource pack validity period. the measurement unit is day.
      */
     public void setExpireDay(Long ExpireDay) {
         this.ExpireDay = ExpireDay;

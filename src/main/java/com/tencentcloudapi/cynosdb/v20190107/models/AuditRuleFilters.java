@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AuditRuleFilters extends AbstractModel {
 
     /**
-    * Audit rule
+    * A single audit rule.
     */
     @SerializedName("RuleFilters")
     @Expose
     private RuleFilters [] RuleFilters;
 
     /**
-     * Get Audit rule 
-     * @return RuleFilters Audit rule
+     * Get A single audit rule. 
+     * @return RuleFilters A single audit rule.
      */
     public RuleFilters [] getRuleFilters() {
         return this.RuleFilters;
     }
 
     /**
-     * Set Audit rule
-     * @param RuleFilters Audit rule
+     * Set A single audit rule.
+     * @param RuleFilters A single audit rule.
      */
     public void setRuleFilters(RuleFilters [] RuleFilters) {
         this.RuleFilters = RuleFilters;

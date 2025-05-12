@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateResourcePackageRequest extends AbstractModel {
 
     /**
-    * Instance type
+    * Instance type. currently fixed to cynosdb-serverless.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+    * Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
     */
     @SerializedName("PackageRegion")
     @Expose
@@ -80,32 +80,32 @@ public class CreateResourcePackageRequest extends AbstractModel {
     private String PackageName;
 
     /**
-     * Get Instance type 
-     * @return InstanceType Instance type
+     * Get Instance type. currently fixed to cynosdb-serverless. 
+     * @return InstanceType Instance type. currently fixed to cynosdb-serverless.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type
-     * @param InstanceType Instance type
+     * Set Instance type. currently fixed to cynosdb-serverless.
+     * @param InstanceType Instance type. currently fixed to cynosdb-serverless.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). 
-     * @return PackageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+     * Get Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas. 
+     * @return PackageRegion Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
      */
     public String getPackageRegion() {
         return this.PackageRegion;
     }
 
     /**
-     * Set Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
-     * @param PackageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+     * Set Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+     * @param PackageRegion Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
      */
     public void setPackageRegion(String PackageRegion) {
         this.PackageRegion = PackageRegion;

@@ -25,7 +25,6 @@ public class OldAddrInfo extends AbstractModel {
 
     /**
     * IP
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Vip")
     @Expose
@@ -33,25 +32,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Port
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * Expected valid hours of old IPs
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Expect recycle time.
     */
     @SerializedName("ReturnTime")
     @Expose
     private String ReturnTime;
 
     /**
-     * Get IP
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get IP 
      * @return Vip IP
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVip() {
         return this.Vip;
@@ -59,19 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set IP
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Vip IP
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Port
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Port 
      * @return Vport Port
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getVport() {
         return this.Vport;
@@ -79,29 +70,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Port
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Vport Port
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get Expected valid hours of old IPs
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReturnTime Expected valid hours of old IPs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Expect recycle time. 
+     * @return ReturnTime Expect recycle time.
      */
     public String getReturnTime() {
         return this.ReturnTime;
     }
 
     /**
-     * Set Expected valid hours of old IPs
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReturnTime Expected valid hours of old IPs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Expect recycle time.
+     * @param ReturnTime Expect recycle time.
      */
     public void setReturnTime(String ReturnTime) {
         this.ReturnTime = ReturnTime;

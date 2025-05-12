@@ -24,303 +24,253 @@ import java.util.HashMap;
 public class NetAddr extends AbstractModel {
 
     /**
-    * Private network IP
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Private IP address
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * Private network port number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the private network port number.
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * Public network domain name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the public network domain name.
     */
     @SerializedName("WanDomain")
     @Expose
     private String WanDomain;
 
     /**
-    * Public network port number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the public network port number.
     */
     @SerializedName("WanPort")
     @Expose
     private Long WanPort;
 
     /**
-    * Network type. Valid values: `ro` (read-only), `rw` or `ha` (read-write)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Network type (ro - read-only, rw/ha - read-write).
     */
     @SerializedName("NetType")
     @Expose
     private String NetType;
 
     /**
-    * Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the subnet ID.
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the virtual private cloud ID.
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * Description
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Description information
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Public IP address
     */
     @SerializedName("WanIP")
     @Expose
     private String WanIP;
 
     /**
-    * Public network status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the public network status.
     */
     @SerializedName("WanStatus")
     @Expose
     private String WanStatus;
 
     /**
-    * Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance group ID
     */
     @SerializedName("InstanceGroupId")
     @Expose
     private String InstanceGroupId;
 
     /**
-     * Get Private network IP
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Vip Private network IP
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Private IP address 
+     * @return Vip Private IP address
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set Private network IP
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Vip Private network IP
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Private IP address
+     * @param Vip Private IP address
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Private network port number
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Vport Private network port number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the private network port number. 
+     * @return Vport Specifies the private network port number.
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set Private network port number
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Vport Private network port number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the private network port number.
+     * @param Vport Specifies the private network port number.
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get Public network domain name
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return WanDomain Public network domain name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the public network domain name. 
+     * @return WanDomain Specifies the public network domain name.
      */
     public String getWanDomain() {
         return this.WanDomain;
     }
 
     /**
-     * Set Public network domain name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param WanDomain Public network domain name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the public network domain name.
+     * @param WanDomain Specifies the public network domain name.
      */
     public void setWanDomain(String WanDomain) {
         this.WanDomain = WanDomain;
     }
 
     /**
-     * Get Public network port number
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return WanPort Public network port number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the public network port number. 
+     * @return WanPort Specifies the public network port number.
      */
     public Long getWanPort() {
         return this.WanPort;
     }
 
     /**
-     * Set Public network port number
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param WanPort Public network port number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the public network port number.
+     * @param WanPort Specifies the public network port number.
      */
     public void setWanPort(Long WanPort) {
         this.WanPort = WanPort;
     }
 
     /**
-     * Get Network type. Valid values: `ro` (read-only), `rw` or `ha` (read-write)
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return NetType Network type. Valid values: `ro` (read-only), `rw` or `ha` (read-write)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Network type (ro - read-only, rw/ha - read-write). 
+     * @return NetType Network type (ro - read-only, rw/ha - read-write).
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set Network type. Valid values: `ro` (read-only), `rw` or `ha` (read-write)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param NetType Network type. Valid values: `ro` (read-only), `rw` or `ha` (read-write)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Network type (ro - read-only, rw/ha - read-write).
+     * @param NetType Network type (ro - read-only, rw/ha - read-write).
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UniqSubnetId Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the subnet ID. 
+     * @return UniqSubnetId Specifies the subnet ID.
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UniqSubnetId Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the subnet ID.
+     * @param UniqSubnetId Specifies the subnet ID.
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get VPC ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UniqVpcId VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the virtual private cloud ID. 
+     * @return UniqVpcId Specifies the virtual private cloud ID.
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UniqVpcId VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the virtual private cloud ID.
+     * @param UniqVpcId Specifies the virtual private cloud ID.
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get Description
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Description Description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Description information 
+     * @return Description Description information
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Description Description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Description information
+     * @param Description Description information
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Public IP
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WanIP Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Public IP address 
+     * @return WanIP Public IP address
      */
     public String getWanIP() {
         return this.WanIP;
     }
 
     /**
-     * Set Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WanIP Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Public IP address
+     * @param WanIP Public IP address
      */
     public void setWanIP(String WanIP) {
         this.WanIP = WanIP;
     }
 
     /**
-     * Get Public network status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WanStatus Public network status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the public network status. 
+     * @return WanStatus Specifies the public network status.
      */
     public String getWanStatus() {
         return this.WanStatus;
     }
 
     /**
-     * Set Public network status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WanStatus Public network status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the public network status.
+     * @param WanStatus Specifies the public network status.
      */
     public void setWanStatus(String WanStatus) {
         this.WanStatus = WanStatus;
     }
 
     /**
-     * Get Instance group ID Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceGroupId Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance group ID 
+     * @return InstanceGroupId Instance group ID
      */
     public String getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
     /**
-     * Set Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceGroupId Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance group ID
+     * @param InstanceGroupId Instance group ID
      */
     public void setInstanceGroupId(String InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;

@@ -31,7 +31,7 @@ public class DescribeResourcePackageListResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * Resource pack details Note: This field may return null, indicating that no valid values can be obtained.
+    * Resource pack details.
     */
     @SerializedName("Detail")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeResourcePackageListResponse extends AbstractModel {
     }
 
     /**
-     * Get Resource pack details Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Detail Resource pack details Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Resource pack details. 
+     * @return Detail Resource pack details.
      */
     public Package [] getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set Resource pack details Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Detail Resource pack details Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Resource pack details.
+     * @param Detail Resource pack details.
      */
     public void setDetail(Package [] Detail) {
         this.Detail = Detail;

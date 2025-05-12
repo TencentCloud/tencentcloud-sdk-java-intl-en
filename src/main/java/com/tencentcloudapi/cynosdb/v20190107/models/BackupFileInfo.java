@@ -87,23 +87,21 @@ public class BackupFileInfo extends AbstractModel {
     private String SnapshotTime;
 
     /**
-    * Backup ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Backup ID.
     */
     @SerializedName("BackupId")
     @Expose
     private Long BackupId;
 
     /**
-    * 
+    * Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
     */
     @SerializedName("SnapShotType")
     @Expose
     private String SnapShotType;
 
     /**
-    * Backup file alias
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the remark of the backup file.
     */
     @SerializedName("BackupName")
     @Expose
@@ -254,56 +252,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Backup ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BackupId Backup ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Backup ID. 
+     * @return BackupId Backup ID.
      */
     public Long getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set Backup ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BackupId Backup ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Backup ID.
+     * @param BackupId Backup ID.
      */
     public void setBackupId(Long BackupId) {
         this.BackupId = BackupId;
     }
 
     /**
-     * Get  
-     * @return SnapShotType 
+     * Get Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot). 
+     * @return SnapShotType Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
      */
     public String getSnapShotType() {
         return this.SnapShotType;
     }
 
     /**
-     * Set 
-     * @param SnapShotType 
+     * Set Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
+     * @param SnapShotType Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
      */
     public void setSnapShotType(String SnapShotType) {
         this.SnapShotType = SnapShotType;
     }
 
     /**
-     * Get Backup file alias
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BackupName Backup file alias
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the remark of the backup file. 
+     * @return BackupName Specifies the remark of the backup file.
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set Backup file alias
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BackupName Backup file alias
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the remark of the backup file.
+     * @param BackupName Specifies the remark of the backup file.
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;

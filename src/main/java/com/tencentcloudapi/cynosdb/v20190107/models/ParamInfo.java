@@ -38,8 +38,7 @@ public class ParamInfo extends AbstractModel {
     private String Default;
 
     /**
-    * List of valid values when parameter type is `enum`, `string` or `bool`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * If the parameter is of type enum/string/bool, the available options list.
     */
     @SerializedName("EnumValue")
     @Expose
@@ -102,36 +101,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Description;
 
     /**
-    * Whether it is global parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether it is a global parameter.
     */
     @SerializedName("IsGlobal")
     @Expose
     private Long IsGlobal;
 
     /**
-    * Whether the parameter can be modified
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether the parameter is modifiable.
     */
     @SerializedName("ModifiableInfo")
     @Expose
     private ModifiableInfo ModifiableInfo;
 
     /**
-    * Whether it is a function
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether it is a function.
     */
     @SerializedName("IsFunc")
     @Expose
     private Boolean IsFunc;
 
     /**
-    * Function
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Function.
     */
     @SerializedName("Func")
     @Expose
     private String Func;
+
+    /**
+    * The default formula style of parameters that support formulas.
+    */
+    @SerializedName("FuncPattern")
+    @Expose
+    private String FuncPattern;
 
     /**
      * Get Current value 
@@ -166,20 +168,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of valid values when parameter type is `enum`, `string` or `bool`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EnumValue List of valid values when parameter type is `enum`, `string` or `bool`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get If the parameter is of type enum/string/bool, the available options list. 
+     * @return EnumValue If the parameter is of type enum/string/bool, the available options list.
      */
     public String [] getEnumValue() {
         return this.EnumValue;
     }
 
     /**
-     * Set List of valid values when parameter type is `enum`, `string` or `bool`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EnumValue List of valid values when parameter type is `enum`, `string` or `bool`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set If the parameter is of type enum/string/bool, the available options list.
+     * @param EnumValue If the parameter is of type enum/string/bool, the available options list.
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;
@@ -314,83 +312,83 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether it is global parameter
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsGlobal Whether it is global parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether it is a global parameter. 
+     * @return IsGlobal Whether it is a global parameter.
      */
     public Long getIsGlobal() {
         return this.IsGlobal;
     }
 
     /**
-     * Set Whether it is global parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsGlobal Whether it is global parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether it is a global parameter.
+     * @param IsGlobal Whether it is a global parameter.
      */
     public void setIsGlobal(Long IsGlobal) {
         this.IsGlobal = IsGlobal;
     }
 
     /**
-     * Get Whether the parameter can be modified
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ModifiableInfo Whether the parameter can be modified
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether the parameter is modifiable. 
+     * @return ModifiableInfo Whether the parameter is modifiable.
      */
     public ModifiableInfo getModifiableInfo() {
         return this.ModifiableInfo;
     }
 
     /**
-     * Set Whether the parameter can be modified
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ModifiableInfo Whether the parameter can be modified
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether the parameter is modifiable.
+     * @param ModifiableInfo Whether the parameter is modifiable.
      */
     public void setModifiableInfo(ModifiableInfo ModifiableInfo) {
         this.ModifiableInfo = ModifiableInfo;
     }
 
     /**
-     * Get Whether it is a function
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsFunc Whether it is a function
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether it is a function. 
+     * @return IsFunc Whether it is a function.
      */
     public Boolean getIsFunc() {
         return this.IsFunc;
     }
 
     /**
-     * Set Whether it is a function
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsFunc Whether it is a function
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether it is a function.
+     * @param IsFunc Whether it is a function.
      */
     public void setIsFunc(Boolean IsFunc) {
         this.IsFunc = IsFunc;
     }
 
     /**
-     * Get Function
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Func Function
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Function. 
+     * @return Func Function.
      */
     public String getFunc() {
         return this.Func;
     }
 
     /**
-     * Set Function
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Func Function
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Function.
+     * @param Func Function.
      */
     public void setFunc(String Func) {
         this.Func = Func;
+    }
+
+    /**
+     * Get The default formula style of parameters that support formulas. 
+     * @return FuncPattern The default formula style of parameters that support formulas.
+     */
+    public String getFuncPattern() {
+        return this.FuncPattern;
+    }
+
+    /**
+     * Set The default formula style of parameters that support formulas.
+     * @param FuncPattern The default formula style of parameters that support formulas.
+     */
+    public void setFuncPattern(String FuncPattern) {
+        this.FuncPattern = FuncPattern;
     }
 
     public ParamInfo() {
@@ -449,6 +447,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Func != null) {
             this.Func = new String(source.Func);
         }
+        if (source.FuncPattern != null) {
+            this.FuncPattern = new String(source.FuncPattern);
+        }
     }
 
 
@@ -471,6 +472,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "ModifiableInfo.", this.ModifiableInfo);
         this.setParamSimple(map, prefix + "IsFunc", this.IsFunc);
         this.setParamSimple(map, prefix + "Func", this.Func);
+        this.setParamSimple(map, prefix + "FuncPattern", this.FuncPattern);
 
     }
 }

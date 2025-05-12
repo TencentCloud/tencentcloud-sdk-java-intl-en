@@ -84,6 +84,13 @@ Memory of a non-serverless instance in GB
     private Long Memory;
 
     /**
+    * Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+    */
+    @SerializedName("InstanceCount")
+    @Expose
+    private Long InstanceCount;
+
+    /**
     * This parameter has been deprecated.
 Storage capacity in GB
     */
@@ -174,13 +181,6 @@ If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the
     private Long StorageLimit;
 
     /**
-    * Number of Instances. Valid range: (0,16]
-    */
-    @SerializedName("InstanceCount")
-    @Expose
-    private Long InstanceCount;
-
-    /**
     * Purchase duration of monthly subscription plan
     */
     @SerializedName("TimeSpan")
@@ -195,7 +195,8 @@ If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the
     private String TimeUnit;
 
     /**
-    * Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
+    * Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -476,6 +477,22 @@ Memory of a non-serverless instance in GB
     }
 
     /**
+     * Get Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos. 
+     * @return InstanceCount Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+     */
+    public Long getInstanceCount() {
+        return this.InstanceCount;
+    }
+
+    /**
+     * Set Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+     * @param InstanceCount Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+     */
+    public void setInstanceCount(Long InstanceCount) {
+        this.InstanceCount = InstanceCount;
+    }
+
+    /**
      * Get This parameter has been deprecated.
 Storage capacity in GB 
      * @return Storage This parameter has been deprecated.
@@ -692,22 +709,6 @@ If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the
     }
 
     /**
-     * Get Number of Instances. Valid range: (0,16] 
-     * @return InstanceCount Number of Instances. Valid range: (0,16]
-     */
-    public Long getInstanceCount() {
-        return this.InstanceCount;
-    }
-
-    /**
-     * Set Number of Instances. Valid range: (0,16]
-     * @param InstanceCount Number of Instances. Valid range: (0,16]
-     */
-    public void setInstanceCount(Long InstanceCount) {
-        this.InstanceCount = InstanceCount;
-    }
-
-    /**
      * Get Purchase duration of monthly subscription plan 
      * @return TimeSpan Purchase duration of monthly subscription plan
      */
@@ -740,16 +741,20 @@ If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the
     }
 
     /**
-     * Get Whether auto-renewal is enabled for monthly subscription plan. Default value: `0` 
-     * @return AutoRenewFlag Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
+     * Get Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal. 
+     * @return AutoRenewFlag Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
-     * @param AutoRenewFlag Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
+     * Set Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
+     * @param AutoRenewFlag Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
@@ -1103,6 +1108,9 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
         if (source.Memory != null) {
             this.Memory = new Long(source.Memory);
         }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
         if (source.Storage != null) {
             this.Storage = new Long(source.Storage);
         }
@@ -1138,9 +1146,6 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
         }
         if (source.StorageLimit != null) {
             this.StorageLimit = new Long(source.StorageLimit);
-        }
-        if (source.InstanceCount != null) {
-            this.InstanceCount = new Long(source.InstanceCount);
         }
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
@@ -1232,6 +1237,7 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
@@ -1244,7 +1250,6 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
         this.setParamSimple(map, prefix + "ExpectTime", this.ExpectTime);
         this.setParamSimple(map, prefix + "ExpectTimeThresh", this.ExpectTimeThresh);
         this.setParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
-        this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);

@@ -45,8 +45,7 @@ public class AuditRuleTemplateInfo extends AbstractModel {
     private RuleFilters [] RuleFilters;
 
     /**
-    * Description of a rule template
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rule template description.
     */
     @SerializedName("Description")
     @Expose
@@ -58,6 +57,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("CreateAt")
     @Expose
     private String CreateAt;
+
+    /**
+    * Rule template modification time.
+    */
+    @SerializedName("UpdateAt")
+    @Expose
+    private String UpdateAt;
+
+    /**
+    * Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+    */
+    @SerializedName("AlarmLevel")
+    @Expose
+    private Long AlarmLevel;
+
+    /**
+    * Alarm policy. 0 - no alert, 1 - alert.
+    */
+    @SerializedName("AlarmPolicy")
+    @Expose
+    private Long AlarmPolicy;
+
+    /**
+    * Template status. 0 - no task, 1 - modifying.
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * Template application is used in which instances.
+    */
+    @SerializedName("AffectedInstances")
+    @Expose
+    private String [] AffectedInstances;
 
     /**
      * Get Rule template ID 
@@ -108,20 +142,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Description of a rule template
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Description Description of a rule template
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rule template description. 
+     * @return Description Rule template description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description of a rule template
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Description Description of a rule template
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rule template description.
+     * @param Description Rule template description.
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -141,6 +171,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setCreateAt(String CreateAt) {
         this.CreateAt = CreateAt;
+    }
+
+    /**
+     * Get Rule template modification time. 
+     * @return UpdateAt Rule template modification time.
+     */
+    public String getUpdateAt() {
+        return this.UpdateAt;
+    }
+
+    /**
+     * Set Rule template modification time.
+     * @param UpdateAt Rule template modification time.
+     */
+    public void setUpdateAt(String UpdateAt) {
+        this.UpdateAt = UpdateAt;
+    }
+
+    /**
+     * Get Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk). 
+     * @return AlarmLevel Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+     */
+    public Long getAlarmLevel() {
+        return this.AlarmLevel;
+    }
+
+    /**
+     * Set Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+     * @param AlarmLevel Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+     */
+    public void setAlarmLevel(Long AlarmLevel) {
+        this.AlarmLevel = AlarmLevel;
+    }
+
+    /**
+     * Get Alarm policy. 0 - no alert, 1 - alert. 
+     * @return AlarmPolicy Alarm policy. 0 - no alert, 1 - alert.
+     */
+    public Long getAlarmPolicy() {
+        return this.AlarmPolicy;
+    }
+
+    /**
+     * Set Alarm policy. 0 - no alert, 1 - alert.
+     * @param AlarmPolicy Alarm policy. 0 - no alert, 1 - alert.
+     */
+    public void setAlarmPolicy(Long AlarmPolicy) {
+        this.AlarmPolicy = AlarmPolicy;
+    }
+
+    /**
+     * Get Template status. 0 - no task, 1 - modifying. 
+     * @return Status Template status. 0 - no task, 1 - modifying.
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Template status. 0 - no task, 1 - modifying.
+     * @param Status Template status. 0 - no task, 1 - modifying.
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get Template application is used in which instances. 
+     * @return AffectedInstances Template application is used in which instances.
+     */
+    public String [] getAffectedInstances() {
+        return this.AffectedInstances;
+    }
+
+    /**
+     * Set Template application is used in which instances.
+     * @param AffectedInstances Template application is used in which instances.
+     */
+    public void setAffectedInstances(String [] AffectedInstances) {
+        this.AffectedInstances = AffectedInstances;
     }
 
     public AuditRuleTemplateInfo() {
@@ -169,6 +279,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.CreateAt != null) {
             this.CreateAt = new String(source.CreateAt);
         }
+        if (source.UpdateAt != null) {
+            this.UpdateAt = new String(source.UpdateAt);
+        }
+        if (source.AlarmLevel != null) {
+            this.AlarmLevel = new Long(source.AlarmLevel);
+        }
+        if (source.AlarmPolicy != null) {
+            this.AlarmPolicy = new Long(source.AlarmPolicy);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.AffectedInstances != null) {
+            this.AffectedInstances = new String[source.AffectedInstances.length];
+            for (int i = 0; i < source.AffectedInstances.length; i++) {
+                this.AffectedInstances[i] = new String(source.AffectedInstances[i]);
+            }
+        }
     }
 
 
@@ -181,6 +309,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "RuleFilters.", this.RuleFilters);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "CreateAt", this.CreateAt);
+        this.setParamSimple(map, prefix + "UpdateAt", this.UpdateAt);
+        this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+        this.setParamSimple(map, prefix + "AlarmPolicy", this.AlarmPolicy);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArraySimple(map, prefix + "AffectedInstances.", this.AffectedInstances);
 
     }
 }

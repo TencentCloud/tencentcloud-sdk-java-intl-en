@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ObjectTask extends AbstractModel {
 
     /**
-    * Auto-Incrementing task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Task auto-increment ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,23 +32,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Task type
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * Task status
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Status of tasks.
     */
     @SerializedName("TaskStatus")
     @Expose
     private String TaskStatus;
 
     /**
-    * Task ID (cluster ID | instance group ID | instance ID)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Task ID (cluster ID | instance group ID | instance ID).
     */
     @SerializedName("ObjectId")
     @Expose
@@ -57,37 +53,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Task type
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ObjectType")
     @Expose
     private String ObjectType;
 
     /**
-     * Get Auto-Incrementing task ID
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TaskId Auto-Incrementing task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Task auto-increment ID. 
+     * @return TaskId Task auto-increment ID.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Auto-Incrementing task ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TaskId Auto-Incrementing task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Task auto-increment ID.
+     * @param TaskId Task auto-increment ID.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Task type
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Task type 
      * @return TaskType Task type
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getTaskType() {
         return this.TaskType;
@@ -95,59 +84,47 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task type
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param TaskType Task type
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get Task status
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TaskStatus Task status
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Status of tasks. 
+     * @return TaskStatus Status of tasks.
      */
     public String getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set Task status
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TaskStatus Task status
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Status of tasks.
+     * @param TaskStatus Status of tasks.
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get Task ID (cluster ID | instance group ID | instance ID)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ObjectId Task ID (cluster ID | instance group ID | instance ID)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Task ID (cluster ID | instance group ID | instance ID). 
+     * @return ObjectId Task ID (cluster ID | instance group ID | instance ID).
      */
     public String getObjectId() {
         return this.ObjectId;
     }
 
     /**
-     * Set Task ID (cluster ID | instance group ID | instance ID)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ObjectId Task ID (cluster ID | instance group ID | instance ID)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Task ID (cluster ID | instance group ID | instance ID).
+     * @param ObjectId Task ID (cluster ID | instance group ID | instance ID).
      */
     public void setObjectId(String ObjectId) {
         this.ObjectId = ObjectId;
     }
 
     /**
-     * Get Task type
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Task type 
      * @return ObjectType Task type
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getObjectType() {
         return this.ObjectType;
@@ -155,9 +132,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task type
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param ObjectType Task type
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setObjectType(String ObjectType) {
         this.ObjectType = ObjectType;

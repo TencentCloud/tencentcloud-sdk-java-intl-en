@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * Instance group ID
+    * Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,16 +45,16 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
     private String Zone;
 
     /**
-     * Get Instance group ID 
-     * @return InstanceId Instance group ID
+     * Get Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id. 
+     * @return InstanceId Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance group ID
-     * @param InstanceId Instance group ID
+     * Set Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
+     * @param InstanceId Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -59,11 +59,25 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     private String [] BackupFreq;
 
     /**
-    * Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered.
+    * Currently, this parameter does not support modification and is not required.
     */
     @SerializedName("BackupType")
     @Expose
     private String BackupType;
+
+    /**
+    * 
+    */
+    @SerializedName("LogicBackupConfig")
+    @Expose
+    private LogicBackupConfigInfo LogicBackupConfig;
+
+    /**
+    * 
+    */
+    @SerializedName("DeleteAutoLogicBackup")
+    @Expose
+    private Boolean DeleteAutoLogicBackup;
 
     /**
      * Get Cluster ID 
@@ -146,19 +160,51 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered. 
-     * @return BackupType Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered.
+     * Get Currently, this parameter does not support modification and is not required. 
+     * @return BackupType Currently, this parameter does not support modification and is not required.
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered.
-     * @param BackupType Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered.
+     * Set Currently, this parameter does not support modification and is not required.
+     * @param BackupType Currently, this parameter does not support modification and is not required.
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
+    }
+
+    /**
+     * Get  
+     * @return LogicBackupConfig 
+     */
+    public LogicBackupConfigInfo getLogicBackupConfig() {
+        return this.LogicBackupConfig;
+    }
+
+    /**
+     * Set 
+     * @param LogicBackupConfig 
+     */
+    public void setLogicBackupConfig(LogicBackupConfigInfo LogicBackupConfig) {
+        this.LogicBackupConfig = LogicBackupConfig;
+    }
+
+    /**
+     * Get  
+     * @return DeleteAutoLogicBackup 
+     */
+    public Boolean getDeleteAutoLogicBackup() {
+        return this.DeleteAutoLogicBackup;
+    }
+
+    /**
+     * Set 
+     * @param DeleteAutoLogicBackup 
+     */
+    public void setDeleteAutoLogicBackup(Boolean DeleteAutoLogicBackup) {
+        this.DeleteAutoLogicBackup = DeleteAutoLogicBackup;
     }
 
     public ModifyBackupConfigRequest() {
@@ -190,6 +236,12 @@ public class ModifyBackupConfigRequest extends AbstractModel {
         if (source.BackupType != null) {
             this.BackupType = new String(source.BackupType);
         }
+        if (source.LogicBackupConfig != null) {
+            this.LogicBackupConfig = new LogicBackupConfigInfo(source.LogicBackupConfig);
+        }
+        if (source.DeleteAutoLogicBackup != null) {
+            this.DeleteAutoLogicBackup = new Boolean(source.DeleteAutoLogicBackup);
+        }
     }
 
 
@@ -203,6 +255,8 @@ public class ModifyBackupConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ReserveDuration", this.ReserveDuration);
         this.setParamArraySimple(map, prefix + "BackupFreq.", this.BackupFreq);
         this.setParamSimple(map, prefix + "BackupType", this.BackupType);
+        this.setParamObj(map, prefix + "LogicBackupConfig.", this.LogicBackupConfig);
+        this.setParamSimple(map, prefix + "DeleteAutoLogicBackup", this.DeleteAutoLogicBackup);
 
     }
 }

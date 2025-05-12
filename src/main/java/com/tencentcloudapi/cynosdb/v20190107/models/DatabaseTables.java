@@ -25,25 +25,21 @@ public class DatabaseTables extends AbstractModel {
 
     /**
     * Database name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Database")
     @Expose
     private String Database;
 
     /**
-    * Table name list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Table name list.
     */
     @SerializedName("Tables")
     @Expose
     private String [] Tables;
 
     /**
-     * Get Database name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Database name 
      * @return Database Database name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDatabase() {
         return this.Database;
@@ -51,29 +47,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Database name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Database Database name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get Table name list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tables Table name list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Table name list. 
+     * @return Tables Table name list.
      */
     public String [] getTables() {
         return this.Tables;
     }
 
     /**
-     * Set Table name list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tables Table name list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Table name list.
+     * @param Tables Table name list.
      */
     public void setTables(String [] Tables) {
         this.Tables = Tables;

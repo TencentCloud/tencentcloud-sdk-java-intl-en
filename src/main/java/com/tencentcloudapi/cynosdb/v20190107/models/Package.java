@@ -24,284 +24,342 @@ import java.util.HashMap;
 public class Package extends AbstractModel {
 
     /**
-    * AppID Note: This field may return null, indicating that no valid values can be obtained.
+    * AppID
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+    * The unique ID of the resource package.
     */
     @SerializedName("PackageId")
     @Expose
     private String PackageId;
 
     /**
-    * Resource pack name Note: This field may return null, indicating that no valid values can be obtained.
+    * Resource package name.
     */
     @SerializedName("PackageName")
     @Expose
     private String PackageName;
 
     /**
-    * Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the resource package type.
+CCU: compute resource package. DISK: storage resource package.
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-    * Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). Note: This field may return null, indicating that no valid values can be obtained.
+    * Resource package region of use.
+China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
     */
     @SerializedName("PackageRegion")
     @Expose
     private String PackageRegion;
 
     /**
-    * Resource pack status. Valid values: `creating`, `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+    * Specifies the status of the resource package.
+creating - indicates that it is in the process of being created.
+{using} specifies that it is in use.
+expired-expired;.
+normal_finish - specifies that it is used up.
+`Apply_refund`: apply for a refund.
+Specifies that the fee has been refunded.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Total number of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+    * Total resource package quantity.
     */
     @SerializedName("PackageTotalSpec")
     @Expose
     private Float PackageTotalSpec;
 
     /**
-    * Consumed usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+    * Used amount of resource package.
     */
     @SerializedName("PackageUsedSpec")
     @Expose
     private Float PackageUsedSpec;
 
     /**
-    * Remaining usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether there is inventory surplus.
     */
     @SerializedName("HasQuota")
     @Expose
     private Boolean HasQuota;
 
     /**
-    * Information of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the bound instance information.
     */
     @SerializedName("BindInstanceInfos")
     @Expose
     private BindInstanceInfo [] BindInstanceInfos;
 
     /**
-    * Validity time:  2022-07-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the effective time: 2022-07-01 00:00:00.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Validity time:  2022-08-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the expiration time: 2022-08-01 00:00:00.
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get AppID Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AppId AppID Note: This field may return null, indicating that no valid values can be obtained.
+    * Information of the instance historically bound (now unbound) to the resource pack.
+    */
+    @SerializedName("HistoryBindResourceInfos")
+    @Expose
+    private BindInstanceInfo [] HistoryBindResourceInfos;
+
+    /**
+     * Get AppID 
+     * @return AppId AppID
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set AppID Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AppId AppID Note: This field may return null, indicating that no valid values can be obtained.
+     * Set AppID
+     * @param AppId AppID
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PackageId The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The unique ID of the resource package. 
+     * @return PackageId The unique ID of the resource package.
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PackageId The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The unique ID of the resource package.
+     * @param PackageId The unique ID of the resource package.
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get Resource pack name Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PackageName Resource pack name Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Resource package name. 
+     * @return PackageName Resource package name.
      */
     public String getPackageName() {
         return this.PackageName;
     }
 
     /**
-     * Set Resource pack name Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PackageName Resource pack name Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Resource package name.
+     * @param PackageName Resource package name.
      */
     public void setPackageName(String PackageName) {
         this.PackageName = PackageName;
     }
 
     /**
-     * Get Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the resource package type.
+CCU: compute resource package. DISK: storage resource package. 
+     * @return PackageType Specifies the resource package type.
+CCU: compute resource package. DISK: storage resource package.
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the resource package type.
+CCU: compute resource package. DISK: storage resource package.
+     * @param PackageType Specifies the resource package type.
+CCU: compute resource package. DISK: storage resource package.
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PackageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Resource package region of use.
+China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas. 
+     * @return PackageRegion Resource package region of use.
+China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
      */
     public String getPackageRegion() {
         return this.PackageRegion;
     }
 
     /**
-     * Set Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PackageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Resource package region of use.
+China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+     * @param PackageRegion Resource package region of use.
+China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
      */
     public void setPackageRegion(String PackageRegion) {
         this.PackageRegion = PackageRegion;
     }
 
     /**
-     * Get Resource pack status. Valid values: `creating`, `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded). 
-Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Resource pack status. Valid values: `creating`, `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the status of the resource package.
+creating - indicates that it is in the process of being created.
+{using} specifies that it is in use.
+expired-expired;.
+normal_finish - specifies that it is used up.
+`Apply_refund`: apply for a refund.
+Specifies that the fee has been refunded. 
+     * @return Status Specifies the status of the resource package.
+creating - indicates that it is in the process of being created.
+{using} specifies that it is in use.
+expired-expired;.
+normal_finish - specifies that it is used up.
+`Apply_refund`: apply for a refund.
+Specifies that the fee has been refunded.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Resource pack status. Valid values: `creating`, `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded). 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param Status Resource pack status. Valid values: `creating`, `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the status of the resource package.
+creating - indicates that it is in the process of being created.
+{using} specifies that it is in use.
+expired-expired;.
+normal_finish - specifies that it is used up.
+`Apply_refund`: apply for a refund.
+Specifies that the fee has been refunded.
+     * @param Status Specifies the status of the resource package.
+creating - indicates that it is in the process of being created.
+{using} specifies that it is in use.
+expired-expired;.
+normal_finish - specifies that it is used up.
+`Apply_refund`: apply for a refund.
+Specifies that the fee has been refunded.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Total number of resource packs Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PackageTotalSpec Total number of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total resource package quantity. 
+     * @return PackageTotalSpec Total resource package quantity.
      */
     public Float getPackageTotalSpec() {
         return this.PackageTotalSpec;
     }
 
     /**
-     * Set Total number of resource packs Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PackageTotalSpec Total number of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total resource package quantity.
+     * @param PackageTotalSpec Total resource package quantity.
      */
     public void setPackageTotalSpec(Float PackageTotalSpec) {
         this.PackageTotalSpec = PackageTotalSpec;
     }
 
     /**
-     * Get Consumed usage of resource packs Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PackageUsedSpec Consumed usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Used amount of resource package. 
+     * @return PackageUsedSpec Used amount of resource package.
      */
     public Float getPackageUsedSpec() {
         return this.PackageUsedSpec;
     }
 
     /**
-     * Set Consumed usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PackageUsedSpec Consumed usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Used amount of resource package.
+     * @param PackageUsedSpec Used amount of resource package.
      */
     public void setPackageUsedSpec(Float PackageUsedSpec) {
         this.PackageUsedSpec = PackageUsedSpec;
     }
 
     /**
-     * Get Remaining usage of resource packs Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HasQuota Remaining usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether there is inventory surplus. 
+     * @return HasQuota Whether there is inventory surplus.
      */
     public Boolean getHasQuota() {
         return this.HasQuota;
     }
 
     /**
-     * Set Remaining usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HasQuota Remaining usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether there is inventory surplus.
+     * @param HasQuota Whether there is inventory surplus.
      */
     public void setHasQuota(Boolean HasQuota) {
         this.HasQuota = HasQuota;
     }
 
     /**
-     * Get Information of the instance bound Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BindInstanceInfos Information of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the bound instance information. 
+     * @return BindInstanceInfos Specifies the bound instance information.
      */
     public BindInstanceInfo [] getBindInstanceInfos() {
         return this.BindInstanceInfos;
     }
 
     /**
-     * Set Information of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BindInstanceInfos Information of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the bound instance information.
+     * @param BindInstanceInfos Specifies the bound instance information.
      */
     public void setBindInstanceInfos(BindInstanceInfo [] BindInstanceInfos) {
         this.BindInstanceInfos = BindInstanceInfos;
     }
 
     /**
-     * Get Validity time:  2022-07-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime Validity time:  2022-07-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the effective time: 2022-07-01 00:00:00. 
+     * @return StartTime Specifies the effective time: 2022-07-01 00:00:00.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Validity time:  2022-07-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTime Validity time:  2022-07-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the effective time: 2022-07-01 00:00:00.
+     * @param StartTime Specifies the effective time: 2022-07-01 00:00:00.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Validity time:  2022-08-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExpireTime Validity time:  2022-08-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the expiration time: 2022-08-01 00:00:00. 
+     * @return ExpireTime Specifies the expiration time: 2022-08-01 00:00:00.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Validity time:  2022-08-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExpireTime Validity time:  2022-08-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the expiration time: 2022-08-01 00:00:00.
+     * @param ExpireTime Specifies the expiration time: 2022-08-01 00:00:00.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get Information of the instance historically bound (now unbound) to the resource pack. 
+     * @return HistoryBindResourceInfos Information of the instance historically bound (now unbound) to the resource pack.
+     */
+    public BindInstanceInfo [] getHistoryBindResourceInfos() {
+        return this.HistoryBindResourceInfos;
+    }
+
+    /**
+     * Set Information of the instance historically bound (now unbound) to the resource pack.
+     * @param HistoryBindResourceInfos Information of the instance historically bound (now unbound) to the resource pack.
+     */
+    public void setHistoryBindResourceInfos(BindInstanceInfo [] HistoryBindResourceInfos) {
+        this.HistoryBindResourceInfos = HistoryBindResourceInfos;
     }
 
     public Package() {
@@ -351,6 +409,12 @@ Note:  This field may return null, indicating that no valid values can be obtain
         if (source.ExpireTime != null) {
             this.ExpireTime = new String(source.ExpireTime);
         }
+        if (source.HistoryBindResourceInfos != null) {
+            this.HistoryBindResourceInfos = new BindInstanceInfo[source.HistoryBindResourceInfos.length];
+            for (int i = 0; i < source.HistoryBindResourceInfos.length; i++) {
+                this.HistoryBindResourceInfos[i] = new BindInstanceInfo(source.HistoryBindResourceInfos[i]);
+            }
+        }
     }
 
 
@@ -370,6 +434,7 @@ Note:  This field may return null, indicating that no valid values can be obtain
         this.setParamArrayObj(map, prefix + "BindInstanceInfos.", this.BindInstanceInfos);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamArrayObj(map, prefix + "HistoryBindResourceInfos.", this.HistoryBindResourceInfos);
 
     }
 }

@@ -80,16 +80,14 @@ public class InstanceSpec extends AbstractModel {
     private Long MaxIoBandWidth;
 
     /**
-    * Inventory information in a region
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Regional inventory information.
     */
     @SerializedName("ZoneStockInfos")
     @Expose
     private ZoneStockInfo [] ZoneStockInfos;
 
     /**
-    * Quantity in stock
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Inventory quantity.
     */
     @SerializedName("StockCount")
     @Expose
@@ -224,40 +222,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Inventory information in a region
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneStockInfos Inventory information in a region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Regional inventory information. 
+     * @return ZoneStockInfos Regional inventory information.
      */
     public ZoneStockInfo [] getZoneStockInfos() {
         return this.ZoneStockInfos;
     }
 
     /**
-     * Set Inventory information in a region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ZoneStockInfos Inventory information in a region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Regional inventory information.
+     * @param ZoneStockInfos Regional inventory information.
      */
     public void setZoneStockInfos(ZoneStockInfo [] ZoneStockInfos) {
         this.ZoneStockInfos = ZoneStockInfos;
     }
 
     /**
-     * Get Quantity in stock
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StockCount Quantity in stock
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Inventory quantity. 
+     * @return StockCount Inventory quantity.
      */
     public Long getStockCount() {
         return this.StockCount;
     }
 
     /**
-     * Set Quantity in stock
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StockCount Quantity in stock
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Inventory quantity.
+     * @param StockCount Inventory quantity.
      */
     public void setStockCount(Long StockCount) {
         this.StockCount = StockCount;

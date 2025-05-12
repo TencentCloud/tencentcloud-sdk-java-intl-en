@@ -101,6 +101,62 @@ public class SlowQueriesItem extends AbstractModel {
     private String SqlMd5;
 
     /**
+    * Remote reading count.
+Specifies that the database kernel version is larger than 3.1.12.
+    */
+    @SerializedName("SyncReadCountRemote")
+    @Expose
+    private Long SyncReadCountRemote;
+
+    /**
+    * Number of remote read bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+    */
+    @SerializedName("SyncReadBytesRemote")
+    @Expose
+    private Long SyncReadBytesRemote;
+
+    /**
+    * Time spent on remote reads (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+    */
+    @SerializedName("SyncReadTimeRemote")
+    @Expose
+    private Long SyncReadTimeRemote;
+
+    /**
+    * Remote write count.
+Specifies that the database kernel version is larger than 3.1.12.
+    */
+    @SerializedName("SyncWriteCountRemote")
+    @Expose
+    private Long SyncWriteCountRemote;
+
+    /**
+    * Specifies the number of remote written bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+    */
+    @SerializedName("SyncWriteBytesRemote")
+    @Expose
+    private Long SyncWriteBytesRemote;
+
+    /**
+    * Time spent on remote writing (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+    */
+    @SerializedName("SyncWriteTimeRemote")
+    @Expose
+    private Long SyncWriteTimeRemote;
+
+    /**
+    * Transaction submission delay (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+    */
+    @SerializedName("TrxCommitDelay")
+    @Expose
+    private Long TrxCommitDelay;
+
+    /**
      * Get Execution timestamp 
      * @return Timestamp Execution timestamp
      */
@@ -276,6 +332,146 @@ public class SlowQueriesItem extends AbstractModel {
         this.SqlMd5 = SqlMd5;
     }
 
+    /**
+     * Get Remote reading count.
+Specifies that the database kernel version is larger than 3.1.12. 
+     * @return SyncReadCountRemote Remote reading count.
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public Long getSyncReadCountRemote() {
+        return this.SyncReadCountRemote;
+    }
+
+    /**
+     * Set Remote reading count.
+Specifies that the database kernel version is larger than 3.1.12.
+     * @param SyncReadCountRemote Remote reading count.
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public void setSyncReadCountRemote(Long SyncReadCountRemote) {
+        this.SyncReadCountRemote = SyncReadCountRemote;
+    }
+
+    /**
+     * Get Number of remote read bytes.
+Specifies that the database kernel version is larger than 3.1.12. 
+     * @return SyncReadBytesRemote Number of remote read bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public Long getSyncReadBytesRemote() {
+        return this.SyncReadBytesRemote;
+    }
+
+    /**
+     * Set Number of remote read bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+     * @param SyncReadBytesRemote Number of remote read bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public void setSyncReadBytesRemote(Long SyncReadBytesRemote) {
+        this.SyncReadBytesRemote = SyncReadBytesRemote;
+    }
+
+    /**
+     * Get Time spent on remote reads (µs).
+Specifies that the database kernel version is larger than 3.1.12. 
+     * @return SyncReadTimeRemote Time spent on remote reads (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public Long getSyncReadTimeRemote() {
+        return this.SyncReadTimeRemote;
+    }
+
+    /**
+     * Set Time spent on remote reads (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+     * @param SyncReadTimeRemote Time spent on remote reads (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public void setSyncReadTimeRemote(Long SyncReadTimeRemote) {
+        this.SyncReadTimeRemote = SyncReadTimeRemote;
+    }
+
+    /**
+     * Get Remote write count.
+Specifies that the database kernel version is larger than 3.1.12. 
+     * @return SyncWriteCountRemote Remote write count.
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public Long getSyncWriteCountRemote() {
+        return this.SyncWriteCountRemote;
+    }
+
+    /**
+     * Set Remote write count.
+Specifies that the database kernel version is larger than 3.1.12.
+     * @param SyncWriteCountRemote Remote write count.
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public void setSyncWriteCountRemote(Long SyncWriteCountRemote) {
+        this.SyncWriteCountRemote = SyncWriteCountRemote;
+    }
+
+    /**
+     * Get Specifies the number of remote written bytes.
+Specifies that the database kernel version is larger than 3.1.12. 
+     * @return SyncWriteBytesRemote Specifies the number of remote written bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public Long getSyncWriteBytesRemote() {
+        return this.SyncWriteBytesRemote;
+    }
+
+    /**
+     * Set Specifies the number of remote written bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+     * @param SyncWriteBytesRemote Specifies the number of remote written bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public void setSyncWriteBytesRemote(Long SyncWriteBytesRemote) {
+        this.SyncWriteBytesRemote = SyncWriteBytesRemote;
+    }
+
+    /**
+     * Get Time spent on remote writing (µs).
+Specifies that the database kernel version is larger than 3.1.12. 
+     * @return SyncWriteTimeRemote Time spent on remote writing (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public Long getSyncWriteTimeRemote() {
+        return this.SyncWriteTimeRemote;
+    }
+
+    /**
+     * Set Time spent on remote writing (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+     * @param SyncWriteTimeRemote Time spent on remote writing (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public void setSyncWriteTimeRemote(Long SyncWriteTimeRemote) {
+        this.SyncWriteTimeRemote = SyncWriteTimeRemote;
+    }
+
+    /**
+     * Get Transaction submission delay (µs).
+Specifies that the database kernel version is larger than 3.1.12. 
+     * @return TrxCommitDelay Transaction submission delay (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public Long getTrxCommitDelay() {
+        return this.TrxCommitDelay;
+    }
+
+    /**
+     * Set Transaction submission delay (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+     * @param TrxCommitDelay Transaction submission delay (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public void setTrxCommitDelay(Long TrxCommitDelay) {
+        this.TrxCommitDelay = TrxCommitDelay;
+    }
+
     public SlowQueriesItem() {
     }
 
@@ -317,6 +513,27 @@ public class SlowQueriesItem extends AbstractModel {
         if (source.SqlMd5 != null) {
             this.SqlMd5 = new String(source.SqlMd5);
         }
+        if (source.SyncReadCountRemote != null) {
+            this.SyncReadCountRemote = new Long(source.SyncReadCountRemote);
+        }
+        if (source.SyncReadBytesRemote != null) {
+            this.SyncReadBytesRemote = new Long(source.SyncReadBytesRemote);
+        }
+        if (source.SyncReadTimeRemote != null) {
+            this.SyncReadTimeRemote = new Long(source.SyncReadTimeRemote);
+        }
+        if (source.SyncWriteCountRemote != null) {
+            this.SyncWriteCountRemote = new Long(source.SyncWriteCountRemote);
+        }
+        if (source.SyncWriteBytesRemote != null) {
+            this.SyncWriteBytesRemote = new Long(source.SyncWriteBytesRemote);
+        }
+        if (source.SyncWriteTimeRemote != null) {
+            this.SyncWriteTimeRemote = new Long(source.SyncWriteTimeRemote);
+        }
+        if (source.TrxCommitDelay != null) {
+            this.TrxCommitDelay = new Long(source.TrxCommitDelay);
+        }
     }
 
 
@@ -335,6 +552,13 @@ public class SlowQueriesItem extends AbstractModel {
         this.setParamSimple(map, prefix + "RowsSent", this.RowsSent);
         this.setParamSimple(map, prefix + "SqlTemplate", this.SqlTemplate);
         this.setParamSimple(map, prefix + "SqlMd5", this.SqlMd5);
+        this.setParamSimple(map, prefix + "SyncReadCountRemote", this.SyncReadCountRemote);
+        this.setParamSimple(map, prefix + "SyncReadBytesRemote", this.SyncReadBytesRemote);
+        this.setParamSimple(map, prefix + "SyncReadTimeRemote", this.SyncReadTimeRemote);
+        this.setParamSimple(map, prefix + "SyncWriteCountRemote", this.SyncWriteCountRemote);
+        this.setParamSimple(map, prefix + "SyncWriteBytesRemote", this.SyncWriteBytesRemote);
+        this.setParamSimple(map, prefix + "SyncWriteTimeRemote", this.SyncWriteTimeRemote);
+        this.setParamSimple(map, prefix + "TrxCommitDelay", this.TrxCommitDelay);
 
     }
 }

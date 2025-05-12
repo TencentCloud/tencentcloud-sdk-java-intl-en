@@ -87,7 +87,7 @@ public class ExportInstanceErrorLogsRequest extends AbstractModel {
     private String OrderBy;
 
     /**
-    * Valid values: `ASC` or `DESC`.
+    * Sorting type. valid values: ASC or DESC.
     */
     @SerializedName("OrderByType")
     @Expose
@@ -238,16 +238,16 @@ public class ExportInstanceErrorLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get Valid values: `ASC` or `DESC`. 
-     * @return OrderByType Valid values: `ASC` or `DESC`.
+     * Get Sorting type. valid values: ASC or DESC. 
+     * @return OrderByType Sorting type. valid values: ASC or DESC.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Valid values: `ASC` or `DESC`.
-     * @param OrderByType Valid values: `ASC` or `DESC`.
+     * Set Sorting type. valid values: ASC or DESC.
+     * @param OrderByType Sorting type. valid values: ASC or DESC.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

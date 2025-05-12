@@ -24,49 +24,77 @@ import java.util.HashMap;
 public class ResourcePackage extends AbstractModel {
 
     /**
-    * The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+    * The unique ID of the resource package.
     */
     @SerializedName("PackageId")
     @Expose
     private String PackageId;
 
     /**
-    * Resource pack type. Valid values:  `CCU` (compute resource pack),  `DISK`  (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+    * Resource package type: CCU: compute resource package.
+DISK: storage resource package.
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-     * Get The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PackageId The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+    * Deduction priority of the current resource package bound to the current instance.
+    */
+    @SerializedName("DeductionPriority")
+    @Expose
+    private Long DeductionPriority;
+
+    /**
+     * Get The unique ID of the resource package. 
+     * @return PackageId The unique ID of the resource package.
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PackageId The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The unique ID of the resource package.
+     * @param PackageId The unique ID of the resource package.
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get Resource pack type. Valid values:  `CCU` (compute resource pack),  `DISK`  (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PackageType Resource pack type. Valid values:  `CCU` (compute resource pack),  `DISK`  (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Resource package type: CCU: compute resource package.
+DISK: storage resource package. 
+     * @return PackageType Resource package type: CCU: compute resource package.
+DISK: storage resource package.
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set Resource pack type. Valid values:  `CCU` (compute resource pack),  `DISK`  (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PackageType Resource pack type. Valid values:  `CCU` (compute resource pack),  `DISK`  (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Resource package type: CCU: compute resource package.
+DISK: storage resource package.
+     * @param PackageType Resource package type: CCU: compute resource package.
+DISK: storage resource package.
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
+    }
+
+    /**
+     * Get Deduction priority of the current resource package bound to the current instance. 
+     * @return DeductionPriority Deduction priority of the current resource package bound to the current instance.
+     */
+    public Long getDeductionPriority() {
+        return this.DeductionPriority;
+    }
+
+    /**
+     * Set Deduction priority of the current resource package bound to the current instance.
+     * @param DeductionPriority Deduction priority of the current resource package bound to the current instance.
+     */
+    public void setDeductionPriority(Long DeductionPriority) {
+        this.DeductionPriority = DeductionPriority;
     }
 
     public ResourcePackage() {
@@ -83,6 +111,9 @@ public class ResourcePackage extends AbstractModel {
         if (source.PackageType != null) {
             this.PackageType = new String(source.PackageType);
         }
+        if (source.DeductionPriority != null) {
+            this.DeductionPriority = new Long(source.DeductionPriority);
+        }
     }
 
 
@@ -92,6 +123,7 @@ public class ResourcePackage extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PackageId", this.PackageId);
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
+        this.setParamSimple(map, prefix + "DeductionPriority", this.DeductionPriority);
 
     }
 }

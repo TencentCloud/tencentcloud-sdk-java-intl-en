@@ -31,8 +31,7 @@ public class Ability extends AbstractModel {
     private String IsSupportSlaveZone;
 
     /**
-    * The reason why secondary AZ is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The causes for no support from an availability zone.
     */
     @SerializedName("NonsupportSlaveZoneReason")
     @Expose
@@ -46,12 +45,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String IsSupportRo;
 
     /**
-    * The reason why read-only instance is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Reasons why RO instances are not supported.
     */
     @SerializedName("NonsupportRoReason")
     @Expose
     private String NonsupportRoReason;
+
+    /**
+    * Whether manual snapshot backup initiation is supported.
+    */
+    @SerializedName("IsSupportManualSnapshot")
+    @Expose
+    private String IsSupportManualSnapshot;
+
+    /**
+    * Whether transparent data encryption is supported.
+    */
+    @SerializedName("IsSupportTransparentDataEncryption")
+    @Expose
+    private String IsSupportTransparentDataEncryption;
+
+    /**
+    * Reasons for no support of transparent data encryption.
+    */
+    @SerializedName("NoSupportTransparentDataEncryptionReason")
+    @Expose
+    private String NoSupportTransparentDataEncryptionReason;
+
+    /**
+    * Whether manual initiation of logical backup is supported.
+    */
+    @SerializedName("IsSupportManualLogic")
+    @Expose
+    private String IsSupportManualLogic;
 
     /**
      * Get Whether secondary AZ is supported 
@@ -70,20 +96,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The reason why secondary AZ is not supported
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NonsupportSlaveZoneReason The reason why secondary AZ is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The causes for no support from an availability zone. 
+     * @return NonsupportSlaveZoneReason The causes for no support from an availability zone.
      */
     public String getNonsupportSlaveZoneReason() {
         return this.NonsupportSlaveZoneReason;
     }
 
     /**
-     * Set The reason why secondary AZ is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NonsupportSlaveZoneReason The reason why secondary AZ is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The causes for no support from an availability zone.
+     * @param NonsupportSlaveZoneReason The causes for no support from an availability zone.
      */
     public void setNonsupportSlaveZoneReason(String NonsupportSlaveZoneReason) {
         this.NonsupportSlaveZoneReason = NonsupportSlaveZoneReason;
@@ -106,23 +128,83 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The reason why read-only instance is not supported
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NonsupportRoReason The reason why read-only instance is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Reasons why RO instances are not supported. 
+     * @return NonsupportRoReason Reasons why RO instances are not supported.
      */
     public String getNonsupportRoReason() {
         return this.NonsupportRoReason;
     }
 
     /**
-     * Set The reason why read-only instance is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NonsupportRoReason The reason why read-only instance is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Reasons why RO instances are not supported.
+     * @param NonsupportRoReason Reasons why RO instances are not supported.
      */
     public void setNonsupportRoReason(String NonsupportRoReason) {
         this.NonsupportRoReason = NonsupportRoReason;
+    }
+
+    /**
+     * Get Whether manual snapshot backup initiation is supported. 
+     * @return IsSupportManualSnapshot Whether manual snapshot backup initiation is supported.
+     */
+    public String getIsSupportManualSnapshot() {
+        return this.IsSupportManualSnapshot;
+    }
+
+    /**
+     * Set Whether manual snapshot backup initiation is supported.
+     * @param IsSupportManualSnapshot Whether manual snapshot backup initiation is supported.
+     */
+    public void setIsSupportManualSnapshot(String IsSupportManualSnapshot) {
+        this.IsSupportManualSnapshot = IsSupportManualSnapshot;
+    }
+
+    /**
+     * Get Whether transparent data encryption is supported. 
+     * @return IsSupportTransparentDataEncryption Whether transparent data encryption is supported.
+     */
+    public String getIsSupportTransparentDataEncryption() {
+        return this.IsSupportTransparentDataEncryption;
+    }
+
+    /**
+     * Set Whether transparent data encryption is supported.
+     * @param IsSupportTransparentDataEncryption Whether transparent data encryption is supported.
+     */
+    public void setIsSupportTransparentDataEncryption(String IsSupportTransparentDataEncryption) {
+        this.IsSupportTransparentDataEncryption = IsSupportTransparentDataEncryption;
+    }
+
+    /**
+     * Get Reasons for no support of transparent data encryption. 
+     * @return NoSupportTransparentDataEncryptionReason Reasons for no support of transparent data encryption.
+     */
+    public String getNoSupportTransparentDataEncryptionReason() {
+        return this.NoSupportTransparentDataEncryptionReason;
+    }
+
+    /**
+     * Set Reasons for no support of transparent data encryption.
+     * @param NoSupportTransparentDataEncryptionReason Reasons for no support of transparent data encryption.
+     */
+    public void setNoSupportTransparentDataEncryptionReason(String NoSupportTransparentDataEncryptionReason) {
+        this.NoSupportTransparentDataEncryptionReason = NoSupportTransparentDataEncryptionReason;
+    }
+
+    /**
+     * Get Whether manual initiation of logical backup is supported. 
+     * @return IsSupportManualLogic Whether manual initiation of logical backup is supported.
+     */
+    public String getIsSupportManualLogic() {
+        return this.IsSupportManualLogic;
+    }
+
+    /**
+     * Set Whether manual initiation of logical backup is supported.
+     * @param IsSupportManualLogic Whether manual initiation of logical backup is supported.
+     */
+    public void setIsSupportManualLogic(String IsSupportManualLogic) {
+        this.IsSupportManualLogic = IsSupportManualLogic;
     }
 
     public Ability() {
@@ -145,6 +227,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.NonsupportRoReason != null) {
             this.NonsupportRoReason = new String(source.NonsupportRoReason);
         }
+        if (source.IsSupportManualSnapshot != null) {
+            this.IsSupportManualSnapshot = new String(source.IsSupportManualSnapshot);
+        }
+        if (source.IsSupportTransparentDataEncryption != null) {
+            this.IsSupportTransparentDataEncryption = new String(source.IsSupportTransparentDataEncryption);
+        }
+        if (source.NoSupportTransparentDataEncryptionReason != null) {
+            this.NoSupportTransparentDataEncryptionReason = new String(source.NoSupportTransparentDataEncryptionReason);
+        }
+        if (source.IsSupportManualLogic != null) {
+            this.IsSupportManualLogic = new String(source.IsSupportManualLogic);
+        }
     }
 
 
@@ -156,6 +250,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "NonsupportSlaveZoneReason", this.NonsupportSlaveZoneReason);
         this.setParamSimple(map, prefix + "IsSupportRo", this.IsSupportRo);
         this.setParamSimple(map, prefix + "NonsupportRoReason", this.NonsupportRoReason);
+        this.setParamSimple(map, prefix + "IsSupportManualSnapshot", this.IsSupportManualSnapshot);
+        this.setParamSimple(map, prefix + "IsSupportTransparentDataEncryption", this.IsSupportTransparentDataEncryption);
+        this.setParamSimple(map, prefix + "NoSupportTransparentDataEncryptionReason", this.NoSupportTransparentDataEncryptionReason);
+        this.setParamSimple(map, prefix + "IsSupportManualLogic", this.IsSupportManualLogic);
 
     }
 }

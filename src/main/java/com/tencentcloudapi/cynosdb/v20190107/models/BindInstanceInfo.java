@@ -24,102 +24,92 @@ import java.util.HashMap;
 public class BindInstanceInfo extends AbstractModel {
 
     /**
-    * ID of the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+    * ID of the bound cluster.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+    * The region where the bound instance is located.
     */
     @SerializedName("InstanceRegion")
     @Expose
     private String InstanceRegion;
 
     /**
-    * Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+    * Type of the bound instance.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * ID of the instance in the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The instance ID under the bound cluster.
     */
     @SerializedName("ExtendIds")
     @Expose
     private String [] ExtendIds;
 
     /**
-     * Get ID of the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceId ID of the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ID of the bound cluster. 
+     * @return InstanceId ID of the bound cluster.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceId ID of the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ID of the bound cluster.
+     * @param InstanceId ID of the bound cluster.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceRegion Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The region where the bound instance is located. 
+     * @return InstanceRegion The region where the bound instance is located.
      */
     public String getInstanceRegion() {
         return this.InstanceRegion;
     }
 
     /**
-     * Set Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceRegion Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The region where the bound instance is located.
+     * @param InstanceRegion The region where the bound instance is located.
      */
     public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;
     }
 
     /**
-     * Get Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceType Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Type of the bound instance. 
+     * @return InstanceType Type of the bound instance.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceType Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Type of the bound instance.
+     * @param InstanceType Type of the bound instance.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get ID of the instance in the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExtendIds ID of the instance in the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The instance ID under the bound cluster. 
+     * @return ExtendIds The instance ID under the bound cluster.
      */
     public String [] getExtendIds() {
         return this.ExtendIds;
     }
 
     /**
-     * Set ID of the instance in the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExtendIds ID of the instance in the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The instance ID under the bound cluster.
+     * @param ExtendIds The instance ID under the bound cluster.
      */
     public void setExtendIds(String [] ExtendIds) {
         this.ExtendIds = ExtendIds;

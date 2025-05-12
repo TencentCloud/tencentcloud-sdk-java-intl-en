@@ -94,18 +94,25 @@ public class ParamItemDetail extends AbstractModel {
     private String Description;
 
     /**
-    * Whether `ParamType` is a `func` Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether the type is a formula.
     */
     @SerializedName("IsFunc")
     @Expose
     private Boolean IsFunc;
 
     /**
-    * Parameter configuration formula Note: This field may return null, indicating that no valid values can be obtained.
+    * Parameter configuration formula.
     */
     @SerializedName("Func")
     @Expose
     private String Func;
+
+    /**
+    * The default formula style of parameters that support formulas.
+    */
+    @SerializedName("FuncPattern")
+    @Expose
+    private String FuncPattern;
 
     /**
      * Get Current value 
@@ -268,35 +275,51 @@ public class ParamItemDetail extends AbstractModel {
     }
 
     /**
-     * Get Whether `ParamType` is a `func` Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsFunc Whether `ParamType` is a `func` Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether the type is a formula. 
+     * @return IsFunc Whether the type is a formula.
      */
     public Boolean getIsFunc() {
         return this.IsFunc;
     }
 
     /**
-     * Set Whether `ParamType` is a `func` Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsFunc Whether `ParamType` is a `func` Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether the type is a formula.
+     * @param IsFunc Whether the type is a formula.
      */
     public void setIsFunc(Boolean IsFunc) {
         this.IsFunc = IsFunc;
     }
 
     /**
-     * Get Parameter configuration formula Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Func Parameter configuration formula Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parameter configuration formula. 
+     * @return Func Parameter configuration formula.
      */
     public String getFunc() {
         return this.Func;
     }
 
     /**
-     * Set Parameter configuration formula Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Func Parameter configuration formula Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parameter configuration formula.
+     * @param Func Parameter configuration formula.
      */
     public void setFunc(String Func) {
         this.Func = Func;
+    }
+
+    /**
+     * Get The default formula style of parameters that support formulas. 
+     * @return FuncPattern The default formula style of parameters that support formulas.
+     */
+    public String getFuncPattern() {
+        return this.FuncPattern;
+    }
+
+    /**
+     * Set The default formula style of parameters that support formulas.
+     * @param FuncPattern The default formula style of parameters that support formulas.
+     */
+    public void setFuncPattern(String FuncPattern) {
+        this.FuncPattern = FuncPattern;
     }
 
     public ParamItemDetail() {
@@ -346,6 +369,9 @@ public class ParamItemDetail extends AbstractModel {
         if (source.Func != null) {
             this.Func = new String(source.Func);
         }
+        if (source.FuncPattern != null) {
+            this.FuncPattern = new String(source.FuncPattern);
+        }
     }
 
 
@@ -365,6 +391,7 @@ public class ParamItemDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "IsFunc", this.IsFunc);
         this.setParamSimple(map, prefix + "Func", this.Func);
+        this.setParamSimple(map, prefix + "FuncPattern", this.FuncPattern);
 
     }
 }

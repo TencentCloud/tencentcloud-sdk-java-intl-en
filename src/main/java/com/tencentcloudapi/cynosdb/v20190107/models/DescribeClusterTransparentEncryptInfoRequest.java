@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRollbackTimeValidityRequest extends AbstractModel {
+public class DescribeClusterTransparentEncryptInfoRequest extends AbstractModel {
 
     /**
     * Cluster ID
@@ -29,20 +29,6 @@ public class DescribeRollbackTimeValidityRequest extends AbstractModel {
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
-
-    /**
-    * Expected time point to roll back to
-    */
-    @SerializedName("ExpectTime")
-    @Expose
-    private String ExpectTime;
-
-    /**
-    * Error tolerance range for rollback time point
-    */
-    @SerializedName("ExpectTimeThresh")
-    @Expose
-    private Long ExpectTimeThresh;
 
     /**
      * Get Cluster ID 
@@ -60,54 +46,16 @@ public class DescribeRollbackTimeValidityRequest extends AbstractModel {
         this.ClusterId = ClusterId;
     }
 
-    /**
-     * Get Expected time point to roll back to 
-     * @return ExpectTime Expected time point to roll back to
-     */
-    public String getExpectTime() {
-        return this.ExpectTime;
-    }
-
-    /**
-     * Set Expected time point to roll back to
-     * @param ExpectTime Expected time point to roll back to
-     */
-    public void setExpectTime(String ExpectTime) {
-        this.ExpectTime = ExpectTime;
-    }
-
-    /**
-     * Get Error tolerance range for rollback time point 
-     * @return ExpectTimeThresh Error tolerance range for rollback time point
-     */
-    public Long getExpectTimeThresh() {
-        return this.ExpectTimeThresh;
-    }
-
-    /**
-     * Set Error tolerance range for rollback time point
-     * @param ExpectTimeThresh Error tolerance range for rollback time point
-     */
-    public void setExpectTimeThresh(Long ExpectTimeThresh) {
-        this.ExpectTimeThresh = ExpectTimeThresh;
-    }
-
-    public DescribeRollbackTimeValidityRequest() {
+    public DescribeClusterTransparentEncryptInfoRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRollbackTimeValidityRequest(DescribeRollbackTimeValidityRequest source) {
+    public DescribeClusterTransparentEncryptInfoRequest(DescribeClusterTransparentEncryptInfoRequest source) {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
-        }
-        if (source.ExpectTime != null) {
-            this.ExpectTime = new String(source.ExpectTime);
-        }
-        if (source.ExpectTimeThresh != null) {
-            this.ExpectTimeThresh = new Long(source.ExpectTimeThresh);
         }
     }
 
@@ -117,8 +65,6 @@ public class DescribeRollbackTimeValidityRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
-        this.setParamSimple(map, prefix + "ExpectTime", this.ExpectTime);
-        this.setParamSimple(map, prefix + "ExpectTimeThresh", this.ExpectTimeThresh);
 
     }
 }

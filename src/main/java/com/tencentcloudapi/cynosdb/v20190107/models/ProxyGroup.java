@@ -67,23 +67,20 @@ public class ProxyGroup extends AbstractModel {
 
     /**
     * Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * User `AppId`
-Note: This field may return null, indicating that no valid values can be obtained.
+    * User AppId
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * Enabling read/write separation for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies that a read-write node activates the database proxy.
     */
     @SerializedName("OpenRw")
     @Expose
@@ -186,10 +183,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Cluster ID 
      * @return ClusterId Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -197,49 +192,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ClusterId Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get User `AppId`
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AppId User `AppId`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get User AppId 
+     * @return AppId User AppId
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User `AppId`
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AppId User `AppId`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set User AppId
+     * @param AppId User AppId
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Enabling read/write separation for database proxy
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OpenRw Enabling read/write separation for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies that a read-write node activates the database proxy. 
+     * @return OpenRw Specifies that a read-write node activates the database proxy.
      */
     public String getOpenRw() {
         return this.OpenRw;
     }
 
     /**
-     * Set Enabling read/write separation for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OpenRw Enabling read/write separation for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies that a read-write node activates the database proxy.
+     * @param OpenRw Specifies that a read-write node activates the database proxy.
      */
     public void setOpenRw(String OpenRw) {
         this.OpenRw = OpenRw;

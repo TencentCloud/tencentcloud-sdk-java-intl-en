@@ -24,26 +24,53 @@ import java.util.HashMap;
 public class DescribeDBSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * Instance group ID
+    * Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Instance group ID 
-     * @return InstanceId Instance group ID
+    * Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+    */
+    @SerializedName("InstanceGroupId")
+    @Expose
+    private String InstanceGroupId;
+
+    /**
+     * Get Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId. 
+     * @return InstanceId Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance group ID
-     * @param InstanceId Instance group ID
+     * Set Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+     * @param InstanceId Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId. 
+     * @return InstanceGroupId Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+     */
+    public String getInstanceGroupId() {
+        return this.InstanceGroupId;
+    }
+
+    /**
+     * Set Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+     * @param InstanceGroupId Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+     */
+    public void setInstanceGroupId(String InstanceGroupId) {
+        this.InstanceGroupId = InstanceGroupId;
     }
 
     public DescribeDBSecurityGroupsRequest() {
@@ -57,6 +84,9 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.InstanceGroupId != null) {
+            this.InstanceGroupId = new String(source.InstanceGroupId);
+        }
     }
 
 
@@ -65,6 +95,7 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
 
     }
 }

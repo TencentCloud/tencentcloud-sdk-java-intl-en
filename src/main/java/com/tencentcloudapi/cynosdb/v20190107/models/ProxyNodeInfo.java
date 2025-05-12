@@ -94,6 +94,13 @@ public class ProxyNodeInfo extends AbstractModel {
     private String Zone;
 
     /**
+    * 
+    */
+    @SerializedName("OssProxyNodeName")
+    @Expose
+    private String OssProxyNodeName;
+
+    /**
      * Get Database proxy node ID 
      * @return ProxyNodeId Database proxy node ID
      */
@@ -253,6 +260,22 @@ public class ProxyNodeInfo extends AbstractModel {
         this.Zone = Zone;
     }
 
+    /**
+     * Get  
+     * @return OssProxyNodeName 
+     */
+    public String getOssProxyNodeName() {
+        return this.OssProxyNodeName;
+    }
+
+    /**
+     * Set 
+     * @param OssProxyNodeName 
+     */
+    public void setOssProxyNodeName(String OssProxyNodeName) {
+        this.OssProxyNodeName = OssProxyNodeName;
+    }
+
     public ProxyNodeInfo() {
     }
 
@@ -291,6 +314,9 @@ public class ProxyNodeInfo extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.OssProxyNodeName != null) {
+            this.OssProxyNodeName = new String(source.OssProxyNodeName);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class ProxyNodeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "OssProxyNodeName", this.OssProxyNodeName);
 
     }
 }

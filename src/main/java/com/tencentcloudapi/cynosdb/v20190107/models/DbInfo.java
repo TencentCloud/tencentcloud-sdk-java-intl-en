@@ -52,56 +52,56 @@ public class DbInfo extends AbstractModel {
     private String CollateRule;
 
     /**
-    * Database remarks Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the remark of the database.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * User permissions Note: This field may return null, indicating that no valid values can be obtained.
+    * User permission
     */
     @SerializedName("UserHostPrivileges")
     @Expose
     private UserHostPrivilege [] UserHostPrivileges;
 
     /**
-    * Database ID Note: This field may return null, indicating that no valid values can be obtained.
+    * Database ID
     */
     @SerializedName("DbId")
     @Expose
     private Long DbId;
 
     /**
-    * Creation time Note: This field may return null, indicating that no valid values can be obtained.
+    * Creation time
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Update time Note: This field may return null, indicating that no valid values can be obtained.
+    * Update time.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * User appid Note: This field may return null, indicating that no valid values can be obtained.
+    * User appid.
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * User Uin Note: This field may return null, indicating that no valid values can be obtained.
+    * User UIN
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * Cluster ID Note: This field may return null, indicating that no valid values can be obtained.
+    * Cluster ID
     */
     @SerializedName("ClusterId")
     @Expose
@@ -172,128 +172,128 @@ public class DbInfo extends AbstractModel {
     }
 
     /**
-     * Get Database remarks Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Description Database remarks Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the remark of the database. 
+     * @return Description Specifies the remark of the database.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Database remarks Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Description Database remarks Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the remark of the database.
+     * @param Description Specifies the remark of the database.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get User permissions Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserHostPrivileges User permissions Note: This field may return null, indicating that no valid values can be obtained.
+     * Get User permission 
+     * @return UserHostPrivileges User permission
      */
     public UserHostPrivilege [] getUserHostPrivileges() {
         return this.UserHostPrivileges;
     }
 
     /**
-     * Set User permissions Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserHostPrivileges User permissions Note: This field may return null, indicating that no valid values can be obtained.
+     * Set User permission
+     * @param UserHostPrivileges User permission
      */
     public void setUserHostPrivileges(UserHostPrivilege [] UserHostPrivileges) {
         this.UserHostPrivileges = UserHostPrivileges;
     }
 
     /**
-     * Get Database ID Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DbId Database ID Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Database ID 
+     * @return DbId Database ID
      */
     public Long getDbId() {
         return this.DbId;
     }
 
     /**
-     * Set Database ID Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DbId Database ID Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Database ID
+     * @param DbId Database ID
      */
     public void setDbId(Long DbId) {
         this.DbId = DbId;
     }
 
     /**
-     * Get Creation time Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Creation time Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Creation time 
+     * @return CreateTime Creation time
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Creation time Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Creation time
+     * @param CreateTime Creation time
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Update time Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime Update time Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Update time. 
+     * @return UpdateTime Update time.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime Update time Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Update time.
+     * @param UpdateTime Update time.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get User appid Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AppId User appid Note: This field may return null, indicating that no valid values can be obtained.
+     * Get User appid. 
+     * @return AppId User appid.
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User appid Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AppId User appid Note: This field may return null, indicating that no valid values can be obtained.
+     * Set User appid.
+     * @param AppId User appid.
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get User Uin Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Uin User Uin Note: This field may return null, indicating that no valid values can be obtained.
+     * Get User UIN 
+     * @return Uin User UIN
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set User Uin Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Uin User Uin Note: This field may return null, indicating that no valid values can be obtained.
+     * Set User UIN
+     * @param Uin User UIN
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Cluster ID Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClusterId Cluster ID Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClusterId Cluster ID Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

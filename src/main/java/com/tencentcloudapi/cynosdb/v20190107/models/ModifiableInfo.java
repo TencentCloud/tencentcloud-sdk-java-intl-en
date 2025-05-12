@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class ModifiableInfo extends AbstractModel {
 
+    /**
+    * 
+    */
+    @SerializedName("IsModifiable")
+    @Expose
+    private Long IsModifiable;
+
+    /**
+     * Get  
+     * @return IsModifiable 
+     */
+    public Long getIsModifiable() {
+        return this.IsModifiable;
+    }
+
+    /**
+     * Set 
+     * @param IsModifiable 
+     */
+    public void setIsModifiable(Long IsModifiable) {
+        this.IsModifiable = IsModifiable;
+    }
+
     public ModifiableInfo() {
     }
 
@@ -31,6 +54,9 @@ public class ModifiableInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifiableInfo(ModifiableInfo source) {
+        if (source.IsModifiable != null) {
+            this.IsModifiable = new Long(source.IsModifiable);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class ModifiableInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "IsModifiable", this.IsModifiable);
 
     }
 }

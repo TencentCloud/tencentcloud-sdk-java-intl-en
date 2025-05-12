@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SlaveZoneAttrItem extends AbstractModel {
 
     /**
-    * 
+    * Availability zone
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 
+    * binlog synchronization mode.
     */
     @SerializedName("BinlogSyncWay")
     @Expose
     private String BinlogSyncWay;
 
     /**
-     * Get  
-     * @return Zone 
+     * Get Availability zone 
+     * @return Zone Availability zone
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 
-     * @param Zone 
+     * Set Availability zone
+     * @param Zone Availability zone
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get  
-     * @return BinlogSyncWay 
+     * Get binlog synchronization mode. 
+     * @return BinlogSyncWay binlog synchronization mode.
      */
     public String getBinlogSyncWay() {
         return this.BinlogSyncWay;
     }
 
     /**
-     * Set 
-     * @param BinlogSyncWay 
+     * Set binlog synchronization mode.
+     * @param BinlogSyncWay binlog synchronization mode.
      */
     public void setBinlogSyncWay(String BinlogSyncWay) {
         this.BinlogSyncWay = BinlogSyncWay;
