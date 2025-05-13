@@ -66,14 +66,14 @@ public class RegisterEventRequest extends AbstractModel {
     private String Owner;
 
     /**
-    * Event Type, default value: TIME_SERIES
+    * Required. event type. default value: TIME_SERIES.
     */
     @SerializedName("EventType")
     @Expose
     private String EventType;
 
     /**
-    * Corresponding DAY: yyyyMMdd, Corresponding HOUR: yyyyMMddHH, Corresponding MIN: yyyyMMddHHmm, Corresponding SECOND: yyyyMMddHHmmss
+    * Required. corresponds to day: yyyyMMdd, corresponds to HOUR: yyyyMMddHH, corresponds to MIN: yyyyMMddHHmm, corresponds to SECOND: yyyyMMddHHmmss. default value: yyyyMMdd.
     */
     @SerializedName("DimensionFormat")
     @Expose
@@ -190,32 +190,32 @@ public class RegisterEventRequest extends AbstractModel {
     }
 
     /**
-     * Get Event Type, default value: TIME_SERIES 
-     * @return EventType Event Type, default value: TIME_SERIES
+     * Get Required. event type. default value: TIME_SERIES. 
+     * @return EventType Required. event type. default value: TIME_SERIES.
      */
     public String getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set Event Type, default value: TIME_SERIES
-     * @param EventType Event Type, default value: TIME_SERIES
+     * Set Required. event type. default value: TIME_SERIES.
+     * @param EventType Required. event type. default value: TIME_SERIES.
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
     }
 
     /**
-     * Get Corresponding DAY: yyyyMMdd, Corresponding HOUR: yyyyMMddHH, Corresponding MIN: yyyyMMddHHmm, Corresponding SECOND: yyyyMMddHHmmss 
-     * @return DimensionFormat Corresponding DAY: yyyyMMdd, Corresponding HOUR: yyyyMMddHH, Corresponding MIN: yyyyMMddHHmm, Corresponding SECOND: yyyyMMddHHmmss
+     * Get Required. corresponds to day: yyyyMMdd, corresponds to HOUR: yyyyMMddHH, corresponds to MIN: yyyyMMddHHmm, corresponds to SECOND: yyyyMMddHHmmss. default value: yyyyMMdd. 
+     * @return DimensionFormat Required. corresponds to day: yyyyMMdd, corresponds to HOUR: yyyyMMddHH, corresponds to MIN: yyyyMMddHHmm, corresponds to SECOND: yyyyMMddHHmmss. default value: yyyyMMdd.
      */
     public String getDimensionFormat() {
         return this.DimensionFormat;
     }
 
     /**
-     * Set Corresponding DAY: yyyyMMdd, Corresponding HOUR: yyyyMMddHH, Corresponding MIN: yyyyMMddHHmm, Corresponding SECOND: yyyyMMddHHmmss
-     * @param DimensionFormat Corresponding DAY: yyyyMMdd, Corresponding HOUR: yyyyMMddHH, Corresponding MIN: yyyyMMddHHmm, Corresponding SECOND: yyyyMMddHHmmss
+     * Set Required. corresponds to day: yyyyMMdd, corresponds to HOUR: yyyyMMddHH, corresponds to MIN: yyyyMMddHHmm, corresponds to SECOND: yyyyMMddHHmmss. default value: yyyyMMdd.
+     * @param DimensionFormat Required. corresponds to day: yyyyMMdd, corresponds to HOUR: yyyyMMddHH, corresponds to MIN: yyyyMMddHHmm, corresponds to SECOND: yyyyMMddHHmmss. default value: yyyyMMdd.
      */
     public void setDimensionFormat(String DimensionFormat) {
         this.DimensionFormat = DimensionFormat;

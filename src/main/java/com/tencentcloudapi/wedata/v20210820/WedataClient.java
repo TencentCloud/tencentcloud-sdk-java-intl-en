@@ -61,6 +61,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *This API is used to asynchronously create task versions in batches.
+     * @param req BatchCreateTaskVersionAsyncRequest
+     * @return BatchCreateTaskVersionAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchCreateTaskVersionAsyncResponse BatchCreateTaskVersionAsync(BatchCreateTaskVersionAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchCreateTaskVersionAsync", BatchCreateTaskVersionAsyncResponse.class);
+    }
+
+    /**
      *Batch Delete Integration Tasks.
      * @param req BatchDeleteIntegrationTasksRequest
      * @return BatchDeleteIntegrationTasksResponse
@@ -424,7 +435,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *Creating task
+     *This API is used to create a task. This API is deprecated. Use the CreateTaskNew API.
      * @param req CreateTaskRequest
      * @return CreateTaskResponse
      * @throws TencentCloudSDKException
@@ -454,6 +465,17 @@ public class WedataClient extends AbstractClient{
     public CreateTaskFolderResponse CreateTaskFolder(CreateTaskFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateTaskFolder", CreateTaskFolderResponse.class);
+    }
+
+    /**
+     *This API is used to aggregate task creation.
+     * @param req CreateTaskNewRequest
+     * @return CreateTaskNewResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTaskNewResponse CreateTaskNew(CreateTaskNewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTaskNew", CreateTaskNewResponse.class);
     }
 
     /**
@@ -2232,8 +2254,8 @@ Update Task
     }
 
     /**
-     *<p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
-Add Parent Task Dependency
+     *<p style="color:red;">[Note: This version is only available to some whitelist customers in the Guangzhou zone]</p>.
+Add parent task dependency. This API is deprecated. Use API ModifyTaskLinksDs.
      * @param req ModifyTaskLinksRequest
      * @return ModifyTaskLinksResponse
      * @throws TencentCloudSDKException
@@ -2241,6 +2263,17 @@ Add Parent Task Dependency
     public ModifyTaskLinksResponse ModifyTaskLinks(ModifyTaskLinksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyTaskLinks", ModifyTaskLinksResponse.class);
+    }
+
+    /**
+     *This API is used to add parent task dependency.
+     * @param req ModifyTaskLinksDsRequest
+     * @return ModifyTaskLinksDsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTaskLinksDsResponse ModifyTaskLinksDs(ModifyTaskLinksDsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTaskLinksDs", ModifyTaskLinksDsResponse.class);
     }
 
     /**
@@ -2267,7 +2300,7 @@ Modify Task Script
     }
 
     /**
-     *Update Workflow Information
+     *This API is used to update workflow information. (deprecated). Use API UpdateWorkflowInfo.
      * @param req ModifyWorkflowInfoRequest
      * @return ModifyWorkflowInfoResponse
      * @throws TencentCloudSDKException
@@ -2278,7 +2311,7 @@ Modify Task Script
     }
 
     /**
-     *Update Workflow Scheduling
+     *This API is used to update workflow scheduling. This API is deprecated. Use the RenewWorkflowSchedulerInfoDs API instead.
      * @param req ModifyWorkflowScheduleRequest
      * @return ModifyWorkflowScheduleResponse
      * @throws TencentCloudSDKException
@@ -2300,8 +2333,19 @@ Modify Task Script
     }
 
     /**
-     *<p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
-Registration Event
+     *This API is used to register an event.
+     * @param req RegisterDsEventRequest
+     * @return RegisterDsEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public RegisterDsEventResponse RegisterDsEvent(RegisterDsEventRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RegisterDsEvent", RegisterDsEventResponse.class);
+    }
+
+    /**
+     *<p style="color:red;">[Note: This version is only available for partial allowlisted customers in the Guangzhou region]</p>.
+This API is used to register events. This API is deprecated. Use API RegisterDsEvent.
      * @param req RegisterEventRequest
      * @return RegisterEventResponse
      * @throws TencentCloudSDKException
@@ -2332,6 +2376,28 @@ Register Event Listener
     public RemoveWorkflowDsResponse RemoveWorkflowDs(RemoveWorkflowDsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RemoveWorkflowDs", RemoveWorkflowDsResponse.class);
+    }
+
+    /**
+     *This API is used to batch update the task owner under a workflow.
+     * @param req RenewWorkflowOwnerDsRequest
+     * @return RenewWorkflowOwnerDsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewWorkflowOwnerDsResponse RenewWorkflowOwnerDs(RenewWorkflowOwnerDsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewWorkflowOwnerDs", RenewWorkflowOwnerDsResponse.class);
+    }
+
+    /**
+     *This API is used to update task scheduling information under a workflow.
+     * @param req RenewWorkflowSchedulerInfoDsRequest
+     * @return RenewWorkflowSchedulerInfoDsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewWorkflowSchedulerInfoDsResponse RenewWorkflowSchedulerInfoDs(RenewWorkflowSchedulerInfoDsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewWorkflowSchedulerInfoDs", RenewWorkflowSchedulerInfoDsResponse.class);
     }
 
     /**
@@ -2457,8 +2523,8 @@ Set Task Alerts, Create/Update Alert Information (Latest)
     }
 
     /**
-     *<p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
-Submit a Task
+     *<p style="color:red;">[Note: This version is only available for partial whitelist customers in the Guangzhou zone]</p>.
+This API is used to submit tasks. This API is deprecated. Use the CreateTaskVersionDs API.
      * @param req SubmitTaskRequest
      * @return SubmitTaskResponse
      * @throws TencentCloudSDKException
@@ -2480,7 +2546,7 @@ Submit a Task
     }
 
     /**
-     *Submit Workflow
+     *Submit a workflow. This API is deprecated. Use the BatchCreateTaskVersionAsync API.
      * @param req SubmitWorkflowRequest
      * @return SubmitWorkflowResponse
      * @throws TencentCloudSDKException
@@ -2524,8 +2590,8 @@ Submit a Task
     }
 
     /**
-     *<p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
-Trigger events
+     *<p style="color:red;">[Note: This version is only available to some allowlisted customers in the Guangzhou region]</p>.
+This API is used to trigger event. This API is deprecated. Use API TriggerDsEvent.
      * @param req TriggerEventRequest
      * @return TriggerEventResponse
      * @throws TencentCloudSDKException
@@ -2558,7 +2624,19 @@ Trigger events
     }
 
     /**
-     *Modifying Workflow Person in Charge
+     *This API is developed in ds.
+This API is used to update a workflow, including its basic information and workflow parameters.
+     * @param req UpdateWorkflowInfoRequest
+     * @return UpdateWorkflowInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateWorkflowInfoResponse UpdateWorkflowInfo(UpdateWorkflowInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateWorkflowInfo", UpdateWorkflowInfoResponse.class);
+    }
+
+    /**
+     *This API is used to modify the workflow owner. Deprecated. Use the RenewWorkflowOwnerDs API.
      * @param req UpdateWorkflowOwnerRequest
      * @return UpdateWorkflowOwnerResponse
      * @throws TencentCloudSDKException

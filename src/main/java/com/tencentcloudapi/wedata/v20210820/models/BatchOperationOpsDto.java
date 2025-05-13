@@ -48,6 +48,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long TotalCount;
 
     /**
+    * Unique id of the asynchronous operation record.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AsyncActionId")
+    @Expose
+    private String AsyncActionId;
+
+    /**
      * Get Number of successful batch operations
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return SuccessCount Number of successful batch operations
@@ -107,6 +115,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.TotalCount = TotalCount;
     }
 
+    /**
+     * Get Unique id of the asynchronous operation record.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AsyncActionId Unique id of the asynchronous operation record.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAsyncActionId() {
+        return this.AsyncActionId;
+    }
+
+    /**
+     * Set Unique id of the asynchronous operation record.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AsyncActionId Unique id of the asynchronous operation record.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAsyncActionId(String AsyncActionId) {
+        this.AsyncActionId = AsyncActionId;
+    }
+
     public BatchOperationOpsDto() {
     }
 
@@ -124,6 +152,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.AsyncActionId != null) {
+            this.AsyncActionId = new String(source.AsyncActionId);
+        }
     }
 
 
@@ -134,6 +165,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
         this.setParamSimple(map, prefix + "FailedCount", this.FailedCount);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "AsyncActionId", this.AsyncActionId);
 
     }
 }

@@ -45,6 +45,13 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     private String ImageUrl;
 
     /**
+    * Whether to return the profile photo, default is false.
+    */
+    @SerializedName("CropPortrait")
+    @Expose
+    private Boolean CropPortrait;
+
+    /**
      * Get The Base64-encoded value of the image.
 Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
@@ -104,6 +111,22 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
         this.ImageUrl = ImageUrl;
     }
 
+    /**
+     * Get Whether to return the profile photo, default is false. 
+     * @return CropPortrait Whether to return the profile photo, default is false.
+     */
+    public Boolean getCropPortrait() {
+        return this.CropPortrait;
+    }
+
+    /**
+     * Set Whether to return the profile photo, default is false.
+     * @param CropPortrait Whether to return the profile photo, default is false.
+     */
+    public void setCropPortrait(Boolean CropPortrait) {
+        this.CropPortrait = CropPortrait;
+    }
+
     public PermitOCRRequest() {
     }
 
@@ -118,6 +141,9 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
         if (source.ImageUrl != null) {
             this.ImageUrl = new String(source.ImageUrl);
         }
+        if (source.CropPortrait != null) {
+            this.CropPortrait = new Boolean(source.CropPortrait);
+        }
     }
 
 
@@ -127,6 +153,7 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "CropPortrait", this.CropPortrait);
 
     }
 }
