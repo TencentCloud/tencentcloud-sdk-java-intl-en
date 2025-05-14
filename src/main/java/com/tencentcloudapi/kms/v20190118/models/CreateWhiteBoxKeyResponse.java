@@ -45,14 +45,14 @@ public class CreateWhiteBoxKeyResponse extends AbstractModel {
     private String KeyId;
 
     /**
-    * Tag operation return code. 0: success; 1: internal error; 2: business processing error
+    * Return code of Tag operation. `0`: success; `1`: internal error; `2`: business processing error.
     */
     @SerializedName("TagCode")
     @Expose
     private Long TagCode;
 
     /**
-    * Tag operation return message
+    * Response information of Tag operation.
     */
     @SerializedName("TagMsg")
     @Expose
@@ -114,32 +114,32 @@ public class CreateWhiteBoxKeyResponse extends AbstractModel {
     }
 
     /**
-     * Get Tag operation return code. 0: success; 1: internal error; 2: business processing error 
-     * @return TagCode Tag operation return code. 0: success; 1: internal error; 2: business processing error
+     * Get Return code of Tag operation. `0`: success; `1`: internal error; `2`: business processing error. 
+     * @return TagCode Return code of Tag operation. `0`: success; `1`: internal error; `2`: business processing error.
      */
     public Long getTagCode() {
         return this.TagCode;
     }
 
     /**
-     * Set Tag operation return code. 0: success; 1: internal error; 2: business processing error
-     * @param TagCode Tag operation return code. 0: success; 1: internal error; 2: business processing error
+     * Set Return code of Tag operation. `0`: success; `1`: internal error; `2`: business processing error.
+     * @param TagCode Return code of Tag operation. `0`: success; `1`: internal error; `2`: business processing error.
      */
     public void setTagCode(Long TagCode) {
         this.TagCode = TagCode;
     }
 
     /**
-     * Get Tag operation return message 
-     * @return TagMsg Tag operation return message
+     * Get Response information of Tag operation. 
+     * @return TagMsg Response information of Tag operation.
      */
     public String getTagMsg() {
         return this.TagMsg;
     }
 
     /**
-     * Set Tag operation return message
-     * @param TagMsg Tag operation return message
+     * Set Response information of Tag operation.
+     * @param TagMsg Response information of Tag operation.
      */
     public void setTagMsg(String TagMsg) {
         this.TagMsg = TagMsg;

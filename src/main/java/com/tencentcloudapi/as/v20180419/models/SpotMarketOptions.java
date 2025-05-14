@@ -31,8 +31,7 @@ public class SpotMarketOptions extends AbstractModel {
     private String MaxPrice;
 
     /**
-    * Bid request type. Currently, only "one-time" type is supported. Default value: one-time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Spot instance type. The value can only be one-time currently. Default value: one-time.
     */
     @SerializedName("SpotInstanceType")
     @Expose
@@ -55,20 +54,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Bid request type. Currently, only "one-time" type is supported. Default value: one-time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SpotInstanceType Bid request type. Currently, only "one-time" type is supported. Default value: one-time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Spot instance type. The value can only be one-time currently. Default value: one-time. 
+     * @return SpotInstanceType Spot instance type. The value can only be one-time currently. Default value: one-time.
      */
     public String getSpotInstanceType() {
         return this.SpotInstanceType;
     }
 
     /**
-     * Set Bid request type. Currently, only "one-time" type is supported. Default value: one-time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SpotInstanceType Bid request type. Currently, only "one-time" type is supported. Default value: one-time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Spot instance type. The value can only be one-time currently. Default value: one-time.
+     * @param SpotInstanceType Spot instance type. The value can only be one-time currently. Default value: one-time.
      */
     public void setSpotInstanceType(String SpotInstanceType) {
         this.SpotInstanceType = SpotInstanceType;

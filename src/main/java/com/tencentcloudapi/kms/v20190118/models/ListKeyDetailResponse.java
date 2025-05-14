@@ -31,8 +31,7 @@ public class ListKeyDetailResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * List of returned attribute information.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the returned attribute information list.
     */
     @SerializedName("KeyMetadatas")
     @Expose
@@ -62,20 +61,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of returned attribute information.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return KeyMetadatas List of returned attribute information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the returned attribute information list. 
+     * @return KeyMetadatas Specifies the returned attribute information list.
      */
     public KeyMetadata [] getKeyMetadatas() {
         return this.KeyMetadatas;
     }
 
     /**
-     * Set List of returned attribute information.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param KeyMetadatas List of returned attribute information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the returned attribute information list.
+     * @param KeyMetadatas Specifies the returned attribute information list.
      */
     public void setKeyMetadatas(KeyMetadata [] KeyMetadatas) {
         this.KeyMetadatas = KeyMetadatas;

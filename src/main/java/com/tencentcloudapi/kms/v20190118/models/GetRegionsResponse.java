@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class GetRegionsResponse extends AbstractModel {
 
     /**
-    * The list of supported regions
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Available region list.
     */
     @SerializedName("Regions")
     @Expose
@@ -39,20 +38,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The list of supported regions
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Regions The list of supported regions
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Available region list. 
+     * @return Regions Available region list.
      */
     public String [] getRegions() {
         return this.Regions;
     }
 
     /**
-     * Set The list of supported regions
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Regions The list of supported regions
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Available region list.
+     * @param Regions Available region list.
      */
     public void setRegions(String [] Regions) {
         this.Regions = Regions;

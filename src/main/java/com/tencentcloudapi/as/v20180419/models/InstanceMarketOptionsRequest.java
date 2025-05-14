@@ -31,8 +31,7 @@ public class InstanceMarketOptionsRequest extends AbstractModel {
     private SpotMarketOptions SpotOptions;
 
     /**
-    * Market option type. Currently, this only supports the value "spot"
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Market option type. The value can only be spot currently.
     */
     @SerializedName("MarketType")
     @Expose
@@ -55,20 +54,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Market option type. Currently, this only supports the value "spot"
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MarketType Market option type. Currently, this only supports the value "spot"
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Market option type. The value can only be spot currently. 
+     * @return MarketType Market option type. The value can only be spot currently.
      */
     public String getMarketType() {
         return this.MarketType;
     }
 
     /**
-     * Set Market option type. Currently, this only supports the value "spot"
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MarketType Market option type. Currently, this only supports the value "spot"
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Market option type. The value can only be spot currently.
+     * @param MarketType Market option type. The value can only be spot currently.
      */
     public void setMarketType(String MarketType) {
         this.MarketType = MarketType;

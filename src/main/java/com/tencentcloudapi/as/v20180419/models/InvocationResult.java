@@ -25,7 +25,6 @@ public class InvocationResult extends AbstractModel {
 
     /**
     * Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,15 +32,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Execution activity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InvocationId")
     @Expose
     private String InvocationId;
 
     /**
-    * Execution task ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task ID.
     */
     @SerializedName("InvocationTaskId")
     @Expose
@@ -49,33 +46,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Command ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CommandId")
     @Expose
     private String CommandId;
 
     /**
-    * Execution Status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the execution task status.
     */
     @SerializedName("TaskStatus")
     @Expose
     private String TaskStatus;
 
     /**
-    * Execution exception information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the exception information during execution.
     */
     @SerializedName("ErrorMessage")
     @Expose
     private String ErrorMessage;
 
     /**
-     * Get Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Instance ID. 
      * @return InstanceId Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -83,19 +75,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceId Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Execution activity ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Execution activity ID. 
      * @return InvocationId Execution activity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInvocationId() {
         return this.InvocationId;
@@ -103,39 +91,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Execution activity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param InvocationId Execution activity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInvocationId(String InvocationId) {
         this.InvocationId = InvocationId;
     }
 
     /**
-     * Get Execution task ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InvocationTaskId Execution task ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task ID. 
+     * @return InvocationTaskId Task ID.
      */
     public String getInvocationTaskId() {
         return this.InvocationTaskId;
     }
 
     /**
-     * Set Execution task ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InvocationTaskId Execution task ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task ID.
+     * @param InvocationTaskId Task ID.
      */
     public void setInvocationTaskId(String InvocationTaskId) {
         this.InvocationTaskId = InvocationTaskId;
     }
 
     /**
-     * Get Command ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Command ID. 
      * @return CommandId Command ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCommandId() {
         return this.CommandId;
@@ -143,49 +123,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Command ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CommandId Command ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCommandId(String CommandId) {
         this.CommandId = CommandId;
     }
 
     /**
-     * Get Execution Status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskStatus Execution Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the execution task status. 
+     * @return TaskStatus Specifies the execution task status.
      */
     public String getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set Execution Status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskStatus Execution Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the execution task status.
+     * @param TaskStatus Specifies the execution task status.
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get Execution exception information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ErrorMessage Execution exception information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the exception information during execution. 
+     * @return ErrorMessage Specifies the exception information during execution.
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
     }
 
     /**
-     * Set Execution exception information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ErrorMessage Execution exception information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the exception information during execution.
+     * @param ErrorMessage Specifies the exception information during execution.
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;

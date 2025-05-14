@@ -24,56 +24,76 @@ import java.util.HashMap;
 public class SystemDisk extends AbstractModel {
 
     /**
-    * System disk type. For more information on limits of system disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>Default value: `CLOUD_PREMIUM`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+    * System disk type. For restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>Default value: CLOUD_PREMIUM.</li>
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * System disk size in GB. Default value: 50
-Note: This field may return null, indicating that no valid values can be obtained.
+    * System disk size, in GB. Default value: 50.
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-     * Get System disk type. For more information on limits of system disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>Default value: `CLOUD_PREMIUM`.
-Note: this field may return `null`, indicating that no valid value can be obtained. 
-     * @return DiskType System disk type. For more information on limits of system disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>Default value: `CLOUD_PREMIUM`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Get System disk type. For restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>Default value: CLOUD_PREMIUM.</li> 
+     * @return DiskType System disk type. For restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>Default value: CLOUD_PREMIUM.</li>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set System disk type. For more information on limits of system disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>Default value: `CLOUD_PREMIUM`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param DiskType System disk type. For more information on limits of system disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>Default value: `CLOUD_PREMIUM`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Set System disk type. For restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>Default value: CLOUD_PREMIUM.</li>
+     * @param DiskType System disk type. For restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>Default value: CLOUD_PREMIUM.</li>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get System disk size in GB. Default value: 50
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiskSize System disk size in GB. Default value: 50
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get System disk size, in GB. Default value: 50. 
+     * @return DiskSize System disk size, in GB. Default value: 50.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set System disk size in GB. Default value: 50
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiskSize System disk size in GB. Default value: 50
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set System disk size, in GB. Default value: 50.
+     * @param DiskSize System disk size, in GB. Default value: 50.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;

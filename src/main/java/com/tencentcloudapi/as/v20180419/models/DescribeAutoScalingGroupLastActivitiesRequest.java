@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel {
 
     /**
-    * ID list of an auto scaling group.
+    * ID list of auto scaling groups.
     */
     @SerializedName("AutoScalingGroupIds")
     @Expose
     private String [] AutoScalingGroupIds;
 
     /**
-     * Get ID list of an auto scaling group. 
-     * @return AutoScalingGroupIds ID list of an auto scaling group.
+    * Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
+    */
+    @SerializedName("ExcludeCancelledActivity")
+    @Expose
+    private Boolean ExcludeCancelledActivity;
+
+    /**
+     * Get ID list of auto scaling groups. 
+     * @return AutoScalingGroupIds ID list of auto scaling groups.
      */
     public String [] getAutoScalingGroupIds() {
         return this.AutoScalingGroupIds;
     }
 
     /**
-     * Set ID list of an auto scaling group.
-     * @param AutoScalingGroupIds ID list of an auto scaling group.
+     * Set ID list of auto scaling groups.
+     * @param AutoScalingGroupIds ID list of auto scaling groups.
      */
     public void setAutoScalingGroupIds(String [] AutoScalingGroupIds) {
         this.AutoScalingGroupIds = AutoScalingGroupIds;
+    }
+
+    /**
+     * Get Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded. 
+     * @return ExcludeCancelledActivity Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
+     */
+    public Boolean getExcludeCancelledActivity() {
+        return this.ExcludeCancelledActivity;
+    }
+
+    /**
+     * Set Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
+     * @param ExcludeCancelledActivity Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
+     */
+    public void setExcludeCancelledActivity(Boolean ExcludeCancelledActivity) {
+        this.ExcludeCancelledActivity = ExcludeCancelledActivity;
     }
 
     public DescribeAutoScalingGroupLastActivitiesRequest() {
@@ -60,6 +83,9 @@ public class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
                 this.AutoScalingGroupIds[i] = new String(source.AutoScalingGroupIds[i]);
             }
         }
+        if (source.ExcludeCancelledActivity != null) {
+            this.ExcludeCancelledActivity = new Boolean(source.ExcludeCancelledActivity);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AutoScalingGroupIds.", this.AutoScalingGroupIds);
+        this.setParamSimple(map, prefix + "ExcludeCancelledActivity", this.ExcludeCancelledActivity);
 
     }
 }

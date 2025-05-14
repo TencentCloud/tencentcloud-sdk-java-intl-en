@@ -31,8 +31,7 @@ public class DeviceFingerprint extends AbstractModel {
     private String Identity;
 
     /**
-    * Description, such as IP and device name. Length limit: 1,024 bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Description information, such as IP and device name, with a maximum of 1024 bytes.
     */
     @SerializedName("Description")
     @Expose
@@ -55,20 +54,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Description, such as IP and device name. Length limit: 1,024 bytes
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Description Description, such as IP and device name. Length limit: 1,024 bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Description information, such as IP and device name, with a maximum of 1024 bytes. 
+     * @return Description Description information, such as IP and device name, with a maximum of 1024 bytes.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description, such as IP and device name. Length limit: 1,024 bytes
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Description Description, such as IP and device name. Length limit: 1,024 bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Description information, such as IP and device name, with a maximum of 1024 bytes.
+     * @param Description Description information, such as IP and device name, with a maximum of 1024 bytes.
      */
     public void setDescription(String Description) {
         this.Description = Description;

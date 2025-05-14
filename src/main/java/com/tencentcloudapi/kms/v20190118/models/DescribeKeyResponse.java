@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeKeyResponse extends AbstractModel {
 
     /**
-    * Key attribute information
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the attribute information of the key.
     */
     @SerializedName("KeyMetadata")
     @Expose
@@ -39,20 +38,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Key attribute information
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return KeyMetadata Key attribute information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the attribute information of the key. 
+     * @return KeyMetadata Specifies the attribute information of the key.
      */
     public KeyMetadata getKeyMetadata() {
         return this.KeyMetadata;
     }
 
     /**
-     * Set Key attribute information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param KeyMetadata Key attribute information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the attribute information of the key.
+     * @param KeyMetadata Specifies the attribute information of the key.
      */
     public void setKeyMetadata(KeyMetadata KeyMetadata) {
         this.KeyMetadata = KeyMetadata;

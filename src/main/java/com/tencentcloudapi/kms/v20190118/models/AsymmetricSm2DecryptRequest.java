@@ -31,7 +31,7 @@ public class AsymmetricSm2DecryptRequest extends AbstractModel {
     private String KeyId;
 
     /**
-    * Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
+    * Specifies that the ciphertext encrypted with PublicKey is Base64 encoded. the original ciphertext format needs to be C1C3C2_ASN1. the length of the original ciphertext cannot exceed 256 bytes.
     */
     @SerializedName("Ciphertext")
     @Expose
@@ -54,16 +54,16 @@ public class AsymmetricSm2DecryptRequest extends AbstractModel {
     }
 
     /**
-     * Get Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes. 
-     * @return Ciphertext Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
+     * Get Specifies that the ciphertext encrypted with PublicKey is Base64 encoded. the original ciphertext format needs to be C1C3C2_ASN1. the length of the original ciphertext cannot exceed 256 bytes. 
+     * @return Ciphertext Specifies that the ciphertext encrypted with PublicKey is Base64 encoded. the original ciphertext format needs to be C1C3C2_ASN1. the length of the original ciphertext cannot exceed 256 bytes.
      */
     public String getCiphertext() {
         return this.Ciphertext;
     }
 
     /**
-     * Set Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
-     * @param Ciphertext Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
+     * Set Specifies that the ciphertext encrypted with PublicKey is Base64 encoded. the original ciphertext format needs to be C1C3C2_ASN1. the length of the original ciphertext cannot exceed 256 bytes.
+     * @param Ciphertext Specifies that the ciphertext encrypted with PublicKey is Base64 encoded. the original ciphertext format needs to be C1C3C2_ASN1. the length of the original ciphertext cannot exceed 256 bytes.
      */
     public void setCiphertext(String Ciphertext) {
         this.Ciphertext = Ciphertext;

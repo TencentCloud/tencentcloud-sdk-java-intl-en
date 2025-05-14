@@ -109,7 +109,7 @@ Default value: Chinese Mainland
 <li>Yunnan</li>
 <li>Chongqing</li>
 <li>Sichuan</li>
-<li>Tibet</li>
+<li>Xizang</li>
 <li>Guangdong</li>
 <li>Guangxi</li>
 <li>Hainan</li>
@@ -331,7 +331,7 @@ Default value: Chinese Mainland
 <li>Yunnan</li>
 <li>Chongqing</li>
 <li>Sichuan</li>
-<li>Tibet</li>
+<li>Xizang</li>
 <li>Guangdong</li>
 <li>Guangxi</li>
 <li>Hainan</li>
@@ -366,7 +366,7 @@ Default value: Chinese Mainland
 <li>Yunnan</li>
 <li>Chongqing</li>
 <li>Sichuan</li>
-<li>Tibet</li>
+<li>Xizang</li>
 <li>Guangdong</li>
 <li>Guangxi</li>
 <li>Hainan</li>
@@ -407,7 +407,7 @@ Default value: Chinese Mainland
 <li>Yunnan</li>
 <li>Chongqing</li>
 <li>Sichuan</li>
-<li>Tibet</li>
+<li>Xizang</li>
 <li>Guangdong</li>
 <li>Guangxi</li>
 <li>Hainan</li>
@@ -442,7 +442,7 @@ Default value: Chinese Mainland
 <li>Yunnan</li>
 <li>Chongqing</li>
 <li>Sichuan</li>
-<li>Tibet</li>
+<li>Xizang</li>
 <li>Guangdong</li>
 <li>Guangxi</li>
 <li>Hainan</li>

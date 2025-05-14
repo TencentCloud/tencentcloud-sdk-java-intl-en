@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeKeysResponse extends AbstractModel {
 
     /**
-    * List of returned attribute information
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The attribute information list returned.
     */
     @SerializedName("KeyMetadatas")
     @Expose
@@ -39,20 +38,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of returned attribute information
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return KeyMetadatas List of returned attribute information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The attribute information list returned. 
+     * @return KeyMetadatas The attribute information list returned.
      */
     public KeyMetadata [] getKeyMetadatas() {
         return this.KeyMetadatas;
     }
 
     /**
-     * Set List of returned attribute information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param KeyMetadatas List of returned attribute information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The attribute information list returned.
+     * @param KeyMetadatas The attribute information list returned.
      */
     public void setKeyMetadatas(KeyMetadata [] KeyMetadatas) {
         this.KeyMetadatas = KeyMetadatas;

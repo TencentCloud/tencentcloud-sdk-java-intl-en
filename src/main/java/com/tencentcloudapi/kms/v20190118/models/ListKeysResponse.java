@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListKeysResponse extends AbstractModel {
 
     /**
-    * CMK list array
+    * CMK list array.
     */
     @SerializedName("Keys")
     @Expose
@@ -45,16 +45,16 @@ public class ListKeysResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get CMK list array 
-     * @return Keys CMK list array
+     * Get CMK list array. 
+     * @return Keys CMK list array.
      */
     public Key [] getKeys() {
         return this.Keys;
     }
 
     /**
-     * Set CMK list array
-     * @param Keys CMK list array
+     * Set CMK list array.
+     * @param Keys CMK list array.
      */
     public void setKeys(Key [] Keys) {
         this.Keys = Keys;

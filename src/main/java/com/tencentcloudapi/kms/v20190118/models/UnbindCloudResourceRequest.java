@@ -38,7 +38,7 @@ public class UnbindCloudResourceRequest extends AbstractModel {
     private String ProductId;
 
     /**
-    * Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
+    * Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service's features.
     */
     @SerializedName("ResourceId")
     @Expose
@@ -77,16 +77,16 @@ public class UnbindCloudResourceRequest extends AbstractModel {
     }
 
     /**
-     * Get Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features. 
-     * @return ResourceId Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
+     * Get Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service's features. 
+     * @return ResourceId Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service's features.
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
-     * @param ResourceId Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
+     * Set Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service's features.
+     * @param ResourceId Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service's features.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

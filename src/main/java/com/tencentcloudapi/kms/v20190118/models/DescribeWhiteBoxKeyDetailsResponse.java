@@ -31,8 +31,7 @@ public class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel {
     private WhiteboxKeyInfo [] KeyInfos;
 
     /**
-    * Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total number of white-box keys.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total number of white-box keys. 
+     * @return TotalCount Total number of white-box keys.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total number of white-box keys.
+     * @param TotalCount Total number of white-box keys.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

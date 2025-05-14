@@ -101,23 +101,21 @@ public class KeyMetadata extends AbstractModel {
     private Long NextRotateTime;
 
     /**
-    * Scheduled deletion time
+    * The time when scheduled deletion occurs.
     */
     @SerializedName("DeletionDate")
     @Expose
     private Long DeletionDate;
 
     /**
-    * CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
     */
     @SerializedName("Origin")
     @Expose
     private String Origin;
 
     /**
-    * It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
     */
     @SerializedName("ValidTo")
     @Expose
@@ -131,12 +129,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ResourceId;
 
     /**
-    * ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * HSM cluster ID (valid only for exclusive or managed version KMS service instances).
     */
     @SerializedName("HsmClusterId")
     @Expose
     private String HsmClusterId;
+
+    /**
+    * Key rotation period (days).
+    */
+    @SerializedName("RotateDays")
+    @Expose
+    private Long RotateDays;
+
+    /**
+    * Last disorderly rotation time (Unix timestamp).
+    */
+    @SerializedName("LastRotateTime")
+    @Expose
+    private Long LastRotateTime;
 
     /**
      * Get Globally unique CMK ID 
@@ -315,56 +326,48 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Scheduled deletion time 
-     * @return DeletionDate Scheduled deletion time
+     * Get The time when scheduled deletion occurs. 
+     * @return DeletionDate The time when scheduled deletion occurs.
      */
     public Long getDeletionDate() {
         return this.DeletionDate;
     }
 
     /**
-     * Set Scheduled deletion time
-     * @param DeletionDate Scheduled deletion time
+     * Set The time when scheduled deletion occurs.
+     * @param DeletionDate The time when scheduled deletion occurs.
      */
     public void setDeletionDate(Long DeletionDate) {
         this.DeletionDate = DeletionDate;
     }
 
     /**
-     * Get CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Origin CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL. 
+     * @return Origin CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
      */
     public String getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Origin CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
+     * @param Origin CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ValidTo It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration. 
+     * @return ValidTo Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
      */
     public Long getValidTo() {
         return this.ValidTo;
     }
 
     /**
-     * Set It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ValidTo It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
+     * @param ValidTo Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
      */
     public void setValidTo(Long ValidTo) {
         this.ValidTo = ValidTo;
@@ -387,23 +390,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get HSM cluster ID (valid only for exclusive or managed version KMS service instances). 
+     * @return HsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
      */
     public String getHsmClusterId() {
         return this.HsmClusterId;
     }
 
     /**
-     * Set ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+     * @param HsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
      */
     public void setHsmClusterId(String HsmClusterId) {
         this.HsmClusterId = HsmClusterId;
+    }
+
+    /**
+     * Get Key rotation period (days). 
+     * @return RotateDays Key rotation period (days).
+     */
+    public Long getRotateDays() {
+        return this.RotateDays;
+    }
+
+    /**
+     * Set Key rotation period (days).
+     * @param RotateDays Key rotation period (days).
+     */
+    public void setRotateDays(Long RotateDays) {
+        this.RotateDays = RotateDays;
+    }
+
+    /**
+     * Get Last disorderly rotation time (Unix timestamp). 
+     * @return LastRotateTime Last disorderly rotation time (Unix timestamp).
+     */
+    public Long getLastRotateTime() {
+        return this.LastRotateTime;
+    }
+
+    /**
+     * Set Last disorderly rotation time (Unix timestamp).
+     * @param LastRotateTime Last disorderly rotation time (Unix timestamp).
+     */
+    public void setLastRotateTime(Long LastRotateTime) {
+        this.LastRotateTime = LastRotateTime;
     }
 
     public KeyMetadata() {
@@ -462,6 +493,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.HsmClusterId != null) {
             this.HsmClusterId = new String(source.HsmClusterId);
         }
+        if (source.RotateDays != null) {
+            this.RotateDays = new Long(source.RotateDays);
+        }
+        if (source.LastRotateTime != null) {
+            this.LastRotateTime = new Long(source.LastRotateTime);
+        }
     }
 
 
@@ -485,6 +522,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "ValidTo", this.ValidTo);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
+        this.setParamSimple(map, prefix + "RotateDays", this.RotateDays);
+        this.setParamSimple(map, prefix + "LastRotateTime", this.LastRotateTime);
 
     }
 }

@@ -104,8 +104,9 @@ Note that this project ID is not the same as the project ID of the scaling group
 
     /**
     * Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -419,11 +420,13 @@ Note that this project ID is not the same as the project ID of the scaling group
 
     /**
      * Get Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance 
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li> 
      * @return InstanceChargeType Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
@@ -431,11 +434,13 @@ Note that this project ID is not the same as the project ID of the scaling group
 
     /**
      * Set Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
      * @param InstanceChargeType Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;

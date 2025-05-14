@@ -24,43 +24,38 @@ import java.util.HashMap;
 public class RunSecurityServiceEnabled extends AbstractModel {
 
     /**
-    * Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+    * Whether to enable [Cloud Workload Protection Platform (CWPP)](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1). Valid values:
+<li>TRUE: enable CWPP.</li>
+<li>FALSE: disable CWPP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
 
     /**
-     * Get Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+     * Get Whether to enable [Cloud Workload Protection Platform (CWPP)](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1). Valid values:
+<li>TRUE: enable CWPP.</li>
+<li>FALSE: disable CWPP.</li>
+Default value: TRUE. 
+     * @return Enabled Whether to enable [Cloud Workload Protection Platform (CWPP)](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1). Valid values:
+<li>TRUE: enable CWPP.</li>
+<li>FALSE: disable CWPP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Enabled Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
-Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+     * Set Whether to enable [Cloud Workload Protection Platform (CWPP)](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1). Valid values:
+<li>TRUE: enable CWPP.</li>
+<li>FALSE: disable CWPP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Enabled Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+     * @param Enabled Whether to enable [Cloud Workload Protection Platform (CWPP)](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1). Valid values:
+<li>TRUE: enable CWPP.</li>
+<li>FALSE: disable CWPP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;

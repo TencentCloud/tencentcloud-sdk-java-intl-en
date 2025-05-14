@@ -45,7 +45,7 @@ public class CreateKeyResponse extends AbstractModel {
     private Long CreateTime;
 
     /**
-    * CMK description
+    * Specifies the description of the CMK.
     */
     @SerializedName("Description")
     @Expose
@@ -66,22 +66,21 @@ public class CreateKeyResponse extends AbstractModel {
     private String KeyUsage;
 
     /**
-    * Tag operation return code. 0: success; 1: internal error; 2: business processing error
+    * Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error.
     */
     @SerializedName("TagCode")
     @Expose
     private Long TagCode;
 
     /**
-    * Tag operation return information
+    * Response information of Tag operation.
     */
     @SerializedName("TagMsg")
     @Expose
     private String TagMsg;
 
     /**
-    * ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * HSM cluster ID (valid only for exclusive or managed version KMS service instances).
     */
     @SerializedName("HsmClusterId")
     @Expose
@@ -143,16 +142,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get CMK description 
-     * @return Description CMK description
+     * Get Specifies the description of the CMK. 
+     * @return Description Specifies the description of the CMK.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set CMK description
-     * @param Description CMK description
+     * Set Specifies the description of the CMK.
+     * @param Description Specifies the description of the CMK.
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -191,52 +190,48 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Tag operation return code. 0: success; 1: internal error; 2: business processing error 
-     * @return TagCode Tag operation return code. 0: success; 1: internal error; 2: business processing error
+     * Get Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error. 
+     * @return TagCode Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error.
      */
     public Long getTagCode() {
         return this.TagCode;
     }
 
     /**
-     * Set Tag operation return code. 0: success; 1: internal error; 2: business processing error
-     * @param TagCode Tag operation return code. 0: success; 1: internal error; 2: business processing error
+     * Set Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error.
+     * @param TagCode Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error.
      */
     public void setTagCode(Long TagCode) {
         this.TagCode = TagCode;
     }
 
     /**
-     * Get Tag operation return information 
-     * @return TagMsg Tag operation return information
+     * Get Response information of Tag operation. 
+     * @return TagMsg Response information of Tag operation.
      */
     public String getTagMsg() {
         return this.TagMsg;
     }
 
     /**
-     * Set Tag operation return information
-     * @param TagMsg Tag operation return information
+     * Set Response information of Tag operation.
+     * @param TagMsg Response information of Tag operation.
      */
     public void setTagMsg(String TagMsg) {
         this.TagMsg = TagMsg;
     }
 
     /**
-     * Get ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get HSM cluster ID (valid only for exclusive or managed version KMS service instances). 
+     * @return HsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
      */
     public String getHsmClusterId() {
         return this.HsmClusterId;
     }
 
     /**
-     * Set ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+     * @param HsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
      */
     public void setHsmClusterId(String HsmClusterId) {
         this.HsmClusterId = HsmClusterId;

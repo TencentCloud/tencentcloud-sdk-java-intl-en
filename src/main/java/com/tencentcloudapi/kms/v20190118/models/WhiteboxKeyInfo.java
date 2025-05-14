@@ -101,8 +101,7 @@ public class WhiteboxKeyInfo extends AbstractModel {
     private String ResourceId;
 
     /**
-    * Whether there is a device fingerprint bound to the current key
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies whether there is a device fingerprint bound to the current key.
     */
     @SerializedName("DeviceFingerprintBind")
     @Expose
@@ -285,20 +284,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether there is a device fingerprint bound to the current key
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DeviceFingerprintBind Whether there is a device fingerprint bound to the current key
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether there is a device fingerprint bound to the current key. 
+     * @return DeviceFingerprintBind Specifies whether there is a device fingerprint bound to the current key.
      */
     public Boolean getDeviceFingerprintBind() {
         return this.DeviceFingerprintBind;
     }
 
     /**
-     * Set Whether there is a device fingerprint bound to the current key
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DeviceFingerprintBind Whether there is a device fingerprint bound to the current key
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether there is a device fingerprint bound to the current key.
+     * @param DeviceFingerprintBind Specifies whether there is a device fingerprint bound to the current key.
      */
     public void setDeviceFingerprintBind(Boolean DeviceFingerprintBind) {
         this.DeviceFingerprintBind = DeviceFingerprintBind;

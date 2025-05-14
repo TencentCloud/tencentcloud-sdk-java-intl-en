@@ -24,24 +24,22 @@ import java.util.HashMap;
 public class DataDisk extends AbstractModel {
 
     /**
-    * Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local hard disk.</li>
+    * Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
 <li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: General cloud disk.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
 <li>CLOUD_SSD: Cloud SSD.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Ultra SSD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
 The default value is consistent with the system disk type (SystemDisk.DiskType).
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
     */
     @SerializedName("DiskSize")
     @Expose
@@ -95,72 +93,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean BurstPerformance;
 
     /**
-     * Get Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local hard disk.</li>
+     * Get Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
 <li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: General cloud disk.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
 <li>CLOUD_SSD: Cloud SSD.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Ultra SSD.</li>
-The default value is consistent with the system disk type (SystemDisk.DiskType).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiskType Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local hard disk.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
+The default value is consistent with the system disk type (SystemDisk.DiskType). 
+     * @return DiskType Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
 <li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: General cloud disk.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
 <li>CLOUD_SSD: Cloud SSD.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Ultra SSD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
 The default value is consistent with the system disk type (SystemDisk.DiskType).
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local hard disk.</li>
+     * Set Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
 <li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: General cloud disk.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
 <li>CLOUD_SSD: Cloud SSD.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Ultra SSD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
 The default value is consistent with the system disk type (SystemDisk.DiskType).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiskType Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local hard disk.</li>
+     * @param DiskType Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
 <li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: General cloud disk.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
 <li>CLOUD_SSD: Cloud SSD.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Ultra SSD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
 The default value is consistent with the system disk type (SystemDisk.DiskType).
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiskSize Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation. 
+     * @return DiskSize Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiskSize Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
+     * @param DiskSize Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
