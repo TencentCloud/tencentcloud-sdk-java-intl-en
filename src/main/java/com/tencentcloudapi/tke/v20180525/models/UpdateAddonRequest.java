@@ -38,18 +38,32 @@ public class UpdateAddonRequest extends AbstractModel {
     private String AddonName;
 
     /**
-    * Add-on version. The add-on version is not updated if this parameter is not specified.
+    * addon version (default does not update if not passed. if AddonVersion is not passed, RawValues must be passed.).
     */
     @SerializedName("AddonVersion")
     @Expose
     private String AddonVersion;
 
     /**
-    * Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
+    * Parameters of the addon, which is a base64-transcoded string in json format. (the addon parameters are obtained through DescribeAddonValues. when RawValues is not passed, AddonVersion must be provided.).
     */
     @SerializedName("RawValues")
     @Expose
     private String RawValues;
+
+    /**
+    * The update policy for the addon parameter supports two strategies: replace and merge. the default value is merge, which is compatible with old version apis. replace: use new RawValues to fully replace the original RawValues of the addon. merge: add or update the corresponding parameters in the original RawValues of the addon based on new RawValues.
+    */
+    @SerializedName("UpdateStrategy")
+    @Expose
+    private String UpdateStrategy;
+
+    /**
+    * Specifies whether to only perform an update check. when set to true, only the check is performed without updating the component.
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
 
     /**
      * Get Cluster ID 
@@ -84,35 +98,67 @@ public class UpdateAddonRequest extends AbstractModel {
     }
 
     /**
-     * Get Add-on version. The add-on version is not updated if this parameter is not specified. 
-     * @return AddonVersion Add-on version. The add-on version is not updated if this parameter is not specified.
+     * Get addon version (default does not update if not passed. if AddonVersion is not passed, RawValues must be passed.). 
+     * @return AddonVersion addon version (default does not update if not passed. if AddonVersion is not passed, RawValues must be passed.).
      */
     public String getAddonVersion() {
         return this.AddonVersion;
     }
 
     /**
-     * Set Add-on version. The add-on version is not updated if this parameter is not specified.
-     * @param AddonVersion Add-on version. The add-on version is not updated if this parameter is not specified.
+     * Set addon version (default does not update if not passed. if AddonVersion is not passed, RawValues must be passed.).
+     * @param AddonVersion addon version (default does not update if not passed. if AddonVersion is not passed, RawValues must be passed.).
      */
     public void setAddonVersion(String AddonVersion) {
         this.AddonVersion = AddonVersion;
     }
 
     /**
-     * Get Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`. 
-     * @return RawValues Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
+     * Get Parameters of the addon, which is a base64-transcoded string in json format. (the addon parameters are obtained through DescribeAddonValues. when RawValues is not passed, AddonVersion must be provided.). 
+     * @return RawValues Parameters of the addon, which is a base64-transcoded string in json format. (the addon parameters are obtained through DescribeAddonValues. when RawValues is not passed, AddonVersion must be provided.).
      */
     public String getRawValues() {
         return this.RawValues;
     }
 
     /**
-     * Set Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
-     * @param RawValues Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
+     * Set Parameters of the addon, which is a base64-transcoded string in json format. (the addon parameters are obtained through DescribeAddonValues. when RawValues is not passed, AddonVersion must be provided.).
+     * @param RawValues Parameters of the addon, which is a base64-transcoded string in json format. (the addon parameters are obtained through DescribeAddonValues. when RawValues is not passed, AddonVersion must be provided.).
      */
     public void setRawValues(String RawValues) {
         this.RawValues = RawValues;
+    }
+
+    /**
+     * Get The update policy for the addon parameter supports two strategies: replace and merge. the default value is merge, which is compatible with old version apis. replace: use new RawValues to fully replace the original RawValues of the addon. merge: add or update the corresponding parameters in the original RawValues of the addon based on new RawValues. 
+     * @return UpdateStrategy The update policy for the addon parameter supports two strategies: replace and merge. the default value is merge, which is compatible with old version apis. replace: use new RawValues to fully replace the original RawValues of the addon. merge: add or update the corresponding parameters in the original RawValues of the addon based on new RawValues.
+     */
+    public String getUpdateStrategy() {
+        return this.UpdateStrategy;
+    }
+
+    /**
+     * Set The update policy for the addon parameter supports two strategies: replace and merge. the default value is merge, which is compatible with old version apis. replace: use new RawValues to fully replace the original RawValues of the addon. merge: add or update the corresponding parameters in the original RawValues of the addon based on new RawValues.
+     * @param UpdateStrategy The update policy for the addon parameter supports two strategies: replace and merge. the default value is merge, which is compatible with old version apis. replace: use new RawValues to fully replace the original RawValues of the addon. merge: add or update the corresponding parameters in the original RawValues of the addon based on new RawValues.
+     */
+    public void setUpdateStrategy(String UpdateStrategy) {
+        this.UpdateStrategy = UpdateStrategy;
+    }
+
+    /**
+     * Get Specifies whether to only perform an update check. when set to true, only the check is performed without updating the component. 
+     * @return DryRun Specifies whether to only perform an update check. when set to true, only the check is performed without updating the component.
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * Set Specifies whether to only perform an update check. when set to true, only the check is performed without updating the component.
+     * @param DryRun Specifies whether to only perform an update check. when set to true, only the check is performed without updating the component.
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
     }
 
     public UpdateAddonRequest() {
@@ -135,6 +181,12 @@ public class UpdateAddonRequest extends AbstractModel {
         if (source.RawValues != null) {
             this.RawValues = new String(source.RawValues);
         }
+        if (source.UpdateStrategy != null) {
+            this.UpdateStrategy = new String(source.UpdateStrategy);
+        }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class UpdateAddonRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AddonName", this.AddonName);
         this.setParamSimple(map, prefix + "AddonVersion", this.AddonVersion);
         this.setParamSimple(map, prefix + "RawValues", this.RawValues);
+        this.setParamSimple(map, prefix + "UpdateStrategy", this.UpdateStrategy);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

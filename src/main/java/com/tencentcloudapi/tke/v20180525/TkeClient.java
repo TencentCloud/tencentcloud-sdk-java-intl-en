@@ -1183,6 +1183,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to retrieve the App List supported by TKE.
+     * @param req GetTkeAppChartListRequest
+     * @return GetTkeAppChartListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTkeAppChartListResponse GetTkeAppChartList(GetTkeAppChartListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTkeAppChartList", GetTkeAppChartListResponse.class);
+    }
+
+    /**
      *This API is used to obtain the current progress of node upgrade. If the cluster is not in node upgrade status, the API will report an error: Task not found.
      * @param req GetUpgradeInstanceProgressRequest
      * @return GetUpgradeInstanceProgressResponse

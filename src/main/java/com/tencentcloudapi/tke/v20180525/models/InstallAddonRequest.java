@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstallAddonRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID (only supported for standard tke clusters).
     */
     @SerializedName("ClusterId")
     @Expose
@@ -52,16 +52,23 @@ public class InstallAddonRequest extends AbstractModel {
     private String RawValues;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+    * Specifies whether to perform only an installation check. when set to true, only checks are performed without installing components.
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+
+    /**
+     * Get Cluster ID (only supported for standard tke clusters). 
+     * @return ClusterId Cluster ID (only supported for standard tke clusters).
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID (only supported for standard tke clusters).
+     * @param ClusterId Cluster ID (only supported for standard tke clusters).
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -115,6 +122,22 @@ public class InstallAddonRequest extends AbstractModel {
         this.RawValues = RawValues;
     }
 
+    /**
+     * Get Specifies whether to perform only an installation check. when set to true, only checks are performed without installing components. 
+     * @return DryRun Specifies whether to perform only an installation check. when set to true, only checks are performed without installing components.
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * Set Specifies whether to perform only an installation check. when set to true, only checks are performed without installing components.
+     * @param DryRun Specifies whether to perform only an installation check. when set to true, only checks are performed without installing components.
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
+    }
+
     public InstallAddonRequest() {
     }
 
@@ -135,6 +158,9 @@ public class InstallAddonRequest extends AbstractModel {
         if (source.RawValues != null) {
             this.RawValues = new String(source.RawValues);
         }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class InstallAddonRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AddonName", this.AddonName);
         this.setParamSimple(map, prefix + "AddonVersion", this.AddonVersion);
         this.setParamSimple(map, prefix + "RawValues", this.RawValues);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }
