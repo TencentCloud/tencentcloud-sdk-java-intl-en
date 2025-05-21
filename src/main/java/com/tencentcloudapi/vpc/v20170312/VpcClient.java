@@ -61,6 +61,17 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add a parameter template of the IP address, protocol port, IP address group, or protocol port group type.
+     * @param req AddTemplateMemberRequest
+     * @return AddTemplateMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddTemplateMemberResponse AddTemplateMember(AddTemplateMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddTemplateMember", AddTemplateMemberResponse.class);
+    }
+
+    /**
      *This API is used to change the public IP of a CVM or the EIP of the associated bandwidth package.
      * @param req AdjustPublicAddressRequest
      * @return AdjustPublicAddressResponse
@@ -1159,6 +1170,17 @@ This API is completed asynchronously. If you need to query the execution result 
     public DeleteSubnetResponse DeleteSubnet(DeleteSubnetRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSubnet", DeleteSubnetResponse.class);
+    }
+
+    /**
+     *This API is used to delete a parameter template of the IP address, protocol port, IP address group, or protocol port group type.
+     * @param req DeleteTemplateMemberRequest
+     * @return DeleteTemplateMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTemplateMemberResponse DeleteTemplateMember(DeleteTemplateMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTemplateMember", DeleteTemplateMemberResponse.class);
     }
 
     /**
@@ -2907,6 +2929,17 @@ This API is completed asynchronously. If you need to query the execution result 
     public ModifySubnetAttributeResponse ModifySubnetAttribute(ModifySubnetAttributeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySubnetAttribute", ModifySubnetAttributeResponse.class);
+    }
+
+    /**
+     *This API is used to modify a parameter template of the IP address, protocol port, IP address group, or protocol port group type.
+     * @param req ModifyTemplateMemberRequest
+     * @return ModifyTemplateMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTemplateMemberResponse ModifyTemplateMember(ModifyTemplateMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTemplateMember", ModifyTemplateMemberResponse.class);
     }
 
     /**
