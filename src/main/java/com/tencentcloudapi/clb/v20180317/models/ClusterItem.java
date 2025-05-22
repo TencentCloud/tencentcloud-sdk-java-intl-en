@@ -31,8 +31,7 @@ public class ClusterItem extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Cluster name
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Cluster name.
     */
     @SerializedName("ClusterName")
     @Expose
@@ -63,20 +62,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cluster name
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ClusterName Cluster name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Cluster name. 
+     * @return ClusterName Cluster name.
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ClusterName Cluster name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Cluster name.
+     * @param ClusterName Cluster name.
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;

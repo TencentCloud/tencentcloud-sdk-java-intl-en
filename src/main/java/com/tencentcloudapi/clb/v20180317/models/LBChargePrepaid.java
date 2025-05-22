@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class LBChargePrepaid extends AbstractModel {
 
     /**
-    * Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Reserved field.
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-    * Cycle, indicating the number of months (reserved field)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Reserved field.
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-     * Get Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RenewFlag Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Reserved field. 
+     * @return RenewFlag Reserved field.
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RenewFlag Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Reserved field.
+     * @param RenewFlag Reserved field.
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get Cycle, indicating the number of months (reserved field)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Period Cycle, indicating the number of months (reserved field)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Reserved field. 
+     * @return Period Reserved field.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Cycle, indicating the number of months (reserved field)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Period Cycle, indicating the number of months (reserved field)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Reserved field.
+     * @param Period Reserved field.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
