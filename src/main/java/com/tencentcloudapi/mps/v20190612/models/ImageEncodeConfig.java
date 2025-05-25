@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ImageEncodeConfig extends AbstractModel {
 
     /**
-    * Image format. Valid values: JPG, BMP, GIF, PNG, and WebP. The default is the original image format.
+    * Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
 Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Format")
@@ -40,9 +40,9 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long Quality;
 
     /**
-     * Get Image format. Valid values: JPG, BMP, GIF, PNG, and WebP. The default is the original image format.
+     * Get Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
 Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Format Image format. Valid values: JPG, BMP, GIF, PNG, and WebP. The default is the original image format.
+     * @return Format Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getFormat() {
@@ -50,9 +50,9 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Set Image format. Valid values: JPG, BMP, GIF, PNG, and WebP. The default is the original image format.
+     * Set Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Format Image format. Valid values: JPG, BMP, GIF, PNG, and WebP. The default is the original image format.
+     * @param Format Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setFormat(String Format) {

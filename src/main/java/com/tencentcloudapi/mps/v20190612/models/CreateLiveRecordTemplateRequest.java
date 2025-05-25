@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class CreateLiveRecordTemplateRequest extends AbstractModel {
 
     /**
-    * HLS configuration parameters.
+    * HLS configuration parameter. Either this parameter or MP4Configure should be specified.
     */
     @SerializedName("HLSConfigure")
     @Expose
     private HLSConfigureInfo HLSConfigure;
+
+    /**
+    * MP4 configuration parameter. Either this parameter or HLSConfigure should be specified.
+    */
+    @SerializedName("MP4Configure")
+    @Expose
+    private MP4ConfigureInfo MP4Configure;
 
     /**
     * Recording template name. Length limit: 64 characters.
@@ -45,19 +52,35 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
-     * Get HLS configuration parameters. 
-     * @return HLSConfigure HLS configuration parameters.
+     * Get HLS configuration parameter. Either this parameter or MP4Configure should be specified. 
+     * @return HLSConfigure HLS configuration parameter. Either this parameter or MP4Configure should be specified.
      */
     public HLSConfigureInfo getHLSConfigure() {
         return this.HLSConfigure;
     }
 
     /**
-     * Set HLS configuration parameters.
-     * @param HLSConfigure HLS configuration parameters.
+     * Set HLS configuration parameter. Either this parameter or MP4Configure should be specified.
+     * @param HLSConfigure HLS configuration parameter. Either this parameter or MP4Configure should be specified.
      */
     public void setHLSConfigure(HLSConfigureInfo HLSConfigure) {
         this.HLSConfigure = HLSConfigure;
+    }
+
+    /**
+     * Get MP4 configuration parameter. Either this parameter or HLSConfigure should be specified. 
+     * @return MP4Configure MP4 configuration parameter. Either this parameter or HLSConfigure should be specified.
+     */
+    public MP4ConfigureInfo getMP4Configure() {
+        return this.MP4Configure;
+    }
+
+    /**
+     * Set MP4 configuration parameter. Either this parameter or HLSConfigure should be specified.
+     * @param MP4Configure MP4 configuration parameter. Either this parameter or HLSConfigure should be specified.
+     */
+    public void setMP4Configure(MP4ConfigureInfo MP4Configure) {
+        this.MP4Configure = MP4Configure;
     }
 
     /**
@@ -103,6 +126,9 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
         if (source.HLSConfigure != null) {
             this.HLSConfigure = new HLSConfigureInfo(source.HLSConfigure);
         }
+        if (source.MP4Configure != null) {
+            this.MP4Configure = new MP4ConfigureInfo(source.MP4Configure);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -117,6 +143,7 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "HLSConfigure.", this.HLSConfigure);
+        this.setParamObj(map, prefix + "MP4Configure.", this.MP4Configure);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
 

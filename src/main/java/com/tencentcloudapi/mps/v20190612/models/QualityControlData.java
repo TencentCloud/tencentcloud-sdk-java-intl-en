@@ -40,12 +40,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean NoVideo;
 
     /**
-    * The no-reference video quality score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * No-reference quality score of the video (100 points in total).
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("QualityEvaluationScore")
     @Expose
     private Long QualityEvaluationScore;
+
+    /**
+    * No-reference quality score of the video (MOS).
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("QualityEvaluationMeanOpinionScore")
+    @Expose
+    private Float QualityEvaluationMeanOpinionScore;
 
     /**
     * Exception items detected in content quality inspection.
@@ -104,23 +112,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The no-reference video quality score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QualityEvaluationScore The no-reference video quality score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get No-reference quality score of the video (100 points in total).
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return QualityEvaluationScore No-reference quality score of the video (100 points in total).
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getQualityEvaluationScore() {
         return this.QualityEvaluationScore;
     }
 
     /**
-     * Set The no-reference video quality score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QualityEvaluationScore The no-reference video quality score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set No-reference quality score of the video (100 points in total).
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param QualityEvaluationScore No-reference quality score of the video (100 points in total).
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setQualityEvaluationScore(Long QualityEvaluationScore) {
         this.QualityEvaluationScore = QualityEvaluationScore;
+    }
+
+    /**
+     * Get No-reference quality score of the video (MOS).
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return QualityEvaluationMeanOpinionScore No-reference quality score of the video (MOS).
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Float getQualityEvaluationMeanOpinionScore() {
+        return this.QualityEvaluationMeanOpinionScore;
+    }
+
+    /**
+     * Set No-reference quality score of the video (MOS).
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param QualityEvaluationMeanOpinionScore No-reference quality score of the video (MOS).
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setQualityEvaluationMeanOpinionScore(Float QualityEvaluationMeanOpinionScore) {
+        this.QualityEvaluationMeanOpinionScore = QualityEvaluationMeanOpinionScore;
     }
 
     /**
@@ -180,6 +208,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.QualityEvaluationScore != null) {
             this.QualityEvaluationScore = new Long(source.QualityEvaluationScore);
         }
+        if (source.QualityEvaluationMeanOpinionScore != null) {
+            this.QualityEvaluationMeanOpinionScore = new Float(source.QualityEvaluationMeanOpinionScore);
+        }
         if (source.QualityControlResultSet != null) {
             this.QualityControlResultSet = new QualityControlResult[source.QualityControlResultSet.length];
             for (int i = 0; i < source.QualityControlResultSet.length; i++) {
@@ -202,6 +233,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "NoAudio", this.NoAudio);
         this.setParamSimple(map, prefix + "NoVideo", this.NoVideo);
         this.setParamSimple(map, prefix + "QualityEvaluationScore", this.QualityEvaluationScore);
+        this.setParamSimple(map, prefix + "QualityEvaluationMeanOpinionScore", this.QualityEvaluationMeanOpinionScore);
         this.setParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
         this.setParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
 

@@ -40,6 +40,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private ImageEnhanceConfig EnhanceConfig;
 
     /**
+    * Image erasing configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("EraseConfig")
+    @Expose
+    private ImageEraseConfig EraseConfig;
+
+    /**
      * Get Image encoding configuration.
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return EncodeConfig Image encoding configuration.
@@ -79,6 +87,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.EnhanceConfig = EnhanceConfig;
     }
 
+    /**
+     * Get Image erasing configuration.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return EraseConfig Image erasing configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public ImageEraseConfig getEraseConfig() {
+        return this.EraseConfig;
+    }
+
+    /**
+     * Set Image erasing configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param EraseConfig Image erasing configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setEraseConfig(ImageEraseConfig EraseConfig) {
+        this.EraseConfig = EraseConfig;
+    }
+
     public ImageTaskInput() {
     }
 
@@ -93,6 +121,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.EnhanceConfig != null) {
             this.EnhanceConfig = new ImageEnhanceConfig(source.EnhanceConfig);
         }
+        if (source.EraseConfig != null) {
+            this.EraseConfig = new ImageEraseConfig(source.EraseConfig);
+        }
     }
 
 
@@ -102,6 +133,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
         this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
+        this.setParamObj(map, prefix + "EraseConfig.", this.EraseConfig);
 
     }
 }

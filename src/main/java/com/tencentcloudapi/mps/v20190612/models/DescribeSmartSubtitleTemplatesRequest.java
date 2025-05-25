@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSmartSubtitleTemplatesRequest extends AbstractModel {
 
     /**
-    * Condition for filtering smart subtitle templates by unique identifier. The array can contain up to 10 unique identifiers.
+    * Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers.
     */
     @SerializedName("Definitions")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeSmartSubtitleTemplatesRequest extends AbstractModel {
     private String Name;
 
     /**
-     * Get Condition for filtering smart subtitle templates by unique identifier. The array can contain up to 10 unique identifiers. 
-     * @return Definitions Condition for filtering smart subtitle templates by unique identifier. The array can contain up to 10 unique identifiers.
+     * Get Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers. 
+     * @return Definitions Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers.
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set Condition for filtering smart subtitle templates by unique identifier. The array can contain up to 10 unique identifiers.
-     * @param Definitions Condition for filtering smart subtitle templates by unique identifier. The array can contain up to 10 unique identifiers.
+     * Set Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers.
+     * @param Definitions Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers.
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;

@@ -45,6 +45,13 @@ public class WordResult extends AbstractModel {
     private Float End;
 
     /**
+    * Text after translation.
+    */
+    @SerializedName("Trans")
+    @Expose
+    private String Trans;
+
+    /**
      * Get Word text. 
      * @return Word Word text.
      */
@@ -92,6 +99,22 @@ public class WordResult extends AbstractModel {
         this.End = End;
     }
 
+    /**
+     * Get Text after translation. 
+     * @return Trans Text after translation.
+     */
+    public String getTrans() {
+        return this.Trans;
+    }
+
+    /**
+     * Set Text after translation.
+     * @param Trans Text after translation.
+     */
+    public void setTrans(String Trans) {
+        this.Trans = Trans;
+    }
+
     public WordResult() {
     }
 
@@ -109,6 +132,9 @@ public class WordResult extends AbstractModel {
         if (source.End != null) {
             this.End = new Float(source.End);
         }
+        if (source.Trans != null) {
+            this.Trans = new String(source.Trans);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class WordResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Word", this.Word);
         this.setParamSimple(map, prefix + "Start", this.Start);
         this.setParamSimple(map, prefix + "End", this.End);
+        this.setParamSimple(map, prefix + "Trans", this.Trans);
 
     }
 }
