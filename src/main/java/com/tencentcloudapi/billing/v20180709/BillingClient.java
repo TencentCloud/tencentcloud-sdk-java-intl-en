@@ -72,6 +72,17 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *Query the details of a cost allocation unit.
+     * @param req DescribeAllocationUnitDetailRequest
+     * @return DescribeAllocationUnitDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationUnitDetailResponse DescribeAllocationUnitDetail(DescribeAllocationUnitDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationUnitDetail", DescribeAllocationUnitDetailResponse.class);
+    }
+
+    /**
      *This API is used to check whether the current UIN has any adjustment, enabling customers to proactively obtain the adjustment status faster.
      * @param req DescribeBillAdjustInfoRequest
      * @return DescribeBillAdjustInfoResponse
