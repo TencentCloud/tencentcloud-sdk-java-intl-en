@@ -39,13 +39,14 @@ public class QuerySubAgentsDetailV2Request extends AbstractModel {
 
     /**
     * Filter criteria, support the following filter parameters.
-Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.
-Name: filter criteria based on customer name.
+Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.The following are the definitions of filtering  items:
+
+Name: specifies second-level reseller name.
 SubAgentUin: specifies the uin of the second-level reseller.
-Remark: remark.
+Remark: specifies remark.
 Mobile: specifies the mobile number.
-Specifies the mailbox.
-ClientUin: specifies the sub-customer uin.
+Email: specifies email address.
+ClientUin: specifies the Indirect customer uin.
     */
     @SerializedName("FilterType")
     @Expose
@@ -101,21 +102,23 @@ acs: ascending.
 
     /**
      * Get Filter criteria, support the following filter parameters.
-Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.
-Name: filter criteria based on customer name.
+Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.The following are the definitions of filtering  items:
+
+Name: specifies second-level reseller name.
 SubAgentUin: specifies the uin of the second-level reseller.
-Remark: remark.
+Remark: specifies remark.
 Mobile: specifies the mobile number.
-Specifies the mailbox.
-ClientUin: specifies the sub-customer uin. 
+Email: specifies email address.
+ClientUin: specifies the Indirect customer uin. 
      * @return FilterType Filter criteria, support the following filter parameters.
-Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.
-Name: filter criteria based on customer name.
+Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.The following are the definitions of filtering  items:
+
+Name: specifies second-level reseller name.
 SubAgentUin: specifies the uin of the second-level reseller.
-Remark: remark.
+Remark: specifies remark.
 Mobile: specifies the mobile number.
-Specifies the mailbox.
-ClientUin: specifies the sub-customer uin.
+Email: specifies email address.
+ClientUin: specifies the Indirect customer uin.
      */
     public String getFilterType() {
         return this.FilterType;
@@ -123,21 +126,23 @@ ClientUin: specifies the sub-customer uin.
 
     /**
      * Set Filter criteria, support the following filter parameters.
-Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.
-Name: filter criteria based on customer name.
+Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.The following are the definitions of filtering  items:
+
+Name: specifies second-level reseller name.
 SubAgentUin: specifies the uin of the second-level reseller.
-Remark: remark.
+Remark: specifies remark.
 Mobile: specifies the mobile number.
-Specifies the mailbox.
-ClientUin: specifies the sub-customer uin.
+Email: specifies email address.
+ClientUin: specifies the Indirect customer uin.
      * @param FilterType Filter criteria, support the following filter parameters.
-Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.
-Name: filter criteria based on customer name.
+Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.The following are the definitions of filtering  items:
+
+Name: specifies second-level reseller name.
 SubAgentUin: specifies the uin of the second-level reseller.
-Remark: remark.
+Remark: specifies remark.
 Mobile: specifies the mobile number.
-Specifies the mailbox.
-ClientUin: specifies the sub-customer uin.
+Email: specifies email address.
+ClientUin: specifies the Indirect customer uin.
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InputSettingInfo extends AbstractModel {
 
     /**
-    * Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+    * Application name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("AppName")
@@ -32,7 +32,7 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String AppName;
 
     /**
-    * Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+    * Stream name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("StreamName")
@@ -64,8 +64,8 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String SourceType;
 
     /**
-    * Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
-Value range: 0 (default) or 10000-600000
+    * Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`.
+Value range: 0 (default) or 10000-600000.
 The value must be a multiple of 1,000.
 Note: This field may return `null`, indicating that no valid value was found.
     */
@@ -104,9 +104,9 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String ContentType;
 
     /**
-     * Get Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+     * Get Application name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found. 
-     * @return AppName Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+     * @return AppName Application name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
      */
     public String getAppName() {
@@ -114,9 +114,9 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Set Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+     * Set Application name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param AppName Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+     * @param AppName Application name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setAppName(String AppName) {
@@ -124,9 +124,9 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+     * Get Stream name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found. 
-     * @return StreamName Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+     * @return StreamName Stream name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
      */
     public String getStreamName() {
@@ -134,9 +134,9 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Set Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+     * Set Stream name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param StreamName Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+     * @param StreamName Stream name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setStreamName(String StreamName) {
@@ -204,12 +204,12 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
-Value range: 0 (default) or 10000-600000
+     * Get Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`.
+Value range: 0 (default) or 10000-600000.
 The value must be a multiple of 1,000.
 Note: This field may return `null`, indicating that no valid value was found. 
-     * @return DelayTime Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
-Value range: 0 (default) or 10000-600000
+     * @return DelayTime Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`.
+Value range: 0 (default) or 10000-600000.
 The value must be a multiple of 1,000.
 Note: This field may return `null`, indicating that no valid value was found.
      */
@@ -218,12 +218,12 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Set Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
-Value range: 0 (default) or 10000-600000
+     * Set Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`.
+Value range: 0 (default) or 10000-600000.
 The value must be a multiple of 1,000.
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param DelayTime Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
-Value range: 0 (default) or 10000-600000
+     * @param DelayTime Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`.
+Value range: 0 (default) or 10000-600000.
 The value must be a multiple of 1,000.
 Note: This field may return `null`, indicating that no valid value was found.
      */
