@@ -38,6 +38,13 @@ public class DescribeBinlogDownloadUrlRequest extends AbstractModel {
     private Long BinlogId;
 
     /**
+    * Backup download source restriction condition.
+    */
+    @SerializedName("DownloadRestriction")
+    @Expose
+    private BackupLimitRestriction DownloadRestriction;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -69,6 +76,22 @@ public class DescribeBinlogDownloadUrlRequest extends AbstractModel {
         this.BinlogId = BinlogId;
     }
 
+    /**
+     * Get Backup download source restriction condition. 
+     * @return DownloadRestriction Backup download source restriction condition.
+     */
+    public BackupLimitRestriction getDownloadRestriction() {
+        return this.DownloadRestriction;
+    }
+
+    /**
+     * Set Backup download source restriction condition.
+     * @param DownloadRestriction Backup download source restriction condition.
+     */
+    public void setDownloadRestriction(BackupLimitRestriction DownloadRestriction) {
+        this.DownloadRestriction = DownloadRestriction;
+    }
+
     public DescribeBinlogDownloadUrlRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeBinlogDownloadUrlRequest extends AbstractModel {
         if (source.BinlogId != null) {
             this.BinlogId = new Long(source.BinlogId);
         }
+        if (source.DownloadRestriction != null) {
+            this.DownloadRestriction = new BackupLimitRestriction(source.DownloadRestriction);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeBinlogDownloadUrlRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "BinlogId", this.BinlogId);
+        this.setParamObj(map, prefix + "DownloadRestriction.", this.DownloadRestriction);
 
     }
 }

@@ -109,7 +109,9 @@ public class OpenAuditServiceRequest extends AbstractModel {
     /**
      * Get Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied. 
      * @return AuditRuleFilters Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+     * @deprecated
      */
+    @Deprecated
     public AuditRuleFilters [] getAuditRuleFilters() {
         return this.AuditRuleFilters;
     }
@@ -117,7 +119,9 @@ public class OpenAuditServiceRequest extends AbstractModel {
     /**
      * Set Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
      * @param AuditRuleFilters Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+     * @deprecated
      */
+    @Deprecated
     public void setAuditRuleFilters(AuditRuleFilters [] AuditRuleFilters) {
         this.AuditRuleFilters = AuditRuleFilters;
     }

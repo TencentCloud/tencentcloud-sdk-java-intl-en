@@ -50,6 +50,17 @@ public class SesClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create an address-level unsubscribe configuration.
+     * @param req CreateAddressUnsubscribeConfigRequest
+     * @return CreateAddressUnsubscribeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAddressUnsubscribeConfigResponse CreateAddressUnsubscribeConfig(CreateAddressUnsubscribeConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAddressUnsubscribeConfig", CreateAddressUnsubscribeConfigResponse.class);
+    }
+
+    /**
      *After the sender domain is verified, you need a sender address to send emails. For example, if your sender domain is mail.qcloud.com, your sender address can be service@mail.qcloud.com. If you want to display your name (such as "Tencent Cloud") in the inbox list of the recipients, the sender address should be in the format of `Tencent Cloud <email address>`. Please note that there must be a space between your name and the first angle bracket.
      * @param req CreateEmailAddressRequest
      * @return CreateEmailAddressResponse
@@ -103,6 +114,17 @@ Note: Only an approved template can be used to send emails.
     public CreateReceiverDetailResponse CreateReceiverDetail(CreateReceiverDetailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateReceiverDetail", CreateReceiverDetailResponse.class);
+    }
+
+    /**
+     *Remove address-level unsubscribe configuration.
+     * @param req DeleteAddressUnsubscribeConfigRequest
+     * @return DeleteAddressUnsubscribeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAddressUnsubscribeConfigResponse DeleteAddressUnsubscribeConfig(DeleteAddressUnsubscribeConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAddressUnsubscribeConfig", DeleteAddressUnsubscribeConfigResponse.class);
     }
 
     /**
@@ -206,6 +228,17 @@ Default API request rate limit: 1 request/sec.
     }
 
     /**
+     *This API is used to get the address and unsubscribe configuration list.
+     * @param req ListAddressUnsubscribeConfigRequest
+     * @return ListAddressUnsubscribeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAddressUnsubscribeConfigResponse ListAddressUnsubscribeConfig(ListAddressUnsubscribeConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListAddressUnsubscribeConfig", ListAddressUnsubscribeConfigResponse.class);
+    }
+
+    /**
      *The API is used to get blocklisted addresses. In the case of a hard bounce, Tencent Cloud will blocklist the recipient address and do not allow any user to send emails to this address. If you confirm that this is a misjudgment, you can remove it from the blocklist.
      * @param req ListBlackEmailAddressRequest
      * @return ListBlackEmailAddressResponse
@@ -280,6 +313,17 @@ Default API request rate limit: 1 request/sec.
     public SendEmailResponse SendEmail(SendEmailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SendEmail", SendEmailResponse.class);
+    }
+
+    /**
+     *This API is used to update address-level unsubscribe configurations.
+     * @param req UpdateAddressUnsubscribeConfigRequest
+     * @return UpdateAddressUnsubscribeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAddressUnsubscribeConfigResponse UpdateAddressUnsubscribeConfig(UpdateAddressUnsubscribeConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAddressUnsubscribeConfig", UpdateAddressUnsubscribeConfigResponse.class);
     }
 
     /**

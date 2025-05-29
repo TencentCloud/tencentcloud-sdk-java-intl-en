@@ -45,6 +45,9 @@ public enum CynosdbErrorCode {
      /* Failed to query the details of a read-write instance */
      FAILEDOPERATION_GETOSSINFOERROR("FailedOperation.GetOssInfoError"),
      
+     /*  */
+     FAILEDOPERATION_INSTANCEQUERYERROR("FailedOperation.InstanceQueryError"),
+     
      /* Insufficient account balance */
      FAILEDOPERATION_INSUFFICIENTBALANCE("FailedOperation.InsufficientBalance"),
      
@@ -101,6 +104,9 @@ public enum CynosdbErrorCode {
      
      /* Failed to query instances by security group. */
      INTERNALERROR_LISTINSTANCEFAILED("InternalError.ListInstanceFailed"),
+     
+     /*  */
+     INTERNALERROR_LISTINSTANCESERROR("InternalError.ListInstancesError"),
      
      /* Public network operation failed. */
      INTERNALERROR_OPERATEWANFAIL("InternalError.OperateWanFail"),
@@ -227,6 +233,9 @@ public enum CynosdbErrorCode {
      
      /* The number of instances exceeds the limit. */
      LIMITEXCEEDED_USERINSTANCELIMIT("LimitExceeded.UserInstanceLimit"),
+     
+     /*  */
+     OPERATIONDENIED_AUDITSTATUSERROR("OperationDenied.AuditStatusError"),
      
      /* Failed to verify permissions */
      OPERATIONDENIED_CAMDENIEDERROR("OperationDenied.CamDeniedError"),

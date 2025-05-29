@@ -50,6 +50,17 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create allocation units.
+     * @param req CreateAllocationUnitRequest
+     * @return CreateAllocationUnitResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAllocationUnitResponse CreateAllocationUnit(CreateAllocationUnitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAllocationUnit", CreateAllocationUnitResponse.class);
+    }
+
+    /**
      *u200cThis API is used to batch cancel cost allocation tags.
      * @param req DeleteAllocationTagRequest
      * @return DeleteAllocationTagResponse
@@ -58,6 +69,17 @@ public class BillingClient extends AbstractClient{
     public DeleteAllocationTagResponse DeleteAllocationTag(DeleteAllocationTagRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAllocationTag", DeleteAllocationTagResponse.class);
+    }
+
+    /**
+     *Delete a cost allocation unit.
+     * @param req DeleteAllocationUnitRequest
+     * @return DeleteAllocationUnitResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAllocationUnitResponse DeleteAllocationUnit(DeleteAllocationUnitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAllocationUnit", DeleteAllocationUnitResponse.class);
     }
 
     /**
@@ -348,6 +370,17 @@ Note: The API request may fail due to network instability or other exceptions. I
     public DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetails(DescribeVoucherUsageDetailsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVoucherUsageDetails", DescribeVoucherUsageDetailsResponse.class);
+    }
+
+    /**
+     *This API is used to modify cost allocation unit information.
+     * @param req ModifyAllocationUnitRequest
+     * @return ModifyAllocationUnitResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAllocationUnitResponse ModifyAllocationUnit(ModifyAllocationUnitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAllocationUnit", ModifyAllocationUnitResponse.class);
     }
 
 }

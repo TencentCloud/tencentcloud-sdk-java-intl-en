@@ -369,6 +369,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the download source limit of the default backup configured by the user in the current region.
+     * @param req DescribeBackupDownloadRestrictionRequest
+     * @return DescribeBackupDownloadRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestriction(DescribeBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupDownloadRestriction", DescribeBackupDownloadRestrictionResponse.class);
+    }
+
+    /**
      *This API is used to query the download link of cluster backup files.
      * @param req DescribeBackupDownloadUrlRequest
      * @return DescribeBackupDownloadUrlResponse
@@ -377,6 +388,17 @@ public class CynosdbClient extends AbstractClient{
     public DescribeBackupDownloadUrlResponse DescribeBackupDownloadUrl(DescribeBackupDownloadUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBackupDownloadUrl", DescribeBackupDownloadUrlResponse.class);
+    }
+
+    /**
+     *This API is used to query the default backup download access restrictions of user-level settings in the current region.
+     * @param req DescribeBackupDownloadUserRestrictionRequest
+     * @return DescribeBackupDownloadUserRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupDownloadUserRestrictionResponse DescribeBackupDownloadUserRestriction(DescribeBackupDownloadUserRestrictionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupDownloadUserRestriction", DescribeBackupDownloadUserRestrictionResponse.class);
     }
 
     /**
@@ -498,6 +520,17 @@ public class CynosdbClient extends AbstractClient{
     public DescribeClusterPasswordComplexityResponse DescribeClusterPasswordComplexity(DescribeClusterPasswordComplexityRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClusterPasswordComplexity", DescribeClusterPasswordComplexityResponse.class);
+    }
+
+    /**
+     *This API is used to query the cluster read-only switch.
+     * @param req DescribeClusterReadOnlyRequest
+     * @return DescribeClusterReadOnlyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterReadOnlyResponse DescribeClusterReadOnly(DescribeClusterReadOnlyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterReadOnly", DescribeClusterReadOnlyResponse.class);
     }
 
     /**
@@ -974,6 +1007,28 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the download source limit of the backup file for the user in the current region. It can be configured to allow downloads from both private and public networks, only the private network, or a designated vpc or ip within the private network.
+     * @param req ModifyBackupDownloadRestrictionRequest
+     * @return ModifyBackupDownloadRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(ModifyBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBackupDownloadRestriction", ModifyBackupDownloadRestrictionResponse.class);
+    }
+
+    /**
+     *This API is used to modify the download source restrictions for backup files in the user's current region. It can be configured to allow downloads from both private and public networks, only from a private network, or from a designated vpc or ip within the private network.
+     * @param req ModifyBackupDownloadUserRestrictionRequest
+     * @return ModifyBackupDownloadUserRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupDownloadUserRestrictionResponse ModifyBackupDownloadUserRestriction(ModifyBackupDownloadUserRestrictionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBackupDownloadUserRestriction", ModifyBackupDownloadUserRestrictionResponse.class);
+    }
+
+    /**
      *This API is used to rename a backup file.
      * @param req ModifyBackupNameRequest
      * @return ModifyBackupNameResponse
@@ -1048,6 +1103,17 @@ public class CynosdbClient extends AbstractClient{
     public ModifyClusterPasswordComplexityResponse ModifyClusterPasswordComplexity(ModifyClusterPasswordComplexityRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyClusterPasswordComplexity", ModifyClusterPasswordComplexityResponse.class);
+    }
+
+    /**
+     *This API is used to modify the read-only switch of a cluster.
+     * @param req ModifyClusterReadOnlyRequest
+     * @return ModifyClusterReadOnlyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterReadOnlyResponse ModifyClusterReadOnly(ModifyClusterReadOnlyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterReadOnly", ModifyClusterReadOnlyResponse.class);
     }
 
     /**

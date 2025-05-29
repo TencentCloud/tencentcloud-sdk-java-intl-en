@@ -38,6 +38,13 @@ public class DescribeBackupDownloadUrlRequest extends AbstractModel {
     private Long BackupId;
 
     /**
+    * Backup download source restriction condition.
+    */
+    @SerializedName("DownloadRestriction")
+    @Expose
+    private BackupLimitRestriction DownloadRestriction;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -69,6 +76,22 @@ public class DescribeBackupDownloadUrlRequest extends AbstractModel {
         this.BackupId = BackupId;
     }
 
+    /**
+     * Get Backup download source restriction condition. 
+     * @return DownloadRestriction Backup download source restriction condition.
+     */
+    public BackupLimitRestriction getDownloadRestriction() {
+        return this.DownloadRestriction;
+    }
+
+    /**
+     * Set Backup download source restriction condition.
+     * @param DownloadRestriction Backup download source restriction condition.
+     */
+    public void setDownloadRestriction(BackupLimitRestriction DownloadRestriction) {
+        this.DownloadRestriction = DownloadRestriction;
+    }
+
     public DescribeBackupDownloadUrlRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeBackupDownloadUrlRequest extends AbstractModel {
         if (source.BackupId != null) {
             this.BackupId = new Long(source.BackupId);
         }
+        if (source.DownloadRestriction != null) {
+            this.DownloadRestriction = new BackupLimitRestriction(source.DownloadRestriction);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeBackupDownloadUrlRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
+        this.setParamObj(map, prefix + "DownloadRestriction.", this.DownloadRestriction);
 
     }
 }
