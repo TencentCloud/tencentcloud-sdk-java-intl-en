@@ -39,6 +39,17 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *Create a sharing rule.
+     * @param req CreateAllocationRuleRequest
+     * @return CreateAllocationRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAllocationRuleResponse CreateAllocationRule(CreateAllocationRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAllocationRule", CreateAllocationRuleResponse.class);
+    }
+
+    /**
      *This API is used to batch set cost allocation tags.
      * @param req CreateAllocationTagRequest
      * @return CreateAllocationTagResponse
@@ -58,6 +69,28 @@ public class BillingClient extends AbstractClient{
     public CreateAllocationUnitResponse CreateAllocationUnit(CreateAllocationUnitRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAllocationUnit", CreateAllocationUnitResponse.class);
+    }
+
+    /**
+     *Create a collection rule.
+     * @param req CreateGatherRuleRequest
+     * @return CreateGatherRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGatherRuleResponse CreateGatherRule(CreateGatherRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGatherRule", CreateGatherRuleResponse.class);
+    }
+
+    /**
+     *Delete sharing rule interface.
+     * @param req DeleteAllocationRuleRequest
+     * @return DeleteAllocationRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAllocationRuleResponse DeleteAllocationRule(DeleteAllocationRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAllocationRule", DeleteAllocationRuleResponse.class);
     }
 
     /**
@@ -83,6 +116,17 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *Delete a collection rule.
+     * @param req DeleteGatherRuleRequest
+     * @return DeleteGatherRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGatherRuleResponse DeleteGatherRule(DeleteGatherRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGatherRule", DeleteGatherRuleResponse.class);
+    }
+
+    /**
      *This API is used to check the Tencent Cloud account balance.
      * @param req DescribeAccountBalanceRequest
      * @return DescribeAccountBalanceResponse
@@ -91,6 +135,39 @@ public class BillingClient extends AbstractClient{
     public DescribeAccountBalanceResponse DescribeAccountBalance(DescribeAccountBalanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAccountBalance", DescribeAccountBalanceResponse.class);
+    }
+
+    /**
+     *This API is used to query sharing rule details.
+     * @param req DescribeAllocationRuleDetailRequest
+     * @return DescribeAllocationRuleDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationRuleDetailResponse DescribeAllocationRuleDetail(DescribeAllocationRuleDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationRuleDetail", DescribeAllocationRuleDetailResponse.class);
+    }
+
+    /**
+     *This API is used to query all sharing rule overviews.
+     * @param req DescribeAllocationRuleSummaryRequest
+     * @return DescribeAllocationRuleSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationRuleSummaryResponse DescribeAllocationRuleSummary(DescribeAllocationRuleSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationRuleSummary", DescribeAllocationRuleSummaryResponse.class);
+    }
+
+    /**
+     *This API is used to query the cost tree.
+     * @param req DescribeAllocationTreeRequest
+     * @return DescribeAllocationTreeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationTreeResponse DescribeAllocationTree(DescribeAllocationTreeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationTree", DescribeAllocationTreeResponse.class);
     }
 
     /**
@@ -340,6 +417,17 @@ Note: The API request may fail due to network instability or other exceptions. I
     }
 
     /**
+     *This API is used to query the collection rule details.
+     * @param req DescribeGatherRuleDetailRequest
+     * @return DescribeGatherRuleDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGatherRuleDetailResponse DescribeGatherRuleDetail(DescribeGatherRuleDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGatherRuleDetail", DescribeGatherRuleDetailResponse.class);
+    }
+
+    /**
      *This API is used to get cost allocation tags.
      * @param req DescribeTagListRequest
      * @return DescribeTagListResponse
@@ -373,6 +461,17 @@ Note: The API request may fail due to network instability or other exceptions. I
     }
 
     /**
+     *Edit sharing rules.
+     * @param req ModifyAllocationRuleRequest
+     * @return ModifyAllocationRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAllocationRuleResponse ModifyAllocationRule(ModifyAllocationRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAllocationRule", ModifyAllocationRuleResponse.class);
+    }
+
+    /**
      *This API is used to modify cost allocation unit information.
      * @param req ModifyAllocationUnitRequest
      * @return ModifyAllocationUnitResponse
@@ -381,6 +480,17 @@ Note: The API request may fail due to network instability or other exceptions. I
     public ModifyAllocationUnitResponse ModifyAllocationUnit(ModifyAllocationUnitRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAllocationUnit", ModifyAllocationUnitResponse.class);
+    }
+
+    /**
+     *Edit a collection rule.
+     * @param req ModifyGatherRuleRequest
+     * @return ModifyGatherRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGatherRuleResponse ModifyGatherRule(ModifyGatherRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGatherRule", ModifyGatherRuleResponse.class);
     }
 
 }
