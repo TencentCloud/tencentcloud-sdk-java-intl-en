@@ -314,6 +314,17 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
+     *Get AB watermark play url.
+     * @param req GetAbWatermarkPlayUrlRequest
+     * @return GetAbWatermarkPlayUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAbWatermarkPlayUrlResponse GetAbWatermarkPlayUrl(GetAbWatermarkPlayUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetAbWatermarkPlayUrl", GetAbWatermarkPlayUrlResponse.class);
+    }
+
+    /**
      *This API is used to modify a StreamLive channel.
      * @param req ModifyStreamLiveChannelRequest
      * @return ModifyStreamLiveChannelResponse
