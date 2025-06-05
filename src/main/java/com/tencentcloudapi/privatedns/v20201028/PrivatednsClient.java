@@ -292,6 +292,17 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the private domain records.
+     * @param req DescribeRecordRequest
+     * @return DescribeRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordResponse DescribeRecord(DescribeRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRecord", DescribeRecordResponse.class);
+    }
+
+    /**
      *This API is used to get the DNS request volume of a private domain.
      * @param req DescribeRequestDataRequest
      * @return DescribeRequestDataResponse

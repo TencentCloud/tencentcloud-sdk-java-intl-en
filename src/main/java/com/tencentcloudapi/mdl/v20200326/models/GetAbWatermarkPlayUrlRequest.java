@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetAbWatermarkPlayUrlRequest extends AbstractModel {
 
     /**
-    * Client UUID, 32-bit unsigned integer.
+    * Client UUID, 32-bit unsigned integer, [0, 4294967295].
     */
     @SerializedName("Uuid")
     @Expose
@@ -45,16 +45,16 @@ public class GetAbWatermarkPlayUrlRequest extends AbstractModel {
     private String Url;
 
     /**
-     * Get Client UUID, 32-bit unsigned integer. 
-     * @return Uuid Client UUID, 32-bit unsigned integer.
+     * Get Client UUID, 32-bit unsigned integer, [0, 4294967295]. 
+     * @return Uuid Client UUID, 32-bit unsigned integer, [0, 4294967295].
      */
     public Long getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set Client UUID, 32-bit unsigned integer.
-     * @param Uuid Client UUID, 32-bit unsigned integer.
+     * Set Client UUID, 32-bit unsigned integer, [0, 4294967295].
+     * @param Uuid Client UUID, 32-bit unsigned integer, [0, 4294967295].
      */
     public void setUuid(Long Uuid) {
         this.Uuid = Uuid;
