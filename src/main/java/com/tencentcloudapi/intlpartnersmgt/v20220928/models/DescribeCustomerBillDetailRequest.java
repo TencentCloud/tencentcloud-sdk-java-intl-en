@@ -31,7 +31,7 @@ public class DescribeCustomerBillDetailRequest extends AbstractModel {
     private Long CustomerUin;
 
     /**
-    * Inquiry month, in the format of YYYY-MM, such as 2023-01
+    * Inquiry month, in the format of YYYY-MM, such as 2023-01.
     */
     @SerializedName("Month")
     @Expose
@@ -119,16 +119,16 @@ pre_downgrade (Upgrade/Downgrade)
     }
 
     /**
-     * Get Inquiry month, in the format of YYYY-MM, such as 2023-01 
-     * @return Month Inquiry month, in the format of YYYY-MM, such as 2023-01
+     * Get Inquiry month, in the format of YYYY-MM, such as 2023-01. 
+     * @return Month Inquiry month, in the format of YYYY-MM, such as 2023-01.
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set Inquiry month, in the format of YYYY-MM, such as 2023-01
-     * @param Month Inquiry month, in the format of YYYY-MM, such as 2023-01
+     * Set Inquiry month, in the format of YYYY-MM, such as 2023-01.
+     * @param Month Inquiry month, in the format of YYYY-MM, such as 2023-01.
      */
     public void setMonth(String Month) {
         this.Month = Month;

@@ -21,40 +21,38 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageEraseLogoConfig extends AbstractModel {
+public class ImageDenoiseConfig extends AbstractModel {
 
     /**
     * Capability configuration enabling status. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled.</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
-Note: This field may return null, indicating that no valid value can be obtained.
-
+    * Type, with valid values including:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
 Note: This field may return null, indicating that no valid value can be obtained.
     */
-    @SerializedName("ImageAreaBoxes")
+    @SerializedName("Type")
     @Expose
-    private ImageAreaBoxInfo [] ImageAreaBoxes;
+    private String Type;
 
     /**
      * Get Capability configuration enabling status. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
-Default value: ON.
-Note: This field may return null, indicating that no valid value can be obtained. 
+<li>ON: enabled.</li>
+<li>OFF: disabled.</li>
+Default value: ON. 
      * @return Switch Capability configuration enabling status. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled.</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
@@ -62,64 +60,63 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Capability configuration enabling status. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled.</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Switch Capability configuration enabling status. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled.</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
-Note: This field may return null, indicating that no valid value can be obtained.
-
+     * Get Type, with valid values including:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
 Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ImageAreaBoxes Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
-Note: This field may return null, indicating that no valid value can be obtained.
-
+     * @return Type Type, with valid values including:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
-    public ImageAreaBoxInfo [] getImageAreaBoxes() {
-        return this.ImageAreaBoxes;
+    public String getType() {
+        return this.Type;
     }
 
     /**
-     * Set Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
+     * Set Type, with valid values including:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
 Note: This field may return null, indicating that no valid value can be obtained.
-
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ImageAreaBoxes Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
-Note: This field may return null, indicating that no valid value can be obtained.
-
+     * @param Type Type, with valid values including:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
-    public void setImageAreaBoxes(ImageAreaBoxInfo [] ImageAreaBoxes) {
-        this.ImageAreaBoxes = ImageAreaBoxes;
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
-    public ImageEraseLogoConfig() {
+    public ImageDenoiseConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ImageEraseLogoConfig(ImageEraseLogoConfig source) {
+    public ImageDenoiseConfig(ImageDenoiseConfig source) {
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
-        if (source.ImageAreaBoxes != null) {
-            this.ImageAreaBoxes = new ImageAreaBoxInfo[source.ImageAreaBoxes.length];
-            for (int i = 0; i < source.ImageAreaBoxes.length; i++) {
-                this.ImageAreaBoxes[i] = new ImageAreaBoxInfo(source.ImageAreaBoxes[i]);
-            }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
         }
     }
 
@@ -129,7 +126,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
-        this.setParamArrayObj(map, prefix + "ImageAreaBoxes.", this.ImageAreaBoxes);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

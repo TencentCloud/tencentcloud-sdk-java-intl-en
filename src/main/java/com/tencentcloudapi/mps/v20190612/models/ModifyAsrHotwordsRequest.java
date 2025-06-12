@@ -26,8 +26,8 @@ public class ModifyAsrHotwordsRequest extends AbstractModel {
     /**
     * Hotword lexicon ID. 
  
-Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
-One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
+Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
 
     */
     @SerializedName("HotwordsId")
@@ -68,13 +68,13 @@ One of Name, FileContent, and FileName should be specified if the hotword lexico
     /**
      * Get Hotword lexicon ID. 
  
-Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
-One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
+Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
  
      * @return HotwordsId Hotword lexicon ID. 
  
-Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
-One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
+Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
 
      */
     public String getHotwordsId() {
@@ -84,13 +84,13 @@ One of Name, FileContent, and FileName should be specified if the hotword lexico
     /**
      * Set Hotword lexicon ID. 
  
-Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
-One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
+Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
 
      * @param HotwordsId Hotword lexicon ID. 
  
-Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
-One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
+Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
 
      */
     public void setHotwordsId(String HotwordsId) {

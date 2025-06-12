@@ -93,7 +93,7 @@ Default value: 0.
     private EnhanceConfig EnhanceConfig;
 
     /**
-    * 
+    * Additional parameter, which is a serialized JSON string.
     */
     @SerializedName("StdExtInfo")
     @Expose
@@ -268,16 +268,16 @@ Default value: 0.
     }
 
     /**
-     * Get  
-     * @return StdExtInfo 
+     * Get Additional parameter, which is a serialized JSON string. 
+     * @return StdExtInfo Additional parameter, which is a serialized JSON string.
      */
     public String getStdExtInfo() {
         return this.StdExtInfo;
     }
 
     /**
-     * Set 
-     * @param StdExtInfo 
+     * Set Additional parameter, which is a serialized JSON string.
+     * @param StdExtInfo Additional parameter, which is a serialized JSON string.
      */
     public void setStdExtInfo(String StdExtInfo) {
         this.StdExtInfo = StdExtInfo;

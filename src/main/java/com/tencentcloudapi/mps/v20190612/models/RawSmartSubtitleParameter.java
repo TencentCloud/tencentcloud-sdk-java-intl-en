@@ -25,9 +25,10 @@ public class RawSmartSubtitleParameter extends AbstractModel {
 
     /**
     * Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
     */
     @SerializedName("SubtitleType")
     @Expose
@@ -46,7 +47,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish
@@ -125,13 +126,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON. 
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON. 
      * @return SubtitleType Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
      */
     public Long getSubtitleType() {
         return this.SubtitleType;
@@ -139,13 +142,15 @@ The value can only be 0 when TranslateSwitch is set to OFF.The value can only be
 
     /**
      * Set Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
      * @param SubtitleType Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
      */
     public void setSubtitleType(Long SubtitleType) {
         this.SubtitleType = SubtitleType;
@@ -164,7 +169,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish
@@ -186,7 +191,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish
@@ -214,7 +219,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish
@@ -236,7 +241,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish

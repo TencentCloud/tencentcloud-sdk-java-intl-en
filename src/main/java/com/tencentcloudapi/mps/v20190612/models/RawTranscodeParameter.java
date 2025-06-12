@@ -72,6 +72,22 @@ Default value: 0.
     private TEHDConfig TEHDConfig;
 
     /**
+    * Additional parameter, which is a serialized JSON string.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("StdExtInfo")
+    @Expose
+    private String StdExtInfo;
+
+    /**
+    * Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("EnhanceConfig")
+    @Expose
+    private EnhanceConfig EnhanceConfig;
+
+    /**
      * Get Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files. 
      * @return Container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
      */
@@ -191,6 +207,46 @@ Default value: 0.
         this.TEHDConfig = TEHDConfig;
     }
 
+    /**
+     * Get Additional parameter, which is a serialized JSON string.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return StdExtInfo Additional parameter, which is a serialized JSON string.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getStdExtInfo() {
+        return this.StdExtInfo;
+    }
+
+    /**
+     * Set Additional parameter, which is a serialized JSON string.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param StdExtInfo Additional parameter, which is a serialized JSON string.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setStdExtInfo(String StdExtInfo) {
+        this.StdExtInfo = StdExtInfo;
+    }
+
+    /**
+     * Get Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return EnhanceConfig Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public EnhanceConfig getEnhanceConfig() {
+        return this.EnhanceConfig;
+    }
+
+    /**
+     * Set Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param EnhanceConfig Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
+        this.EnhanceConfig = EnhanceConfig;
+    }
+
     public RawTranscodeParameter() {
     }
 
@@ -217,6 +273,12 @@ Default value: 0.
         if (source.TEHDConfig != null) {
             this.TEHDConfig = new TEHDConfig(source.TEHDConfig);
         }
+        if (source.StdExtInfo != null) {
+            this.StdExtInfo = new String(source.StdExtInfo);
+        }
+        if (source.EnhanceConfig != null) {
+            this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
+        }
     }
 
 
@@ -230,6 +292,8 @@ Default value: 0.
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+        this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
+        this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
 
     }
 }

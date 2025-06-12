@@ -39,6 +39,18 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to initiate batch processing tasks for URL video links, with features including:
+Smart subtitle (full speech, speech hotword, and speech translation)
+     * @param req BatchProcessMediaRequest
+     * @return BatchProcessMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchProcessMediaResponse BatchProcessMedia(BatchProcessMediaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchProcessMedia", BatchProcessMediaResponse.class);
+    }
+
+    /**
      *This API is used to create a custom content analysis template. Up to 50 templates can be created.
      * @param req CreateAIAnalysisTemplateRequest
      * @return CreateAIAnalysisTemplateResponse
@@ -525,6 +537,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to query the details of the task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
+     * @param req DescribeBatchTaskDetailRequest
+     * @return DescribeBatchTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBatchTaskDetailResponse DescribeBatchTaskDetail(DescribeBatchTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBatchTaskDetail", DescribeBatchTaskDetailResponse.class);
+    }
+
+    /**
      *This API is used to query content moderation templates by template ID. Both custom and preset templates that match the template IDs passed in will be returned.
      * @param req DescribeContentReviewTemplatesRequest
      * @return DescribeContentReviewTemplatesResponse
@@ -544,6 +567,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(DescribeImageSpriteTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeImageSpriteTemplates", DescribeImageSpriteTemplatesResponse.class);
+    }
+
+    /**
+     *This API is used to query the details of the task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
+     * @param req DescribeImageTaskDetailRequest
+     * @return DescribeImageTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageTaskDetailResponse DescribeImageTaskDetail(DescribeImageTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageTaskDetail", DescribeImageTaskDetailResponse.class);
     }
 
     /**
@@ -1016,9 +1050,10 @@ Instead of initiating a video processing task, this API is used to help generate
     }
 
     /**
-     *This API is used to initiate image processing. Its features include:
-1. Format conversion;
-2. Image enhancement;
+     *This API is used to initiate image processing, with features including:
+1. Format conversion.
+2. Image enhancement.
+3. Image erasure.
      * @param req ProcessImageRequest
      * @return ProcessImageResponse
      * @throws TencentCloudSDKException

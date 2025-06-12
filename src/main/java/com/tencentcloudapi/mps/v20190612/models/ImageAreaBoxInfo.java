@@ -25,8 +25,8 @@ public class ImageAreaBoxInfo extends AbstractModel {
 
     /**
     * Type of the box selection area in the image. Valid values:
-<li>logo: icon</li>
-<li>text: text</li>
+<li>logo: icon.</li>
+<li>Text: text.</li>
 Default value: logo.
 Note: This field may return null, indicating that no valid value can be obtained.
     */
@@ -44,7 +44,10 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long [] AreaCoordSet;
 
     /**
-    * 
+    * Coordinates of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner. This parameter takes effect when AreaCoordSet is not specified.
+ - [0.1, 0.1, 0.3, 0.3]: Indicates the ratio (values are less than 1).
+ -[50, 50, 350, 280]: Indicates the pixel (values are greater than or equal to 1).
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("BoundingBox")
     @Expose
@@ -52,13 +55,13 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Type of the box selection area in the image. Valid values:
-<li>logo: icon</li>
-<li>text: text</li>
+<li>logo: icon.</li>
+<li>Text: text.</li>
 Default value: logo.
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return Type Type of the box selection area in the image. Valid values:
-<li>logo: icon</li>
-<li>text: text</li>
+<li>logo: icon.</li>
+<li>Text: text.</li>
 Default value: logo.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
@@ -68,13 +71,13 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Type of the box selection area in the image. Valid values:
-<li>logo: icon</li>
-<li>text: text</li>
+<li>logo: icon.</li>
+<li>Text: text.</li>
 Default value: logo.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param Type Type of the box selection area in the image. Valid values:
-<li>logo: icon</li>
-<li>text: text</li>
+<li>logo: icon.</li>
+<li>Text: text.</li>
 Default value: logo.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
@@ -107,16 +110,28 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get  
-     * @return BoundingBox 
+     * Get Coordinates of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner. This parameter takes effect when AreaCoordSet is not specified.
+ - [0.1, 0.1, 0.3, 0.3]: Indicates the ratio (values are less than 1).
+ -[50, 50, 350, 280]: Indicates the pixel (values are greater than or equal to 1).
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return BoundingBox Coordinates of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner. This parameter takes effect when AreaCoordSet is not specified.
+ - [0.1, 0.1, 0.3, 0.3]: Indicates the ratio (values are less than 1).
+ -[50, 50, 350, 280]: Indicates the pixel (values are greater than or equal to 1).
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Float [] getBoundingBox() {
         return this.BoundingBox;
     }
 
     /**
-     * Set 
-     * @param BoundingBox 
+     * Set Coordinates of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner. This parameter takes effect when AreaCoordSet is not specified.
+ - [0.1, 0.1, 0.3, 0.3]: Indicates the ratio (values are less than 1).
+ -[50, 50, 350, 280]: Indicates the pixel (values are greater than or equal to 1).
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param BoundingBox Coordinates of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner. This parameter takes effect when AreaCoordSet is not specified.
+ - [0.1, 0.1, 0.3, 0.3]: Indicates the ratio (values are less than 1).
+ -[50, 50, 350, 280]: Indicates the pixel (values are greater than or equal to 1).
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setBoundingBox(Float [] BoundingBox) {
         this.BoundingBox = BoundingBox;
