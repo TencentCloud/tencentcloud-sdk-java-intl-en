@@ -30,6 +30,9 @@ public enum LkeErrorCode {
      /* The file size is too large. */
      LIMITEXCEEDED_TOOLARGEFILEERROR("LimitExceeded.TooLargeFileError"),
      
+     /* Missing required parameters. */
+     MISSINGPARAMETER("MissingParameter"),
+     
      /* The account is in arrears. */
      RESOURCEUNAVAILABLE_INARREARS("ResourceUnavailable.InArrears"),
      

@@ -39,6 +39,50 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to check if the label name under an attribute exist.
+     * @param req CheckAttributeLabelExistRequest
+     * @return CheckAttributeLabelExistResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckAttributeLabelExistResponse CheckAttributeLabelExist(CheckAttributeLabelExistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckAttributeLabelExist", CheckAttributeLabelExistResponse.class);
+    }
+
+    /**
+     *This API is used to check attribute label references.
+     * @param req CheckAttributeLabelReferRequest
+     * @return CheckAttributeLabelReferResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckAttributeLabelReferResponse CheckAttributeLabelRefer(CheckAttributeLabelReferRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckAttributeLabelRefer", CheckAttributeLabelReferResponse.class);
+    }
+
+    /**
+     *This API is used to create knowledge engine applications.
+     * @param req CreateAppRequest
+     * @return CreateAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAppResponse CreateApp(CreateAppRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateApp", CreateAppResponse.class);
+    }
+
+    /**
+     *This API is used to create attributes.
+     * @param req CreateAttributeLabelRequest
+     * @return CreateAttributeLabelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAttributeLabelResponse CreateAttributeLabel(CreateAttributeLabelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAttributeLabel", CreateAttributeLabelResponse.class);
+    }
+
+    /**
      *This API is used to create enterprises.
      * @param req CreateCorpRequest
      * @return CreateCorpResponse
@@ -47,6 +91,39 @@ public class LkeClient extends AbstractClient{
     public CreateCorpResponse CreateCorp(CreateCorpRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateCorp", CreateCorpResponse.class);
+    }
+
+    /**
+     *This API is used to create doc categories.
+     * @param req CreateDocCateRequest
+     * @return CreateDocCateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDocCateResponse CreateDocCate(CreateDocCateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDocCate", CreateDocCateResponse.class);
+    }
+
+    /**
+     *This API is used to enter Q&As.
+     * @param req CreateQARequest
+     * @return CreateQAResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateQAResponse CreateQA(CreateQARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateQA", CreateQAResponse.class);
+    }
+
+    /**
+     *This API is used to create Q&A categories.
+     * @param req CreateQACateRequest
+     * @return CreateQACateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateQACateResponse CreateQACate(CreateQACateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateQACate", CreateQACateResponse.class);
     }
 
     /**
@@ -60,6 +137,17 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     public CreateReconstructDocumentFlowResponse CreateReconstructDocumentFlow(CreateReconstructDocumentFlowRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateReconstructDocumentFlow", CreateReconstructDocumentFlowResponse.class);
+    }
+
+    /**
+     *This API is used to create rejected questions.
+     * @param req CreateRejectedQuestionRequest
+     * @return CreateRejectedQuestionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRejectedQuestionResponse CreateRejectedQuestion(CreateRejectedQuestionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRejectedQuestion", CreateRejectedQuestionResponse.class);
     }
 
     /**
@@ -85,6 +173,17 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     }
 
     /**
+     *This API is used to delete attribute labels.
+     * @param req DeleteAttributeLabelRequest
+     * @return DeleteAttributeLabelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAttributeLabelResponse DeleteAttributeLabel(DeleteAttributeLabelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAttributeLabel", DeleteAttributeLabelResponse.class);
+    }
+
+    /**
      *This API is used to delete documents.
      * @param req DeleteDocRequest
      * @return DeleteDocResponse
@@ -93,6 +192,17 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     public DeleteDocResponse DeleteDoc(DeleteDocRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDoc", DeleteDocResponse.class);
+    }
+
+    /**
+     *This API is used to delete Doc categories.
+     * @param req DeleteDocCateRequest
+     * @return DeleteDocCateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDocCateResponse DeleteDocCate(DeleteDocCateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDocCate", DeleteDocCateResponse.class);
     }
 
     /**
@@ -126,6 +236,17 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     public DeleteRejectedQuestionResponse DeleteRejectedQuestion(DeleteRejectedQuestionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRejectedQuestion", DeleteRejectedQuestionResponse.class);
+    }
+
+    /**
+     *This API is used to obtain application details under the corporate.
+     * @param req DescribeAppRequest
+     * @return DescribeAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAppResponse DescribeApp(DescribeAppRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApp", DescribeAppResponse.class);
     }
 
     /**
@@ -173,6 +294,17 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     }
 
     /**
+     *This API is used to query corporate details.
+     * @param req DescribeCorpRequest
+     * @return DescribeCorpResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCorpResponse DescribeCorp(DescribeCorpRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCorp", DescribeCorpResponse.class);
+    }
+
+    /**
      *This API is used to query document details.
      * @param req DescribeDocRequest
      * @return DescribeDocResponse
@@ -206,6 +338,28 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     }
 
     /**
+     *This API is used to query Q&A details.
+     * @param req DescribeQARequest
+     * @return DescribeQAResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQAResponse DescribeQA(DescribeQARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeQA", DescribeQAResponse.class);
+    }
+
+    /**
+     *This API is used to get the reference source details list.
+     * @param req DescribeReferRequest
+     * @return DescribeReferResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReferResponse DescribeRefer(DescribeReferRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRefer", DescribeReferResponse.class);
+    }
+
+    /**
      *This API is used to query release details.
      * @param req DescribeReleaseRequest
      * @return DescribeReleaseResponse
@@ -214,6 +368,17 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     public DescribeReleaseResponse DescribeRelease(DescribeReleaseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRelease", DescribeReleaseResponse.class);
+    }
+
+    /**
+     *This API is used to pull the release button status and last release time.
+     * @param req DescribeReleaseInfoRequest
+     * @return DescribeReleaseInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReleaseInfoResponse DescribeReleaseInfo(DescribeReleaseInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReleaseInfo", DescribeReleaseInfoResponse.class);
     }
 
     /**
@@ -236,6 +401,28 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     public DescribeSearchStatsGraphResponse DescribeSearchStatsGraph(DescribeSearchStatsGraphRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSearchStatsGraph", DescribeSearchStatsGraphResponse.class);
+    }
+
+    /**
+     *This API is used to get fragment details.
+     * @param req DescribeSegmentsRequest
+     * @return DescribeSegmentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSegmentsResponse DescribeSegments(DescribeSegmentsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSegments", DescribeSegmentsResponse.class);
+    }
+
+    /**
+     *This API is used to get the temporary key for file upload.
+     * @param req DescribeStorageCredentialRequest
+     * @return DescribeStorageCredentialResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStorageCredentialResponse DescribeStorageCredential(DescribeStorageCredentialRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStorageCredential", DescribeStorageCredentialResponse.class);
     }
 
     /**
@@ -272,6 +459,17 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     }
 
     /**
+     *This API is used to export attribute labels.
+     * @param req ExportAttributeLabelRequest
+     * @return ExportAttributeLabelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportAttributeLabelResponse ExportAttributeLabel(ExportAttributeLabelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportAttributeLabel", ExportAttributeLabelResponse.class);
+    }
+
+    /**
      *This API is used to export Q&A list.
      * @param req ExportQAListRequest
      * @return ExportQAListResponse
@@ -305,6 +503,61 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     }
 
     /**
+     *This API is used to get response type data statistics.
+     * @param req GetAnswerTypeDataCountRequest
+     * @return GetAnswerTypeDataCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAnswerTypeDataCountResponse GetAnswerTypeDataCount(GetAnswerTypeDataCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetAnswerTypeDataCount", GetAnswerTypeDataCountResponse.class);
+    }
+
+    /**
+     *This API is used to get a model list.
+     * @param req GetAppKnowledgeCountRequest
+     * @return GetAppKnowledgeCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAppKnowledgeCountResponse GetAppKnowledgeCount(GetAppKnowledgeCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetAppKnowledgeCount", GetAppKnowledgeCountResponse.class);
+    }
+
+    /**
+     *This API is used to get application secret keys.
+     * @param req GetAppSecretRequest
+     * @return GetAppSecretResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAppSecretResponse GetAppSecret(GetAppSecretRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetAppSecret", GetAppSecretResponse.class);
+    }
+
+    /**
+     *This API is used to get document preview information.
+     * @param req GetDocPreviewRequest
+     * @return GetDocPreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDocPreviewResponse GetDocPreview(GetDocPreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetDocPreview", GetDocPreviewResponse.class);
+    }
+
+    /**
+     *This API is used to get likes and dislikes data statistics.
+     * @param req GetLikeDataCountRequest
+     * @return GetLikeDataCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLikeDataCountResponse GetLikeDataCount(GetLikeDataCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetLikeDataCount", GetLikeDataCountResponse.class);
+    }
+
+    /**
      *This API is used to obtain chat history based on the session ID (only historical session data within the past 180 days will be retained).
      * @param req GetMsgRecordRequest
      * @return GetMsgRecordResponse
@@ -313,6 +566,17 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     public GetMsgRecordResponse GetMsgRecord(GetMsgRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetMsgRecord", GetMsgRecordResponse.class);
+    }
+
+    /**
+     *This is an asynchronous APIs, used to get document parsing task results.
+     * @param req GetReconstructDocumentResultRequest
+     * @return GetReconstructDocumentResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetReconstructDocumentResultResponse GetReconstructDocumentResult(GetReconstructDocumentResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetReconstructDocumentResult", GetReconstructDocumentResultResponse.class);
     }
 
     /**
@@ -338,6 +602,28 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     }
 
     /**
+     *DocGroup.
+     * @param req GroupDocRequest
+     * @return GroupDocResponse
+     * @throws TencentCloudSDKException
+     */
+    public GroupDocResponse GroupDoc(GroupDocRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GroupDoc", GroupDocResponse.class);
+    }
+
+    /**
+     *Q&A Group.
+     * @param req GroupQARequest
+     * @return GroupQAResponse
+     * @throws TencentCloudSDKException
+     */
+    public GroupQAResponse GroupQA(GroupQARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GroupQA", GroupQAResponse.class);
+    }
+
+    /**
      *This API is used to ignore dissatisfied responses.
      * @param req IgnoreUnsatisfiedReplyRequest
      * @return IgnoreUnsatisfiedReplyResponse
@@ -360,6 +646,28 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     }
 
     /**
+     *This API is used to get list of application types.
+     * @param req ListAppCategoryRequest
+     * @return ListAppCategoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAppCategoryResponse ListAppCategory(ListAppCategoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListAppCategory", ListAppCategoryResponse.class);
+    }
+
+    /**
+     *This API is used to query the knowledge base capacity details in a list.
+     * @param req ListAppKnowledgeDetailRequest
+     * @return ListAppKnowledgeDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAppKnowledgeDetailResponse ListAppKnowledgeDetail(ListAppKnowledgeDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListAppKnowledgeDetail", ListAppKnowledgeDetailResponse.class);
+    }
+
+    /**
      *This API is used to query attribute label lists.
      * @param req ListAttributeLabelRequest
      * @return ListAttributeLabelResponse
@@ -368,6 +676,50 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     public ListAttributeLabelResponse ListAttributeLabel(ListAttributeLabelRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListAttributeLabel", ListAttributeLabelResponse.class);
+    }
+
+    /**
+     *This API is used to get document list.
+     * @param req ListDocRequest
+     * @return ListDocResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDocResponse ListDoc(ListDocRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDoc", ListDocResponse.class);
+    }
+
+    /**
+     *This API is used to get document category.
+     * @param req ListDocCateRequest
+     * @return ListDocCateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDocCateResponse ListDocCate(ListDocCateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDocCate", ListDocCateResponse.class);
+    }
+
+    /**
+     *This API is used to get the model list.
+     * @param req ListModelRequest
+     * @return ListModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListModelResponse ListModel(ListModelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListModel", ListModelResponse.class);
+    }
+
+    /**
+     *This API is used to query Q&A lists.
+     * @param req ListQARequest
+     * @return ListQAResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListQAResponse ListQA(ListQARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListQA", ListQAResponse.class);
     }
 
     /**
@@ -393,6 +745,28 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     }
 
     /**
+     *This API is used to release a preview of rejected questions.
+     * @param req ListRejectedQuestionPreviewRequest
+     * @return ListRejectedQuestionPreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListRejectedQuestionPreviewResponse ListRejectedQuestionPreview(ListRejectedQuestionPreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListRejectedQuestionPreview", ListRejectedQuestionPreviewResponse.class);
+    }
+
+    /**
+     *This API is used to get the release list.
+     * @param req ListReleaseRequest
+     * @return ListReleaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListReleaseResponse ListRelease(ListReleaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListRelease", ListReleaseResponse.class);
+    }
+
+    /**
      *This API is used to preview the release configuration items.
      * @param req ListReleaseConfigPreviewRequest
      * @return ListReleaseConfigPreviewResponse
@@ -401,6 +775,28 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     public ListReleaseConfigPreviewResponse ListReleaseConfigPreview(ListReleaseConfigPreviewRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListReleaseConfigPreview", ListReleaseConfigPreviewResponse.class);
+    }
+
+    /**
+     *This API is used to preview released documents.
+     * @param req ListReleaseDocPreviewRequest
+     * @return ListReleaseDocPreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListReleaseDocPreviewResponse ListReleaseDocPreview(ListReleaseDocPreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListReleaseDocPreview", ListReleaseDocPreviewResponse.class);
+    }
+
+    /**
+     *List of documents.
+     * @param req ListReleaseQAPreviewRequest
+     * @return ListReleaseQAPreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListReleaseQAPreviewResponse ListReleaseQAPreview(ListReleaseQAPreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListReleaseQAPreview", ListReleaseQAPreviewResponse.class);
     }
 
     /**
@@ -544,6 +940,17 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     public RateMsgRecordResponse RateMsgRecord(RateMsgRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RateMsgRecord", RateMsgRecordResponse.class);
+    }
+
+    /**
+     *This API is used to rename a document.
+     * @param req RenameDocRequest
+     * @return RenameDocResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenameDocResponse RenameDoc(RenameDocRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenameDoc", RenameDocResponse.class);
     }
 
     /**
