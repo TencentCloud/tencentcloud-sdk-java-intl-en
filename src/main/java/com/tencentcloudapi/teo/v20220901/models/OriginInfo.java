@@ -76,6 +76,17 @@ If it is not specified, the default value is off.
     private PrivateParameter [] PrivateParameters;
 
     /**
+    * Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
+
+- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
+- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
+- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
+    */
+    @SerializedName("HostHeader")
+    @Expose
+    private String HostHeader;
+
+    /**
     * VODEO sub-application ID. This parameter is required when OriginType is VODEO.
     */
     @SerializedName("VodeoSubAppId")
@@ -97,6 +108,21 @@ If it is not specified, the default value is off.
     @SerializedName("VodeoBucketId")
     @Expose
     private String VodeoBucketId;
+
+    /**
+    * VOD origin-pull scope. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the parameter VodBucketId.</li>.
+</li>
+    */
+    @SerializedName("VodOriginScope")
+    @Expose
+    private String VodOriginScope;
+
+    /**
+    * VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
+    */
+    @SerializedName("VodBucketId")
+    @Expose
+    private String VodBucketId;
 
     /**
      * Get Origin server type, with values:
@@ -247,6 +273,38 @@ If it is not specified, the default value is off.
     }
 
     /**
+     * Get Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
+
+- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
+- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
+- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name. 
+     * @return HostHeader Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
+
+- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
+- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
+- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
+     */
+    public String getHostHeader() {
+        return this.HostHeader;
+    }
+
+    /**
+     * Set Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
+
+- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
+- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
+- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
+     * @param HostHeader Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
+
+- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
+- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
+- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
+     */
+    public void setHostHeader(String HostHeader) {
+        this.HostHeader = HostHeader;
+    }
+
+    /**
      * Get VODEO sub-application ID. This parameter is required when OriginType is VODEO. 
      * @return VodeoSubAppId VODEO sub-application ID. This parameter is required when OriginType is VODEO.
      * @deprecated
@@ -314,6 +372,42 @@ If it is not specified, the default value is off.
         this.VodeoBucketId = VodeoBucketId;
     }
 
+    /**
+     * Get VOD origin-pull scope. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the parameter VodBucketId.</li>.
+</li> 
+     * @return VodOriginScope VOD origin-pull scope. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the parameter VodBucketId.</li>.
+</li>
+     */
+    public String getVodOriginScope() {
+        return this.VodOriginScope;
+    }
+
+    /**
+     * Set VOD origin-pull scope. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the parameter VodBucketId.</li>.
+</li>
+     * @param VodOriginScope VOD origin-pull scope. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the parameter VodBucketId.</li>.
+</li>
+     */
+    public void setVodOriginScope(String VodOriginScope) {
+        this.VodOriginScope = VodOriginScope;
+    }
+
+    /**
+     * Get VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application. 
+     * @return VodBucketId VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
+     */
+    public String getVodBucketId() {
+        return this.VodBucketId;
+    }
+
+    /**
+     * Set VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
+     * @param VodBucketId VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
+     */
+    public void setVodBucketId(String VodBucketId) {
+        this.VodBucketId = VodBucketId;
+    }
+
     public OriginInfo() {
     }
 
@@ -340,6 +434,9 @@ If it is not specified, the default value is off.
                 this.PrivateParameters[i] = new PrivateParameter(source.PrivateParameters[i]);
             }
         }
+        if (source.HostHeader != null) {
+            this.HostHeader = new String(source.HostHeader);
+        }
         if (source.VodeoSubAppId != null) {
             this.VodeoSubAppId = new Long(source.VodeoSubAppId);
         }
@@ -348,6 +445,12 @@ If it is not specified, the default value is off.
         }
         if (source.VodeoBucketId != null) {
             this.VodeoBucketId = new String(source.VodeoBucketId);
+        }
+        if (source.VodOriginScope != null) {
+            this.VodOriginScope = new String(source.VodOriginScope);
+        }
+        if (source.VodBucketId != null) {
+            this.VodBucketId = new String(source.VodBucketId);
         }
     }
 
@@ -361,9 +464,12 @@ If it is not specified, the default value is off.
         this.setParamSimple(map, prefix + "BackupOrigin", this.BackupOrigin);
         this.setParamSimple(map, prefix + "PrivateAccess", this.PrivateAccess);
         this.setParamArrayObj(map, prefix + "PrivateParameters.", this.PrivateParameters);
+        this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
         this.setParamSimple(map, prefix + "VodeoSubAppId", this.VodeoSubAppId);
         this.setParamSimple(map, prefix + "VodeoDistributionRange", this.VodeoDistributionRange);
         this.setParamSimple(map, prefix + "VodeoBucketId", this.VodeoBucketId);
+        this.setParamSimple(map, prefix + "VodOriginScope", this.VodOriginScope);
+        this.setParamSimple(map, prefix + "VodBucketId", this.VodBucketId);
 
     }
 }

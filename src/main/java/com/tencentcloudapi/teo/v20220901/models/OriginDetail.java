@@ -89,6 +89,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private PrivateParameter [] PrivateParameters;
 
     /**
+    * current configured origin HOST header.
+    */
+    @SerializedName("HostHeader")
+    @Expose
+    private String HostHeader;
+
+    /**
     * MO sub-application ID
     */
     @SerializedName("VodeoSubAppId")
@@ -108,6 +115,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("VodeoBucketId")
     @Expose
     private String VodeoBucketId;
+
+    /**
+    * VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+</li>
+    */
+    @SerializedName("VodOriginScope")
+    @Expose
+    private String VodOriginScope;
+
+    /**
+    * VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+    */
+    @SerializedName("VodBucketId")
+    @Expose
+    private String VodBucketId;
 
     /**
      * Get Origin server type. Valid values:
@@ -286,6 +308,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get current configured origin HOST header. 
+     * @return HostHeader current configured origin HOST header.
+     */
+    public String getHostHeader() {
+        return this.HostHeader;
+    }
+
+    /**
+     * Set current configured origin HOST header.
+     * @param HostHeader current configured origin HOST header.
+     */
+    public void setHostHeader(String HostHeader) {
+        this.HostHeader = HostHeader;
+    }
+
+    /**
      * Get MO sub-application ID 
      * @return VodeoSubAppId MO sub-application ID
      * @deprecated
@@ -345,6 +383,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.VodeoBucketId = VodeoBucketId;
     }
 
+    /**
+     * Get VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+</li> 
+     * @return VodOriginScope VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+</li>
+     */
+    public String getVodOriginScope() {
+        return this.VodOriginScope;
+    }
+
+    /**
+     * Set VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+</li>
+     * @param VodOriginScope VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+</li>
+     */
+    public void setVodOriginScope(String VodOriginScope) {
+        this.VodOriginScope = VodOriginScope;
+    }
+
+    /**
+     * Get VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application. 
+     * @return VodBucketId VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+     */
+    public String getVodBucketId() {
+        return this.VodBucketId;
+    }
+
+    /**
+     * Set VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+     * @param VodBucketId VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+     */
+    public void setVodBucketId(String VodBucketId) {
+        this.VodBucketId = VodBucketId;
+    }
+
     public OriginDetail() {
     }
 
@@ -377,6 +451,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.PrivateParameters[i] = new PrivateParameter(source.PrivateParameters[i]);
             }
         }
+        if (source.HostHeader != null) {
+            this.HostHeader = new String(source.HostHeader);
+        }
         if (source.VodeoSubAppId != null) {
             this.VodeoSubAppId = new Long(source.VodeoSubAppId);
         }
@@ -385,6 +462,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.VodeoBucketId != null) {
             this.VodeoBucketId = new String(source.VodeoBucketId);
+        }
+        if (source.VodOriginScope != null) {
+            this.VodOriginScope = new String(source.VodOriginScope);
+        }
+        if (source.VodBucketId != null) {
+            this.VodBucketId = new String(source.VodBucketId);
         }
     }
 
@@ -400,9 +483,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BackOriginGroupName", this.BackOriginGroupName);
         this.setParamSimple(map, prefix + "PrivateAccess", this.PrivateAccess);
         this.setParamArrayObj(map, prefix + "PrivateParameters.", this.PrivateParameters);
+        this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
         this.setParamSimple(map, prefix + "VodeoSubAppId", this.VodeoSubAppId);
         this.setParamSimple(map, prefix + "VodeoDistributionRange", this.VodeoDistributionRange);
         this.setParamSimple(map, prefix + "VodeoBucketId", this.VodeoBucketId);
+        this.setParamSimple(map, prefix + "VodOriginScope", this.VodOriginScope);
+        this.setParamSimple(map, prefix + "VodBucketId", this.VodBucketId);
 
     }
 }

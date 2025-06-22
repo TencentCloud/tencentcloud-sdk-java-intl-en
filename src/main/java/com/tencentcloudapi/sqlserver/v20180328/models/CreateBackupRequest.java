@@ -52,7 +52,7 @@ public class CreateBackupRequest extends AbstractModel {
     private String BackupName;
 
     /**
-    * 
+    * Backup storage policy. 0: Follow the custom backup retention policy; 1: Follow the instance lifecycle until the instance is eliminated. Default value: 0.
     */
     @SerializedName("StorageStrategy")
     @Expose
@@ -123,16 +123,16 @@ public class CreateBackupRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return StorageStrategy 
+     * Get Backup storage policy. 0: Follow the custom backup retention policy; 1: Follow the instance lifecycle until the instance is eliminated. Default value: 0. 
+     * @return StorageStrategy Backup storage policy. 0: Follow the custom backup retention policy; 1: Follow the instance lifecycle until the instance is eliminated. Default value: 0.
      */
     public Long getStorageStrategy() {
         return this.StorageStrategy;
     }
 
     /**
-     * Set 
-     * @param StorageStrategy 
+     * Set Backup storage policy. 0: Follow the custom backup retention policy; 1: Follow the instance lifecycle until the instance is eliminated. Default value: 0.
+     * @param StorageStrategy Backup storage policy. 0: Follow the custom backup retention policy; 1: Follow the instance lifecycle until the instance is eliminated. Default value: 0.
      */
     public void setStorageStrategy(Long StorageStrategy) {
         this.StorageStrategy = StorageStrategy;
