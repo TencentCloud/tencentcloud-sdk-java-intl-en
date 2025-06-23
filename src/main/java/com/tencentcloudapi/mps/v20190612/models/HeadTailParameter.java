@@ -25,7 +25,7 @@ public class HeadTailParameter extends AbstractModel {
 
     /**
     * The opening segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HeadSet")
     @Expose
@@ -33,7 +33,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The closing segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TailSet")
     @Expose
@@ -41,9 +41,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The opening segments.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return HeadSet The opening segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MediaInputInfo [] getHeadSet() {
         return this.HeadSet;
@@ -51,9 +51,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The opening segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param HeadSet The opening segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHeadSet(MediaInputInfo [] HeadSet) {
         this.HeadSet = HeadSet;
@@ -61,9 +61,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The closing segments.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TailSet The closing segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MediaInputInfo [] getTailSet() {
         return this.TailSet;
@@ -71,9 +71,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The closing segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param TailSet The closing segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTailSet(MediaInputInfo [] TailSet) {
         this.TailSet = TailSet;

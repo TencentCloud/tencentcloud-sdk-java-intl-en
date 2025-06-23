@@ -25,7 +25,7 @@ public class LiveActivityResItem extends AbstractModel {
 
     /**
     * The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LiveRecordTask")
     @Expose
@@ -41,9 +41,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return LiveRecordTask The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public LiveScheduleLiveRecordTaskResult getLiveRecordTask() {
         return this.LiveRecordTask;
@@ -51,9 +51,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param LiveRecordTask The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLiveRecordTask(LiveScheduleLiveRecordTaskResult LiveRecordTask) {
         this.LiveRecordTask = LiveRecordTask;

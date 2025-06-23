@@ -26,7 +26,7 @@ public class TaskOutputStorage extends AbstractModel {
     /**
     * The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
-<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -51,10 +51,10 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * Get The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
-<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li> 
+<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li> 
      * @return Type The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
-<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
      */
     public String getType() {
         return this.Type;
@@ -63,10 +63,10 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * Set The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
-<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
      * @param Type The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
-<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
      */
     public void setType(String Type) {
         this.Type = Type;

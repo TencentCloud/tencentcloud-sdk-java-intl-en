@@ -25,7 +25,7 @@ public class AiReviewPornTaskInput extends AbstractModel {
 
     /**
     * The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Definition")
     @Expose
@@ -33,9 +33,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Definition The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDefinition() {
         return this.Definition;
@@ -43,9 +43,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Definition The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

@@ -63,7 +63,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Public network download address (valid for six hours). This field will be disused soon. 
      * @return DownloadUrl Public network download address (valid for six hours). This field will be disused soon.
+     * @deprecated
      */
+    @Deprecated
     public String [] getDownloadUrl() {
         return this.DownloadUrl;
     }
@@ -71,7 +73,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Public network download address (valid for six hours). This field will be disused soon.
      * @param DownloadUrl Public network download address (valid for six hours). This field will be disused soon.
+     * @deprecated
      */
+    @Deprecated
     public void setDownloadUrl(String [] DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
     }
@@ -79,7 +83,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Private network download address (valid for six hours). This field will be disused soon. 
      * @return InnerDownloadUrl Private network download address (valid for six hours). This field will be disused soon.
+     * @deprecated
      */
+    @Deprecated
     public String [] getInnerDownloadUrl() {
         return this.InnerDownloadUrl;
     }
@@ -87,7 +93,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Private network download address (valid for six hours). This field will be disused soon.
      * @param InnerDownloadUrl Private network download address (valid for six hours). This field will be disused soon.
+     * @deprecated
      */
+    @Deprecated
     public void setInnerDownloadUrl(String [] InnerDownloadUrl) {
         this.InnerDownloadUrl = InnerDownloadUrl;
     }
@@ -97,7 +105,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Filenames Filename. This field will be disused soon.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String [] getFilenames() {
         return this.Filenames;
     }
@@ -107,7 +117,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param Filenames Filename. This field will be disused soon.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setFilenames(String [] Filenames) {
         this.Filenames = Filenames;
     }

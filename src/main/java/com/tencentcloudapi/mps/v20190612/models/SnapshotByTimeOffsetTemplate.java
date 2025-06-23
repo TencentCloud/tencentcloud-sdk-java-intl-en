@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SnapshotByTimeOffsetTemplate extends AbstractModel {
 
     /**
-    * Unique ID of a time point screencapturing template.
+    * Unique ID of a time point screenshot template.
     */
     @SerializedName("Definition")
     @Expose
@@ -40,7 +40,7 @@ public class SnapshotByTimeOffsetTemplate extends AbstractModel {
     private String Type;
 
     /**
-    * Name of a time point screencapturing template.
+    * Name of a time point screenshot template.
     */
     @SerializedName("Name")
     @Expose
@@ -121,16 +121,16 @@ Default value: black.
     private String FillType;
 
     /**
-     * Get Unique ID of a time point screencapturing template. 
-     * @return Definition Unique ID of a time point screencapturing template.
+     * Get Unique ID of a time point screenshot template. 
+     * @return Definition Unique ID of a time point screenshot template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of a time point screencapturing template.
-     * @param Definition Unique ID of a time point screencapturing template.
+     * Set Unique ID of a time point screenshot template.
+     * @param Definition Unique ID of a time point screenshot template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -161,16 +161,16 @@ Default value: black.
     }
 
     /**
-     * Get Name of a time point screencapturing template. 
-     * @return Name Name of a time point screencapturing template.
+     * Get Name of a time point screenshot template. 
+     * @return Name Name of a time point screenshot template.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of a time point screencapturing template.
-     * @param Name Name of a time point screencapturing template.
+     * Set Name of a time point screenshot template.
+     * @param Name Name of a time point screenshot template.
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -31,28 +31,28 @@ public class MediaProcessTaskInput extends AbstractModel {
     private TranscodeTaskInput [] TranscodeTaskSet;
 
     /**
-    * List of animated image generating tasks.
+    * List of animated image screenshot tasks.
     */
     @SerializedName("AnimatedGraphicTaskSet")
     @Expose
     private AnimatedGraphicTaskInput [] AnimatedGraphicTaskSet;
 
     /**
-    * List of time point screencapturing tasks.
+    * List of time point screenshot tasks.
     */
     @SerializedName("SnapshotByTimeOffsetTaskSet")
     @Expose
     private SnapshotByTimeOffsetTaskInput [] SnapshotByTimeOffsetTaskSet;
 
     /**
-    * List of sampled screencapturing tasks.
+    * List of sampled screenshot tasks.
     */
     @SerializedName("SampleSnapshotTaskSet")
     @Expose
     private SampleSnapshotTaskInput [] SampleSnapshotTaskSet;
 
     /**
-    * List of image sprite generating tasks.
+    * List of image sprite screenshot tasks.
     */
     @SerializedName("ImageSpriteTaskSet")
     @Expose
@@ -82,64 +82,64 @@ public class MediaProcessTaskInput extends AbstractModel {
     }
 
     /**
-     * Get List of animated image generating tasks. 
-     * @return AnimatedGraphicTaskSet List of animated image generating tasks.
+     * Get List of animated image screenshot tasks. 
+     * @return AnimatedGraphicTaskSet List of animated image screenshot tasks.
      */
     public AnimatedGraphicTaskInput [] getAnimatedGraphicTaskSet() {
         return this.AnimatedGraphicTaskSet;
     }
 
     /**
-     * Set List of animated image generating tasks.
-     * @param AnimatedGraphicTaskSet List of animated image generating tasks.
+     * Set List of animated image screenshot tasks.
+     * @param AnimatedGraphicTaskSet List of animated image screenshot tasks.
      */
     public void setAnimatedGraphicTaskSet(AnimatedGraphicTaskInput [] AnimatedGraphicTaskSet) {
         this.AnimatedGraphicTaskSet = AnimatedGraphicTaskSet;
     }
 
     /**
-     * Get List of time point screencapturing tasks. 
-     * @return SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks.
+     * Get List of time point screenshot tasks. 
+     * @return SnapshotByTimeOffsetTaskSet List of time point screenshot tasks.
      */
     public SnapshotByTimeOffsetTaskInput [] getSnapshotByTimeOffsetTaskSet() {
         return this.SnapshotByTimeOffsetTaskSet;
     }
 
     /**
-     * Set List of time point screencapturing tasks.
-     * @param SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks.
+     * Set List of time point screenshot tasks.
+     * @param SnapshotByTimeOffsetTaskSet List of time point screenshot tasks.
      */
     public void setSnapshotByTimeOffsetTaskSet(SnapshotByTimeOffsetTaskInput [] SnapshotByTimeOffsetTaskSet) {
         this.SnapshotByTimeOffsetTaskSet = SnapshotByTimeOffsetTaskSet;
     }
 
     /**
-     * Get List of sampled screencapturing tasks. 
-     * @return SampleSnapshotTaskSet List of sampled screencapturing tasks.
+     * Get List of sampled screenshot tasks. 
+     * @return SampleSnapshotTaskSet List of sampled screenshot tasks.
      */
     public SampleSnapshotTaskInput [] getSampleSnapshotTaskSet() {
         return this.SampleSnapshotTaskSet;
     }
 
     /**
-     * Set List of sampled screencapturing tasks.
-     * @param SampleSnapshotTaskSet List of sampled screencapturing tasks.
+     * Set List of sampled screenshot tasks.
+     * @param SampleSnapshotTaskSet List of sampled screenshot tasks.
      */
     public void setSampleSnapshotTaskSet(SampleSnapshotTaskInput [] SampleSnapshotTaskSet) {
         this.SampleSnapshotTaskSet = SampleSnapshotTaskSet;
     }
 
     /**
-     * Get List of image sprite generating tasks. 
-     * @return ImageSpriteTaskSet List of image sprite generating tasks.
+     * Get List of image sprite screenshot tasks. 
+     * @return ImageSpriteTaskSet List of image sprite screenshot tasks.
      */
     public ImageSpriteTaskInput [] getImageSpriteTaskSet() {
         return this.ImageSpriteTaskSet;
     }
 
     /**
-     * Set List of image sprite generating tasks.
-     * @param ImageSpriteTaskSet List of image sprite generating tasks.
+     * Set List of image sprite screenshot tasks.
+     * @param ImageSpriteTaskSet List of image sprite screenshot tasks.
      */
     public void setImageSpriteTaskSet(ImageSpriteTaskInput [] ImageSpriteTaskSet) {
         this.ImageSpriteTaskSet = ImageSpriteTaskSet;

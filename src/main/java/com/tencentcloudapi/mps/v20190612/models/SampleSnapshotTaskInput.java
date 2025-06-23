@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SampleSnapshotTaskInput extends AbstractModel {
 
     /**
-    * Sampled screencapturing template ID.
+    * Sampled screenshot template ID.
     */
     @SerializedName("Definition")
     @Expose
@@ -68,16 +68,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private NumberFormat ObjectNumberFormat;
 
     /**
-     * Get Sampled screencapturing template ID. 
-     * @return Definition Sampled screencapturing template ID.
+     * Get Sampled screenshot template ID. 
+     * @return Definition Sampled screenshot template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Sampled screencapturing template ID.
-     * @param Definition Sampled screencapturing template ID.
+     * Set Sampled screenshot template ID.
+     * @param Definition Sampled screenshot template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

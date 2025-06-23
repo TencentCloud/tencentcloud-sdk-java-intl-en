@@ -38,7 +38,7 @@ Default value: `ON`.
 <li>`normal`: Separate voice and background audio.</li>
 <li>`music`: Separate vocals and instrumentals.</li>
 Default value: `normal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -49,7 +49,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`vocal`: Voice.</li>
 <li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
 Default value: `vocal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Track")
     @Expose
@@ -88,12 +88,12 @@ Default value: `ON`.
 <li>`normal`: Separate voice and background audio.</li>
 <li>`music`: Separate vocals and instrumentals.</li>
 Default value: `normal`.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Type The scenario. Valid values:
 <li>`normal`: Separate voice and background audio.</li>
 <li>`music`: Separate vocals and instrumentals.</li>
 Default value: `normal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
@@ -104,12 +104,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`normal`: Separate voice and background audio.</li>
 <li>`music`: Separate vocals and instrumentals.</li>
 Default value: `normal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Type The scenario. Valid values:
 <li>`normal`: Separate voice and background audio.</li>
 <li>`music`: Separate vocals and instrumentals.</li>
 Default value: `normal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -120,12 +120,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`vocal`: Voice.</li>
 <li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
 Default value: `vocal`.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Track The output audio track. Valid values:
 <li>`vocal`: Voice.</li>
 <li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
 Default value: `vocal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTrack() {
         return this.Track;
@@ -136,12 +136,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`vocal`: Voice.</li>
 <li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
 Default value: `vocal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Track The output audio track. Valid values:
 <li>`vocal`: Voice.</li>
 <li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
 Default value: `vocal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTrack(String Track) {
         this.Track = Track;

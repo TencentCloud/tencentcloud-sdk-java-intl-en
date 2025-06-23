@@ -94,7 +94,7 @@ public class TradeDealDetail extends AbstractModel {
     private String Description;
 
     /**
-    * Actual total price of the order in 0.01 CNY
+    * Order actual total price (in cents)
     */
     @SerializedName("Price")
     @Expose
@@ -268,16 +268,16 @@ public class TradeDealDetail extends AbstractModel {
     }
 
     /**
-     * Get Actual total price of the order in 0.01 CNY 
-     * @return Price Actual total price of the order in 0.01 CNY
+     * Get Order actual total price (in cents) 
+     * @return Price Order actual total price (in cents)
      */
     public Long getPrice() {
         return this.Price;
     }
 
     /**
-     * Set Actual total price of the order in 0.01 CNY
-     * @param Price Actual total price of the order in 0.01 CNY
+     * Set Order actual total price (in cents)
+     * @param Price Order actual total price (in cents)
      */
     public void setPrice(Long Price) {
         this.Price = Price;

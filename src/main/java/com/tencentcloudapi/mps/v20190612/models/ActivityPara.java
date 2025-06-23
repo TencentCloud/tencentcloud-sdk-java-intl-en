@@ -38,21 +38,21 @@ public class ActivityPara extends AbstractModel {
     private AnimatedGraphicTaskInput AnimatedGraphicTask;
 
     /**
-    * A time point screencapturing task.
+    * A time point screenshot task.
     */
     @SerializedName("SnapshotByTimeOffsetTask")
     @Expose
     private SnapshotByTimeOffsetTaskInput SnapshotByTimeOffsetTask;
 
     /**
-    * A sampled screencapturing task.
+    * A sampled screenshot task.
     */
     @SerializedName("SampleSnapshotTask")
     @Expose
     private SampleSnapshotTaskInput SampleSnapshotTask;
 
     /**
-    * An image sprite generation task.
+    * An image sprite screenshot task.
     */
     @SerializedName("ImageSpriteTask")
     @Expose
@@ -135,48 +135,48 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get A time point screencapturing task. 
-     * @return SnapshotByTimeOffsetTask A time point screencapturing task.
+     * Get A time point screenshot task. 
+     * @return SnapshotByTimeOffsetTask A time point screenshot task.
      */
     public SnapshotByTimeOffsetTaskInput getSnapshotByTimeOffsetTask() {
         return this.SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Set A time point screencapturing task.
-     * @param SnapshotByTimeOffsetTask A time point screencapturing task.
+     * Set A time point screenshot task.
+     * @param SnapshotByTimeOffsetTask A time point screenshot task.
      */
     public void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTaskInput SnapshotByTimeOffsetTask) {
         this.SnapshotByTimeOffsetTask = SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Get A sampled screencapturing task. 
-     * @return SampleSnapshotTask A sampled screencapturing task.
+     * Get A sampled screenshot task. 
+     * @return SampleSnapshotTask A sampled screenshot task.
      */
     public SampleSnapshotTaskInput getSampleSnapshotTask() {
         return this.SampleSnapshotTask;
     }
 
     /**
-     * Set A sampled screencapturing task.
-     * @param SampleSnapshotTask A sampled screencapturing task.
+     * Set A sampled screenshot task.
+     * @param SampleSnapshotTask A sampled screenshot task.
      */
     public void setSampleSnapshotTask(SampleSnapshotTaskInput SampleSnapshotTask) {
         this.SampleSnapshotTask = SampleSnapshotTask;
     }
 
     /**
-     * Get An image sprite generation task. 
-     * @return ImageSpriteTask An image sprite generation task.
+     * Get An image sprite screenshot task. 
+     * @return ImageSpriteTask An image sprite screenshot task.
      */
     public ImageSpriteTaskInput getImageSpriteTask() {
         return this.ImageSpriteTask;
     }
 
     /**
-     * Set An image sprite generation task.
-     * @param ImageSpriteTask An image sprite generation task.
+     * Set An image sprite screenshot task.
+     * @param ImageSpriteTask An image sprite screenshot task.
      */
     public void setImageSpriteTask(ImageSpriteTaskInput ImageSpriteTask) {
         this.ImageSpriteTask = ImageSpriteTask;

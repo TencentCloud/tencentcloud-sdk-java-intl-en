@@ -40,7 +40,9 @@ public class StartupInstanceResponse extends AbstractModel {
     /**
      * Get This parameter has been deprecated. Determine whether the instance has been deisolated based on the status obtained through the instance query API. 
      * @return TaskId This parameter has been deprecated. Determine whether the instance has been deisolated based on the status obtained through the instance query API.
+     * @deprecated
      */
+    @Deprecated
     public Long getTaskId() {
         return this.TaskId;
     }
@@ -48,7 +50,9 @@ public class StartupInstanceResponse extends AbstractModel {
     /**
      * Set This parameter has been deprecated. Determine whether the instance has been deisolated based on the status obtained through the instance query API.
      * @param TaskId This parameter has been deprecated. Determine whether the instance has been deisolated based on the status obtained through the instance query API.
+     * @deprecated
      */
+    @Deprecated
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }

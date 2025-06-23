@@ -48,7 +48,7 @@ public class EditMediaFileInfo extends AbstractModel {
     * The ID of the material associated with an element. This parameter is required for video compositing tasks.
 
 Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Id")
     @Expose
@@ -106,11 +106,11 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * Get The ID of the material associated with an element. This parameter is required for video compositing tasks.
 
 Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Id The ID of the material associated with an element. This parameter is required for video compositing tasks.
 
 Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getId() {
         return this.Id;
@@ -120,11 +120,11 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * Set The ID of the material associated with an element. This parameter is required for video compositing tasks.
 
 Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Id The ID of the material associated with an element. This parameter is required for video compositing tasks.
 
 Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setId(String Id) {
         this.Id = Id;

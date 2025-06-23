@@ -25,7 +25,7 @@ public class LiveRecordResult extends AbstractModel {
 
     /**
     * The storage of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -33,7 +33,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The recording segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FileList")
     @Expose
@@ -41,9 +41,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The storage of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return OutputStorage The storage of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
@@ -51,9 +51,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The storage of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param OutputStorage The storage of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -61,9 +61,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The recording segments.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return FileList The recording segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public LiveRecordFile [] getFileList() {
         return this.FileList;
@@ -71,9 +71,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The recording segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param FileList The recording segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFileList(LiveRecordFile [] FileList) {
         this.FileList = FileList;

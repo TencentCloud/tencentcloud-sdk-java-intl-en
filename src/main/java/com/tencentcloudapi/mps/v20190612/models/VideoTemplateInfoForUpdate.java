@@ -37,7 +37,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
 
 Note: 
 AV1 encoding containers currently only support mp4, webm, and mkv.
-H.266 encoding containers currently only support mp4, hls, ts, and move. 
+H.266 encoding containers currently only support mp4, hls, ts, and mov. 
 VP8 and VP9 encoding containers currently only support webm and mkv.
 MPEG2 and DNxHD encoding containers currently only support mxf.
 MV-HEVC encoding containers only support mp4, hls, and mov. Also, the hls format only supports mp4 segmentation format.
@@ -191,9 +191,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long FpsDenominator;
 
     /**
-    * 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
-<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
-<Li>Top_bottom: layout arrangement of the original video content from top to bottom.</li>.
+    * 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
+<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
+<Li>top_bottom: layout arrangement of the original video content from top to bottom.</li>
 The usage and charges will be reported based on the segmented resolution dimensions.
 Default value: side_by_side.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -365,7 +365,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
 Note: 
 AV1 encoding containers currently only support mp4, webm, and mkv.
-H.266 encoding containers currently only support mp4, hls, ts, and move. 
+H.266 encoding containers currently only support mp4, hls, ts, and mov. 
 VP8 and VP9 encoding containers currently only support webm and mkv.
 MPEG2 and DNxHD encoding containers currently only support mxf.
 MV-HEVC encoding containers only support mp4, hls, and mov. Also, the hls format only supports mp4 segmentation format.
@@ -384,7 +384,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
 Note: 
 AV1 encoding containers currently only support mp4, webm, and mkv.
-H.266 encoding containers currently only support mp4, hls, ts, and move. 
+H.266 encoding containers currently only support mp4, hls, ts, and mov. 
 VP8 and VP9 encoding containers currently only support webm and mkv.
 MPEG2 and DNxHD encoding containers currently only support mxf.
 MV-HEVC encoding containers only support mp4, hls, and mov. Also, the hls format only supports mp4 segmentation format.
@@ -409,7 +409,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
 Note: 
 AV1 encoding containers currently only support mp4, webm, and mkv.
-H.266 encoding containers currently only support mp4, hls, ts, and move. 
+H.266 encoding containers currently only support mp4, hls, ts, and mov. 
 VP8 and VP9 encoding containers currently only support webm and mkv.
 MPEG2 and DNxHD encoding containers currently only support mxf.
 MV-HEVC encoding containers only support mp4, hls, and mov. Also, the hls format only supports mp4 segmentation format.
@@ -428,7 +428,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
 Note: 
 AV1 encoding containers currently only support mp4, webm, and mkv.
-H.266 encoding containers currently only support mp4, hls, ts, and move. 
+H.266 encoding containers currently only support mp4, hls, ts, and mov. 
 VP8 and VP9 encoding containers currently only support webm and mkv.
 MPEG2 and DNxHD encoding containers currently only support mxf.
 MV-HEVC encoding containers only support mp4, hls, and mov. Also, the hls format only supports mp4 segmentation format.
@@ -852,15 +852,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
-<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
-<Li>Top_bottom: layout arrangement of the original video content from top to bottom.</li>.
+     * Get 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
+<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
+<Li>top_bottom: layout arrangement of the original video content from top to bottom.</li>
 The usage and charges will be reported based on the segmented resolution dimensions.
 Default value: side_by_side.
 Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Stereo3dType 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
-<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
-<Li>Top_bottom: layout arrangement of the original video content from top to bottom.</li>.
+     * @return Stereo3dType 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
+<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
+<Li>top_bottom: layout arrangement of the original video content from top to bottom.</li>
 The usage and charges will be reported based on the segmented resolution dimensions.
 Default value: side_by_side.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -870,15 +870,15 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Set 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
-<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
-<Li>Top_bottom: layout arrangement of the original video content from top to bottom.</li>.
+     * Set 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
+<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
+<Li>top_bottom: layout arrangement of the original video content from top to bottom.</li>
 The usage and charges will be reported based on the segmented resolution dimensions.
 Default value: side_by_side.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Stereo3dType 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
-<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
-<Li>Top_bottom: layout arrangement of the original video content from top to bottom.</li>.
+     * @param Stereo3dType 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
+<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
+<Li>top_bottom: layout arrangement of the original video content from top to bottom.</li>
 The usage and charges will be reported based on the segmented resolution dimensions.
 Default value: side_by_side.
 Note: This field may return null, indicating that no valid value can be obtained.

@@ -53,19 +53,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Message;
 
     /**
-    * Input for a sampled screencapturing task.
+    * Input for a sampled screenshot task.
     */
     @SerializedName("Input")
     @Expose
     private SampleSnapshotTaskInput Input;
 
     /**
-    * Output of a sampled screencapturing task.
+    * Output of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Output")
     @Expose
     private MediaSampleSnapshotItem Output;
+
+    /**
+    * 
+    */
+    @SerializedName("BeginProcessTime")
+    @Expose
+    private String BeginProcessTime;
+
+    /**
+    * 
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private String FinishTime;
 
     /**
      * Get Task status. Valid values: PROCESSING, SUCCESS, FAIL. 
@@ -136,25 +150,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Input for a sampled screencapturing task. 
-     * @return Input Input for a sampled screencapturing task.
+     * Get Input for a sampled screenshot task. 
+     * @return Input Input for a sampled screenshot task.
      */
     public SampleSnapshotTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input for a sampled screencapturing task.
-     * @param Input Input for a sampled screencapturing task.
+     * Set Input for a sampled screenshot task.
+     * @param Input Input for a sampled screenshot task.
      */
     public void setInput(SampleSnapshotTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of a sampled screencapturing task.
+     * Get Output of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of a sampled screencapturing task.
+     * @return Output Output of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MediaSampleSnapshotItem getOutput() {
@@ -162,13 +176,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Output of a sampled screencapturing task.
+     * Set Output of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of a sampled screencapturing task.
+     * @param Output Output of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOutput(MediaSampleSnapshotItem Output) {
         this.Output = Output;
+    }
+
+    /**
+     * Get  
+     * @return BeginProcessTime 
+     */
+    public String getBeginProcessTime() {
+        return this.BeginProcessTime;
+    }
+
+    /**
+     * Set 
+     * @param BeginProcessTime 
+     */
+    public void setBeginProcessTime(String BeginProcessTime) {
+        this.BeginProcessTime = BeginProcessTime;
+    }
+
+    /**
+     * Get  
+     * @return FinishTime 
+     */
+    public String getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set 
+     * @param FinishTime 
+     */
+    public void setFinishTime(String FinishTime) {
+        this.FinishTime = FinishTime;
     }
 
     public MediaProcessTaskSampleSnapshotResult() {
@@ -197,6 +243,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Output != null) {
             this.Output = new MediaSampleSnapshotItem(source.Output);
         }
+        if (source.BeginProcessTime != null) {
+            this.BeginProcessTime = new String(source.BeginProcessTime);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
     }
 
 
@@ -210,6 +262,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
 
     }
 }

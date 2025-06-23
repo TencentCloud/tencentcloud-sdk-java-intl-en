@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MediaSnapshotByTimeOffsetItem extends AbstractModel {
 
     /**
-    * Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+    * Specification of a time point screenshot template. 
     */
     @SerializedName("Definition")
     @Expose
@@ -45,16 +45,16 @@ public class MediaSnapshotByTimeOffsetItem extends AbstractModel {
     private TaskOutputStorage Storage;
 
     /**
-     * Get Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF). 
-     * @return Definition Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * Get Specification of a time point screenshot template.  
+     * @return Definition Specification of a time point screenshot template. 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-     * @param Definition Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * Set Specification of a time point screenshot template. 
+     * @param Definition Specification of a time point screenshot template. 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

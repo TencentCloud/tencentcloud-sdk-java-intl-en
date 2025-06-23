@@ -52,19 +52,33 @@ public class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel {
     private String Message;
 
     /**
-    * Input for a time point screencapturing task.
+    * Input for a time point screenshot task.
     */
     @SerializedName("Input")
     @Expose
     private SnapshotByTimeOffsetTaskInput Input;
 
     /**
-    * Output of a time point screencapturing task.
+    * Output of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Output")
     @Expose
     private MediaSnapshotByTimeOffsetItem Output;
+
+    /**
+    * The time when the task started executing, in ISO date format.
+    */
+    @SerializedName("BeginProcessTime")
+    @Expose
+    private String BeginProcessTime;
+
+    /**
+    * The time when the task finished, in ISO date format.
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private String FinishTime;
 
     /**
      * Get Task status. Valid values: PROCESSING, SUCCESS, FAIL. 
@@ -131,25 +145,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Input for a time point screencapturing task. 
-     * @return Input Input for a time point screencapturing task.
+     * Get Input for a time point screenshot task. 
+     * @return Input Input for a time point screenshot task.
      */
     public SnapshotByTimeOffsetTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input for a time point screencapturing task.
-     * @param Input Input for a time point screencapturing task.
+     * Set Input for a time point screenshot task.
+     * @param Input Input for a time point screenshot task.
      */
     public void setInput(SnapshotByTimeOffsetTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of a time point screencapturing task.
+     * Get Output of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of a time point screencapturing task.
+     * @return Output Output of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MediaSnapshotByTimeOffsetItem getOutput() {
@@ -157,13 +171,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Output of a time point screencapturing task.
+     * Set Output of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of a time point screencapturing task.
+     * @param Output Output of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOutput(MediaSnapshotByTimeOffsetItem Output) {
         this.Output = Output;
+    }
+
+    /**
+     * Get The time when the task started executing, in ISO date format. 
+     * @return BeginProcessTime The time when the task started executing, in ISO date format.
+     */
+    public String getBeginProcessTime() {
+        return this.BeginProcessTime;
+    }
+
+    /**
+     * Set The time when the task started executing, in ISO date format.
+     * @param BeginProcessTime The time when the task started executing, in ISO date format.
+     */
+    public void setBeginProcessTime(String BeginProcessTime) {
+        this.BeginProcessTime = BeginProcessTime;
+    }
+
+    /**
+     * Get The time when the task finished, in ISO date format. 
+     * @return FinishTime The time when the task finished, in ISO date format.
+     */
+    public String getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set The time when the task finished, in ISO date format.
+     * @param FinishTime The time when the task finished, in ISO date format.
+     */
+    public void setFinishTime(String FinishTime) {
+        this.FinishTime = FinishTime;
     }
 
     public MediaProcessTaskSnapshotByTimeOffsetResult() {
@@ -192,6 +238,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Output != null) {
             this.Output = new MediaSnapshotByTimeOffsetItem(source.Output);
         }
+        if (source.BeginProcessTime != null) {
+            this.BeginProcessTime = new String(source.BeginProcessTime);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
     }
 
 
@@ -205,6 +257,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
 
     }
 }

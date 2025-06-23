@@ -37,7 +37,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * The AES-128 encryption details.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SimpleAesDrm")
     @Expose
@@ -88,9 +88,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get The AES-128 encryption details.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return SimpleAesDrm The AES-128 encryption details.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SimpleAesDrm getSimpleAesDrm() {
         return this.SimpleAesDrm;
@@ -98,9 +98,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The AES-128 encryption details.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SimpleAesDrm The AES-128 encryption details.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSimpleAesDrm(SimpleAesDrm SimpleAesDrm) {
         this.SimpleAesDrm = SimpleAesDrm;

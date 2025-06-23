@@ -180,6 +180,9 @@ public enum SslErrorCode {
      /* u200cYou cannot re-submit a review application for a certificate in this status. */
      INVALIDPARAMETER_CERTIFICATESTATUSNOTALLOWRESUBMIT("InvalidParameter.CertificateStatusNotAllowResubmit"),
      
+     /* Number of certificates exceed the limit. */
+     INVALIDPARAMETER_CERTIFICATESNUMBEREXCEEDED("InvalidParameter.CertificatesNumberExceeded"),
+     
      /* Incorrect CSR ID. */
      INVALIDPARAMETER_INVALIDCSRID("InvalidParameter.InvalidCSRId"),
      

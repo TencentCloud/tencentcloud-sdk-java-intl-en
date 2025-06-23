@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SampleSnapshotTemplate extends AbstractModel {
 
     /**
-    * Unique ID of a sampled screencapturing template.
+    * Unique ID of a sampled screenshot template.
     */
     @SerializedName("Definition")
     @Expose
@@ -40,7 +40,7 @@ public class SampleSnapshotTemplate extends AbstractModel {
     private String Type;
 
     /**
-    * Name of a sampled screencapturing template.
+    * Name of a sampled screenshot template.
     */
     @SerializedName("Name")
     @Expose
@@ -95,7 +95,7 @@ Default value: open.
     private String Format;
 
     /**
-    * Sampled screencapturing type.
+    * Sampled screenshot type.
     */
     @SerializedName("SampleType")
     @Expose
@@ -135,16 +135,16 @@ Default value: black.
     private String FillType;
 
     /**
-     * Get Unique ID of a sampled screencapturing template. 
-     * @return Definition Unique ID of a sampled screencapturing template.
+     * Get Unique ID of a sampled screenshot template. 
+     * @return Definition Unique ID of a sampled screenshot template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of a sampled screencapturing template.
-     * @param Definition Unique ID of a sampled screencapturing template.
+     * Set Unique ID of a sampled screenshot template.
+     * @param Definition Unique ID of a sampled screenshot template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -175,16 +175,16 @@ Default value: black.
     }
 
     /**
-     * Get Name of a sampled screencapturing template. 
-     * @return Name Name of a sampled screencapturing template.
+     * Get Name of a sampled screenshot template. 
+     * @return Name Name of a sampled screenshot template.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of a sampled screencapturing template.
-     * @param Name Name of a sampled screencapturing template.
+     * Set Name of a sampled screenshot template.
+     * @param Name Name of a sampled screenshot template.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -323,16 +323,16 @@ Default value: open.
     }
 
     /**
-     * Get Sampled screencapturing type. 
-     * @return SampleType Sampled screencapturing type.
+     * Get Sampled screenshot type. 
+     * @return SampleType Sampled screenshot type.
      */
     public String getSampleType() {
         return this.SampleType;
     }
 
     /**
-     * Set Sampled screencapturing type.
-     * @param SampleType Sampled screencapturing type.
+     * Set Sampled screenshot type.
+     * @param SampleType Sampled screenshot type.
      */
     public void setSampleType(String SampleType) {
         this.SampleType = SampleType;

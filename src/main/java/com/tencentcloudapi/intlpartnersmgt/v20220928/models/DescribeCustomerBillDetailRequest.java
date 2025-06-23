@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCustomerBillDetailRequest extends AbstractModel {
 
     /**
-    * Sub-account UIN
+    * Sub-account UIN.
     */
     @SerializedName("CustomerUin")
     @Expose
@@ -103,16 +103,16 @@ pre_downgrade (Upgrade/Downgrade)
     private String IsConfirmed;
 
     /**
-     * Get Sub-account UIN 
-     * @return CustomerUin Sub-account UIN
+     * Get Sub-account UIN. 
+     * @return CustomerUin Sub-account UIN.
      */
     public Long getCustomerUin() {
         return this.CustomerUin;
     }
 
     /**
-     * Set Sub-account UIN
-     * @param CustomerUin Sub-account UIN
+     * Set Sub-account UIN.
+     * @param CustomerUin Sub-account UIN.
      */
     public void setCustomerUin(Long CustomerUin) {
         this.CustomerUin = CustomerUin;

@@ -560,7 +560,9 @@ public class DescribeTaskListRequest extends AbstractModel {
     /**
      * Get The field `OperatorUin` has been disused and replaced by `OperateUin`. 
      * @return OperatorUin The field `OperatorUin` has been disused and replaced by `OperateUin`.
+     * @deprecated
      */
+    @Deprecated
     public Long [] getOperatorUin() {
         return this.OperatorUin;
     }
@@ -568,7 +570,9 @@ public class DescribeTaskListRequest extends AbstractModel {
     /**
      * Set The field `OperatorUin` has been disused and replaced by `OperateUin`.
      * @param OperatorUin The field `OperatorUin` has been disused and replaced by `OperateUin`.
+     * @deprecated
      */
+    @Deprecated
     public void setOperatorUin(Long [] OperatorUin) {
         this.OperatorUin = OperatorUin;
     }

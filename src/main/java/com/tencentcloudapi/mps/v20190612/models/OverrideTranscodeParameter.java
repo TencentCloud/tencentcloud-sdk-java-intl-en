@@ -88,7 +88,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * An extended field for transcoding.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StdExtInfo")
     @Expose
@@ -96,7 +96,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The subtitle file to add.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AddOnSubtitles")
     @Expose
@@ -260,9 +260,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get An extended field for transcoding.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return StdExtInfo An extended field for transcoding.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStdExtInfo() {
         return this.StdExtInfo;
@@ -270,9 +270,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set An extended field for transcoding.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param StdExtInfo An extended field for transcoding.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStdExtInfo(String StdExtInfo) {
         this.StdExtInfo = StdExtInfo;
@@ -280,9 +280,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The subtitle file to add.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return AddOnSubtitles The subtitle file to add.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AddOnSubtitle [] getAddOnSubtitles() {
         return this.AddOnSubtitles;
@@ -290,9 +290,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The subtitle file to add.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param AddOnSubtitles The subtitle file to add.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAddOnSubtitles(AddOnSubtitle [] AddOnSubtitles) {
         this.AddOnSubtitles = AddOnSubtitles;

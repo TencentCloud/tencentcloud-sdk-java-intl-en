@@ -32,7 +32,7 @@ public class LiveScheduleLiveRecordTaskResult extends AbstractModel {
 
     /**
     * The error code. An empty string indicates the task is successful; any other value indicates the task has failed. For details, see [Error Codes](https://www.tencentcloud.com/document/product/1041/40249).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -40,7 +40,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ErrCode")
     @Expose
@@ -48,7 +48,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The error message.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Message")
     @Expose
@@ -56,7 +56,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The input of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Input")
     @Expose
@@ -64,7 +64,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Output")
     @Expose
@@ -72,7 +72,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The time when the task was started, in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BeginProcessTime")
     @Expose
@@ -80,7 +80,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The time when the task was completed, in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FinishTime")
     @Expose
@@ -104,9 +104,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The error code. An empty string indicates the task is successful; any other value indicates the task has failed. For details, see [Error Codes](https://www.tencentcloud.com/document/product/1041/40249).
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ErrCodeExt The error code. An empty string indicates the task is successful; any other value indicates the task has failed. For details, see [Error Codes](https://www.tencentcloud.com/document/product/1041/40249).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
@@ -114,9 +114,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The error code. An empty string indicates the task is successful; any other value indicates the task has failed. For details, see [Error Codes](https://www.tencentcloud.com/document/product/1041/40249).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ErrCodeExt The error code. An empty string indicates the task is successful; any other value indicates the task has failed. For details, see [Error Codes](https://www.tencentcloud.com/document/product/1041/40249).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
@@ -124,9 +124,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ErrCode The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -134,9 +134,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ErrCode The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -144,9 +144,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The error message.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Message The error message.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMessage() {
         return this.Message;
@@ -154,9 +154,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The error message.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Message The error message.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -164,9 +164,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The input of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Input The input of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public LiveRecordTaskInput getInput() {
         return this.Input;
@@ -174,9 +174,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The input of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Input The input of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInput(LiveRecordTaskInput Input) {
         this.Input = Input;
@@ -184,9 +184,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Output The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public LiveRecordResult getOutput() {
         return this.Output;
@@ -194,9 +194,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Output The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOutput(LiveRecordResult Output) {
         this.Output = Output;
@@ -204,9 +204,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The time when the task was started, in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return BeginProcessTime The time when the task was started, in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
@@ -214,9 +214,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The time when the task was started, in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param BeginProcessTime The time when the task was started, in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
@@ -224,9 +224,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The time when the task was completed, in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return FinishTime The time when the task was completed, in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFinishTime() {
         return this.FinishTime;
@@ -234,9 +234,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The time when the task was completed, in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param FinishTime The time when the task was completed, in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

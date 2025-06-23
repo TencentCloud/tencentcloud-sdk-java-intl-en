@@ -699,7 +699,9 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * Get This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1). 
      * @return SizeUsed This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1).
+     * @deprecated
      */
+    @Deprecated
     public Float getSizeUsed() {
         return this.SizeUsed;
     }
@@ -707,7 +709,9 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * Set This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1).
      * @param SizeUsed This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1).
+     * @deprecated
      */
+    @Deprecated
     public void setSizeUsed(Float SizeUsed) {
         this.SizeUsed = SizeUsed;
     }

@@ -35,7 +35,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LiveActivityResItem")
     @Expose
@@ -71,9 +71,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The task output.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return LiveActivityResItem The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public LiveActivityResItem getLiveActivityResItem() {
         return this.LiveActivityResItem;
@@ -81,9 +81,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param LiveActivityResItem The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLiveActivityResItem(LiveActivityResItem LiveActivityResItem) {
         this.LiveActivityResItem = LiveActivityResItem;

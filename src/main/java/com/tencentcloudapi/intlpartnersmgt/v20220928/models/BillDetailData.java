@@ -64,7 +64,6 @@ Standard ri reserved instance.
 
     /**
     * Project name.
-.
 
     */
     @SerializedName("ProjectName")
@@ -209,7 +208,7 @@ Original cost = component list price * component usage * usage duration.
     private String OriginalCost;
 
     /**
-    * Discount (default is 1).
+    * Discount (default is 1) - abandoned.
     */
     @SerializedName("DiscountRate")
     @Expose
@@ -249,6 +248,13 @@ Original cost = component list price * component usage * usage duration.
     @SerializedName("Id")
     @Expose
     private String Id;
+
+    /**
+    * customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+    */
+    @SerializedName("CustomerDiscountRate")
+    @Expose
+    private String CustomerDiscountRate;
 
     /**
      * Get reseller account. 
@@ -348,10 +354,8 @@ Standard ri reserved instance.
 
     /**
      * Get Project name.
-.
  
      * @return ProjectName Project name.
-.
 
      */
     public String getProjectName() {
@@ -360,10 +364,8 @@ Standard ri reserved instance.
 
     /**
      * Set Project name.
-.
 
      * @param ProjectName Project name.
-.
 
      */
     public void setProjectName(String ProjectName) {
@@ -691,16 +693,16 @@ Original cost = component list price * component usage * usage duration.
     }
 
     /**
-     * Get Discount (default is 1). 
-     * @return DiscountRate Discount (default is 1).
+     * Get Discount (default is 1) - abandoned. 
+     * @return DiscountRate Discount (default is 1) - abandoned.
      */
     public String getDiscountRate() {
         return this.DiscountRate;
     }
 
     /**
-     * Set Discount (default is 1).
-     * @param DiscountRate Discount (default is 1).
+     * Set Discount (default is 1) - abandoned.
+     * @param DiscountRate Discount (default is 1) - abandoned.
      */
     public void setDiscountRate(String DiscountRate) {
         this.DiscountRate = DiscountRate;
@@ -784,6 +786,22 @@ Original cost = component list price * component usage * usage duration.
      */
     public void setId(String Id) {
         this.Id = Id;
+    }
+
+    /**
+     * Get customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1. 
+     * @return CustomerDiscountRate customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+     */
+    public String getCustomerDiscountRate() {
+        return this.CustomerDiscountRate;
+    }
+
+    /**
+     * Set customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+     * @param CustomerDiscountRate customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+     */
+    public void setCustomerDiscountRate(String CustomerDiscountRate) {
+        this.CustomerDiscountRate = CustomerDiscountRate;
     }
 
     public BillDetailData() {
@@ -887,6 +905,9 @@ Original cost = component list price * component usage * usage duration.
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.CustomerDiscountRate != null) {
+            this.CustomerDiscountRate = new String(source.CustomerDiscountRate);
+        }
     }
 
 
@@ -925,6 +946,7 @@ Original cost = component list price * component usage * usage duration.
         this.setParamSimple(map, prefix + "VoucherDeduction", this.VoucherDeduction);
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "CustomerDiscountRate", this.CustomerDiscountRate);
 
     }
 }

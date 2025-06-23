@@ -38,7 +38,7 @@ Default value: `ON`.
 <li>`loudNorm`: Loudness normalization.</li>
 <li>`gainControl`: Volume leveling.</li>
 Default value: `loudNorm`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -77,12 +77,12 @@ Default value: `ON`.
 <li>`loudNorm`: Loudness normalization.</li>
 <li>`gainControl`: Volume leveling.</li>
 Default value: `loudNorm`.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Type The type. Valid values:
 <li>`loudNorm`: Loudness normalization.</li>
 <li>`gainControl`: Volume leveling.</li>
 Default value: `loudNorm`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
@@ -93,12 +93,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`loudNorm`: Loudness normalization.</li>
 <li>`gainControl`: Volume leveling.</li>
 Default value: `loudNorm`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Type The type. Valid values:
 <li>`loudNorm`: Loudness normalization.</li>
 <li>`gainControl`: Volume leveling.</li>
 Default value: `loudNorm`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -33,7 +33,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * The audio enhancement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AudioEnhance")
     @Expose
@@ -61,9 +61,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The audio enhancement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return AudioEnhance The audio enhancement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AudioEnhanceConfig getAudioEnhance() {
         return this.AudioEnhance;
@@ -71,9 +71,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The audio enhancement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param AudioEnhance The audio enhancement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAudioEnhance(AudioEnhanceConfig AudioEnhance) {
         this.AudioEnhance = AudioEnhance;

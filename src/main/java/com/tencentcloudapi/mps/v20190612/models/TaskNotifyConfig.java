@@ -89,7 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * The key used to generate the callback signature.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NotifyKey")
     @Expose
@@ -257,9 +257,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The key used to generate the callback signature.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return NotifyKey The key used to generate the callback signature.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNotifyKey() {
         return this.NotifyKey;
@@ -267,9 +267,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The key used to generate the callback signature.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param NotifyKey The key used to generate the callback signature.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNotifyKey(String NotifyKey) {
         this.NotifyKey = NotifyKey;

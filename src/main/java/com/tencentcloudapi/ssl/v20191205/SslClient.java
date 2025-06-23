@@ -259,6 +259,28 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the record list of cloud resource updates for certificates (certificate ID unchanged).
+     * @param req DescribeHostUploadUpdateRecordRequest
+     * @return DescribeHostUploadUpdateRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostUploadUpdateRecordResponse DescribeHostUploadUpdateRecord(DescribeHostUploadUpdateRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostUploadUpdateRecord", DescribeHostUploadUpdateRecordResponse.class);
+    }
+
+    /**
+     *This API is used to query the deployment record details of certificate update records (certificate ID unchanged).
+     * @param req DescribeHostUploadUpdateRecordDetailRequest
+     * @return DescribeHostUploadUpdateRecordDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostUploadUpdateRecordDetailResponse DescribeHostUploadUpdateRecordDetail(DescribeHostUploadUpdateRecordDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostUploadUpdateRecordDetail", DescribeHostUploadUpdateRecordDetailResponse.class);
+    }
+
+    /**
      *This API is used to download a certificate.
      * @param req DownloadCertificateRequest
      * @return DownloadCertificateResponse
@@ -311,6 +333,17 @@ public class SslClient extends AbstractClient{
     public ModifyCertificateResubmitResponse ModifyCertificateResubmit(ModifyCertificateResubmitRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCertificateResubmit", ModifyCertificateResubmitResponse.class);
+    }
+
+    /**
+     *Modify to ignore certificate expiration notifications. Enable or disable certificate expiration notifications.
+     * @param req ModifyCertificatesExpiringNotificationSwitchRequest
+     * @return ModifyCertificatesExpiringNotificationSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCertificatesExpiringNotificationSwitchResponse ModifyCertificatesExpiringNotificationSwitch(ModifyCertificatesExpiringNotificationSwitchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCertificatesExpiringNotificationSwitch", ModifyCertificatesExpiringNotificationSwitchResponse.class);
     }
 
     /**
@@ -388,6 +421,39 @@ public class SslClient extends AbstractClient{
     public UploadConfirmLetterResponse UploadConfirmLetter(UploadConfirmLetterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UploadConfirmLetter", UploadConfirmLetterResponse.class);
+    }
+
+    /**
+     *This API is used to update certificate content (certificate ID unchanged) and update associated Tencent Cloud resources. This is an asynchronous API. After calling, a DeployRecordId of 0 indicates that the task is in progress. Repeatedly request this API, and when DeployRecordId is greater than 0, it means the task has been successfully created. If the task is not successfully created, an exception will be thrown.
+     * @param req UploadUpdateCertificateInstanceRequest
+     * @return UploadUpdateCertificateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadUpdateCertificateInstanceResponse UploadUpdateCertificateInstance(UploadUpdateCertificateInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UploadUpdateCertificateInstance", UploadUpdateCertificateInstanceResponse.class);
+    }
+
+    /**
+     *Cloud Resource Update (Certificate ID Unchanged) Deployment Retry Record.
+     * @param req UploadUpdateCertificateRecordRetryRequest
+     * @return UploadUpdateCertificateRecordRetryResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadUpdateCertificateRecordRetryResponse UploadUpdateCertificateRecordRetry(UploadUpdateCertificateRecordRetryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UploadUpdateCertificateRecordRetry", UploadUpdateCertificateRecordRetryResponse.class);
+    }
+
+    /**
+     *This API is used to roll back the full task when cloud resource update succeeds with unchanged certificate ID.
+     * @param req UploadUpdateCertificateRecordRollbackRequest
+     * @return UploadUpdateCertificateRecordRollbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadUpdateCertificateRecordRollbackResponse UploadUpdateCertificateRecordRollback(UploadUpdateCertificateRecordRollbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UploadUpdateCertificateRecordRollback", UploadUpdateCertificateRecordRollbackResponse.class);
     }
 
 }

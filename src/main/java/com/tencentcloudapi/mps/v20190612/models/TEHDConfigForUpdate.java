@@ -28,7 +28,7 @@ public class TEHDConfigForUpdate extends AbstractModel {
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -36,7 +36,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxVideoBitrate")
     @Expose
@@ -47,12 +47,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Type The TSC type. Valid values:
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
@@ -63,12 +63,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Type The TSC type. Valid values:
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -76,9 +76,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return MaxVideoBitrate The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMaxVideoBitrate() {
         return this.MaxVideoBitrate;
@@ -86,9 +86,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param MaxVideoBitrate The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMaxVideoBitrate(Long MaxVideoBitrate) {
         this.MaxVideoBitrate = MaxVideoBitrate;

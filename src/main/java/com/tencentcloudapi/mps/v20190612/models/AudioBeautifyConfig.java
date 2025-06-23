@@ -38,7 +38,7 @@ Default value: `ON`.
 <li>`declick`: Noise removal.</li>
 <li>`deesser`: De-essing.</li>
 Default: `declick`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Types")
     @Expose
@@ -77,12 +77,12 @@ Default value: `ON`.
 <li>`declick`: Noise removal.</li>
 <li>`deesser`: De-essing.</li>
 Default: `declick`.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Types The audio improvement options. You can specify multiple options. Valid values:
 <li>`declick`: Noise removal.</li>
 <li>`deesser`: De-essing.</li>
 Default: `declick`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getTypes() {
         return this.Types;
@@ -93,12 +93,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`declick`: Noise removal.</li>
 <li>`deesser`: De-essing.</li>
 Default: `declick`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Types The audio improvement options. You can specify multiple options. Valid values:
 <li>`declick`: Noise removal.</li>
 <li>`deesser`: De-essing.</li>
 Default: `declick`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTypes(String [] Types) {
         this.Types = Types;

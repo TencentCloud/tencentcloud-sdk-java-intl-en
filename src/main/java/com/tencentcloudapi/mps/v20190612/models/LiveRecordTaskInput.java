@@ -32,7 +32,7 @@ public class LiveRecordTaskInput extends AbstractModel {
 
     /**
     * The storage of the recording file. If this parameter is left empty, the `OutputStorage` value of the parent folder will be inherited.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -40,7 +40,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The output path of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OutputObjectPath")
     @Expose
@@ -64,9 +64,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The storage of the recording file. If this parameter is left empty, the `OutputStorage` value of the parent folder will be inherited.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return OutputStorage The storage of the recording file. If this parameter is left empty, the `OutputStorage` value of the parent folder will be inherited.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
@@ -74,9 +74,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The storage of the recording file. If this parameter is left empty, the `OutputStorage` value of the parent folder will be inherited.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param OutputStorage The storage of the recording file. If this parameter is left empty, the `OutputStorage` value of the parent folder will be inherited.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -84,9 +84,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The output path of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return OutputObjectPath The output path of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOutputObjectPath() {
         return this.OutputObjectPath;
@@ -94,9 +94,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The output path of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param OutputObjectPath The output path of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOutputObjectPath(String OutputObjectPath) {
         this.OutputObjectPath = OutputObjectPath;

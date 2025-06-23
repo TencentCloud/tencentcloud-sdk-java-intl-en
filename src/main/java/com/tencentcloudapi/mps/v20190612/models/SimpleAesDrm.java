@@ -25,7 +25,7 @@ public class SimpleAesDrm extends AbstractModel {
 
     /**
     * The URI of decryption key.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uri")
     @Expose
@@ -33,7 +33,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The encryption key (a 32-byte string).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Key")
     @Expose
@@ -41,7 +41,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The initialization vector for encryption (a 32-byte string).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Vector")
     @Expose
@@ -49,9 +49,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The URI of decryption key.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Uri The URI of decryption key.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUri() {
         return this.Uri;
@@ -59,9 +59,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The URI of decryption key.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Uri The URI of decryption key.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUri(String Uri) {
         this.Uri = Uri;
@@ -69,9 +69,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The encryption key (a 32-byte string).
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Key The encryption key (a 32-byte string).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getKey() {
         return this.Key;
@@ -79,9 +79,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The encryption key (a 32-byte string).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Key The encryption key (a 32-byte string).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setKey(String Key) {
         this.Key = Key;
@@ -89,9 +89,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The initialization vector for encryption (a 32-byte string).
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Vector The initialization vector for encryption (a 32-byte string).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVector() {
         return this.Vector;
@@ -99,9 +99,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The initialization vector for encryption (a 32-byte string).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Vector The initialization vector for encryption (a 32-byte string).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVector(String Vector) {
         this.Vector = Vector;

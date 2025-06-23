@@ -25,7 +25,7 @@ public class AudioEnhanceConfig extends AbstractModel {
 
     /**
     * The audio noise reduction configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Denoise")
     @Expose
@@ -33,7 +33,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The audio separation configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Separate")
     @Expose
@@ -41,7 +41,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The volume equalization configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VolumeBalance")
     @Expose
@@ -49,7 +49,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The audio improvement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Beautify")
     @Expose
@@ -57,9 +57,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The audio noise reduction configuration.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Denoise The audio noise reduction configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AudioDenoiseConfig getDenoise() {
         return this.Denoise;
@@ -67,9 +67,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The audio noise reduction configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Denoise The audio noise reduction configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDenoise(AudioDenoiseConfig Denoise) {
         this.Denoise = Denoise;
@@ -77,9 +77,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The audio separation configuration.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Separate The audio separation configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AudioSeparateConfig getSeparate() {
         return this.Separate;
@@ -87,9 +87,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The audio separation configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Separate The audio separation configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSeparate(AudioSeparateConfig Separate) {
         this.Separate = Separate;
@@ -97,9 +97,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The volume equalization configuration.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return VolumeBalance The volume equalization configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public VolumeBalanceConfig getVolumeBalance() {
         return this.VolumeBalance;
@@ -107,9 +107,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The volume equalization configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param VolumeBalance The volume equalization configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVolumeBalance(VolumeBalanceConfig VolumeBalance) {
         this.VolumeBalance = VolumeBalance;
@@ -117,9 +117,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The audio improvement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Beautify The audio improvement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AudioBeautifyConfig getBeautify() {
         return this.Beautify;
@@ -127,9 +127,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The audio improvement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Beautify The audio improvement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBeautify(AudioBeautifyConfig Beautify) {
         this.Beautify = Beautify;

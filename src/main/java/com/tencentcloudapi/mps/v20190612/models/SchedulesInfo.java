@@ -42,7 +42,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     * The scheme type. Valid values:
  <li>`Preset`</li>
 <li>`Custom` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -162,11 +162,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Get The scheme type. Valid values:
  <li>`Preset`</li>
 <li>`Custom` </li>
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Type The scheme type. Valid values:
  <li>`Preset`</li>
 <li>`Custom` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
@@ -176,11 +176,11 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * Set The scheme type. Valid values:
  <li>`Preset`</li>
 <li>`Custom` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Type The scheme type. Valid values:
  <li>`Preset`</li>
 <li>`Custom` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;

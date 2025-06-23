@@ -137,8 +137,6 @@ public class Deal extends AbstractModel {
 
     /**
     * Product code
-
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProductCode")
     @Expose
@@ -159,16 +157,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String BigDealId;
 
     /**
-    * Refund formula
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Refund formula.
     */
     @SerializedName("Formula")
     @Expose
     private String Formula;
 
     /**
-    * Refund involves order information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Refund involves order information.
     */
     @SerializedName("RefReturnDeals")
     @Expose
@@ -184,35 +180,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
     * Transaction type
 
-`modifyNetworkMode`: Adjusting bandwidth mode
-`modifyNetworkSize`: Adjusting bandwidth size
-`refund`: Refund
-`downgrade`: Downgrade
-upgrade (upgrade)
-renew
-purchase
-preMoveOut annual and monthly subscription resources
-preMoveIn annual and monthly subscription resources
-preToPost prepaid to postpaid
-postMoveOut move out pay-as-you-go resources
-postMoveIn move in pay-as-you-go resources
-Note: This field may return null, indicating that no valid values can be obtained.
+Modify network mode adjust bandwidth mode.
+Adjust bandwidth size.
+`Refund`: refund.
+downgrade.
+upgrade configuration.
+renew.
+purchase.
+preMoveOut monthly subscription resource migration out.
+preMoveIn specifies the monthly subscription resources to migrate.
+preToPost specifies the prepaid to postpaid conversion.
+postMoveOut specifies the pay-as-you-go resources to be migrated out.
+postMoveIn specifies the pay-as-you-go resources for inbound migration.
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Product code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Product code chinese name.
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * Subproduct code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Sub-Product code chinese name.
     */
     @SerializedName("SubProductName")
     @Expose
@@ -483,12 +476,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Product code
-
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Product code 
      * @return ProductCode Product code
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProductCode() {
         return this.ProductCode;
@@ -496,11 +485,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Product code
-
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProductCode Product code
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
@@ -539,40 +524,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Refund formula
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Formula Refund formula
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Refund formula. 
+     * @return Formula Refund formula.
      */
     public String getFormula() {
         return this.Formula;
     }
 
     /**
-     * Set Refund formula
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Formula Refund formula
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Refund formula.
+     * @param Formula Refund formula.
      */
     public void setFormula(String Formula) {
         this.Formula = Formula;
     }
 
     /**
-     * Get Refund involves order information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RefReturnDeals Refund involves order information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Refund involves order information. 
+     * @return RefReturnDeals Refund involves order information.
      */
     public String getRefReturnDeals() {
         return this.RefReturnDeals;
     }
 
     /**
-     * Set Refund involves order information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RefReturnDeals Refund involves order information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Refund involves order information.
+     * @param RefReturnDeals Refund involves order information.
      */
     public void setRefReturnDeals(String RefReturnDeals) {
         this.RefReturnDeals = RefReturnDeals;
@@ -597,34 +574,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Transaction type
 
-`modifyNetworkMode`: Adjusting bandwidth mode
-`modifyNetworkSize`: Adjusting bandwidth size
-`refund`: Refund
-`downgrade`: Downgrade
-upgrade (upgrade)
-renew
-purchase
-preMoveOut annual and monthly subscription resources
-preMoveIn annual and monthly subscription resources
-preToPost prepaid to postpaid
-postMoveOut move out pay-as-you-go resources
-postMoveIn move in pay-as-you-go resources
-Note: This field may return null, indicating that no valid values can be obtained. 
+Modify network mode adjust bandwidth mode.
+Adjust bandwidth size.
+`Refund`: refund.
+downgrade.
+upgrade configuration.
+renew.
+purchase.
+preMoveOut monthly subscription resource migration out.
+preMoveIn specifies the monthly subscription resources to migrate.
+preToPost specifies the prepaid to postpaid conversion.
+postMoveOut specifies the pay-as-you-go resources to be migrated out.
+postMoveIn specifies the pay-as-you-go resources for inbound migration. 
      * @return Action Transaction type
 
-`modifyNetworkMode`: Adjusting bandwidth mode
-`modifyNetworkSize`: Adjusting bandwidth size
-`refund`: Refund
-`downgrade`: Downgrade
-upgrade (upgrade)
-renew
-purchase
-preMoveOut annual and monthly subscription resources
-preMoveIn annual and monthly subscription resources
-preToPost prepaid to postpaid
-postMoveOut move out pay-as-you-go resources
-postMoveIn move in pay-as-you-go resources
-Note: This field may return null, indicating that no valid values can be obtained.
+Modify network mode adjust bandwidth mode.
+Adjust bandwidth size.
+`Refund`: refund.
+downgrade.
+upgrade configuration.
+renew.
+purchase.
+preMoveOut monthly subscription resource migration out.
+preMoveIn specifies the monthly subscription resources to migrate.
+preToPost specifies the prepaid to postpaid conversion.
+postMoveOut specifies the pay-as-you-go resources to be migrated out.
+postMoveIn specifies the pay-as-you-go resources for inbound migration.
      */
     public String getAction() {
         return this.Action;
@@ -633,74 +608,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Transaction type
 
-`modifyNetworkMode`: Adjusting bandwidth mode
-`modifyNetworkSize`: Adjusting bandwidth size
-`refund`: Refund
-`downgrade`: Downgrade
-upgrade (upgrade)
-renew
-purchase
-preMoveOut annual and monthly subscription resources
-preMoveIn annual and monthly subscription resources
-preToPost prepaid to postpaid
-postMoveOut move out pay-as-you-go resources
-postMoveIn move in pay-as-you-go resources
-Note: This field may return null, indicating that no valid values can be obtained.
+Modify network mode adjust bandwidth mode.
+Adjust bandwidth size.
+`Refund`: refund.
+downgrade.
+upgrade configuration.
+renew.
+purchase.
+preMoveOut monthly subscription resource migration out.
+preMoveIn specifies the monthly subscription resources to migrate.
+preToPost specifies the prepaid to postpaid conversion.
+postMoveOut specifies the pay-as-you-go resources to be migrated out.
+postMoveIn specifies the pay-as-you-go resources for inbound migration.
      * @param Action Transaction type
 
-`modifyNetworkMode`: Adjusting bandwidth mode
-`modifyNetworkSize`: Adjusting bandwidth size
-`refund`: Refund
-`downgrade`: Downgrade
-upgrade (upgrade)
-renew
-purchase
-preMoveOut annual and monthly subscription resources
-preMoveIn annual and monthly subscription resources
-preToPost prepaid to postpaid
-postMoveOut move out pay-as-you-go resources
-postMoveIn move in pay-as-you-go resources
-Note: This field may return null, indicating that no valid values can be obtained.
+Modify network mode adjust bandwidth mode.
+Adjust bandwidth size.
+`Refund`: refund.
+downgrade.
+upgrade configuration.
+renew.
+purchase.
+preMoveOut monthly subscription resource migration out.
+preMoveIn specifies the monthly subscription resources to migrate.
+preToPost specifies the prepaid to postpaid conversion.
+postMoveOut specifies the pay-as-you-go resources to be migrated out.
+postMoveIn specifies the pay-as-you-go resources for inbound migration.
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Product code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProductName Product code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Product code chinese name. 
+     * @return ProductName Product code chinese name.
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set Product code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProductName Product code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Product code chinese name.
+     * @param ProductName Product code chinese name.
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get Subproduct code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubProductName Subproduct code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Sub-Product code chinese name. 
+     * @return SubProductName Sub-Product code chinese name.
      */
     public String getSubProductName() {
         return this.SubProductName;
     }
 
     /**
-     * Set Subproduct code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubProductName Subproduct code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Sub-Product code chinese name.
+     * @param SubProductName Sub-Product code chinese name.
      */
     public void setSubProductName(String SubProductName) {
         this.SubProductName = SubProductName;

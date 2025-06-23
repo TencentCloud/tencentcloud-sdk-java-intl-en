@@ -25,7 +25,7 @@ public class LiveScheduleTask extends AbstractModel {
 
     /**
     * The ID of a live scheme subtask.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskId")
     @Expose
@@ -35,7 +35,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     * The task status. Valid values:
 <li>`PROCESSING`</li>
 <li>`FINISH` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
@@ -43,7 +43,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ErrCode")
     @Expose
@@ -51,7 +51,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Message")
     @Expose
@@ -59,7 +59,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The URL of the live stream.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Url")
     @Expose
@@ -67,7 +67,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LiveActivityResultSet")
     @Expose
@@ -75,9 +75,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The ID of a live scheme subtask.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TaskId The ID of a live scheme subtask.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTaskId() {
         return this.TaskId;
@@ -85,9 +85,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The ID of a live scheme subtask.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskId The ID of a live scheme subtask.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -97,11 +97,11 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * Get The task status. Valid values:
 <li>`PROCESSING`</li>
 <li>`FINISH` </li>
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Status The task status. Valid values:
 <li>`PROCESSING`</li>
 <li>`FINISH` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStatus() {
         return this.Status;
@@ -111,11 +111,11 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * Set The task status. Valid values:
 <li>`PROCESSING`</li>
 <li>`FINISH` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Status The task status. Valid values:
 <li>`PROCESSING`</li>
 <li>`FINISH` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -123,9 +123,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ErrCode If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -133,9 +133,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ErrCode If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -143,9 +143,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMessage() {
         return this.Message;
@@ -153,9 +153,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -163,9 +163,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The URL of the live stream.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Url The URL of the live stream.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUrl() {
         return this.Url;
@@ -173,9 +173,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The URL of the live stream.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Url The URL of the live stream.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -183,9 +183,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The task output.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return LiveActivityResultSet The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public LiveActivityResult [] getLiveActivityResultSet() {
         return this.LiveActivityResultSet;
@@ -193,9 +193,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param LiveActivityResultSet The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLiveActivityResultSet(LiveActivityResult [] LiveActivityResultSet) {
         this.LiveActivityResultSet = LiveActivityResultSet;

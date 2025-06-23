@@ -25,7 +25,7 @@ public class LiveRecordFile extends AbstractModel {
 
     /**
     * The URL of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Url")
     @Expose
@@ -33,7 +33,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The size of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Size")
     @Expose
@@ -41,7 +41,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The duration of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Duration")
     @Expose
@@ -49,7 +49,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StartTime")
     @Expose
@@ -57,7 +57,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EndTime")
     @Expose
@@ -65,9 +65,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The URL of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Url The URL of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUrl() {
         return this.Url;
@@ -75,9 +75,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The URL of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Url The URL of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -85,9 +85,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The size of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Size The size of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getSize() {
         return this.Size;
@@ -95,9 +95,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The size of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Size The size of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSize(Long Size) {
         this.Size = Size;
@@ -105,9 +105,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The duration of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Duration The duration of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDuration() {
         return this.Duration;
@@ -115,9 +115,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The duration of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Duration The duration of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
@@ -125,9 +125,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return StartTime The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStartTime() {
         return this.StartTime;
@@ -135,9 +135,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param StartTime The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -145,9 +145,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Get The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return EndTime The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getEndTime() {
         return this.EndTime;
@@ -155,9 +155,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param EndTime The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

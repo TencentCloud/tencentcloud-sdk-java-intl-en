@@ -395,7 +395,9 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @return EnableRepicaReadOnly Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
 - true: Supported.
 - false: Not supported.
+     * @deprecated
      */
+    @Deprecated
     public Boolean getEnableRepicaReadOnly() {
         return this.EnableRepicaReadOnly;
     }
@@ -407,7 +409,9 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param EnableRepicaReadOnly Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
 - true: Supported.
 - false: Not supported.
+     * @deprecated
      */
+    @Deprecated
     public void setEnableRepicaReadOnly(Boolean EnableRepicaReadOnly) {
         this.EnableRepicaReadOnly = EnableRepicaReadOnly;
     }

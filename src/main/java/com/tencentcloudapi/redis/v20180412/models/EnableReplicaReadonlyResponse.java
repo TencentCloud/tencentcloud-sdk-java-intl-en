@@ -51,7 +51,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Status Valid values: `ERROR`, `OK`. This field has been disused.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String getStatus() {
         return this.Status;
     }
@@ -61,7 +63,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param Status Valid values: `ERROR`, `OK`. This field has been disused.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setStatus(String Status) {
         this.Status = Status;
     }

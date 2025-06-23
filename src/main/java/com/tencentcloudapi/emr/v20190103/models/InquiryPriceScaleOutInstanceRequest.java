@@ -97,6 +97,27 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
     private Long MasterCount;
 
     /**
+    * The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+    */
+    @SerializedName("ResourceBaseType")
+    @Expose
+    private String ResourceBaseType;
+
+    /**
+    * Computing resource ID.
+    */
+    @SerializedName("ComputeResourceId")
+    @Expose
+    private String ComputeResourceId;
+
+    /**
+    * Scale-out resource type.
+    */
+    @SerializedName("HardwareResourceType")
+    @Expose
+    private String HardwareResourceType;
+
+    /**
      * Get Time unit of scale-out. Valid value:
 <li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li> 
      * @return TimeUnit Time unit of scale-out. Valid value:
@@ -268,6 +289,54 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
         this.MasterCount = MasterCount;
     }
 
+    /**
+     * Get The type can be ComputeResource, EMR, or a default value. The default value is EMR. 
+     * @return ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     */
+    public String getResourceBaseType() {
+        return this.ResourceBaseType;
+    }
+
+    /**
+     * Set The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * @param ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     */
+    public void setResourceBaseType(String ResourceBaseType) {
+        this.ResourceBaseType = ResourceBaseType;
+    }
+
+    /**
+     * Get Computing resource ID. 
+     * @return ComputeResourceId Computing resource ID.
+     */
+    public String getComputeResourceId() {
+        return this.ComputeResourceId;
+    }
+
+    /**
+     * Set Computing resource ID.
+     * @param ComputeResourceId Computing resource ID.
+     */
+    public void setComputeResourceId(String ComputeResourceId) {
+        this.ComputeResourceId = ComputeResourceId;
+    }
+
+    /**
+     * Get Scale-out resource type. 
+     * @return HardwareResourceType Scale-out resource type.
+     */
+    public String getHardwareResourceType() {
+        return this.HardwareResourceType;
+    }
+
+    /**
+     * Set Scale-out resource type.
+     * @param HardwareResourceType Scale-out resource type.
+     */
+    public void setHardwareResourceType(String HardwareResourceType) {
+        this.HardwareResourceType = HardwareResourceType;
+    }
+
     public InquiryPriceScaleOutInstanceRequest() {
     }
 
@@ -306,6 +375,15 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
         if (source.MasterCount != null) {
             this.MasterCount = new Long(source.MasterCount);
         }
+        if (source.ResourceBaseType != null) {
+            this.ResourceBaseType = new String(source.ResourceBaseType);
+        }
+        if (source.ComputeResourceId != null) {
+            this.ComputeResourceId = new String(source.ComputeResourceId);
+        }
+        if (source.HardwareResourceType != null) {
+            this.HardwareResourceType = new String(source.HardwareResourceType);
+        }
     }
 
 
@@ -323,6 +401,9 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamSimple(map, prefix + "RouterCount", this.RouterCount);
         this.setParamSimple(map, prefix + "MasterCount", this.MasterCount);
+        this.setParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
+        this.setParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
+        this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
 
     }
 }

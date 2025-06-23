@@ -70,7 +70,9 @@ public class DescribeSlowLogResponse extends AbstractModel {
     /**
      * Get Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named. 
      * @return InstanceSlowlogDetail Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named.
+     * @deprecated
      */
+    @Deprecated
     public InstanceSlowlogDetail [] getInstanceSlowlogDetail() {
         return this.InstanceSlowlogDetail;
     }
@@ -78,7 +80,9 @@ public class DescribeSlowLogResponse extends AbstractModel {
     /**
      * Set Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named.
      * @param InstanceSlowlogDetail Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named.
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceSlowlogDetail(InstanceSlowlogDetail [] InstanceSlowlogDetail) {
         this.InstanceSlowlogDetail = InstanceSlowlogDetail;
     }

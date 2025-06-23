@@ -197,7 +197,9 @@ public class ModifyInstanceRequest extends AbstractModel {
     /**
      * Get This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds. 
      * @return InstanceId This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceId() {
         return this.InstanceId;
     }
@@ -205,7 +207,9 @@ public class ModifyInstanceRequest extends AbstractModel {
     /**
      * Set This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
      * @param InstanceId This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
@@ -213,7 +217,9 @@ public class ModifyInstanceRequest extends AbstractModel {
     /**
      * Get Disused 
      * @return InstanceName Disused
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceName() {
         return this.InstanceName;
     }
@@ -221,7 +227,9 @@ public class ModifyInstanceRequest extends AbstractModel {
     /**
      * Set Disused
      * @param InstanceName Disused
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
@@ -229,7 +237,9 @@ public class ModifyInstanceRequest extends AbstractModel {
     /**
      * Get This parameter has been deprecated. 
      * @return AutoRenew This parameter has been deprecated.
+     * @deprecated
      */
+    @Deprecated
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
@@ -237,7 +247,9 @@ public class ModifyInstanceRequest extends AbstractModel {
     /**
      * Set This parameter has been deprecated.
      * @param AutoRenew This parameter has been deprecated.
+     * @deprecated
      */
+    @Deprecated
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }

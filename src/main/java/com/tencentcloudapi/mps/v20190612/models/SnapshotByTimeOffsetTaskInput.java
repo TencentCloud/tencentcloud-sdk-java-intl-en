@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SnapshotByTimeOffsetTaskInput extends AbstractModel {
 
     /**
-    * ID of a time point screencapturing template.
+    * ID of a time point screenshot template.
     */
     @SerializedName("Definition")
     @Expose
@@ -85,16 +85,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private NumberFormat ObjectNumberFormat;
 
     /**
-     * Get ID of a time point screencapturing template. 
-     * @return Definition ID of a time point screencapturing template.
+     * Get ID of a time point screenshot template. 
+     * @return Definition ID of a time point screenshot template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set ID of a time point screencapturing template.
-     * @param Definition ID of a time point screencapturing template.
+     * Set ID of a time point screenshot template.
+     * @param Definition ID of a time point screenshot template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
