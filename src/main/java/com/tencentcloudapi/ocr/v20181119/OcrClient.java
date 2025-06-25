@@ -475,6 +475,17 @@ As shown in the table below. <table style="width:650px"> <thead> <tr> <th width=
     }
 
     /**
+     *This interface supports identification of the front and back of Mexican Voter ID Card. The default interface request frequency limit is 5 times per second.
+     * @param req RecognizeMexicoVTIDRequest
+     * @return RecognizeMexicoVTIDResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeMexicoVTIDResponse RecognizeMexicoVTID(RecognizeMexicoVTIDRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RecognizeMexicoVTID", RecognizeMexicoVTIDResponse.class);
+    }
+
+    /**
      *This API is used to recognize a Philippine driver's license.
      * @param req RecognizePhilippinesDrivingLicenseOCRRequest
      * @return RecognizePhilippinesDrivingLicenseOCRResponse
