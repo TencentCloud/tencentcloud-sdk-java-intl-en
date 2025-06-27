@@ -171,6 +171,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Check group account details
+     * @param req DescribeOrganizationInfoRequest
+     * @return DescribeOrganizationInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationInfoResponse DescribeOrganizationInfo(DescribeOrganizationInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOrganizationInfo", DescribeOrganizationInfoResponse.class);
+    }
+
+    /**
+     *Query group account user list
+     * @param req DescribeOrganizationUserInfoRequest
+     * @return DescribeOrganizationUserInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationUserInfoResponse DescribeOrganizationUserInfo(DescribeOrganizationUserInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOrganizationUserInfo", DescribeOrganizationUserInfoResponse.class);
+    }
+
+    /**
      *This API is used to query the list of public IP assets.
      * @param req DescribePublicIpAssetsRequest
      * @return DescribePublicIpAssetsResponse
@@ -300,6 +322,17 @@ public class CsipClient extends AbstractClient{
     public DescribeSearchBugInfoResponse DescribeSearchBugInfo(DescribeSearchBugInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSearchBugInfo", DescribeSearchBugInfoResponse.class);
+    }
+
+    /**
+     *Query the group's sub-account list
+     * @param req DescribeSubUserInfoRequest
+     * @return DescribeSubUserInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubUserInfoResponse DescribeSubUserInfo(DescribeSubUserInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSubUserInfo", DescribeSubUserInfoResponse.class);
     }
 
     /**

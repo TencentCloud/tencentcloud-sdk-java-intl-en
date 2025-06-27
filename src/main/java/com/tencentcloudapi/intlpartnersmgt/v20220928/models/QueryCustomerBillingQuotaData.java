@@ -24,29 +24,28 @@ import java.util.HashMap;
 public class QueryCustomerBillingQuotaData extends AbstractModel {
 
     /**
-    * Total credit limit (unit: cny), accurate down to two decimal places.
+    * Total credit limit (unit: usd), accurate down to two decimal places.
     */
     @SerializedName("TotalCredit")
     @Expose
     private Float TotalCredit;
 
     /**
-    * Remaining credit limit (unit: cny), accurate down to two decimal places.
+    * Remaining credit limit (unit: usd), accurate down to two decimal places.
     */
     @SerializedName("RemainingCredit")
     @Expose
     private Float RemainingCredit;
 
     /**
-    * Remaining total voucher amount (unit: cny), accurate down to two decimal places.
+    * Remaining total voucher amount (unit: usd), accurate down to two decimal places.
     */
     @SerializedName("RemainingVoucher")
     @Expose
     private Float RemainingVoucher;
 
     /**
-    * Forced status
-.
+    * Forced status.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Force")
@@ -68,59 +67,57 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Float PostpayFrozen;
 
     /**
-     * Get Total credit limit (unit: cny), accurate down to two decimal places. 
-     * @return TotalCredit Total credit limit (unit: cny), accurate down to two decimal places.
+     * Get Total credit limit (unit: usd), accurate down to two decimal places. 
+     * @return TotalCredit Total credit limit (unit: usd), accurate down to two decimal places.
      */
     public Float getTotalCredit() {
         return this.TotalCredit;
     }
 
     /**
-     * Set Total credit limit (unit: cny), accurate down to two decimal places.
-     * @param TotalCredit Total credit limit (unit: cny), accurate down to two decimal places.
+     * Set Total credit limit (unit: usd), accurate down to two decimal places.
+     * @param TotalCredit Total credit limit (unit: usd), accurate down to two decimal places.
      */
     public void setTotalCredit(Float TotalCredit) {
         this.TotalCredit = TotalCredit;
     }
 
     /**
-     * Get Remaining credit limit (unit: cny), accurate down to two decimal places. 
-     * @return RemainingCredit Remaining credit limit (unit: cny), accurate down to two decimal places.
+     * Get Remaining credit limit (unit: usd), accurate down to two decimal places. 
+     * @return RemainingCredit Remaining credit limit (unit: usd), accurate down to two decimal places.
      */
     public Float getRemainingCredit() {
         return this.RemainingCredit;
     }
 
     /**
-     * Set Remaining credit limit (unit: cny), accurate down to two decimal places.
-     * @param RemainingCredit Remaining credit limit (unit: cny), accurate down to two decimal places.
+     * Set Remaining credit limit (unit: usd), accurate down to two decimal places.
+     * @param RemainingCredit Remaining credit limit (unit: usd), accurate down to two decimal places.
      */
     public void setRemainingCredit(Float RemainingCredit) {
         this.RemainingCredit = RemainingCredit;
     }
 
     /**
-     * Get Remaining total voucher amount (unit: cny), accurate down to two decimal places. 
-     * @return RemainingVoucher Remaining total voucher amount (unit: cny), accurate down to two decimal places.
+     * Get Remaining total voucher amount (unit: usd), accurate down to two decimal places. 
+     * @return RemainingVoucher Remaining total voucher amount (unit: usd), accurate down to two decimal places.
      */
     public Float getRemainingVoucher() {
         return this.RemainingVoucher;
     }
 
     /**
-     * Set Remaining total voucher amount (unit: cny), accurate down to two decimal places.
-     * @param RemainingVoucher Remaining total voucher amount (unit: cny), accurate down to two decimal places.
+     * Set Remaining total voucher amount (unit: usd), accurate down to two decimal places.
+     * @param RemainingVoucher Remaining total voucher amount (unit: usd), accurate down to two decimal places.
      */
     public void setRemainingVoucher(Float RemainingVoucher) {
         this.RemainingVoucher = RemainingVoucher;
     }
 
     /**
-     * Get Forced status
-.
+     * Get Forced status.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Force Forced status
-.
+     * @return Force Forced status.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getForce() {
@@ -128,11 +125,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Forced status
-.
+     * Set Forced status.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Force Forced status
-.
+     * @param Force Forced status.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setForce(Long Force) {

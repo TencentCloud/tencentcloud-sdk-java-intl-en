@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateDBInstancesRequest extends AbstractModel {
 
     /**
-    * Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
+    * Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Instance memory size in GB
+    * Instance memory size in GB.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Instance storage capacity in GB
+    * Instance storage capacity in GB.
     */
     @SerializedName("Storage")
     @Expose
@@ -52,49 +52,49 @@ public class CreateDBInstancesRequest extends AbstractModel {
     private String InstanceChargeType;
 
     /**
-    * Project ID
+    * Project ID.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Number of instances purchased this time. Default value: 1. Maximum value: 10
+    * Number of instances purchased this time. Default value: 1. Maximum value: 10.
     */
     @SerializedName("GoodsNum")
     @Expose
     private Long GoodsNum;
 
     /**
-    * VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously
+    * VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously
+    * VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48
+    * Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * Whether to automatically use voucher. 0: no, 1: yes. Default value: no
+    * Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * Array of voucher IDs (currently, only one voucher can be used per order)
+    * Array of voucher IDs (currently, only one voucher can be used per order).
     */
     @SerializedName("VoucherIds")
     @Expose
@@ -157,7 +157,7 @@ public class CreateDBInstancesRequest extends AbstractModel {
     private Boolean MultiZones;
 
     /**
-    * Tags associated with the instances to be created
+    * Tags associated with the instances to be created.
     */
     @SerializedName("ResourceTags")
     @Expose
@@ -178,48 +178,62 @@ public class CreateDBInstancesRequest extends AbstractModel {
     private String TimeZone;
 
     /**
-     * Get Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API 
-     * @return Zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
+    * Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+    */
+    @SerializedName("MultiNodes")
+    @Expose
+    private Boolean MultiNodes;
+
+    /**
+    * The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+    */
+    @SerializedName("DrZones")
+    @Expose
+    private String [] DrZones;
+
+    /**
+     * Get Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API. 
+     * @return Zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
-     * @param Zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
+     * Set Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
+     * @param Zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Instance memory size in GB 
-     * @return Memory Instance memory size in GB
+     * Get Instance memory size in GB. 
+     * @return Memory Instance memory size in GB.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Instance memory size in GB
-     * @param Memory Instance memory size in GB
+     * Set Instance memory size in GB.
+     * @param Memory Instance memory size in GB.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Instance storage capacity in GB 
-     * @return Storage Instance storage capacity in GB
+     * Get Instance storage capacity in GB. 
+     * @return Storage Instance storage capacity in GB.
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Instance storage capacity in GB
-     * @param Storage Instance storage capacity in GB
+     * Set Instance storage capacity in GB.
+     * @param Storage Instance storage capacity in GB.
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
@@ -242,112 +256,112 @@ public class CreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get Project ID. 
+     * @return ProjectId Project ID.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set Project ID.
+     * @param ProjectId Project ID.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Number of instances purchased this time. Default value: 1. Maximum value: 10 
-     * @return GoodsNum Number of instances purchased this time. Default value: 1. Maximum value: 10
+     * Get Number of instances purchased this time. Default value: 1. Maximum value: 10. 
+     * @return GoodsNum Number of instances purchased this time. Default value: 1. Maximum value: 10.
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set Number of instances purchased this time. Default value: 1. Maximum value: 10
-     * @param GoodsNum Number of instances purchased this time. Default value: 1. Maximum value: 10
+     * Set Number of instances purchased this time. Default value: 1. Maximum value: 10.
+     * @param GoodsNum Number of instances purchased this time. Default value: 1. Maximum value: 10.
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously 
-     * @return SubnetId VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously
+     * Get VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously. 
+     * @return SubnetId VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously
-     * @param SubnetId VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously
+     * Set VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously.
+     * @param SubnetId VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously 
-     * @return VpcId VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously
+     * Get VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously. 
+     * @return VpcId VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously
-     * @param VpcId VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously
+     * Set VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously.
+     * @param VpcId VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48 
-     * @return Period Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48
+     * Get Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48. 
+     * @return Period Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48
-     * @param Period Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48
+     * Set Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
+     * @param Period Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get Whether to automatically use voucher. 0: no, 1: yes. Default value: no 
-     * @return AutoVoucher Whether to automatically use voucher. 0: no, 1: yes. Default value: no
+     * Get Whether to automatically use voucher. 0: no, 1: yes. Default value: no. 
+     * @return AutoVoucher Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to automatically use voucher. 0: no, 1: yes. Default value: no
-     * @param AutoVoucher Whether to automatically use voucher. 0: no, 1: yes. Default value: no
+     * Set Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
+     * @param AutoVoucher Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get Array of voucher IDs (currently, only one voucher can be used per order) 
-     * @return VoucherIds Array of voucher IDs (currently, only one voucher can be used per order)
+     * Get Array of voucher IDs (currently, only one voucher can be used per order). 
+     * @return VoucherIds Array of voucher IDs (currently, only one voucher can be used per order).
      */
     public String [] getVoucherIds() {
         return this.VoucherIds;
     }
 
     /**
-     * Set Array of voucher IDs (currently, only one voucher can be used per order)
-     * @param VoucherIds Array of voucher IDs (currently, only one voucher can be used per order)
+     * Set Array of voucher IDs (currently, only one voucher can be used per order).
+     * @param VoucherIds Array of voucher IDs (currently, only one voucher can be used per order).
      */
     public void setVoucherIds(String [] VoucherIds) {
         this.VoucherIds = VoucherIds;
@@ -482,16 +496,16 @@ public class CreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Tags associated with the instances to be created 
-     * @return ResourceTags Tags associated with the instances to be created
+     * Get Tags associated with the instances to be created. 
+     * @return ResourceTags Tags associated with the instances to be created.
      */
     public ResourceTag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set Tags associated with the instances to be created
-     * @param ResourceTags Tags associated with the instances to be created
+     * Set Tags associated with the instances to be created.
+     * @param ResourceTags Tags associated with the instances to be created.
      */
     public void setResourceTags(ResourceTag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
@@ -527,6 +541,38 @@ public class CreateDBInstancesRequest extends AbstractModel {
      */
     public void setTimeZone(String TimeZone) {
         this.TimeZone = TimeZone;
+    }
+
+    /**
+     * Get Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true. 
+     * @return MultiNodes Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+     */
+    public Boolean getMultiNodes() {
+        return this.MultiNodes;
+    }
+
+    /**
+     * Set Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+     * @param MultiNodes Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+     */
+    public void setMultiNodes(Boolean MultiNodes) {
+        this.MultiNodes = MultiNodes;
+    }
+
+    /**
+     * Get The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5. 
+     * @return DrZones The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+     */
+    public String [] getDrZones() {
+        return this.DrZones;
+    }
+
+    /**
+     * Set The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+     * @param DrZones The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+     */
+    public void setDrZones(String [] DrZones) {
+        this.DrZones = DrZones;
     }
 
     public CreateDBInstancesRequest() {
@@ -615,6 +661,15 @@ public class CreateDBInstancesRequest extends AbstractModel {
         if (source.TimeZone != null) {
             this.TimeZone = new String(source.TimeZone);
         }
+        if (source.MultiNodes != null) {
+            this.MultiNodes = new Boolean(source.MultiNodes);
+        }
+        if (source.DrZones != null) {
+            this.DrZones = new String[source.DrZones.length];
+            for (int i = 0; i < source.DrZones.length; i++) {
+                this.DrZones[i] = new String(source.DrZones[i]);
+            }
+        }
     }
 
 
@@ -644,6 +699,8 @@ public class CreateDBInstancesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "Collation", this.Collation);
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamSimple(map, prefix + "MultiNodes", this.MultiNodes);
+        this.setParamArraySimple(map, prefix + "DrZones.", this.DrZones);
 
     }
 }
