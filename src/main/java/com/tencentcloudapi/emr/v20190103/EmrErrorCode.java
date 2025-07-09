@@ -207,6 +207,9 @@ public enum EmrErrorCode {
      /* Invalid target specification. */
      INVALIDPARAMETER_INVALIDMODIFYSPEC("InvalidParameter.InvalidModifySpec"),
      
+     /* Illegal node count. */
+     INVALIDPARAMETER_INVALIDNODECOUNT("InvalidParameter.InvalidNodeCount"),
+     
      /* Incorrect node type. */
      INVALIDPARAMETER_INVALIDNODEFLAG("InvalidParameter.InvalidNodeFlag"),
      
@@ -291,6 +294,9 @@ public enum EmrErrorCode {
      /* The TKE cluster ID is invalid, or the TKE cluster is not eligible. */
      INVALIDPARAMETER_INVALIDTKEINSTANCE("InvalidParameter.InvalidTkeInstance"),
      
+     /* Parent account UIN parameter input error. */
+     INVALIDPARAMETER_INVALIDUINNUM("InvalidParameter.InvalidUinNum"),
+     
      /* Invalid unified metadatabase. */
      INVALIDPARAMETER_INVALIDUNIFYMETA("InvalidParameter.InvalidUnifyMeta"),
      
@@ -348,6 +354,9 @@ public enum EmrErrorCode {
      /* The node specification is unsupported or has been sold out. */
      RESOURCEINSUFFICIENT_INSTANCEINSUFFICIENT("ResourceInsufficient.InstanceInsufficient"),
      
+     /* Resources do not exist. */
+     RESOURCENOTFOUND("ResourceNotFound"),
+     
      /* The instance was not found. */
      RESOURCENOTFOUND_CLUSTERNOTFOUND("ResourceNotFound.ClusterNotFound"),
      
@@ -374,6 +383,9 @@ public enum EmrErrorCode {
      
      /* There is no default value of the current resource spec. */
      RESOURCEUNAVAILABLE_RESOURCESPECNOTDEFAULTSPEC("ResourceUnavailable.ResourceSpecNotDefaultSpec"),
+     
+     /* The resource specification does not exist. */
+     RESOURCEUNAVAILABLE_RESOURCESPECNOTEXIST("ResourceUnavailable.ResourceSpecNotExist"),
      
      /* The resources have been sold out. */
      RESOURCESSOLDOUT("ResourcesSoldOut"),

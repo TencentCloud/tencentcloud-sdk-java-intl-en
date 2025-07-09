@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDDoSAttackDataRequest extends AbstractModel {
 
     /**
-    * Start time of the query period.
+    * The start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time of the query period.
+    * The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
     */
     @SerializedName("EndTime")
     @Expose
@@ -49,7 +49,7 @@ public class DescribeDDoSAttackDataRequest extends AbstractModel {
     private String [] MetricNames;
 
     /**
-    * ZoneId set. This parameter is required.
+    * Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -63,11 +63,11 @@ public class DescribeDDoSAttackDataRequest extends AbstractModel {
     private Long [] PolicyIds;
 
     /**
-    * The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: 1 day</li>If this field is not specified, the granularity is determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < Period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+    * Query period granularity. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
     */
     @SerializedName("Interval")
     @Expose
@@ -84,32 +84,32 @@ public class DescribeDDoSAttackDataRequest extends AbstractModel {
     private String Area;
 
     /**
-     * Get Start time of the query period. 
-     * @return StartTime Start time of the query period.
+     * Get The start time. 
+     * @return StartTime The start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the query period.
-     * @param StartTime Start time of the query period.
+     * Set The start time.
+     * @param StartTime The start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of the query period. 
-     * @return EndTime End time of the query period.
+     * Get The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days. 
+     * @return EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the query period.
-     * @param EndTime End time of the query period.
+     * Set The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * @param EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -148,16 +148,16 @@ public class DescribeDDoSAttackDataRequest extends AbstractModel {
     }
 
     /**
-     * Get ZoneId set. This parameter is required. 
-     * @return ZoneIds ZoneId set. This parameter is required.
+     * Get Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface. 
+     * @return ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set ZoneId set. This parameter is required.
-     * @param ZoneIds ZoneId set. This parameter is required.
+     * Set Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
+     * @param ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
@@ -180,32 +180,32 @@ public class DescribeDDoSAttackDataRequest extends AbstractModel {
     }
 
     /**
-     * Get The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: 1 day</li>If this field is not specified, the granularity is determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < Period ≤ 7 days: `hour`; <br>Period > 7 days: `day`. 
-     * @return Interval The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: 1 day</li>If this field is not specified, the granularity is determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < Period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+     * Get Query period granularity. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days. 
+     * @return Interval Query period granularity. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: 1 day</li>If this field is not specified, the granularity is determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < Period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
-     * @param Interval The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: 1 day</li>If this field is not specified, the granularity is determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < Period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+     * Set Query period granularity. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
+     * @param Interval Query period granularity. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;

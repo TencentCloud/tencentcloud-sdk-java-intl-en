@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,25 +31,27 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
     private String StartTime;
 
     /**
-    * The end time.
+    * The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Query indicator. Values: 
-<li>l4Flow_connections: Number of access connections;</li>
-<li>l4Flow_flux: Total access traffic;</li>
-<li>l4Flow_inFlux: Ingress access traffic;</li>
-<li>l4Flow_outFlux: Egress access traffic. </li>
+    * Metric list. Valid values:
+<Li>l4Flow_connections: number of concurrent connections;</li>
+<Li>l4Flow_flux: total traffic;</li>
+<Li>l4Flow_inFlux: inbound traffic;</li>
+<Li>l4Flow_outFlux: outbound traffic.</li>
+<Li>l4Flow_inBandwidth: inbound peak bandwidth.</li>
+<Li>l4Flow_outBandwidth: outbound peak bandwidth.</li>
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-    * ZoneId set. This parameter is required.
+    * Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -67,26 +69,24 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+
     */
     @SerializedName("Interval")
     @Expose
     private String Interval;
 
     /**
-    * Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>ruleId: Filter by forwarding rule ID.</li>
-<li>proxyId: Filter by L4 proxy instance ID.</li>
+    * Filter criteria. The detailed key values of filter criteria are as follows:
+<li>ruleId: filter by forwarding rule ID.</li>
+<li>proxyId: filter by L4 proxy instance ID.</li>
     */
     @SerializedName("Filters")
     @Expose
     private QueryCondition [] Filters;
 
     /**
-    * Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+    * Data ownership region. This parameter is deprecated. Please filter data by client region in Filters.country.
     */
     @SerializedName("Area")
     @Expose
@@ -109,64 +109,72 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
     }
 
     /**
-     * Get The end time. 
-     * @return EndTime The end time.
+     * Get The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days. 
+     * @return EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time.
-     * @param EndTime The end time.
+     * Set The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * @param EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Query indicator. Values: 
-<li>l4Flow_connections: Number of access connections;</li>
-<li>l4Flow_flux: Total access traffic;</li>
-<li>l4Flow_inFlux: Ingress access traffic;</li>
-<li>l4Flow_outFlux: Egress access traffic. </li> 
-     * @return MetricNames Query indicator. Values: 
-<li>l4Flow_connections: Number of access connections;</li>
-<li>l4Flow_flux: Total access traffic;</li>
-<li>l4Flow_inFlux: Ingress access traffic;</li>
-<li>l4Flow_outFlux: Egress access traffic. </li>
+     * Get Metric list. Valid values:
+<Li>l4Flow_connections: number of concurrent connections;</li>
+<Li>l4Flow_flux: total traffic;</li>
+<Li>l4Flow_inFlux: inbound traffic;</li>
+<Li>l4Flow_outFlux: outbound traffic.</li>
+<Li>l4Flow_inBandwidth: inbound peak bandwidth.</li>
+<Li>l4Flow_outBandwidth: outbound peak bandwidth.</li> 
+     * @return MetricNames Metric list. Valid values:
+<Li>l4Flow_connections: number of concurrent connections;</li>
+<Li>l4Flow_flux: total traffic;</li>
+<Li>l4Flow_inFlux: inbound traffic;</li>
+<Li>l4Flow_outFlux: outbound traffic.</li>
+<Li>l4Flow_inBandwidth: inbound peak bandwidth.</li>
+<Li>l4Flow_outBandwidth: outbound peak bandwidth.</li>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set Query indicator. Values: 
-<li>l4Flow_connections: Number of access connections;</li>
-<li>l4Flow_flux: Total access traffic;</li>
-<li>l4Flow_inFlux: Ingress access traffic;</li>
-<li>l4Flow_outFlux: Egress access traffic. </li>
-     * @param MetricNames Query indicator. Values: 
-<li>l4Flow_connections: Number of access connections;</li>
-<li>l4Flow_flux: Total access traffic;</li>
-<li>l4Flow_inFlux: Ingress access traffic;</li>
-<li>l4Flow_outFlux: Egress access traffic. </li>
+     * Set Metric list. Valid values:
+<Li>l4Flow_connections: number of concurrent connections;</li>
+<Li>l4Flow_flux: total traffic;</li>
+<Li>l4Flow_inFlux: inbound traffic;</li>
+<Li>l4Flow_outFlux: outbound traffic.</li>
+<Li>l4Flow_inBandwidth: inbound peak bandwidth.</li>
+<Li>l4Flow_outBandwidth: outbound peak bandwidth.</li>
+     * @param MetricNames Metric list. Valid values:
+<Li>l4Flow_connections: number of concurrent connections;</li>
+<Li>l4Flow_flux: total traffic;</li>
+<Li>l4Flow_inFlux: inbound traffic;</li>
+<Li>l4Flow_outFlux: outbound traffic.</li>
+<Li>l4Flow_inBandwidth: inbound peak bandwidth.</li>
+<Li>l4Flow_outBandwidth: outbound peak bandwidth.</li>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
     }
 
     /**
-     * Get ZoneId set. This parameter is required. 
-     * @return ZoneIds ZoneId set. This parameter is required.
+     * Get Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface. 
+     * @return ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set ZoneId set. This parameter is required.
-     * @param ZoneIds ZoneId set. This parameter is required.
+     * Set Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
+     * @param ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
@@ -193,12 +201,14 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`. 
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+ 
      * @return Interval The query granularity. Values:
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+
      */
     public String getInterval() {
         return this.Interval;
@@ -209,64 +219,54 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+
      * @param Interval The query granularity. Values:
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>ruleId: Filter by forwarding rule ID.</li>
-<li>proxyId: Filter by L4 proxy instance ID.</li> 
-     * @return Filters Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>ruleId: Filter by forwarding rule ID.</li>
-<li>proxyId: Filter by L4 proxy instance ID.</li>
+     * Get Filter criteria. The detailed key values of filter criteria are as follows:
+<li>ruleId: filter by forwarding rule ID.</li>
+<li>proxyId: filter by L4 proxy instance ID.</li> 
+     * @return Filters Filter criteria. The detailed key values of filter criteria are as follows:
+<li>ruleId: filter by forwarding rule ID.</li>
+<li>proxyId: filter by L4 proxy instance ID.</li>
      */
     public QueryCondition [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>ruleId: Filter by forwarding rule ID.</li>
-<li>proxyId: Filter by L4 proxy instance ID.</li>
-     * @param Filters Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>ruleId: Filter by forwarding rule ID.</li>
-<li>proxyId: Filter by L4 proxy instance ID.</li>
+     * Set Filter criteria. The detailed key values of filter criteria are as follows:
+<li>ruleId: filter by forwarding rule ID.</li>
+<li>proxyId: filter by L4 proxy instance ID.</li>
+     * @param Filters Filter criteria. The detailed key values of filter criteria are as follows:
+<li>ruleId: filter by forwarding rule ID.</li>
+<li>proxyId: filter by L4 proxy instance ID.</li>
      */
     public void setFilters(QueryCondition [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used. 
-     * @return Area Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+     * Get Data ownership region. This parameter is deprecated. Please filter data by client region in Filters.country. 
+     * @return Area Data ownership region. This parameter is deprecated. Please filter data by client region in Filters.country.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
-     * @param Area Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+     * Set Data ownership region. This parameter is deprecated. Please filter data by client region in Filters.country.
+     * @param Area Data ownership region. This parameter is deprecated. Please filter data by client region in Filters.country.
      */
     public void setArea(String Area) {
         this.Area = Area;

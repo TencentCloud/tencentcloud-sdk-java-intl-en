@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class IntlpartnersmgtClient extends AbstractClient{
     private static String endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
     private static String service = "intlpartnersmgt";
     private static String version = "2022-09-28";
-    
+
     public IntlpartnersmgtClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -210,7 +210,7 @@ Callable roles: Distributor, Second-level reseller, Reseller.
     }
 
     /**
-     *This API is used to query the daily bill expenditure of cu by resellers.
+     *This API is used to query the daily bill expenditure of customer by resellers.
 Invocation Role: first-level reseller, second-level reseller, reseller.
      * @param req DescribeCustomerBillDetailByDayRequest
      * @return DescribeCustomerBillDetailByDayResponse

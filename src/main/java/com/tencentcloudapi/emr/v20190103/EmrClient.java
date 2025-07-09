@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class EmrClient extends AbstractClient{
     private static String endpoint = "emr.intl.tencentcloudapi.com";
     private static String service = "emr";
     private static String version = "2019-01-03";
-    
+
     public EmrClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -70,6 +70,17 @@ This API is used to add user lists (user management).
     public CreateInstanceResponse CreateInstance(CreateInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateInstance", CreateInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to create a Serverless HBase instance.- If the API call is successful, a Serverless HBase instance will be created. If the instance creation request is successful, the InstanceId of the created instance and the RequestID of the request will be returned.- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling DescribeInstancesList to view the StatusDesc status of the current instance.
+     * @param req CreateSLInstanceRequest
+     * @return CreateSLInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSLInstanceResponse CreateSLInstance(CreateSLInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSLInstance", CreateSLInstanceResponse.class);
     }
 
     /**
@@ -147,6 +158,28 @@ This API is used to add user lists (user management).
     public DescribeResourceScheduleResponse DescribeResourceSchedule(DescribeResourceScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeResourceSchedule", DescribeResourceScheduleResponse.class);
+    }
+
+    /**
+     *This API is used to query the basic information of Serverless HBase instances.
+     * @param req DescribeSLInstanceRequest
+     * @return DescribeSLInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSLInstanceResponse DescribeSLInstance(DescribeSLInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSLInstance", DescribeSLInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to query the detailed information of the Serverless HBase instance list.
+     * @param req DescribeSLInstanceListRequest
+     * @return DescribeSLInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSLInstanceListResponse DescribeSLInstanceList(DescribeSLInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSLInstanceList", DescribeSLInstanceListResponse.class);
     }
 
     /**
@@ -239,6 +272,28 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     }
 
     /**
+     *This API is used to resize a Serverless HBase instance.- If the API call is successful, a Serverless HBase instance will be created. If the instance creation request is successful, the RequestID of the request will be returned.- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling DescribeInstancesList to view the StatusDesc status of the current instance.
+     * @param req ModifySLInstanceRequest
+     * @return ModifySLInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySLInstanceResponse ModifySLInstance(ModifySLInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySLInstance", ModifySLInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to modify the Serverless HBase instance name.
+     * @param req ModifySLInstanceBasicRequest
+     * @return ModifySLInstanceBasicResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySLInstanceBasicResponse ModifySLInstanceBasic(ModifySLInstanceBasicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySLInstanceBasic", ModifySLInstanceBasicResponse.class);
+    }
+
+    /**
      *This API is used to change user password (user management).
      * @param req ModifyUserManagerPwdRequest
      * @return ModifyUserManagerPwdResponse
@@ -302,6 +357,17 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public TerminateInstanceResponse TerminateInstance(TerminateInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TerminateInstance", TerminateInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to terminate a Serverless HBase instance.
+     * @param req TerminateSLInstanceRequest
+     * @return TerminateSLInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateSLInstanceResponse TerminateSLInstance(TerminateSLInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TerminateSLInstance", TerminateSLInstanceResponse.class);
     }
 
     /**

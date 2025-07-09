@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -60,10 +60,25 @@ public class StaffInfo extends AbstractModel {
 
     /**
     * User role id.
+When a user is bound to multiple roles, RoleIdList shall prevail.
     */
     @SerializedName("RoleId")
     @Expose
     private Long RoleId;
+
+    /**
+    * User role id list.
+    */
+    @SerializedName("RoleIdList")
+    @Expose
+    private Long RoleIdList;
+
+    /**
+    * 
+    */
+    @SerializedName("RoleList")
+    @Expose
+    private Long [] RoleList;
 
     /**
     * Affiliated skill group list.
@@ -167,8 +182,10 @@ public class StaffInfo extends AbstractModel {
     }
 
     /**
-     * Get User role id. 
+     * Get User role id.
+When a user is bound to multiple roles, RoleIdList shall prevail. 
      * @return RoleId User role id.
+When a user is bound to multiple roles, RoleIdList shall prevail.
      * @deprecated
      */
     @Deprecated
@@ -178,12 +195,50 @@ public class StaffInfo extends AbstractModel {
 
     /**
      * Set User role id.
+When a user is bound to multiple roles, RoleIdList shall prevail.
      * @param RoleId User role id.
+When a user is bound to multiple roles, RoleIdList shall prevail.
      * @deprecated
      */
     @Deprecated
     public void setRoleId(Long RoleId) {
         this.RoleId = RoleId;
+    }
+
+    /**
+     * Get User role id list. 
+     * @return RoleIdList User role id list.
+     * @deprecated
+     */
+    @Deprecated
+    public Long getRoleIdList() {
+        return this.RoleIdList;
+    }
+
+    /**
+     * Set User role id list.
+     * @param RoleIdList User role id list.
+     * @deprecated
+     */
+    @Deprecated
+    public void setRoleIdList(Long RoleIdList) {
+        this.RoleIdList = RoleIdList;
+    }
+
+    /**
+     * Get  
+     * @return RoleList 
+     */
+    public Long [] getRoleList() {
+        return this.RoleList;
+    }
+
+    /**
+     * Set 
+     * @param RoleList 
+     */
+    public void setRoleList(Long [] RoleList) {
+        this.RoleList = RoleList;
     }
 
     /**
@@ -260,6 +315,15 @@ public class StaffInfo extends AbstractModel {
         if (source.RoleId != null) {
             this.RoleId = new Long(source.RoleId);
         }
+        if (source.RoleIdList != null) {
+            this.RoleIdList = new Long(source.RoleIdList);
+        }
+        if (source.RoleList != null) {
+            this.RoleList = new Long[source.RoleList.length];
+            for (int i = 0; i < source.RoleList.length; i++) {
+                this.RoleList[i] = new Long(source.RoleList[i]);
+            }
+        }
         if (source.SkillGroupList != null) {
             this.SkillGroupList = new SkillGroupItem[source.SkillGroupList.length];
             for (int i = 0; i < source.SkillGroupList.length; i++) {
@@ -285,6 +349,8 @@ public class StaffInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Nick", this.Nick);
         this.setParamSimple(map, prefix + "StaffNumber", this.StaffNumber);
         this.setParamSimple(map, prefix + "RoleId", this.RoleId);
+        this.setParamSimple(map, prefix + "RoleIdList", this.RoleIdList);
+        this.setParamArraySimple(map, prefix + "RoleList.", this.RoleList);
         this.setParamArrayObj(map, prefix + "SkillGroupList.", this.SkillGroupList);
         this.setParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
         this.setParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);

@@ -363,6 +363,12 @@ public enum CvmErrorCode {
      /* Duplicate tags. */
      INVALIDPARAMETERVALUE_DUPLICATETAGS("InvalidParameterValue.DuplicateTags"),
      
+     /*  */
+     INVALIDPARAMETERVALUE_ELASTICNETWORKNOTEXIST("InvalidParameterValue.ElasticNetworkNotExist"),
+     
+     /*  */
+     INVALIDPARAMETERVALUE_ELASTICNETWORKVPCSUBNETMISMATCH("InvalidParameterValue.ElasticNetworkVpcSubnetMismatch"),
+     
      /* The number of requested public IP addresses exceeds the quota of this instance type. */
      INVALIDPARAMETERVALUE_EXTERNALIPQUOTALIMITED("InvalidParameterValue.ExternalIpQuotaLimited"),
      
@@ -392,6 +398,9 @@ public enum CvmErrorCode {
      
      /* The specified instance type does not exist. */
      INVALIDPARAMETERVALUE_INSTANCETYPENOTFOUND("InvalidParameterValue.InstanceTypeNotFound"),
+     
+     /*  */
+     INVALIDPARAMETERVALUE_INSTANCETYPENOTSUPPORTELASTICNETWORKS("InvalidParameterValue.InstanceTypeNotSupportElasticNetworks"),
      
      /* This type of instances cannot be added to the HPC cluster. */
      INVALIDPARAMETERVALUE_INSTANCETYPENOTSUPPORTHPCCLUSTER("InvalidParameterValue.InstanceTypeNotSupportHpcCluster"),
@@ -462,6 +471,9 @@ public enum CvmErrorCode {
      /* Invalid license type. */
      INVALIDPARAMETERVALUE_INVALIDLICENSETYPE("InvalidParameterValue.InvalidLicenseType"),
      
+     /*  */
+     INVALIDPARAMETERVALUE_INVALIDNETWORKINTERFACEID("InvalidParameterValue.InvalidNetworkInterfaceId"),
+     
      /* Invalid parameter value. */
      INVALIDPARAMETERVALUE_INVALIDPARAMETERVALUELIMIT("InvalidParameterValue.InvalidParameterValueLimit"),
      
@@ -479,6 +491,9 @@ public enum CvmErrorCode {
      
      /* Invalid fuzzy query string */
      INVALIDPARAMETERVALUE_INVALIDVAGUENAME("InvalidParameterValue.InvalidVagueName"),
+     
+     /*  */
+     INVALIDPARAMETERVALUE_INVALIDVPCIDSUBNETIDNOTFOUND("InvalidParameterValue.InvalidVpcIdSubnetIdNotFound"),
      
      /* Edge zones do not support this ISP. */
      INVALIDPARAMETERVALUE_ISPNOTSUPPORTFOREDGEZONE("InvalidParameterValue.IspNotSupportForEdgeZone"),
@@ -519,6 +534,9 @@ public enum CvmErrorCode {
      /* The parameter value must be a DHCP-enabled VPC. */
      INVALIDPARAMETERVALUE_MUSTDHCPENABLEDVPC("InvalidParameterValue.MustDhcpEnabledVpc"),
      
+     /*  */
+     INVALIDPARAMETERVALUE_MUSTENABLEDISRDMA("InvalidParameterValue.MustEnabledIsRdma"),
+     
      /* The subnet is not in the CDC cluster. */
      INVALIDPARAMETERVALUE_NOTCDCSUBNET("InvalidParameterValue.NotCdcSubnet"),
      
@@ -549,6 +567,9 @@ public enum CvmErrorCode {
      /* Invalid subnet ID. Please provide a subnet ID in the format of subnet-xxxxxxxx, where “x” can be a lowercase letter or number. */
      INVALIDPARAMETERVALUE_SUBNETIDMALFORMED("InvalidParameterValue.SubnetIdMalformed"),
      
+     /*  */
+     INVALIDPARAMETERVALUE_SUBNETIDZONEIDNOTMATCH("InvalidParameterValue.SubnetIdZoneIdNotMatch"),
+     
      /* Creation failed: the subnet does not exist. Please specify another subnet. */
      INVALIDPARAMETERVALUE_SUBNETNOTEXIST("InvalidParameterValue.SubnetNotExist"),
      
@@ -575,6 +596,9 @@ public enum CvmErrorCode {
      
      /* The specified VpcId doesn't exist. */
      INVALIDPARAMETERVALUE_VPCIDNOTEXIST("InvalidParameterValue.VpcIdNotExist"),
+     
+     /*  */
+     INVALIDPARAMETERVALUE_VPCIDSUBNETIDNOTMATCH("InvalidParameterValue.VpcIdSubnetIdNotMatch"),
      
      /* The VPC and instance must be in the same availability zone. */
      INVALIDPARAMETERVALUE_VPCIDZONEIDNOTMATCH("InvalidParameterValue.VpcIdZoneIdNotMatch"),
@@ -932,6 +956,12 @@ public enum CvmErrorCode {
      
      /* The instance is being terminated, and the operation is not supported. */
      UNSUPPORTEDOPERATION_INSTANCESTATETERMINATING("UnsupportedOperation.InstanceStateTerminating"),
+     
+     /*  */
+     UNSUPPORTEDOPERATION_INSTANCETYPENOTSUPPORTCONFIDENTIALITY("UnsupportedOperation.InstanceTypeNotSupportConfidentiality"),
+     
+     /*  */
+     UNSUPPORTEDOPERATION_INSTANCETYPENOTSUPPORTGRIDLICENCE("UnsupportedOperation.InstanceTypeNotSupportGridLicence"),
      
      /* The instance type does not support setting the `EnableJumboFrame` status. */
      UNSUPPORTEDOPERATION_INSTANCETYPENOTSUPPORTJUMBOFRAME("UnsupportedOperation.InstanceTypeNotSupportJumboFrame"),

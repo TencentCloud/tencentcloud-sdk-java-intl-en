@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDDoSAttackEventRequest extends AbstractModel {
 
     /**
-    * Start time. Time range: 30 days.
+    * The start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time. Time range: 30 days.
+    * The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
     */
     @SerializedName("EndTime")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeDDoSAttackEventRequest extends AbstractModel {
     private Long [] PolicyIds;
 
     /**
-    * ZoneId set. This parameter is required.
+    * Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -101,32 +101,32 @@ public class DescribeDDoSAttackEventRequest extends AbstractModel {
     private String OrderType;
 
     /**
-     * Get Start time. Time range: 30 days. 
-     * @return StartTime Start time. Time range: 30 days.
+     * Get The start time. 
+     * @return StartTime The start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time. Time range: 30 days.
-     * @param StartTime Start time. Time range: 30 days.
+     * Set The start time.
+     * @param StartTime The start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time. Time range: 30 days. 
-     * @return EndTime End time. Time range: 30 days.
+     * Get The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days. 
+     * @return EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time. Time range: 30 days.
-     * @param EndTime End time. Time range: 30 days.
+     * Set The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * @param EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -149,16 +149,16 @@ public class DescribeDDoSAttackEventRequest extends AbstractModel {
     }
 
     /**
-     * Get ZoneId set. This parameter is required. 
-     * @return ZoneIds ZoneId set. This parameter is required.
+     * Get Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface. 
+     * @return ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set ZoneId set. This parameter is required.
-     * @param ZoneIds ZoneId set. This parameter is required.
+     * Set Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
+     * @param ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
     private String StartTime;
 
     /**
-    * The end time.
+    * The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
     */
     @SerializedName("EndTime")
     @Expose
@@ -54,7 +54,7 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
     private String [] MetricNames;
 
     /**
-    * Zone ID set. This parameter is required.
+    * Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -65,7 +65,7 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
 <li>min: 1 minute;</li>
 <li>5min: 5 minutes;</li>
 <li>hour: 1 hour;</li>
-<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
+<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
     */
     @SerializedName("Interval")
     @Expose
@@ -121,16 +121,16 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
     }
 
     /**
-     * Get The end time. 
-     * @return EndTime The end time.
+     * Get The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days. 
+     * @return EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time.
-     * @param EndTime The end time.
+     * Set The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * @param EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -189,16 +189,16 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
     }
 
     /**
-     * Get Zone ID set. This parameter is required. 
-     * @return ZoneIds Zone ID set. This parameter is required.
+     * Get Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface. 
+     * @return ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set Zone ID set. This parameter is required.
-     * @param ZoneIds Zone ID set. This parameter is required.
+     * Set Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
+     * @param ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
@@ -209,12 +209,12 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
 <li>min: 1 minute;</li>
 <li>5min: 5 minutes;</li>
 <li>hour: 1 hour;</li>
-<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days. 
+<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days. 
      * @return Interval Query period granularity. Valid values:
 <li>min: 1 minute;</li>
 <li>5min: 5 minutes;</li>
 <li>hour: 1 hour;</li>
-<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
+<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
      */
     public String getInterval() {
         return this.Interval;
@@ -225,12 +225,12 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
 <li>min: 1 minute;</li>
 <li>5min: 5 minutes;</li>
 <li>hour: 1 hour;</li>
-<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
+<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
      * @param Interval Query period granularity. Valid values:
 <li>min: 1 minute;</li>
 <li>5min: 5 minutes;</li>
 <li>hour: 1 hour;</li>
-<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
+<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ public class CreateCallOutSessionRequest extends AbstractModel {
     private Long SdkAppId;
 
     /**
-    * Customer service user id usually refers to the customer service email.
+    * Customer service user ID, generally the customer service email. ensure that the mobile number has been bound. https://intl.cloud.tencent.com/document/product/679/76067?from_cn_redirect=1#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF.
     */
     @SerializedName("UserId")
     @Expose
@@ -59,7 +59,7 @@ public class CreateCallOutSessionRequest extends AbstractModel {
     private String [] Callers;
 
     /**
-    * Whether to force the use of cell phone outbound call or not, currently only supports true, if true, please ensure that the allowlist has been configured.
+    * Whether to force the use of mobile outbound call. currently only supports true. if set to true, ensure the allowlist is configured. https://intl.cloud.tencent.com/document/product/679/76744?from_cn_redirect=1#.E6.93.8D.E4.BD.9C.E6.AD.A5.E9.AA.A4.
     */
     @SerializedName("IsForceUseMobile")
     @Expose
@@ -96,16 +96,16 @@ public class CreateCallOutSessionRequest extends AbstractModel {
     }
 
     /**
-     * Get Customer service user id usually refers to the customer service email. 
-     * @return UserId Customer service user id usually refers to the customer service email.
+     * Get Customer service user ID, generally the customer service email. ensure that the mobile number has been bound. https://intl.cloud.tencent.com/document/product/679/76067?from_cn_redirect=1#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF. 
+     * @return UserId Customer service user ID, generally the customer service email. ensure that the mobile number has been bound. https://intl.cloud.tencent.com/document/product/679/76067?from_cn_redirect=1#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set Customer service user id usually refers to the customer service email.
-     * @param UserId Customer service user id usually refers to the customer service email.
+     * Set Customer service user ID, generally the customer service email. ensure that the mobile number has been bound. https://intl.cloud.tencent.com/document/product/679/76067?from_cn_redirect=1#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF.
+     * @param UserId Customer service user ID, generally the customer service email. ensure that the mobile number has been bound. https://intl.cloud.tencent.com/document/product/679/76067?from_cn_redirect=1#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
@@ -160,16 +160,16 @@ public class CreateCallOutSessionRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to force the use of cell phone outbound call or not, currently only supports true, if true, please ensure that the allowlist has been configured. 
-     * @return IsForceUseMobile Whether to force the use of cell phone outbound call or not, currently only supports true, if true, please ensure that the allowlist has been configured.
+     * Get Whether to force the use of mobile outbound call. currently only supports true. if set to true, ensure the allowlist is configured. https://intl.cloud.tencent.com/document/product/679/76744?from_cn_redirect=1#.E6.93.8D.E4.BD.9C.E6.AD.A5.E9.AA.A4. 
+     * @return IsForceUseMobile Whether to force the use of mobile outbound call. currently only supports true. if set to true, ensure the allowlist is configured. https://intl.cloud.tencent.com/document/product/679/76744?from_cn_redirect=1#.E6.93.8D.E4.BD.9C.E6.AD.A5.E9.AA.A4.
      */
     public Boolean getIsForceUseMobile() {
         return this.IsForceUseMobile;
     }
 
     /**
-     * Set Whether to force the use of cell phone outbound call or not, currently only supports true, if true, please ensure that the allowlist has been configured.
-     * @param IsForceUseMobile Whether to force the use of cell phone outbound call or not, currently only supports true, if true, please ensure that the allowlist has been configured.
+     * Set Whether to force the use of mobile outbound call. currently only supports true. if set to true, ensure the allowlist is configured. https://intl.cloud.tencent.com/document/product/679/76744?from_cn_redirect=1#.E6.93.8D.E4.BD.9C.E6.AD.A5.E9.AA.A4.
+     * @param IsForceUseMobile Whether to force the use of mobile outbound call. currently only supports true. if set to true, ensure the allowlist is configured. https://intl.cloud.tencent.com/document/product/679/76744?from_cn_redirect=1#.E6.93.8D.E4.BD.9C.E6.AD.A5.E9.AA.A4.
      */
     public void setIsForceUseMobile(Boolean IsForceUseMobile) {
         this.IsForceUseMobile = IsForceUseMobile;

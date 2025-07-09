@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -83,7 +83,7 @@ Note: this field may return `null`, indicating that no valid value was found.
     private AVTemplate [] AVTemplates;
 
     /**
-    * 
+    * Caption templates.
     */
     @SerializedName("CaptionTemplates")
     @Expose
@@ -139,6 +139,13 @@ Note: This field may return `null`, indicating that no valid value was found.
     @SerializedName("FrameCaptureTemplates")
     @Expose
     private FrameCaptureTemplate [] FrameCaptureTemplates;
+
+    /**
+    * General settings.
+    */
+    @SerializedName("GeneralSettings")
+    @Expose
+    private GeneralSetting GeneralSettings;
 
     /**
      * Get Channel ID 
@@ -281,16 +288,16 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return CaptionTemplates 
+     * Get Caption templates. 
+     * @return CaptionTemplates Caption templates.
      */
     public SubtitleConf [] getCaptionTemplates() {
         return this.CaptionTemplates;
     }
 
     /**
-     * Set 
-     * @param CaptionTemplates 
+     * Set Caption templates.
+     * @param CaptionTemplates Caption templates.
      */
     public void setCaptionTemplates(SubtitleConf [] CaptionTemplates) {
         this.CaptionTemplates = CaptionTemplates;
@@ -416,6 +423,22 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.FrameCaptureTemplates = FrameCaptureTemplates;
     }
 
+    /**
+     * Get General settings. 
+     * @return GeneralSettings General settings.
+     */
+    public GeneralSetting getGeneralSettings() {
+        return this.GeneralSettings;
+    }
+
+    /**
+     * Set General settings.
+     * @param GeneralSettings General settings.
+     */
+    public void setGeneralSettings(GeneralSetting GeneralSettings) {
+        this.GeneralSettings = GeneralSettings;
+    }
+
     public StreamLiveChannelInfo() {
     }
 
@@ -496,6 +519,9 @@ Note: This field may return `null`, indicating that no valid value was found.
                 this.FrameCaptureTemplates[i] = new FrameCaptureTemplate(source.FrameCaptureTemplates[i]);
             }
         }
+        if (source.GeneralSettings != null) {
+            this.GeneralSettings = new GeneralSetting(source.GeneralSettings);
+        }
     }
 
 
@@ -519,6 +545,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamObj(map, prefix + "InputAnalysisSettings.", this.InputAnalysisSettings);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "FrameCaptureTemplates.", this.FrameCaptureTemplates);
+        this.setParamObj(map, prefix + "GeneralSettings.", this.GeneralSettings);
 
     }
 }

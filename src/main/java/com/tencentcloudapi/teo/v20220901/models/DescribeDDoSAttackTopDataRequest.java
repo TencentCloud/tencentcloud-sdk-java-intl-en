@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ public class DescribeDDoSAttackTopDataRequest extends AbstractModel {
     private String StartTime;
 
     /**
-    * The end time.
+    * The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
     */
     @SerializedName("EndTime")
     @Expose
@@ -51,7 +51,7 @@ public class DescribeDDoSAttackTopDataRequest extends AbstractModel {
     private String MetricName;
 
     /**
-    * Site ID set. This parameter is required.
+    * Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -101,7 +101,7 @@ public class DescribeDDoSAttackTopDataRequest extends AbstractModel {
     /**
     * Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
     */
     @SerializedName("Area")
     @Expose
@@ -124,16 +124,16 @@ public class DescribeDDoSAttackTopDataRequest extends AbstractModel {
     }
 
     /**
-     * Get The end time. 
-     * @return EndTime The end time.
+     * Get The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days. 
+     * @return EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time.
-     * @param EndTime The end time.
+     * Set The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * @param EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -180,16 +180,16 @@ public class DescribeDDoSAttackTopDataRequest extends AbstractModel {
     }
 
     /**
-     * Get Site ID set. This parameter is required. 
-     * @return ZoneIds Site ID set. This parameter is required.
+     * Get Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface. 
+     * @return ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set Site ID set. This parameter is required.
-     * @param ZoneIds Site ID set. This parameter is required.
+     * Set Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
+     * @param ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
@@ -302,10 +302,10 @@ public class DescribeDDoSAttackTopDataRequest extends AbstractModel {
     /**
      * Get Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location. 
+<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location. 
      * @return Area Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
      */
     public String getArea() {
         return this.Area;
@@ -314,10 +314,10 @@ public class DescribeDDoSAttackTopDataRequest extends AbstractModel {
     /**
      * Set Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
      * @param Area Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
      */
     public void setArea(String Area) {
         this.Area = Area;

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -85,6 +85,20 @@ public class EventSettingsReq extends AbstractModel {
     @SerializedName("TimedMetadataSetting")
     @Expose
     private TimedMetadataInfo TimedMetadataSetting;
+
+    /**
+    * Static image activate setting.
+    */
+    @SerializedName("StaticImageActivateSetting")
+    @Expose
+    private StaticImageActivateSetting StaticImageActivateSetting;
+
+    /**
+    * Static image deactivate setting.
+    */
+    @SerializedName("StaticImageDeactivateSetting")
+    @Expose
+    private StaticImageDeactivateSetting StaticImageDeactivateSetting;
 
     /**
      * Get Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK. If it is not specified, `INPUT_SWITCH` will be used. 
@@ -230,6 +244,38 @@ public class EventSettingsReq extends AbstractModel {
         this.TimedMetadataSetting = TimedMetadataSetting;
     }
 
+    /**
+     * Get Static image activate setting. 
+     * @return StaticImageActivateSetting Static image activate setting.
+     */
+    public StaticImageActivateSetting getStaticImageActivateSetting() {
+        return this.StaticImageActivateSetting;
+    }
+
+    /**
+     * Set Static image activate setting.
+     * @param StaticImageActivateSetting Static image activate setting.
+     */
+    public void setStaticImageActivateSetting(StaticImageActivateSetting StaticImageActivateSetting) {
+        this.StaticImageActivateSetting = StaticImageActivateSetting;
+    }
+
+    /**
+     * Get Static image deactivate setting. 
+     * @return StaticImageDeactivateSetting Static image deactivate setting.
+     */
+    public StaticImageDeactivateSetting getStaticImageDeactivateSetting() {
+        return this.StaticImageDeactivateSetting;
+    }
+
+    /**
+     * Set Static image deactivate setting.
+     * @param StaticImageDeactivateSetting Static image deactivate setting.
+     */
+    public void setStaticImageDeactivateSetting(StaticImageDeactivateSetting StaticImageDeactivateSetting) {
+        this.StaticImageDeactivateSetting = StaticImageDeactivateSetting;
+    }
+
     public EventSettingsReq() {
     }
 
@@ -271,6 +317,12 @@ public class EventSettingsReq extends AbstractModel {
         if (source.TimedMetadataSetting != null) {
             this.TimedMetadataSetting = new TimedMetadataInfo(source.TimedMetadataSetting);
         }
+        if (source.StaticImageActivateSetting != null) {
+            this.StaticImageActivateSetting = new StaticImageActivateSetting(source.StaticImageActivateSetting);
+        }
+        if (source.StaticImageDeactivateSetting != null) {
+            this.StaticImageDeactivateSetting = new StaticImageDeactivateSetting(source.StaticImageDeactivateSetting);
+        }
     }
 
 
@@ -287,6 +339,8 @@ public class EventSettingsReq extends AbstractModel {
         this.setParamSimple(map, prefix + "SpliceEventID", this.SpliceEventID);
         this.setParamSimple(map, prefix + "SpliceDuration", this.SpliceDuration);
         this.setParamObj(map, prefix + "TimedMetadataSetting.", this.TimedMetadataSetting);
+        this.setParamObj(map, prefix + "StaticImageActivateSetting.", this.StaticImageActivateSetting);
+        this.setParamObj(map, prefix + "StaticImageDeactivateSetting.", this.StaticImageDeactivateSetting);
 
     }
 }

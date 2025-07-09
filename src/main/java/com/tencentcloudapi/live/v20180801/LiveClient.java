@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class LiveClient extends AbstractClient{
     private static String endpoint = "live.intl.tencentcloudapi.com";
     private static String service = "live";
     private static String version = "2018-08-01";
-    
+
     public LiveClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -1365,6 +1365,28 @@ Referer information is included in HTTP requests. After you enable referer confi
     public ResumeLiveStreamResponse ResumeLiveStream(ResumeLiveStreamRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResumeLiveStream", ResumeLiveStreamResponse.class);
+    }
+
+    /**
+     *Call this API to switch the live broadcast to standby footage.
+     * @param req StartLivePadStreamRequest
+     * @return StartLivePadStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartLivePadStreamResponse StartLivePadStream(StartLivePadStreamRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartLivePadStream", StartLivePadStreamResponse.class);
+    }
+
+    /**
+     *Call this API to end the transition to standby footage.
+     * @param req StopLivePadStreamRequest
+     * @return StopLivePadStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopLivePadStreamResponse StopLivePadStream(StopLivePadStreamRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopLivePadStream", StopLivePadStreamResponse.class);
     }
 
     /**

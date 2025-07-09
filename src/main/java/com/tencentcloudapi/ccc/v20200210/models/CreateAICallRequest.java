@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,11 +38,12 @@ public class CreateAICallRequest extends AbstractModel {
     private String Callee;
 
     /**
-    * Model interface protocol types, currently compatible with three protocol types:
+    * Model API protocol type. currently compatible with four protocol types:.
 
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
+-OpenAI protocol (including GPT, hunyuan, DeepSeek, etc.): "OpenAI".
+-Azure protocol: "azure".
+-Specifies the "Minimax" protocol.
+-Dify protocol: "dify".
     */
     @SerializedName("LLMType")
     @Expose
@@ -379,6 +380,24 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
     private AICallExtractConfigElement [] ExtractConfig;
 
     /**
+    * Model temperature control.
+    */
+    @SerializedName("Temperature")
+    @Expose
+    private Float Temperature;
+
+    /**
+    * Common variable: <p>prompt content variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+    */
+    @SerializedName("Variables")
+    @Expose
+    private Variable [] Variables;
+
+    /**
      * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
      * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
      */
@@ -411,32 +430,36 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
     }
 
     /**
-     * Get Model interface protocol types, currently compatible with three protocol types:
+     * Get Model API protocol type. currently compatible with four protocol types:.
 
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax" 
-     * @return LLMType Model interface protocol types, currently compatible with three protocol types:
+-OpenAI protocol (including GPT, hunyuan, DeepSeek, etc.): "OpenAI".
+-Azure protocol: "azure".
+-Specifies the "Minimax" protocol.
+-Dify protocol: "dify". 
+     * @return LLMType Model API protocol type. currently compatible with four protocol types:.
 
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
+-OpenAI protocol (including GPT, hunyuan, DeepSeek, etc.): "OpenAI".
+-Azure protocol: "azure".
+-Specifies the "Minimax" protocol.
+-Dify protocol: "dify".
      */
     public String getLLMType() {
         return this.LLMType;
     }
 
     /**
-     * Set Model interface protocol types, currently compatible with three protocol types:
+     * Set Model API protocol type. currently compatible with four protocol types:.
 
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
-     * @param LLMType Model interface protocol types, currently compatible with three protocol types:
+-OpenAI protocol (including GPT, hunyuan, DeepSeek, etc.): "OpenAI".
+-Azure protocol: "azure".
+-Specifies the "Minimax" protocol.
+-Dify protocol: "dify".
+     * @param LLMType Model API protocol type. currently compatible with four protocol types:.
 
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
+-OpenAI protocol (including GPT, hunyuan, DeepSeek, etc.): "OpenAI".
+-Azure protocol: "azure".
+-Specifies the "Minimax" protocol.
+-Dify protocol: "dify".
      */
     public void setLLMType(String LLMType) {
         this.LLMType = LLMType;
@@ -1478,6 +1501,54 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
         this.ExtractConfig = ExtractConfig;
     }
 
+    /**
+     * Get Model temperature control. 
+     * @return Temperature Model temperature control.
+     */
+    public Float getTemperature() {
+        return this.Temperature;
+    }
+
+    /**
+     * Set Model temperature control.
+     * @param Temperature Model temperature control.
+     */
+    public void setTemperature(Float Temperature) {
+        this.Temperature = Temperature;
+    }
+
+    /**
+     * Get Common variable: <p>prompt content variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify. 
+     * @return Variables Common variable: <p>prompt content variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+     */
+    public Variable [] getVariables() {
+        return this.Variables;
+    }
+
+    /**
+     * Set Common variable: <p>prompt content variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+     * @param Variables Common variable: <p>prompt content variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+     */
+    public void setVariables(Variable [] Variables) {
+        this.Variables = Variables;
+    }
+
     public CreateAICallRequest() {
     }
 
@@ -1582,6 +1653,15 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
                 this.ExtractConfig[i] = new AICallExtractConfigElement(source.ExtractConfig[i]);
             }
         }
+        if (source.Temperature != null) {
+            this.Temperature = new Float(source.Temperature);
+        }
+        if (source.Variables != null) {
+            this.Variables = new Variable[source.Variables.length];
+            for (int i = 0; i < source.Variables.length; i++) {
+                this.Variables[i] = new Variable(source.Variables[i]);
+            }
+        }
     }
 
 
@@ -1616,6 +1696,8 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
         this.setParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
         this.setParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
         this.setParamArrayObj(map, prefix + "ExtractConfig.", this.ExtractConfig);
+        this.setParamSimple(map, prefix + "Temperature", this.Temperature);
+        this.setParamArrayObj(map, prefix + "Variables.", this.Variables);
 
     }
 }

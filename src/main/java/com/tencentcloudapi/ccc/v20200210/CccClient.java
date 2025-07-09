@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class CccClient extends AbstractClient{
     private static String endpoint = "ccc.intl.tencentcloudapi.com";
     private static String service = "ccc";
     private static String version = "2020-02-10";
-    
+
     public CccClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -85,7 +85,7 @@ public class CccClient extends AbstractClient{
     /**
      *This API is used to initiate outbound calls using an AI model, limited to owned phone numbers only. Currently, a limited-time free trial of Advanced Agents is available.
 
-Before initiating a call, please ensure your AI model is compatible with OpenAI, Azure, or Minimax protocols, and visit the model provider's website to obtain relevant authentication information. For detailed feature descriptions, please refer to the documentation [Tencent Cloud Contact Center AI Call Platform](https://intl.cloud.tencent.com/document/product/679/112100?from_cn_redirect=1).
+Before initiating a call, please ensure your AI model is compatible with OpenAI, Azure, or Minimax protocols, and visit the model provider's website to obtain relevant authentication information. For detailed feature descriptions, please refer to the documentation [Tencent Cloud Contact Center AI Call Platform](https://www.tencentcloud.com/document/product/1229/70681).
      * @param req CreateAIAgentCallRequest
      * @return CreateAIAgentCallResponse
      * @throws TencentCloudSDKException
@@ -153,7 +153,11 @@ Before initiating a call, please ensure your AI model is compatible with OpenAI,
     }
 
     /**
-     *This API is used to create outbound sessions. Currently, only dual call is supported. That is, firstly, please use the platform number to call the agent's cell phone. After the agent answers, then please make outbound calls to the user. Due to ISP frequency restrictions, the agent's phone number must first be added to the allowlist to avoid frequency control which may lead to the failure of the outbound call.
+     *This API is used to create an outbound call session. Currently, only dual calls are supported. That is, first use the platform number to call the agent mobile phone. After the agent answers, then make an outbound call to the user. Moreover, due to ISP frequency restrictions, the agent phone number must be added to the allowlist first to avoid frequency control leading to the failure of the outbound call. Therefore, before calling this API, the following operations have been completed.
+1. The agent specified by UserId has already bound the mobile number. https://intl.cloud.tencent.com/document/product/679/76067?from_cn_redirect=1#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF.
+2. The agent's bound mobile number has applied for and passed the outbound call allowlist.
+This API is used to make calls. Currently, the agent side can only call the user's mobile phone, so the IsForceMobile field must be true.
+4. Do not fill in the mobile number bound to the current UserId for the callee, otherwise it can lead to call failure due to a busy line.
      * @param req CreateCallOutSessionRequest
      * @return CreateCallOutSessionResponse
      * @throws TencentCloudSDKException
@@ -230,6 +234,17 @@ Before initiating a call, please ensure your AI model is compatible with OpenAI,
     }
 
     /**
+     *This API is used to delete a skill group.
+     * @param req DeleteCCCSkillGroupRequest
+     * @return DeleteCCCSkillGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCCCSkillGroupResponse DeleteCCCSkillGroup(DeleteCCCSkillGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCCCSkillGroup", DeleteCCCSkillGroupResponse.class);
+    }
+
+    /**
      *This API is used to delete telephone accounts.
      * @param req DeleteExtensionRequest
      * @return DeleteExtensionResponse
@@ -271,6 +286,17 @@ Before initiating a call, please ensure your AI model is compatible with OpenAI,
     public DescribeAICallExtractResultResponse DescribeAICallExtractResult(DescribeAICallExtractResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAICallExtractResult", DescribeAICallExtractResultResponse.class);
+    }
+
+    /**
+     *This API is used to obtain AI latency information.
+     * @param req DescribeAILatencyRequest
+     * @return DescribeAILatencyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAILatencyResponse DescribeAILatency(DescribeAILatencyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAILatency", DescribeAILatencyResponse.class);
     }
 
     /**
@@ -516,6 +542,17 @@ Before initiating a call, please ensure your AI model is compatible with OpenAI,
     }
 
     /**
+     *This API is used to force customer service to go offline.
+     * @param req ForceMemberOfflineRequest
+     * @return ForceMemberOfflineResponse
+     * @throws TencentCloudSDKException
+     */
+    public ForceMemberOfflineResponse ForceMemberOffline(ForceMemberOfflineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ForceMemberOffline", ForceMemberOfflineResponse.class);
+    }
+
+    /**
      *This API is used to hang up the phone.
      * @param req HangUpCallRequest
      * @return HangUpCallResponse
@@ -593,6 +630,17 @@ Before initiating a call, please ensure your AI model is compatible with OpenAI,
     }
 
     /**
+     *This API is used to restore customer service to go live.
+     * @param req RestoreMemberOnlineRequest
+     * @return RestoreMemberOnlineResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestoreMemberOnlineResponse RestoreMemberOnline(RestoreMemberOnlineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestoreMemberOnline", RestoreMemberOnlineResponse.class);
+    }
+
+    /**
      *This API is used to resume the predictive outbound call task.
      * @param req ResumePredictiveDialingCampaignRequest
      * @return ResumePredictiveDialingCampaignResponse
@@ -612,6 +660,17 @@ Before initiating a call, please ensure your AI model is compatible with OpenAI,
     public StopAutoCalloutTaskResponse StopAutoCalloutTask(StopAutoCalloutTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopAutoCalloutTask", StopAutoCalloutTaskResponse.class);
+    }
+
+    /**
+     *This API is used to transfer a session to an agent in specific scenarios.
+     * @param req TransferToManualRequest
+     * @return TransferToManualResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransferToManualResponse TransferToManual(TransferToManualRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TransferToManual", TransferToManualResponse.class);
     }
 
     /**

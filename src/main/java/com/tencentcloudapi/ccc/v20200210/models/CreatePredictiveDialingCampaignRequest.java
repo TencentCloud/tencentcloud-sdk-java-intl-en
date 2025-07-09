@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -134,6 +134,20 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
     @SerializedName("CalleeAttributes")
     @Expose
     private CalleeAttribute [] CalleeAttributes;
+
+    /**
+    * IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
+
+    /**
+    * Value range of available time.
+    */
+    @SerializedName("AvailableTime")
+    @Expose
+    private TimeRange [] AvailableTime;
 
     /**
      * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
@@ -391,6 +405,38 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
         this.CalleeAttributes = CalleeAttributes;
     }
 
+    /**
+     * Get IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones. 
+     * @return TimeZone IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+     * @param TimeZone IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
+    }
+
+    /**
+     * Get Value range of available time. 
+     * @return AvailableTime Value range of available time.
+     */
+    public TimeRange [] getAvailableTime() {
+        return this.AvailableTime;
+    }
+
+    /**
+     * Set Value range of available time.
+     * @param AvailableTime Value range of available time.
+     */
+    public void setAvailableTime(TimeRange [] AvailableTime) {
+        this.AvailableTime = AvailableTime;
+    }
+
     public CreatePredictiveDialingCampaignRequest() {
     }
 
@@ -459,6 +505,15 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
                 this.CalleeAttributes[i] = new CalleeAttribute(source.CalleeAttributes[i]);
             }
         }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
+        if (source.AvailableTime != null) {
+            this.AvailableTime = new TimeRange[source.AvailableTime.length];
+            for (int i = 0; i < source.AvailableTime.length; i++) {
+                this.AvailableTime[i] = new TimeRange(source.AvailableTime[i]);
+            }
+        }
     }
 
 
@@ -482,6 +537,8 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Variables.", this.Variables);
         this.setParamSimple(map, prefix + "UUI", this.UUI);
         this.setParamArrayObj(map, prefix + "CalleeAttributes.", this.CalleeAttributes);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamArrayObj(map, prefix + "AvailableTime.", this.AvailableTime);
 
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -57,6 +57,17 @@ public class CreateAIAgentCallRequest extends AbstractModel {
     @SerializedName("PromptVariables")
     @Expose
     private Variable [] PromptVariables;
+
+    /**
+    * <P>Prompt variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+    */
+    @SerializedName("Variables")
+    @Expose
+    private Variable [] Variables;
 
     /**
      * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
@@ -142,6 +153,38 @@ public class CreateAIAgentCallRequest extends AbstractModel {
         this.PromptVariables = PromptVariables;
     }
 
+    /**
+     * Get <P>Prompt variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify. 
+     * @return Variables <P>Prompt variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+     */
+    public Variable [] getVariables() {
+        return this.Variables;
+    }
+
+    /**
+     * Set <P>Prompt variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+     * @param Variables <P>Prompt variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+     */
+    public void setVariables(Variable [] Variables) {
+        this.Variables = Variables;
+    }
+
     public CreateAIAgentCallRequest() {
     }
 
@@ -171,6 +214,12 @@ public class CreateAIAgentCallRequest extends AbstractModel {
                 this.PromptVariables[i] = new Variable(source.PromptVariables[i]);
             }
         }
+        if (source.Variables != null) {
+            this.Variables = new Variable[source.Variables.length];
+            for (int i = 0; i < source.Variables.length; i++) {
+                this.Variables[i] = new Variable(source.Variables[i]);
+            }
+        }
     }
 
 
@@ -183,6 +232,7 @@ public class CreateAIAgentCallRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Callee", this.Callee);
         this.setParamArraySimple(map, prefix + "Callers.", this.Callers);
         this.setParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
+        this.setParamArrayObj(map, prefix + "Variables.", this.Variables);
 
     }
 }

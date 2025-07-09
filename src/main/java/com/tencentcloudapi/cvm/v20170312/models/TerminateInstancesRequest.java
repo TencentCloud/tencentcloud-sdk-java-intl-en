@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,6 +31,16 @@ public class TerminateInstancesRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
+    * Release an Elastic IP. Under EIP 2.0, only the first EIP on the primary network interface can be released, and currently supported release types are limited to HighQualityEIP, AntiDDoSEIP, EIPv6, and HighQualityEIPv6.
+Default value:  `false`.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+    */
+    @SerializedName("ReleaseAddress")
+    @Expose
+    private Boolean ReleaseAddress;
+
+    /**
     * Whether to release a monthly subscription data disk mounted on an instance. true: Release the data disk along with termination of the instance. false: Only terminate the instance.
 Default value: `false`.
     */
@@ -52,6 +62,34 @@ Default value: `false`.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
+    }
+
+    /**
+     * Get Release an Elastic IP. Under EIP 2.0, only the first EIP on the primary network interface can be released, and currently supported release types are limited to HighQualityEIP, AntiDDoSEIP, EIPv6, and HighQualityEIPv6.
+Default value:  `false`.
+
+This feature is currently in gradually released phase. To access it, please contact us. 
+     * @return ReleaseAddress Release an Elastic IP. Under EIP 2.0, only the first EIP on the primary network interface can be released, and currently supported release types are limited to HighQualityEIP, AntiDDoSEIP, EIPv6, and HighQualityEIPv6.
+Default value:  `false`.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+     */
+    public Boolean getReleaseAddress() {
+        return this.ReleaseAddress;
+    }
+
+    /**
+     * Set Release an Elastic IP. Under EIP 2.0, only the first EIP on the primary network interface can be released, and currently supported release types are limited to HighQualityEIP, AntiDDoSEIP, EIPv6, and HighQualityEIPv6.
+Default value:  `false`.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+     * @param ReleaseAddress Release an Elastic IP. Under EIP 2.0, only the first EIP on the primary network interface can be released, and currently supported release types are limited to HighQualityEIP, AntiDDoSEIP, EIPv6, and HighQualityEIPv6.
+Default value:  `false`.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+     */
+    public void setReleaseAddress(Boolean ReleaseAddress) {
+        this.ReleaseAddress = ReleaseAddress;
     }
 
     /**
@@ -88,6 +126,9 @@ Default value: `false`.
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.ReleaseAddress != null) {
+            this.ReleaseAddress = new Boolean(source.ReleaseAddress);
+        }
         if (source.ReleasePrepaidDataDisks != null) {
             this.ReleasePrepaidDataDisks = new Boolean(source.ReleasePrepaidDataDisks);
         }
@@ -99,6 +140,7 @@ Default value: `false`.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "ReleaseAddress", this.ReleaseAddress);
         this.setParamSimple(map, prefix + "ReleasePrepaidDataDisks", this.ReleasePrepaidDataDisks);
 
     }

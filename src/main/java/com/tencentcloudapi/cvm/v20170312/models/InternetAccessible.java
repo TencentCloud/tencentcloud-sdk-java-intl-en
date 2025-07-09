@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -50,6 +50,61 @@ public class InternetAccessible extends AbstractModel {
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
+
+    /**
+    * The EIP line type. 
+ <li>BGP Default: BGP</li>
+
+For a user who has activated the static single-line IP allowlist, possible values are:
+
+ <li>CMCC: China Mobile</li>
+ <li>CTCC: China Telecom</li>
+ <li>CUCC: China Unicom</li>
+
+Note: Only certain regions support static single-line IP addresses.
+    */
+    @SerializedName("InternetServiceProvider")
+    @Expose
+    private String InternetServiceProvider;
+
+    /**
+    * AddressType. Default value: `WanIP`.
+
+For beta users of dedicated IP, the value can be:
+<li>HighQualityEIP: Dedicated IP</li>
+Note that dedicated IPs are only available in partial regions.
+
+For beta users of Anti-DDoS IP, the value can be:
+<li>AntiDDoSEIP: Anti-DDoS EIP</li>
+Note that Anti-DDoS IPs are only available in partial regions.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+    */
+    @SerializedName("IPv4AddressType")
+    @Expose
+    private String IPv4AddressType;
+
+    /**
+    * Indicates the type of EIPv6. Valid values:
+
+<li>EIPv6: common IPv6</li>
+<li>HighQualityEIPv6: dedicated IPv6</li>
+Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+
+Default: `EIPv6`
+
+This feature is currently in gradually released phase. To access it, please contact us.
+    */
+    @SerializedName("IPv6AddressType")
+    @Expose
+    private String IPv6AddressType;
+
+    /**
+    * Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+    */
+    @SerializedName("AntiDDoSPackageId")
+    @Expose
+    private String AntiDDoSPackageId;
 
     /**
      * Get Network connection billing plan. Valid value: <br><li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour. 
@@ -115,6 +170,178 @@ public class InternetAccessible extends AbstractModel {
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
+    /**
+     * Get The EIP line type. 
+ <li>BGP Default: BGP</li>
+
+For a user who has activated the static single-line IP allowlist, possible values are:
+
+ <li>CMCC: China Mobile</li>
+ <li>CTCC: China Telecom</li>
+ <li>CUCC: China Unicom</li>
+
+Note: Only certain regions support static single-line IP addresses. 
+     * @return InternetServiceProvider The EIP line type. 
+ <li>BGP Default: BGP</li>
+
+For a user who has activated the static single-line IP allowlist, possible values are:
+
+ <li>CMCC: China Mobile</li>
+ <li>CTCC: China Telecom</li>
+ <li>CUCC: China Unicom</li>
+
+Note: Only certain regions support static single-line IP addresses.
+     */
+    public String getInternetServiceProvider() {
+        return this.InternetServiceProvider;
+    }
+
+    /**
+     * Set The EIP line type. 
+ <li>BGP Default: BGP</li>
+
+For a user who has activated the static single-line IP allowlist, possible values are:
+
+ <li>CMCC: China Mobile</li>
+ <li>CTCC: China Telecom</li>
+ <li>CUCC: China Unicom</li>
+
+Note: Only certain regions support static single-line IP addresses.
+     * @param InternetServiceProvider The EIP line type. 
+ <li>BGP Default: BGP</li>
+
+For a user who has activated the static single-line IP allowlist, possible values are:
+
+ <li>CMCC: China Mobile</li>
+ <li>CTCC: China Telecom</li>
+ <li>CUCC: China Unicom</li>
+
+Note: Only certain regions support static single-line IP addresses.
+     */
+    public void setInternetServiceProvider(String InternetServiceProvider) {
+        this.InternetServiceProvider = InternetServiceProvider;
+    }
+
+    /**
+     * Get AddressType. Default value: `WanIP`.
+
+For beta users of dedicated IP, the value can be:
+<li>HighQualityEIP: Dedicated IP</li>
+Note that dedicated IPs are only available in partial regions.
+
+For beta users of Anti-DDoS IP, the value can be:
+<li>AntiDDoSEIP: Anti-DDoS EIP</li>
+Note that Anti-DDoS IPs are only available in partial regions.
+
+This feature is currently in gradually released phase. To access it, please contact us. 
+     * @return IPv4AddressType AddressType. Default value: `WanIP`.
+
+For beta users of dedicated IP, the value can be:
+<li>HighQualityEIP: Dedicated IP</li>
+Note that dedicated IPs are only available in partial regions.
+
+For beta users of Anti-DDoS IP, the value can be:
+<li>AntiDDoSEIP: Anti-DDoS EIP</li>
+Note that Anti-DDoS IPs are only available in partial regions.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+     */
+    public String getIPv4AddressType() {
+        return this.IPv4AddressType;
+    }
+
+    /**
+     * Set AddressType. Default value: `WanIP`.
+
+For beta users of dedicated IP, the value can be:
+<li>HighQualityEIP: Dedicated IP</li>
+Note that dedicated IPs are only available in partial regions.
+
+For beta users of Anti-DDoS IP, the value can be:
+<li>AntiDDoSEIP: Anti-DDoS EIP</li>
+Note that Anti-DDoS IPs are only available in partial regions.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+     * @param IPv4AddressType AddressType. Default value: `WanIP`.
+
+For beta users of dedicated IP, the value can be:
+<li>HighQualityEIP: Dedicated IP</li>
+Note that dedicated IPs are only available in partial regions.
+
+For beta users of Anti-DDoS IP, the value can be:
+<li>AntiDDoSEIP: Anti-DDoS EIP</li>
+Note that Anti-DDoS IPs are only available in partial regions.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+     */
+    public void setIPv4AddressType(String IPv4AddressType) {
+        this.IPv4AddressType = IPv4AddressType;
+    }
+
+    /**
+     * Get Indicates the type of EIPv6. Valid values:
+
+<li>EIPv6: common IPv6</li>
+<li>HighQualityEIPv6: dedicated IPv6</li>
+Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+
+Default: `EIPv6`
+
+This feature is currently in gradually released phase. To access it, please contact us. 
+     * @return IPv6AddressType Indicates the type of EIPv6. Valid values:
+
+<li>EIPv6: common IPv6</li>
+<li>HighQualityEIPv6: dedicated IPv6</li>
+Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+
+Default: `EIPv6`
+
+This feature is currently in gradually released phase. To access it, please contact us.
+     */
+    public String getIPv6AddressType() {
+        return this.IPv6AddressType;
+    }
+
+    /**
+     * Set Indicates the type of EIPv6. Valid values:
+
+<li>EIPv6: common IPv6</li>
+<li>HighQualityEIPv6: dedicated IPv6</li>
+Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+
+Default: `EIPv6`
+
+This feature is currently in gradually released phase. To access it, please contact us.
+     * @param IPv6AddressType Indicates the type of EIPv6. Valid values:
+
+<li>EIPv6: common IPv6</li>
+<li>HighQualityEIPv6: dedicated IPv6</li>
+Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+
+Default: `EIPv6`
+
+This feature is currently in gradually released phase. To access it, please contact us.
+     */
+    public void setIPv6AddressType(String IPv6AddressType) {
+        this.IPv6AddressType = IPv6AddressType;
+    }
+
+    /**
+     * Get Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP. 
+     * @return AntiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+     */
+    public String getAntiDDoSPackageId() {
+        return this.AntiDDoSPackageId;
+    }
+
+    /**
+     * Set Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+     * @param AntiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+     */
+    public void setAntiDDoSPackageId(String AntiDDoSPackageId) {
+        this.AntiDDoSPackageId = AntiDDoSPackageId;
+    }
+
     public InternetAccessible() {
     }
 
@@ -135,6 +362,18 @@ public class InternetAccessible extends AbstractModel {
         if (source.BandwidthPackageId != null) {
             this.BandwidthPackageId = new String(source.BandwidthPackageId);
         }
+        if (source.InternetServiceProvider != null) {
+            this.InternetServiceProvider = new String(source.InternetServiceProvider);
+        }
+        if (source.IPv4AddressType != null) {
+            this.IPv4AddressType = new String(source.IPv4AddressType);
+        }
+        if (source.IPv6AddressType != null) {
+            this.IPv6AddressType = new String(source.IPv6AddressType);
+        }
+        if (source.AntiDDoSPackageId != null) {
+            this.AntiDDoSPackageId = new String(source.AntiDDoSPackageId);
+        }
     }
 
 
@@ -146,6 +385,10 @@ public class InternetAccessible extends AbstractModel {
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         this.setParamSimple(map, prefix + "PublicIpAssigned", this.PublicIpAssigned);
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
+        this.setParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
+        this.setParamSimple(map, prefix + "IPv4AddressType", this.IPv4AddressType);
+        this.setParamSimple(map, prefix + "IPv6AddressType", this.IPv6AddressType);
+        this.setParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
 
     }
 }

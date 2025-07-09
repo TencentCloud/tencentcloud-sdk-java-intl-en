@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -327,7 +327,9 @@ ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --M
     /**
      * Get Queries information on a specified product 
      * @return ProductCode Queries information on a specified product
+     * @deprecated
      */
+    @Deprecated
     public String getProductCode() {
         return this.ProductCode;
     }
@@ -335,7 +337,9 @@ ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --M
     /**
      * Set Queries information on a specified product
      * @param ProductCode Queries information on a specified product
+     * @deprecated
      */
+    @Deprecated
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }

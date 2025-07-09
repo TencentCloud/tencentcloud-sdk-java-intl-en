@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class TeoClient extends AbstractClient{
     private static String endpoint = "teo.intl.tencentcloudapi.com";
     private static String service = "teo";
     private static String version = "2022-09-01";
-    
+
     public TeoClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -80,6 +80,17 @@ public class TeoClient extends AbstractClient{
     public CheckCnameStatusResponse CheckCnameStatus(CheckCnameStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CheckCnameStatus", CheckCnameStatusResponse.class);
+    }
+
+    /**
+     *This API is used to confirm that the latest origin ACLs have been updated to the origin server firewall when the origin ACLs change. After confirming the update to the latest version, related change notifications will stop pushing.
+     * @param req ConfirmOriginACLUpdateRequest
+     * @return ConfirmOriginACLUpdateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ConfirmOriginACLUpdateResponse ConfirmOriginACLUpdate(ConfirmOriginACLUpdateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ConfirmOriginACLUpdate", ConfirmOriginACLUpdateResponse.class);
     }
 
     /**
@@ -894,6 +905,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
+     *This API is used to query the binding relationship between L7 acceleration domains/L4 proxy instances and origin ACLs under a site, as well as IP range details. If you want to periodically obtain the latest version of origin IP ranges through an automation script, you can poll this API at a low-frequency (recommended every three days). If the NextOriginACL field has a return value, synchronize the latest origin IP ranges to the origin server firewall configuration.
+     * @param req DescribeOriginACLRequest
+     * @return DescribeOriginACLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOriginACLResponse DescribeOriginACL(DescribeOriginACLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOriginACL", DescribeOriginACLResponse.class);
+    }
+
+    /**
      *This API is used to obtain a list of origin groups.
      * @param req DescribeOriginGroupRequest
      * @return DescribeOriginGroupResponse
@@ -1146,6 +1168,17 @@ A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/
     }
 
     /**
+     *This API is used to disable 'Origin Protection' of a site. Once disabled, resources related to it will no longer use only the origin ACLs provided by "origin protection" to request your origin, and stops sending update notifications on the origin ACLs.
+     * @param req DisableOriginACLRequest
+     * @return DisableOriginACLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableOriginACLResponse DisableOriginACL(DisableOriginACLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableOriginACL", DisableOriginACLResponse.class);
+    }
+
+    /**
      *This API is used to download L4 logs.
      * @param req DownloadL4LogsRequest
      * @return DownloadL4LogsResponse
@@ -1165,6 +1198,23 @@ A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/
     public DownloadL7LogsResponse DownloadL7Logs(DownloadL7LogsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DownloadL7Logs", DownloadL7LogsResponse.class);
+    }
+
+    /**
+     *This API is used to enable 'Origin Protection' for Layer 4 or Layer 7 instances. The number of enabled instances has an upper limit: 200 for Layer 7 domains and 100 for Layer 4 proxy instances. The total number of instances cannot exceed 200, otherwise an error reminder will be triggered. You can first enable the maximum allowed number and use the ModifyOriginACL API to set the excess quantity.
+
+This API is used to enable 'Origin Protection' for the site for the first time. Once enabled, EdgeOne will use specific origin IP ranges for L7 acceleration domains and L4 proxy instances. The maximum number of L7 acceleration domain that can be submitted in a single request is 200, and the maximum number of L4 proxy instance is 100. Mixed submissions of L7 acceleration domains and L4 proxy instances are supported, with a total maximum of 200 instances. If you need to enable more than 200 instances, you can first enable the maximum number by specifying the instances, and then enable the remaining instances through the API ModifyOriginACL. Any subsequent addition of  L7 acceleration domains or L4 proxy instances should be configured through the API ModifyOriginACL.
+
+Note:
+- Calling this API is considered as agreeing to [Origin Protection Enablement Conditions of Use](https://www.tencentcloud.com/document/product/1145/70561?!longPreview).
+- The origin IP ranges may change periodically. EdgeOne will notify you of changes to the origin IP ranges 14 days, 7 days, 3 days, and 1 day in advance through one or more methods such as internal messages, SMS, and email. To ensure you receive notifications about changes to the origin IP ranges, please make sure that you have selected the relevant product service notifications for the Edge Security Acceleration Platform (EO) in [Tencent Cloud Message Center](https://console.tencentcloud.com/message/subscription) and have configured the correct message recipients. For configuration details, please refer to Message [Subscription Management](https://www.tencentcloud.com/document/product/1233/60778).
+     * @param req EnableOriginACLRequest
+     * @return EnableOriginACLResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableOriginACLResponse EnableOriginACL(EnableOriginACLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableOriginACL", EnableOriginACLResponse.class);
     }
 
     /**
@@ -1490,6 +1540,17 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     public ModifyLoadBalancerResponse ModifyLoadBalancer(ModifyLoadBalancerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyLoadBalancer", ModifyLoadBalancerResponse.class);
+    }
+
+    /**
+     *This API is used to enable or disable specific origin ACLs for L7 acceleration domain names or L4 proxy instances. A single submission supports up to 200 L7 acceleration domain names or 100 L4 proxy instances. Hybrid submissions of L7 acceleration domain names and L4 proxy instances are supported, with a maximum total number of instances of 200. If changes are needed for exceeding 200 instances, submit them in batches via this API.
+     * @param req ModifyOriginACLRequest
+     * @return ModifyOriginACLResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOriginACLResponse ModifyOriginACL(ModifyOriginACLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOriginACL", ModifyOriginACLResponse.class);
     }
 
     /**

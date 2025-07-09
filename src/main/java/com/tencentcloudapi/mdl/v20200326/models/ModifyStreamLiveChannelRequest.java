@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -127,6 +127,13 @@ public class ModifyStreamLiveChannelRequest extends AbstractModel {
     @SerializedName("FrameCaptureTemplates")
     @Expose
     private FrameCaptureTemplate [] FrameCaptureTemplates;
+
+    /**
+    * General settings.
+    */
+    @SerializedName("GeneralSettings")
+    @Expose
+    private GeneralSetting GeneralSettings;
 
     /**
      * Get Channel ID 
@@ -368,6 +375,22 @@ public class ModifyStreamLiveChannelRequest extends AbstractModel {
         this.FrameCaptureTemplates = FrameCaptureTemplates;
     }
 
+    /**
+     * Get General settings. 
+     * @return GeneralSettings General settings.
+     */
+    public GeneralSetting getGeneralSettings() {
+        return this.GeneralSettings;
+    }
+
+    /**
+     * Set General settings.
+     * @param GeneralSettings General settings.
+     */
+    public void setGeneralSettings(GeneralSetting GeneralSettings) {
+        this.GeneralSettings = GeneralSettings;
+    }
+
     public ModifyStreamLiveChannelRequest() {
     }
 
@@ -445,6 +468,9 @@ public class ModifyStreamLiveChannelRequest extends AbstractModel {
                 this.FrameCaptureTemplates[i] = new FrameCaptureTemplate(source.FrameCaptureTemplates[i]);
             }
         }
+        if (source.GeneralSettings != null) {
+            this.GeneralSettings = new GeneralSetting(source.GeneralSettings);
+        }
     }
 
 
@@ -467,6 +493,7 @@ public class ModifyStreamLiveChannelRequest extends AbstractModel {
         this.setParamObj(map, prefix + "InputAnalysisSettings.", this.InputAnalysisSettings);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "FrameCaptureTemplates.", this.FrameCaptureTemplates);
+        this.setParamObj(map, prefix + "GeneralSettings.", this.GeneralSettings);
 
     }
 }

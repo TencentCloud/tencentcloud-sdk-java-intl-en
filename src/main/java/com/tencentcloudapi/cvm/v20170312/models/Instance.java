@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -320,6 +320,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     @SerializedName("LatestOperationErrorMsg")
     @Expose
     private String LatestOperationErrorMsg;
+
+    /**
+    * Public IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("PublicIPv6Addresses")
+    @Expose
+    private String [] PublicIPv6Addresses;
 
     /**
      * Get Location of the instance 
@@ -1021,6 +1029,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.LatestOperationErrorMsg = LatestOperationErrorMsg;
     }
 
+    /**
+     * Get Public IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value was found. 
+     * @return PublicIPv6Addresses Public IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public String [] getPublicIPv6Addresses() {
+        return this.PublicIPv6Addresses;
+    }
+
+    /**
+     * Set Public IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value was found.
+     * @param PublicIPv6Addresses Public IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public void setPublicIPv6Addresses(String [] PublicIPv6Addresses) {
+        this.PublicIPv6Addresses = PublicIPv6Addresses;
+    }
+
     public Instance() {
     }
 
@@ -1173,6 +1201,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.LatestOperationErrorMsg != null) {
             this.LatestOperationErrorMsg = new String(source.LatestOperationErrorMsg);
         }
+        if (source.PublicIPv6Addresses != null) {
+            this.PublicIPv6Addresses = new String[source.PublicIPv6Addresses.length];
+            for (int i = 0; i < source.PublicIPv6Addresses.length; i++) {
+                this.PublicIPv6Addresses[i] = new String(source.PublicIPv6Addresses[i]);
+            }
+        }
     }
 
 
@@ -1221,6 +1255,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "DefaultLoginUser", this.DefaultLoginUser);
         this.setParamSimple(map, prefix + "DefaultLoginPort", this.DefaultLoginPort);
         this.setParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);
+        this.setParamArraySimple(map, prefix + "PublicIPv6Addresses.", this.PublicIPv6Addresses);
 
     }
 }
