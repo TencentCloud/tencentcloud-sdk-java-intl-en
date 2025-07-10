@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeSecurityGroupRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of "cmgo-p8vnipr5"
+    * Instance ID. For example, cmgo-p8vn****.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Instance ID in the format of "cmgo-p8vnipr5" 
-     * @return InstanceId Instance ID in the format of "cmgo-p8vnipr5"
+     * Get Instance ID. For example, cmgo-p8vn****. 
+     * @return InstanceId Instance ID. For example, cmgo-p8vn****.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of "cmgo-p8vnipr5"
-     * @param InstanceId Instance ID in the format of "cmgo-p8vnipr5"
+     * Set Instance ID. For example, cmgo-p8vn****.
+     * @param InstanceId Instance ID. For example, cmgo-p8vn****.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -24,164 +24,317 @@ import java.util.HashMap;
 public class ModifyDBInstanceSpecRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+    * Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Memory size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously
+    * Memory size after instance configuration modification. - Unit: GB. The current instance memory size is used by default if this parameter is left blank.<br>Note: Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Disk size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously. For degradation, the new disk capacity must be greater than 1.2 times the used disk capacity
+    * Disk capacity after instance configuration modification. Unit: GB. The current instance disk capacity is used by default if this parameter is left blank.
+ - Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
+ - During configuration downgrading, the disk capacity after modification should be greater than 1.2 times the used disk capacity.
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * Oplog size after instance configuration change in GB, which ranges from 10% to 90% of the disk capacity and is 10% of the disk capacity by default
+    * (Deprecated) Use the independent API ResizeOplog.
+
+Oplog size after instance configuration modification.
+ - Unit: GB.
+ - By default, the capacity occupied by Oplog is 10% of the disk capacity. The range of capacity occupied by Oplog supported by the system is [10%,90%] of the disk capacity.
     */
     @SerializedName("OplogSize")
     @Expose
     private Long OplogSize;
 
     /**
-    * Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+    * Number of Mongod nodes after instance modification (excluding read-only nodes).
+ - When the CPU and memory specifications of Mongod nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
+ - When the CPU and memory specifications of Mongos nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
+ - During node modification (all types), this parameter can be left blank or set to the number of Mongod nodes (excluding read-only nodes) after modification.
+ - Number of replica set nodes: Confirm the range of the number of nodes based on the MinNodeNum and MaxNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
+ - Number of nodes for each shard in a sharded cluster: Confirm the range of the number of nodes based on the MinReplicateSetNodeNum and MaxReplicateSetNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
     */
     @SerializedName("NodeNum")
     @Expose
     private Long NodeNum;
 
     /**
-    * Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+    * Number of shards after instance modification.
+ - The value range can be obtained from the **MinReplicateSetNum** and **MaxReplicateSetNum** parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API for querying saleable TencentDB for MongoDB specifications. - The value of this parameter can only be increased but not decreased.
     */
     @SerializedName("ReplicateSetNum")
     @Expose
     private Long ReplicateSetNum;
 
     /**
-    * Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the quantity of nodes or shards is modified, the value will be `0`.
+    * Switch time for instance configuration modification.
+ - 0: Execute the configuration modification task immediately after the adjustment is completed. Default value: 0.
+ - 1: Execute the configuration modification task within the maintenance window.
+**Note**: Adjusting the number of nodes and shards is unsupported <b>within the maintenance window</b>.
     */
     @SerializedName("InMaintenance")
     @Expose
     private Long InMaintenance;
 
     /**
-     * Get Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page 
-     * @return InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+    * Mongos node memory size after the sharded cluster instance configuration is modified. Unit: GB.
+    */
+    @SerializedName("MongosMemory")
+    @Expose
+    private String MongosMemory;
+
+    /**
+    * List of nodes to be added, containing the node type and AZ information.
+    */
+    @SerializedName("AddNodeList")
+    @Expose
+    private AddNodeList [] AddNodeList;
+
+    /**
+    * List of nodes to be deleted. Note: According to the consistency principle for nodes of each shard on a sharded cluster instance, specify the nodes on shard 0 for node deletion from the sharded cluster instance. For example, cmgo-9nl1czif_0-node-readonly0 will delete the first read-only node of each shard.
+    */
+    @SerializedName("RemoveNodeList")
+    @Expose
+    private RemoveNodeList [] RemoveNodeList;
+
+    /**
+     * Get Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+ 
+     * @return InstanceId Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-     * @param InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * Set Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
+     * @param InstanceId Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Memory size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously 
-     * @return Memory Memory size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously
+     * Get Memory size after instance configuration modification. - Unit: GB. The current instance memory size is used by default if this parameter is left blank.<br>Note: Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time. 
+     * @return Memory Memory size after instance configuration modification. - Unit: GB. The current instance memory size is used by default if this parameter is left blank.<br>Note: Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously
-     * @param Memory Memory size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously
+     * Set Memory size after instance configuration modification. - Unit: GB. The current instance memory size is used by default if this parameter is left blank.<br>Note: Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
+     * @param Memory Memory size after instance configuration modification. - Unit: GB. The current instance memory size is used by default if this parameter is left blank.<br>Note: Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Disk size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously. For degradation, the new disk capacity must be greater than 1.2 times the used disk capacity 
-     * @return Volume Disk size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously. For degradation, the new disk capacity must be greater than 1.2 times the used disk capacity
+     * Get Disk capacity after instance configuration modification. Unit: GB. The current instance disk capacity is used by default if this parameter is left blank.
+ - Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
+ - During configuration downgrading, the disk capacity after modification should be greater than 1.2 times the used disk capacity. 
+     * @return Volume Disk capacity after instance configuration modification. Unit: GB. The current instance disk capacity is used by default if this parameter is left blank.
+ - Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
+ - During configuration downgrading, the disk capacity after modification should be greater than 1.2 times the used disk capacity.
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set Disk size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously. For degradation, the new disk capacity must be greater than 1.2 times the used disk capacity
-     * @param Volume Disk size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously. For degradation, the new disk capacity must be greater than 1.2 times the used disk capacity
+     * Set Disk capacity after instance configuration modification. Unit: GB. The current instance disk capacity is used by default if this parameter is left blank.
+ - Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
+ - During configuration downgrading, the disk capacity after modification should be greater than 1.2 times the used disk capacity.
+     * @param Volume Disk capacity after instance configuration modification. Unit: GB. The current instance disk capacity is used by default if this parameter is left blank.
+ - Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
+ - During configuration downgrading, the disk capacity after modification should be greater than 1.2 times the used disk capacity.
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get Oplog size after instance configuration change in GB, which ranges from 10% to 90% of the disk capacity and is 10% of the disk capacity by default 
-     * @return OplogSize Oplog size after instance configuration change in GB, which ranges from 10% to 90% of the disk capacity and is 10% of the disk capacity by default
+     * Get (Deprecated) Use the independent API ResizeOplog.
+
+Oplog size after instance configuration modification.
+ - Unit: GB.
+ - By default, the capacity occupied by Oplog is 10% of the disk capacity. The range of capacity occupied by Oplog supported by the system is [10%,90%] of the disk capacity. 
+     * @return OplogSize (Deprecated) Use the independent API ResizeOplog.
+
+Oplog size after instance configuration modification.
+ - Unit: GB.
+ - By default, the capacity occupied by Oplog is 10% of the disk capacity. The range of capacity occupied by Oplog supported by the system is [10%,90%] of the disk capacity.
+     * @deprecated
      */
+    @Deprecated
     public Long getOplogSize() {
         return this.OplogSize;
     }
 
     /**
-     * Set Oplog size after instance configuration change in GB, which ranges from 10% to 90% of the disk capacity and is 10% of the disk capacity by default
-     * @param OplogSize Oplog size after instance configuration change in GB, which ranges from 10% to 90% of the disk capacity and is 10% of the disk capacity by default
+     * Set (Deprecated) Use the independent API ResizeOplog.
+
+Oplog size after instance configuration modification.
+ - Unit: GB.
+ - By default, the capacity occupied by Oplog is 10% of the disk capacity. The range of capacity occupied by Oplog supported by the system is [10%,90%] of the disk capacity.
+     * @param OplogSize (Deprecated) Use the independent API ResizeOplog.
+
+Oplog size after instance configuration modification.
+ - Unit: GB.
+ - By default, the capacity occupied by Oplog is 10% of the disk capacity. The range of capacity occupied by Oplog supported by the system is [10%,90%] of the disk capacity.
+     * @deprecated
      */
+    @Deprecated
     public void setOplogSize(Long OplogSize) {
         this.OplogSize = OplogSize;
     }
 
     /**
-     * Get Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged. 
-     * @return NodeNum Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+     * Get Number of Mongod nodes after instance modification (excluding read-only nodes).
+ - When the CPU and memory specifications of Mongod nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
+ - When the CPU and memory specifications of Mongos nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
+ - During node modification (all types), this parameter can be left blank or set to the number of Mongod nodes (excluding read-only nodes) after modification.
+ - Number of replica set nodes: Confirm the range of the number of nodes based on the MinNodeNum and MaxNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
+ - Number of nodes for each shard in a sharded cluster: Confirm the range of the number of nodes based on the MinReplicateSetNodeNum and MaxReplicateSetNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications. 
+     * @return NodeNum Number of Mongod nodes after instance modification (excluding read-only nodes).
+ - When the CPU and memory specifications of Mongod nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
+ - When the CPU and memory specifications of Mongos nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
+ - During node modification (all types), this parameter can be left blank or set to the number of Mongod nodes (excluding read-only nodes) after modification.
+ - Number of replica set nodes: Confirm the range of the number of nodes based on the MinNodeNum and MaxNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
+ - Number of nodes for each shard in a sharded cluster: Confirm the range of the number of nodes based on the MinReplicateSetNodeNum and MaxReplicateSetNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
-     * @param NodeNum Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+     * Set Number of Mongod nodes after instance modification (excluding read-only nodes).
+ - When the CPU and memory specifications of Mongod nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
+ - When the CPU and memory specifications of Mongos nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
+ - During node modification (all types), this parameter can be left blank or set to the number of Mongod nodes (excluding read-only nodes) after modification.
+ - Number of replica set nodes: Confirm the range of the number of nodes based on the MinNodeNum and MaxNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
+ - Number of nodes for each shard in a sharded cluster: Confirm the range of the number of nodes based on the MinReplicateSetNodeNum and MaxReplicateSetNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
+     * @param NodeNum Number of Mongod nodes after instance modification (excluding read-only nodes).
+ - When the CPU and memory specifications of Mongod nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
+ - When the CPU and memory specifications of Mongos nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
+ - During node modification (all types), this parameter can be left blank or set to the number of Mongod nodes (excluding read-only nodes) after modification.
+ - Number of replica set nodes: Confirm the range of the number of nodes based on the MinNodeNum and MaxNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
+ - Number of nodes for each shard in a sharded cluster: Confirm the range of the number of nodes based on the MinReplicateSetNodeNum and MaxReplicateSetNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
     /**
-     * Get Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged. 
-     * @return ReplicateSetNum Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+     * Get Number of shards after instance modification.
+ - The value range can be obtained from the **MinReplicateSetNum** and **MaxReplicateSetNum** parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API for querying saleable TencentDB for MongoDB specifications. - The value of this parameter can only be increased but not decreased. 
+     * @return ReplicateSetNum Number of shards after instance modification.
+ - The value range can be obtained from the **MinReplicateSetNum** and **MaxReplicateSetNum** parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API for querying saleable TencentDB for MongoDB specifications. - The value of this parameter can only be increased but not decreased.
      */
     public Long getReplicateSetNum() {
         return this.ReplicateSetNum;
     }
 
     /**
-     * Set Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
-     * @param ReplicateSetNum Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+     * Set Number of shards after instance modification.
+ - The value range can be obtained from the **MinReplicateSetNum** and **MaxReplicateSetNum** parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API for querying saleable TencentDB for MongoDB specifications. - The value of this parameter can only be increased but not decreased.
+     * @param ReplicateSetNum Number of shards after instance modification.
+ - The value range can be obtained from the **MinReplicateSetNum** and **MaxReplicateSetNum** parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API for querying saleable TencentDB for MongoDB specifications. - The value of this parameter can only be increased but not decreased.
      */
     public void setReplicateSetNum(Long ReplicateSetNum) {
         this.ReplicateSetNum = ReplicateSetNum;
     }
 
     /**
-     * Get Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the quantity of nodes or shards is modified, the value will be `0`. 
-     * @return InMaintenance Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the quantity of nodes or shards is modified, the value will be `0`.
+     * Get Switch time for instance configuration modification.
+ - 0: Execute the configuration modification task immediately after the adjustment is completed. Default value: 0.
+ - 1: Execute the configuration modification task within the maintenance window.
+**Note**: Adjusting the number of nodes and shards is unsupported <b>within the maintenance window</b>. 
+     * @return InMaintenance Switch time for instance configuration modification.
+ - 0: Execute the configuration modification task immediately after the adjustment is completed. Default value: 0.
+ - 1: Execute the configuration modification task within the maintenance window.
+**Note**: Adjusting the number of nodes and shards is unsupported <b>within the maintenance window</b>.
      */
     public Long getInMaintenance() {
         return this.InMaintenance;
     }
 
     /**
-     * Set Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the quantity of nodes or shards is modified, the value will be `0`.
-     * @param InMaintenance Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the quantity of nodes or shards is modified, the value will be `0`.
+     * Set Switch time for instance configuration modification.
+ - 0: Execute the configuration modification task immediately after the adjustment is completed. Default value: 0.
+ - 1: Execute the configuration modification task within the maintenance window.
+**Note**: Adjusting the number of nodes and shards is unsupported <b>within the maintenance window</b>.
+     * @param InMaintenance Switch time for instance configuration modification.
+ - 0: Execute the configuration modification task immediately after the adjustment is completed. Default value: 0.
+ - 1: Execute the configuration modification task within the maintenance window.
+**Note**: Adjusting the number of nodes and shards is unsupported <b>within the maintenance window</b>.
      */
     public void setInMaintenance(Long InMaintenance) {
         this.InMaintenance = InMaintenance;
+    }
+
+    /**
+     * Get Mongos node memory size after the sharded cluster instance configuration is modified. Unit: GB. 
+     * @return MongosMemory Mongos node memory size after the sharded cluster instance configuration is modified. Unit: GB.
+     */
+    public String getMongosMemory() {
+        return this.MongosMemory;
+    }
+
+    /**
+     * Set Mongos node memory size after the sharded cluster instance configuration is modified. Unit: GB.
+     * @param MongosMemory Mongos node memory size after the sharded cluster instance configuration is modified. Unit: GB.
+     */
+    public void setMongosMemory(String MongosMemory) {
+        this.MongosMemory = MongosMemory;
+    }
+
+    /**
+     * Get List of nodes to be added, containing the node type and AZ information. 
+     * @return AddNodeList List of nodes to be added, containing the node type and AZ information.
+     */
+    public AddNodeList [] getAddNodeList() {
+        return this.AddNodeList;
+    }
+
+    /**
+     * Set List of nodes to be added, containing the node type and AZ information.
+     * @param AddNodeList List of nodes to be added, containing the node type and AZ information.
+     */
+    public void setAddNodeList(AddNodeList [] AddNodeList) {
+        this.AddNodeList = AddNodeList;
+    }
+
+    /**
+     * Get List of nodes to be deleted. Note: According to the consistency principle for nodes of each shard on a sharded cluster instance, specify the nodes on shard 0 for node deletion from the sharded cluster instance. For example, cmgo-9nl1czif_0-node-readonly0 will delete the first read-only node of each shard. 
+     * @return RemoveNodeList List of nodes to be deleted. Note: According to the consistency principle for nodes of each shard on a sharded cluster instance, specify the nodes on shard 0 for node deletion from the sharded cluster instance. For example, cmgo-9nl1czif_0-node-readonly0 will delete the first read-only node of each shard.
+     */
+    public RemoveNodeList [] getRemoveNodeList() {
+        return this.RemoveNodeList;
+    }
+
+    /**
+     * Set List of nodes to be deleted. Note: According to the consistency principle for nodes of each shard on a sharded cluster instance, specify the nodes on shard 0 for node deletion from the sharded cluster instance. For example, cmgo-9nl1czif_0-node-readonly0 will delete the first read-only node of each shard.
+     * @param RemoveNodeList List of nodes to be deleted. Note: According to the consistency principle for nodes of each shard on a sharded cluster instance, specify the nodes on shard 0 for node deletion from the sharded cluster instance. For example, cmgo-9nl1czif_0-node-readonly0 will delete the first read-only node of each shard.
+     */
+    public void setRemoveNodeList(RemoveNodeList [] RemoveNodeList) {
+        this.RemoveNodeList = RemoveNodeList;
     }
 
     public ModifyDBInstanceSpecRequest() {
@@ -213,6 +366,21 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
         if (source.InMaintenance != null) {
             this.InMaintenance = new Long(source.InMaintenance);
         }
+        if (source.MongosMemory != null) {
+            this.MongosMemory = new String(source.MongosMemory);
+        }
+        if (source.AddNodeList != null) {
+            this.AddNodeList = new AddNodeList[source.AddNodeList.length];
+            for (int i = 0; i < source.AddNodeList.length; i++) {
+                this.AddNodeList[i] = new AddNodeList(source.AddNodeList[i]);
+            }
+        }
+        if (source.RemoveNodeList != null) {
+            this.RemoveNodeList = new RemoveNodeList[source.RemoveNodeList.length];
+            for (int i = 0; i < source.RemoveNodeList.length; i++) {
+                this.RemoveNodeList[i] = new RemoveNodeList(source.RemoveNodeList[i]);
+            }
+        }
     }
 
 
@@ -227,6 +395,9 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
         this.setParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
         this.setParamSimple(map, prefix + "InMaintenance", this.InMaintenance);
+        this.setParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
+        this.setParamArrayObj(map, prefix + "AddNodeList.", this.AddNodeList);
+        this.setParamArrayObj(map, prefix + "RemoveNodeList.", this.RemoveNodeList);
 
     }
 }

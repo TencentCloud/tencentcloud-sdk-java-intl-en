@@ -25,7 +25,6 @@ public class DBInstancePrice extends AbstractModel {
 
     /**
     * Unit price.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UnitPrice")
     @Expose
@@ -39,17 +38,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Float OriginalPrice;
 
     /**
-    * Discounted price.
+    * Discount price.
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-     * Get Unit price.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Unit price. 
      * @return UnitPrice Unit price.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
@@ -57,9 +54,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Unit price.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param UnitPrice Unit price.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
@@ -82,16 +77,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Discounted price. 
-     * @return DiscountPrice Discounted price.
+     * Get Discount price. 
+     * @return DiscountPrice Discount price.
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set Discounted price.
-     * @param DiscountPrice Discounted price.
+     * Set Discount price.
+     * @param DiscountPrice Discount price.
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;

@@ -24,230 +24,250 @@ import java.util.HashMap;
 public class InstanceIntegerParam extends AbstractModel {
 
     /**
-    * Current value
+    * Current parameter value.
     */
     @SerializedName("CurrentValue")
     @Expose
     private String CurrentValue;
 
     /**
-    * Default value
+    * Default parameter value.
     */
     @SerializedName("DefaultValue")
     @Expose
     private String DefaultValue;
 
     /**
-    * Maximum value
+    * Maximum parameter value.
     */
     @SerializedName("Max")
     @Expose
     private String Max;
 
     /**
-    * Minimum value
+    * Minimum value.
     */
     @SerializedName("Min")
     @Expose
     private String Min;
 
     /**
-    * Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+    * Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
     */
     @SerializedName("NeedRestart")
     @Expose
     private String NeedRestart;
 
     /**
-    * Parameter name
+    * Parameter name.
     */
     @SerializedName("ParamName")
     @Expose
     private String ParamName;
 
     /**
-    * Parameter description
+    * Parameter description.
     */
     @SerializedName("Tips")
     @Expose
     private String [] Tips;
 
     /**
-    * Data type of the parameter
+    * Parameter type.
     */
     @SerializedName("ValueType")
     @Expose
     private String ValueType;
 
     /**
-    * Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+    * Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Redundant field which can be ignored
+    * Redundant field. It can be ignored.
     */
     @SerializedName("Unit")
     @Expose
     private String Unit;
 
     /**
-     * Get Current value 
-     * @return CurrentValue Current value
+     * Get Current parameter value. 
+     * @return CurrentValue Current parameter value.
      */
     public String getCurrentValue() {
         return this.CurrentValue;
     }
 
     /**
-     * Set Current value
-     * @param CurrentValue Current value
+     * Set Current parameter value.
+     * @param CurrentValue Current parameter value.
      */
     public void setCurrentValue(String CurrentValue) {
         this.CurrentValue = CurrentValue;
     }
 
     /**
-     * Get Default value 
-     * @return DefaultValue Default value
+     * Get Default parameter value. 
+     * @return DefaultValue Default parameter value.
      */
     public String getDefaultValue() {
         return this.DefaultValue;
     }
 
     /**
-     * Set Default value
-     * @param DefaultValue Default value
+     * Set Default parameter value.
+     * @param DefaultValue Default parameter value.
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;
     }
 
     /**
-     * Get Maximum value 
-     * @return Max Maximum value
+     * Get Maximum parameter value. 
+     * @return Max Maximum parameter value.
      */
     public String getMax() {
         return this.Max;
     }
 
     /**
-     * Set Maximum value
-     * @param Max Maximum value
+     * Set Maximum parameter value.
+     * @param Max Maximum parameter value.
      */
     public void setMax(String Max) {
         this.Max = Max;
     }
 
     /**
-     * Get Minimum value 
-     * @return Min Minimum value
+     * Get Minimum value. 
+     * @return Min Minimum value.
      */
     public String getMin() {
         return this.Min;
     }
 
     /**
-     * Set Minimum value
-     * @param Min Minimum value
+     * Set Minimum value.
+     * @param Min Minimum value.
      */
     public void setMin(String Min) {
         this.Min = Min;
     }
 
     /**
-     * Get Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately) 
-     * @return NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+     * Get Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately. 
+     * @return NeedRestart Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
      */
     public String getNeedRestart() {
         return this.NeedRestart;
     }
 
     /**
-     * Set Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
-     * @param NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+     * Set Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
+     * @param NeedRestart Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
      */
     public void setNeedRestart(String NeedRestart) {
         this.NeedRestart = NeedRestart;
     }
 
     /**
-     * Get Parameter name 
-     * @return ParamName Parameter name
+     * Get Parameter name. 
+     * @return ParamName Parameter name.
      */
     public String getParamName() {
         return this.ParamName;
     }
 
     /**
-     * Set Parameter name
-     * @param ParamName Parameter name
+     * Set Parameter name.
+     * @param ParamName Parameter name.
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
     }
 
     /**
-     * Get Parameter description 
-     * @return Tips Parameter description
+     * Get Parameter description. 
+     * @return Tips Parameter description.
      */
     public String [] getTips() {
         return this.Tips;
     }
 
     /**
-     * Set Parameter description
-     * @param Tips Parameter description
+     * Set Parameter description.
+     * @param Tips Parameter description.
      */
     public void setTips(String [] Tips) {
         this.Tips = Tips;
     }
 
     /**
-     * Get Data type of the parameter 
-     * @return ValueType Data type of the parameter
+     * Get Parameter type. 
+     * @return ValueType Parameter type.
      */
     public String getValueType() {
         return this.ValueType;
     }
 
     /**
-     * Set Data type of the parameter
-     * @param ValueType Data type of the parameter
+     * Set Parameter type.
+     * @param ValueType Parameter type.
      */
     public void setValueType(String ValueType) {
         this.ValueType = ValueType;
     }
 
     /**
-     * Get Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no) 
-     * @return Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+     * Get Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running. 
+     * @return Status Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
-     * @param Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+     * Set Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
+     * @param Status Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Redundant field which can be ignored 
-     * @return Unit Redundant field which can be ignored
+     * Get Redundant field. It can be ignored. 
+     * @return Unit Redundant field. It can be ignored.
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set Redundant field which can be ignored
-     * @param Unit Redundant field which can be ignored
+     * Set Redundant field. It can be ignored.
+     * @param Unit Redundant field. It can be ignored.
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;

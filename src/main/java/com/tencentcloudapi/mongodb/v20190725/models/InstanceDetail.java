@@ -94,7 +94,7 @@ public class InstanceDetail extends AbstractModel {
     private String SubnetId;
 
     /**
-    * Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
+    * Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
     */
     @SerializedName("Status")
     @Expose
@@ -290,64 +290,56 @@ public class InstanceDetail extends AbstractModel {
     private String RealInstanceId;
 
     /**
-    * Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of Mongos nodes.
     */
     @SerializedName("MongosNodeNum")
     @Expose
     private Long MongosNodeNum;
 
     /**
-    * mongos node memory
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Mongos node memory.
     */
     @SerializedName("MongosMemory")
     @Expose
     private Long MongosMemory;
 
     /**
-    * Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of Mongos node CPU cores.
     */
     @SerializedName("MongosCpuNum")
     @Expose
     private Long MongosCpuNum;
 
     /**
-    * Number of ConfigServer nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of ConfigServer nodes.
     */
     @SerializedName("ConfigServerNodeNum")
     @Expose
     private Long ConfigServerNodeNum;
 
     /**
-    * Memory of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+    * ConfigServer node memory.
     */
     @SerializedName("ConfigServerMemory")
     @Expose
     private Long ConfigServerMemory;
 
     /**
-    * Disk size of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+    * ConfigServer node disk size.
     */
     @SerializedName("ConfigServerVolume")
     @Expose
     private Long ConfigServerVolume;
 
     /**
-    * CPU number of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of ConfigServer node CPU cores.
     */
     @SerializedName("ConfigServerCpuNum")
     @Expose
     private Long ConfigServerCpuNum;
 
     /**
-    * Number of read-only nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of read-only nodes.
     */
     @SerializedName("ReadonlyNodeNum")
     @Expose
@@ -514,16 +506,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired). 
-     * @return Status Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
+     * Get Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired. 
+     * @return Status Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
-     * @param Status Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
+     * Set Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
+     * @param Status Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -962,160 +954,128 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MongosNodeNum Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of Mongos nodes. 
+     * @return MongosNodeNum Number of Mongos nodes.
      */
     public Long getMongosNodeNum() {
         return this.MongosNodeNum;
     }
 
     /**
-     * Set Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MongosNodeNum Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of Mongos nodes.
+     * @param MongosNodeNum Number of Mongos nodes.
      */
     public void setMongosNodeNum(Long MongosNodeNum) {
         this.MongosNodeNum = MongosNodeNum;
     }
 
     /**
-     * Get mongos node memory
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MongosMemory mongos node memory
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Mongos node memory. 
+     * @return MongosMemory Mongos node memory.
      */
     public Long getMongosMemory() {
         return this.MongosMemory;
     }
 
     /**
-     * Set mongos node memory
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MongosMemory mongos node memory
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Mongos node memory.
+     * @param MongosMemory Mongos node memory.
      */
     public void setMongosMemory(Long MongosMemory) {
         this.MongosMemory = MongosMemory;
     }
 
     /**
-     * Get Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MongosCpuNum Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of Mongos node CPU cores. 
+     * @return MongosCpuNum Number of Mongos node CPU cores.
      */
     public Long getMongosCpuNum() {
         return this.MongosCpuNum;
     }
 
     /**
-     * Set Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MongosCpuNum Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of Mongos node CPU cores.
+     * @param MongosCpuNum Number of Mongos node CPU cores.
      */
     public void setMongosCpuNum(Long MongosCpuNum) {
         this.MongosCpuNum = MongosCpuNum;
     }
 
     /**
-     * Get Number of ConfigServer nodes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConfigServerNodeNum Number of ConfigServer nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of ConfigServer nodes. 
+     * @return ConfigServerNodeNum Number of ConfigServer nodes.
      */
     public Long getConfigServerNodeNum() {
         return this.ConfigServerNodeNum;
     }
 
     /**
-     * Set Number of ConfigServer nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConfigServerNodeNum Number of ConfigServer nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of ConfigServer nodes.
+     * @param ConfigServerNodeNum Number of ConfigServer nodes.
      */
     public void setConfigServerNodeNum(Long ConfigServerNodeNum) {
         this.ConfigServerNodeNum = ConfigServerNodeNum;
     }
 
     /**
-     * Get Memory of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConfigServerMemory Memory of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ConfigServer node memory. 
+     * @return ConfigServerMemory ConfigServer node memory.
      */
     public Long getConfigServerMemory() {
         return this.ConfigServerMemory;
     }
 
     /**
-     * Set Memory of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConfigServerMemory Memory of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ConfigServer node memory.
+     * @param ConfigServerMemory ConfigServer node memory.
      */
     public void setConfigServerMemory(Long ConfigServerMemory) {
         this.ConfigServerMemory = ConfigServerMemory;
     }
 
     /**
-     * Get Disk size of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConfigServerVolume Disk size of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ConfigServer node disk size. 
+     * @return ConfigServerVolume ConfigServer node disk size.
      */
     public Long getConfigServerVolume() {
         return this.ConfigServerVolume;
     }
 
     /**
-     * Set Disk size of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConfigServerVolume Disk size of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ConfigServer node disk size.
+     * @param ConfigServerVolume ConfigServer node disk size.
      */
     public void setConfigServerVolume(Long ConfigServerVolume) {
         this.ConfigServerVolume = ConfigServerVolume;
     }
 
     /**
-     * Get CPU number of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConfigServerCpuNum CPU number of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of ConfigServer node CPU cores. 
+     * @return ConfigServerCpuNum Number of ConfigServer node CPU cores.
      */
     public Long getConfigServerCpuNum() {
         return this.ConfigServerCpuNum;
     }
 
     /**
-     * Set CPU number of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConfigServerCpuNum CPU number of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of ConfigServer node CPU cores.
+     * @param ConfigServerCpuNum Number of ConfigServer node CPU cores.
      */
     public void setConfigServerCpuNum(Long ConfigServerCpuNum) {
         this.ConfigServerCpuNum = ConfigServerCpuNum;
     }
 
     /**
-     * Get Number of read-only nodes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReadonlyNodeNum Number of read-only nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of read-only nodes. 
+     * @return ReadonlyNodeNum Number of read-only nodes.
      */
     public Long getReadonlyNodeNum() {
         return this.ReadonlyNodeNum;
     }
 
     /**
-     * Set Number of read-only nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReadonlyNodeNum Number of read-only nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of read-only nodes.
+     * @param ReadonlyNodeNum Number of read-only nodes.
      */
     public void setReadonlyNodeNum(Long ReadonlyNodeNum) {
         this.ReadonlyNodeNum = ReadonlyNodeNum;

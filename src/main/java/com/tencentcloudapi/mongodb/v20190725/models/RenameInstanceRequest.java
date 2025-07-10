@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RenameInstanceRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+    * Instance ID. Format: cmgo-p8vnipr5. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB#/) and copy the instance ID from the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
+    * Custom instance name. It can contain any character, with a length from 1 to 128 characters.
     */
     @SerializedName("NewName")
     @Expose
     private String NewName;
 
     /**
-     * Get Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page 
-     * @return InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * Get Instance ID. Format: cmgo-p8vnipr5. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB#/) and copy the instance ID from the instance list. 
+     * @return InstanceId Instance ID. Format: cmgo-p8vnipr5. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB#/) and copy the instance ID from the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-     * @param InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * Set Instance ID. Format: cmgo-p8vnipr5. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB#/) and copy the instance ID from the instance list.
+     * @param InstanceId Instance ID. Format: cmgo-p8vnipr5. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB#/) and copy the instance ID from the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-) 
-     * @return NewName Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
+     * Get Custom instance name. It can contain any character, with a length from 1 to 128 characters. 
+     * @return NewName Custom instance name. It can contain any character, with a length from 1 to 128 characters.
      */
     public String getNewName() {
         return this.NewName;
     }
 
     /**
-     * Set Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
-     * @param NewName Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
+     * Set Custom instance name. It can contain any character, with a length from 1 to 128 characters.
+     * @param NewName Custom instance name. It can contain any character, with a length from 1 to 128 characters.
      */
     public void setNewName(String NewName) {
         this.NewName = NewName;

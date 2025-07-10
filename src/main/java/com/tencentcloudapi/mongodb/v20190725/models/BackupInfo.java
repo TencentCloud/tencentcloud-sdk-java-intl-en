@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BackupInfo extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,32 +45,28 @@ public class BackupInfo extends AbstractModel {
     private String BackupName;
 
     /**
-    * Backup remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Backup remarks.
     */
     @SerializedName("BackupDesc")
     @Expose
     private String BackupDesc;
 
     /**
-    * Backup file size in KB
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Backup file size. Unit: KB.
     */
     @SerializedName("BackupSize")
     @Expose
     private Long BackupSize;
 
     /**
-    * Backup start time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Backup start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Backup end time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Backup end time.
     */
     @SerializedName("EndTime")
     @Expose
@@ -91,16 +87,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long BackupMethod;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+    * Backup record ID.
+    */
+    @SerializedName("BackId")
+    @Expose
+    private Long BackId;
+
+    /**
+    * Backup deletion time.
+    */
+    @SerializedName("DeleteTime")
+    @Expose
+    private String DeleteTime;
+
+    /**
+    * Region for cross-region backup.
+    */
+    @SerializedName("BackupRegion")
+    @Expose
+    private String BackupRegion;
+
+    /**
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -139,80 +156,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Backup remarks
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BackupDesc Backup remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Backup remarks. 
+     * @return BackupDesc Backup remarks.
      */
     public String getBackupDesc() {
         return this.BackupDesc;
     }
 
     /**
-     * Set Backup remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BackupDesc Backup remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Backup remarks.
+     * @param BackupDesc Backup remarks.
      */
     public void setBackupDesc(String BackupDesc) {
         this.BackupDesc = BackupDesc;
     }
 
     /**
-     * Get Backup file size in KB
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BackupSize Backup file size in KB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Backup file size. Unit: KB. 
+     * @return BackupSize Backup file size. Unit: KB.
      */
     public Long getBackupSize() {
         return this.BackupSize;
     }
 
     /**
-     * Set Backup file size in KB
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BackupSize Backup file size in KB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Backup file size. Unit: KB.
+     * @param BackupSize Backup file size. Unit: KB.
      */
     public void setBackupSize(Long BackupSize) {
         this.BackupSize = BackupSize;
     }
 
     /**
-     * Get Backup start time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime Backup start time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Backup start time. 
+     * @return StartTime Backup start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Backup start time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTime Backup start time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Backup start time.
+     * @param StartTime Backup start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Backup end time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndTime Backup end time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Backup end time. 
+     * @return EndTime Backup end time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Backup end time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndTime Backup end time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Backup end time.
+     * @param EndTime Backup end time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -250,6 +251,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.BackupMethod = BackupMethod;
     }
 
+    /**
+     * Get Backup record ID. 
+     * @return BackId Backup record ID.
+     */
+    public Long getBackId() {
+        return this.BackId;
+    }
+
+    /**
+     * Set Backup record ID.
+     * @param BackId Backup record ID.
+     */
+    public void setBackId(Long BackId) {
+        this.BackId = BackId;
+    }
+
+    /**
+     * Get Backup deletion time. 
+     * @return DeleteTime Backup deletion time.
+     */
+    public String getDeleteTime() {
+        return this.DeleteTime;
+    }
+
+    /**
+     * Set Backup deletion time.
+     * @param DeleteTime Backup deletion time.
+     */
+    public void setDeleteTime(String DeleteTime) {
+        this.DeleteTime = DeleteTime;
+    }
+
+    /**
+     * Get Region for cross-region backup. 
+     * @return BackupRegion Region for cross-region backup.
+     */
+    public String getBackupRegion() {
+        return this.BackupRegion;
+    }
+
+    /**
+     * Set Region for cross-region backup.
+     * @param BackupRegion Region for cross-region backup.
+     */
+    public void setBackupRegion(String BackupRegion) {
+        this.BackupRegion = BackupRegion;
+    }
+
     public BackupInfo() {
     }
 
@@ -285,6 +334,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.BackupMethod != null) {
             this.BackupMethod = new Long(source.BackupMethod);
         }
+        if (source.BackId != null) {
+            this.BackId = new Long(source.BackId);
+        }
+        if (source.DeleteTime != null) {
+            this.DeleteTime = new String(source.DeleteTime);
+        }
+        if (source.BackupRegion != null) {
+            this.BackupRegion = new String(source.BackupRegion);
+        }
     }
 
 
@@ -301,6 +359,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+        this.setParamSimple(map, prefix + "BackId", this.BackId);
+        this.setParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
+        this.setParamSimple(map, prefix + "BackupRegion", this.BackupRegion);
 
     }
 }

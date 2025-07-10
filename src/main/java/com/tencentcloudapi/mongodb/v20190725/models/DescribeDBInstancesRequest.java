@@ -24,42 +24,46 @@ import java.util.HashMap;
 public class DescribeDBInstancesRequest extends AbstractModel {
 
     /**
-    * List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
+    * Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
+    * Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
+    * Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
     */
     @SerializedName("ClusterType")
     @Expose
     private Long ClusterType;
 
     /**
-    * Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
+    * Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * VPC ID. This parameter can be left empty for the classic network.
+    * VPC ID.
+ - You do not need to specify this parameter for basic networks.
+ - Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB), click a VPC name in the instance list, and obtain the ID on the **VPC** page.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
+    * VPC subnet ID.
+ - You do not need to specify this parameter for basic networks.
+ - Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB), click a VPC name in the instance list, and obtain the subnet ID on the **VPC** page.
     */
     @SerializedName("SubnetId")
     @Expose
@@ -87,131 +91,149 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
+    * Configures the field for sorting returned results. Currently, "ProjectId", "InstanceName", and "CreateTime" are supported for sorting.
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting method of the return result set. Valid values: `ASC`, `DESC`.
+    * Configures the method for sorting returned results.
+ - ASC: ascending order.
+ - DESC: descending order.
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * Project ID
+    * Project ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and select Project Management in the account information drop-down menu at the top right corner to query projects.
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * Search keyword, which can be instance ID, instance name, or complete IP.
+    * Specifies the keyword for search. Specific instance IDs, instance names, or private IP addresses are supported.
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-    * Tag information
+    * Tag information, including the tag key and tag value.
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-     * Get List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page. 
-     * @return InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
+     * Get Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list. 
+     * @return InstanceIds Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
-     * @param InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
+     * Set Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+     * @param InstanceIds Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul> 
-     * @return InstanceType Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
+     * Get Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul> 
+     * @return InstanceType Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
-     * @param InstanceType Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
+     * Set Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
+     * @param InstanceType Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul> 
-     * @return ClusterType Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
+     * Get Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul> 
+     * @return ClusterType Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
      */
     public Long getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
-     * @param ClusterType Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
+     * Set Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
+     * @param ClusterType Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul> 
-     * @return Status Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
+     * Get Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul> 
+     * @return Status Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
-     * @param Status Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
+     * Set Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
+     * @param Status Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get VPC ID. This parameter can be left empty for the classic network. 
-     * @return VpcId VPC ID. This parameter can be left empty for the classic network.
+     * Get VPC ID.
+ - You do not need to specify this parameter for basic networks.
+ - Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB), click a VPC name in the instance list, and obtain the ID on the **VPC** page. 
+     * @return VpcId VPC ID.
+ - You do not need to specify this parameter for basic networks.
+ - Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB), click a VPC name in the instance list, and obtain the ID on the **VPC** page.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID. This parameter can be left empty for the classic network.
-     * @param VpcId VPC ID. This parameter can be left empty for the classic network.
+     * Set VPC ID.
+ - You do not need to specify this parameter for basic networks.
+ - Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB), click a VPC name in the instance list, and obtain the ID on the **VPC** page.
+     * @param VpcId VPC ID.
+ - You do not need to specify this parameter for basic networks.
+ - Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB), click a VPC name in the instance list, and obtain the ID on the **VPC** page.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set. 
-     * @return SubnetId Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
+     * Get VPC subnet ID.
+ - You do not need to specify this parameter for basic networks.
+ - Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB), click a VPC name in the instance list, and obtain the subnet ID on the **VPC** page. 
+     * @return SubnetId VPC subnet ID.
+ - You do not need to specify this parameter for basic networks.
+ - Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB), click a VPC name in the instance list, and obtain the subnet ID on the **VPC** page.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
-     * @param SubnetId Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
+     * Set VPC subnet ID.
+ - You do not need to specify this parameter for basic networks.
+ - Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB), click a VPC name in the instance list, and obtain the subnet ID on the **VPC** page.
+     * @param SubnetId VPC subnet ID.
+ - You do not need to specify this parameter for basic networks.
+ - Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB), click a VPC name in the instance list, and obtain the subnet ID on the **VPC** page.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -266,80 +288,88 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default. 
-     * @return OrderBy Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
+     * Get Configures the field for sorting returned results. Currently, "ProjectId", "InstanceName", and "CreateTime" are supported for sorting. 
+     * @return OrderBy Configures the field for sorting returned results. Currently, "ProjectId", "InstanceName", and "CreateTime" are supported for sorting.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
-     * @param OrderBy Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
+     * Set Configures the field for sorting returned results. Currently, "ProjectId", "InstanceName", and "CreateTime" are supported for sorting.
+     * @param OrderBy Configures the field for sorting returned results. Currently, "ProjectId", "InstanceName", and "CreateTime" are supported for sorting.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting method of the return result set. Valid values: `ASC`, `DESC`. 
-     * @return OrderByType Sorting method of the return result set. Valid values: `ASC`, `DESC`.
+     * Get Configures the method for sorting returned results.
+ - ASC: ascending order.
+ - DESC: descending order. 
+     * @return OrderByType Configures the method for sorting returned results.
+ - ASC: ascending order.
+ - DESC: descending order.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting method of the return result set. Valid values: `ASC`, `DESC`.
-     * @param OrderByType Sorting method of the return result set. Valid values: `ASC`, `DESC`.
+     * Set Configures the method for sorting returned results.
+ - ASC: ascending order.
+ - DESC: descending order.
+     * @param OrderByType Configures the method for sorting returned results.
+ - ASC: ascending order.
+ - DESC: descending order.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectIds Project ID
+     * Get Project ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and select Project Management in the account information drop-down menu at the top right corner to query projects. 
+     * @return ProjectIds Project ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and select Project Management in the account information drop-down menu at the top right corner to query projects.
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectIds Project ID
+     * Set Project ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and select Project Management in the account information drop-down menu at the top right corner to query projects.
+     * @param ProjectIds Project ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and select Project Management in the account information drop-down menu at the top right corner to query projects.
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get Search keyword, which can be instance ID, instance name, or complete IP. 
-     * @return SearchKey Search keyword, which can be instance ID, instance name, or complete IP.
+     * Get Specifies the keyword for search. Specific instance IDs, instance names, or private IP addresses are supported. 
+     * @return SearchKey Specifies the keyword for search. Specific instance IDs, instance names, or private IP addresses are supported.
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set Search keyword, which can be instance ID, instance name, or complete IP.
-     * @param SearchKey Search keyword, which can be instance ID, instance name, or complete IP.
+     * Set Specifies the keyword for search. Specific instance IDs, instance names, or private IP addresses are supported.
+     * @param SearchKey Specifies the keyword for search. Specific instance IDs, instance names, or private IP addresses are supported.
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
     }
 
     /**
-     * Get Tag information 
-     * @return Tags Tag information
+     * Get Tag information, including the tag key and tag value. 
+     * @return Tags Tag information, including the tag key and tag value.
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag information
-     * @param Tags Tag information
+     * Set Tag information, including the tag key and tag value.
+     * @param Tags Tag information, including the tag key and tag value.
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;

@@ -24,115 +24,135 @@ import java.util.HashMap;
 public class ModifyDBInstanceNetworkAddressRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Specifies the ID of the instance for modifying the network. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Old IP retention period in minutes. The old IP will be released after the specified time, and both the old and new IPs can be accessed before the release. The value `0` indicates that the old IP will be reclaimed immediately.
+    * Retention period of the original IP address.
+ - Unit: minutes. 0 means that the IP address is immediately repossessed.
+ - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
+
     */
     @SerializedName("OldIpExpiredTime")
     @Expose
     private Long OldIpExpiredTime;
 
     /**
-    * ID of the VPC to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+    * VPC ID after the switch. If the instance is using a basic network, this field is not required.
     */
     @SerializedName("NewUniqVpcId")
     @Expose
     private String NewUniqVpcId;
 
     /**
-    * ID of the subnet to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+    * VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
     */
     @SerializedName("NewUniqSubnetId")
     @Expose
     private String NewUniqSubnetId;
 
     /**
-    * IP information to be modified
+    * IP address information, including the new IP address and the original IP address.
     */
     @SerializedName("NetworkAddresses")
     @Expose
     private ModifyNetworkAddress [] NetworkAddresses;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Specifies the ID of the instance for modifying the network. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+ 
+     * @return InstanceId Specifies the ID of the instance for modifying the network. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Specifies the ID of the instance for modifying the network. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
+     * @param InstanceId Specifies the ID of the instance for modifying the network. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Old IP retention period in minutes. The old IP will be released after the specified time, and both the old and new IPs can be accessed before the release. The value `0` indicates that the old IP will be reclaimed immediately. 
-     * @return OldIpExpiredTime Old IP retention period in minutes. The old IP will be released after the specified time, and both the old and new IPs can be accessed before the release. The value `0` indicates that the old IP will be reclaimed immediately.
+     * Get Retention period of the original IP address.
+ - Unit: minutes. 0 means that the IP address is immediately repossessed.
+ - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
+ 
+     * @return OldIpExpiredTime Retention period of the original IP address.
+ - Unit: minutes. 0 means that the IP address is immediately repossessed.
+ - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
+
      */
     public Long getOldIpExpiredTime() {
         return this.OldIpExpiredTime;
     }
 
     /**
-     * Set Old IP retention period in minutes. The old IP will be released after the specified time, and both the old and new IPs can be accessed before the release. The value `0` indicates that the old IP will be reclaimed immediately.
-     * @param OldIpExpiredTime Old IP retention period in minutes. The old IP will be released after the specified time, and both the old and new IPs can be accessed before the release. The value `0` indicates that the old IP will be reclaimed immediately.
+     * Set Retention period of the original IP address.
+ - Unit: minutes. 0 means that the IP address is immediately repossessed.
+ - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
+
+     * @param OldIpExpiredTime Retention period of the original IP address.
+ - Unit: minutes. 0 means that the IP address is immediately repossessed.
+ - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
+
      */
     public void setOldIpExpiredTime(Long OldIpExpiredTime) {
         this.OldIpExpiredTime = OldIpExpiredTime;
     }
 
     /**
-     * Get ID of the VPC to which the new IP belongs after the switch. When it is classic network, this field will be empty. 
-     * @return NewUniqVpcId ID of the VPC to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+     * Get VPC ID after the switch. If the instance is using a basic network, this field is not required. 
+     * @return NewUniqVpcId VPC ID after the switch. If the instance is using a basic network, this field is not required.
      */
     public String getNewUniqVpcId() {
         return this.NewUniqVpcId;
     }
 
     /**
-     * Set ID of the VPC to which the new IP belongs after the switch. When it is classic network, this field will be empty.
-     * @param NewUniqVpcId ID of the VPC to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+     * Set VPC ID after the switch. If the instance is using a basic network, this field is not required.
+     * @param NewUniqVpcId VPC ID after the switch. If the instance is using a basic network, this field is not required.
      */
     public void setNewUniqVpcId(String NewUniqVpcId) {
         this.NewUniqVpcId = NewUniqVpcId;
     }
 
     /**
-     * Get ID of the subnet to which the new IP belongs after the switch. When it is classic network, this field will be empty. 
-     * @return NewUniqSubnetId ID of the subnet to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+     * Get VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. 
+     * @return NewUniqSubnetId VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
      */
     public String getNewUniqSubnetId() {
         return this.NewUniqSubnetId;
     }
 
     /**
-     * Set ID of the subnet to which the new IP belongs after the switch. When it is classic network, this field will be empty.
-     * @param NewUniqSubnetId ID of the subnet to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+     * Set VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
+     * @param NewUniqSubnetId VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
      */
     public void setNewUniqSubnetId(String NewUniqSubnetId) {
         this.NewUniqSubnetId = NewUniqSubnetId;
     }
 
     /**
-     * Get IP information to be modified 
-     * @return NetworkAddresses IP information to be modified
+     * Get IP address information, including the new IP address and the original IP address. 
+     * @return NetworkAddresses IP address information, including the new IP address and the original IP address.
      */
     public ModifyNetworkAddress [] getNetworkAddresses() {
         return this.NetworkAddresses;
     }
 
     /**
-     * Set IP information to be modified
-     * @param NetworkAddresses IP information to be modified
+     * Set IP address information, including the new IP address and the original IP address.
+     * @param NetworkAddresses IP address information, including the new IP address and the original IP address.
      */
     public void setNetworkAddresses(ModifyNetworkAddress [] NetworkAddresses) {
         this.NetworkAddresses = NetworkAddresses;

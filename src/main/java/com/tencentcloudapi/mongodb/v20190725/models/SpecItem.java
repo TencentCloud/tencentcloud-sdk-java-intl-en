@@ -24,483 +24,598 @@ import java.util.HashMap;
 public class SpecItem extends AbstractModel {
 
     /**
-    * Specification information identifier
+    * Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
+ - Node types are as follows:
+ - mongo: Mongod node.
+ - mongos: Mongos node.
+ - cfgstr: ConfigServer node.
+ - Specification types are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
+ - Memory specifications are as follows:
+ - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
+ - Unit: g, indicating GB. 128g means 128 GB.
     */
     @SerializedName("SpecCode")
     @Expose
     private String SpecCode;
 
     /**
-    * Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
+    * Saleable specification status flag. Valid values are as follows:
+ - 0: selling stopped.
+ - 1: available for sale.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Computing resource specification in terms of CPU core
+    * Computing resource specification, indicating the number of CPU cores.
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Memory size in MB
+    * Memory specification. Unit: MB.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Default disk size in MB
+    * Default disk specification. Unit: MB.
     */
     @SerializedName("DefaultStorage")
     @Expose
     private Long DefaultStorage;
 
     /**
-    * Maximum disk size in MB
+    * Maximum disk specification. Unit: MB.
     */
     @SerializedName("MaxStorage")
     @Expose
     private Long MaxStorage;
 
     /**
-    * Minimum disk size in MB
+    * Minimum disk specification. Unit: MB.
     */
     @SerializedName("MinStorage")
     @Expose
     private Long MinStorage;
 
     /**
-    * Maximum QPS
+    * Maximum number of requests per second. Unit: requests/second.
     */
     @SerializedName("Qps")
     @Expose
     private Long Qps;
 
     /**
-    * Maximum number of connections
+    * Maximum number of connections supported for the specification.
     */
     @SerializedName("Conns")
     @Expose
     private Long Conns;
 
     /**
-    * MongoDB version information of an instance
+    * Storage engine version information on instances.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
     */
     @SerializedName("MongoVersionCode")
     @Expose
     private String MongoVersionCode;
 
     /**
-    * MongoDB version number of an instance
+    * Digital version corresponding to the instance version.
     */
     @SerializedName("MongoVersionValue")
     @Expose
     private Long MongoVersionValue;
 
     /**
-    * MongoDB version number of an instance (short)
+    * Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
+
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * Storage engine
+    * Storage engine.
     */
     @SerializedName("EngineName")
     @Expose
     private String EngineName;
 
     /**
-    * Cluster type. Valid values: 1 (sharding cluster), 0 (replica set cluster)
+    * Cluster type. Valid values are as follows:
+ - 1: sharded cluster.
+ - 0: replica set cluster.
     */
     @SerializedName("ClusterType")
     @Expose
     private Long ClusterType;
 
     /**
-    * Minimum number of secondary nodes in a replica set
+    * Minimum number of nodes for each replica set.
     */
     @SerializedName("MinNodeNum")
     @Expose
     private Long MinNodeNum;
 
     /**
-    * Maximum number of secondary nodes in a replica set
+    * Maximum number of nodes for each replica set.
     */
     @SerializedName("MaxNodeNum")
     @Expose
     private Long MaxNodeNum;
 
     /**
-    * Minimum number of shards
+    * Minimum number of shards.
     */
     @SerializedName("MinReplicateSetNum")
     @Expose
     private Long MinReplicateSetNum;
 
     /**
-    * Maximum number of shards
+    * Maximum number of shards.
     */
     @SerializedName("MaxReplicateSetNum")
     @Expose
     private Long MaxReplicateSetNum;
 
     /**
-    * Minimum number of secondary nodes in a shard
+    * Minimum number of nodes for each shard.
     */
     @SerializedName("MinReplicateSetNodeNum")
     @Expose
     private Long MinReplicateSetNodeNum;
 
     /**
-    * Maximum number of secondary nodes in a shard
+    * Maximum number of nodes for each shard.
     */
     @SerializedName("MaxReplicateSetNodeNum")
     @Expose
     private Long MaxReplicateSetNodeNum;
 
     /**
-    * Server type. Valid values: 0 (HIO), 4 (HIO10G)
+    * Cluster specification type. Valid values are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-     * Get Specification information identifier 
-     * @return SpecCode Specification information identifier
+     * Get Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
+ - Node types are as follows:
+ - mongo: Mongod node.
+ - mongos: Mongos node.
+ - cfgstr: ConfigServer node.
+ - Specification types are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
+ - Memory specifications are as follows:
+ - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
+ - Unit: g, indicating GB. 128g means 128 GB. 
+     * @return SpecCode Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
+ - Node types are as follows:
+ - mongo: Mongod node.
+ - mongos: Mongos node.
+ - cfgstr: ConfigServer node.
+ - Specification types are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
+ - Memory specifications are as follows:
+ - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
+ - Unit: g, indicating GB. 128g means 128 GB.
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set Specification information identifier
-     * @param SpecCode Specification information identifier
+     * Set Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
+ - Node types are as follows:
+ - mongo: Mongod node.
+ - mongos: Mongos node.
+ - cfgstr: ConfigServer node.
+ - Specification types are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
+ - Memory specifications are as follows:
+ - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
+ - Unit: g, indicating GB. 128g means 128 GB.
+     * @param SpecCode Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
+ - Node types are as follows:
+ - mongo: Mongod node.
+ - mongos: Mongos node.
+ - cfgstr: ConfigServer node.
+ - Specification types are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
+ - Memory specifications are as follows:
+ - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
+ - Unit: g, indicating GB. 128g means 128 GB.
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
     }
 
     /**
-     * Get Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable) 
-     * @return Status Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
+     * Get Saleable specification status flag. Valid values are as follows:
+ - 0: selling stopped.
+ - 1: available for sale. 
+     * @return Status Saleable specification status flag. Valid values are as follows:
+ - 0: selling stopped.
+ - 1: available for sale.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
-     * @param Status Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
+     * Set Saleable specification status flag. Valid values are as follows:
+ - 0: selling stopped.
+ - 1: available for sale.
+     * @param Status Saleable specification status flag. Valid values are as follows:
+ - 0: selling stopped.
+ - 1: available for sale.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Computing resource specification in terms of CPU core 
-     * @return Cpu Computing resource specification in terms of CPU core
+     * Get Computing resource specification, indicating the number of CPU cores. 
+     * @return Cpu Computing resource specification, indicating the number of CPU cores.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Computing resource specification in terms of CPU core
-     * @param Cpu Computing resource specification in terms of CPU core
+     * Set Computing resource specification, indicating the number of CPU cores.
+     * @param Cpu Computing resource specification, indicating the number of CPU cores.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Memory size in MB 
-     * @return Memory Memory size in MB
+     * Get Memory specification. Unit: MB. 
+     * @return Memory Memory specification. Unit: MB.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory size in MB
-     * @param Memory Memory size in MB
+     * Set Memory specification. Unit: MB.
+     * @param Memory Memory specification. Unit: MB.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Default disk size in MB 
-     * @return DefaultStorage Default disk size in MB
+     * Get Default disk specification. Unit: MB. 
+     * @return DefaultStorage Default disk specification. Unit: MB.
      */
     public Long getDefaultStorage() {
         return this.DefaultStorage;
     }
 
     /**
-     * Set Default disk size in MB
-     * @param DefaultStorage Default disk size in MB
+     * Set Default disk specification. Unit: MB.
+     * @param DefaultStorage Default disk specification. Unit: MB.
      */
     public void setDefaultStorage(Long DefaultStorage) {
         this.DefaultStorage = DefaultStorage;
     }
 
     /**
-     * Get Maximum disk size in MB 
-     * @return MaxStorage Maximum disk size in MB
+     * Get Maximum disk specification. Unit: MB. 
+     * @return MaxStorage Maximum disk specification. Unit: MB.
      */
     public Long getMaxStorage() {
         return this.MaxStorage;
     }
 
     /**
-     * Set Maximum disk size in MB
-     * @param MaxStorage Maximum disk size in MB
+     * Set Maximum disk specification. Unit: MB.
+     * @param MaxStorage Maximum disk specification. Unit: MB.
      */
     public void setMaxStorage(Long MaxStorage) {
         this.MaxStorage = MaxStorage;
     }
 
     /**
-     * Get Minimum disk size in MB 
-     * @return MinStorage Minimum disk size in MB
+     * Get Minimum disk specification. Unit: MB. 
+     * @return MinStorage Minimum disk specification. Unit: MB.
      */
     public Long getMinStorage() {
         return this.MinStorage;
     }
 
     /**
-     * Set Minimum disk size in MB
-     * @param MinStorage Minimum disk size in MB
+     * Set Minimum disk specification. Unit: MB.
+     * @param MinStorage Minimum disk specification. Unit: MB.
      */
     public void setMinStorage(Long MinStorage) {
         this.MinStorage = MinStorage;
     }
 
     /**
-     * Get Maximum QPS 
-     * @return Qps Maximum QPS
+     * Get Maximum number of requests per second. Unit: requests/second. 
+     * @return Qps Maximum number of requests per second. Unit: requests/second.
      */
     public Long getQps() {
         return this.Qps;
     }
 
     /**
-     * Set Maximum QPS
-     * @param Qps Maximum QPS
+     * Set Maximum number of requests per second. Unit: requests/second.
+     * @param Qps Maximum number of requests per second. Unit: requests/second.
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
     /**
-     * Get Maximum number of connections 
-     * @return Conns Maximum number of connections
+     * Get Maximum number of connections supported for the specification. 
+     * @return Conns Maximum number of connections supported for the specification.
      */
     public Long getConns() {
         return this.Conns;
     }
 
     /**
-     * Set Maximum number of connections
-     * @param Conns Maximum number of connections
+     * Set Maximum number of connections supported for the specification.
+     * @param Conns Maximum number of connections supported for the specification.
      */
     public void setConns(Long Conns) {
         this.Conns = Conns;
     }
 
     /**
-     * Get MongoDB version information of an instance 
-     * @return MongoVersionCode MongoDB version information of an instance
+     * Get Storage engine version information on instances.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine. 
+     * @return MongoVersionCode Storage engine version information on instances.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
      */
     public String getMongoVersionCode() {
         return this.MongoVersionCode;
     }
 
     /**
-     * Set MongoDB version information of an instance
-     * @param MongoVersionCode MongoDB version information of an instance
+     * Set Storage engine version information on instances.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+     * @param MongoVersionCode Storage engine version information on instances.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
      */
     public void setMongoVersionCode(String MongoVersionCode) {
         this.MongoVersionCode = MongoVersionCode;
     }
 
     /**
-     * Get MongoDB version number of an instance 
-     * @return MongoVersionValue MongoDB version number of an instance
+     * Get Digital version corresponding to the instance version. 
+     * @return MongoVersionValue Digital version corresponding to the instance version.
      */
     public Long getMongoVersionValue() {
         return this.MongoVersionValue;
     }
 
     /**
-     * Set MongoDB version number of an instance
-     * @param MongoVersionValue MongoDB version number of an instance
+     * Set Digital version corresponding to the instance version.
+     * @param MongoVersionValue Digital version corresponding to the instance version.
      */
     public void setMongoVersionValue(Long MongoVersionValue) {
         this.MongoVersionValue = MongoVersionValue;
     }
 
     /**
-     * Get MongoDB version number of an instance (short) 
-     * @return Version MongoDB version number of an instance (short)
+     * Get Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
+ 
+     * @return Version Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
+
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set MongoDB version number of an instance (short)
-     * @param Version MongoDB version number of an instance (short)
+     * Set Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
+
+     * @param Version Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
+
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Storage engine 
-     * @return EngineName Storage engine
+     * Get Storage engine. 
+     * @return EngineName Storage engine.
      */
     public String getEngineName() {
         return this.EngineName;
     }
 
     /**
-     * Set Storage engine
-     * @param EngineName Storage engine
+     * Set Storage engine.
+     * @param EngineName Storage engine.
      */
     public void setEngineName(String EngineName) {
         this.EngineName = EngineName;
     }
 
     /**
-     * Get Cluster type. Valid values: 1 (sharding cluster), 0 (replica set cluster) 
-     * @return ClusterType Cluster type. Valid values: 1 (sharding cluster), 0 (replica set cluster)
+     * Get Cluster type. Valid values are as follows:
+ - 1: sharded cluster.
+ - 0: replica set cluster. 
+     * @return ClusterType Cluster type. Valid values are as follows:
+ - 1: sharded cluster.
+ - 0: replica set cluster.
      */
     public Long getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set Cluster type. Valid values: 1 (sharding cluster), 0 (replica set cluster)
-     * @param ClusterType Cluster type. Valid values: 1 (sharding cluster), 0 (replica set cluster)
+     * Set Cluster type. Valid values are as follows:
+ - 1: sharded cluster.
+ - 0: replica set cluster.
+     * @param ClusterType Cluster type. Valid values are as follows:
+ - 1: sharded cluster.
+ - 0: replica set cluster.
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get Minimum number of secondary nodes in a replica set 
-     * @return MinNodeNum Minimum number of secondary nodes in a replica set
+     * Get Minimum number of nodes for each replica set. 
+     * @return MinNodeNum Minimum number of nodes for each replica set.
      */
     public Long getMinNodeNum() {
         return this.MinNodeNum;
     }
 
     /**
-     * Set Minimum number of secondary nodes in a replica set
-     * @param MinNodeNum Minimum number of secondary nodes in a replica set
+     * Set Minimum number of nodes for each replica set.
+     * @param MinNodeNum Minimum number of nodes for each replica set.
      */
     public void setMinNodeNum(Long MinNodeNum) {
         this.MinNodeNum = MinNodeNum;
     }
 
     /**
-     * Get Maximum number of secondary nodes in a replica set 
-     * @return MaxNodeNum Maximum number of secondary nodes in a replica set
+     * Get Maximum number of nodes for each replica set. 
+     * @return MaxNodeNum Maximum number of nodes for each replica set.
      */
     public Long getMaxNodeNum() {
         return this.MaxNodeNum;
     }
 
     /**
-     * Set Maximum number of secondary nodes in a replica set
-     * @param MaxNodeNum Maximum number of secondary nodes in a replica set
+     * Set Maximum number of nodes for each replica set.
+     * @param MaxNodeNum Maximum number of nodes for each replica set.
      */
     public void setMaxNodeNum(Long MaxNodeNum) {
         this.MaxNodeNum = MaxNodeNum;
     }
 
     /**
-     * Get Minimum number of shards 
-     * @return MinReplicateSetNum Minimum number of shards
+     * Get Minimum number of shards. 
+     * @return MinReplicateSetNum Minimum number of shards.
      */
     public Long getMinReplicateSetNum() {
         return this.MinReplicateSetNum;
     }
 
     /**
-     * Set Minimum number of shards
-     * @param MinReplicateSetNum Minimum number of shards
+     * Set Minimum number of shards.
+     * @param MinReplicateSetNum Minimum number of shards.
      */
     public void setMinReplicateSetNum(Long MinReplicateSetNum) {
         this.MinReplicateSetNum = MinReplicateSetNum;
     }
 
     /**
-     * Get Maximum number of shards 
-     * @return MaxReplicateSetNum Maximum number of shards
+     * Get Maximum number of shards. 
+     * @return MaxReplicateSetNum Maximum number of shards.
      */
     public Long getMaxReplicateSetNum() {
         return this.MaxReplicateSetNum;
     }
 
     /**
-     * Set Maximum number of shards
-     * @param MaxReplicateSetNum Maximum number of shards
+     * Set Maximum number of shards.
+     * @param MaxReplicateSetNum Maximum number of shards.
      */
     public void setMaxReplicateSetNum(Long MaxReplicateSetNum) {
         this.MaxReplicateSetNum = MaxReplicateSetNum;
     }
 
     /**
-     * Get Minimum number of secondary nodes in a shard 
-     * @return MinReplicateSetNodeNum Minimum number of secondary nodes in a shard
+     * Get Minimum number of nodes for each shard. 
+     * @return MinReplicateSetNodeNum Minimum number of nodes for each shard.
      */
     public Long getMinReplicateSetNodeNum() {
         return this.MinReplicateSetNodeNum;
     }
 
     /**
-     * Set Minimum number of secondary nodes in a shard
-     * @param MinReplicateSetNodeNum Minimum number of secondary nodes in a shard
+     * Set Minimum number of nodes for each shard.
+     * @param MinReplicateSetNodeNum Minimum number of nodes for each shard.
      */
     public void setMinReplicateSetNodeNum(Long MinReplicateSetNodeNum) {
         this.MinReplicateSetNodeNum = MinReplicateSetNodeNum;
     }
 
     /**
-     * Get Maximum number of secondary nodes in a shard 
-     * @return MaxReplicateSetNodeNum Maximum number of secondary nodes in a shard
+     * Get Maximum number of nodes for each shard. 
+     * @return MaxReplicateSetNodeNum Maximum number of nodes for each shard.
      */
     public Long getMaxReplicateSetNodeNum() {
         return this.MaxReplicateSetNodeNum;
     }
 
     /**
-     * Set Maximum number of secondary nodes in a shard
-     * @param MaxReplicateSetNodeNum Maximum number of secondary nodes in a shard
+     * Set Maximum number of nodes for each shard.
+     * @param MaxReplicateSetNodeNum Maximum number of nodes for each shard.
      */
     public void setMaxReplicateSetNodeNum(Long MaxReplicateSetNodeNum) {
         this.MaxReplicateSetNodeNum = MaxReplicateSetNodeNum;
     }
 
     /**
-     * Get Server type. Valid values: 0 (HIO), 4 (HIO10G) 
-     * @return MachineType Server type. Valid values: 0 (HIO), 4 (HIO10G)
+     * Get Cluster specification type. Valid values are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type. 
+     * @return MachineType Cluster specification type. Valid values are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set Server type. Valid values: 0 (HIO), 4 (HIO10G)
-     * @param MachineType Server type. Valid values: 0 (HIO), 4 (HIO10G)
+     * Set Cluster specification type. Valid values are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
+     * @param MachineType Cluster specification type. Valid values are as follows:
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;

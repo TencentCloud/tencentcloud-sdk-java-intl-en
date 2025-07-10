@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateBackupDBInstanceResponse extends AbstractModel {
 
     /**
-    * The status of the queried backup process.
+    * Request ID.
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateBackupDBInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The status of the queried backup process. 
-     * @return AsyncRequestId The status of the queried backup process.
+     * Get Request ID. 
+     * @return AsyncRequestId Request ID.
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set The status of the queried backup process.
-     * @param AsyncRequestId The status of the queried backup process.
+     * Set Request ID.
+     * @param AsyncRequestId Request ID.
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

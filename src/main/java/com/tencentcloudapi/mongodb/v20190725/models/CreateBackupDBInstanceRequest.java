@@ -24,69 +24,79 @@ import java.util.HashMap;
 public class CreateBackupDBInstanceRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Valid values: 0 (logical backup), 1 (physical backup)
+    * Sets the backup method.
+ - 0: logical backup.
+ - 1: physical backup.
     */
     @SerializedName("BackupMethod")
     @Expose
     private Long BackupMethod;
 
     /**
-    * Backup remarks
+    * Backup remarks information.
     */
     @SerializedName("BackupRemark")
     @Expose
     private String BackupRemark;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list. 
+     * @return InstanceId Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+     * @param InstanceId Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Valid values: 0 (logical backup), 1 (physical backup) 
-     * @return BackupMethod Valid values: 0 (logical backup), 1 (physical backup)
+     * Get Sets the backup method.
+ - 0: logical backup.
+ - 1: physical backup. 
+     * @return BackupMethod Sets the backup method.
+ - 0: logical backup.
+ - 1: physical backup.
      */
     public Long getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set Valid values: 0 (logical backup), 1 (physical backup)
-     * @param BackupMethod Valid values: 0 (logical backup), 1 (physical backup)
+     * Set Sets the backup method.
+ - 0: logical backup.
+ - 1: physical backup.
+     * @param BackupMethod Sets the backup method.
+ - 0: logical backup.
+ - 1: physical backup.
      */
     public void setBackupMethod(Long BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * Get Backup remarks 
-     * @return BackupRemark Backup remarks
+     * Get Backup remarks information. 
+     * @return BackupRemark Backup remarks information.
      */
     public String getBackupRemark() {
         return this.BackupRemark;
     }
 
     /**
-     * Set Backup remarks
-     * @param BackupRemark Backup remarks
+     * Set Backup remarks information.
+     * @param BackupRemark Backup remarks information.
      */
     public void setBackupRemark(String BackupRemark) {
         this.BackupRemark = BackupRemark;

@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class DescribeClientConnectionsRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+    * Specifies the ID of the instance to be queried. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
+    * Number of entries returned per request. Minimum value: 1. Maximum value: 1000. Default value: 1000.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset. Default value: 0.
+    * Offset. Default value: 0. Offset = Limit x (page number - 1).
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page 
-     * @return InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * Get Specifies the ID of the instance to be queried. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+ 
+     * @return InstanceId Specifies the ID of the instance to be queried. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-     * @param InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * Set Specifies the ID of the instance to be queried. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
+     * @param InstanceId Specifies the ID of the instance to be queried. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000 
-     * @return Limit Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
+     * Get Number of entries returned per request. Minimum value: 1. Maximum value: 1000. Default value: 1000. 
+     * @return Limit Number of entries returned per request. Minimum value: 1. Maximum value: 1000. Default value: 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
-     * @param Limit Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
+     * Set Number of entries returned per request. Minimum value: 1. Maximum value: 1000. Default value: 1000.
+     * @param Limit Number of entries returned per request. Minimum value: 1. Maximum value: 1000. Default value: 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. Default value: 0. 
-     * @return Offset Offset. Default value: 0.
+     * Get Offset. Default value: 0. Offset = Limit x (page number - 1). 
+     * @return Offset Offset. Default value: 0. Offset = Limit x (page number - 1).
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: 0.
-     * @param Offset Offset. Default value: 0.
+     * Set Offset. Default value: 0. Offset = Limit x (page number - 1).
+     * @param Offset Offset. Default value: 0. Offset = Limit x (page number - 1).
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

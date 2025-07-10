@@ -87,12 +87,25 @@ public class BackupDownloadTask extends AbstractModel {
     private Long BackupMethod;
 
     /**
-    * Backup description you set when starting a backup task
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the remarks for backup.
     */
     @SerializedName("BackupDesc")
     @Expose
     private String BackupDesc;
+
+    /**
+    * Region information.
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * Bucket information.
+    */
+    @SerializedName("Bucket")
+    @Expose
+    private String Bucket;
 
     /**
      * Get Task creation time 
@@ -239,23 +252,51 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Backup description you set when starting a backup task
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return BackupDesc Backup description you set when starting a backup task
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the remarks for backup. 
+     * @return BackupDesc Specifies the remarks for backup.
      */
     public String getBackupDesc() {
         return this.BackupDesc;
     }
 
     /**
-     * Set Backup description you set when starting a backup task
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param BackupDesc Backup description you set when starting a backup task
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the remarks for backup.
+     * @param BackupDesc Specifies the remarks for backup.
      */
     public void setBackupDesc(String BackupDesc) {
         this.BackupDesc = BackupDesc;
+    }
+
+    /**
+     * Get Region information. 
+     * @return Region Region information.
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set Region information.
+     * @param Region Region information.
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get Bucket information. 
+     * @return Bucket Bucket information.
+     */
+    public String getBucket() {
+        return this.Bucket;
+    }
+
+    /**
+     * Set Bucket information.
+     * @param Bucket Bucket information.
+     */
+    public void setBucket(String Bucket) {
+        this.Bucket = Bucket;
     }
 
     public BackupDownloadTask() {
@@ -296,6 +337,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.BackupDesc != null) {
             this.BackupDesc = new String(source.BackupDesc);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
     }
 
 
@@ -313,6 +360,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
         this.setParamSimple(map, prefix + "BackupDesc", this.BackupDesc);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Bucket", this.Bucket);
 
     }
 }
