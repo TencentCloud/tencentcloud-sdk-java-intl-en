@@ -135,6 +135,28 @@ Note: You need to specify at least one callback URL.
     }
 
     /**
+     *create a live pad rule.
+     * @param req CreateLivePadRuleRequest
+     * @return CreateLivePadRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLivePadRuleResponse CreateLivePadRule(CreateLivePadRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLivePadRule", CreateLivePadRuleResponse.class);
+    }
+
+    /**
+     *create a live pad template
+     * @param req CreateLivePadTemplateRequest
+     * @return CreateLivePadTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLivePadTemplateResponse CreateLivePadTemplate(CreateLivePadTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLivePadTemplate", CreateLivePadTemplateResponse.class);
+    }
+
+    /**
      *This API is used to create a task to pull streams from video files or an external live streaming source and publish them to a specified destination URL.
 Notes:
 1. By default, you can have at most 20 stream pulling tasks at a time. You can submit a ticket to raise the limit.
