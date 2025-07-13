@@ -53,6 +53,13 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel {
     private Long AutoBackupType;
 
     /**
+    * Specifies the retention days of full backup files. unit: day.
+    */
+    @SerializedName("BackupStorageDays")
+    @Expose
+    private Long BackupStorageDays;
+
+    /**
      * Get ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
  
      * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
@@ -120,6 +127,22 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel {
         this.AutoBackupType = AutoBackupType;
     }
 
+    /**
+     * Get Specifies the retention days of full backup files. unit: day. 
+     * @return BackupStorageDays Specifies the retention days of full backup files. unit: day.
+     */
+    public Long getBackupStorageDays() {
+        return this.BackupStorageDays;
+    }
+
+    /**
+     * Set Specifies the retention days of full backup files. unit: day.
+     * @param BackupStorageDays Specifies the retention days of full backup files. unit: day.
+     */
+    public void setBackupStorageDays(Long BackupStorageDays) {
+        this.BackupStorageDays = BackupStorageDays;
+    }
+
     public ModifyAutoBackupConfigRequest() {
     }
 
@@ -143,6 +166,9 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel {
         if (source.AutoBackupType != null) {
             this.AutoBackupType = new Long(source.AutoBackupType);
         }
+        if (source.BackupStorageDays != null) {
+            this.BackupStorageDays = new Long(source.BackupStorageDays);
+        }
     }
 
 
@@ -154,6 +180,7 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "WeekDays.", this.WeekDays);
         this.setParamSimple(map, prefix + "TimePeriod", this.TimePeriod);
         this.setParamSimple(map, prefix + "AutoBackupType", this.AutoBackupType);
+        this.setParamSimple(map, prefix + "BackupStorageDays", this.BackupStorageDays);
 
     }
 }
