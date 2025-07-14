@@ -101,6 +101,14 @@ public class StartPublishCdnStreamRequest extends AbstractModel {
     private McuFeedBackRoomParams [] FeedBackRoomParams;
 
     /**
+    * Relay Recording Parameters.
+Example value:{"UniRecord":1,"RecordKey": "test_recore_key_a"}
+    */
+    @SerializedName("RecordParams")
+    @Expose
+    private McuRecordParams RecordParams;
+
+    /**
      * Get The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are relayed. 
      * @return SdkAppId The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are relayed.
      */
@@ -276,6 +284,26 @@ public class StartPublishCdnStreamRequest extends AbstractModel {
         this.FeedBackRoomParams = FeedBackRoomParams;
     }
 
+    /**
+     * Get Relay Recording Parameters.
+Example value:{"UniRecord":1,"RecordKey": "test_recore_key_a"} 
+     * @return RecordParams Relay Recording Parameters.
+Example value:{"UniRecord":1,"RecordKey": "test_recore_key_a"}
+     */
+    public McuRecordParams getRecordParams() {
+        return this.RecordParams;
+    }
+
+    /**
+     * Set Relay Recording Parameters.
+Example value:{"UniRecord":1,"RecordKey": "test_recore_key_a"}
+     * @param RecordParams Relay Recording Parameters.
+Example value:{"UniRecord":1,"RecordKey": "test_recore_key_a"}
+     */
+    public void setRecordParams(McuRecordParams RecordParams) {
+        this.RecordParams = RecordParams;
+    }
+
     public StartPublishCdnStreamRequest() {
     }
 
@@ -323,6 +351,9 @@ public class StartPublishCdnStreamRequest extends AbstractModel {
                 this.FeedBackRoomParams[i] = new McuFeedBackRoomParams(source.FeedBackRoomParams[i]);
             }
         }
+        if (source.RecordParams != null) {
+            this.RecordParams = new McuRecordParams(source.RecordParams);
+        }
     }
 
 
@@ -341,6 +372,7 @@ public class StartPublishCdnStreamRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
         this.setParamObj(map, prefix + "SeiParams.", this.SeiParams);
         this.setParamArrayObj(map, prefix + "FeedBackRoomParams.", this.FeedBackRoomParams);
+        this.setParamObj(map, prefix + "RecordParams.", this.RecordParams);
 
     }
 }
