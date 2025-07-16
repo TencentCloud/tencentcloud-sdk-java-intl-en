@@ -66,6 +66,34 @@ public class GenerateDataKeyRequest extends AbstractModel {
     private String EncryptionAlgorithm;
 
     /**
+    * Indicates whether the data generated key is managed by KMS. 1 means the key is managed and saved by KMS. 0 means the key is not managed by KMS.
+    */
+    @SerializedName("IsHostedByKms")
+    @Expose
+    private Long IsHostedByKms;
+
+    /**
+    * Name of the data key. required when IsHostedByKms is 1. optional when IsHostedByKms is 0 as KMS does not manage it.
+    */
+    @SerializedName("DataKeyName")
+    @Expose
+    private String DataKeyName;
+
+    /**
+    * Describes the data key. maximum 100 bytes.
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
+    */
+    @SerializedName("HsmClusterId")
+    @Expose
+    private String HsmClusterId;
+
+    /**
      * Get Globally unique CMK ID 
      * @return KeyId Globally unique CMK ID
      */
@@ -161,6 +189,70 @@ public class GenerateDataKeyRequest extends AbstractModel {
         this.EncryptionAlgorithm = EncryptionAlgorithm;
     }
 
+    /**
+     * Get Indicates whether the data generated key is managed by KMS. 1 means the key is managed and saved by KMS. 0 means the key is not managed by KMS. 
+     * @return IsHostedByKms Indicates whether the data generated key is managed by KMS. 1 means the key is managed and saved by KMS. 0 means the key is not managed by KMS.
+     */
+    public Long getIsHostedByKms() {
+        return this.IsHostedByKms;
+    }
+
+    /**
+     * Set Indicates whether the data generated key is managed by KMS. 1 means the key is managed and saved by KMS. 0 means the key is not managed by KMS.
+     * @param IsHostedByKms Indicates whether the data generated key is managed by KMS. 1 means the key is managed and saved by KMS. 0 means the key is not managed by KMS.
+     */
+    public void setIsHostedByKms(Long IsHostedByKms) {
+        this.IsHostedByKms = IsHostedByKms;
+    }
+
+    /**
+     * Get Name of the data key. required when IsHostedByKms is 1. optional when IsHostedByKms is 0 as KMS does not manage it. 
+     * @return DataKeyName Name of the data key. required when IsHostedByKms is 1. optional when IsHostedByKms is 0 as KMS does not manage it.
+     */
+    public String getDataKeyName() {
+        return this.DataKeyName;
+    }
+
+    /**
+     * Set Name of the data key. required when IsHostedByKms is 1. optional when IsHostedByKms is 0 as KMS does not manage it.
+     * @param DataKeyName Name of the data key. required when IsHostedByKms is 1. optional when IsHostedByKms is 0 as KMS does not manage it.
+     */
+    public void setDataKeyName(String DataKeyName) {
+        this.DataKeyName = DataKeyName;
+    }
+
+    /**
+     * Get Describes the data key. maximum 100 bytes. 
+     * @return Description Describes the data key. maximum 100 bytes.
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set Describes the data key. maximum 100 bytes.
+     * @param Description Describes the data key. maximum 100 bytes.
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId. 
+     * @return HsmClusterId HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
+     */
+    public String getHsmClusterId() {
+        return this.HsmClusterId;
+    }
+
+    /**
+     * Set HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
+     * @param HsmClusterId HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
+     */
+    public void setHsmClusterId(String HsmClusterId) {
+        this.HsmClusterId = HsmClusterId;
+    }
+
     public GenerateDataKeyRequest() {
     }
 
@@ -187,6 +279,18 @@ public class GenerateDataKeyRequest extends AbstractModel {
         if (source.EncryptionAlgorithm != null) {
             this.EncryptionAlgorithm = new String(source.EncryptionAlgorithm);
         }
+        if (source.IsHostedByKms != null) {
+            this.IsHostedByKms = new Long(source.IsHostedByKms);
+        }
+        if (source.DataKeyName != null) {
+            this.DataKeyName = new String(source.DataKeyName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.HsmClusterId != null) {
+            this.HsmClusterId = new String(source.HsmClusterId);
+        }
     }
 
 
@@ -200,6 +304,10 @@ public class GenerateDataKeyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EncryptionContext", this.EncryptionContext);
         this.setParamSimple(map, prefix + "EncryptionPublicKey", this.EncryptionPublicKey);
         this.setParamSimple(map, prefix + "EncryptionAlgorithm", this.EncryptionAlgorithm);
+        this.setParamSimple(map, prefix + "IsHostedByKms", this.IsHostedByKms);
+        this.setParamSimple(map, prefix + "DataKeyName", this.DataKeyName);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
 
     }
 }

@@ -83,6 +83,17 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to cancel scheduled deletion for a data key.
+     * @param req CancelDataKeyDeletionRequest
+     * @return CancelDataKeyDeletionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelDataKeyDeletionResponse CancelDataKeyDeletion(CancelDataKeyDeletionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelDataKeyDeletion", CancelDataKeyDeletionResponse.class);
+    }
+
+    /**
      *This API is used to unarchive keys. If a key is unarchived, its status will be `Enabled`.
      * @param req CancelKeyArchiveRequest
      * @return CancelKeyArchiveResponse
@@ -157,6 +168,28 @@ public class KmsClient extends AbstractClient{
     public DeleteWhiteBoxKeyResponse DeleteWhiteBoxKey(DeleteWhiteBoxKeyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteWhiteBoxKey", DeleteWhiteBoxKeyResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve data key details.
+     * @param req DescribeDataKeyRequest
+     * @return DescribeDataKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataKeyResponse DescribeDataKey(DescribeDataKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataKey", DescribeDataKeyResponse.class);
+    }
+
+    /**
+     *This API is used to return the key attribute information list.
+     * @param req DescribeDataKeysRequest
+     * @return DescribeDataKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataKeysResponse DescribeDataKeys(DescribeDataKeysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataKeys", DescribeDataKeysResponse.class);
     }
 
     /**
@@ -237,6 +270,28 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to disable the data key.
+     * @param req DisableDataKeyRequest
+     * @return DisableDataKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableDataKeyResponse DisableDataKey(DisableDataKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableDataKey", DisableDataKeyResponse.class);
+    }
+
+    /**
+     *This API is used to batch disable data keys.
+     * @param req DisableDataKeysRequest
+     * @return DisableDataKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableDataKeysResponse DisableDataKeys(DisableDataKeysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableDataKeys", DisableDataKeysResponse.class);
+    }
+
+    /**
      *This API is used to disable a master key. The disabled key cannot be used for encryption and decryption operations.
      * @param req DisableKeyRequest
      * @return DisableKeyResponse
@@ -289,6 +344,28 @@ public class KmsClient extends AbstractClient{
     public DisableWhiteBoxKeysResponse DisableWhiteBoxKeys(DisableWhiteBoxKeysRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DisableWhiteBoxKeys", DisableWhiteBoxKeysResponse.class);
+    }
+
+    /**
+     *This API is used to enable the data key.
+     * @param req EnableDataKeyRequest
+     * @return EnableDataKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableDataKeyResponse EnableDataKey(EnableDataKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableDataKey", EnableDataKeyResponse.class);
+    }
+
+    /**
+     *This API is used to batch enable data keys.
+     * @param req EnableDataKeysRequest
+     * @return EnableDataKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableDataKeysResponse EnableDataKeys(EnableDataKeysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableDataKeys", EnableDataKeysResponse.class);
     }
 
     /**
@@ -391,6 +468,28 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to download the encrypted data key.
+     * @param req GetDataKeyCiphertextBlobRequest
+     * @return GetDataKeyCiphertextBlobResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDataKeyCiphertextBlobResponse GetDataKeyCiphertextBlob(GetDataKeyCiphertextBlobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetDataKeyCiphertextBlob", GetDataKeyCiphertextBlobResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the key plaintext.
+     * @param req GetDataKeyPlaintextRequest
+     * @return GetDataKeyPlaintextResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDataKeyPlaintextResponse GetDataKeyPlaintext(GetDataKeyPlaintextRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetDataKeyPlaintext", GetDataKeyPlaintextResponse.class);
+    }
+
+    /**
      *Query whether the specified CMK has the key rotation function.
      * @param req GetKeyRotationStatusRequest
      * @return GetKeyRotationStatusResponse
@@ -446,6 +545,17 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *Data key import API, managed by KMS.
+     * @param req ImportDataKeyRequest
+     * @return ImportDataKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportDataKeyResponse ImportDataKey(ImportDataKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportDataKey", ImportDataKeyResponse.class);
+    }
+
+    /**
      *This API is used to import key material into an EXTERNAL CMK. The key obtained through the `GetParametersForImport` API is used to encrypt the key material. You can only reimport the same key material into the specified CMK and set a new expiration time. After the CMK key material is imported, it cannot be replaced. After the key material is expired or deleted, the CMK will remain unavailable until the same key material is reimported. CMKs are independent, which means that the same key material can be imported into different CMKs, but data encrypted by one CMK cannot be decrypted by another one.
 Key material can only be imported into CMKs in `Enabled` and `PendingImport` status.
      * @param req ImportKeyMaterialRequest
@@ -466,6 +576,28 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
     public ListAlgorithmsResponse ListAlgorithms(ListAlgorithmsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListAlgorithms", ListAlgorithmsResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve data key list details based on specified Offset and Limit.
+     * @param req ListDataKeyDetailRequest
+     * @return ListDataKeyDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDataKeyDetailResponse ListDataKeyDetail(ListDataKeyDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDataKeyDetail", ListDataKeyDetailResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of data keys.
+     * @param req ListDataKeysRequest
+     * @return ListDataKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDataKeysResponse ListDataKeys(ListDataKeysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDataKeys", ListDataKeysResponse.class);
     }
 
     /**
@@ -557,6 +689,17 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
     }
 
     /**
+     *Schedule deletion for a data key.
+     * @param req ScheduleDataKeyDeletionRequest
+     * @return ScheduleDataKeyDeletionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScheduleDataKeyDeletionResponse ScheduleDataKeyDeletion(ScheduleDataKeyDeletionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ScheduleDataKeyDeletion", ScheduleDataKeyDeletionResponse.class);
+    }
+
+    /**
      *CMK planned deletion API, used to specify the time of CMK deletion, the optional time interval is [7,30] days
      * @param req ScheduleKeyDeletionRequest
      * @return ScheduleKeyDeletionResponse
@@ -599,6 +742,28 @@ Note that only when KeyUsage is `ASYMMETRIC_SIGN_VERIFY_${ALGORITHM}` (e.g., `AS
     public UpdateAliasResponse UpdateAlias(UpdateAliasRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateAlias", UpdateAliasResponse.class);
+    }
+
+    /**
+     *This API is used to modify the description of a data key.
+     * @param req UpdateDataKeyDescriptionRequest
+     * @return UpdateDataKeyDescriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDataKeyDescriptionResponse UpdateDataKeyDescription(UpdateDataKeyDescriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateDataKeyDescription", UpdateDataKeyDescriptionResponse.class);
+    }
+
+    /**
+     *This API is used to modify the data key name.
+     * @param req UpdateDataKeyNameRequest
+     * @return UpdateDataKeyNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDataKeyNameResponse UpdateDataKeyName(UpdateDataKeyNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateDataKeyName", UpdateDataKeyNameResponse.class);
     }
 
     /**

@@ -150,6 +150,55 @@ public class KeyMetadata extends AbstractModel {
     private Long LastRotateTime;
 
     /**
+    * Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+    */
+    @SerializedName("IsSyncReplica")
+    @Expose
+    private Long IsSyncReplica;
+
+    /**
+    * Synchronous original region.
+    */
+    @SerializedName("SourceRegion")
+    @Expose
+    private String SourceRegion;
+
+    /**
+    * The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+    */
+    @SerializedName("SyncStatus")
+    @Expose
+    private Long SyncStatus;
+
+    /**
+    * Describes the synchronous result.
+    */
+    @SerializedName("SyncMessages")
+    @Expose
+    private String SyncMessages;
+
+    /**
+    * Start time of synchronization.
+    */
+    @SerializedName("SyncStartTime")
+    @Expose
+    private Long SyncStartTime;
+
+    /**
+    * Specifies the synchronous end time.
+    */
+    @SerializedName("SyncEndTime")
+    @Expose
+    private Long SyncEndTime;
+
+    /**
+    * Synchronous original cluster. if empty, it is a public cloud public cluster.
+    */
+    @SerializedName("SourceHsmClusterId")
+    @Expose
+    private String SourceHsmClusterId;
+
+    /**
      * Get Globally unique CMK ID 
      * @return KeyId Globally unique CMK ID
      */
@@ -437,6 +486,118 @@ public class KeyMetadata extends AbstractModel {
         this.LastRotateTime = LastRotateTime;
     }
 
+    /**
+     * Get Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica). 
+     * @return IsSyncReplica Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+     */
+    public Long getIsSyncReplica() {
+        return this.IsSyncReplica;
+    }
+
+    /**
+     * Set Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+     * @param IsSyncReplica Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+     */
+    public void setIsSyncReplica(Long IsSyncReplica) {
+        this.IsSyncReplica = IsSyncReplica;
+    }
+
+    /**
+     * Get Synchronous original region. 
+     * @return SourceRegion Synchronous original region.
+     */
+    public String getSourceRegion() {
+        return this.SourceRegion;
+    }
+
+    /**
+     * Set Synchronous original region.
+     * @param SourceRegion Synchronous original region.
+     */
+    public void setSourceRegion(String SourceRegion) {
+        this.SourceRegion = SourceRegion;
+    }
+
+    /**
+     * Get The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing). 
+     * @return SyncStatus The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+     */
+    public Long getSyncStatus() {
+        return this.SyncStatus;
+    }
+
+    /**
+     * Set The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+     * @param SyncStatus The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+     */
+    public void setSyncStatus(Long SyncStatus) {
+        this.SyncStatus = SyncStatus;
+    }
+
+    /**
+     * Get Describes the synchronous result. 
+     * @return SyncMessages Describes the synchronous result.
+     */
+    public String getSyncMessages() {
+        return this.SyncMessages;
+    }
+
+    /**
+     * Set Describes the synchronous result.
+     * @param SyncMessages Describes the synchronous result.
+     */
+    public void setSyncMessages(String SyncMessages) {
+        this.SyncMessages = SyncMessages;
+    }
+
+    /**
+     * Get Start time of synchronization. 
+     * @return SyncStartTime Start time of synchronization.
+     */
+    public Long getSyncStartTime() {
+        return this.SyncStartTime;
+    }
+
+    /**
+     * Set Start time of synchronization.
+     * @param SyncStartTime Start time of synchronization.
+     */
+    public void setSyncStartTime(Long SyncStartTime) {
+        this.SyncStartTime = SyncStartTime;
+    }
+
+    /**
+     * Get Specifies the synchronous end time. 
+     * @return SyncEndTime Specifies the synchronous end time.
+     */
+    public Long getSyncEndTime() {
+        return this.SyncEndTime;
+    }
+
+    /**
+     * Set Specifies the synchronous end time.
+     * @param SyncEndTime Specifies the synchronous end time.
+     */
+    public void setSyncEndTime(Long SyncEndTime) {
+        this.SyncEndTime = SyncEndTime;
+    }
+
+    /**
+     * Get Synchronous original cluster. if empty, it is a public cloud public cluster. 
+     * @return SourceHsmClusterId Synchronous original cluster. if empty, it is a public cloud public cluster.
+     */
+    public String getSourceHsmClusterId() {
+        return this.SourceHsmClusterId;
+    }
+
+    /**
+     * Set Synchronous original cluster. if empty, it is a public cloud public cluster.
+     * @param SourceHsmClusterId Synchronous original cluster. if empty, it is a public cloud public cluster.
+     */
+    public void setSourceHsmClusterId(String SourceHsmClusterId) {
+        this.SourceHsmClusterId = SourceHsmClusterId;
+    }
+
     public KeyMetadata() {
     }
 
@@ -499,6 +660,27 @@ public class KeyMetadata extends AbstractModel {
         if (source.LastRotateTime != null) {
             this.LastRotateTime = new Long(source.LastRotateTime);
         }
+        if (source.IsSyncReplica != null) {
+            this.IsSyncReplica = new Long(source.IsSyncReplica);
+        }
+        if (source.SourceRegion != null) {
+            this.SourceRegion = new String(source.SourceRegion);
+        }
+        if (source.SyncStatus != null) {
+            this.SyncStatus = new Long(source.SyncStatus);
+        }
+        if (source.SyncMessages != null) {
+            this.SyncMessages = new String(source.SyncMessages);
+        }
+        if (source.SyncStartTime != null) {
+            this.SyncStartTime = new Long(source.SyncStartTime);
+        }
+        if (source.SyncEndTime != null) {
+            this.SyncEndTime = new Long(source.SyncEndTime);
+        }
+        if (source.SourceHsmClusterId != null) {
+            this.SourceHsmClusterId = new String(source.SourceHsmClusterId);
+        }
     }
 
 
@@ -524,6 +706,13 @@ public class KeyMetadata extends AbstractModel {
         this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
         this.setParamSimple(map, prefix + "RotateDays", this.RotateDays);
         this.setParamSimple(map, prefix + "LastRotateTime", this.LastRotateTime);
+        this.setParamSimple(map, prefix + "IsSyncReplica", this.IsSyncReplica);
+        this.setParamSimple(map, prefix + "SourceRegion", this.SourceRegion);
+        this.setParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
+        this.setParamSimple(map, prefix + "SyncMessages", this.SyncMessages);
+        this.setParamSimple(map, prefix + "SyncStartTime", this.SyncStartTime);
+        this.setParamSimple(map, prefix + "SyncEndTime", this.SyncEndTime);
+        this.setParamSimple(map, prefix + "SourceHsmClusterId", this.SourceHsmClusterId);
 
     }
 }
