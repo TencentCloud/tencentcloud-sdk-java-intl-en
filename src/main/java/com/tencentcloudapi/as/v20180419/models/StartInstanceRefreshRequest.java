@@ -38,8 +38,8 @@ public class StartInstanceRefreshRequest extends AbstractModel {
     private RefreshSettings RefreshSettings;
 
     /**
-    * Refresh mode. Valid values:
-<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+    * Refresh mode. default value: ROLLING_UPDATE_RESET. valid values:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
 <li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
     */
     @SerializedName("RefreshMode")
@@ -79,11 +79,11 @@ public class StartInstanceRefreshRequest extends AbstractModel {
     }
 
     /**
-     * Get Refresh mode. Valid values:
-<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+     * Get Refresh mode. default value: ROLLING_UPDATE_RESET. valid values:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
 <li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li> 
-     * @return RefreshMode Refresh mode. Valid values:
-<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+     * @return RefreshMode Refresh mode. default value: ROLLING_UPDATE_RESET. valid values:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
 <li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
      */
     public String getRefreshMode() {
@@ -91,11 +91,11 @@ public class StartInstanceRefreshRequest extends AbstractModel {
     }
 
     /**
-     * Set Refresh mode. Valid values:
-<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+     * Set Refresh mode. default value: ROLLING_UPDATE_RESET. valid values:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
 <li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
-     * @param RefreshMode Refresh mode. Valid values:
-<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+     * @param RefreshMode Refresh mode. default value: ROLLING_UPDATE_RESET. valid values:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
 <li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
      */
     public void setRefreshMode(String RefreshMode) {

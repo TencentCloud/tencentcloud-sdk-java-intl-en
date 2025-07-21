@@ -153,14 +153,16 @@ public class AutoScalingGroup extends AbstractModel {
     private String [] SubnetIdSet;
 
     /**
-    * Termination policy
+    * Destruction policy. valid values are as follows:.
+<Li>OLDEST_INSTANCE: terminate the oldest instance in the scaling group first, default value.</li>.
+<Li>NEWEST_INSTANCE: terminate the newest instance in the scaling group first.</li>.
     */
     @SerializedName("TerminationPolicySet")
     @Expose
     private String [] TerminationPolicySet;
 
     /**
-    * VPC ID
+    * VPC ID.
     */
     @SerializedName("VpcId")
     @Expose
@@ -174,7 +176,10 @@ public class AutoScalingGroup extends AbstractModel {
     private String [] ZoneSet;
 
     /**
-    * Retry policy
+    * Retry policy. a partially successful scaling operation is considered a failed activity. valid values are as follows:.
+<Li>IMMEDIATE_RETRY: default value, means retry immediately, attempting retries in rapid succession over a short period. cease further retries after a certain number of consecutive failures (5).</li>.
+<Li>INCREMENTAL_INTERVALS: specifies incremental interval retry. with the number of consecutive failures, the retry interval gradually increases. the first 10 retries are quick retry, and the follow-up retry interval gradually expands to 10 minutes, 30 minutes, 60 minutes, and one day.</li>.
+<Li>NO_RETRY: there will be no retry until another user call or Alarm information is received.</li>.
     */
     @SerializedName("RetryPolicy")
     @Expose
@@ -202,7 +207,7 @@ public class AutoScalingGroup extends AbstractModel {
     private ServiceSettings ServiceSettings;
 
     /**
-    * The number of IPv6 addresses that an instance has.
+    * The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
     */
     @SerializedName("Ipv6AddressCount")
     @Expose
@@ -227,7 +232,8 @@ public class AutoScalingGroup extends AbstractModel {
     private String HealthCheckType;
 
     /**
-    * Grace period of the CLB health check
+    * Grace period of the CLB health check. the scaled-out instances IN `IN_SERVICE` will not be marked as `CLB_UNHEALTHY` within the specified time range.
+Default value: 0. value range: [0, 7200]. measurement unit: seconds.
     */
     @SerializedName("LoadBalancerHealthCheckGracePeriod")
     @Expose
@@ -261,7 +267,6 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
 
     /**
     * Instance name sequencing settings.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("InstanceNameIndexSettings")
     @Expose
@@ -580,32 +585,40 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Termination policy 
-     * @return TerminationPolicySet Termination policy
+     * Get Destruction policy. valid values are as follows:.
+<Li>OLDEST_INSTANCE: terminate the oldest instance in the scaling group first, default value.</li>.
+<Li>NEWEST_INSTANCE: terminate the newest instance in the scaling group first.</li>. 
+     * @return TerminationPolicySet Destruction policy. valid values are as follows:.
+<Li>OLDEST_INSTANCE: terminate the oldest instance in the scaling group first, default value.</li>.
+<Li>NEWEST_INSTANCE: terminate the newest instance in the scaling group first.</li>.
      */
     public String [] getTerminationPolicySet() {
         return this.TerminationPolicySet;
     }
 
     /**
-     * Set Termination policy
-     * @param TerminationPolicySet Termination policy
+     * Set Destruction policy. valid values are as follows:.
+<Li>OLDEST_INSTANCE: terminate the oldest instance in the scaling group first, default value.</li>.
+<Li>NEWEST_INSTANCE: terminate the newest instance in the scaling group first.</li>.
+     * @param TerminationPolicySet Destruction policy. valid values are as follows:.
+<Li>OLDEST_INSTANCE: terminate the oldest instance in the scaling group first, default value.</li>.
+<Li>NEWEST_INSTANCE: terminate the newest instance in the scaling group first.</li>.
      */
     public void setTerminationPolicySet(String [] TerminationPolicySet) {
         this.TerminationPolicySet = TerminationPolicySet;
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get VPC ID. 
+     * @return VpcId VPC ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set VPC ID.
+     * @param VpcId VPC ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -628,16 +641,28 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Retry policy 
-     * @return RetryPolicy Retry policy
+     * Get Retry policy. a partially successful scaling operation is considered a failed activity. valid values are as follows:.
+<Li>IMMEDIATE_RETRY: default value, means retry immediately, attempting retries in rapid succession over a short period. cease further retries after a certain number of consecutive failures (5).</li>.
+<Li>INCREMENTAL_INTERVALS: specifies incremental interval retry. with the number of consecutive failures, the retry interval gradually increases. the first 10 retries are quick retry, and the follow-up retry interval gradually expands to 10 minutes, 30 minutes, 60 minutes, and one day.</li>.
+<Li>NO_RETRY: there will be no retry until another user call or Alarm information is received.</li>. 
+     * @return RetryPolicy Retry policy. a partially successful scaling operation is considered a failed activity. valid values are as follows:.
+<Li>IMMEDIATE_RETRY: default value, means retry immediately, attempting retries in rapid succession over a short period. cease further retries after a certain number of consecutive failures (5).</li>.
+<Li>INCREMENTAL_INTERVALS: specifies incremental interval retry. with the number of consecutive failures, the retry interval gradually increases. the first 10 retries are quick retry, and the follow-up retry interval gradually expands to 10 minutes, 30 minutes, 60 minutes, and one day.</li>.
+<Li>NO_RETRY: there will be no retry until another user call or Alarm information is received.</li>.
      */
     public String getRetryPolicy() {
         return this.RetryPolicy;
     }
 
     /**
-     * Set Retry policy
-     * @param RetryPolicy Retry policy
+     * Set Retry policy. a partially successful scaling operation is considered a failed activity. valid values are as follows:.
+<Li>IMMEDIATE_RETRY: default value, means retry immediately, attempting retries in rapid succession over a short period. cease further retries after a certain number of consecutive failures (5).</li>.
+<Li>INCREMENTAL_INTERVALS: specifies incremental interval retry. with the number of consecutive failures, the retry interval gradually increases. the first 10 retries are quick retry, and the follow-up retry interval gradually expands to 10 minutes, 30 minutes, 60 minutes, and one day.</li>.
+<Li>NO_RETRY: there will be no retry until another user call or Alarm information is received.</li>.
+     * @param RetryPolicy Retry policy. a partially successful scaling operation is considered a failed activity. valid values are as follows:.
+<Li>IMMEDIATE_RETRY: default value, means retry immediately, attempting retries in rapid succession over a short period. cease further retries after a certain number of consecutive failures (5).</li>.
+<Li>INCREMENTAL_INTERVALS: specifies incremental interval retry. with the number of consecutive failures, the retry interval gradually increases. the first 10 retries are quick retry, and the follow-up retry interval gradually expands to 10 minutes, 30 minutes, 60 minutes, and one day.</li>.
+<Li>NO_RETRY: there will be no retry until another user call or Alarm information is received.</li>.
      */
     public void setRetryPolicy(String RetryPolicy) {
         this.RetryPolicy = RetryPolicy;
@@ -692,16 +717,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get The number of IPv6 addresses that an instance has. 
-     * @return Ipv6AddressCount The number of IPv6 addresses that an instance has.
+     * Get The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1). 
+     * @return Ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
      */
     public Long getIpv6AddressCount() {
         return this.Ipv6AddressCount;
     }
 
     /**
-     * Set The number of IPv6 addresses that an instance has.
-     * @param Ipv6AddressCount The number of IPv6 addresses that an instance has.
+     * Set The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+     * @param Ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
      */
     public void setIpv6AddressCount(Long Ipv6AddressCount) {
         this.Ipv6AddressCount = Ipv6AddressCount;
@@ -756,16 +781,20 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Grace period of the CLB health check 
-     * @return LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check
+     * Get Grace period of the CLB health check. the scaled-out instances IN `IN_SERVICE` will not be marked as `CLB_UNHEALTHY` within the specified time range.
+Default value: 0. value range: [0, 7200]. measurement unit: seconds. 
+     * @return LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check. the scaled-out instances IN `IN_SERVICE` will not be marked as `CLB_UNHEALTHY` within the specified time range.
+Default value: 0. value range: [0, 7200]. measurement unit: seconds.
      */
     public Long getLoadBalancerHealthCheckGracePeriod() {
         return this.LoadBalancerHealthCheckGracePeriod;
     }
 
     /**
-     * Set Grace period of the CLB health check
-     * @param LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check
+     * Set Grace period of the CLB health check. the scaled-out instances IN `IN_SERVICE` will not be marked as `CLB_UNHEALTHY` within the specified time range.
+Default value: 0. value range: [0, 7200]. measurement unit: seconds.
+     * @param LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check. the scaled-out instances IN `IN_SERVICE` will not be marked as `CLB_UNHEALTHY` within the specified time range.
+Default value: 0. value range: [0, 7200]. measurement unit: seconds.
      */
     public void setLoadBalancerHealthCheckGracePeriod(Long LoadBalancerHealthCheckGracePeriod) {
         this.LoadBalancerHealthCheckGracePeriod = LoadBalancerHealthCheckGracePeriod;
@@ -840,10 +869,8 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
     }
 
     /**
-     * Get Instance name sequencing settings.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Instance name sequencing settings. 
      * @return InstanceNameIndexSettings Instance name sequencing settings.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public InstanceNameIndexSettings getInstanceNameIndexSettings() {
         return this.InstanceNameIndexSettings;
@@ -851,9 +878,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Instance name sequencing settings.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param InstanceNameIndexSettings Instance name sequencing settings.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setInstanceNameIndexSettings(InstanceNameIndexSettings InstanceNameIndexSettings) {
         this.InstanceNameIndexSettings = InstanceNameIndexSettings;

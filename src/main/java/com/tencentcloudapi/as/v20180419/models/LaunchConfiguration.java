@@ -102,7 +102,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String UserData;
 
     /**
-    * Creation time of the launch configuration.
+    * Specifies the startup configuration creation time. uses UTC standard time.
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -130,7 +130,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String LaunchConfigurationStatus;
 
     /**
-    * Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
+    * Instance billing type. valid values:.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
+<Li>SPOTPAID: spot payment</li>.
+<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
+<Li>CDCPAID: dedicated cluster payment</li>.
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -159,8 +163,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private InstanceTag [] InstanceTags;
 
     /**
-    * Tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
     */
     @SerializedName("Tags")
     @Expose
@@ -174,14 +177,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long VersionNumber;
 
     /**
-    * Update time
+    * Last update time is in standard UTC time.
     */
     @SerializedName("UpdatedTime")
     @Expose
     private String UpdatedTime;
 
     /**
-    * CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+    * Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
     */
     @SerializedName("CamRoleName")
     @Expose
@@ -246,7 +249,6 @@ Note: This field is default to empty
 
     /**
     * Image family name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ImageFamily")
     @Expose
@@ -440,16 +442,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creation time of the launch configuration. 
-     * @return CreatedTime Creation time of the launch configuration.
+     * Get Specifies the startup configuration creation time. uses UTC standard time. 
+     * @return CreatedTime Specifies the startup configuration creation time. uses UTC standard time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Creation time of the launch configuration.
-     * @param CreatedTime Creation time of the launch configuration.
+     * Set Specifies the startup configuration creation time. uses UTC standard time.
+     * @param CreatedTime Specifies the startup configuration creation time. uses UTC standard time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
@@ -504,16 +506,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li> 
-     * @return InstanceChargeType Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
+     * Get Instance billing type. valid values:.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
+<Li>SPOTPAID: spot payment</li>.
+<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
+<Li>CDCPAID: dedicated cluster payment</li>. 
+     * @return InstanceChargeType Instance billing type. valid values:.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
+<Li>SPOTPAID: spot payment</li>.
+<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
+<Li>CDCPAID: dedicated cluster payment</li>.
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
-     * @param InstanceChargeType Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
+     * Set Instance billing type. valid values:.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
+<Li>SPOTPAID: spot payment</li>.
+<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
+<Li>CDCPAID: dedicated cluster payment</li>.
+     * @param InstanceChargeType Instance billing type. valid values:.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
+<Li>SPOTPAID: spot payment</li>.
+<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
+<Li>CDCPAID: dedicated cluster payment</li>.
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
@@ -572,20 +590,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Tag list.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it. 
+     * @return Tags Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
+     * @param Tags Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -608,32 +622,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Update time 
-     * @return UpdatedTime Update time
+     * Get Last update time is in standard UTC time. 
+     * @return UpdatedTime Last update time is in standard UTC time.
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set Update time
-     * @param UpdatedTime Update time
+     * Set Last update time is in standard UTC time.
+     * @param UpdatedTime Last update time is in standard UTC time.
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
     }
 
     /**
-     * Get CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API. 
-     * @return CamRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+     * Get Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1). 
+     * @return CamRoleName Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
      */
     public String getCamRoleName() {
         return this.CamRoleName;
     }
 
     /**
-     * Set CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
-     * @param CamRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+     * Set Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+     * @param CamRoleName Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
      */
     public void setCamRoleName(String CamRoleName) {
         this.CamRoleName = CamRoleName;
@@ -772,10 +786,8 @@ Note: This field is default to empty
     }
 
     /**
-     * Get Image family name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Image family name. 
      * @return ImageFamily Image family name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getImageFamily() {
         return this.ImageFamily;
@@ -783,9 +795,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Image family name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ImageFamily Image family name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setImageFamily(String ImageFamily) {
         this.ImageFamily = ImageFamily;

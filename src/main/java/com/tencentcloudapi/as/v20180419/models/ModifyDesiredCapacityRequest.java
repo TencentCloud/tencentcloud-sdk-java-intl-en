@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyDesiredCapacityRequest extends AbstractModel {
 
     /**
-    * Auto scaling group ID
+    * Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
     */
     @SerializedName("AutoScalingGroupId")
     @Expose
     private String AutoScalingGroupId;
 
     /**
-    * Desired capacity
+    * Expected number of instances, value ranges from 0 to 2000, to meet MaxSize >= DesiredCapacity >= MinSize.
     */
     @SerializedName("DesiredCapacity")
     @Expose
     private Long DesiredCapacity;
 
     /**
-    * Minimum number of instances. Value range: 0-2000.
+    * Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
     */
     @SerializedName("MinSize")
     @Expose
     private Long MinSize;
 
     /**
-    * Maximum number of instances. Value range: 0-2000.
+    * Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-     * Get Auto scaling group ID 
-     * @return AutoScalingGroupId Auto scaling group ID
+     * Get Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information. 
+     * @return AutoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
      */
     public String getAutoScalingGroupId() {
         return this.AutoScalingGroupId;
     }
 
     /**
-     * Set Auto scaling group ID
-     * @param AutoScalingGroupId Auto scaling group ID
+     * Set Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+     * @param AutoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
         this.AutoScalingGroupId = AutoScalingGroupId;
     }
 
     /**
-     * Get Desired capacity 
-     * @return DesiredCapacity Desired capacity
+     * Get Expected number of instances, value ranges from 0 to 2000, to meet MaxSize >= DesiredCapacity >= MinSize. 
+     * @return DesiredCapacity Expected number of instances, value ranges from 0 to 2000, to meet MaxSize >= DesiredCapacity >= MinSize.
      */
     public Long getDesiredCapacity() {
         return this.DesiredCapacity;
     }
 
     /**
-     * Set Desired capacity
-     * @param DesiredCapacity Desired capacity
+     * Set Expected number of instances, value ranges from 0 to 2000, to meet MaxSize >= DesiredCapacity >= MinSize.
+     * @param DesiredCapacity Expected number of instances, value ranges from 0 to 2000, to meet MaxSize >= DesiredCapacity >= MinSize.
      */
     public void setDesiredCapacity(Long DesiredCapacity) {
         this.DesiredCapacity = DesiredCapacity;
     }
 
     /**
-     * Get Minimum number of instances. Value range: 0-2000. 
-     * @return MinSize Minimum number of instances. Value range: 0-2000.
+     * Get Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time. 
+     * @return MinSize Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
      */
     public Long getMinSize() {
         return this.MinSize;
     }
 
     /**
-     * Set Minimum number of instances. Value range: 0-2000.
-     * @param MinSize Minimum number of instances. Value range: 0-2000.
+     * Set Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+     * @param MinSize Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
     }
 
     /**
-     * Get Maximum number of instances. Value range: 0-2000. 
-     * @return MaxSize Maximum number of instances. Value range: 0-2000.
+     * Get Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize. 
+     * @return MaxSize Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set Maximum number of instances. Value range: 0-2000.
-     * @param MaxSize Maximum number of instances. Value range: 0-2000.
+     * Set Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
+     * @param MaxSize Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

@@ -24,37 +24,42 @@ import java.util.HashMap;
 public class CreateScalingPolicyRequest extends AbstractModel {
 
     /**
-    * Auto scaling group ID.
+    * Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
     */
     @SerializedName("AutoScalingGroupId")
     @Expose
     private String AutoScalingGroupId;
 
     /**
-    * Alarm trigger policy name.
+    * The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal points.
     */
     @SerializedName("ScalingPolicyName")
     @Expose
     private String ScalingPolicyName;
 
     /**
-    * Scaling policy type. Valid values: <br><li>`SIMPLE` (default): A simple policy</li><li>`TARGET_TRACKING`: A target tracking policy</li>.
+    * Alarm trigger policy type. default: SIMPLE. valid values:.
+<Li>`SIMPLE`: a simple policy.</li>.
+<Li>`TARGET_TRACKING`: a target tracking policy.</li>.
     */
     @SerializedName("ScalingPolicyType")
     @Expose
     private String ScalingPolicyType;
 
     /**
-    * The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+    * After an Alarm is triggered, specifies the method for modifying the expected number of instances. required in the scenario of simple policies. valid values:.
+<Li>CHANGE_IN_CAPACITY: increase or decrease the expected number of instances</li>.
+<Li>EXACT_CAPACITY: adjust to the expected number of instances</li>.
+<Li>PERCENT_CHANGE_IN_CAPACITY: adjust expected instance number by percent</li>.
     */
     @SerializedName("AdjustmentType")
     @Expose
     private String AdjustmentType;
 
     /**
-    * Adjustment value for the expected number of instances after an alarm is triggered, which is applicable only to simple policies.
-<li>When AdjustmentType is set to CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances after the alarm is triggered, while a negative value indicates a decrease in the number of instances after the alarm is triggered.</li>
-<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the alarm is triggered. It should be greater than or equal to 0.</li>
+    * Adjustment value for the expected number of instances after an Alarm is triggered, which is applicable only to simple policies and required in simple policy scenarios.
+<li>When AdjustmentType is CHANGE_IN_CAPACITY, a positive AdjustmentValue indicates an increase IN instances after Alarm trigger, while a negative value indicates a decrease IN instances after Alarm trigger.</li>. 
+<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the Alarm is triggered. it must be at least 0.</li>. 
 <li>When AdjustmentType is set to PERCENT_CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances by a percentage after the alarm is triggered, while a negative value indicates a decrease in the number of instances by a percentage after the alarm is triggered. Unit: %.</li>
     */
     @SerializedName("AdjustmentValue")
@@ -69,18 +74,18 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     private Long Cooldown;
 
     /**
-    * Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
+    * Alarm monitoring metric, apply only to simple policies, required in the scenario of simple policy.
     */
     @SerializedName("MetricAlarm")
     @Expose
     private MetricAlarm MetricAlarm;
 
     /**
-    * Predefined monitoring item, applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+    * Predefined monitoring item, applicable only to target tracking policies. required in the scenario. value range:.
+<Li>ASG_AVG_CPU_UTILIZATION: average cpu utilization</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_OUT: specifies the average outbound private network bandwidth.</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>.
+<Li>ASG_AVG_WAN_TRAFFIC_OUT: specifies the average outbound public network bandwidth.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
     */
     @SerializedName("PredefinedMetricType")
@@ -88,11 +93,11 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     private String PredefinedMetricType;
 
     /**
-    * Target value, which is applicable only to target tracking policies.
-<li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
+    * Target value, applicable only to the target tracking policy, required in the scenario.
+<Li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
     */
     @SerializedName("TargetValue")
@@ -124,77 +129,97 @@ Notification group ID, which is the set of user group IDs.
     private String [] NotificationUserGroupIds;
 
     /**
-     * Get Auto scaling group ID. 
-     * @return AutoScalingGroupId Auto scaling group ID.
+     * Get Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information. 
+     * @return AutoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
      */
     public String getAutoScalingGroupId() {
         return this.AutoScalingGroupId;
     }
 
     /**
-     * Set Auto scaling group ID.
-     * @param AutoScalingGroupId Auto scaling group ID.
+     * Set Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+     * @param AutoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
         this.AutoScalingGroupId = AutoScalingGroupId;
     }
 
     /**
-     * Get Alarm trigger policy name. 
-     * @return ScalingPolicyName Alarm trigger policy name.
+     * Get The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal points. 
+     * @return ScalingPolicyName The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal points.
      */
     public String getScalingPolicyName() {
         return this.ScalingPolicyName;
     }
 
     /**
-     * Set Alarm trigger policy name.
-     * @param ScalingPolicyName Alarm trigger policy name.
+     * Set The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal points.
+     * @param ScalingPolicyName The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal points.
      */
     public void setScalingPolicyName(String ScalingPolicyName) {
         this.ScalingPolicyName = ScalingPolicyName;
     }
 
     /**
-     * Get Scaling policy type. Valid values: <br><li>`SIMPLE` (default): A simple policy</li><li>`TARGET_TRACKING`: A target tracking policy</li>. 
-     * @return ScalingPolicyType Scaling policy type. Valid values: <br><li>`SIMPLE` (default): A simple policy</li><li>`TARGET_TRACKING`: A target tracking policy</li>.
+     * Get Alarm trigger policy type. default: SIMPLE. valid values:.
+<Li>`SIMPLE`: a simple policy.</li>.
+<Li>`TARGET_TRACKING`: a target tracking policy.</li>. 
+     * @return ScalingPolicyType Alarm trigger policy type. default: SIMPLE. valid values:.
+<Li>`SIMPLE`: a simple policy.</li>.
+<Li>`TARGET_TRACKING`: a target tracking policy.</li>.
      */
     public String getScalingPolicyType() {
         return this.ScalingPolicyType;
     }
 
     /**
-     * Set Scaling policy type. Valid values: <br><li>`SIMPLE` (default): A simple policy</li><li>`TARGET_TRACKING`: A target tracking policy</li>.
-     * @param ScalingPolicyType Scaling policy type. Valid values: <br><li>`SIMPLE` (default): A simple policy</li><li>`TARGET_TRACKING`: A target tracking policy</li>.
+     * Set Alarm trigger policy type. default: SIMPLE. valid values:.
+<Li>`SIMPLE`: a simple policy.</li>.
+<Li>`TARGET_TRACKING`: a target tracking policy.</li>.
+     * @param ScalingPolicyType Alarm trigger policy type. default: SIMPLE. valid values:.
+<Li>`SIMPLE`: a simple policy.</li>.
+<Li>`TARGET_TRACKING`: a target tracking policy.</li>.
      */
     public void setScalingPolicyType(String ScalingPolicyType) {
         this.ScalingPolicyType = ScalingPolicyType;
     }
 
     /**
-     * Get The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li> 
-     * @return AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+     * Get After an Alarm is triggered, specifies the method for modifying the expected number of instances. required in the scenario of simple policies. valid values:.
+<Li>CHANGE_IN_CAPACITY: increase or decrease the expected number of instances</li>.
+<Li>EXACT_CAPACITY: adjust to the expected number of instances</li>.
+<Li>PERCENT_CHANGE_IN_CAPACITY: adjust expected instance number by percent</li>. 
+     * @return AdjustmentType After an Alarm is triggered, specifies the method for modifying the expected number of instances. required in the scenario of simple policies. valid values:.
+<Li>CHANGE_IN_CAPACITY: increase or decrease the expected number of instances</li>.
+<Li>EXACT_CAPACITY: adjust to the expected number of instances</li>.
+<Li>PERCENT_CHANGE_IN_CAPACITY: adjust expected instance number by percent</li>.
      */
     public String getAdjustmentType() {
         return this.AdjustmentType;
     }
 
     /**
-     * Set The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
-     * @param AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+     * Set After an Alarm is triggered, specifies the method for modifying the expected number of instances. required in the scenario of simple policies. valid values:.
+<Li>CHANGE_IN_CAPACITY: increase or decrease the expected number of instances</li>.
+<Li>EXACT_CAPACITY: adjust to the expected number of instances</li>.
+<Li>PERCENT_CHANGE_IN_CAPACITY: adjust expected instance number by percent</li>.
+     * @param AdjustmentType After an Alarm is triggered, specifies the method for modifying the expected number of instances. required in the scenario of simple policies. valid values:.
+<Li>CHANGE_IN_CAPACITY: increase or decrease the expected number of instances</li>.
+<Li>EXACT_CAPACITY: adjust to the expected number of instances</li>.
+<Li>PERCENT_CHANGE_IN_CAPACITY: adjust expected instance number by percent</li>.
      */
     public void setAdjustmentType(String AdjustmentType) {
         this.AdjustmentType = AdjustmentType;
     }
 
     /**
-     * Get Adjustment value for the expected number of instances after an alarm is triggered, which is applicable only to simple policies.
-<li>When AdjustmentType is set to CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances after the alarm is triggered, while a negative value indicates a decrease in the number of instances after the alarm is triggered.</li>
-<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the alarm is triggered. It should be greater than or equal to 0.</li>
+     * Get Adjustment value for the expected number of instances after an Alarm is triggered, which is applicable only to simple policies and required in simple policy scenarios.
+<li>When AdjustmentType is CHANGE_IN_CAPACITY, a positive AdjustmentValue indicates an increase IN instances after Alarm trigger, while a negative value indicates a decrease IN instances after Alarm trigger.</li>. 
+<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the Alarm is triggered. it must be at least 0.</li>. 
 <li>When AdjustmentType is set to PERCENT_CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances by a percentage after the alarm is triggered, while a negative value indicates a decrease in the number of instances by a percentage after the alarm is triggered. Unit: %.</li> 
-     * @return AdjustmentValue Adjustment value for the expected number of instances after an alarm is triggered, which is applicable only to simple policies.
-<li>When AdjustmentType is set to CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances after the alarm is triggered, while a negative value indicates a decrease in the number of instances after the alarm is triggered.</li>
-<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the alarm is triggered. It should be greater than or equal to 0.</li>
+     * @return AdjustmentValue Adjustment value for the expected number of instances after an Alarm is triggered, which is applicable only to simple policies and required in simple policy scenarios.
+<li>When AdjustmentType is CHANGE_IN_CAPACITY, a positive AdjustmentValue indicates an increase IN instances after Alarm trigger, while a negative value indicates a decrease IN instances after Alarm trigger.</li>. 
+<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the Alarm is triggered. it must be at least 0.</li>. 
 <li>When AdjustmentType is set to PERCENT_CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances by a percentage after the alarm is triggered, while a negative value indicates a decrease in the number of instances by a percentage after the alarm is triggered. Unit: %.</li>
      */
     public Long getAdjustmentValue() {
@@ -202,13 +227,13 @@ Notification group ID, which is the set of user group IDs.
     }
 
     /**
-     * Set Adjustment value for the expected number of instances after an alarm is triggered, which is applicable only to simple policies.
-<li>When AdjustmentType is set to CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances after the alarm is triggered, while a negative value indicates a decrease in the number of instances after the alarm is triggered.</li>
-<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the alarm is triggered. It should be greater than or equal to 0.</li>
+     * Set Adjustment value for the expected number of instances after an Alarm is triggered, which is applicable only to simple policies and required in simple policy scenarios.
+<li>When AdjustmentType is CHANGE_IN_CAPACITY, a positive AdjustmentValue indicates an increase IN instances after Alarm trigger, while a negative value indicates a decrease IN instances after Alarm trigger.</li>. 
+<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the Alarm is triggered. it must be at least 0.</li>. 
 <li>When AdjustmentType is set to PERCENT_CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances by a percentage after the alarm is triggered, while a negative value indicates a decrease in the number of instances by a percentage after the alarm is triggered. Unit: %.</li>
-     * @param AdjustmentValue Adjustment value for the expected number of instances after an alarm is triggered, which is applicable only to simple policies.
-<li>When AdjustmentType is set to CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances after the alarm is triggered, while a negative value indicates a decrease in the number of instances after the alarm is triggered.</li>
-<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the alarm is triggered. It should be greater than or equal to 0.</li>
+     * @param AdjustmentValue Adjustment value for the expected number of instances after an Alarm is triggered, which is applicable only to simple policies and required in simple policy scenarios.
+<li>When AdjustmentType is CHANGE_IN_CAPACITY, a positive AdjustmentValue indicates an increase IN instances after Alarm trigger, while a negative value indicates a decrease IN instances after Alarm trigger.</li>. 
+<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the Alarm is triggered. it must be at least 0.</li>. 
 <li>When AdjustmentType is set to PERCENT_CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances by a percentage after the alarm is triggered, while a negative value indicates a decrease in the number of instances by a percentage after the alarm is triggered. Unit: %.</li>
      */
     public void setAdjustmentValue(Long AdjustmentValue) {
@@ -232,33 +257,33 @@ Notification group ID, which is the set of user group IDs.
     }
 
     /**
-     * Get Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`. 
-     * @return MetricAlarm Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
+     * Get Alarm monitoring metric, apply only to simple policies, required in the scenario of simple policy. 
+     * @return MetricAlarm Alarm monitoring metric, apply only to simple policies, required in the scenario of simple policy.
      */
     public MetricAlarm getMetricAlarm() {
         return this.MetricAlarm;
     }
 
     /**
-     * Set Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
-     * @param MetricAlarm Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
+     * Set Alarm monitoring metric, apply only to simple policies, required in the scenario of simple policy.
+     * @param MetricAlarm Alarm monitoring metric, apply only to simple policies, required in the scenario of simple policy.
      */
     public void setMetricAlarm(MetricAlarm MetricAlarm) {
         this.MetricAlarm = MetricAlarm;
     }
 
     /**
-     * Get Predefined monitoring item, applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+     * Get Predefined monitoring item, applicable only to target tracking policies. required in the scenario. value range:.
+<Li>ASG_AVG_CPU_UTILIZATION: average cpu utilization</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_OUT: specifies the average outbound private network bandwidth.</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>.
+<Li>ASG_AVG_WAN_TRAFFIC_OUT: specifies the average outbound public network bandwidth.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li> 
-     * @return PredefinedMetricType Predefined monitoring item, applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+     * @return PredefinedMetricType Predefined monitoring item, applicable only to target tracking policies. required in the scenario. value range:.
+<Li>ASG_AVG_CPU_UTILIZATION: average cpu utilization</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_OUT: specifies the average outbound private network bandwidth.</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>.
+<Li>ASG_AVG_WAN_TRAFFIC_OUT: specifies the average outbound public network bandwidth.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
      */
     public String getPredefinedMetricType() {
@@ -266,17 +291,17 @@ Notification group ID, which is the set of user group IDs.
     }
 
     /**
-     * Set Predefined monitoring item, applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+     * Set Predefined monitoring item, applicable only to target tracking policies. required in the scenario. value range:.
+<Li>ASG_AVG_CPU_UTILIZATION: average cpu utilization</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_OUT: specifies the average outbound private network bandwidth.</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>.
+<Li>ASG_AVG_WAN_TRAFFIC_OUT: specifies the average outbound public network bandwidth.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
-     * @param PredefinedMetricType Predefined monitoring item, applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+     * @param PredefinedMetricType Predefined monitoring item, applicable only to target tracking policies. required in the scenario. value range:.
+<Li>ASG_AVG_CPU_UTILIZATION: average cpu utilization</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_OUT: specifies the average outbound private network bandwidth.</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>.
+<Li>ASG_AVG_WAN_TRAFFIC_OUT: specifies the average outbound public network bandwidth.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
      */
     public void setPredefinedMetricType(String PredefinedMetricType) {
@@ -284,17 +309,17 @@ Notification group ID, which is the set of user group IDs.
     }
 
     /**
-     * Get Target value, which is applicable only to target tracking policies.
-<li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
+     * Get Target value, applicable only to the target tracking policy, required in the scenario.
+<Li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li> 
-     * @return TargetValue Target value, which is applicable only to target tracking policies.
-<li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
+     * @return TargetValue Target value, applicable only to the target tracking policy, required in the scenario.
+<Li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
      */
     public Long getTargetValue() {
@@ -302,17 +327,17 @@ Notification group ID, which is the set of user group IDs.
     }
 
     /**
-     * Set Target value, which is applicable only to target tracking policies.
-<li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
+     * Set Target value, applicable only to the target tracking policy, required in the scenario.
+<Li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
-     * @param TargetValue Target value, which is applicable only to target tracking policies.
-<li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
+     * @param TargetValue Target value, applicable only to the target tracking policy, required in the scenario.
+<Li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
      */
     public void setTargetValue(Long TargetValue) {

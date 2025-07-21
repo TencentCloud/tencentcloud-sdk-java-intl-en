@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteScheduledActionRequest extends AbstractModel {
 
     /**
-    * ID of the scheduled task to be deleted.
+    * Scheduled task ID to be deleted. obtain the scheduled task ID by calling the api [DescribeScheduledActions](https://intl.cloud.tencent.com/document/api/377/20450?from_cn_redirect=1) and retrieving the ScheduledActionId from the returned information.
     */
     @SerializedName("ScheduledActionId")
     @Expose
     private String ScheduledActionId;
 
     /**
-     * Get ID of the scheduled task to be deleted. 
-     * @return ScheduledActionId ID of the scheduled task to be deleted.
+     * Get Scheduled task ID to be deleted. obtain the scheduled task ID by calling the api [DescribeScheduledActions](https://intl.cloud.tencent.com/document/api/377/20450?from_cn_redirect=1) and retrieving the ScheduledActionId from the returned information. 
+     * @return ScheduledActionId Scheduled task ID to be deleted. obtain the scheduled task ID by calling the api [DescribeScheduledActions](https://intl.cloud.tencent.com/document/api/377/20450?from_cn_redirect=1) and retrieving the ScheduledActionId from the returned information.
      */
     public String getScheduledActionId() {
         return this.ScheduledActionId;
     }
 
     /**
-     * Set ID of the scheduled task to be deleted.
-     * @param ScheduledActionId ID of the scheduled task to be deleted.
+     * Set Scheduled task ID to be deleted. obtain the scheduled task ID by calling the api [DescribeScheduledActions](https://intl.cloud.tencent.com/document/api/377/20450?from_cn_redirect=1) and retrieving the ScheduledActionId from the returned information.
+     * @param ScheduledActionId Scheduled task ID to be deleted. obtain the scheduled task ID by calling the api [DescribeScheduledActions](https://intl.cloud.tencent.com/document/api/377/20450?from_cn_redirect=1) and retrieving the ScheduledActionId from the returned information.
      */
     public void setScheduledActionId(String ScheduledActionId) {
         this.ScheduledActionId = ScheduledActionId;

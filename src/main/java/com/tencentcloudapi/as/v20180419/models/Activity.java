@@ -39,16 +39,16 @@ public class Activity extends AbstractModel {
 
     /**
     * Scaling activity type. Valid values:
-<li>SCALE_OUT: Scale out an instance.</li>
-<li>SCALE_IN: Scale in an instance.</li>
-<li>ATTACH_INSTANCES: Add an instance.</li>
-<li>REMOVE_INSTANCES: Terminate an instance.</li>
-<li>DETACH_INSTANCES: Remove an instance.</li>
-<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
-<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
-<li>START_INSTANCES: Start an instance.</li>
-<li>STOP_INSTANCES: Stop an instance.</li>
-<li>INVOKE_COMMAND: Execute a command.</li>
+<li>SCALE_OUT: Scale out instance(s).</li>
+<li>SCALE_IN: Scale in instance(s).</li>
+<li>ATTACH_INSTANCES: Add instance(s).</li>
+<li>REMOVE_INSTANCES: Terminate instance(s).</li>
+<li>DETACH_INSTANCES: Remove instance(s).</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Instance(s) unexpectedly terminated in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace unhealthy instance(s).</li>
+<li>START_INSTANCES: Start instance(s).</li>
+<li>STOP_INSTANCES: Stop instance(s).</li>
+<li>INVOKE_COMMAND: Execute a command in instance(s).</li>
     */
     @SerializedName("ActivityType")
     @Expose
@@ -89,21 +89,21 @@ public class Activity extends AbstractModel {
     private String Description;
 
     /**
-    * Start time of the scaling activity.
+    * Start time of the auto scaling activity in UTC standard time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time of the scaling activity.
+    * End time of the scaling activity in UTC standard time.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Creation time of the scaling activity.
+    * Create time of the scaling activity in UTC standard time.
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -131,7 +131,7 @@ public class Activity extends AbstractModel {
     private LifecycleActionResultInfo [] LifecycleActionResultSet;
 
     /**
-    * Detailed description of scaling activity status
+    * Detailed description of the scaling activity status
     */
     @SerializedName("DetailedStatusMessageSet")
     @Expose
@@ -145,7 +145,7 @@ public class Activity extends AbstractModel {
     private InvocationResult [] InvocationResultSet;
 
     /**
-    * Information set of the instances related to the scaling activity.
+    * Related instance information set of the scaling activity.
     */
     @SerializedName("RelatedInstanceSet")
     @Expose
@@ -185,27 +185,27 @@ public class Activity extends AbstractModel {
 
     /**
      * Get Scaling activity type. Valid values:
-<li>SCALE_OUT: Scale out an instance.</li>
-<li>SCALE_IN: Scale in an instance.</li>
-<li>ATTACH_INSTANCES: Add an instance.</li>
-<li>REMOVE_INSTANCES: Terminate an instance.</li>
-<li>DETACH_INSTANCES: Remove an instance.</li>
-<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
-<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
-<li>START_INSTANCES: Start an instance.</li>
-<li>STOP_INSTANCES: Stop an instance.</li>
-<li>INVOKE_COMMAND: Execute a command.</li> 
+<li>SCALE_OUT: Scale out instance(s).</li>
+<li>SCALE_IN: Scale in instance(s).</li>
+<li>ATTACH_INSTANCES: Add instance(s).</li>
+<li>REMOVE_INSTANCES: Terminate instance(s).</li>
+<li>DETACH_INSTANCES: Remove instance(s).</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Instance(s) unexpectedly terminated in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace unhealthy instance(s).</li>
+<li>START_INSTANCES: Start instance(s).</li>
+<li>STOP_INSTANCES: Stop instance(s).</li>
+<li>INVOKE_COMMAND: Execute a command in instance(s).</li> 
      * @return ActivityType Scaling activity type. Valid values:
-<li>SCALE_OUT: Scale out an instance.</li>
-<li>SCALE_IN: Scale in an instance.</li>
-<li>ATTACH_INSTANCES: Add an instance.</li>
-<li>REMOVE_INSTANCES: Terminate an instance.</li>
-<li>DETACH_INSTANCES: Remove an instance.</li>
-<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
-<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
-<li>START_INSTANCES: Start an instance.</li>
-<li>STOP_INSTANCES: Stop an instance.</li>
-<li>INVOKE_COMMAND: Execute a command.</li>
+<li>SCALE_OUT: Scale out instance(s).</li>
+<li>SCALE_IN: Scale in instance(s).</li>
+<li>ATTACH_INSTANCES: Add instance(s).</li>
+<li>REMOVE_INSTANCES: Terminate instance(s).</li>
+<li>DETACH_INSTANCES: Remove instance(s).</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Instance(s) unexpectedly terminated in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace unhealthy instance(s).</li>
+<li>START_INSTANCES: Start instance(s).</li>
+<li>STOP_INSTANCES: Stop instance(s).</li>
+<li>INVOKE_COMMAND: Execute a command in instance(s).</li>
      */
     public String getActivityType() {
         return this.ActivityType;
@@ -213,27 +213,27 @@ public class Activity extends AbstractModel {
 
     /**
      * Set Scaling activity type. Valid values:
-<li>SCALE_OUT: Scale out an instance.</li>
-<li>SCALE_IN: Scale in an instance.</li>
-<li>ATTACH_INSTANCES: Add an instance.</li>
-<li>REMOVE_INSTANCES: Terminate an instance.</li>
-<li>DETACH_INSTANCES: Remove an instance.</li>
-<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
-<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
-<li>START_INSTANCES: Start an instance.</li>
-<li>STOP_INSTANCES: Stop an instance.</li>
-<li>INVOKE_COMMAND: Execute a command.</li>
+<li>SCALE_OUT: Scale out instance(s).</li>
+<li>SCALE_IN: Scale in instance(s).</li>
+<li>ATTACH_INSTANCES: Add instance(s).</li>
+<li>REMOVE_INSTANCES: Terminate instance(s).</li>
+<li>DETACH_INSTANCES: Remove instance(s).</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Instance(s) unexpectedly terminated in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace unhealthy instance(s).</li>
+<li>START_INSTANCES: Start instance(s).</li>
+<li>STOP_INSTANCES: Stop instance(s).</li>
+<li>INVOKE_COMMAND: Execute a command in instance(s).</li>
      * @param ActivityType Scaling activity type. Valid values:
-<li>SCALE_OUT: Scale out an instance.</li>
-<li>SCALE_IN: Scale in an instance.</li>
-<li>ATTACH_INSTANCES: Add an instance.</li>
-<li>REMOVE_INSTANCES: Terminate an instance.</li>
-<li>DETACH_INSTANCES: Remove an instance.</li>
-<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
-<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
-<li>START_INSTANCES: Start an instance.</li>
-<li>STOP_INSTANCES: Stop an instance.</li>
-<li>INVOKE_COMMAND: Execute a command.</li>
+<li>SCALE_OUT: Scale out instance(s).</li>
+<li>SCALE_IN: Scale in instance(s).</li>
+<li>ATTACH_INSTANCES: Add instance(s).</li>
+<li>REMOVE_INSTANCES: Terminate instance(s).</li>
+<li>DETACH_INSTANCES: Remove instance(s).</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Instance(s) unexpectedly terminated in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace unhealthy instance(s).</li>
+<li>START_INSTANCES: Start instance(s).</li>
+<li>STOP_INSTANCES: Stop instance(s).</li>
+<li>INVOKE_COMMAND: Execute a command in instance(s).</li>
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;
@@ -328,48 +328,48 @@ public class Activity extends AbstractModel {
     }
 
     /**
-     * Get Start time of the scaling activity. 
-     * @return StartTime Start time of the scaling activity.
+     * Get Start time of the auto scaling activity in UTC standard time. 
+     * @return StartTime Start time of the auto scaling activity in UTC standard time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the scaling activity.
-     * @param StartTime Start time of the scaling activity.
+     * Set Start time of the auto scaling activity in UTC standard time.
+     * @param StartTime Start time of the auto scaling activity in UTC standard time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of the scaling activity. 
-     * @return EndTime End time of the scaling activity.
+     * Get End time of the scaling activity in UTC standard time. 
+     * @return EndTime End time of the scaling activity in UTC standard time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the scaling activity.
-     * @param EndTime End time of the scaling activity.
+     * Set End time of the scaling activity in UTC standard time.
+     * @param EndTime End time of the scaling activity in UTC standard time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Creation time of the scaling activity. 
-     * @return CreatedTime Creation time of the scaling activity.
+     * Get Create time of the scaling activity in UTC standard time. 
+     * @return CreatedTime Create time of the scaling activity in UTC standard time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Creation time of the scaling activity.
-     * @param CreatedTime Creation time of the scaling activity.
+     * Set Create time of the scaling activity in UTC standard time.
+     * @param CreatedTime Create time of the scaling activity in UTC standard time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
@@ -428,16 +428,16 @@ public class Activity extends AbstractModel {
     }
 
     /**
-     * Get Detailed description of scaling activity status 
-     * @return DetailedStatusMessageSet Detailed description of scaling activity status
+     * Get Detailed description of the scaling activity status 
+     * @return DetailedStatusMessageSet Detailed description of the scaling activity status
      */
     public DetailedStatusMessage [] getDetailedStatusMessageSet() {
         return this.DetailedStatusMessageSet;
     }
 
     /**
-     * Set Detailed description of scaling activity status
-     * @param DetailedStatusMessageSet Detailed description of scaling activity status
+     * Set Detailed description of the scaling activity status
+     * @param DetailedStatusMessageSet Detailed description of the scaling activity status
      */
     public void setDetailedStatusMessageSet(DetailedStatusMessage [] DetailedStatusMessageSet) {
         this.DetailedStatusMessageSet = DetailedStatusMessageSet;
@@ -460,16 +460,16 @@ public class Activity extends AbstractModel {
     }
 
     /**
-     * Get Information set of the instances related to the scaling activity. 
-     * @return RelatedInstanceSet Information set of the instances related to the scaling activity.
+     * Get Related instance information set of the scaling activity. 
+     * @return RelatedInstanceSet Related instance information set of the scaling activity.
      */
     public RelatedInstance [] getRelatedInstanceSet() {
         return this.RelatedInstanceSet;
     }
 
     /**
-     * Set Information set of the instances related to the scaling activity.
-     * @param RelatedInstanceSet Information set of the instances related to the scaling activity.
+     * Set Related instance information set of the scaling activity.
+     * @param RelatedInstanceSet Related instance information set of the scaling activity.
      */
     public void setRelatedInstanceSet(RelatedInstance [] RelatedInstanceSet) {
         this.RelatedInstanceSet = RelatedInstanceSet;

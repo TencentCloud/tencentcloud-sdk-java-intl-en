@@ -31,28 +31,28 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel {
     private String AutoScalingGroupName;
 
     /**
-    * The instance ID.
+    * Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * The minimum number of instances. Value range: 0-2000.
+    * Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
     */
     @SerializedName("MinSize")
     @Expose
     private Long MinSize;
 
     /**
-    * The maximum number of instances. Value range: 0-2000.
+    * Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-    * The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
+    * Expected number of instances, value ranges from 0 to 2000, default value equals current MinSize, to meet MaxSize >= DesiredCapacity >= MinSize.
     */
     @SerializedName("DesiredCapacity")
     @Expose
@@ -82,64 +82,64 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get The instance ID. 
-     * @return InstanceId The instance ID.
+     * Get Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information. 
+     * @return InstanceId Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The instance ID.
-     * @param InstanceId The instance ID.
+     * Set Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
+     * @param InstanceId Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get The minimum number of instances. Value range: 0-2000. 
-     * @return MinSize The minimum number of instances. Value range: 0-2000.
+     * Get Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time. 
+     * @return MinSize Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
      */
     public Long getMinSize() {
         return this.MinSize;
     }
 
     /**
-     * Set The minimum number of instances. Value range: 0-2000.
-     * @param MinSize The minimum number of instances. Value range: 0-2000.
+     * Set Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+     * @param MinSize Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
     }
 
     /**
-     * Get The maximum number of instances. Value range: 0-2000. 
-     * @return MaxSize The maximum number of instances. Value range: 0-2000.
+     * Get Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize. 
+     * @return MaxSize Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set The maximum number of instances. Value range: 0-2000.
-     * @param MaxSize The maximum number of instances. Value range: 0-2000.
+     * Set Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
+     * @param MaxSize Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;
     }
 
     /**
-     * Get The desired capacity. Its value must be greater than the minimum and smaller than the maximum. 
-     * @return DesiredCapacity The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
+     * Get Expected number of instances, value ranges from 0 to 2000, default value equals current MinSize, to meet MaxSize >= DesiredCapacity >= MinSize. 
+     * @return DesiredCapacity Expected number of instances, value ranges from 0 to 2000, default value equals current MinSize, to meet MaxSize >= DesiredCapacity >= MinSize.
      */
     public Long getDesiredCapacity() {
         return this.DesiredCapacity;
     }
 
     /**
-     * Set The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
-     * @param DesiredCapacity The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
+     * Set Expected number of instances, value ranges from 0 to 2000, default value equals current MinSize, to meet MaxSize >= DesiredCapacity >= MinSize.
+     * @param DesiredCapacity Expected number of instances, value ranges from 0 to 2000, default value equals current MinSize, to meet MaxSize >= DesiredCapacity >= MinSize.
      */
     public void setDesiredCapacity(Long DesiredCapacity) {
         this.DesiredCapacity = DesiredCapacity;

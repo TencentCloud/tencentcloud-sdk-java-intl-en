@@ -48,22 +48,30 @@ Default value: CLASSIC_SCALING
     private Boolean ReplaceLoadBalancerUnhealthy;
 
     /**
-    * Replace mode of unhealthy replacement service. Valid values:
-RECREATE: Rebuild an instance to replace the original unhealthy instance.
-RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+    * Replacement mode of the unhealthy replacement service. valid values:.
+RECREATE: rebuild an instance to replace the unhealthy instance.
+RESET: performs a system reinstallation on unhealthy instances while keeping the data disk, private IP address, instance id, and other information unchanged. the instance login settings, hostname, enhanced services, and UserData remain consistent with the current launch configuration.
 Default value: RECREATE.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReplaceMode")
     @Expose
     private String ReplaceMode;
 
     /**
-    * Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+    * Automatic instance Tag update. the default value is False. if this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (this feature takes effect for Tag creation and editing but not Tag deletion.) the update does not take effect immediately due to certain latency.
     */
     @SerializedName("AutoUpdateInstanceTags")
     @Expose
     private Boolean AutoUpdateInstanceTags;
+
+    /**
+    * Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
+<Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
+<Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>.
+    */
+    @SerializedName("DesiredCapacitySyncWithMaxMinSize")
+    @Expose
+    private Boolean DesiredCapacitySyncWithMaxMinSize;
 
     /**
      * Get Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default. 
@@ -126,51 +134,71 @@ Default value: CLASSIC_SCALING
     }
 
     /**
-     * Get Replace mode of unhealthy replacement service. Valid values:
-RECREATE: Rebuild an instance to replace the original unhealthy instance.
-RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+     * Get Replacement mode of the unhealthy replacement service. valid values:.
+RECREATE: rebuild an instance to replace the unhealthy instance.
+RESET: performs a system reinstallation on unhealthy instances while keeping the data disk, private IP address, instance id, and other information unchanged. the instance login settings, hostname, enhanced services, and UserData remain consistent with the current launch configuration.
+Default value: RECREATE. 
+     * @return ReplaceMode Replacement mode of the unhealthy replacement service. valid values:.
+RECREATE: rebuild an instance to replace the unhealthy instance.
+RESET: performs a system reinstallation on unhealthy instances while keeping the data disk, private IP address, instance id, and other information unchanged. the instance login settings, hostname, enhanced services, and UserData remain consistent with the current launch configuration.
 Default value: RECREATE.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReplaceMode Replace mode of unhealthy replacement service. Valid values:
-RECREATE: Rebuild an instance to replace the original unhealthy instance.
-RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
-Default value: RECREATE.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getReplaceMode() {
         return this.ReplaceMode;
     }
 
     /**
-     * Set Replace mode of unhealthy replacement service. Valid values:
-RECREATE: Rebuild an instance to replace the original unhealthy instance.
-RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+     * Set Replacement mode of the unhealthy replacement service. valid values:.
+RECREATE: rebuild an instance to replace the unhealthy instance.
+RESET: performs a system reinstallation on unhealthy instances while keeping the data disk, private IP address, instance id, and other information unchanged. the instance login settings, hostname, enhanced services, and UserData remain consistent with the current launch configuration.
 Default value: RECREATE.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReplaceMode Replace mode of unhealthy replacement service. Valid values:
-RECREATE: Rebuild an instance to replace the original unhealthy instance.
-RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+     * @param ReplaceMode Replacement mode of the unhealthy replacement service. valid values:.
+RECREATE: rebuild an instance to replace the unhealthy instance.
+RESET: performs a system reinstallation on unhealthy instances while keeping the data disk, private IP address, instance id, and other information unchanged. the instance login settings, hostname, enhanced services, and UserData remain consistent with the current launch configuration.
 Default value: RECREATE.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReplaceMode(String ReplaceMode) {
         this.ReplaceMode = ReplaceMode;
     }
 
     /**
-     * Get Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency. 
-     * @return AutoUpdateInstanceTags Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+     * Get Automatic instance Tag update. the default value is False. if this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (this feature takes effect for Tag creation and editing but not Tag deletion.) the update does not take effect immediately due to certain latency. 
+     * @return AutoUpdateInstanceTags Automatic instance Tag update. the default value is False. if this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (this feature takes effect for Tag creation and editing but not Tag deletion.) the update does not take effect immediately due to certain latency.
      */
     public Boolean getAutoUpdateInstanceTags() {
         return this.AutoUpdateInstanceTags;
     }
 
     /**
-     * Set Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
-     * @param AutoUpdateInstanceTags Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+     * Set Automatic instance Tag update. the default value is False. if this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (this feature takes effect for Tag creation and editing but not Tag deletion.) the update does not take effect immediately due to certain latency.
+     * @param AutoUpdateInstanceTags Automatic instance Tag update. the default value is False. if this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (this feature takes effect for Tag creation and editing but not Tag deletion.) the update does not take effect immediately due to certain latency.
      */
     public void setAutoUpdateInstanceTags(Boolean AutoUpdateInstanceTags) {
         this.AutoUpdateInstanceTags = AutoUpdateInstanceTags;
+    }
+
+    /**
+     * Get Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
+<Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
+<Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>. 
+     * @return DesiredCapacitySyncWithMaxMinSize Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
+<Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
+<Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>.
+     */
+    public Boolean getDesiredCapacitySyncWithMaxMinSize() {
+        return this.DesiredCapacitySyncWithMaxMinSize;
+    }
+
+    /**
+     * Set Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
+<Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
+<Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>.
+     * @param DesiredCapacitySyncWithMaxMinSize Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
+<Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
+<Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>.
+     */
+    public void setDesiredCapacitySyncWithMaxMinSize(Boolean DesiredCapacitySyncWithMaxMinSize) {
+        this.DesiredCapacitySyncWithMaxMinSize = DesiredCapacitySyncWithMaxMinSize;
     }
 
     public ServiceSettings() {
@@ -196,6 +224,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AutoUpdateInstanceTags != null) {
             this.AutoUpdateInstanceTags = new Boolean(source.AutoUpdateInstanceTags);
         }
+        if (source.DesiredCapacitySyncWithMaxMinSize != null) {
+            this.DesiredCapacitySyncWithMaxMinSize = new Boolean(source.DesiredCapacitySyncWithMaxMinSize);
+        }
     }
 
 
@@ -208,6 +239,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ReplaceLoadBalancerUnhealthy", this.ReplaceLoadBalancerUnhealthy);
         this.setParamSimple(map, prefix + "ReplaceMode", this.ReplaceMode);
         this.setParamSimple(map, prefix + "AutoUpdateInstanceTags", this.AutoUpdateInstanceTags);
+        this.setParamSimple(map, prefix + "DesiredCapacitySyncWithMaxMinSize", this.DesiredCapacitySyncWithMaxMinSize);
 
     }
 }

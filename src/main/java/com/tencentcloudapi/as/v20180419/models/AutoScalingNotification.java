@@ -38,7 +38,13 @@ public class AutoScalingNotification extends AbstractModel {
     private String [] NotificationUserGroupIds;
 
     /**
-    * List of notification events.
+    * Notification event list. valid values are as follows:.
+<Li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>.
+<Li>SCALE_OUT_FAILED: scale-out failed</li>.
+<Li>SCALE_IN_SUCCESSFUL: scale-in succeeded</li>.
+<Li>SCALE_IN_FAILED: scale-in failed</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>.
     */
     @SerializedName("NotificationTypes")
     @Expose
@@ -52,21 +58,26 @@ public class AutoScalingNotification extends AbstractModel {
     private String AutoScalingNotificationId;
 
     /**
-    * Notification receiver type.
+    * Notification receiver type. valid values:.
+USER_GROUP: specifies the user group.
+TDMQ_CMQ_TOPIC: tdmq for cmq topic.
+TDMQ_CMQ_QUEUE: specifies the tdmq cmq queue.
+`CMQ_QUEUE`: cmq queue. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). unable to select.
+CMQ_TOPIC: cmq topic. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1), unable to select.
     */
     @SerializedName("TargetType")
     @Expose
     private String TargetType;
 
     /**
-    * CMQ queue name.
+    * TDMQ CMQ queue name.
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * CMQ topic name.
+    * TDMQ CMQ topic name.
     */
     @SerializedName("TopicName")
     @Expose
@@ -105,16 +116,40 @@ public class AutoScalingNotification extends AbstractModel {
     }
 
     /**
-     * Get List of notification events. 
-     * @return NotificationTypes List of notification events.
+     * Get Notification event list. valid values are as follows:.
+<Li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>.
+<Li>SCALE_OUT_FAILED: scale-out failed</li>.
+<Li>SCALE_IN_SUCCESSFUL: scale-in succeeded</li>.
+<Li>SCALE_IN_FAILED: scale-in failed</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>. 
+     * @return NotificationTypes Notification event list. valid values are as follows:.
+<Li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>.
+<Li>SCALE_OUT_FAILED: scale-out failed</li>.
+<Li>SCALE_IN_SUCCESSFUL: scale-in succeeded</li>.
+<Li>SCALE_IN_FAILED: scale-in failed</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>.
      */
     public String [] getNotificationTypes() {
         return this.NotificationTypes;
     }
 
     /**
-     * Set List of notification events.
-     * @param NotificationTypes List of notification events.
+     * Set Notification event list. valid values are as follows:.
+<Li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>.
+<Li>SCALE_OUT_FAILED: scale-out failed</li>.
+<Li>SCALE_IN_SUCCESSFUL: scale-in succeeded</li>.
+<Li>SCALE_IN_FAILED: scale-in failed</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>.
+     * @param NotificationTypes Notification event list. valid values are as follows:.
+<Li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>.
+<Li>SCALE_OUT_FAILED: scale-out failed</li>.
+<Li>SCALE_IN_SUCCESSFUL: scale-in succeeded</li>.
+<Li>SCALE_IN_FAILED: scale-in failed</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>.
      */
     public void setNotificationTypes(String [] NotificationTypes) {
         this.NotificationTypes = NotificationTypes;
@@ -137,48 +172,68 @@ public class AutoScalingNotification extends AbstractModel {
     }
 
     /**
-     * Get Notification receiver type. 
-     * @return TargetType Notification receiver type.
+     * Get Notification receiver type. valid values:.
+USER_GROUP: specifies the user group.
+TDMQ_CMQ_TOPIC: tdmq for cmq topic.
+TDMQ_CMQ_QUEUE: specifies the tdmq cmq queue.
+`CMQ_QUEUE`: cmq queue. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). unable to select.
+CMQ_TOPIC: cmq topic. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1), unable to select. 
+     * @return TargetType Notification receiver type. valid values:.
+USER_GROUP: specifies the user group.
+TDMQ_CMQ_TOPIC: tdmq for cmq topic.
+TDMQ_CMQ_QUEUE: specifies the tdmq cmq queue.
+`CMQ_QUEUE`: cmq queue. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). unable to select.
+CMQ_TOPIC: cmq topic. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1), unable to select.
      */
     public String getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set Notification receiver type.
-     * @param TargetType Notification receiver type.
+     * Set Notification receiver type. valid values:.
+USER_GROUP: specifies the user group.
+TDMQ_CMQ_TOPIC: tdmq for cmq topic.
+TDMQ_CMQ_QUEUE: specifies the tdmq cmq queue.
+`CMQ_QUEUE`: cmq queue. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). unable to select.
+CMQ_TOPIC: cmq topic. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1), unable to select.
+     * @param TargetType Notification receiver type. valid values:.
+USER_GROUP: specifies the user group.
+TDMQ_CMQ_TOPIC: tdmq for cmq topic.
+TDMQ_CMQ_QUEUE: specifies the tdmq cmq queue.
+`CMQ_QUEUE`: cmq queue. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). unable to select.
+CMQ_TOPIC: cmq topic. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1), unable to select.
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get CMQ queue name. 
-     * @return QueueName CMQ queue name.
+     * Get TDMQ CMQ queue name. 
+     * @return QueueName TDMQ CMQ queue name.
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set CMQ queue name.
-     * @param QueueName CMQ queue name.
+     * Set TDMQ CMQ queue name.
+     * @param QueueName TDMQ CMQ queue name.
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get CMQ topic name. 
-     * @return TopicName CMQ topic name.
+     * Get TDMQ CMQ topic name. 
+     * @return TopicName TDMQ CMQ topic name.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set CMQ topic name.
-     * @param TopicName CMQ topic name.
+     * Set TDMQ CMQ topic name.
+     * @param TopicName TDMQ CMQ topic name.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

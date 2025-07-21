@@ -25,7 +25,6 @@ public class ExitStandbyResponse extends AbstractModel {
 
     /**
     * Scaling activity ID.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ActivityId")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String RequestId;
 
     /**
-     * Get Scaling activity ID.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Scaling activity ID. 
      * @return ActivityId Scaling activity ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getActivityId() {
         return this.ActivityId;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Scaling activity ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param ActivityId Scaling activity ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setActivityId(String ActivityId) {
         this.ActivityId = ActivityId;

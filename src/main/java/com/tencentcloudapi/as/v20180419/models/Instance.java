@@ -52,33 +52,36 @@ public class Instance extends AbstractModel {
     private String LaunchConfigurationName;
 
     /**
-    * Lifecycle status. Valid values:<br>
-<li>`IN_SERVICE`: The instance is running.
-<li>`CREATING`: The instance is being created.
-<li>`CREATION_FAILED`: The instance fails to be created.
-<li>`TERMINATING`: The instance is being terminated.
-<li>`TERMINATION_FAILED`: The instance fails to be terminated.
-<li>`ATTACHING`: The instance is being bound.
-<li>`ATTACH_FAILED`: The instance fails to be bound.
-<li>`DETACHING`: The instance is being unbound.
-<li>`DETACH_FAILED`: The instance fails to be unbound.
-<li>`ATTACHING_LB`: The LB is being bound.
-<li>DETACHING_LB: The LB is being unbound.
-<li>`MODIFYING_LB`: The LB is being modified.
-<li>`STARTING`: The instance is being started up.
-<li>`START_FAILED`: The instance fails to be started up.
-<li>`STOPPING`: The instance is being shut down.
-<li>`STOP_FAILED`: The instance fails to be shut down.
-<li>`STOPPED`: The instance is shut down.
-<li>`IN_LAUNCHING_HOOK`: The lifecycle hook is being scaled out.
-<li>`IN_TERMINATING_HOOK`: The lifecycle hook is being scaled in.
+    * Lifecycle status. valid values are as follows:.
+<Li>IN_SERVICE: running</li>.
+<Li>CREATING: specifies the instance is being created.</li>.
+<Li>CREATION_FAILED: creation failed.</li>.
+<Li>`TERMINATING`: the instance is being terminated.</li>.
+<Li>`TERMINATION_FAILED`: the instance fails to be terminated.</li>.
+<Li>ATTACHING: binding</li>.
+<Li>`ATTACH_FAILED`: the instance fails to be bound.</li>.
+<Li>DETACHING: specifies the unbinding is in progress.</li>.
+<Li>`DETACH_FAILED`: the instance fails to be unbound.</li>.
+<Li>`ATTACHING_LB`: binding to lb</li>.
+<Li>DETACHING_LB: the lb is being unbound.</li>.
+<Li>`MODIFYING_LB`: the lb is being modified.</li>.
+<Li>`STARTING`: the instance is being started up.</li>.
+<Li>`START_FAILED`: the instance fails to be started up.</li>.
+<Li>`STOPPING`: the instance is being shut down.</li>.
+<Li>`STOP_FAILED`: the instance fails to be shut down.</li>.
+<Li>`STOPPED`: the instance is shut down.</li>.
+<Li>`IN_LAUNCHING_HOOK`: the lifecycle hook is being scaled out.</li>.
+<Li>`IN_TERMINATING_HOOK`: the lifecycle hook is being scaled in.</li>.
     */
     @SerializedName("LifeCycleState")
     @Expose
     private String LifeCycleState;
 
     /**
-    * Health status. Value range: HEALTHY, UNHEALTHY
+    * Health status. valid values are as follows:.
+<Li>HEALTHY: the instance is in Healthy status.</li>.
+<Li>UNHEALTHY: instance ping unreachable</li>.
+<Li>CLB_UNHEALTHY: the instance port listened by clb is unhealthy</li>.
     */
     @SerializedName("HealthStatus")
     @Expose
@@ -106,7 +109,7 @@ public class Instance extends AbstractModel {
     private String CreationType;
 
     /**
-    * Instance addition time
+    * Instance join time is displayed in a format that conforms to the ISO8601 standard and uses UTC time.
     */
     @SerializedName("AddTime")
     @Expose
@@ -134,19 +137,18 @@ public class Instance extends AbstractModel {
     private String AutoScalingGroupName;
 
     /**
-    * Warming up status. Valid values:
-<li>`WAITING_ENTER_WARMUP`: The instance is waiting to be warmed up.
-<li>`NO_NEED_WARMUP`: Warming up is not required.
-<li>`IN_WARMUP`: The instance is being warmed up.
-<li>`AFTER_WARMUP`: Warming up is completed.
+    * Preheat status. valid values are as follows:.
+<Li>WAITING_ENTER_WARMUP: specifies the instance is waiting to enter preheating.</li>.
+<Li>`NO_NEED_WARMUP`: warming up is not required.</li>.
+<Li>IN_WARMUP: preheating.</li>.
+<Li>AFTER_WARMUP: indicates the preheating is completed.</li>.
     */
     @SerializedName("WarmupStatus")
     @Expose
     private String WarmupStatus;
 
     /**
-    * Placement group ID. Only one is allowed.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Placement group ID. Only one can be specified.
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
@@ -217,108 +219,120 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Lifecycle status. Valid values:<br>
-<li>`IN_SERVICE`: The instance is running.
-<li>`CREATING`: The instance is being created.
-<li>`CREATION_FAILED`: The instance fails to be created.
-<li>`TERMINATING`: The instance is being terminated.
-<li>`TERMINATION_FAILED`: The instance fails to be terminated.
-<li>`ATTACHING`: The instance is being bound.
-<li>`ATTACH_FAILED`: The instance fails to be bound.
-<li>`DETACHING`: The instance is being unbound.
-<li>`DETACH_FAILED`: The instance fails to be unbound.
-<li>`ATTACHING_LB`: The LB is being bound.
-<li>DETACHING_LB: The LB is being unbound.
-<li>`MODIFYING_LB`: The LB is being modified.
-<li>`STARTING`: The instance is being started up.
-<li>`START_FAILED`: The instance fails to be started up.
-<li>`STOPPING`: The instance is being shut down.
-<li>`STOP_FAILED`: The instance fails to be shut down.
-<li>`STOPPED`: The instance is shut down.
-<li>`IN_LAUNCHING_HOOK`: The lifecycle hook is being scaled out.
-<li>`IN_TERMINATING_HOOK`: The lifecycle hook is being scaled in. 
-     * @return LifeCycleState Lifecycle status. Valid values:<br>
-<li>`IN_SERVICE`: The instance is running.
-<li>`CREATING`: The instance is being created.
-<li>`CREATION_FAILED`: The instance fails to be created.
-<li>`TERMINATING`: The instance is being terminated.
-<li>`TERMINATION_FAILED`: The instance fails to be terminated.
-<li>`ATTACHING`: The instance is being bound.
-<li>`ATTACH_FAILED`: The instance fails to be bound.
-<li>`DETACHING`: The instance is being unbound.
-<li>`DETACH_FAILED`: The instance fails to be unbound.
-<li>`ATTACHING_LB`: The LB is being bound.
-<li>DETACHING_LB: The LB is being unbound.
-<li>`MODIFYING_LB`: The LB is being modified.
-<li>`STARTING`: The instance is being started up.
-<li>`START_FAILED`: The instance fails to be started up.
-<li>`STOPPING`: The instance is being shut down.
-<li>`STOP_FAILED`: The instance fails to be shut down.
-<li>`STOPPED`: The instance is shut down.
-<li>`IN_LAUNCHING_HOOK`: The lifecycle hook is being scaled out.
-<li>`IN_TERMINATING_HOOK`: The lifecycle hook is being scaled in.
+     * Get Lifecycle status. valid values are as follows:.
+<Li>IN_SERVICE: running</li>.
+<Li>CREATING: specifies the instance is being created.</li>.
+<Li>CREATION_FAILED: creation failed.</li>.
+<Li>`TERMINATING`: the instance is being terminated.</li>.
+<Li>`TERMINATION_FAILED`: the instance fails to be terminated.</li>.
+<Li>ATTACHING: binding</li>.
+<Li>`ATTACH_FAILED`: the instance fails to be bound.</li>.
+<Li>DETACHING: specifies the unbinding is in progress.</li>.
+<Li>`DETACH_FAILED`: the instance fails to be unbound.</li>.
+<Li>`ATTACHING_LB`: binding to lb</li>.
+<Li>DETACHING_LB: the lb is being unbound.</li>.
+<Li>`MODIFYING_LB`: the lb is being modified.</li>.
+<Li>`STARTING`: the instance is being started up.</li>.
+<Li>`START_FAILED`: the instance fails to be started up.</li>.
+<Li>`STOPPING`: the instance is being shut down.</li>.
+<Li>`STOP_FAILED`: the instance fails to be shut down.</li>.
+<Li>`STOPPED`: the instance is shut down.</li>.
+<Li>`IN_LAUNCHING_HOOK`: the lifecycle hook is being scaled out.</li>.
+<Li>`IN_TERMINATING_HOOK`: the lifecycle hook is being scaled in.</li>. 
+     * @return LifeCycleState Lifecycle status. valid values are as follows:.
+<Li>IN_SERVICE: running</li>.
+<Li>CREATING: specifies the instance is being created.</li>.
+<Li>CREATION_FAILED: creation failed.</li>.
+<Li>`TERMINATING`: the instance is being terminated.</li>.
+<Li>`TERMINATION_FAILED`: the instance fails to be terminated.</li>.
+<Li>ATTACHING: binding</li>.
+<Li>`ATTACH_FAILED`: the instance fails to be bound.</li>.
+<Li>DETACHING: specifies the unbinding is in progress.</li>.
+<Li>`DETACH_FAILED`: the instance fails to be unbound.</li>.
+<Li>`ATTACHING_LB`: binding to lb</li>.
+<Li>DETACHING_LB: the lb is being unbound.</li>.
+<Li>`MODIFYING_LB`: the lb is being modified.</li>.
+<Li>`STARTING`: the instance is being started up.</li>.
+<Li>`START_FAILED`: the instance fails to be started up.</li>.
+<Li>`STOPPING`: the instance is being shut down.</li>.
+<Li>`STOP_FAILED`: the instance fails to be shut down.</li>.
+<Li>`STOPPED`: the instance is shut down.</li>.
+<Li>`IN_LAUNCHING_HOOK`: the lifecycle hook is being scaled out.</li>.
+<Li>`IN_TERMINATING_HOOK`: the lifecycle hook is being scaled in.</li>.
      */
     public String getLifeCycleState() {
         return this.LifeCycleState;
     }
 
     /**
-     * Set Lifecycle status. Valid values:<br>
-<li>`IN_SERVICE`: The instance is running.
-<li>`CREATING`: The instance is being created.
-<li>`CREATION_FAILED`: The instance fails to be created.
-<li>`TERMINATING`: The instance is being terminated.
-<li>`TERMINATION_FAILED`: The instance fails to be terminated.
-<li>`ATTACHING`: The instance is being bound.
-<li>`ATTACH_FAILED`: The instance fails to be bound.
-<li>`DETACHING`: The instance is being unbound.
-<li>`DETACH_FAILED`: The instance fails to be unbound.
-<li>`ATTACHING_LB`: The LB is being bound.
-<li>DETACHING_LB: The LB is being unbound.
-<li>`MODIFYING_LB`: The LB is being modified.
-<li>`STARTING`: The instance is being started up.
-<li>`START_FAILED`: The instance fails to be started up.
-<li>`STOPPING`: The instance is being shut down.
-<li>`STOP_FAILED`: The instance fails to be shut down.
-<li>`STOPPED`: The instance is shut down.
-<li>`IN_LAUNCHING_HOOK`: The lifecycle hook is being scaled out.
-<li>`IN_TERMINATING_HOOK`: The lifecycle hook is being scaled in.
-     * @param LifeCycleState Lifecycle status. Valid values:<br>
-<li>`IN_SERVICE`: The instance is running.
-<li>`CREATING`: The instance is being created.
-<li>`CREATION_FAILED`: The instance fails to be created.
-<li>`TERMINATING`: The instance is being terminated.
-<li>`TERMINATION_FAILED`: The instance fails to be terminated.
-<li>`ATTACHING`: The instance is being bound.
-<li>`ATTACH_FAILED`: The instance fails to be bound.
-<li>`DETACHING`: The instance is being unbound.
-<li>`DETACH_FAILED`: The instance fails to be unbound.
-<li>`ATTACHING_LB`: The LB is being bound.
-<li>DETACHING_LB: The LB is being unbound.
-<li>`MODIFYING_LB`: The LB is being modified.
-<li>`STARTING`: The instance is being started up.
-<li>`START_FAILED`: The instance fails to be started up.
-<li>`STOPPING`: The instance is being shut down.
-<li>`STOP_FAILED`: The instance fails to be shut down.
-<li>`STOPPED`: The instance is shut down.
-<li>`IN_LAUNCHING_HOOK`: The lifecycle hook is being scaled out.
-<li>`IN_TERMINATING_HOOK`: The lifecycle hook is being scaled in.
+     * Set Lifecycle status. valid values are as follows:.
+<Li>IN_SERVICE: running</li>.
+<Li>CREATING: specifies the instance is being created.</li>.
+<Li>CREATION_FAILED: creation failed.</li>.
+<Li>`TERMINATING`: the instance is being terminated.</li>.
+<Li>`TERMINATION_FAILED`: the instance fails to be terminated.</li>.
+<Li>ATTACHING: binding</li>.
+<Li>`ATTACH_FAILED`: the instance fails to be bound.</li>.
+<Li>DETACHING: specifies the unbinding is in progress.</li>.
+<Li>`DETACH_FAILED`: the instance fails to be unbound.</li>.
+<Li>`ATTACHING_LB`: binding to lb</li>.
+<Li>DETACHING_LB: the lb is being unbound.</li>.
+<Li>`MODIFYING_LB`: the lb is being modified.</li>.
+<Li>`STARTING`: the instance is being started up.</li>.
+<Li>`START_FAILED`: the instance fails to be started up.</li>.
+<Li>`STOPPING`: the instance is being shut down.</li>.
+<Li>`STOP_FAILED`: the instance fails to be shut down.</li>.
+<Li>`STOPPED`: the instance is shut down.</li>.
+<Li>`IN_LAUNCHING_HOOK`: the lifecycle hook is being scaled out.</li>.
+<Li>`IN_TERMINATING_HOOK`: the lifecycle hook is being scaled in.</li>.
+     * @param LifeCycleState Lifecycle status. valid values are as follows:.
+<Li>IN_SERVICE: running</li>.
+<Li>CREATING: specifies the instance is being created.</li>.
+<Li>CREATION_FAILED: creation failed.</li>.
+<Li>`TERMINATING`: the instance is being terminated.</li>.
+<Li>`TERMINATION_FAILED`: the instance fails to be terminated.</li>.
+<Li>ATTACHING: binding</li>.
+<Li>`ATTACH_FAILED`: the instance fails to be bound.</li>.
+<Li>DETACHING: specifies the unbinding is in progress.</li>.
+<Li>`DETACH_FAILED`: the instance fails to be unbound.</li>.
+<Li>`ATTACHING_LB`: binding to lb</li>.
+<Li>DETACHING_LB: the lb is being unbound.</li>.
+<Li>`MODIFYING_LB`: the lb is being modified.</li>.
+<Li>`STARTING`: the instance is being started up.</li>.
+<Li>`START_FAILED`: the instance fails to be started up.</li>.
+<Li>`STOPPING`: the instance is being shut down.</li>.
+<Li>`STOP_FAILED`: the instance fails to be shut down.</li>.
+<Li>`STOPPED`: the instance is shut down.</li>.
+<Li>`IN_LAUNCHING_HOOK`: the lifecycle hook is being scaled out.</li>.
+<Li>`IN_TERMINATING_HOOK`: the lifecycle hook is being scaled in.</li>.
      */
     public void setLifeCycleState(String LifeCycleState) {
         this.LifeCycleState = LifeCycleState;
     }
 
     /**
-     * Get Health status. Value range: HEALTHY, UNHEALTHY 
-     * @return HealthStatus Health status. Value range: HEALTHY, UNHEALTHY
+     * Get Health status. valid values are as follows:.
+<Li>HEALTHY: the instance is in Healthy status.</li>.
+<Li>UNHEALTHY: instance ping unreachable</li>.
+<Li>CLB_UNHEALTHY: the instance port listened by clb is unhealthy</li>. 
+     * @return HealthStatus Health status. valid values are as follows:.
+<Li>HEALTHY: the instance is in Healthy status.</li>.
+<Li>UNHEALTHY: instance ping unreachable</li>.
+<Li>CLB_UNHEALTHY: the instance port listened by clb is unhealthy</li>.
      */
     public String getHealthStatus() {
         return this.HealthStatus;
     }
 
     /**
-     * Set Health status. Value range: HEALTHY, UNHEALTHY
-     * @param HealthStatus Health status. Value range: HEALTHY, UNHEALTHY
+     * Set Health status. valid values are as follows:.
+<Li>HEALTHY: the instance is in Healthy status.</li>.
+<Li>UNHEALTHY: instance ping unreachable</li>.
+<Li>CLB_UNHEALTHY: the instance port listened by clb is unhealthy</li>.
+     * @param HealthStatus Health status. valid values are as follows:.
+<Li>HEALTHY: the instance is in Healthy status.</li>.
+<Li>UNHEALTHY: instance ping unreachable</li>.
+<Li>CLB_UNHEALTHY: the instance port listened by clb is unhealthy</li>.
      */
     public void setHealthStatus(String HealthStatus) {
         this.HealthStatus = HealthStatus;
@@ -373,16 +387,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Instance addition time 
-     * @return AddTime Instance addition time
+     * Get Instance join time is displayed in a format that conforms to the ISO8601 standard and uses UTC time. 
+     * @return AddTime Instance join time is displayed in a format that conforms to the ISO8601 standard and uses UTC time.
      */
     public String getAddTime() {
         return this.AddTime;
     }
 
     /**
-     * Set Instance addition time
-     * @param AddTime Instance addition time
+     * Set Instance join time is displayed in a format that conforms to the ISO8601 standard and uses UTC time.
+     * @param AddTime Instance join time is displayed in a format that conforms to the ISO8601 standard and uses UTC time.
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
@@ -437,52 +451,48 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Warming up status. Valid values:
-<li>`WAITING_ENTER_WARMUP`: The instance is waiting to be warmed up.
-<li>`NO_NEED_WARMUP`: Warming up is not required.
-<li>`IN_WARMUP`: The instance is being warmed up.
-<li>`AFTER_WARMUP`: Warming up is completed. 
-     * @return WarmupStatus Warming up status. Valid values:
-<li>`WAITING_ENTER_WARMUP`: The instance is waiting to be warmed up.
-<li>`NO_NEED_WARMUP`: Warming up is not required.
-<li>`IN_WARMUP`: The instance is being warmed up.
-<li>`AFTER_WARMUP`: Warming up is completed.
+     * Get Preheat status. valid values are as follows:.
+<Li>WAITING_ENTER_WARMUP: specifies the instance is waiting to enter preheating.</li>.
+<Li>`NO_NEED_WARMUP`: warming up is not required.</li>.
+<Li>IN_WARMUP: preheating.</li>.
+<Li>AFTER_WARMUP: indicates the preheating is completed.</li>. 
+     * @return WarmupStatus Preheat status. valid values are as follows:.
+<Li>WAITING_ENTER_WARMUP: specifies the instance is waiting to enter preheating.</li>.
+<Li>`NO_NEED_WARMUP`: warming up is not required.</li>.
+<Li>IN_WARMUP: preheating.</li>.
+<Li>AFTER_WARMUP: indicates the preheating is completed.</li>.
      */
     public String getWarmupStatus() {
         return this.WarmupStatus;
     }
 
     /**
-     * Set Warming up status. Valid values:
-<li>`WAITING_ENTER_WARMUP`: The instance is waiting to be warmed up.
-<li>`NO_NEED_WARMUP`: Warming up is not required.
-<li>`IN_WARMUP`: The instance is being warmed up.
-<li>`AFTER_WARMUP`: Warming up is completed.
-     * @param WarmupStatus Warming up status. Valid values:
-<li>`WAITING_ENTER_WARMUP`: The instance is waiting to be warmed up.
-<li>`NO_NEED_WARMUP`: Warming up is not required.
-<li>`IN_WARMUP`: The instance is being warmed up.
-<li>`AFTER_WARMUP`: Warming up is completed.
+     * Set Preheat status. valid values are as follows:.
+<Li>WAITING_ENTER_WARMUP: specifies the instance is waiting to enter preheating.</li>.
+<Li>`NO_NEED_WARMUP`: warming up is not required.</li>.
+<Li>IN_WARMUP: preheating.</li>.
+<Li>AFTER_WARMUP: indicates the preheating is completed.</li>.
+     * @param WarmupStatus Preheat status. valid values are as follows:.
+<Li>WAITING_ENTER_WARMUP: specifies the instance is waiting to enter preheating.</li>.
+<Li>`NO_NEED_WARMUP`: warming up is not required.</li>.
+<Li>IN_WARMUP: preheating.</li>.
+<Li>AFTER_WARMUP: indicates the preheating is completed.</li>.
      */
     public void setWarmupStatus(String WarmupStatus) {
         this.WarmupStatus = WarmupStatus;
     }
 
     /**
-     * Get Placement group ID. Only one is allowed.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return DisasterRecoverGroupIds Placement group ID. Only one is allowed.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Placement group ID. Only one can be specified. 
+     * @return DisasterRecoverGroupIds Placement group ID. Only one can be specified.
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
     }
 
     /**
-     * Set Placement group ID. Only one is allowed.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param DisasterRecoverGroupIds Placement group ID. Only one is allowed.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Placement group ID. Only one can be specified.
+     * @param DisasterRecoverGroupIds Placement group ID. Only one can be specified.
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;

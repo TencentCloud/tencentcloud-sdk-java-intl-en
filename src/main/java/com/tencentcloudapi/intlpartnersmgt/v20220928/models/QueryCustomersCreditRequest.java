@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class QueryCustomersCreditRequest extends AbstractModel {
 
     /**
-    * Search condition type. You can only search by customer ID, name, remarks, or email.
+    * Search condition type. You can only search by ClientUin, Name, Remark, or Email.
     */
     @SerializedName("FilterType")
     @Expose
@@ -59,16 +59,16 @@ public class QueryCustomersCreditRequest extends AbstractModel {
     private String Order;
 
     /**
-     * Get Search condition type. You can only search by customer ID, name, remarks, or email. 
-     * @return FilterType Search condition type. You can only search by customer ID, name, remarks, or email.
+     * Get Search condition type. You can only search by ClientUin, Name, Remark, or Email. 
+     * @return FilterType Search condition type. You can only search by ClientUin, Name, Remark, or Email.
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set Search condition type. You can only search by customer ID, name, remarks, or email.
-     * @param FilterType Search condition type. You can only search by customer ID, name, remarks, or email.
+     * Set Search condition type. You can only search by ClientUin, Name, Remark, or Email.
+     * @param FilterType Search condition type. You can only search by ClientUin, Name, Remark, or Email.
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;

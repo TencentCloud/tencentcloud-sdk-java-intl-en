@@ -364,6 +364,17 @@ An entity (a Layer 7 domain name or a Layer 4 proxy instance) under the combinat
     }
 
     /**
+     *This API is used to create a security policy configuration template.
+     * @param req CreateWebSecurityTemplateRequest
+     * @return CreateWebSecurityTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWebSecurityTemplateResponse CreateWebSecurityTemplate(CreateWebSecurityTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateWebSecurityTemplate", CreateWebSecurityTemplateResponse.class);
+    }
+
+    /**
      *This API is used to create a site. After you create the site, you can connect it to EdgeOne via the CNAME or NS (see [Quick Start](https://intl.cloud.tencent.com/document/product/1552/87601?from_cn_redirect=1)), or connect it without a domain name (see [Quick Access to L4 Proxy Service](https://intl.cloud.tencent.com/document/product/1552/96051?from_cn_redirect=1)).
 
 If there are already EdgeOne plans under the current account, it is recommended to pass in the `PlanId` to bind the site with the plan directly. If `PlanId` is not passed in, the created site is not activated. You need to call [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1) to bind the site with a plan. To purchase a plan, please go to the EdgeOne console.
@@ -572,6 +583,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DeleteSharedCNAMEResponse DeleteSharedCNAME(DeleteSharedCNAMERequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSharedCNAME", DeleteSharedCNAMEResponse.class);
+    }
+
+    /**
+     *This API is used to delete a security policy configuration template.
+     * @param req DeleteWebSecurityTemplateRequest
+     * @return DeleteWebSecurityTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWebSecurityTemplateResponse DeleteWebSecurityTemplate(DeleteWebSecurityTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteWebSecurityTemplate", DeleteWebSecurityTemplateResponse.class);
     }
 
     /**
@@ -1117,6 +1139,28 @@ This API is used to query the configuration information of an IP group, includin
     }
 
     /**
+     *This API is used to query security policy configuration template details.
+     * @param req DescribeWebSecurityTemplateRequest
+     * @return DescribeWebSecurityTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebSecurityTemplateResponse DescribeWebSecurityTemplate(DescribeWebSecurityTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWebSecurityTemplate", DescribeWebSecurityTemplateResponse.class);
+    }
+
+    /**
+     *This API is used to query the security policy configuration template list.
+     * @param req DescribeWebSecurityTemplatesRequest
+     * @return DescribeWebSecurityTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebSecurityTemplatesResponse DescribeWebSecurityTemplates(DescribeWebSecurityTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWebSecurityTemplates", DescribeWebSecurityTemplatesResponse.class);
+    }
+
+    /**
      *This API is used to query the results of site configuration import via API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
      * @param req DescribeZoneConfigImportResultRequest
      * @return DescribeZoneConfigImportResultResponse
@@ -1617,6 +1661,17 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     public ModifySecurityPolicyResponse ModifySecurityPolicy(ModifySecurityPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySecurityPolicy", ModifySecurityPolicyResponse.class);
+    }
+
+    /**
+     *This API is used to modify the security policy configuration template.
+     * @param req ModifyWebSecurityTemplateRequest
+     * @return ModifyWebSecurityTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWebSecurityTemplateResponse ModifyWebSecurityTemplate(ModifyWebSecurityTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyWebSecurityTemplate", ModifyWebSecurityTemplateResponse.class);
     }
 
     /**

@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class ForwardLoadBalancer extends AbstractModel {
 
     /**
-    * Load balancer ID
+    * ID of the load balancer. this parameter is required as an input parameter. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * Application load balancer listener ID
+    * CLB listener ID. as an input parameter, this parameter is required. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * List of target rule attributes
+    * Target rule attribute list. as an input parameter, this parameter is required.
     */
     @SerializedName("TargetAttributes")
     @Expose
     private TargetAttribute [] TargetAttributes;
 
     /**
-    * ID of a forwarding rule. This parameter is required for layer-7 listeners.
+    * The forwarding rule ID. note: this parameter is required for layer-7 (http/https) listeners. it can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
     */
     @SerializedName("LocationId")
     @Expose
@@ -59,64 +59,64 @@ public class ForwardLoadBalancer extends AbstractModel {
     private String Region;
 
     /**
-     * Get Load balancer ID 
-     * @return LoadBalancerId Load balancer ID
+     * Get ID of the load balancer. this parameter is required as an input parameter. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api. 
+     * @return LoadBalancerId ID of the load balancer. this parameter is required as an input parameter. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set Load balancer ID
-     * @param LoadBalancerId Load balancer ID
+     * Set ID of the load balancer. this parameter is required as an input parameter. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+     * @param LoadBalancerId ID of the load balancer. this parameter is required as an input parameter. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get Application load balancer listener ID 
-     * @return ListenerId Application load balancer listener ID
+     * Get CLB listener ID. as an input parameter, this parameter is required. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api. 
+     * @return ListenerId CLB listener ID. as an input parameter, this parameter is required. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set Application load balancer listener ID
-     * @param ListenerId Application load balancer listener ID
+     * Set CLB listener ID. as an input parameter, this parameter is required. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+     * @param ListenerId CLB listener ID. as an input parameter, this parameter is required. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get List of target rule attributes 
-     * @return TargetAttributes List of target rule attributes
+     * Get Target rule attribute list. as an input parameter, this parameter is required. 
+     * @return TargetAttributes Target rule attribute list. as an input parameter, this parameter is required.
      */
     public TargetAttribute [] getTargetAttributes() {
         return this.TargetAttributes;
     }
 
     /**
-     * Set List of target rule attributes
-     * @param TargetAttributes List of target rule attributes
+     * Set Target rule attribute list. as an input parameter, this parameter is required.
+     * @param TargetAttributes Target rule attribute list. as an input parameter, this parameter is required.
      */
     public void setTargetAttributes(TargetAttribute [] TargetAttributes) {
         this.TargetAttributes = TargetAttributes;
     }
 
     /**
-     * Get ID of a forwarding rule. This parameter is required for layer-7 listeners. 
-     * @return LocationId ID of a forwarding rule. This parameter is required for layer-7 listeners.
+     * Get The forwarding rule ID. note: this parameter is required for layer-7 (http/https) listeners. it can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api. 
+     * @return LocationId The forwarding rule ID. note: this parameter is required for layer-7 (http/https) listeners. it can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set ID of a forwarding rule. This parameter is required for layer-7 listeners.
-     * @param LocationId ID of a forwarding rule. This parameter is required for layer-7 listeners.
+     * Set The forwarding rule ID. note: this parameter is required for layer-7 (http/https) listeners. it can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+     * @param LocationId The forwarding rule ID. note: this parameter is required for layer-7 (http/https) listeners. it can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;

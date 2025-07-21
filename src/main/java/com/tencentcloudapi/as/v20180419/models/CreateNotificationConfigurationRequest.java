@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateNotificationConfigurationRequest extends AbstractModel {
 
     /**
-    * Auto scaling group ID.
+    * Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
     */
     @SerializedName("AutoScalingGroupId")
     @Expose
@@ -44,19 +44,19 @@ public class CreateNotificationConfigurationRequest extends AbstractModel {
     private String [] NotificationTypes;
 
     /**
-    * Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+    * Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when TargetType is USER_GROUP.
     */
     @SerializedName("NotificationUserGroupIds")
     @Expose
     private String [] NotificationUserGroupIds;
 
     /**
-    * Notification receiver type. Valid values:
-<br><li>USER_GROUP:User group
-<br><li>CMQ_QUEUE:CMQ queue
-<br><li>CMQ_TOPIC:CMQ topic
-<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
-<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+    * Notification receiver type. values as follows:.
+<Li>USER_GROUP: user group</li>.
+<Li>TDMQ_CMQ_TOPIC: tdmq cmq topic</li>.
+<Li>TDMQ_CMQ_QUEUE: tdmq cmq queue</li>.
+<li>CMQ_QUEUE: CMQ QUEUE. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended.</li>.
+<li>CMQ_TOPIC: specifies the CMQ TOPIC. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, TDMQ CMQ is recommended for use.</li>.
 
 Default value: `USER_GROUP`.
     */
@@ -65,30 +65,30 @@ Default value: `USER_GROUP`.
     private String TargetType;
 
     /**
-    * CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
+    * TDMQ CMQ QUEUE name. this field is required if TargetType value is `TDMQ_CMQ_QUEUE`.
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
+    * TDMQ CMQ TOPIC name. this field is required when `TargetType` is `TDMQ_CMQ_TOPIC`.
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-     * Get Auto scaling group ID. 
-     * @return AutoScalingGroupId Auto scaling group ID.
+     * Get Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information. 
+     * @return AutoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
      */
     public String getAutoScalingGroupId() {
         return this.AutoScalingGroupId;
     }
 
     /**
-     * Set Auto scaling group ID.
-     * @param AutoScalingGroupId Auto scaling group ID.
+     * Set Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+     * @param AutoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
         this.AutoScalingGroupId = AutoScalingGroupId;
@@ -135,36 +135,36 @@ Default value: `USER_GROUP`.
     }
 
     /**
-     * Get Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API. 
-     * @return NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+     * Get Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when TargetType is USER_GROUP. 
+     * @return NotificationUserGroupIds Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when TargetType is USER_GROUP.
      */
     public String [] getNotificationUserGroupIds() {
         return this.NotificationUserGroupIds;
     }
 
     /**
-     * Set Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
-     * @param NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+     * Set Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when TargetType is USER_GROUP.
+     * @param NotificationUserGroupIds Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when TargetType is USER_GROUP.
      */
     public void setNotificationUserGroupIds(String [] NotificationUserGroupIds) {
         this.NotificationUserGroupIds = NotificationUserGroupIds;
     }
 
     /**
-     * Get Notification receiver type. Valid values:
-<br><li>USER_GROUP:User group
-<br><li>CMQ_QUEUE:CMQ queue
-<br><li>CMQ_TOPIC:CMQ topic
-<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
-<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+     * Get Notification receiver type. values as follows:.
+<Li>USER_GROUP: user group</li>.
+<Li>TDMQ_CMQ_TOPIC: tdmq cmq topic</li>.
+<Li>TDMQ_CMQ_QUEUE: tdmq cmq queue</li>.
+<li>CMQ_QUEUE: CMQ QUEUE. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended.</li>.
+<li>CMQ_TOPIC: specifies the CMQ TOPIC. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, TDMQ CMQ is recommended for use.</li>.
 
 Default value: `USER_GROUP`. 
-     * @return TargetType Notification receiver type. Valid values:
-<br><li>USER_GROUP:User group
-<br><li>CMQ_QUEUE:CMQ queue
-<br><li>CMQ_TOPIC:CMQ topic
-<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
-<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+     * @return TargetType Notification receiver type. values as follows:.
+<Li>USER_GROUP: user group</li>.
+<Li>TDMQ_CMQ_TOPIC: tdmq cmq topic</li>.
+<Li>TDMQ_CMQ_QUEUE: tdmq cmq queue</li>.
+<li>CMQ_QUEUE: CMQ QUEUE. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended.</li>.
+<li>CMQ_TOPIC: specifies the CMQ TOPIC. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, TDMQ CMQ is recommended for use.</li>.
 
 Default value: `USER_GROUP`.
      */
@@ -173,20 +173,20 @@ Default value: `USER_GROUP`.
     }
 
     /**
-     * Set Notification receiver type. Valid values:
-<br><li>USER_GROUP:User group
-<br><li>CMQ_QUEUE:CMQ queue
-<br><li>CMQ_TOPIC:CMQ topic
-<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
-<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+     * Set Notification receiver type. values as follows:.
+<Li>USER_GROUP: user group</li>.
+<Li>TDMQ_CMQ_TOPIC: tdmq cmq topic</li>.
+<Li>TDMQ_CMQ_QUEUE: tdmq cmq queue</li>.
+<li>CMQ_QUEUE: CMQ QUEUE. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended.</li>.
+<li>CMQ_TOPIC: specifies the CMQ TOPIC. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, TDMQ CMQ is recommended for use.</li>.
 
 Default value: `USER_GROUP`.
-     * @param TargetType Notification receiver type. Valid values:
-<br><li>USER_GROUP:User group
-<br><li>CMQ_QUEUE:CMQ queue
-<br><li>CMQ_TOPIC:CMQ topic
-<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
-<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+     * @param TargetType Notification receiver type. values as follows:.
+<Li>USER_GROUP: user group</li>.
+<Li>TDMQ_CMQ_TOPIC: tdmq cmq topic</li>.
+<Li>TDMQ_CMQ_QUEUE: tdmq cmq queue</li>.
+<li>CMQ_QUEUE: CMQ QUEUE. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended.</li>.
+<li>CMQ_TOPIC: specifies the CMQ TOPIC. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, TDMQ CMQ is recommended for use.</li>.
 
 Default value: `USER_GROUP`.
      */
@@ -195,32 +195,32 @@ Default value: `USER_GROUP`.
     }
 
     /**
-     * Get CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`. 
-     * @return QueueName CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
+     * Get TDMQ CMQ QUEUE name. this field is required if TargetType value is `TDMQ_CMQ_QUEUE`. 
+     * @return QueueName TDMQ CMQ QUEUE name. this field is required if TargetType value is `TDMQ_CMQ_QUEUE`.
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
-     * @param QueueName CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
+     * Set TDMQ CMQ QUEUE name. this field is required if TargetType value is `TDMQ_CMQ_QUEUE`.
+     * @param QueueName TDMQ CMQ QUEUE name. this field is required if TargetType value is `TDMQ_CMQ_QUEUE`.
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`. 
-     * @return TopicName CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
+     * Get TDMQ CMQ TOPIC name. this field is required when `TargetType` is `TDMQ_CMQ_TOPIC`. 
+     * @return TopicName TDMQ CMQ TOPIC name. this field is required when `TargetType` is `TDMQ_CMQ_TOPIC`.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
-     * @param TopicName CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
+     * Set TDMQ CMQ TOPIC name. this field is required when `TargetType` is `TDMQ_CMQ_TOPIC`.
+     * @param TopicName TDMQ CMQ TOPIC name. this field is required when `TargetType` is `TDMQ_CMQ_TOPIC`.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

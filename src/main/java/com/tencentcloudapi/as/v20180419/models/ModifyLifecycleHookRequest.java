@@ -24,32 +24,32 @@ import java.util.HashMap;
 public class ModifyLifecycleHookRequest extends AbstractModel {
 
     /**
-    * Lifecycle hook ID.
+    * Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the LifecycleHookId from the returned information.
     */
     @SerializedName("LifecycleHookId")
     @Expose
     private String LifecycleHookId;
 
     /**
-    * Lifecycle hook name.
+    * Lifecycle hook name. Name only supports chinese, english, digits, underscore (_), hyphen (-), decimal point (.), maximum length cannot exceed 128.
     */
     @SerializedName("LifecycleHookName")
     @Expose
     private String LifecycleHookName;
 
     /**
-    * Scenario for entering the lifecycle hook. Valid values:
-<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
-<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
+    * Scenario for entering the lifecycle hook. valid values:.
+`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+`INSTANCE_TERMINATING`: the lifecycle hook is being scaled in.
     */
     @SerializedName("LifecycleTransition")
     @Expose
     private String LifecycleTransition;
 
     /**
-    * Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
-<li>CONTINUE: Continue the scaling activity after timeout.</li>
-<li>ABANDON: Terminate the scaling activity after timeout.</li>
+    * Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+Default value means CONTINUE to execute capacity expansion or reduction.
+* ABANDON: for scale-out hooks, cvms that time out or fail to execute LifecycleCommand are released directly or removed. for scale-in hooks, scale-in activities continue.
     */
     @SerializedName("DefaultResult")
     @Expose
@@ -63,7 +63,7 @@ public class ModifyLifecycleHookRequest extends AbstractModel {
     private Long HeartbeatTimeout;
 
     /**
-    * Additional information sent by AS to the notification target.
+    * Specifies the additional information sent by auto scaling to the notification target. NotificationMetadata and LifecycleCommand are mutually exclusive. the two cannot be specified simultaneously.
     */
     @SerializedName("NotificationMetadata")
     @Expose
@@ -77,94 +77,94 @@ public class ModifyLifecycleHookRequest extends AbstractModel {
     private String LifecycleTransitionType;
 
     /**
-    * Information of the notification target.
+    * Notify the target information. NotificationTarget and LifecycleCommand are mutually exclusive. the two cannot be specified simultaneously.
     */
     @SerializedName("NotificationTarget")
     @Expose
     private NotificationTarget NotificationTarget;
 
     /**
-    * Remote command execution object.
+    * Remote command execution object. `NotificationMetadata`, `NotificationTarget`, and `LifecycleCommand` cannot be specified at the same time.
     */
     @SerializedName("LifecycleCommand")
     @Expose
     private LifecycleCommand LifecycleCommand;
 
     /**
-     * Get Lifecycle hook ID. 
-     * @return LifecycleHookId Lifecycle hook ID.
+     * Get Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the LifecycleHookId from the returned information. 
+     * @return LifecycleHookId Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the LifecycleHookId from the returned information.
      */
     public String getLifecycleHookId() {
         return this.LifecycleHookId;
     }
 
     /**
-     * Set Lifecycle hook ID.
-     * @param LifecycleHookId Lifecycle hook ID.
+     * Set Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the LifecycleHookId from the returned information.
+     * @param LifecycleHookId Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the LifecycleHookId from the returned information.
      */
     public void setLifecycleHookId(String LifecycleHookId) {
         this.LifecycleHookId = LifecycleHookId;
     }
 
     /**
-     * Get Lifecycle hook name. 
-     * @return LifecycleHookName Lifecycle hook name.
+     * Get Lifecycle hook name. Name only supports chinese, english, digits, underscore (_), hyphen (-), decimal point (.), maximum length cannot exceed 128. 
+     * @return LifecycleHookName Lifecycle hook name. Name only supports chinese, english, digits, underscore (_), hyphen (-), decimal point (.), maximum length cannot exceed 128.
      */
     public String getLifecycleHookName() {
         return this.LifecycleHookName;
     }
 
     /**
-     * Set Lifecycle hook name.
-     * @param LifecycleHookName Lifecycle hook name.
+     * Set Lifecycle hook name. Name only supports chinese, english, digits, underscore (_), hyphen (-), decimal point (.), maximum length cannot exceed 128.
+     * @param LifecycleHookName Lifecycle hook name. Name only supports chinese, english, digits, underscore (_), hyphen (-), decimal point (.), maximum length cannot exceed 128.
      */
     public void setLifecycleHookName(String LifecycleHookName) {
         this.LifecycleHookName = LifecycleHookName;
     }
 
     /**
-     * Get Scenario for entering the lifecycle hook. Valid values:
-<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
-<li>INSTANCE_TERMINATING: before the instance is terminated.</li> 
-     * @return LifecycleTransition Scenario for entering the lifecycle hook. Valid values:
-<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
-<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
+     * Get Scenario for entering the lifecycle hook. valid values:.
+`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+`INSTANCE_TERMINATING`: the lifecycle hook is being scaled in. 
+     * @return LifecycleTransition Scenario for entering the lifecycle hook. valid values:.
+`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+`INSTANCE_TERMINATING`: the lifecycle hook is being scaled in.
      */
     public String getLifecycleTransition() {
         return this.LifecycleTransition;
     }
 
     /**
-     * Set Scenario for entering the lifecycle hook. Valid values:
-<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
-<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
-     * @param LifecycleTransition Scenario for entering the lifecycle hook. Valid values:
-<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
-<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
+     * Set Scenario for entering the lifecycle hook. valid values:.
+`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+`INSTANCE_TERMINATING`: the lifecycle hook is being scaled in.
+     * @param LifecycleTransition Scenario for entering the lifecycle hook. valid values:.
+`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+`INSTANCE_TERMINATING`: the lifecycle hook is being scaled in.
      */
     public void setLifecycleTransition(String LifecycleTransition) {
         this.LifecycleTransition = LifecycleTransition;
     }
 
     /**
-     * Get Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
-<li>CONTINUE: Continue the scaling activity after timeout.</li>
-<li>ABANDON: Terminate the scaling activity after timeout.</li> 
-     * @return DefaultResult Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
-<li>CONTINUE: Continue the scaling activity after timeout.</li>
-<li>ABANDON: Terminate the scaling activity after timeout.</li>
+     * Get Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+Default value means CONTINUE to execute capacity expansion or reduction.
+* ABANDON: for scale-out hooks, cvms that time out or fail to execute LifecycleCommand are released directly or removed. for scale-in hooks, scale-in activities continue. 
+     * @return DefaultResult Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+Default value means CONTINUE to execute capacity expansion or reduction.
+* ABANDON: for scale-out hooks, cvms that time out or fail to execute LifecycleCommand are released directly or removed. for scale-in hooks, scale-in activities continue.
      */
     public String getDefaultResult() {
         return this.DefaultResult;
     }
 
     /**
-     * Set Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
-<li>CONTINUE: Continue the scaling activity after timeout.</li>
-<li>ABANDON: Terminate the scaling activity after timeout.</li>
-     * @param DefaultResult Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
-<li>CONTINUE: Continue the scaling activity after timeout.</li>
-<li>ABANDON: Terminate the scaling activity after timeout.</li>
+     * Set Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+Default value means CONTINUE to execute capacity expansion or reduction.
+* ABANDON: for scale-out hooks, cvms that time out or fail to execute LifecycleCommand are released directly or removed. for scale-in hooks, scale-in activities continue.
+     * @param DefaultResult Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+Default value means CONTINUE to execute capacity expansion or reduction.
+* ABANDON: for scale-out hooks, cvms that time out or fail to execute LifecycleCommand are released directly or removed. for scale-in hooks, scale-in activities continue.
      */
     public void setDefaultResult(String DefaultResult) {
         this.DefaultResult = DefaultResult;
@@ -187,16 +187,16 @@ public class ModifyLifecycleHookRequest extends AbstractModel {
     }
 
     /**
-     * Get Additional information sent by AS to the notification target. 
-     * @return NotificationMetadata Additional information sent by AS to the notification target.
+     * Get Specifies the additional information sent by auto scaling to the notification target. NotificationMetadata and LifecycleCommand are mutually exclusive. the two cannot be specified simultaneously. 
+     * @return NotificationMetadata Specifies the additional information sent by auto scaling to the notification target. NotificationMetadata and LifecycleCommand are mutually exclusive. the two cannot be specified simultaneously.
      */
     public String getNotificationMetadata() {
         return this.NotificationMetadata;
     }
 
     /**
-     * Set Additional information sent by AS to the notification target.
-     * @param NotificationMetadata Additional information sent by AS to the notification target.
+     * Set Specifies the additional information sent by auto scaling to the notification target. NotificationMetadata and LifecycleCommand are mutually exclusive. the two cannot be specified simultaneously.
+     * @param NotificationMetadata Specifies the additional information sent by auto scaling to the notification target. NotificationMetadata and LifecycleCommand are mutually exclusive. the two cannot be specified simultaneously.
      */
     public void setNotificationMetadata(String NotificationMetadata) {
         this.NotificationMetadata = NotificationMetadata;
@@ -219,32 +219,32 @@ public class ModifyLifecycleHookRequest extends AbstractModel {
     }
 
     /**
-     * Get Information of the notification target. 
-     * @return NotificationTarget Information of the notification target.
+     * Get Notify the target information. NotificationTarget and LifecycleCommand are mutually exclusive. the two cannot be specified simultaneously. 
+     * @return NotificationTarget Notify the target information. NotificationTarget and LifecycleCommand are mutually exclusive. the two cannot be specified simultaneously.
      */
     public NotificationTarget getNotificationTarget() {
         return this.NotificationTarget;
     }
 
     /**
-     * Set Information of the notification target.
-     * @param NotificationTarget Information of the notification target.
+     * Set Notify the target information. NotificationTarget and LifecycleCommand are mutually exclusive. the two cannot be specified simultaneously.
+     * @param NotificationTarget Notify the target information. NotificationTarget and LifecycleCommand are mutually exclusive. the two cannot be specified simultaneously.
      */
     public void setNotificationTarget(NotificationTarget NotificationTarget) {
         this.NotificationTarget = NotificationTarget;
     }
 
     /**
-     * Get Remote command execution object. 
-     * @return LifecycleCommand Remote command execution object.
+     * Get Remote command execution object. `NotificationMetadata`, `NotificationTarget`, and `LifecycleCommand` cannot be specified at the same time. 
+     * @return LifecycleCommand Remote command execution object. `NotificationMetadata`, `NotificationTarget`, and `LifecycleCommand` cannot be specified at the same time.
      */
     public LifecycleCommand getLifecycleCommand() {
         return this.LifecycleCommand;
     }
 
     /**
-     * Set Remote command execution object.
-     * @param LifecycleCommand Remote command execution object.
+     * Set Remote command execution object. `NotificationMetadata`, `NotificationTarget`, and `LifecycleCommand` cannot be specified at the same time.
+     * @param LifecycleCommand Remote command execution object. `NotificationMetadata`, `NotificationTarget`, and `LifecycleCommand` cannot be specified at the same time.
      */
     public void setLifecycleCommand(LifecycleCommand LifecycleCommand) {
         this.LifecycleCommand = LifecycleCommand;

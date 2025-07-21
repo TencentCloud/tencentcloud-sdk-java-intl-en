@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TargetAttribute extends AbstractModel {
 
     /**
-    * Port
+    * Port. value range: [1,65535]. as an input parameter, this parameter is required.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Weight
+    * Weight. value range: [0,100]. this parameter is required as an input parameter.
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-     * Get Port 
-     * @return Port Port
+     * Get Port. value range: [1,65535]. as an input parameter, this parameter is required. 
+     * @return Port Port. value range: [1,65535]. as an input parameter, this parameter is required.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port
-     * @param Port Port
+     * Set Port. value range: [1,65535]. as an input parameter, this parameter is required.
+     * @param Port Port. value range: [1,65535]. as an input parameter, this parameter is required.
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Weight 
-     * @return Weight Weight
+     * Get Weight. value range: [0,100]. this parameter is required as an input parameter. 
+     * @return Weight Weight. value range: [0,100]. this parameter is required as an input parameter.
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set Weight
-     * @param Weight Weight
+     * Set Weight. value range: [0,100]. this parameter is required as an input parameter.
+     * @param Weight Weight. value range: [0,100]. this parameter is required as an input parameter.
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

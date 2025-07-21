@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class RollbackInstanceRefreshRequest extends AbstractModel {
 
     /**
-    * Scaling group ID.
+    * Scaling group ID. you can obtain available scaling group ids in the following ways. 
+<li>Query the scaling group ID by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/group">console</a>.</li>.
+<li>Obtain the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
     */
     @SerializedName("AutoScalingGroupId")
     @Expose
@@ -38,7 +40,7 @@ public class RollbackInstanceRefreshRequest extends AbstractModel {
     private RefreshSettings RefreshSettings;
 
     /**
-    * Original refresh activity ID.
+    * The original refresh activity ID. you can obtain the original refresh activity ID by calling the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and retrieving the OriginRefreshActivityId from the returned information.
     */
     @SerializedName("OriginRefreshActivityId")
     @Expose
@@ -52,16 +54,24 @@ public class RollbackInstanceRefreshRequest extends AbstractModel {
     private String RefreshMode;
 
     /**
-     * Get Scaling group ID. 
-     * @return AutoScalingGroupId Scaling group ID.
+     * Get Scaling group ID. you can obtain available scaling group ids in the following ways. 
+<li>Query the scaling group ID by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/group">console</a>.</li>.
+<li>Obtain the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>. 
+     * @return AutoScalingGroupId Scaling group ID. you can obtain available scaling group ids in the following ways. 
+<li>Query the scaling group ID by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/group">console</a>.</li>.
+<li>Obtain the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
      */
     public String getAutoScalingGroupId() {
         return this.AutoScalingGroupId;
     }
 
     /**
-     * Set Scaling group ID.
-     * @param AutoScalingGroupId Scaling group ID.
+     * Set Scaling group ID. you can obtain available scaling group ids in the following ways. 
+<li>Query the scaling group ID by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/group">console</a>.</li>.
+<li>Obtain the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+     * @param AutoScalingGroupId Scaling group ID. you can obtain available scaling group ids in the following ways. 
+<li>Query the scaling group ID by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/group">console</a>.</li>.
+<li>Obtain the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
         this.AutoScalingGroupId = AutoScalingGroupId;
@@ -84,16 +94,16 @@ public class RollbackInstanceRefreshRequest extends AbstractModel {
     }
 
     /**
-     * Get Original refresh activity ID. 
-     * @return OriginRefreshActivityId Original refresh activity ID.
+     * Get The original refresh activity ID. you can obtain the original refresh activity ID by calling the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and retrieving the OriginRefreshActivityId from the returned information. 
+     * @return OriginRefreshActivityId The original refresh activity ID. you can obtain the original refresh activity ID by calling the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and retrieving the OriginRefreshActivityId from the returned information.
      */
     public String getOriginRefreshActivityId() {
         return this.OriginRefreshActivityId;
     }
 
     /**
-     * Set Original refresh activity ID.
-     * @param OriginRefreshActivityId Original refresh activity ID.
+     * Set The original refresh activity ID. you can obtain the original refresh activity ID by calling the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and retrieving the OriginRefreshActivityId from the returned information.
+     * @param OriginRefreshActivityId The original refresh activity ID. you can obtain the original refresh activity ID by calling the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and retrieving the OriginRefreshActivityId from the returned information.
      */
     public void setOriginRefreshActivityId(String OriginRefreshActivityId) {
         this.OriginRefreshActivityId = OriginRefreshActivityId;

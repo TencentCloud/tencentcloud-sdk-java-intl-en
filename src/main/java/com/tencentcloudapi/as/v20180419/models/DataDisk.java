@@ -24,14 +24,15 @@ import java.util.HashMap;
 public class DataDisk extends AbstractModel {
 
     /**
-    * Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: Basic Cloud Disk.</li>
-<li>CLOUD_PREMIUM: Premium Disk.</li>
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Tremendous SSD.</li>
+    * Data disk type. for restrictions on data disk types, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
+<Li>LOCAL_BASIC: local hard disk.</li>.
+<Li>LOCAL_SSD: local ssd.</li>.
+<Li>CLOUD_BASIC: general cloud disk.</li>.
+<Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
+<Li>CLOUD_SSD: cloud ssd</li>.
+<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
+<Li>CLOUD_TSSD: ultra ssd.</li>.
+<Li>CLOUD_BSSD: universal ssd cloud disk</li>.
 The default value is consistent with the system disk type (SystemDisk.DiskType).
     */
     @SerializedName("DiskType")
@@ -39,14 +40,14 @@ The default value is consistent with the system disk type (SystemDisk.DiskType).
     private String DiskType;
 
     /**
-    * Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
+    * Data disk size, in GB. the value range varies according to the data disk type. for specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). default value: 0, which means no data disk is purchased. for more restrictions, see the [product documentation](https://intl.cloud.tencent.com/document/product/362/5145?from_cn_redirect=1).
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Data disk snapshot ID, such as `snap-l8psqwnt`.
+    * The data disk snapshot ID can be obtained through the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) api.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SnapshotId")
@@ -83,9 +84,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long ThroughputPerformance;
 
     /**
-    * Burst performance: Whether to enable burst performance. The default value is false.
-
-Note: This feature is in beta test and requires a ticket to be submitted for usage.
+    * Burst performance. specifies whether to enable burst performance. default value is false. this parameter only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD) with capacity > 460GB.
+Note: this feature is in beta test and requires a ticket to be submitted for usage.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BurstPerformance")
@@ -93,23 +93,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean BurstPerformance;
 
     /**
-     * Get Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: Basic Cloud Disk.</li>
-<li>CLOUD_PREMIUM: Premium Disk.</li>
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Tremendous SSD.</li>
+     * Get Data disk type. for restrictions on data disk types, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
+<Li>LOCAL_BASIC: local hard disk.</li>.
+<Li>LOCAL_SSD: local ssd.</li>.
+<Li>CLOUD_BASIC: general cloud disk.</li>.
+<Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
+<Li>CLOUD_SSD: cloud ssd</li>.
+<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
+<Li>CLOUD_TSSD: ultra ssd.</li>.
+<Li>CLOUD_BSSD: universal ssd cloud disk</li>.
 The default value is consistent with the system disk type (SystemDisk.DiskType). 
-     * @return DiskType Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: Basic Cloud Disk.</li>
-<li>CLOUD_PREMIUM: Premium Disk.</li>
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Tremendous SSD.</li>
+     * @return DiskType Data disk type. for restrictions on data disk types, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
+<Li>LOCAL_BASIC: local hard disk.</li>.
+<Li>LOCAL_SSD: local ssd.</li>.
+<Li>CLOUD_BASIC: general cloud disk.</li>.
+<Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
+<Li>CLOUD_SSD: cloud ssd</li>.
+<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
+<Li>CLOUD_TSSD: ultra ssd.</li>.
+<Li>CLOUD_BSSD: universal ssd cloud disk</li>.
 The default value is consistent with the system disk type (SystemDisk.DiskType).
      */
     public String getDiskType() {
@@ -117,23 +119,25 @@ The default value is consistent with the system disk type (SystemDisk.DiskType).
     }
 
     /**
-     * Set Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: Basic Cloud Disk.</li>
-<li>CLOUD_PREMIUM: Premium Disk.</li>
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Tremendous SSD.</li>
+     * Set Data disk type. for restrictions on data disk types, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
+<Li>LOCAL_BASIC: local hard disk.</li>.
+<Li>LOCAL_SSD: local ssd.</li>.
+<Li>CLOUD_BASIC: general cloud disk.</li>.
+<Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
+<Li>CLOUD_SSD: cloud ssd</li>.
+<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
+<Li>CLOUD_TSSD: ultra ssd.</li>.
+<Li>CLOUD_BSSD: universal ssd cloud disk</li>.
 The default value is consistent with the system disk type (SystemDisk.DiskType).
-     * @param DiskType Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: Basic Cloud Disk.</li>
-<li>CLOUD_PREMIUM: Premium Disk.</li>
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Tremendous SSD.</li>
+     * @param DiskType Data disk type. for restrictions on data disk types, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
+<Li>LOCAL_BASIC: local hard disk.</li>.
+<Li>LOCAL_SSD: local ssd.</li>.
+<Li>CLOUD_BASIC: general cloud disk.</li>.
+<Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
+<Li>CLOUD_SSD: cloud ssd</li>.
+<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
+<Li>CLOUD_TSSD: ultra ssd.</li>.
+<Li>CLOUD_BSSD: universal ssd cloud disk</li>.
 The default value is consistent with the system disk type (SystemDisk.DiskType).
      */
     public void setDiskType(String DiskType) {
@@ -141,25 +145,25 @@ The default value is consistent with the system disk type (SystemDisk.DiskType).
     }
 
     /**
-     * Get Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation. 
-     * @return DiskSize Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
+     * Get Data disk size, in GB. the value range varies according to the data disk type. for specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). default value: 0, which means no data disk is purchased. for more restrictions, see the [product documentation](https://intl.cloud.tencent.com/document/product/362/5145?from_cn_redirect=1). 
+     * @return DiskSize Data disk size, in GB. the value range varies according to the data disk type. for specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). default value: 0, which means no data disk is purchased. for more restrictions, see the [product documentation](https://intl.cloud.tencent.com/document/product/362/5145?from_cn_redirect=1).
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
-     * @param DiskSize Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
+     * Set Data disk size, in GB. the value range varies according to the data disk type. for specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). default value: 0, which means no data disk is purchased. for more restrictions, see the [product documentation](https://intl.cloud.tencent.com/document/product/362/5145?from_cn_redirect=1).
+     * @param DiskSize Data disk size, in GB. the value range varies according to the data disk type. for specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). default value: 0, which means no data disk is purchased. for more restrictions, see the [product documentation](https://intl.cloud.tencent.com/document/product/362/5145?from_cn_redirect=1).
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Data disk snapshot ID, such as `snap-l8psqwnt`.
+     * Get The data disk snapshot ID can be obtained through the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) api.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SnapshotId Data disk snapshot ID, such as `snap-l8psqwnt`.
+     * @return SnapshotId The data disk snapshot ID can be obtained through the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) api.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSnapshotId() {
@@ -167,9 +171,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Data disk snapshot ID, such as `snap-l8psqwnt`.
+     * Set The data disk snapshot ID can be obtained through the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) api.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SnapshotId Data disk snapshot ID, such as `snap-l8psqwnt`.
+     * @param SnapshotId The data disk snapshot ID can be obtained through the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) api.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSnapshotId(String SnapshotId) {
@@ -257,13 +261,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Burst performance: Whether to enable burst performance. The default value is false.
-
-Note: This feature is in beta test and requires a ticket to be submitted for usage.
+     * Get Burst performance. specifies whether to enable burst performance. default value is false. this parameter only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD) with capacity > 460GB.
+Note: this feature is in beta test and requires a ticket to be submitted for usage.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BurstPerformance Burst performance: Whether to enable burst performance. The default value is false.
-
-Note: This feature is in beta test and requires a ticket to be submitted for usage.
+     * @return BurstPerformance Burst performance. specifies whether to enable burst performance. default value is false. this parameter only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD) with capacity > 460GB.
+Note: this feature is in beta test and requires a ticket to be submitted for usage.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getBurstPerformance() {
@@ -271,13 +273,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Burst performance: Whether to enable burst performance. The default value is false.
-
-Note: This feature is in beta test and requires a ticket to be submitted for usage.
+     * Set Burst performance. specifies whether to enable burst performance. default value is false. this parameter only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD) with capacity > 460GB.
+Note: this feature is in beta test and requires a ticket to be submitted for usage.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BurstPerformance Burst performance: Whether to enable burst performance. The default value is false.
-
-Note: This feature is in beta test and requires a ticket to be submitted for usage.
+     * @param BurstPerformance Burst performance. specifies whether to enable burst performance. default value is false. this parameter only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD) with capacity > 460GB.
+Note: this feature is in beta test and requires a ticket to be submitted for usage.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBurstPerformance(Boolean BurstPerformance) {

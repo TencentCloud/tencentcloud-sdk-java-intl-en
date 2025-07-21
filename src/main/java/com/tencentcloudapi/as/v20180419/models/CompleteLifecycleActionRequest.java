@@ -24,92 +24,107 @@ import java.util.HashMap;
 public class CompleteLifecycleActionRequest extends AbstractModel {
 
     /**
-    * Lifecycle hook ID
+    * Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the `LifecycleHookId` from the returned information.
     */
     @SerializedName("LifecycleHookId")
     @Expose
     private String LifecycleHookId;
 
     /**
-    * Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
+    * Describes the result of the lifecycle action. valid values are as follows:.
+<Li>CONTINUE: default value, means continue execution of capacity expansion or reduction</li>.
+<li>ABANDON: for scale-out hooks, CVM instances with hook timeout or failed LifecycleCommand execution will be released directly or moved; for scale-in hooks, scale-in activities will continue.</li>.
     */
     @SerializedName("LifecycleActionResult")
     @Expose
     private String LifecycleActionResult;
 
     /**
-    * Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
+    * One of the parameters `InstanceId` or `LifecycleActionToken` is required. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Either "InstanceId" or "LifecycleActionToken" must be specified
+    * Lifecycle action token. specifies that one of `InstanceId` or `LifecycleActionToken` must be filled.
+The method for accessing the parameter is as follows: when the hook of the `NotificationTarget` parameter is triggered, deliver a message containing the token to the message queue specified in the `NotificationTarget` parameter. the message queue consumer can obtain the token from the message.
     */
     @SerializedName("LifecycleActionToken")
     @Expose
     private String LifecycleActionToken;
 
     /**
-     * Get Lifecycle hook ID 
-     * @return LifecycleHookId Lifecycle hook ID
+     * Get Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the `LifecycleHookId` from the returned information. 
+     * @return LifecycleHookId Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the `LifecycleHookId` from the returned information.
      */
     public String getLifecycleHookId() {
         return this.LifecycleHookId;
     }
 
     /**
-     * Set Lifecycle hook ID
-     * @param LifecycleHookId Lifecycle hook ID
+     * Set Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the `LifecycleHookId` from the returned information.
+     * @param LifecycleHookId Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the `LifecycleHookId` from the returned information.
      */
     public void setLifecycleHookId(String LifecycleHookId) {
         this.LifecycleHookId = LifecycleHookId;
     }
 
     /**
-     * Get Result of the lifecycle action. Value range: "CONTINUE", "ABANDON" 
-     * @return LifecycleActionResult Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
+     * Get Describes the result of the lifecycle action. valid values are as follows:.
+<Li>CONTINUE: default value, means continue execution of capacity expansion or reduction</li>.
+<li>ABANDON: for scale-out hooks, CVM instances with hook timeout or failed LifecycleCommand execution will be released directly or moved; for scale-in hooks, scale-in activities will continue.</li>. 
+     * @return LifecycleActionResult Describes the result of the lifecycle action. valid values are as follows:.
+<Li>CONTINUE: default value, means continue execution of capacity expansion or reduction</li>.
+<li>ABANDON: for scale-out hooks, CVM instances with hook timeout or failed LifecycleCommand execution will be released directly or moved; for scale-in hooks, scale-in activities will continue.</li>.
      */
     public String getLifecycleActionResult() {
         return this.LifecycleActionResult;
     }
 
     /**
-     * Set Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
-     * @param LifecycleActionResult Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
+     * Set Describes the result of the lifecycle action. valid values are as follows:.
+<Li>CONTINUE: default value, means continue execution of capacity expansion or reduction</li>.
+<li>ABANDON: for scale-out hooks, CVM instances with hook timeout or failed LifecycleCommand execution will be released directly or moved; for scale-in hooks, scale-in activities will continue.</li>.
+     * @param LifecycleActionResult Describes the result of the lifecycle action. valid values are as follows:.
+<Li>CONTINUE: default value, means continue execution of capacity expansion or reduction</li>.
+<li>ABANDON: for scale-out hooks, CVM instances with hook timeout or failed LifecycleCommand execution will be released directly or moved; for scale-in hooks, scale-in activities will continue.</li>.
      */
     public void setLifecycleActionResult(String LifecycleActionResult) {
         this.LifecycleActionResult = LifecycleActionResult;
     }
 
     /**
-     * Get Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified 
-     * @return InstanceId Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
+     * Get One of the parameters `InstanceId` or `LifecycleActionToken` is required. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information. 
+     * @return InstanceId One of the parameters `InstanceId` or `LifecycleActionToken` is required. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
-     * @param InstanceId Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
+     * Set One of the parameters `InstanceId` or `LifecycleActionToken` is required. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
+     * @param InstanceId One of the parameters `InstanceId` or `LifecycleActionToken` is required. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Either "InstanceId" or "LifecycleActionToken" must be specified 
-     * @return LifecycleActionToken Either "InstanceId" or "LifecycleActionToken" must be specified
+     * Get Lifecycle action token. specifies that one of `InstanceId` or `LifecycleActionToken` must be filled.
+The method for accessing the parameter is as follows: when the hook of the `NotificationTarget` parameter is triggered, deliver a message containing the token to the message queue specified in the `NotificationTarget` parameter. the message queue consumer can obtain the token from the message. 
+     * @return LifecycleActionToken Lifecycle action token. specifies that one of `InstanceId` or `LifecycleActionToken` must be filled.
+The method for accessing the parameter is as follows: when the hook of the `NotificationTarget` parameter is triggered, deliver a message containing the token to the message queue specified in the `NotificationTarget` parameter. the message queue consumer can obtain the token from the message.
      */
     public String getLifecycleActionToken() {
         return this.LifecycleActionToken;
     }
 
     /**
-     * Set Either "InstanceId" or "LifecycleActionToken" must be specified
-     * @param LifecycleActionToken Either "InstanceId" or "LifecycleActionToken" must be specified
+     * Set Lifecycle action token. specifies that one of `InstanceId` or `LifecycleActionToken` must be filled.
+The method for accessing the parameter is as follows: when the hook of the `NotificationTarget` parameter is triggered, deliver a message containing the token to the message queue specified in the `NotificationTarget` parameter. the message queue consumer can obtain the token from the message.
+     * @param LifecycleActionToken Lifecycle action token. specifies that one of `InstanceId` or `LifecycleActionToken` must be filled.
+The method for accessing the parameter is as follows: when the hook of the `NotificationTarget` parameter is triggered, deliver a message containing the token to the message queue specified in the `NotificationTarget` parameter. the message queue consumer can obtain the token from the message.
      */
     public void setLifecycleActionToken(String LifecycleActionToken) {
         this.LifecycleActionToken = LifecycleActionToken;

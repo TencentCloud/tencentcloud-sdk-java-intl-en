@@ -45,21 +45,25 @@ public class LifecycleHook extends AbstractModel {
     private String AutoScalingGroupId;
 
     /**
-    * Default result of the lifecycle hook
+    * Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+-CONTINUE execution by default means capacity expansion or reduction.
+-For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
     */
     @SerializedName("DefaultResult")
     @Expose
     private String DefaultResult;
 
     /**
-    * Wait timeout period of the lifecycle hook
+    * Specifies the timeout waiting time of the lifecycle hook in seconds. value range: 30 to 7200.
     */
     @SerializedName("HeartbeatTimeout")
     @Expose
     private Long HeartbeatTimeout;
 
     /**
-    * Applicable scenario of the lifecycle hook
+    * Scenario for entering the lifecycle hook. valid values:.
+-`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+-INSTANCE_TERMINATING: scale-in lifecycle hook.
     */
     @SerializedName("LifecycleTransition")
     @Expose
@@ -73,7 +77,7 @@ public class LifecycleHook extends AbstractModel {
     private String NotificationMetadata;
 
     /**
-    * Creation time
+    * Creation time. uses UTC for timing.
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -87,7 +91,8 @@ public class LifecycleHook extends AbstractModel {
     private NotificationTarget NotificationTarget;
 
     /**
-    * Applicable scenario of the lifecycle hook
+    * Specifies the scenario type for performing the lifecycle hook. valid values: NORMAL and EXTENSION. default value: NORMAL.
+Description: when set to `EXTENSION`, the lifecycle hook will be triggered during `AttachInstances`, `DetachInstances`, or `RemoveInstances` API calls. if set to `NORMAL`, the lifecycle hook will not be triggered by these apis.
     */
     @SerializedName("LifecycleTransitionType")
     @Expose
@@ -95,7 +100,6 @@ public class LifecycleHook extends AbstractModel {
 
     /**
     * Remote command execution object.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LifecycleCommand")
     @Expose
@@ -150,48 +154,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Default result of the lifecycle hook 
-     * @return DefaultResult Default result of the lifecycle hook
+     * Get Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+-CONTINUE execution by default means capacity expansion or reduction.
+-For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue. 
+     * @return DefaultResult Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+-CONTINUE execution by default means capacity expansion or reduction.
+-For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
      */
     public String getDefaultResult() {
         return this.DefaultResult;
     }
 
     /**
-     * Set Default result of the lifecycle hook
-     * @param DefaultResult Default result of the lifecycle hook
+     * Set Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+-CONTINUE execution by default means capacity expansion or reduction.
+-For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
+     * @param DefaultResult Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+-CONTINUE execution by default means capacity expansion or reduction.
+-For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
      */
     public void setDefaultResult(String DefaultResult) {
         this.DefaultResult = DefaultResult;
     }
 
     /**
-     * Get Wait timeout period of the lifecycle hook 
-     * @return HeartbeatTimeout Wait timeout period of the lifecycle hook
+     * Get Specifies the timeout waiting time of the lifecycle hook in seconds. value range: 30 to 7200. 
+     * @return HeartbeatTimeout Specifies the timeout waiting time of the lifecycle hook in seconds. value range: 30 to 7200.
      */
     public Long getHeartbeatTimeout() {
         return this.HeartbeatTimeout;
     }
 
     /**
-     * Set Wait timeout period of the lifecycle hook
-     * @param HeartbeatTimeout Wait timeout period of the lifecycle hook
+     * Set Specifies the timeout waiting time of the lifecycle hook in seconds. value range: 30 to 7200.
+     * @param HeartbeatTimeout Specifies the timeout waiting time of the lifecycle hook in seconds. value range: 30 to 7200.
      */
     public void setHeartbeatTimeout(Long HeartbeatTimeout) {
         this.HeartbeatTimeout = HeartbeatTimeout;
     }
 
     /**
-     * Get Applicable scenario of the lifecycle hook 
-     * @return LifecycleTransition Applicable scenario of the lifecycle hook
+     * Get Scenario for entering the lifecycle hook. valid values:.
+-`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+-INSTANCE_TERMINATING: scale-in lifecycle hook. 
+     * @return LifecycleTransition Scenario for entering the lifecycle hook. valid values:.
+-`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+-INSTANCE_TERMINATING: scale-in lifecycle hook.
      */
     public String getLifecycleTransition() {
         return this.LifecycleTransition;
     }
 
     /**
-     * Set Applicable scenario of the lifecycle hook
-     * @param LifecycleTransition Applicable scenario of the lifecycle hook
+     * Set Scenario for entering the lifecycle hook. valid values:.
+-`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+-INSTANCE_TERMINATING: scale-in lifecycle hook.
+     * @param LifecycleTransition Scenario for entering the lifecycle hook. valid values:.
+-`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+-INSTANCE_TERMINATING: scale-in lifecycle hook.
      */
     public void setLifecycleTransition(String LifecycleTransition) {
         this.LifecycleTransition = LifecycleTransition;
@@ -214,16 +234,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creation time 
-     * @return CreatedTime Creation time
+     * Get Creation time. uses UTC for timing. 
+     * @return CreatedTime Creation time. uses UTC for timing.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreatedTime Creation time
+     * Set Creation time. uses UTC for timing.
+     * @param CreatedTime Creation time. uses UTC for timing.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
@@ -246,26 +266,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Applicable scenario of the lifecycle hook 
-     * @return LifecycleTransitionType Applicable scenario of the lifecycle hook
+     * Get Specifies the scenario type for performing the lifecycle hook. valid values: NORMAL and EXTENSION. default value: NORMAL.
+Description: when set to `EXTENSION`, the lifecycle hook will be triggered during `AttachInstances`, `DetachInstances`, or `RemoveInstances` API calls. if set to `NORMAL`, the lifecycle hook will not be triggered by these apis. 
+     * @return LifecycleTransitionType Specifies the scenario type for performing the lifecycle hook. valid values: NORMAL and EXTENSION. default value: NORMAL.
+Description: when set to `EXTENSION`, the lifecycle hook will be triggered during `AttachInstances`, `DetachInstances`, or `RemoveInstances` API calls. if set to `NORMAL`, the lifecycle hook will not be triggered by these apis.
      */
     public String getLifecycleTransitionType() {
         return this.LifecycleTransitionType;
     }
 
     /**
-     * Set Applicable scenario of the lifecycle hook
-     * @param LifecycleTransitionType Applicable scenario of the lifecycle hook
+     * Set Specifies the scenario type for performing the lifecycle hook. valid values: NORMAL and EXTENSION. default value: NORMAL.
+Description: when set to `EXTENSION`, the lifecycle hook will be triggered during `AttachInstances`, `DetachInstances`, or `RemoveInstances` API calls. if set to `NORMAL`, the lifecycle hook will not be triggered by these apis.
+     * @param LifecycleTransitionType Specifies the scenario type for performing the lifecycle hook. valid values: NORMAL and EXTENSION. default value: NORMAL.
+Description: when set to `EXTENSION`, the lifecycle hook will be triggered during `AttachInstances`, `DetachInstances`, or `RemoveInstances` API calls. if set to `NORMAL`, the lifecycle hook will not be triggered by these apis.
      */
     public void setLifecycleTransitionType(String LifecycleTransitionType) {
         this.LifecycleTransitionType = LifecycleTransitionType;
     }
 
     /**
-     * Get Remote command execution object.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Remote command execution object. 
      * @return LifecycleCommand Remote command execution object.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public LifecycleCommand getLifecycleCommand() {
         return this.LifecycleCommand;
@@ -273,9 +295,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Remote command execution object.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LifecycleCommand Remote command execution object.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLifecycleCommand(LifecycleCommand LifecycleCommand) {
         this.LifecycleCommand = LifecycleCommand;

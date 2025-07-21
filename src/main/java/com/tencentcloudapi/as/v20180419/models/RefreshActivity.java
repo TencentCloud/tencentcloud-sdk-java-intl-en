@@ -38,8 +38,7 @@ public class RefreshActivity extends AbstractModel {
     private String RefreshActivityId;
 
     /**
-    * Original refresh activity ID, which exists only in the rollback refresh activity.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Original refresh activity ID. exists only in rollback refresh activity.
     */
     @SerializedName("OriginRefreshActivityId")
     @Expose
@@ -53,7 +52,9 @@ Note: This field may return null, indicating that no valid value can be obtained
     private RefreshBatch [] RefreshBatchSet;
 
     /**
-    * Refresh mode.
+    * Refresh mode. valid values as follows:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
     */
     @SerializedName("RefreshMode")
     @Expose
@@ -91,32 +92,30 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String Status;
 
     /**
-    * Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Current refresh batch number. for example, 2 indicates the second batch of instances is being refreshed by the current activity.
     */
     @SerializedName("CurrentRefreshBatchNum")
     @Expose
     private Long CurrentRefreshBatchNum;
 
     /**
-    * Refresh activity start time.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * The activity start time is refreshed in standard `UTC` time, in the format `YYYY-MM-DDTHH:MM:ssZ`.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Refresh activity end time.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Refresh activity end time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Refresh activity creation time.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Refresh activity creation time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -155,20 +154,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Original refresh activity ID, which exists only in the rollback refresh activity.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return OriginRefreshActivityId Original refresh activity ID, which exists only in the rollback refresh activity.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Original refresh activity ID. exists only in rollback refresh activity. 
+     * @return OriginRefreshActivityId Original refresh activity ID. exists only in rollback refresh activity.
      */
     public String getOriginRefreshActivityId() {
         return this.OriginRefreshActivityId;
     }
 
     /**
-     * Set Original refresh activity ID, which exists only in the rollback refresh activity.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param OriginRefreshActivityId Original refresh activity ID, which exists only in the rollback refresh activity.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Original refresh activity ID. exists only in rollback refresh activity.
+     * @param OriginRefreshActivityId Original refresh activity ID. exists only in rollback refresh activity.
      */
     public void setOriginRefreshActivityId(String OriginRefreshActivityId) {
         this.OriginRefreshActivityId = OriginRefreshActivityId;
@@ -191,16 +186,24 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Refresh mode. 
-     * @return RefreshMode Refresh mode.
+     * Get Refresh mode. valid values as follows:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li> 
+     * @return RefreshMode Refresh mode. valid values as follows:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
      */
     public String getRefreshMode() {
         return this.RefreshMode;
     }
 
     /**
-     * Set Refresh mode.
-     * @param RefreshMode Refresh mode.
+     * Set Refresh mode. valid values as follows:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
+     * @param RefreshMode Refresh mode. valid values as follows:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
      */
     public void setRefreshMode(String RefreshMode) {
         this.RefreshMode = RefreshMode;
@@ -295,80 +298,72 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CurrentRefreshBatchNum Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Current refresh batch number. for example, 2 indicates the second batch of instances is being refreshed by the current activity. 
+     * @return CurrentRefreshBatchNum Current refresh batch number. for example, 2 indicates the second batch of instances is being refreshed by the current activity.
      */
     public Long getCurrentRefreshBatchNum() {
         return this.CurrentRefreshBatchNum;
     }
 
     /**
-     * Set Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CurrentRefreshBatchNum Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Current refresh batch number. for example, 2 indicates the second batch of instances is being refreshed by the current activity.
+     * @param CurrentRefreshBatchNum Current refresh batch number. for example, 2 indicates the second batch of instances is being refreshed by the current activity.
      */
     public void setCurrentRefreshBatchNum(Long CurrentRefreshBatchNum) {
         this.CurrentRefreshBatchNum = CurrentRefreshBatchNum;
     }
 
     /**
-     * Get Refresh activity start time.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return StartTime Refresh activity start time.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get The activity start time is refreshed in standard `UTC` time, in the format `YYYY-MM-DDTHH:MM:ssZ`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return StartTime The activity start time is refreshed in standard `UTC` time, in the format `YYYY-MM-DDTHH:MM:ssZ`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Refresh activity start time.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param StartTime Refresh activity start time.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set The activity start time is refreshed in standard `UTC` time, in the format `YYYY-MM-DDTHH:MM:ssZ`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param StartTime The activity start time is refreshed in standard `UTC` time, in the format `YYYY-MM-DDTHH:MM:ssZ`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Refresh activity end time.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return EndTime Refresh activity end time.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Refresh activity end time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EndTime Refresh activity end time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Refresh activity end time.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param EndTime Refresh activity end time.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Refresh activity end time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EndTime Refresh activity end time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Refresh activity creation time.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CreatedTime Refresh activity creation time.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Refresh activity creation time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ. 
+     * @return CreatedTime Refresh activity creation time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Refresh activity creation time.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CreatedTime Refresh activity creation time.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Refresh activity creation time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+     * @param CreatedTime Refresh activity creation time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

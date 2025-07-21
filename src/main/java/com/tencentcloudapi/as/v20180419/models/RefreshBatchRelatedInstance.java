@@ -31,24 +31,22 @@ public class RefreshBatchRelatedInstance extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Refresh instance status. If an instance is removed or destroyed during the refresh process, its status will be updated to NOT_FOUND. Valid values: <br><li>WAITING: pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing in progress.</li> <li>FAILED: Refresh failed.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.</li> <li>NOT_FOUND: Instance not found.
+    * Refresh instance status. if the instance is removed or terminated during refresh, the status will be updated to NOT_FOUND. valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh FAILED;</li> <li>CANCELLED: CANCELLED;</li> <li>SUCCESSFUL: refresh SUCCESSFUL;</li> <li>NOT_FOUND: instance does NOT exist.</li>.
     */
     @SerializedName("InstanceStatus")
     @Expose
     private String InstanceStatus;
 
     /**
-    * The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities API.
+    * The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities api.
 Please note that scaling activities differ from instance refresh activities; a single instance refresh activity may involve multiple scaling activities.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("LastActivityId")
     @Expose
     private String LastActivityId;
 
     /**
-    * Instance refresh status information.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Describes the instance refresh status.
     */
     @SerializedName("InstanceStatusMessage")
     @Expose
@@ -71,60 +69,52 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Refresh instance status. If an instance is removed or destroyed during the refresh process, its status will be updated to NOT_FOUND. Valid values: <br><li>WAITING: pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing in progress.</li> <li>FAILED: Refresh failed.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.</li> <li>NOT_FOUND: Instance not found. 
-     * @return InstanceStatus Refresh instance status. If an instance is removed or destroyed during the refresh process, its status will be updated to NOT_FOUND. Valid values: <br><li>WAITING: pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing in progress.</li> <li>FAILED: Refresh failed.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.</li> <li>NOT_FOUND: Instance not found.
+     * Get Refresh instance status. if the instance is removed or terminated during refresh, the status will be updated to NOT_FOUND. valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh FAILED;</li> <li>CANCELLED: CANCELLED;</li> <li>SUCCESSFUL: refresh SUCCESSFUL;</li> <li>NOT_FOUND: instance does NOT exist.</li>. 
+     * @return InstanceStatus Refresh instance status. if the instance is removed or terminated during refresh, the status will be updated to NOT_FOUND. valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh FAILED;</li> <li>CANCELLED: CANCELLED;</li> <li>SUCCESSFUL: refresh SUCCESSFUL;</li> <li>NOT_FOUND: instance does NOT exist.</li>.
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set Refresh instance status. If an instance is removed or destroyed during the refresh process, its status will be updated to NOT_FOUND. Valid values: <br><li>WAITING: pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing in progress.</li> <li>FAILED: Refresh failed.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.</li> <li>NOT_FOUND: Instance not found.
-     * @param InstanceStatus Refresh instance status. If an instance is removed or destroyed during the refresh process, its status will be updated to NOT_FOUND. Valid values: <br><li>WAITING: pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing in progress.</li> <li>FAILED: Refresh failed.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.</li> <li>NOT_FOUND: Instance not found.
+     * Set Refresh instance status. if the instance is removed or terminated during refresh, the status will be updated to NOT_FOUND. valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh FAILED;</li> <li>CANCELLED: CANCELLED;</li> <li>SUCCESSFUL: refresh SUCCESSFUL;</li> <li>NOT_FOUND: instance does NOT exist.</li>.
+     * @param InstanceStatus Refresh instance status. if the instance is removed or terminated during refresh, the status will be updated to NOT_FOUND. valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh FAILED;</li> <li>CANCELLED: CANCELLED;</li> <li>SUCCESSFUL: refresh SUCCESSFUL;</li> <li>NOT_FOUND: instance does NOT exist.</li>.
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities API.
+     * Get The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities api.
+Please note that scaling activities differ from instance refresh activities; a single instance refresh activity may involve multiple scaling activities. 
+     * @return LastActivityId The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities api.
 Please note that scaling activities differ from instance refresh activities; a single instance refresh activity may involve multiple scaling activities.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return LastActivityId The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities API.
-Please note that scaling activities differ from instance refresh activities; a single instance refresh activity may involve multiple scaling activities.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getLastActivityId() {
         return this.LastActivityId;
     }
 
     /**
-     * Set The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities API.
+     * Set The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities api.
 Please note that scaling activities differ from instance refresh activities; a single instance refresh activity may involve multiple scaling activities.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param LastActivityId The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities API.
+     * @param LastActivityId The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities api.
 Please note that scaling activities differ from instance refresh activities; a single instance refresh activity may involve multiple scaling activities.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setLastActivityId(String LastActivityId) {
         this.LastActivityId = LastActivityId;
     }
 
     /**
-     * Get Instance refresh status information.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return InstanceStatusMessage Instance refresh status information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Describes the instance refresh status. 
+     * @return InstanceStatusMessage Describes the instance refresh status.
      */
     public String getInstanceStatusMessage() {
         return this.InstanceStatusMessage;
     }
 
     /**
-     * Set Instance refresh status information.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param InstanceStatusMessage Instance refresh status information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Describes the instance refresh status.
+     * @param InstanceStatusMessage Describes the instance refresh status.
      */
     public void setInstanceStatusMessage(String InstanceStatusMessage) {
         this.InstanceStatusMessage = InstanceStatusMessage;

@@ -38,8 +38,7 @@ public class Tag extends AbstractModel {
     private String Value;
 
     /**
-    * Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
     */
     @SerializedName("ResourceType")
     @Expose
@@ -78,20 +77,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ResourceType Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively. 
+     * @return ResourceType Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ResourceType Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
+     * @param ResourceType Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

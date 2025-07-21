@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExecuteScalingPolicyRequest extends AbstractModel {
 
     /**
-    * Auto-scaling policy ID. This parameter is not available to a target tracking policy.
+    * Alarm scaling policy ID. target tracking policy is unsupported. the alert policy type can be obtained via the `ScalingPolicyType` parameter in the api response of [DescribeScalingPolicies](https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1).
     */
     @SerializedName("AutoScalingPolicyId")
     @Expose
@@ -45,16 +45,16 @@ public class ExecuteScalingPolicyRequest extends AbstractModel {
     private String TriggerSource;
 
     /**
-     * Get Auto-scaling policy ID. This parameter is not available to a target tracking policy. 
-     * @return AutoScalingPolicyId Auto-scaling policy ID. This parameter is not available to a target tracking policy.
+     * Get Alarm scaling policy ID. target tracking policy is unsupported. the alert policy type can be obtained via the `ScalingPolicyType` parameter in the api response of [DescribeScalingPolicies](https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1). 
+     * @return AutoScalingPolicyId Alarm scaling policy ID. target tracking policy is unsupported. the alert policy type can be obtained via the `ScalingPolicyType` parameter in the api response of [DescribeScalingPolicies](https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1).
      */
     public String getAutoScalingPolicyId() {
         return this.AutoScalingPolicyId;
     }
 
     /**
-     * Set Auto-scaling policy ID. This parameter is not available to a target tracking policy.
-     * @param AutoScalingPolicyId Auto-scaling policy ID. This parameter is not available to a target tracking policy.
+     * Set Alarm scaling policy ID. target tracking policy is unsupported. the alert policy type can be obtained via the `ScalingPolicyType` parameter in the api response of [DescribeScalingPolicies](https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1).
+     * @param AutoScalingPolicyId Alarm scaling policy ID. target tracking policy is unsupported. the alert policy type can be obtained via the `ScalingPolicyType` parameter in the api response of [DescribeScalingPolicies](https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1).
      */
     public void setAutoScalingPolicyId(String AutoScalingPolicyId) {
         this.AutoScalingPolicyId = AutoScalingPolicyId;

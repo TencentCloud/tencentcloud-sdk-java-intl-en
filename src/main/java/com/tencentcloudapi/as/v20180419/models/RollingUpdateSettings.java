@@ -48,6 +48,16 @@ public class RollingUpdateSettings extends AbstractModel {
     private Long MaxSurge;
 
     /**
+    * Failure handling strategy. default value: AUTO_PAUSE. valid values:.
+<Li>AUTO_PAUSE: suspended after refresh fails</li>.
+<li>AUTO_ROLLBACK: roll back after a refresh fails. each batch rolls back one instance during ROLLBACK, and the CheckInstanceTargetHealth parameter value matches the original refresh activity. no need to roll back if the shrinkage process introduced by the MaxSurge parameter fails. a cancel action will replace the ROLLBACK.</li>.
+<Li>AUTO_CANCEL: cancel after refresh fails</li>.
+    */
+    @SerializedName("FailProcess")
+    @Expose
+    private String FailProcess;
+
+    /**
      * Get Batch quantity. The batch quantity should be a positive integer greater than 0, but cannot exceed the total number of instances pending refresh. 
      * @return BatchNumber Batch quantity. The batch quantity should be a positive integer greater than 0, but cannot exceed the total number of instances pending refresh.
      */
@@ -107,6 +117,34 @@ public class RollingUpdateSettings extends AbstractModel {
         this.MaxSurge = MaxSurge;
     }
 
+    /**
+     * Get Failure handling strategy. default value: AUTO_PAUSE. valid values:.
+<Li>AUTO_PAUSE: suspended after refresh fails</li>.
+<li>AUTO_ROLLBACK: roll back after a refresh fails. each batch rolls back one instance during ROLLBACK, and the CheckInstanceTargetHealth parameter value matches the original refresh activity. no need to roll back if the shrinkage process introduced by the MaxSurge parameter fails. a cancel action will replace the ROLLBACK.</li>.
+<Li>AUTO_CANCEL: cancel after refresh fails</li>. 
+     * @return FailProcess Failure handling strategy. default value: AUTO_PAUSE. valid values:.
+<Li>AUTO_PAUSE: suspended after refresh fails</li>.
+<li>AUTO_ROLLBACK: roll back after a refresh fails. each batch rolls back one instance during ROLLBACK, and the CheckInstanceTargetHealth parameter value matches the original refresh activity. no need to roll back if the shrinkage process introduced by the MaxSurge parameter fails. a cancel action will replace the ROLLBACK.</li>.
+<Li>AUTO_CANCEL: cancel after refresh fails</li>.
+     */
+    public String getFailProcess() {
+        return this.FailProcess;
+    }
+
+    /**
+     * Set Failure handling strategy. default value: AUTO_PAUSE. valid values:.
+<Li>AUTO_PAUSE: suspended after refresh fails</li>.
+<li>AUTO_ROLLBACK: roll back after a refresh fails. each batch rolls back one instance during ROLLBACK, and the CheckInstanceTargetHealth parameter value matches the original refresh activity. no need to roll back if the shrinkage process introduced by the MaxSurge parameter fails. a cancel action will replace the ROLLBACK.</li>.
+<Li>AUTO_CANCEL: cancel after refresh fails</li>.
+     * @param FailProcess Failure handling strategy. default value: AUTO_PAUSE. valid values:.
+<Li>AUTO_PAUSE: suspended after refresh fails</li>.
+<li>AUTO_ROLLBACK: roll back after a refresh fails. each batch rolls back one instance during ROLLBACK, and the CheckInstanceTargetHealth parameter value matches the original refresh activity. no need to roll back if the shrinkage process introduced by the MaxSurge parameter fails. a cancel action will replace the ROLLBACK.</li>.
+<Li>AUTO_CANCEL: cancel after refresh fails</li>.
+     */
+    public void setFailProcess(String FailProcess) {
+        this.FailProcess = FailProcess;
+    }
+
     public RollingUpdateSettings() {
     }
 
@@ -124,6 +162,9 @@ public class RollingUpdateSettings extends AbstractModel {
         if (source.MaxSurge != null) {
             this.MaxSurge = new Long(source.MaxSurge);
         }
+        if (source.FailProcess != null) {
+            this.FailProcess = new String(source.FailProcess);
+        }
     }
 
 
@@ -134,6 +175,7 @@ public class RollingUpdateSettings extends AbstractModel {
         this.setParamSimple(map, prefix + "BatchNumber", this.BatchNumber);
         this.setParamSimple(map, prefix + "BatchPause", this.BatchPause);
         this.setParamSimple(map, prefix + "MaxSurge", this.MaxSurge);
+        this.setParamSimple(map, prefix + "FailProcess", this.FailProcess);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RefreshSettings extends AbstractModel {
 
     /**
-    * Rolling update settings parameters. RefreshMode is the rolling update. This parameter must be filled in.Note: This field may return null, indicating that no valid value can be obtained.
+    * Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
     */
     @SerializedName("RollingUpdateSettings")
     @Expose
@@ -38,16 +38,16 @@ public class RefreshSettings extends AbstractModel {
     private Boolean CheckInstanceTargetHealth;
 
     /**
-     * Get Rolling update settings parameters. RefreshMode is the rolling update. This parameter must be filled in.Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return RollingUpdateSettings Rolling update settings parameters. RefreshMode is the rolling update. This parameter must be filled in.Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in. 
+     * @return RollingUpdateSettings Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
      */
     public RollingUpdateSettings getRollingUpdateSettings() {
         return this.RollingUpdateSettings;
     }
 
     /**
-     * Set Rolling update settings parameters. RefreshMode is the rolling update. This parameter must be filled in.Note: This field may return null, indicating that no valid value can be obtained.
-     * @param RollingUpdateSettings Rolling update settings parameters. RefreshMode is the rolling update. This parameter must be filled in.Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
+     * @param RollingUpdateSettings Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
      */
     public void setRollingUpdateSettings(RollingUpdateSettings RollingUpdateSettings) {
         this.RollingUpdateSettings = RollingUpdateSettings;

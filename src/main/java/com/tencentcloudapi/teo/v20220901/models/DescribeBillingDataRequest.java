@@ -24,44 +24,66 @@ import java.util.HashMap;
 public class DescribeBillingDataRequest extends AbstractModel {
 
     /**
-    * Start time.
+    * The start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time.
+    * The end time. The query time range (EndTime - StartTime) must be less than or equal to 31 days.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Site ID set. This parameter is required.
+    * Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * Metric list. Valid values:
+    * Metric name. Valid values:
+**Layer 4/7 Acceleration Traffic (Unit: Byte):**
 <li>acc_flux: content acceleration traffic, in bytes;</li>
 <li>smt_flux: smart acceleration traffic, in bytes;</li>
-<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>l4_flux: layer 4 acceleration traffic, in bytes;</li>
 <li>sec_flux: exclusive protection traffic, in bytes;</li>
-<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
-<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>zxctg_flux: network optimization traffic in the chinese mainland, in bytes;</li>
+
+**Layer 4/7 Acceleration Bandwidth (Unit: bps):**
+<Li>acc_bandwidth: content acceleration bandwidth, in bps.</li>
 <li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
-<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<Li>l4_bandwidth: layer 4 acceleration bandwidth, in bps.</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps.</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the chinese mainland, in bps;</li>
+
+**HTTP/HTTPS Security Requests (Unit: counts):**
 <li>sec_request_clean: number of HTTP/HTTPS requests;</li>
-<li>smt_request_clean: number of smart acceleration requests;</li>
-<li>quic_request: number of QUIC requests;</li>
-<li>bot_request_clean: number of Bot requests;</li>
+
+**Value-added Service Usage:**
+<li>smt_request_clean: number of smart acceleration requests, in counts;</li>
+<li>quic_request: number of quic requests;</li>
+<Li>bot_request_clean: number of bot requests;</li>
 <li>cls_count: number of real-time log entries pushed;</li>
-<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
+<li>ddos_bandwidth: elastic ddos protection bandwidth, in bps.</li>
+
+**Edge Computing Usage:**
+<li>edgefunction_request: number of edge function executions, in counts</li>
+<li>edgefunction_cpu_time: edge function CPU processing time, in milliseconds</li>
+
+**Media Processing Usage (Unit: seconds):**
+<li>total_transcode: duration of jit transcoding and transmuxing for all specifications of audio and video, in seconds;</li>
+<li>remux: transmuxing duration, in seconds;</li>
+<li>transcode_audio: audio transcoding duration, in seconds;</li>
+<li>transcode_H264_SD: specifies the duration of standard-definition videos encoded in H.264 (short side <= 480 px), in seconds;</li>
+<li>transcode_H264_HD: specifies the duration of high-definition video (short side <= 720 px) encoded in H.264, in seconds;</li>
+<li>transcode_H264_FHD: specifies the duration of a full hd video (short side <= 1080 px) encoded in H.264, in seconds;</li>
+<li>transcode_H264_2K: specifies the duration of a 2K video (short side <= 1440 px) encoded in H.264, expressed in seconds.</li>
+
+
     */
     @SerializedName("MetricName")
     @Expose
@@ -79,137 +101,254 @@ public class DescribeBillingDataRequest extends AbstractModel {
 
     /**
     * Filter criteria. The detailed values of filter criteria are as follows:
-<li>host: Filter by domain name, such as test.example.com.<br></li>
-<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
+<ul>
+  <li>host: Filter by domain name, such as test.example.com.</li>
+  <li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.</li>
+  <li>region-id: Filter by billing region. Options:
+    <ul>
+      <li>CH: Chinese mainland</li>
+      <li>AF: Africa</li>
+      <li>AS1: Asia-Pacific Region 1</li>
+      <li>AS2: Asia-Pacific Region 2</li>
+      <li>AS3: Asia-Pacific Region 3</li>
+      <li>EU: Europe</li>
+      <li>MidEast: Middle East</li>
+      <li>NA: North America</li>
+      <li>SA: South America</li>
+    </ul>
+  </li>
+</ul>
+<p>Note: Filters of the same `Type` use OR logic, while filters of different `Type` use AND logic.</p>
+
     */
     @SerializedName("Filters")
     @Expose
     private BillingDataFilter [] Filters;
 
     /**
-     * Get Start time. 
-     * @return StartTime Start time.
+    * <p>Grouping aggregation dimensions. A maximum of two dimensions can be used for grouping simultaneously. The values are as follows:</p>
+  <ul>
+    <li>zone-id: Group by zone ID. If content identifiers are used, grouping by content identifier takes priority.</li>
+    <li>host: Group by domain name.</li>
+    <li>proxy-id: Group by layer-4 proxy instance ID.</li>
+    <li>region-id: Group by billing region.</li>
+  </ul>
+    */
+    @SerializedName("GroupBy")
+    @Expose
+    private String [] GroupBy;
+
+    /**
+     * Get The start time. 
+     * @return StartTime The start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time.
-     * @param StartTime Start time.
+     * Set The start time.
+     * @param StartTime The start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time. 
-     * @return EndTime End time.
+     * Get The end time. The query time range (EndTime - StartTime) must be less than or equal to 31 days. 
+     * @return EndTime The end time. The query time range (EndTime - StartTime) must be less than or equal to 31 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time.
-     * @param EndTime End time.
+     * Set The end time. The query time range (EndTime - StartTime) must be less than or equal to 31 days.
+     * @param EndTime The end time. The query time range (EndTime - StartTime) must be less than or equal to 31 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Site ID set. This parameter is required. 
-     * @return ZoneIds Site ID set. This parameter is required.
+     * Get Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface. 
+     * @return ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set Site ID set. This parameter is required.
-     * @param ZoneIds Site ID set. This parameter is required.
+     * Set Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
+     * @param ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get Metric list. Valid values:
+     * Get Metric name. Valid values:
+**Layer 4/7 Acceleration Traffic (Unit: Byte):**
 <li>acc_flux: content acceleration traffic, in bytes;</li>
 <li>smt_flux: smart acceleration traffic, in bytes;</li>
-<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>l4_flux: layer 4 acceleration traffic, in bytes;</li>
 <li>sec_flux: exclusive protection traffic, in bytes;</li>
-<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
-<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>zxctg_flux: network optimization traffic in the chinese mainland, in bytes;</li>
+
+**Layer 4/7 Acceleration Bandwidth (Unit: bps):**
+<Li>acc_bandwidth: content acceleration bandwidth, in bps.</li>
 <li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
-<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<Li>l4_bandwidth: layer 4 acceleration bandwidth, in bps.</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps.</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the chinese mainland, in bps;</li>
+
+**HTTP/HTTPS Security Requests (Unit: counts):**
 <li>sec_request_clean: number of HTTP/HTTPS requests;</li>
-<li>smt_request_clean: number of smart acceleration requests;</li>
-<li>quic_request: number of QUIC requests;</li>
-<li>bot_request_clean: number of Bot requests;</li>
+
+**Value-added Service Usage:**
+<li>smt_request_clean: number of smart acceleration requests, in counts;</li>
+<li>quic_request: number of quic requests;</li>
+<Li>bot_request_clean: number of bot requests;</li>
 <li>cls_count: number of real-time log entries pushed;</li>
-<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li> 
-     * @return MetricName Metric list. Valid values:
+<li>ddos_bandwidth: elastic ddos protection bandwidth, in bps.</li>
+
+**Edge Computing Usage:**
+<li>edgefunction_request: number of edge function executions, in counts</li>
+<li>edgefunction_cpu_time: edge function CPU processing time, in milliseconds</li>
+
+**Media Processing Usage (Unit: seconds):**
+<li>total_transcode: duration of jit transcoding and transmuxing for all specifications of audio and video, in seconds;</li>
+<li>remux: transmuxing duration, in seconds;</li>
+<li>transcode_audio: audio transcoding duration, in seconds;</li>
+<li>transcode_H264_SD: specifies the duration of standard-definition videos encoded in H.264 (short side <= 480 px), in seconds;</li>
+<li>transcode_H264_HD: specifies the duration of high-definition video (short side <= 720 px) encoded in H.264, in seconds;</li>
+<li>transcode_H264_FHD: specifies the duration of a full hd video (short side <= 1080 px) encoded in H.264, in seconds;</li>
+<li>transcode_H264_2K: specifies the duration of a 2K video (short side <= 1440 px) encoded in H.264, expressed in seconds.</li>
+
+ 
+     * @return MetricName Metric name. Valid values:
+**Layer 4/7 Acceleration Traffic (Unit: Byte):**
 <li>acc_flux: content acceleration traffic, in bytes;</li>
 <li>smt_flux: smart acceleration traffic, in bytes;</li>
-<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>l4_flux: layer 4 acceleration traffic, in bytes;</li>
 <li>sec_flux: exclusive protection traffic, in bytes;</li>
-<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
-<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>zxctg_flux: network optimization traffic in the chinese mainland, in bytes;</li>
+
+**Layer 4/7 Acceleration Bandwidth (Unit: bps):**
+<Li>acc_bandwidth: content acceleration bandwidth, in bps.</li>
 <li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
-<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<Li>l4_bandwidth: layer 4 acceleration bandwidth, in bps.</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps.</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the chinese mainland, in bps;</li>
+
+**HTTP/HTTPS Security Requests (Unit: counts):**
 <li>sec_request_clean: number of HTTP/HTTPS requests;</li>
-<li>smt_request_clean: number of smart acceleration requests;</li>
-<li>quic_request: number of QUIC requests;</li>
-<li>bot_request_clean: number of Bot requests;</li>
+
+**Value-added Service Usage:**
+<li>smt_request_clean: number of smart acceleration requests, in counts;</li>
+<li>quic_request: number of quic requests;</li>
+<Li>bot_request_clean: number of bot requests;</li>
 <li>cls_count: number of real-time log entries pushed;</li>
-<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
+<li>ddos_bandwidth: elastic ddos protection bandwidth, in bps.</li>
+
+**Edge Computing Usage:**
+<li>edgefunction_request: number of edge function executions, in counts</li>
+<li>edgefunction_cpu_time: edge function CPU processing time, in milliseconds</li>
+
+**Media Processing Usage (Unit: seconds):**
+<li>total_transcode: duration of jit transcoding and transmuxing for all specifications of audio and video, in seconds;</li>
+<li>remux: transmuxing duration, in seconds;</li>
+<li>transcode_audio: audio transcoding duration, in seconds;</li>
+<li>transcode_H264_SD: specifies the duration of standard-definition videos encoded in H.264 (short side <= 480 px), in seconds;</li>
+<li>transcode_H264_HD: specifies the duration of high-definition video (short side <= 720 px) encoded in H.264, in seconds;</li>
+<li>transcode_H264_FHD: specifies the duration of a full hd video (short side <= 1080 px) encoded in H.264, in seconds;</li>
+<li>transcode_H264_2K: specifies the duration of a 2K video (short side <= 1440 px) encoded in H.264, expressed in seconds.</li>
+
+
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set Metric list. Valid values:
+     * Set Metric name. Valid values:
+**Layer 4/7 Acceleration Traffic (Unit: Byte):**
 <li>acc_flux: content acceleration traffic, in bytes;</li>
 <li>smt_flux: smart acceleration traffic, in bytes;</li>
-<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>l4_flux: layer 4 acceleration traffic, in bytes;</li>
 <li>sec_flux: exclusive protection traffic, in bytes;</li>
-<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
-<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>zxctg_flux: network optimization traffic in the chinese mainland, in bytes;</li>
+
+**Layer 4/7 Acceleration Bandwidth (Unit: bps):**
+<Li>acc_bandwidth: content acceleration bandwidth, in bps.</li>
 <li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
-<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<Li>l4_bandwidth: layer 4 acceleration bandwidth, in bps.</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps.</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the chinese mainland, in bps;</li>
+
+**HTTP/HTTPS Security Requests (Unit: counts):**
 <li>sec_request_clean: number of HTTP/HTTPS requests;</li>
-<li>smt_request_clean: number of smart acceleration requests;</li>
-<li>quic_request: number of QUIC requests;</li>
-<li>bot_request_clean: number of Bot requests;</li>
+
+**Value-added Service Usage:**
+<li>smt_request_clean: number of smart acceleration requests, in counts;</li>
+<li>quic_request: number of quic requests;</li>
+<Li>bot_request_clean: number of bot requests;</li>
 <li>cls_count: number of real-time log entries pushed;</li>
-<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
-     * @param MetricName Metric list. Valid values:
+<li>ddos_bandwidth: elastic ddos protection bandwidth, in bps.</li>
+
+**Edge Computing Usage:**
+<li>edgefunction_request: number of edge function executions, in counts</li>
+<li>edgefunction_cpu_time: edge function CPU processing time, in milliseconds</li>
+
+**Media Processing Usage (Unit: seconds):**
+<li>total_transcode: duration of jit transcoding and transmuxing for all specifications of audio and video, in seconds;</li>
+<li>remux: transmuxing duration, in seconds;</li>
+<li>transcode_audio: audio transcoding duration, in seconds;</li>
+<li>transcode_H264_SD: specifies the duration of standard-definition videos encoded in H.264 (short side <= 480 px), in seconds;</li>
+<li>transcode_H264_HD: specifies the duration of high-definition video (short side <= 720 px) encoded in H.264, in seconds;</li>
+<li>transcode_H264_FHD: specifies the duration of a full hd video (short side <= 1080 px) encoded in H.264, in seconds;</li>
+<li>transcode_H264_2K: specifies the duration of a 2K video (short side <= 1440 px) encoded in H.264, expressed in seconds.</li>
+
+
+     * @param MetricName Metric name. Valid values:
+**Layer 4/7 Acceleration Traffic (Unit: Byte):**
 <li>acc_flux: content acceleration traffic, in bytes;</li>
 <li>smt_flux: smart acceleration traffic, in bytes;</li>
-<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>l4_flux: layer 4 acceleration traffic, in bytes;</li>
 <li>sec_flux: exclusive protection traffic, in bytes;</li>
-<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
-<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>zxctg_flux: network optimization traffic in the chinese mainland, in bytes;</li>
+
+**Layer 4/7 Acceleration Bandwidth (Unit: bps):**
+<Li>acc_bandwidth: content acceleration bandwidth, in bps.</li>
 <li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
-<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<Li>l4_bandwidth: layer 4 acceleration bandwidth, in bps.</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps.</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the chinese mainland, in bps;</li>
+
+**HTTP/HTTPS Security Requests (Unit: counts):**
 <li>sec_request_clean: number of HTTP/HTTPS requests;</li>
-<li>smt_request_clean: number of smart acceleration requests;</li>
-<li>quic_request: number of QUIC requests;</li>
-<li>bot_request_clean: number of Bot requests;</li>
+
+**Value-added Service Usage:**
+<li>smt_request_clean: number of smart acceleration requests, in counts;</li>
+<li>quic_request: number of quic requests;</li>
+<Li>bot_request_clean: number of bot requests;</li>
 <li>cls_count: number of real-time log entries pushed;</li>
-<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
+<li>ddos_bandwidth: elastic ddos protection bandwidth, in bps.</li>
+
+**Edge Computing Usage:**
+<li>edgefunction_request: number of edge function executions, in counts</li>
+<li>edgefunction_cpu_time: edge function CPU processing time, in milliseconds</li>
+
+**Media Processing Usage (Unit: seconds):**
+<li>total_transcode: duration of jit transcoding and transmuxing for all specifications of audio and video, in seconds;</li>
+<li>remux: transmuxing duration, in seconds;</li>
+<li>transcode_audio: audio transcoding duration, in seconds;</li>
+<li>transcode_H264_SD: specifies the duration of standard-definition videos encoded in H.264 (short side <= 480 px), in seconds;</li>
+<li>transcode_H264_HD: specifies the duration of high-definition video (short side <= 720 px) encoded in H.264, in seconds;</li>
+<li>transcode_H264_FHD: specifies the duration of a full hd video (short side <= 1080 px) encoded in H.264, in seconds;</li>
+<li>transcode_H264_2K: specifies the duration of a 2K video (short side <= 1440 px) encoded in H.264, expressed in seconds.</li>
+
+
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
@@ -245,13 +384,45 @@ public class DescribeBillingDataRequest extends AbstractModel {
 
     /**
      * Get Filter criteria. The detailed values of filter criteria are as follows:
-<li>host: Filter by domain name, such as test.example.com.<br></li>
-<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li> 
+<ul>
+  <li>host: Filter by domain name, such as test.example.com.</li>
+  <li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.</li>
+  <li>region-id: Filter by billing region. Options:
+    <ul>
+      <li>CH: Chinese mainland</li>
+      <li>AF: Africa</li>
+      <li>AS1: Asia-Pacific Region 1</li>
+      <li>AS2: Asia-Pacific Region 2</li>
+      <li>AS3: Asia-Pacific Region 3</li>
+      <li>EU: Europe</li>
+      <li>MidEast: Middle East</li>
+      <li>NA: North America</li>
+      <li>SA: South America</li>
+    </ul>
+  </li>
+</ul>
+<p>Note: Filters of the same `Type` use OR logic, while filters of different `Type` use AND logic.</p>
+ 
      * @return Filters Filter criteria. The detailed values of filter criteria are as follows:
-<li>host: Filter by domain name, such as test.example.com.<br></li>
-<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
+<ul>
+  <li>host: Filter by domain name, such as test.example.com.</li>
+  <li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.</li>
+  <li>region-id: Filter by billing region. Options:
+    <ul>
+      <li>CH: Chinese mainland</li>
+      <li>AF: Africa</li>
+      <li>AS1: Asia-Pacific Region 1</li>
+      <li>AS2: Asia-Pacific Region 2</li>
+      <li>AS3: Asia-Pacific Region 3</li>
+      <li>EU: Europe</li>
+      <li>MidEast: Middle East</li>
+      <li>NA: North America</li>
+      <li>SA: South America</li>
+    </ul>
+  </li>
+</ul>
+<p>Note: Filters of the same `Type` use OR logic, while filters of different `Type` use AND logic.</p>
+
      */
     public BillingDataFilter [] getFilters() {
         return this.Filters;
@@ -259,16 +430,88 @@ public class DescribeBillingDataRequest extends AbstractModel {
 
     /**
      * Set Filter criteria. The detailed values of filter criteria are as follows:
-<li>host: Filter by domain name, such as test.example.com.<br></li>
-<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
+<ul>
+  <li>host: Filter by domain name, such as test.example.com.</li>
+  <li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.</li>
+  <li>region-id: Filter by billing region. Options:
+    <ul>
+      <li>CH: Chinese mainland</li>
+      <li>AF: Africa</li>
+      <li>AS1: Asia-Pacific Region 1</li>
+      <li>AS2: Asia-Pacific Region 2</li>
+      <li>AS3: Asia-Pacific Region 3</li>
+      <li>EU: Europe</li>
+      <li>MidEast: Middle East</li>
+      <li>NA: North America</li>
+      <li>SA: South America</li>
+    </ul>
+  </li>
+</ul>
+<p>Note: Filters of the same `Type` use OR logic, while filters of different `Type` use AND logic.</p>
+
      * @param Filters Filter criteria. The detailed values of filter criteria are as follows:
-<li>host: Filter by domain name, such as test.example.com.<br></li>
-<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
+<ul>
+  <li>host: Filter by domain name, such as test.example.com.</li>
+  <li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.</li>
+  <li>region-id: Filter by billing region. Options:
+    <ul>
+      <li>CH: Chinese mainland</li>
+      <li>AF: Africa</li>
+      <li>AS1: Asia-Pacific Region 1</li>
+      <li>AS2: Asia-Pacific Region 2</li>
+      <li>AS3: Asia-Pacific Region 3</li>
+      <li>EU: Europe</li>
+      <li>MidEast: Middle East</li>
+      <li>NA: North America</li>
+      <li>SA: South America</li>
+    </ul>
+  </li>
+</ul>
+<p>Note: Filters of the same `Type` use OR logic, while filters of different `Type` use AND logic.</p>
+
      */
     public void setFilters(BillingDataFilter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get <p>Grouping aggregation dimensions. A maximum of two dimensions can be used for grouping simultaneously. The values are as follows:</p>
+  <ul>
+    <li>zone-id: Group by zone ID. If content identifiers are used, grouping by content identifier takes priority.</li>
+    <li>host: Group by domain name.</li>
+    <li>proxy-id: Group by layer-4 proxy instance ID.</li>
+    <li>region-id: Group by billing region.</li>
+  </ul> 
+     * @return GroupBy <p>Grouping aggregation dimensions. A maximum of two dimensions can be used for grouping simultaneously. The values are as follows:</p>
+  <ul>
+    <li>zone-id: Group by zone ID. If content identifiers are used, grouping by content identifier takes priority.</li>
+    <li>host: Group by domain name.</li>
+    <li>proxy-id: Group by layer-4 proxy instance ID.</li>
+    <li>region-id: Group by billing region.</li>
+  </ul>
+     */
+    public String [] getGroupBy() {
+        return this.GroupBy;
+    }
+
+    /**
+     * Set <p>Grouping aggregation dimensions. A maximum of two dimensions can be used for grouping simultaneously. The values are as follows:</p>
+  <ul>
+    <li>zone-id: Group by zone ID. If content identifiers are used, grouping by content identifier takes priority.</li>
+    <li>host: Group by domain name.</li>
+    <li>proxy-id: Group by layer-4 proxy instance ID.</li>
+    <li>region-id: Group by billing region.</li>
+  </ul>
+     * @param GroupBy <p>Grouping aggregation dimensions. A maximum of two dimensions can be used for grouping simultaneously. The values are as follows:</p>
+  <ul>
+    <li>zone-id: Group by zone ID. If content identifiers are used, grouping by content identifier takes priority.</li>
+    <li>host: Group by domain name.</li>
+    <li>proxy-id: Group by layer-4 proxy instance ID.</li>
+    <li>region-id: Group by billing region.</li>
+  </ul>
+     */
+    public void setGroupBy(String [] GroupBy) {
+        this.GroupBy = GroupBy;
     }
 
     public DescribeBillingDataRequest() {
@@ -303,6 +546,12 @@ public class DescribeBillingDataRequest extends AbstractModel {
                 this.Filters[i] = new BillingDataFilter(source.Filters[i]);
             }
         }
+        if (source.GroupBy != null) {
+            this.GroupBy = new String[source.GroupBy.length];
+            for (int i = 0; i < source.GroupBy.length; i++) {
+                this.GroupBy[i] = new String(source.GroupBy[i]);
+            }
+        }
     }
 
 
@@ -316,6 +565,7 @@ public class DescribeBillingDataRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MetricName", this.MetricName);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
 
     }
 }

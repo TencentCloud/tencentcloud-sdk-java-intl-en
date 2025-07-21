@@ -24,26 +24,28 @@ import java.util.HashMap;
 public class SecurityAction extends AbstractModel {
 
     /**
-    * Specific action name for security operation. Values:
-<li>`Deny`: block</li> <li>`Monitor`: monitor</li> <li>`ReturnCustomPage`: block with customized page</li> <li>`Redirect`: Redirect to URL</li> <li>`BlockIP`: IP block</li> <li>`JSChallenge`: javaScript challenge</li> <li>`ManagedChallenge`: managed challenge</li> <li>`Disabled`: disabled</li> <li>`Allow`: allow</li>.
+    * Safe execution actions. valid values:.
+<Li>Deny: block request to access site resource;</li>.
+<Li>`Monitor`: observe; only record logs</li>.
+<li>`Redirect`: Redirect to URL</li>.
+<Li>Disabled: disabled; specify rule is not enabled.</li>.
+<Li>Allow: allow access but delay processing the request.</li>.
+<Li>Challenge: challenge, respond to challenge content;</li>.
+<Li>BlockIP: to be deprecated, ip block;</li>.
+<Li>`ReturnCustomPage`: to be deprecated, use specified page block;</li>.
+<li>JSChallenge: to be deprecated, JavaScript challenge;</li>.
+<Li>ManagedChallenge: to be deprecated. managed challenge.</li>.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Additional parameter when Name is BlockIP.
+    * Additional parameters when Name is Deny.
     */
-    @SerializedName("BlockIPActionParameters")
+    @SerializedName("DenyActionParameters")
     @Expose
-    private BlockIPActionParameters BlockIPActionParameters;
-
-    /**
-    * Additional parameter when Name is ReturnCustomPage.
-    */
-    @SerializedName("ReturnCustomPageActionParameters")
-    @Expose
-    private ReturnCustomPageActionParameters ReturnCustomPageActionParameters;
+    private DenyActionParameters DenyActionParameters;
 
     /**
     * Additional parameter when Name is Redirect.
@@ -53,55 +55,103 @@ public class SecurityAction extends AbstractModel {
     private RedirectActionParameters RedirectActionParameters;
 
     /**
-     * Get Specific action name for security operation. Values:
-<li>`Deny`: block</li> <li>`Monitor`: monitor</li> <li>`ReturnCustomPage`: block with customized page</li> <li>`Redirect`: Redirect to URL</li> <li>`BlockIP`: IP block</li> <li>`JSChallenge`: javaScript challenge</li> <li>`ManagedChallenge`: managed challenge</li> <li>`Disabled`: disabled</li> <li>`Allow`: allow</li>. 
-     * @return Name Specific action name for security operation. Values:
-<li>`Deny`: block</li> <li>`Monitor`: monitor</li> <li>`ReturnCustomPage`: block with customized page</li> <li>`Redirect`: Redirect to URL</li> <li>`BlockIP`: IP block</li> <li>`JSChallenge`: javaScript challenge</li> <li>`ManagedChallenge`: managed challenge</li> <li>`Disabled`: disabled</li> <li>`Allow`: allow</li>.
+    * Additional parameters when Name is Allow.
+    */
+    @SerializedName("AllowActionParameters")
+    @Expose
+    private AllowActionParameters AllowActionParameters;
+
+    /**
+    * Additional parameter when Name is Challenge.
+    */
+    @SerializedName("ChallengeActionParameters")
+    @Expose
+    private ChallengeActionParameters ChallengeActionParameters;
+
+    /**
+    * To be deprecated, additional parameter when Name is BlockIP.
+    */
+    @SerializedName("BlockIPActionParameters")
+    @Expose
+    private BlockIPActionParameters BlockIPActionParameters;
+
+    /**
+    * To be deprecated, additional parameter when Name is ReturnCustomPage.
+    */
+    @SerializedName("ReturnCustomPageActionParameters")
+    @Expose
+    private ReturnCustomPageActionParameters ReturnCustomPageActionParameters;
+
+    /**
+     * Get Safe execution actions. valid values:.
+<Li>Deny: block request to access site resource;</li>.
+<Li>`Monitor`: observe; only record logs</li>.
+<li>`Redirect`: Redirect to URL</li>.
+<Li>Disabled: disabled; specify rule is not enabled.</li>.
+<Li>Allow: allow access but delay processing the request.</li>.
+<Li>Challenge: challenge, respond to challenge content;</li>.
+<Li>BlockIP: to be deprecated, ip block;</li>.
+<Li>`ReturnCustomPage`: to be deprecated, use specified page block;</li>.
+<li>JSChallenge: to be deprecated, JavaScript challenge;</li>.
+<Li>ManagedChallenge: to be deprecated. managed challenge.</li>. 
+     * @return Name Safe execution actions. valid values:.
+<Li>Deny: block request to access site resource;</li>.
+<Li>`Monitor`: observe; only record logs</li>.
+<li>`Redirect`: Redirect to URL</li>.
+<Li>Disabled: disabled; specify rule is not enabled.</li>.
+<Li>Allow: allow access but delay processing the request.</li>.
+<Li>Challenge: challenge, respond to challenge content;</li>.
+<Li>BlockIP: to be deprecated, ip block;</li>.
+<Li>`ReturnCustomPage`: to be deprecated, use specified page block;</li>.
+<li>JSChallenge: to be deprecated, JavaScript challenge;</li>.
+<Li>ManagedChallenge: to be deprecated. managed challenge.</li>.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Specific action name for security operation. Values:
-<li>`Deny`: block</li> <li>`Monitor`: monitor</li> <li>`ReturnCustomPage`: block with customized page</li> <li>`Redirect`: Redirect to URL</li> <li>`BlockIP`: IP block</li> <li>`JSChallenge`: javaScript challenge</li> <li>`ManagedChallenge`: managed challenge</li> <li>`Disabled`: disabled</li> <li>`Allow`: allow</li>.
-     * @param Name Specific action name for security operation. Values:
-<li>`Deny`: block</li> <li>`Monitor`: monitor</li> <li>`ReturnCustomPage`: block with customized page</li> <li>`Redirect`: Redirect to URL</li> <li>`BlockIP`: IP block</li> <li>`JSChallenge`: javaScript challenge</li> <li>`ManagedChallenge`: managed challenge</li> <li>`Disabled`: disabled</li> <li>`Allow`: allow</li>.
+     * Set Safe execution actions. valid values:.
+<Li>Deny: block request to access site resource;</li>.
+<Li>`Monitor`: observe; only record logs</li>.
+<li>`Redirect`: Redirect to URL</li>.
+<Li>Disabled: disabled; specify rule is not enabled.</li>.
+<Li>Allow: allow access but delay processing the request.</li>.
+<Li>Challenge: challenge, respond to challenge content;</li>.
+<Li>BlockIP: to be deprecated, ip block;</li>.
+<Li>`ReturnCustomPage`: to be deprecated, use specified page block;</li>.
+<li>JSChallenge: to be deprecated, JavaScript challenge;</li>.
+<Li>ManagedChallenge: to be deprecated. managed challenge.</li>.
+     * @param Name Safe execution actions. valid values:.
+<Li>Deny: block request to access site resource;</li>.
+<Li>`Monitor`: observe; only record logs</li>.
+<li>`Redirect`: Redirect to URL</li>.
+<Li>Disabled: disabled; specify rule is not enabled.</li>.
+<Li>Allow: allow access but delay processing the request.</li>.
+<Li>Challenge: challenge, respond to challenge content;</li>.
+<Li>BlockIP: to be deprecated, ip block;</li>.
+<Li>`ReturnCustomPage`: to be deprecated, use specified page block;</li>.
+<li>JSChallenge: to be deprecated, JavaScript challenge;</li>.
+<Li>ManagedChallenge: to be deprecated. managed challenge.</li>.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Additional parameter when Name is BlockIP. 
-     * @return BlockIPActionParameters Additional parameter when Name is BlockIP.
+     * Get Additional parameters when Name is Deny. 
+     * @return DenyActionParameters Additional parameters when Name is Deny.
      */
-    public BlockIPActionParameters getBlockIPActionParameters() {
-        return this.BlockIPActionParameters;
+    public DenyActionParameters getDenyActionParameters() {
+        return this.DenyActionParameters;
     }
 
     /**
-     * Set Additional parameter when Name is BlockIP.
-     * @param BlockIPActionParameters Additional parameter when Name is BlockIP.
+     * Set Additional parameters when Name is Deny.
+     * @param DenyActionParameters Additional parameters when Name is Deny.
      */
-    public void setBlockIPActionParameters(BlockIPActionParameters BlockIPActionParameters) {
-        this.BlockIPActionParameters = BlockIPActionParameters;
-    }
-
-    /**
-     * Get Additional parameter when Name is ReturnCustomPage. 
-     * @return ReturnCustomPageActionParameters Additional parameter when Name is ReturnCustomPage.
-     */
-    public ReturnCustomPageActionParameters getReturnCustomPageActionParameters() {
-        return this.ReturnCustomPageActionParameters;
-    }
-
-    /**
-     * Set Additional parameter when Name is ReturnCustomPage.
-     * @param ReturnCustomPageActionParameters Additional parameter when Name is ReturnCustomPage.
-     */
-    public void setReturnCustomPageActionParameters(ReturnCustomPageActionParameters ReturnCustomPageActionParameters) {
-        this.ReturnCustomPageActionParameters = ReturnCustomPageActionParameters;
+    public void setDenyActionParameters(DenyActionParameters DenyActionParameters) {
+        this.DenyActionParameters = DenyActionParameters;
     }
 
     /**
@@ -120,6 +170,70 @@ public class SecurityAction extends AbstractModel {
         this.RedirectActionParameters = RedirectActionParameters;
     }
 
+    /**
+     * Get Additional parameters when Name is Allow. 
+     * @return AllowActionParameters Additional parameters when Name is Allow.
+     */
+    public AllowActionParameters getAllowActionParameters() {
+        return this.AllowActionParameters;
+    }
+
+    /**
+     * Set Additional parameters when Name is Allow.
+     * @param AllowActionParameters Additional parameters when Name is Allow.
+     */
+    public void setAllowActionParameters(AllowActionParameters AllowActionParameters) {
+        this.AllowActionParameters = AllowActionParameters;
+    }
+
+    /**
+     * Get Additional parameter when Name is Challenge. 
+     * @return ChallengeActionParameters Additional parameter when Name is Challenge.
+     */
+    public ChallengeActionParameters getChallengeActionParameters() {
+        return this.ChallengeActionParameters;
+    }
+
+    /**
+     * Set Additional parameter when Name is Challenge.
+     * @param ChallengeActionParameters Additional parameter when Name is Challenge.
+     */
+    public void setChallengeActionParameters(ChallengeActionParameters ChallengeActionParameters) {
+        this.ChallengeActionParameters = ChallengeActionParameters;
+    }
+
+    /**
+     * Get To be deprecated, additional parameter when Name is BlockIP. 
+     * @return BlockIPActionParameters To be deprecated, additional parameter when Name is BlockIP.
+     */
+    public BlockIPActionParameters getBlockIPActionParameters() {
+        return this.BlockIPActionParameters;
+    }
+
+    /**
+     * Set To be deprecated, additional parameter when Name is BlockIP.
+     * @param BlockIPActionParameters To be deprecated, additional parameter when Name is BlockIP.
+     */
+    public void setBlockIPActionParameters(BlockIPActionParameters BlockIPActionParameters) {
+        this.BlockIPActionParameters = BlockIPActionParameters;
+    }
+
+    /**
+     * Get To be deprecated, additional parameter when Name is ReturnCustomPage. 
+     * @return ReturnCustomPageActionParameters To be deprecated, additional parameter when Name is ReturnCustomPage.
+     */
+    public ReturnCustomPageActionParameters getReturnCustomPageActionParameters() {
+        return this.ReturnCustomPageActionParameters;
+    }
+
+    /**
+     * Set To be deprecated, additional parameter when Name is ReturnCustomPage.
+     * @param ReturnCustomPageActionParameters To be deprecated, additional parameter when Name is ReturnCustomPage.
+     */
+    public void setReturnCustomPageActionParameters(ReturnCustomPageActionParameters ReturnCustomPageActionParameters) {
+        this.ReturnCustomPageActionParameters = ReturnCustomPageActionParameters;
+    }
+
     public SecurityAction() {
     }
 
@@ -131,14 +245,23 @@ public class SecurityAction extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.DenyActionParameters != null) {
+            this.DenyActionParameters = new DenyActionParameters(source.DenyActionParameters);
+        }
+        if (source.RedirectActionParameters != null) {
+            this.RedirectActionParameters = new RedirectActionParameters(source.RedirectActionParameters);
+        }
+        if (source.AllowActionParameters != null) {
+            this.AllowActionParameters = new AllowActionParameters(source.AllowActionParameters);
+        }
+        if (source.ChallengeActionParameters != null) {
+            this.ChallengeActionParameters = new ChallengeActionParameters(source.ChallengeActionParameters);
+        }
         if (source.BlockIPActionParameters != null) {
             this.BlockIPActionParameters = new BlockIPActionParameters(source.BlockIPActionParameters);
         }
         if (source.ReturnCustomPageActionParameters != null) {
             this.ReturnCustomPageActionParameters = new ReturnCustomPageActionParameters(source.ReturnCustomPageActionParameters);
-        }
-        if (source.RedirectActionParameters != null) {
-            this.RedirectActionParameters = new RedirectActionParameters(source.RedirectActionParameters);
         }
     }
 
@@ -148,9 +271,12 @@ public class SecurityAction extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamObj(map, prefix + "DenyActionParameters.", this.DenyActionParameters);
+        this.setParamObj(map, prefix + "RedirectActionParameters.", this.RedirectActionParameters);
+        this.setParamObj(map, prefix + "AllowActionParameters.", this.AllowActionParameters);
+        this.setParamObj(map, prefix + "ChallengeActionParameters.", this.ChallengeActionParameters);
         this.setParamObj(map, prefix + "BlockIPActionParameters.", this.BlockIPActionParameters);
         this.setParamObj(map, prefix + "ReturnCustomPageActionParameters.", this.ReturnCustomPageActionParameters);
-        this.setParamObj(map, prefix + "RedirectActionParameters.", this.RedirectActionParameters);
 
     }
 }

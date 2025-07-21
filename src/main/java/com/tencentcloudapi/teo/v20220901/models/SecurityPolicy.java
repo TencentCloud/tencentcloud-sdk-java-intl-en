@@ -40,6 +40,34 @@ Note: This field may return null, indicating that no valid value can be obtained
     private ManagedRules ManagedRules;
 
     /**
+    * HTTP DDOS protection configuration.
+    */
+    @SerializedName("HttpDDoSProtection")
+    @Expose
+    private HttpDDoSProtection HttpDDoSProtection;
+
+    /**
+    * Configures the rate limiting rule.
+    */
+    @SerializedName("RateLimitingRules")
+    @Expose
+    private RateLimitingRules RateLimitingRules;
+
+    /**
+    * Exception rule configuration.
+    */
+    @SerializedName("ExceptionRules")
+    @Expose
+    private ExceptionRules ExceptionRules;
+
+    /**
+    * Bot management configuration.
+    */
+    @SerializedName("BotManagement")
+    @Expose
+    private BotManagement BotManagement;
+
+    /**
      * Get Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return CustomRules Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
@@ -79,6 +107,70 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.ManagedRules = ManagedRules;
     }
 
+    /**
+     * Get HTTP DDOS protection configuration. 
+     * @return HttpDDoSProtection HTTP DDOS protection configuration.
+     */
+    public HttpDDoSProtection getHttpDDoSProtection() {
+        return this.HttpDDoSProtection;
+    }
+
+    /**
+     * Set HTTP DDOS protection configuration.
+     * @param HttpDDoSProtection HTTP DDOS protection configuration.
+     */
+    public void setHttpDDoSProtection(HttpDDoSProtection HttpDDoSProtection) {
+        this.HttpDDoSProtection = HttpDDoSProtection;
+    }
+
+    /**
+     * Get Configures the rate limiting rule. 
+     * @return RateLimitingRules Configures the rate limiting rule.
+     */
+    public RateLimitingRules getRateLimitingRules() {
+        return this.RateLimitingRules;
+    }
+
+    /**
+     * Set Configures the rate limiting rule.
+     * @param RateLimitingRules Configures the rate limiting rule.
+     */
+    public void setRateLimitingRules(RateLimitingRules RateLimitingRules) {
+        this.RateLimitingRules = RateLimitingRules;
+    }
+
+    /**
+     * Get Exception rule configuration. 
+     * @return ExceptionRules Exception rule configuration.
+     */
+    public ExceptionRules getExceptionRules() {
+        return this.ExceptionRules;
+    }
+
+    /**
+     * Set Exception rule configuration.
+     * @param ExceptionRules Exception rule configuration.
+     */
+    public void setExceptionRules(ExceptionRules ExceptionRules) {
+        this.ExceptionRules = ExceptionRules;
+    }
+
+    /**
+     * Get Bot management configuration. 
+     * @return BotManagement Bot management configuration.
+     */
+    public BotManagement getBotManagement() {
+        return this.BotManagement;
+    }
+
+    /**
+     * Set Bot management configuration.
+     * @param BotManagement Bot management configuration.
+     */
+    public void setBotManagement(BotManagement BotManagement) {
+        this.BotManagement = BotManagement;
+    }
+
     public SecurityPolicy() {
     }
 
@@ -93,6 +185,18 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.ManagedRules != null) {
             this.ManagedRules = new ManagedRules(source.ManagedRules);
         }
+        if (source.HttpDDoSProtection != null) {
+            this.HttpDDoSProtection = new HttpDDoSProtection(source.HttpDDoSProtection);
+        }
+        if (source.RateLimitingRules != null) {
+            this.RateLimitingRules = new RateLimitingRules(source.RateLimitingRules);
+        }
+        if (source.ExceptionRules != null) {
+            this.ExceptionRules = new ExceptionRules(source.ExceptionRules);
+        }
+        if (source.BotManagement != null) {
+            this.BotManagement = new BotManagement(source.BotManagement);
+        }
     }
 
 
@@ -102,6 +206,10 @@ Note: This field may return null, indicating that no valid value can be obtained
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "CustomRules.", this.CustomRules);
         this.setParamObj(map, prefix + "ManagedRules.", this.ManagedRules);
+        this.setParamObj(map, prefix + "HttpDDoSProtection.", this.HttpDDoSProtection);
+        this.setParamObj(map, prefix + "RateLimitingRules.", this.RateLimitingRules);
+        this.setParamObj(map, prefix + "ExceptionRules.", this.ExceptionRules);
+        this.setParamObj(map, prefix + "BotManagement.", this.BotManagement);
 
     }
 }

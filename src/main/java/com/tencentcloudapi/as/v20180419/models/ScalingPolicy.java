@@ -68,7 +68,7 @@ public class ScalingPolicy extends AbstractModel {
     private Long AdjustmentValue;
 
     /**
-    * Cooldown period. This parameter is only applicable to a simple policy.
+    * Cooldown duration in seconds, applies only to simple policies. value range [0,3600]. default cooldown: 300 seconds.
     */
     @SerializedName("Cooldown")
     @Expose
@@ -233,16 +233,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Cooldown period. This parameter is only applicable to a simple policy. 
-     * @return Cooldown Cooldown period. This parameter is only applicable to a simple policy.
+     * Get Cooldown duration in seconds, applies only to simple policies. value range [0,3600]. default cooldown: 300 seconds. 
+     * @return Cooldown Cooldown duration in seconds, applies only to simple policies. value range [0,3600]. default cooldown: 300 seconds.
      */
     public Long getCooldown() {
         return this.Cooldown;
     }
 
     /**
-     * Set Cooldown period. This parameter is only applicable to a simple policy.
-     * @param Cooldown Cooldown period. This parameter is only applicable to a simple policy.
+     * Set Cooldown duration in seconds, applies only to simple policies. value range [0,3600]. default cooldown: 300 seconds.
+     * @param Cooldown Cooldown duration in seconds, applies only to simple policies. value range [0,3600]. default cooldown: 300 seconds.
      */
     public void setCooldown(Long Cooldown) {
         this.Cooldown = Cooldown;

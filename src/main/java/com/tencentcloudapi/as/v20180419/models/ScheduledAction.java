@@ -52,7 +52,7 @@ public class ScheduledAction extends AbstractModel {
     private String StartTime;
 
     /**
-    * Repeating mode of the scheduled task.
+    * Specifies the repeating mode of the scheduled task. the Recurrence parameter limits (https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
     */
     @SerializedName("Recurrence")
     @Expose
@@ -87,7 +87,7 @@ public class ScheduledAction extends AbstractModel {
     private Long MinSize;
 
     /**
-    * Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+    * The creation time of the scheduled task. value is in standard `UTC` time, formatted as `YYYY-MM-DDThh:MM:ssZ` according to the `ISO8601` standard.
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -167,16 +167,16 @@ public class ScheduledAction extends AbstractModel {
     }
 
     /**
-     * Get Repeating mode of the scheduled task. 
-     * @return Recurrence Repeating mode of the scheduled task.
+     * Get Specifies the repeating mode of the scheduled task. the Recurrence parameter limits (https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week. 
+     * @return Recurrence Specifies the repeating mode of the scheduled task. the Recurrence parameter limits (https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
      */
     public String getRecurrence() {
         return this.Recurrence;
     }
 
     /**
-     * Set Repeating mode of the scheduled task.
-     * @param Recurrence Repeating mode of the scheduled task.
+     * Set Specifies the repeating mode of the scheduled task. the Recurrence parameter limits (https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
+     * @param Recurrence Specifies the repeating mode of the scheduled task. the Recurrence parameter limits (https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
      */
     public void setRecurrence(String Recurrence) {
         this.Recurrence = Recurrence;
@@ -247,16 +247,16 @@ public class ScheduledAction extends AbstractModel {
     }
 
     /**
-     * Get Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard. 
-     * @return CreatedTime Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+     * Get The creation time of the scheduled task. value is in standard `UTC` time, formatted as `YYYY-MM-DDThh:MM:ssZ` according to the `ISO8601` standard. 
+     * @return CreatedTime The creation time of the scheduled task. value is in standard `UTC` time, formatted as `YYYY-MM-DDThh:MM:ssZ` according to the `ISO8601` standard.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
-     * @param CreatedTime Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+     * Set The creation time of the scheduled task. value is in standard `UTC` time, formatted as `YYYY-MM-DDThh:MM:ssZ` according to the `ISO8601` standard.
+     * @param CreatedTime The creation time of the scheduled task. value is in standard `UTC` time, formatted as `YYYY-MM-DDThh:MM:ssZ` according to the `ISO8601` standard.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
