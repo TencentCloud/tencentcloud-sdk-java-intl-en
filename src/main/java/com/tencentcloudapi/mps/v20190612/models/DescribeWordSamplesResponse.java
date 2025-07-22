@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeWordSamplesResponse extends AbstractModel {
 
     /**
-    * Number of eligible entries.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total number of qualified records.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,20 +46,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Number of eligible entries.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Number of eligible entries.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total number of qualified records. 
+     * @return TotalCount Total number of qualified records.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible entries.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Number of eligible entries.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total number of qualified records.
+     * @param TotalCount Total number of qualified records.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

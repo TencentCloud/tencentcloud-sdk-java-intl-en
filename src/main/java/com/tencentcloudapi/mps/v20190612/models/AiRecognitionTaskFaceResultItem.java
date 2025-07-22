@@ -54,78 +54,69 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     private AiRecognitionTaskFaceSegmentItem [] SegmentSet;
 
     /**
-    * The person’s gender.
-<li>Male</li>
-<li>Female</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Gender of the person.
+<Li>Male: man.</li>.
+<Li>Female: specifies the woman.</li>.
     */
     @SerializedName("Gender")
     @Expose
     private String Gender;
 
     /**
-    * The person’s birth date.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Date of birth.
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * The person’s job or job title.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Occupation or position of a person.
     */
     @SerializedName("Profession")
     @Expose
     private String Profession;
 
     /**
-    * The college the person graduated from.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Specifies the graduation institution of the person.
     */
     @SerializedName("SchoolOfGraduation")
     @Expose
     private String SchoolOfGraduation;
 
     /**
-    * The person’s profile.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Description of the person.
     */
     @SerializedName("Abstract")
     @Expose
     private String Abstract;
 
     /**
-    * The person’s place of birth.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Specifies the birthplace or place of origin.
     */
     @SerializedName("PlaceOfBirth")
     @Expose
     private String PlaceOfBirth;
 
     /**
-    * Whether the person is a politician or artist.
-<li>Politician</li>
-<li>Artist</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Person type.
+<Li>Politician: specifies the official.</li>.
+<Li>Artist: specifies the artist.</li>.
     */
     @SerializedName("PersonType")
     @Expose
     private String PersonType;
 
     /**
-    * Sensitivity
-<li>Normal</li>
-<li>Sensitive</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Sensitivity labeling.
+<Li>Normal: specifies the scaling group is normal.</li>.
+<Li>Sensitive: specifies sensitivity.</li>.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * The screenshot URL.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Specifies the screenshot link.
     */
     @SerializedName("Url")
     @Expose
@@ -204,204 +195,168 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get The person’s gender.
-<li>Male</li>
-<li>Female</li>
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Gender The person’s gender.
-<li>Male</li>
-<li>Female</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Gender of the person.
+<Li>Male: man.</li>.
+<Li>Female: specifies the woman.</li>. 
+     * @return Gender Gender of the person.
+<Li>Male: man.</li>.
+<Li>Female: specifies the woman.</li>.
      */
     public String getGender() {
         return this.Gender;
     }
 
     /**
-     * Set The person’s gender.
-<li>Male</li>
-<li>Female</li>
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Gender The person’s gender.
-<li>Male</li>
-<li>Female</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Gender of the person.
+<Li>Male: man.</li>.
+<Li>Female: specifies the woman.</li>.
+     * @param Gender Gender of the person.
+<Li>Male: man.</li>.
+<Li>Female: specifies the woman.</li>.
      */
     public void setGender(String Gender) {
         this.Gender = Gender;
     }
 
     /**
-     * Get The person’s birth date.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Birthday The person’s birth date.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Date of birth. 
+     * @return Birthday Date of birth.
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set The person’s birth date.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Birthday The person’s birth date.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Date of birth.
+     * @param Birthday Date of birth.
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get The person’s job or job title.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Profession The person’s job or job title.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Occupation or position of a person. 
+     * @return Profession Occupation or position of a person.
      */
     public String getProfession() {
         return this.Profession;
     }
 
     /**
-     * Set The person’s job or job title.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Profession The person’s job or job title.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Occupation or position of a person.
+     * @param Profession Occupation or position of a person.
      */
     public void setProfession(String Profession) {
         this.Profession = Profession;
     }
 
     /**
-     * Get The college the person graduated from.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SchoolOfGraduation The college the person graduated from.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Specifies the graduation institution of the person. 
+     * @return SchoolOfGraduation Specifies the graduation institution of the person.
      */
     public String getSchoolOfGraduation() {
         return this.SchoolOfGraduation;
     }
 
     /**
-     * Set The college the person graduated from.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SchoolOfGraduation The college the person graduated from.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Specifies the graduation institution of the person.
+     * @param SchoolOfGraduation Specifies the graduation institution of the person.
      */
     public void setSchoolOfGraduation(String SchoolOfGraduation) {
         this.SchoolOfGraduation = SchoolOfGraduation;
     }
 
     /**
-     * Get The person’s profile.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Abstract The person’s profile.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Description of the person. 
+     * @return Abstract Description of the person.
      */
     public String getAbstract() {
         return this.Abstract;
     }
 
     /**
-     * Set The person’s profile.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Abstract The person’s profile.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Description of the person.
+     * @param Abstract Description of the person.
      */
     public void setAbstract(String Abstract) {
         this.Abstract = Abstract;
     }
 
     /**
-     * Get The person’s place of birth.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return PlaceOfBirth The person’s place of birth.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Specifies the birthplace or place of origin. 
+     * @return PlaceOfBirth Specifies the birthplace or place of origin.
      */
     public String getPlaceOfBirth() {
         return this.PlaceOfBirth;
     }
 
     /**
-     * Set The person’s place of birth.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param PlaceOfBirth The person’s place of birth.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Specifies the birthplace or place of origin.
+     * @param PlaceOfBirth Specifies the birthplace or place of origin.
      */
     public void setPlaceOfBirth(String PlaceOfBirth) {
         this.PlaceOfBirth = PlaceOfBirth;
     }
 
     /**
-     * Get Whether the person is a politician or artist.
-<li>Politician</li>
-<li>Artist</li>
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return PersonType Whether the person is a politician or artist.
-<li>Politician</li>
-<li>Artist</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Person type.
+<Li>Politician: specifies the official.</li>.
+<Li>Artist: specifies the artist.</li>. 
+     * @return PersonType Person type.
+<Li>Politician: specifies the official.</li>.
+<Li>Artist: specifies the artist.</li>.
      */
     public String getPersonType() {
         return this.PersonType;
     }
 
     /**
-     * Set Whether the person is a politician or artist.
-<li>Politician</li>
-<li>Artist</li>
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param PersonType Whether the person is a politician or artist.
-<li>Politician</li>
-<li>Artist</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Person type.
+<Li>Politician: specifies the official.</li>.
+<Li>Artist: specifies the artist.</li>.
+     * @param PersonType Person type.
+<Li>Politician: specifies the official.</li>.
+<Li>Artist: specifies the artist.</li>.
      */
     public void setPersonType(String PersonType) {
         this.PersonType = PersonType;
     }
 
     /**
-     * Get Sensitivity
-<li>Normal</li>
-<li>Sensitive</li>
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Remark Sensitivity
-<li>Normal</li>
-<li>Sensitive</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Sensitivity labeling.
+<Li>Normal: specifies the scaling group is normal.</li>.
+<Li>Sensitive: specifies sensitivity.</li>. 
+     * @return Remark Sensitivity labeling.
+<Li>Normal: specifies the scaling group is normal.</li>.
+<Li>Sensitive: specifies sensitivity.</li>.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Sensitivity
-<li>Normal</li>
-<li>Sensitive</li>
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Remark Sensitivity
-<li>Normal</li>
-<li>Sensitive</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Sensitivity labeling.
+<Li>Normal: specifies the scaling group is normal.</li>.
+<Li>Sensitive: specifies sensitivity.</li>.
+     * @param Remark Sensitivity labeling.
+<Li>Normal: specifies the scaling group is normal.</li>.
+<Li>Sensitive: specifies sensitivity.</li>.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get The screenshot URL.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Url The screenshot URL.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Specifies the screenshot link. 
+     * @return Url Specifies the screenshot link.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set The screenshot URL.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Url The screenshot URL.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Specifies the screenshot link.
+     * @param Url Specifies the screenshot link.
      */
     public void setUrl(String Url) {
         this.Url = Url;

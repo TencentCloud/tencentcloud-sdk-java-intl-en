@@ -24,13 +24,13 @@ import java.util.HashMap;
 public class TaskNotifyConfig extends AbstractModel {
 
     /**
-    * The notification type. Valid values:
-<li>`CMQ`: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
-<li>`TDMQ-CMQ`: Message queue</li>
-<li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
-<li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
-<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+    * Notification type. available values:.
+<li>CMQ: offline. switch to TDMQ-CMQ.</li>.
+<Li>TDMQ-CMQ: message queue</li>.
+<li>URL: when a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. the callback protocol is HTTP+json. the content of the packet body is the same as the output parameters of the parseeventnotification api.</li>.
+<Li>SCF: not recommended. additional configuration is required in the console.</li>.
+<Li>AWS-SQS: aws queue, suitable for aws tasks only and requires the same region.</li>.
+<font color="red">note: if left blank, it is TDMQ-CMQ by default. to use another type, you need to fill in the corresponding type value. if using TDMQ-CMQ message queue, an excessively large task response may cause queue failure.</font>.
     */
     @SerializedName("NotifyType")
     @Expose
@@ -88,48 +88,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AwsSQS AwsSQS;
 
     /**
-    * The key used to generate the callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * key used to generate a callback signature.
     */
     @SerializedName("NotifyKey")
     @Expose
     private String NotifyKey;
 
     /**
-     * Get The notification type. Valid values:
-<li>`CMQ`: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
-<li>`TDMQ-CMQ`: Message queue</li>
-<li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
-<li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
-<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font> 
-     * @return NotifyType The notification type. Valid values:
-<li>`CMQ`: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
-<li>`TDMQ-CMQ`: Message queue</li>
-<li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
-<li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
-<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+     * Get Notification type. available values:.
+<li>CMQ: offline. switch to TDMQ-CMQ.</li>.
+<Li>TDMQ-CMQ: message queue</li>.
+<li>URL: when a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. the callback protocol is HTTP+json. the content of the packet body is the same as the output parameters of the parseeventnotification api.</li>.
+<Li>SCF: not recommended. additional configuration is required in the console.</li>.
+<Li>AWS-SQS: aws queue, suitable for aws tasks only and requires the same region.</li>.
+<font color="red">note: if left blank, it is TDMQ-CMQ by default. to use another type, you need to fill in the corresponding type value. if using TDMQ-CMQ message queue, an excessively large task response may cause queue failure.</font>. 
+     * @return NotifyType Notification type. available values:.
+<li>CMQ: offline. switch to TDMQ-CMQ.</li>.
+<Li>TDMQ-CMQ: message queue</li>.
+<li>URL: when a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. the callback protocol is HTTP+json. the content of the packet body is the same as the output parameters of the parseeventnotification api.</li>.
+<Li>SCF: not recommended. additional configuration is required in the console.</li>.
+<Li>AWS-SQS: aws queue, suitable for aws tasks only and requires the same region.</li>.
+<font color="red">note: if left blank, it is TDMQ-CMQ by default. to use another type, you need to fill in the corresponding type value. if using TDMQ-CMQ message queue, an excessively large task response may cause queue failure.</font>.
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set The notification type. Valid values:
-<li>`CMQ`: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
-<li>`TDMQ-CMQ`: Message queue</li>
-<li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
-<li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
-<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
-     * @param NotifyType The notification type. Valid values:
-<li>`CMQ`: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
-<li>`TDMQ-CMQ`: Message queue</li>
-<li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
-<li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
-<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+     * Set Notification type. available values:.
+<li>CMQ: offline. switch to TDMQ-CMQ.</li>.
+<Li>TDMQ-CMQ: message queue</li>.
+<li>URL: when a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. the callback protocol is HTTP+json. the content of the packet body is the same as the output parameters of the parseeventnotification api.</li>.
+<Li>SCF: not recommended. additional configuration is required in the console.</li>.
+<Li>AWS-SQS: aws queue, suitable for aws tasks only and requires the same region.</li>.
+<font color="red">note: if left blank, it is TDMQ-CMQ by default. to use another type, you need to fill in the corresponding type value. if using TDMQ-CMQ message queue, an excessively large task response may cause queue failure.</font>.
+     * @param NotifyType Notification type. available values:.
+<li>CMQ: offline. switch to TDMQ-CMQ.</li>.
+<Li>TDMQ-CMQ: message queue</li>.
+<li>URL: when a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. the callback protocol is HTTP+json. the content of the packet body is the same as the output parameters of the parseeventnotification api.</li>.
+<Li>SCF: not recommended. additional configuration is required in the console.</li>.
+<Li>AWS-SQS: aws queue, suitable for aws tasks only and requires the same region.</li>.
+<font color="red">note: if left blank, it is TDMQ-CMQ by default. to use another type, you need to fill in the corresponding type value. if using TDMQ-CMQ message queue, an excessively large task response may cause queue failure.</font>.
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
@@ -256,20 +255,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The key used to generate the callback signature.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NotifyKey The key used to generate the callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get key used to generate a callback signature. 
+     * @return NotifyKey key used to generate a callback signature.
      */
     public String getNotifyKey() {
         return this.NotifyKey;
     }
 
     /**
-     * Set The key used to generate the callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NotifyKey The key used to generate the callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set key used to generate a callback signature.
+     * @param NotifyKey key used to generate a callback signature.
      */
     public void setNotifyKey(String NotifyKey) {
         this.NotifyKey = NotifyKey;

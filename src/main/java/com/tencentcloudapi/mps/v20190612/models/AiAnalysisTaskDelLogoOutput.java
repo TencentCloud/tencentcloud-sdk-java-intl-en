@@ -39,7 +39,6 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
 
     /**
     * Path of a subtitle file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginSubtitlePath")
     @Expose
@@ -47,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Path of a subtitle translation file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TranslateSubtitlePath")
     @Expose
@@ -86,10 +84,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Path of a subtitle file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Path of a subtitle file extracted from a video. 
      * @return OriginSubtitlePath Path of a subtitle file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOriginSubtitlePath() {
         return this.OriginSubtitlePath;
@@ -97,19 +93,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Path of a subtitle file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param OriginSubtitlePath Path of a subtitle file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOriginSubtitlePath(String OriginSubtitlePath) {
         this.OriginSubtitlePath = OriginSubtitlePath;
     }
 
     /**
-     * Get Path of a subtitle translation file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Path of a subtitle translation file extracted from a video. 
      * @return TranslateSubtitlePath Path of a subtitle translation file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTranslateSubtitlePath() {
         return this.TranslateSubtitlePath;
@@ -117,9 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Path of a subtitle translation file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TranslateSubtitlePath Path of a subtitle translation file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTranslateSubtitlePath(String TranslateSubtitlePath) {
         this.TranslateSubtitlePath = TranslateSubtitlePath;

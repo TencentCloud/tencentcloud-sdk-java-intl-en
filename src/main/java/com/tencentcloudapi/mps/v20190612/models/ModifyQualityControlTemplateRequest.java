@@ -52,6 +52,14 @@ public class ModifyQualityControlTemplateRequest extends AbstractModel {
     private QualityControlItemConfig [] QualityControlItemSet;
 
     /**
+    * Recording file format. Valid values:
+<li>PNG: PNG image.</li>
+    */
+    @SerializedName("RecordFormat")
+    @Expose
+    private String RecordFormat;
+
+    /**
      * Get Unique identifier of a media quality inspection template. 
      * @return Definition Unique identifier of a media quality inspection template.
      */
@@ -115,6 +123,26 @@ public class ModifyQualityControlTemplateRequest extends AbstractModel {
         this.QualityControlItemSet = QualityControlItemSet;
     }
 
+    /**
+     * Get Recording file format. Valid values:
+<li>PNG: PNG image.</li> 
+     * @return RecordFormat Recording file format. Valid values:
+<li>PNG: PNG image.</li>
+     */
+    public String getRecordFormat() {
+        return this.RecordFormat;
+    }
+
+    /**
+     * Set Recording file format. Valid values:
+<li>PNG: PNG image.</li>
+     * @param RecordFormat Recording file format. Valid values:
+<li>PNG: PNG image.</li>
+     */
+    public void setRecordFormat(String RecordFormat) {
+        this.RecordFormat = RecordFormat;
+    }
+
     public ModifyQualityControlTemplateRequest() {
     }
 
@@ -138,6 +166,9 @@ public class ModifyQualityControlTemplateRequest extends AbstractModel {
                 this.QualityControlItemSet[i] = new QualityControlItemConfig(source.QualityControlItemSet[i]);
             }
         }
+        if (source.RecordFormat != null) {
+            this.RecordFormat = new String(source.RecordFormat);
+        }
     }
 
 
@@ -149,6 +180,7 @@ public class ModifyQualityControlTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamArrayObj(map, prefix + "QualityControlItemSet.", this.QualityControlItemSet);
+        this.setParamSimple(map, prefix + "RecordFormat", this.RecordFormat);
 
     }
 }

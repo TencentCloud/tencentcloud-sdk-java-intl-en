@@ -52,6 +52,34 @@ public class LiveStreamAsrFullTextRecognitionResult extends AbstractModel {
     private Float Confidence;
 
     /**
+    * 
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+    * 
+    */
+    @SerializedName("SteadyState")
+    @Expose
+    private Boolean SteadyState;
+
+    /**
+    * User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
      * Get Recognized text. 
      * @return Text Recognized text.
      */
@@ -115,6 +143,70 @@ public class LiveStreamAsrFullTextRecognitionResult extends AbstractModel {
         this.Confidence = Confidence;
     }
 
+    /**
+     * Get  
+     * @return StartTime 
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 
+     * @param StartTime 
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get  
+     * @return EndTime 
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 
+     * @param EndTime 
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get  
+     * @return SteadyState 
+     */
+    public Boolean getSteadyState() {
+        return this.SteadyState;
+    }
+
+    /**
+     * Set 
+     * @param SteadyState 
+     */
+    public void setSteadyState(Boolean SteadyState) {
+        this.SteadyState = SteadyState;
+    }
+
+    /**
+     * Get User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return UserId User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+     * @param UserId User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     public LiveStreamAsrFullTextRecognitionResult() {
     }
 
@@ -135,6 +227,18 @@ public class LiveStreamAsrFullTextRecognitionResult extends AbstractModel {
         if (source.Confidence != null) {
             this.Confidence = new Float(source.Confidence);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.SteadyState != null) {
+            this.SteadyState = new Boolean(source.SteadyState);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -146,6 +250,10 @@ public class LiveStreamAsrFullTextRecognitionResult extends AbstractModel {
         this.setParamSimple(map, prefix + "StartPtsTime", this.StartPtsTime);
         this.setParamSimple(map, prefix + "EndPtsTime", this.EndPtsTime);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "SteadyState", this.SteadyState);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

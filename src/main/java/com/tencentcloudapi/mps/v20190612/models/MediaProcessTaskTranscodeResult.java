@@ -67,8 +67,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private MediaTranscodeItem Output;
 
     /**
-    * Transcoding progress. Value range: 0-100
-Note: This field may return `null`, indicating that no valid value was found.
+    * Transcoding progress, with a value range of [0-100].
     */
     @SerializedName("Progress")
     @Expose
@@ -175,20 +174,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Transcoding progress. Value range: 0-100
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return Progress Transcoding progress. Value range: 0-100
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Transcoding progress, with a value range of [0-100]. 
+     * @return Progress Transcoding progress, with a value range of [0-100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Transcoding progress. Value range: 0-100
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param Progress Transcoding progress. Value range: 0-100
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Transcoding progress, with a value range of [0-100].
+     * @param Progress Transcoding progress, with a value range of [0-100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

@@ -25,31 +25,29 @@ public class Activity extends AbstractModel {
 
     /**
     * Atomic task type.
-<li>input: start node</li>
-<li>output: end node</li>
-<li>action-trans: transcoding</li>
-<li>action-samplesnapshot: sampled screenshot</li>
-<li>action-AIAnalysis: analysis</li>
-<li>action-AIRecognition: recognition</li>
-<li>action-aiReview: review</li>
-<li>action-animated-graphics: conversion to GIF</li>
-<li>action-image-sprite: image sprite</li>
-<li>action-snapshotByTimeOffset: time point screenshot</li>
-<li>action-adaptive-substream: adaptive bitrate stream</li>
-<li>action-AIQualityControl: media quality inspection</li>
-<li>action-SmartSubtitles: smart subtitle</li>
+<li>input: starting node.</li>.
+<li>`output`: termination node</li>.
+<li>action-trans: transcoding.</li>.
+<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
+<li>action-AIAnalysis: analysis.</li>.
+<li>action-AIRecognition: specifies recognition.</li>.
+<li>action-aiReview: specifies the review action.</li>.
+<li>action-animated-graphics: specifies the animated image.</li>.
+<li>action-image-sprite: specifies the sprite sheet.</li>.
+<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
+<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
+<li>action-AIQualityControl: media quality inspection.</li>.
+<li>action-SmartSubtitles: specifies smart subtitling.</li>.
 
 
 
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ActivityType")
     @Expose
     private String ActivityType;
 
     /**
-    * The indexes of the subsequent actions.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rear node index array.
     */
     @SerializedName("ReardriveIndex")
     @Expose
@@ -65,41 +63,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Atomic task type.
-<li>input: start node</li>
-<li>output: end node</li>
-<li>action-trans: transcoding</li>
-<li>action-samplesnapshot: sampled screenshot</li>
-<li>action-AIAnalysis: analysis</li>
-<li>action-AIRecognition: recognition</li>
-<li>action-aiReview: review</li>
-<li>action-animated-graphics: conversion to GIF</li>
-<li>action-image-sprite: image sprite</li>
-<li>action-snapshotByTimeOffset: time point screenshot</li>
-<li>action-adaptive-substream: adaptive bitrate stream</li>
-<li>action-AIQualityControl: media quality inspection</li>
-<li>action-SmartSubtitles: smart subtitle</li>
+<li>input: starting node.</li>.
+<li>`output`: termination node</li>.
+<li>action-trans: transcoding.</li>.
+<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
+<li>action-AIAnalysis: analysis.</li>.
+<li>action-AIRecognition: specifies recognition.</li>.
+<li>action-aiReview: specifies the review action.</li>.
+<li>action-animated-graphics: specifies the animated image.</li>.
+<li>action-image-sprite: specifies the sprite sheet.</li>.
+<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
+<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
+<li>action-AIQualityControl: media quality inspection.</li>.
+<li>action-SmartSubtitles: specifies smart subtitling.</li>.
 
 
-
-Note: This field may return null, indicating that no valid value can be obtained. 
+ 
      * @return ActivityType Atomic task type.
-<li>input: start node</li>
-<li>output: end node</li>
-<li>action-trans: transcoding</li>
-<li>action-samplesnapshot: sampled screenshot</li>
-<li>action-AIAnalysis: analysis</li>
-<li>action-AIRecognition: recognition</li>
-<li>action-aiReview: review</li>
-<li>action-animated-graphics: conversion to GIF</li>
-<li>action-image-sprite: image sprite</li>
-<li>action-snapshotByTimeOffset: time point screenshot</li>
-<li>action-adaptive-substream: adaptive bitrate stream</li>
-<li>action-AIQualityControl: media quality inspection</li>
-<li>action-SmartSubtitles: smart subtitle</li>
+<li>input: starting node.</li>.
+<li>`output`: termination node</li>.
+<li>action-trans: transcoding.</li>.
+<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
+<li>action-AIAnalysis: analysis.</li>.
+<li>action-AIRecognition: specifies recognition.</li>.
+<li>action-aiReview: specifies the review action.</li>.
+<li>action-animated-graphics: specifies the animated image.</li>.
+<li>action-image-sprite: specifies the sprite sheet.</li>.
+<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
+<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
+<li>action-AIQualityControl: media quality inspection.</li>.
+<li>action-SmartSubtitles: specifies smart subtitling.</li>.
 
 
 
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getActivityType() {
         return this.ActivityType;
@@ -107,61 +103,55 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Atomic task type.
-<li>input: start node</li>
-<li>output: end node</li>
-<li>action-trans: transcoding</li>
-<li>action-samplesnapshot: sampled screenshot</li>
-<li>action-AIAnalysis: analysis</li>
-<li>action-AIRecognition: recognition</li>
-<li>action-aiReview: review</li>
-<li>action-animated-graphics: conversion to GIF</li>
-<li>action-image-sprite: image sprite</li>
-<li>action-snapshotByTimeOffset: time point screenshot</li>
-<li>action-adaptive-substream: adaptive bitrate stream</li>
-<li>action-AIQualityControl: media quality inspection</li>
-<li>action-SmartSubtitles: smart subtitle</li>
+<li>input: starting node.</li>.
+<li>`output`: termination node</li>.
+<li>action-trans: transcoding.</li>.
+<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
+<li>action-AIAnalysis: analysis.</li>.
+<li>action-AIRecognition: specifies recognition.</li>.
+<li>action-aiReview: specifies the review action.</li>.
+<li>action-animated-graphics: specifies the animated image.</li>.
+<li>action-image-sprite: specifies the sprite sheet.</li>.
+<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
+<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
+<li>action-AIQualityControl: media quality inspection.</li>.
+<li>action-SmartSubtitles: specifies smart subtitling.</li>.
 
 
 
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param ActivityType Atomic task type.
-<li>input: start node</li>
-<li>output: end node</li>
-<li>action-trans: transcoding</li>
-<li>action-samplesnapshot: sampled screenshot</li>
-<li>action-AIAnalysis: analysis</li>
-<li>action-AIRecognition: recognition</li>
-<li>action-aiReview: review</li>
-<li>action-animated-graphics: conversion to GIF</li>
-<li>action-image-sprite: image sprite</li>
-<li>action-snapshotByTimeOffset: time point screenshot</li>
-<li>action-adaptive-substream: adaptive bitrate stream</li>
-<li>action-AIQualityControl: media quality inspection</li>
-<li>action-SmartSubtitles: smart subtitle</li>
+<li>input: starting node.</li>.
+<li>`output`: termination node</li>.
+<li>action-trans: transcoding.</li>.
+<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
+<li>action-AIAnalysis: analysis.</li>.
+<li>action-AIRecognition: specifies recognition.</li>.
+<li>action-aiReview: specifies the review action.</li>.
+<li>action-animated-graphics: specifies the animated image.</li>.
+<li>action-image-sprite: specifies the sprite sheet.</li>.
+<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
+<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
+<li>action-AIQualityControl: media quality inspection.</li>.
+<li>action-SmartSubtitles: specifies smart subtitling.</li>.
 
 
 
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;
     }
 
     /**
-     * Get The indexes of the subsequent actions.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReardriveIndex The indexes of the subsequent actions.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rear node index array. 
+     * @return ReardriveIndex Rear node index array.
      */
     public Long [] getReardriveIndex() {
         return this.ReardriveIndex;
     }
 
     /**
-     * Set The indexes of the subsequent actions.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReardriveIndex The indexes of the subsequent actions.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rear node index array.
+     * @param ReardriveIndex Rear node index array.
      */
     public void setReardriveIndex(Long [] ReardriveIndex) {
         this.ReardriveIndex = ReardriveIndex;

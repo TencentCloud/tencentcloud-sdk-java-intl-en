@@ -31,27 +31,24 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
     private String HotwordsId;
 
     /**
-    * Current status of the hotword lexicon corresponding to the ID. The value 0 indicates that no template is bound to this hotword lexicon when the query is performed and that the hotword lexicon can be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Name of the hot lexicon.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
-The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
+    * Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
+Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
 
 
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -59,7 +56,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("FileName")
     @Expose
@@ -76,7 +72,6 @@ Note: This field may return null, indicating that no valid value can be obtained
     * Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
 If the value of Type is 1, the base64-encoded content of the hotword file is returned.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Content")
     @Expose
@@ -84,7 +79,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Number of words contained in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("WordCount")
     @Expose
@@ -92,8 +86,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Paging offset. Default value: 0.
-
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Offset")
     @Expose
@@ -101,22 +93,20 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Number of returned entries. Default value: 10. Maximum value: 100.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, "2006-01-02T15:04:05Z".Note: This field may return null, indicating that no valid value can be obtained.
+    * Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Modification time of the hotword lexicon in ISO datetime format (UTC time). For example, "2006-01-02T15:04:05Z".
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -146,82 +136,68 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Current status of the hotword lexicon corresponding to the ID. The value 0 indicates that no template is bound to this hotword lexicon when the query is performed and that the hotword lexicon can be deleted.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Status Current status of the hotword lexicon corresponding to the ID. The value 0 indicates that no template is bound to this hotword lexicon when the query is performed and that the hotword lexicon can be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted. 
+     * @return Status Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Current status of the hotword lexicon corresponding to the ID. The value 0 indicates that no template is bound to this hotword lexicon when the query is performed and that the hotword lexicon can be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Status Current status of the hotword lexicon corresponding to the ID. The value 0 indicates that no template is bound to this hotword lexicon when the query is performed and that the hotword lexicon can be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
+     * @param Status Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Name Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Name of the hot lexicon. 
+     * @return Name Name of the hot lexicon.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Name Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Name of the hot lexicon.
+     * @param Name Name of the hot lexicon.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
-The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
+     * Get Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
+Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
+
+ 
+     * @return Type Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
+Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
 
 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Type The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
-The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
-
-
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
-The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
+     * Set Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
+Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
 
 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Type The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
-The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
+     * @param Type Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
+Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
 
 
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Name of the uploaded hotword file. 
      * @return FileName Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getFileName() {
         return this.FileName;
@@ -229,9 +205,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param FileName Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
@@ -256,12 +230,10 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * Get Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
-If the value of Type is 1, the base64-encoded content of the hotword file is returned.
-Note: This field may return null, indicating that no valid value can be obtained. 
+If the value of Type is 1, the base64-encoded content of the hotword file is returned. 
      * @return Content Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
 If the value of Type is 1, the base64-encoded content of the hotword file is returned.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getContent() {
         return this.Content;
@@ -271,21 +243,17 @@ Note: This field may return null, indicating that no valid value can be obtained
      * Set Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
 If the value of Type is 1, the base64-encoded content of the hotword file is returned.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Content Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
 If the value of Type is 1, the base64-encoded content of the hotword file is returned.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get Number of words contained in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Number of words contained in the hotword lexicon. 
      * @return WordCount Number of words contained in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getWordCount() {
         return this.WordCount;
@@ -293,21 +261,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Number of words contained in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param WordCount Number of words contained in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setWordCount(Long WordCount) {
         this.WordCount = WordCount;
     }
 
     /**
-     * Get Paging offset. Default value: 0.
-
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Paging offset. Default value: 0. 
      * @return Offset Paging offset. Default value: 0.
-
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getOffset() {
         return this.Offset;
@@ -315,21 +277,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Paging offset. Default value: 0.
-
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Offset Paging offset. Default value: 0.
-
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned entries. Default value: 10. Maximum value: 100.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Number of returned entries. Default value: 10. Maximum value: 100. 
      * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getLimit() {
         return this.Limit;
@@ -337,45 +293,39 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Number of returned entries. Default value: 10. Maximum value: 100.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Limit Number of returned entries. Default value: 10. Maximum value: 100.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, "2006-01-02T15:04:05Z".Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CreateTime Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, "2006-01-02T15:04:05Z".Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z". 
+     * @return CreateTime Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, "2006-01-02T15:04:05Z".Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CreateTime Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, "2006-01-02T15:04:05Z".Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
+     * @param CreateTime Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Modification time of the hotword lexicon in ISO datetime format (UTC time). For example, "2006-01-02T15:04:05Z".
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return UpdateTime Modification time of the hotword lexicon in ISO datetime format (UTC time). For example, "2006-01-02T15:04:05Z".
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z". 
+     * @return UpdateTime Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Modification time of the hotword lexicon in ISO datetime format (UTC time). For example, "2006-01-02T15:04:05Z".
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param UpdateTime Modification time of the hotword lexicon in ISO datetime format (UTC time). For example, "2006-01-02T15:04:05Z".
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
+     * @param UpdateTime Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

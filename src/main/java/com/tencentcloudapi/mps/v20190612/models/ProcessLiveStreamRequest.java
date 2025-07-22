@@ -24,7 +24,13 @@ import java.util.HashMap;
 public class ProcessLiveStreamRequest extends AbstractModel {
 
     /**
-    * Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
+    * Live stream URL. (It should be a live streaming file address. RTMP, HLS, FLV, and TRTC addresses are supported.)
+A TRTC address is as follows:
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` is the TRTC room ID, which is a number.
+`<sdkappid>` is the SDK app ID of TRTC.
+`<userid>` is the user ID for accessing a room, which can be used to distinguish robots.
+<`usersig>` is the TRTC user signature.
     */
     @SerializedName("Url")
     @Expose
@@ -105,16 +111,40 @@ Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, t
     private Long ScheduleId;
 
     /**
-     * Get Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported. 
-     * @return Url Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
+     * Get Live stream URL. (It should be a live streaming file address. RTMP, HLS, FLV, and TRTC addresses are supported.)
+A TRTC address is as follows:
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` is the TRTC room ID, which is a number.
+`<sdkappid>` is the SDK app ID of TRTC.
+`<userid>` is the user ID for accessing a room, which can be used to distinguish robots.
+<`usersig>` is the TRTC user signature. 
+     * @return Url Live stream URL. (It should be a live streaming file address. RTMP, HLS, FLV, and TRTC addresses are supported.)
+A TRTC address is as follows:
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` is the TRTC room ID, which is a number.
+`<sdkappid>` is the SDK app ID of TRTC.
+`<userid>` is the user ID for accessing a room, which can be used to distinguish robots.
+<`usersig>` is the TRTC user signature.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
-     * @param Url Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
+     * Set Live stream URL. (It should be a live streaming file address. RTMP, HLS, FLV, and TRTC addresses are supported.)
+A TRTC address is as follows:
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` is the TRTC room ID, which is a number.
+`<sdkappid>` is the SDK app ID of TRTC.
+`<userid>` is the user ID for accessing a room, which can be used to distinguish robots.
+<`usersig>` is the TRTC user signature.
+     * @param Url Live stream URL. (It should be a live streaming file address. RTMP, HLS, FLV, and TRTC addresses are supported.)
+A TRTC address is as follows:
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` is the TRTC room ID, which is a number.
+`<sdkappid>` is the SDK app ID of TRTC.
+`<userid>` is the user ID for accessing a room, which can be used to distinguish robots.
+<`usersig>` is the TRTC user signature.
      */
     public void setUrl(String Url) {
         this.Url = Url;

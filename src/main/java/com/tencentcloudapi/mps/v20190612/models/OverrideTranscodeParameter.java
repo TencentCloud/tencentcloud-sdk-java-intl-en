@@ -71,32 +71,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private TEHDConfigForUpdate TEHDConfig;
 
     /**
-    * The subtitle settings.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Subtitle stream configuration parameter.
     */
     @SerializedName("SubtitleTemplate")
     @Expose
     private SubtitleTemplate SubtitleTemplate;
 
     /**
-    * The information of the external audio track to add.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the external audio track parameter.
     */
     @SerializedName("AddonAudioStream")
     @Expose
     private MediaInputInfo [] AddonAudioStream;
 
     /**
-    * An extended field for transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Extension field for transcoding.
     */
     @SerializedName("StdExtInfo")
     @Expose
     private String StdExtInfo;
 
     /**
-    * The subtitle file to add.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Subtitle file to be inserted.
     */
     @SerializedName("AddOnSubtitles")
     @Expose
@@ -219,80 +215,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The subtitle settings.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubtitleTemplate The subtitle settings.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Subtitle stream configuration parameter. 
+     * @return SubtitleTemplate Subtitle stream configuration parameter.
      */
     public SubtitleTemplate getSubtitleTemplate() {
         return this.SubtitleTemplate;
     }
 
     /**
-     * Set The subtitle settings.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubtitleTemplate The subtitle settings.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Subtitle stream configuration parameter.
+     * @param SubtitleTemplate Subtitle stream configuration parameter.
      */
     public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {
         this.SubtitleTemplate = SubtitleTemplate;
     }
 
     /**
-     * Get The information of the external audio track to add.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AddonAudioStream The information of the external audio track to add.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the external audio track parameter. 
+     * @return AddonAudioStream Specifies the external audio track parameter.
      */
     public MediaInputInfo [] getAddonAudioStream() {
         return this.AddonAudioStream;
     }
 
     /**
-     * Set The information of the external audio track to add.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AddonAudioStream The information of the external audio track to add.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the external audio track parameter.
+     * @param AddonAudioStream Specifies the external audio track parameter.
      */
     public void setAddonAudioStream(MediaInputInfo [] AddonAudioStream) {
         this.AddonAudioStream = AddonAudioStream;
     }
 
     /**
-     * Get An extended field for transcoding.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StdExtInfo An extended field for transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Extension field for transcoding. 
+     * @return StdExtInfo Extension field for transcoding.
      */
     public String getStdExtInfo() {
         return this.StdExtInfo;
     }
 
     /**
-     * Set An extended field for transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StdExtInfo An extended field for transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Extension field for transcoding.
+     * @param StdExtInfo Extension field for transcoding.
      */
     public void setStdExtInfo(String StdExtInfo) {
         this.StdExtInfo = StdExtInfo;
     }
 
     /**
-     * Get The subtitle file to add.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AddOnSubtitles The subtitle file to add.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Subtitle file to be inserted. 
+     * @return AddOnSubtitles Subtitle file to be inserted.
      */
     public AddOnSubtitle [] getAddOnSubtitles() {
         return this.AddOnSubtitles;
     }
 
     /**
-     * Set The subtitle file to add.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AddOnSubtitles The subtitle file to add.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Subtitle file to be inserted.
+     * @param AddOnSubtitles Subtitle file to be inserted.
      */
     public void setAddOnSubtitles(AddOnSubtitle [] AddOnSubtitles) {
         this.AddOnSubtitles = AddOnSubtitles;

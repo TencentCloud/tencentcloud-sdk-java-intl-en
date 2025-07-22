@@ -59,22 +59,21 @@ public class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel {
     private SnapshotByTimeOffsetTaskInput Input;
 
     /**
-    * Output of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the output of a screenshot task at specified time points for a video.
     */
     @SerializedName("Output")
     @Expose
     private MediaSnapshotByTimeOffsetItem Output;
 
     /**
-    * The time when the task started executing, in ISO date format.
+    * Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * The time when the task finished, in ISO date format.
+    * Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("FinishTime")
     @Expose
@@ -161,52 +160,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the output of a screenshot task at specified time points for a video. 
+     * @return Output Specifies the output of a screenshot task at specified time points for a video.
      */
     public MediaSnapshotByTimeOffsetItem getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the output of a screenshot task at specified time points for a video.
+     * @param Output Specifies the output of a screenshot task at specified time points for a video.
      */
     public void setOutput(MediaSnapshotByTimeOffsetItem Output) {
         this.Output = Output;
     }
 
     /**
-     * Get The time when the task started executing, in ISO date format. 
-     * @return BeginProcessTime The time when the task started executing, in ISO date format.
+     * Get Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set The time when the task started executing, in ISO date format.
-     * @param BeginProcessTime The time when the task started executing, in ISO date format.
+     * Set Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get The time when the task finished, in ISO date format. 
-     * @return FinishTime The time when the task finished, in ISO date format.
+     * Get Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set The time when the task finished, in ISO date format.
-     * @param FinishTime The time when the task finished, in ISO date format.
+     * Set Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

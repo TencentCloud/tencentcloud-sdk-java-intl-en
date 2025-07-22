@@ -73,7 +73,6 @@ Default value: 0.
 
     /**
     * Additional parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("StdExtInfo")
     @Expose
@@ -208,10 +207,8 @@ Default value: 0.
     }
 
     /**
-     * Get Additional parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Additional parameter, which is a serialized JSON string. 
      * @return StdExtInfo Additional parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getStdExtInfo() {
         return this.StdExtInfo;
@@ -219,9 +216,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Additional parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param StdExtInfo Additional parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setStdExtInfo(String StdExtInfo) {
         this.StdExtInfo = StdExtInfo;

@@ -60,22 +60,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private SampleSnapshotTaskInput Input;
 
     /**
-    * Output of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the output of a sampling screenshot task for a video.
     */
     @SerializedName("Output")
     @Expose
     private MediaSampleSnapshotItem Output;
 
     /**
-    * 
+    * Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * 
+    * Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("FinishTime")
     @Expose
@@ -166,52 +165,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the output of a sampling screenshot task for a video. 
+     * @return Output Specifies the output of a sampling screenshot task for a video.
      */
     public MediaSampleSnapshotItem getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the output of a sampling screenshot task for a video.
+     * @param Output Specifies the output of a sampling screenshot task for a video.
      */
     public void setOutput(MediaSampleSnapshotItem Output) {
         this.Output = Output;
     }
 
     /**
-     * Get  
-     * @return BeginProcessTime 
+     * Get Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set 
-     * @param BeginProcessTime 
+     * Set Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get  
-     * @return FinishTime 
+     * Get Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set 
-     * @param FinishTime 
+     * Set Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

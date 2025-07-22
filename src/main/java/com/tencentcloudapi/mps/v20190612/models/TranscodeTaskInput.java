@@ -31,8 +31,8 @@ public class TranscodeTaskInput extends AbstractModel {
     private Long Definition;
 
     /**
-    * Custom video transcoding parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
+    * Custom video transcoding parameter. valid when Definition is set to 0.
+This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
     */
     @SerializedName("RawParameter")
     @Expose
@@ -49,8 +49,7 @@ Note: this field may return `null`, indicating that no valid value was found.
     private OverrideTranscodeParameter OverrideParameter;
 
     /**
-    * List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
     */
     @SerializedName("WatermarkSet")
     @Expose
@@ -144,20 +143,20 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Custom video transcoding parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably. 
-     * @return RawParameter Custom video transcoding parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
+     * Get Custom video transcoding parameter. valid when Definition is set to 0.
+This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters. 
+     * @return RawParameter Custom video transcoding parameter. valid when Definition is set to 0.
+This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
      */
     public RawTranscodeParameter getRawParameter() {
         return this.RawParameter;
     }
 
     /**
-     * Set Custom video transcoding parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
-     * @param RawParameter Custom video transcoding parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
+     * Set Custom video transcoding parameter. valid when Definition is set to 0.
+This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
+     * @param RawParameter Custom video transcoding parameter. valid when Definition is set to 0.
+This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
      */
     public void setRawParameter(RawTranscodeParameter RawParameter) {
         this.RawParameter = RawParameter;
@@ -192,20 +191,16 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WatermarkSet List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported. 
+     * @return WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      */
     public WatermarkInput [] getWatermarkSet() {
         return this.WatermarkSet;
     }
 
     /**
-     * Set List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WatermarkSet List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+     * @param WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;

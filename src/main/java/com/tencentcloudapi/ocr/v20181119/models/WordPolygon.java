@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WordItem extends AbstractModel {
+public class WordPolygon extends AbstractModel {
 
     /**
     * The text content.
@@ -36,20 +36,6 @@ public class WordItem extends AbstractModel {
     @SerializedName("Coord")
     @Expose
     private Polygon Coord;
-
-    /**
-    * Description.
-    */
-    @SerializedName("AdvancedInfo")
-    @Expose
-    private String AdvancedInfo;
-
-    /**
-    * Specifies the four-point coordinate of the word.
-    */
-    @SerializedName("WordCoord")
-    @Expose
-    private WordPolygon [] WordCoord;
 
     /**
      * Get The text content. 
@@ -83,60 +69,19 @@ public class WordItem extends AbstractModel {
         this.Coord = Coord;
     }
 
-    /**
-     * Get Description. 
-     * @return AdvancedInfo Description.
-     */
-    public String getAdvancedInfo() {
-        return this.AdvancedInfo;
-    }
-
-    /**
-     * Set Description.
-     * @param AdvancedInfo Description.
-     */
-    public void setAdvancedInfo(String AdvancedInfo) {
-        this.AdvancedInfo = AdvancedInfo;
-    }
-
-    /**
-     * Get Specifies the four-point coordinate of the word. 
-     * @return WordCoord Specifies the four-point coordinate of the word.
-     */
-    public WordPolygon [] getWordCoord() {
-        return this.WordCoord;
-    }
-
-    /**
-     * Set Specifies the four-point coordinate of the word.
-     * @param WordCoord Specifies the four-point coordinate of the word.
-     */
-    public void setWordCoord(WordPolygon [] WordCoord) {
-        this.WordCoord = WordCoord;
-    }
-
-    public WordItem() {
+    public WordPolygon() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public WordItem(WordItem source) {
+    public WordPolygon(WordPolygon source) {
         if (source.DetectedText != null) {
             this.DetectedText = new String(source.DetectedText);
         }
         if (source.Coord != null) {
             this.Coord = new Polygon(source.Coord);
-        }
-        if (source.AdvancedInfo != null) {
-            this.AdvancedInfo = new String(source.AdvancedInfo);
-        }
-        if (source.WordCoord != null) {
-            this.WordCoord = new WordPolygon[source.WordCoord.length];
-            for (int i = 0; i < source.WordCoord.length; i++) {
-                this.WordCoord[i] = new WordPolygon(source.WordCoord[i]);
-            }
         }
     }
 
@@ -147,8 +92,6 @@ public class WordItem extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DetectedText", this.DetectedText);
         this.setParamObj(map, prefix + "Coord.", this.Coord);
-        this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
-        this.setParamArrayObj(map, prefix + "WordCoord.", this.WordCoord);
 
     }
 }

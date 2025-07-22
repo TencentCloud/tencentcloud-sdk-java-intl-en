@@ -70,8 +70,7 @@ public class DescribeBatchTaskDetailResponse extends AbstractModel {
     private String TaskId;
 
     /**
-    * Video processing task information. This field has a value only when TaskType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Video processing task information. this field has a value only when TaskType is BatchTask.
     */
     @SerializedName("BatchTaskResult")
     @Expose
@@ -233,20 +232,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Video processing task information. This field has a value only when TaskType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return BatchTaskResult Video processing task information. This field has a value only when TaskType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Video processing task information. this field has a value only when TaskType is BatchTask. 
+     * @return BatchTaskResult Video processing task information. this field has a value only when TaskType is BatchTask.
      */
     public BatchSubTaskResult getBatchTaskResult() {
         return this.BatchTaskResult;
     }
 
     /**
-     * Set Video processing task information. This field has a value only when TaskType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param BatchTaskResult Video processing task information. This field has a value only when TaskType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Video processing task information. this field has a value only when TaskType is BatchTask.
+     * @param BatchTaskResult Video processing task information. this field has a value only when TaskType is BatchTask.
      */
     public void setBatchTaskResult(BatchSubTaskResult BatchTaskResult) {
         this.BatchTaskResult = BatchTaskResult;

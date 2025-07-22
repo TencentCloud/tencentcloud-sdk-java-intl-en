@@ -31,7 +31,7 @@ public class ComposeSubtitleItem extends AbstractModel {
     private String StyleId;
 
     /**
-    * The subtitle text.
+    * Subtitle text. note: long text may exceed the frame. recommend using \n for line breaks.
     */
     @SerializedName("Text")
     @Expose
@@ -61,16 +61,16 @@ public class ComposeSubtitleItem extends AbstractModel {
     }
 
     /**
-     * Get The subtitle text. 
-     * @return Text The subtitle text.
+     * Get Subtitle text. note: long text may exceed the frame. recommend using \n for line breaks. 
+     * @return Text Subtitle text. note: long text may exceed the frame. recommend using \n for line breaks.
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set The subtitle text.
-     * @param Text The subtitle text.
+     * Set Subtitle text. note: long text may exceed the frame. recommend using \n for line breaks.
+     * @param Text Subtitle text. note: long text may exceed the frame. recommend using \n for line breaks.
      */
     public void setText(String Text) {
         this.Text = Text;

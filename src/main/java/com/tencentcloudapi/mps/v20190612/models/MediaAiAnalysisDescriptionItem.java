@@ -60,6 +60,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AiParagraphInfo [] Paragraphs;
 
     /**
+    * Address of the mind map of a summary task.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("MindMapUrl")
+    @Expose
+    private String MindMapUrl;
+
+    /**
      * Get Intelligent description. 
      * @return Description Intelligent description.
      */
@@ -143,6 +151,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Paragraphs = Paragraphs;
     }
 
+    /**
+     * Get Address of the mind map of a summary task.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return MindMapUrl Address of the mind map of a summary task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getMindMapUrl() {
+        return this.MindMapUrl;
+    }
+
+    /**
+     * Set Address of the mind map of a summary task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param MindMapUrl Address of the mind map of a summary task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setMindMapUrl(String MindMapUrl) {
+        this.MindMapUrl = MindMapUrl;
+    }
+
     public MediaAiAnalysisDescriptionItem() {
     }
 
@@ -172,6 +200,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.Paragraphs[i] = new AiParagraphInfo(source.Paragraphs[i]);
             }
         }
+        if (source.MindMapUrl != null) {
+            this.MindMapUrl = new String(source.MindMapUrl);
+        }
     }
 
 
@@ -184,6 +215,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamArrayObj(map, prefix + "Paragraphs.", this.Paragraphs);
+        this.setParamSimple(map, prefix + "MindMapUrl", this.MindMapUrl);
 
     }
 }

@@ -352,6 +352,17 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     }
 
     /**
+     *Queries the status of a web-page recording task
+     * @param req DescribeWebRecordRequest
+     * @return DescribeWebRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebRecordResponse DescribeWebRecord(DescribeWebRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWebRecord", DescribeWebRecordResponse.class);
+    }
+
+    /**
      *This API is used to remove all users from a room and dismiss the room. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.
      * @param req DismissRoomRequest
      * @return DismissRoomResponse
@@ -531,6 +542,17 @@ Usage Precautions:
     }
 
     /**
+     *This interface can be used to initiate a web-page recording task. In the interface parameters, specify the recording URL, recording resolution, recording result storage and other parameters. If there are parameter or API logic problems, the result will be returned immediately. If there are page problems, such as the page cannot be accessed, the result will be returned in the callback. Please pay attention.
+     * @param req StartWebRecordRequest
+     * @return StartWebRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartWebRecordResponse StartWebRecord(StartWebRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartWebRecord", StartWebRecordResponse.class);
+    }
+
+    /**
      *Stop AI conversation task
      * @param req StopAIConversationRequest
      * @return StopAIConversationResponse
@@ -572,6 +594,17 @@ Usage Precautions:
     public StopStreamIngestResponse StopStreamIngest(StopStreamIngestRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopStreamIngest", StopStreamIngestResponse.class);
+    }
+
+    /**
+     *Stop an web-page recording task
+     * @param req StopWebRecordRequest
+     * @return StopWebRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopWebRecordResponse StopWebRecord(StopWebRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopWebRecord", StopWebRecordResponse.class);
     }
 
     /**

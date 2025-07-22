@@ -45,15 +45,14 @@ public class SegmentRecognitionItem extends AbstractModel {
     private Float EndTimeOffset;
 
     /**
-    * 
+    * Specifies the split segment URL.
     */
     @SerializedName("SegmentUrl")
     @Expose
     private String SegmentUrl;
 
     /**
-    * Segment cover.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Specifies the segment cover.
     */
     @SerializedName("CovImgUrl")
     @Expose
@@ -61,15 +60,13 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Segment title.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Title")
     @Expose
     private String Title;
 
     /**
-    * Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the segment summary.
     */
     @SerializedName("Summary")
     @Expose
@@ -83,16 +80,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] Keywords;
 
     /**
-    * The start time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Specifies the start time of a live streaming segment in the ISO date format.
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * The end time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Specifies the end time of a live streaming segment in the ISO date format.
     */
     @SerializedName("EndTime")
     @Expose
@@ -154,46 +149,40 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get  
-     * @return SegmentUrl 
+     * Get Specifies the split segment URL. 
+     * @return SegmentUrl Specifies the split segment URL.
      */
     public String getSegmentUrl() {
         return this.SegmentUrl;
     }
 
     /**
-     * Set 
-     * @param SegmentUrl 
+     * Set Specifies the split segment URL.
+     * @param SegmentUrl Specifies the split segment URL.
      */
     public void setSegmentUrl(String SegmentUrl) {
         this.SegmentUrl = SegmentUrl;
     }
 
     /**
-     * Get Segment cover.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CovImgUrl Segment cover.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Specifies the segment cover. 
+     * @return CovImgUrl Specifies the segment cover.
      */
     public String getCovImgUrl() {
         return this.CovImgUrl;
     }
 
     /**
-     * Set Segment cover.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CovImgUrl Segment cover.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Specifies the segment cover.
+     * @param CovImgUrl Specifies the segment cover.
      */
     public void setCovImgUrl(String CovImgUrl) {
         this.CovImgUrl = CovImgUrl;
     }
 
     /**
-     * Get Segment title.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Segment title. 
      * @return Title Segment title.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTitle() {
         return this.Title;
@@ -201,29 +190,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Segment title.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Title Segment title.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Summary Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the segment summary. 
+     * @return Summary Specifies the segment summary.
      */
     public String getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Summary Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the segment summary.
+     * @param Summary Specifies the segment summary.
      */
     public void setSummary(String Summary) {
         this.Summary = Summary;
@@ -246,40 +229,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The start time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return BeginTime The start time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Specifies the start time of a live streaming segment in the ISO date format. 
+     * @return BeginTime Specifies the start time of a live streaming segment in the ISO date format.
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set The start time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param BeginTime The start time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Specifies the start time of a live streaming segment in the ISO date format.
+     * @param BeginTime Specifies the start time of a live streaming segment in the ISO date format.
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get The end time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return EndTime The end time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Specifies the end time of a live streaming segment in the ISO date format. 
+     * @return EndTime Specifies the end time of a live streaming segment in the ISO date format.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param EndTime The end time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Specifies the end time of a live streaming segment in the ISO date format.
+     * @param EndTime Specifies the end time of a live streaming segment in the ISO date format.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -59,12 +59,25 @@ public class MediaProcessTaskImageSpriteResult extends AbstractModel {
     private ImageSpriteTaskInput Input;
 
     /**
-    * Output of an image sprite generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the output of an image sprite task for a video.
     */
     @SerializedName("Output")
     @Expose
     private MediaImageSpriteItem Output;
+
+    /**
+    * Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+    */
+    @SerializedName("BeginProcessTime")
+    @Expose
+    private String BeginProcessTime;
+
+    /**
+    * Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private String FinishTime;
 
     /**
      * Get Task status. Valid values: PROCESSING, SUCCESS, FAIL. 
@@ -147,23 +160,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output of an image sprite generating task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of an image sprite generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the output of an image sprite task for a video. 
+     * @return Output Specifies the output of an image sprite task for a video.
      */
     public MediaImageSpriteItem getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of an image sprite generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of an image sprite generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the output of an image sprite task for a video.
+     * @param Output Specifies the output of an image sprite task for a video.
      */
     public void setOutput(MediaImageSpriteItem Output) {
         this.Output = Output;
+    }
+
+    /**
+     * Get Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     */
+    public String getBeginProcessTime() {
+        return this.BeginProcessTime;
+    }
+
+    /**
+     * Set Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     */
+    public void setBeginProcessTime(String BeginProcessTime) {
+        this.BeginProcessTime = BeginProcessTime;
+    }
+
+    /**
+     * Get Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     */
+    public String getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     */
+    public void setFinishTime(String FinishTime) {
+        this.FinishTime = FinishTime;
     }
 
     public MediaProcessTaskImageSpriteResult() {
@@ -192,6 +233,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Output != null) {
             this.Output = new MediaImageSpriteItem(source.Output);
         }
+        if (source.BeginProcessTime != null) {
+            this.BeginProcessTime = new String(source.BeginProcessTime);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
     }
 
 
@@ -205,6 +252,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
 
     }
 }

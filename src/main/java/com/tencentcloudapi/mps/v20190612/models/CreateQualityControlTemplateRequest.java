@@ -45,6 +45,14 @@ public class CreateQualityControlTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
+    * Recording file format. Valid values:
+<li>PNG: PNG image.</li>
+    */
+    @SerializedName("RecordFormat")
+    @Expose
+    private String RecordFormat;
+
+    /**
      * Get Media quality inspection template name, with a length limit of 64 characters. 
      * @return Name Media quality inspection template name, with a length limit of 64 characters.
      */
@@ -92,6 +100,26 @@ public class CreateQualityControlTemplateRequest extends AbstractModel {
         this.Comment = Comment;
     }
 
+    /**
+     * Get Recording file format. Valid values:
+<li>PNG: PNG image.</li> 
+     * @return RecordFormat Recording file format. Valid values:
+<li>PNG: PNG image.</li>
+     */
+    public String getRecordFormat() {
+        return this.RecordFormat;
+    }
+
+    /**
+     * Set Recording file format. Valid values:
+<li>PNG: PNG image.</li>
+     * @param RecordFormat Recording file format. Valid values:
+<li>PNG: PNG image.</li>
+     */
+    public void setRecordFormat(String RecordFormat) {
+        this.RecordFormat = RecordFormat;
+    }
+
     public CreateQualityControlTemplateRequest() {
     }
 
@@ -112,6 +140,9 @@ public class CreateQualityControlTemplateRequest extends AbstractModel {
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.RecordFormat != null) {
+            this.RecordFormat = new String(source.RecordFormat);
+        }
     }
 
 
@@ -122,6 +153,7 @@ public class CreateQualityControlTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArrayObj(map, prefix + "QualityControlItemSet.", this.QualityControlItemSet);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "RecordFormat", this.RecordFormat);
 
     }
 }

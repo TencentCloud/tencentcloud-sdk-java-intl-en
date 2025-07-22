@@ -52,16 +52,14 @@ public class ScheduleSmartSubtitleTaskResult extends AbstractModel {
     private String Message;
 
     /**
-    * Recognition task input.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Input of the recognition task.
     */
     @SerializedName("Input")
     @Expose
     private SmartSubtitlesTaskInput Input;
 
     /**
-    * Recognition task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Output of the identification task.
     */
     @SerializedName("Output")
     @Expose
@@ -69,7 +67,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("BeginProcessTime")
     @Expose
@@ -77,7 +74,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("FinishTime")
     @Expose
@@ -148,50 +144,40 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Recognition task input.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Input Recognition task input.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Input of the recognition task. 
+     * @return Input Input of the recognition task.
      */
     public SmartSubtitlesTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Recognition task input.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Input Recognition task input.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Input of the recognition task.
+     * @param Input Input of the recognition task.
      */
     public void setInput(SmartSubtitlesTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Recognition task output.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Output Recognition task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Output of the identification task. 
+     * @return Output Output of the identification task.
      */
     public SmartSubtitlesResult [] getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Recognition task output.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Output Recognition task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Output of the identification task.
+     * @param Output Output of the identification task.
      */
     public void setOutput(SmartSubtitlesResult [] Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52). 
      * @return BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
@@ -199,19 +185,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52). 
      * @return FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getFinishTime() {
         return this.FinishTime;
@@ -219,9 +201,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

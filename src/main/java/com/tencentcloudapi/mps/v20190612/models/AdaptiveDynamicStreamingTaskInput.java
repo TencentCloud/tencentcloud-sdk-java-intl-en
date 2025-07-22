@@ -83,7 +83,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Drm information.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("DrmInfo")
     @Expose
@@ -91,13 +90,19 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Adaptive transcoding template type.
-Common: audio-video.
+Common: audio/video type.
 PureAudio: audio-only.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DefinitionType")
     @Expose
     private String DefinitionType;
+
+    /**
+    * Subtitle setting.
+    */
+    @SerializedName("SubtitleTemplate")
+    @Expose
+    private String SubtitleTemplate;
 
     /**
      * Get Adaptive dynamic streaming template ID. 
@@ -248,10 +253,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Drm information.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Drm information. 
      * @return DrmInfo Drm information.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public DrmInfo getDrmInfo() {
         return this.DrmInfo;
@@ -259,9 +262,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Drm information.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param DrmInfo Drm information.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setDrmInfo(DrmInfo DrmInfo) {
         this.DrmInfo = DrmInfo;
@@ -269,13 +270,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Adaptive transcoding template type.
-Common: audio-video.
-PureAudio: audio-only.
-Note: This field may return null, indicating that no valid values can be obtained. 
+Common: audio/video type.
+PureAudio: audio-only. 
      * @return DefinitionType Adaptive transcoding template type.
-Common: audio-video.
+Common: audio/video type.
 PureAudio: audio-only.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDefinitionType() {
         return this.DefinitionType;
@@ -283,16 +282,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Adaptive transcoding template type.
-Common: audio-video.
+Common: audio/video type.
 PureAudio: audio-only.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DefinitionType Adaptive transcoding template type.
-Common: audio-video.
+Common: audio/video type.
 PureAudio: audio-only.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDefinitionType(String DefinitionType) {
         this.DefinitionType = DefinitionType;
+    }
+
+    /**
+     * Get Subtitle setting. 
+     * @return SubtitleTemplate Subtitle setting.
+     */
+    public String getSubtitleTemplate() {
+        return this.SubtitleTemplate;
+    }
+
+    /**
+     * Set Subtitle setting.
+     * @param SubtitleTemplate Subtitle setting.
+     */
+    public void setSubtitleTemplate(String SubtitleTemplate) {
+        this.SubtitleTemplate = SubtitleTemplate;
     }
 
     public AdaptiveDynamicStreamingTaskInput() {
@@ -336,6 +349,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.DefinitionType != null) {
             this.DefinitionType = new String(source.DefinitionType);
         }
+        if (source.SubtitleTemplate != null) {
+            this.SubtitleTemplate = new String(source.SubtitleTemplate);
+        }
     }
 
 
@@ -352,6 +368,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
         this.setParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
         this.setParamSimple(map, prefix + "DefinitionType", this.DefinitionType);
+        this.setParamSimple(map, prefix + "SubtitleTemplate", this.SubtitleTemplate);
 
     }
 }

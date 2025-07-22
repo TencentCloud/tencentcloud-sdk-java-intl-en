@@ -52,6 +52,21 @@ This API is not fully available for the time being. For more information, please
     }
 
     /**
+     *This API supports identifying and extracting field information in structured scenarios such as complex scenarios and multiple formats. Key scenarios include: finance, health care, transportation, travel, insurance. Click [experience now](https://ocrdemo.cloud.tencent.com/).
+
+This API is used to set the alias SmartStructuralPro.
+
+The default API request rate limit is 5 requests per second.
+     * @param req ExtractDocMultiRequest
+     * @return ExtractDocMultiResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExtractDocMultiResponse ExtractDocMulti(ExtractDocMultiRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExtractDocMulti", ExtractDocMultiResponse.class);
+    }
+
+    /**
      *This API is used to detect and recognize characters in an image. It can recognize Chinese, English, Chinese-English, digits, and special symbols and return the text box positions and characters.
 
 It is suitable for scenarios with a lot of characters in complex layouts and requiring high recognition accuracy, such as examination papers, online images, signboards, and legal documents.
