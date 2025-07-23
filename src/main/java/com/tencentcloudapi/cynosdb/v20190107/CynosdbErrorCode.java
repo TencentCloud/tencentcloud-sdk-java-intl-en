@@ -234,6 +234,9 @@ public enum CynosdbErrorCode {
      /* The number of instances exceeds the limit. */
      LIMITEXCEEDED_USERINSTANCELIMIT("LimitExceeded.UserInstanceLimit"),
      
+     /* Audit log is disabled for instance {{1}}. operations cannot be performed. */
+     OPERATIONDENIED_AUDITLOGCLOSEDERROR("OperationDenied.AuditLogClosedError"),
+     
      /*  */
      OPERATIONDENIED_AUDITSTATUSERROR("OperationDenied.AuditStatusError"),
      
@@ -245,6 +248,9 @@ public enum CynosdbErrorCode {
      
      /* For the cluster in this status, the operation is not allowed. */
      OPERATIONDENIED_CLUSTERSTATUSDENIEDERROR("OperationDenied.ClusterStatusDeniedError"),
+     
+     /* Feature {{1}} is not currently supported. */
+     OPERATIONDENIED_FEATURENOTSUPPORTERROR("OperationDenied.FeatureNotSupportError"),
      
      /* Fail to retrieve the proxy. */
      OPERATIONDENIED_GETPROXYGROUPFAILEDERROR("OperationDenied.GetProxyGroupFailedError"),
@@ -261,8 +267,14 @@ public enum CynosdbErrorCode {
      /* Insufficient account balance. */
      OPERATIONDENIED_INSUFFICIENTBALANCEERROR("OperationDenied.InsufficientBalanceError"),
      
+     /* Not a roll back cluster of {{1}}. */
+     OPERATIONDENIED_ISNOTROLLBACKCLUSTERERROR("OperationDenied.IsNotRollbackClusterError"),
+     
      /* Response size exceeds the limit: {{1}}. reduce the query quantity. */
      OPERATIONDENIED_LENGTHOVERLIMIT("OperationDenied.LengthOverLimit"),
+     
+     /* The cloned cluster is not within {{1}} days of {{2}}. */
+     OPERATIONDENIED_LIMITDAYFORAUDITREPLAYERROR("OperationDenied.LimitDayForAuditReplayError"),
      
      /* You do not have permission to operate the resource (carry out this operation). */
      OPERATIONDENIED_OPERATIONDENIEDERROR("OperationDenied.OperationDeniedError"),

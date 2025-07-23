@@ -25,6 +25,9 @@ public enum TmsErrorCode {
      INVALIDPARAMETERVALUE_ERRTEXTCONTENTTYPE("InvalidParameterValue.ErrTextContentType"),
      
      /*  */
+     INVALIDPARAMETERVALUE_ERRTYPE("InvalidParameterValue.ErrType"),
+     
+     /*  */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
      /* Operation not authorized/No valid package/The account is overdue */

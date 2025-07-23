@@ -493,4 +493,15 @@ Note: The API request may fail due to network instability or other exceptions. I
         return this.internalRequest(req, "ModifyGatherRule", ModifyGatherRuleResponse.class);
     }
 
+    /**
+     *This API is used to pay for an order.
+     * @param req PayDealsRequest
+     * @return PayDealsResponse
+     * @throws TencentCloudSDKException
+     */
+    public PayDealsResponse PayDeals(PayDealsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PayDeals", PayDealsResponse.class);
+    }
+
 }

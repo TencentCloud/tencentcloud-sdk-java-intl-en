@@ -80,6 +80,13 @@ public class ImageModerationRequest extends AbstractModel {
     private Device Device;
 
     /**
+    * 
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get This field indicates the specific number of the policy, which is used for API scheduling and can be configured in the CMS console. If the `Biztype` parameter is passed in, a moderation policy will be used based on the business scenario; otherwise, the default moderation policy will be used.<br>Note: `Biztype` can contain 3-32 digits, letters, and underscores; different `Biztype` values are associated with different business scenarios and moderation policies, so you need to verify the `Biztype` before calling this API. 
      * @return BizType This field indicates the specific number of the policy, which is used for API scheduling and can be configured in the CMS console. If the `Biztype` parameter is passed in, a moderation policy will be used based on the business scenario; otherwise, the default moderation policy will be used.<br>Note: `Biztype` can contain 3-32 digits, letters, and underscores; different `Biztype` values are associated with different business scenarios and moderation policies, so you need to verify the `Biztype` before calling this API.
      */
@@ -207,6 +214,22 @@ public class ImageModerationRequest extends AbstractModel {
         this.Device = Device;
     }
 
+    /**
+     * Get  
+     * @return Type 
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 
+     * @param Type 
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public ImageModerationRequest() {
     }
 
@@ -239,6 +262,9 @@ public class ImageModerationRequest extends AbstractModel {
         if (source.Device != null) {
             this.Device = new Device(source.Device);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class ImageModerationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxFrames", this.MaxFrames);
         this.setParamObj(map, prefix + "User.", this.User);
         this.setParamObj(map, prefix + "Device.", this.Device);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

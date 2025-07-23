@@ -56,13 +56,12 @@ Note: this field may return null, indicating that no valid value was found.
     private String BandwidthPackageId;
 
     /**
-    * Describes the line type. For details, refer to [EIP Product Overview](https://intl.cloud.tencent.com/document/product/1199/41646?from_cn_redirect=1). default value: `BGP`.
+    * Describes the line type. For details, refer to [EIP Product Overview](https://www.tencentcloud.com/document/product/213/5733). default value: `BGP`.
 
 <Li>BGP: general bgp line.</li>
 For a user who has enabled the static single-line IP allowlist, valid values include:
  <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
 Note: Only certain regions support static single-line IP addresses.
-
 
     */
     @SerializedName("InternetServiceProvider")
@@ -72,7 +71,8 @@ Note: Only certain regions support static single-line IP addresses.
     /**
     * Type of public IP address.
 
-<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://cloud.tencent.com/document/product/1199/41646). </li> Specify the type of public IPv4 address to assign a public IPv4 address to the resource. Premium IP and Anti-DDoS IP features are gradually released in select regions. For usage, [submit a ticket for consultation](https://console.cloud.tencent.com/workorder/category).
+<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/document/product/213/5733). </li> 
+Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions. For usage, [submit a ticket for consultation](https://console.tencentcloud.com/workorder).
     */
     @SerializedName("IPv4AddressType")
     @Expose
@@ -86,13 +86,11 @@ Note: Only certain regions support static single-line IP addresses.
     private String AntiDDoSPackageId;
 
     /**
-    * Whether to delete the bound EIP when the instance is destroyed.
+    * Whether to delete the bound EIP(HighQualityEIP and AntiDDoSEIP) when the instance is destroyed.
 
 Range of values:
 
-<li>TRUE: retain the EIP</li> <li>FALSE: not retain the EIP</li>
-
-Note that when the IPv4AddressType field specifies the EIP type, the default behavior is not to retain the EIP. 
+<li>TRUE: retain the EIP</li> <li>FALSE: not retain the EIP</li>Note that when the IPv4AddressType field specifies the EIP type, the default behavior is not to retain the EIP. 
 WanIP is unaffected by this field and will always be deleted with the instance. 
 Changing this field configuration will take effect immediately for resources already bound to a scaling group.
     */
@@ -181,21 +179,19 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Describes the line type. For details, refer to [EIP Product Overview](https://intl.cloud.tencent.com/document/product/1199/41646?from_cn_redirect=1). default value: `BGP`.
+     * Get Describes the line type. For details, refer to [EIP Product Overview](https://www.tencentcloud.com/document/product/213/5733). default value: `BGP`.
 
 <Li>BGP: general bgp line.</li>
 For a user who has enabled the static single-line IP allowlist, valid values include:
  <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
 Note: Only certain regions support static single-line IP addresses.
-
  
-     * @return InternetServiceProvider Describes the line type. For details, refer to [EIP Product Overview](https://intl.cloud.tencent.com/document/product/1199/41646?from_cn_redirect=1). default value: `BGP`.
+     * @return InternetServiceProvider Describes the line type. For details, refer to [EIP Product Overview](https://www.tencentcloud.com/document/product/213/5733). default value: `BGP`.
 
 <Li>BGP: general bgp line.</li>
 For a user who has enabled the static single-line IP allowlist, valid values include:
  <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
 Note: Only certain regions support static single-line IP addresses.
-
 
      */
     public String getInternetServiceProvider() {
@@ -203,21 +199,19 @@ Note: Only certain regions support static single-line IP addresses.
     }
 
     /**
-     * Set Describes the line type. For details, refer to [EIP Product Overview](https://intl.cloud.tencent.com/document/product/1199/41646?from_cn_redirect=1). default value: `BGP`.
+     * Set Describes the line type. For details, refer to [EIP Product Overview](https://www.tencentcloud.com/document/product/213/5733). default value: `BGP`.
 
 <Li>BGP: general bgp line.</li>
 For a user who has enabled the static single-line IP allowlist, valid values include:
  <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
 Note: Only certain regions support static single-line IP addresses.
 
-
-     * @param InternetServiceProvider Describes the line type. For details, refer to [EIP Product Overview](https://intl.cloud.tencent.com/document/product/1199/41646?from_cn_redirect=1). default value: `BGP`.
+     * @param InternetServiceProvider Describes the line type. For details, refer to [EIP Product Overview](https://www.tencentcloud.com/document/product/213/5733). default value: `BGP`.
 
 <Li>BGP: general bgp line.</li>
 For a user who has enabled the static single-line IP allowlist, valid values include:
  <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
 Note: Only certain regions support static single-line IP addresses.
-
 
      */
     public void setInternetServiceProvider(String InternetServiceProvider) {
@@ -227,10 +221,12 @@ Note: Only certain regions support static single-line IP addresses.
     /**
      * Get Type of public IP address.
 
-<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://cloud.tencent.com/document/product/1199/41646). </li> Specify the type of public IPv4 address to assign a public IPv4 address to the resource. Premium IP and Anti-DDoS IP features are gradually released in select regions. For usage, [submit a ticket for consultation](https://console.cloud.tencent.com/workorder/category). 
+<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/document/product/213/5733). </li> 
+Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions. For usage, [submit a ticket for consultation](https://console.tencentcloud.com/workorder). 
      * @return IPv4AddressType Type of public IP address.
 
-<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://cloud.tencent.com/document/product/1199/41646). </li> Specify the type of public IPv4 address to assign a public IPv4 address to the resource. Premium IP and Anti-DDoS IP features are gradually released in select regions. For usage, [submit a ticket for consultation](https://console.cloud.tencent.com/workorder/category).
+<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/document/product/213/5733). </li> 
+Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions. For usage, [submit a ticket for consultation](https://console.tencentcloud.com/workorder).
      */
     public String getIPv4AddressType() {
         return this.IPv4AddressType;
@@ -239,10 +235,12 @@ Note: Only certain regions support static single-line IP addresses.
     /**
      * Set Type of public IP address.
 
-<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://cloud.tencent.com/document/product/1199/41646). </li> Specify the type of public IPv4 address to assign a public IPv4 address to the resource. Premium IP and Anti-DDoS IP features are gradually released in select regions. For usage, [submit a ticket for consultation](https://console.cloud.tencent.com/workorder/category).
+<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/document/product/213/5733). </li> 
+Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions. For usage, [submit a ticket for consultation](https://console.tencentcloud.com/workorder).
      * @param IPv4AddressType Type of public IP address.
 
-<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://cloud.tencent.com/document/product/1199/41646). </li> Specify the type of public IPv4 address to assign a public IPv4 address to the resource. Premium IP and Anti-DDoS IP features are gradually released in select regions. For usage, [submit a ticket for consultation](https://console.cloud.tencent.com/workorder/category).
+<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/document/product/213/5733). </li> 
+Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions. For usage, [submit a ticket for consultation](https://console.tencentcloud.com/workorder).
      */
     public void setIPv4AddressType(String IPv4AddressType) {
         this.IPv4AddressType = IPv4AddressType;
@@ -265,22 +263,18 @@ Note: Only certain regions support static single-line IP addresses.
     }
 
     /**
-     * Get Whether to delete the bound EIP when the instance is destroyed.
+     * Get Whether to delete the bound EIP(HighQualityEIP and AntiDDoSEIP) when the instance is destroyed.
 
 Range of values:
 
-<li>TRUE: retain the EIP</li> <li>FALSE: not retain the EIP</li>
-
-Note that when the IPv4AddressType field specifies the EIP type, the default behavior is not to retain the EIP. 
+<li>TRUE: retain the EIP</li> <li>FALSE: not retain the EIP</li>Note that when the IPv4AddressType field specifies the EIP type, the default behavior is not to retain the EIP. 
 WanIP is unaffected by this field and will always be deleted with the instance. 
 Changing this field configuration will take effect immediately for resources already bound to a scaling group. 
-     * @return IsKeepEIP Whether to delete the bound EIP when the instance is destroyed.
+     * @return IsKeepEIP Whether to delete the bound EIP(HighQualityEIP and AntiDDoSEIP) when the instance is destroyed.
 
 Range of values:
 
-<li>TRUE: retain the EIP</li> <li>FALSE: not retain the EIP</li>
-
-Note that when the IPv4AddressType field specifies the EIP type, the default behavior is not to retain the EIP. 
+<li>TRUE: retain the EIP</li> <li>FALSE: not retain the EIP</li>Note that when the IPv4AddressType field specifies the EIP type, the default behavior is not to retain the EIP. 
 WanIP is unaffected by this field and will always be deleted with the instance. 
 Changing this field configuration will take effect immediately for resources already bound to a scaling group.
      */
@@ -289,22 +283,18 @@ Changing this field configuration will take effect immediately for resources alr
     }
 
     /**
-     * Set Whether to delete the bound EIP when the instance is destroyed.
+     * Set Whether to delete the bound EIP(HighQualityEIP and AntiDDoSEIP) when the instance is destroyed.
 
 Range of values:
 
-<li>TRUE: retain the EIP</li> <li>FALSE: not retain the EIP</li>
-
-Note that when the IPv4AddressType field specifies the EIP type, the default behavior is not to retain the EIP. 
+<li>TRUE: retain the EIP</li> <li>FALSE: not retain the EIP</li>Note that when the IPv4AddressType field specifies the EIP type, the default behavior is not to retain the EIP. 
 WanIP is unaffected by this field and will always be deleted with the instance. 
 Changing this field configuration will take effect immediately for resources already bound to a scaling group.
-     * @param IsKeepEIP Whether to delete the bound EIP when the instance is destroyed.
+     * @param IsKeepEIP Whether to delete the bound EIP(HighQualityEIP and AntiDDoSEIP) when the instance is destroyed.
 
 Range of values:
 
-<li>TRUE: retain the EIP</li> <li>FALSE: not retain the EIP</li>
-
-Note that when the IPv4AddressType field specifies the EIP type, the default behavior is not to retain the EIP. 
+<li>TRUE: retain the EIP</li> <li>FALSE: not retain the EIP</li>Note that when the IPv4AddressType field specifies the EIP type, the default behavior is not to retain the EIP. 
 WanIP is unaffected by this field and will always be deleted with the instance. 
 Changing this field configuration will take effect immediately for resources already bound to a scaling group.
      */

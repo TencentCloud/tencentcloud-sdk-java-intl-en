@@ -1392,6 +1392,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to replay instance audit logs.
+     * @param req ReplayInstanceAuditLogRequest
+     * @return ReplayInstanceAuditLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplayInstanceAuditLogResponse ReplayInstanceAuditLog(ReplayInstanceAuditLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReplayInstanceAuditLog", ReplayInstanceAuditLogResponse.class);
+    }
+
+    /**
      *This API is used to modify the database account password.
      * @param req ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse

@@ -98,11 +98,12 @@ PureAudio: audio-only.
     private String DefinitionType;
 
     /**
-    * Subtitle setting.
+    * Specifies the subtitle parameter.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("SubtitleTemplate")
     @Expose
-    private String SubtitleTemplate;
+    private SubtitleTemplate SubtitleTemplate;
 
     /**
      * Get Adaptive dynamic streaming template ID. 
@@ -293,18 +294,22 @@ PureAudio: audio-only.
     }
 
     /**
-     * Get Subtitle setting. 
-     * @return SubtitleTemplate Subtitle setting.
+     * Get Specifies the subtitle parameter.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SubtitleTemplate Specifies the subtitle parameter.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
-    public String getSubtitleTemplate() {
+    public SubtitleTemplate getSubtitleTemplate() {
         return this.SubtitleTemplate;
     }
 
     /**
-     * Set Subtitle setting.
-     * @param SubtitleTemplate Subtitle setting.
+     * Set Specifies the subtitle parameter.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SubtitleTemplate Specifies the subtitle parameter.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
-    public void setSubtitleTemplate(String SubtitleTemplate) {
+    public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {
         this.SubtitleTemplate = SubtitleTemplate;
     }
 
@@ -350,7 +355,7 @@ PureAudio: audio-only.
             this.DefinitionType = new String(source.DefinitionType);
         }
         if (source.SubtitleTemplate != null) {
-            this.SubtitleTemplate = new String(source.SubtitleTemplate);
+            this.SubtitleTemplate = new SubtitleTemplate(source.SubtitleTemplate);
         }
     }
 
@@ -368,7 +373,7 @@ PureAudio: audio-only.
         this.setParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
         this.setParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
         this.setParamSimple(map, prefix + "DefinitionType", this.DefinitionType);
-        this.setParamSimple(map, prefix + "SubtitleTemplate", this.SubtitleTemplate);
+        this.setParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
 
     }
 }
