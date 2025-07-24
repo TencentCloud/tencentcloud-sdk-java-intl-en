@@ -33,7 +33,8 @@ Such as "10000000001"
 
     /**
     * Date.
-Such as" 2025-06-25"
+Such as" 2025-06-25".
+Please note: Historical daily bill dated before "2025-06-01",cannot be queried.
     */
     @SerializedName("Date")
     @Expose
@@ -61,9 +62,11 @@ Such as "10000000001"
 
     /**
      * Get Date.
-Such as" 2025-06-25" 
+Such as" 2025-06-25".
+Please note: Historical daily bill dated before "2025-06-01",cannot be queried. 
      * @return Date Date.
-Such as" 2025-06-25"
+Such as" 2025-06-25".
+Please note: Historical daily bill dated before "2025-06-01",cannot be queried.
      */
     public String getDate() {
         return this.Date;
@@ -71,9 +74,11 @@ Such as" 2025-06-25"
 
     /**
      * Set Date.
-Such as" 2025-06-25"
+Such as" 2025-06-25".
+Please note: Historical daily bill dated before "2025-06-01",cannot be queried.
      * @param Date Date.
-Such as" 2025-06-25"
+Such as" 2025-06-25".
+Please note: Historical daily bill dated before "2025-06-01",cannot be queried.
      */
     public void setDate(String Date) {
         this.Date = Date;
