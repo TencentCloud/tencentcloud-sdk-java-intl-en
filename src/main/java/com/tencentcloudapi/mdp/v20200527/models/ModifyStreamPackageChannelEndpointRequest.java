@@ -103,6 +103,20 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
     private String CustomUrlParam;
 
     /**
+    * Enable DRM. This is only effective for CMAF protocol.
+    */
+    @SerializedName("DRMEnabled")
+    @Expose
+    private Boolean DRMEnabled;
+
+    /**
+    * DRM configuration information
+    */
+    @SerializedName("DRMInfo")
+    @Expose
+    private DRMInfo DRMInfo;
+
+    /**
      * Get Channel ID 
      * @return Id Channel ID
      */
@@ -286,6 +300,38 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
         this.CustomUrlParam = CustomUrlParam;
     }
 
+    /**
+     * Get Enable DRM. This is only effective for CMAF protocol. 
+     * @return DRMEnabled Enable DRM. This is only effective for CMAF protocol.
+     */
+    public Boolean getDRMEnabled() {
+        return this.DRMEnabled;
+    }
+
+    /**
+     * Set Enable DRM. This is only effective for CMAF protocol.
+     * @param DRMEnabled Enable DRM. This is only effective for CMAF protocol.
+     */
+    public void setDRMEnabled(Boolean DRMEnabled) {
+        this.DRMEnabled = DRMEnabled;
+    }
+
+    /**
+     * Get DRM configuration information 
+     * @return DRMInfo DRM configuration information
+     */
+    public DRMInfo getDRMInfo() {
+        return this.DRMInfo;
+    }
+
+    /**
+     * Set DRM configuration information
+     * @param DRMInfo DRM configuration information
+     */
+    public void setDRMInfo(DRMInfo DRMInfo) {
+        this.DRMInfo = DRMInfo;
+    }
+
     public ModifyStreamPackageChannelEndpointRequest() {
     }
 
@@ -327,6 +373,12 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
         if (source.CustomUrlParam != null) {
             this.CustomUrlParam = new String(source.CustomUrlParam);
         }
+        if (source.DRMEnabled != null) {
+            this.DRMEnabled = new Boolean(source.DRMEnabled);
+        }
+        if (source.DRMInfo != null) {
+            this.DRMInfo = new DRMInfo(source.DRMInfo);
+        }
     }
 
 
@@ -345,6 +397,8 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
         this.setParamObj(map, prefix + "SSAIInfo.", this.SSAIInfo);
         this.setParamSimple(map, prefix + "CustomUrlParamIndex", this.CustomUrlParamIndex);
         this.setParamSimple(map, prefix + "CustomUrlParam", this.CustomUrlParam);
+        this.setParamSimple(map, prefix + "DRMEnabled", this.DRMEnabled);
+        this.setParamObj(map, prefix + "DRMInfo.", this.DRMInfo);
 
     }
 }

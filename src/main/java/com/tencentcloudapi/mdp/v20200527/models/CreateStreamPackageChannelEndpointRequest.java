@@ -73,6 +73,20 @@ public class CreateStreamPackageChannelEndpointRequest extends AbstractModel {
     private Long TimeShiftDuration;
 
     /**
+    * Enable DRM. This is only effective for CMAF protocol.
+    */
+    @SerializedName("DRMEnabled")
+    @Expose
+    private Boolean DRMEnabled;
+
+    /**
+    * DRM configuration information.
+    */
+    @SerializedName("DRMInfo")
+    @Expose
+    private DRMInfo DRMInfo;
+
+    /**
      * Get Channel ID 
      * @return Id Channel ID
      */
@@ -184,6 +198,38 @@ public class CreateStreamPackageChannelEndpointRequest extends AbstractModel {
         this.TimeShiftDuration = TimeShiftDuration;
     }
 
+    /**
+     * Get Enable DRM. This is only effective for CMAF protocol. 
+     * @return DRMEnabled Enable DRM. This is only effective for CMAF protocol.
+     */
+    public Boolean getDRMEnabled() {
+        return this.DRMEnabled;
+    }
+
+    /**
+     * Set Enable DRM. This is only effective for CMAF protocol.
+     * @param DRMEnabled Enable DRM. This is only effective for CMAF protocol.
+     */
+    public void setDRMEnabled(Boolean DRMEnabled) {
+        this.DRMEnabled = DRMEnabled;
+    }
+
+    /**
+     * Get DRM configuration information. 
+     * @return DRMInfo DRM configuration information.
+     */
+    public DRMInfo getDRMInfo() {
+        return this.DRMInfo;
+    }
+
+    /**
+     * Set DRM configuration information.
+     * @param DRMInfo DRM configuration information.
+     */
+    public void setDRMInfo(DRMInfo DRMInfo) {
+        this.DRMInfo = DRMInfo;
+    }
+
     public CreateStreamPackageChannelEndpointRequest() {
     }
 
@@ -213,6 +259,12 @@ public class CreateStreamPackageChannelEndpointRequest extends AbstractModel {
         if (source.TimeShiftDuration != null) {
             this.TimeShiftDuration = new Long(source.TimeShiftDuration);
         }
+        if (source.DRMEnabled != null) {
+            this.DRMEnabled = new Boolean(source.DRMEnabled);
+        }
+        if (source.DRMInfo != null) {
+            this.DRMInfo = new DRMInfo(source.DRMInfo);
+        }
     }
 
 
@@ -227,6 +279,8 @@ public class CreateStreamPackageChannelEndpointRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Manifest", this.Manifest);
         this.setParamSimple(map, prefix + "TimeShiftEnable", this.TimeShiftEnable);
         this.setParamSimple(map, prefix + "TimeShiftDuration", this.TimeShiftDuration);
+        this.setParamSimple(map, prefix + "DRMEnabled", this.DRMEnabled);
+        this.setParamObj(map, prefix + "DRMInfo.", this.DRMInfo);
 
     }
 }
