@@ -53,7 +53,7 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
     private Long AudioBitrate;
 
     /**
-    * Audio language code, whose length is always 3 characters.
+    * Audio language code, which length is between 2 and 20.
     */
     @SerializedName("LanguageCode")
     @Expose
@@ -79,6 +79,13 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
     @SerializedName("AudioCodecDetails")
     @Expose
     private AudioCodecDetail AudioCodecDetails;
+
+    /**
+    * Audio language description, which maximum length is 100.
+    */
+    @SerializedName("LanguageDescription")
+    @Expose
+    private String LanguageDescription;
 
     /**
      * Get Only `AttachedInputs.AudioSelectors.Name` can be selected. This parameter is required for RTP_PUSH and UDP_PUSH. 
@@ -149,16 +156,16 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
     }
 
     /**
-     * Get Audio language code, whose length is always 3 characters. 
-     * @return LanguageCode Audio language code, whose length is always 3 characters.
+     * Get Audio language code, which length is between 2 and 20. 
+     * @return LanguageCode Audio language code, which length is between 2 and 20.
      */
     public String getLanguageCode() {
         return this.LanguageCode;
     }
 
     /**
-     * Set Audio language code, whose length is always 3 characters.
-     * @param LanguageCode Audio language code, whose length is always 3 characters.
+     * Set Audio language code, which length is between 2 and 20.
+     * @param LanguageCode Audio language code, which length is between 2 and 20.
      */
     public void setLanguageCode(String LanguageCode) {
         this.LanguageCode = LanguageCode;
@@ -212,6 +219,22 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
         this.AudioCodecDetails = AudioCodecDetails;
     }
 
+    /**
+     * Get Audio language description, which maximum length is 100. 
+     * @return LanguageDescription Audio language description, which maximum length is 100.
+     */
+    public String getLanguageDescription() {
+        return this.LanguageDescription;
+    }
+
+    /**
+     * Set Audio language description, which maximum length is 100.
+     * @param LanguageDescription Audio language description, which maximum length is 100.
+     */
+    public void setLanguageDescription(String LanguageDescription) {
+        this.LanguageDescription = LanguageDescription;
+    }
+
     public AudioTemplateInfo() {
     }
 
@@ -244,6 +267,9 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
         if (source.AudioCodecDetails != null) {
             this.AudioCodecDetails = new AudioCodecDetail(source.AudioCodecDetails);
         }
+        if (source.LanguageDescription != null) {
+            this.LanguageDescription = new String(source.LanguageDescription);
+        }
     }
 
 
@@ -259,6 +285,7 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
         this.setParamObj(map, prefix + "AudioNormalization.", this.AudioNormalization);
         this.setParamSimple(map, prefix + "AudioSampleRate", this.AudioSampleRate);
         this.setParamObj(map, prefix + "AudioCodecDetails.", this.AudioCodecDetails);
+        this.setParamSimple(map, prefix + "LanguageDescription", this.LanguageDescription);
 
     }
 }

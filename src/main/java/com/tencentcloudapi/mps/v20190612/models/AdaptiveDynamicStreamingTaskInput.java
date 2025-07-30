@@ -106,6 +106,13 @@ Note: This field may return null, indicating that no valid value can be obtained
     private SubtitleTemplate SubtitleTemplate;
 
     /**
+    * Extension field for transcoding.
+    */
+    @SerializedName("StdExtInfo")
+    @Expose
+    private String StdExtInfo;
+
+    /**
      * Get Adaptive dynamic streaming template ID. 
      * @return Definition Adaptive dynamic streaming template ID.
      */
@@ -313,6 +320,22 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.SubtitleTemplate = SubtitleTemplate;
     }
 
+    /**
+     * Get Extension field for transcoding. 
+     * @return StdExtInfo Extension field for transcoding.
+     */
+    public String getStdExtInfo() {
+        return this.StdExtInfo;
+    }
+
+    /**
+     * Set Extension field for transcoding.
+     * @param StdExtInfo Extension field for transcoding.
+     */
+    public void setStdExtInfo(String StdExtInfo) {
+        this.StdExtInfo = StdExtInfo;
+    }
+
     public AdaptiveDynamicStreamingTaskInput() {
     }
 
@@ -357,6 +380,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.SubtitleTemplate != null) {
             this.SubtitleTemplate = new SubtitleTemplate(source.SubtitleTemplate);
         }
+        if (source.StdExtInfo != null) {
+            this.StdExtInfo = new String(source.StdExtInfo);
+        }
     }
 
 
@@ -374,6 +400,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
         this.setParamSimple(map, prefix + "DefinitionType", this.DefinitionType);
         this.setParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
+        this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
 
     }
 }

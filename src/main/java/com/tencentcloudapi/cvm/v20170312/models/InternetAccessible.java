@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class InternetAccessible extends AbstractModel {
 
     /**
-    * Network connection billing plan. Valid value: <br><li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour.
+    * Network connection billing plan. Valid value:
+
+<li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour. </li>
+<li>BANDWIDTH_PACKAGE: Bandwidth package user. </li>
     */
     @SerializedName("InternetChargeType")
     @Expose
@@ -52,15 +55,10 @@ public class InternetAccessible extends AbstractModel {
     private String BandwidthPackageId;
 
     /**
-    * The EIP line type. 
+    * Describes the line type. for details, refer to [EIP IP address types](https://www.tencentcloud.com/zh/document/product/213/5733). default value: `BGP`.
  <li>BGP Default: BGP</li>
-
 For a user who has activated the static single-line IP allowlist, possible values are:
-
- <li>CMCC: China Mobile</li>
- <li>CTCC: China Telecom</li>
- <li>CUCC: China Unicom</li>
-
+ <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
 Note: Only certain regions support static single-line IP addresses.
     */
     @SerializedName("InternetServiceProvider")
@@ -68,17 +66,11 @@ Note: Only certain regions support static single-line IP addresses.
     private String InternetServiceProvider;
 
     /**
-    * AddressType. Default value: `WanIP`.
+    * Type of public IP address.
 
-For beta users of dedicated IP, the value can be:
-<li>HighQualityEIP: Dedicated IP</li>
-Note that dedicated IPs are only available in partial regions.
-
-For beta users of Anti-DDoS IP, the value can be:
-<li>AntiDDoSEIP: Anti-DDoS EIP</li>
-Note that Anti-DDoS IPs are only available in partial regions.
-
-This feature is currently in gradually released phase. To access it, please contact us.
+<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/zh/document/product/213/5733). </li> 
+Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions.
+This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
     */
     @SerializedName("IPv4AddressType")
     @Expose
@@ -88,12 +80,12 @@ This feature is currently in gradually released phase. To access it, please cont
     * Indicates the type of EIPv6. Valid values:
 
 <li>EIPv6: common IPv6</li>
-<li>HighQualityEIPv6: dedicated IPv6</li>
+<li>HighQualityEIPv6: High Quality EIPv6</li>
 Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
 
 Default: `EIPv6`
 
-This feature is currently in gradually released phase. To access it, please contact us.
+This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
     */
     @SerializedName("IPv6AddressType")
     @Expose
@@ -107,16 +99,28 @@ This feature is currently in gradually released phase. To access it, please cont
     private String AntiDDoSPackageId;
 
     /**
-     * Get Network connection billing plan. Valid value: <br><li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour. 
-     * @return InternetChargeType Network connection billing plan. Valid value: <br><li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour.
+     * Get Network connection billing plan. Valid value:
+
+<li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour. </li>
+<li>BANDWIDTH_PACKAGE: Bandwidth package user. </li> 
+     * @return InternetChargeType Network connection billing plan. Valid value:
+
+<li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour. </li>
+<li>BANDWIDTH_PACKAGE: Bandwidth package user. </li>
      */
     public String getInternetChargeType() {
         return this.InternetChargeType;
     }
 
     /**
-     * Set Network connection billing plan. Valid value: <br><li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour.
-     * @param InternetChargeType Network connection billing plan. Valid value: <br><li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour.
+     * Set Network connection billing plan. Valid value:
+
+<li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour. </li>
+<li>BANDWIDTH_PACKAGE: Bandwidth package user. </li>
+     * @param InternetChargeType Network connection billing plan. Valid value:
+
+<li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour. </li>
+<li>BANDWIDTH_PACKAGE: Bandwidth package user. </li>
      */
     public void setInternetChargeType(String InternetChargeType) {
         this.InternetChargeType = InternetChargeType;
@@ -171,25 +175,15 @@ This feature is currently in gradually released phase. To access it, please cont
     }
 
     /**
-     * Get The EIP line type. 
+     * Get Describes the line type. for details, refer to [EIP IP address types](https://www.tencentcloud.com/zh/document/product/213/5733). default value: `BGP`.
  <li>BGP Default: BGP</li>
-
 For a user who has activated the static single-line IP allowlist, possible values are:
-
- <li>CMCC: China Mobile</li>
- <li>CTCC: China Telecom</li>
- <li>CUCC: China Unicom</li>
-
+ <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
 Note: Only certain regions support static single-line IP addresses. 
-     * @return InternetServiceProvider The EIP line type. 
+     * @return InternetServiceProvider Describes the line type. for details, refer to [EIP IP address types](https://www.tencentcloud.com/zh/document/product/213/5733). default value: `BGP`.
  <li>BGP Default: BGP</li>
-
 For a user who has activated the static single-line IP allowlist, possible values are:
-
- <li>CMCC: China Mobile</li>
- <li>CTCC: China Telecom</li>
- <li>CUCC: China Unicom</li>
-
+ <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
 Note: Only certain regions support static single-line IP addresses.
      */
     public String getInternetServiceProvider() {
@@ -197,25 +191,15 @@ Note: Only certain regions support static single-line IP addresses.
     }
 
     /**
-     * Set The EIP line type. 
+     * Set Describes the line type. for details, refer to [EIP IP address types](https://www.tencentcloud.com/zh/document/product/213/5733). default value: `BGP`.
  <li>BGP Default: BGP</li>
-
 For a user who has activated the static single-line IP allowlist, possible values are:
-
- <li>CMCC: China Mobile</li>
- <li>CTCC: China Telecom</li>
- <li>CUCC: China Unicom</li>
-
+ <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
 Note: Only certain regions support static single-line IP addresses.
-     * @param InternetServiceProvider The EIP line type. 
+     * @param InternetServiceProvider Describes the line type. for details, refer to [EIP IP address types](https://www.tencentcloud.com/zh/document/product/213/5733). default value: `BGP`.
  <li>BGP Default: BGP</li>
-
 For a user who has activated the static single-line IP allowlist, possible values are:
-
- <li>CMCC: China Mobile</li>
- <li>CTCC: China Telecom</li>
- <li>CUCC: China Unicom</li>
-
+ <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
 Note: Only certain regions support static single-line IP addresses.
      */
     public void setInternetServiceProvider(String InternetServiceProvider) {
@@ -223,56 +207,32 @@ Note: Only certain regions support static single-line IP addresses.
     }
 
     /**
-     * Get AddressType. Default value: `WanIP`.
+     * Get Type of public IP address.
 
-For beta users of dedicated IP, the value can be:
-<li>HighQualityEIP: Dedicated IP</li>
-Note that dedicated IPs are only available in partial regions.
+<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/zh/document/product/213/5733). </li> 
+Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions.
+This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder). 
+     * @return IPv4AddressType Type of public IP address.
 
-For beta users of Anti-DDoS IP, the value can be:
-<li>AntiDDoSEIP: Anti-DDoS EIP</li>
-Note that Anti-DDoS IPs are only available in partial regions.
-
-This feature is currently in gradually released phase. To access it, please contact us. 
-     * @return IPv4AddressType AddressType. Default value: `WanIP`.
-
-For beta users of dedicated IP, the value can be:
-<li>HighQualityEIP: Dedicated IP</li>
-Note that dedicated IPs are only available in partial regions.
-
-For beta users of Anti-DDoS IP, the value can be:
-<li>AntiDDoSEIP: Anti-DDoS EIP</li>
-Note that Anti-DDoS IPs are only available in partial regions.
-
-This feature is currently in gradually released phase. To access it, please contact us.
+<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/zh/document/product/213/5733). </li> 
+Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions.
+This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
      */
     public String getIPv4AddressType() {
         return this.IPv4AddressType;
     }
 
     /**
-     * Set AddressType. Default value: `WanIP`.
+     * Set Type of public IP address.
 
-For beta users of dedicated IP, the value can be:
-<li>HighQualityEIP: Dedicated IP</li>
-Note that dedicated IPs are only available in partial regions.
+<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/zh/document/product/213/5733). </li> 
+Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions.
+This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
+     * @param IPv4AddressType Type of public IP address.
 
-For beta users of Anti-DDoS IP, the value can be:
-<li>AntiDDoSEIP: Anti-DDoS EIP</li>
-Note that Anti-DDoS IPs are only available in partial regions.
-
-This feature is currently in gradually released phase. To access it, please contact us.
-     * @param IPv4AddressType AddressType. Default value: `WanIP`.
-
-For beta users of dedicated IP, the value can be:
-<li>HighQualityEIP: Dedicated IP</li>
-Note that dedicated IPs are only available in partial regions.
-
-For beta users of Anti-DDoS IP, the value can be:
-<li>AntiDDoSEIP: Anti-DDoS EIP</li>
-Note that Anti-DDoS IPs are only available in partial regions.
-
-This feature is currently in gradually released phase. To access it, please contact us.
+<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/zh/document/product/213/5733). </li> 
+Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions.
+This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
      */
     public void setIPv4AddressType(String IPv4AddressType) {
         this.IPv4AddressType = IPv4AddressType;
@@ -282,21 +242,21 @@ This feature is currently in gradually released phase. To access it, please cont
      * Get Indicates the type of EIPv6. Valid values:
 
 <li>EIPv6: common IPv6</li>
-<li>HighQualityEIPv6: dedicated IPv6</li>
+<li>HighQualityEIPv6: High Quality EIPv6</li>
 Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
 
 Default: `EIPv6`
 
-This feature is currently in gradually released phase. To access it, please contact us. 
+This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder). 
      * @return IPv6AddressType Indicates the type of EIPv6. Valid values:
 
 <li>EIPv6: common IPv6</li>
-<li>HighQualityEIPv6: dedicated IPv6</li>
+<li>HighQualityEIPv6: High Quality EIPv6</li>
 Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
 
 Default: `EIPv6`
 
-This feature is currently in gradually released phase. To access it, please contact us.
+This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
      */
     public String getIPv6AddressType() {
         return this.IPv6AddressType;
@@ -306,21 +266,21 @@ This feature is currently in gradually released phase. To access it, please cont
      * Set Indicates the type of EIPv6. Valid values:
 
 <li>EIPv6: common IPv6</li>
-<li>HighQualityEIPv6: dedicated IPv6</li>
+<li>HighQualityEIPv6: High Quality EIPv6</li>
 Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
 
 Default: `EIPv6`
 
-This feature is currently in gradually released phase. To access it, please contact us.
+This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
      * @param IPv6AddressType Indicates the type of EIPv6. Valid values:
 
 <li>EIPv6: common IPv6</li>
-<li>HighQualityEIPv6: dedicated IPv6</li>
+<li>HighQualityEIPv6: High Quality EIPv6</li>
 Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
 
 Default: `EIPv6`
 
-This feature is currently in gradually released phase. To access it, please contact us.
+This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
      */
     public void setIPv6AddressType(String IPv6AddressType) {
         this.IPv6AddressType = IPv6AddressType;

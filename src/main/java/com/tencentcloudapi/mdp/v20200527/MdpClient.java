@@ -424,6 +424,17 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query SSAI ad replacement usage.
+     * @param req DescribeStreamPackageSSAIUsageRequest
+     * @return DescribeStreamPackageSSAIUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSSAIUsageResponse DescribeStreamPackageSSAIUsage(DescribeStreamPackageSSAIUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSSAIUsage", DescribeStreamPackageSSAIUsageResponse.class);
+    }
+
+    /**
      *Query channel linear assembly Source information.
      * @param req DescribeStreamPackageSourceRequest
      * @return DescribeStreamPackageSourceResponse
