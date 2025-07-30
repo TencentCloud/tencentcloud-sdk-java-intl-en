@@ -359,7 +359,9 @@ military:
     /**
      * Get This field has been disused. Please use `PicUrlExpireTime`. 
      * @return PicUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
+     * @deprecated
      */
+    @Deprecated
     public Long getPicUrlExpireTimeStamp() {
         return this.PicUrlExpireTimeStamp;
     }
@@ -367,7 +369,9 @@ military:
     /**
      * Set This field has been disused. Please use `PicUrlExpireTime`.
      * @param PicUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
+     * @deprecated
      */
+    @Deprecated
     public void setPicUrlExpireTimeStamp(Long PicUrlExpireTimeStamp) {
         this.PicUrlExpireTimeStamp = PicUrlExpireTimeStamp;
     }

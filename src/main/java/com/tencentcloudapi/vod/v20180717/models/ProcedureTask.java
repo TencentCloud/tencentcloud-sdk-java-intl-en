@@ -218,7 +218,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return ErrCode Disused. Please use `ErrCode` of each specific task.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public Long getErrCode() {
         return this.ErrCode;
     }
@@ -228,7 +230,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param ErrCode Disused. Please use `ErrCode` of each specific task.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
@@ -238,7 +242,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Message Disused. Please use `Message` of each specific task.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String getMessage() {
         return this.Message;
     }
@@ -248,7 +254,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param Message Disused. Please use `Message` of each specific task.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setMessage(String Message) {
         this.Message = Message;
     }

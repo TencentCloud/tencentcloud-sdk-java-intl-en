@@ -66,7 +66,9 @@ public class TraceWatermarkInput extends AbstractModel {
     /**
      * Get This parameter has been deprecated. 
      * @return Definition This parameter has been deprecated.
+     * @deprecated
      */
+    @Deprecated
     public Long getDefinition() {
         return this.Definition;
     }
@@ -74,7 +76,9 @@ public class TraceWatermarkInput extends AbstractModel {
     /**
      * Set This parameter has been deprecated.
      * @param Definition This parameter has been deprecated.
+     * @deprecated
      */
+    @Deprecated
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }

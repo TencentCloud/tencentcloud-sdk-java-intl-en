@@ -198,7 +198,9 @@ public class MediaContentReviewSegmentItem extends AbstractModel {
     /**
      * Get This field has been disused. Please use `PicUrlExpireTime`. 
      * @return PicUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
+     * @deprecated
      */
+    @Deprecated
     public Long getPicUrlExpireTimeStamp() {
         return this.PicUrlExpireTimeStamp;
     }
@@ -206,7 +208,9 @@ public class MediaContentReviewSegmentItem extends AbstractModel {
     /**
      * Set This field has been disused. Please use `PicUrlExpireTime`.
      * @param PicUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
+     * @deprecated
      */
+    @Deprecated
     public void setPicUrlExpireTimeStamp(Long PicUrlExpireTimeStamp) {
         this.PicUrlExpireTimeStamp = PicUrlExpireTimeStamp;
     }

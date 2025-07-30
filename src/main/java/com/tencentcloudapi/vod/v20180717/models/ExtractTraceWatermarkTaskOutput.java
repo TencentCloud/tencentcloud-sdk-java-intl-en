@@ -56,7 +56,9 @@ public class ExtractTraceWatermarkTaskOutput extends AbstractModel {
     /**
      * Get This parameter has been deprecated. 
      * @return Uid This parameter has been deprecated.
+     * @deprecated
      */
+    @Deprecated
     public String getUid() {
         return this.Uid;
     }
@@ -64,7 +66,9 @@ public class ExtractTraceWatermarkTaskOutput extends AbstractModel {
     /**
      * Set This parameter has been deprecated.
      * @param Uid This parameter has been deprecated.
+     * @deprecated
      */
+    @Deprecated
     public void setUid(String Uid) {
         this.Uid = Uid;
     }
