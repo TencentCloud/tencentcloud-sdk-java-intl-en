@@ -52,6 +52,13 @@ public class ModifyClusterSlaveZoneRequest extends AbstractModel {
     private String BinlogSyncWay;
 
     /**
+    * 
+    */
+    @SerializedName("SemiSyncTimeout")
+    @Expose
+    private Long SemiSyncTimeout;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -115,6 +122,22 @@ public class ModifyClusterSlaveZoneRequest extends AbstractModel {
         this.BinlogSyncWay = BinlogSyncWay;
     }
 
+    /**
+     * Get  
+     * @return SemiSyncTimeout 
+     */
+    public Long getSemiSyncTimeout() {
+        return this.SemiSyncTimeout;
+    }
+
+    /**
+     * Set 
+     * @param SemiSyncTimeout 
+     */
+    public void setSemiSyncTimeout(Long SemiSyncTimeout) {
+        this.SemiSyncTimeout = SemiSyncTimeout;
+    }
+
     public ModifyClusterSlaveZoneRequest() {
     }
 
@@ -135,6 +158,9 @@ public class ModifyClusterSlaveZoneRequest extends AbstractModel {
         if (source.BinlogSyncWay != null) {
             this.BinlogSyncWay = new String(source.BinlogSyncWay);
         }
+        if (source.SemiSyncTimeout != null) {
+            this.SemiSyncTimeout = new Long(source.SemiSyncTimeout);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ModifyClusterSlaveZoneRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OldSlaveZone", this.OldSlaveZone);
         this.setParamSimple(map, prefix + "NewSlaveZone", this.NewSlaveZone);
         this.setParamSimple(map, prefix + "BinlogSyncWay", this.BinlogSyncWay);
+        this.setParamSimple(map, prefix + "SemiSyncTimeout", this.SemiSyncTimeout);
 
     }
 }

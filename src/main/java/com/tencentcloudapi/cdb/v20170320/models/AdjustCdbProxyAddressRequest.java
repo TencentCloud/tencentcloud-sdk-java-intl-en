@@ -108,6 +108,20 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
     private ProxyAllocation [] ProxyAllocation;
 
     /**
+    * 
+    */
+    @SerializedName("AutoLoadBalance")
+    @Expose
+    private Boolean AutoLoadBalance;
+
+    /**
+    * 
+    */
+    @SerializedName("AccessMode")
+    @Expose
+    private String AccessMode;
+
+    /**
      * Get Proxy group ID 
      * @return ProxyGroupId Proxy group ID
      */
@@ -299,6 +313,38 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
         this.ProxyAllocation = ProxyAllocation;
     }
 
+    /**
+     * Get  
+     * @return AutoLoadBalance 
+     */
+    public Boolean getAutoLoadBalance() {
+        return this.AutoLoadBalance;
+    }
+
+    /**
+     * Set 
+     * @param AutoLoadBalance 
+     */
+    public void setAutoLoadBalance(Boolean AutoLoadBalance) {
+        this.AutoLoadBalance = AutoLoadBalance;
+    }
+
+    /**
+     * Get  
+     * @return AccessMode 
+     */
+    public String getAccessMode() {
+        return this.AccessMode;
+    }
+
+    /**
+     * Set 
+     * @param AccessMode 
+     */
+    public void setAccessMode(String AccessMode) {
+        this.AccessMode = AccessMode;
+    }
+
     public AdjustCdbProxyAddressRequest() {
     }
 
@@ -346,6 +392,12 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
                 this.ProxyAllocation[i] = new ProxyAllocation(source.ProxyAllocation[i]);
             }
         }
+        if (source.AutoLoadBalance != null) {
+            this.AutoLoadBalance = new Boolean(source.AutoLoadBalance);
+        }
+        if (source.AccessMode != null) {
+            this.AccessMode = new String(source.AccessMode);
+        }
     }
 
 
@@ -365,6 +417,8 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TransSplit", this.TransSplit);
         this.setParamSimple(map, prefix + "ConnectionPool", this.ConnectionPool);
         this.setParamArrayObj(map, prefix + "ProxyAllocation.", this.ProxyAllocation);
+        this.setParamSimple(map, prefix + "AutoLoadBalance", this.AutoLoadBalance);
+        this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
 
     }
 }

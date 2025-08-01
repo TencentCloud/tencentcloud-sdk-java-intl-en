@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeZonesRequest extends AbstractModel {
 
     /**
-    * Whether the virtual zone is included.–
+    * Whether the virtual zone is included.
     */
     @SerializedName("IncludeVirtualZones")
     @Expose
     private Boolean IncludeVirtualZones;
 
     /**
-    * Whether to display all AZs in a region and the user’s permissions in each AZ.
+    * Whether to display all AZs in a region and the user's permissions in each AZ.
     */
     @SerializedName("ShowPermission")
     @Expose
     private Boolean ShowPermission;
 
     /**
-     * Get Whether the virtual zone is included.– 
-     * @return IncludeVirtualZones Whether the virtual zone is included.–
+     * Get Whether the virtual zone is included. 
+     * @return IncludeVirtualZones Whether the virtual zone is included.
      */
     public Boolean getIncludeVirtualZones() {
         return this.IncludeVirtualZones;
     }
 
     /**
-     * Set Whether the virtual zone is included.–
-     * @param IncludeVirtualZones Whether the virtual zone is included.–
+     * Set Whether the virtual zone is included.
+     * @param IncludeVirtualZones Whether the virtual zone is included.
      */
     public void setIncludeVirtualZones(Boolean IncludeVirtualZones) {
         this.IncludeVirtualZones = IncludeVirtualZones;
     }
 
     /**
-     * Get Whether to display all AZs in a region and the user’s permissions in each AZ. 
-     * @return ShowPermission Whether to display all AZs in a region and the user’s permissions in each AZ.
+     * Get Whether to display all AZs in a region and the user's permissions in each AZ. 
+     * @return ShowPermission Whether to display all AZs in a region and the user's permissions in each AZ.
      */
     public Boolean getShowPermission() {
         return this.ShowPermission;
     }
 
     /**
-     * Set Whether to display all AZs in a region and the user’s permissions in each AZ.
-     * @param ShowPermission Whether to display all AZs in a region and the user’s permissions in each AZ.
+     * Set Whether to display all AZs in a region and the user's permissions in each AZ.
+     * @param ShowPermission Whether to display all AZs in a region and the user's permissions in each AZ.
      */
     public void setShowPermission(Boolean ShowPermission) {
         this.ShowPermission = ShowPermission;

@@ -259,6 +259,18 @@ Invocation roles: reseller, first-level distributor.
     }
 
     /**
+     *This API is used to query the voucher list by Customer. 
+Callable roles: Customer.
+     * @param req DescribeCustomerOwnVoucherListRequest
+     * @return DescribeCustomerOwnVoucherListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomerOwnVoucherListResponse DescribeCustomerOwnVoucherList(DescribeCustomerOwnVoucherListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomerOwnVoucherList", DescribeCustomerOwnVoucherListResponse.class);
+    }
+
+    /**
      *This API is used to query the list of customer UINs.
      * @param req DescribeCustomerUinRequest
      * @return DescribeCustomerUinResponse
@@ -267,6 +279,18 @@ Invocation roles: reseller, first-level distributor.
     public DescribeCustomerUinResponse DescribeCustomerUin(DescribeCustomerUinRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCustomerUin", DescribeCustomerUinResponse.class);
+    }
+
+    /**
+     *This API is used to query the customer voucher list by Reseller, Second-level Reseller or Distributor.
+Callable roles: Reseller, Second-level Reseller or Distributor.
+     * @param req DescribeCustomerVoucherListRequest
+     * @return DescribeCustomerVoucherListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomerVoucherListResponse DescribeCustomerVoucherList(DescribeCustomerVoucherListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomerVoucherList", DescribeCustomerVoucherListResponse.class);
     }
 
     /**

@@ -31,7 +31,7 @@ public class DescribeDBPriceRequest extends AbstractModel {
     private Long Period;
 
     /**
-    * AZ information in the format of "ap-guangzhou-2". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
+    * AZ information in the format of "ap-guangzhou-3". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
     */
     @SerializedName("Zone")
     @Expose
@@ -115,6 +115,13 @@ public class DescribeDBPriceRequest extends AbstractModel {
     private Long Ladder;
 
     /**
+    * 
+    */
+    @SerializedName("DiskType")
+    @Expose
+    private String DiskType;
+
+    /**
      * Get Instance validity period in months. Value range: 1-36. This field is invalid when querying the prices of pay-as-you-go instances. 
      * @return Period Instance validity period in months. Value range: 1-36. This field is invalid when querying the prices of pay-as-you-go instances.
      */
@@ -131,16 +138,16 @@ public class DescribeDBPriceRequest extends AbstractModel {
     }
 
     /**
-     * Get AZ information in the format of "ap-guangzhou-2". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty. 
-     * @return Zone AZ information in the format of "ap-guangzhou-2". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
+     * Get AZ information in the format of "ap-guangzhou-3". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty. 
+     * @return Zone AZ information in the format of "ap-guangzhou-3". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ information in the format of "ap-guangzhou-2". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
-     * @param Zone AZ information in the format of "ap-guangzhou-2". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
+     * Set AZ information in the format of "ap-guangzhou-3". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
+     * @param Zone AZ information in the format of "ap-guangzhou-3". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -322,6 +329,22 @@ public class DescribeDBPriceRequest extends AbstractModel {
         this.Ladder = Ladder;
     }
 
+    /**
+     * Get  
+     * @return DiskType 
+     */
+    public String getDiskType() {
+        return this.DiskType;
+    }
+
+    /**
+     * Set 
+     * @param DiskType 
+     */
+    public void setDiskType(String DiskType) {
+        this.DiskType = DiskType;
+    }
+
     public DescribeDBPriceRequest() {
     }
 
@@ -369,6 +392,9 @@ public class DescribeDBPriceRequest extends AbstractModel {
         if (source.Ladder != null) {
             this.Ladder = new Long(source.Ladder);
         }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class DescribeDBPriceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Ladder", this.Ladder);
+        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
 
     }
 }
