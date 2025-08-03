@@ -122,6 +122,20 @@ public class DescribeTaskListRequest extends AbstractModel {
     private Long [] TaskStatusList;
 
     /**
+    * 
+    */
+    @SerializedName("ArchId")
+    @Expose
+    private String ArchId;
+
+    /**
+    * 
+    */
+    @SerializedName("ArchName")
+    @Expose
+    private String ArchName;
+
+    /**
      * Get Pagination limit 
      * @return Limit Pagination limit
      */
@@ -345,6 +359,38 @@ public class DescribeTaskListRequest extends AbstractModel {
         this.TaskStatusList = TaskStatusList;
     }
 
+    /**
+     * Get  
+     * @return ArchId 
+     */
+    public String getArchId() {
+        return this.ArchId;
+    }
+
+    /**
+     * Set 
+     * @param ArchId 
+     */
+    public void setArchId(String ArchId) {
+        this.ArchId = ArchId;
+    }
+
+    /**
+     * Get  
+     * @return ArchName 
+     */
+    public String getArchName() {
+        return this.ArchName;
+    }
+
+    /**
+     * Set 
+     * @param ArchName 
+     */
+    public void setArchName(String ArchName) {
+        this.ArchName = ArchName;
+    }
+
     public DescribeTaskListRequest() {
     }
 
@@ -416,6 +462,12 @@ public class DescribeTaskListRequest extends AbstractModel {
                 this.TaskStatusList[i] = new Long(source.TaskStatusList[i]);
             }
         }
+        if (source.ArchId != null) {
+            this.ArchId = new String(source.ArchId);
+        }
+        if (source.ArchName != null) {
+            this.ArchName = new String(source.ArchName);
+        }
     }
 
 
@@ -437,6 +489,8 @@ public class DescribeTaskListRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ApplicationId.", this.ApplicationId);
         this.setParamArraySimple(map, prefix + "ApplicationName.", this.ApplicationName);
         this.setParamArraySimple(map, prefix + "TaskStatusList.", this.TaskStatusList);
+        this.setParamSimple(map, prefix + "ArchId", this.ArchId);
+        this.setParamSimple(map, prefix + "ArchName", this.ArchName);
 
     }
 }
