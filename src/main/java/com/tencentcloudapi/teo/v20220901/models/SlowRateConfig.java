@@ -33,16 +33,14 @@ public class SlowRateConfig extends AbstractModel {
     private String Switch;
 
     /**
-    * The sampling interval in seconds. In this way, the first 8 KB of the request is ignored. The rest of data is separated in to multiple parts according to this interval for slow attack measurement.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
     */
     @SerializedName("Interval")
     @Expose
     private Long Interval;
 
     /**
-    * The transfer rate threshold in bps. When the transfer rate of a sample is lower than the threshold, it’s considered a slow attack and handled according to the specified `Action`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
     */
     @SerializedName("Threshold")
     @Expose
@@ -73,40 +71,32 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get The sampling interval in seconds. In this way, the first 8 KB of the request is ignored. The rest of data is separated in to multiple parts according to this interval for slow attack measurement.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Interval The sampling interval in seconds. In this way, the first 8 KB of the request is ignored. The rest of data is separated in to multiple parts according to this interval for slow attack measurement.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard. 
+     * @return Interval The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set The sampling interval in seconds. In this way, the first 8 KB of the request is ignored. The rest of data is separated in to multiple parts according to this interval for slow attack measurement.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Interval The sampling interval in seconds. In this way, the first 8 KB of the request is ignored. The rest of data is separated in to multiple parts according to this interval for slow attack measurement.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
+     * @param Interval The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get The transfer rate threshold in bps. When the transfer rate of a sample is lower than the threshold, it’s considered a slow attack and handled according to the specified `Action`.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Threshold The transfer rate threshold in bps. When the transfer rate of a sample is lower than the threshold, it’s considered a slow attack and handled according to the specified `Action`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied. 
+     * @return Threshold Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
      */
     public Long getThreshold() {
         return this.Threshold;
     }
 
     /**
-     * Set The transfer rate threshold in bps. When the transfer rate of a sample is lower than the threshold, it’s considered a slow attack and handled according to the specified `Action`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Threshold The transfer rate threshold in bps. When the transfer rate of a sample is lower than the threshold, it’s considered a slow attack and handled according to the specified `Action`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
+     * @param Threshold Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
      */
     public void setThreshold(Long Threshold) {
         this.Threshold = Threshold;

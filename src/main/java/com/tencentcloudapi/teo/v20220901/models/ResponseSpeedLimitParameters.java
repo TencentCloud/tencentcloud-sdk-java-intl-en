@@ -34,14 +34,19 @@ public class ResponseSpeedLimitParameters extends AbstractModel {
     private String Mode;
 
     /**
-    * Rate-Limiting value, in kb/s. enter a numerical value to specify the rate limit.
+    * The speed limit value specifies the size of the speed limit. fill in a value or variable with a unit. the currently supported unit is: KB/s.
     */
     @SerializedName("MaxSpeed")
     @Expose
     private String MaxSpeed;
 
     /**
-    * Rate-Limiting start value, which can be the download size or specified duration, in kb or s. this parameter is required when mode is set to limitafterspecificbytesdownloaded or limitafterspecificsecondsdownloaded. enter a numerical value to specify the download size or duration.
+    * The speed limit start value can be download size or specified duration. fill in a value with unit or variable to specify download size or specified duration.
+
+-When the Mode value is LimitAfterSpecificBytesDownloaded, the valid values of the unit are: KB.
+
+-When the Mode value is LimitAfterSpecificSecondsDownloaded, the valid value of the unit is: s.
+
     */
     @SerializedName("StartAt")
     @Expose
@@ -76,32 +81,52 @@ public class ResponseSpeedLimitParameters extends AbstractModel {
     }
 
     /**
-     * Get Rate-Limiting value, in kb/s. enter a numerical value to specify the rate limit. 
-     * @return MaxSpeed Rate-Limiting value, in kb/s. enter a numerical value to specify the rate limit.
+     * Get The speed limit value specifies the size of the speed limit. fill in a value or variable with a unit. the currently supported unit is: KB/s. 
+     * @return MaxSpeed The speed limit value specifies the size of the speed limit. fill in a value or variable with a unit. the currently supported unit is: KB/s.
      */
     public String getMaxSpeed() {
         return this.MaxSpeed;
     }
 
     /**
-     * Set Rate-Limiting value, in kb/s. enter a numerical value to specify the rate limit.
-     * @param MaxSpeed Rate-Limiting value, in kb/s. enter a numerical value to specify the rate limit.
+     * Set The speed limit value specifies the size of the speed limit. fill in a value or variable with a unit. the currently supported unit is: KB/s.
+     * @param MaxSpeed The speed limit value specifies the size of the speed limit. fill in a value or variable with a unit. the currently supported unit is: KB/s.
      */
     public void setMaxSpeed(String MaxSpeed) {
         this.MaxSpeed = MaxSpeed;
     }
 
     /**
-     * Get Rate-Limiting start value, which can be the download size or specified duration, in kb or s. this parameter is required when mode is set to limitafterspecificbytesdownloaded or limitafterspecificsecondsdownloaded. enter a numerical value to specify the download size or duration. 
-     * @return StartAt Rate-Limiting start value, which can be the download size or specified duration, in kb or s. this parameter is required when mode is set to limitafterspecificbytesdownloaded or limitafterspecificsecondsdownloaded. enter a numerical value to specify the download size or duration.
+     * Get The speed limit start value can be download size or specified duration. fill in a value with unit or variable to specify download size or specified duration.
+
+-When the Mode value is LimitAfterSpecificBytesDownloaded, the valid values of the unit are: KB.
+
+-When the Mode value is LimitAfterSpecificSecondsDownloaded, the valid value of the unit is: s.
+ 
+     * @return StartAt The speed limit start value can be download size or specified duration. fill in a value with unit or variable to specify download size or specified duration.
+
+-When the Mode value is LimitAfterSpecificBytesDownloaded, the valid values of the unit are: KB.
+
+-When the Mode value is LimitAfterSpecificSecondsDownloaded, the valid value of the unit is: s.
+
      */
     public String getStartAt() {
         return this.StartAt;
     }
 
     /**
-     * Set Rate-Limiting start value, which can be the download size or specified duration, in kb or s. this parameter is required when mode is set to limitafterspecificbytesdownloaded or limitafterspecificsecondsdownloaded. enter a numerical value to specify the download size or duration.
-     * @param StartAt Rate-Limiting start value, which can be the download size or specified duration, in kb or s. this parameter is required when mode is set to limitafterspecificbytesdownloaded or limitafterspecificsecondsdownloaded. enter a numerical value to specify the download size or duration.
+     * Set The speed limit start value can be download size or specified duration. fill in a value with unit or variable to specify download size or specified duration.
+
+-When the Mode value is LimitAfterSpecificBytesDownloaded, the valid values of the unit are: KB.
+
+-When the Mode value is LimitAfterSpecificSecondsDownloaded, the valid value of the unit is: s.
+
+     * @param StartAt The speed limit start value can be download size or specified duration. fill in a value with unit or variable to specify download size or specified duration.
+
+-When the Mode value is LimitAfterSpecificBytesDownloaded, the valid values of the unit are: KB.
+
+-When the Mode value is LimitAfterSpecificSecondsDownloaded, the valid value of the unit is: s.
+
      */
     public void setStartAt(String StartAt) {
         this.StartAt = StartAt;

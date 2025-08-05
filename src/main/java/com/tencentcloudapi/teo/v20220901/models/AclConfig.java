@@ -40,8 +40,7 @@ public class AclConfig extends AbstractModel {
     private AclUserRule [] AclUserRules;
 
     /**
-    * Custom managed rules
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Managed custom rules.
     */
     @SerializedName("Customizes")
     @Expose
@@ -88,20 +87,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Custom managed rules
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Customizes Custom managed rules
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Managed custom rules. 
+     * @return Customizes Managed custom rules.
      */
     public AclUserRule [] getCustomizes() {
         return this.Customizes;
     }
 
     /**
-     * Set Custom managed rules
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Customizes Custom managed rules
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Managed custom rules.
+     * @param Customizes Managed custom rules.
      */
     public void setCustomizes(AclUserRule [] Customizes) {
         this.Customizes = Customizes;

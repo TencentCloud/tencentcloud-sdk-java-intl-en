@@ -40,32 +40,28 @@ public class BotPortraitRule extends AbstractModel {
     private Long RuleID;
 
     /**
-    * The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The rule ID of JS challenge. default all rules without configuring JS challenge.
     */
     @SerializedName("AlgManagedIds")
     @Expose
     private Long [] AlgManagedIds;
 
     /**
-    * The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
     */
     @SerializedName("CapManagedIds")
     @Expose
     private Long [] CapManagedIds;
 
     /**
-    * The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rule ID for observation. by default, observation is not configured for all rules.
     */
     @SerializedName("MonManagedIds")
     @Expose
     private Long [] MonManagedIds;
 
     /**
-    * The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rule ID for interception. default to all rules with no configuration interception.
     */
     @SerializedName("DropManagedIds")
     @Expose
@@ -112,80 +108,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AlgManagedIds The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The rule ID of JS challenge. default all rules without configuring JS challenge. 
+     * @return AlgManagedIds The rule ID of JS challenge. default all rules without configuring JS challenge.
      */
     public Long [] getAlgManagedIds() {
         return this.AlgManagedIds;
     }
 
     /**
-     * Set The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AlgManagedIds The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The rule ID of JS challenge. default all rules without configuring JS challenge.
+     * @param AlgManagedIds The rule ID of JS challenge. default all rules without configuring JS challenge.
      */
     public void setAlgManagedIds(Long [] AlgManagedIds) {
         this.AlgManagedIds = AlgManagedIds;
     }
 
     /**
-     * Get The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CapManagedIds The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl. 
+     * @return CapManagedIds Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
      */
     public Long [] getCapManagedIds() {
         return this.CapManagedIds;
     }
 
     /**
-     * Set The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CapManagedIds The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
+     * @param CapManagedIds Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
      */
     public void setCapManagedIds(Long [] CapManagedIds) {
         this.CapManagedIds = CapManagedIds;
     }
 
     /**
-     * Get The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MonManagedIds The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rule ID for observation. by default, observation is not configured for all rules. 
+     * @return MonManagedIds Rule ID for observation. by default, observation is not configured for all rules.
      */
     public Long [] getMonManagedIds() {
         return this.MonManagedIds;
     }
 
     /**
-     * Set The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MonManagedIds The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rule ID for observation. by default, observation is not configured for all rules.
+     * @param MonManagedIds Rule ID for observation. by default, observation is not configured for all rules.
      */
     public void setMonManagedIds(Long [] MonManagedIds) {
         this.MonManagedIds = MonManagedIds;
     }
 
     /**
-     * Get The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DropManagedIds The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rule ID for interception. default to all rules with no configuration interception. 
+     * @return DropManagedIds Rule ID for interception. default to all rules with no configuration interception.
      */
     public Long [] getDropManagedIds() {
         return this.DropManagedIds;
     }
 
     /**
-     * Set The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DropManagedIds The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rule ID for interception. default to all rules with no configuration interception.
+     * @param DropManagedIds Rule ID for interception. default to all rules with no configuration interception.
      */
     public void setDropManagedIds(Long [] DropManagedIds) {
         this.DropManagedIds = DropManagedIds;

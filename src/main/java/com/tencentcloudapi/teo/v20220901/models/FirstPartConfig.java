@@ -24,66 +24,61 @@ import java.util.HashMap;
 public class FirstPartConfig extends AbstractModel {
 
     /**
-    * Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
     */
     @SerializedName("StatTime")
     @Expose
     private Long StatTime;
 
     /**
-     * Get Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li> 
+     * @return Switch Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+     * @param Switch Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return StatTime The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default. 
+     * @return StatTime The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
      */
     public Long getStatTime() {
         return this.StatTime;
     }
 
     /**
-     * Set The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param StatTime The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
+     * @param StatTime The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
      */
     public void setStatTime(Long StatTime) {
         this.StatTime = StatTime;

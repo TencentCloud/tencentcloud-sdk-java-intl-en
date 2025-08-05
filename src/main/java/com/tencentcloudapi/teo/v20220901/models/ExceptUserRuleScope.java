@@ -33,29 +33,26 @@ public class ExceptUserRuleScope extends AbstractModel {
     private String Type;
 
     /**
-    * The module to be activated. Values:
-<li>`waf`: Tencent Cloud-managed rules</li>
-<li>`rate`: Rate limiting rules</li>
-<li>`acl`: Custom rule</li>
-<li>`cc`: CC attack defense</li>
-<li>`bot`: Bot protection</li>
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * Effective module. the field value can be:.
+<li>`waf`: tencent cloud-managed rules</li>.
+<Li>`Rate`: rate limit</li>.
+<li>`acl`: custom rule</li>.
+<Li>`Cc`: cc attack defense</li>.
+<Li>`Bot`: bot protection</li>.
     */
     @SerializedName("Modules")
     @Expose
     private String [] Modules;
 
     /**
-    * Module settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Skip exception rule details for some rule ids. if null, use the last set configuration by default.
     */
     @SerializedName("PartialModules")
     @Expose
     private PartialModule [] PartialModules;
 
     /**
-    * Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
     */
     @SerializedName("SkipConditions")
     @Expose
@@ -86,80 +83,68 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get The module to be activated. Values:
-<li>`waf`: Tencent Cloud-managed rules</li>
-<li>`rate`: Rate limiting rules</li>
-<li>`acl`: Custom rule</li>
-<li>`cc`: CC attack defense</li>
-<li>`bot`: Bot protection</li>
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return Modules The module to be activated. Values:
-<li>`waf`: Tencent Cloud-managed rules</li>
-<li>`rate`: Rate limiting rules</li>
-<li>`acl`: Custom rule</li>
-<li>`cc`: CC attack defense</li>
-<li>`bot`: Bot protection</li>
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get Effective module. the field value can be:.
+<li>`waf`: tencent cloud-managed rules</li>.
+<Li>`Rate`: rate limit</li>.
+<li>`acl`: custom rule</li>.
+<Li>`Cc`: cc attack defense</li>.
+<Li>`Bot`: bot protection</li>. 
+     * @return Modules Effective module. the field value can be:.
+<li>`waf`: tencent cloud-managed rules</li>.
+<Li>`Rate`: rate limit</li>.
+<li>`acl`: custom rule</li>.
+<Li>`Cc`: cc attack defense</li>.
+<Li>`Bot`: bot protection</li>.
      */
     public String [] getModules() {
         return this.Modules;
     }
 
     /**
-     * Set The module to be activated. Values:
-<li>`waf`: Tencent Cloud-managed rules</li>
-<li>`rate`: Rate limiting rules</li>
-<li>`acl`: Custom rule</li>
-<li>`cc`: CC attack defense</li>
-<li>`bot`: Bot protection</li>
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param Modules The module to be activated. Values:
-<li>`waf`: Tencent Cloud-managed rules</li>
-<li>`rate`: Rate limiting rules</li>
-<li>`acl`: Custom rule</li>
-<li>`cc`: CC attack defense</li>
-<li>`bot`: Bot protection</li>
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set Effective module. the field value can be:.
+<li>`waf`: tencent cloud-managed rules</li>.
+<Li>`Rate`: rate limit</li>.
+<li>`acl`: custom rule</li>.
+<Li>`Cc`: cc attack defense</li>.
+<Li>`Bot`: bot protection</li>.
+     * @param Modules Effective module. the field value can be:.
+<li>`waf`: tencent cloud-managed rules</li>.
+<Li>`Rate`: rate limit</li>.
+<li>`acl`: custom rule</li>.
+<Li>`Cc`: cc attack defense</li>.
+<Li>`Bot`: bot protection</li>.
      */
     public void setModules(String [] Modules) {
         this.Modules = Modules;
     }
 
     /**
-     * Get Module settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return PartialModules Module settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Skip exception rule details for some rule ids. if null, use the last set configuration by default. 
+     * @return PartialModules Skip exception rule details for some rule ids. if null, use the last set configuration by default.
      */
     public PartialModule [] getPartialModules() {
         return this.PartialModules;
     }
 
     /**
-     * Set Module settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param PartialModules Module settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Skip exception rule details for some rule ids. if null, use the last set configuration by default.
+     * @param PartialModules Skip exception rule details for some rule ids. if null, use the last set configuration by default.
      */
     public void setPartialModules(PartialModule [] PartialModules) {
         this.PartialModules = PartialModules;
     }
 
     /**
-     * Get Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return SkipConditions Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Details of the exception rule for skipping specific fields. if null, use the last set configuration by default. 
+     * @return SkipConditions Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
      */
     public SkipCondition [] getSkipConditions() {
         return this.SkipConditions;
     }
 
     /**
-     * Set Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param SkipConditions Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
+     * @param SkipConditions Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
      */
     public void setSkipConditions(SkipCondition [] SkipConditions) {
         this.SkipConditions = SkipConditions;

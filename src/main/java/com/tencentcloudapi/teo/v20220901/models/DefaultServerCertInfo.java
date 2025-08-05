@@ -24,78 +24,71 @@ import java.util.HashMap;
 public class DefaultServerCertInfo extends AbstractModel {
 
     /**
-    * ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the server certificate ID.
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-    * Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Certificate remark name.
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * Type of the certificate. Values:
+    * Certificate type. valid values:.
 <li>`default`: Default certificate;</li>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+
+<li>`upload`: External certificate;</li>
+
+<li>`managed`: Tencent Cloud managed certificate.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Certificate expiration time.
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * Time when the certificate takes effect.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Certificate Validation Time.
     */
     @SerializedName("EffectiveTime")
     @Expose
     private String EffectiveTime;
 
     /**
-    * Common name of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Common name of the cert.
     */
     @SerializedName("CommonName")
     @Expose
     private String CommonName;
 
     /**
-    * Domain names added to the SAN certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the SAN domain of the certificate.
     */
     @SerializedName("SubjectAltName")
     @Expose
     private String [] SubjectAltName;
 
     /**
-    * Deployment status. Values:
-<li>`processing`: Deployment in progress</li>
-<li>`deployed`: Deployed</li>
-<li>`failed`: Deployment failed</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Deployment state. valid values:.
+<li>processing: deployment in progress;</li>.
+<Li>Deployed: deployed</li>.
+<Li>`Failed`: deployment failed</li>.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Failure description
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Indicates the failure reason when the Status is failed.
     */
     @SerializedName("Message")
     @Expose
@@ -103,221 +96,190 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Certificate algorithm.
-Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("SignAlgo")
     @Expose
     private String SignAlgo;
 
     /**
-     * Get ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CertId ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the server certificate ID. 
+     * @return CertId Specifies the server certificate ID.
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CertId ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the server certificate ID.
+     * @param CertId Specifies the server certificate ID.
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Alias Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Certificate remark name. 
+     * @return Alias Certificate remark name.
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Alias Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Certificate remark name.
+     * @param Alias Certificate remark name.
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get Type of the certificate. Values:
+     * Get Certificate type. valid values:.
 <li>`default`: Default certificate;</li>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Type of the certificate. Values:
+
+<li>`upload`: External certificate;</li>
+
+<li>`managed`: Tencent Cloud managed certificate.</li> 
+     * @return Type Certificate type. valid values:.
 <li>`default`: Default certificate;</li>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+
+<li>`upload`: External certificate;</li>
+
+<li>`managed`: Tencent Cloud managed certificate.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of the certificate. Values:
+     * Set Certificate type. valid values:.
 <li>`default`: Default certificate;</li>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Type of the certificate. Values:
+
+<li>`upload`: External certificate;</li>
+
+<li>`managed`: Tencent Cloud managed certificate.</li>
+     * @param Type Certificate type. valid values:.
 <li>`default`: Default certificate;</li>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+
+<li>`upload`: External certificate;</li>
+
+<li>`managed`: Tencent Cloud managed certificate.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExpireTime Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Certificate expiration time. 
+     * @return ExpireTime Certificate expiration time.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExpireTime Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Certificate expiration time.
+     * @param ExpireTime Certificate expiration time.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Time when the certificate takes effect.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EffectiveTime Time when the certificate takes effect.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Certificate Validation Time. 
+     * @return EffectiveTime Certificate Validation Time.
      */
     public String getEffectiveTime() {
         return this.EffectiveTime;
     }
 
     /**
-     * Set Time when the certificate takes effect.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EffectiveTime Time when the certificate takes effect.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Certificate Validation Time.
+     * @param EffectiveTime Certificate Validation Time.
      */
     public void setEffectiveTime(String EffectiveTime) {
         this.EffectiveTime = EffectiveTime;
     }
 
     /**
-     * Get Common name of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CommonName Common name of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Common name of the cert. 
+     * @return CommonName Common name of the cert.
      */
     public String getCommonName() {
         return this.CommonName;
     }
 
     /**
-     * Set Common name of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CommonName Common name of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Common name of the cert.
+     * @param CommonName Common name of the cert.
      */
     public void setCommonName(String CommonName) {
         this.CommonName = CommonName;
     }
 
     /**
-     * Get Domain names added to the SAN certificate.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubjectAltName Domain names added to the SAN certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the SAN domain of the certificate. 
+     * @return SubjectAltName Specifies the SAN domain of the certificate.
      */
     public String [] getSubjectAltName() {
         return this.SubjectAltName;
     }
 
     /**
-     * Set Domain names added to the SAN certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubjectAltName Domain names added to the SAN certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the SAN domain of the certificate.
+     * @param SubjectAltName Specifies the SAN domain of the certificate.
      */
     public void setSubjectAltName(String [] SubjectAltName) {
         this.SubjectAltName = SubjectAltName;
     }
 
     /**
-     * Get Deployment status. Values:
-<li>`processing`: Deployment in progress</li>
-<li>`deployed`: Deployed</li>
-<li>`failed`: Deployment failed</li>
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Status Deployment status. Values:
-<li>`processing`: Deployment in progress</li>
-<li>`deployed`: Deployed</li>
-<li>`failed`: Deployment failed</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Deployment state. valid values:.
+<li>processing: deployment in progress;</li>.
+<Li>Deployed: deployed</li>.
+<Li>`Failed`: deployment failed</li>. 
+     * @return Status Deployment state. valid values:.
+<li>processing: deployment in progress;</li>.
+<Li>Deployed: deployed</li>.
+<Li>`Failed`: deployment failed</li>.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Deployment status. Values:
-<li>`processing`: Deployment in progress</li>
-<li>`deployed`: Deployed</li>
-<li>`failed`: Deployment failed</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Status Deployment status. Values:
-<li>`processing`: Deployment in progress</li>
-<li>`deployed`: Deployed</li>
-<li>`failed`: Deployment failed</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Deployment state. valid values:.
+<li>processing: deployment in progress;</li>.
+<Li>Deployed: deployed</li>.
+<Li>`Failed`: deployment failed</li>.
+     * @param Status Deployment state. valid values:.
+<li>processing: deployment in progress;</li>.
+<Li>Deployed: deployed</li>.
+<Li>`Failed`: deployment failed</li>.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Failure description
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Message Failure description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Indicates the failure reason when the Status is failed. 
+     * @return Message Indicates the failure reason when the Status is failed.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Failure description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Message Failure description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Indicates the failure reason when the Status is failed.
+     * @param Message Indicates the failure reason when the Status is failed.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get Certificate algorithm.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * Get Certificate algorithm. 
      * @return SignAlgo Certificate algorithm.
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getSignAlgo() {
         return this.SignAlgo;
@@ -325,9 +287,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Certificate algorithm.
-Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param SignAlgo Certificate algorithm.
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSignAlgo(String SignAlgo) {
         this.SignAlgo = SignAlgo;

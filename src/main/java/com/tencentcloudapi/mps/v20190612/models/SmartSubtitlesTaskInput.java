@@ -46,6 +46,32 @@ Note: This field may return null, indicating that no valid value can be obtained
     private RawSmartSubtitleParameter RawParameter;
 
     /**
+    * Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
+**Note**: This parameter is required when InputInfo.Type is set to URL.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("OutputStorage")
+    @Expose
+    private TaskOutputStorage OutputStorage;
+
+    /**
+    * Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.comom/document/product/862/37039.?from_cn_redirect=1
+
+Relative path example:
+ - File name_{variable name}.{format}.
+ - File name.{format}.
+
+Absolute path example:
+ -/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+    */
+    @SerializedName("OutputObjectPath")
+    @Expose
+    private String OutputObjectPath;
+
+    /**
      * Get Smart subtitle template ID.	 
      * @return Definition Smart subtitle template ID.	
      */
@@ -97,6 +123,86 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.RawParameter = RawParameter;
     }
 
+    /**
+     * Get Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
+**Note**: This parameter is required when InputInfo.Type is set to URL.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return OutputStorage Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
+**Note**: This parameter is required when InputInfo.Type is set to URL.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public TaskOutputStorage getOutputStorage() {
+        return this.OutputStorage;
+    }
+
+    /**
+     * Set Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
+**Note**: This parameter is required when InputInfo.Type is set to URL.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param OutputStorage Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
+**Note**: This parameter is required when InputInfo.Type is set to URL.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setOutputStorage(TaskOutputStorage OutputStorage) {
+        this.OutputStorage = OutputStorage;
+    }
+
+    /**
+     * Get Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.comom/document/product/862/37039.?from_cn_redirect=1
+
+Relative path example:
+ - File name_{variable name}.{format}.
+ - File name.{format}.
+
+Absolute path example:
+ -/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}. 
+     * @return OutputObjectPath Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.comom/document/product/862/37039.?from_cn_redirect=1
+
+Relative path example:
+ - File name_{variable name}.{format}.
+ - File name.{format}.
+
+Absolute path example:
+ -/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+     */
+    public String getOutputObjectPath() {
+        return this.OutputObjectPath;
+    }
+
+    /**
+     * Set Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.comom/document/product/862/37039.?from_cn_redirect=1
+
+Relative path example:
+ - File name_{variable name}.{format}.
+ - File name.{format}.
+
+Absolute path example:
+ -/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+     * @param OutputObjectPath Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.comom/document/product/862/37039.?from_cn_redirect=1
+
+Relative path example:
+ - File name_{variable name}.{format}.
+ - File name.{format}.
+
+Absolute path example:
+ -/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+     */
+    public void setOutputObjectPath(String OutputObjectPath) {
+        this.OutputObjectPath = OutputObjectPath;
+    }
+
     public SmartSubtitlesTaskInput() {
     }
 
@@ -114,6 +220,12 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.RawParameter != null) {
             this.RawParameter = new RawSmartSubtitleParameter(source.RawParameter);
         }
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
+        if (source.OutputObjectPath != null) {
+            this.OutputObjectPath = new String(source.OutputObjectPath);
+        }
     }
 
 
@@ -124,6 +236,8 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "UserExtPara", this.UserExtPara);
         this.setParamObj(map, prefix + "RawParameter.", this.RawParameter);
+        this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+        this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
 
     }
 }

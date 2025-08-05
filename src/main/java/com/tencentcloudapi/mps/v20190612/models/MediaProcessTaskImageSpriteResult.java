@@ -59,7 +59,8 @@ public class MediaProcessTaskImageSpriteResult extends AbstractModel {
     private ImageSpriteTaskInput Input;
 
     /**
-    * Specifies the output of an image sprite task for a video.
+    * Output of the image sprite task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Output")
     @Expose
@@ -160,16 +161,20 @@ public class MediaProcessTaskImageSpriteResult extends AbstractModel {
     }
 
     /**
-     * Get Specifies the output of an image sprite task for a video. 
-     * @return Output Specifies the output of an image sprite task for a video.
+     * Get Output of the image sprite task for videos.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Output Output of the image sprite task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public MediaImageSpriteItem getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Specifies the output of an image sprite task for a video.
-     * @param Output Specifies the output of an image sprite task for a video.
+     * Set Output of the image sprite task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Output Output of the image sprite task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setOutput(MediaImageSpriteItem Output) {
         this.Output = Output;

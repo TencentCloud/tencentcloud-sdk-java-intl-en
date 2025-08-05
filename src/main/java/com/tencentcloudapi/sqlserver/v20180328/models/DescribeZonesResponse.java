@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeZonesResponse extends AbstractModel {
 
     /**
-    * Number of AZs returned
+    * Number of AZs returned.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Array of AZs
+    * Array of AZs.
     */
     @SerializedName("ZoneSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeZonesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of AZs returned 
-     * @return TotalCount Number of AZs returned
+     * Get Number of AZs returned. 
+     * @return TotalCount Number of AZs returned.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of AZs returned
-     * @param TotalCount Number of AZs returned
+     * Set Number of AZs returned.
+     * @param TotalCount Number of AZs returned.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Array of AZs 
-     * @return ZoneSet Array of AZs
+     * Get Array of AZs. 
+     * @return ZoneSet Array of AZs.
      */
     public ZoneInfo [] getZoneSet() {
         return this.ZoneSet;
     }
 
     /**
-     * Set Array of AZs
-     * @param ZoneSet Array of AZs
+     * Set Array of AZs.
+     * @param ZoneSet Array of AZs.
      */
     public void setZoneSet(ZoneInfo [] ZoneSet) {
         this.ZoneSet = ZoneSet;

@@ -75,8 +75,7 @@ public class OriginGroup extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * Origin-pull host header
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Specifies the origin-pull Host Header.
     */
     @SerializedName("HostHeader")
     @Expose
@@ -203,20 +202,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Origin-pull host header
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return HostHeader Origin-pull host header
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Specifies the origin-pull Host Header. 
+     * @return HostHeader Specifies the origin-pull Host Header.
      */
     public String getHostHeader() {
         return this.HostHeader;
     }
 
     /**
-     * Set Origin-pull host header
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param HostHeader Origin-pull host header
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Specifies the origin-pull Host Header.
+     * @param HostHeader Specifies the origin-pull Host Header.
      */
     public void setHostHeader(String HostHeader) {
         this.HostHeader = HostHeader;

@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class QualityControlData extends AbstractModel {
 
     /**
-    * Whether there is an audio track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * When this field is set to true, it indicates that the video has no audio track.
     */
     @SerializedName("NoAudio")
     @Expose
     private Boolean NoAudio;
 
     /**
-    * Whether there is a video track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * When this field is set to true, it indicates that the video has no video track.
     */
     @SerializedName("NoVideo")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * No-reference quality score of the video (100 points in total).
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("QualityEvaluationScore")
     @Expose
@@ -49,73 +46,60 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * No-reference quality score of the video (MOS).
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("QualityEvaluationMeanOpinionScore")
     @Expose
     private Float QualityEvaluationMeanOpinionScore;
 
     /**
-    * Exception items detected in content quality inspection.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Exception items identified in content quality inspection.
     */
     @SerializedName("QualityControlResultSet")
     @Expose
     private QualityControlResult [] QualityControlResultSet;
 
     /**
-    * Exception items detected in format diagnosis.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Exception items identified in format diagnosis.
     */
     @SerializedName("ContainerDiagnoseResultSet")
     @Expose
     private ContainerDiagnoseResultItem [] ContainerDiagnoseResultSet;
 
     /**
-     * Get Whether there is an audio track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NoAudio Whether there is an audio track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get When this field is set to true, it indicates that the video has no audio track. 
+     * @return NoAudio When this field is set to true, it indicates that the video has no audio track.
      */
     public Boolean getNoAudio() {
         return this.NoAudio;
     }
 
     /**
-     * Set Whether there is an audio track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NoAudio Whether there is an audio track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set When this field is set to true, it indicates that the video has no audio track.
+     * @param NoAudio When this field is set to true, it indicates that the video has no audio track.
      */
     public void setNoAudio(Boolean NoAudio) {
         this.NoAudio = NoAudio;
     }
 
     /**
-     * Get Whether there is a video track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NoVideo Whether there is a video track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get When this field is set to true, it indicates that the video has no video track. 
+     * @return NoVideo When this field is set to true, it indicates that the video has no video track.
      */
     public Boolean getNoVideo() {
         return this.NoVideo;
     }
 
     /**
-     * Set Whether there is a video track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NoVideo Whether there is a video track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set When this field is set to true, it indicates that the video has no video track.
+     * @param NoVideo When this field is set to true, it indicates that the video has no video track.
      */
     public void setNoVideo(Boolean NoVideo) {
         this.NoVideo = NoVideo;
     }
 
     /**
-     * Get No-reference quality score of the video (100 points in total).
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get No-reference quality score of the video (100 points in total). 
      * @return QualityEvaluationScore No-reference quality score of the video (100 points in total).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getQualityEvaluationScore() {
         return this.QualityEvaluationScore;
@@ -123,19 +107,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set No-reference quality score of the video (100 points in total).
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param QualityEvaluationScore No-reference quality score of the video (100 points in total).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setQualityEvaluationScore(Long QualityEvaluationScore) {
         this.QualityEvaluationScore = QualityEvaluationScore;
     }
 
     /**
-     * Get No-reference quality score of the video (MOS).
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get No-reference quality score of the video (MOS). 
      * @return QualityEvaluationMeanOpinionScore No-reference quality score of the video (MOS).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Float getQualityEvaluationMeanOpinionScore() {
         return this.QualityEvaluationMeanOpinionScore;
@@ -143,49 +123,39 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set No-reference quality score of the video (MOS).
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param QualityEvaluationMeanOpinionScore No-reference quality score of the video (MOS).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setQualityEvaluationMeanOpinionScore(Float QualityEvaluationMeanOpinionScore) {
         this.QualityEvaluationMeanOpinionScore = QualityEvaluationMeanOpinionScore;
     }
 
     /**
-     * Get Exception items detected in content quality inspection.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QualityControlResultSet Exception items detected in content quality inspection.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Exception items identified in content quality inspection. 
+     * @return QualityControlResultSet Exception items identified in content quality inspection.
      */
     public QualityControlResult [] getQualityControlResultSet() {
         return this.QualityControlResultSet;
     }
 
     /**
-     * Set Exception items detected in content quality inspection.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QualityControlResultSet Exception items detected in content quality inspection.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Exception items identified in content quality inspection.
+     * @param QualityControlResultSet Exception items identified in content quality inspection.
      */
     public void setQualityControlResultSet(QualityControlResult [] QualityControlResultSet) {
         this.QualityControlResultSet = QualityControlResultSet;
     }
 
     /**
-     * Get Exception items detected in format diagnosis.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerDiagnoseResultSet Exception items detected in format diagnosis.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Exception items identified in format diagnosis. 
+     * @return ContainerDiagnoseResultSet Exception items identified in format diagnosis.
      */
     public ContainerDiagnoseResultItem [] getContainerDiagnoseResultSet() {
         return this.ContainerDiagnoseResultSet;
     }
 
     /**
-     * Set Exception items detected in format diagnosis.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerDiagnoseResultSet Exception items detected in format diagnosis.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Exception items identified in format diagnosis.
+     * @param ContainerDiagnoseResultSet Exception items identified in format diagnosis.
      */
     public void setContainerDiagnoseResultSet(ContainerDiagnoseResultItem [] ContainerDiagnoseResultSet) {
         this.ContainerDiagnoseResultSet = ContainerDiagnoseResultSet;

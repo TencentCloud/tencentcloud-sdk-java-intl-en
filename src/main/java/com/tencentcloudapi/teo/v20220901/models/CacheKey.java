@@ -24,20 +24,18 @@ import java.util.HashMap;
 public class CacheKey extends AbstractModel {
 
     /**
-    * Whether to enable full-path cache. Values:
-<li>`on`: Enable full-path cache (i.e., disable Ignore Query String).</li>
-<li>`off`: Disable full-path cache (i.e., enable Ignore Query String).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to enable full path cache. valid values:.
+<li>`on`: enable full-path cache (i.e., disable ignore query string).</li>.
+<li>`off`: disable full-path cache (i.e., enable parameter ignore).</li>.
     */
     @SerializedName("FullUrlCache")
     @Expose
     private String FullUrlCache;
 
     /**
-    * Whether to ignore case in the cache key. Values:
-<li>`on`: Ignore</li>
-<li>`off`: Not ignore</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies whether to use case-insensitive cache. valid values:.
+<li>`on`: ignore</li>.
+<li>`off`: not ignore</li>.
     */
     @SerializedName("IgnoreCase")
     @Expose
@@ -52,56 +50,48 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private QueryString QueryString;
 
     /**
-     * Get Whether to enable full-path cache. Values:
-<li>`on`: Enable full-path cache (i.e., disable Ignore Query String).</li>
-<li>`off`: Disable full-path cache (i.e., enable Ignore Query String).</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FullUrlCache Whether to enable full-path cache. Values:
-<li>`on`: Enable full-path cache (i.e., disable Ignore Query String).</li>
-<li>`off`: Disable full-path cache (i.e., enable Ignore Query String).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to enable full path cache. valid values:.
+<li>`on`: enable full-path cache (i.e., disable ignore query string).</li>.
+<li>`off`: disable full-path cache (i.e., enable parameter ignore).</li>. 
+     * @return FullUrlCache Whether to enable full path cache. valid values:.
+<li>`on`: enable full-path cache (i.e., disable ignore query string).</li>.
+<li>`off`: disable full-path cache (i.e., enable parameter ignore).</li>.
      */
     public String getFullUrlCache() {
         return this.FullUrlCache;
     }
 
     /**
-     * Set Whether to enable full-path cache. Values:
-<li>`on`: Enable full-path cache (i.e., disable Ignore Query String).</li>
-<li>`off`: Disable full-path cache (i.e., enable Ignore Query String).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FullUrlCache Whether to enable full-path cache. Values:
-<li>`on`: Enable full-path cache (i.e., disable Ignore Query String).</li>
-<li>`off`: Disable full-path cache (i.e., enable Ignore Query String).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to enable full path cache. valid values:.
+<li>`on`: enable full-path cache (i.e., disable ignore query string).</li>.
+<li>`off`: disable full-path cache (i.e., enable parameter ignore).</li>.
+     * @param FullUrlCache Whether to enable full path cache. valid values:.
+<li>`on`: enable full-path cache (i.e., disable ignore query string).</li>.
+<li>`off`: disable full-path cache (i.e., enable parameter ignore).</li>.
      */
     public void setFullUrlCache(String FullUrlCache) {
         this.FullUrlCache = FullUrlCache;
     }
 
     /**
-     * Get Whether to ignore case in the cache key. Values:
-<li>`on`: Ignore</li>
-<li>`off`: Not ignore</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IgnoreCase Whether to ignore case in the cache key. Values:
-<li>`on`: Ignore</li>
-<li>`off`: Not ignore</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether to use case-insensitive cache. valid values:.
+<li>`on`: ignore</li>.
+<li>`off`: not ignore</li>. 
+     * @return IgnoreCase Specifies whether to use case-insensitive cache. valid values:.
+<li>`on`: ignore</li>.
+<li>`off`: not ignore</li>.
      */
     public String getIgnoreCase() {
         return this.IgnoreCase;
     }
 
     /**
-     * Set Whether to ignore case in the cache key. Values:
-<li>`on`: Ignore</li>
-<li>`off`: Not ignore</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IgnoreCase Whether to ignore case in the cache key. Values:
-<li>`on`: Ignore</li>
-<li>`off`: Not ignore</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether to use case-insensitive cache. valid values:.
+<li>`on`: ignore</li>.
+<li>`off`: not ignore</li>.
+     * @param IgnoreCase Specifies whether to use case-insensitive cache. valid values:.
+<li>`on`: ignore</li>.
+<li>`off`: not ignore</li>.
      */
     public void setIgnoreCase(String IgnoreCase) {
         this.IgnoreCase = IgnoreCase;

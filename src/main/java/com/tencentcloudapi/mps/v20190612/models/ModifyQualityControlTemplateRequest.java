@@ -60,6 +60,13 @@ public class ModifyQualityControlTemplateRequest extends AbstractModel {
     private String RecordFormat;
 
     /**
+    * Spot check policy for media quality inspection.
+    */
+    @SerializedName("Strategy")
+    @Expose
+    private QualityControlStrategy Strategy;
+
+    /**
      * Get Unique identifier of a media quality inspection template. 
      * @return Definition Unique identifier of a media quality inspection template.
      */
@@ -143,6 +150,22 @@ public class ModifyQualityControlTemplateRequest extends AbstractModel {
         this.RecordFormat = RecordFormat;
     }
 
+    /**
+     * Get Spot check policy for media quality inspection. 
+     * @return Strategy Spot check policy for media quality inspection.
+     */
+    public QualityControlStrategy getStrategy() {
+        return this.Strategy;
+    }
+
+    /**
+     * Set Spot check policy for media quality inspection.
+     * @param Strategy Spot check policy for media quality inspection.
+     */
+    public void setStrategy(QualityControlStrategy Strategy) {
+        this.Strategy = Strategy;
+    }
+
     public ModifyQualityControlTemplateRequest() {
     }
 
@@ -169,6 +192,9 @@ public class ModifyQualityControlTemplateRequest extends AbstractModel {
         if (source.RecordFormat != null) {
             this.RecordFormat = new String(source.RecordFormat);
         }
+        if (source.Strategy != null) {
+            this.Strategy = new QualityControlStrategy(source.Strategy);
+        }
     }
 
 
@@ -181,6 +207,7 @@ public class ModifyQualityControlTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamArrayObj(map, prefix + "QualityControlItemSet.", this.QualityControlItemSet);
         this.setParamSimple(map, prefix + "RecordFormat", this.RecordFormat);
+        this.setParamObj(map, prefix + "Strategy.", this.Strategy);
 
     }
 }

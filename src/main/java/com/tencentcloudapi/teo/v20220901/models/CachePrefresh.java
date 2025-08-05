@@ -33,8 +33,7 @@ public class CachePrefresh extends AbstractModel {
     private String Switch;
 
     /**
-    * The cache prefresh percentage. Values: 1-99
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cache pre-refresh percentage. value range: 1-99.
     */
     @SerializedName("Percent")
     @Expose
@@ -65,20 +64,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The cache prefresh percentage. Values: 1-99
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Percent The cache prefresh percentage. Values: 1-99
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cache pre-refresh percentage. value range: 1-99. 
+     * @return Percent Cache pre-refresh percentage. value range: 1-99.
      */
     public Long getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set The cache prefresh percentage. Values: 1-99
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Percent The cache prefresh percentage. Values: 1-99
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cache pre-refresh percentage. value range: 1-99.
+     * @param Percent Cache pre-refresh percentage. value range: 1-99.
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;

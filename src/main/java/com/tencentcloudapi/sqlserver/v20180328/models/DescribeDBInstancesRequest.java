@@ -113,7 +113,7 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private String [] VersionSet;
 
     /**
-    * Instance availability zone, such as ap-guangzhou-2
+    * Instance availability zone, such as ap-guangzhou-3
     */
     @SerializedName("Zone")
     @Expose
@@ -141,14 +141,14 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private String [] UidSet;
 
     /**
-    * Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+    * Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: dual-server high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 
+    * Pagination query method. offset - pagination query by offset; pageNumber - pagination query by number of pages. The default value is pageNumber.
     */
     @SerializedName("PaginationType")
     @Expose
@@ -379,16 +379,16 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance availability zone, such as ap-guangzhou-2 
-     * @return Zone Instance availability zone, such as ap-guangzhou-2
+     * Get Instance availability zone, such as ap-guangzhou-3 
+     * @return Zone Instance availability zone, such as ap-guangzhou-3
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Instance availability zone, such as ap-guangzhou-2
-     * @param Zone Instance availability zone, such as ap-guangzhou-2
+     * Set Instance availability zone, such as ap-guangzhou-3
+     * @param Zone Instance availability zone, such as ap-guangzhou-3
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -443,32 +443,32 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service). 
-     * @return InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+     * Get Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: dual-server high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk. 
+     * @return InstanceType Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: dual-server high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
-     * @param InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+     * Set Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: dual-server high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+     * @param InstanceType Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: dual-server high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get  
-     * @return PaginationType 
+     * Get Pagination query method. offset - pagination query by offset; pageNumber - pagination query by number of pages. The default value is pageNumber. 
+     * @return PaginationType Pagination query method. offset - pagination query by offset; pageNumber - pagination query by number of pages. The default value is pageNumber.
      */
     public String getPaginationType() {
         return this.PaginationType;
     }
 
     /**
-     * Set 
-     * @param PaginationType 
+     * Set Pagination query method. offset - pagination query by offset; pageNumber - pagination query by number of pages. The default value is pageNumber.
+     * @param PaginationType Pagination query method. offset - pagination query by offset; pageNumber - pagination query by number of pages. The default value is pageNumber.
      */
     public void setPaginationType(String PaginationType) {
         this.PaginationType = PaginationType;

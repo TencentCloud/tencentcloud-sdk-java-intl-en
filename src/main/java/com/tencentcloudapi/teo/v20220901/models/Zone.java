@@ -163,8 +163,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ActiveStatus;
 
     /**
-    * The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
     */
     @SerializedName("AliasZoneName")
     @Expose
@@ -547,20 +546,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters. 
+     * @return AliasZoneName Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
      */
     public String getAliasZoneName() {
         return this.AliasZoneName;
     }
 
     /**
-     * Set The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
+     * @param AliasZoneName Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
      */
     public void setAliasZoneName(String AliasZoneName) {
         this.AliasZoneName = AliasZoneName;

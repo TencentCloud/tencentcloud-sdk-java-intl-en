@@ -52,14 +52,17 @@ public class CreateZoneRequest extends AbstractModel {
     private String Area;
 
     /**
-    * ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+    * Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
+Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+
+
     */
     @SerializedName("PlanId")
     @Expose
     private String PlanId;
 
     /**
-    * The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+    * Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
     */
     @SerializedName("AliasZoneName")
     @Expose
@@ -165,32 +168,44 @@ public class CreateZoneRequest extends AbstractModel {
     }
 
     /**
-     * Get ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console. 
-     * @return PlanId ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+     * Get Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
+Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+
+ 
+     * @return PlanId Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
+Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+
+
      */
     public String getPlanId() {
         return this.PlanId;
     }
 
     /**
-     * Set ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
-     * @param PlanId ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+     * Set Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
+Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+
+
+     * @param PlanId Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
+Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+
+
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;
     }
 
     /**
-     * Get The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank. 
-     * @return AliasZoneName The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+     * Get Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply. 
+     * @return AliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
      */
     public String getAliasZoneName() {
         return this.AliasZoneName;
     }
 
     /**
-     * Set The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
-     * @param AliasZoneName The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+     * Set Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
+     * @param AliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
      */
     public void setAliasZoneName(String AliasZoneName) {
         this.AliasZoneName = AliasZoneName;

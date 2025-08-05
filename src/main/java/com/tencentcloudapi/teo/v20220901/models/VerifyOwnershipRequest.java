@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class VerifyOwnershipRequest extends AbstractModel {
 
     /**
-    * Site or acceleration domain name
+    * Specifies the site domain name or acceleration domain name under the site.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-     * Get Site or acceleration domain name 
-     * @return Domain Site or acceleration domain name
+     * Get Specifies the site domain name or acceleration domain name under the site. 
+     * @return Domain Specifies the site domain name or acceleration domain name under the site.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Site or acceleration domain name
-     * @param Domain Site or acceleration domain name
+     * Set Specifies the site domain name or acceleration domain name under the site.
+     * @param Domain Specifies the site domain name or acceleration domain name under the site.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

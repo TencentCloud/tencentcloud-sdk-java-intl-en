@@ -53,16 +53,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] SegmentTags;
 
     /**
-    * The live streaming segment corresponds to the live start time point, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Start time of the live streaming segment in ISO date and time format.	
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * The live streaming segment corresponds to the live streaming end time, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained.
+    * End time of the live streaming segment in ISO date and time format.	
     */
     @SerializedName("EndTime")
     @Expose
@@ -137,40 +135,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The live streaming segment corresponds to the live start time point, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return BeginTime The live streaming segment corresponds to the live start time point, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Start time of the live streaming segment in ISO date and time format.	 
+     * @return BeginTime Start time of the live streaming segment in ISO date and time format.	
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set The live streaming segment corresponds to the live start time point, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param BeginTime The live streaming segment corresponds to the live start time point, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Start time of the live streaming segment in ISO date and time format.	
+     * @param BeginTime Start time of the live streaming segment in ISO date and time format.	
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get The live streaming segment corresponds to the live streaming end time, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return EndTime The live streaming segment corresponds to the live streaming end time, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get End time of the live streaming segment in ISO date and time format.	 
+     * @return EndTime End time of the live streaming segment in ISO date and time format.	
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The live streaming segment corresponds to the live streaming end time, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param EndTime The live streaming segment corresponds to the live streaming end time, in the ISO date format.	
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set End time of the live streaming segment in ISO date and time format.	
+     * @param EndTime End time of the live streaming segment in ISO date and time format.	
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

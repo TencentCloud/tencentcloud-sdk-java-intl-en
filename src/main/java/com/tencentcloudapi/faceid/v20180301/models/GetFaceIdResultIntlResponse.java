@@ -55,11 +55,18 @@ public class GetFaceIdResultIntlResponse extends AbstractModel {
     private String BestFrame;
 
     /**
-    * The video file (Base64) for verification.
+    * The video file (Base64) for verification.Used for verification, contains specific color reflection effects.
     */
     @SerializedName("Video")
     @Expose
     private String Video;
+
+    /**
+    * Records the specific action performed by the user, used for AI Face Shield analysis.
+    */
+    @SerializedName("ActionVideo")
+    @Expose
+    private String ActionVideo;
 
     /**
     * The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
@@ -173,19 +180,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The video file (Base64) for verification. 
-     * @return Video The video file (Base64) for verification.
+     * Get The video file (Base64) for verification.Used for verification, contains specific color reflection effects. 
+     * @return Video The video file (Base64) for verification.Used for verification, contains specific color reflection effects.
      */
     public String getVideo() {
         return this.Video;
     }
 
     /**
-     * Set The video file (Base64) for verification.
-     * @param Video The video file (Base64) for verification.
+     * Set The video file (Base64) for verification.Used for verification, contains specific color reflection effects.
+     * @param Video The video file (Base64) for verification.Used for verification, contains specific color reflection effects.
      */
     public void setVideo(String Video) {
         this.Video = Video;
+    }
+
+    /**
+     * Get Records the specific action performed by the user, used for AI Face Shield analysis. 
+     * @return ActionVideo Records the specific action performed by the user, used for AI Face Shield analysis.
+     */
+    public String getActionVideo() {
+        return this.ActionVideo;
+    }
+
+    /**
+     * Set Records the specific action performed by the user, used for AI Face Shield analysis.
+     * @param ActionVideo Records the specific action performed by the user, used for AI Face Shield analysis.
+     */
+    public void setActionVideo(String ActionVideo) {
+        this.ActionVideo = ActionVideo;
     }
 
     /**
@@ -264,6 +287,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Video != null) {
             this.Video = new String(source.Video);
         }
+        if (source.ActionVideo != null) {
+            this.ActionVideo = new String(source.ActionVideo);
+        }
         if (source.Similarity != null) {
             this.Similarity = new Float(source.Similarity);
         }
@@ -284,6 +310,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "BestFrame", this.BestFrame);
         this.setParamSimple(map, prefix + "Video", this.Video);
+        this.setParamSimple(map, prefix + "ActionVideo", this.ActionVideo);
         this.setParamSimple(map, prefix + "Similarity", this.Similarity);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

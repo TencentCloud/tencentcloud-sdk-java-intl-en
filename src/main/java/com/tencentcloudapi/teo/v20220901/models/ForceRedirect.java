@@ -33,10 +33,9 @@ public class ForceRedirect extends AbstractModel {
     private String Switch;
 
     /**
-    * Redirect status code. Values:
-<li>`301`: 301 redirect</li>
-<li>`302`: 302 redirect</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Redirection status code. valid values:.
+<Li>`301`: 301 redirect</li>.
+<Li>`302`: 302 redirect</li>.
     */
     @SerializedName("RedirectStatusCode")
     @Expose
@@ -67,28 +66,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Redirect status code. Values:
-<li>`301`: 301 redirect</li>
-<li>`302`: 302 redirect</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RedirectStatusCode Redirect status code. Values:
-<li>`301`: 301 redirect</li>
-<li>`302`: 302 redirect</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Redirection status code. valid values:.
+<Li>`301`: 301 redirect</li>.
+<Li>`302`: 302 redirect</li>. 
+     * @return RedirectStatusCode Redirection status code. valid values:.
+<Li>`301`: 301 redirect</li>.
+<Li>`302`: 302 redirect</li>.
      */
     public Long getRedirectStatusCode() {
         return this.RedirectStatusCode;
     }
 
     /**
-     * Set Redirect status code. Values:
-<li>`301`: 301 redirect</li>
-<li>`302`: 302 redirect</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RedirectStatusCode Redirect status code. Values:
-<li>`301`: 301 redirect</li>
-<li>`302`: 302 redirect</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Redirection status code. valid values:.
+<Li>`301`: 301 redirect</li>.
+<Li>`302`: 302 redirect</li>.
+     * @param RedirectStatusCode Redirection status code. valid values:.
+<Li>`301`: 301 redirect</li>.
+<Li>`302`: 302 redirect</li>.
      */
     public void setRedirectStatusCode(Long RedirectStatusCode) {
         this.RedirectStatusCode = RedirectStatusCode;

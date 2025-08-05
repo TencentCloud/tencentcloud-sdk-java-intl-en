@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class CustomizedHeader extends AbstractModel {
 
     /**
-    * Custom header key.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Specifies the custom header Key.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Custom header value.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Set custom headers Value.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Custom header key.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return Key Custom header key.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Specifies the custom header Key. 
+     * @return Key Specifies the custom header Key.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Custom header key.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param Key Custom header key.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Specifies the custom header Key.
+     * @param Key Specifies the custom header Key.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Custom header value.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return Value Custom header value.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Set custom headers Value. 
+     * @return Value Set custom headers Value.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Custom header value.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param Value Custom header value.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Set custom headers Value.
+     * @param Value Set custom headers Value.
      */
     public void setValue(String Value) {
         this.Value = Value;

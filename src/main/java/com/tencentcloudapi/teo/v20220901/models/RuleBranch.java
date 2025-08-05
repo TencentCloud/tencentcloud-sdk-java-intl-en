@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RuleBranch extends AbstractModel {
 
     /**
-    * [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
+    * Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-    * [Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
+    * [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
 Note: this field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("Actions")
@@ -47,25 +47,25 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     private RuleEngineSubRule [] SubRules;
 
     /**
-     * Get [Match condition](https://www.tencentcloud.com/document/product/1145/54759). 
-     * @return Condition [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
+     * Get Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d). 
+     * @return Condition Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
-     * @param Condition [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
+     * Set Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+     * @param Condition Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get [Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
+     * Get [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
 Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return Actions [Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
+     * @return Actions [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
 Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public RuleEngineAction [] getActions() {
@@ -73,9 +73,9 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Set [Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
+     * Set [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
 Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param Actions [Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
+     * @param Actions [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
 Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public void setActions(RuleEngineAction [] Actions) {

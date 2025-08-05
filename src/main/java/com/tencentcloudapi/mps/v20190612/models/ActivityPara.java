@@ -95,6 +95,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AiQualityControlTaskInput QualityControlTask;
 
     /**
+    * Conditional judgment of the task.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ExecRulesTask")
+    @Expose
+    private ExecRulesTask ExecRulesTask;
+
+    /**
     * Smart subtitle task.
 Note: This field may return null, indicating that no valid value can be obtained.
     */
@@ -267,6 +275,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Conditional judgment of the task.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return ExecRulesTask Conditional judgment of the task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public ExecRulesTask getExecRulesTask() {
+        return this.ExecRulesTask;
+    }
+
+    /**
+     * Set Conditional judgment of the task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ExecRulesTask Conditional judgment of the task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setExecRulesTask(ExecRulesTask ExecRulesTask) {
+        this.ExecRulesTask = ExecRulesTask;
+    }
+
+    /**
      * Get Smart subtitle task.
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return SmartSubtitlesTask Smart subtitle task.
@@ -324,6 +352,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.QualityControlTask != null) {
             this.QualityControlTask = new AiQualityControlTaskInput(source.QualityControlTask);
         }
+        if (source.ExecRulesTask != null) {
+            this.ExecRulesTask = new ExecRulesTask(source.ExecRulesTask);
+        }
         if (source.SmartSubtitlesTask != null) {
             this.SmartSubtitlesTask = new SmartSubtitlesTaskInput(source.SmartSubtitlesTask);
         }
@@ -344,6 +375,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
+        this.setParamObj(map, prefix + "ExecRulesTask.", this.ExecRulesTask);
         this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
 
     }

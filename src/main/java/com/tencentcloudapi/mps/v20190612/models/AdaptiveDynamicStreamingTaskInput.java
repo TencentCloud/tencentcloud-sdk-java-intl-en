@@ -106,7 +106,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     private SubtitleTemplate SubtitleTemplate;
 
     /**
-    * Extension field for transcoding.
+    * Transcoding parameter extension field.
     */
     @SerializedName("StdExtInfo")
     @Expose
@@ -321,16 +321,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Extension field for transcoding. 
-     * @return StdExtInfo Extension field for transcoding.
+     * Get Transcoding parameter extension field. 
+     * @return StdExtInfo Transcoding parameter extension field.
      */
     public String getStdExtInfo() {
         return this.StdExtInfo;
     }
 
     /**
-     * Set Extension field for transcoding.
-     * @param StdExtInfo Extension field for transcoding.
+     * Set Transcoding parameter extension field.
+     * @param StdExtInfo Transcoding parameter extension field.
      */
     public void setStdExtInfo(String StdExtInfo) {
         this.StdExtInfo = StdExtInfo;

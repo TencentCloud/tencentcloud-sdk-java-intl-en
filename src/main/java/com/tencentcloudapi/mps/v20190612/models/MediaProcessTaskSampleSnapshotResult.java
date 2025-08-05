@@ -60,7 +60,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private SampleSnapshotTaskInput Input;
 
     /**
-    * Specifies the output of a sampling screenshot task for a video.
+    * Output of the sampled screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Output")
     @Expose
@@ -165,16 +166,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specifies the output of a sampling screenshot task for a video. 
-     * @return Output Specifies the output of a sampling screenshot task for a video.
+     * Get Output of the sampled screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Output Output of the sampled screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public MediaSampleSnapshotItem getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Specifies the output of a sampling screenshot task for a video.
-     * @param Output Specifies the output of a sampling screenshot task for a video.
+     * Set Output of the sampled screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Output Output of the sampled screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setOutput(MediaSampleSnapshotItem Output) {
         this.Output = Output;

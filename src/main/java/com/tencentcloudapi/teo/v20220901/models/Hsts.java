@@ -33,28 +33,27 @@ public class Hsts extends AbstractModel {
     private String Switch;
 
     /**
-    * MaxAge (in seconds). The maximum value is 1 day. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * MaxAge value. expressed in seconds, maximum value is 1 day.
     */
     @SerializedName("MaxAge")
     @Expose
     private Long MaxAge;
 
     /**
-    * Whether to contain subdomain names. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies whether the subdomain is included. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
     */
     @SerializedName("IncludeSubDomains")
     @Expose
     private String IncludeSubDomains;
 
     /**
-    * Whether to enable preloading. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to enable preloading. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
     */
     @SerializedName("Preload")
     @Expose
@@ -85,76 +84,72 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get MaxAge (in seconds). The maximum value is 1 day. 
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return MaxAge MaxAge (in seconds). The maximum value is 1 day. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get MaxAge value. expressed in seconds, maximum value is 1 day. 
+     * @return MaxAge MaxAge value. expressed in seconds, maximum value is 1 day.
      */
     public Long getMaxAge() {
         return this.MaxAge;
     }
 
     /**
-     * Set MaxAge (in seconds). The maximum value is 1 day. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param MaxAge MaxAge (in seconds). The maximum value is 1 day. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set MaxAge value. expressed in seconds, maximum value is 1 day.
+     * @param MaxAge MaxAge value. expressed in seconds, maximum value is 1 day.
      */
     public void setMaxAge(Long MaxAge) {
         this.MaxAge = MaxAge;
     }
 
     /**
-     * Get Whether to contain subdomain names. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IncludeSubDomains Whether to contain subdomain names. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether the subdomain is included. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li> 
+     * @return IncludeSubDomains Specifies whether the subdomain is included. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public String getIncludeSubDomains() {
         return this.IncludeSubDomains;
     }
 
     /**
-     * Set Whether to contain subdomain names. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IncludeSubDomains Whether to contain subdomain names. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether the subdomain is included. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+     * @param IncludeSubDomains Specifies whether the subdomain is included. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public void setIncludeSubDomains(String IncludeSubDomains) {
         this.IncludeSubDomains = IncludeSubDomains;
     }
 
     /**
-     * Get Whether to enable preloading. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Preload Whether to enable preloading. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to enable preloading. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li> 
+     * @return Preload Whether to enable preloading. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public String getPreload() {
         return this.Preload;
     }
 
     /**
-     * Set Whether to enable preloading. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Preload Whether to enable preloading. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to enable preloading. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+     * @param Preload Whether to enable preloading. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public void setPreload(String Preload) {
         this.Preload = Preload;

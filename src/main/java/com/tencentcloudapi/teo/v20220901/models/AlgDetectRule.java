@@ -52,8 +52,7 @@ public class AlgDetectRule extends AbstractModel {
     private AclCondition [] AlgConditions;
 
     /**
-    * Validate Cookie when the condition is satisfied.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Checksum of the Cookie and behavior analysis of the session.
     */
     @SerializedName("AlgDetectSession")
     @Expose
@@ -138,20 +137,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Validate Cookie when the condition is satisfied.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return AlgDetectSession Validate Cookie when the condition is satisfied.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Checksum of the Cookie and behavior analysis of the session. 
+     * @return AlgDetectSession Checksum of the Cookie and behavior analysis of the session.
      */
     public AlgDetectSession getAlgDetectSession() {
         return this.AlgDetectSession;
     }
 
     /**
-     * Set Validate Cookie when the condition is satisfied.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param AlgDetectSession Validate Cookie when the condition is satisfied.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Checksum of the Cookie and behavior analysis of the session.
+     * @param AlgDetectSession Checksum of the Cookie and behavior analysis of the session.
      */
     public void setAlgDetectSession(AlgDetectSession AlgDetectSession) {
         this.AlgDetectSession = AlgDetectSession;

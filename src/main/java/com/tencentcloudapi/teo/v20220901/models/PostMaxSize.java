@@ -33,8 +33,7 @@ public class PostMaxSize extends AbstractModel {
     private String Switch;
 
     /**
-    * Maximum size. Value range: 1-500 MB.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Maximum limit. value range between 1MB and 500MB. byte.
     */
     @SerializedName("MaxSize")
     @Expose
@@ -65,20 +64,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Maximum size. Value range: 1-500 MB.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaxSize Maximum size. Value range: 1-500 MB.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Maximum limit. value range between 1MB and 500MB. byte. 
+     * @return MaxSize Maximum limit. value range between 1MB and 500MB. byte.
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set Maximum size. Value range: 1-500 MB.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaxSize Maximum size. Value range: 1-500 MB.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Maximum limit. value range between 1MB and 500MB. byte.
+     * @param MaxSize Maximum limit. value range between 1MB and 500MB. byte.
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

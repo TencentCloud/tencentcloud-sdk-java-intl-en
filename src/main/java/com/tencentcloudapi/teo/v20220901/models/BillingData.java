@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BillingData extends AbstractModel {
 
     /**
-    * Data timestamp.
+    * Specifies the data timestamp.
     */
     @SerializedName("Time")
     @Expose
@@ -38,45 +38,44 @@ public class BillingData extends AbstractModel {
     private Long Value;
 
     /**
-    * Zone ID (or content identifier if enabled).
+    * Site ID of the associated data point. if the content identifier feature is enabled, this item is the content identifier.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Domain name.
+    * Specifies the domain name of the data point.
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * Layer-4 proxy instance ID.
+    * Specifies the layer-4 proxy instance ID the data point belongs to.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * Billing region (based on EdgeOne node location). Values: 
-<li>CH: Mainland China</li> <li>AF: Africa</li> <li>AS1: Asia Pacific Region 1</li> <li>AS2: Asia Pacific Region 2</li> <li>AS3: Asia Pacific Region 3</li> <li>EU: Europe</li> <li>MidEast: Middle East</li> <li>NA: North America</li> <li>SA: South America</li>
+    * Specifies the billing region ID the data point belongs to. the billing region is determined by the EdgeOne node region where the actual service user client is located. valid values: <li>CH: chinese mainland</li><li>AF: africa</li><li>AS1: asia pacific zone 1</li><li>AS2: asia pacific zone 2</li><li>AS3: asia pacific zone 3</li><li>EU: europe</li><li>MidEast: middle east</li><li>NA: north america</li><li>SA: south america</li>.
     */
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
 
     /**
-     * Get Data timestamp. 
-     * @return Time Data timestamp.
+     * Get Specifies the data timestamp. 
+     * @return Time Specifies the data timestamp.
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set Data timestamp.
-     * @param Time Data timestamp.
+     * Set Specifies the data timestamp.
+     * @param Time Specifies the data timestamp.
      */
     public void setTime(String Time) {
         this.Time = Time;
@@ -99,68 +98,64 @@ public class BillingData extends AbstractModel {
     }
 
     /**
-     * Get Zone ID (or content identifier if enabled). 
-     * @return ZoneId Zone ID (or content identifier if enabled).
+     * Get Site ID of the associated data point. if the content identifier feature is enabled, this item is the content identifier. 
+     * @return ZoneId Site ID of the associated data point. if the content identifier feature is enabled, this item is the content identifier.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone ID (or content identifier if enabled).
-     * @param ZoneId Zone ID (or content identifier if enabled).
+     * Set Site ID of the associated data point. if the content identifier feature is enabled, this item is the content identifier.
+     * @param ZoneId Site ID of the associated data point. if the content identifier feature is enabled, this item is the content identifier.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Domain name. 
-     * @return Host Domain name.
+     * Get Specifies the domain name of the data point. 
+     * @return Host Specifies the domain name of the data point.
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set Domain name.
-     * @param Host Domain name.
+     * Set Specifies the domain name of the data point.
+     * @param Host Specifies the domain name of the data point.
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get Layer-4 proxy instance ID. 
-     * @return ProxyId Layer-4 proxy instance ID.
+     * Get Specifies the layer-4 proxy instance ID the data point belongs to. 
+     * @return ProxyId Specifies the layer-4 proxy instance ID the data point belongs to.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Layer-4 proxy instance ID.
-     * @param ProxyId Layer-4 proxy instance ID.
+     * Set Specifies the layer-4 proxy instance ID the data point belongs to.
+     * @param ProxyId Specifies the layer-4 proxy instance ID the data point belongs to.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get Billing region (based on EdgeOne node location). Values: 
-<li>CH: Mainland China</li> <li>AF: Africa</li> <li>AS1: Asia Pacific Region 1</li> <li>AS2: Asia Pacific Region 2</li> <li>AS3: Asia Pacific Region 3</li> <li>EU: Europe</li> <li>MidEast: Middle East</li> <li>NA: North America</li> <li>SA: South America</li> 
-     * @return RegionId Billing region (based on EdgeOne node location). Values: 
-<li>CH: Mainland China</li> <li>AF: Africa</li> <li>AS1: Asia Pacific Region 1</li> <li>AS2: Asia Pacific Region 2</li> <li>AS3: Asia Pacific Region 3</li> <li>EU: Europe</li> <li>MidEast: Middle East</li> <li>NA: North America</li> <li>SA: South America</li>
+     * Get Specifies the billing region ID the data point belongs to. the billing region is determined by the EdgeOne node region where the actual service user client is located. valid values: <li>CH: chinese mainland</li><li>AF: africa</li><li>AS1: asia pacific zone 1</li><li>AS2: asia pacific zone 2</li><li>AS3: asia pacific zone 3</li><li>EU: europe</li><li>MidEast: middle east</li><li>NA: north america</li><li>SA: south america</li>. 
+     * @return RegionId Specifies the billing region ID the data point belongs to. the billing region is determined by the EdgeOne node region where the actual service user client is located. valid values: <li>CH: chinese mainland</li><li>AF: africa</li><li>AS1: asia pacific zone 1</li><li>AS2: asia pacific zone 2</li><li>AS3: asia pacific zone 3</li><li>EU: europe</li><li>MidEast: middle east</li><li>NA: north america</li><li>SA: south america</li>.
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Billing region (based on EdgeOne node location). Values: 
-<li>CH: Mainland China</li> <li>AF: Africa</li> <li>AS1: Asia Pacific Region 1</li> <li>AS2: Asia Pacific Region 2</li> <li>AS3: Asia Pacific Region 3</li> <li>EU: Europe</li> <li>MidEast: Middle East</li> <li>NA: North America</li> <li>SA: South America</li>
-     * @param RegionId Billing region (based on EdgeOne node location). Values: 
-<li>CH: Mainland China</li> <li>AF: Africa</li> <li>AS1: Asia Pacific Region 1</li> <li>AS2: Asia Pacific Region 2</li> <li>AS3: Asia Pacific Region 3</li> <li>EU: Europe</li> <li>MidEast: Middle East</li> <li>NA: North America</li> <li>SA: South America</li>
+     * Set Specifies the billing region ID the data point belongs to. the billing region is determined by the EdgeOne node region where the actual service user client is located. valid values: <li>CH: chinese mainland</li><li>AF: africa</li><li>AS1: asia pacific zone 1</li><li>AS2: asia pacific zone 2</li><li>AS3: asia pacific zone 3</li><li>EU: europe</li><li>MidEast: middle east</li><li>NA: north america</li><li>SA: south america</li>.
+     * @param RegionId Specifies the billing region ID the data point belongs to. the billing region is determined by the EdgeOne node region where the actual service user client is located. valid values: <li>CH: chinese mainland</li><li>AF: africa</li><li>AS1: asia pacific zone 1</li><li>AS2: asia pacific zone 2</li><li>AS3: asia pacific zone 3</li><li>EU: europe</li><li>MidEast: middle east</li><li>NA: north america</li><li>SA: south america</li>.
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;

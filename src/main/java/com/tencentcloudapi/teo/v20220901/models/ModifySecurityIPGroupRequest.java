@@ -38,10 +38,7 @@ public class ModifySecurityIPGroupRequest extends AbstractModel {
     private IPGroup IPGroup;
 
     /**
-    * Operation type. Valid values: 
-<li>`append`: Add information of `Content` to `IPGroup`;</li>
-<li>`remove`: Delete information of `Content` from `IPGroup`;</li>
-<li>`update`: Replace all information of `IPGroup` and modify the IPGroup name.</li>
+    * Operation type. valid values: <li>`append`: add new IP addresses or set scheduled expiration time to `IPGroup`;</li> <li>`remove`: delete specified IP addresses or their scheduled expiration time from `IPGroup`;</li> <li>`update`: replace all Content of `Content` or `ExpireInfo` in `IPGroup` and modify the IPGroup name.</li>  notes for `append` operation: <li>when adding a scheduled expiration time for an IP or range, it must be later than the current time. if the IP or range does not exist in the group, it must be added to the `Content` parameter simultaneously. if the IP or range already has an expiration time, the new time will overwrite the original one.</li>  notes for `remove` operation: <li>when deleting an IP or range, related unexpired scheduled expiration times will also be deleted;</li> <li>when deleting a scheduled expiration time, only currently unexpired times can be removed.</li>  notes for `update` operation: <li>when replacing `Content`, unexpired times of ips or ranges not in `Content` will be deleted;</li> <li>when replacing `IPExpireInfo`, the ips or ranges in `IPExpireInfo` must exist in `Content` or the IP group.</li>.
     */
     @SerializedName("Mode")
     @Expose
@@ -80,28 +77,16 @@ public class ModifySecurityIPGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get Operation type. Valid values: 
-<li>`append`: Add information of `Content` to `IPGroup`;</li>
-<li>`remove`: Delete information of `Content` from `IPGroup`;</li>
-<li>`update`: Replace all information of `IPGroup` and modify the IPGroup name.</li> 
-     * @return Mode Operation type. Valid values: 
-<li>`append`: Add information of `Content` to `IPGroup`;</li>
-<li>`remove`: Delete information of `Content` from `IPGroup`;</li>
-<li>`update`: Replace all information of `IPGroup` and modify the IPGroup name.</li>
+     * Get Operation type. valid values: <li>`append`: add new IP addresses or set scheduled expiration time to `IPGroup`;</li> <li>`remove`: delete specified IP addresses or their scheduled expiration time from `IPGroup`;</li> <li>`update`: replace all Content of `Content` or `ExpireInfo` in `IPGroup` and modify the IPGroup name.</li>  notes for `append` operation: <li>when adding a scheduled expiration time for an IP or range, it must be later than the current time. if the IP or range does not exist in the group, it must be added to the `Content` parameter simultaneously. if the IP or range already has an expiration time, the new time will overwrite the original one.</li>  notes for `remove` operation: <li>when deleting an IP or range, related unexpired scheduled expiration times will also be deleted;</li> <li>when deleting a scheduled expiration time, only currently unexpired times can be removed.</li>  notes for `update` operation: <li>when replacing `Content`, unexpired times of ips or ranges not in `Content` will be deleted;</li> <li>when replacing `IPExpireInfo`, the ips or ranges in `IPExpireInfo` must exist in `Content` or the IP group.</li>. 
+     * @return Mode Operation type. valid values: <li>`append`: add new IP addresses or set scheduled expiration time to `IPGroup`;</li> <li>`remove`: delete specified IP addresses or their scheduled expiration time from `IPGroup`;</li> <li>`update`: replace all Content of `Content` or `ExpireInfo` in `IPGroup` and modify the IPGroup name.</li>  notes for `append` operation: <li>when adding a scheduled expiration time for an IP or range, it must be later than the current time. if the IP or range does not exist in the group, it must be added to the `Content` parameter simultaneously. if the IP or range already has an expiration time, the new time will overwrite the original one.</li>  notes for `remove` operation: <li>when deleting an IP or range, related unexpired scheduled expiration times will also be deleted;</li> <li>when deleting a scheduled expiration time, only currently unexpired times can be removed.</li>  notes for `update` operation: <li>when replacing `Content`, unexpired times of ips or ranges not in `Content` will be deleted;</li> <li>when replacing `IPExpireInfo`, the ips or ranges in `IPExpireInfo` must exist in `Content` or the IP group.</li>.
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set Operation type. Valid values: 
-<li>`append`: Add information of `Content` to `IPGroup`;</li>
-<li>`remove`: Delete information of `Content` from `IPGroup`;</li>
-<li>`update`: Replace all information of `IPGroup` and modify the IPGroup name.</li>
-     * @param Mode Operation type. Valid values: 
-<li>`append`: Add information of `Content` to `IPGroup`;</li>
-<li>`remove`: Delete information of `Content` from `IPGroup`;</li>
-<li>`update`: Replace all information of `IPGroup` and modify the IPGroup name.</li>
+     * Set Operation type. valid values: <li>`append`: add new IP addresses or set scheduled expiration time to `IPGroup`;</li> <li>`remove`: delete specified IP addresses or their scheduled expiration time from `IPGroup`;</li> <li>`update`: replace all Content of `Content` or `ExpireInfo` in `IPGroup` and modify the IPGroup name.</li>  notes for `append` operation: <li>when adding a scheduled expiration time for an IP or range, it must be later than the current time. if the IP or range does not exist in the group, it must be added to the `Content` parameter simultaneously. if the IP or range already has an expiration time, the new time will overwrite the original one.</li>  notes for `remove` operation: <li>when deleting an IP or range, related unexpired scheduled expiration times will also be deleted;</li> <li>when deleting a scheduled expiration time, only currently unexpired times can be removed.</li>  notes for `update` operation: <li>when replacing `Content`, unexpired times of ips or ranges not in `Content` will be deleted;</li> <li>when replacing `IPExpireInfo`, the ips or ranges in `IPExpireInfo` must exist in `Content` or the IP group.</li>.
+     * @param Mode Operation type. valid values: <li>`append`: add new IP addresses or set scheduled expiration time to `IPGroup`;</li> <li>`remove`: delete specified IP addresses or their scheduled expiration time from `IPGroup`;</li> <li>`update`: replace all Content of `Content` or `ExpireInfo` in `IPGroup` and modify the IPGroup name.</li>  notes for `append` operation: <li>when adding a scheduled expiration time for an IP or range, it must be later than the current time. if the IP or range does not exist in the group, it must be added to the `Content` parameter simultaneously. if the IP or range already has an expiration time, the new time will overwrite the original one.</li>  notes for `remove` operation: <li>when deleting an IP or range, related unexpired scheduled expiration times will also be deleted;</li> <li>when deleting a scheduled expiration time, only currently unexpired times can be removed.</li>  notes for `update` operation: <li>when replacing `Content`, unexpired times of ips or ranges not in `Content` will be deleted;</li> <li>when replacing `IPExpireInfo`, the ips or ranges in `IPExpireInfo` must exist in `Content` or the IP group.</li>.
      */
     public void setMode(String Mode) {
         this.Mode = Mode;

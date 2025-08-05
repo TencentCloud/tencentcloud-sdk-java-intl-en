@@ -24,114 +24,99 @@ import java.util.HashMap;
 public class CustomField extends AbstractModel {
 
     /**
-    * Type of the custom log filed, which indicates extracting data from a specified position in HTTP requests and responses. Valid values:
-<li>ReqHeader: Extract the value of a specified field from an HTTP request header;</li>
-<li>RspHeader: Extract the value of a specified field from an HTTP response header;</li>
-<li>Cookie: Extract the value of a specified field from a cookie;</li>
-<li>ReqBody: Extract specified content from an HTTP request body using a Google RE2 regular expression.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Type of the custom log field, which indicates extracting data from specified positions in HTTP requests and responses. valid values:.
+<li>ReqHeader: extract the value of a specified field from an HTTP request header;</li>.
+<li>RspHeader: extracts the value of a specified field from an HTTP response header.</li>.
+<Li>Cookie: extract the specified field value from a cookie;</li>.
+<li>ReqBody: extract specified content from an HTTP request body using a Google RE2 regular expression.</li>.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Enter the definition of the field value based on the field type (Name). This parameter is case-sensitive.
-<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the name of the parameter for which you need to extract the value, such as Accept-Language. You can enter 1-100 characters. The name should start with a letter, contain letters, digits, and hyphens (-) in the middle, and end with a letter or digit.</li>
-<li>When the field type is ReqBody, enter the Google RE2 regular expression. The maximum length of the regular expression is 4 KB.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Enter the field value definition based on the field type (Name). this parameter is case-sensitive.
+<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the parameter name for value extraction, such as Accept-Language. you can enter 1-100 characters. the name must start with a letter, contain letters, digits, or hyphens (-) in the middle, and end with a letter or digit.</li>.
+<li>When the field type is ReqBody, enter the Google RE2 regular expression. the maximum length of the regular expression is 4 KB.</li>.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * Indicates whether to deliver this field. If not filled in, this field will not be delivered.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to deliver this field. leave blank to skip delivery.
     */
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
 
     /**
-     * Get Type of the custom log filed, which indicates extracting data from a specified position in HTTP requests and responses. Valid values:
-<li>ReqHeader: Extract the value of a specified field from an HTTP request header;</li>
-<li>RspHeader: Extract the value of a specified field from an HTTP response header;</li>
-<li>Cookie: Extract the value of a specified field from a cookie;</li>
-<li>ReqBody: Extract specified content from an HTTP request body using a Google RE2 regular expression.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return Name Type of the custom log filed, which indicates extracting data from a specified position in HTTP requests and responses. Valid values:
-<li>ReqHeader: Extract the value of a specified field from an HTTP request header;</li>
-<li>RspHeader: Extract the value of a specified field from an HTTP response header;</li>
-<li>Cookie: Extract the value of a specified field from a cookie;</li>
-<li>ReqBody: Extract specified content from an HTTP request body using a Google RE2 regular expression.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Type of the custom log field, which indicates extracting data from specified positions in HTTP requests and responses. valid values:.
+<li>ReqHeader: extract the value of a specified field from an HTTP request header;</li>.
+<li>RspHeader: extracts the value of a specified field from an HTTP response header.</li>.
+<Li>Cookie: extract the specified field value from a cookie;</li>.
+<li>ReqBody: extract specified content from an HTTP request body using a Google RE2 regular expression.</li>. 
+     * @return Name Type of the custom log field, which indicates extracting data from specified positions in HTTP requests and responses. valid values:.
+<li>ReqHeader: extract the value of a specified field from an HTTP request header;</li>.
+<li>RspHeader: extracts the value of a specified field from an HTTP response header.</li>.
+<Li>Cookie: extract the specified field value from a cookie;</li>.
+<li>ReqBody: extract specified content from an HTTP request body using a Google RE2 regular expression.</li>.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Type of the custom log filed, which indicates extracting data from a specified position in HTTP requests and responses. Valid values:
-<li>ReqHeader: Extract the value of a specified field from an HTTP request header;</li>
-<li>RspHeader: Extract the value of a specified field from an HTTP response header;</li>
-<li>Cookie: Extract the value of a specified field from a cookie;</li>
-<li>ReqBody: Extract specified content from an HTTP request body using a Google RE2 regular expression.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param Name Type of the custom log filed, which indicates extracting data from a specified position in HTTP requests and responses. Valid values:
-<li>ReqHeader: Extract the value of a specified field from an HTTP request header;</li>
-<li>RspHeader: Extract the value of a specified field from an HTTP response header;</li>
-<li>Cookie: Extract the value of a specified field from a cookie;</li>
-<li>ReqBody: Extract specified content from an HTTP request body using a Google RE2 regular expression.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Type of the custom log field, which indicates extracting data from specified positions in HTTP requests and responses. valid values:.
+<li>ReqHeader: extract the value of a specified field from an HTTP request header;</li>.
+<li>RspHeader: extracts the value of a specified field from an HTTP response header.</li>.
+<Li>Cookie: extract the specified field value from a cookie;</li>.
+<li>ReqBody: extract specified content from an HTTP request body using a Google RE2 regular expression.</li>.
+     * @param Name Type of the custom log field, which indicates extracting data from specified positions in HTTP requests and responses. valid values:.
+<li>ReqHeader: extract the value of a specified field from an HTTP request header;</li>.
+<li>RspHeader: extracts the value of a specified field from an HTTP response header.</li>.
+<Li>Cookie: extract the specified field value from a cookie;</li>.
+<li>ReqBody: extract specified content from an HTTP request body using a Google RE2 regular expression.</li>.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Enter the definition of the field value based on the field type (Name). This parameter is case-sensitive.
-<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the name of the parameter for which you need to extract the value, such as Accept-Language. You can enter 1-100 characters. The name should start with a letter, contain letters, digits, and hyphens (-) in the middle, and end with a letter or digit.</li>
-<li>When the field type is ReqBody, enter the Google RE2 regular expression. The maximum length of the regular expression is 4 KB.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return Value Enter the definition of the field value based on the field type (Name). This parameter is case-sensitive.
-<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the name of the parameter for which you need to extract the value, such as Accept-Language. You can enter 1-100 characters. The name should start with a letter, contain letters, digits, and hyphens (-) in the middle, and end with a letter or digit.</li>
-<li>When the field type is ReqBody, enter the Google RE2 regular expression. The maximum length of the regular expression is 4 KB.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Enter the field value definition based on the field type (Name). this parameter is case-sensitive.
+<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the parameter name for value extraction, such as Accept-Language. you can enter 1-100 characters. the name must start with a letter, contain letters, digits, or hyphens (-) in the middle, and end with a letter or digit.</li>.
+<li>When the field type is ReqBody, enter the Google RE2 regular expression. the maximum length of the regular expression is 4 KB.</li>. 
+     * @return Value Enter the field value definition based on the field type (Name). this parameter is case-sensitive.
+<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the parameter name for value extraction, such as Accept-Language. you can enter 1-100 characters. the name must start with a letter, contain letters, digits, or hyphens (-) in the middle, and end with a letter or digit.</li>.
+<li>When the field type is ReqBody, enter the Google RE2 regular expression. the maximum length of the regular expression is 4 KB.</li>.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Enter the definition of the field value based on the field type (Name). This parameter is case-sensitive.
-<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the name of the parameter for which you need to extract the value, such as Accept-Language. You can enter 1-100 characters. The name should start with a letter, contain letters, digits, and hyphens (-) in the middle, and end with a letter or digit.</li>
-<li>When the field type is ReqBody, enter the Google RE2 regular expression. The maximum length of the regular expression is 4 KB.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param Value Enter the definition of the field value based on the field type (Name). This parameter is case-sensitive.
-<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the name of the parameter for which you need to extract the value, such as Accept-Language. You can enter 1-100 characters. The name should start with a letter, contain letters, digits, and hyphens (-) in the middle, and end with a letter or digit.</li>
-<li>When the field type is ReqBody, enter the Google RE2 regular expression. The maximum length of the regular expression is 4 KB.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Enter the field value definition based on the field type (Name). this parameter is case-sensitive.
+<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the parameter name for value extraction, such as Accept-Language. you can enter 1-100 characters. the name must start with a letter, contain letters, digits, or hyphens (-) in the middle, and end with a letter or digit.</li>.
+<li>When the field type is ReqBody, enter the Google RE2 regular expression. the maximum length of the regular expression is 4 KB.</li>.
+     * @param Value Enter the field value definition based on the field type (Name). this parameter is case-sensitive.
+<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the parameter name for value extraction, such as Accept-Language. you can enter 1-100 characters. the name must start with a letter, contain letters, digits, or hyphens (-) in the middle, and end with a letter or digit.</li>.
+<li>When the field type is ReqBody, enter the Google RE2 regular expression. the maximum length of the regular expression is 4 KB.</li>.
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get Indicates whether to deliver this field. If not filled in, this field will not be delivered.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Enabled Indicates whether to deliver this field. If not filled in, this field will not be delivered.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to deliver this field. leave blank to skip delivery. 
+     * @return Enabled Whether to deliver this field. leave blank to skip delivery.
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Indicates whether to deliver this field. If not filled in, this field will not be delivered.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Enabled Indicates whether to deliver this field. If not filled in, this field will not be delivered.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to deliver this field. leave blank to skip delivery.
+     * @param Enabled Whether to deliver this field. leave blank to skip delivery.
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;

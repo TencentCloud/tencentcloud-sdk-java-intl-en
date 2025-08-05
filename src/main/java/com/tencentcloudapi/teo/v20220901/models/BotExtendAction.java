@@ -38,8 +38,7 @@ public class BotExtendAction extends AbstractModel {
     private String Action;
 
     /**
-    * The probability for triggering the action. Value range: 0-100.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * The probability for triggering the action. value range: 0-100.
     */
     @SerializedName("Percent")
     @Expose
@@ -90,20 +89,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get The probability for triggering the action. Value range: 0-100.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Percent The probability for triggering the action. Value range: 0-100.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get The probability for triggering the action. value range: 0-100. 
+     * @return Percent The probability for triggering the action. value range: 0-100.
      */
     public Long getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set The probability for triggering the action. Value range: 0-100.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Percent The probability for triggering the action. Value range: 0-100.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set The probability for triggering the action. value range: 0-100.
+     * @param Percent The probability for triggering the action. value range: 0-100.
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;

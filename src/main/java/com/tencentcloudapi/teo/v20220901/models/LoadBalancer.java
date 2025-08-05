@@ -88,7 +88,7 @@ public class LoadBalancer extends AbstractModel {
     private String Status;
 
     /**
-    * List of Layer-4 proxy instances bound to a LoadBalancer.
+    * Specifies the list of l4 proxy instances bound to the load balancing instance.
     */
     @SerializedName("L4UsedList")
     @Expose
@@ -262,16 +262,16 @@ public class LoadBalancer extends AbstractModel {
     }
 
     /**
-     * Get List of Layer-4 proxy instances bound to a LoadBalancer. 
-     * @return L4UsedList List of Layer-4 proxy instances bound to a LoadBalancer.
+     * Get Specifies the list of l4 proxy instances bound to the load balancing instance. 
+     * @return L4UsedList Specifies the list of l4 proxy instances bound to the load balancing instance.
      */
     public String [] getL4UsedList() {
         return this.L4UsedList;
     }
 
     /**
-     * Set List of Layer-4 proxy instances bound to a LoadBalancer.
-     * @param L4UsedList List of Layer-4 proxy instances bound to a LoadBalancer.
+     * Set Specifies the list of l4 proxy instances bound to the load balancing instance.
+     * @param L4UsedList Specifies the list of l4 proxy instances bound to the load balancing instance.
      */
     public void setL4UsedList(String [] L4UsedList) {
         this.L4UsedList = L4UsedList;

@@ -82,8 +82,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Status;
 
     /**
-    * The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the rule name.
     */
     @SerializedName("RuleName")
     @Expose
@@ -257,20 +256,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The rule name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RuleName The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the rule name. 
+     * @return RuleName Specifies the rule name.
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RuleName The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the rule name.
+     * @param RuleName Specifies the rule name.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;

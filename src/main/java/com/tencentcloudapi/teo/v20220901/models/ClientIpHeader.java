@@ -33,8 +33,7 @@ public class ClientIpHeader extends AbstractModel {
     private String Switch;
 
     /**
-    * Name of the request header containing the client IP address for origin-pull. When Switch is on, this parameter is required. X-Forwarded-For is not allowed for this parameter.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Specifies the request header name containing the client IP For origin-pull. this parameter is required when Switch is on. X-Forwarded-For is not allowed For this parameter.
     */
     @SerializedName("HeaderName")
     @Expose
@@ -65,20 +64,16 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get Name of the request header containing the client IP address for origin-pull. When Switch is on, this parameter is required. X-Forwarded-For is not allowed for this parameter.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return HeaderName Name of the request header containing the client IP address for origin-pull. When Switch is on, this parameter is required. X-Forwarded-For is not allowed for this parameter.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Specifies the request header name containing the client IP For origin-pull. this parameter is required when Switch is on. X-Forwarded-For is not allowed For this parameter. 
+     * @return HeaderName Specifies the request header name containing the client IP For origin-pull. this parameter is required when Switch is on. X-Forwarded-For is not allowed For this parameter.
      */
     public String getHeaderName() {
         return this.HeaderName;
     }
 
     /**
-     * Set Name of the request header containing the client IP address for origin-pull. When Switch is on, this parameter is required. X-Forwarded-For is not allowed for this parameter.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param HeaderName Name of the request header containing the client IP address for origin-pull. When Switch is on, this parameter is required. X-Forwarded-For is not allowed for this parameter.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Specifies the request header name containing the client IP For origin-pull. this parameter is required when Switch is on. X-Forwarded-For is not allowed For this parameter.
+     * @param HeaderName Specifies the request header name containing the client IP For origin-pull. this parameter is required when Switch is on. X-Forwarded-For is not allowed For this parameter.
      */
     public void setHeaderName(String HeaderName) {
         this.HeaderName = HeaderName;

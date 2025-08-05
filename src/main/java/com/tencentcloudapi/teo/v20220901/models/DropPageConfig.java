@@ -33,16 +33,14 @@ public class DropPageConfig extends AbstractModel {
     private String Switch;
 
     /**
-    * The settings of the block page that applies managed rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
     */
     @SerializedName("WafDropPageDetail")
     @Expose
     private DropPageDetail WafDropPageDetail;
 
     /**
-    * The settings of the block page that applies custom rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Interception page configuration for custom pages. if null, use the last set configuration by default.
     */
     @SerializedName("AclDropPageDetail")
     @Expose
@@ -73,40 +71,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The settings of the block page that applies managed rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WafDropPageDetail The settings of the block page that applies managed rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default. 
+     * @return WafDropPageDetail Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
      */
     public DropPageDetail getWafDropPageDetail() {
         return this.WafDropPageDetail;
     }
 
     /**
-     * Set The settings of the block page that applies managed rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WafDropPageDetail The settings of the block page that applies managed rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
+     * @param WafDropPageDetail Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
      */
     public void setWafDropPageDetail(DropPageDetail WafDropPageDetail) {
         this.WafDropPageDetail = WafDropPageDetail;
     }
 
     /**
-     * Get The settings of the block page that applies custom rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AclDropPageDetail The settings of the block page that applies custom rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Interception page configuration for custom pages. if null, use the last set configuration by default. 
+     * @return AclDropPageDetail Interception page configuration for custom pages. if null, use the last set configuration by default.
      */
     public DropPageDetail getAclDropPageDetail() {
         return this.AclDropPageDetail;
     }
 
     /**
-     * Set The settings of the block page that applies custom rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AclDropPageDetail The settings of the block page that applies custom rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Interception page configuration for custom pages. if null, use the last set configuration by default.
+     * @param AclDropPageDetail Interception page configuration for custom pages. if null, use the last set configuration by default.
      */
     public void setAclDropPageDetail(DropPageDetail AclDropPageDetail) {
         this.AclDropPageDetail = AclDropPageDetail;

@@ -33,34 +33,30 @@ public class SlowPostConfig extends AbstractModel {
     private String Switch;
 
     /**
-    * Detect slow attacks by the transfer period of the first 8 KB of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * First packet configuration.
     */
     @SerializedName("FirstPartConfig")
     @Expose
     private FirstPartConfig FirstPartConfig;
 
     /**
-    * Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Specifies the basic configuration.
     */
     @SerializedName("SlowRateConfig")
     @Expose
     private SlowRateConfig SlowRateConfig;
 
     /**
-    * The action to taken when a slow attack is detected. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block the request</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Handling action for slow attack. valid values:.
+<li>`monitor`: observe</li>.
+<li>`drop`: block the request.</li>.
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * ID of the rule
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Specifies the Id of this rule.
     */
     @SerializedName("RuleId")
     @Expose
@@ -91,88 +87,72 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Detect slow attacks by the transfer period of the first 8 KB of requests
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return FirstPartConfig Detect slow attacks by the transfer period of the first 8 KB of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get First packet configuration. 
+     * @return FirstPartConfig First packet configuration.
      */
     public FirstPartConfig getFirstPartConfig() {
         return this.FirstPartConfig;
     }
 
     /**
-     * Set Detect slow attacks by the transfer period of the first 8 KB of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param FirstPartConfig Detect slow attacks by the transfer period of the first 8 KB of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set First packet configuration.
+     * @param FirstPartConfig First packet configuration.
      */
     public void setFirstPartConfig(FirstPartConfig FirstPartConfig) {
         this.FirstPartConfig = FirstPartConfig;
     }
 
     /**
-     * Get Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return SlowRateConfig Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Specifies the basic configuration. 
+     * @return SlowRateConfig Specifies the basic configuration.
      */
     public SlowRateConfig getSlowRateConfig() {
         return this.SlowRateConfig;
     }
 
     /**
-     * Set Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param SlowRateConfig Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Specifies the basic configuration.
+     * @param SlowRateConfig Specifies the basic configuration.
      */
     public void setSlowRateConfig(SlowRateConfig SlowRateConfig) {
         this.SlowRateConfig = SlowRateConfig;
     }
 
     /**
-     * Get The action to taken when a slow attack is detected. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block the request</li>
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Action The action to taken when a slow attack is detected. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block the request</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Handling action for slow attack. valid values:.
+<li>`monitor`: observe</li>.
+<li>`drop`: block the request.</li>. 
+     * @return Action Handling action for slow attack. valid values:.
+<li>`monitor`: observe</li>.
+<li>`drop`: block the request.</li>.
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set The action to taken when a slow attack is detected. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block the request</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Action The action to taken when a slow attack is detected. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block the request</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Handling action for slow attack. valid values:.
+<li>`monitor`: observe</li>.
+<li>`drop`: block the request.</li>.
+     * @param Action Handling action for slow attack. valid values:.
+<li>`monitor`: observe</li>.
+<li>`drop`: block the request.</li>.
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get ID of the rule
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return RuleId ID of the rule
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Specifies the Id of this rule. 
+     * @return RuleId Specifies the Id of this rule.
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set ID of the rule
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param RuleId ID of the rule
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Specifies the Id of this rule.
+     * @param RuleId Specifies the Id of this rule.
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;

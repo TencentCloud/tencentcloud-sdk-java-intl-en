@@ -60,8 +60,7 @@ public class SkipCondition extends AbstractModel {
     private String MatchFromType;
 
     /**
-    * The value that matches the key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Match the Key value.
     */
     @SerializedName("MatchFrom")
     @Expose
@@ -77,8 +76,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String MatchContentType;
 
     /**
-    * The value that matches the content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Match the Value.
     */
     @SerializedName("MatchContent")
     @Expose
@@ -193,20 +191,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get The value that matches the key.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return MatchFrom The value that matches the key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Match the Key value. 
+     * @return MatchFrom Match the Key value.
      */
     public String [] getMatchFrom() {
         return this.MatchFrom;
     }
 
     /**
-     * Set The value that matches the key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param MatchFrom The value that matches the key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Match the Key value.
+     * @param MatchFrom Match the Key value.
      */
     public void setMatchFrom(String [] MatchFrom) {
         this.MatchFrom = MatchFrom;
@@ -237,20 +231,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get The value that matches the content.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return MatchContent The value that matches the content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Match the Value. 
+     * @return MatchContent Match the Value.
      */
     public String [] getMatchContent() {
         return this.MatchContent;
     }
 
     /**
-     * Set The value that matches the content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param MatchContent The value that matches the content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Match the Value.
+     * @param MatchContent Match the Value.
      */
     public void setMatchContent(String [] MatchContent) {
         this.MatchContent = MatchContent;

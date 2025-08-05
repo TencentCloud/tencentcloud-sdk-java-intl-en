@@ -52,6 +52,14 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     private String TranslateSubtitlePath;
 
     /**
+    * Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SubtitlePos")
+    @Expose
+    private SubtitlePosition SubtitlePos;
+
+    /**
      * Get Path of a file after removal. 
      * @return Path Path of a file after removal.
      */
@@ -115,6 +123,26 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
         this.TranslateSubtitlePath = TranslateSubtitlePath;
     }
 
+    /**
+     * Get Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SubtitlePos Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public SubtitlePosition getSubtitlePos() {
+        return this.SubtitlePos;
+    }
+
+    /**
+     * Set Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SubtitlePos Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setSubtitlePos(SubtitlePosition SubtitlePos) {
+        this.SubtitlePos = SubtitlePos;
+    }
+
     public AiAnalysisTaskDelLogoOutput() {
     }
 
@@ -135,6 +163,9 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
         if (source.TranslateSubtitlePath != null) {
             this.TranslateSubtitlePath = new String(source.TranslateSubtitlePath);
         }
+        if (source.SubtitlePos != null) {
+            this.SubtitlePos = new SubtitlePosition(source.SubtitlePos);
+        }
     }
 
 
@@ -146,6 +177,7 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OriginSubtitlePath", this.OriginSubtitlePath);
         this.setParamSimple(map, prefix + "TranslateSubtitlePath", this.TranslateSubtitlePath);
+        this.setParamObj(map, prefix + "SubtitlePos.", this.SubtitlePos);
 
     }
 }

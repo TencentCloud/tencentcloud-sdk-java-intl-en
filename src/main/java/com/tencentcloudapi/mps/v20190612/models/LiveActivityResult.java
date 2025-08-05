@@ -25,9 +25,8 @@ public class LiveActivityResult extends AbstractModel {
 
     /**
     * Atomic task type.
-<li>LiveRecord: live recording.</li>
-<li>AiQualityControl: media quality inspection.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>LiveRecord: live recording</li>
+<li>AiQualityControl: media quality inspection</li>
     */
     @SerializedName("ActivityType")
     @Expose
@@ -43,13 +42,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Atomic task type.
-<li>LiveRecord: live recording.</li>
-<li>AiQualityControl: media quality inspection.</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
+<li>LiveRecord: live recording</li>
+<li>AiQualityControl: media quality inspection</li> 
      * @return ActivityType Atomic task type.
-<li>LiveRecord: live recording.</li>
-<li>AiQualityControl: media quality inspection.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>LiveRecord: live recording</li>
+<li>AiQualityControl: media quality inspection</li>
      */
     public String getActivityType() {
         return this.ActivityType;
@@ -57,13 +54,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Atomic task type.
-<li>LiveRecord: live recording.</li>
-<li>AiQualityControl: media quality inspection.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>LiveRecord: live recording</li>
+<li>AiQualityControl: media quality inspection</li>
      * @param ActivityType Atomic task type.
-<li>LiveRecord: live recording.</li>
-<li>AiQualityControl: media quality inspection.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>LiveRecord: live recording</li>
+<li>AiQualityControl: media quality inspection</li>
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;

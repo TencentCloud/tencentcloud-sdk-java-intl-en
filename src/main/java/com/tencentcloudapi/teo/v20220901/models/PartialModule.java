@@ -24,56 +24,61 @@ import java.util.HashMap;
 public class PartialModule extends AbstractModel {
 
     /**
-    * The module. Values:
-<li>`waf`: Managed rules</li>
+    * Module name. value is.
+<li>managed-rule: managed rule Id;</li>.
+<Li>Managed-Group: managed rule group;</li>.
+<li>`waf`: to be deprecated, managed rule.</li>.
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * List of managed rule IDs to be skipped.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Specifies the list of rule ids that require exceptions under the module.
     */
     @SerializedName("Include")
     @Expose
     private Long [] Include;
 
     /**
-     * Get The module. Values:
-<li>`waf`: Managed rules</li> 
-     * @return Module The module. Values:
-<li>`waf`: Managed rules</li>
+     * Get Module name. value is.
+<li>managed-rule: managed rule Id;</li>.
+<Li>Managed-Group: managed rule group;</li>.
+<li>`waf`: to be deprecated, managed rule.</li>. 
+     * @return Module Module name. value is.
+<li>managed-rule: managed rule Id;</li>.
+<Li>Managed-Group: managed rule group;</li>.
+<li>`waf`: to be deprecated, managed rule.</li>.
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set The module. Values:
-<li>`waf`: Managed rules</li>
-     * @param Module The module. Values:
-<li>`waf`: Managed rules</li>
+     * Set Module name. value is.
+<li>managed-rule: managed rule Id;</li>.
+<Li>Managed-Group: managed rule group;</li>.
+<li>`waf`: to be deprecated, managed rule.</li>.
+     * @param Module Module name. value is.
+<li>managed-rule: managed rule Id;</li>.
+<Li>Managed-Group: managed rule group;</li>.
+<li>`waf`: to be deprecated, managed rule.</li>.
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get List of managed rule IDs to be skipped.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Include List of managed rule IDs to be skipped.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Specifies the list of rule ids that require exceptions under the module. 
+     * @return Include Specifies the list of rule ids that require exceptions under the module.
      */
     public Long [] getInclude() {
         return this.Include;
     }
 
     /**
-     * Set List of managed rule IDs to be skipped.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Include List of managed rule IDs to be skipped.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Specifies the list of rule ids that require exceptions under the module.
+     * @param Include Specifies the list of rule ids that require exceptions under the module.
      */
     public void setInclude(Long [] Include) {
         this.Include = Include;

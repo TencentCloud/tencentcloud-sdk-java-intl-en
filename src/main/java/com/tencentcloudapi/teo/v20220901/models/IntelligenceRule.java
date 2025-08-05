@@ -24,66 +24,61 @@ import java.util.HashMap;
 public class IntelligenceRule extends AbstractModel {
 
     /**
-    * Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Items in a bot intelligence rule
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the rule detail.
     */
     @SerializedName("IntelligenceRuleItems")
     @Expose
     private IntelligenceRuleItem [] IntelligenceRuleItems;
 
     /**
-     * Get Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li> 
+     * @return Switch Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+     * @param Switch Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Items in a bot intelligence rule
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IntelligenceRuleItems Items in a bot intelligence rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the rule detail. 
+     * @return IntelligenceRuleItems Specifies the rule detail.
      */
     public IntelligenceRuleItem [] getIntelligenceRuleItems() {
         return this.IntelligenceRuleItems;
     }
 
     /**
-     * Set Items in a bot intelligence rule
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IntelligenceRuleItems Items in a bot intelligence rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the rule detail.
+     * @param IntelligenceRuleItems Specifies the rule detail.
      */
     public void setIntelligenceRuleItems(IntelligenceRuleItem [] IntelligenceRuleItems) {
         this.IntelligenceRuleItems = IntelligenceRuleItems;

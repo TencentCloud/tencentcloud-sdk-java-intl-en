@@ -31,8 +31,7 @@ public class DescribeQualityControlTemplatesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Media quality inspection template details list.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of media quality inspection templates.
     */
     @SerializedName("QualityControlTemplateSet")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Media quality inspection template details list.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QualityControlTemplateSet Media quality inspection template details list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of media quality inspection templates. 
+     * @return QualityControlTemplateSet List of media quality inspection templates.
      */
     public QualityControlTemplate [] getQualityControlTemplateSet() {
         return this.QualityControlTemplateSet;
     }
 
     /**
-     * Set Media quality inspection template details list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QualityControlTemplateSet Media quality inspection template details list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of media quality inspection templates.
+     * @param QualityControlTemplateSet List of media quality inspection templates.
      */
     public void setQualityControlTemplateSet(QualityControlTemplate [] QualityControlTemplateSet) {
         this.QualityControlTemplateSet = QualityControlTemplateSet;

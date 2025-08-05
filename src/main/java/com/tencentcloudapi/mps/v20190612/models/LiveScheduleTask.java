@@ -24,42 +24,37 @@ import java.util.HashMap;
 public class LiveScheduleTask extends AbstractModel {
 
     /**
-    * The ID of a live scheme subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Live orchestration task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * The task status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH` </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task stream status. Valid values:
+<li>PROCESSING: processing</li>
+<li>FINISH: completed</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * The URL of the live stream.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Live stream URL.
     */
     @SerializedName("Url")
     @Expose
@@ -74,108 +69,88 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private LiveActivityResult [] LiveActivityResultSet;
 
     /**
-     * Get The ID of a live scheme subtask.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskId The ID of a live scheme subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Live orchestration task ID. 
+     * @return TaskId Live orchestration task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The ID of a live scheme subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskId The ID of a live scheme subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Live orchestration task ID.
+     * @param TaskId Live orchestration task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get The task status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH` </li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status The task status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH` </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task stream status. Valid values:
+<li>PROCESSING: processing</li>
+<li>FINISH: completed</li> 
+     * @return Status Task stream status. Valid values:
+<li>PROCESSING: processing</li>
+<li>FINISH: completed</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The task status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH` </li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status The task status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH` </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task stream status. Valid values:
+<li>PROCESSING: processing</li>
+<li>FINISH: completed</li>
+     * @param Status Task stream status. Valid values:
+<li>PROCESSING: processing</li>
+<li>FINISH: completed</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ErrCode If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned. 
+     * @return ErrCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ErrCode If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+     * @param ErrCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task. 
+     * @return Message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+     * @param Message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get The URL of the live stream.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Url The URL of the live stream.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Live stream URL. 
+     * @return Url Live stream URL.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set The URL of the live stream.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Url The URL of the live stream.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Live stream URL.
+     * @param Url Live stream URL.
      */
     public void setUrl(String Url) {
         this.Url = Url;

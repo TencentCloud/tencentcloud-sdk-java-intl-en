@@ -47,8 +47,7 @@ public class BotConfig extends AbstractModel {
     private BotPortraitRule BotPortraitRule;
 
     /**
-    * The bot intelligence settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Bot intelligent analysis. if null, use the last set configuration by default.
     */
     @SerializedName("IntelligenceRule")
     @Expose
@@ -69,8 +68,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AlgDetectRule [] AlgDetectRule;
 
     /**
-    * Settings of the bot managed rule. It is only used for output.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Bot managed custom policy. optional input. output usage only.
     */
     @SerializedName("Customizes")
     @Expose
@@ -133,20 +131,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get The bot intelligence settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IntelligenceRule The bot intelligence settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Bot intelligent analysis. if null, use the last set configuration by default. 
+     * @return IntelligenceRule Bot intelligent analysis. if null, use the last set configuration by default.
      */
     public IntelligenceRule getIntelligenceRule() {
         return this.IntelligenceRule;
     }
 
     /**
-     * Set The bot intelligence settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IntelligenceRule The bot intelligence settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Bot intelligent analysis. if null, use the last set configuration by default.
+     * @param IntelligenceRule Bot intelligent analysis. if null, use the last set configuration by default.
      */
     public void setIntelligenceRule(IntelligenceRule IntelligenceRule) {
         this.IntelligenceRule = IntelligenceRule;
@@ -185,20 +179,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Settings of the bot managed rule. It is only used for output.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Customizes Settings of the bot managed rule. It is only used for output.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Bot managed custom policy. optional input. output usage only. 
+     * @return Customizes Bot managed custom policy. optional input. output usage only.
      */
     public BotUserRule [] getCustomizes() {
         return this.Customizes;
     }
 
     /**
-     * Set Settings of the bot managed rule. It is only used for output.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Customizes Settings of the bot managed rule. It is only used for output.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Bot managed custom policy. optional input. output usage only.
+     * @param Customizes Bot managed custom policy. optional input. output usage only.
      */
     public void setCustomizes(BotUserRule [] Customizes) {
         this.Customizes = Customizes;

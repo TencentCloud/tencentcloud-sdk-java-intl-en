@@ -39,10 +39,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Cname;
 
     /**
-    * The CNAME status. Values:
-<li>`active`: Activated</li>
-<li>`moved`: Not activated </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CNAME status. valid values:.
+<li>`active`: activated</li>.
+<li>`moved`: not effective;</li>.
     */
     @SerializedName("Status")
     @Expose
@@ -85,28 +84,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The CNAME status. Values:
-<li>`active`: Activated</li>
-<li>`moved`: Not activated </li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status The CNAME status. Values:
-<li>`active`: Activated</li>
-<li>`moved`: Not activated </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CNAME status. valid values:.
+<li>`active`: activated</li>.
+<li>`moved`: not effective;</li>. 
+     * @return Status CNAME status. valid values:.
+<li>`active`: activated</li>.
+<li>`moved`: not effective;</li>.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The CNAME status. Values:
-<li>`active`: Activated</li>
-<li>`moved`: Not activated </li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status The CNAME status. Values:
-<li>`active`: Activated</li>
-<li>`moved`: Not activated </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CNAME status. valid values:.
+<li>`active`: activated</li>.
+<li>`moved`: not effective;</li>.
+     * @param Status CNAME status. valid values:.
+<li>`active`: activated</li>.
+<li>`moved`: not effective;</li>.
      */
     public void setStatus(String Status) {
         this.Status = Status;

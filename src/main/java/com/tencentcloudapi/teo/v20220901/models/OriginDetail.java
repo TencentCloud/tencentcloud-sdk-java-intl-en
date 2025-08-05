@@ -89,7 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private PrivateParameter [] PrivateParameters;
 
     /**
-    * current configured origin HOST header.
+    * Specifies the current configuration of the origin-pull HOST header.
     */
     @SerializedName("HostHeader")
     @Expose
@@ -308,16 +308,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get current configured origin HOST header. 
-     * @return HostHeader current configured origin HOST header.
+     * Get Specifies the current configuration of the origin-pull HOST header. 
+     * @return HostHeader Specifies the current configuration of the origin-pull HOST header.
      */
     public String getHostHeader() {
         return this.HostHeader;
     }
 
     /**
-     * Set current configured origin HOST header.
-     * @param HostHeader current configured origin HOST header.
+     * Set Specifies the current configuration of the origin-pull HOST header.
+     * @param HostHeader Specifies the current configuration of the origin-pull HOST header.
      */
     public void setHostHeader(String HostHeader) {
         this.HostHeader = HostHeader;

@@ -45,14 +45,14 @@ If you want to quickly submit targets urls under different sites, you can set it
     private String Type;
 
     /**
-    * Node cache purge method, valid for directory, hostname, and all cache refreshes. Valid values: <li>invalidate: Refreshes only resources that were updated under the directory; </li><li>delete: Refreshes all node resources, regardless of whether they were updated. </li>Default value: invalidate.
+    * Node cache clearing method is valid for directory refresh, Hostname refresh, and refresh all cache types. valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li> <li> delete: refresh node resources regardless of whether resources under the directory are updated.</li> default value: invalidate.
     */
     @SerializedName("Method")
     @Expose
     private String Method;
 
     /**
-    * List of resources for which cache is to be purged. Each element format depends on the cache purge type and you can refer to the API examples for details. <li>The number of tasks that can be submitted at a time is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>
+    * The list of resources to purge cache, such as https://www.example.com/example.jpg, must carry protocol information. the format for multi-elements depends on the type of cache purging. refer to the following API call example.  <li>the number of tasks that can be submitted at a time is limited by the billing package quota. check [EO billing package](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>.
     */
     @SerializedName("Targets")
     @Expose
@@ -134,32 +134,32 @@ If you want to quickly submit targets urls under different sites, you can set it
     }
 
     /**
-     * Get Node cache purge method, valid for directory, hostname, and all cache refreshes. Valid values: <li>invalidate: Refreshes only resources that were updated under the directory; </li><li>delete: Refreshes all node resources, regardless of whether they were updated. </li>Default value: invalidate. 
-     * @return Method Node cache purge method, valid for directory, hostname, and all cache refreshes. Valid values: <li>invalidate: Refreshes only resources that were updated under the directory; </li><li>delete: Refreshes all node resources, regardless of whether they were updated. </li>Default value: invalidate.
+     * Get Node cache clearing method is valid for directory refresh, Hostname refresh, and refresh all cache types. valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li> <li> delete: refresh node resources regardless of whether resources under the directory are updated.</li> default value: invalidate. 
+     * @return Method Node cache clearing method is valid for directory refresh, Hostname refresh, and refresh all cache types. valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li> <li> delete: refresh node resources regardless of whether resources under the directory are updated.</li> default value: invalidate.
      */
     public String getMethod() {
         return this.Method;
     }
 
     /**
-     * Set Node cache purge method, valid for directory, hostname, and all cache refreshes. Valid values: <li>invalidate: Refreshes only resources that were updated under the directory; </li><li>delete: Refreshes all node resources, regardless of whether they were updated. </li>Default value: invalidate.
-     * @param Method Node cache purge method, valid for directory, hostname, and all cache refreshes. Valid values: <li>invalidate: Refreshes only resources that were updated under the directory; </li><li>delete: Refreshes all node resources, regardless of whether they were updated. </li>Default value: invalidate.
+     * Set Node cache clearing method is valid for directory refresh, Hostname refresh, and refresh all cache types. valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li> <li> delete: refresh node resources regardless of whether resources under the directory are updated.</li> default value: invalidate.
+     * @param Method Node cache clearing method is valid for directory refresh, Hostname refresh, and refresh all cache types. valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li> <li> delete: refresh node resources regardless of whether resources under the directory are updated.</li> default value: invalidate.
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get List of resources for which cache is to be purged. Each element format depends on the cache purge type and you can refer to the API examples for details. <li>The number of tasks that can be submitted at a time is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li> 
-     * @return Targets List of resources for which cache is to be purged. Each element format depends on the cache purge type and you can refer to the API examples for details. <li>The number of tasks that can be submitted at a time is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>
+     * Get The list of resources to purge cache, such as https://www.example.com/example.jpg, must carry protocol information. the format for multi-elements depends on the type of cache purging. refer to the following API call example.  <li>the number of tasks that can be submitted at a time is limited by the billing package quota. check [EO billing package](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>. 
+     * @return Targets The list of resources to purge cache, such as https://www.example.com/example.jpg, must carry protocol information. the format for multi-elements depends on the type of cache purging. refer to the following API call example.  <li>the number of tasks that can be submitted at a time is limited by the billing package quota. check [EO billing package](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>.
      */
     public String [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set List of resources for which cache is to be purged. Each element format depends on the cache purge type and you can refer to the API examples for details. <li>The number of tasks that can be submitted at a time is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>
-     * @param Targets List of resources for which cache is to be purged. Each element format depends on the cache purge type and you can refer to the API examples for details. <li>The number of tasks that can be submitted at a time is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>
+     * Set The list of resources to purge cache, such as https://www.example.com/example.jpg, must carry protocol information. the format for multi-elements depends on the type of cache purging. refer to the following API call example.  <li>the number of tasks that can be submitted at a time is limited by the billing package quota. check [EO billing package](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>.
+     * @param Targets The list of resources to purge cache, such as https://www.example.com/example.jpg, must carry protocol information. the format for multi-elements depends on the type of cache purging. refer to the following API call example.  <li>the number of tasks that can be submitted at a time is limited by the billing package quota. check [EO billing package](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>.
      */
     public void setTargets(String [] Targets) {
         this.Targets = Targets;

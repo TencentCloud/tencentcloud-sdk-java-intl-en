@@ -31,8 +31,7 @@ public class Identification extends AbstractModel {
     private String ZoneName;
 
     /**
-    * The subdomain name to be verified. To verify the ownership of a site, leave it blank.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * The subdomain name to be verified. to verify the ownership of a site, leave it blank.
     */
     @SerializedName("Domain")
     @Expose
@@ -55,8 +54,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private AscriptionInfo Ascription;
 
     /**
-    * The NS record of the domain name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the current NS record of the domain name.
     */
     @SerializedName("OriginalNameServers")
     @Expose
@@ -86,20 +84,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The subdomain name to be verified. To verify the ownership of a site, leave it blank.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Domain The subdomain name to be verified. To verify the ownership of a site, leave it blank.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get The subdomain name to be verified. to verify the ownership of a site, leave it blank. 
+     * @return Domain The subdomain name to be verified. to verify the ownership of a site, leave it blank.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set The subdomain name to be verified. To verify the ownership of a site, leave it blank.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Domain The subdomain name to be verified. To verify the ownership of a site, leave it blank.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set The subdomain name to be verified. to verify the ownership of a site, leave it blank.
+     * @param Domain The subdomain name to be verified. to verify the ownership of a site, leave it blank.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
@@ -146,20 +140,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get The NS record of the domain name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginalNameServers The NS record of the domain name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the current NS record of the domain name. 
+     * @return OriginalNameServers Specifies the current NS record of the domain name.
      */
     public String [] getOriginalNameServers() {
         return this.OriginalNameServers;
     }
 
     /**
-     * Set The NS record of the domain name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginalNameServers The NS record of the domain name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the current NS record of the domain name.
+     * @param OriginalNameServers Specifies the current NS record of the domain name.
      */
     public void setOriginalNameServers(String [] OriginalNameServers) {
         this.OriginalNameServers = OriginalNameServers;

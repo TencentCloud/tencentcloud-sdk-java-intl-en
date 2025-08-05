@@ -38,6 +38,13 @@ public class MediaAiAnalysisTagItem extends AbstractModel {
     private Float Confidence;
 
     /**
+    * Varies based on different types.
+    */
+    @SerializedName("SpecialInfo")
+    @Expose
+    private String SpecialInfo;
+
+    /**
      * Get Tag name. 
      * @return Tag Tag name.
      */
@@ -69,6 +76,22 @@ public class MediaAiAnalysisTagItem extends AbstractModel {
         this.Confidence = Confidence;
     }
 
+    /**
+     * Get Varies based on different types. 
+     * @return SpecialInfo Varies based on different types.
+     */
+    public String getSpecialInfo() {
+        return this.SpecialInfo;
+    }
+
+    /**
+     * Set Varies based on different types.
+     * @param SpecialInfo Varies based on different types.
+     */
+    public void setSpecialInfo(String SpecialInfo) {
+        this.SpecialInfo = SpecialInfo;
+    }
+
     public MediaAiAnalysisTagItem() {
     }
 
@@ -83,6 +106,9 @@ public class MediaAiAnalysisTagItem extends AbstractModel {
         if (source.Confidence != null) {
             this.Confidence = new Float(source.Confidence);
         }
+        if (source.SpecialInfo != null) {
+            this.SpecialInfo = new String(source.SpecialInfo);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class MediaAiAnalysisTagItem extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Tag", this.Tag);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
+        this.setParamSimple(map, prefix + "SpecialInfo", this.SpecialInfo);
 
     }
 }

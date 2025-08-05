@@ -45,6 +45,20 @@ public class DescribeTasksRequest extends AbstractModel {
     private String ScrollToken;
 
     /**
+    * Query task start time.
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * Query task end time.
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
      * Get Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed). 
      * @return Status Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
      */
@@ -92,6 +106,38 @@ public class DescribeTasksRequest extends AbstractModel {
         this.ScrollToken = ScrollToken;
     }
 
+    /**
+     * Get Query task start time. 
+     * @return StartTime Query task start time.
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set Query task start time.
+     * @param StartTime Query task start time.
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get Query task end time. 
+     * @return EndTime Query task end time.
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set Query task end time.
+     * @param EndTime Query task end time.
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
     public DescribeTasksRequest() {
     }
 
@@ -109,6 +155,12 @@ public class DescribeTasksRequest extends AbstractModel {
         if (source.ScrollToken != null) {
             this.ScrollToken = new String(source.ScrollToken);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class DescribeTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

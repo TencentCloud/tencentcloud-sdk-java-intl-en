@@ -86,6 +86,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String UpdateTime;
 
     /**
+    * Spot check policy for media quality inspection.
+    */
+    @SerializedName("Strategy")
+    @Expose
+    private QualityControlStrategy Strategy;
+
+    /**
      * Get Unique identifier of a media quality inspection template. 
      * @return Definition Unique identifier of a media quality inspection template.
      */
@@ -249,6 +256,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get Spot check policy for media quality inspection. 
+     * @return Strategy Spot check policy for media quality inspection.
+     */
+    public QualityControlStrategy getStrategy() {
+        return this.Strategy;
+    }
+
+    /**
+     * Set Spot check policy for media quality inspection.
+     * @param Strategy Spot check policy for media quality inspection.
+     */
+    public void setStrategy(QualityControlStrategy Strategy) {
+        this.Strategy = Strategy;
+    }
+
     public QualityControlTemplate() {
     }
 
@@ -281,6 +304,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Strategy != null) {
+            this.Strategy = new QualityControlStrategy(source.Strategy);
+        }
     }
 
 
@@ -295,6 +321,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "QualityControlItemSet.", this.QualityControlItemSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamObj(map, prefix + "Strategy.", this.Strategy);
 
     }
 }

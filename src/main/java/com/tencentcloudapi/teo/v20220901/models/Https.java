@@ -24,32 +24,31 @@ import java.util.HashMap;
 public class Https extends AbstractModel {
 
     /**
-    * Whether to enable HTTP2. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * http2 configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
     */
     @SerializedName("Http2")
     @Expose
     private String Http2;
 
     /**
-    * Whether to enable OCSP. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * OCSP configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
     */
     @SerializedName("OcspStapling")
     @Expose
     private String OcspStapling;
 
     /**
-    * TLS version. Valid values: 
-<li>`TLSv1`: TLSv1 version;</li>
-<li>`TLSV1.1`: TLSv1.1 version;</li>
-<li>`TLSV1.2`: TLSv1.2 version;</li>
-<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Tls version settings, valid values:.
+<Li>`TLSv1`: tlsv1 version;</li>.
+<li>`TLSV1.1`: TLSV1.1 version;</li>.
+<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
     */
     @SerializedName("TlsVersion")
     @Expose
@@ -72,113 +71,107 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ServerCertInfo [] CertInfo;
 
     /**
-    * Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Application type. valid values:.
+<li>`apply`: managed by EdgeOne.</li>.
+<li>`none`: not managed by EdgeOne.</li>if it is left empty, the default value `none` is used.
     */
     @SerializedName("ApplyType")
     @Expose
     private String ApplyType;
 
     /**
-    * The cipher suite, with values:
-<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
-<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
-<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * The cipher suite, with valid values:.
+<li>loose-v2023: provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>.
+<li>general-v2023: provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites.</li>.
+<li>strict-v2023: provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>.
     */
     @SerializedName("CipherSuite")
     @Expose
     private String CipherSuite;
 
     /**
-     * Get Whether to enable HTTP2. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Http2 Whether to enable HTTP2. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get http2 configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li> 
+     * @return Http2 http2 configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public String getHttp2() {
         return this.Http2;
     }
 
     /**
-     * Set Whether to enable HTTP2. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Http2 Whether to enable HTTP2. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set http2 configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+     * @param Http2 http2 configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public void setHttp2(String Http2) {
         this.Http2 = Http2;
     }
 
     /**
-     * Get Whether to enable OCSP. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OcspStapling Whether to enable OCSP. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get OCSP configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li> 
+     * @return OcspStapling OCSP configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public String getOcspStapling() {
         return this.OcspStapling;
     }
 
     /**
-     * Set Whether to enable OCSP. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OcspStapling Whether to enable OCSP. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set OCSP configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+     * @param OcspStapling OCSP configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
      */
     public void setOcspStapling(String OcspStapling) {
         this.OcspStapling = OcspStapling;
     }
 
     /**
-     * Get TLS version. Valid values: 
-<li>`TLSv1`: TLSv1 version;</li>
-<li>`TLSV1.1`: TLSv1.1 version;</li>
-<li>`TLSV1.2`: TLSv1.2 version;</li>
-<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return TlsVersion TLS version. Valid values: 
-<li>`TLSv1`: TLSv1 version;</li>
-<li>`TLSV1.1`: TLSv1.1 version;</li>
-<li>`TLSV1.2`: TLSv1.2 version;</li>
-<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Tls version settings, valid values:.
+<Li>`TLSv1`: tlsv1 version;</li>.
+<li>`TLSV1.1`: TLSV1.1 version;</li>.
+<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>. 
+     * @return TlsVersion Tls version settings, valid values:.
+<Li>`TLSv1`: tlsv1 version;</li>.
+<li>`TLSV1.1`: TLSV1.1 version;</li>.
+<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
      */
     public String [] getTlsVersion() {
         return this.TlsVersion;
     }
 
     /**
-     * Set TLS version. Valid values: 
-<li>`TLSv1`: TLSv1 version;</li>
-<li>`TLSV1.1`: TLSv1.1 version;</li>
-<li>`TLSV1.2`: TLSv1.2 version;</li>
-<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param TlsVersion TLS version. Valid values: 
-<li>`TLSv1`: TLSv1 version;</li>
-<li>`TLSV1.1`: TLSv1.1 version;</li>
-<li>`TLSV1.2`: TLSv1.2 version;</li>
-<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Tls version settings, valid values:.
+<Li>`TLSv1`: tlsv1 version;</li>.
+<li>`TLSV1.1`: TLSV1.1 version;</li>.
+<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
+     * @param TlsVersion Tls version settings, valid values:.
+<Li>`TLSv1`: tlsv1 version;</li>.
+<li>`TLSV1.1`: TLSV1.1 version;</li>.
+<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
      */
     public void setTlsVersion(String [] TlsVersion) {
         this.TlsVersion = TlsVersion;
@@ -225,60 +218,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ApplyType Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Application type. valid values:.
+<li>`apply`: managed by EdgeOne.</li>.
+<li>`none`: not managed by EdgeOne.</li>if it is left empty, the default value `none` is used. 
+     * @return ApplyType Application type. valid values:.
+<li>`apply`: managed by EdgeOne.</li>.
+<li>`none`: not managed by EdgeOne.</li>if it is left empty, the default value `none` is used.
      */
     public String getApplyType() {
         return this.ApplyType;
     }
 
     /**
-     * Set Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ApplyType Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Application type. valid values:.
+<li>`apply`: managed by EdgeOne.</li>.
+<li>`none`: not managed by EdgeOne.</li>if it is left empty, the default value `none` is used.
+     * @param ApplyType Application type. valid values:.
+<li>`apply`: managed by EdgeOne.</li>.
+<li>`none`: not managed by EdgeOne.</li>if it is left empty, the default value `none` is used.
      */
     public void setApplyType(String ApplyType) {
         this.ApplyType = ApplyType;
     }
 
     /**
-     * Get The cipher suite, with values:
-<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
-<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
-<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return CipherSuite The cipher suite, with values:
-<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
-<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
-<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get The cipher suite, with valid values:.
+<li>loose-v2023: provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>.
+<li>general-v2023: provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites.</li>.
+<li>strict-v2023: provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>. 
+     * @return CipherSuite The cipher suite, with valid values:.
+<li>loose-v2023: provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>.
+<li>general-v2023: provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites.</li>.
+<li>strict-v2023: provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>.
      */
     public String getCipherSuite() {
         return this.CipherSuite;
     }
 
     /**
-     * Set The cipher suite, with values:
-<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
-<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
-<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param CipherSuite The cipher suite, with values:
-<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
-<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
-<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set The cipher suite, with valid values:.
+<li>loose-v2023: provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>.
+<li>general-v2023: provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites.</li>.
+<li>strict-v2023: provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>.
+     * @param CipherSuite The cipher suite, with valid values:.
+<li>loose-v2023: provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>.
+<li>general-v2023: provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites.</li>.
+<li>strict-v2023: provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>.
      */
     public void setCipherSuite(String CipherSuite) {
         this.CipherSuite = CipherSuite;

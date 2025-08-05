@@ -25,8 +25,8 @@ public class SmartSubtitlesResult extends AbstractModel {
 
     /**
     * Task type. Valid values:
-<Li>AsrFullTextRecognition: full speech recognition</li>
-<Li>TransTextRecognition: speech translation</li>
+<li>AsrFullTextRecognition: full speech recognition</li>
+<li>TransTextRecognition: speech translation</li>
     */
     @SerializedName("Type")
     @Expose
@@ -53,11 +53,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Task type. Valid values:
-<Li>AsrFullTextRecognition: full speech recognition</li>
-<Li>TransTextRecognition: speech translation</li> 
+<li>AsrFullTextRecognition: full speech recognition</li>
+<li>TransTextRecognition: speech translation</li> 
      * @return Type Task type. Valid values:
-<Li>AsrFullTextRecognition: full speech recognition</li>
-<Li>TransTextRecognition: speech translation</li>
+<li>AsrFullTextRecognition: full speech recognition</li>
+<li>TransTextRecognition: speech translation</li>
      */
     public String getType() {
         return this.Type;
@@ -65,11 +65,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Task type. Valid values:
-<Li>AsrFullTextRecognition: full speech recognition</li>
-<Li>TransTextRecognition: speech translation</li>
+<li>AsrFullTextRecognition: full speech recognition</li>
+<li>TransTextRecognition: speech translation</li>
      * @param Type Task type. Valid values:
-<Li>AsrFullTextRecognition: full speech recognition</li>
-<Li>TransTextRecognition: speech translation</li>
+<li>AsrFullTextRecognition: full speech recognition</li>
+<li>TransTextRecognition: speech translation</li>
      */
     public void setType(String Type) {
         this.Type = Type;

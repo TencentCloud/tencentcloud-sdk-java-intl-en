@@ -164,7 +164,7 @@ public class DBInstance extends AbstractModel {
     private Long RenewFlag;
 
     /**
-    * High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
+    * Instance disaster recovery type. 1: dual-server high availability; 2: single-node; 3: cross-AZ; 4: cross-AZ cluster; 5: cluster; 6: multi-node cluster; 7: multi-node cross-AZ cluster.
     */
     @SerializedName("Model")
     @Expose
@@ -248,28 +248,28 @@ public class DBInstance extends AbstractModel {
     private String UniqSubnetId;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance isolation operation.
     */
     @SerializedName("IsolateOperator")
     @Expose
     private String IsolateOperator;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Publishing/Subscription flag. SUB: subscription instance; PUB: publishing instance. If this parameter is left blank, the instance is an ordinary instance that does not involve publishing or subscription.
     */
     @SerializedName("SubFlag")
     @Expose
     private String SubFlag;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Read-only flag. RO: read-only instance; MASTER: primary instance bound to a read-only instance. If this parameter is left blank, the instance is not a read-only instance and is not in any read-only group.
     */
     @SerializedName("ROFlag")
     @Expose
     private String ROFlag;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Disaster recovery type. MIRROR: image; ALWAYSON: Always On; SINGLE: single instance.
     */
     @SerializedName("HAFlag")
     @Expose
@@ -283,14 +283,14 @@ public class DBInstance extends AbstractModel {
     private ResourceTag [] ResourceTags;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Backup mode. master_pkg: backup on the primary node (default value); master_no_pkg: no backup on the primary node; slave_pkg: backup on secondary nodes (valid for Always On clusters); slave_no_pkg: no backup on secondary nodes (valid for Always On clusters). This parameter is invalid for read-only instances.
     */
     @SerializedName("BackupModel")
     @Expose
     private String BackupModel;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance backup information.
     */
     @SerializedName("InstanceNote")
     @Expose
@@ -318,7 +318,8 @@ public class DBInstance extends AbstractModel {
     private Long BackupSaveDays;
 
     /**
-    * Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+    * Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+
     */
     @SerializedName("InstanceType")
     @Expose
@@ -381,25 +382,32 @@ public class DBInstance extends AbstractModel {
     private Boolean IsDrZone;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Secondary AZ information on the two-node instance.
     */
     @SerializedName("SlaveZones")
     @Expose
     private SlaveZones SlaveZones;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Architecture flag. SINGLE: single-node; DOUBLE: two-node.
     */
     @SerializedName("Architecture")
     @Expose
     private String Architecture;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Type flag. EXCLUSIVE: exclusive; SHARED: shared.
     */
     @SerializedName("Style")
     @Expose
     private String Style;
+
+    /**
+    * 
+    */
+    @SerializedName("MultiSlaveZones")
+    @Expose
+    private SlaveZones [] MultiSlaveZones;
 
     /**
      * Get Instance ID 
@@ -722,16 +730,16 @@ public class DBInstance extends AbstractModel {
     }
 
     /**
-     * Get High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption) 
-     * @return Model High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
+     * Get Instance disaster recovery type. 1: dual-server high availability; 2: single-node; 3: cross-AZ; 4: cross-AZ cluster; 5: cluster; 6: multi-node cluster; 7: multi-node cross-AZ cluster. 
+     * @return Model Instance disaster recovery type. 1: dual-server high availability; 2: single-node; 3: cross-AZ; 4: cross-AZ cluster; 5: cluster; 6: multi-node cluster; 7: multi-node cross-AZ cluster.
      */
     public Long getModel() {
         return this.Model;
     }
 
     /**
-     * Set High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
-     * @param Model High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
+     * Set Instance disaster recovery type. 1: dual-server high availability; 2: single-node; 3: cross-AZ; 4: cross-AZ cluster; 5: cluster; 6: multi-node cluster; 7: multi-node cross-AZ cluster.
+     * @param Model Instance disaster recovery type. 1: dual-server high availability; 2: single-node; 3: cross-AZ; 4: cross-AZ cluster; 5: cluster; 6: multi-node cluster; 7: multi-node cross-AZ cluster.
      */
     public void setModel(Long Model) {
         this.Model = Model;
@@ -914,64 +922,64 @@ public class DBInstance extends AbstractModel {
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsolateOperator Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance isolation operation. 
+     * @return IsolateOperator Instance isolation operation.
      */
     public String getIsolateOperator() {
         return this.IsolateOperator;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsolateOperator Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance isolation operation.
+     * @param IsolateOperator Instance isolation operation.
      */
     public void setIsolateOperator(String IsolateOperator) {
         this.IsolateOperator = IsolateOperator;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubFlag Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Publishing/Subscription flag. SUB: subscription instance; PUB: publishing instance. If this parameter is left blank, the instance is an ordinary instance that does not involve publishing or subscription. 
+     * @return SubFlag Publishing/Subscription flag. SUB: subscription instance; PUB: publishing instance. If this parameter is left blank, the instance is an ordinary instance that does not involve publishing or subscription.
      */
     public String getSubFlag() {
         return this.SubFlag;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubFlag Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Publishing/Subscription flag. SUB: subscription instance; PUB: publishing instance. If this parameter is left blank, the instance is an ordinary instance that does not involve publishing or subscription.
+     * @param SubFlag Publishing/Subscription flag. SUB: subscription instance; PUB: publishing instance. If this parameter is left blank, the instance is an ordinary instance that does not involve publishing or subscription.
      */
     public void setSubFlag(String SubFlag) {
         this.SubFlag = SubFlag;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ROFlag Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Read-only flag. RO: read-only instance; MASTER: primary instance bound to a read-only instance. If this parameter is left blank, the instance is not a read-only instance and is not in any read-only group. 
+     * @return ROFlag Read-only flag. RO: read-only instance; MASTER: primary instance bound to a read-only instance. If this parameter is left blank, the instance is not a read-only instance and is not in any read-only group.
      */
     public String getROFlag() {
         return this.ROFlag;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ROFlag Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Read-only flag. RO: read-only instance; MASTER: primary instance bound to a read-only instance. If this parameter is left blank, the instance is not a read-only instance and is not in any read-only group.
+     * @param ROFlag Read-only flag. RO: read-only instance; MASTER: primary instance bound to a read-only instance. If this parameter is left blank, the instance is not a read-only instance and is not in any read-only group.
      */
     public void setROFlag(String ROFlag) {
         this.ROFlag = ROFlag;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HAFlag Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Disaster recovery type. MIRROR: image; ALWAYSON: Always On; SINGLE: single instance. 
+     * @return HAFlag Disaster recovery type. MIRROR: image; ALWAYSON: Always On; SINGLE: single instance.
      */
     public String getHAFlag() {
         return this.HAFlag;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HAFlag Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Disaster recovery type. MIRROR: image; ALWAYSON: Always On; SINGLE: single instance.
+     * @param HAFlag Disaster recovery type. MIRROR: image; ALWAYSON: Always On; SINGLE: single instance.
      */
     public void setHAFlag(String HAFlag) {
         this.HAFlag = HAFlag;
@@ -994,32 +1002,32 @@ public class DBInstance extends AbstractModel {
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BackupModel Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Backup mode. master_pkg: backup on the primary node (default value); master_no_pkg: no backup on the primary node; slave_pkg: backup on secondary nodes (valid for Always On clusters); slave_no_pkg: no backup on secondary nodes (valid for Always On clusters). This parameter is invalid for read-only instances. 
+     * @return BackupModel Backup mode. master_pkg: backup on the primary node (default value); master_no_pkg: no backup on the primary node; slave_pkg: backup on secondary nodes (valid for Always On clusters); slave_no_pkg: no backup on secondary nodes (valid for Always On clusters). This parameter is invalid for read-only instances.
      */
     public String getBackupModel() {
         return this.BackupModel;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BackupModel Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Backup mode. master_pkg: backup on the primary node (default value); master_no_pkg: no backup on the primary node; slave_pkg: backup on secondary nodes (valid for Always On clusters); slave_no_pkg: no backup on secondary nodes (valid for Always On clusters). This parameter is invalid for read-only instances.
+     * @param BackupModel Backup mode. master_pkg: backup on the primary node (default value); master_no_pkg: no backup on the primary node; slave_pkg: backup on secondary nodes (valid for Always On clusters); slave_no_pkg: no backup on secondary nodes (valid for Always On clusters). This parameter is invalid for read-only instances.
      */
     public void setBackupModel(String BackupModel) {
         this.BackupModel = BackupModel;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceNote Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance backup information. 
+     * @return InstanceNote Instance backup information.
      */
     public String getInstanceNote() {
         return this.InstanceNote;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceNote Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance backup information.
+     * @param InstanceNote Instance backup information.
      */
     public void setInstanceNote(String InstanceNote) {
         this.InstanceNote = InstanceNote;
@@ -1074,16 +1082,20 @@ public class DBInstance extends AbstractModel {
     }
 
     /**
-     * Get Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service). 
-     * @return InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+     * Get Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+ 
+     * @return InstanceType Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
-     * @param InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+     * Set Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+
+     * @param InstanceType Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -1218,51 +1230,67 @@ public class DBInstance extends AbstractModel {
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SlaveZones Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Secondary AZ information on the two-node instance. 
+     * @return SlaveZones Secondary AZ information on the two-node instance.
      */
     public SlaveZones getSlaveZones() {
         return this.SlaveZones;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SlaveZones Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Secondary AZ information on the two-node instance.
+     * @param SlaveZones Secondary AZ information on the two-node instance.
      */
     public void setSlaveZones(SlaveZones SlaveZones) {
         this.SlaveZones = SlaveZones;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Architecture Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Architecture flag. SINGLE: single-node; DOUBLE: two-node. 
+     * @return Architecture Architecture flag. SINGLE: single-node; DOUBLE: two-node.
      */
     public String getArchitecture() {
         return this.Architecture;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Architecture Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Architecture flag. SINGLE: single-node; DOUBLE: two-node.
+     * @param Architecture Architecture flag. SINGLE: single-node; DOUBLE: two-node.
      */
     public void setArchitecture(String Architecture) {
         this.Architecture = Architecture;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Style Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Type flag. EXCLUSIVE: exclusive; SHARED: shared. 
+     * @return Style Type flag. EXCLUSIVE: exclusive; SHARED: shared.
      */
     public String getStyle() {
         return this.Style;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Style Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Type flag. EXCLUSIVE: exclusive; SHARED: shared.
+     * @param Style Type flag. EXCLUSIVE: exclusive; SHARED: shared.
      */
     public void setStyle(String Style) {
         this.Style = Style;
+    }
+
+    /**
+     * Get  
+     * @return MultiSlaveZones 
+     */
+    public SlaveZones [] getMultiSlaveZones() {
+        return this.MultiSlaveZones;
+    }
+
+    /**
+     * Set 
+     * @param MultiSlaveZones 
+     */
+    public void setMultiSlaveZones(SlaveZones [] MultiSlaveZones) {
+        this.MultiSlaveZones = MultiSlaveZones;
     }
 
     public DBInstance() {
@@ -1444,6 +1472,12 @@ public class DBInstance extends AbstractModel {
         if (source.Style != null) {
             this.Style = new String(source.Style);
         }
+        if (source.MultiSlaveZones != null) {
+            this.MultiSlaveZones = new SlaveZones[source.MultiSlaveZones.length];
+            for (int i = 0; i < source.MultiSlaveZones.length; i++) {
+                this.MultiSlaveZones[i] = new SlaveZones(source.MultiSlaveZones[i]);
+            }
+        }
     }
 
 
@@ -1505,6 +1539,7 @@ public class DBInstance extends AbstractModel {
         this.setParamObj(map, prefix + "SlaveZones.", this.SlaveZones);
         this.setParamSimple(map, prefix + "Architecture", this.Architecture);
         this.setParamSimple(map, prefix + "Style", this.Style);
+        this.setParamArrayObj(map, prefix + "MultiSlaveZones.", this.MultiSlaveZones);
 
     }
 }

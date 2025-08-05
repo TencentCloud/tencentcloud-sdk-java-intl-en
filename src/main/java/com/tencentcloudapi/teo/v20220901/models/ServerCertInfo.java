@@ -24,44 +24,39 @@ import java.util.HashMap;
 public class ServerCertInfo extends AbstractModel {
 
     /**
-    * Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+    * Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
 
-Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-    * Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Certificate remark name.
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * Type of the certificate. Values:
-u200c<li>`default`: Default certificate</li>
-u200c<li>`upload`: Custom certificate</li>
-u200c<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Certificate type. valid values:.
+<Li>Specifies the default certificate.</li>.
+<Li>Upload: user upload;</li>.
+<li>managed: tencent cloud hosted.</li>.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Certificate expiration time.
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * Time when the certificate is deployed.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the cert deployment time.
     */
     @SerializedName("DeployTime")
     @Expose
@@ -69,7 +64,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Signature algorithm.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SignAlgo")
     @Expose
@@ -77,133 +71,110 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Domain name of the certificate.
-Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CommonName")
     @Expose
     private String CommonName;
 
     /**
-     * Get Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+     * Get Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
+ 
+     * @return CertId Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
 
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return CertId Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
-
-Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+     * Set Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
 
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param CertId Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+     * @param CertId Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
 
-Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Alias Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Certificate remark name. 
+     * @return Alias Certificate remark name.
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Alias Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Certificate remark name.
+     * @param Alias Certificate remark name.
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get Type of the certificate. Values:
-u200c<li>`default`: Default certificate</li>
-u200c<li>`upload`: Custom certificate</li>
-u200c<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Type Type of the certificate. Values:
-u200c<li>`default`: Default certificate</li>
-u200c<li>`upload`: Custom certificate</li>
-u200c<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Certificate type. valid values:.
+<Li>Specifies the default certificate.</li>.
+<Li>Upload: user upload;</li>.
+<li>managed: tencent cloud hosted.</li>. 
+     * @return Type Certificate type. valid values:.
+<Li>Specifies the default certificate.</li>.
+<Li>Upload: user upload;</li>.
+<li>managed: tencent cloud hosted.</li>.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of the certificate. Values:
-u200c<li>`default`: Default certificate</li>
-u200c<li>`upload`: Custom certificate</li>
-u200c<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Type Type of the certificate. Values:
-u200c<li>`default`: Default certificate</li>
-u200c<li>`upload`: Custom certificate</li>
-u200c<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Certificate type. valid values:.
+<Li>Specifies the default certificate.</li>.
+<Li>Upload: user upload;</li>.
+<li>managed: tencent cloud hosted.</li>.
+     * @param Type Certificate type. valid values:.
+<Li>Specifies the default certificate.</li>.
+<Li>Upload: user upload;</li>.
+<li>managed: tencent cloud hosted.</li>.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExpireTime Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Certificate expiration time. 
+     * @return ExpireTime Certificate expiration time.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExpireTime Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Certificate expiration time.
+     * @param ExpireTime Certificate expiration time.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Time when the certificate is deployed.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DeployTime Time when the certificate is deployed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the cert deployment time. 
+     * @return DeployTime Specifies the cert deployment time.
      */
     public String getDeployTime() {
         return this.DeployTime;
     }
 
     /**
-     * Set Time when the certificate is deployed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DeployTime Time when the certificate is deployed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the cert deployment time.
+     * @param DeployTime Specifies the cert deployment time.
      */
     public void setDeployTime(String DeployTime) {
         this.DeployTime = DeployTime;
     }
 
     /**
-     * Get Signature algorithm.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Signature algorithm. 
      * @return SignAlgo Signature algorithm.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSignAlgo() {
         return this.SignAlgo;
@@ -211,19 +182,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Signature algorithm.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SignAlgo Signature algorithm.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSignAlgo(String SignAlgo) {
         this.SignAlgo = SignAlgo;
     }
 
     /**
-     * Get Domain name of the certificate.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * Get Domain name of the certificate. 
      * @return CommonName Domain name of the certificate.
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getCommonName() {
         return this.CommonName;
@@ -231,9 +198,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Domain name of the certificate.
-Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CommonName Domain name of the certificate.
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCommonName(String CommonName) {
         this.CommonName = CommonName;

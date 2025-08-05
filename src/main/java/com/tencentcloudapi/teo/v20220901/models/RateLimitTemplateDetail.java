@@ -24,14 +24,13 @@ import java.util.HashMap;
 public class RateLimitTemplateDetail extends AbstractModel {
 
     /**
-    * Template level name. Valid values:
-<li>sup_loose: super loose;</li>
-<li>loose: loose;</li>
-<li>emergency: emergency;</li>
-<li>normal: normal;</li>
-<li>strict: strict;</li>
-<li>close: disabled, effective only for precise rate limiting.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Template level name. valid values:.
+<Li>Sup_loose: specifies super loose.</li>.
+<Li>`Loose`: loose</li>.
+<Li>`Emergency`: emergency</li>.
+<li>`normal`: moderate</li>.
+<li>strict</li>.
+<li>`close`: off, precise rate limiting effective.</li>.
     */
     @SerializedName("Mode")
     @Expose
@@ -45,18 +44,16 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     private Long ID;
 
     /**
-    * Template action. Valid values:
-<li>alg: JavaScript challenge;</li>
-<li>monitor: observation.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Template action. valid values:.
+<li>alg: JavaScript challenge;</li>.
+<li>`monitor`: observe</li>.
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Penalty duration, in seconds. Value range: 0-2 days.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Penalty time, value range 0-2 days, unit second.
     */
     @SerializedName("PunishTime")
     @Expose
@@ -77,44 +74,40 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     private Long Period;
 
     /**
-     * Get Template level name. Valid values:
-<li>sup_loose: super loose;</li>
-<li>loose: loose;</li>
-<li>emergency: emergency;</li>
-<li>normal: normal;</li>
-<li>strict: strict;</li>
-<li>close: disabled, effective only for precise rate limiting.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return Mode Template level name. Valid values:
-<li>sup_loose: super loose;</li>
-<li>loose: loose;</li>
-<li>emergency: emergency;</li>
-<li>normal: normal;</li>
-<li>strict: strict;</li>
-<li>close: disabled, effective only for precise rate limiting.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Template level name. valid values:.
+<Li>Sup_loose: specifies super loose.</li>.
+<Li>`Loose`: loose</li>.
+<Li>`Emergency`: emergency</li>.
+<li>`normal`: moderate</li>.
+<li>strict</li>.
+<li>`close`: off, precise rate limiting effective.</li>. 
+     * @return Mode Template level name. valid values:.
+<Li>Sup_loose: specifies super loose.</li>.
+<Li>`Loose`: loose</li>.
+<Li>`Emergency`: emergency</li>.
+<li>`normal`: moderate</li>.
+<li>strict</li>.
+<li>`close`: off, precise rate limiting effective.</li>.
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set Template level name. Valid values:
-<li>sup_loose: super loose;</li>
-<li>loose: loose;</li>
-<li>emergency: emergency;</li>
-<li>normal: normal;</li>
-<li>strict: strict;</li>
-<li>close: disabled, effective only for precise rate limiting.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param Mode Template level name. Valid values:
-<li>sup_loose: super loose;</li>
-<li>loose: loose;</li>
-<li>emergency: emergency;</li>
-<li>normal: normal;</li>
-<li>strict: strict;</li>
-<li>close: disabled, effective only for precise rate limiting.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Template level name. valid values:.
+<Li>Sup_loose: specifies super loose.</li>.
+<Li>`Loose`: loose</li>.
+<Li>`Emergency`: emergency</li>.
+<li>`normal`: moderate</li>.
+<li>strict</li>.
+<li>`close`: off, precise rate limiting effective.</li>.
+     * @param Mode Template level name. valid values:.
+<Li>Sup_loose: specifies super loose.</li>.
+<Li>`Loose`: loose</li>.
+<Li>`Emergency`: emergency</li>.
+<li>`normal`: moderate</li>.
+<li>strict</li>.
+<li>`close`: off, precise rate limiting effective.</li>.
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
@@ -137,48 +130,40 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get Template action. Valid values:
-<li>alg: JavaScript challenge;</li>
-<li>monitor: observation.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return Action Template action. Valid values:
-<li>alg: JavaScript challenge;</li>
-<li>monitor: observation.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Template action. valid values:.
+<li>alg: JavaScript challenge;</li>.
+<li>`monitor`: observe</li>. 
+     * @return Action Template action. valid values:.
+<li>alg: JavaScript challenge;</li>.
+<li>`monitor`: observe</li>.
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Template action. Valid values:
-<li>alg: JavaScript challenge;</li>
-<li>monitor: observation.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param Action Template action. Valid values:
-<li>alg: JavaScript challenge;</li>
-<li>monitor: observation.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Template action. valid values:.
+<li>alg: JavaScript challenge;</li>.
+<li>`monitor`: observe</li>.
+     * @param Action Template action. valid values:.
+<li>alg: JavaScript challenge;</li>.
+<li>`monitor`: observe</li>.
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Penalty duration, in seconds. Value range: 0-2 days.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return PunishTime Penalty duration, in seconds. Value range: 0-2 days.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Penalty time, value range 0-2 days, unit second. 
+     * @return PunishTime Penalty time, value range 0-2 days, unit second.
      */
     public Long getPunishTime() {
         return this.PunishTime;
     }
 
     /**
-     * Set Penalty duration, in seconds. Value range: 0-2 days.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param PunishTime Penalty duration, in seconds. Value range: 0-2 days.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Penalty time, value range 0-2 days, unit second.
+     * @param PunishTime Penalty time, value range 0-2 days, unit second.
      */
     public void setPunishTime(Long PunishTime) {
         this.PunishTime = PunishTime;

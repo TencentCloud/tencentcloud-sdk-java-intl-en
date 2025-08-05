@@ -59,7 +59,8 @@ public class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel {
     private SnapshotByTimeOffsetTaskInput Input;
 
     /**
-    * Specifies the output of a screenshot task at specified time points for a video.
+    * Output of the time point screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Output")
     @Expose
@@ -160,16 +161,20 @@ public class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel {
     }
 
     /**
-     * Get Specifies the output of a screenshot task at specified time points for a video. 
-     * @return Output Specifies the output of a screenshot task at specified time points for a video.
+     * Get Output of the time point screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Output Output of the time point screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public MediaSnapshotByTimeOffsetItem getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Specifies the output of a screenshot task at specified time points for a video.
-     * @param Output Specifies the output of a screenshot task at specified time points for a video.
+     * Set Output of the time point screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Output Output of the time point screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setOutput(MediaSnapshotByTimeOffsetItem Output) {
         this.Output = Output;

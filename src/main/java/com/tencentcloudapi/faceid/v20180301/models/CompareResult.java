@@ -54,11 +54,18 @@ public class CompareResult extends AbstractModel {
     private FileInfo LiveData;
 
     /**
-    * The download URL of the video used for verification, which is valid for 10 minutes.
+    * The download URL of the video used for verification, which contains specific color reflection effects, is valid for 10 minutes.
     */
     @SerializedName("LiveVideo")
     @Expose
     private FileInfo LiveVideo;
+
+    /**
+    * Records the specific action performed by the user, used for AI Face Shield analysis.
+    */
+    @SerializedName("ActionVideo")
+    @Expose
+    private FileInfo ActionVideo;
 
     /**
     * The liveness detection result code.
@@ -230,19 +237,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The download URL of the video used for verification, which is valid for 10 minutes. 
-     * @return LiveVideo The download URL of the video used for verification, which is valid for 10 minutes.
+     * Get The download URL of the video used for verification, which contains specific color reflection effects, is valid for 10 minutes. 
+     * @return LiveVideo The download URL of the video used for verification, which contains specific color reflection effects, is valid for 10 minutes.
      */
     public FileInfo getLiveVideo() {
         return this.LiveVideo;
     }
 
     /**
-     * Set The download URL of the video used for verification, which is valid for 10 minutes.
-     * @param LiveVideo The download URL of the video used for verification, which is valid for 10 minutes.
+     * Set The download URL of the video used for verification, which contains specific color reflection effects, is valid for 10 minutes.
+     * @param LiveVideo The download URL of the video used for verification, which contains specific color reflection effects, is valid for 10 minutes.
      */
     public void setLiveVideo(FileInfo LiveVideo) {
         this.LiveVideo = LiveVideo;
+    }
+
+    /**
+     * Get Records the specific action performed by the user, used for AI Face Shield analysis. 
+     * @return ActionVideo Records the specific action performed by the user, used for AI Face Shield analysis.
+     */
+    public FileInfo getActionVideo() {
+        return this.ActionVideo;
+    }
+
+    /**
+     * Set Records the specific action performed by the user, used for AI Face Shield analysis.
+     * @param ActionVideo Records the specific action performed by the user, used for AI Face Shield analysis.
+     */
+    public void setActionVideo(FileInfo ActionVideo) {
+        this.ActionVideo = ActionVideo;
     }
 
     /**
@@ -485,6 +508,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.LiveVideo != null) {
             this.LiveVideo = new FileInfo(source.LiveVideo);
         }
+        if (source.ActionVideo != null) {
+            this.ActionVideo = new FileInfo(source.ActionVideo);
+        }
         if (source.LiveErrorCode != null) {
             this.LiveErrorCode = new String(source.LiveErrorCode);
         }
@@ -526,6 +552,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamObj(map, prefix + "LiveData.", this.LiveData);
         this.setParamObj(map, prefix + "LiveVideo.", this.LiveVideo);
+        this.setParamObj(map, prefix + "ActionVideo.", this.ActionVideo);
         this.setParamSimple(map, prefix + "LiveErrorCode", this.LiveErrorCode);
         this.setParamSimple(map, prefix + "LiveErrorMsg", this.LiveErrorMsg);
         this.setParamObj(map, prefix + "BestFrame.", this.BestFrame);

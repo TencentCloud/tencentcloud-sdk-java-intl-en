@@ -33,8 +33,7 @@ public class ExceptConfig extends AbstractModel {
     private String Switch;
 
     /**
-    * The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The settings of the exception rule. if it is null, the settings that were last configured will be used.
     */
     @SerializedName("ExceptUserRules")
     @Expose
@@ -65,20 +64,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExceptUserRules The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The settings of the exception rule. if it is null, the settings that were last configured will be used. 
+     * @return ExceptUserRules The settings of the exception rule. if it is null, the settings that were last configured will be used.
      */
     public ExceptUserRule [] getExceptUserRules() {
         return this.ExceptUserRules;
     }
 
     /**
-     * Set The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExceptUserRules The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The settings of the exception rule. if it is null, the settings that were last configured will be used.
+     * @param ExceptUserRules The settings of the exception rule. if it is null, the settings that were last configured will be used.
      */
     public void setExceptUserRules(ExceptUserRule [] ExceptUserRules) {
         this.ExceptUserRules = ExceptUserRules;

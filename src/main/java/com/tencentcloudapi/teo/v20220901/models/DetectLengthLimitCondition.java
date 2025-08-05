@@ -32,11 +32,11 @@ public class DetectLengthLimitCondition extends AbstractModel {
     private String Name;
 
     /**
-    * Parameter value of the matched condition, used in pairs with the `Name` parameter.
-When the `Name` value is body_depth, `Values` only support passing in a single value. Values:
-<li>`8KB`;</li>
-<li>`64KB`;</li>
-<li>`128KB`.</li>
+    * The parameter value of the match condition. the value is used in pairs with Name.
+When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+<li>10KB;</li>
+<li>64KB;</li>
+<li>128KB.</li>
     */
     @SerializedName("Values")
     @Expose
@@ -63,32 +63,32 @@ When the `Name` value is body_depth, `Values` only support passing in a single v
     }
 
     /**
-     * Get Parameter value of the matched condition, used in pairs with the `Name` parameter.
-When the `Name` value is body_depth, `Values` only support passing in a single value. Values:
-<li>`8KB`;</li>
-<li>`64KB`;</li>
-<li>`128KB`.</li> 
-     * @return Values Parameter value of the matched condition, used in pairs with the `Name` parameter.
-When the `Name` value is body_depth, `Values` only support passing in a single value. Values:
-<li>`8KB`;</li>
-<li>`64KB`;</li>
-<li>`128KB`.</li>
+     * Get The parameter value of the match condition. the value is used in pairs with Name.
+When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+<li>10KB;</li>
+<li>64KB;</li>
+<li>128KB.</li> 
+     * @return Values The parameter value of the match condition. the value is used in pairs with Name.
+When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+<li>10KB;</li>
+<li>64KB;</li>
+<li>128KB.</li>
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Parameter value of the matched condition, used in pairs with the `Name` parameter.
-When the `Name` value is body_depth, `Values` only support passing in a single value. Values:
-<li>`8KB`;</li>
-<li>`64KB`;</li>
-<li>`128KB`.</li>
-     * @param Values Parameter value of the matched condition, used in pairs with the `Name` parameter.
-When the `Name` value is body_depth, `Values` only support passing in a single value. Values:
-<li>`8KB`;</li>
-<li>`64KB`;</li>
-<li>`128KB`.</li>
+     * Set The parameter value of the match condition. the value is used in pairs with Name.
+When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+<li>10KB;</li>
+<li>64KB;</li>
+<li>128KB.</li>
+     * @param Values The parameter value of the match condition. the value is used in pairs with Name.
+When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+<li>10KB;</li>
+<li>64KB;</li>
+<li>128KB.</li>
      */
     public void setValues(String [] Values) {
         this.Values = Values;

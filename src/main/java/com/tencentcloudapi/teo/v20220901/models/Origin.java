@@ -24,137 +24,117 @@ import java.util.HashMap;
 public class Origin extends AbstractModel {
 
     /**
-    * Primary origin server list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Origin server list.
     */
     @SerializedName("Origins")
     @Expose
     private String [] Origins;
 
     /**
-    * The list of backup origin servers.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Backup origin list.
     */
     @SerializedName("BackupOrigins")
     @Expose
     private String [] BackupOrigins;
 
     /**
-    * Origin-pull protocol configuration. Values:
-<li>`http`: Force HTTP for origin-pull.</li>
-<li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Origin server protocol configuration. valid values:.
+<Li>Http: forced http back to source;</li>.
+<Li>`Follow`: follow protocol.</li>.
+<Li>Https: enforce https origin-pull.</li>.
     */
     @SerializedName("OriginPullProtocol")
     @Expose
     private String OriginPullProtocol;
 
     /**
-    * Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
-<li>`on`: Private access;</li>
-<li>`off`: Public access.</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
+<li>`on`: private network access;</li>.
+<li>`off`: public access.</li>.
     */
     @SerializedName("CosPrivateAccess")
     @Expose
     private String CosPrivateAccess;
 
     /**
-     * Get Primary origin server list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Origins Primary origin server list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Origin server list. 
+     * @return Origins Origin server list.
      */
     public String [] getOrigins() {
         return this.Origins;
     }
 
     /**
-     * Set Primary origin server list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Origins Primary origin server list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Origin server list.
+     * @param Origins Origin server list.
      */
     public void setOrigins(String [] Origins) {
         this.Origins = Origins;
     }
 
     /**
-     * Get The list of backup origin servers.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BackupOrigins The list of backup origin servers.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Backup origin list. 
+     * @return BackupOrigins Backup origin list.
      */
     public String [] getBackupOrigins() {
         return this.BackupOrigins;
     }
 
     /**
-     * Set The list of backup origin servers.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BackupOrigins The list of backup origin servers.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Backup origin list.
+     * @param BackupOrigins Backup origin list.
      */
     public void setBackupOrigins(String [] BackupOrigins) {
         this.BackupOrigins = BackupOrigins;
     }
 
     /**
-     * Get Origin-pull protocol configuration. Values:
-<li>`http`: Force HTTP for origin-pull.</li>
-<li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return OriginPullProtocol Origin-pull protocol configuration. Values:
-<li>`http`: Force HTTP for origin-pull.</li>
-<li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Origin server protocol configuration. valid values:.
+<Li>Http: forced http back to source;</li>.
+<Li>`Follow`: follow protocol.</li>.
+<Li>Https: enforce https origin-pull.</li>. 
+     * @return OriginPullProtocol Origin server protocol configuration. valid values:.
+<Li>Http: forced http back to source;</li>.
+<Li>`Follow`: follow protocol.</li>.
+<Li>Https: enforce https origin-pull.</li>.
      */
     public String getOriginPullProtocol() {
         return this.OriginPullProtocol;
     }
 
     /**
-     * Set Origin-pull protocol configuration. Values:
-<li>`http`: Force HTTP for origin-pull.</li>
-<li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param OriginPullProtocol Origin-pull protocol configuration. Values:
-<li>`http`: Force HTTP for origin-pull.</li>
-<li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Origin server protocol configuration. valid values:.
+<Li>Http: forced http back to source;</li>.
+<Li>`Follow`: follow protocol.</li>.
+<Li>Https: enforce https origin-pull.</li>.
+     * @param OriginPullProtocol Origin server protocol configuration. valid values:.
+<Li>Http: forced http back to source;</li>.
+<Li>`Follow`: follow protocol.</li>.
+<Li>Https: enforce https origin-pull.</li>.
      */
     public void setOriginPullProtocol(String OriginPullProtocol) {
         this.OriginPullProtocol = OriginPullProtocol;
     }
 
     /**
-     * Get Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
-<li>`on`: Private access;</li>
-<li>`off`: Public access.</li>
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return CosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
-<li>`on`: Private access;</li>
-<li>`off`: Public access.</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
+<li>`on`: private network access;</li>.
+<li>`off`: public access.</li>. 
+     * @return CosPrivateAccess When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
+<li>`on`: private network access;</li>.
+<li>`off`: public access.</li>.
      */
     public String getCosPrivateAccess() {
         return this.CosPrivateAccess;
     }
 
     /**
-     * Set Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
-<li>`on`: Private access;</li>
-<li>`off`: Public access.</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param CosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
-<li>`on`: Private access;</li>
-<li>`off`: Public access.</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
+<li>`on`: private network access;</li>.
+<li>`off`: public access.</li>.
+     * @param CosPrivateAccess When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
+<li>`on`: private network access;</li>.
+<li>`off`: public access.</li>.
      */
     public void setCosPrivateAccess(String CosPrivateAccess) {
         this.CosPrivateAccess = CosPrivateAccess;

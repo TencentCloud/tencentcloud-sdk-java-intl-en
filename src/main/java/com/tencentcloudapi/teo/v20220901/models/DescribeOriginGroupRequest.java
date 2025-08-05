@@ -45,8 +45,9 @@ public class DescribeOriginGroupRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Filters. Each filter can have up to 20 entries. See below for details:
-<li>`origin-group-id`<br>Filter by the <strong>origin group ID</strong>. Format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`<br>Fuzzy query is not supported</li><li>`origin-group-name`<br>Filter by the <strong>origin group name</strong><br>Fuzzy query is supported. When fuzzy query is used, only one origin groupsource site group name is supported</li>
+    * Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+
+<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
     */
     @SerializedName("Filters")
     @Expose
@@ -101,20 +102,24 @@ public class DescribeOriginGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get Filters. Each filter can have up to 20 entries. See below for details:
-<li>`origin-group-id`<br>Filter by the <strong>origin group ID</strong>. Format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`<br>Fuzzy query is not supported</li><li>`origin-group-name`<br>Filter by the <strong>origin group name</strong><br>Fuzzy query is supported. When fuzzy query is used, only one origin groupsource site group name is supported</li> 
-     * @return Filters Filters. Each filter can have up to 20 entries. See below for details:
-<li>`origin-group-id`<br>Filter by the <strong>origin group ID</strong>. Format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`<br>Fuzzy query is not supported</li><li>`origin-group-name`<br>Filter by the <strong>origin group name</strong><br>Fuzzy query is supported. When fuzzy query is used, only one origin groupsource site group name is supported</li>
+     * Get Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+
+<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>. 
+     * @return Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+
+<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filters. Each filter can have up to 20 entries. See below for details:
-<li>`origin-group-id`<br>Filter by the <strong>origin group ID</strong>. Format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`<br>Fuzzy query is not supported</li><li>`origin-group-name`<br>Filter by the <strong>origin group name</strong><br>Fuzzy query is supported. When fuzzy query is used, only one origin groupsource site group name is supported</li>
-     * @param Filters Filters. Each filter can have up to 20 entries. See below for details:
-<li>`origin-group-id`<br>Filter by the <strong>origin group ID</strong>. Format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`<br>Fuzzy query is not supported</li><li>`origin-group-name`<br>Filter by the <strong>origin group name</strong><br>Fuzzy query is supported. When fuzzy query is used, only one origin groupsource site group name is supported</li>
+     * Set Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+
+<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
+     * @param Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+
+<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;

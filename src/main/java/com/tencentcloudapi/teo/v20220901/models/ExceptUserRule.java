@@ -54,8 +54,7 @@ public class ExceptUserRule extends AbstractModel {
     private Long RuleID;
 
     /**
-    * The update time. If it is null, the current date and time is recorded.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Last update time. if null, the underlying layer generates it using the current system time by default.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -63,15 +62,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
     * The matching condition.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExceptUserRuleConditions")
     @Expose
     private ExceptUserRuleCondition [] ExceptUserRuleConditions;
 
     /**
-    * The scope to which the exception rule applies.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Scope where the rule takes effect.
     */
     @SerializedName("ExceptUserRuleScope")
     @Expose
@@ -157,30 +154,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The update time. If it is null, the current date and time is recorded.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return UpdateTime The update time. If it is null, the current date and time is recorded.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Last update time. if null, the underlying layer generates it using the current system time by default. 
+     * @return UpdateTime Last update time. if null, the underlying layer generates it using the current system time by default.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set The update time. If it is null, the current date and time is recorded.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param UpdateTime The update time. If it is null, the current date and time is recorded.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Last update time. if null, the underlying layer generates it using the current system time by default.
+     * @param UpdateTime Last update time. if null, the underlying layer generates it using the current system time by default.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get The matching condition.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get The matching condition. 
      * @return ExceptUserRuleConditions The matching condition.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ExceptUserRuleCondition [] getExceptUserRuleConditions() {
         return this.ExceptUserRuleConditions;
@@ -188,29 +179,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The matching condition.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ExceptUserRuleConditions The matching condition.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExceptUserRuleConditions(ExceptUserRuleCondition [] ExceptUserRuleConditions) {
         this.ExceptUserRuleConditions = ExceptUserRuleConditions;
     }
 
     /**
-     * Get The scope to which the exception rule applies.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExceptUserRuleScope The scope to which the exception rule applies.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Scope where the rule takes effect. 
+     * @return ExceptUserRuleScope Scope where the rule takes effect.
      */
     public ExceptUserRuleScope getExceptUserRuleScope() {
         return this.ExceptUserRuleScope;
     }
 
     /**
-     * Set The scope to which the exception rule applies.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExceptUserRuleScope The scope to which the exception rule applies.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Scope where the rule takes effect.
+     * @param ExceptUserRuleScope Scope where the rule takes effect.
      */
     public void setExceptUserRuleScope(ExceptUserRuleScope ExceptUserRuleScope) {
         this.ExceptUserRuleScope = ExceptUserRuleScope;

@@ -24,66 +24,61 @@ import java.util.HashMap;
 public class IpTableConfig extends AbstractModel {
 
     /**
-    * Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: disabled;</li>.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Basic control rules. if null, historical configuration is used by default.
     */
     @SerializedName("IpTableRules")
     @Expose
     private IpTableRule [] IpTableRules;
 
     /**
-     * Get Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: disabled;</li>. 
+     * @return Switch Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: disabled;</li>.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: disabled;</li>.
+     * @param Switch Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: disabled;</li>.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IpTableRules The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Basic control rules. if null, historical configuration is used by default. 
+     * @return IpTableRules Basic control rules. if null, historical configuration is used by default.
      */
     public IpTableRule [] getIpTableRules() {
         return this.IpTableRules;
     }
 
     /**
-     * Set The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IpTableRules The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Basic control rules. if null, historical configuration is used by default.
+     * @param IpTableRules Basic control rules. if null, historical configuration is used by default.
      */
     public void setIpTableRules(IpTableRule [] IpTableRules) {
         this.IpTableRules = IpTableRules;

@@ -48,7 +48,7 @@ public class ModifyZoneRequest extends AbstractModel {
     private VanityNameServers VanityNameServers;
 
     /**
-    * The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+    * Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
     */
     @SerializedName("AliasZoneName")
     @Expose
@@ -132,16 +132,16 @@ public class ModifyZoneRequest extends AbstractModel {
     }
 
     /**
-     * Get The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_). 
-     * @return AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     * Get Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. 
+     * @return AliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
      */
     public String getAliasZoneName() {
         return this.AliasZoneName;
     }
 
     /**
-     * Set The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-     * @param AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     * Set Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
+     * @param AliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
      */
     public void setAliasZoneName(String AliasZoneName) {
         this.AliasZoneName = AliasZoneName;

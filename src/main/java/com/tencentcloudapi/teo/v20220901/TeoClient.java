@@ -108,6 +108,7 @@ For sites connected via the CNAME, if you have not verified the ownership of the
 
     /**
      *This API is used to create an alias domain name.
+The feature is only supported by the enterprise plan and is currently in closed beta testing. If you need to use it, please [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
      * @param req CreateAliasDomainRequest
      * @return CreateAliasDomainResponse
      * @throws TencentCloudSDKException
@@ -217,6 +218,19 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     }
 
     /**
+     *JIT transcoding already provides preset transcoding templates to meet most needs. If there are personalized transcoding requirements, you can create custom transcoding templates through this API, with up to 100 custom transcoding templates allowed.
+This API is used to ensure the consistency of JIT transcoding effect, avoid video output exceptions caused by EO cache or M3U8 sharding template changes during the process, and templates cannot be modified after creation.
+This API is used to learn about the detailed capacity of JIT transcoding. EdgeOne video instant processing function introduction (https://www.tencentcloud.comom/document/product/1552/111927?from_cn_redirect=1).
+     * @param req CreateJustInTimeTranscodeTemplateRequest
+     * @return CreateJustInTimeTranscodeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateJustInTimeTranscodeTemplateResponse CreateJustInTimeTranscodeTemplate(CreateJustInTimeTranscodeTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateJustInTimeTranscodeTemplate", CreateJustInTimeTranscodeTemplateResponse.class);
+    }
+
+    /**
      *This API is used to create Layer 4 proxy instances.
      * @param req CreateL4ProxyRequest
      * @return CreateL4ProxyResponse
@@ -258,6 +272,39 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     public CreateLoadBalancerResponse CreateLoadBalancer(CreateLoadBalancerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateLoadBalancer", CreateLoadBalancerResponse.class);
+    }
+
+    /**
+     *Create a multi-channel security acceleration gateway via this API, including Cloud Gateway (gateway created and managed by Tencent Cloud) and private gateway (gateway deployed by users). Query the status using DescribeMultiPathGateway, and creation is successful if the status is online.
+     * @param req CreateMultiPathGatewayRequest
+     * @return CreateMultiPathGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMultiPathGatewayResponse CreateMultiPathGateway(CreateMultiPathGatewayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMultiPathGateway", CreateMultiPathGatewayResponse.class);
+    }
+
+    /**
+     *This API is used to create lines integrated with the multi-channel security acceleration gateway, including EdgeOne Layer-4 proxy and custom lines.
+     * @param req CreateMultiPathGatewayLineRequest
+     * @return CreateMultiPathGatewayLineResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMultiPathGatewayLineResponse CreateMultiPathGatewayLine(CreateMultiPathGatewayLineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMultiPathGatewayLine", CreateMultiPathGatewayLineResponse.class);
+    }
+
+    /**
+     *This API creates an access key for the multi-channel security acceleration gateway. Customers use the access key to sign requests for accessing the gateway. Each site can have only one key, which is applicable to all gateways under that site. Query the key via the DescribeMultiPathGatewaySecretKey API.
+     * @param req CreateMultiPathGatewaySecretKeyRequest
+     * @return CreateMultiPathGatewaySecretKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMultiPathGatewaySecretKeyResponse CreateMultiPathGatewaySecretKey(CreateMultiPathGatewaySecretKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMultiPathGatewaySecretKey", CreateMultiPathGatewaySecretKeyResponse.class);
     }
 
     /**
@@ -319,8 +366,15 @@ For sites connected via the CNAME, if you have not verified the ownership of the
     }
 
     /**
-     *This API is used to create a real-time log delivery task. The following limits apply:
-An entity (a Layer 7 domain name or a Layer 4 proxy instance) under the combination of the same data delivery type (LogType) and data delivery area (Area) can be added to only one real-time log delivery task. It is recommended to first query the real-time log delivery task list by entity through the [DescribeRealtimeLogDeliveryTasks](https://intl.cloud.tencent.com/document/product/1552/104110?from_cn_redirect=1) API to check whether the entity has been added to another real-time log delivery task.
+     *This API is used to create a real-time log delivery task.
+The following restrictions apply:
+
+- When the log type (`LogType`) is site acceleration log (L7 access log) (`domain`), L4 proxy log (`application`), or Edge Function execution log (`function`), the same entity (L7 domain, L4 proxy instance, or Edge Function instance) can be added to only one of the following `TaskType` combinations within the same `LogType`-`Area` pair:
+    - One task delivering to Tencent Cloud CLS plus one task delivering to a custom HTTP(S) endpoint;
+    - One task delivering to Tencent Cloud CLS plus one task delivering to an AWS S3-compatible bucket.
+- When the log type (`LogType`) is rate-limiting & CC attack protection log (`web-rateLiming`), managed rule log (`web-attack`), custom rule log (`web-rule`), or bot management log (`web-bot`), the same entity can be added to only one real-time log delivery task within the same `LogType`-`Area` pair.
+
+Before creating a task, we recommend that you first call [DescribeRealtimeLogDeliveryTasks](https://intl.cloud.tencent.com/document/product/1552/104110?from_cn_redirect=1) to list existing tasks for the entity and verify whether it has already been added to another task.
      * @param req CreateRealtimeLogDeliveryTaskRequest
      * @return CreateRealtimeLogDeliveryTaskResponse
      * @throws TencentCloudSDKException
@@ -331,7 +385,7 @@ An entity (a Layer 7 domain name or a Layer 4 proxy instance) under the combinat
     }
 
     /**
-     *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [CreateL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115822?from_cn_redirect=1).
+     *This interface is the old version of the rule engine creation interface. EdgeOne has fully upgraded the rule engine related interfaces on January 21, 2025. For details on the new version of the seven-layer acceleration rule creation interface, please refer to [CreateL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115822?from_cn_redirect=1).<p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
      * @param req CreateRuleRequest
      * @return CreateRuleResponse
      * @throws TencentCloudSDKException
@@ -339,6 +393,39 @@ An entity (a Layer 7 domain name or a Layer 4 proxy instance) under the combinat
     public CreateRuleResponse CreateRule(CreateRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateRule", CreateRuleResponse.class);
+    }
+
+    /**
+     *This API is used to create an API resource.
+     * @param req CreateSecurityAPIResourceRequest
+     * @return CreateSecurityAPIResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSecurityAPIResourceResponse CreateSecurityAPIResource(CreateSecurityAPIResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSecurityAPIResource", CreateSecurityAPIResourceResponse.class);
+    }
+
+    /**
+     *This API is used to create an API service.
+     * @param req CreateSecurityAPIServiceRequest
+     * @return CreateSecurityAPIServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSecurityAPIServiceResponse CreateSecurityAPIService(CreateSecurityAPIServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSecurityAPIService", CreateSecurityAPIServiceResponse.class);
+    }
+
+    /**
+     *This API is used to create client authentication options.
+     * @param req CreateSecurityClientAttesterRequest
+     * @return CreateSecurityClientAttesterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSecurityClientAttesterResponse CreateSecurityClientAttester(CreateSecurityClientAttesterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSecurityClientAttester", CreateSecurityClientAttesterResponse.class);
     }
 
     /**
@@ -350,6 +437,17 @@ An entity (a Layer 7 domain name or a Layer 4 proxy instance) under the combinat
     public CreateSecurityIPGroupResponse CreateSecurityIPGroup(CreateSecurityIPGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateSecurityIPGroup", CreateSecurityIPGroupResponse.class);
+    }
+
+    /**
+     *This API is used to create a JavaScript injection rule.
+     * @param req CreateSecurityJSInjectionRuleRequest
+     * @return CreateSecurityJSInjectionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSecurityJSInjectionRuleResponse CreateSecurityJSInjectionRule(CreateSecurityJSInjectionRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSecurityJSInjectionRule", CreateSecurityJSInjectionRuleResponse.class);
     }
 
     /**
@@ -400,6 +498,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
 
     /**
      *This API is used to delete an alias domain name.
+The feature is only supported by the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
      * @param req DeleteAliasDomainRequest
      * @return DeleteAliasDomainResponse
      * @throws TencentCloudSDKException
@@ -487,6 +586,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
+     *This API is used to delete the appropriate just in time transcoding template based on the unique template identifier under the site ID.
+     * @param req DeleteJustInTimeTranscodeTemplatesRequest
+     * @return DeleteJustInTimeTranscodeTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteJustInTimeTranscodeTemplatesResponse DeleteJustInTimeTranscodeTemplates(DeleteJustInTimeTranscodeTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteJustInTimeTranscodeTemplates", DeleteJustInTimeTranscodeTemplatesResponse.class);
+    }
+
+    /**
      *This API is used to delete a Layer 4 proxy instance.
      * @param req DeleteL4ProxyRequest
      * @return DeleteL4ProxyResponse
@@ -531,6 +641,28 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
+     *This API is used to delete a multi-channel security acceleration gateway, including private gateways and Cloud Gateways.
+     * @param req DeleteMultiPathGatewayRequest
+     * @return DeleteMultiPathGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMultiPathGatewayResponse DeleteMultiPathGateway(DeleteMultiPathGatewayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMultiPathGateway", DeleteMultiPathGatewayResponse.class);
+    }
+
+    /**
+     *This API is used to delete lines integrated with the multi-channel security acceleration gateway. Only custom lines support deletion.
+     * @param req DeleteMultiPathGatewayLineRequest
+     * @return DeleteMultiPathGatewayLineResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMultiPathGatewayLineResponse DeleteMultiPathGatewayLine(DeleteMultiPathGatewayLineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMultiPathGatewayLine", DeleteMultiPathGatewayLineResponse.class);
+    }
+
+    /**
      *This API is used to delete an origin group. Note that an origin group can not be deleted if it is referenced by services (e.g. L4 Proxy, domain name service, load balancing, rule engines). 
      * @param req DeleteOriginGroupRequest
      * @return DeleteOriginGroupResponse
@@ -553,7 +685,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DeleteL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115821?from_cn_redirect=1).
+     *This interface is the old version of the rule engine deletion interface. EdgeOne has fully upgraded the rule engine related interfaces on January 21, 2025. For details on the new version of the seven-layer acceleration rule deletion interface, please refer to [DeleteL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115821?from_cn_redirect=1).<0>Note: Starting from January 21, 2025, the earlier version API will no longer be updated. Subsequent new features will only be provided in the latest version interface. The original capabilities supported by the earlier version API will not be affected. To avoid field conflicts when using the earlier version API, it is recommended that you migrate to the new version rule engine API as soon as possible.</0>.
      * @param req DeleteRulesRequest
      * @return DeleteRulesResponse
      * @throws TencentCloudSDKException
@@ -561,6 +693,39 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DeleteRulesResponse DeleteRules(DeleteRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRules", DeleteRulesResponse.class);
+    }
+
+    /**
+     *This API is used to delete API resources.
+     * @param req DeleteSecurityAPIResourceRequest
+     * @return DeleteSecurityAPIResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSecurityAPIResourceResponse DeleteSecurityAPIResource(DeleteSecurityAPIResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSecurityAPIResource", DeleteSecurityAPIResourceResponse.class);
+    }
+
+    /**
+     *This API is used to delete the API service.
+     * @param req DeleteSecurityAPIServiceRequest
+     * @return DeleteSecurityAPIServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSecurityAPIServiceResponse DeleteSecurityAPIService(DeleteSecurityAPIServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSecurityAPIService", DeleteSecurityAPIServiceResponse.class);
+    }
+
+    /**
+     *This API is used to delete client authentication options.
+     * @param req DeleteSecurityClientAttesterRequest
+     * @return DeleteSecurityClientAttesterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSecurityClientAttesterResponse DeleteSecurityClientAttester(DeleteSecurityClientAttesterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSecurityClientAttester", DeleteSecurityClientAttesterResponse.class);
     }
 
     /**
@@ -572,6 +737,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DeleteSecurityIPGroupResponse DeleteSecurityIPGroup(DeleteSecurityIPGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSecurityIPGroup", DeleteSecurityIPGroupResponse.class);
+    }
+
+    /**
+     *This API is used to delete JavaScript injection rules.
+     * @param req DeleteSecurityJSInjectionRuleRequest
+     * @return DeleteSecurityJSInjectionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSecurityJSInjectionRuleResponse DeleteSecurityJSInjectionRule(DeleteSecurityJSInjectionRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSecurityJSInjectionRule", DeleteSecurityJSInjectionRuleResponse.class);
     }
 
     /**
@@ -630,7 +806,8 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to query the information of alias domain names.
+     *This API is used to query the alias domain name information list.
+The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
      * @param req DescribeAliasDomainsRequest
      * @return DescribeAliasDomainsResponse
      * @throws TencentCloudSDKException
@@ -762,6 +939,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
+     *This API is used to search for site exclusive Anti-DDoS information.
+     * @param req DescribeDDoSProtectionRequest
+     * @return DescribeDDoSProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDoSProtectionResponse DescribeDDoSProtection(DescribeDDoSProtectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDDoSProtection", DescribeDDoSProtectionResponse.class);
+    }
+
+    /**
      *This API is used to query a list of default certificates.
      * @param req DescribeDefaultCertificatesRequest
      * @return DescribeDefaultCertificatesResponse
@@ -872,6 +1060,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
+     *This API is used to search the transcoding template detail list according to the name, template type, or unique identifier of the just-in-time transcoding template. The returned results include all eligible custom templates and preset templates.
+     * @param req DescribeJustInTimeTranscodeTemplatesRequest
+     * @return DescribeJustInTimeTranscodeTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJustInTimeTranscodeTemplatesResponse DescribeJustInTimeTranscodeTemplates(DescribeJustInTimeTranscodeTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJustInTimeTranscodeTemplates", DescribeJustInTimeTranscodeTemplatesResponse.class);
+    }
+
+    /**
      *This API is used to query a Layer 4 proxy instance list.
      * @param req DescribeL4ProxyRequest
      * @return DescribeL4ProxyResponse
@@ -927,6 +1126,61 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
+     *This API is used to query multi-channel security acceleration gateway details such as name, Gateway ID, IP, port and type.
+     * @param req DescribeMultiPathGatewayRequest
+     * @return DescribeMultiPathGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMultiPathGatewayResponse DescribeMultiPathGateway(DescribeMultiPathGatewayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMultiPathGateway", DescribeMultiPathGatewayResponse.class);
+    }
+
+    /**
+     *Use this API to query the lines integrated with the multi-channel security acceleration gateway, including direct connection lines, EdgeOne Layer-4 proxy lines, and custom lines.
+     * @param req DescribeMultiPathGatewayLineRequest
+     * @return DescribeMultiPathGatewayLineResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMultiPathGatewayLineResponse DescribeMultiPathGatewayLine(DescribeMultiPathGatewayLineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMultiPathGatewayLine", DescribeMultiPathGatewayLineResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of available regions for user-created multi-channel security acceleration gateways (Cloud Gateway).
+     * @param req DescribeMultiPathGatewayRegionsRequest
+     * @return DescribeMultiPathGatewayRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMultiPathGatewayRegionsResponse DescribeMultiPathGatewayRegions(DescribeMultiPathGatewayRegionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMultiPathGatewayRegions", DescribeMultiPathGatewayRegionsResponse.class);
+    }
+
+    /**
+     *This API is used to query keys for integrating multi-channel security acceleration gateways. Customers access multi-channel security acceleration gateways based on key signature.
+     * @param req DescribeMultiPathGatewaySecretKeyRequest
+     * @return DescribeMultiPathGatewaySecretKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMultiPathGatewaySecretKeyResponse DescribeMultiPathGatewaySecretKey(DescribeMultiPathGatewaySecretKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMultiPathGatewaySecretKey", DescribeMultiPathGatewaySecretKeyResponse.class);
+    }
+
+    /**
+     *Query the multi-channel security acceleration gateway list created by the user through this interface. Supports pagination.
+     * @param req DescribeMultiPathGatewaysRequest
+     * @return DescribeMultiPathGatewaysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMultiPathGatewaysResponse DescribeMultiPathGateways(DescribeMultiPathGatewaysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMultiPathGateways", DescribeMultiPathGatewaysResponse.class);
+    }
+
+    /**
      *This API is used to query the binding relationship between L7 acceleration domains/L4 proxy instances and origin ACLs under a site, as well as IP range details. If you want to periodically obtain the latest version of origin IP ranges through an automation script, you can poll this API at a low-frequency (recommended every three days). If the NextOriginACL field has a return value, synchronize the latest origin IP ranges to the origin server firewall configuration.
      * @param req DescribeOriginACLRequest
      * @return DescribeOriginACLResponse
@@ -960,7 +1214,9 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to query the origin protection configuration.
+     *This API is used to query origin protection on an earlier version. EdgeOne comprehensively upgraded relevant APIs for origin protection on June 27, 2025. For details on the new version, see [DescribeOriginACL](https://intl.cloud.tencent.com/document/product/1552/120408?from_cn_redirect=1).
+
+Note: Starting from June 27, 2025, the legacy version APIs will stop updating. New features will only be provided in the latest version APIs. To avoid data field conflicts when using legacy version APIs, it is recommended to migrate to the new version origin protection APIs as soon as possible.
      * @param req DescribeOriginProtectionRequest
      * @return DescribeOriginProtectionResponse
      * @throws TencentCloudSDKException
@@ -979,6 +1235,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DescribeOverviewL7DataResponse DescribeOverviewL7Data(DescribeOverviewL7DataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeOverviewL7Data", DescribeOverviewL7DataResponse.class);
+    }
+
+    /**
+     *This API is used to query package information list with pagination support.
+     * @param req DescribePlansRequest
+     * @return DescribePlansResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePlansResponse DescribePlans(DescribePlansRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePlans", DescribePlansResponse.class);
     }
 
     /**
@@ -1015,7 +1282,8 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DescribeL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
+     *This API is on an earlier version to query engine rules. EdgeOne has comprehensively upgraded relevant APIs of the rule engine on January 21, 2025. For details about the new version API to query layer-7 acceleration rules, see DescribeL7AccRules(https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
+<p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
      * @param req DescribeRulesRequest
      * @return DescribeRulesResponse
      * @throws TencentCloudSDKException
@@ -1037,7 +1305,40 @@ If there are already EdgeOne plans under the current account, it is recommended 
     }
 
     /**
-     *This API is used to query the configuration information of a security IP group, including the ID, name, and content of the security IP group.
+     *This API is used to query API resources under a site.
+     * @param req DescribeSecurityAPIResourceRequest
+     * @return DescribeSecurityAPIResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityAPIResourceResponse DescribeSecurityAPIResource(DescribeSecurityAPIResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityAPIResource", DescribeSecurityAPIResourceResponse.class);
+    }
+
+    /**
+     *This API is used to query API services under a site.
+     * @param req DescribeSecurityAPIServiceRequest
+     * @return DescribeSecurityAPIServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityAPIServiceResponse DescribeSecurityAPIService(DescribeSecurityAPIServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityAPIService", DescribeSecurityAPIServiceResponse.class);
+    }
+
+    /**
+     *This API is used to query client authentication option configuration.
+     * @param req DescribeSecurityClientAttesterRequest
+     * @return DescribeSecurityClientAttesterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityClientAttesterResponse DescribeSecurityClientAttester(DescribeSecurityClientAttesterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityClientAttester", DescribeSecurityClientAttesterResponse.class);
+    }
+
+    /**
+     *This API is used to query the configuration information of a security IP group, including the ID, name and content of the security IP group. The query result of this API only returns up to 2000 IPs or CIDR blocks for each IP group. If there is a very large IP group exceeding 2000 IPs or CIDR blocks, call DescribeSecurityIPGroupContent to perform a paging query.
      * @param req DescribeSecurityIPGroupRequest
      * @return DescribeSecurityIPGroupResponse
      * @throws TencentCloudSDKException
@@ -1045,6 +1346,17 @@ If there are already EdgeOne plans under the current account, it is recommended 
     public DescribeSecurityIPGroupResponse DescribeSecurityIPGroup(DescribeSecurityIPGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSecurityIPGroup", DescribeSecurityIPGroupResponse.class);
+    }
+
+    /**
+     *This API is used to perform a paging query for the IP address list in a designated IP group. When the number of IP addresses in the group exceeds 2000, you can use this API to perform a paging query to obtain the complete IP address list.
+     * @param req DescribeSecurityIPGroupContentRequest
+     * @return DescribeSecurityIPGroupContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityIPGroupContentResponse DescribeSecurityIPGroupContent(DescribeSecurityIPGroupContentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityIPGroupContent", DescribeSecurityIPGroupContentResponse.class);
     }
 
     /**
@@ -1059,6 +1371,17 @@ This API is used to query the configuration information of an IP group, includin
     public DescribeSecurityIPGroupInfoResponse DescribeSecurityIPGroupInfo(DescribeSecurityIPGroupInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSecurityIPGroupInfo", DescribeSecurityIPGroupInfoResponse.class);
+    }
+
+    /**
+     *This API is used to query JavaScript injection rules.
+     * @param req DescribeSecurityJSInjectionRuleRequest
+     * @return DescribeSecurityJSInjectionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityJSInjectionRuleResponse DescribeSecurityJSInjectionRule(DescribeSecurityJSInjectionRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityJSInjectionRule", DescribeSecurityJSInjectionRuleResponse.class);
     }
 
     /**
@@ -1245,13 +1568,11 @@ A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/
     }
 
     /**
-     *This API is used to enable 'Origin Protection' for Layer 4 or Layer 7 instances. The number of enabled instances has an upper limit: 200 for Layer 7 domains and 100 for Layer 4 proxy instances. The total number of instances cannot exceed 200, otherwise an error reminder will be triggered. You can first enable the maximum allowed number and use the ModifyOriginACL API to set the excess quantity.
+     *This API is used to enable origin protection for a site for the first time. Enabled, EdgeOne will use specific origin IP ranges to backhaul traffic for L7 acceleration domains/L4 proxy instances. The maximum allowed number of L7 acceleration domains per submission is 200, and the maximum allowed number of L4 proxy instances is 100. Mixing L7 acceleration domains and L4 proxy instances in a single submission is supported, with a total maximum of 200 instances. To enable more than 200 resources, first enable the maximum quantity via specified resources, then enable the remaining resources via the ModifyOriginACL API. Subsequent addition of L7 acceleration domains/L4 proxy instances should be configured via the ModifyOriginACL API.
 
-This API is used to enable 'Origin Protection' for the site for the first time. Once enabled, EdgeOne will use specific origin IP ranges for L7 acceleration domains and L4 proxy instances. The maximum number of L7 acceleration domain that can be submitted in a single request is 200, and the maximum number of L4 proxy instance is 100. Mixed submissions of L7 acceleration domains and L4 proxy instances are supported, with a total maximum of 200 instances. If you need to enable more than 200 instances, you can first enable the maximum number by specifying the instances, and then enable the remaining instances through the API ModifyOriginACL. Any subsequent addition of  L7 acceleration domains or L4 proxy instances should be configured through the API ModifyOriginACL.
-
-Note:
-- Calling this API is considered as agreeing to [Origin Protection Enablement Conditions of Use](https://www.tencentcloud.com/document/product/1145/70561?!longPreview).
-- The origin IP ranges may change periodically. EdgeOne will notify you of changes to the origin IP ranges 14 days, 7 days, 3 days, and 1 day in advance through one or more methods such as internal messages, SMS, and email. To ensure you receive notifications about changes to the origin IP ranges, please make sure that you have selected the relevant product service notifications for the Edge Security Acceleration Platform (EO) in [Tencent Cloud Message Center](https://console.tencentcloud.com/message/subscription) and have configured the correct message recipients. For configuration details, please refer to Message [Subscription Management](https://www.tencentcloud.com/document/product/1233/60778).
+Create and bind policy Query instance Reset instance access password.
+-Call this API to deem as consent to the origin protection enablement special agreement (https://intl.cloud.tencent.com/document/product/1552/120141?from_cn_redirect=1);.
+-The origin IP range may change irregularly. tencent cloud EdgeOne (EdgeOne) will trigger notifications via message Center, SMS, or email 14 days, 7 days, 3 days, and 1 day before the change. To ensure you receive the change notification for the origin IP range, please ensure you have selected EdgeOne product services in the [tencent cloud message Center console](https://console.cloud.tencent.com/message) and configured the correct message recipient. For the setting method, refer to [message Subscription Management](https://intl.cloud.tencent.com/document/product/567/43476?from_cn_redirect=1).
      * @param req EnableOriginACLRequest
      * @return EnableOriginACLResponse
      * @throws TencentCloudSDKException
@@ -1342,6 +1663,7 @@ After the environment variables are set, they can be used in the function code. 
 
     /**
      *This API is used to modify an alias domain name.
+The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
      * @param req ModifyAliasDomainRequest
      * @return ModifyAliasDomainResponse
      * @throws TencentCloudSDKException
@@ -1353,6 +1675,7 @@ After the environment variables are set, they can be used in the function code. 
 
     /**
      *This API is used to modify the status of an alias domain name.
+The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
      * @param req ModifyAliasDomainStatusRequest
      * @return ModifyAliasDomainStatusResponse
      * @throws TencentCloudSDKException
@@ -1428,6 +1751,17 @@ After the environment variables are set, they can be used in the function code. 
     public ModifyCustomErrorPageResponse ModifyCustomErrorPage(ModifyCustomErrorPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCustomErrorPage", ModifyCustomErrorPageResponse.class);
+    }
+
+    /**
+     *This API is used to modify site exclusive Anti-DDoS protection.
+     * @param req ModifyDDoSProtectionRequest
+     * @return ModifyDDoSProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDDoSProtectionResponse ModifyDDoSProtection(ModifyDDoSProtectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDDoSProtection", ModifyDDoSProtectionResponse.class);
     }
 
     /**
@@ -1587,6 +1921,39 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     }
 
     /**
+     *This API is used to modify multi-channel security acceleration gateway information, such as name, gateway ID, IP and port.
+     * @param req ModifyMultiPathGatewayRequest
+     * @return ModifyMultiPathGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMultiPathGatewayResponse ModifyMultiPathGateway(ModifyMultiPathGatewayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMultiPathGateway", ModifyMultiPathGatewayResponse.class);
+    }
+
+    /**
+     *This API is used to modify the access lines of the multi-channel security acceleration gateway, including EdgeOne Layer-4 proxy lines and custom lines.
+     * @param req ModifyMultiPathGatewayLineRequest
+     * @return ModifyMultiPathGatewayLineResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMultiPathGatewayLineResponse ModifyMultiPathGatewayLine(ModifyMultiPathGatewayLineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMultiPathGatewayLine", ModifyMultiPathGatewayLineResponse.class);
+    }
+
+    /**
+     *This API is used to modify the access key for the multi-channel security acceleration gateway.The access key is used by customers to sign requests for gateway access. The original key becomes invalid after modification.
+     * @param req ModifyMultiPathGatewaySecretKeyRequest
+     * @return ModifyMultiPathGatewaySecretKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMultiPathGatewaySecretKeyResponse ModifyMultiPathGatewaySecretKey(ModifyMultiPathGatewaySecretKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMultiPathGatewaySecretKey", ModifyMultiPathGatewaySecretKeyResponse.class);
+    }
+
+    /**
      *This API is used to enable or disable specific origin ACLs for L7 acceleration domain names or L4 proxy instances. A single submission supports up to 200 L7 acceleration domain names or 100 L4 proxy instances. Hybrid submissions of L7 acceleration domain names and L4 proxy instances are supported, with a maximum total number of instances of 200. If changes are needed for exceeding 200 instances, submit them in batches via this API.
      * @param req ModifyOriginACLRequest
      * @return ModifyOriginACLResponse
@@ -1631,7 +1998,8 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     }
 
     /**
-     *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [ModifyL7AccRule](https://intl.cloud.tencent.com/document/product/1552/115818?from_cn_redirect=1).
+     *This API is on an earlier version. EdgeOne has comprehensively upgraded the relevant APIs of the rule engine on January 21, 2025. For details about the new version of the API for modifying layer-7 acceleration rules, see ModifyL7AccRule(https://intl.cloud.tencent.com/document/product/1552/115818?from_cn_redirect=1).
+<p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
      * @param req ModifyRuleRequest
      * @return ModifyRuleResponse
      * @throws TencentCloudSDKException
@@ -1639,6 +2007,39 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     public ModifyRuleResponse ModifyRule(ModifyRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyRule", ModifyRuleResponse.class);
+    }
+
+    /**
+     *This API is used to modify an API resource.
+     * @param req ModifySecurityAPIResourceRequest
+     * @return ModifySecurityAPIResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySecurityAPIResourceResponse ModifySecurityAPIResource(ModifySecurityAPIResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySecurityAPIResource", ModifySecurityAPIResourceResponse.class);
+    }
+
+    /**
+     *This API is used to modify an API service.
+     * @param req ModifySecurityAPIServiceRequest
+     * @return ModifySecurityAPIServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySecurityAPIServiceResponse ModifySecurityAPIService(ModifySecurityAPIServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySecurityAPIService", ModifySecurityAPIServiceResponse.class);
+    }
+
+    /**
+     *This API is used to modify client authentication options.
+     * @param req ModifySecurityClientAttesterRequest
+     * @return ModifySecurityClientAttesterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySecurityClientAttesterResponse ModifySecurityClientAttester(ModifySecurityClientAttesterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySecurityClientAttester", ModifySecurityClientAttesterResponse.class);
     }
 
     /**
@@ -1650,6 +2051,17 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     public ModifySecurityIPGroupResponse ModifySecurityIPGroup(ModifySecurityIPGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySecurityIPGroup", ModifySecurityIPGroupResponse.class);
+    }
+
+    /**
+     *This API is used to modify JavaScript injection rules.
+     * @param req ModifySecurityJSInjectionRuleRequest
+     * @return ModifySecurityJSInjectionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySecurityJSInjectionRuleResponse ModifySecurityJSInjectionRule(ModifySecurityJSInjectionRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySecurityJSInjectionRule", ModifySecurityJSInjectionRuleResponse.class);
     }
 
     /**
@@ -1705,6 +2117,17 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     public ModifyZoneStatusResponse ModifyZoneStatus(ModifyZoneStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyZoneStatus", ModifyZoneStatusResponse.class);
+    }
+
+    /**
+     *This API is used to refresh keys for multi-channel security acceleration gateways. Customers access multi-channel security acceleration gateways based on integration key signatures. Each site has only one access key, which applies to all gateways under that site. After refreshing the key, the original key becomes invalid.
+     * @param req RefreshMultiPathGatewaySecretKeyRequest
+     * @return RefreshMultiPathGatewaySecretKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public RefreshMultiPathGatewaySecretKeyResponse RefreshMultiPathGatewaySecretKey(RefreshMultiPathGatewaySecretKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RefreshMultiPathGatewaySecretKey", RefreshMultiPathGatewaySecretKeyResponse.class);
     }
 
     /**

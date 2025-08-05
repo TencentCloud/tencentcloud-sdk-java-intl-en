@@ -40,24 +40,21 @@ public class RateLimitConfig extends AbstractModel {
     private RateLimitUserRule [] RateLimitUserRules;
 
     /**
-    * The settings of the rate limiting template. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The rate limit template feature. if null, use the last set configuration by default.
     */
     @SerializedName("RateLimitTemplate")
     @Expose
     private RateLimitTemplate RateLimitTemplate;
 
     /**
-    * The client filtering settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Intelligent client filtering. if null, use the last set configuration by default.
     */
     @SerializedName("RateLimitIntelligence")
     @Expose
     private RateLimitIntelligence RateLimitIntelligence;
 
     /**
-    * The custom rate limiting rules. If it is `null`, the previous settings is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * The custom rate limiting rules. if it is `null`, the previous settings is used.
     */
     @SerializedName("RateLimitCustomizes")
     @Expose
@@ -104,60 +101,48 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get The settings of the rate limiting template. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RateLimitTemplate The settings of the rate limiting template. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The rate limit template feature. if null, use the last set configuration by default. 
+     * @return RateLimitTemplate The rate limit template feature. if null, use the last set configuration by default.
      */
     public RateLimitTemplate getRateLimitTemplate() {
         return this.RateLimitTemplate;
     }
 
     /**
-     * Set The settings of the rate limiting template. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RateLimitTemplate The settings of the rate limiting template. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The rate limit template feature. if null, use the last set configuration by default.
+     * @param RateLimitTemplate The rate limit template feature. if null, use the last set configuration by default.
      */
     public void setRateLimitTemplate(RateLimitTemplate RateLimitTemplate) {
         this.RateLimitTemplate = RateLimitTemplate;
     }
 
     /**
-     * Get The client filtering settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RateLimitIntelligence The client filtering settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Intelligent client filtering. if null, use the last set configuration by default. 
+     * @return RateLimitIntelligence Intelligent client filtering. if null, use the last set configuration by default.
      */
     public RateLimitIntelligence getRateLimitIntelligence() {
         return this.RateLimitIntelligence;
     }
 
     /**
-     * Set The client filtering settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RateLimitIntelligence The client filtering settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Intelligent client filtering. if null, use the last set configuration by default.
+     * @param RateLimitIntelligence Intelligent client filtering. if null, use the last set configuration by default.
      */
     public void setRateLimitIntelligence(RateLimitIntelligence RateLimitIntelligence) {
         this.RateLimitIntelligence = RateLimitIntelligence;
     }
 
     /**
-     * Get The custom rate limiting rules. If it is `null`, the previous settings is used.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return RateLimitCustomizes The custom rate limiting rules. If it is `null`, the previous settings is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get The custom rate limiting rules. if it is `null`, the previous settings is used. 
+     * @return RateLimitCustomizes The custom rate limiting rules. if it is `null`, the previous settings is used.
      */
     public RateLimitUserRule [] getRateLimitCustomizes() {
         return this.RateLimitCustomizes;
     }
 
     /**
-     * Set The custom rate limiting rules. If it is `null`, the previous settings is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param RateLimitCustomizes The custom rate limiting rules. If it is `null`, the previous settings is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set The custom rate limiting rules. if it is `null`, the previous settings is used.
+     * @param RateLimitCustomizes The custom rate limiting rules. if it is `null`, the previous settings is used.
      */
     public void setRateLimitCustomizes(RateLimitUserRule [] RateLimitCustomizes) {
         this.RateLimitCustomizes = RateLimitCustomizes;

@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class CreatePrefetchTaskRequest extends AbstractModel {
 
     /**
-    * ID of the site.
+    * Zone ID.
+
+If you wish to quickly submit Targets urls under different sites, you can fill in * as the value. but the premise is that the account calling this API must have the permission to all site resources under the root account.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -54,16 +56,41 @@ Note: The number of tasks that can be submitted is limited by the quota of a bil
     private Header [] Headers;
 
     /**
-     * Get ID of the site. 
-     * @return ZoneId ID of the site.
+    * Media fragment preheating control. valid values:.
+<Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
+<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
+
+Notes:.
+1. the supported description file is M3U8, and the corresponding shard is TS.
+Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
+Recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
+
+This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+    */
+    @SerializedName("PrefetchMediaSegments")
+    @Expose
+    private String PrefetchMediaSegments;
+
+    /**
+     * Get Zone ID.
+
+If you wish to quickly submit Targets urls under different sites, you can fill in * as the value. but the premise is that the account calling this API must have the permission to all site resources under the root account. 
+     * @return ZoneId Zone ID.
+
+If you wish to quickly submit Targets urls under different sites, you can fill in * as the value. but the premise is that the account calling this API must have the permission to all site resources under the root account.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site.
-     * @param ZoneId ID of the site.
+     * Set Zone ID.
+
+If you wish to quickly submit Targets urls under different sites, you can fill in * as the value. but the premise is that the account calling this API must have the permission to all site resources under the root account.
+     * @param ZoneId Zone ID.
+
+If you wish to quickly submit Targets urls under different sites, you can fill in * as the value. but the premise is that the account calling this API must have the permission to all site resources under the root account.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -129,6 +156,62 @@ Note: The number of tasks that can be submitted is limited by the quota of a bil
         this.Headers = Headers;
     }
 
+    /**
+     * Get Media fragment preheating control. valid values:.
+<Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
+<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
+
+Notes:.
+1. the supported description file is M3U8, and the corresponding shard is TS.
+Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
+Recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
+
+This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers. 
+     * @return PrefetchMediaSegments Media fragment preheating control. valid values:.
+<Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
+<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
+
+Notes:.
+1. the supported description file is M3U8, and the corresponding shard is TS.
+Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
+Recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
+
+This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+     */
+    public String getPrefetchMediaSegments() {
+        return this.PrefetchMediaSegments;
+    }
+
+    /**
+     * Set Media fragment preheating control. valid values:.
+<Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
+<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
+
+Notes:.
+1. the supported description file is M3U8, and the corresponding shard is TS.
+Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
+Recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
+
+This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+     * @param PrefetchMediaSegments Media fragment preheating control. valid values:.
+<Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
+<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
+
+Notes:.
+1. the supported description file is M3U8, and the corresponding shard is TS.
+Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
+Recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
+
+This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+     */
+    public void setPrefetchMediaSegments(String PrefetchMediaSegments) {
+        this.PrefetchMediaSegments = PrefetchMediaSegments;
+    }
+
     public CreatePrefetchTaskRequest() {
     }
 
@@ -155,6 +238,9 @@ Note: The number of tasks that can be submitted is limited by the quota of a bil
                 this.Headers[i] = new Header(source.Headers[i]);
             }
         }
+        if (source.PrefetchMediaSegments != null) {
+            this.PrefetchMediaSegments = new String(source.PrefetchMediaSegments);
+        }
     }
 
 
@@ -166,6 +252,7 @@ Note: The number of tasks that can be submitted is limited by the quota of a bil
         this.setParamArraySimple(map, prefix + "Targets.", this.Targets);
         this.setParamSimple(map, prefix + "EncodeUrl", this.EncodeUrl);
         this.setParamArrayObj(map, prefix + "Headers.", this.Headers);
+        this.setParamSimple(map, prefix + "PrefetchMediaSegments", this.PrefetchMediaSegments);
 
     }
 }

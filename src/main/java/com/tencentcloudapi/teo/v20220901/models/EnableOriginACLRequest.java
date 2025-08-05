@@ -24,150 +24,135 @@ import java.util.HashMap;
 public class EnableOriginACLRequest extends AbstractModel {
 
     /**
-    * Specifies the site ID.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The mode of configurating origin ACLs for L7 acceleration domains.
-- all: configurate origin ACLs for all L7 acceleration domains under the site.
-- specific: configurate origin ACLs for designated L7 acceleration domains under the site.
-When the parameter is empty, it defaults to specific.
-
+    * L7 acceleration domain name activation in origin protection mode.
+<li>`all`: enable layer-7 acceleration domain names for the site.</li>.
+<Li>Specific: enable for the site's designated layer-7 acceleration domain name.</li>when no parameter is defined, the default is specific.
     */
     @SerializedName("L7EnableMode")
     @Expose
     private String L7EnableMode;
 
     /**
-    * The list of L7 acceleration domains that require enabling the origin ACLs. This list must be empty when the request parameter L7EnableMode is set to 'all'. A maximum of 200 domains are supported at a time.
+    * Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
     */
     @SerializedName("L7Hosts")
     @Expose
     private String [] L7Hosts;
 
     /**
-    * The mode of configurating origin ACLs for L4 proxy Instances.
-- all: configurate origin ACLs for all L4 proxy Instances under the site.
-- specific: configurate origin ACLs for designated  L4 proxy Instances under the site.
-When the parameter is empty, it defaults to specific.
+    * Specifies the origin protection mode of the l4 proxy instance.
+<Li>ALL: enable for all l4 proxy instances under the site.</li>.
+<Li>Specific: enable for the designated layer 4 proxy instance of the site.</li>when no parameter is defined, the default is specific.
     */
     @SerializedName("L4EnableMode")
     @Expose
     private String L4EnableMode;
 
     /**
-    * The list of L4 proxy Instances that require enabling origin ACLs. This list must be empty when the request parameter L4EnableMode is set to 'all'. A maximum of 100 instances are supported at a time.
+    * The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
     */
     @SerializedName("L4ProxyIds")
     @Expose
     private String [] L4ProxyIds;
 
     /**
-     * Get Specifies the site ID. 
-     * @return ZoneId Specifies the site ID.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Specifies the site ID.
-     * @param ZoneId Specifies the site ID.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The mode of configurating origin ACLs for L7 acceleration domains.
-- all: configurate origin ACLs for all L7 acceleration domains under the site.
-- specific: configurate origin ACLs for designated L7 acceleration domains under the site.
-When the parameter is empty, it defaults to specific.
- 
-     * @return L7EnableMode The mode of configurating origin ACLs for L7 acceleration domains.
-- all: configurate origin ACLs for all L7 acceleration domains under the site.
-- specific: configurate origin ACLs for designated L7 acceleration domains under the site.
-When the parameter is empty, it defaults to specific.
-
+     * Get L7 acceleration domain name activation in origin protection mode.
+<li>`all`: enable layer-7 acceleration domain names for the site.</li>.
+<Li>Specific: enable for the site's designated layer-7 acceleration domain name.</li>when no parameter is defined, the default is specific. 
+     * @return L7EnableMode L7 acceleration domain name activation in origin protection mode.
+<li>`all`: enable layer-7 acceleration domain names for the site.</li>.
+<Li>Specific: enable for the site's designated layer-7 acceleration domain name.</li>when no parameter is defined, the default is specific.
      */
     public String getL7EnableMode() {
         return this.L7EnableMode;
     }
 
     /**
-     * Set The mode of configurating origin ACLs for L7 acceleration domains.
-- all: configurate origin ACLs for all L7 acceleration domains under the site.
-- specific: configurate origin ACLs for designated L7 acceleration domains under the site.
-When the parameter is empty, it defaults to specific.
-
-     * @param L7EnableMode The mode of configurating origin ACLs for L7 acceleration domains.
-- all: configurate origin ACLs for all L7 acceleration domains under the site.
-- specific: configurate origin ACLs for designated L7 acceleration domains under the site.
-When the parameter is empty, it defaults to specific.
-
+     * Set L7 acceleration domain name activation in origin protection mode.
+<li>`all`: enable layer-7 acceleration domain names for the site.</li>.
+<Li>Specific: enable for the site's designated layer-7 acceleration domain name.</li>when no parameter is defined, the default is specific.
+     * @param L7EnableMode L7 acceleration domain name activation in origin protection mode.
+<li>`all`: enable layer-7 acceleration domain names for the site.</li>.
+<Li>Specific: enable for the site's designated layer-7 acceleration domain name.</li>when no parameter is defined, the default is specific.
      */
     public void setL7EnableMode(String L7EnableMode) {
         this.L7EnableMode = L7EnableMode;
     }
 
     /**
-     * Get The list of L7 acceleration domains that require enabling the origin ACLs. This list must be empty when the request parameter L7EnableMode is set to 'all'. A maximum of 200 domains are supported at a time. 
-     * @return L7Hosts The list of L7 acceleration domains that require enabling the origin ACLs. This list must be empty when the request parameter L7EnableMode is set to 'all'. A maximum of 200 domains are supported at a time.
+     * Get Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation. 
+     * @return L7Hosts Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
      */
     public String [] getL7Hosts() {
         return this.L7Hosts;
     }
 
     /**
-     * Set The list of L7 acceleration domains that require enabling the origin ACLs. This list must be empty when the request parameter L7EnableMode is set to 'all'. A maximum of 200 domains are supported at a time.
-     * @param L7Hosts The list of L7 acceleration domains that require enabling the origin ACLs. This list must be empty when the request parameter L7EnableMode is set to 'all'. A maximum of 200 domains are supported at a time.
+     * Set Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
+     * @param L7Hosts Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
      */
     public void setL7Hosts(String [] L7Hosts) {
         this.L7Hosts = L7Hosts;
     }
 
     /**
-     * Get The mode of configurating origin ACLs for L4 proxy Instances.
-- all: configurate origin ACLs for all L4 proxy Instances under the site.
-- specific: configurate origin ACLs for designated  L4 proxy Instances under the site.
-When the parameter is empty, it defaults to specific. 
-     * @return L4EnableMode The mode of configurating origin ACLs for L4 proxy Instances.
-- all: configurate origin ACLs for all L4 proxy Instances under the site.
-- specific: configurate origin ACLs for designated  L4 proxy Instances under the site.
-When the parameter is empty, it defaults to specific.
+     * Get Specifies the origin protection mode of the l4 proxy instance.
+<Li>ALL: enable for all l4 proxy instances under the site.</li>.
+<Li>Specific: enable for the designated layer 4 proxy instance of the site.</li>when no parameter is defined, the default is specific. 
+     * @return L4EnableMode Specifies the origin protection mode of the l4 proxy instance.
+<Li>ALL: enable for all l4 proxy instances under the site.</li>.
+<Li>Specific: enable for the designated layer 4 proxy instance of the site.</li>when no parameter is defined, the default is specific.
      */
     public String getL4EnableMode() {
         return this.L4EnableMode;
     }
 
     /**
-     * Set The mode of configurating origin ACLs for L4 proxy Instances.
-- all: configurate origin ACLs for all L4 proxy Instances under the site.
-- specific: configurate origin ACLs for designated  L4 proxy Instances under the site.
-When the parameter is empty, it defaults to specific.
-     * @param L4EnableMode The mode of configurating origin ACLs for L4 proxy Instances.
-- all: configurate origin ACLs for all L4 proxy Instances under the site.
-- specific: configurate origin ACLs for designated  L4 proxy Instances under the site.
-When the parameter is empty, it defaults to specific.
+     * Set Specifies the origin protection mode of the l4 proxy instance.
+<Li>ALL: enable for all l4 proxy instances under the site.</li>.
+<Li>Specific: enable for the designated layer 4 proxy instance of the site.</li>when no parameter is defined, the default is specific.
+     * @param L4EnableMode Specifies the origin protection mode of the l4 proxy instance.
+<Li>ALL: enable for all l4 proxy instances under the site.</li>.
+<Li>Specific: enable for the designated layer 4 proxy instance of the site.</li>when no parameter is defined, the default is specific.
      */
     public void setL4EnableMode(String L4EnableMode) {
         this.L4EnableMode = L4EnableMode;
     }
 
     /**
-     * Get The list of L4 proxy Instances that require enabling origin ACLs. This list must be empty when the request parameter L4EnableMode is set to 'all'. A maximum of 100 instances are supported at a time. 
-     * @return L4ProxyIds The list of L4 proxy Instances that require enabling origin ACLs. This list must be empty when the request parameter L4EnableMode is set to 'all'. A maximum of 100 instances are supported at a time.
+     * Get The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation. 
+     * @return L4ProxyIds The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
      */
     public String [] getL4ProxyIds() {
         return this.L4ProxyIds;
     }
 
     /**
-     * Set The list of L4 proxy Instances that require enabling origin ACLs. This list must be empty when the request parameter L4EnableMode is set to 'all'. A maximum of 100 instances are supported at a time.
-     * @param L4ProxyIds The list of L4 proxy Instances that require enabling origin ACLs. This list must be empty when the request parameter L4EnableMode is set to 'all'. A maximum of 100 instances are supported at a time.
+     * Set The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
+     * @param L4ProxyIds The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
      */
     public void setL4ProxyIds(String [] L4ProxyIds) {
         this.L4ProxyIds = L4ProxyIds;

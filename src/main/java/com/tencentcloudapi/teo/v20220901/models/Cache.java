@@ -33,9 +33,8 @@ public class Cache extends AbstractModel {
     private String Switch;
 
     /**
-    * Cache expiration time setting.
-Unit: second. The maximum value is 365 days.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the cache expiration time settings.
+Unit: seconds. the maximum settable value is 365 days.
     */
     @SerializedName("CacheTime")
     @Expose
@@ -76,24 +75,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cache expiration time setting.
-Unit: second. The maximum value is 365 days.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CacheTime Cache expiration time setting.
-Unit: second. The maximum value is 365 days.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the cache expiration time settings.
+Unit: seconds. the maximum settable value is 365 days. 
+     * @return CacheTime Specifies the cache expiration time settings.
+Unit: seconds. the maximum settable value is 365 days.
      */
     public Long getCacheTime() {
         return this.CacheTime;
     }
 
     /**
-     * Set Cache expiration time setting.
-Unit: second. The maximum value is 365 days.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CacheTime Cache expiration time setting.
-Unit: second. The maximum value is 365 days.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the cache expiration time settings.
+Unit: seconds. the maximum settable value is 365 days.
+     * @param CacheTime Specifies the cache expiration time settings.
+Unit: seconds. the maximum settable value is 365 days.
      */
     public void setCacheTime(Long CacheTime) {
         this.CacheTime = CacheTime;

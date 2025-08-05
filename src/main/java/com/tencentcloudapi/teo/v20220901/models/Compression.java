@@ -33,10 +33,9 @@ public class Compression extends AbstractModel {
     private String Switch;
 
     /**
-    * Compression algorithm. Values:
-<li>`brotli`: Brotli algorithm</li>
-<li>`gzip`: Gzip algorithm</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Supported compression algorithm list. valid values:.
+<Li>Brotli: specifies the brotli algorithm.</li>.
+<Li>Gzip: specifies the gzip algorithm.</li>.
     */
     @SerializedName("Algorithms")
     @Expose
@@ -67,28 +66,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Compression algorithm. Values:
-<li>`brotli`: Brotli algorithm</li>
-<li>`gzip`: Gzip algorithm</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Algorithms Compression algorithm. Values:
-<li>`brotli`: Brotli algorithm</li>
-<li>`gzip`: Gzip algorithm</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Supported compression algorithm list. valid values:.
+<Li>Brotli: specifies the brotli algorithm.</li>.
+<Li>Gzip: specifies the gzip algorithm.</li>. 
+     * @return Algorithms Supported compression algorithm list. valid values:.
+<Li>Brotli: specifies the brotli algorithm.</li>.
+<Li>Gzip: specifies the gzip algorithm.</li>.
      */
     public String [] getAlgorithms() {
         return this.Algorithms;
     }
 
     /**
-     * Set Compression algorithm. Values:
-<li>`brotli`: Brotli algorithm</li>
-<li>`gzip`: Gzip algorithm</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Algorithms Compression algorithm. Values:
-<li>`brotli`: Brotli algorithm</li>
-<li>`gzip`: Gzip algorithm</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Supported compression algorithm list. valid values:.
+<Li>Brotli: specifies the brotli algorithm.</li>.
+<Li>Gzip: specifies the gzip algorithm.</li>.
+     * @param Algorithms Supported compression algorithm list. valid values:.
+<Li>Brotli: specifies the brotli algorithm.</li>.
+<Li>Gzip: specifies the gzip algorithm.</li>.
      */
     public void setAlgorithms(String [] Algorithms) {
         this.Algorithms = Algorithms;

@@ -55,8 +55,7 @@ public class DeployRecord extends AbstractModel {
     private String Message;
 
     /**
-    * Release record ID. 
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Release record ID.
     */
     @SerializedName("RecordId")
     @Expose
@@ -147,19 +146,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Release record ID. 
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RecordId Release record ID. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @return RecordId Release record ID.
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set Release record ID. 
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RecordId Release record ID. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Release record ID.
+     * @param RecordId Release record ID.
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;

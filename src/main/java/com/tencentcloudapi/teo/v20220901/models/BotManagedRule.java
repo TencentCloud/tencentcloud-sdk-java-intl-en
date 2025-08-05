@@ -42,40 +42,35 @@ public class BotManagedRule extends AbstractModel {
     private Long RuleID;
 
     /**
-    * The ID of the rule that applies the "Allow" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rule ID to allow. defaults to no rules configured for allowance.
     */
     @SerializedName("TransManagedIds")
     @Expose
     private Long [] TransManagedIds;
 
     /**
-    * The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
     */
     @SerializedName("AlgManagedIds")
     @Expose
     private Long [] AlgManagedIds;
 
     /**
-    * The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The rule ID for digit verification code. by default, all rules do not configure digit verification code.
     */
     @SerializedName("CapManagedIds")
     @Expose
     private Long [] CapManagedIds;
 
     /**
-    * The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rule ID for observation. by default, observation is not configured for all rules.
     */
     @SerializedName("MonManagedIds")
     @Expose
     private Long [] MonManagedIds;
 
     /**
-    * The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rule ID for interception. by default, all rules have no configuration interception.
     */
     @SerializedName("DropManagedIds")
     @Expose
@@ -130,100 +125,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The ID of the rule that applies the "Allow" action.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransManagedIds The ID of the rule that applies the "Allow" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rule ID to allow. defaults to no rules configured for allowance. 
+     * @return TransManagedIds Rule ID to allow. defaults to no rules configured for allowance.
      */
     public Long [] getTransManagedIds() {
         return this.TransManagedIds;
     }
 
     /**
-     * Set The ID of the rule that applies the "Allow" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransManagedIds The ID of the rule that applies the "Allow" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rule ID to allow. defaults to no rules configured for allowance.
+     * @param TransManagedIds Rule ID to allow. defaults to no rules configured for allowance.
      */
     public void setTransManagedIds(Long [] TransManagedIds) {
         this.TransManagedIds = TransManagedIds;
     }
 
     /**
-     * Get The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AlgManagedIds The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rule ID of the JS challenge. default is all rules without configuring the JS challenge. 
+     * @return AlgManagedIds Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
      */
     public Long [] getAlgManagedIds() {
         return this.AlgManagedIds;
     }
 
     /**
-     * Set The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AlgManagedIds The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
+     * @param AlgManagedIds Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
      */
     public void setAlgManagedIds(Long [] AlgManagedIds) {
         this.AlgManagedIds = AlgManagedIds;
     }
 
     /**
-     * Get The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CapManagedIds The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The rule ID for digit verification code. by default, all rules do not configure digit verification code. 
+     * @return CapManagedIds The rule ID for digit verification code. by default, all rules do not configure digit verification code.
      */
     public Long [] getCapManagedIds() {
         return this.CapManagedIds;
     }
 
     /**
-     * Set The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CapManagedIds The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The rule ID for digit verification code. by default, all rules do not configure digit verification code.
+     * @param CapManagedIds The rule ID for digit verification code. by default, all rules do not configure digit verification code.
      */
     public void setCapManagedIds(Long [] CapManagedIds) {
         this.CapManagedIds = CapManagedIds;
     }
 
     /**
-     * Get The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MonManagedIds The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rule ID for observation. by default, observation is not configured for all rules. 
+     * @return MonManagedIds Rule ID for observation. by default, observation is not configured for all rules.
      */
     public Long [] getMonManagedIds() {
         return this.MonManagedIds;
     }
 
     /**
-     * Set The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MonManagedIds The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rule ID for observation. by default, observation is not configured for all rules.
+     * @param MonManagedIds Rule ID for observation. by default, observation is not configured for all rules.
      */
     public void setMonManagedIds(Long [] MonManagedIds) {
         this.MonManagedIds = MonManagedIds;
     }
 
     /**
-     * Get The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DropManagedIds The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rule ID for interception. by default, all rules have no configuration interception. 
+     * @return DropManagedIds Rule ID for interception. by default, all rules have no configuration interception.
      */
     public Long [] getDropManagedIds() {
         return this.DropManagedIds;
     }
 
     /**
-     * Set The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DropManagedIds The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rule ID for interception. by default, all rules have no configuration interception.
+     * @param DropManagedIds Rule ID for interception. by default, all rules have no configuration interception.
      */
     public void setDropManagedIds(Long [] DropManagedIds) {
         this.DropManagedIds = DropManagedIds;

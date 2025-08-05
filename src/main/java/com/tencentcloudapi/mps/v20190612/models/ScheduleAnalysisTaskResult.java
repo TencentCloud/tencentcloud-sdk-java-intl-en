@@ -59,12 +59,25 @@ public class ScheduleAnalysisTaskResult extends AbstractModel {
     private AiAnalysisTaskInput Input;
 
     /**
-    * The output of the content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Analysis task output.
     */
     @SerializedName("Output")
     @Expose
     private AiAnalysisResult [] Output;
+
+    /**
+    * Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+    */
+    @SerializedName("BeginProcessTime")
+    @Expose
+    private String BeginProcessTime;
+
+    /**
+    * Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private String FinishTime;
 
     /**
      * Get The task status. Valid values: PROCESSING, SUCCESS, FAIL. 
@@ -147,23 +160,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The output of the content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output The output of the content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Analysis task output. 
+     * @return Output Analysis task output.
      */
     public AiAnalysisResult [] getOutput() {
         return this.Output;
     }
 
     /**
-     * Set The output of the content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output The output of the content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Analysis task output.
+     * @param Output Analysis task output.
      */
     public void setOutput(AiAnalysisResult [] Output) {
         this.Output = Output;
+    }
+
+    /**
+     * Get Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return BeginProcessTime Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     */
+    public String getBeginProcessTime() {
+        return this.BeginProcessTime;
+    }
+
+    /**
+     * Set Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     * @param BeginProcessTime Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     */
+    public void setBeginProcessTime(String BeginProcessTime) {
+        this.BeginProcessTime = BeginProcessTime;
+    }
+
+    /**
+     * Get Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return FinishTime Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     */
+    public String getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     * @param FinishTime Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     */
+    public void setFinishTime(String FinishTime) {
+        this.FinishTime = FinishTime;
     }
 
     public ScheduleAnalysisTaskResult() {
@@ -195,6 +236,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.Output[i] = new AiAnalysisResult(source.Output[i]);
             }
         }
+        if (source.BeginProcessTime != null) {
+            this.BeginProcessTime = new String(source.BeginProcessTime);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
     }
 
 
@@ -208,6 +255,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamArrayObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
 
     }
 }

@@ -58,23 +58,23 @@ public class ModifyOriginParameters extends AbstractModel {
     private String OriginProtocol;
 
     /**
-    * Ports for http origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is http or follow.
+    * The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
     */
     @SerializedName("HTTPOriginPort")
     @Expose
     private Long HTTPOriginPort;
 
     /**
-    * Ports for https origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is https or follow.
+    * The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
     */
     @SerializedName("HTTPSOriginPort")
     @Expose
     private Long HTTPSOriginPort;
 
     /**
-    * Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type origintype is COS or awss3. valid values:.
+    * Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
 <Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li> if not specified, the default value is off.
+<li>off: disable private authentication.</li>.
     */
     @SerializedName("PrivateAccess")
     @Expose
@@ -189,56 +189,56 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get Ports for http origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is http or follow. 
-     * @return HTTPOriginPort Ports for http origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is http or follow.
+     * Get The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow. 
+     * @return HTTPOriginPort The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
      */
     public Long getHTTPOriginPort() {
         return this.HTTPOriginPort;
     }
 
     /**
-     * Set Ports for http origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is http or follow.
-     * @param HTTPOriginPort Ports for http origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is http or follow.
+     * Set The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
+     * @param HTTPOriginPort The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
      */
     public void setHTTPOriginPort(Long HTTPOriginPort) {
         this.HTTPOriginPort = HTTPOriginPort;
     }
 
     /**
-     * Get Ports for https origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is https or follow. 
-     * @return HTTPSOriginPort Ports for https origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is https or follow.
+     * Get The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow. 
+     * @return HTTPSOriginPort The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
      */
     public Long getHTTPSOriginPort() {
         return this.HTTPSOriginPort;
     }
 
     /**
-     * Set Ports for https origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is https or follow.
-     * @param HTTPSOriginPort Ports for https origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is https or follow.
+     * Set The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
+     * @param HTTPSOriginPort The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
      */
     public void setHTTPSOriginPort(Long HTTPSOriginPort) {
         this.HTTPSOriginPort = HTTPSOriginPort;
     }
 
     /**
-     * Get Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type origintype is COS or awss3. valid values:.
+     * Get Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
 <Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li> if not specified, the default value is off. 
-     * @return PrivateAccess Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type origintype is COS or awss3. valid values:.
+<li>off: disable private authentication.</li>. 
+     * @return PrivateAccess Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
 <Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li> if not specified, the default value is off.
+<li>off: disable private authentication.</li>.
      */
     public String getPrivateAccess() {
         return this.PrivateAccess;
     }
 
     /**
-     * Set Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type origintype is COS or awss3. valid values:.
+     * Set Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
 <Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li> if not specified, the default value is off.
-     * @param PrivateAccess Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type origintype is COS or awss3. valid values:.
+<li>off: disable private authentication.</li>.
+     * @param PrivateAccess Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
 <Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li> if not specified, the default value is off.
+<li>off: disable private authentication.</li>.
      */
     public void setPrivateAccess(String PrivateAccess) {
         this.PrivateAccess = PrivateAccess;

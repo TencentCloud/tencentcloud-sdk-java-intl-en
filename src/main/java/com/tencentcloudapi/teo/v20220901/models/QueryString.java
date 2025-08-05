@@ -33,18 +33,16 @@ public class QueryString extends AbstractModel {
     private String Switch;
 
     /**
-    * Specifies how to use query strings in the cache key. Values:
-<li>`includeCustom`: `Include partial query strings.</li>
-<li>`excludeCustom`: Exclude partial query strings.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CacheKey usage via QueryString, valid values:.
+<li>includeCustom: use partial url parameter;</li>.
+<li>excludeCustom: exclude partial url parameters.</li>.
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Array of query strings used/excluded
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the url parameter array for usage/exclusion.
     */
     @SerializedName("Value")
     @Expose
@@ -75,48 +73,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specifies how to use query strings in the cache key. Values:
-<li>`includeCustom`: `Include partial query strings.</li>
-<li>`excludeCustom`: Exclude partial query strings.</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Action Specifies how to use query strings in the cache key. Values:
-<li>`includeCustom`: `Include partial query strings.</li>
-<li>`excludeCustom`: Exclude partial query strings.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CacheKey usage via QueryString, valid values:.
+<li>includeCustom: use partial url parameter;</li>.
+<li>excludeCustom: exclude partial url parameters.</li>. 
+     * @return Action CacheKey usage via QueryString, valid values:.
+<li>includeCustom: use partial url parameter;</li>.
+<li>excludeCustom: exclude partial url parameters.</li>.
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Specifies how to use query strings in the cache key. Values:
-<li>`includeCustom`: `Include partial query strings.</li>
-<li>`excludeCustom`: Exclude partial query strings.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Action Specifies how to use query strings in the cache key. Values:
-<li>`includeCustom`: `Include partial query strings.</li>
-<li>`excludeCustom`: Exclude partial query strings.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CacheKey usage via QueryString, valid values:.
+<li>includeCustom: use partial url parameter;</li>.
+<li>excludeCustom: exclude partial url parameters.</li>.
+     * @param Action CacheKey usage via QueryString, valid values:.
+<li>includeCustom: use partial url parameter;</li>.
+<li>excludeCustom: exclude partial url parameters.</li>.
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Array of query strings used/excluded
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Value Array of query strings used/excluded
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the url parameter array for usage/exclusion. 
+     * @return Value Specifies the url parameter array for usage/exclusion.
      */
     public String [] getValue() {
         return this.Value;
     }
 
     /**
-     * Set Array of query strings used/excluded
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Value Array of query strings used/excluded
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the url parameter array for usage/exclusion.
+     * @param Value Specifies the url parameter array for usage/exclusion.
      */
     public void setValue(String [] Value) {
         this.Value = Value;

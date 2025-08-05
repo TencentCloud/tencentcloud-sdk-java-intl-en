@@ -102,8 +102,7 @@ Note: Up to 20 ports can be input for each rule.
     private Boolean SessionPersist;
 
     /**
-    * Duration for session persistence. The value takes effect only when SessionPersist is true.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Duration for session persistence. the value takes effect only when SessionPersist is true.
     */
     @SerializedName("SessionPersistTime")
     @Expose
@@ -119,8 +118,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     private String OriginPort;
 
     /**
-    * Rule tag.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Tag of the rule.
     */
     @SerializedName("RuleTag")
     @Expose
@@ -343,20 +341,16 @@ Note: Up to 20 ports can be input for each rule.
     }
 
     /**
-     * Get Duration for session persistence. The value takes effect only when SessionPersist is true.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return SessionPersistTime Duration for session persistence. The value takes effect only when SessionPersist is true.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Duration for session persistence. the value takes effect only when SessionPersist is true. 
+     * @return SessionPersistTime Duration for session persistence. the value takes effect only when SessionPersist is true.
      */
     public Long getSessionPersistTime() {
         return this.SessionPersistTime;
     }
 
     /**
-     * Set Duration for session persistence. The value takes effect only when SessionPersist is true.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param SessionPersistTime Duration for session persistence. The value takes effect only when SessionPersist is true.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Duration for session persistence. the value takes effect only when SessionPersist is true.
+     * @param SessionPersistTime Duration for session persistence. the value takes effect only when SessionPersist is true.
      */
     public void setSessionPersistTime(Long SessionPersistTime) {
         this.SessionPersistTime = SessionPersistTime;
@@ -387,20 +381,16 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get Rule tag.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return RuleTag Rule tag.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Tag of the rule. 
+     * @return RuleTag Tag of the rule.
      */
     public String getRuleTag() {
         return this.RuleTag;
     }
 
     /**
-     * Set Rule tag.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param RuleTag Rule tag.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Tag of the rule.
+     * @param RuleTag Tag of the rule.
      */
     public void setRuleTag(String RuleTag) {
         this.RuleTag = RuleTag;
