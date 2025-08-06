@@ -222,6 +222,9 @@ public enum VpcErrorCode {
      /* Invalid DedicatedClusterId. */
      INVALIDPARAMETERVALUE_INVALIDDEDICATEDCLUSTERID("InvalidParameterValue.InvalidDedicatedClusterId"),
      
+     /*  */
+     INVALIDPARAMETERVALUE_INVALIDEGRESS("InvalidParameterValue.InvalidEgress"),
+     
      /* This IP is applicable only for pay-as-you-go instances that billed by hourly traffic and instances with bandwidth package. */
      INVALIDPARAMETERVALUE_INVALIDINSTANCEINTERNETCHARGETYPE("InvalidParameterValue.InvalidInstanceInternetChargeType"),
      
@@ -401,6 +404,9 @@ public enum VpcErrorCode {
      
      /* This availability zone is unavailable. */
      INVALIDPARAMETERVALUE_UNAVAILABLEZONE("InvalidParameterValue.UnavailableZone"),
+     
+     /*  */
+     INVALIDPARAMETERVALUE_UNSUPPORTEDEGRESS("InvalidParameterValue.UnsupportedEgress"),
      
      /* Destination IP address range conflicts with CIDR of the current VPC. */
      INVALIDPARAMETERVALUE_VPCCIDRCONFLICT("InvalidParameterValue.VpcCidrConflict"),

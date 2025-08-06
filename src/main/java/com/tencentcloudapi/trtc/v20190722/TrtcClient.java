@@ -72,6 +72,21 @@ Mixed-stream recording: Mix the audios and videos of subscribed users (`UserId`)
     }
 
     /**
+     *API description:
+This API is used to enable the cloud slicing feature, completing audio and video slicing tasks in the room, and uploading them to the specified cloud storage.
+This API is used to achieve the following goals:
+* This API is used to specify the slicing parameter (SliceParams) to define the blocklist or allowlist of the anchors that require slicing.
+* This API is used to specify the storage parameter (SliceStorageParams) to specify the cloud storage you want to upload to. Currently, Tencent Cloud Object Storage (COS) and third-party AWS are supported.
+     * @param req CreateCloudSliceTaskRequest
+     * @return CreateCloudSliceTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudSliceTaskResponse CreateCloudSliceTask(CreateCloudSliceTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudSliceTask", CreateCloudSliceTaskResponse.class);
+    }
+
+    /**
      *This API is used to stop a recording task. If a task is stopped successfully, but the uploading of recording files has not completed, the backend will continue to upload the files and will notify you via a callback when the upload is completed.
      * @param req DeleteCloudRecordingRequest
      * @return DeleteCloudRecordingResponse
@@ -80,6 +95,17 @@ Mixed-stream recording: Mix the audios and videos of subscribed users (`UserId`)
     public DeleteCloudRecordingResponse DeleteCloudRecording(DeleteCloudRecordingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCloudRecording", DeleteCloudRecordingResponse.class);
+    }
+
+    /**
+     *This API is used to stop the slicing task after it is started. Successfully stopping the slicing does not mean that all files are fully transmitted; if the transmission is not completed, the backend will continue to upload files. After the upload is successful, a notification is sent to the customer, prompting that all files have been transmitted, through the event callback.
+     * @param req DeleteCloudSliceTaskRequest
+     * @return DeleteCloudSliceTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudSliceTaskResponse DeleteCloudSliceTask(DeleteCloudSliceTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudSliceTask", DeleteCloudSliceTaskResponse.class);
     }
 
     /**
@@ -128,6 +154,17 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
     public DescribeCloudRecordingResponse DescribeCloudRecording(DescribeCloudRecordingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudRecording", DescribeCloudRecordingResponse.class);
+    }
+
+    /**
+     *This API is used to query the status of the slicing task after it is started, which is valid only when the task is in progress. An error will be returned if the task is exited.
+     * @param req DescribeCloudSliceTaskRequest
+     * @return DescribeCloudSliceTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudSliceTaskResponse DescribeCloudSliceTask(DescribeCloudSliceTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudSliceTask", DescribeCloudSliceTaskResponse.class);
     }
 
     /**
@@ -393,6 +430,17 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     public ModifyCloudRecordingResponse ModifyCloudRecording(ModifyCloudRecordingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCloudRecording", ModifyCloudRecordingResponse.class);
+    }
+
+    /**
+     *This API is used to update the slicing task after it is started. It can be used to update the allowlist or blocklist for the specified subscription stream.
+     * @param req ModifyCloudSliceTaskRequest
+     * @return ModifyCloudSliceTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudSliceTaskResponse ModifyCloudSliceTask(ModifyCloudSliceTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudSliceTask", ModifyCloudSliceTaskResponse.class);
     }
 
     /**

@@ -47,7 +47,7 @@ Note: This field may return null, indicating that no valid value was found.
     private String ChargeUnit;
 
     /**
-    * Original price. Unit: CNY. Returned only for prepaid price inquiry.
+    * Original price. Unit: USD. Returned only for prepaid price inquiry.
     */
     @SerializedName("OriginalPrice")
     @Expose
@@ -110,16 +110,16 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Original price. Unit: CNY. Returned only for prepaid price inquiry. 
-     * @return OriginalPrice Original price. Unit: CNY. Returned only for prepaid price inquiry.
+     * Get Original price. Unit: USD. Returned only for prepaid price inquiry. 
+     * @return OriginalPrice Original price. Unit: USD. Returned only for prepaid price inquiry.
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Original price. Unit: CNY. Returned only for prepaid price inquiry.
-     * @param OriginalPrice Original price. Unit: CNY. Returned only for prepaid price inquiry.
+     * Set Original price. Unit: USD. Returned only for prepaid price inquiry.
+     * @param OriginalPrice Original price. Unit: USD. Returned only for prepaid price inquiry.
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
