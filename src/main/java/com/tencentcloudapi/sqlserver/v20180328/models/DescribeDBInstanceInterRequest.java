@@ -31,7 +31,7 @@ public class DescribeDBInstanceInterRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Filter by instance ID
+    * Filter by instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,14 +45,14 @@ public class DescribeDBInstanceInterRequest extends AbstractModel {
     private Long Status;
 
     /**
-    * The list of instance version numbers
+    * The list of instance version numbers.
     */
     @SerializedName("VersionSet")
     @Expose
     private String [] VersionSet;
 
     /**
-    * Instance AZ ID in the format of ap-guangzhou-2
+    * Instance AZ ID in the format of ap-guangzhou-3.
     */
     @SerializedName("Zone")
     @Expose
@@ -82,16 +82,16 @@ public class DescribeDBInstanceInterRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter by instance ID 
-     * @return InstanceId Filter by instance ID
+     * Get Filter by instance ID. 
+     * @return InstanceId Filter by instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Filter by instance ID
-     * @param InstanceId Filter by instance ID
+     * Set Filter by instance ID.
+     * @param InstanceId Filter by instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -114,32 +114,32 @@ public class DescribeDBInstanceInterRequest extends AbstractModel {
     }
 
     /**
-     * Get The list of instance version numbers 
-     * @return VersionSet The list of instance version numbers
+     * Get The list of instance version numbers. 
+     * @return VersionSet The list of instance version numbers.
      */
     public String [] getVersionSet() {
         return this.VersionSet;
     }
 
     /**
-     * Set The list of instance version numbers
-     * @param VersionSet The list of instance version numbers
+     * Set The list of instance version numbers.
+     * @param VersionSet The list of instance version numbers.
      */
     public void setVersionSet(String [] VersionSet) {
         this.VersionSet = VersionSet;
     }
 
     /**
-     * Get Instance AZ ID in the format of ap-guangzhou-2 
-     * @return Zone Instance AZ ID in the format of ap-guangzhou-2
+     * Get Instance AZ ID in the format of ap-guangzhou-3. 
+     * @return Zone Instance AZ ID in the format of ap-guangzhou-3.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Instance AZ ID in the format of ap-guangzhou-2
-     * @param Zone Instance AZ ID in the format of ap-guangzhou-2
+     * Set Instance AZ ID in the format of ap-guangzhou-3.
+     * @param Zone Instance AZ ID in the format of ap-guangzhou-3.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

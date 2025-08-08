@@ -45,21 +45,21 @@ public class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel {
     private Long ReadOnlyGroupType;
 
     /**
-    * Instance memory size in GB
+    * Instance memory size in GB.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Instance disk size in GB
+    * Instance disk size in GB.
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * Number of instance cores
+    * Number of instance cores.
     */
     @SerializedName("Cpu")
     @Expose
@@ -164,32 +164,39 @@ public class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel {
     private Long AutoVoucher;
 
     /**
-    * Array of voucher IDs (currently, only one voucher can be used per order)
+    * Array of voucher IDs (currently, only one voucher can be used per order).
     */
     @SerializedName("VoucherIds")
     @Expose
     private String [] VoucherIds;
 
     /**
-    * Tags associated with the instances to be created
+    * Tags associated with the instances to be created.
     */
     @SerializedName("ResourceTags")
     @Expose
     private ResourceTag [] ResourceTags;
 
     /**
-    * Collation of system character sets. Default value:  Chinese_PRC_CI_AS
+    * Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
     */
     @SerializedName("Collation")
     @Expose
     private String Collation;
 
     /**
-    * System time zone. Default value:  `China Standard Time`
+    * System time zone. Default value:  `China Standard Time`.
     */
     @SerializedName("TimeZone")
     @Expose
     private String TimeZone;
+
+    /**
+    * Disk encryption identification, 0 - no encryption, 1 - encryption.
+    */
+    @SerializedName("DiskEncryptFlag")
+    @Expose
+    private Long DiskEncryptFlag;
 
     /**
      * Get Instance ID in the format of  `mssql-3l3fgqn7`. 
@@ -240,48 +247,48 @@ public class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance memory size in GB 
-     * @return Memory Instance memory size in GB
+     * Get Instance memory size in GB. 
+     * @return Memory Instance memory size in GB.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Instance memory size in GB
-     * @param Memory Instance memory size in GB
+     * Set Instance memory size in GB.
+     * @param Memory Instance memory size in GB.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Instance disk size in GB 
-     * @return Storage Instance disk size in GB
+     * Get Instance disk size in GB. 
+     * @return Storage Instance disk size in GB.
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Instance disk size in GB
-     * @param Storage Instance disk size in GB
+     * Set Instance disk size in GB.
+     * @param Storage Instance disk size in GB.
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get Number of instance cores 
-     * @return Cpu Number of instance cores
+     * Get Number of instance cores. 
+     * @return Cpu Number of instance cores.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of instance cores
-     * @param Cpu Number of instance cores
+     * Set Number of instance cores.
+     * @param Cpu Number of instance cores.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
@@ -512,67 +519,83 @@ public class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Array of voucher IDs (currently, only one voucher can be used per order) 
-     * @return VoucherIds Array of voucher IDs (currently, only one voucher can be used per order)
+     * Get Array of voucher IDs (currently, only one voucher can be used per order). 
+     * @return VoucherIds Array of voucher IDs (currently, only one voucher can be used per order).
      */
     public String [] getVoucherIds() {
         return this.VoucherIds;
     }
 
     /**
-     * Set Array of voucher IDs (currently, only one voucher can be used per order)
-     * @param VoucherIds Array of voucher IDs (currently, only one voucher can be used per order)
+     * Set Array of voucher IDs (currently, only one voucher can be used per order).
+     * @param VoucherIds Array of voucher IDs (currently, only one voucher can be used per order).
      */
     public void setVoucherIds(String [] VoucherIds) {
         this.VoucherIds = VoucherIds;
     }
 
     /**
-     * Get Tags associated with the instances to be created 
-     * @return ResourceTags Tags associated with the instances to be created
+     * Get Tags associated with the instances to be created. 
+     * @return ResourceTags Tags associated with the instances to be created.
      */
     public ResourceTag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set Tags associated with the instances to be created
-     * @param ResourceTags Tags associated with the instances to be created
+     * Set Tags associated with the instances to be created.
+     * @param ResourceTags Tags associated with the instances to be created.
      */
     public void setResourceTags(ResourceTag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get Collation of system character sets. Default value:  Chinese_PRC_CI_AS 
-     * @return Collation Collation of system character sets. Default value:  Chinese_PRC_CI_AS
+     * Get Collation of system character sets. Default value:  Chinese_PRC_CI_AS. 
+     * @return Collation Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
      */
     public String getCollation() {
         return this.Collation;
     }
 
     /**
-     * Set Collation of system character sets. Default value:  Chinese_PRC_CI_AS
-     * @param Collation Collation of system character sets. Default value:  Chinese_PRC_CI_AS
+     * Set Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
+     * @param Collation Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
      */
     public void setCollation(String Collation) {
         this.Collation = Collation;
     }
 
     /**
-     * Get System time zone. Default value:  `China Standard Time` 
-     * @return TimeZone System time zone. Default value:  `China Standard Time`
+     * Get System time zone. Default value:  `China Standard Time`. 
+     * @return TimeZone System time zone. Default value:  `China Standard Time`.
      */
     public String getTimeZone() {
         return this.TimeZone;
     }
 
     /**
-     * Set System time zone. Default value:  `China Standard Time`
-     * @param TimeZone System time zone. Default value:  `China Standard Time`
+     * Set System time zone. Default value:  `China Standard Time`.
+     * @param TimeZone System time zone. Default value:  `China Standard Time`.
      */
     public void setTimeZone(String TimeZone) {
         this.TimeZone = TimeZone;
+    }
+
+    /**
+     * Get Disk encryption identification, 0 - no encryption, 1 - encryption. 
+     * @return DiskEncryptFlag Disk encryption identification, 0 - no encryption, 1 - encryption.
+     */
+    public Long getDiskEncryptFlag() {
+        return this.DiskEncryptFlag;
+    }
+
+    /**
+     * Set Disk encryption identification, 0 - no encryption, 1 - encryption.
+     * @param DiskEncryptFlag Disk encryption identification, 0 - no encryption, 1 - encryption.
+     */
+    public void setDiskEncryptFlag(Long DiskEncryptFlag) {
+        this.DiskEncryptFlag = DiskEncryptFlag;
     }
 
     public CreateCloudReadOnlyDBInstancesRequest() {
@@ -664,6 +687,9 @@ public class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel {
         if (source.TimeZone != null) {
             this.TimeZone = new String(source.TimeZone);
         }
+        if (source.DiskEncryptFlag != null) {
+            this.DiskEncryptFlag = new Long(source.DiskEncryptFlag);
+        }
     }
 
 
@@ -695,6 +721,7 @@ public class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "Collation", this.Collation);
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamSimple(map, prefix + "DiskEncryptFlag", this.DiskEncryptFlag);
 
     }
 }

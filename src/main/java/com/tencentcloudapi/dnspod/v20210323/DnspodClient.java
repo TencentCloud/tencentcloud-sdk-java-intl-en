@@ -83,6 +83,17 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *This API is used to enable a paid plan on the international website.
+     * @param req CreatePackageOrderRequest
+     * @return CreatePackageOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePackageOrderResponse CreatePackageOrder(CreatePackageOrderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePackageOrder", CreatePackageOrderResponse.class);
+    }
+
+    /**
      *This API is used to add a record.
      * @param req CreateRecordRequest
      * @return CreateRecordResponse

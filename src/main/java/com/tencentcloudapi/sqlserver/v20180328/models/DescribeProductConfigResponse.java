@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeProductConfigResponse extends AbstractModel {
 
     /**
-    * Specification information array
+    * Specification information array.
     */
     @SerializedName("SpecInfoList")
     @Expose
     private SpecInfo [] SpecInfoList;
 
     /**
-    * Number of date entries returned
+    * Number of date entries returned.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeProductConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Specification information array 
-     * @return SpecInfoList Specification information array
+     * Get Specification information array. 
+     * @return SpecInfoList Specification information array.
      */
     public SpecInfo [] getSpecInfoList() {
         return this.SpecInfoList;
     }
 
     /**
-     * Set Specification information array
-     * @param SpecInfoList Specification information array
+     * Set Specification information array.
+     * @param SpecInfoList Specification information array.
      */
     public void setSpecInfoList(SpecInfo [] SpecInfoList) {
         this.SpecInfoList = SpecInfoList;
     }
 
     /**
-     * Get Number of date entries returned 
-     * @return TotalCount Number of date entries returned
+     * Get Number of date entries returned. 
+     * @return TotalCount Number of date entries returned.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of date entries returned
-     * @param TotalCount Number of date entries returned
+     * Set Number of date entries returned.
+     * @param TotalCount Number of date entries returned.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

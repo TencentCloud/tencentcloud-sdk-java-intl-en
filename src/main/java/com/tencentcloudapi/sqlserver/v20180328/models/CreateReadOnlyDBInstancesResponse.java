@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateReadOnlyDBInstancesResponse extends AbstractModel {
 
     /**
-    * 
+    * Order name in array.
     */
     @SerializedName("DealNames")
     @Expose
@@ -38,16 +38,16 @@ public class CreateReadOnlyDBInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return DealNames 
+     * Get Order name in array. 
+     * @return DealNames Order name in array.
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set 
-     * @param DealNames 
+     * Set Order name in array.
+     * @param DealNames Order name in array.
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
