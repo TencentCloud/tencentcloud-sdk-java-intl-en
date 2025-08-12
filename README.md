@@ -76,17 +76,16 @@ public class DescribeInstances
 
 You can find more detailed examples in the `examples` directory of the [GitHub repository](https://github.com/tencentcloud/tencentcloud-sdk-java-intl-en).
 
-# Relevant Configuration
+# Configuration
 
 ## Proxy
-
-Specify proxy access. Currently, only HTTP proxy is supported:
-
-```
-HttpProfile httpProfile = new HttpProfile();
-httpProfile.setProxyHost("real proxy IP");
-httpProfile.setProxyPort(real proxy port);
-```
+```java  
+HttpProfile httpProfile = new HttpProfile();  
+httpProfile.setProxyHost("proxy-host");  
+httpProfile.setProxyPort(proxy-port);  
+httpProfile.setProxyUsername("username");  
+httpProfile.setProxyPassword("password");  
+```  
 
 Or, set the system proxy before initiating a request in the code:
 
@@ -95,8 +94,115 @@ System.setProperty("https.proxyHost", "Real proxy IP");
 System.setProperty("https.proxyPort", "Real proxy port");
 ```
 
-Or, set it in the startup parameters when running the program.
+## Language
+```java  
+clientProfile.setLanguage(Language.ZH_CN); // or Language.EN_US  
+```  
 
-# Compliance Notice
+## HTTP/HTTPS
+Switch protocols using `HttpProfile.setProtocol()`:
+```java  
+httpProfile.setProtocol("http://"); // or "https://" (default)  
+```  
 
-Please prioritize using the ​default domain names configured in the SDK for each product. If using other domains, note that ​overseas domains may pose ​data compliance risks.
+## Logging
+```java  
+clientProfile.setDebug(true);  
+```  
+Logs use `commons.logging`. Configure logging frameworks like Log4j if needed.
+
+## Regional Failover
+1. Failures ≥ 5 times.
+2. Failure rate ≥ 75%.
+
+Configure as follows:
+```java  
+clientProfile.setBackupEndpoint("ap-guangzhou.tencentcloudapi.com");  
+CircuitBreaker.Setting setting = new CircuitBreaker.Setting();  
+setting.maxFailNum = 6;  
+setting.maxFailPercentage = 0.8f;  
+client.setRegionBreaker(new CircuitBreaker(setting));  
+```  
+
+# Common Client
+**Note**: You must know the exact API parameters. Only POST + Signature v3 is supported.  
+Example: [Common Client Usage](https://github.com/TencentCloud/tencentcloud-sdk-java/tree/master/examples/common/commonclient).
+
+# Retry Mechanism
+Example: [Retry Example](https://github.com/TencentCloud/tencentcloud-sdk-java/tree/master/examples/common/Retry.java).
+
+# Credential Management
+Supported methods:
+1. **Environment Variables**:
+   ```java  
+   Credential cred = new EnvironmentVariableCredentialsProvider().getCredentials();  
+   ```  
+2. **Configuration File**:
+    - Path: `~/.tencentcloud/credentials` (Linux) or `C:\Users\NAME\.tencentcloud\credentials` (Windows).
+    - Format:
+      ```ini  
+      [default]  
+      secret_id = xxxxx  
+      secret_key = xxxxx  
+      ```  
+   ```java  
+   Credential cred = new ProfileCredentialsProvider().getCredentials();  
+   ```  
+3. **Role Assumption**:
+   ```java  
+   Credential cred = new STSCredential("secretId", "secretKey", "roleArn", "roleSessionName");  
+   ```  
+4. **Instance Role**:
+   ```java  
+   Credential cred = new CvmRoleCredential();  
+   ```  
+5. **TKE OIDC**:
+   ```java  
+   Credential cred = new OIDCRoleArnProvider().getCredentials();  
+   ```  
+6. **Provider Chain**:
+   ```java  
+   Credential cred = new DefaultCredentialsProvider().getCredentials(); // Order: Env → File → Instance → OIDC  
+   ```  
+Example: [Credential Manager](https://github.com/TencentCloud/tencentcloud-sdk-java/blob/master/examples/common/CredentialManager.java).
+
+# Custom SSL/TLS
+```java  
+ClientProfile cpf = new ClientProfile();  
+cpf.getHttpProfile().setSslSocketFactory(new MySSLSocketFactoryImpl());  
+cpf.getHttpProfile().setX509TrustManager(new MyX509TrustManagerImpl());  
+```  
+
+# Skip Certificate Verification
+```java  
+TrustManager[] trustAllCerts = new TrustManager[] { /* Custom TrustManager */ };  
+SSLContext sslContext = SSLContext.getInstance("TLS");  
+sslContext.init(null, trustAllCerts, new SecureRandom());  
+httpProfile.setSslSocketFactory(sslContext.getSocketFactory());  
+httpProfile.setX509TrustManager((X509TrustManager) trustAllCerts[0]);  
+httpProfile.setHostnameVerifier((hostname, session) -> true);  
+```  
+
+# Custom Headers
+## For `DescribeInstancesRequest`:
+```java  
+Map<String, String> header = new HashMap<>();  
+header.put("X-TC-TraceId", "ffe0c072-8a5d-4e17-8887-a8a60252abca");  
+request.setHeader(header);  
+```  
+## For `CommonClient`:
+```java  
+CommonRequest request = new CommonRequest();  
+request.setHeader(header);  
+```  
+Example: [CustomHttpClient.java](examples/common/CustomHttpClient.java).
+
+# Other Issues
+
+## Certificate Problems
+Usually caused by client environment misconfiguration. Enable debug logs with `-Djavax.net.debug=ssl`.
+
+- **IBM JDK 1.8**: Some users report `SSLHandshakeException`. Switching to Oracle JDK may resolve it.
+
+## Kotlin Issues
+Error: `java.lang.NoSuchMethodError: kotlin.collections.ArraysKt.copyInto`. Upgrade Kotlin to fix.
