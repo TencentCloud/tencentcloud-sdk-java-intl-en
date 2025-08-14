@@ -25,28 +25,21 @@ public class AvailableRegion extends AbstractModel {
 
     /**
     * Region
-
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * AZ information.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * AZ information
     */
     @SerializedName("AvailableZones")
     @Expose
     private String [] AvailableZones;
 
     /**
-     * Get Region
-
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Region 
      * @return Region Region
-
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getRegion() {
         return this.Region;
@@ -54,31 +47,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Region
-
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Region Region
-
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get AZ information.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return AvailableZones AZ information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get AZ information 
+     * @return AvailableZones AZ information
      */
     public String [] getAvailableZones() {
         return this.AvailableZones;
     }
 
     /**
-     * Set AZ information.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param AvailableZones AZ information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set AZ information
+     * @param AvailableZones AZ information
      */
     public void setAvailableZones(String [] AvailableZones) {
         this.AvailableZones = AvailableZones;

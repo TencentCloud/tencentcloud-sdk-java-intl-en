@@ -102,7 +102,7 @@ public class DBInstance extends AbstractModel {
 
     /**
     * The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DBMajorVersion")
     @Expose
@@ -117,7 +117,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DBKernelVersion")
     @Expose
@@ -234,7 +234,7 @@ Default value: 0
 
     /**
     * The information of tags associated with instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TagList")
     @Expose
@@ -242,7 +242,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * Primary instance information, which is returned only when the instance is read-only.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MasterDBInstanceId")
     @Expose
@@ -250,7 +250,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * Number of read-only instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReadOnlyInstanceNum")
     @Expose
@@ -258,7 +258,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * The status of a read-only instance in a read-only group
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StatusInReadonlyGroup")
     @Expose
@@ -266,7 +266,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * Offline time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OfflineTime")
     @Expose
@@ -274,7 +274,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * Instance node information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DBNodeSet")
     @Expose
@@ -513,9 +513,9 @@ Default value: 0
 
     /**
      * Get The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DBMajorVersion The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDBMajorVersion() {
         return this.DBMajorVersion;
@@ -523,9 +523,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param DBMajorVersion The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDBMajorVersion(String DBMajorVersion) {
         this.DBMajorVersion = DBMajorVersion;
@@ -549,9 +549,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DBKernelVersion PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDBKernelVersion() {
         return this.DBKernelVersion;
@@ -559,9 +559,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param DBKernelVersion PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDBKernelVersion(String DBKernelVersion) {
         this.DBKernelVersion = DBKernelVersion;
@@ -837,9 +837,9 @@ Default value: 0
 
     /**
      * Get The information of tags associated with instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TagList The information of tags associated with instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Tag [] getTagList() {
         return this.TagList;
@@ -847,9 +847,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set The information of tags associated with instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param TagList The information of tags associated with instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTagList(Tag [] TagList) {
         this.TagList = TagList;
@@ -857,9 +857,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Primary instance information, which is returned only when the instance is read-only.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return MasterDBInstanceId Primary instance information, which is returned only when the instance is read-only.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMasterDBInstanceId() {
         return this.MasterDBInstanceId;
@@ -867,9 +867,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Primary instance information, which is returned only when the instance is read-only.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param MasterDBInstanceId Primary instance information, which is returned only when the instance is read-only.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMasterDBInstanceId(String MasterDBInstanceId) {
         this.MasterDBInstanceId = MasterDBInstanceId;
@@ -877,9 +877,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Number of read-only instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ReadOnlyInstanceNum Number of read-only instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getReadOnlyInstanceNum() {
         return this.ReadOnlyInstanceNum;
@@ -887,9 +887,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Number of read-only instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ReadOnlyInstanceNum Number of read-only instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReadOnlyInstanceNum(Long ReadOnlyInstanceNum) {
         this.ReadOnlyInstanceNum = ReadOnlyInstanceNum;
@@ -897,9 +897,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get The status of a read-only instance in a read-only group
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return StatusInReadonlyGroup The status of a read-only instance in a read-only group
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStatusInReadonlyGroup() {
         return this.StatusInReadonlyGroup;
@@ -907,9 +907,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set The status of a read-only instance in a read-only group
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param StatusInReadonlyGroup The status of a read-only instance in a read-only group
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatusInReadonlyGroup(String StatusInReadonlyGroup) {
         this.StatusInReadonlyGroup = StatusInReadonlyGroup;
@@ -917,9 +917,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Offline time
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return OfflineTime Offline time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOfflineTime() {
         return this.OfflineTime;
@@ -927,9 +927,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Offline time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param OfflineTime Offline time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;
@@ -937,9 +937,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Instance node information
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DBNodeSet Instance node information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DBNode [] getDBNodeSet() {
         return this.DBNodeSet;
@@ -947,9 +947,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Instance node information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param DBNodeSet Instance node information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDBNodeSet(DBNode [] DBNodeSet) {
         this.DBNodeSet = DBNodeSet;

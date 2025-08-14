@@ -38,7 +38,7 @@ public class DescribeSlowLogResponse extends AbstractModel {
     private InstanceSlowlogDetail [] InstanceSlowlogDetail;
 
     /**
-    * Details of slow queries.
+    * Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries.
     */
     @SerializedName("InstanceSlowLogDetail")
     @Expose
@@ -88,16 +88,16 @@ public class DescribeSlowLogResponse extends AbstractModel {
     }
 
     /**
-     * Get Details of slow queries. 
-     * @return InstanceSlowLogDetail Details of slow queries.
+     * Get Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries. 
+     * @return InstanceSlowLogDetail Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries.
      */
     public InstanceSlowlogDetail [] getInstanceSlowLogDetail() {
         return this.InstanceSlowLogDetail;
     }
 
     /**
-     * Set Details of slow queries.
-     * @param InstanceSlowLogDetail Details of slow queries.
+     * Set Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries.
+     * @param InstanceSlowLogDetail Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries.
      */
     public void setInstanceSlowLogDetail(InstanceSlowlogDetail [] InstanceSlowLogDetail) {
         this.InstanceSlowLogDetail = InstanceSlowLogDetail;

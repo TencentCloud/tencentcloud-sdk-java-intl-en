@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeProductInfoResponse extends AbstractModel {
 
     /**
-    * Sale information of a region.
+    * Selling information on the region. The selling information on all regions is returned even if a region is specified.
     */
     @SerializedName("RegionSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeProductInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Sale information of a region. 
-     * @return RegionSet Sale information of a region.
+     * Get Selling information on the region. The selling information on all regions is returned even if a region is specified. 
+     * @return RegionSet Selling information on the region. The selling information on all regions is returned even if a region is specified.
      */
     public RegionConf [] getRegionSet() {
         return this.RegionSet;
     }
 
     /**
-     * Set Sale information of a region.
-     * @param RegionSet Sale information of a region.
+     * Set Selling information on the region. The selling information on all regions is returned even if a region is specified.
+     * @param RegionSet Selling information on the region. The selling information on all regions is returned even if a region is specified.
      */
     public void setRegionSet(RegionConf [] RegionSet) {
         this.RegionSet = RegionSet;

@@ -24,64 +24,56 @@ import java.util.HashMap;
 public class DescribeInstanceDTSInfoResponse extends AbstractModel {
 
     /**
-    * DTS task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * DTS task ID.
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * DTS task name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * DTS task name.
     */
     @SerializedName("JobName")
     @Expose
     private String JobName;
 
     /**
-    * Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task status. 1: creating (Creating); 3: checking (Checking); 4: check successful (CheckPass); 5: check failed (CheckNotPass); 7: task running (Running); 8: preparation completed (ReadyComplete); 9: task successful (Success); 10: task failed (Failed); 11: stopping (Stopping); 12: completing (Completing).
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Status description
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Status description.
     */
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
 
     /**
-    * Sync latency in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Synchronization delay. Unit: bytes.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Disconnection time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Disconnection time.
     */
     @SerializedName("CutDownTime")
     @Expose
     private String CutDownTime;
 
     /**
-    * Source instance information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Source instance information.
     */
     @SerializedName("SrcInfo")
     @Expose
     private DescribeInstanceDTSInstanceInfo SrcInfo;
 
     /**
-    * Target instance information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Destination instance information.
     */
     @SerializedName("DstInfo")
     @Expose
@@ -95,160 +87,128 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get DTS task ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return JobId DTS task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get DTS task ID. 
+     * @return JobId DTS task ID.
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set DTS task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param JobId DTS task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set DTS task ID.
+     * @param JobId DTS task ID.
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get DTS task name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return JobName DTS task name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get DTS task name. 
+     * @return JobName DTS task name.
      */
     public String getJobName() {
         return this.JobName;
     }
 
     /**
-     * Set DTS task name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param JobName DTS task name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set DTS task name.
+     * @param JobName DTS task name.
      */
     public void setJobName(String JobName) {
         this.JobName = JobName;
     }
 
     /**
-     * Get Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task status. 1: creating (Creating); 3: checking (Checking); 4: check successful (CheckPass); 5: check failed (CheckNotPass); 7: task running (Running); 8: preparation completed (ReadyComplete); 9: task successful (Success); 10: task failed (Failed); 11: stopping (Stopping); 12: completing (Completing). 
+     * @return Status Task status. 1: creating (Creating); 3: checking (Checking); 4: check successful (CheckPass); 5: check failed (CheckNotPass); 7: task running (Running); 8: preparation completed (ReadyComplete); 9: task successful (Success); 10: task failed (Failed); 11: stopping (Stopping); 12: completing (Completing).
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task status. 1: creating (Creating); 3: checking (Checking); 4: check successful (CheckPass); 5: check failed (CheckNotPass); 7: task running (Running); 8: preparation completed (ReadyComplete); 9: task successful (Success); 10: task failed (Failed); 11: stopping (Stopping); 12: completing (Completing).
+     * @param Status Task status. 1: creating (Creating); 3: checking (Checking); 4: check successful (CheckPass); 5: check failed (CheckNotPass); 7: task running (Running); 8: preparation completed (ReadyComplete); 9: task successful (Success); 10: task failed (Failed); 11: stopping (Stopping); 12: completing (Completing).
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Status description
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StatusDesc Status description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Status description. 
+     * @return StatusDesc Status description.
      */
     public String getStatusDesc() {
         return this.StatusDesc;
     }
 
     /**
-     * Set Status description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StatusDesc Status description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Status description.
+     * @param StatusDesc Status description.
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get Sync latency in bytes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Offset Sync latency in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Synchronization delay. Unit: bytes. 
+     * @return Offset Synchronization delay. Unit: bytes.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Sync latency in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Offset Sync latency in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Synchronization delay. Unit: bytes.
+     * @param Offset Synchronization delay. Unit: bytes.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Disconnection time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CutDownTime Disconnection time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Disconnection time. 
+     * @return CutDownTime Disconnection time.
      */
     public String getCutDownTime() {
         return this.CutDownTime;
     }
 
     /**
-     * Set Disconnection time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CutDownTime Disconnection time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Disconnection time.
+     * @param CutDownTime Disconnection time.
      */
     public void setCutDownTime(String CutDownTime) {
         this.CutDownTime = CutDownTime;
     }
 
     /**
-     * Get Source instance information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SrcInfo Source instance information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Source instance information. 
+     * @return SrcInfo Source instance information.
      */
     public DescribeInstanceDTSInstanceInfo getSrcInfo() {
         return this.SrcInfo;
     }
 
     /**
-     * Set Source instance information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SrcInfo Source instance information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Source instance information.
+     * @param SrcInfo Source instance information.
      */
     public void setSrcInfo(DescribeInstanceDTSInstanceInfo SrcInfo) {
         this.SrcInfo = SrcInfo;
     }
 
     /**
-     * Get Target instance information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DstInfo Target instance information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Destination instance information. 
+     * @return DstInfo Destination instance information.
      */
     public DescribeInstanceDTSInstanceInfo getDstInfo() {
         return this.DstInfo;
     }
 
     /**
-     * Set Target instance information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DstInfo Target instance information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Destination instance information.
+     * @param DstInfo Destination instance information.
      */
     public void setDstInfo(DescribeInstanceDTSInstanceInfo DstInfo) {
         this.DstInfo = DstInfo;

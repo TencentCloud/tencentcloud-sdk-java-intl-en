@@ -80,8 +80,7 @@ public class Instances extends AbstractModel {
     private Long RedisShardSize;
 
     /**
-    * Instance disk size
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance disk size.
     */
     @SerializedName("DiskSize")
     @Expose
@@ -109,16 +108,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Vip;
 
     /**
-    * Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
     */
     @SerializedName("Vip6")
     @Expose
     private String Vip6;
 
     /**
-    * Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Internal parameter, which can be ignored.
     */
     @SerializedName("IPv6")
     @Expose
@@ -312,20 +309,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance disk size
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiskSize Instance disk size
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance disk size. 
+     * @return DiskSize Instance disk size.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Instance disk size
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiskSize Instance disk size
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance disk size.
+     * @param DiskSize Instance disk size.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
@@ -380,40 +373,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored. 
+     * @return Vip6 This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
      */
     public String getVip6() {
         return this.Vip6;
     }
 
     /**
-     * Set Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
+     * @param Vip6 This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
      */
     public void setVip6(String Vip6) {
         this.Vip6 = Vip6;
     }
 
     /**
-     * Get Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IPv6 Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Internal parameter, which can be ignored. 
+     * @return IPv6 Internal parameter, which can be ignored.
      */
     public String getIPv6() {
         return this.IPv6;
     }
 
     /**
-     * Set Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IPv6 Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Internal parameter, which can be ignored.
+     * @param IPv6 Internal parameter, which can be ignored.
      */
     public void setIPv6(String IPv6) {
         this.IPv6 = IPv6;

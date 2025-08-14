@@ -243,6 +243,9 @@ public enum PostgresErrorCode {
      /* An exception occurred while executing the request. */
      INTERNALERROR_INTERNALHTTPSERVERERROR("InternalError.InternalHttpServerError"),
      
+     /*  */
+     INTERNALERROR_JSONPARSEERROR("InternalError.JsonParseError"),
+     
      /* Failed to parse background data. Please contact customer service. */
      INTERNALERROR_MARSHALERROR("InternalError.MarshalError"),
      
@@ -306,6 +309,9 @@ public enum PostgresErrorCode {
      /* Failed to convert data format. Please contact customer service. */
      INVALIDPARAMETERVALUE_DATACONVERTERROR("InvalidParameterValue.DataConvertError"),
      
+     /*  */
+     INVALIDPARAMETERVALUE_DECRYPTPASSWORDFAILED("InvalidParameterValue.DecryptPasswordFailed"),
+     
      /* Unsupported billing type. */
      INVALIDPARAMETERVALUE_ILLEGALCHARGETYPE("InvalidParameterValue.IllegalChargeType"),
      
@@ -338,6 +344,12 @@ public enum PostgresErrorCode {
      
      /* The current account name cannot be a reserved character. */
      INVALIDPARAMETERVALUE_INVALIDACCOUNTNAME("InvalidParameterValue.InvalidAccountName"),
+     
+     /*  */
+     INVALIDPARAMETERVALUE_INVALIDACCOUNTNAMEERROR("InvalidParameterValue.InvalidAccountNameError"),
+     
+     /*  */
+     INVALIDPARAMETERVALUE_INVALIDACCOUNTNAMEFORMATERROR("InvalidParameterValue.InvalidAccountNameFormatError"),
      
      /* Incorrect database character set. Currently, only `UTF8` and `LATIN1` are supported. */
      INVALIDPARAMETERVALUE_INVALIDCHARSET("InvalidParameterValue.InvalidCharset"),
@@ -450,6 +462,9 @@ public enum PostgresErrorCode {
      /* Invalid instance type */
      OPERATIONDENIED_INSTANCETYPEDENIED("OperationDenied.InstanceTypeDenied"),
      
+     /*  */
+     OPERATIONDENIED_INSUFFICIENTBALANCEERROR("OperationDenied.InsufficientBalanceError"),
+     
      /* Serverless is not supported in this availability zone. */
      OPERATIONDENIED_NOTSUPPORTZONEERROR("OperationDenied.NotSupportZoneError"),
      
@@ -470,6 +485,9 @@ public enum PostgresErrorCode {
      
      /* The total number of read-only nodes should not exceed the upper limit. */
      OPERATIONDENIED_ROINSTANCECOUNTEXEEDERROR("OperationDenied.RoInstanceCountExeedError"),
+     
+     /*  */
+     OPERATIONDENIED_TRADEPERMISSIONERROR("OperationDenied.TradePermissionError"),
      
      /* You need to verify your identity to make a purchase. */
      OPERATIONDENIED_USERNOTAUTHENTICATEDERROR("OperationDenied.UserNotAuthenticatedError"),

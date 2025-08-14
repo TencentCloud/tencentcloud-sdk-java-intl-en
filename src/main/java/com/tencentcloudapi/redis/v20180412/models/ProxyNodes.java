@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class ProxyNodes extends AbstractModel {
 
     /**
-    * Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Node ID.
     */
     @SerializedName("NodeId")
     @Expose
     private String NodeId;
 
     /**
-    * AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * AZ ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-     * Get Node ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NodeId Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Node ID. 
+     * @return NodeId Node ID.
      */
     public String getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NodeId Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Node ID.
+     * @param NodeId Node ID.
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get AZ ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneId AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get AZ ID. 
+     * @return ZoneId AZ ID.
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ZoneId AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set AZ ID.
+     * @param ZoneId AZ ID.
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;

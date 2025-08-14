@@ -53,7 +53,7 @@ public class InstanceSet extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * Region ID. <ul><li>1: Guangzhou;</li> <li>4: Shanghai;</li> <li>5: Hong Kong (China);</li> <li>7: Shanghai Finance;</li> <li>8: Beijing;</li> <li>9: Singapore;</li> <li>11: Shenzhen Finance;</li> <li>15: Western United States (Silicon Valley);</li> <li>16: Chengdu;</li> <li>17: Frankfurt;</li> <li>18: Seoul;</li> <li>19: Chongqing;</li> <li>21: Mumbai;</li> <li>22: Eastern United States (Virginia);</li> <li>23: Bangkok;</li> <li>25: Tokyo.</li></ul>
+    * Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul>
     */
     @SerializedName("RegionId")
     @Expose
@@ -124,18 +124,20 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * Instance type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
-- 3: CKV 3.2 Memory Edition (standard architecture).
-- 4: CKV 3.2 Memory Edition (cluster architecture).
-- 5: Redis 2.8 Memory Edition (stand-alone).
-- 6: Redis 4.0 Memory Edition (standard architecture).
-- 7: Redis 4.0 Memory Edition (cluster architecture).
-- 8: Redis 5.0 Memory Edition (standard architecture).
-- 9: Redis 5.0 Memory Edition (cluster architecture).
-- 15: Redis 6.2 Memory Edition (standard architecture).
-- 16: Redis 6.2 Memory Edition (cluster architecture).
-- 17: Redis 7.0 Memory Edition (standard architecture).
-- 18: Redis 7.0 Memory Edition (cluster architecture).
+
+- 2: Redis 2.8 memory edition (standard architecture).
+- 3: CKV 3.2 memory edition (standard architecture).
+- 4: CKV 3.2 memory edition (cluster architecture).
+- 5: Redis 2.8 memory edition (standalone).
+- 6: Redis 4.0 memory edition (standard architecture).
+- 7: Redis 4.0 memory edition (cluster architecture).
+- 8: Redis 5.0 memory edition (standard architecture).
+- 9: Redis 5.0 memory edition (cluster architecture).
+- 15: Redis 6.2 memory edition (standard architecture).
+- 16: Redis 6.2 memory edition (cluster architecture).
+- 17: Redis 7.0 memory edition (standard architecture).
+- 18: Redis 7.0 memory edition (cluster architecture).
+- 200: Memcached 1.6 memory edition (cluster architecture).
     */
     @SerializedName("Type")
     @Expose
@@ -205,7 +207,9 @@ public class InstanceSet extends AbstractModel {
     private String OfflineTime;
 
     /**
-    * Sub-status returned for an instance in process.
+    * Sub-status returned for the instance in the process.
+ - 0: disk read-write status.
+ - 1: disk read-only status because the upper limit is exceeded.
     */
     @SerializedName("SubStatus")
     @Expose
@@ -268,8 +272,7 @@ public class InstanceSet extends AbstractModel {
     private Long SlaveReadWeight;
 
     /**
-    * Tag information associated with an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Information on tags associated with the instance.
     */
     @SerializedName("InstanceTags")
     @Expose
@@ -277,16 +280,13 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Project name
-
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * Whether an instance is a password-free instance. <ul><li>true: yes;</li> <li>false: no.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Whether the instance is password-free.<ul><li>true: password-free instance.</li><li>false: password required by the instance.</li></ul>
     */
     @SerializedName("NoAuth")
     @Expose
@@ -294,39 +294,34 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ClientLimit")
     @Expose
     private Long ClientLimit;
 
     /**
-    * DTS status (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
+    * DTS status. (Internal parameter, which can be ignored.)
     */
     @SerializedName("DtsStatus")
     @Expose
     private Long DtsStatus;
 
     /**
-    * Upper limit of the shard bandwidth. Unit: MB.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Shard bandwidth limit. Unit: MB.
     */
     @SerializedName("NetLimit")
     @Expose
     private Long NetLimit;
 
     /**
-    * Password-free instance flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Password-free instance flag. (Internal parameter, which can be ignored.)
     */
     @SerializedName("PasswordFree")
     @Expose
     private Long PasswordFree;
 
     /**
-    * Internal parameter, which can be ignored. This parameter is not properly named. It is recommended to use the IPv6 parameter to replace it.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
     */
     @SerializedName("Vip6")
     @Expose
@@ -334,15 +329,13 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("IPv6")
     @Expose
     private String IPv6;
 
     /**
-    * Instance read-only flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Instance read-only flag. (Internal parameter, which can be ignored.)
     */
     @SerializedName("ReadOnly")
     @Expose
@@ -350,23 +343,20 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("RemainBandwidthDuration")
     @Expose
     private String RemainBandwidthDuration;
 
     /**
-    * For Redis instances, ignore this parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * For TencentDB for Redis® instances, ignore this parameter.
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Monitoring version. <ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li> <li>5s: 5-second granularity monitoring.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Monitoring version.<ul><li>1m: monitoring with the 1-minute granularity. Currently, this monitoring granularity is unavailable. For details, see [1-Minute Granularity Will Be Disused](https://intl.cloud.tencent.com/document/product/239/80653?from_cn_redirect=1).</li><li>5s: monitoring with the 5-second granularity.</li></ul>
     */
     @SerializedName("MonitorVersion")
     @Expose
@@ -374,7 +364,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Minimum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ClientLimitMin")
     @Expose
@@ -382,23 +371,22 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Maximum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ClientLimitMax")
     @Expose
     private Long ClientLimitMax;
 
     /**
-    * Detailed node information of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Node details of the instance.
+
+It is returned only for multi-AZ instances.
     */
     @SerializedName("NodeSet")
     @Expose
     private RedisNodeInfo [] NodeSet;
 
     /**
-    * Region information of an instance, for example, ap-guangzhou.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Region information on the instance. For example, ap-guangzhou.
     */
     @SerializedName("Region")
     @Expose
@@ -406,23 +394,20 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Public network address.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("WanAddress")
     @Expose
     private String WanAddress;
 
     /**
-    * Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Polaris service address for internal use.
     */
     @SerializedName("PolarisServer")
     @Expose
     private String PolarisServer;
 
     /**
-    * CDC Redis cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * CDC cluster ID of TencentDB for Redis®.
     */
     @SerializedName("RedisClusterId")
     @Expose
@@ -430,55 +415,48 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * CDC cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("DedicatedClusterId")
     @Expose
     private String DedicatedClusterId;
 
     /**
-    * Product edition. <ul><li>local: local disk;</li> <li>cloud: cloud disk;</li> <li>cdc: CDC cluster.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Product edition.<ul><li>local: local disk.</li><li>cloud: cloud disk edition.</li><li>cdc: CDC cluster edition.</li></ul>
     */
     @SerializedName("ProductVersion")
     @Expose
     private String ProductVersion;
 
     /**
-    * Current Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Current proxy version of the instance.
     */
     @SerializedName("CurrentProxyVersion")
     @Expose
     private String CurrentProxyVersion;
 
     /**
-    * Current Cache minor version of an instance. If the instance joins a global replication group, the kernel version of the global replication group will be displayed.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Current cache minor version of the instance. If the instance is added to a global replication group, the global replication kernel version is displayed.
     */
     @SerializedName("CurrentRedisVersion")
     @Expose
     private String CurrentRedisVersion;
 
     /**
-    * Upgradable Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Upgradable proxy version for the instance.
     */
     @SerializedName("UpgradeProxyVersion")
     @Expose
     private String UpgradeProxyVersion;
 
     /**
-    * Upgradable Cache minor version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Upgradable cache minor version for the instance.
     */
     @SerializedName("UpgradeRedisVersion")
     @Expose
     private String UpgradeRedisVersion;
 
     /**
-    * Backup mode. SecondLevelBackup: second-level backup; NormalLevelBackup: normal backup.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup.
     */
     @SerializedName("BackupMode")
     @Expose
@@ -553,16 +531,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Region ID. <ul><li>1: Guangzhou;</li> <li>4: Shanghai;</li> <li>5: Hong Kong (China);</li> <li>7: Shanghai Finance;</li> <li>8: Beijing;</li> <li>9: Singapore;</li> <li>11: Shenzhen Finance;</li> <li>15: Western United States (Silicon Valley);</li> <li>16: Chengdu;</li> <li>17: Frankfurt;</li> <li>18: Seoul;</li> <li>19: Chongqing;</li> <li>21: Mumbai;</li> <li>22: Eastern United States (Virginia);</li> <li>23: Bangkok;</li> <li>25: Tokyo.</li></ul> 
-     * @return RegionId Region ID. <ul><li>1: Guangzhou;</li> <li>4: Shanghai;</li> <li>5: Hong Kong (China);</li> <li>7: Shanghai Finance;</li> <li>8: Beijing;</li> <li>9: Singapore;</li> <li>11: Shenzhen Finance;</li> <li>15: Western United States (Silicon Valley);</li> <li>16: Chengdu;</li> <li>17: Frankfurt;</li> <li>18: Seoul;</li> <li>19: Chongqing;</li> <li>21: Mumbai;</li> <li>22: Eastern United States (Virginia);</li> <li>23: Bangkok;</li> <li>25: Tokyo.</li></ul>
+     * Get Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul> 
+     * @return RegionId Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Region ID. <ul><li>1: Guangzhou;</li> <li>4: Shanghai;</li> <li>5: Hong Kong (China);</li> <li>7: Shanghai Finance;</li> <li>8: Beijing;</li> <li>9: Singapore;</li> <li>11: Shenzhen Finance;</li> <li>15: Western United States (Silicon Valley);</li> <li>16: Chengdu;</li> <li>17: Frankfurt;</li> <li>18: Seoul;</li> <li>19: Chongqing;</li> <li>21: Mumbai;</li> <li>22: Eastern United States (Virginia);</li> <li>23: Bangkok;</li> <li>25: Tokyo.</li></ul>
-     * @param RegionId Region ID. <ul><li>1: Guangzhou;</li> <li>4: Shanghai;</li> <li>5: Hong Kong (China);</li> <li>7: Shanghai Finance;</li> <li>8: Beijing;</li> <li>9: Singapore;</li> <li>11: Shenzhen Finance;</li> <li>15: Western United States (Silicon Valley);</li> <li>16: Chengdu;</li> <li>17: Frankfurt;</li> <li>18: Seoul;</li> <li>19: Chongqing;</li> <li>21: Mumbai;</li> <li>22: Eastern United States (Virginia);</li> <li>23: Bangkok;</li> <li>25: Tokyo.</li></ul>
+     * Set Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul>
+     * @param RegionId Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
@@ -718,31 +696,35 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Instance type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
-- 3: CKV 3.2 Memory Edition (standard architecture).
-- 4: CKV 3.2 Memory Edition (cluster architecture).
-- 5: Redis 2.8 Memory Edition (stand-alone).
-- 6: Redis 4.0 Memory Edition (standard architecture).
-- 7: Redis 4.0 Memory Edition (cluster architecture).
-- 8: Redis 5.0 Memory Edition (standard architecture).
-- 9: Redis 5.0 Memory Edition (cluster architecture).
-- 15: Redis 6.2 Memory Edition (standard architecture).
-- 16: Redis 6.2 Memory Edition (cluster architecture).
-- 17: Redis 7.0 Memory Edition (standard architecture).
-- 18: Redis 7.0 Memory Edition (cluster architecture). 
+
+- 2: Redis 2.8 memory edition (standard architecture).
+- 3: CKV 3.2 memory edition (standard architecture).
+- 4: CKV 3.2 memory edition (cluster architecture).
+- 5: Redis 2.8 memory edition (standalone).
+- 6: Redis 4.0 memory edition (standard architecture).
+- 7: Redis 4.0 memory edition (cluster architecture).
+- 8: Redis 5.0 memory edition (standard architecture).
+- 9: Redis 5.0 memory edition (cluster architecture).
+- 15: Redis 6.2 memory edition (standard architecture).
+- 16: Redis 6.2 memory edition (cluster architecture).
+- 17: Redis 7.0 memory edition (standard architecture).
+- 18: Redis 7.0 memory edition (cluster architecture).
+- 200: Memcached 1.6 memory edition (cluster architecture). 
      * @return Type Instance type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
-- 3: CKV 3.2 Memory Edition (standard architecture).
-- 4: CKV 3.2 Memory Edition (cluster architecture).
-- 5: Redis 2.8 Memory Edition (stand-alone).
-- 6: Redis 4.0 Memory Edition (standard architecture).
-- 7: Redis 4.0 Memory Edition (cluster architecture).
-- 8: Redis 5.0 Memory Edition (standard architecture).
-- 9: Redis 5.0 Memory Edition (cluster architecture).
-- 15: Redis 6.2 Memory Edition (standard architecture).
-- 16: Redis 6.2 Memory Edition (cluster architecture).
-- 17: Redis 7.0 Memory Edition (standard architecture).
-- 18: Redis 7.0 Memory Edition (cluster architecture).
+
+- 2: Redis 2.8 memory edition (standard architecture).
+- 3: CKV 3.2 memory edition (standard architecture).
+- 4: CKV 3.2 memory edition (cluster architecture).
+- 5: Redis 2.8 memory edition (standalone).
+- 6: Redis 4.0 memory edition (standard architecture).
+- 7: Redis 4.0 memory edition (cluster architecture).
+- 8: Redis 5.0 memory edition (standard architecture).
+- 9: Redis 5.0 memory edition (cluster architecture).
+- 15: Redis 6.2 memory edition (standard architecture).
+- 16: Redis 6.2 memory edition (cluster architecture).
+- 17: Redis 7.0 memory edition (standard architecture).
+- 18: Redis 7.0 memory edition (cluster architecture).
+- 200: Memcached 1.6 memory edition (cluster architecture).
      */
     public Long getType() {
         return this.Type;
@@ -750,31 +732,35 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Instance type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
-- 3: CKV 3.2 Memory Edition (standard architecture).
-- 4: CKV 3.2 Memory Edition (cluster architecture).
-- 5: Redis 2.8 Memory Edition (stand-alone).
-- 6: Redis 4.0 Memory Edition (standard architecture).
-- 7: Redis 4.0 Memory Edition (cluster architecture).
-- 8: Redis 5.0 Memory Edition (standard architecture).
-- 9: Redis 5.0 Memory Edition (cluster architecture).
-- 15: Redis 6.2 Memory Edition (standard architecture).
-- 16: Redis 6.2 Memory Edition (cluster architecture).
-- 17: Redis 7.0 Memory Edition (standard architecture).
-- 18: Redis 7.0 Memory Edition (cluster architecture).
+
+- 2: Redis 2.8 memory edition (standard architecture).
+- 3: CKV 3.2 memory edition (standard architecture).
+- 4: CKV 3.2 memory edition (cluster architecture).
+- 5: Redis 2.8 memory edition (standalone).
+- 6: Redis 4.0 memory edition (standard architecture).
+- 7: Redis 4.0 memory edition (cluster architecture).
+- 8: Redis 5.0 memory edition (standard architecture).
+- 9: Redis 5.0 memory edition (cluster architecture).
+- 15: Redis 6.2 memory edition (standard architecture).
+- 16: Redis 6.2 memory edition (cluster architecture).
+- 17: Redis 7.0 memory edition (standard architecture).
+- 18: Redis 7.0 memory edition (cluster architecture).
+- 200: Memcached 1.6 memory edition (cluster architecture).
      * @param Type Instance type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
-- 3: CKV 3.2 Memory Edition (standard architecture).
-- 4: CKV 3.2 Memory Edition (cluster architecture).
-- 5: Redis 2.8 Memory Edition (stand-alone).
-- 6: Redis 4.0 Memory Edition (standard architecture).
-- 7: Redis 4.0 Memory Edition (cluster architecture).
-- 8: Redis 5.0 Memory Edition (standard architecture).
-- 9: Redis 5.0 Memory Edition (cluster architecture).
-- 15: Redis 6.2 Memory Edition (standard architecture).
-- 16: Redis 6.2 Memory Edition (cluster architecture).
-- 17: Redis 7.0 Memory Edition (standard architecture).
-- 18: Redis 7.0 Memory Edition (cluster architecture).
+
+- 2: Redis 2.8 memory edition (standard architecture).
+- 3: CKV 3.2 memory edition (standard architecture).
+- 4: CKV 3.2 memory edition (cluster architecture).
+- 5: Redis 2.8 memory edition (standalone).
+- 6: Redis 4.0 memory edition (standard architecture).
+- 7: Redis 4.0 memory edition (cluster architecture).
+- 8: Redis 5.0 memory edition (standard architecture).
+- 9: Redis 5.0 memory edition (cluster architecture).
+- 15: Redis 6.2 memory edition (standard architecture).
+- 16: Redis 6.2 memory edition (cluster architecture).
+- 17: Redis 7.0 memory edition (standard architecture).
+- 18: Redis 7.0 memory edition (cluster architecture).
+- 200: Memcached 1.6 memory edition (cluster architecture).
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -925,16 +911,24 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Sub-status returned for an instance in process. 
-     * @return SubStatus Sub-status returned for an instance in process.
+     * Get Sub-status returned for the instance in the process.
+ - 0: disk read-write status.
+ - 1: disk read-only status because the upper limit is exceeded. 
+     * @return SubStatus Sub-status returned for the instance in the process.
+ - 0: disk read-write status.
+ - 1: disk read-only status because the upper limit is exceeded.
      */
     public Long getSubStatus() {
         return this.SubStatus;
     }
 
     /**
-     * Set Sub-status returned for an instance in process.
-     * @param SubStatus Sub-status returned for an instance in process.
+     * Set Sub-status returned for the instance in the process.
+ - 0: disk read-write status.
+ - 1: disk read-only status because the upper limit is exceeded.
+     * @param SubStatus Sub-status returned for the instance in the process.
+ - 0: disk read-write status.
+ - 1: disk read-only status because the upper limit is exceeded.
      */
     public void setSubStatus(Long SubStatus) {
         this.SubStatus = SubStatus;
@@ -1069,32 +1063,24 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Tag information associated with an instance.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return InstanceTags Tag information associated with an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Information on tags associated with the instance. 
+     * @return InstanceTags Information on tags associated with the instance.
      */
     public InstanceTagInfo [] getInstanceTags() {
         return this.InstanceTags;
     }
 
     /**
-     * Set Tag information associated with an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param InstanceTags Tag information associated with an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Information on tags associated with the instance.
+     * @param InstanceTags Information on tags associated with the instance.
      */
     public void setInstanceTags(InstanceTagInfo [] InstanceTags) {
         this.InstanceTags = InstanceTags;
     }
 
     /**
-     * Get Project name
-
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Project name 
      * @return ProjectName Project name
-
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getProjectName() {
         return this.ProjectName;
@@ -1102,41 +1088,31 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Project name
-
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param ProjectName Project name
-
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get Whether an instance is a password-free instance. <ul><li>true: yes;</li> <li>false: no.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return NoAuth Whether an instance is a password-free instance. <ul><li>true: yes;</li> <li>false: no.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Whether the instance is password-free.<ul><li>true: password-free instance.</li><li>false: password required by the instance.</li></ul> 
+     * @return NoAuth Whether the instance is password-free.<ul><li>true: password-free instance.</li><li>false: password required by the instance.</li></ul>
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set Whether an instance is a password-free instance. <ul><li>true: yes;</li> <li>false: no.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param NoAuth Whether an instance is a password-free instance. <ul><li>true: yes;</li> <li>false: no.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Whether the instance is password-free.<ul><li>true: password-free instance.</li><li>false: password required by the instance.</li></ul>
+     * @param NoAuth Whether the instance is password-free.<ul><li>true: password-free instance.</li><li>false: password required by the instance.</li></ul>
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;
     }
 
     /**
-     * Get Number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Number of client connections. 
      * @return ClientLimit Number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getClientLimit() {
         return this.ClientLimit;
@@ -1144,99 +1120,79 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param ClientLimit Number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setClientLimit(Long ClientLimit) {
         this.ClientLimit = ClientLimit;
     }
 
     /**
-     * Get DTS status (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return DtsStatus DTS status (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get DTS status. (Internal parameter, which can be ignored.) 
+     * @return DtsStatus DTS status. (Internal parameter, which can be ignored.)
      */
     public Long getDtsStatus() {
         return this.DtsStatus;
     }
 
     /**
-     * Set DTS status (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param DtsStatus DTS status (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set DTS status. (Internal parameter, which can be ignored.)
+     * @param DtsStatus DTS status. (Internal parameter, which can be ignored.)
      */
     public void setDtsStatus(Long DtsStatus) {
         this.DtsStatus = DtsStatus;
     }
 
     /**
-     * Get Upper limit of the shard bandwidth. Unit: MB.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return NetLimit Upper limit of the shard bandwidth. Unit: MB.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Shard bandwidth limit. Unit: MB. 
+     * @return NetLimit Shard bandwidth limit. Unit: MB.
      */
     public Long getNetLimit() {
         return this.NetLimit;
     }
 
     /**
-     * Set Upper limit of the shard bandwidth. Unit: MB.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param NetLimit Upper limit of the shard bandwidth. Unit: MB.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Shard bandwidth limit. Unit: MB.
+     * @param NetLimit Shard bandwidth limit. Unit: MB.
      */
     public void setNetLimit(Long NetLimit) {
         this.NetLimit = NetLimit;
     }
 
     /**
-     * Get Password-free instance flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return PasswordFree Password-free instance flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Password-free instance flag. (Internal parameter, which can be ignored.) 
+     * @return PasswordFree Password-free instance flag. (Internal parameter, which can be ignored.)
      */
     public Long getPasswordFree() {
         return this.PasswordFree;
     }
 
     /**
-     * Set Password-free instance flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param PasswordFree Password-free instance flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Password-free instance flag. (Internal parameter, which can be ignored.)
+     * @param PasswordFree Password-free instance flag. (Internal parameter, which can be ignored.)
      */
     public void setPasswordFree(Long PasswordFree) {
         this.PasswordFree = PasswordFree;
     }
 
     /**
-     * Get Internal parameter, which can be ignored. This parameter is not properly named. It is recommended to use the IPv6 parameter to replace it.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Vip6 Internal parameter, which can be ignored. This parameter is not properly named. It is recommended to use the IPv6 parameter to replace it.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored. 
+     * @return Vip6 This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
      */
     public String getVip6() {
         return this.Vip6;
     }
 
     /**
-     * Set Internal parameter, which can be ignored. This parameter is not properly named. It is recommended to use the IPv6 parameter to replace it.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Vip6 Internal parameter, which can be ignored. This parameter is not properly named. It is recommended to use the IPv6 parameter to replace it.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
+     * @param Vip6 This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
      */
     public void setVip6(String Vip6) {
         this.Vip6 = Vip6;
     }
 
     /**
-     * Get Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Internal parameter, which can be ignored. 
      * @return IPv6 Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getIPv6() {
         return this.IPv6;
@@ -1244,39 +1200,31 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param IPv6 Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setIPv6(String IPv6) {
         this.IPv6 = IPv6;
     }
 
     /**
-     * Get Instance read-only flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ReadOnly Instance read-only flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Instance read-only flag. (Internal parameter, which can be ignored.) 
+     * @return ReadOnly Instance read-only flag. (Internal parameter, which can be ignored.)
      */
     public Long getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set Instance read-only flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ReadOnly Instance read-only flag (internal parameter, which can be ignored).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Instance read-only flag. (Internal parameter, which can be ignored.)
+     * @param ReadOnly Instance read-only flag. (Internal parameter, which can be ignored.)
      */
     public void setReadOnly(Long ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Internal parameter, which can be ignored. 
      * @return RemainBandwidthDuration Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getRemainBandwidthDuration() {
         return this.RemainBandwidthDuration;
@@ -1284,59 +1232,47 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param RemainBandwidthDuration Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setRemainBandwidthDuration(String RemainBandwidthDuration) {
         this.RemainBandwidthDuration = RemainBandwidthDuration;
     }
 
     /**
-     * Get For Redis instances, ignore this parameter.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return DiskSize For Redis instances, ignore this parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get For TencentDB for Redis® instances, ignore this parameter. 
+     * @return DiskSize For TencentDB for Redis® instances, ignore this parameter.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set For Redis instances, ignore this parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param DiskSize For Redis instances, ignore this parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set For TencentDB for Redis® instances, ignore this parameter.
+     * @param DiskSize For TencentDB for Redis® instances, ignore this parameter.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Monitoring version. <ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li> <li>5s: 5-second granularity monitoring.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return MonitorVersion Monitoring version. <ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li> <li>5s: 5-second granularity monitoring.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Monitoring version.<ul><li>1m: monitoring with the 1-minute granularity. Currently, this monitoring granularity is unavailable. For details, see [1-Minute Granularity Will Be Disused](https://intl.cloud.tencent.com/document/product/239/80653?from_cn_redirect=1).</li><li>5s: monitoring with the 5-second granularity.</li></ul> 
+     * @return MonitorVersion Monitoring version.<ul><li>1m: monitoring with the 1-minute granularity. Currently, this monitoring granularity is unavailable. For details, see [1-Minute Granularity Will Be Disused](https://intl.cloud.tencent.com/document/product/239/80653?from_cn_redirect=1).</li><li>5s: monitoring with the 5-second granularity.</li></ul>
      */
     public String getMonitorVersion() {
         return this.MonitorVersion;
     }
 
     /**
-     * Set Monitoring version. <ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li> <li>5s: 5-second granularity monitoring.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param MonitorVersion Monitoring version. <ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li> <li>5s: 5-second granularity monitoring.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Monitoring version.<ul><li>1m: monitoring with the 1-minute granularity. Currently, this monitoring granularity is unavailable. For details, see [1-Minute Granularity Will Be Disused](https://intl.cloud.tencent.com/document/product/239/80653?from_cn_redirect=1).</li><li>5s: monitoring with the 5-second granularity.</li></ul>
+     * @param MonitorVersion Monitoring version.<ul><li>1m: monitoring with the 1-minute granularity. Currently, this monitoring granularity is unavailable. For details, see [1-Minute Granularity Will Be Disused](https://intl.cloud.tencent.com/document/product/239/80653?from_cn_redirect=1).</li><li>5s: monitoring with the 5-second granularity.</li></ul>
      */
     public void setMonitorVersion(String MonitorVersion) {
         this.MonitorVersion = MonitorVersion;
     }
 
     /**
-     * Get Minimum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Minimum value that can be set for the maximum number of client connections. 
      * @return ClientLimitMin Minimum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getClientLimitMin() {
         return this.ClientLimitMin;
@@ -1344,19 +1280,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Minimum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param ClientLimitMin Minimum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setClientLimitMin(Long ClientLimitMin) {
         this.ClientLimitMin = ClientLimitMin;
     }
 
     /**
-     * Get Maximum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Maximum value that can be set for the maximum number of client connections. 
      * @return ClientLimitMax Maximum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getClientLimitMax() {
         return this.ClientLimitMax;
@@ -1364,59 +1296,55 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Maximum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param ClientLimitMax Maximum value that can be set for the maximum number of client connections.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setClientLimitMax(Long ClientLimitMax) {
         this.ClientLimitMax = ClientLimitMax;
     }
 
     /**
-     * Get Detailed node information of an instance.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return NodeSet Detailed node information of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Node details of the instance.
+
+It is returned only for multi-AZ instances. 
+     * @return NodeSet Node details of the instance.
+
+It is returned only for multi-AZ instances.
      */
     public RedisNodeInfo [] getNodeSet() {
         return this.NodeSet;
     }
 
     /**
-     * Set Detailed node information of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param NodeSet Detailed node information of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Node details of the instance.
+
+It is returned only for multi-AZ instances.
+     * @param NodeSet Node details of the instance.
+
+It is returned only for multi-AZ instances.
      */
     public void setNodeSet(RedisNodeInfo [] NodeSet) {
         this.NodeSet = NodeSet;
     }
 
     /**
-     * Get Region information of an instance, for example, ap-guangzhou.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Region Region information of an instance, for example, ap-guangzhou.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Region information on the instance. For example, ap-guangzhou. 
+     * @return Region Region information on the instance. For example, ap-guangzhou.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region information of an instance, for example, ap-guangzhou.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Region Region information of an instance, for example, ap-guangzhou.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Region information on the instance. For example, ap-guangzhou.
+     * @param Region Region information on the instance. For example, ap-guangzhou.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Public network address.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Public network address. 
      * @return WanAddress Public network address.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getWanAddress() {
         return this.WanAddress;
@@ -1424,59 +1352,47 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Public network address.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param WanAddress Public network address.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setWanAddress(String WanAddress) {
         this.WanAddress = WanAddress;
     }
 
     /**
-     * Get Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return PolarisServer Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Polaris service address for internal use. 
+     * @return PolarisServer Polaris service address for internal use.
      */
     public String getPolarisServer() {
         return this.PolarisServer;
     }
 
     /**
-     * Set Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param PolarisServer Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Polaris service address for internal use.
+     * @param PolarisServer Polaris service address for internal use.
      */
     public void setPolarisServer(String PolarisServer) {
         this.PolarisServer = PolarisServer;
     }
 
     /**
-     * Get CDC Redis cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return RedisClusterId CDC Redis cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get CDC cluster ID of TencentDB for Redis®. 
+     * @return RedisClusterId CDC cluster ID of TencentDB for Redis®.
      */
     public String getRedisClusterId() {
         return this.RedisClusterId;
     }
 
     /**
-     * Set CDC Redis cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param RedisClusterId CDC Redis cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set CDC cluster ID of TencentDB for Redis®.
+     * @param RedisClusterId CDC cluster ID of TencentDB for Redis®.
      */
     public void setRedisClusterId(String RedisClusterId) {
         this.RedisClusterId = RedisClusterId;
     }
 
     /**
-     * Get CDC cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get CDC cluster ID. 
      * @return DedicatedClusterId CDC cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
@@ -1484,129 +1400,103 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set CDC cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param DedicatedClusterId CDC cluster ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
     /**
-     * Get Product edition. <ul><li>local: local disk;</li> <li>cloud: cloud disk;</li> <li>cdc: CDC cluster.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ProductVersion Product edition. <ul><li>local: local disk;</li> <li>cloud: cloud disk;</li> <li>cdc: CDC cluster.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Product edition.<ul><li>local: local disk.</li><li>cloud: cloud disk edition.</li><li>cdc: CDC cluster edition.</li></ul> 
+     * @return ProductVersion Product edition.<ul><li>local: local disk.</li><li>cloud: cloud disk edition.</li><li>cdc: CDC cluster edition.</li></ul>
      */
     public String getProductVersion() {
         return this.ProductVersion;
     }
 
     /**
-     * Set Product edition. <ul><li>local: local disk;</li> <li>cloud: cloud disk;</li> <li>cdc: CDC cluster.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ProductVersion Product edition. <ul><li>local: local disk;</li> <li>cloud: cloud disk;</li> <li>cdc: CDC cluster.</li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Product edition.<ul><li>local: local disk.</li><li>cloud: cloud disk edition.</li><li>cdc: CDC cluster edition.</li></ul>
+     * @param ProductVersion Product edition.<ul><li>local: local disk.</li><li>cloud: cloud disk edition.</li><li>cdc: CDC cluster edition.</li></ul>
      */
     public void setProductVersion(String ProductVersion) {
         this.ProductVersion = ProductVersion;
     }
 
     /**
-     * Get Current Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CurrentProxyVersion Current Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Current proxy version of the instance. 
+     * @return CurrentProxyVersion Current proxy version of the instance.
      */
     public String getCurrentProxyVersion() {
         return this.CurrentProxyVersion;
     }
 
     /**
-     * Set Current Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CurrentProxyVersion Current Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Current proxy version of the instance.
+     * @param CurrentProxyVersion Current proxy version of the instance.
      */
     public void setCurrentProxyVersion(String CurrentProxyVersion) {
         this.CurrentProxyVersion = CurrentProxyVersion;
     }
 
     /**
-     * Get Current Cache minor version of an instance. If the instance joins a global replication group, the kernel version of the global replication group will be displayed.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CurrentRedisVersion Current Cache minor version of an instance. If the instance joins a global replication group, the kernel version of the global replication group will be displayed.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Current cache minor version of the instance. If the instance is added to a global replication group, the global replication kernel version is displayed. 
+     * @return CurrentRedisVersion Current cache minor version of the instance. If the instance is added to a global replication group, the global replication kernel version is displayed.
      */
     public String getCurrentRedisVersion() {
         return this.CurrentRedisVersion;
     }
 
     /**
-     * Set Current Cache minor version of an instance. If the instance joins a global replication group, the kernel version of the global replication group will be displayed.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CurrentRedisVersion Current Cache minor version of an instance. If the instance joins a global replication group, the kernel version of the global replication group will be displayed.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Current cache minor version of the instance. If the instance is added to a global replication group, the global replication kernel version is displayed.
+     * @param CurrentRedisVersion Current cache minor version of the instance. If the instance is added to a global replication group, the global replication kernel version is displayed.
      */
     public void setCurrentRedisVersion(String CurrentRedisVersion) {
         this.CurrentRedisVersion = CurrentRedisVersion;
     }
 
     /**
-     * Get Upgradable Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return UpgradeProxyVersion Upgradable Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Upgradable proxy version for the instance. 
+     * @return UpgradeProxyVersion Upgradable proxy version for the instance.
      */
     public String getUpgradeProxyVersion() {
         return this.UpgradeProxyVersion;
     }
 
     /**
-     * Set Upgradable Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param UpgradeProxyVersion Upgradable Proxy version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Upgradable proxy version for the instance.
+     * @param UpgradeProxyVersion Upgradable proxy version for the instance.
      */
     public void setUpgradeProxyVersion(String UpgradeProxyVersion) {
         this.UpgradeProxyVersion = UpgradeProxyVersion;
     }
 
     /**
-     * Get Upgradable Cache minor version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return UpgradeRedisVersion Upgradable Cache minor version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Upgradable cache minor version for the instance. 
+     * @return UpgradeRedisVersion Upgradable cache minor version for the instance.
      */
     public String getUpgradeRedisVersion() {
         return this.UpgradeRedisVersion;
     }
 
     /**
-     * Set Upgradable Cache minor version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param UpgradeRedisVersion Upgradable Cache minor version of an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Upgradable cache minor version for the instance.
+     * @param UpgradeRedisVersion Upgradable cache minor version for the instance.
      */
     public void setUpgradeRedisVersion(String UpgradeRedisVersion) {
         this.UpgradeRedisVersion = UpgradeRedisVersion;
     }
 
     /**
-     * Get Backup mode. SecondLevelBackup: second-level backup; NormalLevelBackup: normal backup.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return BackupMode Backup mode. SecondLevelBackup: second-level backup; NormalLevelBackup: normal backup.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup. 
+     * @return BackupMode Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup.
      */
     public String getBackupMode() {
         return this.BackupMode;
     }
 
     /**
-     * Set Backup mode. SecondLevelBackup: second-level backup; NormalLevelBackup: normal backup.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param BackupMode Backup mode. SecondLevelBackup: second-level backup; NormalLevelBackup: normal backup.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup.
+     * @param BackupMode Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup.
      */
     public void setBackupMode(String BackupMode) {
         this.BackupMode = BackupMode;

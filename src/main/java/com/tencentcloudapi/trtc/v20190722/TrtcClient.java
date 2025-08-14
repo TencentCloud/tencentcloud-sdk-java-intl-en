@@ -51,6 +51,22 @@ public class TrtcClient extends AbstractClient{
 
     /**
      *API description:
+This API is used to enable the cloud moderation feature to complete audio and video slicing, video frame extraction, and audio stream recording in the room, and submit them to the specified moderation supplier for completing the moderation.
+
+This API is used to achieve the following goals:
+* This API is used to specify the moderation parameters (ModerationParams) to specify the detailed parameters required for moderation.
+* This API is used to specify the storage parameter (SliceStorageParams) to specify the cloud storage you want to upload the file complying with the moderation policy to. Currently, Tencent Cloud Object Storage (COS) and third-party AWS are supported.
+     * @param req CreateCloudModerationRequest
+     * @return CreateCloudModerationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudModerationResponse CreateCloudModeration(CreateCloudModerationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudModeration", CreateCloudModerationResponse.class);
+    }
+
+    /**
+     *API description:
 This API is used to start an on-cloud recording task. It records the audio and video streams in a room and saves them to the specified cloud storage. You can use this API to record the streams in a room separately, or you can mix the streams first and then record the mixed stream.
 
 You can use this API to perform the following operations:
@@ -84,6 +100,17 @@ This API is used to achieve the following goals:
     public CreateCloudSliceTaskResponse CreateCloudSliceTask(CreateCloudSliceTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateCloudSliceTask", CreateCloudSliceTaskResponse.class);
+    }
+
+    /**
+     *This API is used to stop submission for moderation after the cloud moderation task is successfully started.
+     * @param req DeleteCloudModerationRequest
+     * @return DeleteCloudModerationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudModerationResponse DeleteCloudModeration(DeleteCloudModerationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudModeration", DeleteCloudModerationResponse.class);
     }
 
     /**
@@ -142,6 +169,17 @@ This API is used to achieve the following goals:
     public DescribeCallDetailInfoResponse DescribeCallDetailInfo(DescribeCallDetailInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCallDetailInfo", DescribeCallDetailInfoResponse.class);
+    }
+
+    /**
+     *This API is used to query the status of the moderation task and information about the subscription blocklist and allowlist after the task is started, which is valid only when the task is in progress. An error will be returned if the task is exited.
+     * @param req DescribeCloudModerationRequest
+     * @return DescribeCloudModerationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudModerationResponse DescribeCloudModeration(DescribeCloudModerationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudModeration", DescribeCloudModerationResponse.class);
     }
 
     /**
@@ -419,6 +457,17 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     public DismissRoomByStrRoomIdResponse DismissRoomByStrRoomId(DismissRoomByStrRoomIdRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DismissRoomByStrRoomId", DismissRoomByStrRoomIdResponse.class);
+    }
+
+    /**
+     *This API is used to update the subscription blocklist and allowlist after the cloud moderation task is successfully started.
+     * @param req ModifyCloudModerationRequest
+     * @return ModifyCloudModerationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudModerationResponse ModifyCloudModeration(ModifyCloudModerationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudModeration", ModifyCloudModerationResponse.class);
     }
 
     /**

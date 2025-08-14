@@ -25,7 +25,6 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
     * Region ID.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("RegionId")
     @Expose
@@ -33,15 +32,13 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Instance ID.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Warehouse ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Repository ID.
     */
     @SerializedName("SetId")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * AZ ID.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -57,7 +53,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Instance type.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Instance name.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Instance access address.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Vip")
     @Expose
@@ -81,17 +74,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Status.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get Region ID.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Region ID. 
      * @return RegionId Region ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -99,19 +89,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Region ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param RegionId Region ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get Instance ID.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Instance ID. 
      * @return InstanceId Instance ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -119,39 +105,31 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Instance ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param InstanceId Instance ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Warehouse ID.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SetId Warehouse ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Repository ID. 
+     * @return SetId Repository ID.
      */
     public Long getSetId() {
         return this.SetId;
     }
 
     /**
-     * Set Warehouse ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SetId Warehouse ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Repository ID.
+     * @param SetId Repository ID.
      */
     public void setSetId(Long SetId) {
         this.SetId = SetId;
     }
 
     /**
-     * Get AZ ID.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get AZ ID. 
      * @return ZoneId AZ ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getZoneId() {
         return this.ZoneId;
@@ -159,19 +137,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set AZ ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param ZoneId AZ ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Instance type.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Instance type. 
      * @return Type Instance type.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getType() {
         return this.Type;
@@ -179,19 +153,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Instance type.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Type Instance type.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Instance name.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Instance name. 
      * @return InstanceName Instance name.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -199,19 +169,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Instance name.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param InstanceName Instance name.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Instance access address.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Instance access address. 
      * @return Vip Instance access address.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getVip() {
         return this.Vip;
@@ -219,19 +185,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Instance access address.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Vip Instance access address.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Status.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Status. 
      * @return Status Status.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getStatus() {
         return this.Status;
@@ -239,9 +201,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Status.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Status Status.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

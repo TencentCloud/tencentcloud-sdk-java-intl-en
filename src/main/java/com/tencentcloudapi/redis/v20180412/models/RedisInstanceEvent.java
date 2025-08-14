@@ -25,74 +25,77 @@ public class RedisInstanceEvent extends AbstractModel {
 
     /**
     * Event ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * Instance ID.Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name.Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be only set to **InstanceMigration**.Note: This field may return null, indicating that no valid values can be obtained.
+    * Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Event levels are divided into Critical, High, Medium, and Low events according to the severity and urgency.- Critical
-- High
-- Middle
-- Low
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Event level. The levels are divided into critical, important, medium, and general based on severity and urgency.
+ - Critical: critical.
+ - High: important.
+ - Middle: medium.
+ - Low.
     */
     @SerializedName("Grade")
     @Expose
     private String Grade;
 
     /**
-    * Scheduled event execution date.Note: This field may return null, indicating that no valid values can be obtained.
+    * Scheduled event execution date.
     */
     @SerializedName("ExecutionDate")
     @Expose
     private String ExecutionDate;
 
     /**
-    * Scheduled start time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
+    * Start date of scheduled event execution.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Scheduled end time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
+    * End date of scheduled event execution.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * The latest execution date of the operations event. Event execution must be completed before this date. Otherwise, the business may be affected.Note: This field may return null, indicating that no valid values can be obtained.
+    * Latest execution date of the Ops event. The event should be completed before this date. Otherwise, the business may be affected.
     */
     @SerializedName("LatestExecutionDate")
     @Expose
     private String LatestExecutionDate;
 
     /**
-    * Current event status.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event operations is completed.- Canceled: Execution of the event is canceled.Note: This field may return null, indicating that no valid values can be obtained.
+    * Current event status.
+ - Waiting: event not reached the execution date or not within the maintenance window.
+ - Running: event within the maintenance window and under maintenance execution.
+ - Finished: event with maintenance completed.
+- Canceled: Execution of the event is canceled.
     */
     @SerializedName("Status")
     @Expose
@@ -100,31 +103,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Completion time of the event execution task.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskEndTime")
     @Expose
     private String TaskEndTime;
 
     /**
-    * Impact of the event.Note: This field may return null, indicating that no valid values can be obtained.
+    * Event impact information.
     */
     @SerializedName("EffectInfo")
     @Expose
     private String EffectInfo;
 
     /**
-    * Initial scheduled execution date of the event.Note: This field may return null, indicating that no valid values can be obtained.
+    * Initial scheduled event execution date.
     */
     @SerializedName("InitialExecutionDate")
     @Expose
     private String InitialExecutionDate;
 
     /**
-     * Get Event ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Event ID. 
      * @return ID Event ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getID() {
         return this.ID;
@@ -132,179 +132,191 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Event ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ID Event ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get Instance ID.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceId Instance ID.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceId Instance ID.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceName Instance name.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceName Instance name.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be only set to **InstanceMigration**.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be only set to **InstanceMigration**.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**. 
+     * @return Type Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be only set to **InstanceMigration**.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be only set to **InstanceMigration**.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**.
+     * @param Type Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Event levels are divided into Critical, High, Medium, and Low events according to the severity and urgency.- Critical
-- High
-- Middle
-- Low
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Grade Event levels are divided into Critical, High, Medium, and Low events according to the severity and urgency.- Critical
-- High
-- Middle
-- Low
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Event level. The levels are divided into critical, important, medium, and general based on severity and urgency.
+ - Critical: critical.
+ - High: important.
+ - Middle: medium.
+ - Low. 
+     * @return Grade Event level. The levels are divided into critical, important, medium, and general based on severity and urgency.
+ - Critical: critical.
+ - High: important.
+ - Middle: medium.
+ - Low.
      */
     public String getGrade() {
         return this.Grade;
     }
 
     /**
-     * Set Event levels are divided into Critical, High, Medium, and Low events according to the severity and urgency.- Critical
-- High
-- Middle
-- Low
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Grade Event levels are divided into Critical, High, Medium, and Low events according to the severity and urgency.- Critical
-- High
-- Middle
-- Low
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Event level. The levels are divided into critical, important, medium, and general based on severity and urgency.
+ - Critical: critical.
+ - High: important.
+ - Middle: medium.
+ - Low.
+     * @param Grade Event level. The levels are divided into critical, important, medium, and general based on severity and urgency.
+ - Critical: critical.
+ - High: important.
+ - Middle: medium.
+ - Low.
      */
     public void setGrade(String Grade) {
         this.Grade = Grade;
     }
 
     /**
-     * Get Scheduled event execution date.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExecutionDate Scheduled event execution date.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Scheduled event execution date. 
+     * @return ExecutionDate Scheduled event execution date.
      */
     public String getExecutionDate() {
         return this.ExecutionDate;
     }
 
     /**
-     * Set Scheduled event execution date.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExecutionDate Scheduled event execution date.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Scheduled event execution date.
+     * @param ExecutionDate Scheduled event execution date.
      */
     public void setExecutionDate(String ExecutionDate) {
         this.ExecutionDate = ExecutionDate;
     }
 
     /**
-     * Get Scheduled start time of event execution.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime Scheduled start time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Start date of scheduled event execution. 
+     * @return StartTime Start date of scheduled event execution.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Scheduled start time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTime Scheduled start time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Start date of scheduled event execution.
+     * @param StartTime Start date of scheduled event execution.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Scheduled end time of event execution.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndTime Scheduled end time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get End date of scheduled event execution. 
+     * @return EndTime End date of scheduled event execution.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Scheduled end time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndTime Scheduled end time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set End date of scheduled event execution.
+     * @param EndTime End date of scheduled event execution.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get The latest execution date of the operations event. Event execution must be completed before this date. Otherwise, the business may be affected.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LatestExecutionDate The latest execution date of the operations event. Event execution must be completed before this date. Otherwise, the business may be affected.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Latest execution date of the Ops event. The event should be completed before this date. Otherwise, the business may be affected. 
+     * @return LatestExecutionDate Latest execution date of the Ops event. The event should be completed before this date. Otherwise, the business may be affected.
      */
     public String getLatestExecutionDate() {
         return this.LatestExecutionDate;
     }
 
     /**
-     * Set The latest execution date of the operations event. Event execution must be completed before this date. Otherwise, the business may be affected.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LatestExecutionDate The latest execution date of the operations event. Event execution must be completed before this date. Otherwise, the business may be affected.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Latest execution date of the Ops event. The event should be completed before this date. Otherwise, the business may be affected.
+     * @param LatestExecutionDate Latest execution date of the Ops event. The event should be completed before this date. Otherwise, the business may be affected.
      */
     public void setLatestExecutionDate(String LatestExecutionDate) {
         this.LatestExecutionDate = LatestExecutionDate;
     }
 
     /**
-     * Get Current event status.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event operations is completed.- Canceled: Execution of the event is canceled.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Current event status.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event operations is completed.- Canceled: Execution of the event is canceled.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Current event status.
+ - Waiting: event not reached the execution date or not within the maintenance window.
+ - Running: event within the maintenance window and under maintenance execution.
+ - Finished: event with maintenance completed.
+- Canceled: Execution of the event is canceled. 
+     * @return Status Current event status.
+ - Waiting: event not reached the execution date or not within the maintenance window.
+ - Running: event within the maintenance window and under maintenance execution.
+ - Finished: event with maintenance completed.
+- Canceled: Execution of the event is canceled.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Current event status.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event operations is completed.- Canceled: Execution of the event is canceled.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Current event status.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event operations is completed.- Canceled: Execution of the event is canceled.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Current event status.
+ - Waiting: event not reached the execution date or not within the maintenance window.
+ - Running: event within the maintenance window and under maintenance execution.
+ - Finished: event with maintenance completed.
+- Canceled: Execution of the event is canceled.
+     * @param Status Current event status.
+ - Waiting: event not reached the execution date or not within the maintenance window.
+ - Running: event within the maintenance window and under maintenance execution.
+ - Finished: event with maintenance completed.
+- Canceled: Execution of the event is canceled.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Completion time of the event execution task.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Completion time of the event execution task. 
      * @return TaskEndTime Completion time of the event execution task.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTaskEndTime() {
         return this.TaskEndTime;
@@ -312,41 +324,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Completion time of the event execution task.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskEndTime Completion time of the event execution task.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskEndTime(String TaskEndTime) {
         this.TaskEndTime = TaskEndTime;
     }
 
     /**
-     * Get Impact of the event.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EffectInfo Impact of the event.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Event impact information. 
+     * @return EffectInfo Event impact information.
      */
     public String getEffectInfo() {
         return this.EffectInfo;
     }
 
     /**
-     * Set Impact of the event.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EffectInfo Impact of the event.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Event impact information.
+     * @param EffectInfo Event impact information.
      */
     public void setEffectInfo(String EffectInfo) {
         this.EffectInfo = EffectInfo;
     }
 
     /**
-     * Get Initial scheduled execution date of the event.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InitialExecutionDate Initial scheduled execution date of the event.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Initial scheduled event execution date. 
+     * @return InitialExecutionDate Initial scheduled event execution date.
      */
     public String getInitialExecutionDate() {
         return this.InitialExecutionDate;
     }
 
     /**
-     * Set Initial scheduled execution date of the event.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InitialExecutionDate Initial scheduled execution date of the event.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Initial scheduled event execution date.
+     * @param InitialExecutionDate Initial scheduled event execution date.
      */
     public void setInitialExecutionDate(String InitialExecutionDate) {
         this.InitialExecutionDate = InitialExecutionDate;

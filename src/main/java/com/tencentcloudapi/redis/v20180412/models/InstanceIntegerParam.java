@@ -87,8 +87,7 @@ public class InstanceIntegerParam extends AbstractModel {
     private Long Status;
 
     /**
-    * Parameter unit
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parameter unit.
     */
     @SerializedName("Unit")
     @Expose
@@ -239,20 +238,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Parameter unit
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Unit Parameter unit
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parameter unit. 
+     * @return Unit Parameter unit.
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set Parameter unit
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Unit Parameter unit
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parameter unit.
+     * @param Unit Parameter unit.
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;

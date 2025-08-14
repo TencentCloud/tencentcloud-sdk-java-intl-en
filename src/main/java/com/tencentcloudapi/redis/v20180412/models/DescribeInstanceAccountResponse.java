@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeInstanceAccountResponse extends AbstractModel {
 
     /**
-    * Account details 
-Note:  This field may return null, indicating that no valid values can be obtained.
+    * Account details.
     */
     @SerializedName("Accounts")
     @Expose
     private Account [] Accounts;
 
     /**
-    * Number of accounts 
-Note:  This field may return null, indicating that no valid values can be obtained.
+    * Number of accounts.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,40 +45,32 @@ Note:  This field may return null, indicating that no valid values can be obtain
     private String RequestId;
 
     /**
-     * Get Account details 
-Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return Accounts Account details 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Account details. 
+     * @return Accounts Account details.
      */
     public Account [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set Account details 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param Accounts Account details 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Account details.
+     * @param Accounts Account details.
      */
     public void setAccounts(Account [] Accounts) {
         this.Accounts = Accounts;
     }
 
     /**
-     * Get Number of accounts 
-Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Number of accounts 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Number of accounts. 
+     * @return TotalCount Number of accounts.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of accounts 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Number of accounts 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Number of accounts.
+     * @param TotalCount Number of accounts.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

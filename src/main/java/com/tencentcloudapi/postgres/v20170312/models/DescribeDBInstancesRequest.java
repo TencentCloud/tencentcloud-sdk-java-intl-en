@@ -38,7 +38,7 @@ db-public-address: filter by instance public network address (in string format)
     private Filter [] Filters;
 
     /**
-    * The maximum number of results returned per page. Value range: 1-100. Default: `10`
+    * The maximum number of results returned per page. Value range: 1-100. Default: `10`.
     */
     @SerializedName("Limit")
     @Expose
@@ -52,7 +52,7 @@ db-public-address: filter by instance public network address (in string format)
     private Long Offset;
 
     /**
-    * Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+    * Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
     */
     @SerializedName("OrderBy")
     @Expose
@@ -110,16 +110,16 @@ db-public-address: filter by instance public network address (in string format)
     }
 
     /**
-     * Get The maximum number of results returned per page. Value range: 1-100. Default: `10` 
-     * @return Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
+     * Get The maximum number of results returned per page. Value range: 1-100. Default: `10`. 
+     * @return Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The maximum number of results returned per page. Value range: 1-100. Default: `10`
-     * @param Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
+     * Set The maximum number of results returned per page. Value range: 1-100. Default: `10`.
+     * @param Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -142,16 +142,16 @@ db-public-address: filter by instance public network address (in string format)
     }
 
     /**
-     * Get Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime 
-     * @return OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+     * Get Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime. 
+     * @return OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
-     * @param OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+     * Set Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
+     * @param OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

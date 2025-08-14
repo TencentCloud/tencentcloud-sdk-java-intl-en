@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DisableReplicaReadonlyResponse extends AbstractModel {
 
     /**
-    * Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Task ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task ID. 
+     * @return TaskId Task ID.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task ID.
+     * @param TaskId Task ID.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

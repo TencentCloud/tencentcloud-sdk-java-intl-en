@@ -87,6 +87,13 @@ public class CreateSLInstanceRequest extends AbstractModel {
     private String ClientToken;
 
     /**
+    * 
+    */
+    @SerializedName("DeploymentMode")
+    @Expose
+    private String DeploymentMode;
+
+    /**
      * Get Instance name. 
      * @return InstanceName Instance name.
      */
@@ -230,6 +237,22 @@ public class CreateSLInstanceRequest extends AbstractModel {
         this.ClientToken = ClientToken;
     }
 
+    /**
+     * Get  
+     * @return DeploymentMode 
+     */
+    public String getDeploymentMode() {
+        return this.DeploymentMode;
+    }
+
+    /**
+     * Set 
+     * @param DeploymentMode 
+     */
+    public void setDeploymentMode(String DeploymentMode) {
+        this.DeploymentMode = DeploymentMode;
+    }
+
     public CreateSLInstanceRequest() {
     }
 
@@ -271,6 +294,9 @@ public class CreateSLInstanceRequest extends AbstractModel {
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.DeploymentMode != null) {
+            this.DeploymentMode = new String(source.DeploymentMode);
+        }
     }
 
 
@@ -287,6 +313,7 @@ public class CreateSLInstanceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "PrePaySetting.", this.PrePaySetting);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "DeploymentMode", this.DeploymentMode);
 
     }
 }

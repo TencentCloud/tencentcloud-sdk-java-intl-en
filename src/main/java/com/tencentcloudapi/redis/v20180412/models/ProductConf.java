@@ -131,10 +131,9 @@ public class ProductConf extends AbstractModel {
     private Boolean EnableRepicaReadOnly;
 
     /**
-    * Whether the Read-Only Replica is supported.
-- true: Supported.
-- false: Not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Whether read-only replica is supported.
+ - true: read-only replica supported.
+ - false: not supported.
     */
     @SerializedName("EnableReplicaReadOnly")
     @Expose
@@ -417,28 +416,24 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Whether the Read-Only Replica is supported.
-- true: Supported.
-- false: Not supported.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return EnableReplicaReadOnly Whether the Read-Only Replica is supported.
-- true: Supported.
-- false: Not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Whether read-only replica is supported.
+ - true: read-only replica supported.
+ - false: not supported. 
+     * @return EnableReplicaReadOnly Whether read-only replica is supported.
+ - true: read-only replica supported.
+ - false: not supported.
      */
     public Boolean getEnableReplicaReadOnly() {
         return this.EnableReplicaReadOnly;
     }
 
     /**
-     * Set Whether the Read-Only Replica is supported.
-- true: Supported.
-- false: Not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param EnableReplicaReadOnly Whether the Read-Only Replica is supported.
-- true: Supported.
-- false: Not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Whether read-only replica is supported.
+ - true: read-only replica supported.
+ - false: not supported.
+     * @param EnableReplicaReadOnly Whether read-only replica is supported.
+ - true: read-only replica supported.
+ - false: not supported.
      */
     public void setEnableReplicaReadOnly(Boolean EnableReplicaReadOnly) {
         this.EnableReplicaReadOnly = EnableReplicaReadOnly;

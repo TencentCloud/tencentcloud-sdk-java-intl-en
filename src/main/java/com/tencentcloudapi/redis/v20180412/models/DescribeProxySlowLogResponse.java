@@ -31,7 +31,7 @@ public class DescribeProxySlowLogResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Slow query details
+    * Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries.
     */
     @SerializedName("InstanceProxySlowLogDetail")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeProxySlowLogResponse extends AbstractModel {
     }
 
     /**
-     * Get Slow query details 
-     * @return InstanceProxySlowLogDetail Slow query details
+     * Get Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries. 
+     * @return InstanceProxySlowLogDetail Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries.
      */
     public InstanceProxySlowlogDetail [] getInstanceProxySlowLogDetail() {
         return this.InstanceProxySlowLogDetail;
     }
 
     /**
-     * Set Slow query details
-     * @param InstanceProxySlowLogDetail Slow query details
+     * Set Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries.
+     * @param InstanceProxySlowLogDetail Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries.
      */
     public void setInstanceProxySlowLogDetail(InstanceProxySlowlogDetail [] InstanceProxySlowLogDetail) {
         this.InstanceProxySlowLogDetail = InstanceProxySlowLogDetail;

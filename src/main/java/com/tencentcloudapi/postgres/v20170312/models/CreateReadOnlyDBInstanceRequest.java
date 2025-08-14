@@ -173,11 +173,18 @@ Default value: `0`.
     private String Name;
 
     /**
-    * (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+    * (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
     */
     @SerializedName("DBVersion")
     @Expose
     private String DBVersion;
+
+    /**
+    * 
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
 
     /**
      * Get Primary AZ of an instance, such as "ap-guangzhou-3".
@@ -548,19 +555,39 @@ Default value: `0`.
     }
 
     /**
-     * Get (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance. 
-     * @return DBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+     * Get (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance. 
+     * @return DBVersion (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
+     * @deprecated
      */
+    @Deprecated
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
-     * @param DBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+     * Set (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
+     * @param DBVersion (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
+     * @deprecated
      */
+    @Deprecated
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
+    }
+
+    /**
+     * Get  
+     * @return DedicatedClusterId 
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set 
+     * @param DedicatedClusterId 
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
     }
 
     public CreateReadOnlyDBInstanceRequest() {
@@ -637,6 +664,9 @@ Default value: `0`.
         if (source.DBVersion != null) {
             this.DBVersion = new String(source.DBVersion);
         }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
     }
 
 
@@ -664,6 +694,7 @@ Default value: `0`.
         this.setParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
 
     }
 }

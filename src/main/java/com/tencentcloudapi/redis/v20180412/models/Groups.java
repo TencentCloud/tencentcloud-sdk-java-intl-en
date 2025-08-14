@@ -32,21 +32,20 @@ public class Groups extends AbstractModel {
 
     /**
     * Region ID.
-- 1: Guangzhou.
-- 4: Shanghai.
-- 5: Hong Kong (China).
-- 7: Shanghai Finance.
-- 8: Beijing.
-- 9: Singapore.
-- 11: Shenzhen Finance.
-- 15: Western United States (Silicon Valley).
-- 16: Chengdu.
-- 17: Germany.
-- 18: South Korea.
-- 19: Chongqing.
-- 21: India.
-- 22: Eastern United States (Virginia).
-- 23: Thailand.
+ - 1: Guangzhou.
+ - 4: Shanghai.
+ - 5: Hong Kong (China).
+ - 7: Shanghai Finance.
+ - 8: Beijing.
+ - 9: Singapore.
+ - 11: Shenzhen Finance.
+ - 15: Western US (Silicon Valley).
+ - 16: Chengdu.
+ - 17: Germany.
+ - 18: South Korea.
+ - 19: Chongqing.
+ - 22: Eastern US (Virginia).
+ - 23: Thailand.
 - 25: Japan.
     */
     @SerializedName("RegionId")
@@ -61,8 +60,7 @@ public class Groups extends AbstractModel {
     private String GroupId;
 
     /**
-    * Replication group name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Replication group name.
     */
     @SerializedName("GroupName")
     @Expose
@@ -88,16 +86,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long InstanceCount;
 
     /**
-    * Instance information in replication groups
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance information on the replication group.
     */
     @SerializedName("Instances")
     @Expose
     private Instances [] Instances;
 
     /**
-    * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Remark information.
     */
     @SerializedName("Remark")
     @Expose
@@ -121,38 +117,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Region ID.
-- 1: Guangzhou.
-- 4: Shanghai.
-- 5: Hong Kong (China).
-- 7: Shanghai Finance.
-- 8: Beijing.
-- 9: Singapore.
-- 11: Shenzhen Finance.
-- 15: Western United States (Silicon Valley).
-- 16: Chengdu.
-- 17: Germany.
-- 18: South Korea.
-- 19: Chongqing.
-- 21: India.
-- 22: Eastern United States (Virginia).
-- 23: Thailand.
+ - 1: Guangzhou.
+ - 4: Shanghai.
+ - 5: Hong Kong (China).
+ - 7: Shanghai Finance.
+ - 8: Beijing.
+ - 9: Singapore.
+ - 11: Shenzhen Finance.
+ - 15: Western US (Silicon Valley).
+ - 16: Chengdu.
+ - 17: Germany.
+ - 18: South Korea.
+ - 19: Chongqing.
+ - 22: Eastern US (Virginia).
+ - 23: Thailand.
 - 25: Japan. 
      * @return RegionId Region ID.
-- 1: Guangzhou.
-- 4: Shanghai.
-- 5: Hong Kong (China).
-- 7: Shanghai Finance.
-- 8: Beijing.
-- 9: Singapore.
-- 11: Shenzhen Finance.
-- 15: Western United States (Silicon Valley).
-- 16: Chengdu.
-- 17: Germany.
-- 18: South Korea.
-- 19: Chongqing.
-- 21: India.
-- 22: Eastern United States (Virginia).
-- 23: Thailand.
+ - 1: Guangzhou.
+ - 4: Shanghai.
+ - 5: Hong Kong (China).
+ - 7: Shanghai Finance.
+ - 8: Beijing.
+ - 9: Singapore.
+ - 11: Shenzhen Finance.
+ - 15: Western US (Silicon Valley).
+ - 16: Chengdu.
+ - 17: Germany.
+ - 18: South Korea.
+ - 19: Chongqing.
+ - 22: Eastern US (Virginia).
+ - 23: Thailand.
 - 25: Japan.
      */
     public Long getRegionId() {
@@ -161,38 +155,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Region ID.
-- 1: Guangzhou.
-- 4: Shanghai.
-- 5: Hong Kong (China).
-- 7: Shanghai Finance.
-- 8: Beijing.
-- 9: Singapore.
-- 11: Shenzhen Finance.
-- 15: Western United States (Silicon Valley).
-- 16: Chengdu.
-- 17: Germany.
-- 18: South Korea.
-- 19: Chongqing.
-- 21: India.
-- 22: Eastern United States (Virginia).
-- 23: Thailand.
+ - 1: Guangzhou.
+ - 4: Shanghai.
+ - 5: Hong Kong (China).
+ - 7: Shanghai Finance.
+ - 8: Beijing.
+ - 9: Singapore.
+ - 11: Shenzhen Finance.
+ - 15: Western US (Silicon Valley).
+ - 16: Chengdu.
+ - 17: Germany.
+ - 18: South Korea.
+ - 19: Chongqing.
+ - 22: Eastern US (Virginia).
+ - 23: Thailand.
 - 25: Japan.
      * @param RegionId Region ID.
-- 1: Guangzhou.
-- 4: Shanghai.
-- 5: Hong Kong (China).
-- 7: Shanghai Finance.
-- 8: Beijing.
-- 9: Singapore.
-- 11: Shenzhen Finance.
-- 15: Western United States (Silicon Valley).
-- 16: Chengdu.
-- 17: Germany.
-- 18: South Korea.
-- 19: Chongqing.
-- 21: India.
-- 22: Eastern United States (Virginia).
-- 23: Thailand.
+ - 1: Guangzhou.
+ - 4: Shanghai.
+ - 5: Hong Kong (China).
+ - 7: Shanghai Finance.
+ - 8: Beijing.
+ - 9: Singapore.
+ - 11: Shenzhen Finance.
+ - 15: Western US (Silicon Valley).
+ - 16: Chengdu.
+ - 17: Germany.
+ - 18: South Korea.
+ - 19: Chongqing.
+ - 22: Eastern US (Virginia).
+ - 23: Thailand.
 - 25: Japan.
      */
     public void setRegionId(Long RegionId) {
@@ -216,20 +208,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Replication group name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupName Replication group name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Replication group name. 
+     * @return GroupName Replication group name.
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set Replication group name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupName Replication group name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Replication group name.
+     * @param GroupName Replication group name.
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
@@ -288,40 +276,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance information in replication groups
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Instances Instance information in replication groups
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance information on the replication group. 
+     * @return Instances Instance information on the replication group.
      */
     public Instances [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set Instance information in replication groups
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Instances Instance information in replication groups
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance information on the replication group.
+     * @param Instances Instance information on the replication group.
      */
     public void setInstances(Instances [] Instances) {
         this.Instances = Instances;
     }
 
     /**
-     * Get Remarks
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Remark information. 
+     * @return Remark Remark information.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Remark information.
+     * @param Remark Remark information.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

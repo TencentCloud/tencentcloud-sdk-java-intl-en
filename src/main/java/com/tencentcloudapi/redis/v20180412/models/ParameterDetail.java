@@ -68,24 +68,21 @@ public class ParameterDetail extends AbstractModel {
     private Long NeedReboot;
 
     /**
-    * Maximum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Maximum parameter value allowed.
     */
     @SerializedName("Max")
     @Expose
     private String Max;
 
     /**
-    * Minimum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Minimum parameter value allowed.
     */
     @SerializedName("Min")
     @Expose
     private String Min;
 
     /**
-    * Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Optional enumeration values of a parameter. For non-enumeration parameters, it is empty.
     */
     @SerializedName("EnumValue")
     @Expose
@@ -196,60 +193,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Maximum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Max Maximum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Maximum parameter value allowed. 
+     * @return Max Maximum parameter value allowed.
      */
     public String getMax() {
         return this.Max;
     }
 
     /**
-     * Set Maximum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Max Maximum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Maximum parameter value allowed.
+     * @param Max Maximum parameter value allowed.
      */
     public void setMax(String Max) {
         this.Max = Max;
     }
 
     /**
-     * Get Minimum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Min Minimum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Minimum parameter value allowed. 
+     * @return Min Minimum parameter value allowed.
      */
     public String getMin() {
         return this.Min;
     }
 
     /**
-     * Set Minimum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Min Minimum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Minimum parameter value allowed.
+     * @param Min Minimum parameter value allowed.
      */
     public void setMin(String Min) {
         this.Min = Min;
     }
 
     /**
-     * Get Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Optional enumeration values of a parameter. For non-enumeration parameters, it is empty. 
+     * @return EnumValue Optional enumeration values of a parameter. For non-enumeration parameters, it is empty.
      */
     public String [] getEnumValue() {
         return this.EnumValue;
     }
 
     /**
-     * Set Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Optional enumeration values of a parameter. For non-enumeration parameters, it is empty.
+     * @param EnumValue Optional enumeration values of a parameter. For non-enumeration parameters, it is empty.
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;

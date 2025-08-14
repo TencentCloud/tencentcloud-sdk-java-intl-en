@@ -67,7 +67,6 @@ public class RedisBackupSet extends AbstractModel {
 
     /**
     * Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BackupSize")
     @Expose
@@ -75,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FullBackup")
     @Expose
@@ -83,7 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceType")
     @Expose
@@ -228,10 +225,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Internal field, which can be ignored. 
      * @return BackupSize Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getBackupSize() {
         return this.BackupSize;
@@ -239,19 +234,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BackupSize Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBackupSize(Long BackupSize) {
         this.BackupSize = BackupSize;
     }
 
     /**
-     * Get Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Internal field, which can be ignored. 
      * @return FullBackup Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getFullBackup() {
         return this.FullBackup;
@@ -259,19 +250,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FullBackup Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFullBackup(Long FullBackup) {
         this.FullBackup = FullBackup;
     }
 
     /**
-     * Get Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Internal field, which can be ignored. 
      * @return InstanceType Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getInstanceType() {
         return this.InstanceType;
@@ -279,9 +266,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceType Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;

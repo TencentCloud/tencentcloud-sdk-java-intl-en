@@ -47,28 +47,28 @@ public class ModifyInstanceLogDeliveryRequest extends AbstractModel {
     private Boolean Enabled;
 
     /**
-    * ID of the shipped logset, which can be obtained through the sub-parameter **LogsetId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
+    * ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * ID of the shipped log topic, which can be obtained through the sub-parameter **TopicId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
+    * ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Logset name. If **LogsetId** is not specified, this parameter needs to be configured and the system will automatically create a logset with the specified name.
+    * Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
     */
     @SerializedName("LogsetName")
     @Expose
     private String LogsetName;
 
     /**
-    * Log topic name. This parameter is required when TopicId is empty, and the system will automatically create a log topic.
+    * Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs.
     */
     @SerializedName("TopicName")
     @Expose
@@ -152,64 +152,64 @@ public class ModifyInstanceLogDeliveryRequest extends AbstractModel {
     }
 
     /**
-     * Get ID of the shipped logset, which can be obtained through the sub-parameter **LogsetId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1). 
-     * @return LogsetId ID of the shipped logset, which can be obtained through the sub-parameter **LogsetId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
+     * Get ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1). 
+     * @return LogsetId ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set ID of the shipped logset, which can be obtained through the sub-parameter **LogsetId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
-     * @param LogsetId ID of the shipped logset, which can be obtained through the sub-parameter **LogsetId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
+     * Set ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
+     * @param LogsetId ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get ID of the shipped log topic, which can be obtained through the sub-parameter **TopicId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1). 
-     * @return TopicId ID of the shipped log topic, which can be obtained through the sub-parameter **TopicId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
+     * Get ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1). 
+     * @return TopicId ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set ID of the shipped log topic, which can be obtained through the sub-parameter **TopicId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
-     * @param TopicId ID of the shipped log topic, which can be obtained through the sub-parameter **TopicId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
+     * Set ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
+     * @param TopicId ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Logset name. If **LogsetId** is not specified, this parameter needs to be configured and the system will automatically create a logset with the specified name. 
-     * @return LogsetName Logset name. If **LogsetId** is not specified, this parameter needs to be configured and the system will automatically create a logset with the specified name.
+     * Get Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs. 
+     * @return LogsetName Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
      */
     public String getLogsetName() {
         return this.LogsetName;
     }
 
     /**
-     * Set Logset name. If **LogsetId** is not specified, this parameter needs to be configured and the system will automatically create a logset with the specified name.
-     * @param LogsetName Logset name. If **LogsetId** is not specified, this parameter needs to be configured and the system will automatically create a logset with the specified name.
+     * Set Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
+     * @param LogsetName Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
      */
     public void setLogsetName(String LogsetName) {
         this.LogsetName = LogsetName;
     }
 
     /**
-     * Get Log topic name. This parameter is required when TopicId is empty, and the system will automatically create a log topic. 
-     * @return TopicName Log topic name. This parameter is required when TopicId is empty, and the system will automatically create a log topic.
+     * Get Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs. 
+     * @return TopicName Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Log topic name. This parameter is required when TopicId is empty, and the system will automatically create a log topic.
-     * @param TopicName Log topic name. This parameter is required when TopicId is empty, and the system will automatically create a log topic.
+     * Set Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs.
+     * @param TopicName Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

@@ -31,7 +31,7 @@ public class DescribeTendisSlowLogResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Slow query details
+    * Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries.
     */
     @SerializedName("TendisSlowLogDetail")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeTendisSlowLogResponse extends AbstractModel {
     }
 
     /**
-     * Get Slow query details 
-     * @return TendisSlowLogDetail Slow query details
+     * Get Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries. 
+     * @return TendisSlowLogDetail Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries.
      */
     public TendisSlowLogDetail [] getTendisSlowLogDetail() {
         return this.TendisSlowLogDetail;
     }
 
     /**
-     * Set Slow query details
-     * @param TendisSlowLogDetail Slow query details
+     * Set Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries.
+     * @param TendisSlowLogDetail Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries.
      */
     public void setTendisSlowLogDetail(TendisSlowLogDetail [] TendisSlowLogDetail) {
         this.TendisSlowLogDetail = TendisSlowLogDetail;

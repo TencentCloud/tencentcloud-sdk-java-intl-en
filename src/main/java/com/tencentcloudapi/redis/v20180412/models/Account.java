@@ -25,7 +25,6 @@ public class Account extends AbstractModel {
 
     /**
     * Instance ID.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Account name.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("AccountName")
     @Expose
@@ -41,18 +39,17 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Account description.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Read/write permission policy.
+    * Read/Write permission policy.
 - r: read-only.
-- w: write-only.
+
+ - w: write-only.
 - rw: read/write.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Privilege")
     @Expose
@@ -60,9 +57,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Read-only routing policy.
-- master: primary node.
-- replication: secondary node.
-Note: This field may return null, indicating that no valid value can be obtained.
+ - master: primary node.
+ - replication: replica node.
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
@@ -70,27 +66,24 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Sub-account status.
-- 1: changing.
-- 2: valid.
-- 4: deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+ - 1: account under modification.
+ - 2: valid account.
+ - 4: account deleted.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Creation time.Note: This field may return null, indicating that no valid values can be obtained.
+    * Creation time
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get Instance ID.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Instance ID. 
      * @return InstanceId Instance ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -98,19 +91,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Instance ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param InstanceId Instance ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Account name.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Account name. 
      * @return AccountName Account name.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getAccountName() {
         return this.AccountName;
@@ -118,19 +107,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Account name.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param AccountName Account name.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get Account description.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Account description. 
      * @return Remark Account description.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getRemark() {
         return this.Remark;
@@ -138,41 +123,39 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Account description.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Remark Account description.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Read/write permission policy.
+     * Get Read/Write permission policy.
 - r: read-only.
-- w: write-only.
-- rw: read/write.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Privilege Read/write permission policy.
+
+ - w: write-only.
+- rw: read/write. 
+     * @return Privilege Read/Write permission policy.
 - r: read-only.
-- w: write-only.
+
+ - w: write-only.
 - rw: read/write.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set Read/write permission policy.
+     * Set Read/Write permission policy.
 - r: read-only.
-- w: write-only.
+
+ - w: write-only.
 - rw: read/write.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Privilege Read/write permission policy.
+     * @param Privilege Read/Write permission policy.
 - r: read-only.
-- w: write-only.
+
+ - w: write-only.
 - rw: read/write.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
@@ -180,13 +163,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Read-only routing policy.
-- master: primary node.
-- replication: secondary node.
-Note: This field may return null, indicating that no valid value can be obtained. 
+ - master: primary node.
+ - replication: replica node. 
      * @return ReadonlyPolicy Read-only routing policy.
-- master: primary node.
-- replication: secondary node.
-Note: This field may return null, indicating that no valid value can be obtained.
+ - master: primary node.
+ - replication: replica node.
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
@@ -194,13 +175,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Read-only routing policy.
-- master: primary node.
-- replication: secondary node.
-Note: This field may return null, indicating that no valid value can be obtained.
+ - master: primary node.
+ - replication: replica node.
      * @param ReadonlyPolicy Read-only routing policy.
-- master: primary node.
-- replication: secondary node.
-Note: This field may return null, indicating that no valid value can be obtained.
+ - master: primary node.
+ - replication: replica node.
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;
@@ -208,15 +187,13 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Sub-account status.
-- 1: changing.
-- 2: valid.
-- 4: deleted.
-Note: This field may return null, indicating that no valid value can be obtained. 
+ - 1: account under modification.
+ - 2: valid account.
+ - 4: account deleted. 
      * @return Status Sub-account status.
-- 1: changing.
-- 2: valid.
-- 4: deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+ - 1: account under modification.
+ - 2: valid account.
+ - 4: account deleted.
      */
     public Long getStatus() {
         return this.Status;
@@ -224,31 +201,29 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Sub-account status.
-- 1: changing.
-- 2: valid.
-- 4: deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+ - 1: account under modification.
+ - 2: valid account.
+ - 4: account deleted.
      * @param Status Sub-account status.
-- 1: changing.
-- 2: valid.
-- 4: deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+ - 1: account under modification.
+ - 2: valid account.
+ - 4: account deleted.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Creation time.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Creation time.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Creation time 
+     * @return CreateTime Creation time
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Creation time.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Creation time
+     * @param CreateTime Creation time
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

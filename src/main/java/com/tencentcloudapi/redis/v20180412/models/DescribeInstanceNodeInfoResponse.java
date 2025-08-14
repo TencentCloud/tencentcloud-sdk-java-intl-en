@@ -31,8 +31,7 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel {
     private Long ProxyCount;
 
     /**
-    * Proxy node information 
-Note:  This field may return null, indicating that no valid values can be obtained.
+    * Proxy node information.
     */
     @SerializedName("Proxy")
     @Expose
@@ -46,8 +45,7 @@ Note:  This field may return null, indicating that no valid values can be obtain
     private Long RedisCount;
 
     /**
-    * Redis node information 
-Note:  This field may return null, indicating that no valid values can be obtained.
+    * TencentDB for Redis® node information.
     */
     @SerializedName("Redis")
     @Expose
@@ -61,8 +59,7 @@ Note:  This field may return null, indicating that no valid values can be obtain
     private Long TendisCount;
 
     /**
-    * This parameter has been disused. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+    * This parameter is no longer used. Please ignore it.
     */
     @SerializedName("Tendis")
     @Expose
@@ -92,20 +89,16 @@ Note:  This field may return null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Proxy node information 
-Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return Proxy Proxy node information 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Proxy node information. 
+     * @return Proxy Proxy node information.
      */
     public ProxyNodes [] getProxy() {
         return this.Proxy;
     }
 
     /**
-     * Set Proxy node information 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param Proxy Proxy node information 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Proxy node information.
+     * @param Proxy Proxy node information.
      */
     public void setProxy(ProxyNodes [] Proxy) {
         this.Proxy = Proxy;
@@ -128,20 +121,16 @@ Note:  This field may return null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Redis node information 
-Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return Redis Redis node information 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get TencentDB for Redis® node information. 
+     * @return Redis TencentDB for Redis® node information.
      */
     public RedisNodes [] getRedis() {
         return this.Redis;
     }
 
     /**
-     * Set Redis node information 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param Redis Redis node information 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set TencentDB for Redis® node information.
+     * @param Redis TencentDB for Redis® node information.
      */
     public void setRedis(RedisNodes [] Redis) {
         this.Redis = Redis;
@@ -164,20 +153,16 @@ Note:  This field may return null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get This parameter has been disused. 
-Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return Tendis This parameter has been disused. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get This parameter is no longer used. Please ignore it. 
+     * @return Tendis This parameter is no longer used. Please ignore it.
      */
     public TendisNodes [] getTendis() {
         return this.Tendis;
     }
 
     /**
-     * Set This parameter has been disused. 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param Tendis This parameter has been disused. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set This parameter is no longer used. Please ignore it.
+     * @param Tendis This parameter is no longer used. Please ignore it.
      */
     public void setTendis(TendisNodes [] Tendis) {
         this.Tendis = Tendis;

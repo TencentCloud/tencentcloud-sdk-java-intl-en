@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class EnableReplicaReadonlyResponse extends AbstractModel {
 
     /**
-    * Valid values: `ERROR`, `OK`. This field has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * ERROR: incorrect; OK: correct (discarded).
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Valid values: `ERROR`, `OK`. This field has been disused.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Valid values: `ERROR`, `OK`. This field has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ERROR: incorrect; OK: correct (discarded). 
+     * @return Status ERROR: incorrect; OK: correct (discarded).
      * @deprecated
      */
     @Deprecated
@@ -59,10 +55,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Valid values: `ERROR`, `OK`. This field has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Valid values: `ERROR`, `OK`. This field has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ERROR: incorrect; OK: correct (discarded).
+     * @param Status ERROR: incorrect; OK: correct (discarded).
      * @deprecated
      */
     @Deprecated
@@ -71,20 +65,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Task ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task ID. 
+     * @return TaskId Task ID.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task ID.
+     * @param TaskId Task ID.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

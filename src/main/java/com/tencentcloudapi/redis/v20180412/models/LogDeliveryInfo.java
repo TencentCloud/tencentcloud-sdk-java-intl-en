@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class LogDeliveryInfo extends AbstractModel {
 
     /**
-    * Whether log shipping is enabled. true: enabled; false: disabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Enabling status of log shipping. true: enabled; false: disabled.
     */
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
 
     /**
-    * Logset ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Log set ID.
     */
     @SerializedName("LogsetId")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Log topic ID.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("TopicId")
     @Expose
@@ -49,58 +46,46 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Logset region
-
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("LogRegion")
     @Expose
     private String LogRegion;
 
     /**
-     * Get Whether log shipping is enabled. true: enabled; false: disabled.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Enabled Whether log shipping is enabled. true: enabled; false: disabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Enabling status of log shipping. true: enabled; false: disabled. 
+     * @return Enabled Enabling status of log shipping. true: enabled; false: disabled.
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Whether log shipping is enabled. true: enabled; false: disabled.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Enabled Whether log shipping is enabled. true: enabled; false: disabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Enabling status of log shipping. true: enabled; false: disabled.
+     * @param Enabled Enabling status of log shipping. true: enabled; false: disabled.
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get Logset ID.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return LogsetId Logset ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Log set ID. 
+     * @return LogsetId Log set ID.
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set Logset ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param LogsetId Logset ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Log set ID.
+     * @param LogsetId Log set ID.
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get Log topic ID.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Log topic ID. 
      * @return TopicId Log topic ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getTopicId() {
         return this.TopicId;
@@ -108,21 +93,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Log topic ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param TopicId Log topic ID.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Logset region
-
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Logset region 
      * @return LogRegion Logset region
-
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getLogRegion() {
         return this.LogRegion;
@@ -130,11 +109,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Logset region
-
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param LogRegion Logset region
-
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setLogRegion(String LogRegion) {
         this.LogRegion = LogRegion;

@@ -240,6 +240,13 @@ For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tence
     private String KMSRegion;
 
     /**
+    * 
+    */
+    @SerializedName("KMSClusterId")
+    @Expose
+    private String KMSClusterId;
+
+    /**
     * Database engine, which supports:
 <li>`postgresql`: TencentDB for PostgreSQL</li>
 <li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
@@ -837,6 +844,22 @@ For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tence
     }
 
     /**
+     * Get  
+     * @return KMSClusterId 
+     */
+    public String getKMSClusterId() {
+        return this.KMSClusterId;
+    }
+
+    /**
+     * Set 
+     * @param KMSClusterId 
+     */
+    public void setKMSClusterId(String KMSClusterId) {
+        this.KMSClusterId = KMSClusterId;
+    }
+
+    /**
      * Get Database engine, which supports:
 <li>`postgresql`: TencentDB for PostgreSQL</li>
 <li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
@@ -1066,6 +1089,9 @@ Default value: 0
         if (source.KMSRegion != null) {
             this.KMSRegion = new String(source.KMSRegion);
         }
+        if (source.KMSClusterId != null) {
+            this.KMSClusterId = new String(source.KMSClusterId);
+        }
         if (source.DBEngine != null) {
             this.DBEngine = new String(source.DBEngine);
         }
@@ -1111,6 +1137,7 @@ Default value: 0
         this.setParamSimple(map, prefix + "NeedSupportTDE", this.NeedSupportTDE);
         this.setParamSimple(map, prefix + "KMSKeyId", this.KMSKeyId);
         this.setParamSimple(map, prefix + "KMSRegion", this.KMSRegion);
+        this.setParamSimple(map, prefix + "KMSClusterId", this.KMSClusterId);
         this.setParamSimple(map, prefix + "DBEngine", this.DBEngine);
         this.setParamSimple(map, prefix + "DBEngineConfig", this.DBEngineConfig);
         this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
