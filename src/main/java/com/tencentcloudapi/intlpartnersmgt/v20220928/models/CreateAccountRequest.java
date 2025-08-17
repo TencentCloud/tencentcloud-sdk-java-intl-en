@@ -88,13 +88,6 @@ Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/
     private String VerifyCode;
 
     /**
-    * Extension field, which is left empty by default.
-    */
-    @SerializedName("Extended")
-    @Expose
-    private String Extended;
-
-    /**
     * Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
 such as "kghy_01".
     */
@@ -109,6 +102,13 @@ such as "kghy_0101"
     @SerializedName("TradeTwo")
     @Expose
     private String TradeTwo;
+
+    /**
+    * Extension field, which is left empty by default.
+    */
+    @SerializedName("Extended")
+    @Expose
+    private String Extended;
 
     /**
      * Get Account type of a new customer.
@@ -271,22 +271,6 @@ Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/
     }
 
     /**
-     * Get Extension field, which is left empty by default. 
-     * @return Extended Extension field, which is left empty by default.
-     */
-    public String getExtended() {
-        return this.Extended;
-    }
-
-    /**
-     * Set Extension field, which is left empty by default.
-     * @param Extended Extension field, which is left empty by default.
-     */
-    public void setExtended(String Extended) {
-        this.Extended = Extended;
-    }
-
-    /**
      * Get Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
 such as "kghy_01". 
      * @return TradeOne Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
@@ -326,6 +310,22 @@ such as "kghy_0101"
         this.TradeTwo = TradeTwo;
     }
 
+    /**
+     * Get Extension field, which is left empty by default. 
+     * @return Extended Extension field, which is left empty by default.
+     */
+    public String getExtended() {
+        return this.Extended;
+    }
+
+    /**
+     * Set Extension field, which is left empty by default.
+     * @param Extended Extension field, which is left empty by default.
+     */
+    public void setExtended(String Extended) {
+        this.Extended = Extended;
+    }
+
     public CreateAccountRequest() {
     }
 
@@ -358,14 +358,14 @@ such as "kghy_0101"
         if (source.VerifyCode != null) {
             this.VerifyCode = new String(source.VerifyCode);
         }
-        if (source.Extended != null) {
-            this.Extended = new String(source.Extended);
-        }
         if (source.TradeOne != null) {
             this.TradeOne = new String(source.TradeOne);
         }
         if (source.TradeTwo != null) {
             this.TradeTwo = new String(source.TradeTwo);
+        }
+        if (source.Extended != null) {
+            this.Extended = new String(source.Extended);
         }
     }
 
@@ -382,9 +382,9 @@ such as "kghy_0101"
         this.setParamSimple(map, prefix + "CountryCode", this.CountryCode);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "VerifyCode", this.VerifyCode);
-        this.setParamSimple(map, prefix + "Extended", this.Extended);
         this.setParamSimple(map, prefix + "TradeOne", this.TradeOne);
         this.setParamSimple(map, prefix + "TradeTwo", this.TradeTwo);
+        this.setParamSimple(map, prefix + "Extended", this.Extended);
 
     }
 }
