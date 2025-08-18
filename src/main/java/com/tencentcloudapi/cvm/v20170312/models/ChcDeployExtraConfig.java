@@ -23,6 +23,98 @@ import java.util.HashMap;
 
 public class ChcDeployExtraConfig extends AbstractModel {
 
+    /**
+    * 
+    */
+    @SerializedName("MiniOsType")
+    @Expose
+    private String MiniOsType;
+
+    /**
+    * 
+    */
+    @SerializedName("BootType")
+    @Expose
+    private String BootType;
+
+    /**
+    * 
+    */
+    @SerializedName("BootFile")
+    @Expose
+    private String BootFile;
+
+    /**
+    * 
+    */
+    @SerializedName("NextServerAddress")
+    @Expose
+    private String NextServerAddress;
+
+    /**
+     * Get  
+     * @return MiniOsType 
+     */
+    public String getMiniOsType() {
+        return this.MiniOsType;
+    }
+
+    /**
+     * Set 
+     * @param MiniOsType 
+     */
+    public void setMiniOsType(String MiniOsType) {
+        this.MiniOsType = MiniOsType;
+    }
+
+    /**
+     * Get  
+     * @return BootType 
+     */
+    public String getBootType() {
+        return this.BootType;
+    }
+
+    /**
+     * Set 
+     * @param BootType 
+     */
+    public void setBootType(String BootType) {
+        this.BootType = BootType;
+    }
+
+    /**
+     * Get  
+     * @return BootFile 
+     */
+    public String getBootFile() {
+        return this.BootFile;
+    }
+
+    /**
+     * Set 
+     * @param BootFile 
+     */
+    public void setBootFile(String BootFile) {
+        this.BootFile = BootFile;
+    }
+
+    /**
+     * Get  
+     * @return NextServerAddress 
+     */
+    public String getNextServerAddress() {
+        return this.NextServerAddress;
+    }
+
+    /**
+     * Set 
+     * @param NextServerAddress 
+     */
+    public void setNextServerAddress(String NextServerAddress) {
+        this.NextServerAddress = NextServerAddress;
+    }
+
     public ChcDeployExtraConfig() {
     }
 
@@ -31,6 +123,18 @@ public class ChcDeployExtraConfig extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ChcDeployExtraConfig(ChcDeployExtraConfig source) {
+        if (source.MiniOsType != null) {
+            this.MiniOsType = new String(source.MiniOsType);
+        }
+        if (source.BootType != null) {
+            this.BootType = new String(source.BootType);
+        }
+        if (source.BootFile != null) {
+            this.BootFile = new String(source.BootFile);
+        }
+        if (source.NextServerAddress != null) {
+            this.NextServerAddress = new String(source.NextServerAddress);
+        }
     }
 
 
@@ -38,6 +142,10 @@ public class ChcDeployExtraConfig extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "MiniOsType", this.MiniOsType);
+        this.setParamSimple(map, prefix + "BootType", this.BootType);
+        this.setParamSimple(map, prefix + "BootFile", this.BootFile);
+        this.setParamSimple(map, prefix + "NextServerAddress", this.NextServerAddress);
 
     }
 }

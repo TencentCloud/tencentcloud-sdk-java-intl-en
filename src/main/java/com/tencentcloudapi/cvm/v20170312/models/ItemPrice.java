@@ -24,577 +24,482 @@ import java.util.HashMap;
 public class ItemPrice extends AbstractModel {
 
     /**
-    * The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
+    * Original price of subsequent total costs, postpaid billing mode usage, unit: usd. <li>if other time interval items are returned, such as UnitPriceSecondStep, this item represents the time interval (0, 96) hr. if no other time interval items are returned, this item represents the full period (0, ∞) hr.
     */
     @SerializedName("UnitPrice")
     @Expose
     private Float UnitPrice;
 
     /**
-    * Billing unit for pay-as-you-go mode. Valid values: <br><li>HOUR: billed on an hourly basis. It's used for hourly postpaid instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. It's used for postpaid products that are billed by the hourly traffic (`TRAFFIC_POSTPAID_BY_HOUR`).
-Note: this field may return null, indicating that no valid value is obtained.
+    * Billing unit for pay-as-you-go mode. valid values: <br><li>HOUR: billed on an hourly basis. it's used for hourly POSTPAID instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill BY TRAFFIC in GB. it's used for POSTPAID products that are billed BY the hourly TRAFFIC (`TRAFFIC_POSTPAID_BY_HOUR`).
     */
     @SerializedName("ChargeUnit")
     @Expose
     private String ChargeUnit;
 
     /**
-    * The original price of a pay-in-advance instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
+    * Original price of total prepaid costs. measurement unit: usd.
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * Discount price of a prepaid instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
+    * Discount price of total prepaid costs. unit: usd.
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-    * Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Discount, such as 20.0 representing 80% off.
     */
     @SerializedName("Discount")
     @Expose
     private Float Discount;
 
     /**
-    * The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
+    * Discounted price of subsequent total cost, postpaid billing mode usage, unit: usd <li>if other time interval items are returned, such as UnitPriceDiscountSecondStep, this item represents the time interval (0, 96) hr; if no other time interval items are returned, this item represents the full period (0, ∞) hr.
     */
     @SerializedName("UnitPriceDiscount")
     @Expose
     private Float UnitPriceDiscount;
 
     /**
-    * Original unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+    * Original price of subsequent total costs for usage time range (96, 360) hr in postpaid billing mode. unit: usd.
     */
     @SerializedName("UnitPriceSecondStep")
     @Expose
     private Float UnitPriceSecondStep;
 
     /**
-    * Discounted unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+    * Discounted price of subsequent total cost for usage time interval (96, 360) hr in postpaid billing mode. unit: usd.
     */
     @SerializedName("UnitPriceDiscountSecondStep")
     @Expose
     private Float UnitPriceDiscountSecondStep;
 
     /**
-    * Original unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+    * Specifies the original price of subsequent total costs with a usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
     */
     @SerializedName("UnitPriceThirdStep")
     @Expose
     private Float UnitPriceThirdStep;
 
     /**
-    * Discounted unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+    * Discounted price of subsequent total cost for usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
     */
     @SerializedName("UnitPriceDiscountThirdStep")
     @Expose
     private Float UnitPriceDiscountThirdStep;
 
     /**
-    * Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+    * Specifies the original price of total 3-year prepaid costs in prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("OriginalPriceThreeYear")
     @Expose
     private Float OriginalPriceThreeYear;
 
     /**
-    * Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+    * Specifies the discount price for an advance payment of the total fee for three years, prepaid mode usage, measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("DiscountPriceThreeYear")
     @Expose
     private Float DiscountPriceThreeYear;
 
     /**
-    * Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+    * Specifies the discount for a 3-year advance payment, for example 20.0 represents 80% off.
+Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("DiscountThreeYear")
     @Expose
     private Float DiscountThreeYear;
 
     /**
-    * Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+    * Specifies the original price of the 5-year total cost with advance payment, using prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("OriginalPriceFiveYear")
     @Expose
     private Float OriginalPriceFiveYear;
 
     /**
-    * Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+    * Prepaid 5-year total cost discount price, prepaid billing mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("DiscountPriceFiveYear")
     @Expose
     private Float DiscountPriceFiveYear;
 
     /**
-    * Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+    * Specifies the discount for 5-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("DiscountFiveYear")
     @Expose
     private Float DiscountFiveYear;
 
     /**
-    * Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+    * Original price of one-year advance payment total cost. prepaid mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("OriginalPriceOneYear")
     @Expose
     private Float OriginalPriceOneYear;
 
     /**
-    * Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+    * Discount price for total advance payment for one year. specifies prepaid mode usage. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("DiscountPriceOneYear")
     @Expose
     private Float DiscountPriceOneYear;
 
     /**
-    * Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+    * Specifies the discount for a one-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("DiscountOneYear")
     @Expose
     private Float DiscountOneYear;
 
     /**
-     * Get The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return UnitPrice The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Original price of subsequent total costs, postpaid billing mode usage, unit: usd. <li>if other time interval items are returned, such as UnitPriceSecondStep, this item represents the time interval (0, 96) hr. if no other time interval items are returned, this item represents the full period (0, ∞) hr. 
+     * @return UnitPrice Original price of subsequent total costs, postpaid billing mode usage, unit: usd. <li>if other time interval items are returned, such as UnitPriceSecondStep, this item represents the time interval (0, 96) hr. if no other time interval items are returned, this item represents the full period (0, ∞) hr.
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
     }
 
     /**
-     * Set The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param UnitPrice The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Original price of subsequent total costs, postpaid billing mode usage, unit: usd. <li>if other time interval items are returned, such as UnitPriceSecondStep, this item represents the time interval (0, 96) hr. if no other time interval items are returned, this item represents the full period (0, ∞) hr.
+     * @param UnitPrice Original price of subsequent total costs, postpaid billing mode usage, unit: usd. <li>if other time interval items are returned, such as UnitPriceSecondStep, this item represents the time interval (0, 96) hr. if no other time interval items are returned, this item represents the full period (0, ∞) hr.
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get Billing unit for pay-as-you-go mode. Valid values: <br><li>HOUR: billed on an hourly basis. It's used for hourly postpaid instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. It's used for postpaid products that are billed by the hourly traffic (`TRAFFIC_POSTPAID_BY_HOUR`).
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return ChargeUnit Billing unit for pay-as-you-go mode. Valid values: <br><li>HOUR: billed on an hourly basis. It's used for hourly postpaid instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. It's used for postpaid products that are billed by the hourly traffic (`TRAFFIC_POSTPAID_BY_HOUR`).
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Billing unit for pay-as-you-go mode. valid values: <br><li>HOUR: billed on an hourly basis. it's used for hourly POSTPAID instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill BY TRAFFIC in GB. it's used for POSTPAID products that are billed BY the hourly TRAFFIC (`TRAFFIC_POSTPAID_BY_HOUR`). 
+     * @return ChargeUnit Billing unit for pay-as-you-go mode. valid values: <br><li>HOUR: billed on an hourly basis. it's used for hourly POSTPAID instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill BY TRAFFIC in GB. it's used for POSTPAID products that are billed BY the hourly TRAFFIC (`TRAFFIC_POSTPAID_BY_HOUR`).
      */
     public String getChargeUnit() {
         return this.ChargeUnit;
     }
 
     /**
-     * Set Billing unit for pay-as-you-go mode. Valid values: <br><li>HOUR: billed on an hourly basis. It's used for hourly postpaid instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. It's used for postpaid products that are billed by the hourly traffic (`TRAFFIC_POSTPAID_BY_HOUR`).
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param ChargeUnit Billing unit for pay-as-you-go mode. Valid values: <br><li>HOUR: billed on an hourly basis. It's used for hourly postpaid instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. It's used for postpaid products that are billed by the hourly traffic (`TRAFFIC_POSTPAID_BY_HOUR`).
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Billing unit for pay-as-you-go mode. valid values: <br><li>HOUR: billed on an hourly basis. it's used for hourly POSTPAID instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill BY TRAFFIC in GB. it's used for POSTPAID products that are billed BY the hourly TRAFFIC (`TRAFFIC_POSTPAID_BY_HOUR`).
+     * @param ChargeUnit Billing unit for pay-as-you-go mode. valid values: <br><li>HOUR: billed on an hourly basis. it's used for hourly POSTPAID instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill BY TRAFFIC in GB. it's used for POSTPAID products that are billed BY the hourly TRAFFIC (`TRAFFIC_POSTPAID_BY_HOUR`).
      */
     public void setChargeUnit(String ChargeUnit) {
         this.ChargeUnit = ChargeUnit;
     }
 
     /**
-     * Get The original price of a pay-in-advance instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return OriginalPrice The original price of a pay-in-advance instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Original price of total prepaid costs. measurement unit: usd. 
+     * @return OriginalPrice Original price of total prepaid costs. measurement unit: usd.
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set The original price of a pay-in-advance instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param OriginalPrice The original price of a pay-in-advance instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Original price of total prepaid costs. measurement unit: usd.
+     * @param OriginalPrice Original price of total prepaid costs. measurement unit: usd.
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get Discount price of a prepaid instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return DiscountPrice Discount price of a prepaid instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Discount price of total prepaid costs. unit: usd. 
+     * @return DiscountPrice Discount price of total prepaid costs. unit: usd.
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set Discount price of a prepaid instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param DiscountPrice Discount price of a prepaid instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Discount price of total prepaid costs. unit: usd.
+     * @param DiscountPrice Discount price of total prepaid costs. unit: usd.
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
     }
 
     /**
-     * Get Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Discount Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Discount, such as 20.0 representing 80% off. 
+     * @return Discount Discount, such as 20.0 representing 80% off.
      */
     public Float getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Discount Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Discount, such as 20.0 representing 80% off.
+     * @param Discount Discount, such as 20.0 representing 80% off.
      */
     public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 
     /**
-     * Get The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return UnitPriceDiscount The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Discounted price of subsequent total cost, postpaid billing mode usage, unit: usd <li>if other time interval items are returned, such as UnitPriceDiscountSecondStep, this item represents the time interval (0, 96) hr; if no other time interval items are returned, this item represents the full period (0, ∞) hr. 
+     * @return UnitPriceDiscount Discounted price of subsequent total cost, postpaid billing mode usage, unit: usd <li>if other time interval items are returned, such as UnitPriceDiscountSecondStep, this item represents the time interval (0, 96) hr; if no other time interval items are returned, this item represents the full period (0, ∞) hr.
      */
     public Float getUnitPriceDiscount() {
         return this.UnitPriceDiscount;
     }
 
     /**
-     * Set The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param UnitPriceDiscount The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Discounted price of subsequent total cost, postpaid billing mode usage, unit: usd <li>if other time interval items are returned, such as UnitPriceDiscountSecondStep, this item represents the time interval (0, 96) hr; if no other time interval items are returned, this item represents the full period (0, ∞) hr.
+     * @param UnitPriceDiscount Discounted price of subsequent total cost, postpaid billing mode usage, unit: usd <li>if other time interval items are returned, such as UnitPriceDiscountSecondStep, this item represents the time interval (0, 96) hr; if no other time interval items are returned, this item represents the full period (0, ∞) hr.
      */
     public void setUnitPriceDiscount(Float UnitPriceDiscount) {
         this.UnitPriceDiscount = UnitPriceDiscount;
     }
 
     /**
-     * Get Original unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return UnitPriceSecondStep Original unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Original price of subsequent total costs for usage time range (96, 360) hr in postpaid billing mode. unit: usd. 
+     * @return UnitPriceSecondStep Original price of subsequent total costs for usage time range (96, 360) hr in postpaid billing mode. unit: usd.
      */
     public Float getUnitPriceSecondStep() {
         return this.UnitPriceSecondStep;
     }
 
     /**
-     * Set Original unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param UnitPriceSecondStep Original unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Original price of subsequent total costs for usage time range (96, 360) hr in postpaid billing mode. unit: usd.
+     * @param UnitPriceSecondStep Original price of subsequent total costs for usage time range (96, 360) hr in postpaid billing mode. unit: usd.
      */
     public void setUnitPriceSecondStep(Float UnitPriceSecondStep) {
         this.UnitPriceSecondStep = UnitPriceSecondStep;
     }
 
     /**
-     * Get Discounted unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return UnitPriceDiscountSecondStep Discounted unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Discounted price of subsequent total cost for usage time interval (96, 360) hr in postpaid billing mode. unit: usd. 
+     * @return UnitPriceDiscountSecondStep Discounted price of subsequent total cost for usage time interval (96, 360) hr in postpaid billing mode. unit: usd.
      */
     public Float getUnitPriceDiscountSecondStep() {
         return this.UnitPriceDiscountSecondStep;
     }
 
     /**
-     * Set Discounted unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param UnitPriceDiscountSecondStep Discounted unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Discounted price of subsequent total cost for usage time interval (96, 360) hr in postpaid billing mode. unit: usd.
+     * @param UnitPriceDiscountSecondStep Discounted price of subsequent total cost for usage time interval (96, 360) hr in postpaid billing mode. unit: usd.
      */
     public void setUnitPriceDiscountSecondStep(Float UnitPriceDiscountSecondStep) {
         this.UnitPriceDiscountSecondStep = UnitPriceDiscountSecondStep;
     }
 
     /**
-     * Get Original unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return UnitPriceThirdStep Original unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Specifies the original price of subsequent total costs with a usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd. 
+     * @return UnitPriceThirdStep Specifies the original price of subsequent total costs with a usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
      */
     public Float getUnitPriceThirdStep() {
         return this.UnitPriceThirdStep;
     }
 
     /**
-     * Set Original unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param UnitPriceThirdStep Original unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Specifies the original price of subsequent total costs with a usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
+     * @param UnitPriceThirdStep Specifies the original price of subsequent total costs with a usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
      */
     public void setUnitPriceThirdStep(Float UnitPriceThirdStep) {
         this.UnitPriceThirdStep = UnitPriceThirdStep;
     }
 
     /**
-     * Get Discounted unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return UnitPriceDiscountThirdStep Discounted unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Discounted price of subsequent total cost for usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd. 
+     * @return UnitPriceDiscountThirdStep Discounted price of subsequent total cost for usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
      */
     public Float getUnitPriceDiscountThirdStep() {
         return this.UnitPriceDiscountThirdStep;
     }
 
     /**
-     * Set Discounted unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param UnitPriceDiscountThirdStep Discounted unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Discounted price of subsequent total cost for usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
+     * @param UnitPriceDiscountThirdStep Discounted price of subsequent total cost for usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
      */
     public void setUnitPriceDiscountThirdStep(Float UnitPriceDiscountThirdStep) {
         this.UnitPriceDiscountThirdStep = UnitPriceDiscountThirdStep;
     }
 
     /**
-     * Get Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return OriginalPriceThreeYear Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Specifies the original price of total 3-year prepaid costs in prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found. 
+     * @return OriginalPriceThreeYear Specifies the original price of total 3-year prepaid costs in prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
      */
     public Float getOriginalPriceThreeYear() {
         return this.OriginalPriceThreeYear;
     }
 
     /**
-     * Set Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param OriginalPriceThreeYear Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Specifies the original price of total 3-year prepaid costs in prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+     * @param OriginalPriceThreeYear Specifies the original price of total 3-year prepaid costs in prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
      */
     public void setOriginalPriceThreeYear(Float OriginalPriceThreeYear) {
         this.OriginalPriceThreeYear = OriginalPriceThreeYear;
     }
 
     /**
-     * Get Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return DiscountPriceThreeYear Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Specifies the discount price for an advance payment of the total fee for three years, prepaid mode usage, measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found. 
+     * @return DiscountPriceThreeYear Specifies the discount price for an advance payment of the total fee for three years, prepaid mode usage, measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
      */
     public Float getDiscountPriceThreeYear() {
         return this.DiscountPriceThreeYear;
     }
 
     /**
-     * Set Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param DiscountPriceThreeYear Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Specifies the discount price for an advance payment of the total fee for three years, prepaid mode usage, measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+     * @param DiscountPriceThreeYear Specifies the discount price for an advance payment of the total fee for three years, prepaid mode usage, measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
      */
     public void setDiscountPriceThreeYear(Float DiscountPriceThreeYear) {
         this.DiscountPriceThreeYear = DiscountPriceThreeYear;
     }
 
     /**
-     * Get Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return DiscountThreeYear Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Specifies the discount for a 3-year advance payment, for example 20.0 represents 80% off.
+Note: This field may return null, indicating that no valid value is found. 
+     * @return DiscountThreeYear Specifies the discount for a 3-year advance payment, for example 20.0 represents 80% off.
+Note: This field may return null, indicating that no valid value is found.
      */
     public Float getDiscountThreeYear() {
         return this.DiscountThreeYear;
     }
 
     /**
-     * Set Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param DiscountThreeYear Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Specifies the discount for a 3-year advance payment, for example 20.0 represents 80% off.
+Note: This field may return null, indicating that no valid value is found.
+     * @param DiscountThreeYear Specifies the discount for a 3-year advance payment, for example 20.0 represents 80% off.
+Note: This field may return null, indicating that no valid value is found.
      */
     public void setDiscountThreeYear(Float DiscountThreeYear) {
         this.DiscountThreeYear = DiscountThreeYear;
     }
 
     /**
-     * Get Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return OriginalPriceFiveYear Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Specifies the original price of the 5-year total cost with advance payment, using prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found. 
+     * @return OriginalPriceFiveYear Specifies the original price of the 5-year total cost with advance payment, using prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
      */
     public Float getOriginalPriceFiveYear() {
         return this.OriginalPriceFiveYear;
     }
 
     /**
-     * Set Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param OriginalPriceFiveYear Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Specifies the original price of the 5-year total cost with advance payment, using prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+     * @param OriginalPriceFiveYear Specifies the original price of the 5-year total cost with advance payment, using prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
      */
     public void setOriginalPriceFiveYear(Float OriginalPriceFiveYear) {
         this.OriginalPriceFiveYear = OriginalPriceFiveYear;
     }
 
     /**
-     * Get Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return DiscountPriceFiveYear Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Prepaid 5-year total cost discount price, prepaid billing mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found. 
+     * @return DiscountPriceFiveYear Prepaid 5-year total cost discount price, prepaid billing mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
      */
     public Float getDiscountPriceFiveYear() {
         return this.DiscountPriceFiveYear;
     }
 
     /**
-     * Set Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param DiscountPriceFiveYear Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Prepaid 5-year total cost discount price, prepaid billing mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+     * @param DiscountPriceFiveYear Prepaid 5-year total cost discount price, prepaid billing mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
      */
     public void setDiscountPriceFiveYear(Float DiscountPriceFiveYear) {
         this.DiscountPriceFiveYear = DiscountPriceFiveYear;
     }
 
     /**
-     * Get Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return DiscountFiveYear Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Specifies the discount for 5-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found. 
+     * @return DiscountFiveYear Specifies the discount for 5-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
      */
     public Float getDiscountFiveYear() {
         return this.DiscountFiveYear;
     }
 
     /**
-     * Set Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param DiscountFiveYear Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Specifies the discount for 5-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
+     * @param DiscountFiveYear Specifies the discount for 5-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
      */
     public void setDiscountFiveYear(Float DiscountFiveYear) {
         this.DiscountFiveYear = DiscountFiveYear;
     }
 
     /**
-     * Get Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return OriginalPriceOneYear Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Original price of one-year advance payment total cost. prepaid mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found. 
+     * @return OriginalPriceOneYear Original price of one-year advance payment total cost. prepaid mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
      */
     public Float getOriginalPriceOneYear() {
         return this.OriginalPriceOneYear;
     }
 
     /**
-     * Set Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param OriginalPriceOneYear Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Original price of one-year advance payment total cost. prepaid mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+     * @param OriginalPriceOneYear Original price of one-year advance payment total cost. prepaid mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
      */
     public void setOriginalPriceOneYear(Float OriginalPriceOneYear) {
         this.OriginalPriceOneYear = OriginalPriceOneYear;
     }
 
     /**
-     * Get Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return DiscountPriceOneYear Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Discount price for total advance payment for one year. specifies prepaid mode usage. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found. 
+     * @return DiscountPriceOneYear Discount price for total advance payment for one year. specifies prepaid mode usage. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
      */
     public Float getDiscountPriceOneYear() {
         return this.DiscountPriceOneYear;
     }
 
     /**
-     * Set Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param DiscountPriceOneYear Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Discount price for total advance payment for one year. specifies prepaid mode usage. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+     * @param DiscountPriceOneYear Discount price for total advance payment for one year. specifies prepaid mode usage. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
      */
     public void setDiscountPriceOneYear(Float DiscountPriceOneYear) {
         this.DiscountPriceOneYear = DiscountPriceOneYear;
     }
 
     /**
-     * Get Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return DiscountOneYear Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Specifies the discount for a one-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found. 
+     * @return DiscountOneYear Specifies the discount for a one-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
      */
     public Float getDiscountOneYear() {
         return this.DiscountOneYear;
     }
 
     /**
-     * Set Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param DiscountOneYear Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Specifies the discount for a one-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
+     * @param DiscountOneYear Specifies the discount for a one-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
      */
     public void setDiscountOneYear(Float DiscountOneYear) {
         this.DiscountOneYear = DiscountOneYear;

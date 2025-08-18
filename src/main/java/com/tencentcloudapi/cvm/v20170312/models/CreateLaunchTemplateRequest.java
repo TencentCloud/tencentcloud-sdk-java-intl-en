@@ -219,6 +219,13 @@ false (default): sends a normal request. after passing the check, creates an ins
     private Boolean DisableApiTermination;
 
     /**
+    * 
+    */
+    @SerializedName("EnableJumboFrame")
+    @Expose
+    private Boolean EnableJumboFrame;
+
+    /**
     * Description list of tags. by specifying this parameter, tags can be bound to the instance launch template.
     */
     @SerializedName("LaunchTemplateTagSpecification")
@@ -701,6 +708,22 @@ false (default): sends a normal request. after passing the check, creates an ins
     }
 
     /**
+     * Get  
+     * @return EnableJumboFrame 
+     */
+    public Boolean getEnableJumboFrame() {
+        return this.EnableJumboFrame;
+    }
+
+    /**
+     * Set 
+     * @param EnableJumboFrame 
+     */
+    public void setEnableJumboFrame(Boolean EnableJumboFrame) {
+        this.EnableJumboFrame = EnableJumboFrame;
+    }
+
+    /**
      * Get Description list of tags. by specifying this parameter, tags can be bound to the instance launch template. 
      * @return LaunchTemplateTagSpecification Description list of tags. by specifying this parameter, tags can be bound to the instance launch template.
      */
@@ -869,6 +892,9 @@ Note: this field is in beta test.
         if (source.DisableApiTermination != null) {
             this.DisableApiTermination = new Boolean(source.DisableApiTermination);
         }
+        if (source.EnableJumboFrame != null) {
+            this.EnableJumboFrame = new Boolean(source.EnableJumboFrame);
+        }
         if (source.LaunchTemplateTagSpecification != null) {
             this.LaunchTemplateTagSpecification = new TagSpecification[source.LaunchTemplateTagSpecification.length];
             for (int i = 0; i < source.LaunchTemplateTagSpecification.length; i++) {
@@ -915,6 +941,7 @@ Note: this field is in beta test.
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+        this.setParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
         this.setParamArrayObj(map, prefix + "LaunchTemplateTagSpecification.", this.LaunchTemplateTagSpecification);
         this.setParamObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamSimple(map, prefix + "TemplateDataModifyAction", this.TemplateDataModifyAction);
