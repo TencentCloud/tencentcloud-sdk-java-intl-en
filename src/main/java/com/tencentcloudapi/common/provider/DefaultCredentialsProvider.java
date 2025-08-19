@@ -3,8 +3,6 @@ package com.tencentcloudapi.common.provider;
 import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 
-import java.io.IOException;
-
 public class DefaultCredentialsProvider implements CredentialsProvider {
     @Override
     public Credential getCredentials() throws TencentCloudSDKException {
@@ -26,12 +24,7 @@ public class DefaultCredentialsProvider implements CredentialsProvider {
             return cred;
         }
 
-        try {
-            cred = new OIDCRoleArnProvider().getCredentials();
-            return cred;
-        } catch (IOException e) {
-        }
-
-        throw new TencentCloudSDKException("No valid credential");
+        cred = new OIDCRoleArnProvider().getCredentials();
+        return cred;
     }
 }

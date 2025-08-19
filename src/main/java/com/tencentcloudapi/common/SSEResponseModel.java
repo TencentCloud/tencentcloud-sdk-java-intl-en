@@ -21,25 +21,26 @@ import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 
+import java.io.Closeable;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public abstract class SSEResponseModel extends AbstractModel implements Iterable<SSEResponseModel.SSE> {
-    protected String RequestId;
+public abstract class SSEResponseModel extends AbstractModel implements Iterable<SSEResponseModel.SSE>, Closeable {
     private Response response;
     private CircuitBreaker.Token token;
 
-    public String getRequestId() {
-        return RequestId;
-    }
+    public abstract String getRequestId();
 
-    public void setRequestId(String requestId) {
-        RequestId = requestId;
-    }
+    public abstract void setRequestId(String requestId);
 
     public void setResponse(Response response) {
         this.response = response;
+    }
+
+    public boolean isStream() {
+        return this.response != null;
     }
 
     public void setToken(CircuitBreaker.Token token) {
@@ -66,7 +67,7 @@ public abstract class SSEResponseModel extends AbstractModel implements Iterable
             if (body == null) {
                 throw new TencentCloudSDKException("Response body should not be null");
             }
-            this.scanner = new Scanner(body.source());
+            this.scanner = new Scanner(body.source(), StandardCharsets.UTF_8.name());
         }
 
         @Override
@@ -135,5 +136,10 @@ public abstract class SSEResponseModel extends AbstractModel implements Iterable
 
     @Override
     protected void toMap(HashMap<String, String> map, String prefix) {
+    }
+
+    @Override
+    public void close() {
+        this.response.close();
     }
 }
