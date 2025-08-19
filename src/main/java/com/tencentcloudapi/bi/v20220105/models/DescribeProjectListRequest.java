@@ -1,0 +1,209 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.bi.v20220105.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeProjectListRequest extends AbstractModel {
+
+    /**
+    * Page capacity. The initial version defaults to 20 and may change dynamically based on screen width in the future.
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
+    * Page marker.
+    */
+    @SerializedName("PageNo")
+    @Expose
+    private Long PageNo;
+
+    /**
+    * Fuzzy search field.
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
+    * Whether to display all. If true, ignore pagination.
+    */
+    @SerializedName("AllPage")
+    @Expose
+    private Boolean AllPage;
+
+    /**
+    * Role information.
+    */
+    @SerializedName("ModuleCollection")
+    @Expose
+    private String ModuleCollection;
+
+    /**
+    * moduleId set.
+    */
+    @SerializedName("ModuleIdList")
+    @Expose
+    private String [] ModuleIdList;
+
+    /**
+     * Get Page capacity. The initial version defaults to 20 and may change dynamically based on screen width in the future. 
+     * @return PageSize Page capacity. The initial version defaults to 20 and may change dynamically based on screen width in the future.
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set Page capacity. The initial version defaults to 20 and may change dynamically based on screen width in the future.
+     * @param PageSize Page capacity. The initial version defaults to 20 and may change dynamically based on screen width in the future.
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    /**
+     * Get Page marker. 
+     * @return PageNo Page marker.
+     */
+    public Long getPageNo() {
+        return this.PageNo;
+    }
+
+    /**
+     * Set Page marker.
+     * @param PageNo Page marker.
+     */
+    public void setPageNo(Long PageNo) {
+        this.PageNo = PageNo;
+    }
+
+    /**
+     * Get Fuzzy search field. 
+     * @return Keyword Fuzzy search field.
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set Fuzzy search field.
+     * @param Keyword Fuzzy search field.
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
+    /**
+     * Get Whether to display all. If true, ignore pagination. 
+     * @return AllPage Whether to display all. If true, ignore pagination.
+     */
+    public Boolean getAllPage() {
+        return this.AllPage;
+    }
+
+    /**
+     * Set Whether to display all. If true, ignore pagination.
+     * @param AllPage Whether to display all. If true, ignore pagination.
+     */
+    public void setAllPage(Boolean AllPage) {
+        this.AllPage = AllPage;
+    }
+
+    /**
+     * Get Role information. 
+     * @return ModuleCollection Role information.
+     */
+    public String getModuleCollection() {
+        return this.ModuleCollection;
+    }
+
+    /**
+     * Set Role information.
+     * @param ModuleCollection Role information.
+     */
+    public void setModuleCollection(String ModuleCollection) {
+        this.ModuleCollection = ModuleCollection;
+    }
+
+    /**
+     * Get moduleId set. 
+     * @return ModuleIdList moduleId set.
+     */
+    public String [] getModuleIdList() {
+        return this.ModuleIdList;
+    }
+
+    /**
+     * Set moduleId set.
+     * @param ModuleIdList moduleId set.
+     */
+    public void setModuleIdList(String [] ModuleIdList) {
+        this.ModuleIdList = ModuleIdList;
+    }
+
+    public DescribeProjectListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProjectListRequest(DescribeProjectListRequest source) {
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.PageNo != null) {
+            this.PageNo = new Long(source.PageNo);
+        }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
+        if (source.AllPage != null) {
+            this.AllPage = new Boolean(source.AllPage);
+        }
+        if (source.ModuleCollection != null) {
+            this.ModuleCollection = new String(source.ModuleCollection);
+        }
+        if (source.ModuleIdList != null) {
+            this.ModuleIdList = new String[source.ModuleIdList.length];
+            for (int i = 0; i < source.ModuleIdList.length; i++) {
+                this.ModuleIdList[i] = new String(source.ModuleIdList[i]);
+            }
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "PageNo", this.PageNo);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
+        this.setParamSimple(map, prefix + "AllPage", this.AllPage);
+        this.setParamSimple(map, prefix + "ModuleCollection", this.ModuleCollection);
+        this.setParamArraySimple(map, prefix + "ModuleIdList.", this.ModuleIdList);
+
+    }
+}
+
