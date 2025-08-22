@@ -347,6 +347,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the character set and time zone supported by the instance.
+     * @param req DescribeCollationTimeZoneRequest
+     * @return DescribeCollationTimeZoneResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCollationTimeZoneResponse DescribeCollationTimeZone(DescribeCollationTimeZoneRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCollationTimeZone", DescribeCollationTimeZoneResponse.class);
+    }
+
+    /**
      *This API is used to query the database character sets supported by an instance.
      * @param req DescribeDBCharsetsRequest
      * @return DescribeDBCharsetsResponse
@@ -567,6 +578,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the status information on specifications, including the sales status and reference price. (The actual price is subject to the result returned by price querying APIs.)
+     * @param req DescribeSpecSellStatusRequest
+     * @return DescribeSpecSellStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSpecSellStatusResponse DescribeSpecSellStatus(DescribeSpecSellStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSpecSellStatus", DescribeSpecSellStatusResponse.class);
+    }
+
+    /**
      *This API is used to query a backup upload permission.
      * @param req DescribeUploadBackupInfoRequest
      * @return DescribeUploadBackupInfoResponse
@@ -611,7 +633,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the upgrade prices of a monthly subscribed instance
+     *This API is used to query the upgrade prices of a monthly subscribed instance.
 .
      * @param req InquiryPriceUpgradeDBInstanceRequest
      * @return InquiryPriceUpgradeDBInstanceResponse

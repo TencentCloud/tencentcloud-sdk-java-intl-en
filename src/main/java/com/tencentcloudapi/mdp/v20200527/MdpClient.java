@@ -149,6 +149,17 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
+     *Create VodRemuxTask
+     * @param req CreateStreamPackageVodRemuxTaskRequest
+     * @return CreateStreamPackageVodRemuxTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamPackageVodRemuxTaskResponse CreateStreamPackageVodRemuxTask(CreateStreamPackageVodRemuxTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStreamPackageVodRemuxTask", CreateStreamPackageVodRemuxTaskResponse.class);
+    }
+
+    /**
      *This API is used to delete endpoints from a StreamPackage channel in batches.
      * @param req DeleteStreamPackageChannelEndpointsRequest
      * @return DeleteStreamPackageChannelEndpointsResponse
@@ -267,6 +278,28 @@ public class MdpClient extends AbstractClient{
     public DeleteStreamPackageSourceLocationResponse DeleteStreamPackageSourceLocation(DeleteStreamPackageSourceLocationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteStreamPackageSourceLocation", DeleteStreamPackageSourceLocationResponse.class);
+    }
+
+    /**
+     *Delete Vod remux task.
+     * @param req DeleteStreamPackageVodRemuxTaskRequest
+     * @return DeleteStreamPackageVodRemuxTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageVodRemuxTaskResponse DeleteStreamPackageVodRemuxTask(DeleteStreamPackageVodRemuxTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageVodRemuxTask", DeleteStreamPackageVodRemuxTaskResponse.class);
+    }
+
+    /**
+     *Delete VOD remux tasks in batches.
+     * @param req DeleteStreamPackageVodRemuxTasksRequest
+     * @return DeleteStreamPackageVodRemuxTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageVodRemuxTasksResponse DeleteStreamPackageVodRemuxTasks(DeleteStreamPackageVodRemuxTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageVodRemuxTasks", DeleteStreamPackageVodRemuxTasksResponse.class);
     }
 
     /**
@@ -501,6 +534,28 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
+     *Query VOD remux task information.
+     * @param req DescribeStreamPackageVodRemuxTaskRequest
+     * @return DescribeStreamPackageVodRemuxTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageVodRemuxTaskResponse DescribeStreamPackageVodRemuxTask(DescribeStreamPackageVodRemuxTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageVodRemuxTask", DescribeStreamPackageVodRemuxTaskResponse.class);
+    }
+
+    /**
+     *Query VOD remux tasks informations.
+     * @param req DescribeStreamPackageVodRemuxTasksRequest
+     * @return DescribeStreamPackageVodRemuxTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageVodRemuxTasksResponse DescribeStreamPackageVodRemuxTasks(DescribeStreamPackageVodRemuxTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageVodRemuxTasks", DescribeStreamPackageVodRemuxTasksResponse.class);
+    }
+
+    /**
      *This API is used to modify a StreamPackage channel.
      * @param req ModifyStreamPackageChannelRequest
      * @return ModifyStreamPackageChannelResponse
@@ -597,6 +652,17 @@ public class MdpClient extends AbstractClient{
     public StartStreamPackageLinearAssemblyChannelResponse StartStreamPackageLinearAssemblyChannel(StartStreamPackageLinearAssemblyChannelRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StartStreamPackageLinearAssemblyChannel", StartStreamPackageLinearAssemblyChannelResponse.class);
+    }
+
+    /**
+     *Start VOD remux task.
+     * @param req StartStreamPackageVodRemuxTaskRequest
+     * @return StartStreamPackageVodRemuxTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartStreamPackageVodRemuxTaskResponse StartStreamPackageVodRemuxTask(StartStreamPackageVodRemuxTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartStreamPackageVodRemuxTask", StartStreamPackageVodRemuxTaskResponse.class);
     }
 
     /**

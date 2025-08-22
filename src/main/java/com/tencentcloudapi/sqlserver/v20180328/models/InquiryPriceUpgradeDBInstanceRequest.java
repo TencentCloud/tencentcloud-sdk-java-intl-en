@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of mssql-njj2mtpl
+    * Instance ID in the format of mssql-njj2mtpl.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
+    * Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+    * Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity.
     */
     @SerializedName("Storage")
     @Expose
@@ -52,48 +52,48 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
     private Long Cpu;
 
     /**
-     * Get Instance ID in the format of mssql-njj2mtpl 
-     * @return InstanceId Instance ID in the format of mssql-njj2mtpl
+     * Get Instance ID in the format of mssql-njj2mtpl. 
+     * @return InstanceId Instance ID in the format of mssql-njj2mtpl.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of mssql-njj2mtpl
-     * @param InstanceId Instance ID in the format of mssql-njj2mtpl
+     * Set Instance ID in the format of mssql-njj2mtpl.
+     * @param InstanceId Instance ID in the format of mssql-njj2mtpl.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size 
-     * @return Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
+     * Get Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size. 
+     * @return Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
-     * @param Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
+     * Set Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size.
+     * @param Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity 
-     * @return Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+     * Get Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity. 
+     * @return Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity.
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
-     * @param Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+     * Set Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity.
+     * @param Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity.
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;

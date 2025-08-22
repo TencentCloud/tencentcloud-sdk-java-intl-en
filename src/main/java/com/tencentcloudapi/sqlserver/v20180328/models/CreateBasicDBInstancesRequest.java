@@ -24,509 +24,532 @@ import java.util.HashMap;
 public class CreateBasicDBInstancesRequest extends AbstractModel {
 
     /**
-    * 
+    * Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 
+    * Number of CPU cores.
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 
+    * Instance memory size in GB.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 
+    * Instance storage capacity in GB.
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 
+    * VPC subnet ID in the format of subnet-bdoe83fa.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 
+    * VPC ID in the format of vpc-dsp338hz.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 
+    * Host type of purchased instances. CLOUD_PREMIUM: Premium Disk for virtual machines; CLOUD_SSD: Cloud SSD for virtual machines; CLOUD_HSSD: Enhanced SSD for virtual machines; CLOUD_BSSD: Balanced SSD for virtual machines.
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-    * 
+    * Billing mode. Valid value: POSTPAID (pay-as-you-go).
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * 
+    * Project ID.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 
+    * Number of instances purchased this time. Default value: 1. Maximum value: 10.
     */
     @SerializedName("GoodsNum")
     @Expose
     private Long GoodsNum;
 
     /**
-    * 
+    * SQL Server version. Valid values: `2008R2` (SQL Server 2008 R2 Enterprise), `2012SP3` (SQL Server 2012 Enterprise), `201202` (SQL Server 2012 Standard), `2014SP2` (SQL Server 2014 Enterprise), 201402 (SQL Server 2014 Standard), `2016SP1` (SQL Server 2016 Enterprise), `201602` (SQL Server 2016 Standard), `2017` (SQL Server 2017 Enterprise), `201702` (SQL Server 2017 Standard), `2019` (SQL Server 2019 Enterprise), `201902` (SQL Server 2019 Standard). Default value: `2008R2`. The available version varies by region, and you can pull the version information by calling the `DescribeProductConfig` API.
     */
     @SerializedName("DBVersion")
     @Expose
     private String DBVersion;
 
     /**
-    * 
+    * Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 
+    * Security group list, which contains security group IDs in the format of sg-xxx.
     */
     @SerializedName("SecurityGroupList")
     @Expose
     private String [] SecurityGroupList;
 
     /**
-    * 
+    * Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 
+    * Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * 
+    * Array of voucher IDs (currently, only one voucher can be used per order).
     */
     @SerializedName("VoucherIds")
     @Expose
     private String [] VoucherIds;
 
     /**
-    * 
+    * Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
     */
     @SerializedName("Weekly")
     @Expose
     private Long [] Weekly;
 
     /**
-    * 
+    * Configuration of the maintenance window, which specifies the start time of daily maintenance.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * Configuration of the maintenance window, which specifies the maintenance duration in hours.
     */
     @SerializedName("Span")
     @Expose
     private Long Span;
 
     /**
-    * 
+    * Tags associated with the instances to be created.
     */
     @SerializedName("ResourceTags")
     @Expose
     private ResourceTag [] ResourceTags;
 
     /**
-    * 
+    * Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
     */
     @SerializedName("Collation")
     @Expose
     private String Collation;
 
     /**
-    * 
+    * System time zone. Default value: `China Standard Time`.
     */
     @SerializedName("TimeZone")
     @Expose
     private String TimeZone;
 
     /**
-     * Get  
-     * @return Zone 
+    * Disk encryption identifier, 0-unencrypted, 1-encrypted.
+    */
+    @SerializedName("DiskEncryptFlag")
+    @Expose
+    private Long DiskEncryptFlag;
+
+    /**
+     * Get Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API. 
+     * @return Zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 
-     * @param Zone 
+     * Set Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
+     * @param Zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get  
-     * @return Cpu 
+     * Get Number of CPU cores. 
+     * @return Cpu Number of CPU cores.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 
-     * @param Cpu 
+     * Set Number of CPU cores.
+     * @param Cpu Number of CPU cores.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get  
-     * @return Memory 
+     * Get Instance memory size in GB. 
+     * @return Memory Instance memory size in GB.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 
-     * @param Memory 
+     * Set Instance memory size in GB.
+     * @param Memory Instance memory size in GB.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get  
-     * @return Storage 
+     * Get Instance storage capacity in GB. 
+     * @return Storage Instance storage capacity in GB.
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 
-     * @param Storage 
+     * Set Instance storage capacity in GB.
+     * @param Storage Instance storage capacity in GB.
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get  
-     * @return SubnetId 
+     * Get VPC subnet ID in the format of subnet-bdoe83fa. 
+     * @return SubnetId VPC subnet ID in the format of subnet-bdoe83fa.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 
-     * @param SubnetId 
+     * Set VPC subnet ID in the format of subnet-bdoe83fa.
+     * @param SubnetId VPC subnet ID in the format of subnet-bdoe83fa.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get  
-     * @return VpcId 
+     * Get VPC ID in the format of vpc-dsp338hz. 
+     * @return VpcId VPC ID in the format of vpc-dsp338hz.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 
-     * @param VpcId 
+     * Set VPC ID in the format of vpc-dsp338hz.
+     * @param VpcId VPC ID in the format of vpc-dsp338hz.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get  
-     * @return MachineType 
+     * Get Host type of purchased instances. CLOUD_PREMIUM: Premium Disk for virtual machines; CLOUD_SSD: Cloud SSD for virtual machines; CLOUD_HSSD: Enhanced SSD for virtual machines; CLOUD_BSSD: Balanced SSD for virtual machines. 
+     * @return MachineType Host type of purchased instances. CLOUD_PREMIUM: Premium Disk for virtual machines; CLOUD_SSD: Cloud SSD for virtual machines; CLOUD_HSSD: Enhanced SSD for virtual machines; CLOUD_BSSD: Balanced SSD for virtual machines.
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set 
-     * @param MachineType 
+     * Set Host type of purchased instances. CLOUD_PREMIUM: Premium Disk for virtual machines; CLOUD_SSD: Cloud SSD for virtual machines; CLOUD_HSSD: Enhanced SSD for virtual machines; CLOUD_BSSD: Balanced SSD for virtual machines.
+     * @param MachineType Host type of purchased instances. CLOUD_PREMIUM: Premium Disk for virtual machines; CLOUD_SSD: Cloud SSD for virtual machines; CLOUD_HSSD: Enhanced SSD for virtual machines; CLOUD_BSSD: Balanced SSD for virtual machines.
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get  
-     * @return InstanceChargeType 
+     * Get Billing mode. Valid value: POSTPAID (pay-as-you-go). 
+     * @return InstanceChargeType Billing mode. Valid value: POSTPAID (pay-as-you-go).
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 
-     * @param InstanceChargeType 
+     * Set Billing mode. Valid value: POSTPAID (pay-as-you-go).
+     * @param InstanceChargeType Billing mode. Valid value: POSTPAID (pay-as-you-go).
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get  
-     * @return ProjectId 
+     * Get Project ID. 
+     * @return ProjectId Project ID.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 
-     * @param ProjectId 
+     * Set Project ID.
+     * @param ProjectId Project ID.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get  
-     * @return GoodsNum 
+     * Get Number of instances purchased this time. Default value: 1. Maximum value: 10. 
+     * @return GoodsNum Number of instances purchased this time. Default value: 1. Maximum value: 10.
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set 
-     * @param GoodsNum 
+     * Set Number of instances purchased this time. Default value: 1. Maximum value: 10.
+     * @param GoodsNum Number of instances purchased this time. Default value: 1. Maximum value: 10.
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get  
-     * @return DBVersion 
+     * Get SQL Server version. Valid values: `2008R2` (SQL Server 2008 R2 Enterprise), `2012SP3` (SQL Server 2012 Enterprise), `201202` (SQL Server 2012 Standard), `2014SP2` (SQL Server 2014 Enterprise), 201402 (SQL Server 2014 Standard), `2016SP1` (SQL Server 2016 Enterprise), `201602` (SQL Server 2016 Standard), `2017` (SQL Server 2017 Enterprise), `201702` (SQL Server 2017 Standard), `2019` (SQL Server 2019 Enterprise), `201902` (SQL Server 2019 Standard). Default value: `2008R2`. The available version varies by region, and you can pull the version information by calling the `DescribeProductConfig` API. 
+     * @return DBVersion SQL Server version. Valid values: `2008R2` (SQL Server 2008 R2 Enterprise), `2012SP3` (SQL Server 2012 Enterprise), `201202` (SQL Server 2012 Standard), `2014SP2` (SQL Server 2014 Enterprise), 201402 (SQL Server 2014 Standard), `2016SP1` (SQL Server 2016 Enterprise), `201602` (SQL Server 2016 Standard), `2017` (SQL Server 2017 Enterprise), `201702` (SQL Server 2017 Standard), `2019` (SQL Server 2019 Enterprise), `201902` (SQL Server 2019 Standard). Default value: `2008R2`. The available version varies by region, and you can pull the version information by calling the `DescribeProductConfig` API.
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set 
-     * @param DBVersion 
+     * Set SQL Server version. Valid values: `2008R2` (SQL Server 2008 R2 Enterprise), `2012SP3` (SQL Server 2012 Enterprise), `201202` (SQL Server 2012 Standard), `2014SP2` (SQL Server 2014 Enterprise), 201402 (SQL Server 2014 Standard), `2016SP1` (SQL Server 2016 Enterprise), `201602` (SQL Server 2016 Standard), `2017` (SQL Server 2017 Enterprise), `201702` (SQL Server 2017 Standard), `2019` (SQL Server 2019 Enterprise), `201902` (SQL Server 2019 Standard). Default value: `2008R2`. The available version varies by region, and you can pull the version information by calling the `DescribeProductConfig` API.
+     * @param DBVersion SQL Server version. Valid values: `2008R2` (SQL Server 2008 R2 Enterprise), `2012SP3` (SQL Server 2012 Enterprise), `201202` (SQL Server 2012 Standard), `2014SP2` (SQL Server 2014 Enterprise), 201402 (SQL Server 2014 Standard), `2016SP1` (SQL Server 2016 Enterprise), `201602` (SQL Server 2016 Standard), `2017` (SQL Server 2017 Enterprise), `201702` (SQL Server 2017 Standard), `2019` (SQL Server 2019 Enterprise), `201902` (SQL Server 2019 Standard). Default value: `2008R2`. The available version varies by region, and you can pull the version information by calling the `DescribeProductConfig` API.
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
     }
 
     /**
-     * Get  
-     * @return Period 
+     * Get Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48. 
+     * @return Period Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 
-     * @param Period 
+     * Set Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
+     * @param Period Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get  
-     * @return SecurityGroupList 
+     * Get Security group list, which contains security group IDs in the format of sg-xxx. 
+     * @return SecurityGroupList Security group list, which contains security group IDs in the format of sg-xxx.
      */
     public String [] getSecurityGroupList() {
         return this.SecurityGroupList;
     }
 
     /**
-     * Set 
-     * @param SecurityGroupList 
+     * Set Security group list, which contains security group IDs in the format of sg-xxx.
+     * @param SecurityGroupList Security group list, which contains security group IDs in the format of sg-xxx.
      */
     public void setSecurityGroupList(String [] SecurityGroupList) {
         this.SecurityGroupList = SecurityGroupList;
     }
 
     /**
-     * Get  
-     * @return AutoRenewFlag 
+     * Get Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1. 
+     * @return AutoRenewFlag Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 
-     * @param AutoRenewFlag 
+     * Set Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
+     * @param AutoRenewFlag Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get  
-     * @return AutoVoucher 
+     * Get Whether to automatically use voucher. 0: no, 1: yes. Default value: no. 
+     * @return AutoVoucher Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 
-     * @param AutoVoucher 
+     * Set Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
+     * @param AutoVoucher Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get  
-     * @return VoucherIds 
+     * Get Array of voucher IDs (currently, only one voucher can be used per order). 
+     * @return VoucherIds Array of voucher IDs (currently, only one voucher can be used per order).
      */
     public String [] getVoucherIds() {
         return this.VoucherIds;
     }
 
     /**
-     * Set 
-     * @param VoucherIds 
+     * Set Array of voucher IDs (currently, only one voucher can be used per order).
+     * @param VoucherIds Array of voucher IDs (currently, only one voucher can be used per order).
      */
     public void setVoucherIds(String [] VoucherIds) {
         this.VoucherIds = VoucherIds;
     }
 
     /**
-     * Get  
-     * @return Weekly 
+     * Get Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday). 
+     * @return Weekly Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
      */
     public Long [] getWeekly() {
         return this.Weekly;
     }
 
     /**
-     * Set 
-     * @param Weekly 
+     * Set Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
+     * @param Weekly Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
      */
     public void setWeekly(Long [] Weekly) {
         this.Weekly = Weekly;
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Configuration of the maintenance window, which specifies the start time of daily maintenance. 
+     * @return StartTime Configuration of the maintenance window, which specifies the start time of daily maintenance.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Configuration of the maintenance window, which specifies the start time of daily maintenance.
+     * @param StartTime Configuration of the maintenance window, which specifies the start time of daily maintenance.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return Span 
+     * Get Configuration of the maintenance window, which specifies the maintenance duration in hours. 
+     * @return Span Configuration of the maintenance window, which specifies the maintenance duration in hours.
      */
     public Long getSpan() {
         return this.Span;
     }
 
     /**
-     * Set 
-     * @param Span 
+     * Set Configuration of the maintenance window, which specifies the maintenance duration in hours.
+     * @param Span Configuration of the maintenance window, which specifies the maintenance duration in hours.
      */
     public void setSpan(Long Span) {
         this.Span = Span;
     }
 
     /**
-     * Get  
-     * @return ResourceTags 
+     * Get Tags associated with the instances to be created. 
+     * @return ResourceTags Tags associated with the instances to be created.
      */
     public ResourceTag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set 
-     * @param ResourceTags 
+     * Set Tags associated with the instances to be created.
+     * @param ResourceTags Tags associated with the instances to be created.
      */
     public void setResourceTags(ResourceTag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get  
-     * @return Collation 
+     * Get Collation of system character sets. Default value: `Chinese_PRC_CI_AS`. 
+     * @return Collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
      */
     public String getCollation() {
         return this.Collation;
     }
 
     /**
-     * Set 
-     * @param Collation 
+     * Set Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+     * @param Collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
      */
     public void setCollation(String Collation) {
         this.Collation = Collation;
     }
 
     /**
-     * Get  
-     * @return TimeZone 
+     * Get System time zone. Default value: `China Standard Time`. 
+     * @return TimeZone System time zone. Default value: `China Standard Time`.
      */
     public String getTimeZone() {
         return this.TimeZone;
     }
 
     /**
-     * Set 
-     * @param TimeZone 
+     * Set System time zone. Default value: `China Standard Time`.
+     * @param TimeZone System time zone. Default value: `China Standard Time`.
      */
     public void setTimeZone(String TimeZone) {
         this.TimeZone = TimeZone;
+    }
+
+    /**
+     * Get Disk encryption identifier, 0-unencrypted, 1-encrypted. 
+     * @return DiskEncryptFlag Disk encryption identifier, 0-unencrypted, 1-encrypted.
+     */
+    public Long getDiskEncryptFlag() {
+        return this.DiskEncryptFlag;
+    }
+
+    /**
+     * Set Disk encryption identifier, 0-unencrypted, 1-encrypted.
+     * @param DiskEncryptFlag Disk encryption identifier, 0-unencrypted, 1-encrypted.
+     */
+    public void setDiskEncryptFlag(Long DiskEncryptFlag) {
+        this.DiskEncryptFlag = DiskEncryptFlag;
     }
 
     public CreateBasicDBInstancesRequest() {
@@ -615,6 +638,9 @@ public class CreateBasicDBInstancesRequest extends AbstractModel {
         if (source.TimeZone != null) {
             this.TimeZone = new String(source.TimeZone);
         }
+        if (source.DiskEncryptFlag != null) {
+            this.DiskEncryptFlag = new Long(source.DiskEncryptFlag);
+        }
     }
 
 
@@ -644,6 +670,7 @@ public class CreateBasicDBInstancesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "Collation", this.Collation);
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamSimple(map, prefix + "DiskEncryptFlag", this.DiskEncryptFlag);
 
     }
 }

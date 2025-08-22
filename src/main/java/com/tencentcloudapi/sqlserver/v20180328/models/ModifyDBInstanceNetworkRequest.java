@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyDBInstanceNetworkRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * ID of the new VPC
+    * ID of the new VPC.
     */
     @SerializedName("NewVpcId")
     @Expose
     private String NewVpcId;
 
     /**
-    * ID of the new subnet
+    * ID of the new subnet.
     */
     @SerializedName("NewSubnetId")
     @Expose
@@ -52,62 +52,70 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel {
     private Long OldIpRetainTime;
 
     /**
-    * New VIP
+    * New VIP.
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 
+    * Target node. 0 - modify the primary node network; 1 - modify the secondary node network. The default value is 0.
+
     */
     @SerializedName("DRNetwork")
     @Expose
     private Long DRNetwork;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+    * Secondary server resource ID. It is required when DRNetwork = 1.
+    */
+    @SerializedName("DrInstanceId")
+    @Expose
+    private String DrInstanceId;
+
+    /**
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get ID of the new VPC 
-     * @return NewVpcId ID of the new VPC
+     * Get ID of the new VPC. 
+     * @return NewVpcId ID of the new VPC.
      */
     public String getNewVpcId() {
         return this.NewVpcId;
     }
 
     /**
-     * Set ID of the new VPC
-     * @param NewVpcId ID of the new VPC
+     * Set ID of the new VPC.
+     * @param NewVpcId ID of the new VPC.
      */
     public void setNewVpcId(String NewVpcId) {
         this.NewVpcId = NewVpcId;
     }
 
     /**
-     * Get ID of the new subnet 
-     * @return NewSubnetId ID of the new subnet
+     * Get ID of the new subnet. 
+     * @return NewSubnetId ID of the new subnet.
      */
     public String getNewSubnetId() {
         return this.NewSubnetId;
     }
 
     /**
-     * Set ID of the new subnet
-     * @param NewSubnetId ID of the new subnet
+     * Set ID of the new subnet.
+     * @param NewSubnetId ID of the new subnet.
      */
     public void setNewSubnetId(String NewSubnetId) {
         this.NewSubnetId = NewSubnetId;
@@ -130,35 +138,55 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel {
     }
 
     /**
-     * Get New VIP 
-     * @return Vip New VIP
+     * Get New VIP. 
+     * @return Vip New VIP.
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set New VIP
-     * @param Vip New VIP
+     * Set New VIP.
+     * @param Vip New VIP.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get  
-     * @return DRNetwork 
+     * Get Target node. 0 - modify the primary node network; 1 - modify the secondary node network. The default value is 0.
+ 
+     * @return DRNetwork Target node. 0 - modify the primary node network; 1 - modify the secondary node network. The default value is 0.
+
      */
     public Long getDRNetwork() {
         return this.DRNetwork;
     }
 
     /**
-     * Set 
-     * @param DRNetwork 
+     * Set Target node. 0 - modify the primary node network; 1 - modify the secondary node network. The default value is 0.
+
+     * @param DRNetwork Target node. 0 - modify the primary node network; 1 - modify the secondary node network. The default value is 0.
+
      */
     public void setDRNetwork(Long DRNetwork) {
         this.DRNetwork = DRNetwork;
+    }
+
+    /**
+     * Get Secondary server resource ID. It is required when DRNetwork = 1. 
+     * @return DrInstanceId Secondary server resource ID. It is required when DRNetwork = 1.
+     */
+    public String getDrInstanceId() {
+        return this.DrInstanceId;
+    }
+
+    /**
+     * Set Secondary server resource ID. It is required when DRNetwork = 1.
+     * @param DrInstanceId Secondary server resource ID. It is required when DRNetwork = 1.
+     */
+    public void setDrInstanceId(String DrInstanceId) {
+        this.DrInstanceId = DrInstanceId;
     }
 
     public ModifyDBInstanceNetworkRequest() {
@@ -187,6 +215,9 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel {
         if (source.DRNetwork != null) {
             this.DRNetwork = new Long(source.DRNetwork);
         }
+        if (source.DrInstanceId != null) {
+            this.DrInstanceId = new String(source.DrInstanceId);
+        }
     }
 
 
@@ -200,6 +231,7 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OldIpRetainTime", this.OldIpRetainTime);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "DRNetwork", this.DRNetwork);
+        this.setParamSimple(map, prefix + "DrInstanceId", this.DrInstanceId);
 
     }
 }

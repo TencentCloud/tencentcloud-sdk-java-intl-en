@@ -94,6 +94,13 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
     private Long WaitSwitch;
 
     /**
+    * Secondary node AZ of the multi-node architecture instance. The default value is null. It should be specified when modifying the AZ of the specified secondary node needs to be performed during configuration adjustment. When MultiZones = MultiZones, the AZs of the primary nodes and secondary nodes cannot all be the same. The collection of AZs of the secondary node can include 2-5 AZs.
+    */
+    @SerializedName("DrZones")
+    @Expose
+    private DrZoneInfo [] DrZones;
+
+    /**
      * Get Instance ID in the format of mssql-j8kv137v 
      * @return InstanceId Instance ID in the format of mssql-j8kv137v
      */
@@ -253,6 +260,22 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         this.WaitSwitch = WaitSwitch;
     }
 
+    /**
+     * Get Secondary node AZ of the multi-node architecture instance. The default value is null. It should be specified when modifying the AZ of the specified secondary node needs to be performed during configuration adjustment. When MultiZones = MultiZones, the AZs of the primary nodes and secondary nodes cannot all be the same. The collection of AZs of the secondary node can include 2-5 AZs. 
+     * @return DrZones Secondary node AZ of the multi-node architecture instance. The default value is null. It should be specified when modifying the AZ of the specified secondary node needs to be performed during configuration adjustment. When MultiZones = MultiZones, the AZs of the primary nodes and secondary nodes cannot all be the same. The collection of AZs of the secondary node can include 2-5 AZs.
+     */
+    public DrZoneInfo [] getDrZones() {
+        return this.DrZones;
+    }
+
+    /**
+     * Set Secondary node AZ of the multi-node architecture instance. The default value is null. It should be specified when modifying the AZ of the specified secondary node needs to be performed during configuration adjustment. When MultiZones = MultiZones, the AZs of the primary nodes and secondary nodes cannot all be the same. The collection of AZs of the secondary node can include 2-5 AZs.
+     * @param DrZones Secondary node AZ of the multi-node architecture instance. The default value is null. It should be specified when modifying the AZ of the specified secondary node needs to be performed during configuration adjustment. When MultiZones = MultiZones, the AZs of the primary nodes and secondary nodes cannot all be the same. The collection of AZs of the secondary node can include 2-5 AZs.
+     */
+    public void setDrZones(DrZoneInfo [] DrZones) {
+        this.DrZones = DrZones;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -294,6 +317,12 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         if (source.WaitSwitch != null) {
             this.WaitSwitch = new Long(source.WaitSwitch);
         }
+        if (source.DrZones != null) {
+            this.DrZones = new DrZoneInfo[source.DrZones.length];
+            for (int i = 0; i < source.DrZones.length; i++) {
+                this.DrZones[i] = new DrZoneInfo(source.DrZones[i]);
+            }
+        }
     }
 
 
@@ -311,6 +340,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HAType", this.HAType);
         this.setParamSimple(map, prefix + "MultiZones", this.MultiZones);
         this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
+        this.setParamArrayObj(map, prefix + "DrZones.", this.DrZones);
 
     }
 }

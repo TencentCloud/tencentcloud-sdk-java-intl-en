@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstanceByOrdersResponse extends AbstractModel {
 
     /**
-    * 
+    * Resource ID set.
     */
     @SerializedName("DealInstance")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeInstanceByOrdersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return DealInstance 
+     * Get Resource ID set. 
+     * @return DealInstance Resource ID set.
      */
     public DealInstance [] getDealInstance() {
         return this.DealInstance;
     }
 
     /**
-     * Set 
-     * @param DealInstance 
+     * Set Resource ID set.
+     * @param DealInstance Resource ID set.
      */
     public void setDealInstance(DealInstance [] DealInstance) {
         this.DealInstance = DealInstance;
