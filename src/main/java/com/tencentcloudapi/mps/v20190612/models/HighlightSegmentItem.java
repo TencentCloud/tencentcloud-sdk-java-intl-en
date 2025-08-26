@@ -67,6 +67,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String EndTime;
 
     /**
+    * Highlight title.
+    */
+    @SerializedName("Title")
+    @Expose
+    private String Title;
+
+    /**
+    * Highlight overview.
+    */
+    @SerializedName("Summary")
+    @Expose
+    private String Summary;
+
+    /**
      * Get The confidence score. 
      * @return Confidence The confidence score.
      */
@@ -166,6 +180,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get Highlight title. 
+     * @return Title Highlight title.
+     */
+    public String getTitle() {
+        return this.Title;
+    }
+
+    /**
+     * Set Highlight title.
+     * @param Title Highlight title.
+     */
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
+    /**
+     * Get Highlight overview. 
+     * @return Summary Highlight overview.
+     */
+    public String getSummary() {
+        return this.Summary;
+    }
+
+    /**
+     * Set Highlight overview.
+     * @param Summary Highlight overview.
+     */
+    public void setSummary(String Summary) {
+        this.Summary = Summary;
+    }
+
     public HighlightSegmentItem() {
     }
 
@@ -195,6 +241,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Summary != null) {
+            this.Summary = new String(source.Summary);
+        }
     }
 
 
@@ -208,6 +260,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "SegmentTags.", this.SegmentTags);
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamSimple(map, prefix + "Summary", this.Summary);
 
     }
 }

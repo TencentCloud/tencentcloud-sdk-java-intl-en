@@ -31,7 +31,7 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     private String [] UinAccount;
 
     /**
-    * Sub-business types of Tencent Cloud Agent Development Platform/TCADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
+    * Sub-business types of Tencent Cloud Agent Development Platform/ADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
     */
     @SerializedName("SubBizType")
     @Expose
@@ -66,6 +66,20 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     private String [] AppBizIds;
 
     /**
+    * 
+    */
+    @SerializedName("AppType")
+    @Expose
+    private String AppType;
+
+    /**
+    * 
+    */
+    @SerializedName("SubScenes")
+    @Expose
+    private String [] SubScenes;
+
+    /**
      * Get Root account of Tencent Cloud. 
      * @return UinAccount Root account of Tencent Cloud.
      */
@@ -82,16 +96,16 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     }
 
     /**
-     * Get Sub-business types of Tencent Cloud Agent Development Platform/TCADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine). 
-     * @return SubBizType Sub-business types of Tencent Cloud Agent Development Platform/TCADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
+     * Get Sub-business types of Tencent Cloud Agent Development Platform/ADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine). 
+     * @return SubBizType Sub-business types of Tencent Cloud Agent Development Platform/ADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
      */
     public String getSubBizType() {
         return this.SubBizType;
     }
 
     /**
-     * Set Sub-business types of Tencent Cloud Agent Development Platform/TCADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
-     * @param SubBizType Sub-business types of Tencent Cloud Agent Development Platform/TCADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
+     * Set Sub-business types of Tencent Cloud Agent Development Platform/ADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
+     * @param SubBizType Sub-business types of Tencent Cloud Agent Development Platform/ADP: fileparse (document parsing), Embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
      */
     public void setSubBizType(String SubBizType) {
         this.SubBizType = SubBizType;
@@ -161,6 +175,38 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
         this.AppBizIds = AppBizIds;
     }
 
+    /**
+     * Get  
+     * @return AppType 
+     */
+    public String getAppType() {
+        return this.AppType;
+    }
+
+    /**
+     * Set 
+     * @param AppType 
+     */
+    public void setAppType(String AppType) {
+        this.AppType = AppType;
+    }
+
+    /**
+     * Get  
+     * @return SubScenes 
+     */
+    public String [] getSubScenes() {
+        return this.SubScenes;
+    }
+
+    /**
+     * Set 
+     * @param SubScenes 
+     */
+    public void setSubScenes(String [] SubScenes) {
+        this.SubScenes = SubScenes;
+    }
+
     public DescribeTokenUsageGraphRequest() {
     }
 
@@ -193,6 +239,15 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
                 this.AppBizIds[i] = new String(source.AppBizIds[i]);
             }
         }
+        if (source.AppType != null) {
+            this.AppType = new String(source.AppType);
+        }
+        if (source.SubScenes != null) {
+            this.SubScenes = new String[source.SubScenes.length];
+            for (int i = 0; i < source.SubScenes.length; i++) {
+                this.SubScenes[i] = new String(source.SubScenes[i]);
+            }
+        }
     }
 
 
@@ -206,6 +261,8 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
+        this.setParamSimple(map, prefix + "AppType", this.AppType);
+        this.setParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
 
     }
 }

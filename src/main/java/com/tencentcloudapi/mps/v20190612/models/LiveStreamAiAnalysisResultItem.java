@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class LiveStreamAiAnalysisResultItem extends AbstractModel {
 
     /**
-    * 
+    * Result type. Valid values:
+<li>SegmentRecognition: video splitting.</li>
+<li>Highlight: highlight.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -38,16 +40,32 @@ public class LiveStreamAiAnalysisResultItem extends AbstractModel {
     private SegmentRecognitionItem [] SegmentResultSet;
 
     /**
-     * Get  
-     * @return Type 
+    * Highlight result. This field is valid when Type is set to Highlight.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HighlightResultSet")
+    @Expose
+    private MediaAiAnalysisHighlightItem [] HighlightResultSet;
+
+    /**
+     * Get Result type. Valid values:
+<li>SegmentRecognition: video splitting.</li>
+<li>Highlight: highlight.</li> 
+     * @return Type Result type. Valid values:
+<li>SegmentRecognition: video splitting.</li>
+<li>Highlight: highlight.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Result type. Valid values:
+<li>SegmentRecognition: video splitting.</li>
+<li>Highlight: highlight.</li>
+     * @param Type Result type. Valid values:
+<li>SegmentRecognition: video splitting.</li>
+<li>Highlight: highlight.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -69,6 +87,26 @@ public class LiveStreamAiAnalysisResultItem extends AbstractModel {
         this.SegmentResultSet = SegmentResultSet;
     }
 
+    /**
+     * Get Highlight result. This field is valid when Type is set to Highlight.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HighlightResultSet Highlight result. This field is valid when Type is set to Highlight.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public MediaAiAnalysisHighlightItem [] getHighlightResultSet() {
+        return this.HighlightResultSet;
+    }
+
+    /**
+     * Set Highlight result. This field is valid when Type is set to Highlight.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HighlightResultSet Highlight result. This field is valid when Type is set to Highlight.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHighlightResultSet(MediaAiAnalysisHighlightItem [] HighlightResultSet) {
+        this.HighlightResultSet = HighlightResultSet;
+    }
+
     public LiveStreamAiAnalysisResultItem() {
     }
 
@@ -86,6 +124,12 @@ public class LiveStreamAiAnalysisResultItem extends AbstractModel {
                 this.SegmentResultSet[i] = new SegmentRecognitionItem(source.SegmentResultSet[i]);
             }
         }
+        if (source.HighlightResultSet != null) {
+            this.HighlightResultSet = new MediaAiAnalysisHighlightItem[source.HighlightResultSet.length];
+            for (int i = 0; i < source.HighlightResultSet.length; i++) {
+                this.HighlightResultSet[i] = new MediaAiAnalysisHighlightItem(source.HighlightResultSet[i]);
+            }
+        }
     }
 
 
@@ -95,6 +139,7 @@ public class LiveStreamAiAnalysisResultItem extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "SegmentResultSet.", this.SegmentResultSet);
+        this.setParamArrayObj(map, prefix + "HighlightResultSet.", this.HighlightResultSet);
 
     }
 }

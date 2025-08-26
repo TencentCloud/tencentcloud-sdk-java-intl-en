@@ -59,6 +59,22 @@ public class MediaAiAnalysisHighlightItem extends AbstractModel {
     private HighlightSegmentItem [] SegmentSet;
 
     /**
+    * Intelligent highlight address.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HighlightUrl")
+    @Expose
+    private String HighlightUrl;
+
+    /**
+    * Intelligent highlight cover address.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CovImgUrl")
+    @Expose
+    private String CovImgUrl;
+
+    /**
      * Get The URL of the highlight segments. 
      * @return HighlightPath The URL of the highlight segments.
      */
@@ -138,6 +154,46 @@ public class MediaAiAnalysisHighlightItem extends AbstractModel {
         this.SegmentSet = SegmentSet;
     }
 
+    /**
+     * Get Intelligent highlight address.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HighlightUrl Intelligent highlight address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getHighlightUrl() {
+        return this.HighlightUrl;
+    }
+
+    /**
+     * Set Intelligent highlight address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HighlightUrl Intelligent highlight address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHighlightUrl(String HighlightUrl) {
+        this.HighlightUrl = HighlightUrl;
+    }
+
+    /**
+     * Get Intelligent highlight cover address.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CovImgUrl Intelligent highlight cover address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCovImgUrl() {
+        return this.CovImgUrl;
+    }
+
+    /**
+     * Set Intelligent highlight cover address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CovImgUrl Intelligent highlight cover address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCovImgUrl(String CovImgUrl) {
+        this.CovImgUrl = CovImgUrl;
+    }
+
     public MediaAiAnalysisHighlightItem() {
     }
 
@@ -164,6 +220,12 @@ public class MediaAiAnalysisHighlightItem extends AbstractModel {
                 this.SegmentSet[i] = new HighlightSegmentItem(source.SegmentSet[i]);
             }
         }
+        if (source.HighlightUrl != null) {
+            this.HighlightUrl = new String(source.HighlightUrl);
+        }
+        if (source.CovImgUrl != null) {
+            this.CovImgUrl = new String(source.CovImgUrl);
+        }
     }
 
 
@@ -176,6 +238,8 @@ public class MediaAiAnalysisHighlightItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+        this.setParamSimple(map, prefix + "HighlightUrl", this.HighlightUrl);
+        this.setParamSimple(map, prefix + "CovImgUrl", this.CovImgUrl);
 
     }
 }

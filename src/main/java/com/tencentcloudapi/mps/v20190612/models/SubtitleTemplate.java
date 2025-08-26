@@ -44,6 +44,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long StreamIndex;
 
     /**
+    * Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SubtitleFileInput")
+    @Expose
+    private MediaInputInfo SubtitleFileInput;
+
+    /**
     * Font type. valid values:.
 <li>hei.ttf: simhei.</li>.
 <li>song.ttf: simsun.</li>.
@@ -169,6 +177,70 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Float BoardAlpha;
 
     /**
+    * Stroke width.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OutlineWidth")
+    @Expose
+    private Float OutlineWidth;
+
+    /**
+    * Stroke color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OutlineColor")
+    @Expose
+    private String OutlineColor;
+
+    /**
+    * Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OutlineAlpha")
+    @Expose
+    private Float OutlineAlpha;
+
+    /**
+    * Shadow width. The value should be a floating-point number in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ShadowWidth")
+    @Expose
+    private Float ShadowWidth;
+
+    /**
+    * Shadow color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ShadowColor")
+    @Expose
+    private String ShadowColor;
+
+    /**
+    * Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ShadowAlpha")
+    @Expose
+    private Float ShadowAlpha;
+
+    /**
+    * Line spacing. The value should be a positive integer in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LineSpacing")
+    @Expose
+    private Long LineSpacing;
+
+    /**
+    * Alignment mode. Valid values: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Alignment")
+    @Expose
+    private String Alignment;
+
+    /**
      * Get The URL of the subtitles to add to the video.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Path The URL of the subtitles to add to the video.
@@ -222,6 +294,26 @@ Note: This field may return null, indicating that no valid value can be obtained
      */
     public void setStreamIndex(Long StreamIndex) {
         this.StreamIndex = StreamIndex;
+    }
+
+    /**
+     * Get Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubtitleFileInput Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public MediaInputInfo getSubtitleFileInput() {
+        return this.SubtitleFileInput;
+    }
+
+    /**
+     * Set Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubtitleFileInput Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSubtitleFileInput(MediaInputInfo SubtitleFileInput) {
+        this.SubtitleFileInput = SubtitleFileInput;
     }
 
     /**
@@ -604,6 +696,166 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.BoardAlpha = BoardAlpha;
     }
 
+    /**
+     * Get Stroke width.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OutlineWidth Stroke width.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Float getOutlineWidth() {
+        return this.OutlineWidth;
+    }
+
+    /**
+     * Set Stroke width.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OutlineWidth Stroke width.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOutlineWidth(Float OutlineWidth) {
+        this.OutlineWidth = OutlineWidth;
+    }
+
+    /**
+     * Get Stroke color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OutlineColor Stroke color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getOutlineColor() {
+        return this.OutlineColor;
+    }
+
+    /**
+     * Set Stroke color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OutlineColor Stroke color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOutlineColor(String OutlineColor) {
+        this.OutlineColor = OutlineColor;
+    }
+
+    /**
+     * Get Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OutlineAlpha Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Float getOutlineAlpha() {
+        return this.OutlineAlpha;
+    }
+
+    /**
+     * Set Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OutlineAlpha Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOutlineAlpha(Float OutlineAlpha) {
+        this.OutlineAlpha = OutlineAlpha;
+    }
+
+    /**
+     * Get Shadow width. The value should be a floating-point number in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ShadowWidth Shadow width. The value should be a floating-point number in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Float getShadowWidth() {
+        return this.ShadowWidth;
+    }
+
+    /**
+     * Set Shadow width. The value should be a floating-point number in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ShadowWidth Shadow width. The value should be a floating-point number in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setShadowWidth(Float ShadowWidth) {
+        this.ShadowWidth = ShadowWidth;
+    }
+
+    /**
+     * Get Shadow color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ShadowColor Shadow color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getShadowColor() {
+        return this.ShadowColor;
+    }
+
+    /**
+     * Set Shadow color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ShadowColor Shadow color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setShadowColor(String ShadowColor) {
+        this.ShadowColor = ShadowColor;
+    }
+
+    /**
+     * Get Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ShadowAlpha Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Float getShadowAlpha() {
+        return this.ShadowAlpha;
+    }
+
+    /**
+     * Set Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ShadowAlpha Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setShadowAlpha(Float ShadowAlpha) {
+        this.ShadowAlpha = ShadowAlpha;
+    }
+
+    /**
+     * Get Line spacing. The value should be a positive integer in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LineSpacing Line spacing. The value should be a positive integer in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getLineSpacing() {
+        return this.LineSpacing;
+    }
+
+    /**
+     * Set Line spacing. The value should be a positive integer in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LineSpacing Line spacing. The value should be a positive integer in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLineSpacing(Long LineSpacing) {
+        this.LineSpacing = LineSpacing;
+    }
+
+    /**
+     * Get Alignment mode. Valid values: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Alignment Alignment mode. Valid values: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAlignment() {
+        return this.Alignment;
+    }
+
+    /**
+     * Set Alignment mode. Valid values: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Alignment Alignment mode. Valid values: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAlignment(String Alignment) {
+        this.Alignment = Alignment;
+    }
+
     public SubtitleTemplate() {
     }
 
@@ -617,6 +869,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         }
         if (source.StreamIndex != null) {
             this.StreamIndex = new Long(source.StreamIndex);
+        }
+        if (source.SubtitleFileInput != null) {
+            this.SubtitleFileInput = new MediaInputInfo(source.SubtitleFileInput);
         }
         if (source.FontType != null) {
             this.FontType = new String(source.FontType);
@@ -648,6 +903,30 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.BoardAlpha != null) {
             this.BoardAlpha = new Float(source.BoardAlpha);
         }
+        if (source.OutlineWidth != null) {
+            this.OutlineWidth = new Float(source.OutlineWidth);
+        }
+        if (source.OutlineColor != null) {
+            this.OutlineColor = new String(source.OutlineColor);
+        }
+        if (source.OutlineAlpha != null) {
+            this.OutlineAlpha = new Float(source.OutlineAlpha);
+        }
+        if (source.ShadowWidth != null) {
+            this.ShadowWidth = new Float(source.ShadowWidth);
+        }
+        if (source.ShadowColor != null) {
+            this.ShadowColor = new String(source.ShadowColor);
+        }
+        if (source.ShadowAlpha != null) {
+            this.ShadowAlpha = new Float(source.ShadowAlpha);
+        }
+        if (source.LineSpacing != null) {
+            this.LineSpacing = new Long(source.LineSpacing);
+        }
+        if (source.Alignment != null) {
+            this.Alignment = new String(source.Alignment);
+        }
     }
 
 
@@ -657,6 +936,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "StreamIndex", this.StreamIndex);
+        this.setParamObj(map, prefix + "SubtitleFileInput.", this.SubtitleFileInput);
         this.setParamSimple(map, prefix + "FontType", this.FontType);
         this.setParamSimple(map, prefix + "FontSize", this.FontSize);
         this.setParamSimple(map, prefix + "FontColor", this.FontColor);
@@ -667,6 +947,14 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "BoardHeight", this.BoardHeight);
         this.setParamSimple(map, prefix + "BoardColor", this.BoardColor);
         this.setParamSimple(map, prefix + "BoardAlpha", this.BoardAlpha);
+        this.setParamSimple(map, prefix + "OutlineWidth", this.OutlineWidth);
+        this.setParamSimple(map, prefix + "OutlineColor", this.OutlineColor);
+        this.setParamSimple(map, prefix + "OutlineAlpha", this.OutlineAlpha);
+        this.setParamSimple(map, prefix + "ShadowWidth", this.ShadowWidth);
+        this.setParamSimple(map, prefix + "ShadowColor", this.ShadowColor);
+        this.setParamSimple(map, prefix + "ShadowAlpha", this.ShadowAlpha);
+        this.setParamSimple(map, prefix + "LineSpacing", this.LineSpacing);
+        this.setParamSimple(map, prefix + "Alignment", this.Alignment);
 
     }
 }

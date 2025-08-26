@@ -130,7 +130,7 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
     private Boolean IsRefer;
 
     /**
-    * Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/TCADP page.
+    * Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/ADP page.
     */
     @SerializedName("Opt")
     @Expose
@@ -142,6 +142,34 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
     @SerializedName("CateBizId")
     @Expose
     private String CateBizId;
+
+    /**
+    * 
+    */
+    @SerializedName("IsDownload")
+    @Expose
+    private Boolean IsDownload;
+
+    /**
+    * 
+    */
+    @SerializedName("DuplicateFileHandles")
+    @Expose
+    private DuplicateFileHandle [] DuplicateFileHandles;
+
+    /**
+    * 
+    */
+    @SerializedName("SplitRule")
+    @Expose
+    private String SplitRule;
+
+    /**
+    * 
+    */
+    @SerializedName("UpdatePeriodInfo")
+    @Expose
+    private UpdatePeriodInfo UpdatePeriodInfo;
 
     /**
      * Get Application ID. 
@@ -388,16 +416,16 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
     }
 
     /**
-     * Get Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/TCADP page. 
-     * @return Opt Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/TCADP page.
+     * Get Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/ADP page. 
+     * @return Opt Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/ADP page.
      */
     public Long getOpt() {
         return this.Opt;
     }
 
     /**
-     * Set Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/TCADP page.
-     * @param Opt Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/TCADP page.
+     * Set Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/ADP page.
+     * @param Opt Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/ADP page.
      */
     public void setOpt(Long Opt) {
         this.Opt = Opt;
@@ -417,6 +445,70 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
      */
     public void setCateBizId(String CateBizId) {
         this.CateBizId = CateBizId;
+    }
+
+    /**
+     * Get  
+     * @return IsDownload 
+     */
+    public Boolean getIsDownload() {
+        return this.IsDownload;
+    }
+
+    /**
+     * Set 
+     * @param IsDownload 
+     */
+    public void setIsDownload(Boolean IsDownload) {
+        this.IsDownload = IsDownload;
+    }
+
+    /**
+     * Get  
+     * @return DuplicateFileHandles 
+     */
+    public DuplicateFileHandle [] getDuplicateFileHandles() {
+        return this.DuplicateFileHandles;
+    }
+
+    /**
+     * Set 
+     * @param DuplicateFileHandles 
+     */
+    public void setDuplicateFileHandles(DuplicateFileHandle [] DuplicateFileHandles) {
+        this.DuplicateFileHandles = DuplicateFileHandles;
+    }
+
+    /**
+     * Get  
+     * @return SplitRule 
+     */
+    public String getSplitRule() {
+        return this.SplitRule;
+    }
+
+    /**
+     * Set 
+     * @param SplitRule 
+     */
+    public void setSplitRule(String SplitRule) {
+        this.SplitRule = SplitRule;
+    }
+
+    /**
+     * Get  
+     * @return UpdatePeriodInfo 
+     */
+    public UpdatePeriodInfo getUpdatePeriodInfo() {
+        return this.UpdatePeriodInfo;
+    }
+
+    /**
+     * Set 
+     * @param UpdatePeriodInfo 
+     */
+    public void setUpdatePeriodInfo(UpdatePeriodInfo UpdatePeriodInfo) {
+        this.UpdatePeriodInfo = UpdatePeriodInfo;
     }
 
     public SaveDocRequest() {
@@ -481,6 +573,21 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
         if (source.CateBizId != null) {
             this.CateBizId = new String(source.CateBizId);
         }
+        if (source.IsDownload != null) {
+            this.IsDownload = new Boolean(source.IsDownload);
+        }
+        if (source.DuplicateFileHandles != null) {
+            this.DuplicateFileHandles = new DuplicateFileHandle[source.DuplicateFileHandles.length];
+            for (int i = 0; i < source.DuplicateFileHandles.length; i++) {
+                this.DuplicateFileHandles[i] = new DuplicateFileHandle(source.DuplicateFileHandles[i]);
+            }
+        }
+        if (source.SplitRule != null) {
+            this.SplitRule = new String(source.SplitRule);
+        }
+        if (source.UpdatePeriodInfo != null) {
+            this.UpdatePeriodInfo = new UpdatePeriodInfo(source.UpdatePeriodInfo);
+        }
     }
 
 
@@ -505,6 +612,10 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
         this.setParamSimple(map, prefix + "IsRefer", this.IsRefer);
         this.setParamSimple(map, prefix + "Opt", this.Opt);
         this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
+        this.setParamSimple(map, prefix + "IsDownload", this.IsDownload);
+        this.setParamArrayObj(map, prefix + "DuplicateFileHandles.", this.DuplicateFileHandles);
+        this.setParamSimple(map, prefix + "SplitRule", this.SplitRule);
+        this.setParamObj(map, prefix + "UpdatePeriodInfo.", this.UpdatePeriodInfo);
 
     }
 }

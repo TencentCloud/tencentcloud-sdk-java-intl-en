@@ -87,6 +87,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private EnhanceConfig EnhanceConfig;
 
     /**
+    * Subtitle parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SubtitleTemplate")
+    @Expose
+    private SubtitleTemplate SubtitleTemplate;
+
+    /**
      * Get Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files. 
      * @return Container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
      */
@@ -242,6 +250,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.EnhanceConfig = EnhanceConfig;
     }
 
+    /**
+     * Get Subtitle parameter.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubtitleTemplate Subtitle parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public SubtitleTemplate getSubtitleTemplate() {
+        return this.SubtitleTemplate;
+    }
+
+    /**
+     * Set Subtitle parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubtitleTemplate Subtitle parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {
+        this.SubtitleTemplate = SubtitleTemplate;
+    }
+
     public RawTranscodeParameter() {
     }
 
@@ -274,6 +302,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.EnhanceConfig != null) {
             this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
         }
+        if (source.SubtitleTemplate != null) {
+            this.SubtitleTemplate = new SubtitleTemplate(source.SubtitleTemplate);
+        }
     }
 
 
@@ -289,6 +320,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
         this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
         this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
+        this.setParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
 
     }
 }

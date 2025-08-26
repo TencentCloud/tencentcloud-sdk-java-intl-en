@@ -52,6 +52,13 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
+    * Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
+    */
+    @SerializedName("RecordType")
+    @Expose
+    private String RecordType;
+
+    /**
      * Get HLS configuration parameter. Either this parameter or MP4Configure should be specified. 
      * @return HLSConfigure HLS configuration parameter. Either this parameter or MP4Configure should be specified.
      */
@@ -115,6 +122,22 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
         this.Comment = Comment;
     }
 
+    /**
+     * Get Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used. 
+     * @return RecordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
+     */
+    public String getRecordType() {
+        return this.RecordType;
+    }
+
+    /**
+     * Set Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
+     * @param RecordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
+     */
+    public void setRecordType(String RecordType) {
+        this.RecordType = RecordType;
+    }
+
     public CreateLiveRecordTemplateRequest() {
     }
 
@@ -135,6 +158,9 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.RecordType != null) {
+            this.RecordType = new String(source.RecordType);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
         this.setParamObj(map, prefix + "MP4Configure.", this.MP4Configure);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "RecordType", this.RecordType);
 
     }
 }

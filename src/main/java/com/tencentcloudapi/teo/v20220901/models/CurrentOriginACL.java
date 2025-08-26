@@ -48,7 +48,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     private String ActiveTime;
 
     /**
-    * This parameter is used to record whether "I've upgraded to the lastest verison" is completed before the origin ACLs version is effective. valid values:.
+    * This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
 - true: specifies that the version is effective and the update to the latest version is confirmed.
 - false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
 Note: This field may return null, which indicates a failure to obtain a valid value.
@@ -118,11 +118,11 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get This parameter is used to record whether "I've upgraded to the lastest verison" is completed before the origin ACLs version is effective. valid values:.
+     * Get This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
 - true: specifies that the version is effective and the update to the latest version is confirmed.
 - false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
 Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return IsPlaned This parameter is used to record whether "I've upgraded to the lastest verison" is completed before the origin ACLs version is effective. valid values:.
+     * @return IsPlaned This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
 - true: specifies that the version is effective and the update to the latest version is confirmed.
 - false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
 Note: This field may return null, which indicates a failure to obtain a valid value.
@@ -132,11 +132,11 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Set This parameter is used to record whether "I've upgraded to the lastest verison" is completed before the origin ACLs version is effective. valid values:.
+     * Set This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
 - true: specifies that the version is effective and the update to the latest version is confirmed.
 - false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
 Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param IsPlaned This parameter is used to record whether "I've upgraded to the lastest verison" is completed before the origin ACLs version is effective. valid values:.
+     * @param IsPlaned This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
 - true: specifies that the version is effective and the update to the latest version is confirmed.
 - false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
 Note: This field may return null, which indicates a failure to obtain a valid value.

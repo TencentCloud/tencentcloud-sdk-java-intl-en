@@ -59,6 +59,13 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
+    * Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+    */
+    @SerializedName("RecordType")
+    @Expose
+    private String RecordType;
+
+    /**
      * Get Specifies the recording template unique identifier. 
      * @return Definition Specifies the recording template unique identifier.
      */
@@ -138,6 +145,22 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel {
         this.Comment = Comment;
     }
 
+    /**
+     * Get Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. 
+     * @return RecordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+     */
+    public String getRecordType() {
+        return this.RecordType;
+    }
+
+    /**
+     * Set Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+     * @param RecordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+     */
+    public void setRecordType(String RecordType) {
+        this.RecordType = RecordType;
+    }
+
     public ModifyLiveRecordTemplateRequest() {
     }
 
@@ -161,6 +184,9 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel {
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.RecordType != null) {
+            this.RecordType = new String(source.RecordType);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel {
         this.setParamObj(map, prefix + "MP4Configure.", this.MP4Configure);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "RecordType", this.RecordType);
 
     }
 }

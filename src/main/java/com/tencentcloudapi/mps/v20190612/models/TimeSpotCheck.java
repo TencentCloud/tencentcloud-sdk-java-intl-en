@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TimeSpotCheck extends AbstractModel {
 
     /**
-    * Duration of each loop detection in the spot check policy, in seconds. Valid values:
+    * Duration of each loop detection, in seconds. Value range:
 
  - Minimum value: 10.
  - Maximum value: 86400.
@@ -35,33 +35,41 @@ public class TimeSpotCheck extends AbstractModel {
     private Long CheckDuration;
 
     /**
-    * Detection interval of the spot check policy, which indicates how long to wait before conducting the next detection after one detection is completed.
+    * Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
+ - Minimum value: 10.
+ - Maximum value: 3600.
     */
     @SerializedName("CheckInterval")
     @Expose
     private Long CheckInterval;
 
     /**
-    * Duration for which the opening clip is skipped.
+    * Skipped opening duration, in seconds. Value range:
+ - Minimum value: 1.
+ - Maximum value: 1800.
     */
     @SerializedName("SkipDuration")
     @Expose
     private Long SkipDuration;
 
     /**
-    * Number of loops. When this field is empty or set to 0, the default behavior is to loop until the video ends.
+    * Number of loops. Value range:
+ - Minimum value: 0.
+ - Maximum value: 1000.
+
+If the value is 0 or not specified, it indicates that loops are executed until the video ends.
     */
     @SerializedName("CirclesNumber")
     @Expose
     private Long CirclesNumber;
 
     /**
-     * Get Duration of each loop detection in the spot check policy, in seconds. Valid values:
+     * Get Duration of each loop detection, in seconds. Value range:
 
  - Minimum value: 10.
  - Maximum value: 86400.
  
-     * @return CheckDuration Duration of each loop detection in the spot check policy, in seconds. Valid values:
+     * @return CheckDuration Duration of each loop detection, in seconds. Value range:
 
  - Minimum value: 10.
  - Maximum value: 86400.
@@ -72,12 +80,12 @@ public class TimeSpotCheck extends AbstractModel {
     }
 
     /**
-     * Set Duration of each loop detection in the spot check policy, in seconds. Valid values:
+     * Set Duration of each loop detection, in seconds. Value range:
 
  - Minimum value: 10.
  - Maximum value: 86400.
 
-     * @param CheckDuration Duration of each loop detection in the spot check policy, in seconds. Valid values:
+     * @param CheckDuration Duration of each loop detection, in seconds. Value range:
 
  - Minimum value: 10.
  - Maximum value: 86400.
@@ -88,48 +96,80 @@ public class TimeSpotCheck extends AbstractModel {
     }
 
     /**
-     * Get Detection interval of the spot check policy, which indicates how long to wait before conducting the next detection after one detection is completed. 
-     * @return CheckInterval Detection interval of the spot check policy, which indicates how long to wait before conducting the next detection after one detection is completed.
+     * Get Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
+ - Minimum value: 10.
+ - Maximum value: 3600. 
+     * @return CheckInterval Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
+ - Minimum value: 10.
+ - Maximum value: 3600.
      */
     public Long getCheckInterval() {
         return this.CheckInterval;
     }
 
     /**
-     * Set Detection interval of the spot check policy, which indicates how long to wait before conducting the next detection after one detection is completed.
-     * @param CheckInterval Detection interval of the spot check policy, which indicates how long to wait before conducting the next detection after one detection is completed.
+     * Set Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
+ - Minimum value: 10.
+ - Maximum value: 3600.
+     * @param CheckInterval Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
+ - Minimum value: 10.
+ - Maximum value: 3600.
      */
     public void setCheckInterval(Long CheckInterval) {
         this.CheckInterval = CheckInterval;
     }
 
     /**
-     * Get Duration for which the opening clip is skipped. 
-     * @return SkipDuration Duration for which the opening clip is skipped.
+     * Get Skipped opening duration, in seconds. Value range:
+ - Minimum value: 1.
+ - Maximum value: 1800. 
+     * @return SkipDuration Skipped opening duration, in seconds. Value range:
+ - Minimum value: 1.
+ - Maximum value: 1800.
      */
     public Long getSkipDuration() {
         return this.SkipDuration;
     }
 
     /**
-     * Set Duration for which the opening clip is skipped.
-     * @param SkipDuration Duration for which the opening clip is skipped.
+     * Set Skipped opening duration, in seconds. Value range:
+ - Minimum value: 1.
+ - Maximum value: 1800.
+     * @param SkipDuration Skipped opening duration, in seconds. Value range:
+ - Minimum value: 1.
+ - Maximum value: 1800.
      */
     public void setSkipDuration(Long SkipDuration) {
         this.SkipDuration = SkipDuration;
     }
 
     /**
-     * Get Number of loops. When this field is empty or set to 0, the default behavior is to loop until the video ends. 
-     * @return CirclesNumber Number of loops. When this field is empty or set to 0, the default behavior is to loop until the video ends.
+     * Get Number of loops. Value range:
+ - Minimum value: 0.
+ - Maximum value: 1000.
+
+If the value is 0 or not specified, it indicates that loops are executed until the video ends. 
+     * @return CirclesNumber Number of loops. Value range:
+ - Minimum value: 0.
+ - Maximum value: 1000.
+
+If the value is 0 or not specified, it indicates that loops are executed until the video ends.
      */
     public Long getCirclesNumber() {
         return this.CirclesNumber;
     }
 
     /**
-     * Set Number of loops. When this field is empty or set to 0, the default behavior is to loop until the video ends.
-     * @param CirclesNumber Number of loops. When this field is empty or set to 0, the default behavior is to loop until the video ends.
+     * Set Number of loops. Value range:
+ - Minimum value: 0.
+ - Maximum value: 1000.
+
+If the value is 0 or not specified, it indicates that loops are executed until the video ends.
+     * @param CirclesNumber Number of loops. Value range:
+ - Minimum value: 0.
+ - Maximum value: 1000.
+
+If the value is 0 or not specified, it indicates that loops are executed until the video ends.
      */
     public void setCirclesNumber(Long CirclesNumber) {
         this.CirclesNumber = CirclesNumber;

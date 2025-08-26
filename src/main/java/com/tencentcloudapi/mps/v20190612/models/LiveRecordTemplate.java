@@ -83,6 +83,13 @@ public class LiveRecordTemplate extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+    */
+    @SerializedName("RecordType")
+    @Expose
+    private String RecordType;
+
+    /**
      * Get Specifies the recording template unique identifier. 
      * @return Definition Specifies the recording template unique identifier.
      */
@@ -222,6 +229,22 @@ public class LiveRecordTemplate extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. 
+     * @return RecordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+     */
+    public String getRecordType() {
+        return this.RecordType;
+    }
+
+    /**
+     * Set Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+     * @param RecordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+     */
+    public void setRecordType(String RecordType) {
+        this.RecordType = RecordType;
+    }
+
     public LiveRecordTemplate() {
     }
 
@@ -254,6 +277,9 @@ public class LiveRecordTemplate extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.RecordType != null) {
+            this.RecordType = new String(source.RecordType);
+        }
     }
 
 
@@ -269,6 +295,7 @@ public class LiveRecordTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "RecordType", this.RecordType);
 
     }
 }

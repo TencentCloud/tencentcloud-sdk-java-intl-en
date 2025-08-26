@@ -24,12 +24,11 @@ import java.util.HashMap;
 public class LiveStreamTaskNotifyConfig extends AbstractModel {
 
     /**
-    * Notification type:
+    * Notification Type:
+TDMQ-CMQ: TDMQ for CMQ.
+"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.comom/document/product/862/39229?from_cn_redirect=1).
 
-"CMQ": Callback messages are written to the CMQ queue; 
-"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://intl.cloud.tencent.com/document/product/862/39229?from_cn_redirect=1).
-
-<font color="red">Note: If left blank, it is CMQ by default. To use the other type, you need to fill in the corresponding type value.</font>
+<font color="red">Note: If it is left blank, TDMQ-CMQ is used by default. To use other types, fill in the corresponding type value.</font>
     */
     @SerializedName("NotifyType")
     @Expose
@@ -43,28 +42,28 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
     private String NotifyUrl;
 
     /**
-    * CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
+    * Queue and Topic models are provided.
     */
     @SerializedName("CmqModel")
     @Expose
     private String CmqModel;
 
     /**
-    * CMQ region, such as `sh` and `bj`.
+    * Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj.
     */
     @SerializedName("CmqRegion")
     @Expose
     private String CmqRegion;
 
     /**
-    * This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
+    * This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications.
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+    * This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
     */
     @SerializedName("TopicName")
     @Expose
@@ -79,36 +78,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String NotifyKey;
 
     /**
-     * Get Notification type:
+     * Get Notification Type:
+TDMQ-CMQ: TDMQ for CMQ.
+"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.comom/document/product/862/39229?from_cn_redirect=1).
 
-"CMQ": Callback messages are written to the CMQ queue; 
-"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://intl.cloud.tencent.com/document/product/862/39229?from_cn_redirect=1).
+<font color="red">Note: If it is left blank, TDMQ-CMQ is used by default. To use other types, fill in the corresponding type value.</font> 
+     * @return NotifyType Notification Type:
+TDMQ-CMQ: TDMQ for CMQ.
+"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.comom/document/product/862/39229?from_cn_redirect=1).
 
-<font color="red">Note: If left blank, it is CMQ by default. To use the other type, you need to fill in the corresponding type value.</font> 
-     * @return NotifyType Notification type:
-
-"CMQ": Callback messages are written to the CMQ queue; 
-"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://intl.cloud.tencent.com/document/product/862/39229?from_cn_redirect=1).
-
-<font color="red">Note: If left blank, it is CMQ by default. To use the other type, you need to fill in the corresponding type value.</font>
+<font color="red">Note: If it is left blank, TDMQ-CMQ is used by default. To use other types, fill in the corresponding type value.</font>
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set Notification type:
+     * Set Notification Type:
+TDMQ-CMQ: TDMQ for CMQ.
+"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.comom/document/product/862/39229?from_cn_redirect=1).
 
-"CMQ": Callback messages are written to the CMQ queue; 
-"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://intl.cloud.tencent.com/document/product/862/39229?from_cn_redirect=1).
+<font color="red">Note: If it is left blank, TDMQ-CMQ is used by default. To use other types, fill in the corresponding type value.</font>
+     * @param NotifyType Notification Type:
+TDMQ-CMQ: TDMQ for CMQ.
+"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.comom/document/product/862/39229?from_cn_redirect=1).
 
-<font color="red">Note: If left blank, it is CMQ by default. To use the other type, you need to fill in the corresponding type value.</font>
-     * @param NotifyType Notification type:
-
-"CMQ": Callback messages are written to the CMQ queue; 
-"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://intl.cloud.tencent.com/document/product/862/39229?from_cn_redirect=1).
-
-<font color="red">Note: If left blank, it is CMQ by default. To use the other type, you need to fill in the corresponding type value.</font>
+<font color="red">Note: If it is left blank, TDMQ-CMQ is used by default. To use other types, fill in the corresponding type value.</font>
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
@@ -131,64 +126,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported. 
-     * @return CmqModel CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
+     * Get Queue and Topic models are provided. 
+     * @return CmqModel Queue and Topic models are provided.
      */
     public String getCmqModel() {
         return this.CmqModel;
     }
 
     /**
-     * Set CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
-     * @param CmqModel CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
+     * Set Queue and Topic models are provided.
+     * @param CmqModel Queue and Topic models are provided.
      */
     public void setCmqModel(String CmqModel) {
         this.CmqModel = CmqModel;
     }
 
     /**
-     * Get CMQ region, such as `sh` and `bj`. 
-     * @return CmqRegion CMQ region, such as `sh` and `bj`.
+     * Get Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj. 
+     * @return CmqRegion Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj.
      */
     public String getCmqRegion() {
         return this.CmqRegion;
     }
 
     /**
-     * Set CMQ region, such as `sh` and `bj`.
-     * @param CmqRegion CMQ region, such as `sh` and `bj`.
+     * Set Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj.
+     * @param CmqRegion Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj.
      */
     public void setCmqRegion(String CmqRegion) {
         this.CmqRegion = CmqRegion;
     }
 
     /**
-     * Get This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications. 
-     * @return QueueName This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
+     * Get This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications. 
+     * @return QueueName This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications.
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
-     * @param QueueName This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
+     * Set This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications.
+     * @param QueueName This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications.
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications. 
-     * @return TopicName This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+     * Get This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications. 
+     * @return TopicName This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
-     * @param TopicName This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+     * Set This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
+     * @param TopicName This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
