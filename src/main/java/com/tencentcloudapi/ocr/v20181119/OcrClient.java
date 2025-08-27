@@ -249,7 +249,7 @@ A maximum of 10 requests can be initiated per second for this API.
     }
 
     /**
-     *This API is used to identify Brazil RNE documents.
+     *This API is used to identify Brazil common documents.
 
 This API is used to set the default request rate limit to 5 requests/second.
      * @param req RecognizeBrazilCommonOCRRequest

@@ -78,6 +78,15 @@ public enum SqlserverErrorCode {
      /* The API does not exist. */
      INVALIDPARAMETER_INTERFACENAMENOTFOUND("InvalidParameter.InterfaceNameNotFound"),
      
+     /* Instances with publish-subscribe relationships are not supported. */
+     INVALIDPARAMETER_NOTSUPPORTPUBSUBINSTANCE("InvalidParameter.NotSupportPubSubInstance"),
+     
+     /* Primary instances with read-only replicas are not supported. */
+     INVALIDPARAMETER_NOTSUPPORTREADONLYMASTERINSTANCE("InvalidParameter.NotSupportReadOnlyMasterInstance"),
+     
+     /* Single-node edition (basic edition or RO replica) instances are not supported. */
+     INVALIDPARAMETER_NOTSUPPORTSINGLEINSTANCE("InvalidParameter.NotSupportSingleInstance"),
+     
      /* An error occurred while converting parameter assertion. */
      INVALIDPARAMETER_PARAMSASSERTFAILED("InvalidParameter.ParamsAssertFailed"),
      

@@ -26,7 +26,7 @@ public class GetFaceIdTokenIntlRequest extends AbstractModel {
     /**
     * The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Selfie verification.
+`compare`: Selfie Verification(liveness detection and face comparison).
 Default value: `liveness`.
     */
     @SerializedName("CheckMode")
@@ -76,13 +76,20 @@ The default value is blink. The different action types passed in this parameter 
     private String ActionList;
 
     /**
+    * ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+    */
+    @SerializedName("SdkVersion")
+    @Expose
+    private String SdkVersion;
+
+    /**
      * Get The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Selfie verification.
+`compare`: Selfie Verification(liveness detection and face comparison).
 Default value: `liveness`. 
      * @return CheckMode The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Selfie verification.
+`compare`: Selfie Verification(liveness detection and face comparison).
 Default value: `liveness`.
      */
     public String getCheckMode() {
@@ -92,11 +99,11 @@ Default value: `liveness`.
     /**
      * Set The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Selfie verification.
+`compare`: Selfie Verification(liveness detection and face comparison).
 Default value: `liveness`.
      * @param CheckMode The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Selfie verification.
+`compare`: Selfie Verification(liveness detection and face comparison).
 Default value: `liveness`.
      */
     public void setCheckMode(String CheckMode) {
@@ -223,6 +230,22 @@ The default value is blink. The different action types passed in this parameter 
         this.ActionList = ActionList;
     }
 
+    /**
+     * Get ENHANCED: Enhanced Version, BASIC: Basic Version (Default) 
+     * @return SdkVersion ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+     */
+    public String getSdkVersion() {
+        return this.SdkVersion;
+    }
+
+    /**
+     * Set ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+     * @param SdkVersion ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+     */
+    public void setSdkVersion(String SdkVersion) {
+        this.SdkVersion = SdkVersion;
+    }
+
     public GetFaceIdTokenIntlRequest() {
     }
 
@@ -246,6 +269,9 @@ The default value is blink. The different action types passed in this parameter 
         if (source.ActionList != null) {
             this.ActionList = new String(source.ActionList);
         }
+        if (source.SdkVersion != null) {
+            this.SdkVersion = new String(source.SdkVersion);
+        }
     }
 
 
@@ -258,6 +284,7 @@ The default value is blink. The different action types passed in this parameter 
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "ActionList", this.ActionList);
+        this.setParamSimple(map, prefix + "SdkVersion", this.SdkVersion);
 
     }
 }

@@ -61,6 +61,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to complete the instance upgrade and switch immediately without waiting for the maintenance window when the instance status is "upgrade pending switch" after scale-out is initiated. This API needs to be called during off-peak hours of the instance. Some databases cannot be accessed before the switch is completed.
+     * @param req CompleteExpansionRequest
+     * @return CompleteExpansionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CompleteExpansionResponse CompleteExpansion(CompleteExpansionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CompleteExpansion", CompleteExpansionResponse.class);
+    }
+
+    /**
      *This API is used to create an instance account.
      * @param req CreateAccountRequest
      * @return CreateAccountResponse
@@ -201,6 +212,17 @@ public class SqlserverClient extends AbstractClient{
     public CreateReadOnlyDBInstancesResponse CreateReadOnlyDBInstances(CreateReadOnlyDBInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateReadOnlyDBInstances", CreateReadOnlyDBInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to manually cut block logs and deadlock logs.
+     * @param req CutXEventsRequest
+     * @return CutXEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CutXEventsResponse CutXEvents(CutXEventsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CutXEvents", CutXEventsResponse.class);
     }
 
     /**
@@ -358,6 +380,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the disaster recovery region and AZ of the secondary node based on the primary instance.
+     * @param req DescribeCrossRegionZoneRequest
+     * @return DescribeCrossRegionZoneResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCrossRegionZoneResponse DescribeCrossRegionZone(DescribeCrossRegionZoneRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCrossRegionZone", DescribeCrossRegionZoneResponse.class);
+    }
+
+    /**
      *This API is used to query the database character sets supported by an instance.
      * @param req DescribeDBCharsetsRequest
      * @return DescribeDBCharsetsResponse
@@ -424,6 +457,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the database list.
+     * @param req DescribeDatabasesRequest
+     * @return DescribeDatabasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabasesResponse DescribeDatabases(DescribeDatabasesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDatabases", DescribeDatabasesResponse.class);
+    }
+
+    /**
      *This API is used to query flow status.
      * @param req DescribeFlowStatusRequest
      * @return DescribeFlowStatusResponse
@@ -476,6 +520,28 @@ public class SqlserverClient extends AbstractClient{
     public DescribeInstanceParamsResponse DescribeInstanceParams(DescribeInstanceParamsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstanceParams", DescribeInstanceParamsResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of asynchronous tasks related to an instance.
+     * @param req DescribeInstanceTasksRequest
+     * @return DescribeInstanceTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceTasksResponse DescribeInstanceTasks(DescribeInstanceTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceTasks", DescribeInstanceTasksResponse.class);
+    }
+
+    /**
+     *This API is used to query the instance billing parameters.
+     * @param req DescribeInstanceTradeParameterRequest
+     * @return DescribeInstanceTradeParameterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceTradeParameterResponse DescribeInstanceTradeParameter(DescribeInstanceTradeParameterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceTradeParameter", DescribeInstanceTradeParameterResponse.class);
     }
 
     /**
@@ -586,6 +652,17 @@ public class SqlserverClient extends AbstractClient{
     public DescribeSpecSellStatusResponse DescribeSpecSellStatus(DescribeSpecSellStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSpecSellStatus", DescribeSpecSellStatusResponse.class);
+    }
+
+    /**
+     *This API is used to pre-check the impact of the instance configuration adjustment before the adjustment.
+     * @param req DescribeUpgradeInstanceCheckRequest
+     * @return DescribeUpgradeInstanceCheckResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUpgradeInstanceCheckResponse DescribeUpgradeInstanceCheck(DescribeUpgradeInstanceCheckRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUpgradeInstanceCheck", DescribeUpgradeInstanceCheckResponse.class);
     }
 
     /**
@@ -719,6 +796,17 @@ public class SqlserverClient extends AbstractClient{
     public ModifyDBInstanceNetworkResponse ModifyDBInstanceNetwork(ModifyDBInstanceNetworkRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDBInstanceNetwork", ModifyDBInstanceNetworkResponse.class);
+    }
+
+    /**
+     *This API is used to modify the instance remarks.
+     * @param req ModifyDBInstanceNoteRequest
+     * @return ModifyDBInstanceNoteResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceNoteResponse ModifyDBInstanceNote(ModifyDBInstanceNoteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceNote", ModifyDBInstanceNoteResponse.class);
     }
 
     /**
