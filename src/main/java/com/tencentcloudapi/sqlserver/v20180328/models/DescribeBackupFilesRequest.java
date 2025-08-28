@@ -66,6 +66,13 @@ public class DescribeBackupFilesRequest extends AbstractModel {
     private String OrderBy;
 
     /**
+    * Sorting field. Size - sort by backup size; DBs - sort by database name. The default value is size.
+    */
+    @SerializedName("OrderByType")
+    @Expose
+    private String OrderByType;
+
+    /**
      * Get Instance ID in the format of mssql-njj2mtpl 
      * @return InstanceId Instance ID in the format of mssql-njj2mtpl
      */
@@ -161,6 +168,22 @@ public class DescribeBackupFilesRequest extends AbstractModel {
         this.OrderBy = OrderBy;
     }
 
+    /**
+     * Get Sorting field. Size - sort by backup size; DBs - sort by database name. The default value is size. 
+     * @return OrderByType Sorting field. Size - sort by backup size; DBs - sort by database name. The default value is size.
+     */
+    public String getOrderByType() {
+        return this.OrderByType;
+    }
+
+    /**
+     * Set Sorting field. Size - sort by backup size; DBs - sort by database name. The default value is size.
+     * @param OrderByType Sorting field. Size - sort by backup size; DBs - sort by database name. The default value is size.
+     */
+    public void setOrderByType(String OrderByType) {
+        this.OrderByType = OrderByType;
+    }
+
     public DescribeBackupFilesRequest() {
     }
 
@@ -187,6 +210,9 @@ public class DescribeBackupFilesRequest extends AbstractModel {
         if (source.OrderBy != null) {
             this.OrderBy = new String(source.OrderBy);
         }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class DescribeBackupFilesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
 
     }
 }

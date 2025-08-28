@@ -38,7 +38,7 @@ public class ModifyBackupStrategyResponse extends AbstractModel {
     private String Msg;
 
     /**
-    * 
+    * Returned error code.
     */
     @SerializedName("Code")
     @Expose
@@ -88,16 +88,16 @@ public class ModifyBackupStrategyResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Code 
+     * Get Returned error code. 
+     * @return Code Returned error code.
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 
-     * @param Code 
+     * Set Returned error code.
+     * @param Code Returned error code.
      */
     public void setCode(Long Code) {
         this.Code = Code;

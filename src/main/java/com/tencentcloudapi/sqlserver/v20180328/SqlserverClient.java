@@ -39,6 +39,28 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to bind security groups to instances in batches.
+     * @param req AssociateSecurityGroupsRequest
+     * @return AssociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssociateSecurityGroups", AssociateSecurityGroupsResponse.class);
+    }
+
+    /**
+     *This API is used to balance the routing weight of each read-only instance according to the predefined weights. The DescribeReadOnlyGroupAutoWeight API is used to query the predefined weights.
+     * @param req BalanceReadOnlyGroupRequest
+     * @return BalanceReadOnlyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public BalanceReadOnlyGroupResponse BalanceReadOnlyGroup(BalanceReadOnlyGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BalanceReadOnlyGroup", BalanceReadOnlyGroupResponse.class);
+    }
+
+    /**
      *This API is used to clone and rename databases of an instance. The clones are still in the instance from which they are cloned.
      * @param req CloneDBRequest
      * @return CloneDBResponse
@@ -204,6 +226,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a publish/subscribe relationship between two databases. A subscriber cannot act as a publisher, and a publisher can have multiple subscriber instances.
+     * @param req CreatePublishSubscribeRequest
+     * @return CreatePublishSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePublishSubscribeResponse CreatePublishSubscribe(CreatePublishSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePublishSubscribe", CreatePublishSubscribeResponse.class);
+    }
+
+    /**
      *This API is used to create read-only instances (local disk).
      * @param req CreateReadOnlyDBInstancesRequest
      * @return CreateReadOnlyDBInstancesResponse
@@ -270,6 +303,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to release SQL server instances (eliminated immediately) in the recycle bin. The released instances will be physically terminated after being retained for a period of time. Their publish-subscribe relationships will be automatically disassociated, and their RO replicas will be automatically released.
+     * @param req DeleteDBInstanceRequest
+     * @return DeleteDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDBInstanceResponse DeleteDBInstance(DeleteDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDBInstance", DeleteDBInstanceResponse.class);
+    }
+
+    /**
      *This API is used to delete an incremental backup import task.
      * @param req DeleteIncrementalMigrationRequest
      * @return DeleteIncrementalMigrationResponse
@@ -292,6 +336,28 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete the publish/subscribe relationship between two databases.
+     * @param req DeletePublishSubscribeRequest
+     * @return DeletePublishSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePublishSubscribeResponse DeletePublishSubscribe(DeletePublishSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePublishSubscribe", DeletePublishSubscribeResponse.class);
+    }
+
+    /**
+     *This API is used to query information on the account and permissions associated with the database.
+     * @param req DescribeAccountPrivilegeByDBRequest
+     * @return DescribeAccountPrivilegeByDBResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountPrivilegeByDBResponse DescribeAccountPrivilegeByDB(DescribeAccountPrivilegeByDBRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccountPrivilegeByDB", DescribeAccountPrivilegeByDBResponse.class);
+    }
+
+    /**
      *This API is used to pull the list of instance accounts.
      * @param req DescribeAccountsRequest
      * @return DescribeAccountsResponse
@@ -300,6 +366,17 @@ public class SqlserverClient extends AbstractClient{
     public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAccounts", DescribeAccountsResponse.class);
+    }
+
+    /**
+     *This API is used to query the created backup details through the backup creation process ID. The process ID can be obtained through the CreateBackup API.
+     * @param req DescribeBackupByFlowIdRequest
+     * @return DescribeBackupByFlowIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupByFlowIdResponse DescribeBackupByFlowId(DescribeBackupByFlowIdRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupByFlowId", DescribeBackupByFlowIdResponse.class);
     }
 
     /**
@@ -333,6 +410,39 @@ public class SqlserverClient extends AbstractClient{
     public DescribeBackupMigrationResponse DescribeBackupMigration(DescribeBackupMigrationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBackupMigration", DescribeBackupMigrationResponse.class);
+    }
+
+    /**
+     *This API is used to query backup space usage details.
+     * @param req DescribeBackupMonitorRequest
+     * @return DescribeBackupMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupMonitorResponse DescribeBackupMonitor(DescribeBackupMonitorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupMonitor", DescribeBackupMonitorResponse.class);
+    }
+
+    /**
+     *This API is used to query the real-time statistics list of backups.
+     * @param req DescribeBackupStatisticalRequest
+     * @return DescribeBackupStatisticalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupStatisticalResponse DescribeBackupStatistical(DescribeBackupStatisticalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupStatistical", DescribeBackupStatisticalResponse.class);
+    }
+
+    /**
+     *This API is used to query the backup overview information of databases.
+     * @param req DescribeBackupSummaryRequest
+     * @return DescribeBackupSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupSummaryResponse DescribeBackupSummary(DescribeBackupSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupSummary", DescribeBackupSummaryResponse.class);
     }
 
     /**
@@ -380,6 +490,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the real-time statistics list of cross-region backups.
+     * @param req DescribeCrossBackupStatisticalRequest
+     * @return DescribeCrossBackupStatisticalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCrossBackupStatisticalResponse DescribeCrossBackupStatistical(DescribeCrossBackupStatisticalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCrossBackupStatistical", DescribeCrossBackupStatisticalResponse.class);
+    }
+
+    /**
      *This API is used to query the disaster recovery region and AZ of the secondary node based on the primary instance.
      * @param req DescribeCrossRegionZoneRequest
      * @return DescribeCrossRegionZoneResponse
@@ -388,6 +509,17 @@ public class SqlserverClient extends AbstractClient{
     public DescribeCrossRegionZoneResponse DescribeCrossRegionZone(DescribeCrossRegionZoneRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCrossRegionZone", DescribeCrossRegionZoneResponse.class);
+    }
+
+    /**
+     *This API is used to query the target region for cross-region backups.
+     * @param req DescribeCrossRegionsRequest
+     * @return DescribeCrossRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCrossRegionsResponse DescribeCrossRegions(DescribeCrossRegionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCrossRegions", DescribeCrossRegionsResponse.class);
     }
 
     /**
@@ -435,6 +567,39 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query information on the databases and permissions associated with the account.
+     * @param req DescribeDBPrivilegeByAccountRequest
+     * @return DescribeDBPrivilegeByAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBPrivilegeByAccountResponse DescribeDBPrivilegeByAccount(DescribeDBPrivilegeByAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBPrivilegeByAccount", DescribeDBPrivilegeByAccountResponse.class);
+    }
+
+    /**
+     *This API is used to query databases that can be rolled back.
+     * @param req DescribeDBRestoreTimeRequest
+     * @return DescribeDBRestoreTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBRestoreTimeResponse DescribeDBRestoreTime(DescribeDBRestoreTimeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBRestoreTime", DescribeDBRestoreTimeResponse.class);
+    }
+
+    /**
+     *This API is used to query the security group details of instances.
+     * @param req DescribeDBSecurityGroupsRequest
+     * @return DescribeDBSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBSecurityGroups", DescribeDBSecurityGroupsResponse.class);
+    }
+
+    /**
      *This API is used to query the list of databases
      * @param req DescribeDBsRequest
      * @return DescribeDBsResponse
@@ -457,6 +622,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the database name associated with the account.
+     * @param req DescribeDatabaseNamesRequest
+     * @return DescribeDatabaseNamesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabaseNamesResponse DescribeDatabaseNames(DescribeDatabaseNamesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDatabaseNames", DescribeDatabaseNamesResponse.class);
+    }
+
+    /**
      *This API is used to query the database list.
      * @param req DescribeDatabasesRequest
      * @return DescribeDatabasesResponse
@@ -468,6 +644,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query database configuration information. This API does not contain accounts associated with databases.
+     * @param req DescribeDatabasesNormalRequest
+     * @return DescribeDatabasesNormalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabasesNormalResponse DescribeDatabasesNormal(DescribeDatabasesNormalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDatabasesNormal", DescribeDatabasesNormalResponse.class);
+    }
+
+    /**
      *This API is used to query flow status.
      * @param req DescribeFlowStatusRequest
      * @return DescribeFlowStatusResponse
@@ -476,6 +663,17 @@ public class SqlserverClient extends AbstractClient{
     public DescribeFlowStatusResponse DescribeFlowStatus(DescribeFlowStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeFlowStatus", DescribeFlowStatusResponse.class);
+    }
+
+    /**
+     *This API is used to perform the manual primary-secondary switch.
+     * @param req DescribeHASwitchLogRequest
+     * @return DescribeHASwitchLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHASwitchLogResponse DescribeHASwitchLog(DescribeHASwitchLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHASwitchLog", DescribeHASwitchLogResponse.class);
     }
 
     /**
@@ -600,6 +798,72 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query security group details of a project.
+     * @param req DescribeProjectSecurityGroupsRequest
+     * @return DescribeProjectSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(DescribeProjectSecurityGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProjectSecurityGroups", DescribeProjectSecurityGroupsResponse.class);
+    }
+
+    /**
+     *This API is used to query the publish/subscribe relationship list.
+     * @param req DescribePublishSubscribeRequest
+     * @return DescribePublishSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePublishSubscribeResponse DescribePublishSubscribe(DescribePublishSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePublishSubscribe", DescribePublishSubscribeResponse.class);
+    }
+
+    /**
+     *This API is used to query the automatic weight assignment result of the read-only group. The BalanceReadOnlyGroup API is used to perform routing weight assignment according to the automatic weight assignment result.
+     * @param req DescribeReadOnlyGroupAutoWeightRequest
+     * @return DescribeReadOnlyGroupAutoWeightResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReadOnlyGroupAutoWeightResponse DescribeReadOnlyGroupAutoWeight(DescribeReadOnlyGroupAutoWeightRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReadOnlyGroupAutoWeight", DescribeReadOnlyGroupAutoWeightResponse.class);
+    }
+
+    /**
+     *This API is used to query the read-only group where the read-only instance is located by its ID.
+     * @param req DescribeReadOnlyGroupByReadOnlyInstanceRequest
+     * @return DescribeReadOnlyGroupByReadOnlyInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReadOnlyGroupByReadOnlyInstanceResponse DescribeReadOnlyGroupByReadOnlyInstance(DescribeReadOnlyGroupByReadOnlyInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReadOnlyGroupByReadOnlyInstance", DescribeReadOnlyGroupByReadOnlyInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to query read-only group details.
+     * @param req DescribeReadOnlyGroupDetailsRequest
+     * @return DescribeReadOnlyGroupDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReadOnlyGroupDetailsResponse DescribeReadOnlyGroupDetails(DescribeReadOnlyGroupDetailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReadOnlyGroupDetails", DescribeReadOnlyGroupDetailsResponse.class);
+    }
+
+    /**
+     *This API is used to query the read-only group list.
+     * @param req DescribeReadOnlyGroupListRequest
+     * @return DescribeReadOnlyGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReadOnlyGroupListResponse DescribeReadOnlyGroupList(DescribeReadOnlyGroupListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReadOnlyGroupList", DescribeReadOnlyGroupListResponse.class);
+    }
+
+    /**
      *This API is used to query purchasable regions.
      * @param req DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -608,6 +872,28 @@ public class SqlserverClient extends AbstractClient{
     public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRegions", DescribeRegionsResponse.class);
+    }
+
+    /**
+     *This API is used to query the scheduled backup retention plans of instances.
+     * @param req DescribeRegularBackupPlanRequest
+     * @return DescribeRegularBackupPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegularBackupPlanResponse DescribeRegularBackupPlan(DescribeRegularBackupPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRegularBackupPlan", DescribeRegularBackupPlanResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of rollback tasks.
+     * @param req DescribeRestoreTaskRequest
+     * @return DescribeRestoreTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRestoreTaskResponse DescribeRestoreTask(DescribeRestoreTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRestoreTask", DescribeRestoreTaskResponse.class);
     }
 
     /**
@@ -699,6 +985,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to unbind security groups from instances in batches.
+     * @param req DisassociateSecurityGroupsRequest
+     * @return DisassociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisassociateSecurityGroups", DisassociateSecurityGroupsResponse.class);
+    }
+
+    /**
      *This API is used to query the price of requested instances.
      * @param req InquiryPriceCreateDBInstancesRequest
      * @return InquiryPriceCreateDBInstancesResponse
@@ -755,6 +1052,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the name of a backup task.
+     * @param req ModifyBackupNameRequest
+     * @return ModifyBackupNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupNameResponse ModifyBackupName(ModifyBackupNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBackupName", ModifyBackupNameResponse.class);
+    }
+
+    /**
      *This API is used to modify the backup policy.
      * @param req ModifyBackupStrategyRequest
      * @return ModifyBackupStrategyResponse
@@ -763,6 +1071,28 @@ public class SqlserverClient extends AbstractClient{
     public ModifyBackupStrategyResponse ModifyBackupStrategy(ModifyBackupStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyBackupStrategy", ModifyBackupStrategyResponse.class);
+    }
+
+    /**
+     *This API is used to disable the public network for the instance.
+     * @param req ModifyCloseWanIpRequest
+     * @return ModifyCloseWanIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloseWanIpResponse ModifyCloseWanIp(ModifyCloseWanIpRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloseWanIp", ModifyCloseWanIpResponse.class);
+    }
+
+    /**
+     *This API is used to enable or disable cross-region backup policies.
+     * @param req ModifyCrossBackupStrategyRequest
+     * @return ModifyCrossBackupStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCrossBackupStrategyResponse ModifyCrossBackupStrategy(ModifyCrossBackupStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCrossBackupStrategy", ModifyCrossBackupStrategyResponse.class);
     }
 
     /**
@@ -818,6 +1148,28 @@ public class SqlserverClient extends AbstractClient{
     public ModifyDBInstanceProjectResponse ModifyDBInstanceProject(ModifyDBInstanceProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDBInstanceProject", ModifyDBInstanceProjectResponse.class);
+    }
+
+    /**
+     *This API is used to enable/disable/update SSL encryption.
+     * @param req ModifyDBInstanceSSLRequest
+     * @return ModifyDBInstanceSSLResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceSSLResponse ModifyDBInstanceSSL(ModifyDBInstanceSSLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceSSL", ModifyDBInstanceSSLResponse.class);
+    }
+
+    /**
+     *This API is used to modify security groups bound to an instance.
+     * @param req ModifyDBInstanceSecurityGroupsRequest
+     * @return ModifyDBInstanceSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceSecurityGroups", ModifyDBInstanceSecurityGroupsResponse.class);
     }
 
     /**
@@ -887,6 +1239,28 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify instance database permissions.
+     * @param req ModifyDatabasePrivilegeRequest
+     * @return ModifyDatabasePrivilegeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDatabasePrivilegeResponse ModifyDatabasePrivilege(ModifyDatabasePrivilegeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDatabasePrivilege", ModifyDatabasePrivilegeResponse.class);
+    }
+
+    /**
+     *This API is used to shrink the database mdf (Shrink mdf).
+     * @param req ModifyDatabaseShrinkMDFRequest
+     * @return ModifyDatabaseShrinkMDFResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDatabaseShrinkMDFResponse ModifyDatabaseShrinkMDF(ModifyDatabaseShrinkMDFRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDatabaseShrinkMDF", ModifyDatabaseShrinkMDFResponse.class);
+    }
+
+    /**
      *This API is used to modify an incremental backup import task.
      * @param req ModifyIncrementalMigrationRequest
      * @return ModifyIncrementalMigrationResponse
@@ -922,6 +1296,17 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     }
 
     /**
+     *This API is used to modify the maintenance window of the instance.
+     * @param req ModifyMaintenanceSpanRequest
+     * @return ModifyMaintenanceSpanResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMaintenanceSpanResponse ModifyMaintenanceSpan(ModifyMaintenanceSpanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMaintenanceSpan", ModifyMaintenanceSpanResponse.class);
+    }
+
+    /**
      *This API is used to modify an existing migration task.
      * @param req ModifyMigrationRequest
      * @return ModifyMigrationResponse
@@ -930,6 +1315,50 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public ModifyMigrationResponse ModifyMigration(ModifyMigrationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyMigration", ModifyMigrationResponse.class);
+    }
+
+    /**
+     *This API is used to enable the public network for the instance.
+     * @param req ModifyOpenWanIpRequest
+     * @return ModifyOpenWanIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOpenWanIpResponse ModifyOpenWanIp(ModifyOpenWanIpRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOpenWanIp", ModifyOpenWanIpResponse.class);
+    }
+
+    /**
+     *This API is used to modify the publish/subscribe relationship of the instance.
+     * @param req ModifyPublishSubscribeRequest
+     * @return ModifyPublishSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPublishSubscribeResponse ModifyPublishSubscribe(ModifyPublishSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPublishSubscribe", ModifyPublishSubscribeResponse.class);
+    }
+
+    /**
+     *This API is used to modify the publish/subscribe names.
+     * @param req ModifyPublishSubscribeNameRequest
+     * @return ModifyPublishSubscribeNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPublishSubscribeNameResponse ModifyPublishSubscribeName(ModifyPublishSubscribeNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPublishSubscribeName", ModifyPublishSubscribeNameResponse.class);
+    }
+
+    /**
+     *This API is used to modify read-only group details.
+     * @param req ModifyReadOnlyGroupDetailsRequest
+     * @return ModifyReadOnlyGroupDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyReadOnlyGroupDetailsResponse ModifyReadOnlyGroupDetails(ModifyReadOnlyGroupDetailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyReadOnlyGroupDetails", ModifyReadOnlyGroupDetailsResponse.class);
     }
 
     /**
@@ -952,6 +1381,39 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public RecycleDBInstanceResponse RecycleDBInstance(RecycleDBInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RecycleDBInstance", RecycleDBInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to reclaim resources of read-only groups immediately. The resources, such as VIP, occupied by the read-only group will be released immediately and cannot be recovered.
+     * @param req RecycleReadOnlyGroupRequest
+     * @return RecycleReadOnlyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecycleReadOnlyGroupResponse RecycleReadOnlyGroup(RecycleReadOnlyGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RecycleReadOnlyGroup", RecycleReadOnlyGroupResponse.class);
+    }
+
+    /**
+     *This API is used to delete backup files created by users manually. The backup policy to be deleted can be instance backup or multi-database backup.
+     * @param req RemoveBackupsRequest
+     * @return RemoveBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveBackupsResponse RemoveBackups(RemoveBackupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveBackups", RemoveBackupsResponse.class);
+    }
+
+    /**
+     *This API is used to recover the pay-as-you-go instance that is manually isolated through the API TerminateDBInstance from the recycle bin.
+     * @param req RenewPostpaidDBInstanceRequest
+     * @return RenewPostpaidDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewPostpaidDBInstanceResponse RenewPostpaidDBInstance(RenewPostpaidDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewPostpaidDBInstance", RenewPostpaidDBInstanceResponse.class);
     }
 
     /**
@@ -1040,6 +1502,17 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public StartInstanceXEventResponse StartInstanceXEvent(StartInstanceXEventRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StartInstanceXEvent", StartInstanceXEventResponse.class);
+    }
+
+    /**
+     *This API is used to manually switch between primary and secondary.
+     * @param req SwitchCloudInstanceHARequest
+     * @return SwitchCloudInstanceHAResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchCloudInstanceHAResponse SwitchCloudInstanceHA(SwitchCloudInstanceHARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SwitchCloudInstanceHA", SwitchCloudInstanceHAResponse.class);
     }
 
     /**

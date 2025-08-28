@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateAccountRequest extends AbstractModel {
 
     /**
-    * Database instance ID in the format of mssql-njj2mtpl
+    * Database instance ID in the format of mssql-njj2mtpl.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Database instance account information
+    * Database instance account information.
     */
     @SerializedName("Accounts")
     @Expose
     private AccountCreateInfo [] Accounts;
 
     /**
-     * Get Database instance ID in the format of mssql-njj2mtpl 
-     * @return InstanceId Database instance ID in the format of mssql-njj2mtpl
+     * Get Database instance ID in the format of mssql-njj2mtpl. 
+     * @return InstanceId Database instance ID in the format of mssql-njj2mtpl.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Database instance ID in the format of mssql-njj2mtpl
-     * @param InstanceId Database instance ID in the format of mssql-njj2mtpl
+     * Set Database instance ID in the format of mssql-njj2mtpl.
+     * @param InstanceId Database instance ID in the format of mssql-njj2mtpl.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Database instance account information 
-     * @return Accounts Database instance account information
+     * Get Database instance account information. 
+     * @return Accounts Database instance account information.
      */
     public AccountCreateInfo [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set Database instance account information
-     * @param Accounts Database instance account information
+     * Set Database instance account information.
+     * @param Accounts Database instance account information.
      */
     public void setAccounts(AccountCreateInfo [] Accounts) {
         this.Accounts = Accounts;

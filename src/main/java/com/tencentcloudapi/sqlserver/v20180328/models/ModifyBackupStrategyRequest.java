@@ -59,7 +59,7 @@ public class ModifyBackupStrategyRequest extends AbstractModel {
     private String BackupModel;
 
     /**
-    * The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+    * The days of the week on which backup will be performed when "BackupType" is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
     */
     @SerializedName("BackupCycle")
     @Expose
@@ -80,7 +80,7 @@ public class ModifyBackupStrategyRequest extends AbstractModel {
     private String RegularBackupEnable;
 
     /**
-    * Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+    * Archive backup retention days. Value range: 90-3650 days. Default value: 365 days.
     */
     @SerializedName("RegularBackupSaveDays")
     @Expose
@@ -188,16 +188,16 @@ public class ModifyBackupStrategyRequest extends AbstractModel {
     }
 
     /**
-     * Get The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default. 
-     * @return BackupCycle The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+     * Get The days of the week on which backup will be performed when "BackupType" is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default. 
+     * @return BackupCycle The days of the week on which backup will be performed when "BackupType" is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
      */
     public Long [] getBackupCycle() {
         return this.BackupCycle;
     }
 
     /**
-     * Set The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
-     * @param BackupCycle The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+     * Set The days of the week on which backup will be performed when "BackupType" is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+     * @param BackupCycle The days of the week on which backup will be performed when "BackupType" is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
      */
     public void setBackupCycle(Long [] BackupCycle) {
         this.BackupCycle = BackupCycle;
@@ -236,16 +236,16 @@ public class ModifyBackupStrategyRequest extends AbstractModel {
     }
 
     /**
-     * Get Archive backup retention days. Value range: 90–3650 days. Default value: 365 days. 
-     * @return RegularBackupSaveDays Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+     * Get Archive backup retention days. Value range: 90-3650 days. Default value: 365 days. 
+     * @return RegularBackupSaveDays Archive backup retention days. Value range: 90-3650 days. Default value: 365 days.
      */
     public Long getRegularBackupSaveDays() {
         return this.RegularBackupSaveDays;
     }
 
     /**
-     * Set Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
-     * @param RegularBackupSaveDays Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+     * Set Archive backup retention days. Value range: 90-3650 days. Default value: 365 days.
+     * @param RegularBackupSaveDays Archive backup retention days. Value range: 90-3650 days. Default value: 365 days.
      */
     public void setRegularBackupSaveDays(Long RegularBackupSaveDays) {
         this.RegularBackupSaveDays = RegularBackupSaveDays;

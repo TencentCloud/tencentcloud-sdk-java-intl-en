@@ -15,6 +15,9 @@ public enum SqlserverErrorCode {
      /* Database error. */
      FAILEDOPERATION_DBERROR("FailedOperation.DBError"),
      
+     /* Public network operation failed. */
+     FAILEDOPERATION_DOMAINOPERATIONFAILED("FailedOperation.DomainOperationFailed"),
+     
      /* The operation failed or the network timed out. */
      FAILEDOPERATION_GCSERROR("FailedOperation.GcsError"),
      
@@ -32,6 +35,9 @@ public enum SqlserverErrorCode {
      
      /* Billing error. Failed to query price. */
      FAILEDOPERATION_QUERYPRICEFAILED("FailedOperation.QueryPriceFailed"),
+     
+     /* Security group operation failed. */
+     FAILEDOPERATION_SECURITYGROUPOPERATIONERROR("FailedOperation.SecurityGroupOperationError"),
      
      /* Failed to operate the network or the session timed out. */
      FAILEDOPERATION_VPCERROR("FailedOperation.VPCError"),
@@ -53,6 +59,9 @@ public enum SqlserverErrorCode {
      
      /* Database error */
      INTERNALERROR_DBERROR("InternalError.DBError"),
+     
+     /* A data error occurs. */
+     INTERNALERROR_DATAERROR("InternalError.DataError"),
      
      /* GCS API error. */
      INTERNALERROR_GCSERROR("InternalError.GcsError"),
@@ -180,8 +189,14 @@ public enum SqlserverErrorCode {
      /* Incorrect database permission settings. */
      INVALIDPARAMETERVALUE_PRIVILEGEISILLEGAL("InvalidParameterValue.PrivilegeIsIllegal"),
      
+     /* The publish/subscribe name does not meet the requirements. */
+     INVALIDPARAMETERVALUE_PUBSUBNAMEISILLEGAL("InvalidParameterValue.PubSubNameIsIllegal"),
+     
      /* Read-only group name contains invalid characters. */
      INVALIDPARAMETERVALUE_ROGROUPNAMEISILLEGAL("InvalidParameterValue.RoGroupNameIsIllegal"),
+     
+     /* The read-only group status is abnormal. */
+     INVALIDPARAMETERVALUE_ROGROUPSTATUSISILLEGAL("InvalidParameterValue.RoGroupStatusIsIllegal"),
      
      /* Invalid security group ID. */
      INVALIDPARAMETERVALUE_SECURITYGROUPIDISILLEGAL("InvalidParameterValue.SecurityGroupIdIsIllegal"),

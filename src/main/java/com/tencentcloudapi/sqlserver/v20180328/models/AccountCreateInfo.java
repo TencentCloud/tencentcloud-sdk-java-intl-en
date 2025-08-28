@@ -73,11 +73,18 @@ public class AccountCreateInfo extends AbstractModel {
     private String AccountType;
 
     /**
-    * Whether CAM authentication is enabled
+    * Whether CAM authentication is enabled.
     */
     @SerializedName("IsCam")
     @Expose
     private Boolean IsCam;
+
+    /**
+    * Encryption key version number. 0: disable encryption.
+    */
+    @SerializedName("EncryptedVersion")
+    @Expose
+    private Long EncryptedVersion;
 
     /**
      * Get Instance username 
@@ -192,19 +199,35 @@ public class AccountCreateInfo extends AbstractModel {
     }
 
     /**
-     * Get Whether CAM authentication is enabled 
-     * @return IsCam Whether CAM authentication is enabled
+     * Get Whether CAM authentication is enabled. 
+     * @return IsCam Whether CAM authentication is enabled.
      */
     public Boolean getIsCam() {
         return this.IsCam;
     }
 
     /**
-     * Set Whether CAM authentication is enabled
-     * @param IsCam Whether CAM authentication is enabled
+     * Set Whether CAM authentication is enabled.
+     * @param IsCam Whether CAM authentication is enabled.
      */
     public void setIsCam(Boolean IsCam) {
         this.IsCam = IsCam;
+    }
+
+    /**
+     * Get Encryption key version number. 0: disable encryption. 
+     * @return EncryptedVersion Encryption key version number. 0: disable encryption.
+     */
+    public Long getEncryptedVersion() {
+        return this.EncryptedVersion;
+    }
+
+    /**
+     * Set Encryption key version number. 0: disable encryption.
+     * @param EncryptedVersion Encryption key version number. 0: disable encryption.
+     */
+    public void setEncryptedVersion(Long EncryptedVersion) {
+        this.EncryptedVersion = EncryptedVersion;
     }
 
     public AccountCreateInfo() {
@@ -242,6 +265,9 @@ public class AccountCreateInfo extends AbstractModel {
         if (source.IsCam != null) {
             this.IsCam = new Boolean(source.IsCam);
         }
+        if (source.EncryptedVersion != null) {
+            this.EncryptedVersion = new Long(source.EncryptedVersion);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class AccountCreateInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Authentication", this.Authentication);
         this.setParamSimple(map, prefix + "AccountType", this.AccountType);
         this.setParamSimple(map, prefix + "IsCam", this.IsCam);
+        this.setParamSimple(map, prefix + "EncryptedVersion", this.EncryptedVersion);
 
     }
 }
