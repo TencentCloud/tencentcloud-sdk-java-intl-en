@@ -94,6 +94,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to complete a migration task.
+     * @param req CompleteMigrationRequest
+     * @return CompleteMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CompleteMigrationResponse CompleteMigration(CompleteMigrationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CompleteMigration", CompleteMigrationResponse.class);
+    }
+
+    /**
      *This API is used to create an instance account.
      * @param req CreateAccountRequest
      * @return CreateAccountResponse
@@ -751,6 +762,17 @@ public class SqlserverClient extends AbstractClient{
     public DescribeMaintenanceSpanResponse DescribeMaintenanceSpan(DescribeMaintenanceSpanRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMaintenanceSpan", DescribeMaintenanceSpanResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of databases to be migrated.
+     * @param req DescribeMigrationDatabasesRequest
+     * @return DescribeMigrationDatabasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMigrationDatabasesResponse DescribeMigrationDatabases(DescribeMigrationDatabasesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMigrationDatabases", DescribeMigrationDatabasesResponse.class);
     }
 
     /**
