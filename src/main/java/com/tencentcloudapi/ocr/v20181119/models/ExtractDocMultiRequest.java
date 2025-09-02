@@ -86,6 +86,10 @@ Default true.
 -- MultiRealEstateCertificate
 -- MultiRealEstateMaterial
 -- HongKongUtilityBill
+-- OverseasCheques
+-- RegistrationCertificate
+-- GridPhoto
+-- SignaturePage
     */
     @SerializedName("ConfigId")
     @Expose
@@ -242,7 +246,11 @@ Default true.
 -- CarInsurance
 -- MultiRealEstateCertificate
 -- MultiRealEstateMaterial
--- HongKongUtilityBill 
+-- HongKongUtilityBill
+-- OverseasCheques
+-- RegistrationCertificate
+-- GridPhoto
+-- SignaturePage 
      * @return ConfigId Configuration ID support: 
 -- General
 -- InvoiceEng
@@ -261,6 +269,10 @@ Default true.
 -- MultiRealEstateCertificate
 -- MultiRealEstateMaterial
 -- HongKongUtilityBill
+-- OverseasCheques
+-- RegistrationCertificate
+-- GridPhoto
+-- SignaturePage
      */
     public String getConfigId() {
         return this.ConfigId;
@@ -285,6 +297,10 @@ Default true.
 -- MultiRealEstateCertificate
 -- MultiRealEstateMaterial
 -- HongKongUtilityBill
+-- OverseasCheques
+-- RegistrationCertificate
+-- GridPhoto
+-- SignaturePage
      * @param ConfigId Configuration ID support: 
 -- General
 -- InvoiceEng
@@ -303,6 +319,10 @@ Default true.
 -- MultiRealEstateCertificate
 -- MultiRealEstateMaterial
 -- HongKongUtilityBill
+-- OverseasCheques
+-- RegistrationCertificate
+-- GridPhoto
+-- SignaturePage
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
