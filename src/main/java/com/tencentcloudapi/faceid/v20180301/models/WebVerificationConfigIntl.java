@@ -144,6 +144,20 @@ The default value is blink. The different action types passed in this parameter 
     private Long LivenessRetryLimit;
 
     /**
+    * Specifies the liveness detection timeout period in seconds. value range: (0,600].
+    */
+    @SerializedName("LivenessTimeout")
+    @Expose
+    private Long LivenessTimeout;
+
+    /**
+    * Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+    */
+    @SerializedName("SelectedWarningCodes")
+    @Expose
+    private String SelectedWarningCodes;
+
+    /**
      * Get When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered. 
      * @return AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
      */
@@ -467,6 +481,38 @@ The default value is blink. The different action types passed in this parameter 
         this.LivenessRetryLimit = LivenessRetryLimit;
     }
 
+    /**
+     * Get Specifies the liveness detection timeout period in seconds. value range: (0,600]. 
+     * @return LivenessTimeout Specifies the liveness detection timeout period in seconds. value range: (0,600].
+     */
+    public Long getLivenessTimeout() {
+        return this.LivenessTimeout;
+    }
+
+    /**
+     * Set Specifies the liveness detection timeout period in seconds. value range: (0,600].
+     * @param LivenessTimeout Specifies the liveness detection timeout period in seconds. value range: (0,600].
+     */
+    public void setLivenessTimeout(Long LivenessTimeout) {
+        this.LivenessTimeout = LivenessTimeout;
+    }
+
+    /**
+     * Get Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. 
+     * @return SelectedWarningCodes Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+     */
+    public String getSelectedWarningCodes() {
+        return this.SelectedWarningCodes;
+    }
+
+    /**
+     * Set Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+     * @param SelectedWarningCodes Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+     */
+    public void setSelectedWarningCodes(String SelectedWarningCodes) {
+        this.SelectedWarningCodes = SelectedWarningCodes;
+    }
+
     public WebVerificationConfigIntl() {
     }
 
@@ -514,6 +560,12 @@ The default value is blink. The different action types passed in this parameter 
         if (source.LivenessRetryLimit != null) {
             this.LivenessRetryLimit = new Long(source.LivenessRetryLimit);
         }
+        if (source.LivenessTimeout != null) {
+            this.LivenessTimeout = new Long(source.LivenessTimeout);
+        }
+        if (source.SelectedWarningCodes != null) {
+            this.SelectedWarningCodes = new String(source.SelectedWarningCodes);
+        }
     }
 
 
@@ -534,6 +586,8 @@ The default value is blink. The different action types passed in this parameter 
         this.setParamSimple(map, prefix + "AutoDowngrade", this.AutoDowngrade);
         this.setParamSimple(map, prefix + "ActionList", this.ActionList);
         this.setParamSimple(map, prefix + "LivenessRetryLimit", this.LivenessRetryLimit);
+        this.setParamSimple(map, prefix + "LivenessTimeout", this.LivenessTimeout);
+        this.setParamSimple(map, prefix + "SelectedWarningCodes", this.SelectedWarningCodes);
 
     }
 }

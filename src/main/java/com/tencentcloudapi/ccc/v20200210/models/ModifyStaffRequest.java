@@ -94,6 +94,13 @@ public class ModifyStaffRequest extends AbstractModel {
     private String ExtensionNumber;
 
     /**
+    * Call forwarding configuration.
+    */
+    @SerializedName("ForwardingConfig")
+    @Expose
+    private ForwardingConfig ForwardingConfig;
+
+    /**
      * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
      * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
@@ -253,6 +260,22 @@ public class ModifyStaffRequest extends AbstractModel {
         this.ExtensionNumber = ExtensionNumber;
     }
 
+    /**
+     * Get Call forwarding configuration. 
+     * @return ForwardingConfig Call forwarding configuration.
+     */
+    public ForwardingConfig getForwardingConfig() {
+        return this.ForwardingConfig;
+    }
+
+    /**
+     * Set Call forwarding configuration.
+     * @param ForwardingConfig Call forwarding configuration.
+     */
+    public void setForwardingConfig(ForwardingConfig ForwardingConfig) {
+        this.ForwardingConfig = ForwardingConfig;
+    }
+
     public ModifyStaffRequest() {
     }
 
@@ -294,6 +317,9 @@ public class ModifyStaffRequest extends AbstractModel {
         if (source.ExtensionNumber != null) {
             this.ExtensionNumber = new String(source.ExtensionNumber);
         }
+        if (source.ForwardingConfig != null) {
+            this.ForwardingConfig = new ForwardingConfig(source.ForwardingConfig);
+        }
     }
 
 
@@ -311,6 +337,7 @@ public class ModifyStaffRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
         this.setParamSimple(map, prefix + "UseMobileAccept", this.UseMobileAccept);
         this.setParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
+        this.setParamObj(map, prefix + "ForwardingConfig.", this.ForwardingConfig);
 
     }
 }

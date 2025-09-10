@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class JobDateTime extends AbstractModel {
 
     /**
-    * Time parameters for scheduled execution
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Time parameter for scheduled execution.
     */
     @SerializedName("Timed")
     @Expose
     private TimedJob [] Timed;
 
     /**
-    * Time parameters for periodic execution
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Time parameter for periodic execution.
     */
     @SerializedName("Cron")
     @Expose
     private CronJob [] Cron;
 
     /**
-    * Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the time zone.
     */
     @SerializedName("TimeTZone")
     @Expose
     private String TimeTZone;
 
     /**
-     * Get Time parameters for scheduled execution
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Timed Time parameters for scheduled execution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Time parameter for scheduled execution. 
+     * @return Timed Time parameter for scheduled execution.
      */
     public TimedJob [] getTimed() {
         return this.Timed;
     }
 
     /**
-     * Set Time parameters for scheduled execution
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Timed Time parameters for scheduled execution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Time parameter for scheduled execution.
+     * @param Timed Time parameter for scheduled execution.
      */
     public void setTimed(TimedJob [] Timed) {
         this.Timed = Timed;
     }
 
     /**
-     * Get Time parameters for periodic execution
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Cron Time parameters for periodic execution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Time parameter for periodic execution. 
+     * @return Cron Time parameter for periodic execution.
      */
     public CronJob [] getCron() {
         return this.Cron;
     }
 
     /**
-     * Set Time parameters for periodic execution
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Cron Time parameters for periodic execution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Time parameter for periodic execution.
+     * @param Cron Time parameter for periodic execution.
      */
     public void setCron(CronJob [] Cron) {
         this.Cron = Cron;
     }
 
     /**
-     * Get Time zone
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TimeTZone Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the time zone. 
+     * @return TimeTZone Specifies the time zone.
      */
     public String getTimeTZone() {
         return this.TimeTZone;
     }
 
     /**
-     * Set Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TimeTZone Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the time zone.
+     * @param TimeTZone Specifies the time zone.
      */
     public void setTimeTZone(String TimeTZone) {
         this.TimeTZone = TimeTZone;

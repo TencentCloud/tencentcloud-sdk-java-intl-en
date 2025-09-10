@@ -48,6 +48,9 @@ public enum WafErrorCode {
      /* DBErr */
      INTERNALERROR_DBERR("InternalError.DBErr"),
      
+     /* InternalError.Unknown */
+     INTERNALERROR_UNKNOWN("InternalError.Unknown"),
+     
      /* An internal error exists. Please contact us. */
      INTERNALERROR_UNKNOWNERR("InternalError.UnknownErr"),
      
@@ -105,6 +108,9 @@ public enum WafErrorCode {
      /* Invalid parameter value. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
+     /* InvalidRequest */
+     INVALIDPARAMETERVALUE_INVALIDREQUEST("InvalidParameterValue.InvalidRequest"),
+     
      /* The quota limit is exceeded. */
      LIMITEXCEEDED("LimitExceeded"),
      
@@ -131,6 +137,9 @@ public enum WafErrorCode {
      
      /* Resources do not exist. */
      RESOURCENOTFOUND("ResourceNotFound"),
+     
+     /* ResourceNotFound.NotFound */
+     RESOURCENOTFOUND_NOTFOUND("ResourceNotFound.NotFound"),
      
      /* Resources are unavailable. */
      RESOURCEUNAVAILABLE("ResourceUnavailable"),

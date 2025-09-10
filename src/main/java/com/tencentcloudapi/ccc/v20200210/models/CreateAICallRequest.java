@@ -196,7 +196,7 @@ HoaiMy
     private Long WelcomeType;
 
     /**
-    * 0: interruptible by default, 1: high priority and not interruptible.
+    * 0: interruptible by default, 2: high priority non-interruptible.
     */
     @SerializedName("WelcomeMessagePriority")
     @Expose
@@ -396,6 +396,37 @@ dify-inputs-xxx specifies the inputs variable for dify.
     @SerializedName("Variables")
     @Expose
     private Variable [] Variables;
+
+    /**
+    * Specifies the model topP.
+    */
+    @SerializedName("TopP")
+    @Expose
+    private Float TopP;
+
+    /**
+    * The vad far-field voice suppression capacity (does not impact asr recognition performance). value range: [0, 3]. default is 0. recommended setting: 2 for better far-field voice suppression.
+    */
+    @SerializedName("VadLevel")
+    @Expose
+    private Long VadLevel;
+
+    /**
+    * Transition.
+    */
+    @SerializedName("ToneWord")
+    @Expose
+    private ToneWordInfo ToneWord;
+
+    /**
+    * Compliance prompt sound. 
+This parameter specifies whether to play morse code during call initiation (default: true), indicating the conversation content is AI-generated.
+This parameter signifies disabled when set to false. the parameter indicates you understand and agree to the following protocol:.
+Our side fully acknowledges and understands that according to the laws and regulations including the "cybersecurity law" (https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm), "provision on administration of deep synthesis of internet-based information service" (https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm), "interim measures for the management of generative artificial intelligence services" (https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm), and "measures for the identification of artificial intelligence-generated synthetic content" (https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm), explicit and implicit identification shall be added to ai-generated synthetic content. based on business needs, we request tencent cloud not to add explicit identification to generated synthetic content. we commit to lawful and compliant use of such content to avoid confusion or misunderstanding. if the ai-generated synthetic content is used to provide services to the public or spread over networks, we will proactively add explicit identification compliant with legal provisions and national standard requirements and bear the legal obligations for ai-generated synthetic content identification. if we fail to properly fulfill the identification obligations for ai-generated content, resulting in adverse consequences or penalties from the competent department, we will fully assume all related responsibilities.
+    */
+    @SerializedName("EnableComplianceAudio")
+    @Expose
+    private Boolean EnableComplianceAudio;
 
     /**
      * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
@@ -954,16 +985,16 @@ HoaiMy
     }
 
     /**
-     * Get 0: interruptible by default, 1: high priority and not interruptible. 
-     * @return WelcomeMessagePriority 0: interruptible by default, 1: high priority and not interruptible.
+     * Get 0: interruptible by default, 2: high priority non-interruptible. 
+     * @return WelcomeMessagePriority 0: interruptible by default, 2: high priority non-interruptible.
      */
     public Long getWelcomeMessagePriority() {
         return this.WelcomeMessagePriority;
     }
 
     /**
-     * Set 0: interruptible by default, 1: high priority and not interruptible.
-     * @param WelcomeMessagePriority 0: interruptible by default, 1: high priority and not interruptible.
+     * Set 0: interruptible by default, 2: high priority non-interruptible.
+     * @param WelcomeMessagePriority 0: interruptible by default, 2: high priority non-interruptible.
      */
     public void setWelcomeMessagePriority(Long WelcomeMessagePriority) {
         this.WelcomeMessagePriority = WelcomeMessagePriority;
@@ -1549,6 +1580,82 @@ dify-inputs-xxx specifies the inputs variable for dify.
         this.Variables = Variables;
     }
 
+    /**
+     * Get Specifies the model topP. 
+     * @return TopP Specifies the model topP.
+     */
+    public Float getTopP() {
+        return this.TopP;
+    }
+
+    /**
+     * Set Specifies the model topP.
+     * @param TopP Specifies the model topP.
+     */
+    public void setTopP(Float TopP) {
+        this.TopP = TopP;
+    }
+
+    /**
+     * Get The vad far-field voice suppression capacity (does not impact asr recognition performance). value range: [0, 3]. default is 0. recommended setting: 2 for better far-field voice suppression. 
+     * @return VadLevel The vad far-field voice suppression capacity (does not impact asr recognition performance). value range: [0, 3]. default is 0. recommended setting: 2 for better far-field voice suppression.
+     */
+    public Long getVadLevel() {
+        return this.VadLevel;
+    }
+
+    /**
+     * Set The vad far-field voice suppression capacity (does not impact asr recognition performance). value range: [0, 3]. default is 0. recommended setting: 2 for better far-field voice suppression.
+     * @param VadLevel The vad far-field voice suppression capacity (does not impact asr recognition performance). value range: [0, 3]. default is 0. recommended setting: 2 for better far-field voice suppression.
+     */
+    public void setVadLevel(Long VadLevel) {
+        this.VadLevel = VadLevel;
+    }
+
+    /**
+     * Get Transition. 
+     * @return ToneWord Transition.
+     */
+    public ToneWordInfo getToneWord() {
+        return this.ToneWord;
+    }
+
+    /**
+     * Set Transition.
+     * @param ToneWord Transition.
+     */
+    public void setToneWord(ToneWordInfo ToneWord) {
+        this.ToneWord = ToneWord;
+    }
+
+    /**
+     * Get Compliance prompt sound. 
+This parameter specifies whether to play morse code during call initiation (default: true), indicating the conversation content is AI-generated.
+This parameter signifies disabled when set to false. the parameter indicates you understand and agree to the following protocol:.
+Our side fully acknowledges and understands that according to the laws and regulations including the "cybersecurity law" (https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm), "provision on administration of deep synthesis of internet-based information service" (https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm), "interim measures for the management of generative artificial intelligence services" (https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm), and "measures for the identification of artificial intelligence-generated synthetic content" (https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm), explicit and implicit identification shall be added to ai-generated synthetic content. based on business needs, we request tencent cloud not to add explicit identification to generated synthetic content. we commit to lawful and compliant use of such content to avoid confusion or misunderstanding. if the ai-generated synthetic content is used to provide services to the public or spread over networks, we will proactively add explicit identification compliant with legal provisions and national standard requirements and bear the legal obligations for ai-generated synthetic content identification. if we fail to properly fulfill the identification obligations for ai-generated content, resulting in adverse consequences or penalties from the competent department, we will fully assume all related responsibilities. 
+     * @return EnableComplianceAudio Compliance prompt sound. 
+This parameter specifies whether to play morse code during call initiation (default: true), indicating the conversation content is AI-generated.
+This parameter signifies disabled when set to false. the parameter indicates you understand and agree to the following protocol:.
+Our side fully acknowledges and understands that according to the laws and regulations including the "cybersecurity law" (https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm), "provision on administration of deep synthesis of internet-based information service" (https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm), "interim measures for the management of generative artificial intelligence services" (https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm), and "measures for the identification of artificial intelligence-generated synthetic content" (https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm), explicit and implicit identification shall be added to ai-generated synthetic content. based on business needs, we request tencent cloud not to add explicit identification to generated synthetic content. we commit to lawful and compliant use of such content to avoid confusion or misunderstanding. if the ai-generated synthetic content is used to provide services to the public or spread over networks, we will proactively add explicit identification compliant with legal provisions and national standard requirements and bear the legal obligations for ai-generated synthetic content identification. if we fail to properly fulfill the identification obligations for ai-generated content, resulting in adverse consequences or penalties from the competent department, we will fully assume all related responsibilities.
+     */
+    public Boolean getEnableComplianceAudio() {
+        return this.EnableComplianceAudio;
+    }
+
+    /**
+     * Set Compliance prompt sound. 
+This parameter specifies whether to play morse code during call initiation (default: true), indicating the conversation content is AI-generated.
+This parameter signifies disabled when set to false. the parameter indicates you understand and agree to the following protocol:.
+Our side fully acknowledges and understands that according to the laws and regulations including the "cybersecurity law" (https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm), "provision on administration of deep synthesis of internet-based information service" (https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm), "interim measures for the management of generative artificial intelligence services" (https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm), and "measures for the identification of artificial intelligence-generated synthetic content" (https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm), explicit and implicit identification shall be added to ai-generated synthetic content. based on business needs, we request tencent cloud not to add explicit identification to generated synthetic content. we commit to lawful and compliant use of such content to avoid confusion or misunderstanding. if the ai-generated synthetic content is used to provide services to the public or spread over networks, we will proactively add explicit identification compliant with legal provisions and national standard requirements and bear the legal obligations for ai-generated synthetic content identification. if we fail to properly fulfill the identification obligations for ai-generated content, resulting in adverse consequences or penalties from the competent department, we will fully assume all related responsibilities.
+     * @param EnableComplianceAudio Compliance prompt sound. 
+This parameter specifies whether to play morse code during call initiation (default: true), indicating the conversation content is AI-generated.
+This parameter signifies disabled when set to false. the parameter indicates you understand and agree to the following protocol:.
+Our side fully acknowledges and understands that according to the laws and regulations including the "cybersecurity law" (https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm), "provision on administration of deep synthesis of internet-based information service" (https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm), "interim measures for the management of generative artificial intelligence services" (https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm), and "measures for the identification of artificial intelligence-generated synthetic content" (https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm), explicit and implicit identification shall be added to ai-generated synthetic content. based on business needs, we request tencent cloud not to add explicit identification to generated synthetic content. we commit to lawful and compliant use of such content to avoid confusion or misunderstanding. if the ai-generated synthetic content is used to provide services to the public or spread over networks, we will proactively add explicit identification compliant with legal provisions and national standard requirements and bear the legal obligations for ai-generated synthetic content identification. if we fail to properly fulfill the identification obligations for ai-generated content, resulting in adverse consequences or penalties from the competent department, we will fully assume all related responsibilities.
+     */
+    public void setEnableComplianceAudio(Boolean EnableComplianceAudio) {
+        this.EnableComplianceAudio = EnableComplianceAudio;
+    }
+
     public CreateAICallRequest() {
     }
 
@@ -1662,6 +1769,18 @@ dify-inputs-xxx specifies the inputs variable for dify.
                 this.Variables[i] = new Variable(source.Variables[i]);
             }
         }
+        if (source.TopP != null) {
+            this.TopP = new Float(source.TopP);
+        }
+        if (source.VadLevel != null) {
+            this.VadLevel = new Long(source.VadLevel);
+        }
+        if (source.ToneWord != null) {
+            this.ToneWord = new ToneWordInfo(source.ToneWord);
+        }
+        if (source.EnableComplianceAudio != null) {
+            this.EnableComplianceAudio = new Boolean(source.EnableComplianceAudio);
+        }
     }
 
 
@@ -1698,6 +1817,10 @@ dify-inputs-xxx specifies the inputs variable for dify.
         this.setParamArrayObj(map, prefix + "ExtractConfig.", this.ExtractConfig);
         this.setParamSimple(map, prefix + "Temperature", this.Temperature);
         this.setParamArrayObj(map, prefix + "Variables.", this.Variables);
+        this.setParamSimple(map, prefix + "TopP", this.TopP);
+        this.setParamSimple(map, prefix + "VadLevel", this.VadLevel);
+        this.setParamObj(map, prefix + "ToneWord.", this.ToneWord);
+        this.setParamSimple(map, prefix + "EnableComplianceAudio", this.EnableComplianceAudio);
 
     }
 }

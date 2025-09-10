@@ -138,6 +138,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long LastStatusTimestamp;
 
     /**
+    * Specifies the endpoint information for customer service logon.
+    */
+    @SerializedName("ClientInfo")
+    @Expose
+    private ClientInfo [] ClientInfo;
+
+    /**
      * Get Agent email. 
      * @return Email Agent email.
      */
@@ -401,6 +408,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.LastStatusTimestamp = LastStatusTimestamp;
     }
 
+    /**
+     * Get Specifies the endpoint information for customer service logon. 
+     * @return ClientInfo Specifies the endpoint information for customer service logon.
+     */
+    public ClientInfo [] getClientInfo() {
+        return this.ClientInfo;
+    }
+
+    /**
+     * Set Specifies the endpoint information for customer service logon.
+     * @param ClientInfo Specifies the endpoint information for customer service logon.
+     */
+    public void setClientInfo(ClientInfo [] ClientInfo) {
+        this.ClientInfo = ClientInfo;
+    }
+
     public StaffStatusMetrics() {
     }
 
@@ -457,6 +480,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.LastStatusTimestamp != null) {
             this.LastStatusTimestamp = new Long(source.LastStatusTimestamp);
         }
+        if (source.ClientInfo != null) {
+            this.ClientInfo = new ClientInfo[source.ClientInfo.length];
+            for (int i = 0; i < source.ClientInfo.length; i++) {
+                this.ClientInfo[i] = new ClientInfo(source.ClientInfo[i]);
+            }
+        }
     }
 
 
@@ -480,6 +509,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
         this.setParamSimple(map, prefix + "LastOnlineTimestamp", this.LastOnlineTimestamp);
         this.setParamSimple(map, prefix + "LastStatusTimestamp", this.LastStatusTimestamp);
+        this.setParamArrayObj(map, prefix + "ClientInfo.", this.ClientInfo);
 
     }
 }

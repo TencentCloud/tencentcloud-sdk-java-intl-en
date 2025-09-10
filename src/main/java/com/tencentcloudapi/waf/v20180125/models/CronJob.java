@@ -24,25 +24,21 @@ import java.util.HashMap;
 public class CronJob extends AbstractModel {
 
     /**
-    * Days in each month for execution
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Execution day of each month.
     */
     @SerializedName("Days")
     @Expose
     private Long [] Days;
 
     /**
-    * Days of each week for execution
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Execution day of each week.
     */
     @SerializedName("WDays")
     @Expose
     private Long [] WDays;
 
     /**
-    * Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Start time.
     */
     @SerializedName("StartTime")
     @Expose
@@ -50,84 +46,62 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get Days in each month for execution
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Days Days in each month for execution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Execution day of each month. 
+     * @return Days Execution day of each month.
      */
     public Long [] getDays() {
         return this.Days;
     }
 
     /**
-     * Set Days in each month for execution
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Days Days in each month for execution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Execution day of each month.
+     * @param Days Execution day of each month.
      */
     public void setDays(Long [] Days) {
         this.Days = Days;
     }
 
     /**
-     * Get Days of each week for execution
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WDays Days of each week for execution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Execution day of each week. 
+     * @return WDays Execution day of each week.
      */
     public Long [] getWDays() {
         return this.WDays;
     }
 
     /**
-     * Set Days of each week for execution
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WDays Days of each week for execution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Execution day of each week.
+     * @param WDays Execution day of each week.
      */
     public void setWDays(Long [] WDays) {
         this.WDays = WDays;
     }
 
     /**
-     * Get Start time
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Start time. 
+     * @return StartTime Start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTime Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Start time.
+     * @param StartTime Start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time
-
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get End time 
      * @return EndTime End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getEndTime() {
         return this.EndTime;
@@ -135,11 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EndTime End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

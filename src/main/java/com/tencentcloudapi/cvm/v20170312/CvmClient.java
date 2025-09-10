@@ -785,6 +785,18 @@ This API is used to query the renewal price of monthly subscription instances.
     }
 
     /**
+     *This API is used to adjust the placement group of an instance.
+* Currently only basic networks or Virtual Private Cloud (VPC) instances are supported.
+     * @param req ModifyInstancesDisasterRecoverGroupRequest
+     * @return ModifyInstancesDisasterRecoverGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstancesDisasterRecoverGroupResponse ModifyInstancesDisasterRecoverGroup(ModifyInstancesDisasterRecoverGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstancesDisasterRecoverGroup", ModifyInstancesDisasterRecoverGroupResponse.class);
+    }
+
+    /**
      *This API is used to change the project to which an instance is assigned.
 
 * Project is a virtual concept. You can create multiple projects under one account, manage different resources in each project, and assign different instances to different projects. You may use the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API to query instances and use the project ID to filter the results.

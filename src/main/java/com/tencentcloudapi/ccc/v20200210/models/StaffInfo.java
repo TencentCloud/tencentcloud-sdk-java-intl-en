@@ -59,8 +59,7 @@ public class StaffInfo extends AbstractModel {
     private String StaffNumber;
 
     /**
-    * User role id.
-When a user is bound to multiple roles, RoleIdList shall prevail.
+    * User role ID. if a user is bound to multiple roles, RoleIdList takes precedence.
     */
     @SerializedName("RoleId")
     @Expose
@@ -74,7 +73,7 @@ When a user is bound to multiple roles, RoleIdList shall prevail.
     private Long RoleIdList;
 
     /**
-    * 
+    * Specifies the user role id list.
     */
     @SerializedName("RoleList")
     @Expose
@@ -100,6 +99,13 @@ When a user is bound to multiple roles, RoleIdList shall prevail.
     @SerializedName("ExtensionNumber")
     @Expose
     private String ExtensionNumber;
+
+    /**
+    * Call forwarding configuration.
+    */
+    @SerializedName("ForwardingConfig")
+    @Expose
+    private ForwardingConfig ForwardingConfig;
 
     /**
      * Get Agent name. 
@@ -182,10 +188,8 @@ When a user is bound to multiple roles, RoleIdList shall prevail.
     }
 
     /**
-     * Get User role id.
-When a user is bound to multiple roles, RoleIdList shall prevail. 
-     * @return RoleId User role id.
-When a user is bound to multiple roles, RoleIdList shall prevail.
+     * Get User role ID. if a user is bound to multiple roles, RoleIdList takes precedence. 
+     * @return RoleId User role ID. if a user is bound to multiple roles, RoleIdList takes precedence.
      * @deprecated
      */
     @Deprecated
@@ -194,10 +198,8 @@ When a user is bound to multiple roles, RoleIdList shall prevail.
     }
 
     /**
-     * Set User role id.
-When a user is bound to multiple roles, RoleIdList shall prevail.
-     * @param RoleId User role id.
-When a user is bound to multiple roles, RoleIdList shall prevail.
+     * Set User role ID. if a user is bound to multiple roles, RoleIdList takes precedence.
+     * @param RoleId User role ID. if a user is bound to multiple roles, RoleIdList takes precedence.
      * @deprecated
      */
     @Deprecated
@@ -226,16 +228,16 @@ When a user is bound to multiple roles, RoleIdList shall prevail.
     }
 
     /**
-     * Get  
-     * @return RoleList 
+     * Get Specifies the user role id list. 
+     * @return RoleList Specifies the user role id list.
      */
     public Long [] getRoleList() {
         return this.RoleList;
     }
 
     /**
-     * Set 
-     * @param RoleList 
+     * Set Specifies the user role id list.
+     * @param RoleList Specifies the user role id list.
      */
     public void setRoleList(Long [] RoleList) {
         this.RoleList = RoleList;
@@ -289,6 +291,22 @@ When a user is bound to multiple roles, RoleIdList shall prevail.
         this.ExtensionNumber = ExtensionNumber;
     }
 
+    /**
+     * Get Call forwarding configuration. 
+     * @return ForwardingConfig Call forwarding configuration.
+     */
+    public ForwardingConfig getForwardingConfig() {
+        return this.ForwardingConfig;
+    }
+
+    /**
+     * Set Call forwarding configuration.
+     * @param ForwardingConfig Call forwarding configuration.
+     */
+    public void setForwardingConfig(ForwardingConfig ForwardingConfig) {
+        this.ForwardingConfig = ForwardingConfig;
+    }
+
     public StaffInfo() {
     }
 
@@ -336,6 +354,9 @@ When a user is bound to multiple roles, RoleIdList shall prevail.
         if (source.ExtensionNumber != null) {
             this.ExtensionNumber = new String(source.ExtensionNumber);
         }
+        if (source.ForwardingConfig != null) {
+            this.ForwardingConfig = new ForwardingConfig(source.ForwardingConfig);
+        }
     }
 
 
@@ -354,6 +375,7 @@ When a user is bound to multiple roles, RoleIdList shall prevail.
         this.setParamArrayObj(map, prefix + "SkillGroupList.", this.SkillGroupList);
         this.setParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
         this.setParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
+        this.setParamObj(map, prefix + "ForwardingConfig.", this.ForwardingConfig);
 
     }
 }

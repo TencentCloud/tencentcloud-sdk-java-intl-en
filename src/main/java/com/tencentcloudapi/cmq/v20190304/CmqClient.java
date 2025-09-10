@@ -39,105 +39,6 @@ public class CmqClient extends AbstractClient{
     }
 
     /**
-     *This API is used to clear all messages in a queue.
-     * @param req ClearQueueRequest
-     * @return ClearQueueResponse
-     * @throws TencentCloudSDKException
-     */
-    public ClearQueueResponse ClearQueue(ClearQueueRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ClearQueue", ClearQueueResponse.class);
-    }
-
-    /**
-     *This API is used to clear the message tags of a subscriber.
-     * @param req ClearSubscriptionFilterTagsRequest
-     * @return ClearSubscriptionFilterTagsResponse
-     * @throws TencentCloudSDKException
-     */
-    public ClearSubscriptionFilterTagsResponse ClearSubscriptionFilterTags(ClearSubscriptionFilterTagsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ClearSubscriptionFilterTags", ClearSubscriptionFilterTagsResponse.class);
-    }
-
-    /**
-     *This API is used to create a queue.
-     * @param req CreateQueueRequest
-     * @return CreateQueueResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateQueueResponse CreateQueue(CreateQueueRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateQueue", CreateQueueResponse.class);
-    }
-
-    /**
-     *This API is used to create a subscription.
-     * @param req CreateSubscribeRequest
-     * @return CreateSubscribeResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateSubscribeResponse CreateSubscribe(CreateSubscribeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateSubscribe", CreateSubscribeResponse.class);
-    }
-
-    /**
-     *This API is used to create a topic.
-     * @param req CreateTopicRequest
-     * @return CreateTopicResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTopicResponse CreateTopic(CreateTopicRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTopic", CreateTopicResponse.class);
-    }
-
-    /**
-     *This API is used to delete a queue.
-     * @param req DeleteQueueRequest
-     * @return DeleteQueueResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteQueueResponse DeleteQueue(DeleteQueueRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteQueue", DeleteQueueResponse.class);
-    }
-
-    /**
-     *This API is used to delete a subscription.
-     * @param req DeleteSubscribeRequest
-     * @return DeleteSubscribeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteSubscribeResponse DeleteSubscribe(DeleteSubscribeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteSubscribe", DeleteSubscribeResponse.class);
-    }
-
-    /**
-     *This API is used to delete a topic.
-     * @param req DeleteTopicRequest
-     * @return DeleteTopicResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteTopicResponse DeleteTopic(DeleteTopicRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteTopic", DeleteTopicResponse.class);
-    }
-
-    /**
-     *This API is used to enumerate the source queues of a dead letter queue.
-     * @param req DescribeDeadLetterSourceQueuesRequest
-     * @return DescribeDeadLetterSourceQueuesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDeadLetterSourceQueuesResponse DescribeDeadLetterSourceQueues(DescribeDeadLetterSourceQueuesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDeadLetterSourceQueues", DescribeDeadLetterSourceQueuesResponse.class);
-    }
-
-    /**
      *This API is used to enumerate queues.
      * @param req DescribeQueueDetailRequest
      * @return DescribeQueueDetailResponse
@@ -149,17 +50,6 @@ public class CmqClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query subscription details.
-     * @param req DescribeSubscriptionDetailRequest
-     * @return DescribeSubscriptionDetailResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSubscriptionDetailResponse DescribeSubscriptionDetail(DescribeSubscriptionDetailRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeSubscriptionDetail", DescribeSubscriptionDetailResponse.class);
-    }
-
-    /**
      *This API is used to query topic details.
      * @param req DescribeTopicDetailRequest
      * @return DescribeTopicDetailResponse
@@ -168,61 +58,6 @@ public class CmqClient extends AbstractClient{
     public DescribeTopicDetailResponse DescribeTopicDetail(DescribeTopicDetailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTopicDetail", DescribeTopicDetailResponse.class);
-    }
-
-    /**
-     *This API is used to modify queue attributes.
-     * @param req ModifyQueueAttributeRequest
-     * @return ModifyQueueAttributeResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyQueueAttributeResponse ModifyQueueAttribute(ModifyQueueAttributeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyQueueAttribute", ModifyQueueAttributeResponse.class);
-    }
-
-    /**
-     *This API is used to modify subscription attributes.
-     * @param req ModifySubscriptionAttributeRequest
-     * @return ModifySubscriptionAttributeResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifySubscriptionAttributeResponse ModifySubscriptionAttribute(ModifySubscriptionAttributeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifySubscriptionAttribute", ModifySubscriptionAttributeResponse.class);
-    }
-
-    /**
-     *This API is used to modify topic attributes.
-     * @param req ModifyTopicAttributeRequest
-     * @return ModifyTopicAttributeResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyTopicAttributeResponse ModifyTopicAttribute(ModifyTopicAttributeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyTopicAttribute", ModifyTopicAttributeResponse.class);
-    }
-
-    /**
-     *This API is used to rewind a queue.
-     * @param req RewindQueueRequest
-     * @return RewindQueueResponse
-     * @throws TencentCloudSDKException
-     */
-    public RewindQueueResponse RewindQueue(RewindQueueRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RewindQueue", RewindQueueResponse.class);
-    }
-
-    /**
-     *This API is used to unbind a dead letter queue.
-     * @param req UnbindDeadLetterRequest
-     * @return UnbindDeadLetterResponse
-     * @throws TencentCloudSDKException
-     */
-    public UnbindDeadLetterResponse UnbindDeadLetter(UnbindDeadLetterRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UnbindDeadLetter", UnbindDeadLetterResponse.class);
     }
 
 }

@@ -61,6 +61,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *This API is used to bind a number to a callback API for incoming calls.
+     * @param req BindNumberCallInInterfaceRequest
+     * @return BindNumberCallInInterfaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindNumberCallInInterfaceResponse BindNumberCallInInterface(BindNumberCallInInterfaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindNumberCallInInterface", BindNumberCallInInterfaceResponse.class);
+    }
+
+    /**
      *This API is used to bind outbound skill group of number.
      * @param req BindNumberCallOutSkillGroupRequest
      * @return BindNumberCallOutSkillGroupResponse
@@ -80,6 +91,17 @@ public class CccClient extends AbstractClient{
     public BindStaffSkillGroupListResponse BindStaffSkillGroupList(BindStaffSkillGroupListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "BindStaffSkillGroupList", BindStaffSkillGroupListResponse.class);
+    }
+
+    /**
+     *This API is used to provide server-side robot control feature.
+     * @param req ControlAIConversationRequest
+     * @return ControlAIConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ControlAIConversationResponse ControlAIConversation(ControlAIConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ControlAIConversation", ControlAIConversationResponse.class);
     }
 
     /**
@@ -231,6 +253,17 @@ This API is used to make calls. Currently, the agent side can only call the user
     public CreateStaffResponse CreateStaff(CreateStaffRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateStaff", CreateStaffResponse.class);
+    }
+
+    /**
+     *This API is used to create a user data signature.
+     * @param req CreateUserSigRequest
+     * @return CreateUserSigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserSigResponse CreateUserSig(CreateUserSigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUserSig", CreateUserSigResponse.class);
     }
 
     /**
@@ -454,6 +487,17 @@ This API is used to make calls. Currently, the agent side can only call the user
     }
 
     /**
+     *This API is used to query call detail.
+     * @param req DescribeSessionDetailRequest
+     * @return DescribeSessionDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSessionDetailResponse DescribeSessionDetail(DescribeSessionDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSessionDetail", DescribeSessionDetailResponse.class);
+    }
+
+    /**
      *This API is used to access the skill group information list.
      * @param req DescribeSkillGroupInfoListRequest
      * @return DescribeSkillGroupInfoListResponse
@@ -473,6 +517,17 @@ This API is used to make calls. Currently, the agent side can only call the user
     public DescribeStaffInfoListResponse DescribeStaffInfoList(DescribeStaffInfoListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeStaffInfoList", DescribeStaffInfoListResponse.class);
+    }
+
+    /**
+     *This API is used to query agent status history.
+     * @param req DescribeStaffStatusHistoryRequest
+     * @return DescribeStaffStatusHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStaffStatusHistoryResponse DescribeStaffStatusHistory(DescribeStaffStatusHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStaffStatusHistory", DescribeStaffStatusHistoryResponse.class);
     }
 
     /**

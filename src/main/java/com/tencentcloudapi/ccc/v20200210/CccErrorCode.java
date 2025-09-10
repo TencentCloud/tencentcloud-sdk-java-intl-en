@@ -30,6 +30,9 @@ public enum CccErrorCode {
      /* Calls are not allowed at this time. */
      FAILEDOPERATION_CALLOUTRULENOTWORKTIME("FailedOperation.CalloutRuleNotWorkTime"),
      
+     /* Control ai conversation error information. */
+     FAILEDOPERATION_CONTROLAICONVERSATION("FailedOperation.ControlAIConversation"),
+     
      /* The current number status cannot be modified. */
      FAILEDOPERATION_CURSTATENOTALLOWMODIFY("FailedOperation.CurStateNotAllowModify"),
      
@@ -47,6 +50,9 @@ public enum CccErrorCode {
      
      /* Session does not exist. */
      FAILEDOPERATION_SESSIONNOTEXISTS("FailedOperation.SessionNotExists"),
+     
+     /* Session not in control status. */
+     FAILEDOPERATION_SESSIONNOTINCONTROLSTATE("FailedOperation.SessionNotInControlState"),
      
      /* Number of uploaded files exceeds the limit. */
      FAILEDOPERATION_UPLOADFILEOVERFLOW("FailedOperation.UploadFileOverflow"),

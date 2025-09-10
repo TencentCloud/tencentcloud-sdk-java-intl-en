@@ -21,67 +21,70 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TimedJob extends AbstractModel {
+public class DeleteOwaspWhiteRuleRequest extends AbstractModel {
 
     /**
-    * Start timestamp, in seconds.
+    * ID list of allowlisted rules.
     */
-    @SerializedName("StartDateTime")
+    @SerializedName("Ids")
     @Expose
-    private Long StartDateTime;
+    private Long [] Ids;
 
     /**
-    * End timestamp, in seconds.
+    * Domain name
     */
-    @SerializedName("EndDateTime")
+    @SerializedName("Domain")
     @Expose
-    private Long EndDateTime;
+    private String Domain;
 
     /**
-     * Get Start timestamp, in seconds. 
-     * @return StartDateTime Start timestamp, in seconds.
+     * Get ID list of allowlisted rules. 
+     * @return Ids ID list of allowlisted rules.
      */
-    public Long getStartDateTime() {
-        return this.StartDateTime;
+    public Long [] getIds() {
+        return this.Ids;
     }
 
     /**
-     * Set Start timestamp, in seconds.
-     * @param StartDateTime Start timestamp, in seconds.
+     * Set ID list of allowlisted rules.
+     * @param Ids ID list of allowlisted rules.
      */
-    public void setStartDateTime(Long StartDateTime) {
-        this.StartDateTime = StartDateTime;
+    public void setIds(Long [] Ids) {
+        this.Ids = Ids;
     }
 
     /**
-     * Get End timestamp, in seconds. 
-     * @return EndDateTime End timestamp, in seconds.
+     * Get Domain name 
+     * @return Domain Domain name
      */
-    public Long getEndDateTime() {
-        return this.EndDateTime;
+    public String getDomain() {
+        return this.Domain;
     }
 
     /**
-     * Set End timestamp, in seconds.
-     * @param EndDateTime End timestamp, in seconds.
+     * Set Domain name
+     * @param Domain Domain name
      */
-    public void setEndDateTime(Long EndDateTime) {
-        this.EndDateTime = EndDateTime;
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
     }
 
-    public TimedJob() {
+    public DeleteOwaspWhiteRuleRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TimedJob(TimedJob source) {
-        if (source.StartDateTime != null) {
-            this.StartDateTime = new Long(source.StartDateTime);
+    public DeleteOwaspWhiteRuleRequest(DeleteOwaspWhiteRuleRequest source) {
+        if (source.Ids != null) {
+            this.Ids = new Long[source.Ids.length];
+            for (int i = 0; i < source.Ids.length; i++) {
+                this.Ids[i] = new Long(source.Ids[i]);
+            }
         }
-        if (source.EndDateTime != null) {
-            this.EndDateTime = new Long(source.EndDateTime);
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
         }
     }
 
@@ -90,8 +93,8 @@ public class TimedJob extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "StartDateTime", this.StartDateTime);
-        this.setParamSimple(map, prefix + "EndDateTime", this.EndDateTime);
+        this.setParamArraySimple(map, prefix + "Ids.", this.Ids);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

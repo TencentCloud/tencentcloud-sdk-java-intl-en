@@ -52,6 +52,13 @@ public class AILatencyDetail extends AbstractModel {
     private Long LLMLatency;
 
     /**
+    * llm first token latency (ms).
+    */
+    @SerializedName("LLMFirstTokenLatency")
+    @Expose
+    private Long LLMFirstTokenLatency;
+
+    /**
     * End-To-End delay (ms).
     */
     @SerializedName("ETELatency")
@@ -123,6 +130,22 @@ public class AILatencyDetail extends AbstractModel {
     }
 
     /**
+     * Get llm first token latency (ms). 
+     * @return LLMFirstTokenLatency llm first token latency (ms).
+     */
+    public Long getLLMFirstTokenLatency() {
+        return this.LLMFirstTokenLatency;
+    }
+
+    /**
+     * Set llm first token latency (ms).
+     * @param LLMFirstTokenLatency llm first token latency (ms).
+     */
+    public void setLLMFirstTokenLatency(Long LLMFirstTokenLatency) {
+        this.LLMFirstTokenLatency = LLMFirstTokenLatency;
+    }
+
+    /**
      * Get End-To-End delay (ms). 
      * @return ETELatency End-To-End delay (ms).
      */
@@ -158,6 +181,9 @@ public class AILatencyDetail extends AbstractModel {
         if (source.LLMLatency != null) {
             this.LLMLatency = new Long(source.LLMLatency);
         }
+        if (source.LLMFirstTokenLatency != null) {
+            this.LLMFirstTokenLatency = new Long(source.LLMFirstTokenLatency);
+        }
         if (source.ETELatency != null) {
             this.ETELatency = new Long(source.ETELatency);
         }
@@ -172,6 +198,7 @@ public class AILatencyDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ASRLatency", this.ASRLatency);
         this.setParamSimple(map, prefix + "TTSLatency", this.TTSLatency);
         this.setParamSimple(map, prefix + "LLMLatency", this.LLMLatency);
+        this.setParamSimple(map, prefix + "LLMFirstTokenLatency", this.LLMFirstTokenLatency);
         this.setParamSimple(map, prefix + "ETELatency", this.ETELatency);
 
     }

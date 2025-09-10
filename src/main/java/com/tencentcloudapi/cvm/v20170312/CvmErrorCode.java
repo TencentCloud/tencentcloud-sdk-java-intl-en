@@ -15,6 +15,9 @@ public enum CvmErrorCode {
      /* You cannot share images with yourself. */
      FAILEDOPERATION_ACCOUNTISYOURSELF("FailedOperation.AccountIsYourSelf"),
      
+     /* The instance `ins-xxxxxxx` is already in the instance placement group `dgroup-xxxxxx`. */
+     FAILEDOPERATION_ALREADYINDISASTERRECOVERGROUP("FailedOperation.AlreadyInDisasterRecoverGroup"),
+     
      /* BYOL images cannot be shared. */
      FAILEDOPERATION_BYOLIMAGESHAREFAILED("FailedOperation.BYOLImageShareFailed"),
      
@@ -854,6 +857,9 @@ public enum CvmErrorCode {
      
      /* The specified instance or network cannot use the bandwidth package. */
      UNSUPPORTEDOPERATION_BANDWIDTHPACKAGEIDNOTSUPPORTED("UnsupportedOperation.BandwidthPackageIdNotSupported"),
+     
+     /* The far end ssd disk does not support this operation. */
+     UNSUPPORTEDOPERATION_CBSREMOTESSDNOTSUPPORT("UnsupportedOperation.CbsRemoteSsdNotSupport"),
      
      /* Only one snapshot can be created in 24 hours.  */
      UNSUPPORTEDOPERATION_DISKSNAPCREATETIMETOOOLD("UnsupportedOperation.DiskSnapCreateTimeTooOld"),

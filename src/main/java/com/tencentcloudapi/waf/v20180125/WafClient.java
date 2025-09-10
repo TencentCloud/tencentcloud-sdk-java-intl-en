@@ -127,6 +127,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add a rule engine allowlist.
+     * @param req CreateOwaspWhiteRuleRequest
+     * @return CreateOwaspWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOwaspWhiteRuleResponse CreateOwaspWhiteRule(CreateOwaspWhiteRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOwaspWhiteRule", CreateOwaspWhiteRuleResponse.class);
+    }
+
+    /**
      *Delete tamper-proof URL
      * @param req DeleteAntiFakeUrlRequest
      * @return DeleteAntiFakeUrlResponse
@@ -201,6 +212,28 @@ public class WafClient extends AbstractClient{
     public DeleteIpAccessControlV2Response DeleteIpAccessControlV2(DeleteIpAccessControlV2Request req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteIpAccessControlV2", DeleteIpAccessControlV2Response.class);
+    }
+
+    /**
+     *This API is used to unlock the Door God rule status.
+     * @param req DeleteOwaspRuleStatusRequest
+     * @return DeleteOwaspRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOwaspRuleStatusResponse DeleteOwaspRuleStatus(DeleteOwaspRuleStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOwaspRuleStatus", DeleteOwaspRuleStatusResponse.class);
+    }
+
+    /**
+     *This API is used to delete a user rule engine allowlist.
+     * @param req DeleteOwaspWhiteRuleRequest
+     * @return DeleteOwaspWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOwaspWhiteRuleResponse DeleteOwaspWhiteRule(DeleteOwaspWhiteRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOwaspWhiteRule", DeleteOwaspWhiteRuleResponse.class);
     }
 
     /**
@@ -498,6 +531,39 @@ public class WafClient extends AbstractClient{
     public DescribeObjectsResponse DescribeObjects(DescribeObjectsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeObjects", DescribeObjectsResponse.class);
+    }
+
+    /**
+     *This API is used to query the rule types of the rule engine.
+     * @param req DescribeOwaspRuleTypesRequest
+     * @return DescribeOwaspRuleTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOwaspRuleTypesResponse DescribeOwaspRuleTypes(DescribeOwaspRuleTypesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOwaspRuleTypes", DescribeOwaspRuleTypesResponse.class);
+    }
+
+    /**
+     *This API is used to query the rule list of the rule engine.
+     * @param req DescribeOwaspRulesRequest
+     * @return DescribeOwaspRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOwaspRulesResponse DescribeOwaspRules(DescribeOwaspRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOwaspRules", DescribeOwaspRulesResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the allowlist for the rule engine.
+     * @param req DescribeOwaspWhiteRulesRequest
+     * @return DescribeOwaspWhiteRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOwaspWhiteRulesResponse DescribeOwaspWhiteRules(DescribeOwaspWhiteRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOwaspWhiteRules", DescribeOwaspWhiteRulesResponse.class);
     }
 
     /**
@@ -972,6 +1038,61 @@ Batch operation is supported.
     public ModifyObjectResponse ModifyObject(ModifyObjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyObject", ModifyObjectResponse.class);
+    }
+
+    /**
+     *This API is used to refresh the rule switch.
+     * @param req ModifyOwaspRuleStatusRequest
+     * @return ModifyOwaspRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOwaspRuleStatusResponse ModifyOwaspRuleStatus(ModifyOwaspRuleStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOwaspRuleStatus", ModifyOwaspRuleStatusResponse.class);
+    }
+
+    /**
+     *This API is used to update the protection mode of the rule type.
+     * @param req ModifyOwaspRuleTypeActionRequest
+     * @return ModifyOwaspRuleTypeActionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOwaspRuleTypeActionResponse ModifyOwaspRuleTypeAction(ModifyOwaspRuleTypeActionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOwaspRuleTypeAction", ModifyOwaspRuleTypeActionResponse.class);
+    }
+
+    /**
+     *This API is used to update the protection level of a rule type.
+     * @param req ModifyOwaspRuleTypeLevelRequest
+     * @return ModifyOwaspRuleTypeLevelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOwaspRuleTypeLevelResponse ModifyOwaspRuleTypeLevel(ModifyOwaspRuleTypeLevelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOwaspRuleTypeLevel", ModifyOwaspRuleTypeLevelResponse.class);
+    }
+
+    /**
+     *This API is used to update the rule type switch.
+     * @param req ModifyOwaspRuleTypeStatusRequest
+     * @return ModifyOwaspRuleTypeStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOwaspRuleTypeStatusResponse ModifyOwaspRuleTypeStatus(ModifyOwaspRuleTypeStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOwaspRuleTypeStatus", ModifyOwaspRuleTypeStatusResponse.class);
+    }
+
+    /**
+     *This API is used to edit the allowlist for the rule engine.
+     * @param req ModifyOwaspWhiteRuleRequest
+     * @return ModifyOwaspWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOwaspWhiteRuleResponse ModifyOwaspWhiteRule(ModifyOwaspWhiteRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOwaspWhiteRule", ModifyOwaspWhiteRuleResponse.class);
     }
 
     /**
