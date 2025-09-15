@@ -31,7 +31,11 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Parameter for record filtration. Valid values: "StartTime", "EndTime" and "StrategyName". StartTime and EndTime support the time format of 2006-01-02 15:04:05 or 2006/01/02 15:04:05.
+    * Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
+Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
+ScaleAction: 1 (scale out), 2 (scale in).
+
     */
     @SerializedName("Filters")
     @Expose
@@ -52,6 +56,20 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * Whether it is automatic scaling (0) or managed scaling (1)
+    */
+    @SerializedName("RecordSource")
+    @Expose
+    private Long RecordSource;
+
+    /**
+    * Ascending or not. 1: ascending, 0: descending.
+    */
+    @SerializedName("Asc")
+    @Expose
+    private Long Asc;
+
+    /**
      * Get The instance ID. 
      * @return InstanceId The instance ID.
      */
@@ -68,16 +86,32 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
     }
 
     /**
-     * Get Parameter for record filtration. Valid values: "StartTime", "EndTime" and "StrategyName". StartTime and EndTime support the time format of 2006-01-02 15:04:05 or 2006/01/02 15:04:05. 
-     * @return Filters Parameter for record filtration. Valid values: "StartTime", "EndTime" and "StrategyName". StartTime and EndTime support the time format of 2006-01-02 15:04:05 or 2006/01/02 15:04:05.
+     * Get Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
+Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
+ScaleAction: 1 (scale out), 2 (scale in).
+ 
+     * @return Filters Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
+Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
+ScaleAction: 1 (scale out), 2 (scale in).
+
      */
     public KeyValue [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Parameter for record filtration. Valid values: "StartTime", "EndTime" and "StrategyName". StartTime and EndTime support the time format of 2006-01-02 15:04:05 or 2006/01/02 15:04:05.
-     * @param Filters Parameter for record filtration. Valid values: "StartTime", "EndTime" and "StrategyName". StartTime and EndTime support the time format of 2006-01-02 15:04:05 or 2006/01/02 15:04:05.
+     * Set Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
+Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
+ScaleAction: 1 (scale out), 2 (scale in).
+
+     * @param Filters Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
+Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
+ScaleAction: 1 (scale out), 2 (scale in).
+
      */
     public void setFilters(KeyValue [] Filters) {
         this.Filters = Filters;
@@ -115,6 +149,38 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get Whether it is automatic scaling (0) or managed scaling (1) 
+     * @return RecordSource Whether it is automatic scaling (0) or managed scaling (1)
+     */
+    public Long getRecordSource() {
+        return this.RecordSource;
+    }
+
+    /**
+     * Set Whether it is automatic scaling (0) or managed scaling (1)
+     * @param RecordSource Whether it is automatic scaling (0) or managed scaling (1)
+     */
+    public void setRecordSource(Long RecordSource) {
+        this.RecordSource = RecordSource;
+    }
+
+    /**
+     * Get Ascending or not. 1: ascending, 0: descending. 
+     * @return Asc Ascending or not. 1: ascending, 0: descending.
+     */
+    public Long getAsc() {
+        return this.Asc;
+    }
+
+    /**
+     * Set Ascending or not. 1: ascending, 0: descending.
+     * @param Asc Ascending or not. 1: ascending, 0: descending.
+     */
+    public void setAsc(Long Asc) {
+        this.Asc = Asc;
+    }
+
     public DescribeAutoScaleRecordsRequest() {
     }
 
@@ -138,6 +204,12 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.RecordSource != null) {
+            this.RecordSource = new Long(source.RecordSource);
+        }
+        if (source.Asc != null) {
+            this.Asc = new Long(source.Asc);
+        }
     }
 
 
@@ -149,6 +221,8 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "RecordSource", this.RecordSource);
+        this.setParamSimple(map, prefix + "Asc", this.Asc);
 
     }
 }

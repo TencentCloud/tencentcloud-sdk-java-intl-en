@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MutualTLS extends AbstractModel {
 
     /**
-    * 
+    * Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
     */
     @SerializedName("Switch")
     @Expose
@@ -39,16 +39,16 @@ Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you 
     private CertificateInfo [] CertInfos;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li> 
+     * @return Switch Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
+     * @param Switch Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

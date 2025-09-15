@@ -39,6 +39,28 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add scaling rules by load and time.
+     * @param req AddMetricScaleStrategyRequest
+     * @return AddMetricScaleStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddMetricScaleStrategyResponse AddMetricScaleStrategy(AddMetricScaleStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddMetricScaleStrategy", AddMetricScaleStrategyResponse.class);
+    }
+
+    /**
+     *This API is used to add node specifications of the current cluster.
+     * @param req AddNodeResourceConfigRequest
+     * @return AddNodeResourceConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddNodeResourceConfigResponse AddNodeResourceConfig(AddNodeResourceConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddNodeResourceConfig", AddNodeResourceConfigResponse.class);
+    }
+
+    /**
      *This API is available for clusters with OpenLDAP components configured.
 This API is used to add user lists (user management).
      * @param req AddUsersForUserManagerRequest
@@ -51,6 +73,28 @@ This API is used to add user lists (user management).
     }
 
     /**
+     *This API is used to mount cloud disks.
+     * @param req AttachDisksRequest
+     * @return AttachDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachDisksResponse AttachDisks(AttachDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AttachDisks", AttachDisksResponse.class);
+    }
+
+    /**
+     *This API is used to convert a monthly subscription cluster to a pay-as-you-go cluster (excluding cdb).
+     * @param req ConvertPreToPostClusterRequest
+     * @return ConvertPreToPostClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ConvertPreToPostClusterResponse ConvertPreToPostCluster(ConvertPreToPostClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ConvertPreToPostCluster", ConvertPreToPostClusterResponse.class);
+    }
+
+    /**
      *This API is used to create an EMR cluster instance.
      * @param req CreateClusterRequest
      * @return CreateClusterResponse
@@ -59,6 +103,17 @@ This API is used to add user lists (user management).
     public CreateClusterResponse CreateCluster(CreateClusterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateCluster", CreateClusterResponse.class);
+    }
+
+    /**
+     *This API is used to create user groups in batches under User Management.
+     * @param req CreateGroupsSTDRequest
+     * @return CreateGroupsSTDResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGroupsSTDResponse CreateGroupsSTD(CreateGroupsSTDRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGroupsSTD", CreateGroupsSTDResponse.class);
     }
 
     /**
@@ -84,6 +139,61 @@ This API is used to add user lists (user management).
     }
 
     /**
+     *This API is used to delete automatic scaling rules. Nodes scaled based on these rules are destroyed in the background.
+     * @param req DeleteAutoScaleStrategyRequest
+     * @return DeleteAutoScaleStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAutoScaleStrategyResponse DeleteAutoScaleStrategy(DeleteAutoScaleStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAutoScaleStrategy", DeleteAutoScaleStrategyResponse.class);
+    }
+
+    /**
+     *This API is used to delete user groups in batches.
+     * @param req DeleteGroupsSTDRequest
+     * @return DeleteGroupsSTDResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGroupsSTDResponse DeleteGroupsSTD(DeleteGroupsSTDRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGroupsSTD", DeleteGroupsSTDResponse.class);
+    }
+
+    /**
+     *This API is used to delete the node specifications of the current cluster.
+     * @param req DeleteNodeResourceConfigRequest
+     * @return DeleteNodeResourceConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNodeResourceConfigResponse DeleteNodeResourceConfig(DeleteNodeResourceConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteNodeResourceConfig", DeleteNodeResourceConfigResponse.class);
+    }
+
+    /**
+     *This API is used to bring the configuration into effect in YARN resource scheduling after deployment.
+     * @param req DeployYarnConfRequest
+     * @return DeployYarnConfResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeployYarnConfResponse DeployYarnConf(DeployYarnConfRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeployYarnConf", DeployYarnConfResponse.class);
+    }
+
+    /**
+     *This API is used to access the global configuration of automatic scaling.
+     * @param req DescribeAutoScaleGroupGlobalConfRequest
+     * @return DescribeAutoScaleGroupGlobalConfResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoScaleGroupGlobalConfResponse DescribeAutoScaleGroupGlobalConf(DescribeAutoScaleGroupGlobalConfRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAutoScaleGroupGlobalConf", DescribeAutoScaleGroupGlobalConfResponse.class);
+    }
+
+    /**
      *This API is used to inquiry detailed records of cluster autoscaling.
      * @param req DescribeAutoScaleRecordsRequest
      * @return DescribeAutoScaleRecordsResponse
@@ -92,6 +202,28 @@ This API is used to add user lists (user management).
     public DescribeAutoScaleRecordsResponse DescribeAutoScaleRecords(DescribeAutoScaleRecordsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAutoScaleRecords", DescribeAutoScaleRecordsResponse.class);
+    }
+
+    /**
+     *This API is used to access automatic scaling rules.
+     * @param req DescribeAutoScaleStrategiesRequest
+     * @return DescribeAutoScaleStrategiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoScaleStrategiesResponse DescribeAutoScaleStrategies(DescribeAutoScaleStrategiesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAutoScaleStrategies", DescribeAutoScaleStrategiesResponse.class);
+    }
+
+    /**
+     *This API is used to query the EMR task running details status.
+     * @param req DescribeClusterFlowStatusDetailRequest
+     * @return DescribeClusterFlowStatusDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterFlowStatusDetailResponse DescribeClusterFlowStatusDetail(DescribeClusterFlowStatusDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterFlowStatusDetail", DescribeClusterFlowStatusDetailResponse.class);
     }
 
     /**
@@ -106,7 +238,18 @@ This API is used to add user lists (user management).
     }
 
     /**
-     * This API is used to query the Yarn application statistics.
+     *This API is used to query DAG information.
+     * @param req DescribeDAGInfoRequest
+     * @return DescribeDAGInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDAGInfoResponse DescribeDAGInfo(DescribeDAGInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDAGInfo", DescribeDAGInfoResponse.class);
+    }
+
+    /**
+     *This API is used to query the YARN application statistics API.
      * @param req DescribeEmrApplicationStaticsRequest
      * @return DescribeEmrApplicationStaticsResponse
      * @throws TencentCloudSDKException
@@ -114,6 +257,61 @@ This API is used to add user lists (user management).
     public DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(DescribeEmrApplicationStaticsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeEmrApplicationStatics", DescribeEmrApplicationStaticsResponse.class);
+    }
+
+    /**
+     *This API is used to query the metric data on the monitoring overview page.
+     * @param req DescribeEmrOverviewMetricsRequest
+     * @return DescribeEmrOverviewMetricsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEmrOverviewMetricsResponse DescribeEmrOverviewMetrics(DescribeEmrOverviewMetricsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEmrOverviewMetrics", DescribeEmrOverviewMetricsResponse.class);
+    }
+
+    /**
+     *This API is used to query the global configurations of YARN Resource Scheduling.
+     * @param req DescribeGlobalConfigRequest
+     * @return DescribeGlobalConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGlobalConfigResponse DescribeGlobalConfig(DescribeGlobalConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGlobalConfig", DescribeGlobalConfigResponse.class);
+    }
+
+    /**
+     *This API is used to query a user group.
+     * @param req DescribeGroupsSTDRequest
+     * @return DescribeGroupsSTDResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupsSTDResponse DescribeGroupsSTD(DescribeGroupsSTDRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGroupsSTD", DescribeGroupsSTDResponse.class);
+    }
+
+    /**
+     *This API is used to access the overview of HBase table-level monitoring data.
+     * @param req DescribeHBaseTableOverviewRequest
+     * @return DescribeHBaseTableOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHBaseTableOverviewResponse DescribeHBaseTableOverview(DescribeHBaseTableOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHBaseTableOverview", DescribeHBaseTableOverviewResponse.class);
+    }
+
+    /**
+     *This API is used to query information of file(s) stored in HDFS.
+     * @param req DescribeHDFSStorageInfoRequest
+     * @return DescribeHDFSStorageInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHDFSStorageInfoResponse DescribeHDFSStorageInfo(DescribeHDFSStorageInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHDFSStorageInfo", DescribeHDFSStorageInfoResponse.class);
     }
 
     /**
@@ -125,6 +323,28 @@ This API is used to add user lists (user management).
     public DescribeHiveQueriesResponse DescribeHiveQueries(DescribeHiveQueriesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeHiveQueries", DescribeHiveQueriesResponse.class);
+    }
+
+    /**
+     *This API is used to obtain insight result information.
+     * @param req DescribeInsightListRequest
+     * @return DescribeInsightListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInsightListResponse DescribeInsightList(DescribeInsightListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInsightList", DescribeInsightListResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the inspection task result list.
+     * @param req DescribeInspectionTaskResultRequest
+     * @return DescribeInspectionTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInspectionTaskResultResponse DescribeInspectionTaskResult(DescribeInspectionTaskResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInspectionTaskResult", DescribeInspectionTaskResultResponse.class);
     }
 
     /**
@@ -150,7 +370,51 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query the data of YARN Resource Scheduling.
+     *This API is used to query Kyuubi query information.
+     * @param req DescribeKyuubiQueryInfoRequest
+     * @return DescribeKyuubiQueryInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKyuubiQueryInfoResponse DescribeKyuubiQueryInfo(DescribeKyuubiQueryInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKyuubiQueryInfo", DescribeKyuubiQueryInfoResponse.class);
+    }
+
+    /**
+     *This API is used to query data disk information of nodes.
+     * @param req DescribeNodeDataDisksRequest
+     * @return DescribeNodeDataDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNodeDataDisksResponse DescribeNodeDataDisks(DescribeNodeDataDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNodeDataDisks", DescribeNodeDataDisksResponse.class);
+    }
+
+    /**
+     *This API is used to quickly obtain node specifications of the current cluster.
+     * @param req DescribeNodeResourceConfigFastRequest
+     * @return DescribeNodeResourceConfigFastResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNodeResourceConfigFastResponse DescribeNodeResourceConfigFast(DescribeNodeResourceConfigFastRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNodeResourceConfigFast", DescribeNodeResourceConfigFastResponse.class);
+    }
+
+    /**
+     *This API is used to query node specifications.
+     * @param req DescribeNodeSpecRequest
+     * @return DescribeNodeSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNodeSpecResponse DescribeNodeSpec(DescribeNodeSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNodeSpec", DescribeNodeSpecResponse.class);
+    }
+
+    /**
+     *This API is used to query YARN resource scheduling information. It has been deprecated. You can use the DescribeYarnQueue API to query queue information.
      * @param req DescribeResourceScheduleRequest
      * @return DescribeResourceScheduleResponse
      * @throws TencentCloudSDKException
@@ -158,6 +422,17 @@ This API is used to add user lists (user management).
     public DescribeResourceScheduleResponse DescribeResourceSchedule(DescribeResourceScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeResourceSchedule", DescribeResourceScheduleResponse.class);
+    }
+
+    /**
+     *This API is used to query change details in YARN resource scheduling.
+     * @param req DescribeResourceScheduleDiffDetailRequest
+     * @return DescribeResourceScheduleDiffDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceScheduleDiffDetailResponse DescribeResourceScheduleDiffDetail(DescribeResourceScheduleDiffDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceScheduleDiffDetail", DescribeResourceScheduleDiffDetailResponse.class);
     }
 
     /**
@@ -183,6 +458,72 @@ This API is used to add user lists (user management).
     }
 
     /**
+     *This API is used to describe service configuration group information.
+     * @param req DescribeServiceConfGroupInfosRequest
+     * @return DescribeServiceConfGroupInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServiceConfGroupInfosResponse DescribeServiceConfGroupInfos(DescribeServiceConfGroupInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServiceConfGroupInfos", DescribeServiceConfGroupInfosResponse.class);
+    }
+
+    /**
+     *This API is used to query service process information.
+     * @param req DescribeServiceNodeInfosRequest
+     * @return DescribeServiceNodeInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServiceNodeInfosResponse DescribeServiceNodeInfos(DescribeServiceNodeInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServiceNodeInfos", DescribeServiceNodeInfosResponse.class);
+    }
+
+    /**
+     *This API is used to obtain a Spark application list.
+     * @param req DescribeSparkApplicationsRequest
+     * @return DescribeSparkApplicationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSparkApplicationsResponse DescribeSparkApplications(DescribeSparkApplicationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSparkApplications", DescribeSparkApplicationsResponse.class);
+    }
+
+    /**
+     *This API is used to query the Spark query information list.
+     * @param req DescribeSparkQueriesRequest
+     * @return DescribeSparkQueriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSparkQueriesResponse DescribeSparkQueries(DescribeSparkQueriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSparkQueries", DescribeSparkQueriesResponse.class);
+    }
+
+    /**
+     *This API is used to query StarRocks information.
+     * @param req DescribeStarRocksQueryInfoRequest
+     * @return DescribeStarRocksQueryInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStarRocksQueryInfoResponse DescribeStarRocksQueryInfo(DescribeStarRocksQueryInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStarRocksQueryInfo", DescribeStarRocksQueryInfoResponse.class);
+    }
+
+    /**
+     *This API is used to query Trino(PrestoSQL) query information.
+     * @param req DescribeTrinoQueryInfoRequest
+     * @return DescribeTrinoQueryInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrinoQueryInfoResponse DescribeTrinoQueryInfo(DescribeTrinoQueryInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTrinoQueryInfo", DescribeTrinoQueryInfoResponse.class);
+    }
+
+    /**
      *This API is available for clusters with OpenLDAP components configured.
 This API is used to export users in batches. For a Kerberos cluster, set `NeedKeytabInfo` to `true` to obtain the download link of the Keytab file. If `SupportDownLoadKeyTab` is `true`, but `DownLoadKeyTabUrl` is null, the Keytab file is not ready yet (being generated) in the backend.
      * @param req DescribeUsersForUserManagerRequest
@@ -192,6 +533,28 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public DescribeUsersForUserManagerResponse DescribeUsersForUserManager(DescribeUsersForUserManagerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeUsersForUserManager", DescribeUsersForUserManagerResponse.class);
+    }
+
+    /**
+     *This API is used to obtain queue information in resource scheduling.
+     * @param req DescribeYarnQueueRequest
+     * @return DescribeYarnQueueResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeYarnQueueResponse DescribeYarnQueue(DescribeYarnQueueRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeYarnQueue", DescribeYarnQueueResponse.class);
+    }
+
+    /**
+     *This API is used to view the YARN resource scheduling history. It has been deprecated. You can use the Process Center to view the history records.
+     * @param req DescribeYarnScheduleHistoryRequest
+     * @return DescribeYarnScheduleHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeYarnScheduleHistoryResponse DescribeYarnScheduleHistory(DescribeYarnScheduleHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeYarnScheduleHistory", DescribeYarnScheduleHistoryResponse.class);
     }
 
     /**
@@ -239,7 +602,76 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     }
 
     /**
-     *This API is used to modify the resource configuration of YARN Resource Scheduling.
+     *This API is used to introduce the prerequisite prepaid clusters.
+This API is used to enable or disable automatic renewal at the resource level.
+     * @param req ModifyAutoRenewFlagRequest
+     * @return ModifyAutoRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(ModifyAutoRenewFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAutoRenewFlag", ModifyAutoRenewFlagResponse.class);
+    }
+
+    /**
+     *This API is used to modify automatic scaling rules.
+     * @param req ModifyAutoScaleStrategyRequest
+     * @return ModifyAutoScaleStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAutoScaleStrategyResponse ModifyAutoScaleStrategy(ModifyAutoScaleStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAutoScaleStrategy", ModifyAutoScaleStrategyResponse.class);
+    }
+
+    /**
+     *This API is used to modify the global configuration of YARN Resource Scheduling.
+     * @param req ModifyGlobalConfigRequest
+     * @return ModifyGlobalConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGlobalConfigResponse ModifyGlobalConfig(ModifyGlobalConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGlobalConfig", ModifyGlobalConfigResponse.class);
+    }
+
+    /**
+     *This API is used to set inspection task configurations.
+     * @param req ModifyInspectionSettingsRequest
+     * @return ModifyInspectionSettingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInspectionSettingsResponse ModifyInspectionSettings(ModifyInspectionSettingsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInspectionSettings", ModifyInspectionSettingsResponse.class);
+    }
+
+    /**
+     *This API is used to modify a cluster name.
+     * @param req ModifyInstanceBasicRequest
+     * @return ModifyInstanceBasicResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceBasicResponse ModifyInstanceBasic(ModifyInstanceBasicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceBasic", ModifyInstanceBasicResponse.class);
+    }
+
+    /**
+     *This API is used to resize an instance.
+     * @param req ModifyResourceRequest
+     * @return ModifyResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourceResponse ModifyResource(ModifyResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyResource", ModifyResourceResponse.class);
+    }
+
+    /**
+     *This API is deprecated. Use ModifyYarnQueueV2 to modify queue configuration. No related logs exist in the past one year.
+
+This API is used to modify the resource configuration of YARN Resource Scheduling. It has been deprecated. Use the ModifyYarnQueueV2 API to modify the queue configuration.
      * @param req ModifyResourceScheduleConfigRequest
      * @return ModifyResourceScheduleConfigResponse
      * @throws TencentCloudSDKException
@@ -250,7 +682,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     }
 
     /**
-     *This API is used to modify the YARN resource scheduler (the change will take effect after you click Apply).
+     *This API is used to modify a YARN resource scheduler. After the modification, you can click Deploy to bring it into effect.
      * @param req ModifyResourceSchedulerRequest
      * @return ModifyResourceSchedulerResponse
      * @throws TencentCloudSDKException
@@ -294,6 +726,17 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     }
 
     /**
+     *This API is used to modify user groups under User Management.
+     * @param req ModifyUserGroupRequest
+     * @return ModifyUserGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserGroupResponse ModifyUserGroup(ModifyUserGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserGroup", ModifyUserGroupResponse.class);
+    }
+
+    /**
      *This API is used to change user password (user management).
      * @param req ModifyUserManagerPwdRequest
      * @return ModifyUserManagerPwdResponse
@@ -302,6 +745,63 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public ModifyUserManagerPwdResponse ModifyUserManagerPwd(ModifyUserManagerPwdRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUserManagerPwd", ModifyUserManagerPwdResponse.class);
+    }
+
+    /**
+     *This API is used to change the user information of user groups.
+     * @param req ModifyUsersOfGroupSTDRequest
+     * @return ModifyUsersOfGroupSTDResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUsersOfGroupSTDResponse ModifyUsersOfGroupSTD(ModifyUsersOfGroupSTDRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUsersOfGroupSTD", ModifyUsersOfGroupSTDResponse.class);
+    }
+
+    /**
+     *This API is deprecated. Use DeployYarnConf to bring configurations into effect after deployment.
+
+This API is used to bring configurations into effect after deployment. It has been deprecated. Use the DeployYarnConf API to bring configurations into effect after deployment.
+     * @param req ModifyYarnDeployRequest
+     * @return ModifyYarnDeployResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyYarnDeployResponse ModifyYarnDeploy(ModifyYarnDeployRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyYarnDeploy", ModifyYarnDeployResponse.class);
+    }
+
+    /**
+     *This API is used to modify queue information in resource scheduling.
+     * @param req ModifyYarnQueueV2Request
+     * @return ModifyYarnQueueV2Response
+     * @throws TencentCloudSDKException
+     */
+    public ModifyYarnQueueV2Response ModifyYarnQueueV2(ModifyYarnQueueV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyYarnQueueV2", ModifyYarnQueueV2Response.class);
+    }
+
+    /**
+     *This API is used to modify the resource configuration of YARN resource scheduling.
+     * @param req ResetYarnConfigRequest
+     * @return ResetYarnConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetYarnConfigResponse ResetYarnConfig(ResetYarnConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetYarnConfig", ResetYarnConfigResponse.class);
+    }
+
+    /**
+     *This API is used to scale out the cloud data disk.
+     * @param req ResizeDataDisksRequest
+     * @return ResizeDataDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResizeDataDisksResponse ResizeDataDisks(ResizeDataDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResizeDataDisks", ResizeDataDisksResponse.class);
     }
 
     /**
@@ -324,6 +824,17 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     public ScaleOutInstanceResponse ScaleOutInstance(ScaleOutInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ScaleOutInstance", ScaleOutInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to set specifications for a node in the current cluster to default or not.
+     * @param req SetNodeResourceConfigDefaultRequest
+     * @return SetNodeResourceConfigDefaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetNodeResourceConfigDefaultResponse SetNodeResourceConfigDefault(SetNodeResourceConfigDefaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetNodeResourceConfigDefault", SetNodeResourceConfigDefaultResponse.class);
     }
 
     /**

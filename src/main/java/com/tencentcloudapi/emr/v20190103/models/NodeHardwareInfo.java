@@ -24,241 +24,212 @@ import java.util.HashMap;
 public class NodeHardwareInfo extends AbstractModel {
 
     /**
-    * User `APPID`
-Note: this field may return null, indicating that no valid values can be obtained.
+    * User AppID.
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * Serial number
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Serial number.
     */
     @SerializedName("SerialNo")
     @Expose
     private String SerialNo;
 
     /**
-    * Machine instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Machine instance ID.
     */
     @SerializedName("OrderNo")
     @Expose
     private String OrderNo;
 
     /**
-    * Public IP bound to master node
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Public network IP address bound for the Master node.
     */
     @SerializedName("WanIp")
     @Expose
     private String WanIp;
 
     /**
-    * Node type. 0: common node; 1: master node;
-2: core node; 3: task node
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Node type. 0: Common node; 1: Master node.
+ 2: Core node; 3: Task node.
     */
     @SerializedName("Flag")
     @Expose
     private Long Flag;
 
     /**
-    * Node specification
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Node specifications.
     */
     @SerializedName("Spec")
     @Expose
     private String Spec;
 
     /**
-    * Number of node cores
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Number of node cores.
     */
     @SerializedName("CpuNum")
     @Expose
     private Long CpuNum;
 
     /**
-    * Node memory size
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Node memory (bytes).
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * Node memory description
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Node memory (GB).
     */
     @SerializedName("MemDesc")
     @Expose
     private String MemDesc;
 
     /**
-    * Node region
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The region where the node is located.
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * Node AZ
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The zone where the node is located.
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * Application time
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Application time.
     */
     @SerializedName("ApplyTime")
     @Expose
     private String ApplyTime;
 
     /**
-    * Release time
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Release time.
     */
     @SerializedName("FreeTime")
     @Expose
     private String FreeTime;
 
     /**
-    * Disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Hard disk size.
     */
     @SerializedName("DiskSize")
     @Expose
     private String DiskSize;
 
     /**
-    * Node description
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Node description.
     */
     @SerializedName("NameTag")
     @Expose
     private String NameTag;
 
     /**
-    * Services deployed on node
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Node deployment service.
     */
     @SerializedName("Services")
     @Expose
     private String Services;
 
     /**
-    * Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput SSD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
+
     */
     @SerializedName("StorageType")
     @Expose
     private Long StorageType;
 
     /**
-    * System disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+    * System disk size (GB).
     */
     @SerializedName("RootSize")
     @Expose
     private Long RootSize;
 
     /**
-    * Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Payment type. Valid values: 0 (pay-as-you-go); 1 (yearly/monthly subscription).
     */
     @SerializedName("ChargeType")
     @Expose
     private Long ChargeType;
 
     /**
-    * Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Database IP address.
     */
     @SerializedName("CdbIp")
     @Expose
     private String CdbIp;
 
     /**
-    * Database port
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Database port.
     */
     @SerializedName("CdbPort")
     @Expose
     private Long CdbPort;
 
     /**
-    * Disk capacity
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Hard disk capacity (bytes).
     */
     @SerializedName("HwDiskSize")
     @Expose
     private Long HwDiskSize;
 
     /**
-    * Disk capacity description
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Hard disk capacity description.
     */
     @SerializedName("HwDiskSizeDesc")
     @Expose
     private String HwDiskSizeDesc;
 
     /**
-    * Memory capacity
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Memory capacity (bytes).
     */
     @SerializedName("HwMemSize")
     @Expose
     private Long HwMemSize;
 
     /**
-    * Memory capacity description
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Memory capacity description.
     */
     @SerializedName("HwMemSizeDesc")
     @Expose
     private String HwMemSizeDesc;
 
     /**
-    * Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Expiration time.
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * Node resource ID
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Node resource ID.
     */
     @SerializedName("EmrResourceId")
     @Expose
     private String EmrResourceId;
 
     /**
-    * Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Renewal flag.
     */
     @SerializedName("IsAutoRenew")
     @Expose
     private Long IsAutoRenew;
 
     /**
-    * Device flag
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Device identification.
     */
     @SerializedName("DeviceClass")
     @Expose
     private String DeviceClass;
 
     /**
-    * Support for configuration adjustment
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Supporting resizing.
     */
     @SerializedName("Mutable")
     @Expose
@@ -281,16 +252,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private CdbInfo CdbNodeInfo;
 
     /**
-    * Private IP
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Private network IP address.
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * Whether this node can be terminated. 1: yes, 0: no
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Whether this node can be terminated. 1: Yes, 0: No.
     */
     @SerializedName("Destroyable")
     @Expose
@@ -305,55 +274,49 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Tag [] Tags;
 
     /**
-    * Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
+    * Whether it is an automatic scaling node. 0: common node, 1: automatic scaling node.
     */
     @SerializedName("AutoFlag")
     @Expose
     private Long AutoFlag;
 
     /**
-    * Resource type. Valid values: host, pod
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Resource type, with the valid values of "host" and "pod".
     */
     @SerializedName("HardwareResourceType")
     @Expose
     private String HardwareResourceType;
 
     /**
-    * Whether floating specification is used. `1`: yes; `0`: no
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether it is a floating specification. 1: Yes, 0: No.
     */
     @SerializedName("IsDynamicSpec")
     @Expose
     private Long IsDynamicSpec;
 
     /**
-    * Floating specification in JSON string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Floating specification value in the JSON string format.
     */
     @SerializedName("DynamicPodSpec")
     @Expose
     private String DynamicPodSpec;
 
     /**
-    * Whether to support billing mode change. `0`: no; `1`: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether the billing type can be changed. 1: Yes, 0: No.
     */
     @SerializedName("SupportModifyPayMode")
     @Expose
     private Long SupportModifyPayMode;
 
     /**
-    * System disk type
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * System disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput HDD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
     */
     @SerializedName("RootStorageType")
     @Expose
     private Long RootStorageType;
 
     /**
-    * AZ information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Availability information.
     */
     @SerializedName("Zone")
     @Expose
@@ -368,668 +331,607 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private SubnetInfo SubnetInfo;
 
     /**
-    * Client
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Client.
     */
     @SerializedName("Clients")
     @Expose
     private String Clients;
 
     /**
-    * The current system time.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Current system time.
     */
     @SerializedName("CurrentTime")
     @Expose
     private String CurrentTime;
 
     /**
-    * Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Indicates whether it is for federation. 1: Yes, 0: No.
     */
     @SerializedName("IsFederation")
     @Expose
     private Long IsFederation;
 
     /**
-    * Device name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Device name.
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * Service
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Service.
     */
     @SerializedName("ServiceClient")
     @Expose
     private String ServiceClient;
 
     /**
-    * Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether instance protection is enabled. True: enabled, false: disabled.
     */
     @SerializedName("DisableApiTermination")
     @Expose
     private Boolean DisableApiTermination;
 
     /**
-    * The billing version. Valid values: `0` (original billing) and `1` (new billing)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 0: old billing, 1: new billing.
     */
     @SerializedName("TradeVersion")
     @Expose
     private Long TradeVersion;
 
     /**
-    * Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Component status. ZooKeeper: STARTED, ResourceManager: STARTED, STARTED: Component is running, STOPPED: Component is halted.
     */
     @SerializedName("ServicesStatus")
     @Expose
     private String ServicesStatus;
 
     /**
-     * Get User `APPID`
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AppId User `APPID`
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Remarks.
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
+    * Shared cluster ID.
+    */
+    @SerializedName("SharedClusterId")
+    @Expose
+    private String SharedClusterId;
+
+    /**
+    * Shared cluster ID description.
+    */
+    @SerializedName("SharedClusterIdDesc")
+    @Expose
+    private String SharedClusterIdDesc;
+
+    /**
+    * Whether the resource is set for scheduled termination.
+    */
+    @SerializedName("TimingResource")
+    @Expose
+    private Boolean TimingResource;
+
+    /**
+    * Corresponding TKE cluster ID in the case that the resource type (HardwareResourceType) is pod.
+    */
+    @SerializedName("TkeClusterId")
+    @Expose
+    private String TkeClusterId;
+
+    /**
+    * Name list of services that can be configured when a new disk is mounted.
+    */
+    @SerializedName("ConfigurableServices")
+    @Expose
+    private String [] ConfigurableServices;
+
+    /**
+    * Node labeling information: currently used only in the Terraform.
+    */
+    @SerializedName("NodeMark")
+    @Expose
+    private String NodeMark;
+
+    /**
+    * Whether auto-renewal is available for committed use resources.
+    */
+    @SerializedName("UnderwriteSetAutoRenew")
+    @Expose
+    private Boolean UnderwriteSetAutoRenew;
+
+    /**
+    * GPU information.
+    */
+    @SerializedName("GpuDesc")
+    @Expose
+    private String GpuDesc;
+
+    /**
+     * Get User AppID. 
+     * @return AppId User AppID.
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User `APPID`
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AppId User `APPID`
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set User AppID.
+     * @param AppId User AppID.
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Serial number
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SerialNo Serial number
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Serial number. 
+     * @return SerialNo Serial number.
      */
     public String getSerialNo() {
         return this.SerialNo;
     }
 
     /**
-     * Set Serial number
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SerialNo Serial number
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Serial number.
+     * @param SerialNo Serial number.
      */
     public void setSerialNo(String SerialNo) {
         this.SerialNo = SerialNo;
     }
 
     /**
-     * Get Machine instance ID
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OrderNo Machine instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Machine instance ID. 
+     * @return OrderNo Machine instance ID.
      */
     public String getOrderNo() {
         return this.OrderNo;
     }
 
     /**
-     * Set Machine instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OrderNo Machine instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Machine instance ID.
+     * @param OrderNo Machine instance ID.
      */
     public void setOrderNo(String OrderNo) {
         this.OrderNo = OrderNo;
     }
 
     /**
-     * Get Public IP bound to master node
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return WanIp Public IP bound to master node
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Public network IP address bound for the Master node. 
+     * @return WanIp Public network IP address bound for the Master node.
      */
     public String getWanIp() {
         return this.WanIp;
     }
 
     /**
-     * Set Public IP bound to master node
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WanIp Public IP bound to master node
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Public network IP address bound for the Master node.
+     * @param WanIp Public network IP address bound for the Master node.
      */
     public void setWanIp(String WanIp) {
         this.WanIp = WanIp;
     }
 
     /**
-     * Get Node type. 0: common node; 1: master node;
-2: core node; 3: task node
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Flag Node type. 0: common node; 1: master node;
-2: core node; 3: task node
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Node type. 0: Common node; 1: Master node.
+ 2: Core node; 3: Task node. 
+     * @return Flag Node type. 0: Common node; 1: Master node.
+ 2: Core node; 3: Task node.
      */
     public Long getFlag() {
         return this.Flag;
     }
 
     /**
-     * Set Node type. 0: common node; 1: master node;
-2: core node; 3: task node
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Flag Node type. 0: common node; 1: master node;
-2: core node; 3: task node
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Node type. 0: Common node; 1: Master node.
+ 2: Core node; 3: Task node.
+     * @param Flag Node type. 0: Common node; 1: Master node.
+ 2: Core node; 3: Task node.
      */
     public void setFlag(Long Flag) {
         this.Flag = Flag;
     }
 
     /**
-     * Get Node specification
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Spec Node specification
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Node specifications. 
+     * @return Spec Node specifications.
      */
     public String getSpec() {
         return this.Spec;
     }
 
     /**
-     * Set Node specification
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Spec Node specification
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Node specifications.
+     * @param Spec Node specifications.
      */
     public void setSpec(String Spec) {
         this.Spec = Spec;
     }
 
     /**
-     * Get Number of node cores
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CpuNum Number of node cores
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Number of node cores. 
+     * @return CpuNum Number of node cores.
      */
     public Long getCpuNum() {
         return this.CpuNum;
     }
 
     /**
-     * Set Number of node cores
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CpuNum Number of node cores
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Number of node cores.
+     * @param CpuNum Number of node cores.
      */
     public void setCpuNum(Long CpuNum) {
         this.CpuNum = CpuNum;
     }
 
     /**
-     * Get Node memory size
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MemSize Node memory size
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Node memory (bytes). 
+     * @return MemSize Node memory (bytes).
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set Node memory size
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MemSize Node memory size
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Node memory (bytes).
+     * @param MemSize Node memory (bytes).
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get Node memory description
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MemDesc Node memory description
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Node memory (GB). 
+     * @return MemDesc Node memory (GB).
      */
     public String getMemDesc() {
         return this.MemDesc;
     }
 
     /**
-     * Set Node memory description
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MemDesc Node memory description
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Node memory (GB).
+     * @param MemDesc Node memory (GB).
      */
     public void setMemDesc(String MemDesc) {
         this.MemDesc = MemDesc;
     }
 
     /**
-     * Get Node region
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RegionId Node region
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The region where the node is located. 
+     * @return RegionId The region where the node is located.
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Node region
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RegionId Node region
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The region where the node is located.
+     * @param RegionId The region where the node is located.
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get Node AZ
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneId Node AZ
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The zone where the node is located. 
+     * @return ZoneId The zone where the node is located.
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Node AZ
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ZoneId Node AZ
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The zone where the node is located.
+     * @param ZoneId The zone where the node is located.
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Application time
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ApplyTime Application time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Application time. 
+     * @return ApplyTime Application time.
      */
     public String getApplyTime() {
         return this.ApplyTime;
     }
 
     /**
-     * Set Application time
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ApplyTime Application time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Application time.
+     * @param ApplyTime Application time.
      */
     public void setApplyTime(String ApplyTime) {
         this.ApplyTime = ApplyTime;
     }
 
     /**
-     * Get Release time
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FreeTime Release time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Release time. 
+     * @return FreeTime Release time.
      */
     public String getFreeTime() {
         return this.FreeTime;
     }
 
     /**
-     * Set Release time
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FreeTime Release time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Release time.
+     * @param FreeTime Release time.
      */
     public void setFreeTime(String FreeTime) {
         this.FreeTime = FreeTime;
     }
 
     /**
-     * Get Disk size
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DiskSize Disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Hard disk size. 
+     * @return DiskSize Hard disk size.
      */
     public String getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Disk size
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DiskSize Disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Hard disk size.
+     * @param DiskSize Hard disk size.
      */
     public void setDiskSize(String DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Node description
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return NameTag Node description
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Node description. 
+     * @return NameTag Node description.
      */
     public String getNameTag() {
         return this.NameTag;
     }
 
     /**
-     * Set Node description
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param NameTag Node description
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Node description.
+     * @param NameTag Node description.
      */
     public void setNameTag(String NameTag) {
         this.NameTag = NameTag;
     }
 
     /**
-     * Get Services deployed on node
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Services Services deployed on node
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Node deployment service. 
+     * @return Services Node deployment service.
      */
     public String getServices() {
         return this.Services;
     }
 
     /**
-     * Set Services deployed on node
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Services Services deployed on node
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Node deployment service.
+     * @param Services Node deployment service.
      */
     public void setServices(String Services) {
         this.Services = Services;
     }
 
     /**
-     * Get Disk type
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StorageType Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput SSD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
+ 
+     * @return StorageType Disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput SSD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
+
      */
     public Long getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StorageType Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput SSD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
+
+     * @param StorageType Disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput SSD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
+
      */
     public void setStorageType(Long StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get System disk size
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RootSize System disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get System disk size (GB). 
+     * @return RootSize System disk size (GB).
      */
     public Long getRootSize() {
         return this.RootSize;
     }
 
     /**
-     * Set System disk size
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RootSize System disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set System disk size (GB).
+     * @param RootSize System disk size (GB).
      */
     public void setRootSize(Long RootSize) {
         this.RootSize = RootSize;
     }
 
     /**
-     * Get Payment type
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ChargeType Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Payment type. Valid values: 0 (pay-as-you-go); 1 (yearly/monthly subscription). 
+     * @return ChargeType Payment type. Valid values: 0 (pay-as-you-go); 1 (yearly/monthly subscription).
      */
     public Long getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ChargeType Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Payment type. Valid values: 0 (pay-as-you-go); 1 (yearly/monthly subscription).
+     * @param ChargeType Payment type. Valid values: 0 (pay-as-you-go); 1 (yearly/monthly subscription).
      */
     public void setChargeType(Long ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get Database IP
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CdbIp Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Database IP address. 
+     * @return CdbIp Database IP address.
      */
     public String getCdbIp() {
         return this.CdbIp;
     }
 
     /**
-     * Set Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CdbIp Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Database IP address.
+     * @param CdbIp Database IP address.
      */
     public void setCdbIp(String CdbIp) {
         this.CdbIp = CdbIp;
     }
 
     /**
-     * Get Database port
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CdbPort Database port
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Database port. 
+     * @return CdbPort Database port.
      */
     public Long getCdbPort() {
         return this.CdbPort;
     }
 
     /**
-     * Set Database port
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CdbPort Database port
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Database port.
+     * @param CdbPort Database port.
      */
     public void setCdbPort(Long CdbPort) {
         this.CdbPort = CdbPort;
     }
 
     /**
-     * Get Disk capacity
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return HwDiskSize Disk capacity
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Hard disk capacity (bytes). 
+     * @return HwDiskSize Hard disk capacity (bytes).
      */
     public Long getHwDiskSize() {
         return this.HwDiskSize;
     }
 
     /**
-     * Set Disk capacity
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param HwDiskSize Disk capacity
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Hard disk capacity (bytes).
+     * @param HwDiskSize Hard disk capacity (bytes).
      */
     public void setHwDiskSize(Long HwDiskSize) {
         this.HwDiskSize = HwDiskSize;
     }
 
     /**
-     * Get Disk capacity description
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return HwDiskSizeDesc Disk capacity description
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Hard disk capacity description. 
+     * @return HwDiskSizeDesc Hard disk capacity description.
      */
     public String getHwDiskSizeDesc() {
         return this.HwDiskSizeDesc;
     }
 
     /**
-     * Set Disk capacity description
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param HwDiskSizeDesc Disk capacity description
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Hard disk capacity description.
+     * @param HwDiskSizeDesc Hard disk capacity description.
      */
     public void setHwDiskSizeDesc(String HwDiskSizeDesc) {
         this.HwDiskSizeDesc = HwDiskSizeDesc;
     }
 
     /**
-     * Get Memory capacity
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return HwMemSize Memory capacity
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Memory capacity (bytes). 
+     * @return HwMemSize Memory capacity (bytes).
      */
     public Long getHwMemSize() {
         return this.HwMemSize;
     }
 
     /**
-     * Set Memory capacity
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param HwMemSize Memory capacity
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Memory capacity (bytes).
+     * @param HwMemSize Memory capacity (bytes).
      */
     public void setHwMemSize(Long HwMemSize) {
         this.HwMemSize = HwMemSize;
     }
 
     /**
-     * Get Memory capacity description
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return HwMemSizeDesc Memory capacity description
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Memory capacity description. 
+     * @return HwMemSizeDesc Memory capacity description.
      */
     public String getHwMemSizeDesc() {
         return this.HwMemSizeDesc;
     }
 
     /**
-     * Set Memory capacity description
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param HwMemSizeDesc Memory capacity description
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Memory capacity description.
+     * @param HwMemSizeDesc Memory capacity description.
      */
     public void setHwMemSizeDesc(String HwMemSizeDesc) {
         this.HwMemSizeDesc = HwMemSizeDesc;
     }
 
     /**
-     * Get Expiration time
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ExpireTime Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Expiration time. 
+     * @return ExpireTime Expiration time.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ExpireTime Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Expiration time.
+     * @param ExpireTime Expiration time.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Node resource ID
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return EmrResourceId Node resource ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Node resource ID. 
+     * @return EmrResourceId Node resource ID.
      */
     public String getEmrResourceId() {
         return this.EmrResourceId;
     }
 
     /**
-     * Set Node resource ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EmrResourceId Node resource ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Node resource ID.
+     * @param EmrResourceId Node resource ID.
      */
     public void setEmrResourceId(String EmrResourceId) {
         this.EmrResourceId = EmrResourceId;
     }
 
     /**
-     * Get Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsAutoRenew Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Renewal flag. 
+     * @return IsAutoRenew Renewal flag.
      */
     public Long getIsAutoRenew() {
         return this.IsAutoRenew;
     }
 
     /**
-     * Set Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsAutoRenew Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Renewal flag.
+     * @param IsAutoRenew Renewal flag.
      */
     public void setIsAutoRenew(Long IsAutoRenew) {
         this.IsAutoRenew = IsAutoRenew;
     }
 
     /**
-     * Get Device flag
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DeviceClass Device flag
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Device identification. 
+     * @return DeviceClass Device identification.
      */
     public String getDeviceClass() {
         return this.DeviceClass;
     }
 
     /**
-     * Set Device flag
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DeviceClass Device flag
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Device identification.
+     * @param DeviceClass Device identification.
      */
     public void setDeviceClass(String DeviceClass) {
         this.DeviceClass = DeviceClass;
     }
 
     /**
-     * Get Support for configuration adjustment
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Mutable Support for configuration adjustment
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Supporting resizing. 
+     * @return Mutable Supporting resizing.
      */
     public Long getMutable() {
         return this.Mutable;
     }
 
     /**
-     * Set Support for configuration adjustment
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Mutable Support for configuration adjustment
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Supporting resizing.
+     * @param Mutable Supporting resizing.
      */
     public void setMutable(Long Mutable) {
         this.Mutable = Mutable;
@@ -1076,40 +978,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Private IP
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Ip Private IP
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Private network IP address. 
+     * @return Ip Private network IP address.
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Private IP
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Ip Private IP
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Private network IP address.
+     * @param Ip Private network IP address.
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get Whether this node can be terminated. 1: yes, 0: no
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Destroyable Whether this node can be terminated. 1: yes, 0: no
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Whether this node can be terminated. 1: Yes, 0: No. 
+     * @return Destroyable Whether this node can be terminated. 1: Yes, 0: No.
      */
     public Long getDestroyable() {
         return this.Destroyable;
     }
 
     /**
-     * Set Whether this node can be terminated. 1: yes, 0: no
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Destroyable Whether this node can be terminated. 1: yes, 0: no
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Whether this node can be terminated. 1: Yes, 0: No.
+     * @param Destroyable Whether this node can be terminated. 1: Yes, 0: No.
      */
     public void setDestroyable(Long Destroyable) {
         this.Destroyable = Destroyable;
@@ -1136,136 +1030,112 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node. 
-     * @return AutoFlag Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
+     * Get Whether it is an automatic scaling node. 0: common node, 1: automatic scaling node. 
+     * @return AutoFlag Whether it is an automatic scaling node. 0: common node, 1: automatic scaling node.
      */
     public Long getAutoFlag() {
         return this.AutoFlag;
     }
 
     /**
-     * Set Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
-     * @param AutoFlag Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
+     * Set Whether it is an automatic scaling node. 0: common node, 1: automatic scaling node.
+     * @param AutoFlag Whether it is an automatic scaling node. 0: common node, 1: automatic scaling node.
      */
     public void setAutoFlag(Long AutoFlag) {
         this.AutoFlag = AutoFlag;
     }
 
     /**
-     * Get Resource type. Valid values: host, pod
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return HardwareResourceType Resource type. Valid values: host, pod
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Resource type, with the valid values of "host" and "pod". 
+     * @return HardwareResourceType Resource type, with the valid values of "host" and "pod".
      */
     public String getHardwareResourceType() {
         return this.HardwareResourceType;
     }
 
     /**
-     * Set Resource type. Valid values: host, pod
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param HardwareResourceType Resource type. Valid values: host, pod
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Resource type, with the valid values of "host" and "pod".
+     * @param HardwareResourceType Resource type, with the valid values of "host" and "pod".
      */
     public void setHardwareResourceType(String HardwareResourceType) {
         this.HardwareResourceType = HardwareResourceType;
     }
 
     /**
-     * Get Whether floating specification is used. `1`: yes; `0`: no
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return IsDynamicSpec Whether floating specification is used. `1`: yes; `0`: no
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether it is a floating specification. 1: Yes, 0: No. 
+     * @return IsDynamicSpec Whether it is a floating specification. 1: Yes, 0: No.
      */
     public Long getIsDynamicSpec() {
         return this.IsDynamicSpec;
     }
 
     /**
-     * Set Whether floating specification is used. `1`: yes; `0`: no
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param IsDynamicSpec Whether floating specification is used. `1`: yes; `0`: no
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether it is a floating specification. 1: Yes, 0: No.
+     * @param IsDynamicSpec Whether it is a floating specification. 1: Yes, 0: No.
      */
     public void setIsDynamicSpec(Long IsDynamicSpec) {
         this.IsDynamicSpec = IsDynamicSpec;
     }
 
     /**
-     * Get Floating specification in JSON string
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return DynamicPodSpec Floating specification in JSON string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Floating specification value in the JSON string format. 
+     * @return DynamicPodSpec Floating specification value in the JSON string format.
      */
     public String getDynamicPodSpec() {
         return this.DynamicPodSpec;
     }
 
     /**
-     * Set Floating specification in JSON string
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param DynamicPodSpec Floating specification in JSON string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Floating specification value in the JSON string format.
+     * @param DynamicPodSpec Floating specification value in the JSON string format.
      */
     public void setDynamicPodSpec(String DynamicPodSpec) {
         this.DynamicPodSpec = DynamicPodSpec;
     }
 
     /**
-     * Get Whether to support billing mode change. `0`: no; `1`: yes
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SupportModifyPayMode Whether to support billing mode change. `0`: no; `1`: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether the billing type can be changed. 1: Yes, 0: No. 
+     * @return SupportModifyPayMode Whether the billing type can be changed. 1: Yes, 0: No.
      */
     public Long getSupportModifyPayMode() {
         return this.SupportModifyPayMode;
     }
 
     /**
-     * Set Whether to support billing mode change. `0`: no; `1`: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SupportModifyPayMode Whether to support billing mode change. `0`: no; `1`: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether the billing type can be changed. 1: Yes, 0: No.
+     * @param SupportModifyPayMode Whether the billing type can be changed. 1: Yes, 0: No.
      */
     public void setSupportModifyPayMode(Long SupportModifyPayMode) {
         this.SupportModifyPayMode = SupportModifyPayMode;
     }
 
     /**
-     * Get System disk type
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return RootStorageType System disk type
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get System disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput HDD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD). 
+     * @return RootStorageType System disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput HDD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
      */
     public Long getRootStorageType() {
         return this.RootStorageType;
     }
 
     /**
-     * Set System disk type
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param RootStorageType System disk type
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set System disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput HDD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
+     * @param RootStorageType System disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput HDD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
      */
     public void setRootStorageType(Long RootStorageType) {
         this.RootStorageType = RootStorageType;
     }
 
     /**
-     * Get AZ information
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Zone AZ information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Availability information. 
+     * @return Zone Availability information.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ information
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Zone AZ information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Availability information.
+     * @param Zone Availability information.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -1292,163 +1162,275 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Client
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Clients Client
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Client. 
+     * @return Clients Client.
      */
     public String getClients() {
         return this.Clients;
     }
 
     /**
-     * Set Client
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Clients Client
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Client.
+     * @param Clients Client.
      */
     public void setClients(String Clients) {
         this.Clients = Clients;
     }
 
     /**
-     * Get The current system time.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CurrentTime The current system time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Current system time. 
+     * @return CurrentTime Current system time.
      */
     public String getCurrentTime() {
         return this.CurrentTime;
     }
 
     /**
-     * Set The current system time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CurrentTime The current system time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Current system time.
+     * @param CurrentTime Current system time.
      */
     public void setCurrentTime(String CurrentTime) {
         this.CurrentTime = CurrentTime;
     }
 
     /**
-     * Get Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsFederation Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Indicates whether it is for federation. 1: Yes, 0: No. 
+     * @return IsFederation Indicates whether it is for federation. 1: Yes, 0: No.
      */
     public Long getIsFederation() {
         return this.IsFederation;
     }
 
     /**
-     * Set Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsFederation Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Indicates whether it is for federation. 1: Yes, 0: No.
+     * @param IsFederation Indicates whether it is for federation. 1: Yes, 0: No.
      */
     public void setIsFederation(Long IsFederation) {
         this.IsFederation = IsFederation;
     }
 
     /**
-     * Get Device name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DeviceName Device name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Device name. 
+     * @return DeviceName Device name.
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set Device name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DeviceName Device name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Device name.
+     * @param DeviceName Device name.
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get Service
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceClient Service
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Service. 
+     * @return ServiceClient Service.
      */
     public String getServiceClient() {
         return this.ServiceClient;
     }
 
     /**
-     * Set Service
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ServiceClient Service
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Service.
+     * @param ServiceClient Service.
      */
     public void setServiceClient(String ServiceClient) {
         this.ServiceClient = ServiceClient;
     }
 
     /**
-     * Get Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DisableApiTermination Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether instance protection is enabled. True: enabled, false: disabled. 
+     * @return DisableApiTermination Whether instance protection is enabled. True: enabled, false: disabled.
      */
     public Boolean getDisableApiTermination() {
         return this.DisableApiTermination;
     }
 
     /**
-     * Set Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DisableApiTermination Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether instance protection is enabled. True: enabled, false: disabled.
+     * @param DisableApiTermination Whether instance protection is enabled. True: enabled, false: disabled.
      */
     public void setDisableApiTermination(Boolean DisableApiTermination) {
         this.DisableApiTermination = DisableApiTermination;
     }
 
     /**
-     * Get The billing version. Valid values: `0` (original billing) and `1` (new billing)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TradeVersion The billing version. Valid values: `0` (original billing) and `1` (new billing)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 0: old billing, 1: new billing. 
+     * @return TradeVersion 0: old billing, 1: new billing.
      */
     public Long getTradeVersion() {
         return this.TradeVersion;
     }
 
     /**
-     * Set The billing version. Valid values: `0` (original billing) and `1` (new billing)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TradeVersion The billing version. Valid values: `0` (original billing) and `1` (new billing)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 0: old billing, 1: new billing.
+     * @param TradeVersion 0: old billing, 1: new billing.
      */
     public void setTradeVersion(Long TradeVersion) {
         this.TradeVersion = TradeVersion;
     }
 
     /**
-     * Get Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ServicesStatus Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Component status. ZooKeeper: STARTED, ResourceManager: STARTED, STARTED: Component is running, STOPPED: Component is halted. 
+     * @return ServicesStatus Component status. ZooKeeper: STARTED, ResourceManager: STARTED, STARTED: Component is running, STOPPED: Component is halted.
      */
     public String getServicesStatus() {
         return this.ServicesStatus;
     }
 
     /**
-     * Set Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ServicesStatus Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Component status. ZooKeeper: STARTED, ResourceManager: STARTED, STARTED: Component is running, STOPPED: Component is halted.
+     * @param ServicesStatus Component status. ZooKeeper: STARTED, ResourceManager: STARTED, STARTED: Component is running, STOPPED: Component is halted.
      */
     public void setServicesStatus(String ServicesStatus) {
         this.ServicesStatus = ServicesStatus;
+    }
+
+    /**
+     * Get Remarks. 
+     * @return Remark Remarks.
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set Remarks.
+     * @param Remark Remarks.
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
+     * Get Shared cluster ID. 
+     * @return SharedClusterId Shared cluster ID.
+     */
+    public String getSharedClusterId() {
+        return this.SharedClusterId;
+    }
+
+    /**
+     * Set Shared cluster ID.
+     * @param SharedClusterId Shared cluster ID.
+     */
+    public void setSharedClusterId(String SharedClusterId) {
+        this.SharedClusterId = SharedClusterId;
+    }
+
+    /**
+     * Get Shared cluster ID description. 
+     * @return SharedClusterIdDesc Shared cluster ID description.
+     */
+    public String getSharedClusterIdDesc() {
+        return this.SharedClusterIdDesc;
+    }
+
+    /**
+     * Set Shared cluster ID description.
+     * @param SharedClusterIdDesc Shared cluster ID description.
+     */
+    public void setSharedClusterIdDesc(String SharedClusterIdDesc) {
+        this.SharedClusterIdDesc = SharedClusterIdDesc;
+    }
+
+    /**
+     * Get Whether the resource is set for scheduled termination. 
+     * @return TimingResource Whether the resource is set for scheduled termination.
+     */
+    public Boolean getTimingResource() {
+        return this.TimingResource;
+    }
+
+    /**
+     * Set Whether the resource is set for scheduled termination.
+     * @param TimingResource Whether the resource is set for scheduled termination.
+     */
+    public void setTimingResource(Boolean TimingResource) {
+        this.TimingResource = TimingResource;
+    }
+
+    /**
+     * Get Corresponding TKE cluster ID in the case that the resource type (HardwareResourceType) is pod. 
+     * @return TkeClusterId Corresponding TKE cluster ID in the case that the resource type (HardwareResourceType) is pod.
+     */
+    public String getTkeClusterId() {
+        return this.TkeClusterId;
+    }
+
+    /**
+     * Set Corresponding TKE cluster ID in the case that the resource type (HardwareResourceType) is pod.
+     * @param TkeClusterId Corresponding TKE cluster ID in the case that the resource type (HardwareResourceType) is pod.
+     */
+    public void setTkeClusterId(String TkeClusterId) {
+        this.TkeClusterId = TkeClusterId;
+    }
+
+    /**
+     * Get Name list of services that can be configured when a new disk is mounted. 
+     * @return ConfigurableServices Name list of services that can be configured when a new disk is mounted.
+     */
+    public String [] getConfigurableServices() {
+        return this.ConfigurableServices;
+    }
+
+    /**
+     * Set Name list of services that can be configured when a new disk is mounted.
+     * @param ConfigurableServices Name list of services that can be configured when a new disk is mounted.
+     */
+    public void setConfigurableServices(String [] ConfigurableServices) {
+        this.ConfigurableServices = ConfigurableServices;
+    }
+
+    /**
+     * Get Node labeling information: currently used only in the Terraform. 
+     * @return NodeMark Node labeling information: currently used only in the Terraform.
+     */
+    public String getNodeMark() {
+        return this.NodeMark;
+    }
+
+    /**
+     * Set Node labeling information: currently used only in the Terraform.
+     * @param NodeMark Node labeling information: currently used only in the Terraform.
+     */
+    public void setNodeMark(String NodeMark) {
+        this.NodeMark = NodeMark;
+    }
+
+    /**
+     * Get Whether auto-renewal is available for committed use resources. 
+     * @return UnderwriteSetAutoRenew Whether auto-renewal is available for committed use resources.
+     */
+    public Boolean getUnderwriteSetAutoRenew() {
+        return this.UnderwriteSetAutoRenew;
+    }
+
+    /**
+     * Set Whether auto-renewal is available for committed use resources.
+     * @param UnderwriteSetAutoRenew Whether auto-renewal is available for committed use resources.
+     */
+    public void setUnderwriteSetAutoRenew(Boolean UnderwriteSetAutoRenew) {
+        this.UnderwriteSetAutoRenew = UnderwriteSetAutoRenew;
+    }
+
+    /**
+     * Get GPU information. 
+     * @return GpuDesc GPU information.
+     */
+    public String getGpuDesc() {
+        return this.GpuDesc;
+    }
+
+    /**
+     * Set GPU information.
+     * @param GpuDesc GPU information.
+     */
+    public void setGpuDesc(String GpuDesc) {
+        this.GpuDesc = GpuDesc;
     }
 
     public NodeHardwareInfo() {
@@ -1618,6 +1600,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ServicesStatus != null) {
             this.ServicesStatus = new String(source.ServicesStatus);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.SharedClusterId != null) {
+            this.SharedClusterId = new String(source.SharedClusterId);
+        }
+        if (source.SharedClusterIdDesc != null) {
+            this.SharedClusterIdDesc = new String(source.SharedClusterIdDesc);
+        }
+        if (source.TimingResource != null) {
+            this.TimingResource = new Boolean(source.TimingResource);
+        }
+        if (source.TkeClusterId != null) {
+            this.TkeClusterId = new String(source.TkeClusterId);
+        }
+        if (source.ConfigurableServices != null) {
+            this.ConfigurableServices = new String[source.ConfigurableServices.length];
+            for (int i = 0; i < source.ConfigurableServices.length; i++) {
+                this.ConfigurableServices[i] = new String(source.ConfigurableServices[i]);
+            }
+        }
+        if (source.NodeMark != null) {
+            this.NodeMark = new String(source.NodeMark);
+        }
+        if (source.UnderwriteSetAutoRenew != null) {
+            this.UnderwriteSetAutoRenew = new Boolean(source.UnderwriteSetAutoRenew);
+        }
+        if (source.GpuDesc != null) {
+            this.GpuDesc = new String(source.GpuDesc);
+        }
     }
 
 
@@ -1676,6 +1688,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
         this.setParamSimple(map, prefix + "TradeVersion", this.TradeVersion);
         this.setParamSimple(map, prefix + "ServicesStatus", this.ServicesStatus);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "SharedClusterId", this.SharedClusterId);
+        this.setParamSimple(map, prefix + "SharedClusterIdDesc", this.SharedClusterIdDesc);
+        this.setParamSimple(map, prefix + "TimingResource", this.TimingResource);
+        this.setParamSimple(map, prefix + "TkeClusterId", this.TkeClusterId);
+        this.setParamArraySimple(map, prefix + "ConfigurableServices.", this.ConfigurableServices);
+        this.setParamSimple(map, prefix + "NodeMark", this.NodeMark);
+        this.setParamSimple(map, prefix + "UnderwriteSetAutoRenew", this.UnderwriteSetAutoRenew);
+        this.setParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
 
     }
 }

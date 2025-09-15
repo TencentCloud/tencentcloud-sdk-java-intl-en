@@ -24,162 +24,195 @@ import java.util.HashMap;
 public class DiskSpecInfo extends AbstractModel {
 
     /**
-    * The number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of disks.
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * The system disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
+    * Valid values of the system disk type:
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
 
-The data disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
-<li>`CLOUD_THROUGHPUT`: Throughput HDD</li>
-<li>CLOUD_TSSD: ulTra SSD</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Valid values of the data disk type.
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
+<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
+<li>CLOUD_BSSD: Balanced SSD.</li>
+<li>REMOTE_SSD: Remote SSD.</li>
+
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * The disk capacity in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Data capacity in GB.
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-     * Get The number of disks.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Count The number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Additional performance.
+    */
+    @SerializedName("ExtraPerformance")
+    @Expose
+    private Long ExtraPerformance;
+
+    /**
+     * Get Number of disks. 
+     * @return Count Number of disks.
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set The number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Count The number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of disks.
+     * @param Count Number of disks.
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get The system disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
+     * Get Valid values of the system disk type:
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
 
-The data disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
-<li>`CLOUD_THROUGHPUT`: Throughput HDD</li>
-<li>CLOUD_TSSD: ulTra SSD</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiskType The system disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
+Valid values of the data disk type.
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
+<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
+<li>CLOUD_BSSD: Balanced SSD.</li>
+<li>REMOTE_SSD: Remote SSD.</li>
+ 
+     * @return DiskType Valid values of the system disk type:
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
 
-The data disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
-<li>`CLOUD_THROUGHPUT`: Throughput HDD</li>
-<li>CLOUD_TSSD: ulTra SSD</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Valid values of the data disk type.
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
+<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
+<li>CLOUD_BSSD: Balanced SSD.</li>
+<li>REMOTE_SSD: Remote SSD.</li>
+
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set The system disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
+     * Set Valid values of the system disk type:
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
 
-The data disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
-<li>`CLOUD_THROUGHPUT`: Throughput HDD</li>
-<li>CLOUD_TSSD: ulTra SSD</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiskType The system disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
+Valid values of the data disk type.
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
+<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
+<li>CLOUD_BSSD: Balanced SSD.</li>
+<li>REMOTE_SSD: Remote SSD.</li>
 
-The data disk type. Valid values:
-<li>`CLOUD_SSD`: Cloud SSD</li>
-<li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-<li>`CLOUD_BASIC`: Cloud HDD</li>
-<li>`LOCAL_BASIC`: Local disk</li>
-<li>`LOCAL_SSD`: Local SSD</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
-<li>`CLOUD_THROUGHPUT`: Throughput HDD</li>
-<li>CLOUD_TSSD: ulTra SSD</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DiskType Valid values of the system disk type:
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+
+Valid values of the data disk type.
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+<li>CLOUD_BASIC: Cloud Disk.</li>
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
+<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
+<li>CLOUD_BSSD: Balanced SSD.</li>
+<li>REMOTE_SSD: Remote SSD.</li>
+
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get The disk capacity in GB.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiskSize The disk capacity in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Data capacity in GB. 
+     * @return DiskSize Data capacity in GB.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set The disk capacity in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiskSize The disk capacity in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Data capacity in GB.
+     * @param DiskSize Data capacity in GB.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
+    }
+
+    /**
+     * Get Additional performance. 
+     * @return ExtraPerformance Additional performance.
+     */
+    public Long getExtraPerformance() {
+        return this.ExtraPerformance;
+    }
+
+    /**
+     * Set Additional performance.
+     * @param ExtraPerformance Additional performance.
+     */
+    public void setExtraPerformance(Long ExtraPerformance) {
+        this.ExtraPerformance = ExtraPerformance;
     }
 
     public DiskSpecInfo() {
@@ -199,6 +232,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.DiskSize != null) {
             this.DiskSize = new Long(source.DiskSize);
         }
+        if (source.ExtraPerformance != null) {
+            this.ExtraPerformance = new Long(source.ExtraPerformance);
+        }
     }
 
 
@@ -209,6 +245,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "ExtraPerformance", this.ExtraPerformance);
 
     }
 }

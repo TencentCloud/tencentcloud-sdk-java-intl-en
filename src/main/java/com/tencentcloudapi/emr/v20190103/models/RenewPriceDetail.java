@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class RenewPriceDetail extends AbstractModel {
 
     /**
-    * 
+    * Billing item name.
     */
     @SerializedName("BillingName")
     @Expose
     private String BillingName;
 
     /**
-    * 
+    * Discount.
     */
     @SerializedName("Policy")
     @Expose
     private Float Policy;
 
     /**
-    * 
+    * Quantity.
     */
     @SerializedName("Quantity")
     @Expose
     private Long Quantity;
 
     /**
-    * 
+    * Original price.
     */
     @SerializedName("OriginalCost")
     @Expose
     private Float OriginalCost;
 
     /**
-    * 
+    * Discount price.
     */
     @SerializedName("DiscountCost")
     @Expose
     private Float DiscountCost;
 
     /**
-     * Get  
-     * @return BillingName 
+     * Get Billing item name. 
+     * @return BillingName Billing item name.
      */
     public String getBillingName() {
         return this.BillingName;
     }
 
     /**
-     * Set 
-     * @param BillingName 
+     * Set Billing item name.
+     * @param BillingName Billing item name.
      */
     public void setBillingName(String BillingName) {
         this.BillingName = BillingName;
     }
 
     /**
-     * Get  
-     * @return Policy 
+     * Get Discount. 
+     * @return Policy Discount.
      */
     public Float getPolicy() {
         return this.Policy;
     }
 
     /**
-     * Set 
-     * @param Policy 
+     * Set Discount.
+     * @param Policy Discount.
      */
     public void setPolicy(Float Policy) {
         this.Policy = Policy;
     }
 
     /**
-     * Get  
-     * @return Quantity 
+     * Get Quantity. 
+     * @return Quantity Quantity.
      */
     public Long getQuantity() {
         return this.Quantity;
     }
 
     /**
-     * Set 
-     * @param Quantity 
+     * Set Quantity.
+     * @param Quantity Quantity.
      */
     public void setQuantity(Long Quantity) {
         this.Quantity = Quantity;
     }
 
     /**
-     * Get  
-     * @return OriginalCost 
+     * Get Original price. 
+     * @return OriginalCost Original price.
      */
     public Float getOriginalCost() {
         return this.OriginalCost;
     }
 
     /**
-     * Set 
-     * @param OriginalCost 
+     * Set Original price.
+     * @param OriginalCost Original price.
      */
     public void setOriginalCost(Float OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get  
-     * @return DiscountCost 
+     * Get Discount price. 
+     * @return DiscountCost Discount price.
      */
     public Float getDiscountCost() {
         return this.DiscountCost;
     }
 
     /**
-     * Set 
-     * @param DiscountCost 
+     * Set Discount price.
+     * @param DiscountCost Discount price.
      */
     public void setDiscountCost(Float DiscountCost) {
         this.DiscountCost = DiscountCost;

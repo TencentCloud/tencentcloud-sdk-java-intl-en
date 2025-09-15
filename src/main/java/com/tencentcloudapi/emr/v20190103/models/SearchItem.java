@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SearchItem extends AbstractModel {
 
     /**
-    * Searchable type
+    * Searchable type.
     */
     @SerializedName("SearchType")
     @Expose
     private String SearchType;
 
     /**
-    * Searchable value
+    * Searchable value.
     */
     @SerializedName("SearchValue")
     @Expose
     private String SearchValue;
 
     /**
-     * Get Searchable type 
-     * @return SearchType Searchable type
+     * Get Searchable type. 
+     * @return SearchType Searchable type.
      */
     public String getSearchType() {
         return this.SearchType;
     }
 
     /**
-     * Set Searchable type
-     * @param SearchType Searchable type
+     * Set Searchable type.
+     * @param SearchType Searchable type.
      */
     public void setSearchType(String SearchType) {
         this.SearchType = SearchType;
     }
 
     /**
-     * Get Searchable value 
-     * @return SearchValue Searchable value
+     * Get Searchable value. 
+     * @return SearchValue Searchable value.
      */
     public String getSearchValue() {
         return this.SearchValue;
     }
 
     /**
-     * Set Searchable value
-     * @param SearchValue Searchable value
+     * Set Searchable value.
+     * @param SearchValue Searchable value.
      */
     public void setSearchValue(String SearchValue) {
         this.SearchValue = SearchValue;

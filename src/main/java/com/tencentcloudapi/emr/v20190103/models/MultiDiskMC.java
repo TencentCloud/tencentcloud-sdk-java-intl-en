@@ -24,84 +24,152 @@ import java.util.HashMap;
 public class MultiDiskMC extends AbstractModel {
 
     /**
-    * Number of cloud disks in this type
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Number of cloud disks of this type.
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Disk type.
+1: Local Disk.
+2: Cloud Disk.
+3: Local SSD.
+4: Cloud SSD.
+5: Premium Cloud Disk.
+6: Enhanced SSD.
+11: Throughput HDD.
+12: Tremendous SSD.
+13: Balanced SSD.
+14: Big Data Cloud Disk.
+15: High IO Cloud Disk.
+16: Remote SSD.
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * Cloud disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Disk size.
+    */
+    @SerializedName("Size")
+    @Expose
+    private String Size;
+
+    /**
+    * Cloud disk size (bytes).
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-     * Get Number of cloud disks in this type
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Count Number of cloud disks in this type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Number of cloud disks of this type. 
+     * @return Count Number of cloud disks of this type.
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Number of cloud disks in this type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Count Number of cloud disks in this type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Number of cloud disks of this type.
+     * @param Count Number of cloud disks of this type.
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get Disk type
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Type Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Disk type.
+1: Local Disk.
+2: Cloud Disk.
+3: Local SSD.
+4: Cloud SSD.
+5: Premium Cloud Disk.
+6: Enhanced SSD.
+11: Throughput HDD.
+12: Tremendous SSD.
+13: Balanced SSD.
+14: Big Data Cloud Disk.
+15: High IO Cloud Disk.
+16: Remote SSD. 
+     * @return Type Disk type.
+1: Local Disk.
+2: Cloud Disk.
+3: Local SSD.
+4: Cloud SSD.
+5: Premium Cloud Disk.
+6: Enhanced SSD.
+11: Throughput HDD.
+12: Tremendous SSD.
+13: Balanced SSD.
+14: Big Data Cloud Disk.
+15: High IO Cloud Disk.
+16: Remote SSD.
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Type Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Disk type.
+1: Local Disk.
+2: Cloud Disk.
+3: Local SSD.
+4: Cloud SSD.
+5: Premium Cloud Disk.
+6: Enhanced SSD.
+11: Throughput HDD.
+12: Tremendous SSD.
+13: Balanced SSD.
+14: Big Data Cloud Disk.
+15: High IO Cloud Disk.
+16: Remote SSD.
+     * @param Type Disk type.
+1: Local Disk.
+2: Cloud Disk.
+3: Local SSD.
+4: Cloud SSD.
+5: Premium Cloud Disk.
+6: Enhanced SSD.
+11: Throughput HDD.
+12: Tremendous SSD.
+13: Balanced SSD.
+14: Big Data Cloud Disk.
+15: High IO Cloud Disk.
+16: Remote SSD.
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Cloud disk size
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Volume Cloud disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Disk size. 
+     * @return Size Disk size.
+     */
+    public String getSize() {
+        return this.Size;
+    }
+
+    /**
+     * Set Disk size.
+     * @param Size Disk size.
+     */
+    public void setSize(String Size) {
+        this.Size = Size;
+    }
+
+    /**
+     * Get Cloud disk size (bytes). 
+     * @return Volume Cloud disk size (bytes).
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set Cloud disk size
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Volume Cloud disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Cloud disk size (bytes).
+     * @param Volume Cloud disk size (bytes).
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
@@ -121,6 +189,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.Size != null) {
+            this.Size = new String(source.Size);
+        }
         if (source.Volume != null) {
             this.Volume = new Long(source.Volume);
         }
@@ -133,6 +204,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "Volume", this.Volume);
 
     }

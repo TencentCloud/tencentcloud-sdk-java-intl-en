@@ -25,7 +25,6 @@ public class DescribeMNPVersionResp extends AbstractModel {
 
     /**
     * Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPId")
     @Expose
@@ -33,15 +32,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 1: Pending; 20: Running; 30: Failed; 60: Succeeded 
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 1: Pending; 20: Running; 30: Failed; 60: Succeeded
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -49,17 +46,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Task status message
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskMsg")
     @Expose
     private String TaskMsg;
 
     /**
-     * Get Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+    * Mini program version ID (returned when compilation succeeds)
+    */
+    @SerializedName("MNPVersionId")
+    @Expose
+    private Long MNPVersionId;
+
+    /**
+     * Get Mini program ID 
      * @return MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPId() {
         return this.MNPId;
@@ -67,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Task ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Task ID 
      * @return TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTaskId() {
         return this.TaskId;
@@ -87,9 +84,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -97,29 +92,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get 1: Pending; 20: Running; 30: Failed; 60: Succeeded 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskStatus 1: Pending; 20: Running; 30: Failed; 60: Succeeded 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @return TaskStatus 1: Pending; 20: Running; 30: Failed; 60: Succeeded
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 1: Pending; 20: Running; 30: Failed; 60: Succeeded 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskStatus 1: Pending; 20: Running; 30: Failed; 60: Succeeded 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 1: Pending; 20: Running; 30: Failed; 60: Succeeded
+     * @param TaskStatus 1: Pending; 20: Running; 30: Failed; 60: Succeeded
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get Task status message
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Task status message 
      * @return TaskMsg Task status message
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTaskMsg() {
         return this.TaskMsg;
@@ -127,12 +116,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task status message
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskMsg Task status message
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskMsg(String TaskMsg) {
         this.TaskMsg = TaskMsg;
+    }
+
+    /**
+     * Get Mini program version ID (returned when compilation succeeds) 
+     * @return MNPVersionId Mini program version ID (returned when compilation succeeds)
+     */
+    public Long getMNPVersionId() {
+        return this.MNPVersionId;
+    }
+
+    /**
+     * Set Mini program version ID (returned when compilation succeeds)
+     * @param MNPVersionId Mini program version ID (returned when compilation succeeds)
+     */
+    public void setMNPVersionId(Long MNPVersionId) {
+        this.MNPVersionId = MNPVersionId;
     }
 
     public DescribeMNPVersionResp() {
@@ -155,6 +158,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TaskMsg != null) {
             this.TaskMsg = new String(source.TaskMsg);
         }
+        if (source.MNPVersionId != null) {
+            this.MNPVersionId = new Long(source.MNPVersionId);
+        }
     }
 
 
@@ -166,6 +172,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
         this.setParamSimple(map, prefix + "TaskMsg", this.TaskMsg);
+        this.setParamSimple(map, prefix + "MNPVersionId", this.MNPVersionId);
 
     }
 }

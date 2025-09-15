@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class ClusterIDToFlowID extends AbstractModel {
 
     /**
-    * Cluster IDNote: This field may return null, indicating that no valid values can be obtained.
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Flow ID.
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-     * Get Cluster IDNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClusterId Cluster IDNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster IDNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ClusterId Cluster IDNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Process ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FlowId Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Flow ID. 
+     * @return FlowId Flow ID.
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FlowId Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Flow ID.
+     * @param FlowId Flow ID.
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

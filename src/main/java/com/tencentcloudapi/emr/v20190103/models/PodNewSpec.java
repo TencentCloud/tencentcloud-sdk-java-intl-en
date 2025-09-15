@@ -90,24 +90,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private DynamicPodSpec DynamicPodSpec;
 
     /**
-    * The unique VPC ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Unique ID of VPC network.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * The unique VPC subnet ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Unique ID of a VPC subnet.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * The pod name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * pod name
     */
     @SerializedName("PodName")
     @Expose
@@ -270,60 +267,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The unique VPC ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VpcId The unique VPC ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Unique ID of VPC network. 
+     * @return VpcId Unique ID of VPC network.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set The unique VPC ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VpcId The unique VPC ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Unique ID of VPC network.
+     * @param VpcId Unique ID of VPC network.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get The unique VPC subnet ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubnetId The unique VPC subnet ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Unique ID of a VPC subnet. 
+     * @return SubnetId Unique ID of a VPC subnet.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set The unique VPC subnet ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubnetId The unique VPC subnet ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Unique ID of a VPC subnet.
+     * @param SubnetId Unique ID of a VPC subnet.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get The pod name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PodName The pod name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get pod name 
+     * @return PodName pod name
      */
     public String getPodName() {
         return this.PodName;
     }
 
     /**
-     * Set The pod name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PodName The pod name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set pod name
+     * @param PodName pod name
      */
     public void setPodName(String PodName) {
         this.PodName = PodName;

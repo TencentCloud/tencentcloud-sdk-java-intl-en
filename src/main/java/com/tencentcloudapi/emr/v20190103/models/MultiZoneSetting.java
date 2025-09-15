@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class MultiZoneSetting extends AbstractModel {
 
     /**
-    * "master", "standby", "third-party"
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * "master", "standby" or "third-party".
     */
     @SerializedName("ZoneTag")
     @Expose
@@ -53,20 +52,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private NewResourceSpec ResourceSpec;
 
     /**
-     * Get "master", "standby", "third-party"
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ZoneTag "master", "standby", "third-party"
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get "master", "standby" or "third-party". 
+     * @return ZoneTag "master", "standby" or "third-party".
      */
     public String getZoneTag() {
         return this.ZoneTag;
     }
 
     /**
-     * Set "master", "standby", "third-party"
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ZoneTag "master", "standby", "third-party"
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set "master", "standby" or "third-party".
+     * @param ZoneTag "master", "standby" or "third-party".
      */
     public void setZoneTag(String ZoneTag) {
         this.ZoneTag = ZoneTag;

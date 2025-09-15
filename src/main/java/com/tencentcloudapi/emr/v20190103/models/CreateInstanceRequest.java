@@ -157,7 +157,7 @@ Enter an instance value: `hive` or `flink`.
     private Long AutoRenew;
 
     /**
-    * Client token.
+    * Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
     */
     @SerializedName("ClientToken")
     @Expose
@@ -284,6 +284,27 @@ Hadoop-Hbase
     @SerializedName("MultiZoneSettings")
     @Expose
     private MultiZoneSetting [] MultiZoneSettings;
+
+    /**
+    * COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+    */
+    @SerializedName("CosBucket")
+    @Expose
+    private String CosBucket;
+
+    /**
+    * Node identifier information: currently used only in Terraform.
+    */
+    @SerializedName("NodeMarks")
+    @Expose
+    private NodeMark [] NodeMarks;
+
+    /**
+    * CLB id
+    */
+    @SerializedName("LoadBalancerId")
+    @Expose
+    private String LoadBalancerId;
 
     /**
      * Get Product ID. Different product IDs stand for different EMR product versions. Valid range:
@@ -638,16 +659,16 @@ Enter an instance value: `hive` or `flink`.
     }
 
     /**
-     * Get Client token. 
-     * @return ClientToken Client token.
+     * Get Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280. 
+     * @return ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set Client token.
-     * @param ClientToken Client token.
+     * Set Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
+     * @param ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
@@ -949,6 +970,54 @@ Hadoop-Hbase
         this.MultiZoneSettings = MultiZoneSettings;
     }
 
+    /**
+     * Get COS bucket path, which is used when you create StarRocks compute-storage separation clusters. 
+     * @return CosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+     */
+    public String getCosBucket() {
+        return this.CosBucket;
+    }
+
+    /**
+     * Set COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+     * @param CosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+     */
+    public void setCosBucket(String CosBucket) {
+        this.CosBucket = CosBucket;
+    }
+
+    /**
+     * Get Node identifier information: currently used only in Terraform. 
+     * @return NodeMarks Node identifier information: currently used only in Terraform.
+     */
+    public NodeMark [] getNodeMarks() {
+        return this.NodeMarks;
+    }
+
+    /**
+     * Set Node identifier information: currently used only in Terraform.
+     * @param NodeMarks Node identifier information: currently used only in Terraform.
+     */
+    public void setNodeMarks(NodeMark [] NodeMarks) {
+        this.NodeMarks = NodeMarks;
+    }
+
+    /**
+     * Get CLB id 
+     * @return LoadBalancerId CLB id
+     */
+    public String getLoadBalancerId() {
+        return this.LoadBalancerId;
+    }
+
+    /**
+     * Set CLB id
+     * @param LoadBalancerId CLB id
+     */
+    public void setLoadBalancerId(String LoadBalancerId) {
+        this.LoadBalancerId = LoadBalancerId;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -1071,6 +1140,18 @@ Hadoop-Hbase
                 this.MultiZoneSettings[i] = new MultiZoneSetting(source.MultiZoneSettings[i]);
             }
         }
+        if (source.CosBucket != null) {
+            this.CosBucket = new String(source.CosBucket);
+        }
+        if (source.NodeMarks != null) {
+            this.NodeMarks = new NodeMark[source.NodeMarks.length];
+            for (int i = 0; i < source.NodeMarks.length; i++) {
+                this.NodeMarks[i] = new NodeMark(source.NodeMarks[i]);
+            }
+        }
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
     }
 
 
@@ -1110,6 +1191,9 @@ Hadoop-Hbase
         this.setParamSimple(map, prefix + "VersionID", this.VersionID);
         this.setParamSimple(map, prefix + "MultiZone", this.MultiZone);
         this.setParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
+        this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
+        this.setParamArrayObj(map, prefix + "NodeMarks.", this.NodeMarks);
+        this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
 
     }
 }

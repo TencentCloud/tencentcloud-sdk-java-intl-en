@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class ShortNodeInfo extends AbstractModel {
 
     /**
-    * Node type: Master/Core/Task/Router/Common
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Node type: Master/Core/Task/Router/Common.
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * Number of nodes
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Number of nodes.
     */
     @SerializedName("NodeSize")
     @Expose
     private Long NodeSize;
 
     /**
-     * Get Node type: Master/Core/Task/Router/Common
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return NodeType Node type: Master/Core/Task/Router/Common
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Node type: Master/Core/Task/Router/Common. 
+     * @return NodeType Node type: Master/Core/Task/Router/Common.
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Node type: Master/Core/Task/Router/Common
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param NodeType Node type: Master/Core/Task/Router/Common
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Node type: Master/Core/Task/Router/Common.
+     * @param NodeType Node type: Master/Core/Task/Router/Common.
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get Number of nodes
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return NodeSize Number of nodes
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Number of nodes. 
+     * @return NodeSize Number of nodes.
      */
     public Long getNodeSize() {
         return this.NodeSize;
     }
 
     /**
-     * Set Number of nodes
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param NodeSize Number of nodes
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Number of nodes.
+     * @param NodeSize Number of nodes.
      */
     public void setNodeSize(Long NodeSize) {
         this.NodeSize = NodeSize;

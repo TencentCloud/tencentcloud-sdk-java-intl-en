@@ -40,13 +40,6 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
     private Long TimeSpan;
 
     /**
-    * Target node specification.
-    */
-    @SerializedName("UpdateSpec")
-    @Expose
-    private UpdateInstanceSettings UpdateSpec;
-
-    /**
     * Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
     */
@@ -55,18 +48,25 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
     private Long PayMode;
 
     /**
-    * Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-    */
-    @SerializedName("Placement")
-    @Expose
-    private Placement Placement;
-
-    /**
     * Currency.
     */
     @SerializedName("Currency")
     @Expose
     private String Currency;
+
+    /**
+    * Target node specification.
+    */
+    @SerializedName("UpdateSpec")
+    @Expose
+    private UpdateInstanceSettings UpdateSpec;
+
+    /**
+    * Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+    */
+    @SerializedName("Placement")
+    @Expose
+    private Placement Placement;
 
     /**
     * The resource ID list for batch configuration change.
@@ -116,22 +116,6 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Target node specification. 
-     * @return UpdateSpec Target node specification.
-     */
-    public UpdateInstanceSettings getUpdateSpec() {
-        return this.UpdateSpec;
-    }
-
-    /**
-     * Set Target node specification.
-     * @param UpdateSpec Target node specification.
-     */
-    public void setUpdateSpec(UpdateInstanceSettings UpdateSpec) {
-        this.UpdateSpec = UpdateSpec;
-    }
-
-    /**
      * Get Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li> 
      * @return PayMode Instance billing mode. Valid values:
@@ -152,22 +136,6 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance. 
-     * @return Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-     */
-    public Placement getPlacement() {
-        return this.Placement;
-    }
-
-    /**
-     * Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-     * @param Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-     */
-    public void setPlacement(Placement Placement) {
-        this.Placement = Placement;
-    }
-
-    /**
      * Get Currency. 
      * @return Currency Currency.
      */
@@ -181,6 +149,38 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;
+    }
+
+    /**
+     * Get Target node specification. 
+     * @return UpdateSpec Target node specification.
+     */
+    public UpdateInstanceSettings getUpdateSpec() {
+        return this.UpdateSpec;
+    }
+
+    /**
+     * Set Target node specification.
+     * @param UpdateSpec Target node specification.
+     */
+    public void setUpdateSpec(UpdateInstanceSettings UpdateSpec) {
+        this.UpdateSpec = UpdateSpec;
+    }
+
+    /**
+     * Get Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance. 
+     * @return Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     */
+    public Placement getPlacement() {
+        return this.Placement;
+    }
+
+    /**
+     * Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     * @param Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     */
+    public void setPlacement(Placement Placement) {
+        this.Placement = Placement;
     }
 
     /**
@@ -213,17 +213,17 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
         }
-        if (source.UpdateSpec != null) {
-            this.UpdateSpec = new UpdateInstanceSettings(source.UpdateSpec);
-        }
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
-        if (source.Placement != null) {
-            this.Placement = new Placement(source.Placement);
-        }
         if (source.Currency != null) {
             this.Currency = new String(source.Currency);
+        }
+        if (source.UpdateSpec != null) {
+            this.UpdateSpec = new UpdateInstanceSettings(source.UpdateSpec);
+        }
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
         }
         if (source.ResourceIdList != null) {
             this.ResourceIdList = new String[source.ResourceIdList.length];
@@ -240,10 +240,10 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
-        this.setParamObj(map, prefix + "UpdateSpec.", this.UpdateSpec);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
-        this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamObj(map, prefix + "UpdateSpec.", this.UpdateSpec);
+        this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamArraySimple(map, prefix + "ResourceIdList.", this.ResourceIdList);
 
     }

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class NodeResourceSpec extends AbstractModel {
 
     /**
-    * The spec type, such as `S2.MEDIUM8`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * specifications type, such as S2.MEDIUM8.
     */
     @SerializedName("InstanceType")
     @Expose
@@ -64,20 +63,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private DiskSpecInfo [] LocalDataDisk;
 
     /**
-     * Get The spec type, such as `S2.MEDIUM8`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceType The spec type, such as `S2.MEDIUM8`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get specifications type, such as S2.MEDIUM8. 
+     * @return InstanceType specifications type, such as S2.MEDIUM8.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set The spec type, such as `S2.MEDIUM8`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceType The spec type, such as `S2.MEDIUM8`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set specifications type, such as S2.MEDIUM8.
+     * @param InstanceType specifications type, such as S2.MEDIUM8.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

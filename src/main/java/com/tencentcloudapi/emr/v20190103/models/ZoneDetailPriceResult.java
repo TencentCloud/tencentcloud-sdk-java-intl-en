@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ZoneDetailPriceResult extends AbstractModel {
 
     /**
-    * AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Availability zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private NodeDetailPriceResult [] NodeDetailPrice;
 
     /**
-     * Get AZ ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneId AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Availability zone ID. 
+     * @return ZoneId Availability zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ZoneId AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Availability zone ID.
+     * @param ZoneId Availability zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;

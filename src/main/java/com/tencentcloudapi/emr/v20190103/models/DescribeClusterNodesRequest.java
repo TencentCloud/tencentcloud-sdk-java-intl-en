@@ -46,6 +46,13 @@ Note: only the above values are supported for the time being. Entering other val
     private String NodeFlag;
 
     /**
+    * Whether to carry CDB information when all node information is exported in CSV format.
+    */
+    @SerializedName("ExportDb")
+    @Expose
+    private Boolean ExportDb;
+
+    /**
     * Page number. Default value: 0, indicating the first page.
     */
     @SerializedName("Offset")
@@ -53,7 +60,8 @@ Note: only the above values are supported for the time being. Entering other val
     private Long Offset;
 
     /**
-    * Number of returned results per page. Default value: 100. Maximum value: 100
+    * Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both offset and limit are not set, or both are set to 0, all data will be returned.
     */
     @SerializedName("Limit")
     @Expose
@@ -74,14 +82,14 @@ Note: only the above values are supported for the time being. Entering other val
     private SearchItem [] SearchFields;
 
     /**
-    * None
+    * Order field.
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * None
+    * Ascending or not. 1: ascending; 0: descending.
     */
     @SerializedName("Asc")
     @Expose
@@ -152,6 +160,22 @@ Note: only the above values are supported for the time being. Entering other val
     }
 
     /**
+     * Get Whether to carry CDB information when all node information is exported in CSV format. 
+     * @return ExportDb Whether to carry CDB information when all node information is exported in CSV format.
+     */
+    public Boolean getExportDb() {
+        return this.ExportDb;
+    }
+
+    /**
+     * Set Whether to carry CDB information when all node information is exported in CSV format.
+     * @param ExportDb Whether to carry CDB information when all node information is exported in CSV format.
+     */
+    public void setExportDb(Boolean ExportDb) {
+        this.ExportDb = ExportDb;
+    }
+
+    /**
      * Get Page number. Default value: 0, indicating the first page. 
      * @return Offset Page number. Default value: 0, indicating the first page.
      */
@@ -168,16 +192,20 @@ Note: only the above values are supported for the time being. Entering other val
     }
 
     /**
-     * Get Number of returned results per page. Default value: 100. Maximum value: 100 
-     * @return Limit Number of returned results per page. Default value: 100. Maximum value: 100
+     * Get Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both offset and limit are not set, or both are set to 0, all data will be returned. 
+     * @return Limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both offset and limit are not set, or both are set to 0, all data will be returned.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results per page. Default value: 100. Maximum value: 100
-     * @param Limit Number of returned results per page. Default value: 100. Maximum value: 100
+     * Set Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both offset and limit are not set, or both are set to 0, all data will be returned.
+     * @param Limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both offset and limit are not set, or both are set to 0, all data will be returned.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -216,32 +244,32 @@ Note: only the above values are supported for the time being. Entering other val
     }
 
     /**
-     * Get None 
-     * @return OrderField None
+     * Get Order field. 
+     * @return OrderField Order field.
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set None
-     * @param OrderField None
+     * Set Order field.
+     * @param OrderField Order field.
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get None 
-     * @return Asc None
+     * Get Ascending or not. 1: ascending; 0: descending. 
+     * @return Asc Ascending or not. 1: ascending; 0: descending.
      */
     public Long getAsc() {
         return this.Asc;
     }
 
     /**
-     * Set None
-     * @param Asc None
+     * Set Ascending or not. 1: ascending; 0: descending.
+     * @param Asc Ascending or not. 1: ascending; 0: descending.
      */
     public void setAsc(Long Asc) {
         this.Asc = Asc;
@@ -260,6 +288,9 @@ Note: only the above values are supported for the time being. Entering other val
         }
         if (source.NodeFlag != null) {
             this.NodeFlag = new String(source.NodeFlag);
+        }
+        if (source.ExportDb != null) {
+            this.ExportDb = new Boolean(source.ExportDb);
         }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
@@ -291,6 +322,7 @@ Note: only the above values are supported for the time being. Entering other val
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "NodeFlag", this.NodeFlag);
+        this.setParamSimple(map, prefix + "ExportDb", this.ExportDb);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);

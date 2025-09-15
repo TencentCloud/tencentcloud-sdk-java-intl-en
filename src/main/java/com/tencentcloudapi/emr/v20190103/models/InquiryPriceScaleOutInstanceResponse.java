@@ -25,7 +25,6 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel {
 
     /**
     * Original price.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginalCost")
     @Expose
@@ -33,16 +32,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiscountCost")
     @Expose
     private String DiscountCost;
 
     /**
-    * Time unit of scale-out. Valid value:
-<li>s: Second.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Time unit of scale-out. Valid values.
+<li>s: second.</li>
     */
     @SerializedName("Unit")
     @Expose
@@ -72,10 +69,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Original price.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Original price. 
      * @return OriginalCost Original price.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOriginalCost() {
         return this.OriginalCost;
@@ -83,19 +78,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Original price.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param OriginalCost Original price.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOriginalCost(String OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get Discounted price.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Discounted price. 
      * @return DiscountCost Discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDiscountCost() {
         return this.DiscountCost;
@@ -103,33 +94,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DiscountCost Discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiscountCost(String DiscountCost) {
         this.DiscountCost = DiscountCost;
     }
 
     /**
-     * Get Time unit of scale-out. Valid value:
-<li>s: Second.</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Unit Time unit of scale-out. Valid value:
-<li>s: Second.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Time unit of scale-out. Valid values.
+<li>s: second.</li> 
+     * @return Unit Time unit of scale-out. Valid values.
+<li>s: second.</li>
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set Time unit of scale-out. Valid value:
-<li>s: Second.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Unit Time unit of scale-out. Valid value:
-<li>s: Second.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Time unit of scale-out. Valid values.
+<li>s: second.</li>
+     * @param Unit Time unit of scale-out. Valid values.
+<li>s: second.</li>
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;

@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class KeyValue extends AbstractModel {
 
     /**
-    * Key
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Key.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * ValueNote: This field may return null, indicating that no valid values can be obtained.
+    * Value.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Key
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Key Key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Key. 
+     * @return Key Key.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Key
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Key Key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Key.
+     * @param Key Key.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get ValueNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Value ValueNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Value. 
+     * @return Value Value.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set ValueNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Value ValueNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Value.
+     * @param Value Value.
      */
     public void setValue(String Value) {
         this.Value = Value;

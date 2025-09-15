@@ -1395,6 +1395,17 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     }
 
     /**
+     *This API is used to query the progress of the migration verification task, inquiry of migration check task progress, applicable to the migration method where the migration source type is TencentDB for SQL Server.
+     * @param req QueryMigrationCheckProcessRequest
+     * @return QueryMigrationCheckProcessResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryMigrationCheckProcessResponse QueryMigrationCheckProcess(QueryMigrationCheckProcessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryMigrationCheckProcess", QueryMigrationCheckProcessResponse.class);
+    }
+
+    /**
      *This API is used to return a deactivated SQL Server instance.
      * @param req RecycleDBInstanceRequest
      * @return RecycleDBInstanceResponse

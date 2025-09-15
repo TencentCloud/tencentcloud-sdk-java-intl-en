@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class TopologyInfo extends AbstractModel {
 
     /**
-    * AZ ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Availability zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * AZ information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Availability information.
     */
     @SerializedName("Zone")
     @Expose
@@ -56,40 +54,32 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private ShortNodeInfo [] NodeInfoList;
 
     /**
-     * Get AZ ID
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ZoneId AZ ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Availability zone ID. 
+     * @return ZoneId Availability zone ID.
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set AZ ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ZoneId AZ ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Availability zone ID.
+     * @param ZoneId Availability zone ID.
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get AZ information
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Zone AZ information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Availability information. 
+     * @return Zone Availability information.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Zone AZ information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Availability information.
+     * @param Zone Availability information.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

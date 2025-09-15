@@ -57,6 +57,20 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel {
     private StrategyConfig StrategyConfig;
 
     /**
+    * Parameters used for suspending services.
+    */
+    @SerializedName("StopParams")
+    @Expose
+    private StopParams StopParams;
+
+    /**
+    * This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+    */
+    @SerializedName("KeepMonitorButNotRecoverProcess")
+    @Expose
+    private Boolean KeepMonitorButNotRecoverProcess;
+
+    /**
      * Get The cluster ID. 
      * @return InstanceId The cluster ID.
      */
@@ -140,6 +154,38 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel {
         this.StrategyConfig = StrategyConfig;
     }
 
+    /**
+     * Get Parameters used for suspending services. 
+     * @return StopParams Parameters used for suspending services.
+     */
+    public StopParams getStopParams() {
+        return this.StopParams;
+    }
+
+    /**
+     * Set Parameters used for suspending services.
+     * @param StopParams Parameters used for suspending services.
+     */
+    public void setStopParams(StopParams StopParams) {
+        this.StopParams = StopParams;
+    }
+
+    /**
+     * Get This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them. 
+     * @return KeepMonitorButNotRecoverProcess This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+     */
+    public Boolean getKeepMonitorButNotRecoverProcess() {
+        return this.KeepMonitorButNotRecoverProcess;
+    }
+
+    /**
+     * Set This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+     * @param KeepMonitorButNotRecoverProcess This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+     */
+    public void setKeepMonitorButNotRecoverProcess(Boolean KeepMonitorButNotRecoverProcess) {
+        this.KeepMonitorButNotRecoverProcess = KeepMonitorButNotRecoverProcess;
+    }
+
     public StartStopServiceOrMonitorRequest() {
     }
 
@@ -160,6 +206,12 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel {
         if (source.StrategyConfig != null) {
             this.StrategyConfig = new StrategyConfig(source.StrategyConfig);
         }
+        if (source.StopParams != null) {
+            this.StopParams = new StopParams(source.StopParams);
+        }
+        if (source.KeepMonitorButNotRecoverProcess != null) {
+            this.KeepMonitorButNotRecoverProcess = new Boolean(source.KeepMonitorButNotRecoverProcess);
+        }
     }
 
 
@@ -171,6 +223,8 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OpType", this.OpType);
         this.setParamObj(map, prefix + "OpScope.", this.OpScope);
         this.setParamObj(map, prefix + "StrategyConfig.", this.StrategyConfig);
+        this.setParamObj(map, prefix + "StopParams.", this.StopParams);
+        this.setParamSimple(map, prefix + "KeepMonitorButNotRecoverProcess", this.KeepMonitorButNotRecoverProcess);
 
     }
 }

@@ -94,7 +94,7 @@ public class DescribeEmrApplicationStaticsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Page limit
+    * Page capacity in the range of [10,100].
     */
     @SerializedName("Limit")
     @Expose
@@ -261,16 +261,16 @@ public class DescribeEmrApplicationStaticsRequest extends AbstractModel {
     }
 
     /**
-     * Get Page limit 
-     * @return Limit Page limit
+     * Get Page capacity in the range of [10,100]. 
+     * @return Limit Page capacity in the range of [10,100].
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Page limit
-     * @param Limit Page limit
+     * Set Page capacity in the range of [10,100].
+     * @param Limit Page capacity in the range of [10,100].
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

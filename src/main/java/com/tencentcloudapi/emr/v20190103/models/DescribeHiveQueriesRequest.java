@@ -59,6 +59,27 @@ public class DescribeHiveQueriesRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * Execution status, for example, ERROR.
+    */
+    @SerializedName("State")
+    @Expose
+    private String [] State;
+
+    /**
+    * Time point earlier than the end time.
+    */
+    @SerializedName("EndTimeGte")
+    @Expose
+    private Long EndTimeGte;
+
+    /**
+    * Time point later than the end time.
+    */
+    @SerializedName("EndTimeLte")
+    @Expose
+    private Long EndTimeLte;
+
+    /**
      * Get The cluster ID. 
      * @return InstanceId The cluster ID.
      */
@@ -138,6 +159,54 @@ public class DescribeHiveQueriesRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get Execution status, for example, ERROR. 
+     * @return State Execution status, for example, ERROR.
+     */
+    public String [] getState() {
+        return this.State;
+    }
+
+    /**
+     * Set Execution status, for example, ERROR.
+     * @param State Execution status, for example, ERROR.
+     */
+    public void setState(String [] State) {
+        this.State = State;
+    }
+
+    /**
+     * Get Time point earlier than the end time. 
+     * @return EndTimeGte Time point earlier than the end time.
+     */
+    public Long getEndTimeGte() {
+        return this.EndTimeGte;
+    }
+
+    /**
+     * Set Time point earlier than the end time.
+     * @param EndTimeGte Time point earlier than the end time.
+     */
+    public void setEndTimeGte(Long EndTimeGte) {
+        this.EndTimeGte = EndTimeGte;
+    }
+
+    /**
+     * Get Time point later than the end time. 
+     * @return EndTimeLte Time point later than the end time.
+     */
+    public Long getEndTimeLte() {
+        return this.EndTimeLte;
+    }
+
+    /**
+     * Set Time point later than the end time.
+     * @param EndTimeLte Time point later than the end time.
+     */
+    public void setEndTimeLte(Long EndTimeLte) {
+        this.EndTimeLte = EndTimeLte;
+    }
+
     public DescribeHiveQueriesRequest() {
     }
 
@@ -161,6 +230,18 @@ public class DescribeHiveQueriesRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.State != null) {
+            this.State = new String[source.State.length];
+            for (int i = 0; i < source.State.length; i++) {
+                this.State[i] = new String(source.State[i]);
+            }
+        }
+        if (source.EndTimeGte != null) {
+            this.EndTimeGte = new Long(source.EndTimeGte);
+        }
+        if (source.EndTimeLte != null) {
+            this.EndTimeLte = new Long(source.EndTimeLte);
+        }
     }
 
 
@@ -173,6 +254,9 @@ public class DescribeHiveQueriesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "State.", this.State);
+        this.setParamSimple(map, prefix + "EndTimeGte", this.EndTimeGte);
+        this.setParamSimple(map, prefix + "EndTimeLte", this.EndTimeLte);
 
     }
 }

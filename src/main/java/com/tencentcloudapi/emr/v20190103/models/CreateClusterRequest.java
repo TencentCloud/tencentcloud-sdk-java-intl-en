@@ -41,7 +41,7 @@ public class CreateClusterRequest extends AbstractModel {
 
     /**
     * The instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
     */
     @SerializedName("InstanceName")
@@ -94,7 +94,7 @@ public class CreateClusterRequest extends AbstractModel {
     private ScriptBootstrapActionConfig [] ScriptBootstrapActionConfig;
 
     /**
-    * A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
+    * Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
     */
     @SerializedName("ClientToken")
     @Expose
@@ -182,6 +182,27 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
     private ZoneResourceConfiguration [] ZoneResourceConfiguration;
 
     /**
+    * COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+    */
+    @SerializedName("CosBucket")
+    @Expose
+    private String CosBucket;
+
+    /**
+    * Node identifier information: currently used only in Terraform.
+    */
+    @SerializedName("NodeMarks")
+    @Expose
+    private NodeMark [] NodeMarks;
+
+    /**
+    * clb id
+    */
+    @SerializedName("LoadBalancerId")
+    @Expose
+    private String LoadBalancerId;
+
+    /**
      * Get The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1). 
      * @return ProductVersion The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1).
      */
@@ -223,10 +244,10 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
 
     /**
      * Get The instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li> 
      * @return InstanceName The instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
      */
     public String getInstanceName() {
@@ -235,10 +256,10 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
 
     /**
      * Set The instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
      * @param InstanceName The instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
      */
     public void setInstanceName(String InstanceName) {
@@ -354,16 +375,16 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
     }
 
     /**
-     * Get A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`. 
-     * @return ClientToken A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
+     * Get Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808. 
+     * @return ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
-     * @param ClientToken A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
+     * Set Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
+     * @param ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
@@ -573,6 +594,54 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
         this.ZoneResourceConfiguration = ZoneResourceConfiguration;
     }
 
+    /**
+     * Get COS bucket path, which is used when you create StarRocks compute-storage separation clusters. 
+     * @return CosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+     */
+    public String getCosBucket() {
+        return this.CosBucket;
+    }
+
+    /**
+     * Set COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+     * @param CosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+     */
+    public void setCosBucket(String CosBucket) {
+        this.CosBucket = CosBucket;
+    }
+
+    /**
+     * Get Node identifier information: currently used only in Terraform. 
+     * @return NodeMarks Node identifier information: currently used only in Terraform.
+     */
+    public NodeMark [] getNodeMarks() {
+        return this.NodeMarks;
+    }
+
+    /**
+     * Set Node identifier information: currently used only in Terraform.
+     * @param NodeMarks Node identifier information: currently used only in Terraform.
+     */
+    public void setNodeMarks(NodeMark [] NodeMarks) {
+        this.NodeMarks = NodeMarks;
+    }
+
+    /**
+     * Get clb id 
+     * @return LoadBalancerId clb id
+     */
+    public String getLoadBalancerId() {
+        return this.LoadBalancerId;
+    }
+
+    /**
+     * Set clb id
+     * @param LoadBalancerId clb id
+     */
+    public void setLoadBalancerId(String LoadBalancerId) {
+        this.LoadBalancerId = LoadBalancerId;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -659,6 +728,18 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
                 this.ZoneResourceConfiguration[i] = new ZoneResourceConfiguration(source.ZoneResourceConfiguration[i]);
             }
         }
+        if (source.CosBucket != null) {
+            this.CosBucket = new String(source.CosBucket);
+        }
+        if (source.NodeMarks != null) {
+            this.NodeMarks = new NodeMark[source.NodeMarks.length];
+            for (int i = 0; i < source.NodeMarks.length; i++) {
+                this.NodeMarks[i] = new NodeMark(source.NodeMarks[i]);
+            }
+        }
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
     }
 
 
@@ -686,6 +767,9 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
         this.setParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
         this.setParamArrayObj(map, prefix + "DependService.", this.DependService);
         this.setParamArrayObj(map, prefix + "ZoneResourceConfiguration.", this.ZoneResourceConfiguration);
+        this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
+        this.setParamArrayObj(map, prefix + "NodeMarks.", this.NodeMarks);
+        this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
 
     }
 }

@@ -87,34 +87,46 @@ public class AutoScaleRecord extends AbstractModel {
     private String SpecInfo;
 
     /**
-    * Compensatory scale-out. Valid values: 0 (disabled), 1 (enabled).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Compensatory scale-out. 0: disable, 1: enable.
     */
     @SerializedName("CompensateFlag")
     @Expose
     private Long CompensateFlag;
 
     /**
-    * Number of compensations
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of compensations.
     */
     @SerializedName("CompensateCount")
     @Expose
     private Long CompensateCount;
 
     /**
-    * 
+    * Number of retries.
     */
     @SerializedName("RetryCount")
     @Expose
     private Long RetryCount;
 
     /**
-    * 
+    * Retry information.
     */
     @SerializedName("RetryInfo")
     @Expose
     private String RetryInfo;
+
+    /**
+    * Retry description in English.
+    */
+    @SerializedName("RetryEnReason")
+    @Expose
+    private String RetryEnReason;
+
+    /**
+    * Retry description.
+    */
+    @SerializedName("RetryReason")
+    @Expose
+    private String RetryReason;
 
     /**
      * Get Name of the scale-in or scale-out rule. 
@@ -261,75 +273,99 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Compensatory scale-out. Valid values: 0 (disabled), 1 (enabled).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CompensateFlag Compensatory scale-out. Valid values: 0 (disabled), 1 (enabled).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Compensatory scale-out. 0: disable, 1: enable. 
+     * @return CompensateFlag Compensatory scale-out. 0: disable, 1: enable.
      */
     public Long getCompensateFlag() {
         return this.CompensateFlag;
     }
 
     /**
-     * Set Compensatory scale-out. Valid values: 0 (disabled), 1 (enabled).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CompensateFlag Compensatory scale-out. Valid values: 0 (disabled), 1 (enabled).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Compensatory scale-out. 0: disable, 1: enable.
+     * @param CompensateFlag Compensatory scale-out. 0: disable, 1: enable.
      */
     public void setCompensateFlag(Long CompensateFlag) {
         this.CompensateFlag = CompensateFlag;
     }
 
     /**
-     * Get Number of compensations
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CompensateCount Number of compensations
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of compensations. 
+     * @return CompensateCount Number of compensations.
      */
     public Long getCompensateCount() {
         return this.CompensateCount;
     }
 
     /**
-     * Set Number of compensations
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CompensateCount Number of compensations
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of compensations.
+     * @param CompensateCount Number of compensations.
      */
     public void setCompensateCount(Long CompensateCount) {
         this.CompensateCount = CompensateCount;
     }
 
     /**
-     * Get  
-     * @return RetryCount 
+     * Get Number of retries. 
+     * @return RetryCount Number of retries.
      */
     public Long getRetryCount() {
         return this.RetryCount;
     }
 
     /**
-     * Set 
-     * @param RetryCount 
+     * Set Number of retries.
+     * @param RetryCount Number of retries.
      */
     public void setRetryCount(Long RetryCount) {
         this.RetryCount = RetryCount;
     }
 
     /**
-     * Get  
-     * @return RetryInfo 
+     * Get Retry information. 
+     * @return RetryInfo Retry information.
      */
     public String getRetryInfo() {
         return this.RetryInfo;
     }
 
     /**
-     * Set 
-     * @param RetryInfo 
+     * Set Retry information.
+     * @param RetryInfo Retry information.
      */
     public void setRetryInfo(String RetryInfo) {
         this.RetryInfo = RetryInfo;
+    }
+
+    /**
+     * Get Retry description in English. 
+     * @return RetryEnReason Retry description in English.
+     */
+    public String getRetryEnReason() {
+        return this.RetryEnReason;
+    }
+
+    /**
+     * Set Retry description in English.
+     * @param RetryEnReason Retry description in English.
+     */
+    public void setRetryEnReason(String RetryEnReason) {
+        this.RetryEnReason = RetryEnReason;
+    }
+
+    /**
+     * Get Retry description. 
+     * @return RetryReason Retry description.
+     */
+    public String getRetryReason() {
+        return this.RetryReason;
+    }
+
+    /**
+     * Set Retry description.
+     * @param RetryReason Retry description.
+     */
+    public void setRetryReason(String RetryReason) {
+        this.RetryReason = RetryReason;
     }
 
     public AutoScaleRecord() {
@@ -379,6 +415,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RetryInfo != null) {
             this.RetryInfo = new String(source.RetryInfo);
         }
+        if (source.RetryEnReason != null) {
+            this.RetryEnReason = new String(source.RetryEnReason);
+        }
+        if (source.RetryReason != null) {
+            this.RetryReason = new String(source.RetryReason);
+        }
     }
 
 
@@ -399,6 +441,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CompensateCount", this.CompensateCount);
         this.setParamSimple(map, prefix + "RetryCount", this.RetryCount);
         this.setParamSimple(map, prefix + "RetryInfo", this.RetryInfo);
+        this.setParamSimple(map, prefix + "RetryEnReason", this.RetryEnReason);
+        this.setParamSimple(map, prefix + "RetryReason", this.RetryReason);
 
     }
 }

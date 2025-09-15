@@ -25,15 +25,13 @@ public class PersistentVolumeContext extends AbstractModel {
 
     /**
     * Disk size in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Disk type. Valid values: `CLOUD_PREMIUM` and `CLOUD_SSD`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Disk type, CLOUD_PREMIUM or CLOUD_SSD.
     */
     @SerializedName("DiskType")
     @Expose
@@ -41,17 +39,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskNum")
     @Expose
     private Long DiskNum;
 
     /**
-     * Get Disk size in GB.
-Note: This field may return null, indicating that no valid values can be obtained. 
+    * Additional performance of cloud disks.
+    */
+    @SerializedName("ExtraPerformance")
+    @Expose
+    private Long ExtraPerformance;
+
+    /**
+     * Get Disk size in GB. 
      * @return DiskSize Disk size in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDiskSize() {
         return this.DiskSize;
@@ -59,39 +61,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Disk size in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DiskSize Disk size in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Disk type. Valid values: `CLOUD_PREMIUM` and `CLOUD_SSD`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiskType Disk type. Valid values: `CLOUD_PREMIUM` and `CLOUD_SSD`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Disk type, CLOUD_PREMIUM or CLOUD_SSD. 
+     * @return DiskType Disk type, CLOUD_PREMIUM or CLOUD_SSD.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Disk type. Valid values: `CLOUD_PREMIUM` and `CLOUD_SSD`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiskType Disk type. Valid values: `CLOUD_PREMIUM` and `CLOUD_SSD`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Disk type, CLOUD_PREMIUM or CLOUD_SSD.
+     * @param DiskType Disk type, CLOUD_PREMIUM or CLOUD_SSD.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of disks. 
      * @return DiskNum Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDiskNum() {
         return this.DiskNum;
@@ -99,12 +93,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DiskNum Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskNum(Long DiskNum) {
         this.DiskNum = DiskNum;
+    }
+
+    /**
+     * Get Additional performance of cloud disks. 
+     * @return ExtraPerformance Additional performance of cloud disks.
+     */
+    public Long getExtraPerformance() {
+        return this.ExtraPerformance;
+    }
+
+    /**
+     * Set Additional performance of cloud disks.
+     * @param ExtraPerformance Additional performance of cloud disks.
+     */
+    public void setExtraPerformance(Long ExtraPerformance) {
+        this.ExtraPerformance = ExtraPerformance;
     }
 
     public PersistentVolumeContext() {
@@ -124,6 +132,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.DiskNum != null) {
             this.DiskNum = new Long(source.DiskNum);
         }
+        if (source.ExtraPerformance != null) {
+            this.ExtraPerformance = new Long(source.ExtraPerformance);
+        }
     }
 
 
@@ -134,6 +145,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskNum", this.DiskNum);
+        this.setParamSimple(map, prefix + "ExtraPerformance", this.ExtraPerformance);
 
     }
 }

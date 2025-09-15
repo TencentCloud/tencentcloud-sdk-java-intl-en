@@ -1828,7 +1828,6 @@ The feature is only supported in the enterprise plan and is currently in closed 
     /**
      *This API is used to configure the certificate of a site. You can use your own certificate or [apply for a free certificate](https://intl.cloud.tencent.com/document/product/1552/90437?from_cn_redirect=1).
 To use an external certificate, upload the certificate to [SSL Certificates Console](https://console.cloud.tencent.com/certoview) first, and then input the certificate ID in this API. For details, see [Deploying Own Certificates to EdgeOne Domains](https://intl.cloud.tencent.com/document/product/1552/88874?from_cn_redirect=1).
- 
      * @param req ModifyHostsCertificateRequest
      * @return ModifyHostsCertificateResponse
      * @throws TencentCloudSDKException

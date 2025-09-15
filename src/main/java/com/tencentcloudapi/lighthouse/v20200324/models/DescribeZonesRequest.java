@@ -24,76 +24,76 @@ import java.util.HashMap;
 public class DescribeZonesRequest extends AbstractModel {
 
     /**
-    * Sorting field. Valid values:
-<li>`ZONE`: Sort by the availability zone.
-<li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
-The default value is `ZONE`.
+    * Field on which the AZ list is sorted. value range:.
+<Li>ZONE: sorted based on availability zone.</li>.
+INSTANCE_DISPLAY_LABEL: specifies the Tag DISPLAY sorting order based on availability zone. valid values: HIDDEN (hide), NORMAL (ordinary), SELECTED (chosen by default). defaults to ascending order: ['HIDDEN', 'NORMAL', 'SELECTED'].
+Specifies the default sorting order by availability zone.
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * Specifies how availability zones are listed. Valid values:
-<li>ASC: Ascending sort. 
-<li>DESC: Descending sort.
-The default value is `ASC`.
+    * Outputs the sorting order of the availability zone list. value range:.
+<Li>ASC: ascending order.</li>.
+<Li>DESC: sort in descending order.</li>.
+Specifies the default ascending order.
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-     * Get Sorting field. Valid values:
-<li>`ZONE`: Sort by the availability zone.
-<li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
-The default value is `ZONE`. 
-     * @return OrderField Sorting field. Valid values:
-<li>`ZONE`: Sort by the availability zone.
-<li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
-The default value is `ZONE`.
+     * Get Field on which the AZ list is sorted. value range:.
+<Li>ZONE: sorted based on availability zone.</li>.
+INSTANCE_DISPLAY_LABEL: specifies the Tag DISPLAY sorting order based on availability zone. valid values: HIDDEN (hide), NORMAL (ordinary), SELECTED (chosen by default). defaults to ascending order: ['HIDDEN', 'NORMAL', 'SELECTED'].
+Specifies the default sorting order by availability zone. 
+     * @return OrderField Field on which the AZ list is sorted. value range:.
+<Li>ZONE: sorted based on availability zone.</li>.
+INSTANCE_DISPLAY_LABEL: specifies the Tag DISPLAY sorting order based on availability zone. valid values: HIDDEN (hide), NORMAL (ordinary), SELECTED (chosen by default). defaults to ascending order: ['HIDDEN', 'NORMAL', 'SELECTED'].
+Specifies the default sorting order by availability zone.
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set Sorting field. Valid values:
-<li>`ZONE`: Sort by the availability zone.
-<li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
-The default value is `ZONE`.
-     * @param OrderField Sorting field. Valid values:
-<li>`ZONE`: Sort by the availability zone.
-<li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
-The default value is `ZONE`.
+     * Set Field on which the AZ list is sorted. value range:.
+<Li>ZONE: sorted based on availability zone.</li>.
+INSTANCE_DISPLAY_LABEL: specifies the Tag DISPLAY sorting order based on availability zone. valid values: HIDDEN (hide), NORMAL (ordinary), SELECTED (chosen by default). defaults to ascending order: ['HIDDEN', 'NORMAL', 'SELECTED'].
+Specifies the default sorting order by availability zone.
+     * @param OrderField Field on which the AZ list is sorted. value range:.
+<Li>ZONE: sorted based on availability zone.</li>.
+INSTANCE_DISPLAY_LABEL: specifies the Tag DISPLAY sorting order based on availability zone. valid values: HIDDEN (hide), NORMAL (ordinary), SELECTED (chosen by default). defaults to ascending order: ['HIDDEN', 'NORMAL', 'SELECTED'].
+Specifies the default sorting order by availability zone.
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get Specifies how availability zones are listed. Valid values:
-<li>ASC: Ascending sort. 
-<li>DESC: Descending sort.
-The default value is `ASC`. 
-     * @return Order Specifies how availability zones are listed. Valid values:
-<li>ASC: Ascending sort. 
-<li>DESC: Descending sort.
-The default value is `ASC`.
+     * Get Outputs the sorting order of the availability zone list. value range:.
+<Li>ASC: ascending order.</li>.
+<Li>DESC: sort in descending order.</li>.
+Specifies the default ascending order. 
+     * @return Order Outputs the sorting order of the availability zone list. value range:.
+<Li>ASC: ascending order.</li>.
+<Li>DESC: sort in descending order.</li>.
+Specifies the default ascending order.
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Specifies how availability zones are listed. Valid values:
-<li>ASC: Ascending sort. 
-<li>DESC: Descending sort.
-The default value is `ASC`.
-     * @param Order Specifies how availability zones are listed. Valid values:
-<li>ASC: Ascending sort. 
-<li>DESC: Descending sort.
-The default value is `ASC`.
+     * Set Outputs the sorting order of the availability zone list. value range:.
+<Li>ASC: ascending order.</li>.
+<Li>DESC: sort in descending order.</li>.
+Specifies the default ascending order.
+     * @param Order Outputs the sorting order of the availability zone list. value range:.
+<Li>ASC: ascending order.</li>.
+<Li>DESC: sort in descending order.</li>.
+Specifies the default ascending order.
      */
     public void setOrder(String Order) {
         this.Order = Order;

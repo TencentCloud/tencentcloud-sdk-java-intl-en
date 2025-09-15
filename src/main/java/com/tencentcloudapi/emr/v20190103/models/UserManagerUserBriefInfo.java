@@ -45,8 +45,7 @@ public class UserManagerUserBriefInfo extends AbstractModel {
     private String UserType;
 
     /**
-    * Account creation time
-Note: This field may return null, indicating that no valid value can be obtained.
+    * User creation time.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -60,8 +59,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Boolean SupportDownLoadKeyTab;
 
     /**
-    * Download link of the Keytab file
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Download address of the keytab file.
     */
     @SerializedName("DownLoadKeyTabUrl")
     @Expose
@@ -116,20 +114,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Account creation time
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CreateTime Account creation time
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get User creation time. 
+     * @return CreateTime User creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Account creation time
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CreateTime Account creation time
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set User creation time.
+     * @param CreateTime User creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -152,20 +146,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Download link of the Keytab file
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return DownLoadKeyTabUrl Download link of the Keytab file
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Download address of the keytab file. 
+     * @return DownLoadKeyTabUrl Download address of the keytab file.
      */
     public String getDownLoadKeyTabUrl() {
         return this.DownLoadKeyTabUrl;
     }
 
     /**
-     * Set Download link of the Keytab file
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param DownLoadKeyTabUrl Download link of the Keytab file
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Download address of the keytab file.
+     * @param DownLoadKeyTabUrl Download address of the keytab file.
      */
     public void setDownLoadKeyTabUrl(String DownLoadKeyTabUrl) {
         this.DownLoadKeyTabUrl = DownLoadKeyTabUrl;

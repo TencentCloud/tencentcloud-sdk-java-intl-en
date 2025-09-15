@@ -73,14 +73,14 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
     private Long ModifyPayMode;
 
     /**
-    * 
+    * Whether the renewal price for every node is required.
     */
     @SerializedName("NeedDetail")
     @Expose
     private Boolean NeedDetail;
 
     /**
-    * 
+    * Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -199,32 +199,32 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return NeedDetail 
+     * Get Whether the renewal price for every node is required. 
+     * @return NeedDetail Whether the renewal price for every node is required.
      */
     public Boolean getNeedDetail() {
         return this.NeedDetail;
     }
 
     /**
-     * Set 
-     * @param NeedDetail 
+     * Set Whether the renewal price for every node is required.
+     * @param NeedDetail Whether the renewal price for every node is required.
      */
     public void setNeedDetail(Boolean NeedDetail) {
         this.NeedDetail = NeedDetail;
     }
 
     /**
-     * Get  
-     * @return InstanceId 
+     * Get Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster. 
+     * @return InstanceId Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 
-     * @param InstanceId 
+     * Set Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
+     * @param InstanceId Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -136,8 +136,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean SecurityOn;
 
     /**
-    * Security group name
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Initial security group ID of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -160,8 +160,8 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private String ApplicationRole;
 
     /**
-    * Security groups
-Note: this field may return `null`, indicating that no valid value can be obtained.
+    * Security group ID.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SecurityGroups")
     @Expose
@@ -456,20 +456,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Security group name
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SecurityGroup Security group name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Initial security group ID of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SecurityGroup Initial security group ID of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set Security group name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SecurityGroup Security group name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Initial security group ID of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SecurityGroup Initial security group ID of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSecurityGroup(String SecurityGroup) {
         this.SecurityGroup = SecurityGroup;
@@ -516,20 +516,20 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Security groups
-Note: this field may return `null`, indicating that no valid value can be obtained. 
-     * @return SecurityGroups Security groups
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Get Security group ID.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SecurityGroups Security group ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getSecurityGroups() {
         return this.SecurityGroups;
     }
 
     /**
-     * Set Security groups
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param SecurityGroups Security groups
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Set Security group ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SecurityGroups Security group ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSecurityGroups(String [] SecurityGroups) {
         this.SecurityGroups = SecurityGroups;

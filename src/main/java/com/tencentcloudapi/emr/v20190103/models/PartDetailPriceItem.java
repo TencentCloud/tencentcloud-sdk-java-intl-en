@@ -24,168 +24,138 @@ import java.util.HashMap;
 public class PartDetailPriceItem extends AbstractModel {
 
     /**
-    * The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Rate (original)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Unit price (original price).
     */
     @SerializedName("Price")
     @Expose
     private Float Price;
 
     /**
-    * Rate (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Unit price (discounted price).
     */
     @SerializedName("RealCost")
     @Expose
     private Float RealCost;
 
     /**
-    * Total price (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total price (discounted price).
     */
     @SerializedName("RealTotalCost")
     @Expose
     private Float RealTotalCost;
 
     /**
-    * Discount
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Discount.
     */
     @SerializedName("Policy")
     @Expose
     private Float Policy;
 
     /**
-    * Quantity
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Quantity.
     */
     @SerializedName("GoodsNum")
     @Expose
     private Long GoodsNum;
 
     /**
-     * Get The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceType The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB. 
+     * @return InstanceType Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceType The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
+     * @param InstanceType Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Rate (original)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Price Rate (original)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Unit price (original price). 
+     * @return Price Unit price (original price).
      */
     public Float getPrice() {
         return this.Price;
     }
 
     /**
-     * Set Rate (original)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Price Rate (original)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Unit price (original price).
+     * @param Price Unit price (original price).
      */
     public void setPrice(Float Price) {
         this.Price = Price;
     }
 
     /**
-     * Get Rate (discounted)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RealCost Rate (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Unit price (discounted price). 
+     * @return RealCost Unit price (discounted price).
      */
     public Float getRealCost() {
         return this.RealCost;
     }
 
     /**
-     * Set Rate (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RealCost Rate (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Unit price (discounted price).
+     * @param RealCost Unit price (discounted price).
      */
     public void setRealCost(Float RealCost) {
         this.RealCost = RealCost;
     }
 
     /**
-     * Get Total price (discounted)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RealTotalCost Total price (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total price (discounted price). 
+     * @return RealTotalCost Total price (discounted price).
      */
     public Float getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set Total price (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RealTotalCost Total price (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total price (discounted price).
+     * @param RealTotalCost Total price (discounted price).
      */
     public void setRealTotalCost(Float RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get Discount
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Policy Discount
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Discount. 
+     * @return Policy Discount.
      */
     public Float getPolicy() {
         return this.Policy;
     }
 
     /**
-     * Set Discount
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Policy Discount
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Discount.
+     * @param Policy Discount.
      */
     public void setPolicy(Float Policy) {
         this.Policy = Policy;
     }
 
     /**
-     * Get Quantity
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GoodsNum Quantity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Quantity. 
+     * @return GoodsNum Quantity.
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set Quantity
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GoodsNum Quantity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Quantity.
+     * @param GoodsNum Quantity.
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;

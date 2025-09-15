@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ComponentBasicRestartInfo extends AbstractModel {
 
     /**
-    * The process name (required), such as NameNode.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Process name which is required, such as NameNode.
     */
     @SerializedName("ComponentName")
     @Expose
@@ -40,20 +39,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] IpList;
 
     /**
-     * Get The process name (required), such as NameNode.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ComponentName The process name (required), such as NameNode.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Process name which is required, such as NameNode. 
+     * @return ComponentName Process name which is required, such as NameNode.
      */
     public String getComponentName() {
         return this.ComponentName;
     }
 
     /**
-     * Set The process name (required), such as NameNode.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ComponentName The process name (required), such as NameNode.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Process name which is required, such as NameNode.
+     * @param ComponentName Process name which is required, such as NameNode.
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;

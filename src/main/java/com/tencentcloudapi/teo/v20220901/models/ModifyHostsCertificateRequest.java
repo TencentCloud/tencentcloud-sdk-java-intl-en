@@ -72,6 +72,13 @@ Default value: `none`.
     private MutualTLS ClientCertInfo;
 
     /**
+    * Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
+    */
+    @SerializedName("UpstreamCertInfo")
+    @Expose
+    private UpstreamCertInfo UpstreamCertInfo;
+
+    /**
      * Get ID of the site. 
      * @return ZoneId ID of the site.
      */
@@ -195,6 +202,22 @@ Default value: `none`.
         this.ClientCertInfo = ClientCertInfo;
     }
 
+    /**
+     * Get Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access. 
+     * @return UpstreamCertInfo Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
+     */
+    public UpstreamCertInfo getUpstreamCertInfo() {
+        return this.UpstreamCertInfo;
+    }
+
+    /**
+     * Set Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
+     * @param UpstreamCertInfo Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
+     */
+    public void setUpstreamCertInfo(UpstreamCertInfo UpstreamCertInfo) {
+        this.UpstreamCertInfo = UpstreamCertInfo;
+    }
+
     public ModifyHostsCertificateRequest() {
     }
 
@@ -227,6 +250,9 @@ Default value: `none`.
         if (source.ClientCertInfo != null) {
             this.ClientCertInfo = new MutualTLS(source.ClientCertInfo);
         }
+        if (source.UpstreamCertInfo != null) {
+            this.UpstreamCertInfo = new UpstreamCertInfo(source.UpstreamCertInfo);
+        }
     }
 
 
@@ -240,6 +266,7 @@ Default value: `none`.
         this.setParamArrayObj(map, prefix + "ServerCertInfo.", this.ServerCertInfo);
         this.setParamSimple(map, prefix + "ApplyType", this.ApplyType);
         this.setParamObj(map, prefix + "ClientCertInfo.", this.ClientCertInfo);
+        this.setParamObj(map, prefix + "UpstreamCertInfo.", this.UpstreamCertInfo);
 
     }
 }

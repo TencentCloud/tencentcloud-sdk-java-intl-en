@@ -56,32 +56,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private NodeResourceSpec CommonResourceSpec;
 
     /**
-    * The number of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of Master nodes.
     */
     @SerializedName("MasterCount")
     @Expose
     private Long MasterCount;
 
     /**
-    * The number of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of core nodes.
     */
     @SerializedName("CoreCount")
     @Expose
     private Long CoreCount;
 
     /**
-    * The number of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of task nodes.
     */
     @SerializedName("TaskCount")
     @Expose
     private Long TaskCount;
 
     /**
-    * The number of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of common nodes.
     */
     @SerializedName("CommonCount")
     @Expose
@@ -168,80 +164,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The number of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MasterCount The number of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of Master nodes. 
+     * @return MasterCount Number of Master nodes.
      */
     public Long getMasterCount() {
         return this.MasterCount;
     }
 
     /**
-     * Set The number of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MasterCount The number of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of Master nodes.
+     * @param MasterCount Number of Master nodes.
      */
     public void setMasterCount(Long MasterCount) {
         this.MasterCount = MasterCount;
     }
 
     /**
-     * Get The number of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CoreCount The number of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of core nodes. 
+     * @return CoreCount Number of core nodes.
      */
     public Long getCoreCount() {
         return this.CoreCount;
     }
 
     /**
-     * Set The number of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CoreCount The number of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of core nodes.
+     * @param CoreCount Number of core nodes.
      */
     public void setCoreCount(Long CoreCount) {
         this.CoreCount = CoreCount;
     }
 
     /**
-     * Get The number of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskCount The number of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of task nodes. 
+     * @return TaskCount Number of task nodes.
      */
     public Long getTaskCount() {
         return this.TaskCount;
     }
 
     /**
-     * Set The number of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskCount The number of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of task nodes.
+     * @param TaskCount Number of task nodes.
      */
     public void setTaskCount(Long TaskCount) {
         this.TaskCount = TaskCount;
     }
 
     /**
-     * Get The number of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CommonCount The number of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of common nodes. 
+     * @return CommonCount Number of common nodes.
      */
     public Long getCommonCount() {
         return this.CommonCount;
     }
 
     /**
-     * Set The number of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CommonCount The number of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of common nodes.
+     * @param CommonCount Number of common nodes.
      */
     public void setCommonCount(Long CommonCount) {
         this.CommonCount = CommonCount;

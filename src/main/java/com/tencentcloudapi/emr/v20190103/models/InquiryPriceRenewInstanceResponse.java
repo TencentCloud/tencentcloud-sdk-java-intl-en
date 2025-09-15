@@ -25,7 +25,6 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel {
 
     /**
     * Original price.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginalCost")
     @Expose
@@ -33,37 +32,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Discounted price.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiscountCost")
     @Expose
     private Float DiscountCost;
 
     /**
-    * Unit of time for instance renewal.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Time unit for instance renewal.
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * How long the instance will be renewed for.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Duration of instance renewal.
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 
+    * Price details.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PriceDetail")
     @Expose
     private PriceDetail [] PriceDetail;
 
     /**
-    * 
+    * Node renewal pricing list.
     */
     @SerializedName("NodeRenewPriceDetails")
     @Expose
@@ -77,10 +74,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Original price.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Original price. 
      * @return OriginalCost Original price.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Float getOriginalCost() {
         return this.OriginalCost;
@@ -88,19 +83,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Original price.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param OriginalCost Original price.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOriginalCost(Float OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get Discounted price.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Discounted price. 
      * @return DiscountCost Discounted price.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Float getDiscountCost() {
         return this.DiscountCost;
@@ -108,81 +99,75 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Discounted price.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param DiscountCost Discounted price.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDiscountCost(Float DiscountCost) {
         this.DiscountCost = DiscountCost;
     }
 
     /**
-     * Get Unit of time for instance renewal.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TimeUnit Unit of time for instance renewal.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Time unit for instance renewal. 
+     * @return TimeUnit Time unit for instance renewal.
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Unit of time for instance renewal.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TimeUnit Unit of time for instance renewal.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Time unit for instance renewal.
+     * @param TimeUnit Time unit for instance renewal.
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get How long the instance will be renewed for.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TimeSpan How long the instance will be renewed for.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Duration of instance renewal. 
+     * @return TimeSpan Duration of instance renewal.
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set How long the instance will be renewed for.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TimeSpan How long the instance will be renewed for.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Duration of instance renewal.
+     * @param TimeSpan Duration of instance renewal.
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get  
-     * @return PriceDetail 
+     * Get Price details.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PriceDetail Price details.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public PriceDetail [] getPriceDetail() {
         return this.PriceDetail;
     }
 
     /**
-     * Set 
-     * @param PriceDetail 
+     * Set Price details.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PriceDetail Price details.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPriceDetail(PriceDetail [] PriceDetail) {
         this.PriceDetail = PriceDetail;
     }
 
     /**
-     * Get  
-     * @return NodeRenewPriceDetails 
+     * Get Node renewal pricing list. 
+     * @return NodeRenewPriceDetails Node renewal pricing list.
      */
     public NodeRenewPriceDetail [] getNodeRenewPriceDetails() {
         return this.NodeRenewPriceDetails;
     }
 
     /**
-     * Set 
-     * @param NodeRenewPriceDetails 
+     * Set Node renewal pricing list.
+     * @param NodeRenewPriceDetails Node renewal pricing list.
      */
     public void setNodeRenewPriceDetails(NodeRenewPriceDetail [] NodeRenewPriceDetails) {
         this.NodeRenewPriceDetails = NodeRenewPriceDetails;

@@ -24,31 +24,72 @@ import java.util.HashMap;
 public class UserManagerFilter extends AbstractModel {
 
     /**
-    * Username
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Username.
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-     * Get Username
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return UserName Username
-Note: This field may return null, indicating that no valid value can be obtained.
+    * User source.
+    */
+    @SerializedName("UserType")
+    @Expose
+    private String UserType;
+
+    /**
+    * Group name.
+    */
+    @SerializedName("Groups")
+    @Expose
+    private String Groups;
+
+    /**
+     * Get Username. 
+     * @return UserName Username.
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Username
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param UserName Username
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Username.
+     * @param UserName Username.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
+    }
+
+    /**
+     * Get User source. 
+     * @return UserType User source.
+     */
+    public String getUserType() {
+        return this.UserType;
+    }
+
+    /**
+     * Set User source.
+     * @param UserType User source.
+     */
+    public void setUserType(String UserType) {
+        this.UserType = UserType;
+    }
+
+    /**
+     * Get Group name. 
+     * @return Groups Group name.
+     */
+    public String getGroups() {
+        return this.Groups;
+    }
+
+    /**
+     * Set Group name.
+     * @param Groups Group name.
+     */
+    public void setGroups(String Groups) {
+        this.Groups = Groups;
     }
 
     public UserManagerFilter() {
@@ -62,6 +103,12 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.UserName != null) {
             this.UserName = new String(source.UserName);
         }
+        if (source.UserType != null) {
+            this.UserType = new String(source.UserType);
+        }
+        if (source.Groups != null) {
+            this.Groups = new String(source.Groups);
+        }
     }
 
 
@@ -70,6 +117,8 @@ Note: This field may return null, indicating that no valid value can be obtained
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "UserType", this.UserType);
+        this.setParamSimple(map, prefix + "Groups", this.Groups);
 
     }
 }

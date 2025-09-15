@@ -24,112 +24,92 @@ import java.util.HashMap;
 public class ClusterExternalServiceInfo extends AbstractModel {
 
     /**
-    * Dependency. `0`: Other clusters depend on the current cluster. `1`: The current cluster depends on other clusters.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
     */
     @SerializedName("DependType")
     @Expose
     private Long DependType;
 
     /**
-    * Shared component
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Shared component.
     */
     @SerializedName("Service")
     @Expose
     private String Service;
 
     /**
-    * Sharing cluster
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Shared cluster.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Sharing cluster status
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Shared cluster status.
     */
     @SerializedName("ClusterStatus")
     @Expose
     private Long ClusterStatus;
 
     /**
-     * Get Dependency. `0`: Other clusters depend on the current cluster. `1`: The current cluster depends on other clusters.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return DependType Dependency. `0`: Other clusters depend on the current cluster. `1`: The current cluster depends on other clusters.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters. 
+     * @return DependType Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
      */
     public Long getDependType() {
         return this.DependType;
     }
 
     /**
-     * Set Dependency. `0`: Other clusters depend on the current cluster. `1`: The current cluster depends on other clusters.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param DependType Dependency. `0`: Other clusters depend on the current cluster. `1`: The current cluster depends on other clusters.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
+     * @param DependType Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
      */
     public void setDependType(Long DependType) {
         this.DependType = DependType;
     }
 
     /**
-     * Get Shared component
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Service Shared component
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Shared component. 
+     * @return Service Shared component.
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set Shared component
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Service Shared component
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Shared component.
+     * @param Service Shared component.
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get Sharing cluster
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return ClusterId Sharing cluster
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Shared cluster. 
+     * @return ClusterId Shared cluster.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Sharing cluster
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param ClusterId Sharing cluster
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Shared cluster.
+     * @param ClusterId Shared cluster.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Sharing cluster status
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return ClusterStatus Sharing cluster status
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Shared cluster status. 
+     * @return ClusterStatus Shared cluster status.
      */
     public Long getClusterStatus() {
         return this.ClusterStatus;
     }
 
     /**
-     * Set Sharing cluster status
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param ClusterStatus Sharing cluster status
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Shared cluster status.
+     * @param ClusterStatus Shared cluster status.
      */
     public void setClusterStatus(Long ClusterStatus) {
         this.ClusterStatus = ClusterStatus;

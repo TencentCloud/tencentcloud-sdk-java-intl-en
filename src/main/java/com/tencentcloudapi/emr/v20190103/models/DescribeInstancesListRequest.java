@@ -38,7 +38,8 @@ public class DescribeInstancesListRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number of returned results per page. Default value: `10`; maximum value: `100`.
+    * Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both limit and offset are 0, all records will be queried.
     */
     @SerializedName("Limit")
     @Expose
@@ -52,14 +53,14 @@ public class DescribeInstancesListRequest extends AbstractModel {
     private String OrderField;
 
     /**
-    * Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
+    * Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
     */
     @SerializedName("Asc")
     @Expose
     private Long Asc;
 
     /**
-    * Custom query
+    * Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
     */
     @SerializedName("Filters")
     @Expose
@@ -98,16 +99,20 @@ public class DescribeInstancesListRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of returned results per page. Default value: `10`; maximum value: `100`. 
-     * @return Limit Number of returned results per page. Default value: `10`; maximum value: `100`.
+     * Get Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both limit and offset are 0, all records will be queried. 
+     * @return Limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both limit and offset are 0, all records will be queried.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results per page. Default value: `10`; maximum value: `100`.
-     * @param Limit Number of returned results per page. Default value: `10`; maximum value: `100`.
+     * Set Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both limit and offset are 0, all records will be queried.
+     * @param Limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both limit and offset are 0, all records will be queried.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -130,32 +135,32 @@ public class DescribeInstancesListRequest extends AbstractModel {
     }
 
     /**
-     * Get Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0. 
-     * @return Asc Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
+     * Get Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0. 
+     * @return Asc Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
      */
     public Long getAsc() {
         return this.Asc;
     }
 
     /**
-     * Set Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
-     * @param Asc Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
+     * Set Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+     * @param Asc Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
      */
     public void setAsc(Long Asc) {
         this.Asc = Asc;
     }
 
     /**
-     * Get Custom query 
-     * @return Filters Custom query
+     * Get Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>. 
+     * @return Filters Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Custom query
-     * @param Filters Custom query
+     * Set Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
+     * @param Filters Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;

@@ -33,6 +33,9 @@ public enum LighthouseErrorCode {
      /*  */
      FAILEDOPERATION_DESCRIBEBUNDLESFAILED("FailedOperation.DescribeBundlesFailed"),
      
+     /* Querying CBS quota failed. */
+     FAILEDOPERATION_DESCRIBEDISKCONFIGQUOTAFAILED("FailedOperation.DescribeDiskConfigQuotaFailed"),
+     
      /* An error occurred when querying the instance status. */
      FAILEDOPERATION_DESCRIBEINSTANCESTATUS("FailedOperation.DescribeInstanceStatus"),
      

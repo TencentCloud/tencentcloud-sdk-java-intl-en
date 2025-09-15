@@ -127,7 +127,7 @@ public class ScaleOutInstanceRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * Resource type selected for scaling. Valid values: `host` (general CVM resource) and `pod` (resource provided by TKE or EKS cluster).
+    * Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
     */
     @SerializedName("HardwareResourceType")
     @Expose
@@ -212,6 +212,34 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
+
+    /**
+    * The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+    */
+    @SerializedName("ResourceBaseType")
+    @Expose
+    private String ResourceBaseType;
+
+    /**
+    * Computing resource ID.
+    */
+    @SerializedName("ComputeResourceId")
+    @Expose
+    private String ComputeResourceId;
+
+    /**
+    * Advanced settings of computing resources.
+    */
+    @SerializedName("ComputeResourceAdvanceParams")
+    @Expose
+    private ComputeResourceAdvanceParams ComputeResourceAdvanceParams;
+
+    /**
+    * Node tag information: currently used only in Terraform.
+    */
+    @SerializedName("NodeMarks")
+    @Expose
+    private NodeMark NodeMarks;
 
     /**
      * Get Time unit of scale-out. Valid values:
@@ -458,16 +486,16 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
     }
 
     /**
-     * Get Resource type selected for scaling. Valid values: `host` (general CVM resource) and `pod` (resource provided by TKE or EKS cluster). 
-     * @return HardwareResourceType Resource type selected for scaling. Valid values: `host` (general CVM resource) and `pod` (resource provided by TKE or EKS cluster).
+     * Get Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type. 
+     * @return HardwareResourceType Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
      */
     public String getHardwareResourceType() {
         return this.HardwareResourceType;
     }
 
     /**
-     * Set Resource type selected for scaling. Valid values: `host` (general CVM resource) and `pod` (resource provided by TKE or EKS cluster).
-     * @param HardwareResourceType Resource type selected for scaling. Valid values: `host` (general CVM resource) and `pod` (resource provided by TKE or EKS cluster).
+     * Set Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
+     * @param HardwareResourceType Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
      */
     public void setHardwareResourceType(String HardwareResourceType) {
         this.HardwareResourceType = HardwareResourceType;
@@ -661,6 +689,70 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
         this.AutoRenew = AutoRenew;
     }
 
+    /**
+     * Get The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used. 
+     * @return ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+     */
+    public String getResourceBaseType() {
+        return this.ResourceBaseType;
+    }
+
+    /**
+     * Set The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+     * @param ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+     */
+    public void setResourceBaseType(String ResourceBaseType) {
+        this.ResourceBaseType = ResourceBaseType;
+    }
+
+    /**
+     * Get Computing resource ID. 
+     * @return ComputeResourceId Computing resource ID.
+     */
+    public String getComputeResourceId() {
+        return this.ComputeResourceId;
+    }
+
+    /**
+     * Set Computing resource ID.
+     * @param ComputeResourceId Computing resource ID.
+     */
+    public void setComputeResourceId(String ComputeResourceId) {
+        this.ComputeResourceId = ComputeResourceId;
+    }
+
+    /**
+     * Get Advanced settings of computing resources. 
+     * @return ComputeResourceAdvanceParams Advanced settings of computing resources.
+     */
+    public ComputeResourceAdvanceParams getComputeResourceAdvanceParams() {
+        return this.ComputeResourceAdvanceParams;
+    }
+
+    /**
+     * Set Advanced settings of computing resources.
+     * @param ComputeResourceAdvanceParams Advanced settings of computing resources.
+     */
+    public void setComputeResourceAdvanceParams(ComputeResourceAdvanceParams ComputeResourceAdvanceParams) {
+        this.ComputeResourceAdvanceParams = ComputeResourceAdvanceParams;
+    }
+
+    /**
+     * Get Node tag information: currently used only in Terraform. 
+     * @return NodeMarks Node tag information: currently used only in Terraform.
+     */
+    public NodeMark getNodeMarks() {
+        return this.NodeMarks;
+    }
+
+    /**
+     * Set Node tag information: currently used only in Terraform.
+     * @param NodeMarks Node tag information: currently used only in Terraform.
+     */
+    public void setNodeMarks(NodeMark NodeMarks) {
+        this.NodeMarks = NodeMarks;
+    }
+
     public ScaleOutInstanceRequest() {
     }
 
@@ -765,6 +857,18 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
         if (source.AutoRenew != null) {
             this.AutoRenew = new Long(source.AutoRenew);
         }
+        if (source.ResourceBaseType != null) {
+            this.ResourceBaseType = new String(source.ResourceBaseType);
+        }
+        if (source.ComputeResourceId != null) {
+            this.ComputeResourceId = new String(source.ComputeResourceId);
+        }
+        if (source.ComputeResourceAdvanceParams != null) {
+            this.ComputeResourceAdvanceParams = new ComputeResourceAdvanceParams(source.ComputeResourceAdvanceParams);
+        }
+        if (source.NodeMarks != null) {
+            this.NodeMarks = new NodeMark(source.NodeMarks);
+        }
     }
 
 
@@ -798,6 +902,10 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "ScaleOutServiceConfAssign", this.ScaleOutServiceConfAssign);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+        this.setParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
+        this.setParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
+        this.setParamObj(map, prefix + "ComputeResourceAdvanceParams.", this.ComputeResourceAdvanceParams);
+        this.setParamObj(map, prefix + "NodeMarks.", this.NodeMarks);
 
     }
 }

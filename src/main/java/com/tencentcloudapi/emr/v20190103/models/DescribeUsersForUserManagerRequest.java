@@ -38,7 +38,8 @@ public class DescribeUsersForUserManagerRequest extends AbstractModel {
     private Long PageNo;
 
     /**
-    * Page size
+    * Pagination size.
+All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
     */
     @SerializedName("PageSize")
     @Expose
@@ -91,16 +92,20 @@ public class DescribeUsersForUserManagerRequest extends AbstractModel {
     }
 
     /**
-     * Get Page size 
-     * @return PageSize Page size
+     * Get Pagination size.
+All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried. 
+     * @return PageSize Pagination size.
+All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Page size
-     * @param PageSize Page size
+     * Set Pagination size.
+All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
+     * @param PageSize Pagination size.
+All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

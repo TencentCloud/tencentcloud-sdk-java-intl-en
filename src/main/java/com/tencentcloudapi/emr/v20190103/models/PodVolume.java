@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class PodVolume extends AbstractModel {
 
     /**
-    * Storage type. Valid values: `pvc` and `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Storage type, which can be "pvc" or "hostpath".
     */
     @SerializedName("VolumeType")
     @Expose
@@ -48,20 +47,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private HostVolumeContext HostVolume;
 
     /**
-     * Get Storage type. Valid values: `pvc` and `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VolumeType Storage type. Valid values: `pvc` and `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Storage type, which can be "pvc" or "hostpath". 
+     * @return VolumeType Storage type, which can be "pvc" or "hostpath".
      */
     public String getVolumeType() {
         return this.VolumeType;
     }
 
     /**
-     * Set Storage type. Valid values: `pvc` and `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VolumeType Storage type. Valid values: `pvc` and `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Storage type, which can be "pvc" or "hostpath".
+     * @param VolumeType Storage type, which can be "pvc" or "hostpath".
      */
     public void setVolumeType(String VolumeType) {
         this.VolumeType = VolumeType;

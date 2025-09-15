@@ -24,45 +24,42 @@ import java.util.HashMap;
 public class HiveQuery extends AbstractModel {
 
     /**
-    * Query statementNote: This field may return null, indicating that no valid values can be obtained.
+    * Query statement.
     */
     @SerializedName("Statement")
     @Expose
     private String Statement;
 
     /**
-    * Execution Duration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Execution duration.
     */
     @SerializedName("Duration")
     @Expose
     private String Duration;
 
     /**
-    * Start Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Start time in milliseconds.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * End Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+    * End time in milliseconds.
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * StatusNote: This field may return null, indicating that no valid values can be obtained.
+    * Status.
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * UserNote: This field may return null, indicating that no valid values can be obtained.
+    * User.
     */
     @SerializedName("User")
     @Expose
@@ -77,124 +74,110 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] JobIds;
 
     /**
-    * Execution Engine
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Execution engine.
     */
     @SerializedName("ExecutionEngine")
     @Expose
     private String ExecutionEngine;
 
     /**
-    * Query ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Query ID.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-     * Get Query statementNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Statement Query statementNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Query statement. 
+     * @return Statement Query statement.
      */
     public String getStatement() {
         return this.Statement;
     }
 
     /**
-     * Set Query statementNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Statement Query statementNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Query statement.
+     * @param Statement Query statement.
      */
     public void setStatement(String Statement) {
         this.Statement = Statement;
     }
 
     /**
-     * Get Execution Duration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Duration Execution Duration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Execution duration. 
+     * @return Duration Execution duration.
      */
     public String getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Execution Duration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Duration Execution Duration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Execution duration.
+     * @param Duration Execution duration.
      */
     public void setDuration(String Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get Start Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime Start Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Start time in milliseconds. 
+     * @return StartTime Start time in milliseconds.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTime Start Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Start time in milliseconds.
+     * @param StartTime Start time in milliseconds.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndTime End Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get End time in milliseconds. 
+     * @return EndTime End time in milliseconds.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndTime End Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set End time in milliseconds.
+     * @param EndTime End time in milliseconds.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get StatusNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return State StatusNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Status. 
+     * @return State Status.
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set StatusNote: This field may return null, indicating that no valid values can be obtained.
-     * @param State StatusNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Status.
+     * @param State Status.
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get UserNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return User UserNote: This field may return null, indicating that no valid values can be obtained.
+     * Get User. 
+     * @return User User.
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set UserNote: This field may return null, indicating that no valid values can be obtained.
-     * @param User UserNote: This field may return null, indicating that no valid values can be obtained.
+     * Set User.
+     * @param User User.
      */
     public void setUser(String User) {
         this.User = User;
@@ -221,40 +204,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Execution Engine
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExecutionEngine Execution Engine
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Execution engine. 
+     * @return ExecutionEngine Execution engine.
      */
     public String getExecutionEngine() {
         return this.ExecutionEngine;
     }
 
     /**
-     * Set Execution Engine
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExecutionEngine Execution Engine
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Execution engine.
+     * @param ExecutionEngine Execution engine.
      */
     public void setExecutionEngine(String ExecutionEngine) {
         this.ExecutionEngine = ExecutionEngine;
     }
 
     /**
-     * Get Query ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Id Query ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Query ID. 
+     * @return Id Query ID.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Query ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Id Query ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Query ID.
+     * @param Id Query ID.
      */
     public void setId(String Id) {
         this.Id = Id;

@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class SubnetInfo extends AbstractModel {
 
     /**
-    * Subnet information (name)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Subnet information (name).
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * Subnet information (ID)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Subnet information (ID).
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-     * Get Subnet information (name)
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return SubnetName Subnet information (name)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Subnet information (name). 
+     * @return SubnetName Subnet information (name).
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set Subnet information (name)
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param SubnetName Subnet information (name)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Subnet information (name).
+     * @param SubnetName Subnet information (name).
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get Subnet information (ID)
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return SubnetId Subnet information (ID)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Subnet information (ID). 
+     * @return SubnetId Subnet information (ID).
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet information (ID)
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param SubnetId Subnet information (ID)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Subnet information (ID).
+     * @param SubnetId Subnet information (ID).
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

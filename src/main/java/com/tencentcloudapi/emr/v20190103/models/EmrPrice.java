@@ -24,24 +24,21 @@ import java.util.HashMap;
 public class EmrPrice extends AbstractModel {
 
     /**
-    * The published price.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List price.
     */
     @SerializedName("OriginalCost")
     @Expose
     private String OriginalCost;
 
     /**
-    * The discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Discounted price.
     */
     @SerializedName("DiscountCost")
     @Expose
     private String DiscountCost;
 
     /**
-    * The unit of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Unit.
     */
     @SerializedName("Unit")
     @Expose
@@ -57,67 +54,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Whether spot instances are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SupportSpotPaid")
     @Expose
     private Boolean SupportSpotPaid;
 
     /**
-     * Get The published price.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginalCost The published price.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List price. 
+     * @return OriginalCost List price.
      */
     public String getOriginalCost() {
         return this.OriginalCost;
     }
 
     /**
-     * Set The published price.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginalCost The published price.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List price.
+     * @param OriginalCost List price.
      */
     public void setOriginalCost(String OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get The discounted price.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiscountCost The discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Discounted price. 
+     * @return DiscountCost Discounted price.
      */
     public String getDiscountCost() {
         return this.DiscountCost;
     }
 
     /**
-     * Set The discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiscountCost The discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Discounted price.
+     * @param DiscountCost Discounted price.
      */
     public void setDiscountCost(String DiscountCost) {
         this.DiscountCost = DiscountCost;
     }
 
     /**
-     * Get The unit of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Unit The unit of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Unit. 
+     * @return Unit Unit.
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set The unit of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Unit The unit of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Unit.
+     * @param Unit Unit.
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
@@ -144,10 +128,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether spot instances are supported.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Whether spot instances are supported. 
      * @return SupportSpotPaid Whether spot instances are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getSupportSpotPaid() {
         return this.SupportSpotPaid;
@@ -155,9 +137,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Whether spot instances are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SupportSpotPaid Whether spot instances are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSupportSpotPaid(Boolean SupportSpotPaid) {
         this.SupportSpotPaid = SupportSpotPaid;

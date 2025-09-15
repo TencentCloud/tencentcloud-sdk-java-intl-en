@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class NodeRenewPriceDetail extends AbstractModel {
 
     /**
-    * 
+    * Billing type (1: monthly subscription, 3: committed use).
     */
     @SerializedName("ChargeType")
     @Expose
     private Long ChargeType;
 
     /**
-    * 
+    * EMR resource ID.
     */
     @SerializedName("EmrResourceId")
     @Expose
     private String EmrResourceId;
 
     /**
-    * 
+    * Node type.
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * 
+    * Node private network IP.
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 
+    * Current expiration time.
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 
+    * Original price.
     */
     @SerializedName("OriginalCost")
     @Expose
     private Float OriginalCost;
 
     /**
-    * 
+    * Discount price.
     */
     @SerializedName("DiscountCost")
     @Expose
     private Float DiscountCost;
 
     /**
-    * 
+    * Node component renewal pricing list.
     */
     @SerializedName("RenewPriceDetails")
     @Expose
     private RenewPriceDetail [] RenewPriceDetails;
 
     /**
-     * Get  
-     * @return ChargeType 
+     * Get Billing type (1: monthly subscription, 3: committed use). 
+     * @return ChargeType Billing type (1: monthly subscription, 3: committed use).
      */
     public Long getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 
-     * @param ChargeType 
+     * Set Billing type (1: monthly subscription, 3: committed use).
+     * @param ChargeType Billing type (1: monthly subscription, 3: committed use).
      */
     public void setChargeType(Long ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get  
-     * @return EmrResourceId 
+     * Get EMR resource ID. 
+     * @return EmrResourceId EMR resource ID.
      */
     public String getEmrResourceId() {
         return this.EmrResourceId;
     }
 
     /**
-     * Set 
-     * @param EmrResourceId 
+     * Set EMR resource ID.
+     * @param EmrResourceId EMR resource ID.
      */
     public void setEmrResourceId(String EmrResourceId) {
         this.EmrResourceId = EmrResourceId;
     }
 
     /**
-     * Get  
-     * @return NodeType 
+     * Get Node type. 
+     * @return NodeType Node type.
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set 
-     * @param NodeType 
+     * Set Node type.
+     * @param NodeType Node type.
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get  
-     * @return Ip 
+     * Get Node private network IP. 
+     * @return Ip Node private network IP.
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 
-     * @param Ip 
+     * Set Node private network IP.
+     * @param Ip Node private network IP.
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get  
-     * @return ExpireTime 
+     * Get Current expiration time. 
+     * @return ExpireTime Current expiration time.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 
-     * @param ExpireTime 
+     * Set Current expiration time.
+     * @param ExpireTime Current expiration time.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get  
-     * @return OriginalCost 
+     * Get Original price. 
+     * @return OriginalCost Original price.
      */
     public Float getOriginalCost() {
         return this.OriginalCost;
     }
 
     /**
-     * Set 
-     * @param OriginalCost 
+     * Set Original price.
+     * @param OriginalCost Original price.
      */
     public void setOriginalCost(Float OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get  
-     * @return DiscountCost 
+     * Get Discount price. 
+     * @return DiscountCost Discount price.
      */
     public Float getDiscountCost() {
         return this.DiscountCost;
     }
 
     /**
-     * Set 
-     * @param DiscountCost 
+     * Set Discount price.
+     * @param DiscountCost Discount price.
      */
     public void setDiscountCost(Float DiscountCost) {
         this.DiscountCost = DiscountCost;
     }
 
     /**
-     * Get  
-     * @return RenewPriceDetails 
+     * Get Node component renewal pricing list. 
+     * @return RenewPriceDetails Node component renewal pricing list.
      */
     public RenewPriceDetail [] getRenewPriceDetails() {
         return this.RenewPriceDetails;
     }
 
     /**
-     * Set 
-     * @param RenewPriceDetails 
+     * Set Node component renewal pricing list.
+     * @param RenewPriceDetails Node component renewal pricing list.
      */
     public void setRenewPriceDetails(RenewPriceDetail [] RenewPriceDetails) {
         this.RenewPriceDetails = RenewPriceDetails;

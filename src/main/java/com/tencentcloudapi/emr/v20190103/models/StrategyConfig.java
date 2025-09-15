@@ -24,120 +24,128 @@ import java.util.HashMap;
 public class StrategyConfig extends AbstractModel {
 
     /**
-    * `0`: Disable rolling restart
-`1`: Enable rolling restart
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 0: disable rolling restart.
+1: enable rolling start.
     */
     @SerializedName("RollingRestartSwitch")
     @Expose
     private Long RollingRestartSwitch;
 
     /**
-    * The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rolling restart quantity per batch, which is up to 99999.
     */
     @SerializedName("BatchSize")
     @Expose
     private Long BatchSize;
 
     /**
-    * The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
     */
     @SerializedName("TimeWait")
     @Expose
     private Long TimeWait;
 
     /**
-    * The failure handling policy. Valid values: `0` (blocks the process) and `1` (skips).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
     */
     @SerializedName("DealOnFail")
     @Expose
     private Long DealOnFail;
 
     /**
-     * Get `0`: Disable rolling restart
-`1`: Enable rolling restart
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RollingRestartSwitch `0`: Disable rolling restart
-`1`: Enable rolling restart
+    * Parameters required in the instruction.
 Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Args")
+    @Expose
+    private Arg [] Args;
+
+    /**
+     * Get 0: disable rolling restart.
+1: enable rolling start. 
+     * @return RollingRestartSwitch 0: disable rolling restart.
+1: enable rolling start.
      */
     public Long getRollingRestartSwitch() {
         return this.RollingRestartSwitch;
     }
 
     /**
-     * Set `0`: Disable rolling restart
-`1`: Enable rolling restart
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RollingRestartSwitch `0`: Disable rolling restart
-`1`: Enable rolling restart
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 0: disable rolling restart.
+1: enable rolling start.
+     * @param RollingRestartSwitch 0: disable rolling restart.
+1: enable rolling start.
      */
     public void setRollingRestartSwitch(Long RollingRestartSwitch) {
         this.RollingRestartSwitch = RollingRestartSwitch;
     }
 
     /**
-     * Get The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BatchSize The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rolling restart quantity per batch, which is up to 99999. 
+     * @return BatchSize Rolling restart quantity per batch, which is up to 99999.
      */
     public Long getBatchSize() {
         return this.BatchSize;
     }
 
     /**
-     * Set The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BatchSize The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rolling restart quantity per batch, which is up to 99999.
+     * @param BatchSize Rolling restart quantity per batch, which is up to 99999.
      */
     public void setBatchSize(Long BatchSize) {
         this.BatchSize = BatchSize;
     }
 
     /**
-     * Get The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TimeWait The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds. 
+     * @return TimeWait Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
      */
     public Long getTimeWait() {
         return this.TimeWait;
     }
 
     /**
-     * Set The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TimeWait The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
+     * @param TimeWait Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
      */
     public void setTimeWait(Long TimeWait) {
         this.TimeWait = TimeWait;
     }
 
     /**
-     * Get The failure handling policy. Valid values: `0` (blocks the process) and `1` (skips).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DealOnFail The failure handling policy. Valid values: `0` (blocks the process) and `1` (skips).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure. 
+     * @return DealOnFail Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
      */
     public Long getDealOnFail() {
         return this.DealOnFail;
     }
 
     /**
-     * Set The failure handling policy. Valid values: `0` (blocks the process) and `1` (skips).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DealOnFail The failure handling policy. Valid values: `0` (blocks the process) and `1` (skips).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
+     * @param DealOnFail Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
      */
     public void setDealOnFail(Long DealOnFail) {
         this.DealOnFail = DealOnFail;
+    }
+
+    /**
+     * Get Parameters required in the instruction.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Args Parameters required in the instruction.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Arg [] getArgs() {
+        return this.Args;
+    }
+
+    /**
+     * Set Parameters required in the instruction.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Args Parameters required in the instruction.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setArgs(Arg [] Args) {
+        this.Args = Args;
     }
 
     public StrategyConfig() {
@@ -160,6 +168,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.DealOnFail != null) {
             this.DealOnFail = new Long(source.DealOnFail);
         }
+        if (source.Args != null) {
+            this.Args = new Arg[source.Args.length];
+            for (int i = 0; i < source.Args.length; i++) {
+                this.Args[i] = new Arg(source.Args[i]);
+            }
+        }
     }
 
 
@@ -171,6 +185,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BatchSize", this.BatchSize);
         this.setParamSimple(map, prefix + "TimeWait", this.TimeWait);
         this.setParamSimple(map, prefix + "DealOnFail", this.DealOnFail);
+        this.setParamArrayObj(map, prefix + "Args.", this.Args);
 
     }
 }

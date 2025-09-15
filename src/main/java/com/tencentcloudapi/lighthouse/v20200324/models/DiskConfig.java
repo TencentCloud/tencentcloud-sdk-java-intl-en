@@ -31,7 +31,11 @@ public class DiskConfig extends AbstractModel {
     private String Zone;
 
     /**
-    * Cloud disk type.
+    * Cloud disk type. valid values are as follows:.
+
+<Li>CLOUD_BASIC: basic cloud disk.</li>.
+<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
     */
     @SerializedName("DiskType")
     @Expose
@@ -82,16 +86,32 @@ public class DiskConfig extends AbstractModel {
     }
 
     /**
-     * Get Cloud disk type. 
-     * @return DiskType Cloud disk type.
+     * Get Cloud disk type. valid values are as follows:.
+
+<Li>CLOUD_BASIC: basic cloud disk.</li>.
+<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>. 
+     * @return DiskType Cloud disk type. valid values are as follows:.
+
+<Li>CLOUD_BASIC: basic cloud disk.</li>.
+<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Cloud disk type.
-     * @param DiskType Cloud disk type.
+     * Set Cloud disk type. valid values are as follows:.
+
+<Li>CLOUD_BASIC: basic cloud disk.</li>.
+<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
+     * @param DiskType Cloud disk type. valid values are as follows:.
+
+<Li>CLOUD_BASIC: basic cloud disk.</li>.
+<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;

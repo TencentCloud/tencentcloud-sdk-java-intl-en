@@ -24,104 +24,91 @@ import java.util.HashMap;
 public class CdbInfo extends AbstractModel {
 
     /**
-    * Database instance
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Database instance.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Database IP address.
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * Database port
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Database port.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Database memory specification
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Database memory specifications.
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * Database disk specification
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Database disk specifications.
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * Service flag
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Service identifier.
     */
     @SerializedName("Service")
     @Expose
     private String Service;
 
     /**
-    * Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Expiration time.
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * Application time
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Application time.
     */
     @SerializedName("ApplyTime")
     @Expose
     private String ApplyTime;
 
     /**
-    * Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Billing type.
     */
     @SerializedName("PayType")
     @Expose
     private Long PayType;
 
     /**
-    * Expiration flag
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Expiration flag.
     */
     @SerializedName("ExpireFlag")
     @Expose
     private Boolean ExpireFlag;
 
     /**
-    * Database status
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Database status.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Renewal flag.
     */
     @SerializedName("IsAutoRenew")
     @Expose
     private Long IsAutoRenew;
 
     /**
-    * Database string
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Database string.
     */
     @SerializedName("SerialNo")
     @Expose
@@ -129,7 +116,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * ZoneId
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -137,277 +123,222 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * RegionId
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-     * Get Database instance
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceName Database instance
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Database instance. 
+     * @return InstanceName Database instance.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Database instance
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param InstanceName Database instance
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Database instance.
+     * @param InstanceName Database instance.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Database IP
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Ip Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Database IP address. 
+     * @return Ip Database IP address.
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Ip Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Database IP address.
+     * @param Ip Database IP address.
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get Database port
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Port Database port
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Database port. 
+     * @return Port Database port.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Database port
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Port Database port
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Database port.
+     * @param Port Database port.
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Database memory specification
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MemSize Database memory specification
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Database memory specifications. 
+     * @return MemSize Database memory specifications.
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set Database memory specification
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MemSize Database memory specification
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Database memory specifications.
+     * @param MemSize Database memory specifications.
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get Database disk specification
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Volume Database disk specification
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Database disk specifications. 
+     * @return Volume Database disk specifications.
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set Database disk specification
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Volume Database disk specification
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Database disk specifications.
+     * @param Volume Database disk specifications.
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get Service flag
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Service Service flag
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Service identifier. 
+     * @return Service Service identifier.
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set Service flag
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Service Service flag
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Service identifier.
+     * @param Service Service identifier.
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get Expiration time
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ExpireTime Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Expiration time. 
+     * @return ExpireTime Expiration time.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ExpireTime Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Expiration time.
+     * @param ExpireTime Expiration time.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Application time
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ApplyTime Application time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Application time. 
+     * @return ApplyTime Application time.
      */
     public String getApplyTime() {
         return this.ApplyTime;
     }
 
     /**
-     * Set Application time
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ApplyTime Application time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Application time.
+     * @param ApplyTime Application time.
      */
     public void setApplyTime(String ApplyTime) {
         this.ApplyTime = ApplyTime;
     }
 
     /**
-     * Get Payment type
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PayType Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Billing type. 
+     * @return PayType Billing type.
      */
     public Long getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PayType Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Billing type.
+     * @param PayType Billing type.
      */
     public void setPayType(Long PayType) {
         this.PayType = PayType;
     }
 
     /**
-     * Get Expiration flag
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ExpireFlag Expiration flag
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Expiration flag. 
+     * @return ExpireFlag Expiration flag.
      */
     public Boolean getExpireFlag() {
         return this.ExpireFlag;
     }
 
     /**
-     * Set Expiration flag
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ExpireFlag Expiration flag
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Expiration flag.
+     * @param ExpireFlag Expiration flag.
      */
     public void setExpireFlag(Boolean ExpireFlag) {
         this.ExpireFlag = ExpireFlag;
     }
 
     /**
-     * Get Database status
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Status Database status
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Database status. 
+     * @return Status Database status.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Database status
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Status Database status
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Database status.
+     * @param Status Database status.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsAutoRenew Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Renewal flag. 
+     * @return IsAutoRenew Renewal flag.
      */
     public Long getIsAutoRenew() {
         return this.IsAutoRenew;
     }
 
     /**
-     * Set Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsAutoRenew Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Renewal flag.
+     * @param IsAutoRenew Renewal flag.
      */
     public void setIsAutoRenew(Long IsAutoRenew) {
         this.IsAutoRenew = IsAutoRenew;
     }
 
     /**
-     * Get Database string
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SerialNo Database string
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Database string. 
+     * @return SerialNo Database string.
      */
     public String getSerialNo() {
         return this.SerialNo;
     }
 
     /**
-     * Set Database string
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SerialNo Database string
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Database string.
+     * @param SerialNo Database string.
      */
     public void setSerialNo(String SerialNo) {
         this.SerialNo = SerialNo;
     }
 
     /**
-     * Get ZoneId
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get ZoneId 
      * @return ZoneId ZoneId
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getZoneId() {
         return this.ZoneId;
@@ -415,19 +346,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set ZoneId
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param ZoneId ZoneId
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get RegionId
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get RegionId 
      * @return RegionId RegionId
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -435,9 +362,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set RegionId
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param RegionId RegionId
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;

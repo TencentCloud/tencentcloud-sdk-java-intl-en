@@ -33,140 +33,147 @@ public class ScaleOutClusterRequest extends AbstractModel {
     private String InstanceChargeType;
 
     /**
-    * The cluster instance ID.
+    * Cluster instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * The type and number of nodes to be added.
+    * Scale-up node type and quantity.
     */
     @SerializedName("ScaleOutNodeConfig")
     @Expose
     private ScaleOutNodeConfig ScaleOutNodeConfig;
 
     /**
-    * A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae36063280`.
+    * Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * The details of the monthly subscription, including the instance period and auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+    * Setting of parameters related to monthly subscription. Through this parameter, you can specify the duration of purchase for monthly subscription instances, whether to set auto-renewal, and other attributes. This parameter is required when the specified instance is subject to the payment mode of prepaid.
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
+    * [Bootstrap Actions](https://www.tencentcloud.comom/document/product/589/35656?from_cn_redirect=1) script settings.
     */
     @SerializedName("ScriptBootstrapActionConfig")
     @Expose
     private ScriptBootstrapActionConfig [] ScriptBootstrapActionConfig;
 
     /**
-    * The services to be deployed for new nodes. By default, new nodes will inherit services deployed for the current node type, including default optional services. This parameter only supports the inclusion of optional services. For example, if HDFS, YARN, and Impala have been deployed for existing task nodes, when using the API for task node scale-out without deploying Impala, only HDFS and YARN are included in with this parameter. 
+    * Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
     */
     @SerializedName("SoftDeployInfo")
     @Expose
     private Long [] SoftDeployInfo;
 
     /**
-    * The processes to be deployed. All processes for services to be added are deployed by default. Deployed processes can be changed. For example, HDFS, YARN, and Impala have been deployed for current task nodes, and default services are DataNode, NodeManager, and ImpalaServer; if you want to change deployed processes, you can set this parameter to DataNode,NodeManager,ImpalaServerCoordinator or DataNode,NodeManager,ImpalaServerExecutor. 
+    * Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
     */
     @SerializedName("ServiceNodeInfo")
     @Expose
     private Long [] ServiceNodeInfo;
 
     /**
-    * The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
+    * Spread placement group ID list. Only one can be specified currently.
+This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.comom/document/product/213/17810?from_cn_redirect=1) API.
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
     private String [] DisasterRecoverGroupIds;
 
     /**
-    * The list of tags bound to added nodes.
+    * List of tags bound to scale-out nodes.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * The type of resources to add. Valid values: `host` (general CVM resources) and `pod` (resources provided by a TKE or EKS cluster).
+    * Resource type selected for scale-out with valid values "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
     */
     @SerializedName("HardwareSourceType")
     @Expose
     private String HardwareSourceType;
 
     /**
-    * The pod resource information.
+    * Pod-related resource information.
     */
     @SerializedName("PodSpecInfo")
     @Expose
     private PodSpecInfo PodSpecInfo;
 
     /**
-    * The server group name selected for ClickHouse cluster scale-out.
+    * Machine group name selected for ClickHouse cluster scale-out.
     */
     @SerializedName("ClickHouseClusterName")
     @Expose
     private String ClickHouseClusterName;
 
     /**
-    * The server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
+    * Machine group type selected for ClickHouse cluster scale-out. "New" indicates creating a group type, and "old" indicates using an existing group type.
     */
     @SerializedName("ClickHouseClusterType")
     @Expose
     private String ClickHouseClusterType;
 
     /**
-    * The YARN node label specified for scale-out.
+    * Specified Yarn Node Label for scale-out.
     */
     @SerializedName("YarnNodeLabel")
     @Expose
     private String YarnNodeLabel;
 
     /**
-    * Whether to start services after scale-out.
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
+    * Whether to start a service after scale-out (default: false).
+<li>true: yes</li>.
+<li>false: no</li>.
     */
     @SerializedName("EnableStartServiceFlag")
     @Expose
     private Boolean EnableStartServiceFlag;
 
     /**
-    * The spec settings.
+    * Specifications settings.
     */
     @SerializedName("ResourceSpec")
     @Expose
     private NodeResourceSpec ResourceSpec;
 
     /**
-    * The ID of the AZ where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
+    * Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * The subnet, which defaults to the subnet used when the cluster is created.
+    * Subnet, which is the subnet at the time of cluster creation by default.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 
+    * Configuration group specified for scale-out.
     */
     @SerializedName("ScaleOutServiceConfGroupsInfo")
     @Expose
     private ScaleOutServiceConfGroupsInfo [] ScaleOutServiceConfGroupsInfo;
+
+    /**
+    * Node tag information: currently used only in Terraform.
+    */
+    @SerializedName("NodeMarks")
+    @Expose
+    private NodeMark NodeMarks;
 
     /**
      * Get The node billing mode. Valid values:
@@ -193,319 +200,335 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
     }
 
     /**
-     * Get The cluster instance ID. 
-     * @return InstanceId The cluster instance ID.
+     * Get Cluster instance ID. 
+     * @return InstanceId Cluster instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The cluster instance ID.
-     * @param InstanceId The cluster instance ID.
+     * Set Cluster instance ID.
+     * @param InstanceId Cluster instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get The type and number of nodes to be added. 
-     * @return ScaleOutNodeConfig The type and number of nodes to be added.
+     * Get Scale-up node type and quantity. 
+     * @return ScaleOutNodeConfig Scale-up node type and quantity.
      */
     public ScaleOutNodeConfig getScaleOutNodeConfig() {
         return this.ScaleOutNodeConfig;
     }
 
     /**
-     * Set The type and number of nodes to be added.
-     * @param ScaleOutNodeConfig The type and number of nodes to be added.
+     * Set Scale-up node type and quantity.
+     * @param ScaleOutNodeConfig Scale-up node type and quantity.
      */
     public void setScaleOutNodeConfig(ScaleOutNodeConfig ScaleOutNodeConfig) {
         this.ScaleOutNodeConfig = ScaleOutNodeConfig;
     }
 
     /**
-     * Get A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae36063280`. 
-     * @return ClientToken A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae36063280`.
+     * Get Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280. 
+     * @return ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae36063280`.
-     * @param ClientToken A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae36063280`.
+     * Set Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
+     * @param ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get The details of the monthly subscription, including the instance period and auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`. 
-     * @return InstanceChargePrepaid The details of the monthly subscription, including the instance period and auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+     * Get Setting of parameters related to monthly subscription. Through this parameter, you can specify the duration of purchase for monthly subscription instances, whether to set auto-renewal, and other attributes. This parameter is required when the specified instance is subject to the payment mode of prepaid. 
+     * @return InstanceChargePrepaid Setting of parameters related to monthly subscription. Through this parameter, you can specify the duration of purchase for monthly subscription instances, whether to set auto-renewal, and other attributes. This parameter is required when the specified instance is subject to the payment mode of prepaid.
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
     }
 
     /**
-     * Set The details of the monthly subscription, including the instance period and auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
-     * @param InstanceChargePrepaid The details of the monthly subscription, including the instance period and auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+     * Set Setting of parameters related to monthly subscription. Through this parameter, you can specify the duration of purchase for monthly subscription instances, whether to set auto-renewal, and other attributes. This parameter is required when the specified instance is subject to the payment mode of prepaid.
+     * @param InstanceChargePrepaid Setting of parameters related to monthly subscription. Through this parameter, you can specify the duration of purchase for monthly subscription instances, whether to set auto-renewal, and other attributes. This parameter is required when the specified instance is subject to the payment mode of prepaid.
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
     /**
-     * Get The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings. 
-     * @return ScriptBootstrapActionConfig The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
+     * Get [Bootstrap Actions](https://www.tencentcloud.comom/document/product/589/35656?from_cn_redirect=1) script settings. 
+     * @return ScriptBootstrapActionConfig [Bootstrap Actions](https://www.tencentcloud.comom/document/product/589/35656?from_cn_redirect=1) script settings.
      */
     public ScriptBootstrapActionConfig [] getScriptBootstrapActionConfig() {
         return this.ScriptBootstrapActionConfig;
     }
 
     /**
-     * Set The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
-     * @param ScriptBootstrapActionConfig The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
+     * Set [Bootstrap Actions](https://www.tencentcloud.comom/document/product/589/35656?from_cn_redirect=1) script settings.
+     * @param ScriptBootstrapActionConfig [Bootstrap Actions](https://www.tencentcloud.comom/document/product/589/35656?from_cn_redirect=1) script settings.
      */
     public void setScriptBootstrapActionConfig(ScriptBootstrapActionConfig [] ScriptBootstrapActionConfig) {
         this.ScriptBootstrapActionConfig = ScriptBootstrapActionConfig;
     }
 
     /**
-     * Get The services to be deployed for new nodes. By default, new nodes will inherit services deployed for the current node type, including default optional services. This parameter only supports the inclusion of optional services. For example, if HDFS, YARN, and Impala have been deployed for existing task nodes, when using the API for task node scale-out without deploying Impala, only HDFS and YARN are included in with this parameter.  
-     * @return SoftDeployInfo The services to be deployed for new nodes. By default, new nodes will inherit services deployed for the current node type, including default optional services. This parameter only supports the inclusion of optional services. For example, if HDFS, YARN, and Impala have been deployed for existing task nodes, when using the API for task node scale-out without deploying Impala, only HDFS and YARN are included in with this parameter. 
+     * Get Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1). 
+     * @return SoftDeployInfo Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
      */
     public Long [] getSoftDeployInfo() {
         return this.SoftDeployInfo;
     }
 
     /**
-     * Set The services to be deployed for new nodes. By default, new nodes will inherit services deployed for the current node type, including default optional services. This parameter only supports the inclusion of optional services. For example, if HDFS, YARN, and Impala have been deployed for existing task nodes, when using the API for task node scale-out without deploying Impala, only HDFS and YARN are included in with this parameter. 
-     * @param SoftDeployInfo The services to be deployed for new nodes. By default, new nodes will inherit services deployed for the current node type, including default optional services. This parameter only supports the inclusion of optional services. For example, if HDFS, YARN, and Impala have been deployed for existing task nodes, when using the API for task node scale-out without deploying Impala, only HDFS and YARN are included in with this parameter. 
+     * Set Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+     * @param SoftDeployInfo Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
      */
     public void setSoftDeployInfo(Long [] SoftDeployInfo) {
         this.SoftDeployInfo = SoftDeployInfo;
     }
 
     /**
-     * Get The processes to be deployed. All processes for services to be added are deployed by default. Deployed processes can be changed. For example, HDFS, YARN, and Impala have been deployed for current task nodes, and default services are DataNode, NodeManager, and ImpalaServer; if you want to change deployed processes, you can set this parameter to DataNode,NodeManager,ImpalaServerCoordinator or DataNode,NodeManager,ImpalaServerExecutor.  
-     * @return ServiceNodeInfo The processes to be deployed. All processes for services to be added are deployed by default. Deployed processes can be changed. For example, HDFS, YARN, and Impala have been deployed for current task nodes, and default services are DataNode, NodeManager, and ImpalaServer; if you want to change deployed processes, you can set this parameter to DataNode,NodeManager,ImpalaServerCoordinator or DataNode,NodeManager,ImpalaServerExecutor. 
+     * Get Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1). 
+     * @return ServiceNodeInfo Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
      */
     public Long [] getServiceNodeInfo() {
         return this.ServiceNodeInfo;
     }
 
     /**
-     * Set The processes to be deployed. All processes for services to be added are deployed by default. Deployed processes can be changed. For example, HDFS, YARN, and Impala have been deployed for current task nodes, and default services are DataNode, NodeManager, and ImpalaServer; if you want to change deployed processes, you can set this parameter to DataNode,NodeManager,ImpalaServerCoordinator or DataNode,NodeManager,ImpalaServerExecutor. 
-     * @param ServiceNodeInfo The processes to be deployed. All processes for services to be added are deployed by default. Deployed processes can be changed. For example, HDFS, YARN, and Impala have been deployed for current task nodes, and default services are DataNode, NodeManager, and ImpalaServer; if you want to change deployed processes, you can set this parameter to DataNode,NodeManager,ImpalaServerCoordinator or DataNode,NodeManager,ImpalaServerExecutor. 
+     * Set Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+     * @param ServiceNodeInfo Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
      */
     public void setServiceNodeInfo(Long [] ServiceNodeInfo) {
         this.ServiceNodeInfo = ServiceNodeInfo;
     }
 
     /**
-     * Get The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response. 
-     * @return DisasterRecoverGroupIds The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
+     * Get Spread placement group ID list. Only one can be specified currently.
+This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.comom/document/product/213/17810?from_cn_redirect=1) API. 
+     * @return DisasterRecoverGroupIds Spread placement group ID list. Only one can be specified currently.
+This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.comom/document/product/213/17810?from_cn_redirect=1) API.
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
     }
 
     /**
-     * Set The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
-     * @param DisasterRecoverGroupIds The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
+     * Set Spread placement group ID list. Only one can be specified currently.
+This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.comom/document/product/213/17810?from_cn_redirect=1) API.
+     * @param DisasterRecoverGroupIds Spread placement group ID list. Only one can be specified currently.
+This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.comom/document/product/213/17810?from_cn_redirect=1) API.
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
     }
 
     /**
-     * Get The list of tags bound to added nodes. 
-     * @return Tags The list of tags bound to added nodes.
+     * Get List of tags bound to scale-out nodes. 
+     * @return Tags List of tags bound to scale-out nodes.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set The list of tags bound to added nodes.
-     * @param Tags The list of tags bound to added nodes.
+     * Set List of tags bound to scale-out nodes.
+     * @param Tags List of tags bound to scale-out nodes.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get The type of resources to add. Valid values: `host` (general CVM resources) and `pod` (resources provided by a TKE or EKS cluster). 
-     * @return HardwareSourceType The type of resources to add. Valid values: `host` (general CVM resources) and `pod` (resources provided by a TKE or EKS cluster).
+     * Get Resource type selected for scale-out with valid values "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type. 
+     * @return HardwareSourceType Resource type selected for scale-out with valid values "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
      */
     public String getHardwareSourceType() {
         return this.HardwareSourceType;
     }
 
     /**
-     * Set The type of resources to add. Valid values: `host` (general CVM resources) and `pod` (resources provided by a TKE or EKS cluster).
-     * @param HardwareSourceType The type of resources to add. Valid values: `host` (general CVM resources) and `pod` (resources provided by a TKE or EKS cluster).
+     * Set Resource type selected for scale-out with valid values "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
+     * @param HardwareSourceType Resource type selected for scale-out with valid values "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
      */
     public void setHardwareSourceType(String HardwareSourceType) {
         this.HardwareSourceType = HardwareSourceType;
     }
 
     /**
-     * Get The pod resource information. 
-     * @return PodSpecInfo The pod resource information.
+     * Get Pod-related resource information. 
+     * @return PodSpecInfo Pod-related resource information.
      */
     public PodSpecInfo getPodSpecInfo() {
         return this.PodSpecInfo;
     }
 
     /**
-     * Set The pod resource information.
-     * @param PodSpecInfo The pod resource information.
+     * Set Pod-related resource information.
+     * @param PodSpecInfo Pod-related resource information.
      */
     public void setPodSpecInfo(PodSpecInfo PodSpecInfo) {
         this.PodSpecInfo = PodSpecInfo;
     }
 
     /**
-     * Get The server group name selected for ClickHouse cluster scale-out. 
-     * @return ClickHouseClusterName The server group name selected for ClickHouse cluster scale-out.
+     * Get Machine group name selected for ClickHouse cluster scale-out. 
+     * @return ClickHouseClusterName Machine group name selected for ClickHouse cluster scale-out.
      */
     public String getClickHouseClusterName() {
         return this.ClickHouseClusterName;
     }
 
     /**
-     * Set The server group name selected for ClickHouse cluster scale-out.
-     * @param ClickHouseClusterName The server group name selected for ClickHouse cluster scale-out.
+     * Set Machine group name selected for ClickHouse cluster scale-out.
+     * @param ClickHouseClusterName Machine group name selected for ClickHouse cluster scale-out.
      */
     public void setClickHouseClusterName(String ClickHouseClusterName) {
         this.ClickHouseClusterName = ClickHouseClusterName;
     }
 
     /**
-     * Get The server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group). 
-     * @return ClickHouseClusterType The server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
+     * Get Machine group type selected for ClickHouse cluster scale-out. "New" indicates creating a group type, and "old" indicates using an existing group type. 
+     * @return ClickHouseClusterType Machine group type selected for ClickHouse cluster scale-out. "New" indicates creating a group type, and "old" indicates using an existing group type.
      */
     public String getClickHouseClusterType() {
         return this.ClickHouseClusterType;
     }
 
     /**
-     * Set The server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
-     * @param ClickHouseClusterType The server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
+     * Set Machine group type selected for ClickHouse cluster scale-out. "New" indicates creating a group type, and "old" indicates using an existing group type.
+     * @param ClickHouseClusterType Machine group type selected for ClickHouse cluster scale-out. "New" indicates creating a group type, and "old" indicates using an existing group type.
      */
     public void setClickHouseClusterType(String ClickHouseClusterType) {
         this.ClickHouseClusterType = ClickHouseClusterType;
     }
 
     /**
-     * Get The YARN node label specified for scale-out. 
-     * @return YarnNodeLabel The YARN node label specified for scale-out.
+     * Get Specified Yarn Node Label for scale-out. 
+     * @return YarnNodeLabel Specified Yarn Node Label for scale-out.
      */
     public String getYarnNodeLabel() {
         return this.YarnNodeLabel;
     }
 
     /**
-     * Set The YARN node label specified for scale-out.
-     * @param YarnNodeLabel The YARN node label specified for scale-out.
+     * Set Specified Yarn Node Label for scale-out.
+     * @param YarnNodeLabel Specified Yarn Node Label for scale-out.
      */
     public void setYarnNodeLabel(String YarnNodeLabel) {
         this.YarnNodeLabel = YarnNodeLabel;
     }
 
     /**
-     * Get Whether to start services after scale-out.
-<li>`true`: Yes</li>
-<li>`false` (default): No</li> 
-     * @return EnableStartServiceFlag Whether to start services after scale-out.
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
+     * Get Whether to start a service after scale-out (default: false).
+<li>true: yes</li>.
+<li>false: no</li>. 
+     * @return EnableStartServiceFlag Whether to start a service after scale-out (default: false).
+<li>true: yes</li>.
+<li>false: no</li>.
      */
     public Boolean getEnableStartServiceFlag() {
         return this.EnableStartServiceFlag;
     }
 
     /**
-     * Set Whether to start services after scale-out.
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
-     * @param EnableStartServiceFlag Whether to start services after scale-out.
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
+     * Set Whether to start a service after scale-out (default: false).
+<li>true: yes</li>.
+<li>false: no</li>.
+     * @param EnableStartServiceFlag Whether to start a service after scale-out (default: false).
+<li>true: yes</li>.
+<li>false: no</li>.
      */
     public void setEnableStartServiceFlag(Boolean EnableStartServiceFlag) {
         this.EnableStartServiceFlag = EnableStartServiceFlag;
     }
 
     /**
-     * Get The spec settings. 
-     * @return ResourceSpec The spec settings.
+     * Get Specifications settings. 
+     * @return ResourceSpec Specifications settings.
      */
     public NodeResourceSpec getResourceSpec() {
         return this.ResourceSpec;
     }
 
     /**
-     * Set The spec settings.
-     * @param ResourceSpec The spec settings.
+     * Set Specifications settings.
+     * @param ResourceSpec Specifications settings.
      */
     public void setResourceSpec(NodeResourceSpec ResourceSpec) {
         this.ResourceSpec = ResourceSpec;
     }
 
     /**
-     * Get The ID of the AZ where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response. 
-     * @return Zone The ID of the AZ where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
+     * Get Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1). 
+     * @return Zone Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set The ID of the AZ where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
-     * @param Zone The ID of the AZ where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
+     * Set Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+     * @param Zone Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get The subnet, which defaults to the subnet used when the cluster is created. 
-     * @return SubnetId The subnet, which defaults to the subnet used when the cluster is created.
+     * Get Subnet, which is the subnet at the time of cluster creation by default. 
+     * @return SubnetId Subnet, which is the subnet at the time of cluster creation by default.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set The subnet, which defaults to the subnet used when the cluster is created.
-     * @param SubnetId The subnet, which defaults to the subnet used when the cluster is created.
+     * Set Subnet, which is the subnet at the time of cluster creation by default.
+     * @param SubnetId Subnet, which is the subnet at the time of cluster creation by default.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get  
-     * @return ScaleOutServiceConfGroupsInfo 
+     * Get Configuration group specified for scale-out. 
+     * @return ScaleOutServiceConfGroupsInfo Configuration group specified for scale-out.
      */
     public ScaleOutServiceConfGroupsInfo [] getScaleOutServiceConfGroupsInfo() {
         return this.ScaleOutServiceConfGroupsInfo;
     }
 
     /**
-     * Set 
-     * @param ScaleOutServiceConfGroupsInfo 
+     * Set Configuration group specified for scale-out.
+     * @param ScaleOutServiceConfGroupsInfo Configuration group specified for scale-out.
      */
     public void setScaleOutServiceConfGroupsInfo(ScaleOutServiceConfGroupsInfo [] ScaleOutServiceConfGroupsInfo) {
         this.ScaleOutServiceConfGroupsInfo = ScaleOutServiceConfGroupsInfo;
+    }
+
+    /**
+     * Get Node tag information: currently used only in Terraform. 
+     * @return NodeMarks Node tag information: currently used only in Terraform.
+     */
+    public NodeMark getNodeMarks() {
+        return this.NodeMarks;
+    }
+
+    /**
+     * Set Node tag information: currently used only in Terraform.
+     * @param NodeMarks Node tag information: currently used only in Terraform.
+     */
+    public void setNodeMarks(NodeMark NodeMarks) {
+        this.NodeMarks = NodeMarks;
     }
 
     public ScaleOutClusterRequest() {
@@ -594,6 +617,9 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
                 this.ScaleOutServiceConfGroupsInfo[i] = new ScaleOutServiceConfGroupsInfo(source.ScaleOutServiceConfGroupsInfo[i]);
             }
         }
+        if (source.NodeMarks != null) {
+            this.NodeMarks = new NodeMark(source.NodeMarks);
+        }
     }
 
 
@@ -621,6 +647,7 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamArrayObj(map, prefix + "ScaleOutServiceConfGroupsInfo.", this.ScaleOutServiceConfGroupsInfo);
+        this.setParamObj(map, prefix + "NodeMarks.", this.NodeMarks);
 
     }
 }
