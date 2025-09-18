@@ -160,6 +160,17 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *This API is used to disable the paid plan on the international website.
+     * @param req DeletePackageOrderRequest
+     * @return DeletePackageOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePackageOrderResponse DeletePackageOrder(DeletePackageOrderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePackageOrder", DeletePackageOrderResponse.class);
+    }
+
+    /**
      *This API is used to delete a record.
      * @param req DeleteRecordRequest
      * @return DeleteRecordResponse
@@ -289,6 +300,17 @@ public class DnspodClient extends AbstractClient{
     public DescribeRecordGroupListResponse DescribeRecordGroupList(DescribeRecordGroupListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRecordGroupList", DescribeRecordGroupListResponse.class);
+    }
+
+    /**
+     *This API is used to return a line list by category.
+     * @param req DescribeRecordLineCategoryListRequest
+     * @return DescribeRecordLineCategoryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordLineCategoryListResponse DescribeRecordLineCategoryList(DescribeRecordLineCategoryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRecordLineCategoryList", DescribeRecordLineCategoryListResponse.class);
     }
 
     /**

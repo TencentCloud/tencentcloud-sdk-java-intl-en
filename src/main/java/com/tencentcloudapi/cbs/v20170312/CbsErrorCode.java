@@ -165,7 +165,8 @@ public enum CbsErrorCode {
      /* Incorrect cloud disk type. For example, a system disk cannot be mounted to CVM. */
      RESOURCEUNAVAILABLE_TYPEERROR("ResourceUnavailable.TypeError"),
      
-     /*  */
+     /* The cloud disk and the instance are not in the same availability zone.
+         */
      RESOURCEUNAVAILABLE_ZONENOTMATCH("ResourceUnavailable.ZoneNotMatch"),
      
      /* Order conflict. */
@@ -189,7 +190,8 @@ public enum CbsErrorCode {
      /* Unsupported operation */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
-     /*  */
+     /* Detaching cloud disks from EKS is not currently supported.
+         */
      UNSUPPORTEDOPERATION_DETACHPOD("UnsupportedOperation.DetachPod"),
      
      /* The disk is encrypted. */

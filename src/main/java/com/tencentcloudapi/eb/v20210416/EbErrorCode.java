@@ -66,7 +66,8 @@ public enum EbErrorCode {
      /* Service error. Please try again. If the problem persists, please submit a ticket. */
      INTERNALERROR_SYSTEM("InternalError.System"),
      
-     /*  */
+     /* Unknown error.
+         */
      INTERNALERROR_UNKNOWNINTERNALERROR("InternalError.UnknownInternalError"),
      
      /* Parameter error. */

@@ -9,7 +9,8 @@ public enum TagErrorCode {
      /* The operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
-     /*  */
+     /* Enforcement restrictions in the tag policy.
+         */
      FAILEDOPERATION_POLICYENFORCEDINVALID("FailedOperation.PolicyEnforcedInvalid"),
      
      /* Exceeding the project count limit. */

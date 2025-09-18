@@ -102,7 +102,8 @@ public enum ScfErrorCode {
      /* You cannot publish a version in the current function state. Please try again when the state is normal. */
      FAILEDOPERATION_PUBLISHVERSION("FailedOperation.PublishVersion"),
      
-     /*  */
+     /* Query failed.
+         */
      FAILEDOPERATION_QUERYERROR("FailedOperation.QueryError"),
      
      /* The value of ReservedExceedTotal exceeds the limit. */
@@ -465,7 +466,8 @@ public enum ScfErrorCode {
      /* The number of layer versions exceeds the upper limit. */
      LIMITEXCEEDED_LAYERVERSIONS("LimitExceeded.LayerVersions"),
      
-     /*  */
+     /* The number of layers exceeds the maximum limit.
+         */
      LIMITEXCEEDED_LAYERS("LimitExceeded.Layers"),
      
      /* Reached the upper limit of dynamic scaling. */
@@ -513,7 +515,8 @@ public enum ScfErrorCode {
      /* This account has been isolated. */
      OPERATIONDENIED_ACCOUNTISOLATE("OperationDenied.AccountIsolate"),
      
-     /*  */
+     /* Account does not exist.
+         */
      OPERATIONDENIED_ACCOUNTNOTEXISTS("OperationDenied.AccountNotExists"),
      
      /* The resource is in use. */
@@ -660,7 +663,8 @@ public enum ScfErrorCode {
      /* Cdn is not supported. */
      UNSUPPORTEDOPERATION_CDN("UnsupportedOperation.Cdn"),
      
-     /*  */
+     /* The function cannot be copied.
+         */
      UNSUPPORTEDOPERATION_COPYFUNCTION("UnsupportedOperation.CopyFunction"),
      
      /* Cos operation is not supported. */
@@ -672,7 +676,8 @@ public enum ScfErrorCode {
      /* Unsupported region. */
      UNSUPPORTEDOPERATION_NOTSUPPORTREGION("UnsupportedOperation.NotSupportRegion"),
      
-     /*  */
+     /* Cannot release the version in the current state.
+         */
      UNSUPPORTEDOPERATION_PUBLISHVERSION("UnsupportedOperation.PublishVersion"),
      
      /* This region is not supported. */

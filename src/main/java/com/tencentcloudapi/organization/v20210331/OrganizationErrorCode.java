@@ -1,6 +1,7 @@
 package com.tencentcloudapi.organization.v20210331;
 public enum OrganizationErrorCode {
-     /* Operation failed. */
+     /* Operation failed.
+         */
      FAILEDOPERATION("FailedOperation"),
      
      /* The account has been registered. */

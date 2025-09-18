@@ -27,10 +27,12 @@ public enum LighthouseErrorCode {
      /* Failed to query the image. Try again later. */
      FAILEDOPERATION_DESCRIBEBLUEPRINTSFAILED("FailedOperation.DescribeBlueprintsFailed"),
      
-     /*  */
+     /* Query for plan discount failed.
+         */
      FAILEDOPERATION_DESCRIBEBUNDLEDISCOUNTFAILED("FailedOperation.DescribeBundleDiscountFailed"),
      
-     /*  */
+     /* Query for plan failed.
+         */
      FAILEDOPERATION_DESCRIBEBUNDLESFAILED("FailedOperation.DescribeBundlesFailed"),
      
      /* Querying CBS quota failed. */
@@ -63,7 +65,8 @@ public enum LighthouseErrorCode {
      /* Failed to manipulate the instance. */
      FAILEDOPERATION_INSTANCEOPERATIONFAILED("FailedOperation.InstanceOperationFailed"),
      
-     /*  */
+     /* Insufficient account balance. Please recharge promptly.
+         */
      FAILEDOPERATION_INSUFFICIENTBALANCE("FailedOperation.InsufficientBalance"),
      
      /* The command is not found. */
@@ -429,7 +432,8 @@ public enum LighthouseErrorCode {
      /* The firewall rule does not exist. */
      RESOURCENOTFOUND_FIREWALLRULESNOTFOUND("ResourceNotFound.FirewallRulesNotFound"),
      
-     /*  */
+     /* Firewall template not found.
+         */
      RESOURCENOTFOUND_FIREWALLTEMPLATENOTFOUND("ResourceNotFound.FirewallTemplateNotFound"),
      
      /* There are no data disks mounted to the instance. */
@@ -444,7 +448,8 @@ public enum LighthouseErrorCode {
      /* The key pair ID does not exist. */
      RESOURCENOTFOUND_KEYIDNOTFOUND("ResourceNotFound.KeyIdNotFound"),
      
-     /*  */
+     /* Key pair not found.
+         */
      RESOURCENOTFOUND_KEYPAIRNOTFOUND("ResourceNotFound.KeyPairNotFound"),
      
      /* The custom image does not exist. */
@@ -471,7 +476,8 @@ public enum LighthouseErrorCode {
      /* The package is not available. */
      RESOURCEUNAVAILABLE_BUNDLEUNAVAILABLE("ResourceUnavailable.BundleUnavailable"),
      
-     /*  */
+     /* Plan sold out.
+         */
      RESOURCESSOLDOUT_BUNDLESOLDOUT("ResourcesSoldOut.BundleSoldOut"),
      
      /* There is no available configuration in the package. */
@@ -489,7 +495,8 @@ public enum LighthouseErrorCode {
      /* No permission. */
      UNAUTHORIZEDOPERATION_NOPERMISSION("UnauthorizedOperation.NoPermission"),
      
-     /*  */
+     /* You do not have permission to perform this operation. The token in the request is invalid.
+         */
      UNAUTHORIZEDOPERATION_TOKENINVALID("UnauthorizedOperation.TokenInvalid"),
      
      /* Unknown parameter error. */
@@ -564,7 +571,8 @@ public enum LighthouseErrorCode {
      /* The shared image does not support this operation. */
      UNSUPPORTEDOPERATION_NOTSUPPORTSHAREDBLUEPRINT("UnsupportedOperation.NotSupportSharedBlueprint"),
      
-     /*  */
+     /* This API is no longer available.
+         */
      UNSUPPORTEDOPERATION_OPERATIONOFFLINE("UnsupportedOperation.OperationOffline"),
      
      /* Terminating a resource in the resource center failed. */

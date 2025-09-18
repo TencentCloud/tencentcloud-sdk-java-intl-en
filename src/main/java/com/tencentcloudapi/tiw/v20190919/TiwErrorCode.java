@@ -1,6 +1,7 @@
 package com.tencentcloudapi.tiw.v20190919;
 public enum TiwErrorCode {
-     /*  */
+     /* CAM signature/authentication error.
+         */
      AUTHFAILURE("AuthFailure"),
      
      /* Operation failed. */
@@ -66,7 +67,8 @@ public enum TiwErrorCode {
      /* Unsupported configuration task type. */
      INVALIDPARAMETER_INVALIDTASKTYPE("InvalidParameter.InvalidTaskType"),
      
-     /*  */
+     /* The transcoding preprocessing parameter format is incorrect.
+         */
      INVALIDPARAMETER_PREPROCESSPARAMETER("InvalidParameter.PreprocessParameter"),
      
      /* The format of the real-time recording parameter is invalid. */

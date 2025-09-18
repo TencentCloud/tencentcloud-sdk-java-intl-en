@@ -273,10 +273,12 @@ public enum CdnErrorCode {
      /* Domain name operations are too frequent. */
      LIMITEXCEEDED_CDNHOSTOPTOOOFTEN("LimitExceeded.CdnHostOpTooOften"),
      
-     /*  */
+     /* The number of refreshed URLs exceeds the per-batch submission limit.
+         */
      LIMITEXCEEDED_CDNPURGEEXCEEDBATCHLIMIT("LimitExceeded.CdnPurgeExceedBatchLimit"),
      
-     /*  */
+     /* The number of refreshed URLs exceeds the daily quota.
+         */
      LIMITEXCEEDED_CDNPURGEEXCEEDDAYLIMIT("LimitExceeded.CdnPurgeExceedDayLimit"),
      
      /* The number of directories to be purged exceeds the limit. */

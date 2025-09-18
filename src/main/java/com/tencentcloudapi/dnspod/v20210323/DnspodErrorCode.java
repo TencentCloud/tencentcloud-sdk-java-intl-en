@@ -6,10 +6,14 @@ public enum DnspodErrorCode {
      /* The operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
+     /* This domain name is on the free plan. closing the plan is not allowed. */
+     FAILEDOPERATION_CANNOTCLOSEFREEDOMAIN("FailedOperation.CanNotCloseFreeDomain"),
+     
      /* The domain is already in your list. There is no need to add it again. */
      FAILEDOPERATION_DOMAINEXISTS("FailedOperation.DomainExists"),
      
-     /*  */
+     /* The domain belongs to an enterprise email user.
+         */
      FAILEDOPERATION_DOMAININENTERPRISEMAILACCOUNT("FailedOperation.DomainInEnterpriseMailAccount"),
      
      /* This domain is a key protected resource in DNSPod. To prevent the service from being affected by maloperations, you cannot delete it. If you are sure you need to delete it, please contact your sales rep for technical support. */
@@ -105,7 +109,8 @@ public enum DnspodErrorCode {
      /* The domain number is incorrect. */
      INVALIDPARAMETER_DOMAINIDINVALID("InvalidParameter.DomainIdInvalid"),
      
-     /*  */
+     /* The domain is on the illegal and non-compliant blacklist, and this operation cannot be performed.
+         */
      INVALIDPARAMETER_DOMAININBLACKLIST("InvalidParameter.DomainInBlackList"),
      
      /* You cannot perform operations on a domain currently active or invalid. */
@@ -117,7 +122,8 @@ public enum DnspodErrorCode {
      /* This domain is an alias of another domain. */
      INVALIDPARAMETER_DOMAINISALIASER("InvalidParameter.DomainIsAliaser"),
      
-     /*  */
+     /* This domain is an alias for itself.
+         */
      INVALIDPARAMETER_DOMAINISMYALIAS("InvalidParameter.DomainIsMyAlias"),
      
      /* The domain is not locked. */
@@ -207,7 +213,8 @@ public enum DnspodErrorCode {
      /* The user UIN is invalid. */
      INVALIDPARAMETER_QCLOUDUININVALID("InvalidParameter.QcloudUinInvalid"),
      
-     /*  */
+     /* TXT record cannot be matched. Please confirm whether the record value is accurate and verify again.
+         */
      INVALIDPARAMETER_QUHUITXTNOTMATCH("InvalidParameter.QuhuiTxtNotMatch"),
      
      /* The TXT record was not set or has not taken effect. Try again later. */

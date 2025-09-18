@@ -168,7 +168,8 @@ public enum TdmqErrorCode {
      /* The parameter value is incorrect. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /*  */
+     /* At least one parameter must be provided.
+         */
      INVALIDPARAMETERVALUE_ATLEASTONE("InvalidParameterValue.AtLeastOne"),
      
      /* The cluster name already exists. */

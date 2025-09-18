@@ -78,7 +78,8 @@ public enum CfsErrorCode {
      /* The parameter value is incorrect. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /*  */
+     /* Auto-scaling policy does not exist.
+         */
      INVALIDPARAMETERVALUE_AUTOPOLICYNOTFOUND("InvalidParameterValue.AutoPolicyNotFound"),
      
      /* The length of the string used to ensure the idempotency of the request exceeds the upper limit of 64 bytes. */
@@ -99,7 +100,8 @@ public enum CfsErrorCode {
      /* The file system quota exceeds the upper limit. */
      INVALIDPARAMETERVALUE_FSSIZELIMITEXCEEDED("InvalidParameterValue.FsSizeLimitExceeded"),
      
-     /*  */
+     /* Invalid AliveDays value error
+         */
      INVALIDPARAMETERVALUE_INVALIDALIVEDAYS("InvalidParameterValue.InvalidAliveDays"),
      
      /* Incorrect rule IP. */
@@ -111,7 +113,8 @@ public enum CfsErrorCode {
      /* The string used to ensure the idempotency of the request is incorrect. */
      INVALIDPARAMETERVALUE_INVALIDCLIENTTOKEN("InvalidParameterValue.InvalidClientToken"),
      
-     /*  */
+     /* The cross-region replication parameter for snapshots is not supported in this region.
+         */
      INVALIDPARAMETERVALUE_INVALIDDESTINATIONREGIONS("InvalidParameterValue.InvalidDestinationRegions"),
      
      /* Invalid encryption parameter. */
@@ -138,7 +141,8 @@ public enum CfsErrorCode {
      /* Invalid value of `DayOfMonth`. */
      INVALIDPARAMETERVALUE_INVALIDPARAMDAYOFMONTH("InvalidParameterValue.InvalidParamDayOfMonth"),
      
-     /*  */
+     /* Invalid parameter: DayOfWeek
+         */
      INVALIDPARAMETERVALUE_INVALIDPARAMDAYOFWEEK("InvalidParameterValue.InvalidParamDayOfWeek"),
      
      /* Invalid value of `IntervalDays`. */
@@ -171,13 +175,16 @@ public enum CfsErrorCode {
      /* Invalid target capacity. */
      INVALIDPARAMETERVALUE_INVALIDSCALEUPTARGETCAPACITY("InvalidParameterValue.InvalidScaleupTargetCapacity"),
      
-     /*  */
+     /* Invalid snapshot policy status
+         */
      INVALIDPARAMETERVALUE_INVALIDSNAPPOLICYSTATUS("InvalidParameterValue.InvalidSnapPolicyStatus"),
      
-     /*  */
+     /* Invalid snapshot name
+         */
      INVALIDPARAMETERVALUE_INVALIDSNAPSHOTNAME("InvalidParameterValue.InvalidSnapshotName"),
      
-     /*  */
+     /* Invalid snapshot policy name
+         */
      INVALIDPARAMETERVALUE_INVALIDSNAPSHOTPOLICYNAME("InvalidParameterValue.InvalidSnapshotPolicyName"),
      
      /* The snapshot is invalid. */
@@ -240,7 +247,8 @@ public enum CfsErrorCode {
      /* Snapshot policy parameters missing. */
      INVALIDPARAMETERVALUE_MISSINGPOLICYPARAM("InvalidParameterValue.MissingPolicyParam"),
      
-     /*  */
+     /* Missing parameter(s): Snapshot Name or aliveDays
+         */
      INVALIDPARAMETERVALUE_MISSINGSNAPNAMEORALIVEDAY("InvalidParameterValue.MissingSnapNameOrAliveDay"),
      
      /* No storage pack is bound to. */
@@ -270,10 +278,12 @@ public enum CfsErrorCode {
      /* The permission group rule and permission group do not match. */
      INVALIDPARAMETERVALUE_RULENOTMATCHPGROUP("InvalidParameterValue.RuleNotMatchPgroup"),
      
-     /*  */
+     /* Snapshot name exceeds the limit. The name length must not exceed 64 characters.
+         */
      INVALIDPARAMETERVALUE_SNAPSHOTNAMELIMITEXCEEDED("InvalidParameterValue.SnapshotNameLimitExceeded"),
      
-     /*  */
+     /* Snapshot policy name exceeds the 64-character limit.
+         */
      INVALIDPARAMETERVALUE_SNAPSHOTPOLICYNAMELIMITEXCEEDED("InvalidParameterValue.SnapshotPolicyNameLimitExceeded"),
      
      /* Invalid parameter value: the number of tag keys exceeds the upper limit (6). */

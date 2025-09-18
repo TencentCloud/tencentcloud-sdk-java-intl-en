@@ -60,7 +60,8 @@ public enum TeoErrorCode {
      /* Invalid filter field. */
      INVALIDPARAMETER_INVALIDFILTERNAME("InvalidParameter.InvalidFilterName"),
      
-     /*  */
+     /* Invalid enforced HTTPS redirect.
+         */
      INVALIDPARAMETER_INVALIDFORCEREDIRECTTYPE("InvalidParameter.InvalidForceRedirectType"),
      
      /* Invalid origin server. */
@@ -126,7 +127,8 @@ public enum TeoErrorCode {
      /* Incorrect DNS proxy */
      INVALIDPARAMETERVALUE_INVALIDPROXYORIGIN("InvalidParameterValue.InvalidProxyOrigin"),
      
-     /*  */
+     /* SRV record name incorrect.
+         */
      INVALIDPARAMETERVALUE_INVALIDSRVNAME("InvalidParameterValue.InvalidSRVName"),
      
      /* This record already exists. */
