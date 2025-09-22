@@ -32,8 +32,7 @@ Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBB
     private String VerificationUrl;
 
     /**
-    * The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
-Example: 81EEF678-28EE-4759-A82E-6CBBBE6BC442
+    * A token that identifies a Web verification process, with a validity time of 10 minutes. after the process is complete, the token can be used to obtain the verification result.
     */
     @SerializedName("BizToken")
     @Expose
@@ -79,20 +78,16 @@ Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBB
     }
 
     /**
-     * Get The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
-Example: 81EEF678-28EE-4759-A82E-6CBBBE6BC442 
-     * @return BizToken The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
-Example: 81EEF678-28EE-4759-A82E-6CBBBE6BC442
+     * Get A token that identifies a Web verification process, with a validity time of 10 minutes. after the process is complete, the token can be used to obtain the verification result. 
+     * @return BizToken A token that identifies a Web verification process, with a validity time of 10 minutes. after the process is complete, the token can be used to obtain the verification result.
      */
     public String getBizToken() {
         return this.BizToken;
     }
 
     /**
-     * Set The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
-Example: 81EEF678-28EE-4759-A82E-6CBBBE6BC442
-     * @param BizToken The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
-Example: 81EEF678-28EE-4759-A82E-6CBBBE6BC442
+     * Set A token that identifies a Web verification process, with a validity time of 10 minutes. after the process is complete, the token can be used to obtain the verification result.
+     * @param BizToken A token that identifies a Web verification process, with a validity time of 10 minutes. after the process is complete, the token can be used to obtain the verification result.
      */
     public void setBizToken(String BizToken) {
         this.BizToken = BizToken;

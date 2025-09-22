@@ -60,6 +60,22 @@ Note: This field may return null, indicating that no valid value can be obtained
     private SubtitlePosition SubtitlePos;
 
     /**
+    * Specifies the file url of the video after voice cloning.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("VoiceClonedVideo")
+    @Expose
+    private String VoiceClonedVideo;
+
+    /**
+    * Specifies the file address of the voice type clone annotation.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("VoiceClonedMarkFile")
+    @Expose
+    private String VoiceClonedMarkFile;
+
+    /**
      * Get Path of a file after removal. 
      * @return Path Path of a file after removal.
      */
@@ -143,6 +159,46 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.SubtitlePos = SubtitlePos;
     }
 
+    /**
+     * Get Specifies the file url of the video after voice cloning.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return VoiceClonedVideo Specifies the file url of the video after voice cloning.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getVoiceClonedVideo() {
+        return this.VoiceClonedVideo;
+    }
+
+    /**
+     * Set Specifies the file url of the video after voice cloning.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param VoiceClonedVideo Specifies the file url of the video after voice cloning.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setVoiceClonedVideo(String VoiceClonedVideo) {
+        this.VoiceClonedVideo = VoiceClonedVideo;
+    }
+
+    /**
+     * Get Specifies the file address of the voice type clone annotation.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return VoiceClonedMarkFile Specifies the file address of the voice type clone annotation.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getVoiceClonedMarkFile() {
+        return this.VoiceClonedMarkFile;
+    }
+
+    /**
+     * Set Specifies the file address of the voice type clone annotation.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param VoiceClonedMarkFile Specifies the file address of the voice type clone annotation.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setVoiceClonedMarkFile(String VoiceClonedMarkFile) {
+        this.VoiceClonedMarkFile = VoiceClonedMarkFile;
+    }
+
     public AiAnalysisTaskDelLogoOutput() {
     }
 
@@ -166,6 +222,12 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.SubtitlePos != null) {
             this.SubtitlePos = new SubtitlePosition(source.SubtitlePos);
         }
+        if (source.VoiceClonedVideo != null) {
+            this.VoiceClonedVideo = new String(source.VoiceClonedVideo);
+        }
+        if (source.VoiceClonedMarkFile != null) {
+            this.VoiceClonedMarkFile = new String(source.VoiceClonedMarkFile);
+        }
     }
 
 
@@ -178,6 +240,8 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "OriginSubtitlePath", this.OriginSubtitlePath);
         this.setParamSimple(map, prefix + "TranslateSubtitlePath", this.TranslateSubtitlePath);
         this.setParamObj(map, prefix + "SubtitlePos.", this.SubtitlePos);
+        this.setParamSimple(map, prefix + "VoiceClonedVideo", this.VoiceClonedVideo);
+        this.setParamSimple(map, prefix + "VoiceClonedMarkFile", this.VoiceClonedMarkFile);
 
     }
 }

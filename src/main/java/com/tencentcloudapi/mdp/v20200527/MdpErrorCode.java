@@ -45,8 +45,7 @@ public enum MdpErrorCode {
      /* Failed to find the VOD remux task. */
      INVALIDPARAMETER_NOTFOUND("InvalidParameter.NotFound"),
      
-     /* OutputGroups is invalid.
-         */
+     /* OutputGroups is invalid. */
      INVALIDPARAMETER_OUTPUTGROUPS("InvalidParameter.OutputGroups"),
      
      /* The OutputStorage is invalid. */

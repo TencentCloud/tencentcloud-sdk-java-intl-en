@@ -114,6 +114,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private SmartSubtitlesResult [] SmartSubtitlesTaskResult;
 
     /**
+    * Execution result of the smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SmartEraseTaskResult")
+    @Expose
+    private SmartEraseTaskResult SmartEraseTaskResult;
+
+    /**
      * Get The media processing task ID. 
      * @return TaskId The media processing task ID.
      */
@@ -329,6 +337,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.SmartSubtitlesTaskResult = SmartSubtitlesTaskResult;
     }
 
+    /**
+     * Get Execution result of the smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SmartEraseTaskResult Execution result of the smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public SmartEraseTaskResult getSmartEraseTaskResult() {
+        return this.SmartEraseTaskResult;
+    }
+
+    /**
+     * Set Execution result of the smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SmartEraseTaskResult Execution result of the smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setSmartEraseTaskResult(SmartEraseTaskResult SmartEraseTaskResult) {
+        this.SmartEraseTaskResult = SmartEraseTaskResult;
+    }
+
     public WorkflowTask() {
     }
 
@@ -388,6 +416,9 @@ Note: This field may return null, indicating that no valid value can be obtained
                 this.SmartSubtitlesTaskResult[i] = new SmartSubtitlesResult(source.SmartSubtitlesTaskResult[i]);
             }
         }
+        if (source.SmartEraseTaskResult != null) {
+            this.SmartEraseTaskResult = new SmartEraseTaskResult(source.SmartEraseTaskResult);
+        }
     }
 
 
@@ -407,6 +438,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamArrayObj(map, prefix + "AiRecognitionResultSet.", this.AiRecognitionResultSet);
         this.setParamObj(map, prefix + "AiQualityControlTaskResult.", this.AiQualityControlTaskResult);
         this.setParamArrayObj(map, prefix + "SmartSubtitlesTaskResult.", this.SmartSubtitlesTaskResult);
+        this.setParamObj(map, prefix + "SmartEraseTaskResult.", this.SmartEraseTaskResult);
 
     }
 }

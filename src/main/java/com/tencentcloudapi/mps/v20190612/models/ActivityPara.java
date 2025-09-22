@@ -111,6 +111,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private SmartSubtitlesTaskInput SmartSubtitlesTask;
 
     /**
+    * Smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SmartEraseTask")
+    @Expose
+    private SmartEraseTaskInput SmartEraseTask;
+
+    /**
      * Get A transcoding task. 
      * @return TranscodeTask A transcoding task.
      */
@@ -314,6 +322,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.SmartSubtitlesTask = SmartSubtitlesTask;
     }
 
+    /**
+     * Get Smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SmartEraseTask Smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public SmartEraseTaskInput getSmartEraseTask() {
+        return this.SmartEraseTask;
+    }
+
+    /**
+     * Set Smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SmartEraseTask Smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setSmartEraseTask(SmartEraseTaskInput SmartEraseTask) {
+        this.SmartEraseTask = SmartEraseTask;
+    }
+
     public ActivityPara() {
     }
 
@@ -358,6 +386,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.SmartSubtitlesTask != null) {
             this.SmartSubtitlesTask = new SmartSubtitlesTaskInput(source.SmartSubtitlesTask);
         }
+        if (source.SmartEraseTask != null) {
+            this.SmartEraseTask = new SmartEraseTaskInput(source.SmartEraseTask);
+        }
     }
 
 
@@ -377,6 +408,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
         this.setParamObj(map, prefix + "ExecRulesTask.", this.ExecRulesTask);
         this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
+        this.setParamObj(map, prefix + "SmartEraseTask.", this.SmartEraseTask);
 
     }
 }

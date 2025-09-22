@@ -74,7 +74,7 @@ If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicS
     private String SegmentObjectName;
 
     /**
-    * Subtitle file to be inserted.
+    * External subtitle feature specifies the subtitle file to be inserted.
 Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("AddOnSubtitles")
@@ -82,7 +82,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     private AddOnSubtitle [] AddOnSubtitles;
 
     /**
-    * Drm information.
+    * Specifies the Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("DrmInfo")
     @Expose
@@ -98,7 +99,7 @@ PureAudio: audio-only.
     private String DefinitionType;
 
     /**
-    * Specifies the subtitle parameter.
+    * Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
 Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("SubtitleTemplate")
@@ -241,9 +242,9 @@ If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicS
     }
 
     /**
-     * Get Subtitle file to be inserted.
+     * Get External subtitle feature specifies the subtitle file to be inserted.
 Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return AddOnSubtitles Subtitle file to be inserted.
+     * @return AddOnSubtitles External subtitle feature specifies the subtitle file to be inserted.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public AddOnSubtitle [] getAddOnSubtitles() {
@@ -251,9 +252,9 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Set Subtitle file to be inserted.
+     * Set External subtitle feature specifies the subtitle file to be inserted.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param AddOnSubtitles Subtitle file to be inserted.
+     * @param AddOnSubtitles External subtitle feature specifies the subtitle file to be inserted.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setAddOnSubtitles(AddOnSubtitle [] AddOnSubtitles) {
@@ -261,16 +262,20 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Drm information. 
-     * @return DrmInfo Drm information.
+     * Get Specifies the Drm information.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return DrmInfo Specifies the Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public DrmInfo getDrmInfo() {
         return this.DrmInfo;
     }
 
     /**
-     * Set Drm information.
-     * @param DrmInfo Drm information.
+     * Set Specifies the Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param DrmInfo Specifies the Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setDrmInfo(DrmInfo DrmInfo) {
         this.DrmInfo = DrmInfo;
@@ -301,9 +306,9 @@ PureAudio: audio-only.
     }
 
     /**
-     * Get Specifies the subtitle parameter.
+     * Get Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
 Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SubtitleTemplate Specifies the subtitle parameter.
+     * @return SubtitleTemplate Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public SubtitleTemplate getSubtitleTemplate() {
@@ -311,9 +316,9 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Set Specifies the subtitle parameter.
+     * Set Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SubtitleTemplate Specifies the subtitle parameter.
+     * @param SubtitleTemplate Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {

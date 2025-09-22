@@ -6,8 +6,7 @@ public enum DbbrainErrorCode {
      /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
-     /* Loading data
-         */
+     /* Loading data */
      FAILEDOPERATION_SEGMENTLOADING("FailedOperation.SegmentLoading"),
      
      /* Internal error. */

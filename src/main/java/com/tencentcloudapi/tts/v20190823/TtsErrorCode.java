@@ -12,8 +12,7 @@ public enum TtsErrorCode {
      /* Internal error. */
      INTERNALERROR_INTERNALERROR("InternalError.InternalError"),
      
-     /* No resources available, please try again later.
-         */
+     /* No resources available, please try again later. */
      INTERNALERROR_NORESOURCE("InternalError.NoResource"),
      
      /* The request text contains invalid characters. */

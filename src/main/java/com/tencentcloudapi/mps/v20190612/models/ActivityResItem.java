@@ -120,6 +120,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private ScheduleSmartSubtitleTaskResult SmartSubtitlesTask;
 
     /**
+    * Smart erase task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SmartEraseTask")
+    @Expose
+    private SmartEraseTaskResult SmartEraseTask;
+
+    /**
      * Get The result of a transcoding task.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TranscodeTask The result of a transcoding task.
@@ -359,6 +367,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.SmartSubtitlesTask = SmartSubtitlesTask;
     }
 
+    /**
+     * Get Smart erase task output.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SmartEraseTask Smart erase task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public SmartEraseTaskResult getSmartEraseTask() {
+        return this.SmartEraseTask;
+    }
+
+    /**
+     * Set Smart erase task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SmartEraseTask Smart erase task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setSmartEraseTask(SmartEraseTaskResult SmartEraseTask) {
+        this.SmartEraseTask = SmartEraseTask;
+    }
+
     public ActivityResItem() {
     }
 
@@ -403,6 +431,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.SmartSubtitlesTask != null) {
             this.SmartSubtitlesTask = new ScheduleSmartSubtitleTaskResult(source.SmartSubtitlesTask);
         }
+        if (source.SmartEraseTask != null) {
+            this.SmartEraseTask = new SmartEraseTaskResult(source.SmartEraseTask);
+        }
     }
 
 
@@ -422,6 +453,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
         this.setParamObj(map, prefix + "ExecRuleTask.", this.ExecRuleTask);
         this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
+        this.setParamObj(map, prefix + "SmartEraseTask.", this.SmartEraseTask);
 
     }
 }

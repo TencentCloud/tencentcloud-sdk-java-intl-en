@@ -35,38 +35,40 @@ The value can only be 0 when TranslateSwitch is set to OFF. The value can only b
     private Long SubtitleType;
 
     /**
-    * Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
+    * Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
 hi: Hindi
-fr: French
-de: German
+Fr: French.
+de: German.
 zh-dialect: Chinese dialect
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
     */
     @SerializedName("VideoSrcLanguage")
     @Expose
     private String VideoSrcLanguage;
 
     /**
-    * Smart subtitle file format.
-vtt: WebVTT format
+    * Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("SubtitleFormat")
     @Expose
@@ -157,128 +159,136 @@ The value can only be 0 when TranslateSwitch is set to OFF. The value can only b
     }
 
     /**
-     * Get Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
+     * Get Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
 hi: Hindi
-fr: French
-de: German
-zh-dialect: Chinese dialect 
-     * @return VideoSrcLanguage Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
-hi: Hindi
-fr: French
-de: German
+Fr: French.
+de: German.
 zh-dialect: Chinese dialect
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English. 
+     * @return VideoSrcLanguage Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
+hi: Hindi
+Fr: French.
+de: German.
+zh-dialect: Chinese dialect
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
      */
     public String getVideoSrcLanguage() {
         return this.VideoSrcLanguage;
     }
 
     /**
-     * Set Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
+     * Set Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
 hi: Hindi
-fr: French
-de: German
+Fr: French.
+de: German.
 zh-dialect: Chinese dialect
-     * @param VideoSrcLanguage Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
+     * @param VideoSrcLanguage Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
 hi: Hindi
-fr: French
-de: German
+Fr: French.
+de: German.
 zh-dialect: Chinese dialect
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
      */
     public void setVideoSrcLanguage(String VideoSrcLanguage) {
         this.VideoSrcLanguage = VideoSrcLanguage;
     }
 
     /**
-     * Get Smart subtitle file format.
-vtt: WebVTT format
+     * Get Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
+If this field is left blank, no subtitle file will be generated. 
+     * @return SubtitleFormat Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SubtitleFormat Smart subtitle file format.
-vtt: WebVTT format
-If this field is left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getSubtitleFormat() {
         return this.SubtitleFormat;
     }
 
     /**
-     * Set Smart subtitle file format.
-vtt: WebVTT format
+     * Set Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SubtitleFormat Smart subtitle file format.
-vtt: WebVTT format
+     * @param SubtitleFormat Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSubtitleFormat(String SubtitleFormat) {
         this.SubtitleFormat = SubtitleFormat;

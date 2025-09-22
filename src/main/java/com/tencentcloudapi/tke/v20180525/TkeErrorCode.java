@@ -126,8 +126,7 @@ public enum TkeErrorCode {
      /* Kubernetes Delete operation error. */
      FAILEDOPERATION_KUBERNETESDELETEOPERATIONERROR("FailedOperation.KubernetesDeleteOperationError"),
      
-     /* Failed to get Kubernetes resources.
-         */
+     /* Failed to get Kubernetes resources. */
      FAILEDOPERATION_KUBERNETESGETOPERATIONERROR("FailedOperation.KubernetesGetOperationError"),
      
      /* Unknown Kubernetes error. */

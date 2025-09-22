@@ -27,8 +27,7 @@ public enum TrtcErrorCode {
      /* This operation is not allowed, please submit a ticket to contact us */
      FAILEDOPERATION_NOTALLOWED("FailedOperation.NotAllowed"),
      
-     /* RTMP is not enabled.
-         */
+     /* RTMP is not enabled. */
      FAILEDOPERATION_NOTRTMPFUNCTION("FailedOperation.NotRtmpFunction"),
      
      /* Query task failed */
@@ -166,8 +165,7 @@ public enum TrtcErrorCode {
      /* UserSig is expired or wrong */
      INVALIDPARAMETER_USERSIG("InvalidParameter.UserSig"),
      
-     /* UserSig is not a super administrator.
-         */
+     /* UserSig is not a super administrator. */
      INVALIDPARAMETER_USERSIGNOTADMIN("InvalidParameter.UserSigNotAdmin"),
      
      /* Invalid RoomId. */

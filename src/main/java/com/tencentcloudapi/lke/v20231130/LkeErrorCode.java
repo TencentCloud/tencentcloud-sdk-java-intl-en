@@ -21,8 +21,7 @@ public enum LkeErrorCode {
      /* The service is not activated. */
      FAILEDOPERATION_UNOPENERROR("FailedOperation.UnOpenError"),
      
-     /* Parameter error.
-         */
+     /* Parameter error. */
      INVALIDPARAMETER("InvalidParameter"),
      
      /* Parameter value error. */

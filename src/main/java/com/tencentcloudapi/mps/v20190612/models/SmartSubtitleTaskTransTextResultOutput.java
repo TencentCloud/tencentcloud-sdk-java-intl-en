@@ -39,6 +39,13 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String SubtitlePath;
 
     /**
+    * Subtitle file storage location.
+    */
+    @SerializedName("OutputStorage")
+    @Expose
+    private TaskOutputStorage OutputStorage;
+
+    /**
      * Get List of segments for translation.
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return SegmentSet List of segments for translation.
@@ -74,6 +81,22 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.SubtitlePath = SubtitlePath;
     }
 
+    /**
+     * Get Subtitle file storage location. 
+     * @return OutputStorage Subtitle file storage location.
+     */
+    public TaskOutputStorage getOutputStorage() {
+        return this.OutputStorage;
+    }
+
+    /**
+     * Set Subtitle file storage location.
+     * @param OutputStorage Subtitle file storage location.
+     */
+    public void setOutputStorage(TaskOutputStorage OutputStorage) {
+        this.OutputStorage = OutputStorage;
+    }
+
     public SmartSubtitleTaskTransTextResultOutput() {
     }
 
@@ -91,6 +114,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.SubtitlePath != null) {
             this.SubtitlePath = new String(source.SubtitlePath);
         }
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
     }
 
 
@@ -100,6 +126,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
         this.setParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
+        this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
 
     }
 }

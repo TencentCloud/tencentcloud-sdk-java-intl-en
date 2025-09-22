@@ -85,6 +85,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private LiveStreamProcessTask LiveStreamProcessTask;
 
     /**
+    * Extracts digital watermark task information. this field has a value only when TaskType is ExtractBlindWatermark.
+    */
+    @SerializedName("ExtractBlindWatermarkTask")
+    @Expose
+    private ExtractBlindWatermarkTask ExtractBlindWatermarkTask;
+
+    /**
     * Event notification information of a task.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -130,7 +137,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LiveScheduleTask")
     @Expose
@@ -292,6 +299,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Extracts digital watermark task information. this field has a value only when TaskType is ExtractBlindWatermark. 
+     * @return ExtractBlindWatermarkTask Extracts digital watermark task information. this field has a value only when TaskType is ExtractBlindWatermark.
+     */
+    public ExtractBlindWatermarkTask getExtractBlindWatermarkTask() {
+        return this.ExtractBlindWatermarkTask;
+    }
+
+    /**
+     * Set Extracts digital watermark task information. this field has a value only when TaskType is ExtractBlindWatermark.
+     * @param ExtractBlindWatermarkTask Extracts digital watermark task information. this field has a value only when TaskType is ExtractBlindWatermark.
+     */
+    public void setExtractBlindWatermarkTask(ExtractBlindWatermarkTask ExtractBlindWatermarkTask) {
+        this.ExtractBlindWatermarkTask = ExtractBlindWatermarkTask;
+    }
+
+    /**
      * Get Event notification information of a task.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TaskNotifyConfig Event notification information of a task.
@@ -397,9 +420,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
-Note: This field may return·null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return LiveScheduleTask The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public LiveScheduleTask getLiveScheduleTask() {
         return this.LiveScheduleTask;
@@ -407,9 +430,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param LiveScheduleTask The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLiveScheduleTask(LiveScheduleTask LiveScheduleTask) {
         this.LiveScheduleTask = LiveScheduleTask;
@@ -463,6 +486,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (source.LiveStreamProcessTask != null) {
             this.LiveStreamProcessTask = new LiveStreamProcessTask(source.LiveStreamProcessTask);
         }
+        if (source.ExtractBlindWatermarkTask != null) {
+            this.ExtractBlindWatermarkTask = new ExtractBlindWatermarkTask(source.ExtractBlindWatermarkTask);
+        }
         if (source.TaskNotifyConfig != null) {
             this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
         }
@@ -502,6 +528,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.setParamObj(map, prefix + "EditMediaTask.", this.EditMediaTask);
         this.setParamObj(map, prefix + "WorkflowTask.", this.WorkflowTask);
         this.setParamObj(map, prefix + "LiveStreamProcessTask.", this.LiveStreamProcessTask);
+        this.setParamObj(map, prefix + "ExtractBlindWatermarkTask.", this.ExtractBlindWatermarkTask);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

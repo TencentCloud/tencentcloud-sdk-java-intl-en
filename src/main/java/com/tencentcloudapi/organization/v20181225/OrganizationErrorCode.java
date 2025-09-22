@@ -1,7 +1,6 @@
 package com.tencentcloudapi.organization.v20181225;
 public enum OrganizationErrorCode {
-     /* Operation failed.
-         */
+     /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
      /* Members cannot be deleted from the root unit. */

@@ -97,6 +97,20 @@ Note 3: The trigger configured for an orchestration is for automatically startin
     private AiQualityControlTaskInput AiQualityControlTask;
 
     /**
+    * Smart subtitle task.
+    */
+    @SerializedName("SmartSubtitlesTask")
+    @Expose
+    private SmartSubtitlesTaskInput SmartSubtitlesTask;
+
+    /**
+    * Smart erase task parameter.
+    */
+    @SerializedName("SmartEraseTask")
+    @Expose
+    private SmartEraseTaskInput SmartEraseTask;
+
+    /**
     * Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
     */
     @SerializedName("TaskNotifyConfig")
@@ -139,13 +153,6 @@ Note 3: The trigger configured for an orchestration is for automatically startin
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
-
-    /**
-    * Smart subtitle task.
-    */
-    @SerializedName("SmartSubtitlesTask")
-    @Expose
-    private SmartSubtitlesTaskInput SmartSubtitlesTask;
 
     /**
     * Whether to skip metadata acquisition. Valid values:
@@ -342,6 +349,38 @@ Note 3: The trigger configured for an orchestration is for automatically startin
     }
 
     /**
+     * Get Smart subtitle task. 
+     * @return SmartSubtitlesTask Smart subtitle task.
+     */
+    public SmartSubtitlesTaskInput getSmartSubtitlesTask() {
+        return this.SmartSubtitlesTask;
+    }
+
+    /**
+     * Set Smart subtitle task.
+     * @param SmartSubtitlesTask Smart subtitle task.
+     */
+    public void setSmartSubtitlesTask(SmartSubtitlesTaskInput SmartSubtitlesTask) {
+        this.SmartSubtitlesTask = SmartSubtitlesTask;
+    }
+
+    /**
+     * Get Smart erase task parameter. 
+     * @return SmartEraseTask Smart erase task parameter.
+     */
+    public SmartEraseTaskInput getSmartEraseTask() {
+        return this.SmartEraseTask;
+    }
+
+    /**
+     * Set Smart erase task parameter.
+     * @param SmartEraseTask Smart erase task parameter.
+     */
+    public void setSmartEraseTask(SmartEraseTaskInput SmartEraseTask) {
+        this.SmartEraseTask = SmartEraseTask;
+    }
+
+    /**
      * Get Event notification information of a task. If this parameter is left empty, no event notifications will be obtained. 
      * @return TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
      */
@@ -446,22 +485,6 @@ Note 3: The trigger configured for an orchestration is for automatically startin
     }
 
     /**
-     * Get Smart subtitle task. 
-     * @return SmartSubtitlesTask Smart subtitle task.
-     */
-    public SmartSubtitlesTaskInput getSmartSubtitlesTask() {
-        return this.SmartSubtitlesTask;
-    }
-
-    /**
-     * Set Smart subtitle task.
-     * @param SmartSubtitlesTask Smart subtitle task.
-     */
-    public void setSmartSubtitlesTask(SmartSubtitlesTaskInput SmartSubtitlesTask) {
-        this.SmartSubtitlesTask = SmartSubtitlesTask;
-    }
-
-    /**
      * Get Whether to skip metadata acquisition. Valid values:
 0: do not skip
 1: skip
@@ -524,6 +547,12 @@ Default value: 0
         if (source.AiQualityControlTask != null) {
             this.AiQualityControlTask = new AiQualityControlTaskInput(source.AiQualityControlTask);
         }
+        if (source.SmartSubtitlesTask != null) {
+            this.SmartSubtitlesTask = new SmartSubtitlesTaskInput(source.SmartSubtitlesTask);
+        }
+        if (source.SmartEraseTask != null) {
+            this.SmartEraseTask = new SmartEraseTaskInput(source.SmartEraseTask);
+        }
         if (source.TaskNotifyConfig != null) {
             this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
         }
@@ -541,9 +570,6 @@ Default value: 0
         }
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
-        }
-        if (source.SmartSubtitlesTask != null) {
-            this.SmartSubtitlesTask = new SmartSubtitlesTaskInput(source.SmartSubtitlesTask);
         }
         if (source.SkipMateData != null) {
             this.SkipMateData = new Long(source.SkipMateData);
@@ -564,13 +590,14 @@ Default value: 0
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
+        this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
+        this.setParamObj(map, prefix + "SmartEraseTask.", this.SmartEraseTask);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
-        this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
         this.setParamSimple(map, prefix + "SkipMateData", this.SkipMateData);
 
     }

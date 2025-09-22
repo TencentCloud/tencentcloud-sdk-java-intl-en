@@ -24,10 +24,11 @@ import java.util.HashMap;
 public class MediaInputInfo extends AbstractModel {
 
     /**
-    * The input type. Valid values:
-<li>`COS`: A COS bucket address.</li>
-<li> `URL`: A URL.</li>
-<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
+    * Type of input source object. valid values:.
+<Li>COS: specifies the cos origin.</li>
+<Li>URL: the url source.</li>
+<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
+<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
     */
     @SerializedName("Type")
     @Expose
@@ -57,28 +58,40 @@ Note: This field may return null, indicating that no valid value can be obtained
     private S3InputInfo S3InputInfo;
 
     /**
-     * Get The input type. Valid values:
-<li>`COS`: A COS bucket address.</li>
-<li> `URL`: A URL.</li>
-<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li> 
-     * @return Type The input type. Valid values:
-<li>`COS`: A COS bucket address.</li>
-<li> `URL`: A URL.</li>
-<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
+    * The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("VODInputInfo")
+    @Expose
+    private VODInputInfo VODInputInfo;
+
+    /**
+     * Get Type of input source object. valid values:.
+<Li>COS: specifies the cos origin.</li>
+<Li>URL: the url source.</li>
+<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
+<Li>VOD: video-on-demand pro edition (VOD Pro). </li> 
+     * @return Type Type of input source object. valid values:.
+<Li>COS: specifies the cos origin.</li>
+<Li>URL: the url source.</li>
+<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
+<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The input type. Valid values:
-<li>`COS`: A COS bucket address.</li>
-<li> `URL`: A URL.</li>
-<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
-     * @param Type The input type. Valid values:
-<li>`COS`: A COS bucket address.</li>
-<li> `URL`: A URL.</li>
-<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
+     * Set Type of input source object. valid values:.
+<Li>COS: specifies the cos origin.</li>
+<Li>URL: the url source.</li>
+<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
+<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
+     * @param Type Type of input source object. valid values:.
+<Li>COS: specifies the cos origin.</li>
+<Li>URL: the url source.</li>
+<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
+<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -140,6 +153,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.S3InputInfo = S3InputInfo;
     }
 
+    /**
+     * Get The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return VODInputInfo The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public VODInputInfo getVODInputInfo() {
+        return this.VODInputInfo;
+    }
+
+    /**
+     * Set The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param VODInputInfo The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setVODInputInfo(VODInputInfo VODInputInfo) {
+        this.VODInputInfo = VODInputInfo;
+    }
+
     public MediaInputInfo() {
     }
 
@@ -160,6 +193,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.S3InputInfo != null) {
             this.S3InputInfo = new S3InputInfo(source.S3InputInfo);
         }
+        if (source.VODInputInfo != null) {
+            this.VODInputInfo = new VODInputInfo(source.VODInputInfo);
+        }
     }
 
 
@@ -171,6 +207,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "CosInputInfo.", this.CosInputInfo);
         this.setParamObj(map, prefix + "UrlInputInfo.", this.UrlInputInfo);
         this.setParamObj(map, prefix + "S3InputInfo.", this.S3InputInfo);
+        this.setParamObj(map, prefix + "VODInputInfo.", this.VODInputInfo);
 
     }
 }

@@ -297,8 +297,7 @@ public enum EcmErrorCode {
      /* The specified CIDR block conflicts with another subnet in the same VPC. */
      INVALIDPARAMETERVALUE_SUBNETCONFLICT("InvalidParameterValue.SubnetConflict"),
      
-     /* The subnet does not exist.
-         */
+     /* The subnet does not exist. */
      INVALIDPARAMETERVALUE_SUBNETNOTEXIST("InvalidParameterValue.SubnetNotExist"),
      
      /* The subnet IP range is invalid. */
@@ -421,8 +420,7 @@ public enum EcmErrorCode {
      /* The number of private images exceeds the limit. */
      RESOURCEINSUFFICIENT_INVAILDPRIVATEIMAGENUM("ResourceInsufficient.InvaildPrivateImageNum"),
      
-     /* Insufficient internal IP addresses in the current subnet.
-         */
+     /* Insufficient internal IP addresses in the current subnet. */
      RESOURCEINSUFFICIENT_PRIVATEIPQUOTANOTENOUGH("ResourceInsufficient.PrivateIPQuotaNotEnough"),
      
      /* The resource does not exist. */
@@ -437,8 +435,7 @@ public enum EcmErrorCode {
      /* CLB instances have been sold out. */
      RESOURCESSOLDOUT_LOADBALANCERSOLDOUT("ResourcesSoldOut.LoadBalancerSoldOut"),
      
-     /* Specific models are sold out.
-         */
+     /* Specific models are sold out. */
      RESOURCESSOLDOUT_SPECIFIEDINSTANCETYPE("ResourcesSoldOut.SpecifiedInstanceType"),
      
      /* You don't have the permission to perform this operation. */

@@ -186,8 +186,7 @@ public enum EmrErrorCode {
      /* The CosBucket parameter is invalid. */
      INVALIDPARAMETER_INVALIDCOSBUCKET("InvalidParameter.InvalidCosBucket"),
      
-     /* The CosFileUri parameter value is invalid.
-         */
+     /* The CosFileUri parameter value is invalid. */
      INVALIDPARAMETER_INVALIDCOSFILEURI("InvalidParameter.InvalidCosFileURI"),
      
      /* The count must be greater than 0. */

@@ -25,18 +25,20 @@ public class ActivityResult extends AbstractModel {
 
     /**
     * Atomic task type.
-<Li>Transcode: transcoding</li>
-<Li>SampleSnapshot: sampled screenshot</li>
-<Li>AnimatedGraphics: conversion to GIF</li>
-<Li>SnapshotByTimeOffset: time point screenshot</li>
-<Li>ImageSprites: image sprite</li>
-<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
-<Li>AiContentReview: content review</li>
-<Li>AIRecognition: intelligent recognition</li>
-<Li>AIAnalysis: intelligent analysis</li>
-<li>AiQualityControl: media quality inspection.</li>
+<Li>Transcode: transcoding.</li>.
+<Li>SampleSnapshot: specifies sampled screenshot taking.</li>.
+<Li>AnimatedGraphics: specifies the animated image.</li>.
+<Li>SnapshotByTimeOffset: specifies time point screenshot taking.</li>.
+<Li>ImageSprites: specifies the sprite sheet.</li>.
+<Li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>.
+<Li>AiContentReview: specifies content moderation.</li>.
+<Li>AIRecognition: intelligent identification.</li>.
+<Li>AIAnalysis: specifies ai analysis.</li>.
+<li>AiQualityControl: media quality inspection</li>
 
 <Li>SmartSubtitles: smart subtitle</li>
+
+<Li>SmartErase: smart erasure.</li>.
     */
     @SerializedName("ActivityType")
     @Expose
@@ -51,31 +53,35 @@ public class ActivityResult extends AbstractModel {
 
     /**
      * Get Atomic task type.
-<Li>Transcode: transcoding</li>
-<Li>SampleSnapshot: sampled screenshot</li>
-<Li>AnimatedGraphics: conversion to GIF</li>
-<Li>SnapshotByTimeOffset: time point screenshot</li>
-<Li>ImageSprites: image sprite</li>
-<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
-<Li>AiContentReview: content review</li>
-<Li>AIRecognition: intelligent recognition</li>
-<Li>AIAnalysis: intelligent analysis</li>
-<li>AiQualityControl: media quality inspection.</li>
-
-<Li>SmartSubtitles: smart subtitle</li> 
-     * @return ActivityType Atomic task type.
-<Li>Transcode: transcoding</li>
-<Li>SampleSnapshot: sampled screenshot</li>
-<Li>AnimatedGraphics: conversion to GIF</li>
-<Li>SnapshotByTimeOffset: time point screenshot</li>
-<Li>ImageSprites: image sprite</li>
-<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
-<Li>AiContentReview: content review</li>
-<Li>AIRecognition: intelligent recognition</li>
-<Li>AIAnalysis: intelligent analysis</li>
-<li>AiQualityControl: media quality inspection.</li>
+<Li>Transcode: transcoding.</li>.
+<Li>SampleSnapshot: specifies sampled screenshot taking.</li>.
+<Li>AnimatedGraphics: specifies the animated image.</li>.
+<Li>SnapshotByTimeOffset: specifies time point screenshot taking.</li>.
+<Li>ImageSprites: specifies the sprite sheet.</li>.
+<Li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>.
+<Li>AiContentReview: specifies content moderation.</li>.
+<Li>AIRecognition: intelligent identification.</li>.
+<Li>AIAnalysis: specifies ai analysis.</li>.
+<li>AiQualityControl: media quality inspection</li>
 
 <Li>SmartSubtitles: smart subtitle</li>
+
+<Li>SmartErase: smart erasure.</li>. 
+     * @return ActivityType Atomic task type.
+<Li>Transcode: transcoding.</li>.
+<Li>SampleSnapshot: specifies sampled screenshot taking.</li>.
+<Li>AnimatedGraphics: specifies the animated image.</li>.
+<Li>SnapshotByTimeOffset: specifies time point screenshot taking.</li>.
+<Li>ImageSprites: specifies the sprite sheet.</li>.
+<Li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>.
+<Li>AiContentReview: specifies content moderation.</li>.
+<Li>AIRecognition: intelligent identification.</li>.
+<Li>AIAnalysis: specifies ai analysis.</li>.
+<li>AiQualityControl: media quality inspection</li>
+
+<Li>SmartSubtitles: smart subtitle</li>
+
+<Li>SmartErase: smart erasure.</li>.
      */
     public String getActivityType() {
         return this.ActivityType;
@@ -83,31 +89,35 @@ public class ActivityResult extends AbstractModel {
 
     /**
      * Set Atomic task type.
-<Li>Transcode: transcoding</li>
-<Li>SampleSnapshot: sampled screenshot</li>
-<Li>AnimatedGraphics: conversion to GIF</li>
-<Li>SnapshotByTimeOffset: time point screenshot</li>
-<Li>ImageSprites: image sprite</li>
-<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
-<Li>AiContentReview: content review</li>
-<Li>AIRecognition: intelligent recognition</li>
-<Li>AIAnalysis: intelligent analysis</li>
-<li>AiQualityControl: media quality inspection.</li>
+<Li>Transcode: transcoding.</li>.
+<Li>SampleSnapshot: specifies sampled screenshot taking.</li>.
+<Li>AnimatedGraphics: specifies the animated image.</li>.
+<Li>SnapshotByTimeOffset: specifies time point screenshot taking.</li>.
+<Li>ImageSprites: specifies the sprite sheet.</li>.
+<Li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>.
+<Li>AiContentReview: specifies content moderation.</li>.
+<Li>AIRecognition: intelligent identification.</li>.
+<Li>AIAnalysis: specifies ai analysis.</li>.
+<li>AiQualityControl: media quality inspection</li>
 
 <Li>SmartSubtitles: smart subtitle</li>
+
+<Li>SmartErase: smart erasure.</li>.
      * @param ActivityType Atomic task type.
-<Li>Transcode: transcoding</li>
-<Li>SampleSnapshot: sampled screenshot</li>
-<Li>AnimatedGraphics: conversion to GIF</li>
-<Li>SnapshotByTimeOffset: time point screenshot</li>
-<Li>ImageSprites: image sprite</li>
-<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
-<Li>AiContentReview: content review</li>
-<Li>AIRecognition: intelligent recognition</li>
-<Li>AIAnalysis: intelligent analysis</li>
-<li>AiQualityControl: media quality inspection.</li>
+<Li>Transcode: transcoding.</li>.
+<Li>SampleSnapshot: specifies sampled screenshot taking.</li>.
+<Li>AnimatedGraphics: specifies the animated image.</li>.
+<Li>SnapshotByTimeOffset: specifies time point screenshot taking.</li>.
+<Li>ImageSprites: specifies the sprite sheet.</li>.
+<Li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>.
+<Li>AiContentReview: specifies content moderation.</li>.
+<Li>AIRecognition: intelligent identification.</li>.
+<Li>AIAnalysis: specifies ai analysis.</li>.
+<li>AiQualityControl: media quality inspection</li>
 
 <Li>SmartSubtitles: smart subtitle</li>
+
+<Li>SmartErase: smart erasure.</li>.
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;

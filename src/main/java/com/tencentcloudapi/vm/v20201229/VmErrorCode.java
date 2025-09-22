@@ -48,8 +48,7 @@ public enum VmErrorCode {
      /* Unauthorized operation. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-     /* Not authorized / No valid package / Account is in arrears.
-         */
+     /* Not authorized / No valid package / Account is in arrears. */
      UNAUTHORIZEDOPERATION_UNAUTHORIZED("UnauthorizedOperation.Unauthorized"),
      
      /* Unknown parameter error. */

@@ -56,36 +56,40 @@ Length limit: 256 characters.
     private String Comment;
 
     /**
-    * Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
+    * Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
 hi: Hindi
-fr: French
-de: German
+Fr: French.
+de: German.
 zh-dialect: Chinese dialect
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
+
     */
     @SerializedName("VideoSrcLanguage")
     @Expose
     private String VideoSrcLanguage;
 
     /**
-    * Smart subtitle file format.
-vtt: WebVTT format
+    * Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated.
     */
     @SerializedName("SubtitleFormat")
@@ -94,9 +98,10 @@ If this field is left blank, no subtitle file will be generated.
 
     /**
     * Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
     */
     @SerializedName("SubtitleType")
     @Expose
@@ -216,111 +221,125 @@ Length limit: 256 characters.
     }
 
     /**
-     * Get Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
+     * Get Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
 hi: Hindi
-fr: French
-de: German
-zh-dialect: Chinese dialect 
-     * @return VideoSrcLanguage Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
-hi: Hindi
-fr: French
-de: German
+Fr: French.
+de: German.
 zh-dialect: Chinese dialect
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
+ 
+     * @return VideoSrcLanguage Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
+hi: Hindi
+Fr: French.
+de: German.
+zh-dialect: Chinese dialect
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
+
      */
     public String getVideoSrcLanguage() {
         return this.VideoSrcLanguage;
     }
 
     /**
-     * Set Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
+     * Set Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
 hi: Hindi
-fr: French
-de: German
+Fr: French.
+de: German.
 zh-dialect: Chinese dialect
-     * @param VideoSrcLanguage Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fil: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
+
+     * @param VideoSrcLanguage Video source language for intelligent caption.
+Valid values: 
+zh: Simplified Chinese.
+en: Eenglish.
+Ja: Japanese.
+Ko: Korean.
+zh-PY: Simplified Chinese, English and Cantonese.
+zh-medical: Medical Chinese.
+yue: Cantonese.
+Vi: Vietnamese.
+ms: Malay.
+id: Indonesian.
+fil: Filipino.
+th: Thai.
+pt: Portuguese.
+tr: Turkish.
+ar: Arabic.
+es: Spanish.
 hi: Hindi
-fr: French
-de: German
+Fr: French.
+de: German.
 zh-dialect: Chinese dialect
+zh_en: Simplified Chinese and English
+prime_zh: Simplified Chinese, Chinese Dialect and English.
+
      */
     public void setVideoSrcLanguage(String VideoSrcLanguage) {
         this.VideoSrcLanguage = VideoSrcLanguage;
     }
 
     /**
-     * Get Smart subtitle file format.
-vtt: WebVTT format
+     * Get Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated. 
-     * @return SubtitleFormat Smart subtitle file format.
-vtt: WebVTT format
+     * @return SubtitleFormat Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated.
      */
     public String getSubtitleFormat() {
@@ -328,11 +347,13 @@ If this field is left blank, no subtitle file will be generated.
     }
 
     /**
-     * Set Smart subtitle file format.
-vtt: WebVTT format
+     * Set Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated.
-     * @param SubtitleFormat Smart subtitle file format.
-vtt: WebVTT format
+     * @param SubtitleFormat Intelligent subtitle file format.
+vtt: WebVTT format.
+srt: SRT format.
 If this field is left blank, no subtitle file will be generated.
      */
     public void setSubtitleFormat(String SubtitleFormat) {
@@ -341,13 +362,15 @@ If this field is left blank, no subtitle file will be generated.
 
     /**
      * Get Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON. 
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON. 
      * @return SubtitleType Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
      */
     public Long getSubtitleType() {
         return this.SubtitleType;
@@ -355,13 +378,15 @@ The value can only be 0 when TranslateSwitch is set to OFF.The value can only be
 
     /**
      * Set Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
      * @param SubtitleType Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
      */
     public void setSubtitleType(Long SubtitleType) {
         this.SubtitleType = SubtitleType;

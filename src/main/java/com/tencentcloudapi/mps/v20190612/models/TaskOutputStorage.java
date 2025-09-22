@@ -24,9 +24,10 @@ import java.util.HashMap;
 public class TaskOutputStorage extends AbstractModel {
 
     /**
-    * The storage type for a media processing output file. Valid values:
-<li>`COS`: Tencent Cloud COS</li>
-<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+    * Specifies the type of storage location for the media processing service output object. valid values:.
+<Li>COS: cos storage.</li>.
+<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
+<Li>VOD: video-on-demand (vod) pro edition</li>.
     */
     @SerializedName("Type")
     @Expose
@@ -49,24 +50,36 @@ Note: This field may return null, indicating that no valid value can be obtained
     private S3OutputStorage S3OutputStorage;
 
     /**
-     * Get The storage type for a media processing output file. Valid values:
-<li>`COS`: Tencent Cloud COS</li>
-<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li> 
-     * @return Type The storage type for a media processing output file. Valid values:
-<li>`COS`: Tencent Cloud COS</li>
-<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+    * The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("VODOutputStorage")
+    @Expose
+    private VODOutputStorage VODOutputStorage;
+
+    /**
+     * Get Specifies the type of storage location for the media processing service output object. valid values:.
+<Li>COS: cos storage.</li>.
+<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
+<Li>VOD: video-on-demand (vod) pro edition</li>. 
+     * @return Type Specifies the type of storage location for the media processing service output object. valid values:.
+<Li>COS: cos storage.</li>.
+<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
+<Li>VOD: video-on-demand (vod) pro edition</li>.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The storage type for a media processing output file. Valid values:
-<li>`COS`: Tencent Cloud COS</li>
-<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
-     * @param Type The storage type for a media processing output file. Valid values:
-<li>`COS`: Tencent Cloud COS</li>
-<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+     * Set Specifies the type of storage location for the media processing service output object. valid values:.
+<Li>COS: cos storage.</li>.
+<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
+<Li>VOD: video-on-demand (vod) pro edition</li>.
+     * @param Type Specifies the type of storage location for the media processing service output object. valid values:.
+<Li>COS: cos storage.</li>.
+<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
+<Li>VOD: video-on-demand (vod) pro edition</li>.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -112,6 +125,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.S3OutputStorage = S3OutputStorage;
     }
 
+    /**
+     * Get The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return VODOutputStorage The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public VODOutputStorage getVODOutputStorage() {
+        return this.VODOutputStorage;
+    }
+
+    /**
+     * Set The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param VODOutputStorage The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setVODOutputStorage(VODOutputStorage VODOutputStorage) {
+        this.VODOutputStorage = VODOutputStorage;
+    }
+
     public TaskOutputStorage() {
     }
 
@@ -129,6 +162,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.S3OutputStorage != null) {
             this.S3OutputStorage = new S3OutputStorage(source.S3OutputStorage);
         }
+        if (source.VODOutputStorage != null) {
+            this.VODOutputStorage = new VODOutputStorage(source.VODOutputStorage);
+        }
     }
 
 
@@ -139,6 +175,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "CosOutputStorage.", this.CosOutputStorage);
         this.setParamObj(map, prefix + "S3OutputStorage.", this.S3OutputStorage);
+        this.setParamObj(map, prefix + "VODOutputStorage.", this.VODOutputStorage);
 
     }
 }

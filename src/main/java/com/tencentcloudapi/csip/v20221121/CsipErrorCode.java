@@ -12,8 +12,7 @@ public enum CsipErrorCode {
      /* An internal error occurs. */
      INTERNALERROR("InternalError"),
      
-     /* Invalid filter
-         */
+     /* Invalid filter */
      INVALIDFILTER("InvalidFilter"),
      
      /* The parameter is incorrect. */
@@ -34,8 +33,7 @@ public enum CsipErrorCode {
      /* Operation denied. */
      OPERATIONDENIED("OperationDenied"),
      
-     /* Region error
-         */
+     /* Region error */
      REGIONERROR("RegionError"),
      
      /* Too many requests. */
@@ -59,12 +57,10 @@ public enum CsipErrorCode {
      /* The operation is unauthorized. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-     /* Unauthorized operation for "Operation Audit" product.
-         */
+     /* Unauthorized operation for "Operation Audit" product. */
      UNAUTHORIZEDOPERATION_CLOUDAUDIT("UnauthorizedOperation.CloudAudit"),
      
-     /* Unauthorized operation for the "Object Storage" product.
-         */
+     /* Unauthorized operation for the "Object Storage" product. */
      UNAUTHORIZEDOPERATION_COS("UnauthorizedOperation.Cos"),
      
      /* The parameter is unknown. */
