@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ApplySdkVerificationTokenResponse extends AbstractModel {
 
     /**
-    * The token used to identify an SDK-based verification process. It is valid for 7,200s and can be used to get the verification result after the process is completed.
+    * A token that identifies an SDK verification process. the validity time is 10 minutes. after the process is complete, the token can be used to retrieve the verification result.
     */
     @SerializedName("SdkToken")
     @Expose
@@ -38,16 +38,16 @@ public class ApplySdkVerificationTokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The token used to identify an SDK-based verification process. It is valid for 7,200s and can be used to get the verification result after the process is completed. 
-     * @return SdkToken The token used to identify an SDK-based verification process. It is valid for 7,200s and can be used to get the verification result after the process is completed.
+     * Get A token that identifies an SDK verification process. the validity time is 10 minutes. after the process is complete, the token can be used to retrieve the verification result. 
+     * @return SdkToken A token that identifies an SDK verification process. the validity time is 10 minutes. after the process is complete, the token can be used to retrieve the verification result.
      */
     public String getSdkToken() {
         return this.SdkToken;
     }
 
     /**
-     * Set The token used to identify an SDK-based verification process. It is valid for 7,200s and can be used to get the verification result after the process is completed.
-     * @param SdkToken The token used to identify an SDK-based verification process. It is valid for 7,200s and can be used to get the verification result after the process is completed.
+     * Set A token that identifies an SDK verification process. the validity time is 10 minutes. after the process is complete, the token can be used to retrieve the verification result.
+     * @param SdkToken A token that identifies an SDK verification process. the validity time is 10 minutes. after the process is complete, the token can be used to retrieve the verification result.
      */
     public void setSdkToken(String SdkToken) {
         this.SdkToken = SdkToken;

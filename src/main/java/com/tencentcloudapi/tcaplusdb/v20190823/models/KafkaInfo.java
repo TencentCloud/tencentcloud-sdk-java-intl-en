@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class KafkaInfo extends AbstractModel {
 
     /**
-    * CKafka address
+    * Kafka address
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-    * CKafka topic
+    * Kafka topic
     */
     @SerializedName("Topic")
     @Expose
@@ -66,32 +66,32 @@ public class KafkaInfo extends AbstractModel {
     private Long IsVpc;
 
     /**
-     * Get CKafka address 
-     * @return Address CKafka address
+     * Get Kafka address 
+     * @return Address Kafka address
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set CKafka address
-     * @param Address CKafka address
+     * Set Kafka address
+     * @param Address Kafka address
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get CKafka topic 
-     * @return Topic CKafka topic
+     * Get Kafka topic 
+     * @return Topic Kafka topic
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set CKafka topic
-     * @param Topic CKafka topic
+     * Set Kafka topic
+     * @param Topic Kafka topic
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;

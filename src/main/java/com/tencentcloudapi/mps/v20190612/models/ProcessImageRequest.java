@@ -45,6 +45,22 @@ public class ProcessImageRequest extends AbstractModel {
     private String OutputDir;
 
     /**
+    * Output path, which can be a relative or an absolute path.
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+**Relative path example:**
+<Li>`Filename_{Variablename}.{format}`.</li>
+<Li>`Filename.{format}`.</li>
+
+**Absolute path example:**
+<Li>`/Path/Filename_{Variablename}.{format}`.</li>
+
+If not filled in, default relative path: `{inputName}.{format}`.
+    */
+    @SerializedName("OutputPath")
+    @Expose
+    private String OutputPath;
+
+    /**
     * Image processing parameter.
     */
     @SerializedName("ImageTask")
@@ -100,6 +116,58 @@ public class ProcessImageRequest extends AbstractModel {
     }
 
     /**
+     * Get Output path, which can be a relative or an absolute path.
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+**Relative path example:**
+<Li>`Filename_{Variablename}.{format}`.</li>
+<Li>`Filename.{format}`.</li>
+
+**Absolute path example:**
+<Li>`/Path/Filename_{Variablename}.{format}`.</li>
+
+If not filled in, default relative path: `{inputName}.{format}`. 
+     * @return OutputPath Output path, which can be a relative or an absolute path.
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+**Relative path example:**
+<Li>`Filename_{Variablename}.{format}`.</li>
+<Li>`Filename.{format}`.</li>
+
+**Absolute path example:**
+<Li>`/Path/Filename_{Variablename}.{format}`.</li>
+
+If not filled in, default relative path: `{inputName}.{format}`.
+     */
+    public String getOutputPath() {
+        return this.OutputPath;
+    }
+
+    /**
+     * Set Output path, which can be a relative or an absolute path.
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+**Relative path example:**
+<Li>`Filename_{Variablename}.{format}`.</li>
+<Li>`Filename.{format}`.</li>
+
+**Absolute path example:**
+<Li>`/Path/Filename_{Variablename}.{format}`.</li>
+
+If not filled in, default relative path: `{inputName}.{format}`.
+     * @param OutputPath Output path, which can be a relative or an absolute path.
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+**Relative path example:**
+<Li>`Filename_{Variablename}.{format}`.</li>
+<Li>`Filename.{format}`.</li>
+
+**Absolute path example:**
+<Li>`/Path/Filename_{Variablename}.{format}`.</li>
+
+If not filled in, default relative path: `{inputName}.{format}`.
+     */
+    public void setOutputPath(String OutputPath) {
+        this.OutputPath = OutputPath;
+    }
+
+    /**
      * Get Image processing parameter. 
      * @return ImageTask Image processing parameter.
      */
@@ -132,6 +200,9 @@ public class ProcessImageRequest extends AbstractModel {
         if (source.OutputDir != null) {
             this.OutputDir = new String(source.OutputDir);
         }
+        if (source.OutputPath != null) {
+            this.OutputPath = new String(source.OutputPath);
+        }
         if (source.ImageTask != null) {
             this.ImageTask = new ImageTaskInput(source.ImageTask);
         }
@@ -145,6 +216,7 @@ public class ProcessImageRequest extends AbstractModel {
         this.setParamObj(map, prefix + "InputInfo.", this.InputInfo);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputDir", this.OutputDir);
+        this.setParamSimple(map, prefix + "OutputPath", this.OutputPath);
         this.setParamObj(map, prefix + "ImageTask.", this.ImageTask);
 
     }

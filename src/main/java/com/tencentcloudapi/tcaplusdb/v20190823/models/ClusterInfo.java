@@ -115,72 +115,63 @@ public class ClusterInfo extends AbstractModel {
     private Long ApiAccessPort;
 
     /**
-    * If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
-Note: this field may return null, indicating that no valid values can be obtained.
+    * If the value of PasswordStatus is unmodifiable, it indicates that the old password has not expired. This field will display the expiration time of the old password; otherwise, the value is null.
     */
     @SerializedName("OldPasswordExpireTime")
     @Expose
     private String OldPasswordExpireTime;
 
     /**
-    * TcaplusDB SDK connection parameter for accessing IPv6 addresses
-Note: this field may return null, indicating that no valid values can be obtained.
+    * TencentDB for TcaplusDB (TcaplusDB) SDK connection parameters, which are used to access the IPv6 address.
     */
     @SerializedName("ApiAccessIpv6")
     @Expose
     private String ApiAccessIpv6;
 
     /**
-    * Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cluster type. 0,1: shared cluster; 2: independent cluster.
     */
     @SerializedName("ClusterType")
     @Expose
     private Long ClusterType;
 
     /**
-    * Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cluster status. 0: indicates normal operation; 1: indicates frozen isolation (usually due to arrears); 2: indicates to be recycled (usually when the user proactively triggers deletion); 3: pending release (indicating that resources occupied by this table can be released); 4: changing.
     */
     @SerializedName("ClusterStatus")
     @Expose
     private Long ClusterStatus;
 
     /**
-    * Read CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Read CU.
     */
     @SerializedName("ReadCapacityUnit")
     @Expose
     private Long ReadCapacityUnit;
 
     /**
-    * Write CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Write CU.
     */
     @SerializedName("WriteCapacityUnit")
     @Expose
     private Long WriteCapacityUnit;
 
     /**
-    * Disk capacity
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Disk capacity.
     */
     @SerializedName("DiskVolume")
     @Expose
     private Long DiskVolume;
 
     /**
-    * Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Information about the dedicated server.
     */
     @SerializedName("ServerList")
     @Expose
     private ServerDetailInfo [] ServerList;
 
     /**
-    * Information of the machine at the access layer (tcaproxy) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Information about the dedicated proxy server.
     */
     @SerializedName("ProxyList")
     @Expose
@@ -194,60 +185,67 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long Censorship;
 
     /**
-    * Approver UIN list
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Approver UIN list.
     */
     @SerializedName("DbaUins")
     @Expose
     private String [] DbaUins;
 
     /**
-    * Whether data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether data subscription is enabled.
     */
     @SerializedName("DataFlowStatus")
     @Expose
     private Long DataFlowStatus;
 
     /**
-    * CKafka information when data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Kafka information for data subscription.
     */
     @SerializedName("KafkaInfo")
     @Expose
     private KafkaInfo KafkaInfo;
 
     /**
-    * The number of days after which the cluster Txh backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Retention period for the Txh backup file of the cluster before expiration and deletion.
     */
     @SerializedName("TxhBackupExpireDay")
     @Expose
     private Long TxhBackupExpireDay;
 
     /**
-    * The number of days after which the cluster Ulog backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Retention period for the Ulog backup file of the cluster before expiration and deletion.
     */
     @SerializedName("UlogBackupExpireDay")
     @Expose
     private Long UlogBackupExpireDay;
 
     /**
-    * Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Whether the expiration policy for the Ulog backup file of the cluster is read-only. 0: UlogBackupExpire is read-only and cannot be modified; 1: UlogBackupExpire can be modified.
     */
     @SerializedName("IsReadOnlyUlogBackupExpireDay")
     @Expose
     private Long IsReadOnlyUlogBackupExpireDay;
 
     /**
-    * restproxy Status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * restproxy status.
     */
     @SerializedName("RestProxyStatus")
     @Expose
     private Long RestProxyStatus;
+
+    /**
+    * Total number of shards in the cluster.
+    */
+    @SerializedName("ShardTotalNum")
+    @Expose
+    private Long ShardTotalNum;
+
+    /**
+    * Total number of used shards.
+    */
+    @SerializedName("ShardUsedNum")
+    @Expose
+    private Long ShardUsedNum;
 
     /**
      * Get Cluster name 
@@ -458,180 +456,144 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OldPasswordExpireTime If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get If the value of PasswordStatus is unmodifiable, it indicates that the old password has not expired. This field will display the expiration time of the old password; otherwise, the value is null. 
+     * @return OldPasswordExpireTime If the value of PasswordStatus is unmodifiable, it indicates that the old password has not expired. This field will display the expiration time of the old password; otherwise, the value is null.
      */
     public String getOldPasswordExpireTime() {
         return this.OldPasswordExpireTime;
     }
 
     /**
-     * Set If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OldPasswordExpireTime If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set If the value of PasswordStatus is unmodifiable, it indicates that the old password has not expired. This field will display the expiration time of the old password; otherwise, the value is null.
+     * @param OldPasswordExpireTime If the value of PasswordStatus is unmodifiable, it indicates that the old password has not expired. This field will display the expiration time of the old password; otherwise, the value is null.
      */
     public void setOldPasswordExpireTime(String OldPasswordExpireTime) {
         this.OldPasswordExpireTime = OldPasswordExpireTime;
     }
 
     /**
-     * Get TcaplusDB SDK connection parameter for accessing IPv6 addresses
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ApiAccessIpv6 TcaplusDB SDK connection parameter for accessing IPv6 addresses
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get TencentDB for TcaplusDB (TcaplusDB) SDK connection parameters, which are used to access the IPv6 address. 
+     * @return ApiAccessIpv6 TencentDB for TcaplusDB (TcaplusDB) SDK connection parameters, which are used to access the IPv6 address.
      */
     public String getApiAccessIpv6() {
         return this.ApiAccessIpv6;
     }
 
     /**
-     * Set TcaplusDB SDK connection parameter for accessing IPv6 addresses
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ApiAccessIpv6 TcaplusDB SDK connection parameter for accessing IPv6 addresses
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set TencentDB for TcaplusDB (TcaplusDB) SDK connection parameters, which are used to access the IPv6 address.
+     * @param ApiAccessIpv6 TencentDB for TcaplusDB (TcaplusDB) SDK connection parameters, which are used to access the IPv6 address.
      */
     public void setApiAccessIpv6(String ApiAccessIpv6) {
         this.ApiAccessIpv6 = ApiAccessIpv6;
     }
 
     /**
-     * Get Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClusterType Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cluster type. 0,1: shared cluster; 2: independent cluster. 
+     * @return ClusterType Cluster type. 0,1: shared cluster; 2: independent cluster.
      */
     public Long getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClusterType Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cluster type. 0,1: shared cluster; 2: independent cluster.
+     * @param ClusterType Cluster type. 0,1: shared cluster; 2: independent cluster.
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClusterStatus Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cluster status. 0: indicates normal operation; 1: indicates frozen isolation (usually due to arrears); 2: indicates to be recycled (usually when the user proactively triggers deletion); 3: pending release (indicating that resources occupied by this table can be released); 4: changing. 
+     * @return ClusterStatus Cluster status. 0: indicates normal operation; 1: indicates frozen isolation (usually due to arrears); 2: indicates to be recycled (usually when the user proactively triggers deletion); 3: pending release (indicating that resources occupied by this table can be released); 4: changing.
      */
     public Long getClusterStatus() {
         return this.ClusterStatus;
     }
 
     /**
-     * Set Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClusterStatus Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cluster status. 0: indicates normal operation; 1: indicates frozen isolation (usually due to arrears); 2: indicates to be recycled (usually when the user proactively triggers deletion); 3: pending release (indicating that resources occupied by this table can be released); 4: changing.
+     * @param ClusterStatus Cluster status. 0: indicates normal operation; 1: indicates frozen isolation (usually due to arrears); 2: indicates to be recycled (usually when the user proactively triggers deletion); 3: pending release (indicating that resources occupied by this table can be released); 4: changing.
      */
     public void setClusterStatus(Long ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
     }
 
     /**
-     * Get Read CU
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ReadCapacityUnit Read CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Read CU. 
+     * @return ReadCapacityUnit Read CU.
      */
     public Long getReadCapacityUnit() {
         return this.ReadCapacityUnit;
     }
 
     /**
-     * Set Read CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ReadCapacityUnit Read CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Read CU.
+     * @param ReadCapacityUnit Read CU.
      */
     public void setReadCapacityUnit(Long ReadCapacityUnit) {
         this.ReadCapacityUnit = ReadCapacityUnit;
     }
 
     /**
-     * Get Write CU
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return WriteCapacityUnit Write CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Write CU. 
+     * @return WriteCapacityUnit Write CU.
      */
     public Long getWriteCapacityUnit() {
         return this.WriteCapacityUnit;
     }
 
     /**
-     * Set Write CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param WriteCapacityUnit Write CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Write CU.
+     * @param WriteCapacityUnit Write CU.
      */
     public void setWriteCapacityUnit(Long WriteCapacityUnit) {
         this.WriteCapacityUnit = WriteCapacityUnit;
     }
 
     /**
-     * Get Disk capacity
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return DiskVolume Disk capacity
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Disk capacity. 
+     * @return DiskVolume Disk capacity.
      */
     public Long getDiskVolume() {
         return this.DiskVolume;
     }
 
     /**
-     * Set Disk capacity
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param DiskVolume Disk capacity
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Disk capacity.
+     * @param DiskVolume Disk capacity.
      */
     public void setDiskVolume(Long DiskVolume) {
         this.DiskVolume = DiskVolume;
     }
 
     /**
-     * Get Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ServerList Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Information about the dedicated server. 
+     * @return ServerList Information about the dedicated server.
      */
     public ServerDetailInfo [] getServerList() {
         return this.ServerList;
     }
 
     /**
-     * Set Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ServerList Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Information about the dedicated server.
+     * @param ServerList Information about the dedicated server.
      */
     public void setServerList(ServerDetailInfo [] ServerList) {
         this.ServerList = ServerList;
     }
 
     /**
-     * Get Information of the machine at the access layer (tcaproxy) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ProxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Information about the dedicated proxy server. 
+     * @return ProxyList Information about the dedicated proxy server.
      */
     public ProxyDetailInfo [] getProxyList() {
         return this.ProxyList;
     }
 
     /**
-     * Set Information of the machine at the access layer (tcaproxy) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ProxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Information about the dedicated proxy server.
+     * @param ProxyList Information about the dedicated proxy server.
      */
     public void setProxyList(ProxyDetailInfo [] ProxyList) {
         this.ProxyList = ProxyList;
@@ -654,143 +616,147 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Approver UIN list
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return DbaUins Approver UIN list
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Approver UIN list. 
+     * @return DbaUins Approver UIN list.
      */
     public String [] getDbaUins() {
         return this.DbaUins;
     }
 
     /**
-     * Set Approver UIN list
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param DbaUins Approver UIN list
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Approver UIN list.
+     * @param DbaUins Approver UIN list.
      */
     public void setDbaUins(String [] DbaUins) {
         this.DbaUins = DbaUins;
     }
 
     /**
-     * Get Whether data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return DataFlowStatus Whether data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether data subscription is enabled. 
+     * @return DataFlowStatus Whether data subscription is enabled.
      */
     public Long getDataFlowStatus() {
         return this.DataFlowStatus;
     }
 
     /**
-     * Set Whether data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param DataFlowStatus Whether data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether data subscription is enabled.
+     * @param DataFlowStatus Whether data subscription is enabled.
      */
     public void setDataFlowStatus(Long DataFlowStatus) {
         this.DataFlowStatus = DataFlowStatus;
     }
 
     /**
-     * Get CKafka information when data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return KafkaInfo CKafka information when data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Kafka information for data subscription. 
+     * @return KafkaInfo Kafka information for data subscription.
      */
     public KafkaInfo getKafkaInfo() {
         return this.KafkaInfo;
     }
 
     /**
-     * Set CKafka information when data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param KafkaInfo CKafka information when data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Kafka information for data subscription.
+     * @param KafkaInfo Kafka information for data subscription.
      */
     public void setKafkaInfo(KafkaInfo KafkaInfo) {
         this.KafkaInfo = KafkaInfo;
     }
 
     /**
-     * Get The number of days after which the cluster Txh backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return TxhBackupExpireDay The number of days after which the cluster Txh backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Retention period for the Txh backup file of the cluster before expiration and deletion. 
+     * @return TxhBackupExpireDay Retention period for the Txh backup file of the cluster before expiration and deletion.
      */
     public Long getTxhBackupExpireDay() {
         return this.TxhBackupExpireDay;
     }
 
     /**
-     * Set The number of days after which the cluster Txh backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param TxhBackupExpireDay The number of days after which the cluster Txh backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Retention period for the Txh backup file of the cluster before expiration and deletion.
+     * @param TxhBackupExpireDay Retention period for the Txh backup file of the cluster before expiration and deletion.
      */
     public void setTxhBackupExpireDay(Long TxhBackupExpireDay) {
         this.TxhBackupExpireDay = TxhBackupExpireDay;
     }
 
     /**
-     * Get The number of days after which the cluster Ulog backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return UlogBackupExpireDay The number of days after which the cluster Ulog backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Retention period for the Ulog backup file of the cluster before expiration and deletion. 
+     * @return UlogBackupExpireDay Retention period for the Ulog backup file of the cluster before expiration and deletion.
      */
     public Long getUlogBackupExpireDay() {
         return this.UlogBackupExpireDay;
     }
 
     /**
-     * Set The number of days after which the cluster Ulog backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param UlogBackupExpireDay The number of days after which the cluster Ulog backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Retention period for the Ulog backup file of the cluster before expiration and deletion.
+     * @param UlogBackupExpireDay Retention period for the Ulog backup file of the cluster before expiration and deletion.
      */
     public void setUlogBackupExpireDay(Long UlogBackupExpireDay) {
         this.UlogBackupExpireDay = UlogBackupExpireDay;
     }
 
     /**
-     * Get Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return IsReadOnlyUlogBackupExpireDay Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether the expiration policy for the Ulog backup file of the cluster is read-only. 0: UlogBackupExpire is read-only and cannot be modified; 1: UlogBackupExpire can be modified. 
+     * @return IsReadOnlyUlogBackupExpireDay Whether the expiration policy for the Ulog backup file of the cluster is read-only. 0: UlogBackupExpire is read-only and cannot be modified; 1: UlogBackupExpire can be modified.
      */
     public Long getIsReadOnlyUlogBackupExpireDay() {
         return this.IsReadOnlyUlogBackupExpireDay;
     }
 
     /**
-     * Set Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param IsReadOnlyUlogBackupExpireDay Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether the expiration policy for the Ulog backup file of the cluster is read-only. 0: UlogBackupExpire is read-only and cannot be modified; 1: UlogBackupExpire can be modified.
+     * @param IsReadOnlyUlogBackupExpireDay Whether the expiration policy for the Ulog backup file of the cluster is read-only. 0: UlogBackupExpire is read-only and cannot be modified; 1: UlogBackupExpire can be modified.
      */
     public void setIsReadOnlyUlogBackupExpireDay(Long IsReadOnlyUlogBackupExpireDay) {
         this.IsReadOnlyUlogBackupExpireDay = IsReadOnlyUlogBackupExpireDay;
     }
 
     /**
-     * Get restproxy Status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RestProxyStatus restproxy Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get restproxy status. 
+     * @return RestProxyStatus restproxy status.
      */
     public Long getRestProxyStatus() {
         return this.RestProxyStatus;
     }
 
     /**
-     * Set restproxy Status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RestProxyStatus restproxy Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set restproxy status.
+     * @param RestProxyStatus restproxy status.
      */
     public void setRestProxyStatus(Long RestProxyStatus) {
         this.RestProxyStatus = RestProxyStatus;
+    }
+
+    /**
+     * Get Total number of shards in the cluster. 
+     * @return ShardTotalNum Total number of shards in the cluster.
+     */
+    public Long getShardTotalNum() {
+        return this.ShardTotalNum;
+    }
+
+    /**
+     * Set Total number of shards in the cluster.
+     * @param ShardTotalNum Total number of shards in the cluster.
+     */
+    public void setShardTotalNum(Long ShardTotalNum) {
+        this.ShardTotalNum = ShardTotalNum;
+    }
+
+    /**
+     * Get Total number of used shards. 
+     * @return ShardUsedNum Total number of used shards.
+     */
+    public Long getShardUsedNum() {
+        return this.ShardUsedNum;
+    }
+
+    /**
+     * Set Total number of used shards.
+     * @param ShardUsedNum Total number of used shards.
+     */
+    public void setShardUsedNum(Long ShardUsedNum) {
+        this.ShardUsedNum = ShardUsedNum;
     }
 
     public ClusterInfo() {
@@ -900,6 +866,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RestProxyStatus != null) {
             this.RestProxyStatus = new Long(source.RestProxyStatus);
         }
+        if (source.ShardTotalNum != null) {
+            this.ShardTotalNum = new Long(source.ShardTotalNum);
+        }
+        if (source.ShardUsedNum != null) {
+            this.ShardUsedNum = new Long(source.ShardUsedNum);
+        }
     }
 
 
@@ -937,6 +909,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UlogBackupExpireDay", this.UlogBackupExpireDay);
         this.setParamSimple(map, prefix + "IsReadOnlyUlogBackupExpireDay", this.IsReadOnlyUlogBackupExpireDay);
         this.setParamSimple(map, prefix + "RestProxyStatus", this.RestProxyStatus);
+        this.setParamSimple(map, prefix + "ShardTotalNum", this.ShardTotalNum);
+        this.setParamSimple(map, prefix + "ShardUsedNum", this.ShardUsedNum);
 
     }
 }

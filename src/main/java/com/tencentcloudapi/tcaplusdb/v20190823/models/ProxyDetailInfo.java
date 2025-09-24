@@ -59,8 +59,7 @@ public class ProxyDetailInfo extends AbstractModel {
     private Long SlowProcessSpeed;
 
     /**
-    * Version
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Version.
     */
     @SerializedName("Version")
     @Expose
@@ -147,20 +146,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Version
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Version Version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Version. 
+     * @return Version Version.
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set Version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Version Version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Version.
+     * @param Version Version.
      */
     public void setVersion(String Version) {
         this.Version = Version;
