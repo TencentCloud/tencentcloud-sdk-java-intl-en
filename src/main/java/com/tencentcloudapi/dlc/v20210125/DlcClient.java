@@ -611,6 +611,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to retrieve all built-in images of all minor versions under a specified major version.
+     * @param req DescribeSessionImageVersionRequest
+     * @return DescribeSessionImageVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSessionImageVersionResponse DescribeSessionImageVersion(DescribeSessionImageVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSessionImageVersion", DescribeSessionImageVersionResponse.class);
+    }
+
+    /**
      *u200cThis API is used to query the information of a Spark job.
      * @param req DescribeSparkAppJobRequest
      * @return DescribeSparkAppJobResponse

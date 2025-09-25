@@ -68,6 +68,13 @@ public class StartAITranscriptionRequest extends AbstractModel {
     private RecognizeConfig RecognizeConfig;
 
     /**
+    * Translation config.
+    */
+    @SerializedName("TranslationConfig")
+    @Expose
+    private TranslationConfig TranslationConfig;
+
+    /**
      * Get TRTC's [SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid) is the same as the SdkAppId used by the room that starts the transcription task. 
      * @return SdkAppId TRTC's [SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid) is the same as the SdkAppId used by the room that starts the transcription task.
      */
@@ -171,6 +178,22 @@ public class StartAITranscriptionRequest extends AbstractModel {
         this.RecognizeConfig = RecognizeConfig;
     }
 
+    /**
+     * Get Translation config. 
+     * @return TranslationConfig Translation config.
+     */
+    public TranslationConfig getTranslationConfig() {
+        return this.TranslationConfig;
+    }
+
+    /**
+     * Set Translation config.
+     * @param TranslationConfig Translation config.
+     */
+    public void setTranslationConfig(TranslationConfig TranslationConfig) {
+        this.TranslationConfig = TranslationConfig;
+    }
+
     public StartAITranscriptionRequest() {
     }
 
@@ -197,6 +220,9 @@ public class StartAITranscriptionRequest extends AbstractModel {
         if (source.RecognizeConfig != null) {
             this.RecognizeConfig = new RecognizeConfig(source.RecognizeConfig);
         }
+        if (source.TranslationConfig != null) {
+            this.TranslationConfig = new TranslationConfig(source.TranslationConfig);
+        }
     }
 
 
@@ -210,6 +236,7 @@ public class StartAITranscriptionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
         this.setParamObj(map, prefix + "RecognizeConfig.", this.RecognizeConfig);
+        this.setParamObj(map, prefix + "TranslationConfig.", this.TranslationConfig);
 
     }
 }
