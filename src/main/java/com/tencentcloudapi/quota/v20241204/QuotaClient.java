@@ -49,4 +49,48 @@ public class QuotaClient extends AbstractClient{
         return this.internalRequest(req, "CreateAlarm", CreateAlarmResponse.class);
     }
 
+    /**
+     *Deletes alarm rules
+     * @param req DeleteAlarmRequest
+     * @return DeleteAlarmResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAlarmResponse DeleteAlarm(DeleteAlarmRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAlarm", DeleteAlarmResponse.class);
+    }
+
+    /**
+     *This API is used to query the alarm rule list.
+     * @param req DescribeAlarmsRequest
+     * @return DescribeAlarmsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmsResponse DescribeAlarms(DescribeAlarmsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAlarms", DescribeAlarmsResponse.class);
+    }
+
+    /**
+     *This API is used to enable alarm rules.
+     * @param req EnableAlarmRequest
+     * @return EnableAlarmResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableAlarmResponse EnableAlarm(EnableAlarmRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableAlarm", EnableAlarmResponse.class);
+    }
+
+    /**
+     *Modifies alarm rules
+     * @param req UpdateAlarmRequest
+     * @return UpdateAlarmResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAlarmResponse UpdateAlarm(UpdateAlarmRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAlarm", UpdateAlarmResponse.class);
+    }
+
 }
