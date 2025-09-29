@@ -199,6 +199,17 @@ This API is used to create an orchestration, which is in disable status by defau
     }
 
     /**
+     *This API is used to create a custom smart erasing template.
+     * @param req CreateSmartEraseTemplateRequest
+     * @return CreateSmartEraseTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSmartEraseTemplateResponse CreateSmartEraseTemplate(CreateSmartEraseTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSmartEraseTemplate", CreateSmartEraseTemplateResponse.class);
+    }
+
+    /**
      *This API is used to create a custom smart subtitle template.
      * @param req CreateSmartSubtitleTemplateRequest
      * @return CreateSmartSubtitleTemplateResponse
@@ -407,6 +418,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteScheduleResponse DeleteSchedule(DeleteScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSchedule", DeleteScheduleResponse.class);
+    }
+
+    /**
+     *This API is used to delete a user-defined smart erasing template.
+     * @param req DeleteSmartEraseTemplateRequest
+     * @return DeleteSmartEraseTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSmartEraseTemplateResponse DeleteSmartEraseTemplate(DeleteSmartEraseTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSmartEraseTemplate", DeleteSmartEraseTemplateResponse.class);
     }
 
     /**
@@ -649,6 +671,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeSchedulesResponse DescribeSchedules(DescribeSchedulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSchedules", DescribeSchedulesResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the list of smart erasing template details based on the unique identifier of the template. The returned result includes all matching user-defined smart erasing templates and system preset smart erasing templates.
+     * @param req DescribeSmartEraseTemplatesRequest
+     * @return DescribeSmartEraseTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSmartEraseTemplatesResponse DescribeSmartEraseTemplates(DescribeSmartEraseTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSmartEraseTemplates", DescribeSmartEraseTemplatesResponse.class);
     }
 
     /**
@@ -973,6 +1006,17 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyScheduleResponse ModifySchedule(ModifyScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySchedule", ModifyScheduleResponse.class);
+    }
+
+    /**
+     *This API is used to modify a user-defined smart erasing template.
+     * @param req ModifySmartEraseTemplateRequest
+     * @return ModifySmartEraseTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySmartEraseTemplateResponse ModifySmartEraseTemplate(ModifySmartEraseTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySmartEraseTemplate", ModifySmartEraseTemplateResponse.class);
     }
 
     /**
