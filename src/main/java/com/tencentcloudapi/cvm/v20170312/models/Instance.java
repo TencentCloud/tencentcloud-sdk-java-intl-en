@@ -52,14 +52,14 @@ public class Instance extends AbstractModel {
     private Long CPU;
 
     /**
-    * Memory capacity; unit: `GB`.
+    * Instance memory capacity. unit: GiB.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
+    * Instance business status. valid values:<br><li>NORMAL: indicates an instance in the NORMAL state</li><li>EXPIRED: indicates an EXPIRED instance</li><li>PROTECTIVELY_ISOLATED: PROTECTIVELY ISOLATED instance</li>.
     */
     @SerializedName("RestrictState")
     @Expose
@@ -130,8 +130,8 @@ Note: This field may return null, indicating that no valid value is found.
     private String ImageId;
 
     /**
-    * Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
-<br><li>Note: this parameter is `null` for postpaid instances.
+    * AUTO-Renewal flag. valid values:<br><li>`NOTIFY_AND_MANUAL_RENEW`: indicates that a notification of impending expiration is made but AUTO-renewal is not performed</li><li>`NOTIFY_AND_AUTO_RENEW`: indicates that a notification of impending expiration is made AND AUTO-renewal is performed</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: indicates that notification that it is about to expire is not made AND AUTO-renewal is not performed.
+Note: this field is null in postpaid mode.
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -173,7 +173,7 @@ Note: This field may return null, indicating that no valid value is found.
     private LoginSettings LoginSettings;
 
     /**
-    * Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
+    * Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
     */
     @SerializedName("InstanceState")
     @Expose
@@ -187,8 +187,9 @@ Note: This field may return null, indicating that no valid value is found.
     private Tag [] Tags;
 
     /**
-    * Instance billing method after shutdown.
-Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
+    * Shutdown billing mode of an instance.
+
+Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown</li><li>STOP_CHARGING: billing stops after shutdown</li><li>NOT_APPLICABLE: the instance is NOT shut down or stopping billing after shutdown is NOT APPLICABLE to the instance</li>.
     */
     @SerializedName("StopChargingMode")
     @Expose
@@ -209,7 +210,8 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
     private String LatestOperation;
 
     /**
-    * The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
+    * The latest operation status of the instance. valid values:<br><li>SUCCESS: indicates that the operation succeeded</li><li>OPERATING: indicates that the operation is in progress</li><li>FAILED: indicates that the operation FAILED</li>.
+Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("LatestOperationState")
     @Expose
@@ -223,8 +225,7 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
     private String LatestOperationRequestId;
 
     /**
-    * ID of a spread placement group.
-Note: this field may return null, indicating that no valid value is obtained.
+    * Spread placement group ID.
     */
     @SerializedName("DisasterRecoverGroupId")
     @Expose
@@ -247,8 +248,7 @@ Note: this field may return null, indicating that no valid value is obtained.
     private String CamRoleName;
 
     /**
-    * HPC cluster ID.
-Note: this field may return null, indicating that no valid value was found.
+    * High-performance computing cluster ID.
     */
     @SerializedName("HpcClusterId")
     @Expose
@@ -263,23 +263,21 @@ Note: this field may return null, indicating that no valid value was found.
     private String [] RdmaIpAddresses;
 
     /**
-    * 
+    * Dedicated cluster ID where the instance is located.
     */
     @SerializedName("DedicatedClusterId")
     @Expose
     private String DedicatedClusterId;
 
     /**
-    * The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
-Note: this field may return null, indicating that no valid value was found.
+    * Instance isolation type. valid values:<br><li>ARREAR: indicates arrears isolation<br></li><li>EXPIRE: indicates isolation upon expiration<br></li><li>MANMADE: indicates voluntarily refunded isolation<br></li><li>NOTISOLATED: indicates unisolated<br></li>.
     */
     @SerializedName("IsolatedSource")
     @Expose
     private String IsolatedSource;
 
     /**
-    * GPU information. This field is only returned for GPU instances.
-Note: this field may return null, indicating that no valid value was found.
+    * GPU information. if it is a gpu type instance, this value will be returned. for other type instances, it does not return.
     */
     @SerializedName("GPUInfo")
     @Expose
@@ -293,7 +291,7 @@ Note: this field may return null, indicating that no valid value was found.
     private String LicenseType;
 
     /**
-    * Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+    * Instance destruction protection flag indicates whether an instance is allowed to be deleted through an api. value ranges from:<br><li>true: indicates that instance protection is enabled, deletion through apis is not allowed</li><li>false: indicates that instance protection is disabled, allow passage</li><br>default value: false.
     */
     @SerializedName("DisableApiTermination")
     @Expose
@@ -322,8 +320,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String LatestOperationErrorMsg;
 
     /**
-    * Public IPv6 address of the instance.
-Note: this field may return null, indicating that no valid value was found.
+    * Custom metadata. this parameter corresponds to the metadata information specified when creating a CVM. **note: in beta test**.
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private Metadata Metadata;
+
+    /**
+    * Specifies the public IPv6 address bound to the instance.
     */
     @SerializedName("PublicIPv6Addresses")
     @Expose
@@ -394,32 +398,32 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Memory capacity; unit: `GB`. 
-     * @return Memory Memory capacity; unit: `GB`.
+     * Get Instance memory capacity. unit: GiB. 
+     * @return Memory Instance memory capacity. unit: GiB.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory capacity; unit: `GB`.
-     * @param Memory Memory capacity; unit: `GB`.
+     * Set Instance memory capacity. unit: GiB.
+     * @param Memory Instance memory capacity. unit: GiB.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated. 
-     * @return RestrictState Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
+     * Get Instance business status. valid values:<br><li>NORMAL: indicates an instance in the NORMAL state</li><li>EXPIRED: indicates an EXPIRED instance</li><li>PROTECTIVELY_ISOLATED: PROTECTIVELY ISOLATED instance</li>. 
+     * @return RestrictState Instance business status. valid values:<br><li>NORMAL: indicates an instance in the NORMAL state</li><li>EXPIRED: indicates an EXPIRED instance</li><li>PROTECTIVELY_ISOLATED: PROTECTIVELY ISOLATED instance</li>.
      */
     public String getRestrictState() {
         return this.RestrictState;
     }
 
     /**
-     * Set Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
-     * @param RestrictState Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
+     * Set Instance business status. valid values:<br><li>NORMAL: indicates an instance in the NORMAL state</li><li>EXPIRED: indicates an EXPIRED instance</li><li>PROTECTIVELY_ISOLATED: PROTECTIVELY ISOLATED instance</li>.
+     * @param RestrictState Instance business status. valid values:<br><li>NORMAL: indicates an instance in the NORMAL state</li><li>EXPIRED: indicates an EXPIRED instance</li><li>PROTECTIVELY_ISOLATED: PROTECTIVELY ISOLATED instance</li>.
      */
     public void setRestrictState(String RestrictState) {
         this.RestrictState = RestrictState;
@@ -574,20 +578,20 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Get Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
-<br><li>Note: this parameter is `null` for postpaid instances. 
-     * @return RenewFlag Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
-<br><li>Note: this parameter is `null` for postpaid instances.
+     * Get AUTO-Renewal flag. valid values:<br><li>`NOTIFY_AND_MANUAL_RENEW`: indicates that a notification of impending expiration is made but AUTO-renewal is not performed</li><li>`NOTIFY_AND_AUTO_RENEW`: indicates that a notification of impending expiration is made AND AUTO-renewal is performed</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: indicates that notification that it is about to expire is not made AND AUTO-renewal is not performed.
+Note: this field is null in postpaid mode. 
+     * @return RenewFlag AUTO-Renewal flag. valid values:<br><li>`NOTIFY_AND_MANUAL_RENEW`: indicates that a notification of impending expiration is made but AUTO-renewal is not performed</li><li>`NOTIFY_AND_AUTO_RENEW`: indicates that a notification of impending expiration is made AND AUTO-renewal is performed</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: indicates that notification that it is about to expire is not made AND AUTO-renewal is not performed.
+Note: this field is null in postpaid mode.
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
-<br><li>Note: this parameter is `null` for postpaid instances.
-     * @param RenewFlag Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
-<br><li>Note: this parameter is `null` for postpaid instances.
+     * Set AUTO-Renewal flag. valid values:<br><li>`NOTIFY_AND_MANUAL_RENEW`: indicates that a notification of impending expiration is made but AUTO-renewal is not performed</li><li>`NOTIFY_AND_AUTO_RENEW`: indicates that a notification of impending expiration is made AND AUTO-renewal is performed</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: indicates that notification that it is about to expire is not made AND AUTO-renewal is not performed.
+Note: this field is null in postpaid mode.
+     * @param RenewFlag AUTO-Renewal flag. valid values:<br><li>`NOTIFY_AND_MANUAL_RENEW`: indicates that a notification of impending expiration is made but AUTO-renewal is not performed</li><li>`NOTIFY_AND_AUTO_RENEW`: indicates that a notification of impending expiration is made AND AUTO-renewal is performed</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: indicates that notification that it is about to expire is not made AND AUTO-renewal is not performed.
+Note: this field is null in postpaid mode.
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
@@ -674,16 +678,16 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Get Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li> 
-     * @return InstanceState Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
+     * Get Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus). 
+     * @return InstanceState Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
      */
     public String getInstanceState() {
         return this.InstanceState;
     }
 
     /**
-     * Set Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
-     * @param InstanceState Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
+     * Set Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
+     * @param InstanceState Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;
@@ -706,20 +710,24 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Get Instance billing method after shutdown.
-Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br> 
-     * @return StopChargingMode Instance billing method after shutdown.
-Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
+     * Get Shutdown billing mode of an instance.
+
+Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown</li><li>STOP_CHARGING: billing stops after shutdown</li><li>NOT_APPLICABLE: the instance is NOT shut down or stopping billing after shutdown is NOT APPLICABLE to the instance</li>. 
+     * @return StopChargingMode Shutdown billing mode of an instance.
+
+Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown</li><li>STOP_CHARGING: billing stops after shutdown</li><li>NOT_APPLICABLE: the instance is NOT shut down or stopping billing after shutdown is NOT APPLICABLE to the instance</li>.
      */
     public String getStopChargingMode() {
         return this.StopChargingMode;
     }
 
     /**
-     * Set Instance billing method after shutdown.
-Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
-     * @param StopChargingMode Instance billing method after shutdown.
-Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
+     * Set Shutdown billing mode of an instance.
+
+Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown</li><li>STOP_CHARGING: billing stops after shutdown</li><li>NOT_APPLICABLE: the instance is NOT shut down or stopping billing after shutdown is NOT APPLICABLE to the instance</li>.
+     * @param StopChargingMode Shutdown billing mode of an instance.
+
+Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown</li><li>STOP_CHARGING: billing stops after shutdown</li><li>NOT_APPLICABLE: the instance is NOT shut down or stopping billing after shutdown is NOT APPLICABLE to the instance</li>.
      */
     public void setStopChargingMode(String StopChargingMode) {
         this.StopChargingMode = StopChargingMode;
@@ -758,16 +766,20 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
     }
 
     /**
-     * Get The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed 
-     * @return LatestOperationState The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
+     * Get The latest operation status of the instance. valid values:<br><li>SUCCESS: indicates that the operation succeeded</li><li>OPERATING: indicates that the operation is in progress</li><li>FAILED: indicates that the operation FAILED</li>.
+Note: This field may return null, indicating that no valid value is found. 
+     * @return LatestOperationState The latest operation status of the instance. valid values:<br><li>SUCCESS: indicates that the operation succeeded</li><li>OPERATING: indicates that the operation is in progress</li><li>FAILED: indicates that the operation FAILED</li>.
+Note: This field may return null, indicating that no valid value is found.
      */
     public String getLatestOperationState() {
         return this.LatestOperationState;
     }
 
     /**
-     * Set The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
-     * @param LatestOperationState The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
+     * Set The latest operation status of the instance. valid values:<br><li>SUCCESS: indicates that the operation succeeded</li><li>OPERATING: indicates that the operation is in progress</li><li>FAILED: indicates that the operation FAILED</li>.
+Note: This field may return null, indicating that no valid value is found.
+     * @param LatestOperationState The latest operation status of the instance. valid values:<br><li>SUCCESS: indicates that the operation succeeded</li><li>OPERATING: indicates that the operation is in progress</li><li>FAILED: indicates that the operation FAILED</li>.
+Note: This field may return null, indicating that no valid value is found.
      */
     public void setLatestOperationState(String LatestOperationState) {
         this.LatestOperationState = LatestOperationState;
@@ -790,20 +802,16 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
     }
 
     /**
-     * Get ID of a spread placement group.
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return DisasterRecoverGroupId ID of a spread placement group.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Spread placement group ID. 
+     * @return DisasterRecoverGroupId Spread placement group ID.
      */
     public String getDisasterRecoverGroupId() {
         return this.DisasterRecoverGroupId;
     }
 
     /**
-     * Set ID of a spread placement group.
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param DisasterRecoverGroupId ID of a spread placement group.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Spread placement group ID.
+     * @param DisasterRecoverGroupId Spread placement group ID.
      */
     public void setDisasterRecoverGroupId(String DisasterRecoverGroupId) {
         this.DisasterRecoverGroupId = DisasterRecoverGroupId;
@@ -850,20 +858,16 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 
     /**
-     * Get HPC cluster ID.
-Note: this field may return null, indicating that no valid value was found. 
-     * @return HpcClusterId HPC cluster ID.
-Note: this field may return null, indicating that no valid value was found.
+     * Get High-performance computing cluster ID. 
+     * @return HpcClusterId High-performance computing cluster ID.
      */
     public String getHpcClusterId() {
         return this.HpcClusterId;
     }
 
     /**
-     * Set HPC cluster ID.
-Note: this field may return null, indicating that no valid value was found.
-     * @param HpcClusterId HPC cluster ID.
-Note: this field may return null, indicating that no valid value was found.
+     * Set High-performance computing cluster ID.
+     * @param HpcClusterId High-performance computing cluster ID.
      */
     public void setHpcClusterId(String HpcClusterId) {
         this.HpcClusterId = HpcClusterId;
@@ -890,56 +894,48 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return DedicatedClusterId 
+     * Get Dedicated cluster ID where the instance is located. 
+     * @return DedicatedClusterId Dedicated cluster ID where the instance is located.
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set 
-     * @param DedicatedClusterId 
+     * Set Dedicated cluster ID where the instance is located.
+     * @param DedicatedClusterId Dedicated cluster ID where the instance is located.
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
     /**
-     * Get The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
-Note: this field may return null, indicating that no valid value was found. 
-     * @return IsolatedSource The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
-Note: this field may return null, indicating that no valid value was found.
+     * Get Instance isolation type. valid values:<br><li>ARREAR: indicates arrears isolation<br></li><li>EXPIRE: indicates isolation upon expiration<br></li><li>MANMADE: indicates voluntarily refunded isolation<br></li><li>NOTISOLATED: indicates unisolated<br></li>. 
+     * @return IsolatedSource Instance isolation type. valid values:<br><li>ARREAR: indicates arrears isolation<br></li><li>EXPIRE: indicates isolation upon expiration<br></li><li>MANMADE: indicates voluntarily refunded isolation<br></li><li>NOTISOLATED: indicates unisolated<br></li>.
      */
     public String getIsolatedSource() {
         return this.IsolatedSource;
     }
 
     /**
-     * Set The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
-Note: this field may return null, indicating that no valid value was found.
-     * @param IsolatedSource The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
-Note: this field may return null, indicating that no valid value was found.
+     * Set Instance isolation type. valid values:<br><li>ARREAR: indicates arrears isolation<br></li><li>EXPIRE: indicates isolation upon expiration<br></li><li>MANMADE: indicates voluntarily refunded isolation<br></li><li>NOTISOLATED: indicates unisolated<br></li>.
+     * @param IsolatedSource Instance isolation type. valid values:<br><li>ARREAR: indicates arrears isolation<br></li><li>EXPIRE: indicates isolation upon expiration<br></li><li>MANMADE: indicates voluntarily refunded isolation<br></li><li>NOTISOLATED: indicates unisolated<br></li>.
      */
     public void setIsolatedSource(String IsolatedSource) {
         this.IsolatedSource = IsolatedSource;
     }
 
     /**
-     * Get GPU information. This field is only returned for GPU instances.
-Note: this field may return null, indicating that no valid value was found. 
-     * @return GPUInfo GPU information. This field is only returned for GPU instances.
-Note: this field may return null, indicating that no valid value was found.
+     * Get GPU information. if it is a gpu type instance, this value will be returned. for other type instances, it does not return. 
+     * @return GPUInfo GPU information. if it is a gpu type instance, this value will be returned. for other type instances, it does not return.
      */
     public GPUInfo getGPUInfo() {
         return this.GPUInfo;
     }
 
     /**
-     * Set GPU information. This field is only returned for GPU instances.
-Note: this field may return null, indicating that no valid value was found.
-     * @param GPUInfo GPU information. This field is only returned for GPU instances.
-Note: this field may return null, indicating that no valid value was found.
+     * Set GPU information. if it is a gpu type instance, this value will be returned. for other type instances, it does not return.
+     * @param GPUInfo GPU information. if it is a gpu type instance, this value will be returned. for other type instances, it does not return.
      */
     public void setGPUInfo(GPUInfo GPUInfo) {
         this.GPUInfo = GPUInfo;
@@ -962,16 +958,16 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`. 
-     * @return DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+     * Get Instance destruction protection flag indicates whether an instance is allowed to be deleted through an api. value ranges from:<br><li>true: indicates that instance protection is enabled, deletion through apis is not allowed</li><li>false: indicates that instance protection is disabled, allow passage</li><br>default value: false. 
+     * @return DisableApiTermination Instance destruction protection flag indicates whether an instance is allowed to be deleted through an api. value ranges from:<br><li>true: indicates that instance protection is enabled, deletion through apis is not allowed</li><li>false: indicates that instance protection is disabled, allow passage</li><br>default value: false.
      */
     public Boolean getDisableApiTermination() {
         return this.DisableApiTermination;
     }
 
     /**
-     * Set Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
-     * @param DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+     * Set Instance destruction protection flag indicates whether an instance is allowed to be deleted through an api. value ranges from:<br><li>true: indicates that instance protection is enabled, deletion through apis is not allowed</li><li>false: indicates that instance protection is disabled, allow passage</li><br>default value: false.
+     * @param DisableApiTermination Instance destruction protection flag indicates whether an instance is allowed to be deleted through an api. value ranges from:<br><li>true: indicates that instance protection is enabled, deletion through apis is not allowed</li><li>false: indicates that instance protection is disabled, allow passage</li><br>default value: false.
      */
     public void setDisableApiTermination(Boolean DisableApiTermination) {
         this.DisableApiTermination = DisableApiTermination;
@@ -1030,20 +1026,32 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Public IPv6 address of the instance.
-Note: this field may return null, indicating that no valid value was found. 
-     * @return PublicIPv6Addresses Public IPv6 address of the instance.
-Note: this field may return null, indicating that no valid value was found.
+     * Get Custom metadata. this parameter corresponds to the metadata information specified when creating a CVM. **note: in beta test**. 
+     * @return Metadata Custom metadata. this parameter corresponds to the metadata information specified when creating a CVM. **note: in beta test**.
+     */
+    public Metadata getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set Custom metadata. this parameter corresponds to the metadata information specified when creating a CVM. **note: in beta test**.
+     * @param Metadata Custom metadata. this parameter corresponds to the metadata information specified when creating a CVM. **note: in beta test**.
+     */
+    public void setMetadata(Metadata Metadata) {
+        this.Metadata = Metadata;
+    }
+
+    /**
+     * Get Specifies the public IPv6 address bound to the instance. 
+     * @return PublicIPv6Addresses Specifies the public IPv6 address bound to the instance.
      */
     public String [] getPublicIPv6Addresses() {
         return this.PublicIPv6Addresses;
     }
 
     /**
-     * Set Public IPv6 address of the instance.
-Note: this field may return null, indicating that no valid value was found.
-     * @param PublicIPv6Addresses Public IPv6 address of the instance.
-Note: this field may return null, indicating that no valid value was found.
+     * Set Specifies the public IPv6 address bound to the instance.
+     * @param PublicIPv6Addresses Specifies the public IPv6 address bound to the instance.
      */
     public void setPublicIPv6Addresses(String [] PublicIPv6Addresses) {
         this.PublicIPv6Addresses = PublicIPv6Addresses;
@@ -1201,6 +1209,9 @@ Note: this field may return null, indicating that no valid value was found.
         if (source.LatestOperationErrorMsg != null) {
             this.LatestOperationErrorMsg = new String(source.LatestOperationErrorMsg);
         }
+        if (source.Metadata != null) {
+            this.Metadata = new Metadata(source.Metadata);
+        }
         if (source.PublicIPv6Addresses != null) {
             this.PublicIPv6Addresses = new String[source.PublicIPv6Addresses.length];
             for (int i = 0; i < source.PublicIPv6Addresses.length; i++) {
@@ -1255,6 +1266,7 @@ Note: this field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "DefaultLoginUser", this.DefaultLoginUser);
         this.setParamSimple(map, prefix + "DefaultLoginPort", this.DefaultLoginPort);
         this.setParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);
+        this.setParamObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamArraySimple(map, prefix + "PublicIPv6Addresses.", this.PublicIPv6Addresses);
 
     }

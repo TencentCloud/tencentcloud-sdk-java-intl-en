@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class GPUInfo extends AbstractModel {
 
     /**
-    * Number of GPUs. 
-Note: this field may return `null`, indicating that no valid value can be found.
+    * Specifies the GPU count of the instance. a value less than 1 indicates VGPU type, and a value larger than 1 indicates GPU passthrough type.
     */
     @SerializedName("GPUCount")
     @Expose
     private Float GPUCount;
 
     /**
-    * GPU address
-Note: this field may return `null`, indicating that no valid value can be found.
+    * Specifies the GPU address of the instance.
     */
     @SerializedName("GPUId")
     @Expose
     private String [] GPUId;
 
     /**
-    * GPU type of the instance.
-Note: this field may return `null`, indicating that no valid value can be found.
+    * Specifies the GPU type of the instance.
     */
     @SerializedName("GPUType")
     @Expose
     private String GPUType;
 
     /**
-     * Get Number of GPUs. 
-Note: this field may return `null`, indicating that no valid value can be found. 
-     * @return GPUCount Number of GPUs. 
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Get Specifies the GPU count of the instance. a value less than 1 indicates VGPU type, and a value larger than 1 indicates GPU passthrough type. 
+     * @return GPUCount Specifies the GPU count of the instance. a value less than 1 indicates VGPU type, and a value larger than 1 indicates GPU passthrough type.
      */
     public Float getGPUCount() {
         return this.GPUCount;
     }
 
     /**
-     * Set Number of GPUs. 
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param GPUCount Number of GPUs. 
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Set Specifies the GPU count of the instance. a value less than 1 indicates VGPU type, and a value larger than 1 indicates GPU passthrough type.
+     * @param GPUCount Specifies the GPU count of the instance. a value less than 1 indicates VGPU type, and a value larger than 1 indicates GPU passthrough type.
      */
     public void setGPUCount(Float GPUCount) {
         this.GPUCount = GPUCount;
     }
 
     /**
-     * Get GPU address
-Note: this field may return `null`, indicating that no valid value can be found. 
-     * @return GPUId GPU address
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Get Specifies the GPU address of the instance. 
+     * @return GPUId Specifies the GPU address of the instance.
      */
     public String [] getGPUId() {
         return this.GPUId;
     }
 
     /**
-     * Set GPU address
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param GPUId GPU address
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Set Specifies the GPU address of the instance.
+     * @param GPUId Specifies the GPU address of the instance.
      */
     public void setGPUId(String [] GPUId) {
         this.GPUId = GPUId;
     }
 
     /**
-     * Get GPU type of the instance.
-Note: this field may return `null`, indicating that no valid value can be found. 
-     * @return GPUType GPU type of the instance.
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Get Specifies the GPU type of the instance. 
+     * @return GPUType Specifies the GPU type of the instance.
      */
     public String getGPUType() {
         return this.GPUType;
     }
 
     /**
-     * Set GPU type of the instance.
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param GPUType GPU type of the instance.
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Set Specifies the GPU type of the instance.
+     * @param GPUType Specifies the GPU type of the instance.
      */
     public void setGPUType(String GPUType) {
         this.GPUType = GPUType;

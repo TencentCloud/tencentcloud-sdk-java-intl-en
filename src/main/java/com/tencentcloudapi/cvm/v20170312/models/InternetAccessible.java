@@ -55,44 +55,49 @@ public class InternetAccessible extends AbstractModel {
     private String BandwidthPackageId;
 
     /**
-    * Describes the line type. for details, refer to [EIP IP address types](https://www.tencentcloud.com/zh/document/product/213/5733). default value: `BGP`.
- <li>BGP Default: BGP</li>
-For a user who has activated the static single-line IP allowlist, possible values are:
- <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
-Note: Only certain regions support static single-line IP addresses.
+    * Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1). default value: BGP.
+<Li>BGP: specifies the general bgp line.</li>.
+For a user with static single-line IP allowlist enabled, valid values include:.
+<Li>CMCC: china mobile.</li>.
+<Li>CTCC: china telecom</li>.
+<Li>CUCC: china unicom</li>.
+Note: The static single-line IP is only supported in some regions.
+
+
     */
     @SerializedName("InternetServiceProvider")
     @Expose
     private String InternetServiceProvider;
 
     /**
-    * Type of public IP address.
+    * Specifies the public IP type.
 
-<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/zh/document/product/213/5733). </li> 
-Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions.
-This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
+<Li>WanIP: specifies the public ip address.</li>.
+<Li>HighQualityEIP: specifies a high quality ip. high quality ip is only supported in Singapore and hong kong (china).</li>.
+<li> AntiDDoSEIP: specifies the anti-ddos eip. only partial regions support anti-ddos eip. details visible in the [elastic IP product overview](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1).</li>.
+If needed, assign a public IPv4 address to the resource by specifying the IPv4 address type.
+
+This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
     */
     @SerializedName("IPv4AddressType")
     @Expose
     private String IPv4AddressType;
 
     /**
-    * Indicates the type of EIPv6. Valid values:
+    * Indicates the type of elastic public IPv6.
+<Li>EIPv6: elastic ip version 6.</li>.
+<Li>HighQualityEIPv6: specifies the high quality ipv6. highqualityeipv6 is only supported in hong kong (china).</li>.
+If needed, assign an elastic IPv6 address for resource allocation.
 
-<li>EIPv6: common IPv6</li>
-<li>HighQualityEIPv6: High Quality EIPv6</li>
-Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
-
-Default: `EIPv6`
-
-This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
+This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
     */
     @SerializedName("IPv6AddressType")
     @Expose
     private String IPv6AddressType;
 
     /**
-    * Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+    * DDoS protection package unique ID. this field is required when applying for a ddos protection IP.
+
     */
     @SerializedName("AntiDDoSPackageId")
     @Expose
@@ -175,128 +180,148 @@ This feature is currently in gradually released phase. To access it, please [con
     }
 
     /**
-     * Get Describes the line type. for details, refer to [EIP IP address types](https://www.tencentcloud.com/zh/document/product/213/5733). default value: `BGP`.
- <li>BGP Default: BGP</li>
-For a user who has activated the static single-line IP allowlist, possible values are:
- <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
-Note: Only certain regions support static single-line IP addresses. 
-     * @return InternetServiceProvider Describes the line type. for details, refer to [EIP IP address types](https://www.tencentcloud.com/zh/document/product/213/5733). default value: `BGP`.
- <li>BGP Default: BGP</li>
-For a user who has activated the static single-line IP allowlist, possible values are:
- <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
-Note: Only certain regions support static single-line IP addresses.
+     * Get Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1). default value: BGP.
+<Li>BGP: specifies the general bgp line.</li>.
+For a user with static single-line IP allowlist enabled, valid values include:.
+<Li>CMCC: china mobile.</li>.
+<Li>CTCC: china telecom</li>.
+<Li>CUCC: china unicom</li>.
+Note: The static single-line IP is only supported in some regions.
+
+ 
+     * @return InternetServiceProvider Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1). default value: BGP.
+<Li>BGP: specifies the general bgp line.</li>.
+For a user with static single-line IP allowlist enabled, valid values include:.
+<Li>CMCC: china mobile.</li>.
+<Li>CTCC: china telecom</li>.
+<Li>CUCC: china unicom</li>.
+Note: The static single-line IP is only supported in some regions.
+
+
      */
     public String getInternetServiceProvider() {
         return this.InternetServiceProvider;
     }
 
     /**
-     * Set Describes the line type. for details, refer to [EIP IP address types](https://www.tencentcloud.com/zh/document/product/213/5733). default value: `BGP`.
- <li>BGP Default: BGP</li>
-For a user who has activated the static single-line IP allowlist, possible values are:
- <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
-Note: Only certain regions support static single-line IP addresses.
-     * @param InternetServiceProvider Describes the line type. for details, refer to [EIP IP address types](https://www.tencentcloud.com/zh/document/product/213/5733). default value: `BGP`.
- <li>BGP Default: BGP</li>
-For a user who has activated the static single-line IP allowlist, possible values are:
- <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
-Note: Only certain regions support static single-line IP addresses.
+     * Set Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1). default value: BGP.
+<Li>BGP: specifies the general bgp line.</li>.
+For a user with static single-line IP allowlist enabled, valid values include:.
+<Li>CMCC: china mobile.</li>.
+<Li>CTCC: china telecom</li>.
+<Li>CUCC: china unicom</li>.
+Note: The static single-line IP is only supported in some regions.
+
+
+     * @param InternetServiceProvider Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1). default value: BGP.
+<Li>BGP: specifies the general bgp line.</li>.
+For a user with static single-line IP allowlist enabled, valid values include:.
+<Li>CMCC: china mobile.</li>.
+<Li>CTCC: china telecom</li>.
+<Li>CUCC: china unicom</li>.
+Note: The static single-line IP is only supported in some regions.
+
+
      */
     public void setInternetServiceProvider(String InternetServiceProvider) {
         this.InternetServiceProvider = InternetServiceProvider;
     }
 
     /**
-     * Get Type of public IP address.
+     * Get Specifies the public IP type.
 
-<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/zh/document/product/213/5733). </li> 
-Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions.
-This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder). 
-     * @return IPv4AddressType Type of public IP address.
+<Li>WanIP: specifies the public ip address.</li>.
+<Li>HighQualityEIP: specifies a high quality ip. high quality ip is only supported in Singapore and hong kong (china).</li>.
+<li> AntiDDoSEIP: specifies the anti-ddos eip. only partial regions support anti-ddos eip. details visible in the [elastic IP product overview](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1).</li>.
+If needed, assign a public IPv4 address to the resource by specifying the IPv4 address type.
 
-<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/zh/document/product/213/5733). </li> 
-Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions.
-This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
+This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed. 
+     * @return IPv4AddressType Specifies the public IP type.
+
+<Li>WanIP: specifies the public ip address.</li>.
+<Li>HighQualityEIP: specifies a high quality ip. high quality ip is only supported in Singapore and hong kong (china).</li>.
+<li> AntiDDoSEIP: specifies the anti-ddos eip. only partial regions support anti-ddos eip. details visible in the [elastic IP product overview](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1).</li>.
+If needed, assign a public IPv4 address to the resource by specifying the IPv4 address type.
+
+This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
      */
     public String getIPv4AddressType() {
         return this.IPv4AddressType;
     }
 
     /**
-     * Set Type of public IP address.
+     * Set Specifies the public IP type.
 
-<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/zh/document/product/213/5733). </li> 
-Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions.
-This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
-     * @param IPv4AddressType Type of public IP address.
+<Li>WanIP: specifies the public ip address.</li>.
+<Li>HighQualityEIP: specifies a high quality ip. high quality ip is only supported in Singapore and hong kong (china).</li>.
+<li> AntiDDoSEIP: specifies the anti-ddos eip. only partial regions support anti-ddos eip. details visible in the [elastic IP product overview](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1).</li>.
+If needed, assign a public IPv4 address to the resource by specifying the IPv4 address type.
 
-<li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/zh/document/product/213/5733). </li> 
-Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions.
-This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
+This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
+     * @param IPv4AddressType Specifies the public IP type.
+
+<Li>WanIP: specifies the public ip address.</li>.
+<Li>HighQualityEIP: specifies a high quality ip. high quality ip is only supported in Singapore and hong kong (china).</li>.
+<li> AntiDDoSEIP: specifies the anti-ddos eip. only partial regions support anti-ddos eip. details visible in the [elastic IP product overview](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1).</li>.
+If needed, assign a public IPv4 address to the resource by specifying the IPv4 address type.
+
+This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
      */
     public void setIPv4AddressType(String IPv4AddressType) {
         this.IPv4AddressType = IPv4AddressType;
     }
 
     /**
-     * Get Indicates the type of EIPv6. Valid values:
+     * Get Indicates the type of elastic public IPv6.
+<Li>EIPv6: elastic ip version 6.</li>.
+<Li>HighQualityEIPv6: specifies the high quality ipv6. highqualityeipv6 is only supported in hong kong (china).</li>.
+If needed, assign an elastic IPv6 address for resource allocation.
 
-<li>EIPv6: common IPv6</li>
-<li>HighQualityEIPv6: High Quality EIPv6</li>
-Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed. 
+     * @return IPv6AddressType Indicates the type of elastic public IPv6.
+<Li>EIPv6: elastic ip version 6.</li>.
+<Li>HighQualityEIPv6: specifies the high quality ipv6. highqualityeipv6 is only supported in hong kong (china).</li>.
+If needed, assign an elastic IPv6 address for resource allocation.
 
-Default: `EIPv6`
-
-This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder). 
-     * @return IPv6AddressType Indicates the type of EIPv6. Valid values:
-
-<li>EIPv6: common IPv6</li>
-<li>HighQualityEIPv6: High Quality EIPv6</li>
-Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
-
-Default: `EIPv6`
-
-This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
+This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
      */
     public String getIPv6AddressType() {
         return this.IPv6AddressType;
     }
 
     /**
-     * Set Indicates the type of EIPv6. Valid values:
+     * Set Indicates the type of elastic public IPv6.
+<Li>EIPv6: elastic ip version 6.</li>.
+<Li>HighQualityEIPv6: specifies the high quality ipv6. highqualityeipv6 is only supported in hong kong (china).</li>.
+If needed, assign an elastic IPv6 address for resource allocation.
 
-<li>EIPv6: common IPv6</li>
-<li>HighQualityEIPv6: High Quality EIPv6</li>
-Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
+     * @param IPv6AddressType Indicates the type of elastic public IPv6.
+<Li>EIPv6: elastic ip version 6.</li>.
+<Li>HighQualityEIPv6: specifies the high quality ipv6. highqualityeipv6 is only supported in hong kong (china).</li>.
+If needed, assign an elastic IPv6 address for resource allocation.
 
-Default: `EIPv6`
-
-This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
-     * @param IPv6AddressType Indicates the type of EIPv6. Valid values:
-
-<li>EIPv6: common IPv6</li>
-<li>HighQualityEIPv6: High Quality EIPv6</li>
-Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
-
-Default: `EIPv6`
-
-This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
+This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
      */
     public void setIPv6AddressType(String IPv6AddressType) {
         this.IPv6AddressType = IPv6AddressType;
     }
 
     /**
-     * Get Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP. 
-     * @return AntiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+     * Get DDoS protection package unique ID. this field is required when applying for a ddos protection IP.
+ 
+     * @return AntiDDoSPackageId DDoS protection package unique ID. this field is required when applying for a ddos protection IP.
+
      */
     public String getAntiDDoSPackageId() {
         return this.AntiDDoSPackageId;
     }
 
     /**
-     * Set Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
-     * @param AntiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+     * Set DDoS protection package unique ID. this field is required when applying for a ddos protection IP.
+
+     * @param AntiDDoSPackageId DDoS protection package unique ID. this field is required when applying for a ddos protection IP.
+
      */
     public void setAntiDDoSPackageId(String AntiDDoSPackageId) {
         this.AntiDDoSPackageId = AntiDDoSPackageId;

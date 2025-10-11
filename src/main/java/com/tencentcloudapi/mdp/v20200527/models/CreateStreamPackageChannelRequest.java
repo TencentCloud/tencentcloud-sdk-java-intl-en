@@ -31,7 +31,7 @@ public class CreateStreamPackageChannelRequest extends AbstractModel {
     private String Name;
 
     /**
-    * Channel protocol. Valid values: HLS, DASH, CMAF.
+    * Channel protocol. Valid values: HLS/DASH.
     */
     @SerializedName("Protocol")
     @Expose
@@ -61,16 +61,16 @@ public class CreateStreamPackageChannelRequest extends AbstractModel {
     }
 
     /**
-     * Get Channel protocol. Valid values: HLS, DASH, CMAF. 
-     * @return Protocol Channel protocol. Valid values: HLS, DASH, CMAF.
+     * Get Channel protocol. Valid values: HLS/DASH. 
+     * @return Protocol Channel protocol. Valid values: HLS/DASH.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Channel protocol. Valid values: HLS, DASH, CMAF.
-     * @param Protocol Channel protocol. Valid values: HLS, DASH, CMAF.
+     * Set Channel protocol. Valid values: HLS/DASH.
+     * @param Protocol Channel protocol. Valid values: HLS/DASH.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

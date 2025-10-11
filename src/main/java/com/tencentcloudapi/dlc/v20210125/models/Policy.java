@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class Policy extends AbstractModel {
 
     /**
-    * The name of the target database. `*` represents all databases in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any database.
+    * The database name requiring authorization. use * to represent all databases under the current Catalog. for administrator level authorization type, only * is allowed. for data connection level authorization type, leave it blank. for other types, any specified database is allowed.
     */
     @SerializedName("Database")
     @Expose
     private String Database;
 
     /**
-    * The name of the target data source. To grant admin permission, it must be `*` (all resources at this level); to grant data source and database permissions, it must be `COSDataCatalog` or `*`; to grant table permissions, it can be a custom data source; if it is left empty, `DataLakeCatalog` is used. Note: To grant permissions on a custom data source, the permissions that can be managed in the Data Lake Compute console are subsets of the account permissions granted when you connect the data source to the console.
+    * Specifies the name of the data source requiring authorization. at administrator level, only * is supported (representing all resources at this level). for database-level or data source-level authentication, only COSDataCatalog or * is supported. for table-level authentication, user-defined data sources can be filled. defaults to DataLakeCatalog if left blank. note: if authenticating a user-defined data source, the permissions DLC can manage are a subset of the account provided when the user accesses the data source.
     */
     @SerializedName("Catalog")
     @Expose
     private String Catalog;
 
     /**
-    * The name of the target table. `*` represents all tables in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any table.
+    * Specifies the table name requiring authorization. use * to represent all tables in the current Database. for administrator-level authorization type, only * is allowed. for data connection level or Database-level authorization type, leave it blank. for other types, any specific data table can be specified.
     */
     @SerializedName("Table")
     @Expose
@@ -59,7 +59,7 @@ public class Policy extends AbstractModel {
     private String PolicyType;
 
     /**
-    * The name of the target function. `*` represents all functions in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any function.
+    * Name of the function requiring authorization. use * to represent all functions in the current Catalog. for administrator-level authorization type, only * is allowed. for data connection-level authorization type, leave it blank. for other types, any function can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Function")
@@ -67,7 +67,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Function;
 
     /**
-    * The name of the target view. `*` represents all views in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any view.
+    * Authorization is required for the view. fill in * to represent all views under the current Database. when the authorization type is administrator level, only * is allowed. when the authorization type is data connection level or Database level, only blank is allowed. for other types, any view can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("View")
@@ -75,7 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String View;
 
     /**
-    * The name of the target column. `*` represents all columns. To grant admin permissions, it must be `*`.
+    * Columns requiring authorization. use * to represent all current columns. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Column")
@@ -83,7 +83,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Column;
 
     /**
-    * The name of the target data engine. `*` represents all engines. To grant admin permissions, it must be `*`.
+    * The data engine requiring authorization. use * to represent all current engines. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataEngine")
@@ -155,48 +155,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Id;
 
     /**
-     * Get The name of the target database. `*` represents all databases in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any database. 
-     * @return Database The name of the target database. `*` represents all databases in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any database.
+    * Specifies the engine type.
+
+    */
+    @SerializedName("EngineGeneration")
+    @Expose
+    private String EngineGeneration;
+
+    /**
+     * Get The database name requiring authorization. use * to represent all databases under the current Catalog. for administrator level authorization type, only * is allowed. for data connection level authorization type, leave it blank. for other types, any specified database is allowed. 
+     * @return Database The database name requiring authorization. use * to represent all databases under the current Catalog. for administrator level authorization type, only * is allowed. for data connection level authorization type, leave it blank. for other types, any specified database is allowed.
      */
     public String getDatabase() {
         return this.Database;
     }
 
     /**
-     * Set The name of the target database. `*` represents all databases in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any database.
-     * @param Database The name of the target database. `*` represents all databases in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any database.
+     * Set The database name requiring authorization. use * to represent all databases under the current Catalog. for administrator level authorization type, only * is allowed. for data connection level authorization type, leave it blank. for other types, any specified database is allowed.
+     * @param Database The database name requiring authorization. use * to represent all databases under the current Catalog. for administrator level authorization type, only * is allowed. for data connection level authorization type, leave it blank. for other types, any specified database is allowed.
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get The name of the target data source. To grant admin permission, it must be `*` (all resources at this level); to grant data source and database permissions, it must be `COSDataCatalog` or `*`; to grant table permissions, it can be a custom data source; if it is left empty, `DataLakeCatalog` is used. Note: To grant permissions on a custom data source, the permissions that can be managed in the Data Lake Compute console are subsets of the account permissions granted when you connect the data source to the console. 
-     * @return Catalog The name of the target data source. To grant admin permission, it must be `*` (all resources at this level); to grant data source and database permissions, it must be `COSDataCatalog` or `*`; to grant table permissions, it can be a custom data source; if it is left empty, `DataLakeCatalog` is used. Note: To grant permissions on a custom data source, the permissions that can be managed in the Data Lake Compute console are subsets of the account permissions granted when you connect the data source to the console.
+     * Get Specifies the name of the data source requiring authorization. at administrator level, only * is supported (representing all resources at this level). for database-level or data source-level authentication, only COSDataCatalog or * is supported. for table-level authentication, user-defined data sources can be filled. defaults to DataLakeCatalog if left blank. note: if authenticating a user-defined data source, the permissions DLC can manage are a subset of the account provided when the user accesses the data source. 
+     * @return Catalog Specifies the name of the data source requiring authorization. at administrator level, only * is supported (representing all resources at this level). for database-level or data source-level authentication, only COSDataCatalog or * is supported. for table-level authentication, user-defined data sources can be filled. defaults to DataLakeCatalog if left blank. note: if authenticating a user-defined data source, the permissions DLC can manage are a subset of the account provided when the user accesses the data source.
      */
     public String getCatalog() {
         return this.Catalog;
     }
 
     /**
-     * Set The name of the target data source. To grant admin permission, it must be `*` (all resources at this level); to grant data source and database permissions, it must be `COSDataCatalog` or `*`; to grant table permissions, it can be a custom data source; if it is left empty, `DataLakeCatalog` is used. Note: To grant permissions on a custom data source, the permissions that can be managed in the Data Lake Compute console are subsets of the account permissions granted when you connect the data source to the console.
-     * @param Catalog The name of the target data source. To grant admin permission, it must be `*` (all resources at this level); to grant data source and database permissions, it must be `COSDataCatalog` or `*`; to grant table permissions, it can be a custom data source; if it is left empty, `DataLakeCatalog` is used. Note: To grant permissions on a custom data source, the permissions that can be managed in the Data Lake Compute console are subsets of the account permissions granted when you connect the data source to the console.
+     * Set Specifies the name of the data source requiring authorization. at administrator level, only * is supported (representing all resources at this level). for database-level or data source-level authentication, only COSDataCatalog or * is supported. for table-level authentication, user-defined data sources can be filled. defaults to DataLakeCatalog if left blank. note: if authenticating a user-defined data source, the permissions DLC can manage are a subset of the account provided when the user accesses the data source.
+     * @param Catalog Specifies the name of the data source requiring authorization. at administrator level, only * is supported (representing all resources at this level). for database-level or data source-level authentication, only COSDataCatalog or * is supported. for table-level authentication, user-defined data sources can be filled. defaults to DataLakeCatalog if left blank. note: if authenticating a user-defined data source, the permissions DLC can manage are a subset of the account provided when the user accesses the data source.
      */
     public void setCatalog(String Catalog) {
         this.Catalog = Catalog;
     }
 
     /**
-     * Get The name of the target table. `*` represents all tables in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any table. 
-     * @return Table The name of the target table. `*` represents all tables in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any table.
+     * Get Specifies the table name requiring authorization. use * to represent all tables in the current Database. for administrator-level authorization type, only * is allowed. for data connection level or Database-level authorization type, leave it blank. for other types, any specific data table can be specified. 
+     * @return Table Specifies the table name requiring authorization. use * to represent all tables in the current Database. for administrator-level authorization type, only * is allowed. for data connection level or Database-level authorization type, leave it blank. for other types, any specific data table can be specified.
      */
     public String getTable() {
         return this.Table;
     }
 
     /**
-     * Set The name of the target table. `*` represents all tables in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any table.
-     * @param Table The name of the target table. `*` represents all tables in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any table.
+     * Set Specifies the table name requiring authorization. use * to represent all tables in the current Database. for administrator-level authorization type, only * is allowed. for data connection level or Database-level authorization type, leave it blank. for other types, any specific data table can be specified.
+     * @param Table Specifies the table name requiring authorization. use * to represent all tables in the current Database. for administrator-level authorization type, only * is allowed. for data connection level or Database-level authorization type, leave it blank. for other types, any specific data table can be specified.
      */
     public void setTable(String Table) {
         this.Table = Table;
@@ -235,9 +243,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The name of the target function. `*` represents all functions in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any function.
+     * Get Name of the function requiring authorization. use * to represent all functions in the current Catalog. for administrator-level authorization type, only * is allowed. for data connection-level authorization type, leave it blank. for other types, any function can be specified.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Function The name of the target function. `*` represents all functions in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any function.
+     * @return Function Name of the function requiring authorization. use * to represent all functions in the current Catalog. for administrator-level authorization type, only * is allowed. for data connection-level authorization type, leave it blank. for other types, any function can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFunction() {
@@ -245,9 +253,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The name of the target function. `*` represents all functions in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any function.
+     * Set Name of the function requiring authorization. use * to represent all functions in the current Catalog. for administrator-level authorization type, only * is allowed. for data connection-level authorization type, leave it blank. for other types, any function can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Function The name of the target function. `*` represents all functions in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any function.
+     * @param Function Name of the function requiring authorization. use * to represent all functions in the current Catalog. for administrator-level authorization type, only * is allowed. for data connection-level authorization type, leave it blank. for other types, any function can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFunction(String Function) {
@@ -255,9 +263,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The name of the target view. `*` represents all views in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any view.
+     * Get Authorization is required for the view. fill in * to represent all views under the current Database. when the authorization type is administrator level, only * is allowed. when the authorization type is data connection level or Database level, only blank is allowed. for other types, any view can be specified.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return View The name of the target view. `*` represents all views in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any view.
+     * @return View Authorization is required for the view. fill in * to represent all views under the current Database. when the authorization type is administrator level, only * is allowed. when the authorization type is data connection level or Database level, only blank is allowed. for other types, any view can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getView() {
@@ -265,9 +273,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The name of the target view. `*` represents all views in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any view.
+     * Set Authorization is required for the view. fill in * to represent all views under the current Database. when the authorization type is administrator level, only * is allowed. when the authorization type is data connection level or Database level, only blank is allowed. for other types, any view can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param View The name of the target view. `*` represents all views in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any view.
+     * @param View Authorization is required for the view. fill in * to represent all views under the current Database. when the authorization type is administrator level, only * is allowed. when the authorization type is data connection level or Database level, only blank is allowed. for other types, any view can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setView(String View) {
@@ -275,9 +283,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The name of the target column. `*` represents all columns. To grant admin permissions, it must be `*`.
+     * Get Columns requiring authorization. use * to represent all current columns. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Column The name of the target column. `*` represents all columns. To grant admin permissions, it must be `*`.
+     * @return Column Columns requiring authorization. use * to represent all current columns. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getColumn() {
@@ -285,9 +293,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The name of the target column. `*` represents all columns. To grant admin permissions, it must be `*`.
+     * Set Columns requiring authorization. use * to represent all current columns. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Column The name of the target column. `*` represents all columns. To grant admin permissions, it must be `*`.
+     * @param Column Columns requiring authorization. use * to represent all current columns. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setColumn(String Column) {
@@ -295,9 +303,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The name of the target data engine. `*` represents all engines. To grant admin permissions, it must be `*`.
+     * Get The data engine requiring authorization. use * to represent all current engines. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataEngine The name of the target data engine. `*` represents all engines. To grant admin permissions, it must be `*`.
+     * @return DataEngine The data engine requiring authorization. use * to represent all current engines. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDataEngine() {
@@ -305,9 +313,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The name of the target data engine. `*` represents all engines. To grant admin permissions, it must be `*`.
+     * Set The data engine requiring authorization. use * to represent all current engines. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataEngine The name of the target data engine. `*` represents all engines. To grant admin permissions, it must be `*`.
+     * @param DataEngine The data engine requiring authorization. use * to represent all current engines. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataEngine(String DataEngine) {
@@ -474,6 +482,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Id = Id;
     }
 
+    /**
+     * Get Specifies the engine type.
+ 
+     * @return EngineGeneration Specifies the engine type.
+
+     */
+    public String getEngineGeneration() {
+        return this.EngineGeneration;
+    }
+
+    /**
+     * Set Specifies the engine type.
+
+     * @param EngineGeneration Specifies the engine type.
+
+     */
+    public void setEngineGeneration(String EngineGeneration) {
+        this.EngineGeneration = EngineGeneration;
+    }
+
     public Policy() {
     }
 
@@ -533,6 +561,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Id != null) {
             this.Id = new Long(source.Id);
         }
+        if (source.EngineGeneration != null) {
+            this.EngineGeneration = new String(source.EngineGeneration);
+        }
     }
 
 
@@ -557,6 +588,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SourceId", this.SourceId);
         this.setParamSimple(map, prefix + "SourceName", this.SourceName);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
 
     }
 }

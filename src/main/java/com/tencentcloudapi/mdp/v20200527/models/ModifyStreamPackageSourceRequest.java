@@ -53,6 +53,13 @@ Optional values: Live, VOD (on demand)
     private SourcePackageConf [] PackageConfs;
 
     /**
+    * ADS can return more precise advertisements based on Source Tag information.
+    */
+    @SerializedName("SourceTags")
+    @Expose
+    private SourceTag [] SourceTags;
+
+    /**
      * Get Source Id. 
      * @return Id Source Id.
      */
@@ -120,6 +127,22 @@ Optional values: Live, VOD (on demand)
         this.PackageConfs = PackageConfs;
     }
 
+    /**
+     * Get ADS can return more precise advertisements based on Source Tag information. 
+     * @return SourceTags ADS can return more precise advertisements based on Source Tag information.
+     */
+    public SourceTag [] getSourceTags() {
+        return this.SourceTags;
+    }
+
+    /**
+     * Set ADS can return more precise advertisements based on Source Tag information.
+     * @param SourceTags ADS can return more precise advertisements based on Source Tag information.
+     */
+    public void setSourceTags(SourceTag [] SourceTags) {
+        this.SourceTags = SourceTags;
+    }
+
     public ModifyStreamPackageSourceRequest() {
     }
 
@@ -143,6 +166,12 @@ Optional values: Live, VOD (on demand)
                 this.PackageConfs[i] = new SourcePackageConf(source.PackageConfs[i]);
             }
         }
+        if (source.SourceTags != null) {
+            this.SourceTags = new SourceTag[source.SourceTags.length];
+            for (int i = 0; i < source.SourceTags.length; i++) {
+                this.SourceTags[i] = new SourceTag(source.SourceTags[i]);
+            }
+        }
     }
 
 
@@ -154,6 +183,7 @@ Optional values: Live, VOD (on demand)
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "PackageConfs.", this.PackageConfs);
+        this.setParamArrayObj(map, prefix + "SourceTags.", this.SourceTags);
 
     }
 }

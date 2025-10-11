@@ -52,6 +52,13 @@ public class CreateStreamPackageSourceRequest extends AbstractModel {
     private SourcePackageConf [] PackageConfs;
 
     /**
+    * The sourcetag allows ADS to deliver more precise ads based on the Source Tag information
+    */
+    @SerializedName("SourceTags")
+    @Expose
+    private SourceTag [] SourceTags;
+
+    /**
      * Get The location id to which this source belongs is required and uniquely bound to one location. 
      * @return AttachedLocation The location id to which this source belongs is required and uniquely bound to one location.
      */
@@ -115,6 +122,22 @@ public class CreateStreamPackageSourceRequest extends AbstractModel {
         this.PackageConfs = PackageConfs;
     }
 
+    /**
+     * Get The sourcetag allows ADS to deliver more precise ads based on the Source Tag information 
+     * @return SourceTags The sourcetag allows ADS to deliver more precise ads based on the Source Tag information
+     */
+    public SourceTag [] getSourceTags() {
+        return this.SourceTags;
+    }
+
+    /**
+     * Set The sourcetag allows ADS to deliver more precise ads based on the Source Tag information
+     * @param SourceTags The sourcetag allows ADS to deliver more precise ads based on the Source Tag information
+     */
+    public void setSourceTags(SourceTag [] SourceTags) {
+        this.SourceTags = SourceTags;
+    }
+
     public CreateStreamPackageSourceRequest() {
     }
 
@@ -138,6 +161,12 @@ public class CreateStreamPackageSourceRequest extends AbstractModel {
                 this.PackageConfs[i] = new SourcePackageConf(source.PackageConfs[i]);
             }
         }
+        if (source.SourceTags != null) {
+            this.SourceTags = new SourceTag[source.SourceTags.length];
+            for (int i = 0; i < source.SourceTags.length; i++) {
+                this.SourceTags[i] = new SourceTag(source.SourceTags[i]);
+            }
+        }
     }
 
 
@@ -149,6 +178,7 @@ public class CreateStreamPackageSourceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "PackageConfs.", this.PackageConfs);
+        this.setParamArrayObj(map, prefix + "SourceTags.", this.SourceTags);
 
     }
 }

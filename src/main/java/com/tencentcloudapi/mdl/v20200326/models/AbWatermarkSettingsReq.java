@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mdp.v20200527.models;
+package com.tencentcloudapi.mdl.v20200326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,71 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClipRangeInfo extends AbstractModel {
+public class AbWatermarkSettingsReq extends AbstractModel {
 
     /**
-    * The vod type is valid, the content is valid starting time, Entire and SpecifyTimeRange are optional.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Offset, valid when Type is SpecifyTimeRange.
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
-     * Get The vod type is valid, the content is valid starting time, Entire and SpecifyTimeRange are optional. 
-     * @return Type The vod type is valid, the content is valid starting time, Entire and SpecifyTimeRange are optional.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The vod type is valid, the content is valid starting time, Entire and SpecifyTimeRange are optional.
-     * @param Type The vod type is valid, the content is valid starting time, Entire and SpecifyTimeRange are optional.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
-    /**
-     * Get Offset, valid when Type is SpecifyTimeRange. 
-     * @return Offset Offset, valid when Type is SpecifyTimeRange.
-     * @deprecated
-     */
-    @Deprecated
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set Offset, valid when Type is SpecifyTimeRange.
-     * @param Offset Offset, valid when Type is SpecifyTimeRange.
-     * @deprecated
-     */
-    @Deprecated
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
-    }
-
-    public ClipRangeInfo() {
+    public AbWatermarkSettingsReq() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ClipRangeInfo(ClipRangeInfo source) {
+    public AbWatermarkSettingsReq(AbWatermarkSettingsReq source) {
         if (source.Type != null) {
             this.Type = new String(source.Type);
-        }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
         }
     }
 
@@ -95,7 +65,6 @@ public class ClipRangeInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

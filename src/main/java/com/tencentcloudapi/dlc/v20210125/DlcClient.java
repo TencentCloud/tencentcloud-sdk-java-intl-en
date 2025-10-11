@@ -61,6 +61,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to bind a DMask policy.
+     * @param req AttachDataMaskPolicyRequest
+     * @return AttachDataMaskPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachDataMaskPolicyResponse AttachDataMaskPolicy(AttachDataMaskPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AttachDataMaskPolicy", AttachDataMaskPolicyResponse.class);
+    }
+
+    /**
      *This API is used to bind the authentication policy to the user.
      * @param req AttachUserPolicyRequest
      * @return AttachUserPolicyResponse
@@ -212,6 +223,17 @@ public class DlcClient extends AbstractClient{
     public CreateDataEngineResponse CreateDataEngine(CreateDataEngineRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateDataEngine", CreateDataEngineResponse.class);
+    }
+
+    /**
+     *This API is used to create a DMask policy.
+     * @param req CreateDataMaskStrategyRequest
+     * @return CreateDataMaskStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataMaskStrategyResponse CreateDataMaskStrategy(CreateDataMaskStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDataMaskStrategy", CreateDataMaskStrategyResponse.class);
     }
 
     /**

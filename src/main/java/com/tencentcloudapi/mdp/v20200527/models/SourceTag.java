@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cvm.v20170312.models;
+package com.tencentcloudapi.mdp.v20200527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,62 +21,62 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MetadataItem extends AbstractModel {
+public class SourceTag extends AbstractModel {
 
     /**
-    * Custom metadata key, consisting of uppercase letters (A-Z), lowercase letters (A-Z), digits (0-9), underscores (_), or hyphens (-), with a size limit of 128 bytes.
+    * 
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Custom metadata value. The upper limit of message size is 256 KB.
+    * 
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Custom metadata key, consisting of uppercase letters (A-Z), lowercase letters (A-Z), digits (0-9), underscores (_), or hyphens (-), with a size limit of 128 bytes. 
-     * @return Key Custom metadata key, consisting of uppercase letters (A-Z), lowercase letters (A-Z), digits (0-9), underscores (_), or hyphens (-), with a size limit of 128 bytes.
+     * Get  
+     * @return Key 
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Custom metadata key, consisting of uppercase letters (A-Z), lowercase letters (A-Z), digits (0-9), underscores (_), or hyphens (-), with a size limit of 128 bytes.
-     * @param Key Custom metadata key, consisting of uppercase letters (A-Z), lowercase letters (A-Z), digits (0-9), underscores (_), or hyphens (-), with a size limit of 128 bytes.
+     * Set 
+     * @param Key 
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Custom metadata value. The upper limit of message size is 256 KB. 
-     * @return Value Custom metadata value. The upper limit of message size is 256 KB.
+     * Get  
+     * @return Value 
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Custom metadata value. The upper limit of message size is 256 KB.
-     * @param Value Custom metadata value. The upper limit of message size is 256 KB.
+     * Set 
+     * @param Value 
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
-    public MetadataItem() {
+    public SourceTag() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public MetadataItem(MetadataItem source) {
+    public SourceTag(SourceTag source) {
         if (source.Key != null) {
             this.Key = new String(source.Key);
         }

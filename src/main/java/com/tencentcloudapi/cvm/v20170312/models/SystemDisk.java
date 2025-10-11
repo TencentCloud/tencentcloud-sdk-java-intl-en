@@ -40,8 +40,8 @@ Default value: Current disk types with inventory available.
     private String DiskType;
 
     /**
-    * Specifies the system disk ID.
-This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
+    * System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
     */
     @SerializedName("DiskId")
     @Expose
@@ -55,7 +55,8 @@ This parameter currently only serves as a response parameter for query apis such
     private Long DiskSize;
 
     /**
-    * Specifies the exclusive cluster ID it belongs to.
+    * Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("CdcId")
     @Expose
@@ -121,20 +122,20 @@ Default value: Current disk types with inventory available.
     }
 
     /**
-     * Get Specifies the system disk ID.
-This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`. 
-     * @return DiskId Specifies the system disk ID.
-This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
+     * Get System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1). 
+     * @return DiskId System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set Specifies the system disk ID.
-This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
-     * @param DiskId Specifies the system disk ID.
-This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
+     * Set System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
+     * @param DiskId System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
@@ -157,16 +158,20 @@ This parameter currently only serves as a response parameter for query apis such
     }
 
     /**
-     * Get Specifies the exclusive cluster ID it belongs to. 
-     * @return CdcId Specifies the exclusive cluster ID it belongs to.
+     * Get Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found. 
+     * @return CdcId Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set Specifies the exclusive cluster ID it belongs to.
-     * @param CdcId Specifies the exclusive cluster ID it belongs to.
+     * Set Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
+     * @param CdcId Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;

@@ -52,6 +52,13 @@ public class CreateStreamLiveWatermarkRequest extends AbstractModel {
     private CreateTextSettings TextSettings;
 
     /**
+    * AB watermark configuration
+    */
+    @SerializedName("AbWatermarkSettings")
+    @Expose
+    private AbWatermarkSettingsReq AbWatermarkSettings;
+
+    /**
      * Get Watermark name 
      * @return Name Watermark name
      */
@@ -115,6 +122,22 @@ public class CreateStreamLiveWatermarkRequest extends AbstractModel {
         this.TextSettings = TextSettings;
     }
 
+    /**
+     * Get AB watermark configuration 
+     * @return AbWatermarkSettings AB watermark configuration
+     */
+    public AbWatermarkSettingsReq getAbWatermarkSettings() {
+        return this.AbWatermarkSettings;
+    }
+
+    /**
+     * Set AB watermark configuration
+     * @param AbWatermarkSettings AB watermark configuration
+     */
+    public void setAbWatermarkSettings(AbWatermarkSettingsReq AbWatermarkSettings) {
+        this.AbWatermarkSettings = AbWatermarkSettings;
+    }
+
     public CreateStreamLiveWatermarkRequest() {
     }
 
@@ -135,6 +158,9 @@ public class CreateStreamLiveWatermarkRequest extends AbstractModel {
         if (source.TextSettings != null) {
             this.TextSettings = new CreateTextSettings(source.TextSettings);
         }
+        if (source.AbWatermarkSettings != null) {
+            this.AbWatermarkSettings = new AbWatermarkSettingsReq(source.AbWatermarkSettings);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateStreamLiveWatermarkRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "ImageSettings.", this.ImageSettings);
         this.setParamObj(map, prefix + "TextSettings.", this.TextSettings);
+        this.setParamObj(map, prefix + "AbWatermarkSettings.", this.AbWatermarkSettings);
 
     }
 }
