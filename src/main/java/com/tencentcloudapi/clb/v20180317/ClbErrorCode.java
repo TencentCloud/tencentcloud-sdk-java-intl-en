@@ -12,6 +12,9 @@ public enum ClbErrorCode {
      /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
+     /* Instance deletion is determined to be a high-risk operation through frequency verification. Please check the business or try again later. */
+     FAILEDOPERATION_FREQUENCYCHECKRISK("FailedOperation.FrequencyCheckRisk"),
+     
      /* Exceptional CLB instance status */
      FAILEDOPERATION_INVALIDLBSTATUS("FailedOperation.InvalidLBStatus"),
      
@@ -20,6 +23,12 @@ public enum ClbErrorCode {
      
      /* The specified resource is currently being operated. Please try again later. */
      FAILEDOPERATION_RESOURCEINOPERATING("FailedOperation.ResourceInOperating"),
+     
+     /* Instance deletion is determined to be a high-risk operation through rule quantity verification. To forcibly delete the instance, set the forced verification parameter ForceDelete to true. */
+     FAILEDOPERATION_TARGETNUMCHECKRISK("FailedOperation.TargetNumCheckRisk"),
+     
+     /* Instance deletion is determined to be a high-risk operation through traffic verification. To forcibly delete the instance, set the forced verification parameter ForceDelete to true. */
+     FAILEDOPERATION_TRAFFICCHECKRISK("FailedOperation.TrafficCheckRisk"),
      
      /* Internal error. */
      INTERNALERROR("InternalError"),

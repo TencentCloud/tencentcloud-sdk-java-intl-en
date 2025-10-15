@@ -24,23 +24,25 @@ import java.util.HashMap;
 public class QualityControlResult extends AbstractModel {
 
     /**
-    * The issue type. Valid values:
-`Jitter`
-`Blur`
-`LowLighting`
-`HighLighting` (overexposure)
-`CrashScreen` (video corruption)
-`BlackWhiteEdge`
-`SolidColorScreen` (blank screen)
-`Noise`
-`Mosaic` (pixelation)
-`QRCode`
-`AppletCode` (Weixin Mini Program code)
-`BarCode`
-`LowVoice`
-`HighVoice`
-`NoVoice`
-`LowEvaluation` (low no-reference video quality score)
+    * Exception type. valid values:.
+Jitter: jitter.
+Blur: specifies the blur effect.
+LowLighting: specifies low light.
+HighLighting: overexposure.
+CrashScreen: specifies screen glitch.
+BlackWhiteEdge: specifies the black and white edges.
+SolidColorScreen: specifies the solid color screen.
+Noise: specifies the noise.
+Mosaic: mosaic.
+QRCode: specifies the qr code.
+AppletCode: specifies the mini program code.
+BarCode: specifies the barcode.
+LowVoice: specifies the bass.
+HighVoice: specifies high voice detection.
+NoVoice: specifies mute.
+LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
+AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: specifies the audio noise.
     */
     @SerializedName("Type")
     @Expose
@@ -54,80 +56,88 @@ public class QualityControlResult extends AbstractModel {
     private QualityControlItem [] QualityControlItems;
 
     /**
-     * Get The issue type. Valid values:
-`Jitter`
-`Blur`
-`LowLighting`
-`HighLighting` (overexposure)
-`CrashScreen` (video corruption)
-`BlackWhiteEdge`
-`SolidColorScreen` (blank screen)
-`Noise`
-`Mosaic` (pixelation)
-`QRCode`
-`AppletCode` (Weixin Mini Program code)
-`BarCode`
-`LowVoice`
-`HighVoice`
-`NoVoice`
-`LowEvaluation` (low no-reference video quality score) 
-     * @return Type The issue type. Valid values:
-`Jitter`
-`Blur`
-`LowLighting`
-`HighLighting` (overexposure)
-`CrashScreen` (video corruption)
-`BlackWhiteEdge`
-`SolidColorScreen` (blank screen)
-`Noise`
-`Mosaic` (pixelation)
-`QRCode`
-`AppletCode` (Weixin Mini Program code)
-`BarCode`
-`LowVoice`
-`HighVoice`
-`NoVoice`
-`LowEvaluation` (low no-reference video quality score)
+     * Get Exception type. valid values:.
+Jitter: jitter.
+Blur: specifies the blur effect.
+LowLighting: specifies low light.
+HighLighting: overexposure.
+CrashScreen: specifies screen glitch.
+BlackWhiteEdge: specifies the black and white edges.
+SolidColorScreen: specifies the solid color screen.
+Noise: specifies the noise.
+Mosaic: mosaic.
+QRCode: specifies the qr code.
+AppletCode: specifies the mini program code.
+BarCode: specifies the barcode.
+LowVoice: specifies the bass.
+HighVoice: specifies high voice detection.
+NoVoice: specifies mute.
+LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
+AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: specifies the audio noise. 
+     * @return Type Exception type. valid values:.
+Jitter: jitter.
+Blur: specifies the blur effect.
+LowLighting: specifies low light.
+HighLighting: overexposure.
+CrashScreen: specifies screen glitch.
+BlackWhiteEdge: specifies the black and white edges.
+SolidColorScreen: specifies the solid color screen.
+Noise: specifies the noise.
+Mosaic: mosaic.
+QRCode: specifies the qr code.
+AppletCode: specifies the mini program code.
+BarCode: specifies the barcode.
+LowVoice: specifies the bass.
+HighVoice: specifies high voice detection.
+NoVoice: specifies mute.
+LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
+AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: specifies the audio noise.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The issue type. Valid values:
-`Jitter`
-`Blur`
-`LowLighting`
-`HighLighting` (overexposure)
-`CrashScreen` (video corruption)
-`BlackWhiteEdge`
-`SolidColorScreen` (blank screen)
-`Noise`
-`Mosaic` (pixelation)
-`QRCode`
-`AppletCode` (Weixin Mini Program code)
-`BarCode`
-`LowVoice`
-`HighVoice`
-`NoVoice`
-`LowEvaluation` (low no-reference video quality score)
-     * @param Type The issue type. Valid values:
-`Jitter`
-`Blur`
-`LowLighting`
-`HighLighting` (overexposure)
-`CrashScreen` (video corruption)
-`BlackWhiteEdge`
-`SolidColorScreen` (blank screen)
-`Noise`
-`Mosaic` (pixelation)
-`QRCode`
-`AppletCode` (Weixin Mini Program code)
-`BarCode`
-`LowVoice`
-`HighVoice`
-`NoVoice`
-`LowEvaluation` (low no-reference video quality score)
+     * Set Exception type. valid values:.
+Jitter: jitter.
+Blur: specifies the blur effect.
+LowLighting: specifies low light.
+HighLighting: overexposure.
+CrashScreen: specifies screen glitch.
+BlackWhiteEdge: specifies the black and white edges.
+SolidColorScreen: specifies the solid color screen.
+Noise: specifies the noise.
+Mosaic: mosaic.
+QRCode: specifies the qr code.
+AppletCode: specifies the mini program code.
+BarCode: specifies the barcode.
+LowVoice: specifies the bass.
+HighVoice: specifies high voice detection.
+NoVoice: specifies mute.
+LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
+AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: specifies the audio noise.
+     * @param Type Exception type. valid values:.
+Jitter: jitter.
+Blur: specifies the blur effect.
+LowLighting: specifies low light.
+HighLighting: overexposure.
+CrashScreen: specifies screen glitch.
+BlackWhiteEdge: specifies the black and white edges.
+SolidColorScreen: specifies the solid color screen.
+Noise: specifies the noise.
+Mosaic: mosaic.
+QRCode: specifies the qr code.
+AppletCode: specifies the mini program code.
+BarCode: specifies the barcode.
+LowVoice: specifies the bass.
+HighVoice: specifies high voice detection.
+NoVoice: specifies mute.
+LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
+AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: specifies the audio noise.
      */
     public void setType(String Type) {
         this.Type = Type;

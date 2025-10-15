@@ -311,6 +311,17 @@ This API is used to make calls. Currently, the agent side can only call the user
     }
 
     /**
+     *This API is used to obtain AI Conversation Analytics results.
+     * @param req DescribeAIAnalysisResultRequest
+     * @return DescribeAIAnalysisResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIAnalysisResultResponse DescribeAIAnalysisResult(DescribeAIAnalysisResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIAnalysisResult", DescribeAIAnalysisResultResponse.class);
+    }
+
+    /**
      *Obtain AI call content extraction result
      * @param req DescribeAICallExtractResultRequest
      * @return DescribeAICallExtractResultResponse

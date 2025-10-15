@@ -32,16 +32,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Uri;
 
     /**
-    * The encryption key (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Encryption key (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * The initialization vector for encryption (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Initialization vector for encryption (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Vector")
     @Expose
@@ -68,40 +68,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The encryption key (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Key The encryption key (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Encryption key (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Key Encryption key (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set The encryption key (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Key The encryption key (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Encryption key (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Key Encryption key (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get The initialization vector for encryption (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Vector The initialization vector for encryption (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Initialization vector for encryption (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return Vector Initialization vector for encryption (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getVector() {
         return this.Vector;
     }
 
     /**
-     * Set The initialization vector for encryption (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Vector The initialization vector for encryption (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Initialization vector for encryption (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param Vector Initialization vector for encryption (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setVector(String Vector) {
         this.Vector = Vector;

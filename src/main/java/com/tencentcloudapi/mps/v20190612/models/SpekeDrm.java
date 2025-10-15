@@ -41,7 +41,7 @@ Note: different DRM manufacturers have different limitations on the number of su
     private String KeyServerUrl;
 
     /**
-    * Encryption initialization vector (32-byte string). the field content is user-customized.
+    * Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
     */
     @SerializedName("Vector")
     @Expose
@@ -112,16 +112,16 @@ Note: different DRM manufacturers have different limitations on the number of su
     }
 
     /**
-     * Get Encryption initialization vector (32-byte string). the field content is user-customized. 
-     * @return Vector Encryption initialization vector (32-byte string). the field content is user-customized.
+     * Get Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized. 
+     * @return Vector Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
      */
     public String getVector() {
         return this.Vector;
     }
 
     /**
-     * Set Encryption initialization vector (32-byte string). the field content is user-customized.
-     * @param Vector Encryption initialization vector (32-byte string). the field content is user-customized.
+     * Set Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
+     * @param Vector Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
      */
     public void setVector(String Vector) {
         this.Vector = Vector;

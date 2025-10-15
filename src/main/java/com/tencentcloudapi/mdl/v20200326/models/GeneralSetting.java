@@ -31,6 +31,20 @@ public class GeneralSetting extends AbstractModel {
     private StaticImageSettings StaticImageSettings;
 
     /**
+    * Dynamic graphic overlay configuration.
+    */
+    @SerializedName("MotionGraphicsSettings")
+    @Expose
+    private MotionGraphicsSetting MotionGraphicsSettings;
+
+    /**
+    * Thumbnail Configuration.
+    */
+    @SerializedName("ThumbnailSettings")
+    @Expose
+    private ThumbnailSettings ThumbnailSettings;
+
+    /**
      * Get Static graphic overlay configuration. 
      * @return StaticImageSettings Static graphic overlay configuration.
      */
@@ -46,6 +60,38 @@ public class GeneralSetting extends AbstractModel {
         this.StaticImageSettings = StaticImageSettings;
     }
 
+    /**
+     * Get Dynamic graphic overlay configuration. 
+     * @return MotionGraphicsSettings Dynamic graphic overlay configuration.
+     */
+    public MotionGraphicsSetting getMotionGraphicsSettings() {
+        return this.MotionGraphicsSettings;
+    }
+
+    /**
+     * Set Dynamic graphic overlay configuration.
+     * @param MotionGraphicsSettings Dynamic graphic overlay configuration.
+     */
+    public void setMotionGraphicsSettings(MotionGraphicsSetting MotionGraphicsSettings) {
+        this.MotionGraphicsSettings = MotionGraphicsSettings;
+    }
+
+    /**
+     * Get Thumbnail Configuration. 
+     * @return ThumbnailSettings Thumbnail Configuration.
+     */
+    public ThumbnailSettings getThumbnailSettings() {
+        return this.ThumbnailSettings;
+    }
+
+    /**
+     * Set Thumbnail Configuration.
+     * @param ThumbnailSettings Thumbnail Configuration.
+     */
+    public void setThumbnailSettings(ThumbnailSettings ThumbnailSettings) {
+        this.ThumbnailSettings = ThumbnailSettings;
+    }
+
     public GeneralSetting() {
     }
 
@@ -57,6 +103,12 @@ public class GeneralSetting extends AbstractModel {
         if (source.StaticImageSettings != null) {
             this.StaticImageSettings = new StaticImageSettings(source.StaticImageSettings);
         }
+        if (source.MotionGraphicsSettings != null) {
+            this.MotionGraphicsSettings = new MotionGraphicsSetting(source.MotionGraphicsSettings);
+        }
+        if (source.ThumbnailSettings != null) {
+            this.ThumbnailSettings = new ThumbnailSettings(source.ThumbnailSettings);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class GeneralSetting extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "StaticImageSettings.", this.StaticImageSettings);
+        this.setParamObj(map, prefix + "MotionGraphicsSettings.", this.MotionGraphicsSettings);
+        this.setParamObj(map, prefix + "ThumbnailSettings.", this.ThumbnailSettings);
 
     }
 }

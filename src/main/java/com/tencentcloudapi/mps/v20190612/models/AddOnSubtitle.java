@@ -52,6 +52,22 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String SubtitleName;
 
     /**
+    * Output format of the subtitle. valid values: "WebVTT", "TTML".
+Default value: "WebVTT".
+    */
+    @SerializedName("OutputFormat")
+    @Expose
+    private String OutputFormat;
+
+    /**
+    * Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
+Default value: `false`.
+    */
+    @SerializedName("DefaultTrack")
+    @Expose
+    private Boolean DefaultTrack;
+
+    /**
      * Get The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
 <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
@@ -127,6 +143,46 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.SubtitleName = SubtitleName;
     }
 
+    /**
+     * Get Output format of the subtitle. valid values: "WebVTT", "TTML".
+Default value: "WebVTT". 
+     * @return OutputFormat Output format of the subtitle. valid values: "WebVTT", "TTML".
+Default value: "WebVTT".
+     */
+    public String getOutputFormat() {
+        return this.OutputFormat;
+    }
+
+    /**
+     * Set Output format of the subtitle. valid values: "WebVTT", "TTML".
+Default value: "WebVTT".
+     * @param OutputFormat Output format of the subtitle. valid values: "WebVTT", "TTML".
+Default value: "WebVTT".
+     */
+    public void setOutputFormat(String OutputFormat) {
+        this.OutputFormat = OutputFormat;
+    }
+
+    /**
+     * Get Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
+Default value: `false`. 
+     * @return DefaultTrack Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
+Default value: `false`.
+     */
+    public Boolean getDefaultTrack() {
+        return this.DefaultTrack;
+    }
+
+    /**
+     * Set Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
+Default value: `false`.
+     * @param DefaultTrack Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
+Default value: `false`.
+     */
+    public void setDefaultTrack(Boolean DefaultTrack) {
+        this.DefaultTrack = DefaultTrack;
+    }
+
     public AddOnSubtitle() {
     }
 
@@ -144,6 +200,12 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.SubtitleName != null) {
             this.SubtitleName = new String(source.SubtitleName);
         }
+        if (source.OutputFormat != null) {
+            this.OutputFormat = new String(source.OutputFormat);
+        }
+        if (source.DefaultTrack != null) {
+            this.DefaultTrack = new Boolean(source.DefaultTrack);
+        }
     }
 
 
@@ -154,6 +216,8 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "Subtitle.", this.Subtitle);
         this.setParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
+        this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
+        this.setParamSimple(map, prefix + "DefaultTrack", this.DefaultTrack);
 
     }
 }

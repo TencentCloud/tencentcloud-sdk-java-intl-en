@@ -215,6 +215,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a newly purchased cluster.
+     * @param req CreateIntegrateClusterRequest
+     * @return CreateIntegrateClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIntegrateClusterResponse CreateIntegrateCluster(CreateIntegrateClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIntegrateCluster", CreateIntegrateClusterResponse.class);
+    }
+
+    /**
      *This API is used to create parameter templates.
      * @param req CreateParamTemplateRequest
      * @return CreateParamTemplateResponse
@@ -652,6 +663,17 @@ public class CynosdbClient extends AbstractClient{
     public DescribeInstancesWithinSameClusterResponse DescribeInstancesWithinSameCluster(DescribeInstancesWithinSameClusterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstancesWithinSameCluster", DescribeInstancesWithinSameClusterResponse.class);
+    }
+
+    /**
+     *This API is used to query cluster tasks.
+     * @param req DescribeIntegrateTaskRequest
+     * @return DescribeIntegrateTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIntegrateTaskResponse DescribeIntegrateTask(DescribeIntegrateTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIntegrateTask", DescribeIntegrateTaskResponse.class);
     }
 
     /**

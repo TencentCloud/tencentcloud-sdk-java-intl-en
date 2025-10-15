@@ -369,6 +369,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a data masking policy.
+     * @param req DeleteDataMaskStrategyRequest
+     * @return DeleteDataMaskStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDataMaskStrategyResponse DeleteDataMaskStrategy(DeleteDataMaskStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDataMaskStrategy", DeleteDataMaskStrategyResponse.class);
+    }
+
+    /**
      *This API is used to delete a Spark job.
      * @param req DeleteSparkAppRequest
      * @return DeleteSparkAppResponse
@@ -531,6 +542,17 @@ public class DlcClient extends AbstractClient{
     public DescribeDataEnginesScaleDetailResponse DescribeDataEnginesScaleDetail(DescribeDataEnginesScaleDetailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataEnginesScaleDetail", DescribeDataEnginesScaleDetailResponse.class);
+    }
+
+    /**
+     *This API is used to query the DMask list.
+     * @param req DescribeDataMaskStrategiesRequest
+     * @return DescribeDataMaskStrategiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataMaskStrategiesResponse DescribeDataMaskStrategies(DescribeDataMaskStrategiesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataMaskStrategies", DescribeDataMaskStrategiesResponse.class);
     }
 
     /**
@@ -1169,6 +1191,17 @@ public class DlcClient extends AbstractClient{
     public UpdateDataEngineConfigResponse UpdateDataEngineConfig(UpdateDataEngineConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateDataEngineConfig", UpdateDataEngineConfigResponse.class);
+    }
+
+    /**
+     *This API is used to update the DMask policy.
+     * @param req UpdateDataMaskStrategyRequest
+     * @return UpdateDataMaskStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDataMaskStrategyResponse UpdateDataMaskStrategy(UpdateDataMaskStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateDataMaskStrategy", UpdateDataMaskStrategyResponse.class);
     }
 
     /**

@@ -50,17 +50,18 @@ Advanced edition: better effectiveness, suitable for mini-drama and reality styl
     private String WatermarkModel;
 
     /**
-    * Specifies automatic removal of a custom region.
-Specifies the use of an AI model to automatically detect and erase existing targets in the specified region.
-Note that this parameter will not take effect when the removal method is custom.
+    * Automatically erase the custom region.
+Automatically detects and erases the targeted removal in the specified region using the AI model.
+Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
     */
     @SerializedName("AutoAreas")
     @Expose
     private EraseArea [] AutoAreas;
 
     /**
-    * Specifies erasure of a custom region.
-Detects and directly performs removal within a specified time range for the selected region.
+    * Specifies the removal of a custom region.
+Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
+Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
     */
     @SerializedName("CustomAreas")
     @Expose
@@ -147,44 +148,48 @@ Advanced edition: better effectiveness, suitable for mini-drama and reality styl
     }
 
     /**
-     * Get Specifies automatic removal of a custom region.
-Specifies the use of an AI model to automatically detect and erase existing targets in the specified region.
-Note that this parameter will not take effect when the removal method is custom. 
-     * @return AutoAreas Specifies automatic removal of a custom region.
-Specifies the use of an AI model to automatically detect and erase existing targets in the specified region.
-Note that this parameter will not take effect when the removal method is custom.
+     * Get Automatically erase the custom region.
+Automatically detects and erases the targeted removal in the specified region using the AI model.
+Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged. 
+     * @return AutoAreas Automatically erase the custom region.
+Automatically detects and erases the targeted removal in the specified region using the AI model.
+Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
      */
     public EraseArea [] getAutoAreas() {
         return this.AutoAreas;
     }
 
     /**
-     * Set Specifies automatic removal of a custom region.
-Specifies the use of an AI model to automatically detect and erase existing targets in the specified region.
-Note that this parameter will not take effect when the removal method is custom.
-     * @param AutoAreas Specifies automatic removal of a custom region.
-Specifies the use of an AI model to automatically detect and erase existing targets in the specified region.
-Note that this parameter will not take effect when the removal method is custom.
+     * Set Automatically erase the custom region.
+Automatically detects and erases the targeted removal in the specified region using the AI model.
+Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
+     * @param AutoAreas Automatically erase the custom region.
+Automatically detects and erases the targeted removal in the specified region using the AI model.
+Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
      */
     public void setAutoAreas(EraseArea [] AutoAreas) {
         this.AutoAreas = AutoAreas;
     }
 
     /**
-     * Get Specifies erasure of a custom region.
-Detects and directly performs removal within a specified time range for the selected region. 
-     * @return CustomAreas Specifies erasure of a custom region.
-Detects and directly performs removal within a specified time range for the selected region.
+     * Get Specifies the removal of a custom region.
+Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
+Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed. 
+     * @return CustomAreas Specifies the removal of a custom region.
+Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
+Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
      */
     public EraseTimeArea [] getCustomAreas() {
         return this.CustomAreas;
     }
 
     /**
-     * Set Specifies erasure of a custom region.
-Detects and directly performs removal within a specified time range for the selected region.
-     * @param CustomAreas Specifies erasure of a custom region.
-Detects and directly performs removal within a specified time range for the selected region.
+     * Set Specifies the removal of a custom region.
+Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
+Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
+     * @param CustomAreas Specifies the removal of a custom region.
+Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
+Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
      */
     public void setCustomAreas(EraseTimeArea [] CustomAreas) {
         this.CustomAreas = CustomAreas;

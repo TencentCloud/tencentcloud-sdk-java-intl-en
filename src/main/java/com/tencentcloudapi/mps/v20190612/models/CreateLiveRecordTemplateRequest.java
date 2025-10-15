@@ -52,7 +52,13 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
-    * Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
+    * Recording type. Valid values: 
+
+- video: audio and video recording; 
+- audio: audio recording; 
+- auto: automatic detection;
+
+If it is left blank, "video" will be used as the default value.
     */
     @SerializedName("RecordType")
     @Expose
@@ -123,16 +129,40 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used. 
-     * @return RecordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
+     * Get Recording type. Valid values: 
+
+- video: audio and video recording; 
+- audio: audio recording; 
+- auto: automatic detection;
+
+If it is left blank, "video" will be used as the default value. 
+     * @return RecordType Recording type. Valid values: 
+
+- video: audio and video recording; 
+- audio: audio recording; 
+- auto: automatic detection;
+
+If it is left blank, "video" will be used as the default value.
      */
     public String getRecordType() {
         return this.RecordType;
     }
 
     /**
-     * Set Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
-     * @param RecordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
+     * Set Recording type. Valid values: 
+
+- video: audio and video recording; 
+- audio: audio recording; 
+- auto: automatic detection;
+
+If it is left blank, "video" will be used as the default value.
+     * @param RecordType Recording type. Valid values: 
+
+- video: audio and video recording; 
+- audio: audio recording; 
+- auto: automatic detection;
+
+If it is left blank, "video" will be used as the default value.
      */
     public void setRecordType(String RecordType) {
         this.RecordType = RecordType;

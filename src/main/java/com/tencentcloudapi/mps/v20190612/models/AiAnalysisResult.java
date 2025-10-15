@@ -27,13 +27,14 @@ public class AiAnalysisResult extends AbstractModel {
     * Task type. valid values:.
 <Li>Classification: intelligent classification.</li>.
 <Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tag.</li>.
-<Li>FrameTag: specifies intelligent frame-by-frame tagging.</li>.
+<Li>Tag: intelligent tagging.</li>.
+<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
 <Li>Highlight: intelligent highlights</li>.
 <Li>DeLogo: intelligent removal.</li>.
 <li>Description: large model summarization.</li>
 
 <Li>Dubbing: intelligent dubbing.</li>.
+<Li>VideoRemake: specifies video deduplication.</li>.
     */
     @SerializedName("Type")
     @Expose
@@ -124,26 +125,36 @@ Note: This field may return null, indicating that no valid value can be obtained
     private AiAnalysisTaskDubbingResult DubbingTask;
 
     /**
+    * The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("VideoRemakeTask")
+    @Expose
+    private AiAnalysisTaskVideoRemakeResult VideoRemakeTask;
+
+    /**
      * Get Task type. valid values:.
 <Li>Classification: intelligent classification.</li>.
 <Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tag.</li>.
-<Li>FrameTag: specifies intelligent frame-by-frame tagging.</li>.
-<Li>Highlight: intelligent highlights</li>.
-<Li>DeLogo: intelligent removal.</li>.
-<li>Description: large model summarization.</li>
-
-<Li>Dubbing: intelligent dubbing.</li>. 
-     * @return Type Task type. valid values:.
-<Li>Classification: intelligent classification.</li>.
-<Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tag.</li>.
-<Li>FrameTag: specifies intelligent frame-by-frame tagging.</li>.
+<Li>Tag: intelligent tagging.</li>.
+<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
 <Li>Highlight: intelligent highlights</li>.
 <Li>DeLogo: intelligent removal.</li>.
 <li>Description: large model summarization.</li>
 
 <Li>Dubbing: intelligent dubbing.</li>.
+<Li>VideoRemake: specifies video deduplication.</li>. 
+     * @return Type Task type. valid values:.
+<Li>Classification: intelligent classification.</li>.
+<Li>Cover: specifies the intelligent cover.</li>.
+<Li>Tag: intelligent tagging.</li>.
+<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
+<Li>Highlight: intelligent highlights</li>.
+<Li>DeLogo: intelligent removal.</li>.
+<li>Description: large model summarization.</li>
+
+<Li>Dubbing: intelligent dubbing.</li>.
+<Li>VideoRemake: specifies video deduplication.</li>.
      */
     public String getType() {
         return this.Type;
@@ -153,23 +164,25 @@ Note: This field may return null, indicating that no valid value can be obtained
      * Set Task type. valid values:.
 <Li>Classification: intelligent classification.</li>.
 <Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tag.</li>.
-<Li>FrameTag: specifies intelligent frame-by-frame tagging.</li>.
+<Li>Tag: intelligent tagging.</li>.
+<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
 <Li>Highlight: intelligent highlights</li>.
 <Li>DeLogo: intelligent removal.</li>.
 <li>Description: large model summarization.</li>
 
 <Li>Dubbing: intelligent dubbing.</li>.
+<Li>VideoRemake: specifies video deduplication.</li>.
      * @param Type Task type. valid values:.
 <Li>Classification: intelligent classification.</li>.
 <Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tag.</li>.
-<Li>FrameTag: specifies intelligent frame-by-frame tagging.</li>.
+<Li>Tag: intelligent tagging.</li>.
+<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
 <Li>Highlight: intelligent highlights</li>.
 <Li>DeLogo: intelligent removal.</li>.
 <li>Description: large model summarization.</li>
 
 <Li>Dubbing: intelligent dubbing.</li>.
+<Li>VideoRemake: specifies video deduplication.</li>.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -379,6 +392,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.DubbingTask = DubbingTask;
     }
 
+    /**
+     * Get The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return VideoRemakeTask The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public AiAnalysisTaskVideoRemakeResult getVideoRemakeTask() {
+        return this.VideoRemakeTask;
+    }
+
+    /**
+     * Set The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param VideoRemakeTask The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setVideoRemakeTask(AiAnalysisTaskVideoRemakeResult VideoRemakeTask) {
+        this.VideoRemakeTask = VideoRemakeTask;
+    }
+
     public AiAnalysisResult() {
     }
 
@@ -423,6 +456,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.DubbingTask != null) {
             this.DubbingTask = new AiAnalysisTaskDubbingResult(source.DubbingTask);
         }
+        if (source.VideoRemakeTask != null) {
+            this.VideoRemakeTask = new AiAnalysisTaskVideoRemakeResult(source.VideoRemakeTask);
+        }
     }
 
 
@@ -442,6 +478,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "DescriptionTask.", this.DescriptionTask);
         this.setParamObj(map, prefix + "HorizontalToVerticalTask.", this.HorizontalToVerticalTask);
         this.setParamObj(map, prefix + "DubbingTask.", this.DubbingTask);
+        this.setParamObj(map, prefix + "VideoRemakeTask.", this.VideoRemakeTask);
 
     }
 }

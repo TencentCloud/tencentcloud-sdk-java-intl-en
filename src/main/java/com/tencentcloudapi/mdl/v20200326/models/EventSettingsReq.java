@@ -101,6 +101,13 @@ public class EventSettingsReq extends AbstractModel {
     private StaticImageDeactivateSetting StaticImageDeactivateSetting;
 
     /**
+    * Dynamic graphic overlay activate configuration
+    */
+    @SerializedName("MotionGraphicsActivateSetting")
+    @Expose
+    private MotionGraphicsActivateSetting MotionGraphicsActivateSetting;
+
+    /**
      * Get Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`,`TIMED_METADATA `,`STATIC_IMAGE_ACTIVATE `,`STATIC_IMAGE_DEACTIVATE `. If it is not specified, `INPUT_SWITCH` will be used. 
      * @return EventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`,`TIMED_METADATA `,`STATIC_IMAGE_ACTIVATE `,`STATIC_IMAGE_DEACTIVATE `. If it is not specified, `INPUT_SWITCH` will be used.
      */
@@ -276,6 +283,22 @@ public class EventSettingsReq extends AbstractModel {
         this.StaticImageDeactivateSetting = StaticImageDeactivateSetting;
     }
 
+    /**
+     * Get Dynamic graphic overlay activate configuration 
+     * @return MotionGraphicsActivateSetting Dynamic graphic overlay activate configuration
+     */
+    public MotionGraphicsActivateSetting getMotionGraphicsActivateSetting() {
+        return this.MotionGraphicsActivateSetting;
+    }
+
+    /**
+     * Set Dynamic graphic overlay activate configuration
+     * @param MotionGraphicsActivateSetting Dynamic graphic overlay activate configuration
+     */
+    public void setMotionGraphicsActivateSetting(MotionGraphicsActivateSetting MotionGraphicsActivateSetting) {
+        this.MotionGraphicsActivateSetting = MotionGraphicsActivateSetting;
+    }
+
     public EventSettingsReq() {
     }
 
@@ -323,6 +346,9 @@ public class EventSettingsReq extends AbstractModel {
         if (source.StaticImageDeactivateSetting != null) {
             this.StaticImageDeactivateSetting = new StaticImageDeactivateSetting(source.StaticImageDeactivateSetting);
         }
+        if (source.MotionGraphicsActivateSetting != null) {
+            this.MotionGraphicsActivateSetting = new MotionGraphicsActivateSetting(source.MotionGraphicsActivateSetting);
+        }
     }
 
 
@@ -341,6 +367,7 @@ public class EventSettingsReq extends AbstractModel {
         this.setParamObj(map, prefix + "TimedMetadataSetting.", this.TimedMetadataSetting);
         this.setParamObj(map, prefix + "StaticImageActivateSetting.", this.StaticImageActivateSetting);
         this.setParamObj(map, prefix + "StaticImageDeactivateSetting.", this.StaticImageDeactivateSetting);
+        this.setParamObj(map, prefix + "MotionGraphicsActivateSetting.", this.MotionGraphicsActivateSetting);
 
     }
 }

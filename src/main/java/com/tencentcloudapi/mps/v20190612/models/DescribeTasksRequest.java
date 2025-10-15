@@ -24,11 +24,21 @@ import java.util.HashMap;
 public class DescribeTasksRequest extends AbstractModel {
 
     /**
-    * Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
+    * Filters task status. available values:.
+-WAITING.
+-PROCESSING (processing).
+-FINISH (completed).
     */
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * Indicates whether there is a subtask failure when the task is complete.
+    */
+    @SerializedName("SubTaskHasFailed")
+    @Expose
+    private Boolean SubTaskHasFailed;
 
     /**
     * Number of returned entries. Default value: 10. Maximum value: 100.
@@ -59,19 +69,47 @@ public class DescribeTasksRequest extends AbstractModel {
     private String EndTime;
 
     /**
-     * Get Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed). 
-     * @return Status Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
+     * Get Filters task status. available values:.
+-WAITING.
+-PROCESSING (processing).
+-FINISH (completed). 
+     * @return Status Filters task status. available values:.
+-WAITING.
+-PROCESSING (processing).
+-FINISH (completed).
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
-     * @param Status Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
+     * Set Filters task status. available values:.
+-WAITING.
+-PROCESSING (processing).
+-FINISH (completed).
+     * @param Status Filters task status. available values:.
+-WAITING.
+-PROCESSING (processing).
+-FINISH (completed).
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get Indicates whether there is a subtask failure when the task is complete. 
+     * @return SubTaskHasFailed Indicates whether there is a subtask failure when the task is complete.
+     */
+    public Boolean getSubTaskHasFailed() {
+        return this.SubTaskHasFailed;
+    }
+
+    /**
+     * Set Indicates whether there is a subtask failure when the task is complete.
+     * @param SubTaskHasFailed Indicates whether there is a subtask failure when the task is complete.
+     */
+    public void setSubTaskHasFailed(Boolean SubTaskHasFailed) {
+        this.SubTaskHasFailed = SubTaskHasFailed;
     }
 
     /**
@@ -149,6 +187,9 @@ public class DescribeTasksRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.SubTaskHasFailed != null) {
+            this.SubTaskHasFailed = new Boolean(source.SubTaskHasFailed);
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
@@ -169,6 +210,7 @@ public class DescribeTasksRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "SubTaskHasFailed", this.SubTaskHasFailed);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
