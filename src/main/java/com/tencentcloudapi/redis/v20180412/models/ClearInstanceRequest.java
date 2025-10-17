@@ -40,6 +40,13 @@ public class ClearInstanceRequest extends AbstractModel {
     private String Password;
 
     /**
+    * Whether to encrypt the password.
+    */
+    @SerializedName("EncryptPassword")
+    @Expose
+    private Boolean EncryptPassword;
+
+    /**
      * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
      * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
@@ -79,6 +86,22 @@ public class ClearInstanceRequest extends AbstractModel {
         this.Password = Password;
     }
 
+    /**
+     * Get Whether to encrypt the password. 
+     * @return EncryptPassword Whether to encrypt the password.
+     */
+    public Boolean getEncryptPassword() {
+        return this.EncryptPassword;
+    }
+
+    /**
+     * Set Whether to encrypt the password.
+     * @param EncryptPassword Whether to encrypt the password.
+     */
+    public void setEncryptPassword(Boolean EncryptPassword) {
+        this.EncryptPassword = EncryptPassword;
+    }
+
     public ClearInstanceRequest() {
     }
 
@@ -93,6 +116,9 @@ public class ClearInstanceRequest extends AbstractModel {
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.EncryptPassword != null) {
+            this.EncryptPassword = new Boolean(source.EncryptPassword);
+        }
     }
 
 
@@ -102,6 +128,7 @@ public class ClearInstanceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
 
     }
 }

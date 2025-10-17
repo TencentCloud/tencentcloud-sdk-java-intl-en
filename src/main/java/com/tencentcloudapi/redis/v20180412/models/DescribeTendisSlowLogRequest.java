@@ -45,21 +45,21 @@ public class DescribeTendisSlowLogRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * Slow query threshold in ms
+    * Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
     */
     @SerializedName("MinQueryTime")
     @Expose
     private Long MinQueryTime;
 
     /**
-    * Page size. Default value 20. Maximum value 100.
+    * Page size. The default value is 20, the minimum value is 1, and the maximum value is 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+    * Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -114,48 +114,48 @@ public class DescribeTendisSlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get Slow query threshold in ms 
-     * @return MinQueryTime Slow query threshold in ms
+     * Get Slow query threshold, in milliseconds. The value is a positive integer greater than 0. 
+     * @return MinQueryTime Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
      */
     public Long getMinQueryTime() {
         return this.MinQueryTime;
     }
 
     /**
-     * Set Slow query threshold in ms
-     * @param MinQueryTime Slow query threshold in ms
+     * Set Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
+     * @param MinQueryTime Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
      */
     public void setMinQueryTime(Long MinQueryTime) {
         this.MinQueryTime = MinQueryTime;
     }
 
     /**
-     * Get Page size. Default value 20. Maximum value 100. 
-     * @return Limit Page size. Default value 20. Maximum value 100.
+     * Get Page size. The default value is 20, the minimum value is 1, and the maximum value is 100. 
+     * @return Limit Page size. The default value is 20, the minimum value is 1, and the maximum value is 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Page size. Default value 20. Maximum value 100.
-     * @param Limit Page size. Default value 20. Maximum value 100.
+     * Set Page size. The default value is 20, the minimum value is 1, and the maximum value is 100.
+     * @param Limit Page size. The default value is 20, the minimum value is 1, and the maximum value is 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1). 
-     * @return Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+     * Get Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0. 
+     * @return Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
-     * @param Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+     * Set Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
+     * @param Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

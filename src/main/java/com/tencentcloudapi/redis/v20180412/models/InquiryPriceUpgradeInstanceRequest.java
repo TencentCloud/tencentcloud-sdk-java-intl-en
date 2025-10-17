@@ -38,7 +38,9 @@ public class InquiryPriceUpgradeInstanceRequest extends AbstractModel {
     private Long MemSize;
 
     /**
-    * Number of shards. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
+    * Number of shards.
+- The instance adopts the standard architecture. The default value of RedisShardNum is 1.
+- This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Stand-Alone Edition.
     */
     @SerializedName("RedisShardNum")
     @Expose
@@ -84,16 +86,24 @@ public class InquiryPriceUpgradeInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of shards. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition. 
-     * @return RedisShardNum Number of shards. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
+     * Get Number of shards.
+- The instance adopts the standard architecture. The default value of RedisShardNum is 1.
+- This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Stand-Alone Edition. 
+     * @return RedisShardNum Number of shards.
+- The instance adopts the standard architecture. The default value of RedisShardNum is 1.
+- This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Stand-Alone Edition.
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set Number of shards. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
-     * @param RedisShardNum Number of shards. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
+     * Set Number of shards.
+- The instance adopts the standard architecture. The default value of RedisShardNum is 1.
+- This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Stand-Alone Edition.
+     * @param RedisShardNum Number of shards.
+- The instance adopts the standard architecture. The default value of RedisShardNum is 1.
+- This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Stand-Alone Edition.
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;

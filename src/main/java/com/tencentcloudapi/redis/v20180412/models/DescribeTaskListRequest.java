@@ -31,7 +31,7 @@ public class DescribeTaskListRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Instance name
+    * Instance name. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeTaskListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+    * Pagination offset, which is an integer multiple of Limit. Offset = Limit x (Page number – 1). The default value is 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -183,16 +183,16 @@ public class DescribeTaskListRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Instance name. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list. 
+     * @return InstanceName Instance name. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Instance name. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+     * @param InstanceName Instance name. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -215,16 +215,16 @@ public class DescribeTaskListRequest extends AbstractModel {
     }
 
     /**
-     * Get Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1). 
-     * @return Offset Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+     * Get Pagination offset, which is an integer multiple of Limit. Offset = Limit x (Page number – 1). The default value is 0. 
+     * @return Offset Pagination offset, which is an integer multiple of Limit. Offset = Limit x (Page number – 1). The default value is 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
-     * @param Offset Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+     * Set Pagination offset, which is an integer multiple of Limit. Offset = Limit x (Page number – 1). The default value is 0.
+     * @param Offset Pagination offset, which is an integer multiple of Limit. Offset = Limit x (Page number – 1). The default value is 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

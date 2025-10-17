@@ -237,6 +237,13 @@ Node information of an instance. Currently, information about the node type (mas
     private String [] AlarmPolicyList;
 
     /**
+    * Whether to encrypt the password.
+    */
+    @SerializedName("EncryptPassword")
+    @Expose
+    private Boolean EncryptPassword;
+
+    /**
      * Get Instance type.
 
 <ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li>Note: CKV editions are currently used by some users and are temporarily retained.</ul> 
@@ -776,6 +783,22 @@ Node information of an instance. Currently, information about the node type (mas
         this.AlarmPolicyList = AlarmPolicyList;
     }
 
+    /**
+     * Get Whether to encrypt the password. 
+     * @return EncryptPassword Whether to encrypt the password.
+     */
+    public Boolean getEncryptPassword() {
+        return this.EncryptPassword;
+    }
+
+    /**
+     * Set Whether to encrypt the password.
+     * @param EncryptPassword Whether to encrypt the password.
+     */
+    public void setEncryptPassword(Boolean EncryptPassword) {
+        this.EncryptPassword = EncryptPassword;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -874,6 +897,9 @@ Node information of an instance. Currently, information about the node type (mas
                 this.AlarmPolicyList[i] = new String(source.AlarmPolicyList[i]);
             }
         }
+        if (source.EncryptPassword != null) {
+            this.EncryptPassword = new Boolean(source.EncryptPassword);
+        }
     }
 
 
@@ -907,6 +933,7 @@ Node information of an instance. Currently, information about the node type (mas
         this.setParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
         this.setParamSimple(map, prefix + "RedisClusterId", this.RedisClusterId);
         this.setParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
+        this.setParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
 
     }
 }

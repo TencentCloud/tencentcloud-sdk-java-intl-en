@@ -73,21 +73,24 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     private Long BillingMode;
 
     /**
-    * ID of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+    * ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
+    * Number of instance shards.
+- The number of shards is required to be set to 1 for the standard architecture.
+- The number of shards can be set to 1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, or 128 for the cluster architecture.
     */
     @SerializedName("RedisShardNum")
     @Expose
     private Long RedisShardNum;
 
     /**
-    * Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
+    * Number of instance replicas. Valid values: 1, 2, 3, 4, and 5.
     */
     @SerializedName("RedisReplicasNum")
     @Expose
@@ -103,7 +106,8 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     private Boolean ReplicasReadonly;
 
     /**
-    * Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+    * Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
     */
     @SerializedName("ZoneName")
     @Expose
@@ -256,48 +260,60 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     }
 
     /**
-     * Get ID of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1). 
-     * @return ZoneId ID of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+     * Get ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**. 
+     * @return ZoneId ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
-     * @param ZoneId ID of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+     * Set ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
+     * @param ZoneId ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified. 
-     * @return RedisShardNum Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
+     * Get Number of instance shards.
+- The number of shards is required to be set to 1 for the standard architecture.
+- The number of shards can be set to 1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, or 128 for the cluster architecture. 
+     * @return RedisShardNum Number of instance shards.
+- The number of shards is required to be set to 1 for the standard architecture.
+- The number of shards can be set to 1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, or 128 for the cluster architecture.
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
-     * @param RedisShardNum Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
+     * Set Number of instance shards.
+- The number of shards is required to be set to 1 for the standard architecture.
+- The number of shards can be set to 1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, or 128 for the cluster architecture.
+     * @param RedisShardNum Number of instance shards.
+- The number of shards is required to be set to 1 for the standard architecture.
+- The number of shards can be set to 1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, or 128 for the cluster architecture.
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
     /**
-     * Get Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured. 
-     * @return RedisReplicasNum Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
+     * Get Number of instance replicas. Valid values: 1, 2, 3, 4, and 5. 
+     * @return RedisReplicasNum Number of instance replicas. Valid values: 1, 2, 3, 4, and 5.
      */
     public Long getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
     /**
-     * Set Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
-     * @param RedisReplicasNum Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
+     * Set Number of instance replicas. Valid values: 1, 2, 3, 4, and 5.
+     * @param RedisReplicasNum Number of instance replicas. Valid values: 1, 2, 3, 4, and 5.
      */
     public void setRedisReplicasNum(Long RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;
@@ -328,16 +344,20 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     }
 
     /**
-     * Get Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1). 
-     * @return ZoneName Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+     * Get Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**. 
+     * @return ZoneName Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
-     * @param ZoneName Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+     * Set Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
+     * @param ZoneName Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;

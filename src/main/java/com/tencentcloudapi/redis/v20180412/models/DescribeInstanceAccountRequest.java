@@ -31,7 +31,7 @@ public class DescribeInstanceAccountRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Number of entries per page
+    * Pagination size. The default value is 20, the minimum value is 1, and the maximum value is 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeInstanceAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of entries per page 
-     * @return Limit Number of entries per page
+     * Get Pagination size. The default value is 20, the minimum value is 1, and the maximum value is 100. 
+     * @return Limit Pagination size. The default value is 20, the minimum value is 1, and the maximum value is 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries per page
-     * @param Limit Number of entries per page
+     * Set Pagination size. The default value is 20, the minimum value is 1, and the maximum value is 100.
+     * @param Limit Pagination size. The default value is 20, the minimum value is 1, and the maximum value is 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

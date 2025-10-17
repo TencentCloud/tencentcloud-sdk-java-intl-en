@@ -39,6 +39,7 @@ public class ModifyMaintenanceWindowRequest extends AbstractModel {
 
     /**
     * End time of the maintenance window, for example, 19:00.
+**Note:** Maintenance window duration. Valid values: 30 minutes, 1 hour, 1.5 hours, 2 hours, and 3 hours.
     */
     @SerializedName("EndTime")
     @Expose
@@ -77,8 +78,10 @@ public class ModifyMaintenanceWindowRequest extends AbstractModel {
     }
 
     /**
-     * Get End time of the maintenance window, for example, 19:00. 
+     * Get End time of the maintenance window, for example, 19:00.
+**Note:** Maintenance window duration. Valid values: 30 minutes, 1 hour, 1.5 hours, 2 hours, and 3 hours. 
      * @return EndTime End time of the maintenance window, for example, 19:00.
+**Note:** Maintenance window duration. Valid values: 30 minutes, 1 hour, 1.5 hours, 2 hours, and 3 hours.
      */
     public String getEndTime() {
         return this.EndTime;
@@ -86,7 +89,9 @@ public class ModifyMaintenanceWindowRequest extends AbstractModel {
 
     /**
      * Set End time of the maintenance window, for example, 19:00.
+**Note:** Maintenance window duration. Valid values: 30 minutes, 1 hour, 1.5 hours, 2 hours, and 3 hours.
      * @param EndTime End time of the maintenance window, for example, 19:00.
+**Note:** Maintenance window duration. Valid values: 30 minutes, 1 hour, 1.5 hours, 2 hours, and 3 hours.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

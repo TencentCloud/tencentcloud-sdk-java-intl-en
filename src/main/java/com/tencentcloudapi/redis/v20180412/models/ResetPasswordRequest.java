@@ -31,7 +31,10 @@ public class ResetPasswordRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
+    * Reset password. This parameter can be left unspecified when a password-free instance is used.
+- It should contain 8 to 32 characters. 12 or more characters are recommended.
+- It cannot start with a forward slash (/).
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
     */
     @SerializedName("Password")
     @Expose
@@ -39,12 +42,21 @@ public class ResetPasswordRequest extends AbstractModel {
 
     /**
     * Whether to switch to a password-free instance.
-- false: Switch to a non-password-free instance.
-- true: Switch to a password-free instance. Default value: false.
+- false: switch to an instance that requires a password. The default value is false.
+- true: switch to a password-free instance.
     */
     @SerializedName("NoAuth")
     @Expose
     private Boolean NoAuth;
+
+    /**
+    * Whether to encrypt the password.
+- false: non-encrypted password. The default value is false.
+- true: encrypted password.
+    */
+    @SerializedName("EncryptPassword")
+    @Expose
+    private Boolean EncryptPassword;
 
     /**
      * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
@@ -63,16 +75,28 @@ public class ResetPasswordRequest extends AbstractModel {
     }
 
     /**
-     * Get Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases. 
-     * @return Password Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
+     * Get Reset password. This parameter can be left unspecified when a password-free instance is used.
+- It should contain 8 to 32 characters. 12 or more characters are recommended.
+- It cannot start with a forward slash (/).
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/). 
+     * @return Password Reset password. This parameter can be left unspecified when a password-free instance is used.
+- It should contain 8 to 32 characters. 12 or more characters are recommended.
+- It cannot start with a forward slash (/).
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
-     * @param Password Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
+     * Set Reset password. This parameter can be left unspecified when a password-free instance is used.
+- It should contain 8 to 32 characters. 12 or more characters are recommended.
+- It cannot start with a forward slash (/).
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
+     * @param Password Reset password. This parameter can be left unspecified when a password-free instance is used.
+- It should contain 8 to 32 characters. 12 or more characters are recommended.
+- It cannot start with a forward slash (/).
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
      */
     public void setPassword(String Password) {
         this.Password = Password;
@@ -80,11 +104,11 @@ public class ResetPasswordRequest extends AbstractModel {
 
     /**
      * Get Whether to switch to a password-free instance.
-- false: Switch to a non-password-free instance.
-- true: Switch to a password-free instance. Default value: false. 
+- false: switch to an instance that requires a password. The default value is false.
+- true: switch to a password-free instance. 
      * @return NoAuth Whether to switch to a password-free instance.
-- false: Switch to a non-password-free instance.
-- true: Switch to a password-free instance. Default value: false.
+- false: switch to an instance that requires a password. The default value is false.
+- true: switch to a password-free instance.
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
@@ -92,14 +116,38 @@ public class ResetPasswordRequest extends AbstractModel {
 
     /**
      * Set Whether to switch to a password-free instance.
-- false: Switch to a non-password-free instance.
-- true: Switch to a password-free instance. Default value: false.
+- false: switch to an instance that requires a password. The default value is false.
+- true: switch to a password-free instance.
      * @param NoAuth Whether to switch to a password-free instance.
-- false: Switch to a non-password-free instance.
-- true: Switch to a password-free instance. Default value: false.
+- false: switch to an instance that requires a password. The default value is false.
+- true: switch to a password-free instance.
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;
+    }
+
+    /**
+     * Get Whether to encrypt the password.
+- false: non-encrypted password. The default value is false.
+- true: encrypted password. 
+     * @return EncryptPassword Whether to encrypt the password.
+- false: non-encrypted password. The default value is false.
+- true: encrypted password.
+     */
+    public Boolean getEncryptPassword() {
+        return this.EncryptPassword;
+    }
+
+    /**
+     * Set Whether to encrypt the password.
+- false: non-encrypted password. The default value is false.
+- true: encrypted password.
+     * @param EncryptPassword Whether to encrypt the password.
+- false: non-encrypted password. The default value is false.
+- true: encrypted password.
+     */
+    public void setEncryptPassword(Boolean EncryptPassword) {
+        this.EncryptPassword = EncryptPassword;
     }
 
     public ResetPasswordRequest() {
@@ -119,6 +167,9 @@ public class ResetPasswordRequest extends AbstractModel {
         if (source.NoAuth != null) {
             this.NoAuth = new Boolean(source.NoAuth);
         }
+        if (source.EncryptPassword != null) {
+            this.EncryptPassword = new Boolean(source.EncryptPassword);
+        }
     }
 
 
@@ -129,6 +180,7 @@ public class ResetPasswordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "NoAuth", this.NoAuth);
+        this.setParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
 
     }
 }

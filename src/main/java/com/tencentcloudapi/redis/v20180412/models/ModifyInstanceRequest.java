@@ -25,9 +25,10 @@ public class ModifyInstanceRequest extends AbstractModel {
 
     /**
     * Instance modification operation. Valid values:
-- rename: Rename the instance.
-- modifyProject: Modify the project to which the instance belongs.
-- modifyAutoRenew: Modify the instance renewal flag.
+- rename: rename an instance.
+- modifyProject: modify the project to which the instance belongs.
+- modifyAutoRenew: modify the instance renewal flag.
+- modifyDeleteProtectionSwitch: modify the instance deletion protection switch status.
     */
     @SerializedName("Operation")
     @Expose
@@ -41,7 +42,7 @@ public class ModifyInstanceRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * New name of the instance.
+    * New name of the instance. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
     */
     @SerializedName("InstanceNames")
     @Expose
@@ -66,6 +67,13 @@ public class ModifyInstanceRequest extends AbstractModel {
     private Long [] AutoRenews;
 
     /**
+    * Deletion protection switch. - 0: disabled by default; - 1: enabled.
+    */
+    @SerializedName("DeleteProtectionSwitches")
+    @Expose
+    private Long [] DeleteProtectionSwitches;
+
+    /**
     * This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
     */
     @SerializedName("InstanceId")
@@ -88,13 +96,15 @@ public class ModifyInstanceRequest extends AbstractModel {
 
     /**
      * Get Instance modification operation. Valid values:
-- rename: Rename the instance.
-- modifyProject: Modify the project to which the instance belongs.
-- modifyAutoRenew: Modify the instance renewal flag. 
+- rename: rename an instance.
+- modifyProject: modify the project to which the instance belongs.
+- modifyAutoRenew: modify the instance renewal flag.
+- modifyDeleteProtectionSwitch: modify the instance deletion protection switch status. 
      * @return Operation Instance modification operation. Valid values:
-- rename: Rename the instance.
-- modifyProject: Modify the project to which the instance belongs.
-- modifyAutoRenew: Modify the instance renewal flag.
+- rename: rename an instance.
+- modifyProject: modify the project to which the instance belongs.
+- modifyAutoRenew: modify the instance renewal flag.
+- modifyDeleteProtectionSwitch: modify the instance deletion protection switch status.
      */
     public String getOperation() {
         return this.Operation;
@@ -102,13 +112,15 @@ public class ModifyInstanceRequest extends AbstractModel {
 
     /**
      * Set Instance modification operation. Valid values:
-- rename: Rename the instance.
-- modifyProject: Modify the project to which the instance belongs.
-- modifyAutoRenew: Modify the instance renewal flag.
+- rename: rename an instance.
+- modifyProject: modify the project to which the instance belongs.
+- modifyAutoRenew: modify the instance renewal flag.
+- modifyDeleteProtectionSwitch: modify the instance deletion protection switch status.
      * @param Operation Instance modification operation. Valid values:
-- rename: Rename the instance.
-- modifyProject: Modify the project to which the instance belongs.
-- modifyAutoRenew: Modify the instance renewal flag.
+- rename: rename an instance.
+- modifyProject: modify the project to which the instance belongs.
+- modifyAutoRenew: modify the instance renewal flag.
+- modifyDeleteProtectionSwitch: modify the instance deletion protection switch status.
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
@@ -131,16 +143,16 @@ public class ModifyInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get New name of the instance. 
-     * @return InstanceNames New name of the instance.
+     * Get New name of the instance. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters. 
+     * @return InstanceNames New name of the instance. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
      */
     public String [] getInstanceNames() {
         return this.InstanceNames;
     }
 
     /**
-     * Set New name of the instance.
-     * @param InstanceNames New name of the instance.
+     * Set New name of the instance. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
+     * @param InstanceNames New name of the instance. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
      */
     public void setInstanceNames(String [] InstanceNames) {
         this.InstanceNames = InstanceNames;
@@ -192,6 +204,22 @@ public class ModifyInstanceRequest extends AbstractModel {
      */
     public void setAutoRenews(Long [] AutoRenews) {
         this.AutoRenews = AutoRenews;
+    }
+
+    /**
+     * Get Deletion protection switch. - 0: disabled by default; - 1: enabled. 
+     * @return DeleteProtectionSwitches Deletion protection switch. - 0: disabled by default; - 1: enabled.
+     */
+    public Long [] getDeleteProtectionSwitches() {
+        return this.DeleteProtectionSwitches;
+    }
+
+    /**
+     * Set Deletion protection switch. - 0: disabled by default; - 1: enabled.
+     * @param DeleteProtectionSwitches Deletion protection switch. - 0: disabled by default; - 1: enabled.
+     */
+    public void setDeleteProtectionSwitches(Long [] DeleteProtectionSwitches) {
+        this.DeleteProtectionSwitches = DeleteProtectionSwitches;
     }
 
     /**
@@ -286,6 +314,12 @@ public class ModifyInstanceRequest extends AbstractModel {
                 this.AutoRenews[i] = new Long(source.AutoRenews[i]);
             }
         }
+        if (source.DeleteProtectionSwitches != null) {
+            this.DeleteProtectionSwitches = new Long[source.DeleteProtectionSwitches.length];
+            for (int i = 0; i < source.DeleteProtectionSwitches.length; i++) {
+                this.DeleteProtectionSwitches[i] = new Long(source.DeleteProtectionSwitches[i]);
+            }
+        }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
@@ -307,6 +341,7 @@ public class ModifyInstanceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "InstanceNames.", this.InstanceNames);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArraySimple(map, prefix + "AutoRenews.", this.AutoRenews);
+        this.setParamArraySimple(map, prefix + "DeleteProtectionSwitches.", this.DeleteProtectionSwitches);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);

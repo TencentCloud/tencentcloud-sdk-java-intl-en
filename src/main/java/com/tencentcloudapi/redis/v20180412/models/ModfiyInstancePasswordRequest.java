@@ -48,6 +48,13 @@ public class ModfiyInstancePasswordRequest extends AbstractModel {
     private String Password;
 
     /**
+    * Whether to encrypt the password.
+    */
+    @SerializedName("EncryptPassword")
+    @Expose
+    private Boolean EncryptPassword;
+
+    /**
      * Get Instance ID, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list. 
      * @return InstanceId Instance ID, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
@@ -107,6 +114,22 @@ public class ModfiyInstancePasswordRequest extends AbstractModel {
         this.Password = Password;
     }
 
+    /**
+     * Get Whether to encrypt the password. 
+     * @return EncryptPassword Whether to encrypt the password.
+     */
+    public Boolean getEncryptPassword() {
+        return this.EncryptPassword;
+    }
+
+    /**
+     * Set Whether to encrypt the password.
+     * @param EncryptPassword Whether to encrypt the password.
+     */
+    public void setEncryptPassword(Boolean EncryptPassword) {
+        this.EncryptPassword = EncryptPassword;
+    }
+
     public ModfiyInstancePasswordRequest() {
     }
 
@@ -124,6 +147,9 @@ public class ModfiyInstancePasswordRequest extends AbstractModel {
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.EncryptPassword != null) {
+            this.EncryptPassword = new Boolean(source.EncryptPassword);
+        }
     }
 
 
@@ -134,6 +160,7 @@ public class ModfiyInstancePasswordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "OldPassword", this.OldPassword);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
 
     }
 }

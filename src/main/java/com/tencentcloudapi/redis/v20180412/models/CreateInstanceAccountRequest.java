@@ -59,20 +59,27 @@ public class CreateInstanceAccountRequest extends AbstractModel {
     private String [] ReadonlyPolicy;
 
     /**
-    * The read/write permission of the account supports the selection of read-only and read/write permissions.
-- r: read-only
-- rw: Read/Write permission.
+    * Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
+- r: read-only.
+- rw: read-write.
     */
     @SerializedName("Privilege")
     @Expose
     private String Privilege;
 
     /**
-    * Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
+    * Description information about account remarks, with a length of [0, 64] bytes.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
+
+    /**
+    * Whether to encrypt the password.
+    */
+    @SerializedName("EncryptPassword")
+    @Expose
+    private Boolean EncryptPassword;
 
     /**
      * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
@@ -167,43 +174,59 @@ public class CreateInstanceAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get The read/write permission of the account supports the selection of read-only and read/write permissions.
-- r: read-only
-- rw: Read/Write permission. 
-     * @return Privilege The read/write permission of the account supports the selection of read-only and read/write permissions.
-- r: read-only
-- rw: Read/Write permission.
+     * Get Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
+- r: read-only.
+- rw: read-write. 
+     * @return Privilege Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
+- r: read-only.
+- rw: read-write.
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set The read/write permission of the account supports the selection of read-only and read/write permissions.
-- r: read-only
-- rw: Read/Write permission.
-     * @param Privilege The read/write permission of the account supports the selection of read-only and read/write permissions.
-- r: read-only
-- rw: Read/Write permission.
+     * Set Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
+- r: read-only.
+- rw: read-write.
+     * @param Privilege Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
+- r: read-only.
+- rw: read-write.
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
     }
 
     /**
-     * Get Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters. 
-     * @return Remark Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
+     * Get Description information about account remarks, with a length of [0, 64] bytes. 
+     * @return Remark Description information about account remarks, with a length of [0, 64] bytes.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
-     * @param Remark Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
+     * Set Description information about account remarks, with a length of [0, 64] bytes.
+     * @param Remark Description information about account remarks, with a length of [0, 64] bytes.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
+    }
+
+    /**
+     * Get Whether to encrypt the password. 
+     * @return EncryptPassword Whether to encrypt the password.
+     */
+    public Boolean getEncryptPassword() {
+        return this.EncryptPassword;
+    }
+
+    /**
+     * Set Whether to encrypt the password.
+     * @param EncryptPassword Whether to encrypt the password.
+     */
+    public void setEncryptPassword(Boolean EncryptPassword) {
+        this.EncryptPassword = EncryptPassword;
     }
 
     public CreateInstanceAccountRequest() {
@@ -235,6 +258,9 @@ public class CreateInstanceAccountRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.EncryptPassword != null) {
+            this.EncryptPassword = new Boolean(source.EncryptPassword);
+        }
     }
 
 
@@ -248,6 +274,7 @@ public class CreateInstanceAccountRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ReadonlyPolicy.", this.ReadonlyPolicy);
         this.setParamSimple(map, prefix + "Privilege", this.Privilege);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
 
     }
 }

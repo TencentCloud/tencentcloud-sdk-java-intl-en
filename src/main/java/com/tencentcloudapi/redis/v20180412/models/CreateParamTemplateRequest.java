@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateParamTemplateRequest extends AbstractModel {
 
     /**
-    * Parameter template name.
+    * Parameter template name, which can contain [2, 64] characters.
     */
     @SerializedName("Name")
     @Expose
@@ -39,7 +39,6 @@ public class CreateParamTemplateRequest extends AbstractModel {
 
     /**
     * Product type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
 - 6: Redis 4.0 Memory Edition (standard architecture).
 - 7: Redis 4.0 Memory Edition (cluster architecture).
 - 8: Redis 5.0 Memory Edition (standard architecture).
@@ -68,16 +67,16 @@ public class CreateParamTemplateRequest extends AbstractModel {
     private InstanceParam [] ParamList;
 
     /**
-     * Get Parameter template name. 
-     * @return Name Parameter template name.
+     * Get Parameter template name, which can contain [2, 64] characters. 
+     * @return Name Parameter template name, which can contain [2, 64] characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Parameter template name.
-     * @param Name Parameter template name.
+     * Set Parameter template name, which can contain [2, 64] characters.
+     * @param Name Parameter template name, which can contain [2, 64] characters.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -101,7 +100,6 @@ public class CreateParamTemplateRequest extends AbstractModel {
 
     /**
      * Get Product type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
 - 6: Redis 4.0 Memory Edition (standard architecture).
 - 7: Redis 4.0 Memory Edition (cluster architecture).
 - 8: Redis 5.0 Memory Edition (standard architecture).
@@ -111,7 +109,6 @@ public class CreateParamTemplateRequest extends AbstractModel {
 - 17: Redis 7.0 Memory Edition (standard architecture).
 - 18: Redis 7.0 Memory Edition (cluster architecture). 
      * @return ProductType Product type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
 - 6: Redis 4.0 Memory Edition (standard architecture).
 - 7: Redis 4.0 Memory Edition (cluster architecture).
 - 8: Redis 5.0 Memory Edition (standard architecture).
@@ -127,7 +124,6 @@ public class CreateParamTemplateRequest extends AbstractModel {
 
     /**
      * Set Product type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
 - 6: Redis 4.0 Memory Edition (standard architecture).
 - 7: Redis 4.0 Memory Edition (cluster architecture).
 - 8: Redis 5.0 Memory Edition (standard architecture).
@@ -137,7 +133,6 @@ public class CreateParamTemplateRequest extends AbstractModel {
 - 17: Redis 7.0 Memory Edition (standard architecture).
 - 18: Redis 7.0 Memory Edition (cluster architecture).
      * @param ProductType Product type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
 - 6: Redis 4.0 Memory Edition (standard architecture).
 - 7: Redis 4.0 Memory Edition (cluster architecture).
 - 8: Redis 5.0 Memory Edition (standard architecture).

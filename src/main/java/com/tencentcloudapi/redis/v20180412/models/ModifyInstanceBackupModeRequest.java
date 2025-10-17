@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstanceBackupModeRequest extends AbstractModel {
 
     /**
-    * Instance ID, which can contain 12 to 36 characters.
+    * Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -32,24 +32,24 @@ public class ModifyInstanceBackupModeRequest extends AbstractModel {
 
     /**
     * Backup mode:
- - SecondLevelBackup: second-level backup.
- - NormalLevelBackup: ordinary backup.
+- SecondLevelBackup: second-level backup.
+- NormalLevelBackup: ordinary backup.
     */
     @SerializedName("BackupMode")
     @Expose
     private String BackupMode;
 
     /**
-     * Get Instance ID, which can contain 12 to 36 characters. 
-     * @return InstanceId Instance ID, which can contain 12 to 36 characters.
+     * Get Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list. 
+     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID, which can contain 12 to 36 characters.
-     * @param InstanceId Instance ID, which can contain 12 to 36 characters.
+     * Set Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -57,11 +57,11 @@ public class ModifyInstanceBackupModeRequest extends AbstractModel {
 
     /**
      * Get Backup mode:
- - SecondLevelBackup: second-level backup.
- - NormalLevelBackup: ordinary backup. 
+- SecondLevelBackup: second-level backup.
+- NormalLevelBackup: ordinary backup. 
      * @return BackupMode Backup mode:
- - SecondLevelBackup: second-level backup.
- - NormalLevelBackup: ordinary backup.
+- SecondLevelBackup: second-level backup.
+- NormalLevelBackup: ordinary backup.
      */
     public String getBackupMode() {
         return this.BackupMode;
@@ -69,11 +69,11 @@ public class ModifyInstanceBackupModeRequest extends AbstractModel {
 
     /**
      * Set Backup mode:
- - SecondLevelBackup: second-level backup.
- - NormalLevelBackup: ordinary backup.
+- SecondLevelBackup: second-level backup.
+- NormalLevelBackup: ordinary backup.
      * @param BackupMode Backup mode:
- - SecondLevelBackup: second-level backup.
- - NormalLevelBackup: ordinary backup.
+- SecondLevelBackup: second-level backup.
+- NormalLevelBackup: ordinary backup.
      */
     public void setBackupMode(String BackupMode) {
         this.BackupMode = BackupMode;

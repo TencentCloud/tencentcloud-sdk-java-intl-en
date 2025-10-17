@@ -39,7 +39,7 @@ public class DescribeSecondLevelBackupInfoResponse extends AbstractModel {
 
     /**
     * Timestamp range within which backup is missing.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MissingTimestamps")
     @Expose
@@ -93,9 +93,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Timestamp range within which backup is missing.
-Note: This field may return null, indicating that no valid value can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return MissingTimestamps Timestamp range within which backup is missing.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SecondLevelBackupMissingTimestamps [] getMissingTimestamps() {
         return this.MissingTimestamps;
@@ -103,9 +103,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Timestamp range within which backup is missing.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param MissingTimestamps Timestamp range within which backup is missing.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMissingTimestamps(SecondLevelBackupMissingTimestamps [] MissingTimestamps) {
         this.MissingTimestamps = MissingTimestamps;

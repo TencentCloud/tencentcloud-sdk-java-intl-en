@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class RemoveReplicationGroupRequest extends AbstractModel {
 
     /**
-    * Replication group ID.
+    * Replication group ID. Log in to the [Redis console and go to the global replication](https://console.cloud.tencent.com/redis/replication) page to obtain the ID.
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get Replication group ID. 
-     * @return GroupId Replication group ID.
+     * Get Replication group ID. Log in to the [Redis console and go to the global replication](https://console.cloud.tencent.com/redis/replication) page to obtain the ID. 
+     * @return GroupId Replication group ID. Log in to the [Redis console and go to the global replication](https://console.cloud.tencent.com/redis/replication) page to obtain the ID.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Replication group ID.
-     * @param GroupId Replication group ID.
+     * Set Replication group ID. Log in to the [Redis console and go to the global replication](https://console.cloud.tencent.com/redis/replication) page to obtain the ID.
+     * @param GroupId Replication group ID. Log in to the [Redis console and go to the global replication](https://console.cloud.tencent.com/redis/replication) page to obtain the ID.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

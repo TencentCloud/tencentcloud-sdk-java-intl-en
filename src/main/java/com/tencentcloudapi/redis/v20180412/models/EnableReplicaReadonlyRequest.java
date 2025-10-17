@@ -33,8 +33,7 @@ public class EnableReplicaReadonlyRequest extends AbstractModel {
     /**
     * Read-only routing policy.
 - master: read-only routing to the primary node.
-- replication: read-only routing to the secondary node.
-- Default policy: writing to the primary node and reading from the secondary node.
+- replication: read-only routing to the secondary node. The default value is replication.
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
@@ -59,12 +58,10 @@ public class EnableReplicaReadonlyRequest extends AbstractModel {
     /**
      * Get Read-only routing policy.
 - master: read-only routing to the primary node.
-- replication: read-only routing to the secondary node.
-- Default policy: writing to the primary node and reading from the secondary node. 
+- replication: read-only routing to the secondary node. The default value is replication. 
      * @return ReadonlyPolicy Read-only routing policy.
 - master: read-only routing to the primary node.
-- replication: read-only routing to the secondary node.
-- Default policy: writing to the primary node and reading from the secondary node.
+- replication: read-only routing to the secondary node. The default value is replication.
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
@@ -73,12 +70,10 @@ public class EnableReplicaReadonlyRequest extends AbstractModel {
     /**
      * Set Read-only routing policy.
 - master: read-only routing to the primary node.
-- replication: read-only routing to the secondary node.
-- Default policy: writing to the primary node and reading from the secondary node.
+- replication: read-only routing to the secondary node. The default value is replication.
      * @param ReadonlyPolicy Read-only routing policy.
 - master: read-only routing to the primary node.
-- replication: read-only routing to the secondary node.
-- Default policy: writing to the primary node and reading from the secondary node.
+- replication: read-only routing to the secondary node. The default value is replication.
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;

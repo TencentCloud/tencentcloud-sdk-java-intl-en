@@ -66,7 +66,7 @@ public class CreateAlarmRequest extends AbstractModel {
     private Long Frequency;
 
     /**
-    *   Member UIN
+    *   Member UIN.
     */
     @SerializedName("MemberUin")
     @Expose
@@ -169,16 +169,16 @@ public class CreateAlarmRequest extends AbstractModel {
     }
 
     /**
-     * Get   Member UIN 
-     * @return MemberUin   Member UIN
+     * Get   Member UIN. 
+     * @return MemberUin   Member UIN.
      */
     public Long getMemberUin() {
         return this.MemberUin;
     }
 
     /**
-     * Set   Member UIN
-     * @param MemberUin   Member UIN
+     * Set   Member UIN.
+     * @param MemberUin   Member UIN.
      */
     public void setMemberUin(Long MemberUin) {
         this.MemberUin = MemberUin;

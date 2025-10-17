@@ -46,21 +46,21 @@ public class DescribeSlowLogRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * The average execution time threshold of slow query  in microseconds
+    * Average execution time threshold for slow queries, in milliseconds. The value is a positive integer greater than 0
     */
     @SerializedName("MinQueryTime")
     @Expose
     private Long MinQueryTime;
 
     /**
-    * Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
+    * Number of slow query results displayed per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+    * Offset of the number of slow queries. The value is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -127,48 +127,48 @@ public class DescribeSlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get The average execution time threshold of slow query  in microseconds 
-     * @return MinQueryTime The average execution time threshold of slow query  in microseconds
+     * Get Average execution time threshold for slow queries, in milliseconds. The value is a positive integer greater than 0 
+     * @return MinQueryTime Average execution time threshold for slow queries, in milliseconds. The value is a positive integer greater than 0
      */
     public Long getMinQueryTime() {
         return this.MinQueryTime;
     }
 
     /**
-     * Set The average execution time threshold of slow query  in microseconds
-     * @param MinQueryTime The average execution time threshold of slow query  in microseconds
+     * Set Average execution time threshold for slow queries, in milliseconds. The value is a positive integer greater than 0
+     * @param MinQueryTime Average execution time threshold for slow queries, in milliseconds. The value is a positive integer greater than 0
      */
     public void setMinQueryTime(Long MinQueryTime) {
         this.MinQueryTime = MinQueryTime;
     }
 
     /**
-     * Get Number of slow query logs displayed per page. Default value: 20. Maximum value: 100. 
-     * @return Limit Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
+     * Get Number of slow query results displayed per page. The default value is 20, the minimum value is 1, and the maximum value is 100. 
+     * @return Limit Number of slow query results displayed per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
-     * @param Limit Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
+     * Set Number of slow query results displayed per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
+     * @param Limit Number of slow query results displayed per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1). 
-     * @return Offset Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+     * Get Offset of the number of slow queries. The value is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0. 
+     * @return Offset Offset of the number of slow queries. The value is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
-     * @param Offset Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+     * Set Offset of the number of slow queries. The value is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
+     * @param Offset Offset of the number of slow queries. The value is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

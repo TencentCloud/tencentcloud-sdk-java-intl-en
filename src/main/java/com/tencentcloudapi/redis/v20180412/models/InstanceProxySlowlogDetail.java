@@ -59,6 +59,20 @@ public class InstanceProxySlowlogDetail extends AbstractModel {
     private String ExecuteTime;
 
     /**
+    * Duration of receiving client requests (ms).
+    */
+    @SerializedName("RecvClientEnd")
+    @Expose
+    private Long RecvClientEnd;
+
+    /**
+    * Duration of sending client requests (ms).
+    */
+    @SerializedName("SendClientEnd")
+    @Expose
+    private Long SendClientEnd;
+
+    /**
      * Get Slow query duration in milliseconds 
      * @return Duration Slow query duration in milliseconds
      */
@@ -138,6 +152,38 @@ public class InstanceProxySlowlogDetail extends AbstractModel {
         this.ExecuteTime = ExecuteTime;
     }
 
+    /**
+     * Get Duration of receiving client requests (ms). 
+     * @return RecvClientEnd Duration of receiving client requests (ms).
+     */
+    public Long getRecvClientEnd() {
+        return this.RecvClientEnd;
+    }
+
+    /**
+     * Set Duration of receiving client requests (ms).
+     * @param RecvClientEnd Duration of receiving client requests (ms).
+     */
+    public void setRecvClientEnd(Long RecvClientEnd) {
+        this.RecvClientEnd = RecvClientEnd;
+    }
+
+    /**
+     * Get Duration of sending client requests (ms). 
+     * @return SendClientEnd Duration of sending client requests (ms).
+     */
+    public Long getSendClientEnd() {
+        return this.SendClientEnd;
+    }
+
+    /**
+     * Set Duration of sending client requests (ms).
+     * @param SendClientEnd Duration of sending client requests (ms).
+     */
+    public void setSendClientEnd(Long SendClientEnd) {
+        this.SendClientEnd = SendClientEnd;
+    }
+
     public InstanceProxySlowlogDetail() {
     }
 
@@ -161,6 +207,12 @@ public class InstanceProxySlowlogDetail extends AbstractModel {
         if (source.ExecuteTime != null) {
             this.ExecuteTime = new String(source.ExecuteTime);
         }
+        if (source.RecvClientEnd != null) {
+            this.RecvClientEnd = new Long(source.RecvClientEnd);
+        }
+        if (source.SendClientEnd != null) {
+            this.SendClientEnd = new Long(source.SendClientEnd);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class InstanceProxySlowlogDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "CommandLine", this.CommandLine);
         this.setParamSimple(map, prefix + "ExecuteTime", this.ExecuteTime);
+        this.setParamSimple(map, prefix + "RecvClientEnd", this.RecvClientEnd);
+        this.setParamSimple(map, prefix + "SendClientEnd", this.SendClientEnd);
 
     }
 }

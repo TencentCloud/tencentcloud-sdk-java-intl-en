@@ -38,7 +38,7 @@ public class InstanceSet extends AbstractModel {
     private String InstanceId;
 
     /**
-    * App ID of a user, which is an application ID that uniquely corresponds to the account ID. Some Tencent Cloud products use this app ID.
+    * App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
 
     */
     @SerializedName("Appid")
@@ -266,6 +266,8 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * Read weight of a secondary node.
+- 0: disable read-only replicas.
+- 100: enable read-only replicas.
     */
     @SerializedName("SlaveReadWeight")
     @Expose
@@ -463,6 +465,13 @@ It is returned only for multi-AZ instances.
     private String BackupMode;
 
     /**
+    * Deletion protection switch. 0: disabled; 1: enabled.
+    */
+    @SerializedName("DeleteProtectionSwitch")
+    @Expose
+    private Long DeleteProtectionSwitch;
+
+    /**
      * Get Instance name. 
      * @return InstanceName Instance name.
      */
@@ -495,9 +504,9 @@ It is returned only for multi-AZ instances.
     }
 
     /**
-     * Get App ID of a user, which is an application ID that uniquely corresponds to the account ID. Some Tencent Cloud products use this app ID.
+     * Get App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
  
-     * @return Appid App ID of a user, which is an application ID that uniquely corresponds to the account ID. Some Tencent Cloud products use this app ID.
+     * @return Appid App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
 
      */
     public Long getAppid() {
@@ -505,9 +514,9 @@ It is returned only for multi-AZ instances.
     }
 
     /**
-     * Set App ID of a user, which is an application ID that uniquely corresponds to the account ID. Some Tencent Cloud products use this app ID.
+     * Set App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
 
-     * @param Appid App ID of a user, which is an application ID that uniquely corresponds to the account ID. Some Tencent Cloud products use this app ID.
+     * @param Appid App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
 
      */
     public void setAppid(Long Appid) {
@@ -1047,8 +1056,12 @@ It is returned only for multi-AZ instances.
     }
 
     /**
-     * Get Read weight of a secondary node. 
+     * Get Read weight of a secondary node.
+- 0: disable read-only replicas.
+- 100: enable read-only replicas. 
      * @return SlaveReadWeight Read weight of a secondary node.
+- 0: disable read-only replicas.
+- 100: enable read-only replicas.
      */
     public Long getSlaveReadWeight() {
         return this.SlaveReadWeight;
@@ -1056,7 +1069,11 @@ It is returned only for multi-AZ instances.
 
     /**
      * Set Read weight of a secondary node.
+- 0: disable read-only replicas.
+- 100: enable read-only replicas.
      * @param SlaveReadWeight Read weight of a secondary node.
+- 0: disable read-only replicas.
+- 100: enable read-only replicas.
      */
     public void setSlaveReadWeight(Long SlaveReadWeight) {
         this.SlaveReadWeight = SlaveReadWeight;
@@ -1502,6 +1519,22 @@ It is returned only for multi-AZ instances.
         this.BackupMode = BackupMode;
     }
 
+    /**
+     * Get Deletion protection switch. 0: disabled; 1: enabled. 
+     * @return DeleteProtectionSwitch Deletion protection switch. 0: disabled; 1: enabled.
+     */
+    public Long getDeleteProtectionSwitch() {
+        return this.DeleteProtectionSwitch;
+    }
+
+    /**
+     * Set Deletion protection switch. 0: disabled; 1: enabled.
+     * @param DeleteProtectionSwitch Deletion protection switch. 0: disabled; 1: enabled.
+     */
+    public void setDeleteProtectionSwitch(Long DeleteProtectionSwitch) {
+        this.DeleteProtectionSwitch = DeleteProtectionSwitch;
+    }
+
     public InstanceSet() {
     }
 
@@ -1702,6 +1735,9 @@ It is returned only for multi-AZ instances.
         if (source.BackupMode != null) {
             this.BackupMode = new String(source.BackupMode);
         }
+        if (source.DeleteProtectionSwitch != null) {
+            this.DeleteProtectionSwitch = new Long(source.DeleteProtectionSwitch);
+        }
     }
 
 
@@ -1769,6 +1805,7 @@ It is returned only for multi-AZ instances.
         this.setParamSimple(map, prefix + "UpgradeProxyVersion", this.UpgradeProxyVersion);
         this.setParamSimple(map, prefix + "UpgradeRedisVersion", this.UpgradeRedisVersion);
         this.setParamSimple(map, prefix + "BackupMode", this.BackupMode);
+        this.setParamSimple(map, prefix + "DeleteProtectionSwitch", this.DeleteProtectionSwitch);
 
     }
 }

@@ -31,7 +31,8 @@ public class ModifyConnectionConfigRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Additional bandwidth in MB, which should be greater than 0.
+    * Additional bandwidth, in MB, which should be greater than 0.
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
     */
     @SerializedName("Bandwidth")
     @Expose
@@ -41,6 +42,7 @@ public class ModifyConnectionConfigRequest extends AbstractModel {
     * Total number of connections per shard.
 - When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
 - When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
     */
     @SerializedName("ClientLimit")
     @Expose
@@ -63,16 +65,20 @@ public class ModifyConnectionConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get Additional bandwidth in MB, which should be greater than 0. 
-     * @return Bandwidth Additional bandwidth in MB, which should be greater than 0.
+     * Get Additional bandwidth, in MB, which should be greater than 0.
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration. 
+     * @return Bandwidth Additional bandwidth, in MB, which should be greater than 0.
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set Additional bandwidth in MB, which should be greater than 0.
-     * @param Bandwidth Additional bandwidth in MB, which should be greater than 0.
+     * Set Additional bandwidth, in MB, which should be greater than 0.
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
+     * @param Bandwidth Additional bandwidth, in MB, which should be greater than 0.
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
@@ -81,10 +87,12 @@ public class ModifyConnectionConfigRequest extends AbstractModel {
     /**
      * Get Total number of connections per shard.
 - When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
-- When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3). 
+- When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration. 
      * @return ClientLimit Total number of connections per shard.
 - When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
 - When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
      */
     public Long getClientLimit() {
         return this.ClientLimit;
@@ -94,9 +102,11 @@ public class ModifyConnectionConfigRequest extends AbstractModel {
      * Set Total number of connections per shard.
 - When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
 - When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
      * @param ClientLimit Total number of connections per shard.
 - When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
 - When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
      */
     public void setClientLimit(Long ClientLimit) {
         this.ClientLimit = ClientLimit;

@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class DescribeSecondLevelBackupInfoRequest extends AbstractModel {
 
     /**
-    * Specifies the instance ID. For example, crs-xjhsdj****. Log in to the TencentDB for Redis® console and copy the instance ID from the instance list.
+    * Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Second-level backup timestamp. The corresponding time should be within the last 7 days.
+    * Second-level backup timestamp.
+- Setting range: support any second-level time point within 7 days.
+- Timestamp format: UNIX timestamp.
     */
     @SerializedName("BackupTimestamp")
     @Expose
     private Long BackupTimestamp;
 
     /**
-     * Get Specifies the instance ID. For example, crs-xjhsdj****. Log in to the TencentDB for Redis® console and copy the instance ID from the instance list. 
-     * @return InstanceId Specifies the instance ID. For example, crs-xjhsdj****. Log in to the TencentDB for Redis® console and copy the instance ID from the instance list.
+     * Get Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list. 
+     * @return InstanceId Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Specifies the instance ID. For example, crs-xjhsdj****. Log in to the TencentDB for Redis® console and copy the instance ID from the instance list.
-     * @param InstanceId Specifies the instance ID. For example, crs-xjhsdj****. Log in to the TencentDB for Redis® console and copy the instance ID from the instance list.
+     * Set Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+     * @param InstanceId Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Second-level backup timestamp. The corresponding time should be within the last 7 days. 
-     * @return BackupTimestamp Second-level backup timestamp. The corresponding time should be within the last 7 days.
+     * Get Second-level backup timestamp.
+- Setting range: support any second-level time point within 7 days.
+- Timestamp format: UNIX timestamp. 
+     * @return BackupTimestamp Second-level backup timestamp.
+- Setting range: support any second-level time point within 7 days.
+- Timestamp format: UNIX timestamp.
      */
     public Long getBackupTimestamp() {
         return this.BackupTimestamp;
     }
 
     /**
-     * Set Second-level backup timestamp. The corresponding time should be within the last 7 days.
-     * @param BackupTimestamp Second-level backup timestamp. The corresponding time should be within the last 7 days.
+     * Set Second-level backup timestamp.
+- Setting range: support any second-level time point within 7 days.
+- Timestamp format: UNIX timestamp.
+     * @param BackupTimestamp Second-level backup timestamp.
+- Setting range: support any second-level time point within 7 days.
+- Timestamp format: UNIX timestamp.
      */
     public void setBackupTimestamp(Long BackupTimestamp) {
         this.BackupTimestamp = BackupTimestamp;

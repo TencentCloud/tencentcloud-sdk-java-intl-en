@@ -31,7 +31,9 @@ public class DescribeInstanceShardsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
+    * Specifies whether to filter out secondary node information.
+- true: filter out secondary nodes.
+- false: filtering not required. The default value is false.
     */
     @SerializedName("FilterSlave")
     @Expose
@@ -54,16 +56,24 @@ public class DescribeInstanceShardsRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no). 
-     * @return FilterSlave Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
+     * Get Specifies whether to filter out secondary node information.
+- true: filter out secondary nodes.
+- false: filtering not required. The default value is false. 
+     * @return FilterSlave Specifies whether to filter out secondary node information.
+- true: filter out secondary nodes.
+- false: filtering not required. The default value is false.
      */
     public Boolean getFilterSlave() {
         return this.FilterSlave;
     }
 
     /**
-     * Set Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
-     * @param FilterSlave Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
+     * Set Specifies whether to filter out secondary node information.
+- true: filter out secondary nodes.
+- false: filtering not required. The default value is false.
+     * @param FilterSlave Specifies whether to filter out secondary node information.
+- true: filter out secondary nodes.
+- false: filtering not required. The default value is false.
      */
     public void setFilterSlave(Boolean FilterSlave) {
         this.FilterSlave = FilterSlave;

@@ -184,6 +184,20 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     }
 
     /**
+     *This API is used to create a Prometheus alert rule groups.
+
+This API is used to group alert rules, which can include multiple alert rules. Alert messages within the group are sent via the alert group's notification template.
+This API is used to enable individually creating enabled/disabled alert rules under an alert group.
+     * @param req CreatePrometheusAlertGroupRequest
+     * @return CreatePrometheusAlertGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrometheusAlertGroupResponse CreatePrometheusAlertGroup(CreatePrometheusAlertGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePrometheusAlertGroup", CreatePrometheusAlertGroupResponse.class);
+    }
+
+    /**
      *This API is used to create an alerting rule.
      * @param req CreatePrometheusAlertPolicyRequest
      * @return CreatePrometheusAlertPolicyResponse
@@ -392,6 +406,17 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public DeletePolicyGroupResponse DeletePolicyGroup(DeletePolicyGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeletePolicyGroup", DeletePolicyGroupResponse.class);
+    }
+
+    /**
+     *This API is used to delete Prometheus alert rule groups.
+     * @param req DeletePrometheusAlertGroupsRequest
+     * @return DeletePrometheusAlertGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrometheusAlertGroupsResponse DeletePrometheusAlertGroups(DeletePrometheusAlertGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePrometheusAlertGroups", DeletePrometheusAlertGroupsResponse.class);
     }
 
     /**
@@ -856,6 +881,17 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribePrometheusAgentsResponse DescribePrometheusAgents(DescribePrometheusAgentsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePrometheusAgents", DescribePrometheusAgentsResponse.class);
+    }
+
+    /**
+     *This API is used to query alarm groups under a given prometheus.
+     * @param req DescribePrometheusAlertGroupsRequest
+     * @return DescribePrometheusAlertGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusAlertGroupsResponse DescribePrometheusAlertGroups(DescribePrometheusAlertGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrometheusAlertGroups", DescribePrometheusAlertGroupsResponse.class);
     }
 
     /**
@@ -1584,6 +1620,28 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpdatePrometheusAgentStatusResponse UpdatePrometheusAgentStatus(UpdatePrometheusAgentStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdatePrometheusAgentStatus", UpdatePrometheusAgentStatusResponse.class);
+    }
+
+    /**
+     *This API is used to update Prometheus alert rule groups.
+     * @param req UpdatePrometheusAlertGroupRequest
+     * @return UpdatePrometheusAlertGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdatePrometheusAlertGroupResponse UpdatePrometheusAlertGroup(UpdatePrometheusAlertGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdatePrometheusAlertGroup", UpdatePrometheusAlertGroupResponse.class);
+    }
+
+    /**
+     *This API is used to batch update the status of alarm groups and set all rules grouped in them to the target status.
+     * @param req UpdatePrometheusAlertGroupStateRequest
+     * @return UpdatePrometheusAlertGroupStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdatePrometheusAlertGroupStateResponse UpdatePrometheusAlertGroupState(UpdatePrometheusAlertGroupStateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdatePrometheusAlertGroupState", UpdatePrometheusAlertGroupStateResponse.class);
     }
 
     /**

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteParamTemplateRequest extends AbstractModel {
 
     /**
-    * Parameter template ID.
+    * Parameter template ID. Log in to the [Redis console and go to the parameter template page](https://console.cloud.tencent.com/redis/templates) to obtain the template ID.
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-     * Get Parameter template ID. 
-     * @return TemplateId Parameter template ID.
+     * Get Parameter template ID. Log in to the [Redis console and go to the parameter template page](https://console.cloud.tencent.com/redis/templates) to obtain the template ID. 
+     * @return TemplateId Parameter template ID. Log in to the [Redis console and go to the parameter template page](https://console.cloud.tencent.com/redis/templates) to obtain the template ID.
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Parameter template ID.
-     * @param TemplateId Parameter template ID.
+     * Set Parameter template ID. Log in to the [Redis console and go to the parameter template page](https://console.cloud.tencent.com/redis/templates) to obtain the template ID.
+     * @param TemplateId Parameter template ID. Log in to the [Redis console and go to the parameter template page](https://console.cloud.tencent.com/redis/templates) to obtain the template ID.
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

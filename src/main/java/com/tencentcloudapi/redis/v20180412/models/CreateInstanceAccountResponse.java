@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateInstanceAccountResponse extends AbstractModel {
 
     /**
-    * Task ID
+    * Task ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateInstanceAccountResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task ID 
-     * @return TaskId Task ID
+     * Get Task ID. 
+     * @return TaskId Task ID.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID
-     * @param TaskId Task ID
+     * Set Task ID.
+     * @param TaskId Task ID.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

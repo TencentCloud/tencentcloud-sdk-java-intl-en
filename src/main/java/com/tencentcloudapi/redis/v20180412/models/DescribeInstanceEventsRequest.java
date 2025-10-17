@@ -45,14 +45,18 @@ public class DescribeInstanceEventsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Number of events displayed per page. Default value: 10. Maximum value: 100.
+    * Outputs the number of events displayed per page.
+- Default value: 10.
+- Value range: [1, 100].
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * Configures the page number for querying events. You can query events on a certain page by specifying PageNo and PageSize. Default value: 1.
+    * Configures the output page number for querying events. You can query events on a certain page by specifying PageNo (page number) and PageSize (number of output results per page).
+- Default value: 1.
+- Value range: positive integers greater than 0.
     */
     @SerializedName("PageNo")
     @Expose
@@ -128,32 +132,48 @@ public class DescribeInstanceEventsRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of events displayed per page. Default value: 10. Maximum value: 100. 
-     * @return PageSize Number of events displayed per page. Default value: 10. Maximum value: 100.
+     * Get Outputs the number of events displayed per page.
+- Default value: 10.
+- Value range: [1, 100]. 
+     * @return PageSize Outputs the number of events displayed per page.
+- Default value: 10.
+- Value range: [1, 100].
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Number of events displayed per page. Default value: 10. Maximum value: 100.
-     * @param PageSize Number of events displayed per page. Default value: 10. Maximum value: 100.
+     * Set Outputs the number of events displayed per page.
+- Default value: 10.
+- Value range: [1, 100].
+     * @param PageSize Outputs the number of events displayed per page.
+- Default value: 10.
+- Value range: [1, 100].
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get Configures the page number for querying events. You can query events on a certain page by specifying PageNo and PageSize. Default value: 1. 
-     * @return PageNo Configures the page number for querying events. You can query events on a certain page by specifying PageNo and PageSize. Default value: 1.
+     * Get Configures the output page number for querying events. You can query events on a certain page by specifying PageNo (page number) and PageSize (number of output results per page).
+- Default value: 1.
+- Value range: positive integers greater than 0. 
+     * @return PageNo Configures the output page number for querying events. You can query events on a certain page by specifying PageNo (page number) and PageSize (number of output results per page).
+- Default value: 1.
+- Value range: positive integers greater than 0.
      */
     public Long getPageNo() {
         return this.PageNo;
     }
 
     /**
-     * Set Configures the page number for querying events. You can query events on a certain page by specifying PageNo and PageSize. Default value: 1.
-     * @param PageNo Configures the page number for querying events. You can query events on a certain page by specifying PageNo and PageSize. Default value: 1.
+     * Set Configures the output page number for querying events. You can query events on a certain page by specifying PageNo (page number) and PageSize (number of output results per page).
+- Default value: 1.
+- Value range: positive integers greater than 0.
+     * @param PageNo Configures the output page number for querying events. You can query events on a certain page by specifying PageNo (page number) and PageSize (number of output results per page).
+- Default value: 1.
+- Value range: positive integers greater than 0.
      */
     public void setPageNo(Long PageNo) {
         this.PageNo = PageNo;

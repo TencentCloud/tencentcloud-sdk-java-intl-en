@@ -24,61 +24,61 @@ import java.util.HashMap;
 public class DescribeInstanceSupportFeatureRequest extends AbstractModel {
 
     /**
-    * Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-Sample value: crs-asdasdas.
+    * Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it from the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Feature names.
-- Read-local-node-only: Proximity access feature.- multi-account: Multiple accounts feature.
+    * The features that support queries are as follows.
+- read-local-node-only: nearby access.
+- multi-account: multi-account management.
+- auto-failback: fault recovery scenario, such as whether automatic failback is enabled for the primary node.
     */
     @SerializedName("FeatureName")
     @Expose
     private String FeatureName;
 
     /**
-     * Get Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-Sample value: crs-asdasdas. 
-     * @return InstanceId Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-Sample value: crs-asdasdas.
+     * Get Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it from the instance list. 
+     * @return InstanceId Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it from the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-Sample value: crs-asdasdas.
-     * @param InstanceId Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-Sample value: crs-asdasdas.
+     * Set Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it from the instance list.
+     * @param InstanceId Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it from the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Feature names.
-- Read-local-node-only: Proximity access feature.- multi-account: Multiple accounts feature. 
-     * @return FeatureName Feature names.
-- Read-local-node-only: Proximity access feature.- multi-account: Multiple accounts feature.
+     * Get The features that support queries are as follows.
+- read-local-node-only: nearby access.
+- multi-account: multi-account management.
+- auto-failback: fault recovery scenario, such as whether automatic failback is enabled for the primary node. 
+     * @return FeatureName The features that support queries are as follows.
+- read-local-node-only: nearby access.
+- multi-account: multi-account management.
+- auto-failback: fault recovery scenario, such as whether automatic failback is enabled for the primary node.
      */
     public String getFeatureName() {
         return this.FeatureName;
     }
 
     /**
-     * Set Feature names.
-- Read-local-node-only: Proximity access feature.- multi-account: Multiple accounts feature.
-     * @param FeatureName Feature names.
-- Read-local-node-only: Proximity access feature.- multi-account: Multiple accounts feature.
+     * Set The features that support queries are as follows.
+- read-local-node-only: nearby access.
+- multi-account: multi-account management.
+- auto-failback: fault recovery scenario, such as whether automatic failback is enabled for the primary node.
+     * @param FeatureName The features that support queries are as follows.
+- read-local-node-only: nearby access.
+- multi-account: multi-account management.
+- auto-failback: fault recovery scenario, such as whether automatic failback is enabled for the primary node.
      */
     public void setFeatureName(String FeatureName) {
         this.FeatureName = FeatureName;

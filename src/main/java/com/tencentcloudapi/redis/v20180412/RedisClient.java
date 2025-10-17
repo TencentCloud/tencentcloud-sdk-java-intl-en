@@ -325,7 +325,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the information of an instance sub-account.
+     *This API is used to view instance account information.
      * @param req DescribeInstanceAccountRequest
      * @return DescribeInstanceAccountResponse
      * @throws TencentCloudSDKException
@@ -710,7 +710,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the second-level backup information on an instance.
+     *This API is used to query second-level backup information for the instance.
      * @param req DescribeSecondLevelBackupInfoRequest
      * @return DescribeSecondLevelBackupInfoResponse
      * @throws TencentCloudSDKException
@@ -930,7 +930,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the instance sub-account.
+     *This API is used to modify an instance account.
      * @param req ModifyInstanceAccountRequest
      * @return ModifyInstanceAccountResponse
      * @throws TencentCloudSDKException
@@ -952,7 +952,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the instance backup mode.
+     *This API is used to modify the backup mode of an instance.
      * @param req ModifyInstanceBackupModeRequest
      * @return ModifyInstanceBackupModeResponse
      * @throws TencentCloudSDKException

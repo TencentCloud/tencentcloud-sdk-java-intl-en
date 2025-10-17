@@ -61,7 +61,7 @@ public class CloneInstancesRequest extends AbstractModel {
     private Long Period;
 
     /**
-    * Security group ID, which can be obtained on the <b>Security Group</b> page in the console.
+    * Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.comom/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
     */
     @SerializedName("SecurityGroupIdList")
     @Expose
@@ -170,6 +170,13 @@ Only instances with second-level backup enabled are supported.
     private String CloneTime;
 
     /**
+    * Whether to encrypt the password.
+    */
+    @SerializedName("EncryptPassword")
+    @Expose
+    private Boolean EncryptPassword;
+
+    /**
      * Get The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list. 
      * @return InstanceId The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
@@ -258,16 +265,16 @@ Only instances with second-level backup enabled are supported.
     }
 
     /**
-     * Get Security group ID, which can be obtained on the <b>Security Group</b> page in the console. 
-     * @return SecurityGroupIdList Security group ID, which can be obtained on the <b>Security Group</b> page in the console.
+     * Get Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.comom/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance. 
+     * @return SecurityGroupIdList Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.comom/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
      */
     public String [] getSecurityGroupIdList() {
         return this.SecurityGroupIdList;
     }
 
     /**
-     * Set Security group ID, which can be obtained on the <b>Security Group</b> page in the console.
-     * @param SecurityGroupIdList Security group ID, which can be obtained on the <b>Security Group</b> page in the console.
+     * Set Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.comom/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
+     * @param SecurityGroupIdList Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.comom/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
      */
     public void setSecurityGroupIdList(String [] SecurityGroupIdList) {
         this.SecurityGroupIdList = SecurityGroupIdList;
@@ -513,6 +520,22 @@ Only instances with second-level backup enabled are supported.
         this.CloneTime = CloneTime;
     }
 
+    /**
+     * Get Whether to encrypt the password. 
+     * @return EncryptPassword Whether to encrypt the password.
+     */
+    public Boolean getEncryptPassword() {
+        return this.EncryptPassword;
+    }
+
+    /**
+     * Set Whether to encrypt the password.
+     * @param EncryptPassword Whether to encrypt the password.
+     */
+    public void setEncryptPassword(Boolean EncryptPassword) {
+        this.EncryptPassword = EncryptPassword;
+    }
+
     public CloneInstancesRequest() {
     }
 
@@ -593,6 +616,9 @@ Only instances with second-level backup enabled are supported.
         if (source.CloneTime != null) {
             this.CloneTime = new String(source.CloneTime);
         }
+        if (source.EncryptPassword != null) {
+            this.EncryptPassword = new Boolean(source.EncryptPassword);
+        }
     }
 
 
@@ -620,6 +646,7 @@ Only instances with second-level backup enabled are supported.
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
         this.setParamSimple(map, prefix + "CloneTime", this.CloneTime);
+        this.setParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeReplicationGroupRequest extends AbstractModel {
 
     /**
-    * Number of instances returned per page. Default value: `20`.
+    * Size of the output instance list per page. The value is a positive integer greater than 0, and the default value is 20.
     */
     @SerializedName("Limit")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeReplicationGroupRequest extends AbstractModel {
     private String SearchKey;
 
     /**
-     * Get Number of instances returned per page. Default value: `20`. 
-     * @return Limit Number of instances returned per page. Default value: `20`.
+     * Get Size of the output instance list per page. The value is a positive integer greater than 0, and the default value is 20. 
+     * @return Limit Size of the output instance list per page. The value is a positive integer greater than 0, and the default value is 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of instances returned per page. Default value: `20`.
-     * @param Limit Number of instances returned per page. Default value: `20`.
+     * Set Size of the output instance list per page. The value is a positive integer greater than 0, and the default value is 20.
+     * @param Limit Size of the output instance list per page. The value is a positive integer greater than 0, and the default value is 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
