@@ -24,207 +24,252 @@ import java.util.HashMap;
 public class DescribeBackupDownloadTaskRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
+    * Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * The name of a backup file with download tasks to be queried
+    * Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
     */
     @SerializedName("BackupName")
     @Expose
     private String BackupName;
 
     /**
-    * The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
+    * Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
+    * Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
+    * Number of entries returned for this query. Value range: 1–100. The default value is 20.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset for pagination. Default value: `0`.
+    * Specifies the number of pages returned for this query. The default value is 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The field used to sort the results. Valid values: `createTime` (default), `finishTime`.
+    * Sorting field.
+- createTime: sort by the creation time of the backup download task. The default value is createTime.
+- finishTime: sort by the completion time of the backup download task.
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sort order. Valid values: `asc`, `desc` (default).
+    * Sorting method.
+- asc: ascending order.
+- desc: descending order. The default value is desc.
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * The status of the tasks to be queried. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry). If it is left empty, tasks in any status will be returned.
+    * Specifies the task status for filtering download tasks. If this parameter is not configured, tasks of all status types will be returned.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-     * Get Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console 
-     * @return InstanceId Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
+     * Get Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list. 
+     * @return InstanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
-     * @param InstanceId Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
+     * Set Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+     * @param InstanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get The name of a backup file with download tasks to be queried 
-     * @return BackupName The name of a backup file with download tasks to be queried
+     * Get Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name. 
+     * @return BackupName Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set The name of a backup file with download tasks to be queried
-     * @param BackupName The name of a backup file with download tasks to be queried
+     * Set Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
+     * @param BackupName Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;
     }
 
     /**
-     * Get The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time. 
-     * @return StartTime The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
+     * Get Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default. 
+     * @return StartTime Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
-     * @param StartTime The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
+     * Set Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
+     * @param StartTime Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time. 
-     * @return EndTime The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
+     * Get Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default. 
+     * @return EndTime Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
-     * @param EndTime The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
+     * Set Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default.
+     * @param EndTime Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get The maximum number of results returned per page. Value range: 1-100. Default value: `20`. 
-     * @return Limit The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
+     * Get Number of entries returned for this query. Value range: 1–100. The default value is 20. 
+     * @return Limit Number of entries returned for this query. Value range: 1–100. The default value is 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
-     * @param Limit The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
+     * Set Number of entries returned for this query. Value range: 1–100. The default value is 20.
+     * @param Limit Number of entries returned for this query. Value range: 1–100. The default value is 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset for pagination. Default value: `0`. 
-     * @return Offset Offset for pagination. Default value: `0`.
+     * Get Specifies the number of pages returned for this query. The default value is 0. 
+     * @return Offset Specifies the number of pages returned for this query. The default value is 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset for pagination. Default value: `0`.
-     * @param Offset Offset for pagination. Default value: `0`.
+     * Set Specifies the number of pages returned for this query. The default value is 0.
+     * @param Offset Specifies the number of pages returned for this query. The default value is 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The field used to sort the results. Valid values: `createTime` (default), `finishTime`. 
-     * @return OrderBy The field used to sort the results. Valid values: `createTime` (default), `finishTime`.
+     * Get Sorting field.
+- createTime: sort by the creation time of the backup download task. The default value is createTime.
+- finishTime: sort by the completion time of the backup download task. 
+     * @return OrderBy Sorting field.
+- createTime: sort by the creation time of the backup download task. The default value is createTime.
+- finishTime: sort by the completion time of the backup download task.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set The field used to sort the results. Valid values: `createTime` (default), `finishTime`.
-     * @param OrderBy The field used to sort the results. Valid values: `createTime` (default), `finishTime`.
+     * Set Sorting field.
+- createTime: sort by the creation time of the backup download task. The default value is createTime.
+- finishTime: sort by the completion time of the backup download task.
+     * @param OrderBy Sorting field.
+- createTime: sort by the creation time of the backup download task. The default value is createTime.
+- finishTime: sort by the completion time of the backup download task.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sort order. Valid values: `asc`, `desc` (default). 
-     * @return OrderByType Sort order. Valid values: `asc`, `desc` (default).
+     * Get Sorting method.
+- asc: ascending order.
+- desc: descending order. The default value is desc. 
+     * @return OrderByType Sorting method.
+- asc: ascending order.
+- desc: descending order. The default value is desc.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sort order. Valid values: `asc`, `desc` (default).
-     * @param OrderByType Sort order. Valid values: `asc`, `desc` (default).
+     * Set Sorting method.
+- asc: ascending order.
+- desc: descending order. The default value is desc.
+     * @param OrderByType Sorting method.
+- asc: ascending order.
+- desc: descending order. The default value is desc.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get The status of the tasks to be queried. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry). If it is left empty, tasks in any status will be returned. 
-     * @return Status The status of the tasks to be queried. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry). If it is left empty, tasks in any status will be returned.
+     * Get Specifies the task status for filtering download tasks. If this parameter is not configured, tasks of all status types will be returned.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry. 
+     * @return Status Specifies the task status for filtering download tasks. If this parameter is not configured, tasks of all status types will be returned.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The status of the tasks to be queried. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry). If it is left empty, tasks in any status will be returned.
-     * @param Status The status of the tasks to be queried. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry). If it is left empty, tasks in any status will be returned.
+     * Set Specifies the task status for filtering download tasks. If this parameter is not configured, tasks of all status types will be returned.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
+     * @param Status Specifies the task status for filtering download tasks. If this parameter is not configured, tasks of all status types will be returned.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;

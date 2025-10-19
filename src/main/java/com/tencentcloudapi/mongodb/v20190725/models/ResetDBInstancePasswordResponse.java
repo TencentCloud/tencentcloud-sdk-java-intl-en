@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ResetDBInstancePasswordResponse extends AbstractModel {
 
     /**
-    * Async request ID, which is used to query the running status of the process.
+    * Task request ID.
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class ResetDBInstancePasswordResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async request ID, which is used to query the running status of the process. 
-     * @return AsyncRequestId Async request ID, which is used to query the running status of the process.
+     * Get Task request ID. 
+     * @return AsyncRequestId Task request ID.
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set Async request ID, which is used to query the running status of the process.
-     * @param AsyncRequestId Async request ID, which is used to query the running status of the process.
+     * Set Task request ID.
+     * @param AsyncRequestId Task request ID.
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

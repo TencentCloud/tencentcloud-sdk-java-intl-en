@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AssignProjectResponse extends AbstractModel {
 
     /**
-    * List of the returned async task IDs
+    * Lists async task ids returned.
     */
     @SerializedName("FlowIds")
     @Expose
@@ -38,16 +38,16 @@ public class AssignProjectResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List of the returned async task IDs 
-     * @return FlowIds List of the returned async task IDs
+     * Get Lists async task ids returned. 
+     * @return FlowIds Lists async task ids returned.
      */
     public Long [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set List of the returned async task IDs
-     * @param FlowIds List of the returned async task IDs
+     * Set Lists async task ids returned.
+     * @param FlowIds Lists async task ids returned.
      */
     public void setFlowIds(Long [] FlowIds) {
         this.FlowIds = FlowIds;

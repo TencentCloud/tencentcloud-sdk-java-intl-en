@@ -24,35 +24,48 @@ import java.util.HashMap;
 public class DescribeDBInstanceDealResponse extends AbstractModel {
 
     /**
-    * Order status. Valid values: 1 (unpaid), 2 (paid), 3 (delivering), 4 (delivered), 5 (delivery failed), 6 (refunded), 7 (order closed), 8 (order closed because it failed to be paid within timeout period).
+    * Order status.
+- 1: unpaid.
+- 2: paid.
+- 3: delivering.
+- 4: delivered successfully.
+- 5: delivery failed.
+- 6: refund.
+- 7: order closed.
+- 8: closed due to unpaid timeout.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Original price of the order.
+    * Original price of the order, in USD.
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * Discounted price of the order.
+    * Discount price of the order, in USD.
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-    * Operation performed by the order. Valid values: purchase, renew, upgrade, downgrade, refund.
+    * Order operation behavior.
+- purchase: newly purchased.
+- renew: renewed.
+- upgrade: configuration upgraded.
+- downgrade: configuration downgraded.
+- refund: return and refund.
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Resource ID of the current order.
+    * Instance ID of the current order.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -66,80 +79,132 @@ public class DescribeDBInstanceDealResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Order status. Valid values: 1 (unpaid), 2 (paid), 3 (delivering), 4 (delivered), 5 (delivery failed), 6 (refunded), 7 (order closed), 8 (order closed because it failed to be paid within timeout period). 
-     * @return Status Order status. Valid values: 1 (unpaid), 2 (paid), 3 (delivering), 4 (delivered), 5 (delivery failed), 6 (refunded), 7 (order closed), 8 (order closed because it failed to be paid within timeout period).
+     * Get Order status.
+- 1: unpaid.
+- 2: paid.
+- 3: delivering.
+- 4: delivered successfully.
+- 5: delivery failed.
+- 6: refund.
+- 7: order closed.
+- 8: closed due to unpaid timeout. 
+     * @return Status Order status.
+- 1: unpaid.
+- 2: paid.
+- 3: delivering.
+- 4: delivered successfully.
+- 5: delivery failed.
+- 6: refund.
+- 7: order closed.
+- 8: closed due to unpaid timeout.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Order status. Valid values: 1 (unpaid), 2 (paid), 3 (delivering), 4 (delivered), 5 (delivery failed), 6 (refunded), 7 (order closed), 8 (order closed because it failed to be paid within timeout period).
-     * @param Status Order status. Valid values: 1 (unpaid), 2 (paid), 3 (delivering), 4 (delivered), 5 (delivery failed), 6 (refunded), 7 (order closed), 8 (order closed because it failed to be paid within timeout period).
+     * Set Order status.
+- 1: unpaid.
+- 2: paid.
+- 3: delivering.
+- 4: delivered successfully.
+- 5: delivery failed.
+- 6: refund.
+- 7: order closed.
+- 8: closed due to unpaid timeout.
+     * @param Status Order status.
+- 1: unpaid.
+- 2: paid.
+- 3: delivering.
+- 4: delivered successfully.
+- 5: delivery failed.
+- 6: refund.
+- 7: order closed.
+- 8: closed due to unpaid timeout.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Original price of the order. 
-     * @return OriginalPrice Original price of the order.
+     * Get Original price of the order, in USD. 
+     * @return OriginalPrice Original price of the order, in USD.
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Original price of the order.
-     * @param OriginalPrice Original price of the order.
+     * Set Original price of the order, in USD.
+     * @param OriginalPrice Original price of the order, in USD.
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get Discounted price of the order. 
-     * @return DiscountPrice Discounted price of the order.
+     * Get Discount price of the order, in USD. 
+     * @return DiscountPrice Discount price of the order, in USD.
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set Discounted price of the order.
-     * @param DiscountPrice Discounted price of the order.
+     * Set Discount price of the order, in USD.
+     * @param DiscountPrice Discount price of the order, in USD.
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
     }
 
     /**
-     * Get Operation performed by the order. Valid values: purchase, renew, upgrade, downgrade, refund. 
-     * @return Action Operation performed by the order. Valid values: purchase, renew, upgrade, downgrade, refund.
+     * Get Order operation behavior.
+- purchase: newly purchased.
+- renew: renewed.
+- upgrade: configuration upgraded.
+- downgrade: configuration downgraded.
+- refund: return and refund. 
+     * @return Action Order operation behavior.
+- purchase: newly purchased.
+- renew: renewed.
+- upgrade: configuration upgraded.
+- downgrade: configuration downgraded.
+- refund: return and refund.
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Operation performed by the order. Valid values: purchase, renew, upgrade, downgrade, refund.
-     * @param Action Operation performed by the order. Valid values: purchase, renew, upgrade, downgrade, refund.
+     * Set Order operation behavior.
+- purchase: newly purchased.
+- renew: renewed.
+- upgrade: configuration upgraded.
+- downgrade: configuration downgraded.
+- refund: return and refund.
+     * @param Action Order operation behavior.
+- purchase: newly purchased.
+- renew: renewed.
+- upgrade: configuration upgraded.
+- downgrade: configuration downgraded.
+- refund: return and refund.
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Resource ID of the current order. 
-     * @return InstanceId Resource ID of the current order.
+     * Get Instance ID of the current order. 
+     * @return InstanceId Instance ID of the current order.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Resource ID of the current order.
-     * @param InstanceId Resource ID of the current order.
+     * Set Instance ID of the current order.
+     * @param InstanceId Instance ID of the current order.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

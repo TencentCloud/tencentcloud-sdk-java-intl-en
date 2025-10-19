@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateBackupDownloadTaskResponse extends AbstractModel {
 
     /**
-    * Download task status
+    * Status of the download task.
     */
     @SerializedName("Tasks")
     @Expose
@@ -38,16 +38,16 @@ public class CreateBackupDownloadTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Download task status 
-     * @return Tasks Download task status
+     * Get Status of the download task. 
+     * @return Tasks Status of the download task.
      */
     public BackupDownloadTaskStatus [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set Download task status
-     * @param Tasks Download task status
+     * Set Status of the download task.
+     * @param Tasks Status of the download task.
      */
     public void setTasks(BackupDownloadTaskStatus [] Tasks) {
         this.Tasks = Tasks;

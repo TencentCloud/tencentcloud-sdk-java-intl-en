@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBackupDownloadTaskResponse extends AbstractModel {
 
     /**
-    * Total number of results
+    * All entries that meet the query conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * The list of download tasks
+    * Download task list.
     */
     @SerializedName("Tasks")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBackupDownloadTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of results 
-     * @return TotalCount Total number of results
+     * Get All entries that meet the query conditions. 
+     * @return TotalCount All entries that meet the query conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of results
-     * @param TotalCount Total number of results
+     * Set All entries that meet the query conditions.
+     * @param TotalCount All entries that meet the query conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get The list of download tasks 
-     * @return Tasks The list of download tasks
+     * Get Download task list. 
+     * @return Tasks Download task list.
      */
     public BackupDownloadTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set The list of download tasks
-     * @param Tasks The list of download tasks
+     * Set Download task list.
+     * @param Tasks Download task list.
      */
     public void setTasks(BackupDownloadTask [] Tasks) {
         this.Tasks = Tasks;

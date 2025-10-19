@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ClientConnection extends AbstractModel {
 
     /**
-    * Client IP of a connection
+    * IP address of the connected client.
     */
     @SerializedName("IP")
     @Expose
     private String IP;
 
     /**
-    * Number of connections corresponding to a client IP
+    * Number of connections corresponding to the client IP address.
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * Whether it is the Tencent Cloud IP for automated testing
+    * Whether it is an internal IP address.
     */
     @SerializedName("InternalService")
     @Expose
     private Boolean InternalService;
 
     /**
-     * Get Client IP of a connection 
-     * @return IP Client IP of a connection
+     * Get IP address of the connected client. 
+     * @return IP IP address of the connected client.
      */
     public String getIP() {
         return this.IP;
     }
 
     /**
-     * Set Client IP of a connection
-     * @param IP Client IP of a connection
+     * Set IP address of the connected client.
+     * @param IP IP address of the connected client.
      */
     public void setIP(String IP) {
         this.IP = IP;
     }
 
     /**
-     * Get Number of connections corresponding to a client IP 
-     * @return Count Number of connections corresponding to a client IP
+     * Get Number of connections corresponding to the client IP address. 
+     * @return Count Number of connections corresponding to the client IP address.
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Number of connections corresponding to a client IP
-     * @param Count Number of connections corresponding to a client IP
+     * Set Number of connections corresponding to the client IP address.
+     * @param Count Number of connections corresponding to the client IP address.
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get Whether it is the Tencent Cloud IP for automated testing 
-     * @return InternalService Whether it is the Tencent Cloud IP for automated testing
+     * Get Whether it is an internal IP address. 
+     * @return InternalService Whether it is an internal IP address.
      */
     public Boolean getInternalService() {
         return this.InternalService;
     }
 
     /**
-     * Set Whether it is the Tencent Cloud IP for automated testing
-     * @param InternalService Whether it is the Tencent Cloud IP for automated testing
+     * Set Whether it is an internal IP address.
+     * @param InternalService Whether it is an internal IP address.
      */
     public void setInternalService(Boolean InternalService) {
         this.InternalService = InternalService;

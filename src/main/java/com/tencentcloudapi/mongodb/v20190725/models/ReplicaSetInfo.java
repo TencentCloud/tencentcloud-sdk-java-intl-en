@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ReplicaSetInfo extends AbstractModel {
 
     /**
-    * Replica set ID
+    * Replica set ID.
     */
     @SerializedName("ReplicaSetId")
     @Expose
     private String ReplicaSetId;
 
     /**
-     * Get Replica set ID 
-     * @return ReplicaSetId Replica set ID
+     * Get Replica set ID. 
+     * @return ReplicaSetId Replica set ID.
      */
     public String getReplicaSetId() {
         return this.ReplicaSetId;
     }
 
     /**
-     * Set Replica set ID
-     * @param ReplicaSetId Replica set ID
+     * Set Replica set ID.
+     * @param ReplicaSetId Replica set ID.
      */
     public void setReplicaSetId(String ReplicaSetId) {
         this.ReplicaSetId = ReplicaSetId;

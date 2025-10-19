@@ -42,14 +42,14 @@ public class ModifyDBInstanceNetworkAddressRequest extends AbstractModel {
     private Long OldIpExpiredTime;
 
     /**
-    * VPC ID after the switch. If the instance is using a basic network, this field is not required.
+    * VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
     */
     @SerializedName("NewUniqVpcId")
     @Expose
     private String NewUniqVpcId;
 
     /**
-    * VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
+    * VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
     */
     @SerializedName("NewUniqSubnetId")
     @Expose
@@ -111,32 +111,32 @@ public class ModifyDBInstanceNetworkAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get VPC ID after the switch. If the instance is using a basic network, this field is not required. 
-     * @return NewUniqVpcId VPC ID after the switch. If the instance is using a basic network, this field is not required.
+     * Get VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID. 
+     * @return NewUniqVpcId VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
      */
     public String getNewUniqVpcId() {
         return this.NewUniqVpcId;
     }
 
     /**
-     * Set VPC ID after the switch. If the instance is using a basic network, this field is not required.
-     * @param NewUniqVpcId VPC ID after the switch. If the instance is using a basic network, this field is not required.
+     * Set VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
+     * @param NewUniqVpcId VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
      */
     public void setNewUniqVpcId(String NewUniqVpcId) {
         this.NewUniqVpcId = NewUniqVpcId;
     }
 
     /**
-     * Get VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. 
-     * @return NewUniqSubnetId VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
+     * Get VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC. 
+     * @return NewUniqSubnetId VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
      */
     public String getNewUniqSubnetId() {
         return this.NewUniqSubnetId;
     }
 
     /**
-     * Set VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
-     * @param NewUniqSubnetId VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
+     * Set VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
+     * @param NewUniqSubnetId VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
      */
     public void setNewUniqSubnetId(String NewUniqSubnetId) {
         this.NewUniqSubnetId = NewUniqSubnetId;

@@ -24,92 +24,115 @@ import java.util.HashMap;
 public class SlowLogPattern extends AbstractModel {
 
     /**
-    * Slow log pattern
+    * Slow log output format: database name.table name.command.
     */
     @SerializedName("Pattern")
     @Expose
     private String Pattern;
 
     /**
-    * Maximum execution time
+    * queryHash value carried during slow log recording. It can be used to identify a query type.
+    */
+    @SerializedName("QueryHash")
+    @Expose
+    private String QueryHash;
+
+    /**
+    * Maximum execution time, in milliseconds.
     */
     @SerializedName("MaxTime")
     @Expose
     private Long MaxTime;
 
     /**
-    * Average execution time
+    * Average execution time, in milliseconds.
     */
     @SerializedName("AverageTime")
     @Expose
     private Long AverageTime;
 
     /**
-    * Number of slow logs in this pattern
+    * Number of slow logs.
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-     * Get Slow log pattern 
-     * @return Pattern Slow log pattern
+     * Get Slow log output format: database name.table name.command. 
+     * @return Pattern Slow log output format: database name.table name.command.
      */
     public String getPattern() {
         return this.Pattern;
     }
 
     /**
-     * Set Slow log pattern
-     * @param Pattern Slow log pattern
+     * Set Slow log output format: database name.table name.command.
+     * @param Pattern Slow log output format: database name.table name.command.
      */
     public void setPattern(String Pattern) {
         this.Pattern = Pattern;
     }
 
     /**
-     * Get Maximum execution time 
-     * @return MaxTime Maximum execution time
+     * Get queryHash value carried during slow log recording. It can be used to identify a query type. 
+     * @return QueryHash queryHash value carried during slow log recording. It can be used to identify a query type.
+     */
+    public String getQueryHash() {
+        return this.QueryHash;
+    }
+
+    /**
+     * Set queryHash value carried during slow log recording. It can be used to identify a query type.
+     * @param QueryHash queryHash value carried during slow log recording. It can be used to identify a query type.
+     */
+    public void setQueryHash(String QueryHash) {
+        this.QueryHash = QueryHash;
+    }
+
+    /**
+     * Get Maximum execution time, in milliseconds. 
+     * @return MaxTime Maximum execution time, in milliseconds.
      */
     public Long getMaxTime() {
         return this.MaxTime;
     }
 
     /**
-     * Set Maximum execution time
-     * @param MaxTime Maximum execution time
+     * Set Maximum execution time, in milliseconds.
+     * @param MaxTime Maximum execution time, in milliseconds.
      */
     public void setMaxTime(Long MaxTime) {
         this.MaxTime = MaxTime;
     }
 
     /**
-     * Get Average execution time 
-     * @return AverageTime Average execution time
+     * Get Average execution time, in milliseconds. 
+     * @return AverageTime Average execution time, in milliseconds.
      */
     public Long getAverageTime() {
         return this.AverageTime;
     }
 
     /**
-     * Set Average execution time
-     * @param AverageTime Average execution time
+     * Set Average execution time, in milliseconds.
+     * @param AverageTime Average execution time, in milliseconds.
      */
     public void setAverageTime(Long AverageTime) {
         this.AverageTime = AverageTime;
     }
 
     /**
-     * Get Number of slow logs in this pattern 
-     * @return Total Number of slow logs in this pattern
+     * Get Number of slow logs. 
+     * @return Total Number of slow logs.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Number of slow logs in this pattern
-     * @param Total Number of slow logs in this pattern
+     * Set Number of slow logs.
+     * @param Total Number of slow logs.
      */
     public void setTotal(Long Total) {
         this.Total = Total;
@@ -125,6 +148,9 @@ public class SlowLogPattern extends AbstractModel {
     public SlowLogPattern(SlowLogPattern source) {
         if (source.Pattern != null) {
             this.Pattern = new String(source.Pattern);
+        }
+        if (source.QueryHash != null) {
+            this.QueryHash = new String(source.QueryHash);
         }
         if (source.MaxTime != null) {
             this.MaxTime = new Long(source.MaxTime);
@@ -143,6 +169,7 @@ public class SlowLogPattern extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Pattern", this.Pattern);
+        this.setParamSimple(map, prefix + "QueryHash", this.QueryHash);
         this.setParamSimple(map, prefix + "MaxTime", this.MaxTime);
         this.setParamSimple(map, prefix + "AverageTime", this.AverageTime);
         this.setParamSimple(map, prefix + "Total", this.Total);

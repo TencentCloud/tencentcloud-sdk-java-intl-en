@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class SecurityGroup extends AbstractModel {
 
     /**
-    * Project ID
+    * Associated project ID.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Creation time
+    * Security group creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Inbound rule
+    * Security group inbound rule.
     */
     @SerializedName("Inbound")
     @Expose
     private SecurityGroupBound [] Inbound;
 
     /**
-    * Outbound rule
+    * Security group outbound rule.
     */
     @SerializedName("Outbound")
     @Expose
     private SecurityGroupBound [] Outbound;
 
     /**
-    * Security group ID
+    * Security group ID.
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-    * Security group name
+    * Security group name.
     */
     @SerializedName("SecurityGroupName")
     @Expose
     private String SecurityGroupName;
 
     /**
-    * Security group remarks
+    * Security group remarks.
     */
     @SerializedName("SecurityGroupRemark")
     @Expose
     private String SecurityGroupRemark;
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get Associated project ID. 
+     * @return ProjectId Associated project ID.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set Associated project ID.
+     * @param ProjectId Associated project ID.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Security group creation time. 
+     * @return CreateTime Security group creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Security group creation time.
+     * @param CreateTime Security group creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Inbound rule 
-     * @return Inbound Inbound rule
+     * Get Security group inbound rule. 
+     * @return Inbound Security group inbound rule.
      */
     public SecurityGroupBound [] getInbound() {
         return this.Inbound;
     }
 
     /**
-     * Set Inbound rule
-     * @param Inbound Inbound rule
+     * Set Security group inbound rule.
+     * @param Inbound Security group inbound rule.
      */
     public void setInbound(SecurityGroupBound [] Inbound) {
         this.Inbound = Inbound;
     }
 
     /**
-     * Get Outbound rule 
-     * @return Outbound Outbound rule
+     * Get Security group outbound rule. 
+     * @return Outbound Security group outbound rule.
      */
     public SecurityGroupBound [] getOutbound() {
         return this.Outbound;
     }
 
     /**
-     * Set Outbound rule
-     * @param Outbound Outbound rule
+     * Set Security group outbound rule.
+     * @param Outbound Security group outbound rule.
      */
     public void setOutbound(SecurityGroupBound [] Outbound) {
         this.Outbound = Outbound;
     }
 
     /**
-     * Get Security group ID 
-     * @return SecurityGroupId Security group ID
+     * Get Security group ID. 
+     * @return SecurityGroupId Security group ID.
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set Security group ID
-     * @param SecurityGroupId Security group ID
+     * Set Security group ID.
+     * @param SecurityGroupId Security group ID.
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get Security group name 
-     * @return SecurityGroupName Security group name
+     * Get Security group name. 
+     * @return SecurityGroupName Security group name.
      */
     public String getSecurityGroupName() {
         return this.SecurityGroupName;
     }
 
     /**
-     * Set Security group name
-     * @param SecurityGroupName Security group name
+     * Set Security group name.
+     * @param SecurityGroupName Security group name.
      */
     public void setSecurityGroupName(String SecurityGroupName) {
         this.SecurityGroupName = SecurityGroupName;
     }
 
     /**
-     * Get Security group remarks 
-     * @return SecurityGroupRemark Security group remarks
+     * Get Security group remarks. 
+     * @return SecurityGroupRemark Security group remarks.
      */
     public String getSecurityGroupRemark() {
         return this.SecurityGroupRemark;
     }
 
     /**
-     * Set Security group remarks
-     * @param SecurityGroupRemark Security group remarks
+     * Set Security group remarks.
+     * @param SecurityGroupRemark Security group remarks.
      */
     public void setSecurityGroupRemark(String SecurityGroupRemark) {
         this.SecurityGroupRemark = SecurityGroupRemark;

@@ -24,69 +24,79 @@ import java.util.HashMap;
 public class ResetDBInstancePasswordRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Specifies the instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance account name
+    * Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.comom/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * New password, which must contain at least eight characters
+    * Specifies a new password for the account. Password complexity requirements:
+- It should contain 8–32 characters.
+- It should contain at least two types of the following: letters, digits, and special characters (!@#%^\*()\_).
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Specifies the instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list. 
+     * @return InstanceId Specifies the instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Specifies the instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+     * @param InstanceId Specifies the instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance account name 
-     * @return UserName Instance account name
+     * Get Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.comom/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed. 
+     * @return UserName Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.comom/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Instance account name
-     * @param UserName Instance account name
+     * Set Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.comom/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
+     * @param UserName Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.comom/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get New password, which must contain at least eight characters 
-     * @return Password New password, which must contain at least eight characters
+     * Get Specifies a new password for the account. Password complexity requirements:
+- It should contain 8–32 characters.
+- It should contain at least two types of the following: letters, digits, and special characters (!@#%^\*()\_). 
+     * @return Password Specifies a new password for the account. Password complexity requirements:
+- It should contain 8–32 characters.
+- It should contain at least two types of the following: letters, digits, and special characters (!@#%^\*()\_).
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set New password, which must contain at least eight characters
-     * @param Password New password, which must contain at least eight characters
+     * Set Specifies a new password for the account. Password complexity requirements:
+- It should contain 8–32 characters.
+- It should contain at least two types of the following: letters, digits, and special characters (!@#%^\*()\_).
+     * @param Password Specifies a new password for the account. Password complexity requirements:
+- It should contain 8–32 characters.
+- It should contain at least two types of the following: letters, digits, and special characters (!@#%^\*()\_).
      */
     public void setPassword(String Password) {
         this.Password = Password;

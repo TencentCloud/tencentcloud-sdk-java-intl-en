@@ -24,70 +24,81 @@ import java.util.HashMap;
 public class BackupDownloadTask extends AbstractModel {
 
     /**
-    * Task creation time
+    * Task creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Backup name
+    * Backup file name.
     */
     @SerializedName("BackupName")
     @Expose
     private String BackupName;
 
     /**
-    * Shard name
+    * Shard name.
     */
     @SerializedName("ReplicaSetId")
     @Expose
     private String ReplicaSetId;
 
     /**
-    * Backup size in bytes
+    * Backup data size, in bytes.
     */
     @SerializedName("BackupSize")
     @Expose
     private Long BackupSize;
 
     /**
-    * Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+    * Task status.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Task progress in percentage
+    * Task progress percentage.
     */
     @SerializedName("Percent")
     @Expose
     private Long Percent;
 
     /**
-    * Task duration in seconds
+    * Duration, in seconds.
     */
     @SerializedName("TimeSpend")
     @Expose
     private Long TimeSpend;
 
     /**
-    * Backup download address
+    * Download link for backup data.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+    * Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
     */
     @SerializedName("BackupMethod")
     @Expose
     private Long BackupMethod;
 
     /**
-    * Specifies the remarks for backup.
+    * Specified remarks for initiating backup tasks.
     */
     @SerializedName("BackupDesc")
     @Expose
@@ -108,160 +119,204 @@ public class BackupDownloadTask extends AbstractModel {
     private String Bucket;
 
     /**
-     * Get Task creation time 
-     * @return CreateTime Task creation time
+     * Get Task creation time. 
+     * @return CreateTime Task creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Task creation time
-     * @param CreateTime Task creation time
+     * Set Task creation time.
+     * @param CreateTime Task creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Backup name 
-     * @return BackupName Backup name
+     * Get Backup file name. 
+     * @return BackupName Backup file name.
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set Backup name
-     * @param BackupName Backup name
+     * Set Backup file name.
+     * @param BackupName Backup file name.
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;
     }
 
     /**
-     * Get Shard name 
-     * @return ReplicaSetId Shard name
+     * Get Shard name. 
+     * @return ReplicaSetId Shard name.
      */
     public String getReplicaSetId() {
         return this.ReplicaSetId;
     }
 
     /**
-     * Set Shard name
-     * @param ReplicaSetId Shard name
+     * Set Shard name.
+     * @param ReplicaSetId Shard name.
      */
     public void setReplicaSetId(String ReplicaSetId) {
         this.ReplicaSetId = ReplicaSetId;
     }
 
     /**
-     * Get Backup size in bytes 
-     * @return BackupSize Backup size in bytes
+     * Get Backup data size, in bytes. 
+     * @return BackupSize Backup data size, in bytes.
      */
     public Long getBackupSize() {
         return this.BackupSize;
     }
 
     /**
-     * Set Backup size in bytes
-     * @param BackupSize Backup size in bytes
+     * Set Backup data size, in bytes.
+     * @param BackupSize Backup data size, in bytes.
      */
     public void setBackupSize(Long BackupSize) {
         this.BackupSize = BackupSize;
     }
 
     /**
-     * Get Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry) 
-     * @return Status Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+     * Get Task status.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry. 
+     * @return Status Task status.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
-     * @param Status Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+     * Set Task status.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
+     * @param Status Task status.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Task progress in percentage 
-     * @return Percent Task progress in percentage
+     * Get Task progress percentage. 
+     * @return Percent Task progress percentage.
      */
     public Long getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set Task progress in percentage
-     * @param Percent Task progress in percentage
+     * Set Task progress percentage.
+     * @param Percent Task progress percentage.
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;
     }
 
     /**
-     * Get Task duration in seconds 
-     * @return TimeSpend Task duration in seconds
+     * Get Duration, in seconds. 
+     * @return TimeSpend Duration, in seconds.
      */
     public Long getTimeSpend() {
         return this.TimeSpend;
     }
 
     /**
-     * Set Task duration in seconds
-     * @param TimeSpend Task duration in seconds
+     * Set Duration, in seconds.
+     * @param TimeSpend Duration, in seconds.
      */
     public void setTimeSpend(Long TimeSpend) {
         this.TimeSpend = TimeSpend;
     }
 
     /**
-     * Get Backup download address 
-     * @return Url Backup download address
+     * Get Download link for backup data. 
+     * @return Url Download link for backup data.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Backup download address
-     * @param Url Backup download address
+     * Set Download link for backup data.
+     * @param Url Download link for backup data.
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup) 
-     * @return BackupMethod Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+     * Get Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance. 
+     * @return BackupMethod Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
      */
     public Long getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
-     * @param BackupMethod Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+     * Set Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
+     * @param BackupMethod Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
      */
     public void setBackupMethod(Long BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * Get Specifies the remarks for backup. 
-     * @return BackupDesc Specifies the remarks for backup.
+     * Get Specified remarks for initiating backup tasks. 
+     * @return BackupDesc Specified remarks for initiating backup tasks.
      */
     public String getBackupDesc() {
         return this.BackupDesc;
     }
 
     /**
-     * Set Specifies the remarks for backup.
-     * @param BackupDesc Specifies the remarks for backup.
+     * Set Specified remarks for initiating backup tasks.
+     * @param BackupDesc Specified remarks for initiating backup tasks.
      */
     public void setBackupDesc(String BackupDesc) {
         this.BackupDesc = BackupDesc;

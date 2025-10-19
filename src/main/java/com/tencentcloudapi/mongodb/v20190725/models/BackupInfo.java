@@ -31,28 +31,30 @@ public class BackupInfo extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Backup mode. 0: automatic backup; 1: manual backup
+    * Backup method.
+- 0: automatic backup.
+- 1: manual backup.
     */
     @SerializedName("BackupType")
     @Expose
     private Long BackupType;
 
     /**
-    * Backup name
+    * Backup file name.
     */
     @SerializedName("BackupName")
     @Expose
     private String BackupName;
 
     /**
-    * Backup remarks.
+    * Backup task remarks.
     */
     @SerializedName("BackupDesc")
     @Expose
     private String BackupDesc;
 
     /**
-    * Backup file size. Unit: KB.
+    * Backup file size, in KB.
     */
     @SerializedName("BackupSize")
     @Expose
@@ -73,14 +75,22 @@ public class BackupInfo extends AbstractModel {
     private String EndTime;
 
     /**
-    * Backup status. 1: backing up; 2: backed up successful
+    * Backup status.
+- 1: backing up.
+- 2: backup successful.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Backup method. 0: logical backup; 1: physical backup
+    * Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note:**
+- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+- Physical backup is not supported when storage encryption is enabled for the instance.
     */
     @SerializedName("BackupMethod")
     @Expose
@@ -101,11 +111,18 @@ public class BackupInfo extends AbstractModel {
     private String DeleteTime;
 
     /**
-    * Region for cross-region backup.
+    * Cross-region backup region.
     */
     @SerializedName("BackupRegion")
     @Expose
     private String BackupRegion;
+
+    /**
+    * Rollback time supported by the backup.
+    */
+    @SerializedName("RestoreTime")
+    @Expose
+    private String RestoreTime;
 
     /**
      * Get Instance ID. 
@@ -124,64 +141,72 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Get Backup mode. 0: automatic backup; 1: manual backup 
-     * @return BackupType Backup mode. 0: automatic backup; 1: manual backup
+     * Get Backup method.
+- 0: automatic backup.
+- 1: manual backup. 
+     * @return BackupType Backup method.
+- 0: automatic backup.
+- 1: manual backup.
      */
     public Long getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set Backup mode. 0: automatic backup; 1: manual backup
-     * @param BackupType Backup mode. 0: automatic backup; 1: manual backup
+     * Set Backup method.
+- 0: automatic backup.
+- 1: manual backup.
+     * @param BackupType Backup method.
+- 0: automatic backup.
+- 1: manual backup.
      */
     public void setBackupType(Long BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get Backup name 
-     * @return BackupName Backup name
+     * Get Backup file name. 
+     * @return BackupName Backup file name.
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set Backup name
-     * @param BackupName Backup name
+     * Set Backup file name.
+     * @param BackupName Backup file name.
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;
     }
 
     /**
-     * Get Backup remarks. 
-     * @return BackupDesc Backup remarks.
+     * Get Backup task remarks. 
+     * @return BackupDesc Backup task remarks.
      */
     public String getBackupDesc() {
         return this.BackupDesc;
     }
 
     /**
-     * Set Backup remarks.
-     * @param BackupDesc Backup remarks.
+     * Set Backup task remarks.
+     * @param BackupDesc Backup task remarks.
      */
     public void setBackupDesc(String BackupDesc) {
         this.BackupDesc = BackupDesc;
     }
 
     /**
-     * Get Backup file size. Unit: KB. 
-     * @return BackupSize Backup file size. Unit: KB.
+     * Get Backup file size, in KB. 
+     * @return BackupSize Backup file size, in KB.
      */
     public Long getBackupSize() {
         return this.BackupSize;
     }
 
     /**
-     * Set Backup file size. Unit: KB.
-     * @param BackupSize Backup file size. Unit: KB.
+     * Set Backup file size, in KB.
+     * @param BackupSize Backup file size, in KB.
      */
     public void setBackupSize(Long BackupSize) {
         this.BackupSize = BackupSize;
@@ -220,32 +245,64 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Get Backup status. 1: backing up; 2: backed up successful 
-     * @return Status Backup status. 1: backing up; 2: backed up successful
+     * Get Backup status.
+- 1: backing up.
+- 2: backup successful. 
+     * @return Status Backup status.
+- 1: backing up.
+- 2: backup successful.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Backup status. 1: backing up; 2: backed up successful
-     * @param Status Backup status. 1: backing up; 2: backed up successful
+     * Set Backup status.
+- 1: backing up.
+- 2: backup successful.
+     * @param Status Backup status.
+- 1: backing up.
+- 2: backup successful.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Backup method. 0: logical backup; 1: physical backup 
-     * @return BackupMethod Backup method. 0: logical backup; 1: physical backup
+     * Get Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note:**
+- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+- Physical backup is not supported when storage encryption is enabled for the instance. 
+     * @return BackupMethod Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note:**
+- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+- Physical backup is not supported when storage encryption is enabled for the instance.
      */
     public Long getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set Backup method. 0: logical backup; 1: physical backup
-     * @param BackupMethod Backup method. 0: logical backup; 1: physical backup
+     * Set Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note:**
+- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+- Physical backup is not supported when storage encryption is enabled for the instance.
+     * @param BackupMethod Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note:**
+- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+- Physical backup is not supported when storage encryption is enabled for the instance.
      */
     public void setBackupMethod(Long BackupMethod) {
         this.BackupMethod = BackupMethod;
@@ -284,19 +341,35 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Get Region for cross-region backup. 
-     * @return BackupRegion Region for cross-region backup.
+     * Get Cross-region backup region. 
+     * @return BackupRegion Cross-region backup region.
      */
     public String getBackupRegion() {
         return this.BackupRegion;
     }
 
     /**
-     * Set Region for cross-region backup.
-     * @param BackupRegion Region for cross-region backup.
+     * Set Cross-region backup region.
+     * @param BackupRegion Cross-region backup region.
      */
     public void setBackupRegion(String BackupRegion) {
         this.BackupRegion = BackupRegion;
+    }
+
+    /**
+     * Get Rollback time supported by the backup. 
+     * @return RestoreTime Rollback time supported by the backup.
+     */
+    public String getRestoreTime() {
+        return this.RestoreTime;
+    }
+
+    /**
+     * Set Rollback time supported by the backup.
+     * @param RestoreTime Rollback time supported by the backup.
+     */
+    public void setRestoreTime(String RestoreTime) {
+        this.RestoreTime = RestoreTime;
     }
 
     public BackupInfo() {
@@ -343,6 +416,9 @@ public class BackupInfo extends AbstractModel {
         if (source.BackupRegion != null) {
             this.BackupRegion = new String(source.BackupRegion);
         }
+        if (source.RestoreTime != null) {
+            this.RestoreTime = new String(source.RestoreTime);
+        }
     }
 
 
@@ -362,6 +438,7 @@ public class BackupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BackId", this.BackId);
         this.setParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
         this.setParamSimple(map, prefix + "BackupRegion", this.BackupRegion);
+        this.setParamSimple(map, prefix + "RestoreTime", this.RestoreTime);
 
     }
 }

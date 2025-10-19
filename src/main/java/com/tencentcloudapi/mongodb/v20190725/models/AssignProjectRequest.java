@@ -31,7 +31,7 @@ public class AssignProjectRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * Unique ID of an existing project (instead of a new project).
+    * Project ID, the unique ID of the project created by the user. Go to the [project management](https://console.cloud.tencent.com/project) area of the account center in the console to copy the project ID.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -54,16 +54,16 @@ public class AssignProjectRequest extends AbstractModel {
     }
 
     /**
-     * Get Unique ID of an existing project (instead of a new project). 
-     * @return ProjectId Unique ID of an existing project (instead of a new project).
+     * Get Project ID, the unique ID of the project created by the user. Go to the [project management](https://console.cloud.tencent.com/project) area of the account center in the console to copy the project ID. 
+     * @return ProjectId Project ID, the unique ID of the project created by the user. Go to the [project management](https://console.cloud.tencent.com/project) area of the account center in the console to copy the project ID.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Unique ID of an existing project (instead of a new project).
-     * @param ProjectId Unique ID of an existing project (instead of a new project).
+     * Set Project ID, the unique ID of the project created by the user. Go to the [project management](https://console.cloud.tencent.com/project) area of the account center in the console to copy the project ID.
+     * @param ProjectId Project ID, the unique ID of the project created by the user. Go to the [project management](https://console.cloud.tencent.com/project) area of the account center in the console to copy the project ID.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

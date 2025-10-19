@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeAsyncRequestInfoRequest extends AbstractModel {
 
     /**
-    * Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
+    * Specifies the ID of the asynchronous request to be queried. When an asynchronous process is involved in the API operation (such as [CreateBackupDBInstance](https://www.tencentcloud.comom/document/product/240/46599?from_cn_redirect=1)), the response value of AsyncRequestId is the ID to be filled in for this parameter.
     */
     @SerializedName("AsyncRequestId")
     @Expose
     private String AsyncRequestId;
 
     /**
-     * Get Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`. 
-     * @return AsyncRequestId Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
+     * Get Specifies the ID of the asynchronous request to be queried. When an asynchronous process is involved in the API operation (such as [CreateBackupDBInstance](https://www.tencentcloud.comom/document/product/240/46599?from_cn_redirect=1)), the response value of AsyncRequestId is the ID to be filled in for this parameter. 
+     * @return AsyncRequestId Specifies the ID of the asynchronous request to be queried. When an asynchronous process is involved in the API operation (such as [CreateBackupDBInstance](https://www.tencentcloud.comom/document/product/240/46599?from_cn_redirect=1)), the response value of AsyncRequestId is the ID to be filled in for this parameter.
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
-     * @param AsyncRequestId Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
+     * Set Specifies the ID of the asynchronous request to be queried. When an asynchronous process is involved in the API operation (such as [CreateBackupDBInstance](https://www.tencentcloud.comom/document/product/240/46599?from_cn_redirect=1)), the response value of AsyncRequestId is the ID to be filled in for this parameter.
+     * @param AsyncRequestId Specifies the ID of the asynchronous request to be queried. When an asynchronous process is involved in the API operation (such as [CreateBackupDBInstance](https://www.tencentcloud.comom/document/product/240/46599?from_cn_redirect=1)), the response value of AsyncRequestId is the ID to be filled in for this parameter.
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

@@ -24,21 +24,25 @@ import java.util.HashMap;
 public class DescribeSlowLogPatternsRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of `cmgo-p8vnipr5`, which is the same as the instance ID displayed on the TencentDB Console page
+    * Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Start time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-01 10:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
+    * Slow log start time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-01 10:00:00.
+- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-02 12:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
+    * Slow log end time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-02 12:00:00.
+- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
     */
     @SerializedName("EndTime")
     @Expose
@@ -73,48 +77,64 @@ public class DescribeSlowLogPatternsRequest extends AbstractModel {
     private String Format;
 
     /**
-     * Get Instance ID in the format of `cmgo-p8vnipr5`, which is the same as the instance ID displayed on the TencentDB Console page 
-     * @return InstanceId Instance ID in the format of `cmgo-p8vnipr5`, which is the same as the instance ID displayed on the TencentDB Console page
+     * Get Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list. 
+     * @return InstanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of `cmgo-p8vnipr5`, which is the same as the instance ID displayed on the TencentDB Console page
-     * @param InstanceId Instance ID in the format of `cmgo-p8vnipr5`, which is the same as the instance ID displayed on the TencentDB Console page
+     * Set Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+     * @param InstanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Start time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-01 10:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried. 
-     * @return StartTime Start time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-01 10:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
+     * Get Slow log start time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-01 10:00:00.
+- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried. 
+     * @return StartTime Slow log start time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-01 10:00:00.
+- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-01 10:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
-     * @param StartTime Start time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-01 10:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
+     * Set Slow log start time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-01 10:00:00.
+- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
+     * @param StartTime Slow log start time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-01 10:00:00.
+- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-02 12:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried. 
-     * @return EndTime End time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-02 12:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
+     * Get Slow log end time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-02 12:00:00.
+- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried. 
+     * @return EndTime Slow log end time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-02 12:00:00.
+- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-02 12:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
-     * @param EndTime End time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-02 12:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
+     * Set Slow log end time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-02 12:00:00.
+- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
+     * @param EndTime Slow log end time.
+- Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-02 12:00:00.
+- The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -25,16 +25,9 @@ public class SpecItem extends AbstractModel {
 
     /**
     * Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
- - Node types are as follows:
- - mongo: Mongod node.
- - mongos: Mongos node.
- - cfgstr: ConfigServer node.
- - Specification types are as follows:
- - HIO10G: general high-I/O 10GE type.
- - HCD: cloud disk type.
- - Memory specifications are as follows:
- - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
- - Unit: g, indicating GB. 128g means 128 GB.
+- Node type: **mongo** indicates a Mongod node; **mongos** indicates a Mongos node; **cfgstr** indicates a ConfigServer node.
+- Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
+- Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB.
     */
     @SerializedName("SpecCode")
     @Expose
@@ -100,12 +93,12 @@ public class SpecItem extends AbstractModel {
 
     /**
     * Storage engine version information on instances.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
     */
     @SerializedName("MongoVersionCode")
     @Expose
@@ -119,8 +112,7 @@ public class SpecItem extends AbstractModel {
     private Long MongoVersionValue;
 
     /**
-    * Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
-
+    * Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
     */
     @SerializedName("Version")
     @Expose
@@ -195,27 +187,13 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Get Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
- - Node types are as follows:
- - mongo: Mongod node.
- - mongos: Mongos node.
- - cfgstr: ConfigServer node.
- - Specification types are as follows:
- - HIO10G: general high-I/O 10GE type.
- - HCD: cloud disk type.
- - Memory specifications are as follows:
- - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
- - Unit: g, indicating GB. 128g means 128 GB. 
+- Node type: **mongo** indicates a Mongod node; **mongos** indicates a Mongos node; **cfgstr** indicates a ConfigServer node.
+- Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
+- Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB. 
      * @return SpecCode Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
- - Node types are as follows:
- - mongo: Mongod node.
- - mongos: Mongos node.
- - cfgstr: ConfigServer node.
- - Specification types are as follows:
- - HIO10G: general high-I/O 10GE type.
- - HCD: cloud disk type.
- - Memory specifications are as follows:
- - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
- - Unit: g, indicating GB. 128g means 128 GB.
+- Node type: **mongo** indicates a Mongod node; **mongos** indicates a Mongos node; **cfgstr** indicates a ConfigServer node.
+- Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
+- Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB.
      */
     public String getSpecCode() {
         return this.SpecCode;
@@ -223,27 +201,13 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
- - Node types are as follows:
- - mongo: Mongod node.
- - mongos: Mongos node.
- - cfgstr: ConfigServer node.
- - Specification types are as follows:
- - HIO10G: general high-I/O 10GE type.
- - HCD: cloud disk type.
- - Memory specifications are as follows:
- - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
- - Unit: g, indicating GB. 128g means 128 GB.
+- Node type: **mongo** indicates a Mongod node; **mongos** indicates a Mongos node; **cfgstr** indicates a ConfigServer node.
+- Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
+- Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB.
      * @param SpecCode Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
- - Node types are as follows:
- - mongo: Mongod node.
- - mongos: Mongos node.
- - cfgstr: ConfigServer node.
- - Specification types are as follows:
- - HIO10G: general high-I/O 10GE type.
- - HCD: cloud disk type.
- - Memory specifications are as follows:
- - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
- - Unit: g, indicating GB. 128g means 128 GB.
+- Node type: **mongo** indicates a Mongod node; **mongos** indicates a Mongos node; **cfgstr** indicates a ConfigServer node.
+- Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
+- Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB.
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
@@ -387,19 +351,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Get Storage engine version information on instances.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine. 
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine. 
      * @return MongoVersionCode Storage engine version information on instances.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
      */
     public String getMongoVersionCode() {
         return this.MongoVersionCode;
@@ -407,19 +371,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set Storage engine version information on instances.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
      * @param MongoVersionCode Storage engine version information on instances.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
      */
     public void setMongoVersionCode(String MongoVersionCode) {
         this.MongoVersionCode = MongoVersionCode;
@@ -442,20 +406,16 @@ public class SpecItem extends AbstractModel {
     }
 
     /**
-     * Get Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
- 
-     * @return Version Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
-
+     * Get Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0. 
+     * @return Version Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
-
-     * @param Version Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
-
+     * Set Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
+     * @param Version Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
      */
     public void setVersion(String Version) {
         this.Version = Version;

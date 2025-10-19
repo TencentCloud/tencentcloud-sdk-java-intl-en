@@ -24,92 +24,102 @@ import java.util.HashMap;
 public class SpecificationInfo extends AbstractModel {
 
     /**
-    * Region information
+    * Region information.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * AZ information
+    * AZ information.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Purchasable specification information
+    * Sales specification information.
     */
     @SerializedName("SpecItems")
     @Expose
     private SpecItem [] SpecItems;
 
     /**
-    * Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+    * Whether cross-AZ deployment is supported.
+- 1: supported.
+- 0: not supported.
     */
     @SerializedName("SupportMultiAZ")
     @Expose
     private Long SupportMultiAZ;
 
     /**
-     * Get Region information 
-     * @return Region Region information
+     * Get Region information. 
+     * @return Region Region information.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region information
-     * @param Region Region information
+     * Set Region information.
+     * @param Region Region information.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get AZ information 
-     * @return Zone AZ information
+     * Get AZ information. 
+     * @return Zone AZ information.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ information
-     * @param Zone AZ information
+     * Set AZ information.
+     * @param Zone AZ information.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Purchasable specification information 
-     * @return SpecItems Purchasable specification information
+     * Get Sales specification information. 
+     * @return SpecItems Sales specification information.
      */
     public SpecItem [] getSpecItems() {
         return this.SpecItems;
     }
 
     /**
-     * Set Purchasable specification information
-     * @param SpecItems Purchasable specification information
+     * Set Sales specification information.
+     * @param SpecItems Sales specification information.
      */
     public void setSpecItems(SpecItem [] SpecItems) {
         this.SpecItems = SpecItems;
     }
 
     /**
-     * Get Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no). 
-     * @return SupportMultiAZ Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+     * Get Whether cross-AZ deployment is supported.
+- 1: supported.
+- 0: not supported. 
+     * @return SupportMultiAZ Whether cross-AZ deployment is supported.
+- 1: supported.
+- 0: not supported.
      */
     public Long getSupportMultiAZ() {
         return this.SupportMultiAZ;
     }
 
     /**
-     * Set Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
-     * @param SupportMultiAZ Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+     * Set Whether cross-AZ deployment is supported.
+- 1: supported.
+- 0: not supported.
+     * @param SupportMultiAZ Whether cross-AZ deployment is supported.
+- 1: supported.
+- 0: not supported.
      */
     public void setSupportMultiAZ(Long SupportMultiAZ) {
         this.SupportMultiAZ = SupportMultiAZ;

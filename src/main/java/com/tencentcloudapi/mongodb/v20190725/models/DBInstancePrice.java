@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DBInstancePrice extends AbstractModel {
 
     /**
-    * Unit price.
+    * Unit price of the instance, in USD.
     */
     @SerializedName("UnitPrice")
     @Expose
     private Float UnitPrice;
 
     /**
-    * Original price.
+    * Original price of the instance, in USD.
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * Discount price.
+    * Discount price of the instance, in USD.
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-     * Get Unit price. 
-     * @return UnitPrice Unit price.
+     * Get Unit price of the instance, in USD. 
+     * @return UnitPrice Unit price of the instance, in USD.
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
     }
 
     /**
-     * Set Unit price.
-     * @param UnitPrice Unit price.
+     * Set Unit price of the instance, in USD.
+     * @param UnitPrice Unit price of the instance, in USD.
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get Original price. 
-     * @return OriginalPrice Original price.
+     * Get Original price of the instance, in USD. 
+     * @return OriginalPrice Original price of the instance, in USD.
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Original price.
-     * @param OriginalPrice Original price.
+     * Set Original price of the instance, in USD.
+     * @param OriginalPrice Original price of the instance, in USD.
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get Discount price. 
-     * @return DiscountPrice Discount price.
+     * Get Discount price of the instance, in USD. 
+     * @return DiscountPrice Discount price of the instance, in USD.
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set Discount price.
-     * @param DiscountPrice Discount price.
+     * Set Discount price of the instance, in USD.
+     * @param DiscountPrice Discount price of the instance, in USD.
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;

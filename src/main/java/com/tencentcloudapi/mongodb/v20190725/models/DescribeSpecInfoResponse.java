@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSpecInfoResponse extends AbstractModel {
 
     /**
-    * List of purchasable instance specifications
+    * List of sales specification information on the instance.
     */
     @SerializedName("SpecInfoList")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeSpecInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List of purchasable instance specifications 
-     * @return SpecInfoList List of purchasable instance specifications
+     * Get List of sales specification information on the instance. 
+     * @return SpecInfoList List of sales specification information on the instance.
      */
     public SpecificationInfo [] getSpecInfoList() {
         return this.SpecInfoList;
     }
 
     /**
-     * Set List of purchasable instance specifications
-     * @param SpecInfoList List of purchasable instance specifications
+     * Set List of sales specification information on the instance.
+     * @param SpecInfoList List of sales specification information on the instance.
      */
     public void setSpecInfoList(SpecificationInfo [] SpecInfoList) {
         this.SpecInfoList = SpecInfoList;

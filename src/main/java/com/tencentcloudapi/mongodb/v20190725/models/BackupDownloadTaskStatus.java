@@ -24,46 +24,71 @@ import java.util.HashMap;
 public class BackupDownloadTaskStatus extends AbstractModel {
 
     /**
-    * Shard name
+    * Shard name.
     */
     @SerializedName("ReplicaSetId")
     @Expose
     private String ReplicaSetId;
 
     /**
-    * Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+    * Current status of the task.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get Shard name 
-     * @return ReplicaSetId Shard name
+     * Get Shard name. 
+     * @return ReplicaSetId Shard name.
      */
     public String getReplicaSetId() {
         return this.ReplicaSetId;
     }
 
     /**
-     * Set Shard name
-     * @param ReplicaSetId Shard name
+     * Set Shard name.
+     * @param ReplicaSetId Shard name.
      */
     public void setReplicaSetId(String ReplicaSetId) {
         this.ReplicaSetId = ReplicaSetId;
     }
 
     /**
-     * Get Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry) 
-     * @return Status Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+     * Get Current status of the task.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry. 
+     * @return Status Current status of the task.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
-     * @param Status Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+     * Set Current status of the task.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
+     * @param Status Current status of the task.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

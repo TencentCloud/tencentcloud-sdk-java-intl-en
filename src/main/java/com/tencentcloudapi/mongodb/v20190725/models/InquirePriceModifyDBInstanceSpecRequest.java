@@ -24,115 +24,135 @@ import java.util.HashMap;
 public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
+    * Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance memory size in GB after specification adjustment.
+    * Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Instance disk size in GB after specification adjustment.
+    * Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
+    * Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
+- Replica set instance, which refers to the number of primary and secondary nodes for the instance after configuration changes.
+- Sharded cluster instance, which refers to the number of primary and secondary nodes per shard for the instance after configuration changes.
+**Note**: Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
     */
     @SerializedName("NodeNum")
     @Expose
     private Long NodeNum;
 
     /**
-    * Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
+    * Sharded cluster instance, which refers to the number of shards for the instance after configuration changes. Value range: [2, 36].
+**Note**: The number of shards after changes cannot be less than the current number. Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
     */
     @SerializedName("ReplicateSetNum")
     @Expose
     private Long ReplicateSetNum;
 
     /**
-     * Get Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console. 
-     * @return InstanceId Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
+     * Get Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list. 
+     * @return InstanceId Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
-     * @param InstanceId Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
+     * Set Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+     * @param InstanceId Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance memory size in GB after specification adjustment. 
-     * @return Memory Instance memory size in GB after specification adjustment.
+     * Get Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory. 
+     * @return Memory Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Instance memory size in GB after specification adjustment.
-     * @param Memory Instance memory size in GB after specification adjustment.
+     * Set Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
+     * @param Memory Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Instance disk size in GB after specification adjustment. 
-     * @return Volume Instance disk size in GB after specification adjustment.
+     * Get Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification. 
+     * @return Volume Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set Instance disk size in GB after specification adjustment.
-     * @param Volume Instance disk size in GB after specification adjustment.
+     * Set Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
+     * @param Volume Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently. 
-     * @return NodeNum Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
+     * Get Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
+- Replica set instance, which refers to the number of primary and secondary nodes for the instance after configuration changes.
+- Sharded cluster instance, which refers to the number of primary and secondary nodes per shard for the instance after configuration changes.
+**Note**: Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously. 
+     * @return NodeNum Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
+- Replica set instance, which refers to the number of primary and secondary nodes for the instance after configuration changes.
+- Sharded cluster instance, which refers to the number of primary and secondary nodes per shard for the instance after configuration changes.
+**Note**: Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
-     * @param NodeNum Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
+     * Set Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
+- Replica set instance, which refers to the number of primary and secondary nodes for the instance after configuration changes.
+- Sharded cluster instance, which refers to the number of primary and secondary nodes per shard for the instance after configuration changes.
+**Note**: Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
+     * @param NodeNum Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
+- Replica set instance, which refers to the number of primary and secondary nodes for the instance after configuration changes.
+- Sharded cluster instance, which refers to the number of primary and secondary nodes per shard for the instance after configuration changes.
+**Note**: Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
     /**
-     * Get Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently. 
-     * @return ReplicateSetNum Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
+     * Get Sharded cluster instance, which refers to the number of shards for the instance after configuration changes. Value range: [2, 36].
+**Note**: The number of shards after changes cannot be less than the current number. Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously. 
+     * @return ReplicateSetNum Sharded cluster instance, which refers to the number of shards for the instance after configuration changes. Value range: [2, 36].
+**Note**: The number of shards after changes cannot be less than the current number. Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
      */
     public Long getReplicateSetNum() {
         return this.ReplicateSetNum;
     }
 
     /**
-     * Set Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
-     * @param ReplicateSetNum Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
+     * Set Sharded cluster instance, which refers to the number of shards for the instance after configuration changes. Value range: [2, 36].
+**Note**: The number of shards after changes cannot be less than the current number. Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
+     * @param ReplicateSetNum Sharded cluster instance, which refers to the number of shards for the instance after configuration changes. Value range: [2, 36].
+**Note**: The number of shards after changes cannot be less than the current number. Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
      */
     public void setReplicateSetNum(Long ReplicateSetNum) {
         this.ReplicateSetNum = ReplicateSetNum;

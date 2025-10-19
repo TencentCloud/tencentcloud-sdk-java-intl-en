@@ -34,19 +34,18 @@ public class RemoveNodeList extends AbstractModel {
     private String Role;
 
     /**
-    * IDs of nodes to be deleted. For a sharded cluster instance, specify the IDs of nodes to be deleted on one shard. Nodes with the same IDs on other shards will also be deleted.
-
- - Obtaining method: Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/), go to the **Node Management** tab, and obtain the **node IDs**.
- - Note: For a sharded cluster instance, specify the IDs of nodes on shard 0. For example, cmgo-6hfk****_0-node-primary.
+    * IDs of nodes to be deleted. For a sharded cluster instance, specify the names of nodes to be deleted on one shard. Nodes with the same names on other shards will also be deleted.
+- Obtaining method: Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), go to the **Node Management** tab, and obtain the **node ID**.
+- Note: For a sharded cluster instance, specify the IDs of nodes on shard 0. For example, cmgo-6hfk\*\*\*\*\_0-node-primary.
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * AZs corresponding to the nodes.
- - Single AZ: All nodes are in the same AZ.
- - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be deleted should be specified. After deletion, the number of nodes in any two AZs should be larger than that in the third AZ.
+    * AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+- Single AZ: all nodes are in the same AZ.
+- Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be deleted should be specified. After deletion, the number of nodes in any 2 AZs should be larger than that in the third AZ.
     */
     @SerializedName("Zone")
     @Expose
@@ -81,52 +80,48 @@ public class RemoveNodeList extends AbstractModel {
     }
 
     /**
-     * Get IDs of nodes to be deleted. For a sharded cluster instance, specify the IDs of nodes to be deleted on one shard. Nodes with the same IDs on other shards will also be deleted.
-
- - Obtaining method: Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/), go to the **Node Management** tab, and obtain the **node IDs**.
- - Note: For a sharded cluster instance, specify the IDs of nodes on shard 0. For example, cmgo-6hfk****_0-node-primary. 
-     * @return NodeName IDs of nodes to be deleted. For a sharded cluster instance, specify the IDs of nodes to be deleted on one shard. Nodes with the same IDs on other shards will also be deleted.
-
- - Obtaining method: Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/), go to the **Node Management** tab, and obtain the **node IDs**.
- - Note: For a sharded cluster instance, specify the IDs of nodes on shard 0. For example, cmgo-6hfk****_0-node-primary.
+     * Get IDs of nodes to be deleted. For a sharded cluster instance, specify the names of nodes to be deleted on one shard. Nodes with the same names on other shards will also be deleted.
+- Obtaining method: Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), go to the **Node Management** tab, and obtain the **node ID**.
+- Note: For a sharded cluster instance, specify the IDs of nodes on shard 0. For example, cmgo-6hfk\*\*\*\*\_0-node-primary. 
+     * @return NodeName IDs of nodes to be deleted. For a sharded cluster instance, specify the names of nodes to be deleted on one shard. Nodes with the same names on other shards will also be deleted.
+- Obtaining method: Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), go to the **Node Management** tab, and obtain the **node ID**.
+- Note: For a sharded cluster instance, specify the IDs of nodes on shard 0. For example, cmgo-6hfk\*\*\*\*\_0-node-primary.
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set IDs of nodes to be deleted. For a sharded cluster instance, specify the IDs of nodes to be deleted on one shard. Nodes with the same IDs on other shards will also be deleted.
-
- - Obtaining method: Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/), go to the **Node Management** tab, and obtain the **node IDs**.
- - Note: For a sharded cluster instance, specify the IDs of nodes on shard 0. For example, cmgo-6hfk****_0-node-primary.
-     * @param NodeName IDs of nodes to be deleted. For a sharded cluster instance, specify the IDs of nodes to be deleted on one shard. Nodes with the same IDs on other shards will also be deleted.
-
- - Obtaining method: Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/), go to the **Node Management** tab, and obtain the **node IDs**.
- - Note: For a sharded cluster instance, specify the IDs of nodes on shard 0. For example, cmgo-6hfk****_0-node-primary.
+     * Set IDs of nodes to be deleted. For a sharded cluster instance, specify the names of nodes to be deleted on one shard. Nodes with the same names on other shards will also be deleted.
+- Obtaining method: Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), go to the **Node Management** tab, and obtain the **node ID**.
+- Note: For a sharded cluster instance, specify the IDs of nodes on shard 0. For example, cmgo-6hfk\*\*\*\*\_0-node-primary.
+     * @param NodeName IDs of nodes to be deleted. For a sharded cluster instance, specify the names of nodes to be deleted on one shard. Nodes with the same names on other shards will also be deleted.
+- Obtaining method: Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), go to the **Node Management** tab, and obtain the **node ID**.
+- Note: For a sharded cluster instance, specify the IDs of nodes on shard 0. For example, cmgo-6hfk\*\*\*\*\_0-node-primary.
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get AZs corresponding to the nodes.
- - Single AZ: All nodes are in the same AZ.
- - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be deleted should be specified. After deletion, the number of nodes in any two AZs should be larger than that in the third AZ. 
-     * @return Zone AZs corresponding to the nodes.
- - Single AZ: All nodes are in the same AZ.
- - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be deleted should be specified. After deletion, the number of nodes in any two AZs should be larger than that in the third AZ.
+     * Get AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+- Single AZ: all nodes are in the same AZ.
+- Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be deleted should be specified. After deletion, the number of nodes in any 2 AZs should be larger than that in the third AZ. 
+     * @return Zone AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+- Single AZ: all nodes are in the same AZ.
+- Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be deleted should be specified. After deletion, the number of nodes in any 2 AZs should be larger than that in the third AZ.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZs corresponding to the nodes.
- - Single AZ: All nodes are in the same AZ.
- - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be deleted should be specified. After deletion, the number of nodes in any two AZs should be larger than that in the third AZ.
-     * @param Zone AZs corresponding to the nodes.
- - Single AZ: All nodes are in the same AZ.
- - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be deleted should be specified. After deletion, the number of nodes in any two AZs should be larger than that in the third AZ.
+     * Set AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+- Single AZ: all nodes are in the same AZ.
+- Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be deleted should be specified. After deletion, the number of nodes in any 2 AZs should be larger than that in the third AZ.
+     * @param Zone AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+- Single AZ: all nodes are in the same AZ.
+- Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be deleted should be specified. After deletion, the number of nodes in any 2 AZs should be larger than that in the third AZ.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

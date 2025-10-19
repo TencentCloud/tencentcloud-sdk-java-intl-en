@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class DescribeDBInstanceDealRequest extends AbstractModel {
 
     /**
-    * Order ID. It is returned by the `CreateDBInstance` and other APIs.
+    * Order ID.
+- Pay-as-you-go instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstanceHour](https://www.tencentcloud.comom/document/product/240/38570?from_cn_redirect=1) API.
+- Yearly/monthly subscription instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstance](https://www.tencentcloud.comom/document/product/240/38571?from_cn_redirect=1) API.
     */
     @SerializedName("DealId")
     @Expose
     private String DealId;
 
     /**
-     * Get Order ID. It is returned by the `CreateDBInstance` and other APIs. 
-     * @return DealId Order ID. It is returned by the `CreateDBInstance` and other APIs.
+     * Get Order ID.
+- Pay-as-you-go instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstanceHour](https://www.tencentcloud.comom/document/product/240/38570?from_cn_redirect=1) API.
+- Yearly/monthly subscription instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstance](https://www.tencentcloud.comom/document/product/240/38571?from_cn_redirect=1) API. 
+     * @return DealId Order ID.
+- Pay-as-you-go instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstanceHour](https://www.tencentcloud.comom/document/product/240/38570?from_cn_redirect=1) API.
+- Yearly/monthly subscription instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstance](https://www.tencentcloud.comom/document/product/240/38571?from_cn_redirect=1) API.
      */
     public String getDealId() {
         return this.DealId;
     }
 
     /**
-     * Set Order ID. It is returned by the `CreateDBInstance` and other APIs.
-     * @param DealId Order ID. It is returned by the `CreateDBInstance` and other APIs.
+     * Set Order ID.
+- Pay-as-you-go instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstanceHour](https://www.tencentcloud.comom/document/product/240/38570?from_cn_redirect=1) API.
+- Yearly/monthly subscription instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstance](https://www.tencentcloud.comom/document/product/240/38571?from_cn_redirect=1) API.
+     * @param DealId Order ID.
+- Pay-as-you-go instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstanceHour](https://www.tencentcloud.comom/document/product/240/38570?from_cn_redirect=1) API.
+- Yearly/monthly subscription instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstance](https://www.tencentcloud.comom/document/product/240/38571?from_cn_redirect=1) API.
      */
     public void setDealId(String DealId) {
         this.DealId = DealId;

@@ -3,8 +3,14 @@ public enum MongodbErrorCode {
      /* CAM signature/authentication error */
      AUTHFAILURE("AuthFailure"),
      
+     /* Termination protection is enabled for the instance. destruction is not allowed. */
+     FAILEDOPERATION_DELETIONPROTECTIONENABLED("FailedOperation.DeletionProtectionEnabled"),
+     
      /* Public network access has been enabled for the current instance. */
      FAILEDOPERATION_NOTALLOWMODIFYADDRAFTEROPENWANSERVICE("FailedOperation.NotAllowModifyAddrAfterOpenWanService"),
+     
+     /* Physical backup is not supported when transparent data encryption is enabled for the instance. */
+     FAILEDOPERATION_TRANSPARENTDATAENCRYPTIONALREADYOPEN("FailedOperation.TransparentDataEncryptionAlreadyOpen"),
      
      /* Internal error */
      INTERNALERROR("InternalError"),
@@ -60,6 +66,9 @@ public enum MongodbErrorCode {
      /* Billing error. Corresponding purchase/renewal/configuration change operations are not allowed for the current instance. */
      INVALIDPARAMETERVALUE_INVALIDTRADEOPERATION("InvalidParameterValue.InvalidTradeOperation"),
      
+     /* limit value ranges from 1 to 100. */
+     INVALIDPARAMETERVALUE_LIMITPARAOUTOFRANGE("InvalidParameterValue.LimitParaOutOfRange"),
+     
      /* Instance lock failed. */
      INVALIDPARAMETERVALUE_LOCKFAILED("InvalidParameterValue.LockFailed"),
      
@@ -77,6 +86,9 @@ public enum MongodbErrorCode {
      
      /* The instance was not found. */
      INVALIDPARAMETERVALUE_NOTFOUNDINSTANCE("InvalidParameterValue.NotFoundInstance"),
+     
+     /* offset value ranges from 0 to 10000. */
+     INVALIDPARAMETERVALUE_OFFSETPARAOUTOFRANGE("InvalidParameterValue.OffsetParaOutOfRange"),
      
      /* The `OplogSize` parameter is set incorrectly and should be between 10% and 90% of the disk capacity. */
      INVALIDPARAMETERVALUE_OPLOGSIZEOUTOFRANGE("InvalidParameterValue.OplogSizeOutOfRange"),
@@ -134,6 +146,9 @@ public enum MongodbErrorCode {
      
      /* The specified tag was not found. */
      INVALIDPARAMETERVALUE_TAGNOTFOUND("InvalidParameterValue.TagNotFound"),
+     
+     /* Illegal time format. */
+     INVALIDPARAMETERVALUE_TIMEFORMATERR("InvalidParameterValue.TimeFormatErr"),
      
      /* The user account does not exist. */
      INVALIDPARAMETERVALUE_USERNOTFOUND("InvalidParameterValue.UserNotFound"),

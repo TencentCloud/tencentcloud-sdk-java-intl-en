@@ -24,28 +24,41 @@ import java.util.HashMap;
 public class DescribeDBInstancesRequest extends AbstractModel {
 
     /**
-    * Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+    * Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
+    * Specifies the instance type for querying. Valid values:
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: the query range includes the formal, read-only, and disaster recovery instances simultaneously.
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
+    * Specifies the cluster type of the instance to be queried. Valid values:
+- 0: replica set instance.
+- 1: sharded cluster instance.
+- -1: replica set and sharded cluster instance.
     */
     @SerializedName("ClusterType")
     @Expose
     private Long ClusterType;
 
     /**
-    * Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
+    * Specifies the current status of the instance to be queried. Valid values:
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
     */
     @SerializedName("Status")
     @Expose
@@ -77,7 +90,7 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private Long PayMode;
 
     /**
-    * Number of results returned per request. Default value: `20`. Value range: [1,100].
+    * Number of entries returned per request. The default value is 20, and the value range is (1, 100].
     */
     @SerializedName("Limit")
     @Expose
@@ -128,64 +141,116 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private TagInfo [] Tags;
 
     /**
-     * Get Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list. 
-     * @return InstanceIds Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+     * Get Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list. 
+     * @return InstanceIds Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
-     * @param InstanceIds Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+     * Set Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+     * @param InstanceIds Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul> 
-     * @return InstanceType Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
+     * Get Specifies the instance type for querying. Valid values:
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: the query range includes the formal, read-only, and disaster recovery instances simultaneously. 
+     * @return InstanceType Specifies the instance type for querying. Valid values:
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: the query range includes the formal, read-only, and disaster recovery instances simultaneously.
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
-     * @param InstanceType Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
+     * Set Specifies the instance type for querying. Valid values:
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: the query range includes the formal, read-only, and disaster recovery instances simultaneously.
+     * @param InstanceType Specifies the instance type for querying. Valid values:
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: the query range includes the formal, read-only, and disaster recovery instances simultaneously.
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul> 
-     * @return ClusterType Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
+     * Get Specifies the cluster type of the instance to be queried. Valid values:
+- 0: replica set instance.
+- 1: sharded cluster instance.
+- -1: replica set and sharded cluster instance. 
+     * @return ClusterType Specifies the cluster type of the instance to be queried. Valid values:
+- 0: replica set instance.
+- 1: sharded cluster instance.
+- -1: replica set and sharded cluster instance.
      */
     public Long getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
-     * @param ClusterType Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
+     * Set Specifies the cluster type of the instance to be queried. Valid values:
+- 0: replica set instance.
+- 1: sharded cluster instance.
+- -1: replica set and sharded cluster instance.
+     * @param ClusterType Specifies the cluster type of the instance to be queried. Valid values:
+- 0: replica set instance.
+- 1: sharded cluster instance.
+- -1: replica set and sharded cluster instance.
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul> 
-     * @return Status Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
+     * Get Specifies the current status of the instance to be queried. Valid values:
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go). 
+     * @return Status Specifies the current status of the instance to be queried. Valid values:
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
-     * @param Status Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
+     * Set Specifies the current status of the instance to be queried. Valid values:
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
+     * @param Status Specifies the current status of the instance to be queried. Valid values:
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
@@ -256,16 +321,16 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of results returned per request. Default value: `20`. Value range: [1,100]. 
-     * @return Limit Number of results returned per request. Default value: `20`. Value range: [1,100].
+     * Get Number of entries returned per request. The default value is 20, and the value range is (1, 100]. 
+     * @return Limit Number of entries returned per request. The default value is 20, and the value range is (1, 100].
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results returned per request. Default value: `20`. Value range: [1,100].
-     * @param Limit Number of results returned per request. Default value: `20`. Value range: [1,100].
+     * Set Number of entries returned per request. The default value is 20, and the value range is (1, 100].
+     * @param Limit Number of entries returned per request. The default value is 20, and the value range is (1, 100].
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

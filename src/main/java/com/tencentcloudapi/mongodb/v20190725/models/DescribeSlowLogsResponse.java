@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSlowLogsResponse extends AbstractModel {
 
     /**
-    * Total number of slow logs
+    * Total number of slow logs.
     */
     @SerializedName("Count")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeSlowLogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of slow logs 
-     * @return Count Total number of slow logs
+     * Get Total number of slow logs. 
+     * @return Count Total number of slow logs.
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Total number of slow logs
-     * @param Count Total number of slow logs
+     * Set Total number of slow logs.
+     * @param Count Total number of slow logs.
      */
     public void setCount(Long Count) {
         this.Count = Count;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstanceDetail extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,14 +45,16 @@ public class InstanceDetail extends AbstractModel {
     private Long PayMode;
 
     /**
-    * Project ID
+    * Project ID.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
+    * Cluster type.
+- 0: replica set instance.
+- 1: sharded cluster instance.
     */
     @SerializedName("ClusterType")
     @Expose
@@ -73,7 +75,9 @@ public class InstanceDetail extends AbstractModel {
     private String Zone;
 
     /**
-    * Network type. Valid values: 0 (basic network), 1 (VPC)
+    * Network type.
+- 0: basic network.
+- 1: VPC.
     */
     @SerializedName("NetType")
     @Expose
@@ -94,7 +98,12 @@ public class InstanceDetail extends AbstractModel {
     private String SubnetId;
 
     /**
-    * Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
+    * Instance status.
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
     */
     @SerializedName("Status")
     @Expose
@@ -129,35 +138,44 @@ public class InstanceDetail extends AbstractModel {
     private String DeadLine;
 
     /**
-    * Instance version information
+    * Storage engine version information on instances.
+- MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
     */
     @SerializedName("MongoVersion")
     @Expose
     private String MongoVersion;
 
     /**
-    * Instance memory size in MB
+    * Instance memory specification, in MB.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Instance disk size in MB
+    * Instance disk specification, in MB.
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * Number of CPU cores of an instance
+    * Number of the instance CPU cores.
     */
     @SerializedName("CpuNum")
     @Expose
     private Long CpuNum;
 
     /**
-    * Instance machine type
+    * Instance machine type.
+- HIO10G: general HIO 10GE type.
+- HCD: Cloud Disk Edition type.
     */
     @SerializedName("MachineType")
     @Expose
@@ -178,14 +196,17 @@ public class InstanceDetail extends AbstractModel {
     private Long ReplicationSetNum;
 
     /**
-    * Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
+    * Automatic renewal flag for the instance.
+- 0: manual renewal.
+- 1: automatic renewal.
+- 2: no renewal after confirmation.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * Used capacity in MB
+    * Used capacity, in MB.
     */
     @SerializedName("UsedVolume")
     @Expose
@@ -262,28 +283,33 @@ public class InstanceDetail extends AbstractModel {
     private Long ClusterVer;
 
     /**
-    * Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
+    * Protocol information: mongodb.
     */
     @SerializedName("Protocol")
     @Expose
     private Long Protocol;
 
     /**
-    * Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
+    * Instance type.
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: include the formal, read-only, and disaster recovery instance simultaneously.
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * Instance status description
+    * Instance status description.
     */
     @SerializedName("InstanceStatusDesc")
     @Expose
     private String InstanceStatusDesc;
 
     /**
-    * Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
+    * Physical instance ID corresponding to the instance. The instances that have been rolled back and replaced have different InstanceIds and RealInstanceIds, which need to be obtained through the physical ID in scenarios such as obtaining monitoring data from Barad.
     */
     @SerializedName("RealInstanceId")
     @Expose
@@ -297,7 +323,7 @@ public class InstanceDetail extends AbstractModel {
     private Long MongosNodeNum;
 
     /**
-    * Mongos node memory.
+    * Mongos node memory, in MB.
     */
     @SerializedName("MongosMemory")
     @Expose
@@ -318,14 +344,14 @@ public class InstanceDetail extends AbstractModel {
     private Long ConfigServerNodeNum;
 
     /**
-    * ConfigServer node memory.
+    * Config Server node memory, in MB.
     */
     @SerializedName("ConfigServerMemory")
     @Expose
     private Long ConfigServerMemory;
 
     /**
-    * ConfigServer node disk size.
+    * Config Server node disk size, in MB.
     */
     @SerializedName("ConfigServerVolume")
     @Expose
@@ -346,16 +372,16 @@ public class InstanceDetail extends AbstractModel {
     private Long ReadonlyNodeNum;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -394,32 +420,40 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get Project ID. 
+     * @return ProjectId Project ID.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set Project ID.
+     * @param ProjectId Project ID.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance). 
-     * @return ClusterType Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
+     * Get Cluster type.
+- 0: replica set instance.
+- 1: sharded cluster instance. 
+     * @return ClusterType Cluster type.
+- 0: replica set instance.
+- 1: sharded cluster instance.
      */
     public Long getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
-     * @param ClusterType Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
+     * Set Cluster type.
+- 0: replica set instance.
+- 1: sharded cluster instance.
+     * @param ClusterType Cluster type.
+- 0: replica set instance.
+- 1: sharded cluster instance.
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
@@ -458,16 +492,24 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get Network type. Valid values: 0 (basic network), 1 (VPC) 
-     * @return NetType Network type. Valid values: 0 (basic network), 1 (VPC)
+     * Get Network type.
+- 0: basic network.
+- 1: VPC. 
+     * @return NetType Network type.
+- 0: basic network.
+- 1: VPC.
      */
     public Long getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set Network type. Valid values: 0 (basic network), 1 (VPC)
-     * @param NetType Network type. Valid values: 0 (basic network), 1 (VPC)
+     * Set Network type.
+- 0: basic network.
+- 1: VPC.
+     * @param NetType Network type.
+- 0: basic network.
+- 1: VPC.
      */
     public void setNetType(Long NetType) {
         this.NetType = NetType;
@@ -506,16 +548,36 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired. 
-     * @return Status Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
+     * Get Instance status.
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go). 
+     * @return Status Instance status.
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
-     * @param Status Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
+     * Set Instance status.
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
+     * @param Status Instance status.
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -586,80 +648,116 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get Instance version information 
-     * @return MongoVersion Instance version information
+     * Get Storage engine version information on instances.
+- MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine. 
+     * @return MongoVersion Storage engine version information on instances.
+- MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
      */
     public String getMongoVersion() {
         return this.MongoVersion;
     }
 
     /**
-     * Set Instance version information
-     * @param MongoVersion Instance version information
+     * Set Storage engine version information on instances.
+- MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+     * @param MongoVersion Storage engine version information on instances.
+- MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;
     }
 
     /**
-     * Get Instance memory size in MB 
-     * @return Memory Instance memory size in MB
+     * Get Instance memory specification, in MB. 
+     * @return Memory Instance memory specification, in MB.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Instance memory size in MB
-     * @param Memory Instance memory size in MB
+     * Set Instance memory specification, in MB.
+     * @param Memory Instance memory specification, in MB.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Instance disk size in MB 
-     * @return Volume Instance disk size in MB
+     * Get Instance disk specification, in MB. 
+     * @return Volume Instance disk specification, in MB.
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set Instance disk size in MB
-     * @param Volume Instance disk size in MB
+     * Set Instance disk specification, in MB.
+     * @param Volume Instance disk specification, in MB.
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get Number of CPU cores of an instance 
-     * @return CpuNum Number of CPU cores of an instance
+     * Get Number of the instance CPU cores. 
+     * @return CpuNum Number of the instance CPU cores.
      */
     public Long getCpuNum() {
         return this.CpuNum;
     }
 
     /**
-     * Set Number of CPU cores of an instance
-     * @param CpuNum Number of CPU cores of an instance
+     * Set Number of the instance CPU cores.
+     * @param CpuNum Number of the instance CPU cores.
      */
     public void setCpuNum(Long CpuNum) {
         this.CpuNum = CpuNum;
     }
 
     /**
-     * Get Instance machine type 
-     * @return MachineType Instance machine type
+     * Get Instance machine type.
+- HIO10G: general HIO 10GE type.
+- HCD: Cloud Disk Edition type. 
+     * @return MachineType Instance machine type.
+- HIO10G: general HIO 10GE type.
+- HCD: Cloud Disk Edition type.
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set Instance machine type
-     * @param MachineType Instance machine type
+     * Set Instance machine type.
+- HIO10G: general HIO 10GE type.
+- HCD: Cloud Disk Edition type.
+     * @param MachineType Instance machine type.
+- HIO10G: general HIO 10GE type.
+- HCD: Cloud Disk Edition type.
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
@@ -698,32 +796,44 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration) 
-     * @return AutoRenewFlag Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
+     * Get Automatic renewal flag for the instance.
+- 0: manual renewal.
+- 1: automatic renewal.
+- 2: no renewal after confirmation. 
+     * @return AutoRenewFlag Automatic renewal flag for the instance.
+- 0: manual renewal.
+- 1: automatic renewal.
+- 2: no renewal after confirmation.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
-     * @param AutoRenewFlag Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
+     * Set Automatic renewal flag for the instance.
+- 0: manual renewal.
+- 1: automatic renewal.
+- 2: no renewal after confirmation.
+     * @param AutoRenewFlag Automatic renewal flag for the instance.
+- 0: manual renewal.
+- 1: automatic renewal.
+- 2: no renewal after confirmation.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get Used capacity in MB 
-     * @return UsedVolume Used capacity in MB
+     * Get Used capacity, in MB. 
+     * @return UsedVolume Used capacity, in MB.
      */
     public Long getUsedVolume() {
         return this.UsedVolume;
     }
 
     /**
-     * Set Used capacity in MB
-     * @param UsedVolume Used capacity in MB
+     * Set Used capacity, in MB.
+     * @param UsedVolume Used capacity, in MB.
      */
     public void setUsedVolume(Long UsedVolume) {
         this.UsedVolume = UsedVolume;
@@ -890,64 +1000,84 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get Protocol information. Valid values: `1` (mongodb), `2` (dynamodb). 
-     * @return Protocol Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
+     * Get Protocol information: mongodb. 
+     * @return Protocol Protocol information: mongodb.
      */
     public Long getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
-     * @param Protocol Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
+     * Set Protocol information: mongodb.
+     * @param Protocol Protocol information: mongodb.
      */
     public void setProtocol(Long Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance) 
-     * @return InstanceType Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
+     * Get Instance type.
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: include the formal, read-only, and disaster recovery instance simultaneously. 
+     * @return InstanceType Instance type.
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: include the formal, read-only, and disaster recovery instance simultaneously.
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
-     * @param InstanceType Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
+     * Set Instance type.
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: include the formal, read-only, and disaster recovery instance simultaneously.
+     * @param InstanceType Instance type.
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: include the formal, read-only, and disaster recovery instance simultaneously.
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Instance status description 
-     * @return InstanceStatusDesc Instance status description
+     * Get Instance status description. 
+     * @return InstanceStatusDesc Instance status description.
      */
     public String getInstanceStatusDesc() {
         return this.InstanceStatusDesc;
     }
 
     /**
-     * Set Instance status description
-     * @param InstanceStatusDesc Instance status description
+     * Set Instance status description.
+     * @param InstanceStatusDesc Instance status description.
      */
     public void setInstanceStatusDesc(String InstanceStatusDesc) {
         this.InstanceStatusDesc = InstanceStatusDesc;
     }
 
     /**
-     * Get Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad 
-     * @return RealInstanceId Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
+     * Get Physical instance ID corresponding to the instance. The instances that have been rolled back and replaced have different InstanceIds and RealInstanceIds, which need to be obtained through the physical ID in scenarios such as obtaining monitoring data from Barad. 
+     * @return RealInstanceId Physical instance ID corresponding to the instance. The instances that have been rolled back and replaced have different InstanceIds and RealInstanceIds, which need to be obtained through the physical ID in scenarios such as obtaining monitoring data from Barad.
      */
     public String getRealInstanceId() {
         return this.RealInstanceId;
     }
 
     /**
-     * Set Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
-     * @param RealInstanceId Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
+     * Set Physical instance ID corresponding to the instance. The instances that have been rolled back and replaced have different InstanceIds and RealInstanceIds, which need to be obtained through the physical ID in scenarios such as obtaining monitoring data from Barad.
+     * @param RealInstanceId Physical instance ID corresponding to the instance. The instances that have been rolled back and replaced have different InstanceIds and RealInstanceIds, which need to be obtained through the physical ID in scenarios such as obtaining monitoring data from Barad.
      */
     public void setRealInstanceId(String RealInstanceId) {
         this.RealInstanceId = RealInstanceId;
@@ -970,16 +1100,16 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get Mongos node memory. 
-     * @return MongosMemory Mongos node memory.
+     * Get Mongos node memory, in MB. 
+     * @return MongosMemory Mongos node memory, in MB.
      */
     public Long getMongosMemory() {
         return this.MongosMemory;
     }
 
     /**
-     * Set Mongos node memory.
-     * @param MongosMemory Mongos node memory.
+     * Set Mongos node memory, in MB.
+     * @param MongosMemory Mongos node memory, in MB.
      */
     public void setMongosMemory(Long MongosMemory) {
         this.MongosMemory = MongosMemory;
@@ -1018,32 +1148,32 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get ConfigServer node memory. 
-     * @return ConfigServerMemory ConfigServer node memory.
+     * Get Config Server node memory, in MB. 
+     * @return ConfigServerMemory Config Server node memory, in MB.
      */
     public Long getConfigServerMemory() {
         return this.ConfigServerMemory;
     }
 
     /**
-     * Set ConfigServer node memory.
-     * @param ConfigServerMemory ConfigServer node memory.
+     * Set Config Server node memory, in MB.
+     * @param ConfigServerMemory Config Server node memory, in MB.
      */
     public void setConfigServerMemory(Long ConfigServerMemory) {
         this.ConfigServerMemory = ConfigServerMemory;
     }
 
     /**
-     * Get ConfigServer node disk size. 
-     * @return ConfigServerVolume ConfigServer node disk size.
+     * Get Config Server node disk size, in MB. 
+     * @return ConfigServerVolume Config Server node disk size, in MB.
      */
     public Long getConfigServerVolume() {
         return this.ConfigServerVolume;
     }
 
     /**
-     * Set ConfigServer node disk size.
-     * @param ConfigServerVolume ConfigServer node disk size.
+     * Set Config Server node disk size, in MB.
+     * @param ConfigServerVolume Config Server node disk size, in MB.
      */
     public void setConfigServerVolume(Long ConfigServerVolume) {
         this.ConfigServerVolume = ConfigServerVolume;

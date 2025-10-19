@@ -32,8 +32,12 @@ public class CreateBackupDBInstanceRequest extends AbstractModel {
 
     /**
     * Sets the backup method.
- - 0: logical backup.
- - 1: physical backup.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
     */
     @SerializedName("BackupMethod")
     @Expose
@@ -64,11 +68,19 @@ public class CreateBackupDBInstanceRequest extends AbstractModel {
 
     /**
      * Get Sets the backup method.
- - 0: logical backup.
- - 1: physical backup. 
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance. 
      * @return BackupMethod Sets the backup method.
- - 0: logical backup.
- - 1: physical backup.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
      */
     public Long getBackupMethod() {
         return this.BackupMethod;
@@ -76,11 +88,19 @@ public class CreateBackupDBInstanceRequest extends AbstractModel {
 
     /**
      * Set Sets the backup method.
- - 0: logical backup.
- - 1: physical backup.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
      * @param BackupMethod Sets the backup method.
- - 0: logical backup.
- - 1: physical backup.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
      */
     public void setBackupMethod(Long BackupMethod) {
         this.BackupMethod = BackupMethod;

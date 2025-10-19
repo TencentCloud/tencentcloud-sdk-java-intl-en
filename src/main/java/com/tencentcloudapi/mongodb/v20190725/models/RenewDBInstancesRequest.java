@@ -25,8 +25,8 @@ public class RenewDBInstancesRequest extends AbstractModel {
 
     /**
     * Specifies the ID or IDs of one or multiple instances to be renewed.
- - You can obtain the IDs from **InstanceIds** in the return values of the [DescribeDBInstances](https://intl.cloud.tencent.com/document/product/240/38568?from_cn_redirect=1) API.
- - The maximum number of instances for each renewal request is 100.
+- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API.
+- The maximum number of instances for each renewal request is 100.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -41,11 +41,11 @@ public class RenewDBInstancesRequest extends AbstractModel {
 
     /**
      * Get Specifies the ID or IDs of one or multiple instances to be renewed.
- - You can obtain the IDs from **InstanceIds** in the return values of the [DescribeDBInstances](https://intl.cloud.tencent.com/document/product/240/38568?from_cn_redirect=1) API.
- - The maximum number of instances for each renewal request is 100. 
+- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API.
+- The maximum number of instances for each renewal request is 100. 
      * @return InstanceIds Specifies the ID or IDs of one or multiple instances to be renewed.
- - You can obtain the IDs from **InstanceIds** in the return values of the [DescribeDBInstances](https://intl.cloud.tencent.com/document/product/240/38568?from_cn_redirect=1) API.
- - The maximum number of instances for each renewal request is 100.
+- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API.
+- The maximum number of instances for each renewal request is 100.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -53,11 +53,11 @@ public class RenewDBInstancesRequest extends AbstractModel {
 
     /**
      * Set Specifies the ID or IDs of one or multiple instances to be renewed.
- - You can obtain the IDs from **InstanceIds** in the return values of the [DescribeDBInstances](https://intl.cloud.tencent.com/document/product/240/38568?from_cn_redirect=1) API.
- - The maximum number of instances for each renewal request is 100.
+- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API.
+- The maximum number of instances for each renewal request is 100.
      * @param InstanceIds Specifies the ID or IDs of one or multiple instances to be renewed.
- - You can obtain the IDs from **InstanceIds** in the return values of the [DescribeDBInstances](https://intl.cloud.tencent.com/document/product/240/38568?from_cn_redirect=1) API.
- - The maximum number of instances for each renewal request is 100.
+- It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API.
+- The maximum number of instances for each renewal request is 100.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

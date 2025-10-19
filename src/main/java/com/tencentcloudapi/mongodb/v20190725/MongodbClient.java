@@ -72,7 +72,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a monthly subscription TencentDB for MongoDB instance. The purchasable specifications supported by this API can be obtained through the `DescribeSpecInfo` API.
+     *This API is used to create a yearly/monthly subscription TencentDB for MongoDB instance. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/35767?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
      * @param req CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -105,7 +105,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query backup download task information.
+     *This API is used to query information about the backup download task.
      * @param req DescribeBackupDownloadTaskRequest
      * @return DescribeBackupDownloadTaskResponse
      * @throws TencentCloudSDKException
@@ -171,6 +171,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query slow log details of the instance.
+     * @param req DescribeDetailedSlowLogsRequest
+     * @return DescribeDetailedSlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDetailedSlowLogsResponse DescribeDetailedSlowLogs(DescribeDetailedSlowLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDetailedSlowLogs", DescribeDetailedSlowLogsResponse.class);
+    }
+
+    /**
      *This API is used to query the list of parameters that can be modified for the current instance.
      * @param req DescribeInstanceParamsRequest
      * @return DescribeInstanceParamsResponse
@@ -215,7 +226,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the purchasable instance specifications.
+     *This API is used to query the sales specification of an instance.
      * @param req DescribeSpecInfoRequest
      * @return DescribeSpecInfoResponse
      * @throws TencentCloudSDKException
@@ -270,7 +281,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to isolate a pay-as-you-go TencentDB for MongoDB instance. An isolated instance is retained in the recycle bin and data can no longer be written to it. After it is isolated for a certain period of time, it will be completely deleted. For the retention period in the recycle bin, please see the terms of service for pay-as-you-go billing. Isolated pay-as-you-go instances cannot be recovered, so please proceed with caution.
+     *This API is used to isolate a pay-as-you-go TencentDB for MongoDB instance. After isolation, the instance is retained in the recycle bin, and data cannot be written into it. After a certain period of isolation, the instance is deleted permanently. For the retention time in the recycle bin, see the pay-as-you-go service terms. The deleted pay-as-you-go instance cannot be recovered. Proceed with caution.
      * @param req IsolateDBInstanceRequest
      * @return IsolateDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -303,7 +314,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to adjust the configuration of a TencentDB for MongoDB instance. Saleable specifications supported for this API can be obtained from the DescribeSpecInfo API for querying saleable TencentDB for MongoDB specifications.
+     *This API is used to adjust the TencentDB for MongoDB instance configuration. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
      * @param req ModifyDBInstanceSpecRequest
      * @return ModifyDBInstanceSpecResponse
      * @throws TencentCloudSDKException
@@ -347,7 +358,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify instance password.
+     *This API is used to reset the instance access password.
      * @param req ResetDBInstancePasswordRequest
      * @return ResetDBInstancePasswordResponse
      * @throws TencentCloudSDKException
@@ -355,6 +366,28 @@ public class MongodbClient extends AbstractClient{
     public ResetDBInstancePasswordResponse ResetDBInstancePassword(ResetDBInstancePasswordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResetDBInstancePassword", ResetDBInstancePasswordResponse.class);
+    }
+
+    /**
+     *This API is used to set instance termination protection.
+     * @param req SetDBInstanceDeletionProtectionRequest
+     * @return SetDBInstanceDeletionProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetDBInstanceDeletionProtectionResponse SetDBInstanceDeletionProtection(SetDBInstanceDeletionProtectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetDBInstanceDeletionProtection", SetDBInstanceDeletionProtectionResponse.class);
+    }
+
+    /**
+     *This API is used to terminate monthly subscription billing instances.
+     * @param req TerminateDBInstancesRequest
+     * @return TerminateDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateDBInstancesResponse TerminateDBInstances(TerminateDBInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TerminateDBInstances", TerminateDBInstancesResponse.class);
     }
 
 }
