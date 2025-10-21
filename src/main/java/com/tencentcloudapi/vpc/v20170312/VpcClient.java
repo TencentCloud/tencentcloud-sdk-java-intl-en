@@ -621,6 +621,39 @@ Before taking actions on a NAT gateway, ensure that it has been successfully cre
     }
 
     /**
+     *This API is used to create a VPC route reception policy, including name, description and policy entries.
+     * @param req CreateRoutePolicyRequest
+     * @return CreateRoutePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRoutePolicyResponse CreateRoutePolicy(CreateRoutePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRoutePolicy", CreateRoutePolicyResponse.class);
+    }
+
+    /**
+     *This API is used to create route reception policy bindings (the binding relationship between policy instances and route table instances as well as set priorities).
+     * @param req CreateRoutePolicyAssociationsRequest
+     * @return CreateRoutePolicyAssociationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRoutePolicyAssociationsResponse CreateRoutePolicyAssociations(CreateRoutePolicyAssociationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRoutePolicyAssociations", CreateRoutePolicyAssociationsResponse.class);
+    }
+
+    /**
+     *This API is used to create route reception policy entries.
+     * @param req CreateRoutePolicyEntriesRequest
+     * @return CreateRoutePolicyEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRoutePolicyEntriesResponse CreateRoutePolicyEntries(CreateRoutePolicyEntriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRoutePolicyEntries", CreateRoutePolicyEntriesResponse.class);
+    }
+
+    /**
      *This API is used to create a route table.
 * After the VPC instance has been created, the system creates a default route table with which all newly created subnets will be associated. By default, you can use this route table to manage your routing policies. If you have multiple routing policies, you can call the API for creating route tables to create more route tables to manage these routing policies.
 * You can bind a tag when creating a route table. The tag list in the response indicates the tags that have been successfully added.
@@ -1077,6 +1110,39 @@ This API is completed asynchronously. If you need to query the execution result 
     public DeleteReserveIpAddressesResponse DeleteReserveIpAddresses(DeleteReserveIpAddressesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteReserveIpAddresses", DeleteReserveIpAddressesResponse.class);
+    }
+
+    /**
+     *This API is used to delete a route reception policy and entries.
+     * @param req DeleteRoutePolicyRequest
+     * @return DeleteRoutePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoutePolicyResponse DeleteRoutePolicy(DeleteRoutePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRoutePolicy", DeleteRoutePolicyResponse.class);
+    }
+
+    /**
+     *This API is used to delete route reception policy bindings (the binding relationship between route reception policy objects and route tables).
+     * @param req DeleteRoutePolicyAssociationsRequest
+     * @return DeleteRoutePolicyAssociationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoutePolicyAssociationsResponse DeleteRoutePolicyAssociations(DeleteRoutePolicyAssociationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRoutePolicyAssociations", DeleteRoutePolicyAssociationsResponse.class);
+    }
+
+    /**
+     *This API is used to delete route reception policy entries.
+     * @param req DeleteRoutePolicyEntriesRequest
+     * @return DeleteRoutePolicyEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoutePolicyEntriesResponse DeleteRoutePolicyEntries(DeleteRoutePolicyEntriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRoutePolicyEntries", DeleteRoutePolicyEntriesResponse.class);
     }
 
     /**
@@ -1748,6 +1814,17 @@ This API is used to check the jumbo frame status before and after instance migra
     public DescribeReserveIpAddressesResponse DescribeReserveIpAddresses(DescribeReserveIpAddressesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeReserveIpAddresses", DescribeReserveIpAddressesResponse.class);
+    }
+
+    /**
+     *This API is used to query the route reception policy entry list.
+     * @param req DescribeRoutePolicyEntriesRequest
+     * @return DescribeRoutePolicyEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoutePolicyEntriesResponse DescribeRoutePolicyEntries(DescribeRoutePolicyEntriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRoutePolicyEntries", DescribeRoutePolicyEntriesResponse.class);
     }
 
     /**
@@ -2840,6 +2917,17 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API is used to modify the route reception policy attribute.
+     * @param req ModifyRoutePolicyAttributeRequest
+     * @return ModifyRoutePolicyAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoutePolicyAttributeResponse ModifyRoutePolicyAttribute(ModifyRoutePolicyAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRoutePolicyAttribute", ModifyRoutePolicyAttributeResponse.class);
+    }
+
+    /**
      *This API (ModifyRouteTableAttribute) is used to modify the attributes of a route table.
      * @param req ModifyRouteTableAttributeRequest
      * @return ModifyRouteTableAttributeResponse
@@ -3141,6 +3229,28 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API is used to modify the binding Priority (Priority) based on the route reception policy instance ID (RoutePolicyId) and route table instance ID (RouteTableId), supporting batch modification.
+     * @param req ReplaceRoutePolicyAssociationsRequest
+     * @return ReplaceRoutePolicyAssociationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceRoutePolicyAssociationsResponse ReplaceRoutePolicyAssociations(ReplaceRoutePolicyAssociationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReplaceRoutePolicyAssociations", ReplaceRoutePolicyAssociationsResponse.class);
+    }
+
+    /**
+     *This API is used to modify specified routing policy entries based on route reception policy rule ID and supports batch modification.
+     * @param req ReplaceRoutePolicyEntriesRequest
+     * @return ReplaceRoutePolicyEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceRoutePolicyEntriesResponse ReplaceRoutePolicyEntries(ReplaceRoutePolicyEntriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReplaceRoutePolicyEntries", ReplaceRoutePolicyEntriesResponse.class);
+    }
+
+    /**
      *This API (ReplaceRouteTableAssociation) is used to modify the route table associated with a subnet.
 * A subnet can only be associated with one route table.
      * @param req ReplaceRouteTableAssociationRequest
@@ -3207,6 +3317,28 @@ Only one policy in a single direction can be replaced in each request, and the P
     public ResetNatGatewayConnectionResponse ResetNatGatewayConnection(ResetNatGatewayConnectionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResetNatGatewayConnection", ResetNatGatewayConnectionResponse.class);
+    }
+
+    /**
+     *This API is used to unbind the routing policy instance already bound to a specific route table instance, set up alarms for the new binding routing policy and priority.
+     * @param req ResetRoutePolicyAssociationsRequest
+     * @return ResetRoutePolicyAssociationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetRoutePolicyAssociationsResponse ResetRoutePolicyAssociations(ResetRoutePolicyAssociationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetRoutePolicyAssociations", ResetRoutePolicyAssociationsResponse.class);
+    }
+
+    /**
+     *This API is used to reset the designated route reception policy entry based on the rule ID and supports batch modification.
+     * @param req ResetRoutePolicyEntriesRequest
+     * @return ResetRoutePolicyEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetRoutePolicyEntriesResponse ResetRoutePolicyEntries(ResetRoutePolicyEntriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetRoutePolicyEntries", ResetRoutePolicyEntriesResponse.class);
     }
 
     /**

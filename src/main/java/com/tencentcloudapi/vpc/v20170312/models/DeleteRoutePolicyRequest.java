@@ -21,67 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Tag extends AbstractModel {
+public class DeleteRoutePolicyRequest extends AbstractModel {
 
     /**
-    * Tag key
+    * Specifies the unique ID of the route reception policy.
     */
-    @SerializedName("Key")
+    @SerializedName("RoutePolicyId")
     @Expose
-    private String Key;
+    private String RoutePolicyId;
 
     /**
-    * Tag value
-    */
-    @SerializedName("Value")
-    @Expose
-    private String Value;
-
-    /**
-     * Get Tag key 
-     * @return Key Tag key
+     * Get Specifies the unique ID of the route reception policy. 
+     * @return RoutePolicyId Specifies the unique ID of the route reception policy.
      */
-    public String getKey() {
-        return this.Key;
+    public String getRoutePolicyId() {
+        return this.RoutePolicyId;
     }
 
     /**
-     * Set Tag key
-     * @param Key Tag key
+     * Set Specifies the unique ID of the route reception policy.
+     * @param RoutePolicyId Specifies the unique ID of the route reception policy.
      */
-    public void setKey(String Key) {
-        this.Key = Key;
+    public void setRoutePolicyId(String RoutePolicyId) {
+        this.RoutePolicyId = RoutePolicyId;
     }
 
-    /**
-     * Get Tag value 
-     * @return Value Tag value
-     */
-    public String getValue() {
-        return this.Value;
-    }
-
-    /**
-     * Set Tag value
-     * @param Value Tag value
-     */
-    public void setValue(String Value) {
-        this.Value = Value;
-    }
-
-    public Tag() {
+    public DeleteRoutePolicyRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Tag(Tag source) {
-        if (source.Key != null) {
-            this.Key = new String(source.Key);
-        }
-        if (source.Value != null) {
-            this.Value = new String(source.Value);
+    public DeleteRoutePolicyRequest(DeleteRoutePolicyRequest source) {
+        if (source.RoutePolicyId != null) {
+            this.RoutePolicyId = new String(source.RoutePolicyId);
         }
     }
 
@@ -90,8 +64,7 @@ public class Tag extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Key", this.Key);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "RoutePolicyId", this.RoutePolicyId);
 
     }
 }
