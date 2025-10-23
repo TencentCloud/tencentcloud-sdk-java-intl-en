@@ -61,6 +61,17 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
+     *BindSSAICDNDomainWithChannel
+     * @param req BindSSAICDNDomainWithChannelRequest
+     * @return BindSSAICDNDomainWithChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindSSAICDNDomainWithChannelResponse BindSSAICDNDomainWithChannel(BindSSAICDNDomainWithChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindSSAICDNDomainWithChannel", BindSSAICDNDomainWithChannelResponse.class);
+    }
+
+    /**
      *This API is used to create a StreamPackage channel.
      * @param req CreateStreamPackageChannelRequest
      * @return CreateStreamPackageChannelResponse
@@ -696,6 +707,17 @@ public class MdpClient extends AbstractClient{
     public UnbindLinearAssemblyCDNDomainWithChannelResponse UnbindLinearAssemblyCDNDomainWithChannel(UnbindLinearAssemblyCDNDomainWithChannelRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnbindLinearAssemblyCDNDomainWithChannel", UnbindLinearAssemblyCDNDomainWithChannelResponse.class);
+    }
+
+    /**
+     *UnbindSSAICDNDomainWithChannel
+     * @param req UnbindSSAICDNDomainWithChannelRequest
+     * @return UnbindSSAICDNDomainWithChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindSSAICDNDomainWithChannelResponse UnbindSSAICDNDomainWithChannel(UnbindSSAICDNDomainWithChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnbindSSAICDNDomainWithChannel", UnbindSSAICDNDomainWithChannelResponse.class);
     }
 
 }

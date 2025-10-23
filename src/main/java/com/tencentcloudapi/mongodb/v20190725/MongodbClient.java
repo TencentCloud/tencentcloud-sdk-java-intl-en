@@ -160,6 +160,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query node attributes, such as the AZ, node name, address, role, status, delay between primary and secondary nodes, priority, voting right, and tags.
+     * @param req DescribeDBInstanceNodePropertyRequest
+     * @return DescribeDBInstanceNodePropertyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceNodePropertyResponse DescribeDBInstanceNodeProperty(DescribeDBInstanceNodePropertyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBInstanceNodeProperty", DescribeDBInstanceNodePropertyResponse.class);
+    }
+
+    /**
      *This API is used to query the list of TencentDB for MongoDB instances. It supports filtering primary instances, disaster recovery instances, and read-only instances by project ID, instance ID, instance status, and other conditions.
      * @param req DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse

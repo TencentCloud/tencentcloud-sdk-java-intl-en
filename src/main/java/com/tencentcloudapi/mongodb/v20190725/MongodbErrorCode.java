@@ -6,6 +6,9 @@ public enum MongodbErrorCode {
      /* Termination protection is enabled for the instance. destruction is not allowed. */
      FAILEDOPERATION_DELETIONPROTECTIONENABLED("FailedOperation.DeletionProtectionEnabled"),
      
+     /* Kernel response timed out. */
+     FAILEDOPERATION_KERNELRESPONSETIMEOUT("FailedOperation.KernelResponseTimeout"),
+     
      /* Public network access has been enabled for the current instance. */
      FAILEDOPERATION_NOTALLOWMODIFYADDRAFTEROPENWANSERVICE("FailedOperation.NotAllowModifyAddrAfterOpenWanService"),
      
