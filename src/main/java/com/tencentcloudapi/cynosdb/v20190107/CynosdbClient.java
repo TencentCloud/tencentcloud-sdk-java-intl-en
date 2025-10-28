@@ -930,6 +930,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to inquire prices in batch.
+     * @param req InquirePriceMultiSpecRequest
+     * @return InquirePriceMultiSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceMultiSpecResponse InquirePriceMultiSpec(InquirePriceMultiSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquirePriceMultiSpec", InquirePriceMultiSpecResponse.class);
+    }
+
+    /**
      *This API is used to query the renewal price of a cluster.
      * @param req InquirePriceRenewRequest
      * @return InquirePriceRenewResponse

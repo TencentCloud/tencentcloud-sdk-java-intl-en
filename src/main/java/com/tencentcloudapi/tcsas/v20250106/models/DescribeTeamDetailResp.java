@@ -25,23 +25,20 @@ public class DescribeTeamDetailResp extends AbstractModel {
 
     /**
     * Team name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Team role type 1-Mini program team 2-Application team
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Team role type 1-mini program team 2-application team
     */
     @SerializedName("TeamRoleType")
     @Expose
     private Long TeamRoleType;
 
     /**
-    * Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Administrator account
     */
     @SerializedName("AdminUserAccount")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creator
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateUser")
     @Expose
@@ -57,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MemberCount")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of bound mini program teams
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BindMiniTeamCount")
     @Expose
@@ -94,17 +87,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RegisterLink;
 
     /**
-    * Application name. It’s required when querying details of a mini program team.
+    * Application name. It Is required when querying details of a mini program team.
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-     * Get Team name
-Note: This field may return null, indicating that no valid values can be obtained. 
+    * Team expiration time. 0 means never expire.
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private Long ExpireTime;
+
+    /**
+    * Team status. valid values: 1: normal; 2: disabled; 3: expired.
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+     * Get Team name 
      * @return TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeamName() {
         return this.TeamName;
@@ -112,59 +117,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Team role type 1-Mini program team 2-Application team
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TeamRoleType Team role type 1-Mini program team 2-Application team
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Team role type 1-mini program team 2-application team 
+     * @return TeamRoleType Team role type 1-mini program team 2-application team
      */
     public Long getTeamRoleType() {
         return this.TeamRoleType;
     }
 
     /**
-     * Set Team role type 1-Mini program team 2-Application team
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TeamRoleType Team role type 1-Mini program team 2-Application team
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Team role type 1-mini program team 2-application team
+     * @param TeamRoleType Team role type 1-mini program team 2-application team
      */
     public void setTeamRoleType(Long TeamRoleType) {
         this.TeamRoleType = TeamRoleType;
     }
 
     /**
-     * Get Admin account
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AdminUserAccount Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Administrator account 
+     * @return AdminUserAccount Administrator account
      */
     public String getAdminUserAccount() {
         return this.AdminUserAccount;
     }
 
     /**
-     * Set Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AdminUserAccount Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Administrator account
+     * @param AdminUserAccount Administrator account
      */
     public void setAdminUserAccount(String AdminUserAccount) {
         this.AdminUserAccount = AdminUserAccount;
     }
 
     /**
-     * Get Creator
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creator 
      * @return CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateUser() {
         return this.CreateUser;
@@ -172,19 +165,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creation time 
      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -192,19 +181,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Number of team members
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of team members 
      * @return MemberCount Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMemberCount() {
         return this.MemberCount;
@@ -212,19 +197,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MemberCount Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMemberCount(Long MemberCount) {
         this.MemberCount = MemberCount;
     }
 
     /**
-     * Get Number of bound mini program teams
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of bound mini program teams 
      * @return BindMiniTeamCount Number of bound mini program teams
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getBindMiniTeamCount() {
         return this.BindMiniTeamCount;
@@ -232,9 +213,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of bound mini program teams
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BindMiniTeamCount Number of bound mini program teams
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBindMiniTeamCount(Long BindMiniTeamCount) {
         this.BindMiniTeamCount = BindMiniTeamCount;
@@ -273,19 +252,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Application name. It’s required when querying details of a mini program team. 
-     * @return ApplicationName Application name. It’s required when querying details of a mini program team.
+     * Get Application name. It Is required when querying details of a mini program team. 
+     * @return ApplicationName Application name. It Is required when querying details of a mini program team.
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set Application name. It’s required when querying details of a mini program team.
-     * @param ApplicationName Application name. It’s required when querying details of a mini program team.
+     * Set Application name. It Is required when querying details of a mini program team.
+     * @param ApplicationName Application name. It Is required when querying details of a mini program team.
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
+    }
+
+    /**
+     * Get Team expiration time. 0 means never expire. 
+     * @return ExpireTime Team expiration time. 0 means never expire.
+     */
+    public Long getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set Team expiration time. 0 means never expire.
+     * @param ExpireTime Team expiration time. 0 means never expire.
+     */
+    public void setExpireTime(Long ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get Team status. valid values: 1: normal; 2: disabled; 3: expired. 
+     * @return Status Team status. valid values: 1: normal; 2: disabled; 3: expired.
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Team status. valid values: 1: normal; 2: disabled; 3: expired.
+     * @param Status Team status. valid values: 1: normal; 2: disabled; 3: expired.
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     public DescribeTeamDetailResp() {
@@ -326,6 +337,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ApplicationName != null) {
             this.ApplicationName = new String(source.ApplicationName);
         }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -343,6 +360,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BindTeamName", this.BindTeamName);
         this.setParamSimple(map, prefix + "RegisterLink", this.RegisterLink);
         this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

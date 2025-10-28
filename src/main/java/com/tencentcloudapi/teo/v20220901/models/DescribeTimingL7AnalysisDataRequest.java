@@ -46,7 +46,7 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
     private String [] MetricNames;
 
     /**
-    * Site ID list. This parameter is required. A maximum of 100 site IDs can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. To query account-level data, you must have resource permissions for all sites in this API.
+    * Site ID list. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). A maximum of 100 site IDs can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. To query account-level data, you must have resource permissions for all sites in this API.
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -64,15 +64,15 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
     private String Interval;
 
     /**
-    * Filtering conditions used when querying data. Refer to the [Filtering Conditions for Analytics](https://www.tencentcloud.com/document/product/1145/56985) document for the available filters applicable to L7 client traffic, bandwidth and requests.  
-To restrict results by zone or content identifier, input the corresponding values via the `ZoneIds.N` parameter.
+    * Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.comom/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945).
+If needed, limit the site or content identifier by importing the corresponding value in the `ZoneIds.N` parameter.
     */
     @SerializedName("Filters")
     @Expose
     private QueryCondition [] Filters;
 
     /**
-    * Data region. This parameter is deprecated. Please filter data by client region in `Filters.country`.
+    * Data ownership region. this parameter is deprecated. please filter data by client region in `Filters.country`.
     */
     @SerializedName("Area")
     @Expose
@@ -131,16 +131,16 @@ To restrict results by zone or content identifier, input the corresponding value
     }
 
     /**
-     * Get Site ID list. This parameter is required. A maximum of 100 site IDs can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. To query account-level data, you must have resource permissions for all sites in this API. 
-     * @return ZoneIds Site ID list. This parameter is required. A maximum of 100 site IDs can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. To query account-level data, you must have resource permissions for all sites in this API.
+     * Get Site ID list. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). A maximum of 100 site IDs can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. To query account-level data, you must have resource permissions for all sites in this API. 
+     * @return ZoneIds Site ID list. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). A maximum of 100 site IDs can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. To query account-level data, you must have resource permissions for all sites in this API.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set Site ID list. This parameter is required. A maximum of 100 site IDs can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. To query account-level data, you must have resource permissions for all sites in this API.
-     * @param ZoneIds Site ID list. This parameter is required. A maximum of 100 site IDs can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. To query account-level data, you must have resource permissions for all sites in this API.
+     * Set Site ID list. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). A maximum of 100 site IDs can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. To query account-level data, you must have resource permissions for all sites in this API.
+     * @param ZoneIds Site ID list. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980). A maximum of 100 site IDs can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. To query account-level data, you must have resource permissions for all sites in this API.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
@@ -179,36 +179,36 @@ To restrict results by zone or content identifier, input the corresponding value
     }
 
     /**
-     * Get Filtering conditions used when querying data. Refer to the [Filtering Conditions for Analytics](https://www.tencentcloud.com/document/product/1145/56985) document for the available filters applicable to L7 client traffic, bandwidth and requests.  
-To restrict results by zone or content identifier, input the corresponding values via the `ZoneIds.N` parameter. 
-     * @return Filters Filtering conditions used when querying data. Refer to the [Filtering Conditions for Analytics](https://www.tencentcloud.com/document/product/1145/56985) document for the available filters applicable to L7 client traffic, bandwidth and requests.  
-To restrict results by zone or content identifier, input the corresponding values via the `ZoneIds.N` parameter.
+     * Get Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.comom/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945).
+If needed, limit the site or content identifier by importing the corresponding value in the `ZoneIds.N` parameter. 
+     * @return Filters Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.comom/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945).
+If needed, limit the site or content identifier by importing the corresponding value in the `ZoneIds.N` parameter.
      */
     public QueryCondition [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filtering conditions used when querying data. Refer to the [Filtering Conditions for Analytics](https://www.tencentcloud.com/document/product/1145/56985) document for the available filters applicable to L7 client traffic, bandwidth and requests.  
-To restrict results by zone or content identifier, input the corresponding values via the `ZoneIds.N` parameter.
-     * @param Filters Filtering conditions used when querying data. Refer to the [Filtering Conditions for Analytics](https://www.tencentcloud.com/document/product/1145/56985) document for the available filters applicable to L7 client traffic, bandwidth and requests.  
-To restrict results by zone or content identifier, input the corresponding values via the `ZoneIds.N` parameter.
+     * Set Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.comom/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945).
+If needed, limit the site or content identifier by importing the corresponding value in the `ZoneIds.N` parameter.
+     * @param Filters Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.comom/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945).
+If needed, limit the site or content identifier by importing the corresponding value in the `ZoneIds.N` parameter.
      */
     public void setFilters(QueryCondition [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Data region. This parameter is deprecated. Please filter data by client region in `Filters.country`. 
-     * @return Area Data region. This parameter is deprecated. Please filter data by client region in `Filters.country`.
+     * Get Data ownership region. this parameter is deprecated. please filter data by client region in `Filters.country`. 
+     * @return Area Data ownership region. this parameter is deprecated. please filter data by client region in `Filters.country`.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Data region. This parameter is deprecated. Please filter data by client region in `Filters.country`.
-     * @param Area Data region. This parameter is deprecated. Please filter data by client region in `Filters.country`.
+     * Set Data ownership region. this parameter is deprecated. please filter data by client region in `Filters.country`.
+     * @param Area Data ownership region. this parameter is deprecated. please filter data by client region in `Filters.country`.
      */
     public void setArea(String Area) {
         this.Area = Area;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeTeamPageResp extends AbstractModel {
 
     /**
-    * Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total count
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,37 +32,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * List information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataList")
     @Expose
     private DescribeTeamListInfoResp [] DataList;
 
     /**
-     * Get Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total count 
+     * @return TotalCount Total count
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total count
+     * @param TotalCount Total count
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List information 
      * @return DataList List information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DescribeTeamListInfoResp [] getDataList() {
         return this.DataList;
@@ -71,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DataList List information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataList(DescribeTeamListInfoResp [] DataList) {
         this.DataList = DataList;

@@ -92,7 +92,7 @@ public class Task extends AbstractModel {
     private String FailType;
 
     /**
-    * Failure description for refresh and preheating.
+    * Description of the reason for cache purge or warm cache failure.
     */
     @SerializedName("FailMessage")
     @Expose
@@ -275,16 +275,16 @@ public class Task extends AbstractModel {
     }
 
     /**
-     * Get Failure description for refresh and preheating. 
-     * @return FailMessage Failure description for refresh and preheating.
+     * Get Description of the reason for cache purge or warm cache failure. 
+     * @return FailMessage Description of the reason for cache purge or warm cache failure.
      */
     public String getFailMessage() {
         return this.FailMessage;
     }
 
     /**
-     * Set Failure description for refresh and preheating.
-     * @param FailMessage Failure description for refresh and preheating.
+     * Set Description of the reason for cache purge or warm cache failure.
+     * @param FailMessage Description of the reason for cache purge or warm cache failure.
      */
     public void setFailMessage(String FailMessage) {
         this.FailMessage = FailMessage;

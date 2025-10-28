@@ -25,7 +25,6 @@ public class DescribeTeamListInfoResp extends AbstractModel {
 
     /**
     * Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeamId")
     @Expose
@@ -33,31 +32,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Team name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Admin ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Administrator user ID
     */
     @SerializedName("AdminUserId")
     @Expose
     private String AdminUserId;
 
     /**
-    * Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Administrator account
     */
     @SerializedName("AdminUserAccount")
     @Expose
     private String AdminUserAccount;
 
     /**
-    * Admin username
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Administrator username
     */
     @SerializedName("AdminUserName")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MemberCount")
     @Expose
@@ -80,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Team permission type
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeamRoleTypeList")
     @Expose
@@ -94,10 +87,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long RelatedTeamId;
 
     /**
-     * Get Team ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+    * Team expiration time. 0 means never expire.
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private Long ExpireTime;
+
+    /**
+    * Team status. valid values: 1: normal; 2: disabled; 3: expired.
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+     * Get Team ID 
      * @return TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeamId() {
         return this.TeamId;
@@ -105,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Team name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Team name 
      * @return TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeamName() {
         return this.TeamName;
@@ -125,79 +126,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Admin ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AdminUserId Admin ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Administrator user ID 
+     * @return AdminUserId Administrator user ID
      */
     public String getAdminUserId() {
         return this.AdminUserId;
     }
 
     /**
-     * Set Admin ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AdminUserId Admin ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Administrator user ID
+     * @param AdminUserId Administrator user ID
      */
     public void setAdminUserId(String AdminUserId) {
         this.AdminUserId = AdminUserId;
     }
 
     /**
-     * Get Admin account
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AdminUserAccount Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Administrator account 
+     * @return AdminUserAccount Administrator account
      */
     public String getAdminUserAccount() {
         return this.AdminUserAccount;
     }
 
     /**
-     * Set Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AdminUserAccount Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Administrator account
+     * @param AdminUserAccount Administrator account
      */
     public void setAdminUserAccount(String AdminUserAccount) {
         this.AdminUserAccount = AdminUserAccount;
     }
 
     /**
-     * Get Admin username
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AdminUserName Admin username
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Administrator username 
+     * @return AdminUserName Administrator username
      */
     public String getAdminUserName() {
         return this.AdminUserName;
     }
 
     /**
-     * Set Admin username
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AdminUserName Admin username
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Administrator username
+     * @param AdminUserName Administrator username
      */
     public void setAdminUserName(String AdminUserName) {
         this.AdminUserName = AdminUserName;
     }
 
     /**
-     * Get Number of team members
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of team members 
      * @return MemberCount Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMemberCount() {
         return this.MemberCount;
@@ -205,9 +190,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MemberCount Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMemberCount(Long MemberCount) {
         this.MemberCount = MemberCount;
@@ -230,10 +213,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Team permission type
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Team permission type 
      * @return TeamRoleTypeList Team permission type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long [] getTeamRoleTypeList() {
         return this.TeamRoleTypeList;
@@ -241,9 +222,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Team permission type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TeamRoleTypeList Team permission type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeamRoleTypeList(Long [] TeamRoleTypeList) {
         this.TeamRoleTypeList = TeamRoleTypeList;
@@ -263,6 +242,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setRelatedTeamId(Long RelatedTeamId) {
         this.RelatedTeamId = RelatedTeamId;
+    }
+
+    /**
+     * Get Team expiration time. 0 means never expire. 
+     * @return ExpireTime Team expiration time. 0 means never expire.
+     */
+    public Long getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set Team expiration time. 0 means never expire.
+     * @param ExpireTime Team expiration time. 0 means never expire.
+     */
+    public void setExpireTime(Long ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get Team status. valid values: 1: normal; 2: disabled; 3: expired. 
+     * @return Status Team status. valid values: 1: normal; 2: disabled; 3: expired.
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Team status. valid values: 1: normal; 2: disabled; 3: expired.
+     * @param Status Team status. valid values: 1: normal; 2: disabled; 3: expired.
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     public DescribeTeamListInfoResp() {
@@ -303,6 +314,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RelatedTeamId != null) {
             this.RelatedTeamId = new Long(source.RelatedTeamId);
         }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -319,6 +336,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RegisterLink", this.RegisterLink);
         this.setParamArraySimple(map, prefix + "TeamRoleTypeList.", this.TeamRoleTypeList);
         this.setParamSimple(map, prefix + "RelatedTeamId", this.RelatedTeamId);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

@@ -61,7 +61,7 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
-     *BindSSAICDNDomainWithChannel
+     *This API is used to bind a CDN playback domain to a channel.
      * @param req BindSSAICDNDomainWithChannelRequest
      * @return BindSSAICDNDomainWithChannelResponse
      * @throws TencentCloudSDKException
@@ -710,7 +710,7 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
-     *UnbindSSAICDNDomainWithChannel
+     *This API is used to cancel the correlation between a channel and a CDN playback domain.
      * @param req UnbindSSAICDNDomainWithChannelRequest
      * @return UnbindSSAICDNDomainWithChannelResponse
      * @throws TencentCloudSDKException

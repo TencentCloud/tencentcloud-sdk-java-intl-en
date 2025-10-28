@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class UnbindSSAICDNDomainWithChannelRequest extends AbstractModel {
 
     /**
-    * Channel Id
+    * Channel Id.
     */
     @SerializedName("ChannelId")
     @Expose
     private String ChannelId;
 
     /**
-    * The domain name for CDN playback.
+    * Specifies the playback domain of CDN.
     */
     @SerializedName("CdnDomain")
     @Expose
     private String CdnDomain;
 
     /**
-     * Get Channel Id 
-     * @return ChannelId Channel Id
+     * Get Channel Id. 
+     * @return ChannelId Channel Id.
      */
     public String getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set Channel Id
-     * @param ChannelId Channel Id
+     * Set Channel Id.
+     * @param ChannelId Channel Id.
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get The domain name for CDN playback. 
-     * @return CdnDomain The domain name for CDN playback.
+     * Get Specifies the playback domain of CDN. 
+     * @return CdnDomain Specifies the playback domain of CDN.
      */
     public String getCdnDomain() {
         return this.CdnDomain;
     }
 
     /**
-     * Set The domain name for CDN playback.
-     * @param CdnDomain The domain name for CDN playback.
+     * Set Specifies the playback domain of CDN.
+     * @param CdnDomain Specifies the playback domain of CDN.
      */
     public void setCdnDomain(String CdnDomain) {
         this.CdnDomain = CdnDomain;

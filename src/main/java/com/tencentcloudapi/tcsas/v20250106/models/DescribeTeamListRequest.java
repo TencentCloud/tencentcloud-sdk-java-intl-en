@@ -31,7 +31,7 @@ public class DescribeTeamListRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number of results per page
+    * Page size
     */
     @SerializedName("Limit")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeTeamListRequest extends AbstractModel {
     private String PlatformId;
 
     /**
-    * Name of the team to be queried
+    * Team name to be queried
     */
     @SerializedName("Keyword")
     @Expose
@@ -68,16 +68,16 @@ public class DescribeTeamListRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of results per page 
-     * @return Limit Number of results per page
+     * Get Page size 
+     * @return Limit Page size
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results per page
-     * @param Limit Number of results per page
+     * Set Page size
+     * @param Limit Page size
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -100,16 +100,16 @@ public class DescribeTeamListRequest extends AbstractModel {
     }
 
     /**
-     * Get Name of the team to be queried 
-     * @return Keyword Name of the team to be queried
+     * Get Team name to be queried 
+     * @return Keyword Team name to be queried
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set Name of the team to be queried
-     * @param Keyword Name of the team to be queried
+     * Set Team name to be queried
+     * @param Keyword Team name to be queried
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
