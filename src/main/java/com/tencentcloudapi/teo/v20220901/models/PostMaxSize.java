@@ -33,7 +33,7 @@ public class PostMaxSize extends AbstractModel {
     private String Switch;
 
     /**
-    * Maximum limit. value range between 1MB and 500MB. byte.
+    * Maximum limit.Takes effect only when Switch is on. Range:1 MB - 800 MB (bytes).
     */
     @SerializedName("MaxSize")
     @Expose
@@ -64,16 +64,16 @@ public class PostMaxSize extends AbstractModel {
     }
 
     /**
-     * Get Maximum limit. value range between 1MB and 500MB. byte. 
-     * @return MaxSize Maximum limit. value range between 1MB and 500MB. byte.
+     * Get Maximum limit.Takes effect only when Switch is on. Range:1 MB - 800 MB (bytes). 
+     * @return MaxSize Maximum limit.Takes effect only when Switch is on. Range:1 MB - 800 MB (bytes).
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set Maximum limit. value range between 1MB and 500MB. byte.
-     * @param MaxSize Maximum limit. value range between 1MB and 500MB. byte.
+     * Set Maximum limit.Takes effect only when Switch is on. Range:1 MB - 800 MB (bytes).
+     * @param MaxSize Maximum limit.Takes effect only when Switch is on. Range:1 MB - 800 MB (bytes).
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

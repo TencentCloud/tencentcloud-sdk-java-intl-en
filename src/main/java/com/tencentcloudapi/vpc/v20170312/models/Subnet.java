@@ -129,16 +129,14 @@ public class Subnet extends AbstractModel {
     private Tag [] TagSet;
 
     /**
-    * CDC instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * CDC instance ID.
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-    * Whether it is a CDC subnet. Valid values: 0: no; 1: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether the subnet is associated with CDC. valid values: 0 (no), 1 (yes).
     */
     @SerializedName("IsCdcSubnet")
     @Expose
@@ -385,40 +383,32 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get CDC instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return CdcId CDC instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get CDC instance ID. 
+     * @return CdcId CDC instance ID.
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set CDC instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param CdcId CDC instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set CDC instance ID.
+     * @param CdcId CDC instance ID.
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get Whether it is a CDC subnet. Valid values: 0: no; 1: yes
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return IsCdcSubnet Whether it is a CDC subnet. Valid values: 0: no; 1: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether the subnet is associated with CDC. valid values: 0 (no), 1 (yes). 
+     * @return IsCdcSubnet Whether the subnet is associated with CDC. valid values: 0 (no), 1 (yes).
      */
     public Long getIsCdcSubnet() {
         return this.IsCdcSubnet;
     }
 
     /**
-     * Set Whether it is a CDC subnet. Valid values: 0: no; 1: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param IsCdcSubnet Whether it is a CDC subnet. Valid values: 0: no; 1: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether the subnet is associated with CDC. valid values: 0 (no), 1 (yes).
+     * @param IsCdcSubnet Whether the subnet is associated with CDC. valid values: 0 (no), 1 (yes).
      */
     public void setIsCdcSubnet(Long IsCdcSubnet) {
         this.IsCdcSubnet = IsCdcSubnet;

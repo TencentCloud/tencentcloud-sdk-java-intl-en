@@ -108,12 +108,25 @@ public class Vpc extends AbstractModel {
     private Tag [] TagSet;
 
     /**
-    * The secondary CIDR block.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Auxiliary CIDR
     */
     @SerializedName("AssistantCidrSet")
     @Expose
     private AssistantCidr [] AssistantCidrSet;
+
+    /**
+    * Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+    */
+    @SerializedName("EnableRouteVpcPublish")
+    @Expose
+    private Boolean EnableRouteVpcPublish;
+
+    /**
+    * Returns the multi-operator IPv6 Cidr Block.
+    */
+    @SerializedName("Ipv6CidrBlockSet")
+    @Expose
+    private ISPIPv6CidrBlock [] Ipv6CidrBlockSet;
 
     /**
      * Get `VPC` name. 
@@ -308,23 +321,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The secondary CIDR block.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AssistantCidrSet The secondary CIDR block.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Auxiliary CIDR 
+     * @return AssistantCidrSet Auxiliary CIDR
      */
     public AssistantCidr [] getAssistantCidrSet() {
         return this.AssistantCidrSet;
     }
 
     /**
-     * Set The secondary CIDR block.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AssistantCidrSet The secondary CIDR block.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Auxiliary CIDR
+     * @param AssistantCidrSet Auxiliary CIDR
      */
     public void setAssistantCidrSet(AssistantCidr [] AssistantCidrSet) {
         this.AssistantCidrSet = AssistantCidrSet;
+    }
+
+    /**
+     * Get Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist. 
+     * @return EnableRouteVpcPublish Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+     */
+    public Boolean getEnableRouteVpcPublish() {
+        return this.EnableRouteVpcPublish;
+    }
+
+    /**
+     * Set Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+     * @param EnableRouteVpcPublish Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+     */
+    public void setEnableRouteVpcPublish(Boolean EnableRouteVpcPublish) {
+        this.EnableRouteVpcPublish = EnableRouteVpcPublish;
+    }
+
+    /**
+     * Get Returns the multi-operator IPv6 Cidr Block. 
+     * @return Ipv6CidrBlockSet Returns the multi-operator IPv6 Cidr Block.
+     */
+    public ISPIPv6CidrBlock [] getIpv6CidrBlockSet() {
+        return this.Ipv6CidrBlockSet;
+    }
+
+    /**
+     * Set Returns the multi-operator IPv6 Cidr Block.
+     * @param Ipv6CidrBlockSet Returns the multi-operator IPv6 Cidr Block.
+     */
+    public void setIpv6CidrBlockSet(ISPIPv6CidrBlock [] Ipv6CidrBlockSet) {
+        this.Ipv6CidrBlockSet = Ipv6CidrBlockSet;
     }
 
     public Vpc() {
@@ -383,6 +424,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.AssistantCidrSet[i] = new AssistantCidr(source.AssistantCidrSet[i]);
             }
         }
+        if (source.EnableRouteVpcPublish != null) {
+            this.EnableRouteVpcPublish = new Boolean(source.EnableRouteVpcPublish);
+        }
+        if (source.Ipv6CidrBlockSet != null) {
+            this.Ipv6CidrBlockSet = new ISPIPv6CidrBlock[source.Ipv6CidrBlockSet.length];
+            for (int i = 0; i < source.Ipv6CidrBlockSet.length; i++) {
+                this.Ipv6CidrBlockSet[i] = new ISPIPv6CidrBlock(source.Ipv6CidrBlockSet[i]);
+            }
+        }
     }
 
 
@@ -403,6 +453,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamArrayObj(map, prefix + "AssistantCidrSet.", this.AssistantCidrSet);
+        this.setParamSimple(map, prefix + "EnableRouteVpcPublish", this.EnableRouteVpcPublish);
+        this.setParamArrayObj(map, prefix + "Ipv6CidrBlockSet.", this.Ipv6CidrBlockSet);
 
     }
 }

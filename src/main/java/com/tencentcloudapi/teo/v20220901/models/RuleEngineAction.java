@@ -195,6 +195,13 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     private ForceRedirectHTTPSParameters ForceRedirectHTTPSParameters;
 
     /**
+    * 
+    */
+    @SerializedName("OriginPullProtocolParameters")
+    @Expose
+    private OriginPullProtocolParameters OriginPullProtocolParameters;
+
+    /**
     * Intelligent compression configuration. this parameter is required when name is set to compression.
 Note: this field may return null, which indicates a failure to obtain a valid value.
     */
@@ -827,6 +834,22 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
+     * Get  
+     * @return OriginPullProtocolParameters 
+     */
+    public OriginPullProtocolParameters getOriginPullProtocolParameters() {
+        return this.OriginPullProtocolParameters;
+    }
+
+    /**
+     * Set 
+     * @param OriginPullProtocolParameters 
+     */
+    public void setOriginPullProtocolParameters(OriginPullProtocolParameters OriginPullProtocolParameters) {
+        this.OriginPullProtocolParameters = OriginPullProtocolParameters;
+    }
+
+    /**
      * Get Intelligent compression configuration. this parameter is required when name is set to compression.
 Note: this field may return null, which indicates a failure to obtain a valid value. 
      * @return CompressionParameters Intelligent compression configuration. this parameter is required when name is set to compression.
@@ -1265,6 +1288,9 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         if (source.ForceRedirectHTTPSParameters != null) {
             this.ForceRedirectHTTPSParameters = new ForceRedirectHTTPSParameters(source.ForceRedirectHTTPSParameters);
         }
+        if (source.OriginPullProtocolParameters != null) {
+            this.OriginPullProtocolParameters = new OriginPullProtocolParameters(source.OriginPullProtocolParameters);
+        }
         if (source.CompressionParameters != null) {
             this.CompressionParameters = new CompressionParameters(source.CompressionParameters);
         }
@@ -1346,6 +1372,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         this.setParamObj(map, prefix + "UpstreamHTTP2Parameters.", this.UpstreamHTTP2Parameters);
         this.setParamObj(map, prefix + "HostHeaderParameters.", this.HostHeaderParameters);
         this.setParamObj(map, prefix + "ForceRedirectHTTPSParameters.", this.ForceRedirectHTTPSParameters);
+        this.setParamObj(map, prefix + "OriginPullProtocolParameters.", this.OriginPullProtocolParameters);
         this.setParamObj(map, prefix + "CompressionParameters.", this.CompressionParameters);
         this.setParamObj(map, prefix + "HSTSParameters.", this.HSTSParameters);
         this.setParamObj(map, prefix + "ClientIPHeaderParameters.", this.ClientIPHeaderParameters);

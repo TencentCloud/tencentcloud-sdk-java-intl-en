@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TagSpecification extends AbstractModel {
 
     /**
-    * Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
+    * Specifies the resource type for Tag binding. valid values: "instance" (cloud virtual machine), "host" (cdh), "image" (mirror), "keypair" (key), "ps" (placement group), "hpc" (hyper computing cluster).
     */
     @SerializedName("ResourceType")
     @Expose
@@ -38,16 +38,16 @@ public class TagSpecification extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key. 
-     * @return ResourceType Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
+     * Get Specifies the resource type for Tag binding. valid values: "instance" (cloud virtual machine), "host" (cdh), "image" (mirror), "keypair" (key), "ps" (placement group), "hpc" (hyper computing cluster). 
+     * @return ResourceType Specifies the resource type for Tag binding. valid values: "instance" (cloud virtual machine), "host" (cdh), "image" (mirror), "keypair" (key), "ps" (placement group), "hpc" (hyper computing cluster).
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
-     * @param ResourceType Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
+     * Set Specifies the resource type for Tag binding. valid values: "instance" (cloud virtual machine), "host" (cdh), "image" (mirror), "keypair" (key), "ps" (placement group), "hpc" (hyper computing cluster).
+     * @param ResourceType Specifies the resource type for Tag binding. valid values: "instance" (cloud virtual machine), "host" (cdh), "image" (mirror), "keypair" (key), "ps" (placement group), "hpc" (hyper computing cluster).
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

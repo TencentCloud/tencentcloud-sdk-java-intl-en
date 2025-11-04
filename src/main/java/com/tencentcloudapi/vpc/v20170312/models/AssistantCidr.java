@@ -45,8 +45,7 @@ public class AssistantCidr extends AbstractModel {
     private Long AssistantType;
 
     /**
-    * Subnets divided by the secondary CIDR.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Subnet Split by Auxiliary CIDR
     */
     @SerializedName("SubnetSet")
     @Expose
@@ -101,20 +100,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Subnets divided by the secondary CIDR.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubnetSet Subnets divided by the secondary CIDR.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Subnet Split by Auxiliary CIDR 
+     * @return SubnetSet Subnet Split by Auxiliary CIDR
      */
     public Subnet [] getSubnetSet() {
         return this.SubnetSet;
     }
 
     /**
-     * Set Subnets divided by the secondary CIDR.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubnetSet Subnets divided by the secondary CIDR.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Subnet Split by Auxiliary CIDR
+     * @param SubnetSet Subnet Split by Auxiliary CIDR
      */
     public void setSubnetSet(Subnet [] SubnetSet) {
         this.SubnetSet = SubnetSet;

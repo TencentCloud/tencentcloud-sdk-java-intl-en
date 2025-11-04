@@ -66,6 +66,13 @@ public class CreateVpcRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+    */
+    @SerializedName("EnableRouteVpcPublish")
+    @Expose
+    private Boolean EnableRouteVpcPublish;
+
+    /**
      * Get The VPC name. The maximum length is 60 bytes. 
      * @return VpcName The VPC name. The maximum length is 60 bytes.
      */
@@ -161,6 +168,22 @@ public class CreateVpcRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist. 
+     * @return EnableRouteVpcPublish Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+     */
+    public Boolean getEnableRouteVpcPublish() {
+        return this.EnableRouteVpcPublish;
+    }
+
+    /**
+     * Set Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+     * @param EnableRouteVpcPublish Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+     */
+    public void setEnableRouteVpcPublish(Boolean EnableRouteVpcPublish) {
+        this.EnableRouteVpcPublish = EnableRouteVpcPublish;
+    }
+
     public CreateVpcRequest() {
     }
 
@@ -193,6 +216,9 @@ public class CreateVpcRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.EnableRouteVpcPublish != null) {
+            this.EnableRouteVpcPublish = new Boolean(source.EnableRouteVpcPublish);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class CreateVpcRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "DnsServers.", this.DnsServers);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "EnableRouteVpcPublish", this.EnableRouteVpcPublish);
 
     }
 }

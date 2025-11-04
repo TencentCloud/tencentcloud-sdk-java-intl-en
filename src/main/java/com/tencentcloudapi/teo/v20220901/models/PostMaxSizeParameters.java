@@ -31,7 +31,7 @@ public class PostMaxSizeParameters extends AbstractModel {
     private String Switch;
 
     /**
-    * Maximum size of the file uploaded for streaming via a post request, in bytes. value range: 1 * 2<sup>20</sup> bytes to 500 * 2<sup>20</sup> bytes.
+    * Maximum size of the file uploaded for streaming via a post request. Takes effect only when Switch is on. Range: 1 MB - 800 MB (bytes).
     */
     @SerializedName("MaxSize")
     @Expose
@@ -54,16 +54,16 @@ public class PostMaxSizeParameters extends AbstractModel {
     }
 
     /**
-     * Get Maximum size of the file uploaded for streaming via a post request, in bytes. value range: 1 * 2<sup>20</sup> bytes to 500 * 2<sup>20</sup> bytes. 
-     * @return MaxSize Maximum size of the file uploaded for streaming via a post request, in bytes. value range: 1 * 2<sup>20</sup> bytes to 500 * 2<sup>20</sup> bytes.
+     * Get Maximum size of the file uploaded for streaming via a post request. Takes effect only when Switch is on. Range: 1 MB - 800 MB (bytes). 
+     * @return MaxSize Maximum size of the file uploaded for streaming via a post request. Takes effect only when Switch is on. Range: 1 MB - 800 MB (bytes).
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set Maximum size of the file uploaded for streaming via a post request, in bytes. value range: 1 * 2<sup>20</sup> bytes to 500 * 2<sup>20</sup> bytes.
-     * @param MaxSize Maximum size of the file uploaded for streaming via a post request, in bytes. value range: 1 * 2<sup>20</sup> bytes to 500 * 2<sup>20</sup> bytes.
+     * Set Maximum size of the file uploaded for streaming via a post request. Takes effect only when Switch is on. Range: 1 MB - 800 MB (bytes).
+     * @param MaxSize Maximum size of the file uploaded for streaming via a post request. Takes effect only when Switch is on. Range: 1 MB - 800 MB (bytes).
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

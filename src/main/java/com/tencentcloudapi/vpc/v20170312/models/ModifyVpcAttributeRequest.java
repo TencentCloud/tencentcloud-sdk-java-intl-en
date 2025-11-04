@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyVpcAttributeRequest extends AbstractModel {
 
     /**
-    * Security group can be named freely, but cannot exceed 60 characters.
+    * VPC instance ID, in the format of vpc-f49l6u0z.
     */
     @SerializedName("VpcId")
     @Expose
@@ -59,6 +59,13 @@ public class ModifyVpcAttributeRequest extends AbstractModel {
     private String DomainName;
 
     /**
+    * Vpc association with CCN route publish policy. true enables cidr route publishing. false enables subnet route publishing. the default is subnet route publishing when creating a vpc. to use cidr route publishing, submit a ticket to add to allowlist.
+    */
+    @SerializedName("EnableRouteVpcPublish")
+    @Expose
+    private Boolean EnableRouteVpcPublish;
+
+    /**
     * Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish
     */
     @SerializedName("EnableCdcPublish")
@@ -66,16 +73,16 @@ public class ModifyVpcAttributeRequest extends AbstractModel {
     private Boolean EnableCdcPublish;
 
     /**
-     * Get Security group can be named freely, but cannot exceed 60 characters. 
-     * @return VpcId Security group can be named freely, but cannot exceed 60 characters.
+     * Get VPC instance ID, in the format of vpc-f49l6u0z. 
+     * @return VpcId VPC instance ID, in the format of vpc-f49l6u0z.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Security group can be named freely, but cannot exceed 60 characters.
-     * @param VpcId Security group can be named freely, but cannot exceed 60 characters.
+     * Set VPC instance ID, in the format of vpc-f49l6u0z.
+     * @param VpcId VPC instance ID, in the format of vpc-f49l6u0z.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -146,6 +153,22 @@ public class ModifyVpcAttributeRequest extends AbstractModel {
     }
 
     /**
+     * Get Vpc association with CCN route publish policy. true enables cidr route publishing. false enables subnet route publishing. the default is subnet route publishing when creating a vpc. to use cidr route publishing, submit a ticket to add to allowlist. 
+     * @return EnableRouteVpcPublish Vpc association with CCN route publish policy. true enables cidr route publishing. false enables subnet route publishing. the default is subnet route publishing when creating a vpc. to use cidr route publishing, submit a ticket to add to allowlist.
+     */
+    public Boolean getEnableRouteVpcPublish() {
+        return this.EnableRouteVpcPublish;
+    }
+
+    /**
+     * Set Vpc association with CCN route publish policy. true enables cidr route publishing. false enables subnet route publishing. the default is subnet route publishing when creating a vpc. to use cidr route publishing, submit a ticket to add to allowlist.
+     * @param EnableRouteVpcPublish Vpc association with CCN route publish policy. true enables cidr route publishing. false enables subnet route publishing. the default is subnet route publishing when creating a vpc. to use cidr route publishing, submit a ticket to add to allowlist.
+     */
+    public void setEnableRouteVpcPublish(Boolean EnableRouteVpcPublish) {
+        this.EnableRouteVpcPublish = EnableRouteVpcPublish;
+    }
+
+    /**
      * Get Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish 
      * @return EnableCdcPublish Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish
      */
@@ -187,6 +210,9 @@ public class ModifyVpcAttributeRequest extends AbstractModel {
         if (source.DomainName != null) {
             this.DomainName = new String(source.DomainName);
         }
+        if (source.EnableRouteVpcPublish != null) {
+            this.EnableRouteVpcPublish = new Boolean(source.EnableRouteVpcPublish);
+        }
         if (source.EnableCdcPublish != null) {
             this.EnableCdcPublish = new Boolean(source.EnableCdcPublish);
         }
@@ -202,6 +228,7 @@ public class ModifyVpcAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableMulticast", this.EnableMulticast);
         this.setParamArraySimple(map, prefix + "DnsServers.", this.DnsServers);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "EnableRouteVpcPublish", this.EnableRouteVpcPublish);
         this.setParamSimple(map, prefix + "EnableCdcPublish", this.EnableCdcPublish);
 
     }
