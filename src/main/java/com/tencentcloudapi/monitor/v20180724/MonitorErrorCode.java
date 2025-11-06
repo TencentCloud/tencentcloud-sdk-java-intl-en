@@ -54,6 +54,9 @@ public enum MonitorErrorCode {
      /* The YAML format is incorrect. */
      FAILEDOPERATION_BADYAMLFORMAT("FailedOperation.BadYamlFormat"),
      
+     /* The cluster does not exist. */
+     FAILEDOPERATION_CLUSTERNOTFOUND("FailedOperation.ClusterNotFound"),
+     
      /* FailedOperation.ComponentClientCommon */
      FAILEDOPERATION_COMPONENTCLIENTCOMMON("FailedOperation.ComponentClientCommon"),
      

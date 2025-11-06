@@ -31,7 +31,7 @@ public class CreateExporterIntegrationRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Type
+    * Type (obtain through the DescribePrometheusIntegrations api, using the ExporterType field of each item).
     */
     @SerializedName("Kind")
     @Expose
@@ -45,17 +45,17 @@ public class CreateExporterIntegrationRequest extends AbstractModel {
     private String Content;
 
     /**
-    * Kubernetes cluster type. Valid values:
-<li> 1 = TKE </li>
-<li> 2 = EKS </li>
-<li> 3 = MEKS </li>
+    * Kubernetes cluster type, optional, valid values are as follows:.
+<li>1 = TKE</li>
+<li>2 = EKS</li>
+<li>3 = MEKS</li>
     */
     @SerializedName("KubeType")
     @Expose
     private Long KubeType;
 
     /**
-    * Cluster ID
+    * Cluster ID, optional.
     */
     @SerializedName("ClusterId")
     @Expose
@@ -78,16 +78,16 @@ public class CreateExporterIntegrationRequest extends AbstractModel {
     }
 
     /**
-     * Get Type 
-     * @return Kind Type
+     * Get Type (obtain through the DescribePrometheusIntegrations api, using the ExporterType field of each item). 
+     * @return Kind Type (obtain through the DescribePrometheusIntegrations api, using the ExporterType field of each item).
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set Type
-     * @param Kind Type
+     * Set Type (obtain through the DescribePrometheusIntegrations api, using the ExporterType field of each item).
+     * @param Kind Type (obtain through the DescribePrometheusIntegrations api, using the ExporterType field of each item).
      */
     public void setKind(String Kind) {
         this.Kind = Kind;
@@ -110,44 +110,44 @@ public class CreateExporterIntegrationRequest extends AbstractModel {
     }
 
     /**
-     * Get Kubernetes cluster type. Valid values:
-<li> 1 = TKE </li>
-<li> 2 = EKS </li>
-<li> 3 = MEKS </li> 
-     * @return KubeType Kubernetes cluster type. Valid values:
-<li> 1 = TKE </li>
-<li> 2 = EKS </li>
-<li> 3 = MEKS </li>
+     * Get Kubernetes cluster type, optional, valid values are as follows:.
+<li>1 = TKE</li>
+<li>2 = EKS</li>
+<li>3 = MEKS</li> 
+     * @return KubeType Kubernetes cluster type, optional, valid values are as follows:.
+<li>1 = TKE</li>
+<li>2 = EKS</li>
+<li>3 = MEKS</li>
      */
     public Long getKubeType() {
         return this.KubeType;
     }
 
     /**
-     * Set Kubernetes cluster type. Valid values:
-<li> 1 = TKE </li>
-<li> 2 = EKS </li>
-<li> 3 = MEKS </li>
-     * @param KubeType Kubernetes cluster type. Valid values:
-<li> 1 = TKE </li>
-<li> 2 = EKS </li>
-<li> 3 = MEKS </li>
+     * Set Kubernetes cluster type, optional, valid values are as follows:.
+<li>1 = TKE</li>
+<li>2 = EKS</li>
+<li>3 = MEKS</li>
+     * @param KubeType Kubernetes cluster type, optional, valid values are as follows:.
+<li>1 = TKE</li>
+<li>2 = EKS</li>
+<li>3 = MEKS</li>
      */
     public void setKubeType(Long KubeType) {
         this.KubeType = KubeType;
     }
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID, optional. 
+     * @return ClusterId Cluster ID, optional.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID, optional.
+     * @param ClusterId Cluster ID, optional.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
