@@ -83,6 +83,17 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *This API is used to confirm the latest origin IP range is updated to the origin server firewall when the multi-channel security acceleration gateway's origin IP range changes.
+     * @param req ConfirmMultiPathGatewayOriginACLRequest
+     * @return ConfirmMultiPathGatewayOriginACLResponse
+     * @throws TencentCloudSDKException
+     */
+    public ConfirmMultiPathGatewayOriginACLResponse ConfirmMultiPathGatewayOriginACL(ConfirmMultiPathGatewayOriginACLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ConfirmMultiPathGatewayOriginACL", ConfirmMultiPathGatewayOriginACLResponse.class);
+    }
+
+    /**
      *This API is used to confirm that the latest origin ACLs have been updated to the origin server firewall when the origin ACLs change. After confirming the update to the latest version, related change notifications will stop pushing.
      * @param req ConfirmOriginACLUpdateRequest
      * @return ConfirmOriginACLUpdateResponse
@@ -1148,6 +1159,17 @@ The feature is only supported in the enterprise plan and is currently in closed 
     }
 
     /**
+     *This API is used to query the binding relationship between a multi-channel security acceleration gateway instance and the origin server IP range, as well as the IP range details. If the MultiPathGatewayNextOriginACL field has a return value, the latest origin server IP range must be synchronized to the origin server firewall configuration.
+     * @param req DescribeMultiPathGatewayOriginACLRequest
+     * @return DescribeMultiPathGatewayOriginACLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMultiPathGatewayOriginACLResponse DescribeMultiPathGatewayOriginACL(DescribeMultiPathGatewayOriginACLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMultiPathGatewayOriginACL", DescribeMultiPathGatewayOriginACLResponse.class);
+    }
+
+    /**
      *This API is used to query the list of available regions for user-created multi-channel security acceleration gateways (Cloud Gateway).
      * @param req DescribeMultiPathGatewayRegionsRequest
      * @return DescribeMultiPathGatewayRegionsResponse
@@ -1956,6 +1978,17 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     public ModifyMultiPathGatewaySecretKeyResponse ModifyMultiPathGatewaySecretKey(ModifyMultiPathGatewaySecretKeyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyMultiPathGatewaySecretKey", ModifyMultiPathGatewaySecretKeyResponse.class);
+    }
+
+    /**
+     *This API is used to update the status of a multi-channel security gateway.
+     * @param req ModifyMultiPathGatewayStatusRequest
+     * @return ModifyMultiPathGatewayStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMultiPathGatewayStatusResponse ModifyMultiPathGatewayStatus(ModifyMultiPathGatewayStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMultiPathGatewayStatus", ModifyMultiPathGatewayStatusResponse.class);
     }
 
     /**
