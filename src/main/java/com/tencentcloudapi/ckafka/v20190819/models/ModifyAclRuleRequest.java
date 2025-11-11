@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyAclRuleRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * The ckafka cluster instance Id.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * ACL policy name
+    * ACL rule name.
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * Whether to be applied to new topics
+    * Specifies whether to apply to newly-added topics when importing predefined rule modifications.
     */
     @SerializedName("IsApplied")
     @Expose
     private Long IsApplied;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get The ckafka cluster instance Id. 
+     * @return InstanceId The ckafka cluster instance Id.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set The ckafka cluster instance Id.
+     * @param InstanceId The ckafka cluster instance Id.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get ACL policy name 
-     * @return RuleName ACL policy name
+     * Get ACL rule name. 
+     * @return RuleName ACL rule name.
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set ACL policy name
-     * @param RuleName ACL policy name
+     * Set ACL rule name.
+     * @param RuleName ACL rule name.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get Whether to be applied to new topics 
-     * @return IsApplied Whether to be applied to new topics
+     * Get Specifies whether to apply to newly-added topics when importing predefined rule modifications. 
+     * @return IsApplied Specifies whether to apply to newly-added topics when importing predefined rule modifications.
      */
     public Long getIsApplied() {
         return this.IsApplied;
     }
 
     /**
-     * Set Whether to be applied to new topics
-     * @param IsApplied Whether to be applied to new topics
+     * Set Specifies whether to apply to newly-added topics when importing predefined rule modifications.
+     * @param IsApplied Specifies whether to apply to newly-added topics when importing predefined rule modifications.
      */
     public void setIsApplied(Long IsApplied) {
         this.IsApplied = IsApplied;

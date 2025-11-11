@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteAclRequest extends AbstractModel {
 
     /**
-    * Instance ID information
+    * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -52,7 +52,7 @@ public class DeleteAclRequest extends AbstractModel {
     private Long Operation;
 
     /**
-    * Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka.
+    * Permission type (2:DENY, 3:ALLOW). currently ckafka supports ALLOW (equivalent to allowlist), others used when compatible with open-source kafka acl.
     */
     @SerializedName("PermissionType")
     @Expose
@@ -66,23 +66,23 @@ public class DeleteAclRequest extends AbstractModel {
     private String Host;
 
     /**
-    * User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
+    * List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
     */
     @SerializedName("Principal")
     @Expose
     private String Principal;
 
     /**
-     * Get Instance ID information 
-     * @return InstanceId Instance ID information
+     * Get The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api. 
+     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID information
-     * @param InstanceId Instance ID information
+     * Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -137,16 +137,16 @@ public class DeleteAclRequest extends AbstractModel {
     }
 
     /**
-     * Get Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka. 
-     * @return PermissionType Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka.
+     * Get Permission type (2:DENY, 3:ALLOW). currently ckafka supports ALLOW (equivalent to allowlist), others used when compatible with open-source kafka acl. 
+     * @return PermissionType Permission type (2:DENY, 3:ALLOW). currently ckafka supports ALLOW (equivalent to allowlist), others used when compatible with open-source kafka acl.
      */
     public Long getPermissionType() {
         return this.PermissionType;
     }
 
     /**
-     * Set Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka.
-     * @param PermissionType Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka.
+     * Set Permission type (2:DENY, 3:ALLOW). currently ckafka supports ALLOW (equivalent to allowlist), others used when compatible with open-source kafka acl.
+     * @param PermissionType Permission type (2:DENY, 3:ALLOW). currently ckafka supports ALLOW (equivalent to allowlist), others used when compatible with open-source kafka acl.
      */
     public void setPermissionType(Long PermissionType) {
         this.PermissionType = PermissionType;
@@ -169,16 +169,16 @@ public class DeleteAclRequest extends AbstractModel {
     }
 
     /**
-     * Get User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list 
-     * @return Principal User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
+     * Get List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users. 
+     * @return Principal List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
      */
     public String getPrincipal() {
         return this.Principal;
     }
 
     /**
-     * Set User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
-     * @param Principal User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
+     * Set List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
+     * @param Principal List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
      */
     public void setPrincipal(String Principal) {
         this.Principal = Principal;

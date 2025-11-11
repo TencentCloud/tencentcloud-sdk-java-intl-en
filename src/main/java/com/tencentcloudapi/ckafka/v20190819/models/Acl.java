@@ -38,16 +38,14 @@ public class Acl extends AbstractModel {
     private String ResourceName;
 
     /**
-    * User list. The default value is `User:*`, which means that any user can access. The current user can only be one included in the user list
-Note: this field may return null, indicating that no valid values can be obtained.
+    * List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
     */
     @SerializedName("Principal")
     @Expose
     private String Principal;
 
     /**
-    * The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Defaults to *, indicating any host is accessible in the entire region. currently, ckafka does not support * as the host, however, the following open-source kafka productization will directly support it.
     */
     @SerializedName("Host")
     @Expose
@@ -100,40 +98,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get User list. The default value is `User:*`, which means that any user can access. The current user can only be one included in the user list
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Principal User list. The default value is `User:*`, which means that any user can access. The current user can only be one included in the user list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users. 
+     * @return Principal List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
      */
     public String getPrincipal() {
         return this.Principal;
     }
 
     /**
-     * Set User list. The default value is `User:*`, which means that any user can access. The current user can only be one included in the user list
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Principal User list. The default value is `User:*`, which means that any user can access. The current user can only be one included in the user list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
+     * @param Principal List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
      */
     public void setPrincipal(String Principal) {
         this.Principal = Principal;
     }
 
     /**
-     * Get The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Host The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Defaults to *, indicating any host is accessible in the entire region. currently, ckafka does not support * as the host, however, the following open-source kafka productization will directly support it. 
+     * @return Host Defaults to *, indicating any host is accessible in the entire region. currently, ckafka does not support * as the host, however, the following open-source kafka productization will directly support it.
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Host The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Defaults to *, indicating any host is accessible in the entire region. currently, ckafka does not support * as the host, however, the following open-source kafka productization will directly support it.
+     * @param Host Defaults to *, indicating any host is accessible in the entire region. currently, ckafka does not support * as the host, however, the following open-source kafka productization will directly support it.
      */
     public void setHost(String Host) {
         this.Host = Host;

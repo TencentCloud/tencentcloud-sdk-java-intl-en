@@ -45,40 +45,35 @@ public class Region extends AbstractModel {
     private String AreaName;
 
     /**
-    * Region code
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Region code.
     */
     @SerializedName("RegionCode")
     @Expose
     private String RegionCode;
 
     /**
-    * Region code (v3)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Region code (V3 version).
     */
     @SerializedName("RegionCodeV3")
     @Expose
     private String RegionCodeV3;
 
     /**
-    * NONE: no special models are supported by default.\nCVM: the CVM type is supported.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Specifies the default value does not support any special type instance type.
     */
     @SerializedName("Support")
     @Expose
     private String Support;
 
     /**
-    * Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Whether ipv6 is supported. 0: indicates no support. 1: indicates support.
     */
     @SerializedName("Ipv6")
     @Expose
     private Long Ipv6;
 
     /**
-    * Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Whether cross-az is supported. valid values: 0 (unsupported), 1 (supported).
     */
     @SerializedName("MultiZone")
     @Expose
@@ -133,100 +128,80 @@ Note: `null` may be returned for this field, indicating that no valid values can
     }
 
     /**
-     * Get Region code
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return RegionCode Region code
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Region code. 
+     * @return RegionCode Region code.
      */
     public String getRegionCode() {
         return this.RegionCode;
     }
 
     /**
-     * Set Region code
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param RegionCode Region code
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Region code.
+     * @param RegionCode Region code.
      */
     public void setRegionCode(String RegionCode) {
         this.RegionCode = RegionCode;
     }
 
     /**
-     * Get Region code (v3)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return RegionCodeV3 Region code (v3)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Region code (V3 version). 
+     * @return RegionCodeV3 Region code (V3 version).
      */
     public String getRegionCodeV3() {
         return this.RegionCodeV3;
     }
 
     /**
-     * Set Region code (v3)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param RegionCodeV3 Region code (v3)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Region code (V3 version).
+     * @param RegionCodeV3 Region code (V3 version).
      */
     public void setRegionCodeV3(String RegionCodeV3) {
         this.RegionCodeV3 = RegionCodeV3;
     }
 
     /**
-     * Get NONE: no special models are supported by default.\nCVM: the CVM type is supported.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return Support NONE: no special models are supported by default.\nCVM: the CVM type is supported.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Specifies the default value does not support any special type instance type. 
+     * @return Support Specifies the default value does not support any special type instance type.
      */
     public String getSupport() {
         return this.Support;
     }
 
     /**
-     * Set NONE: no special models are supported by default.\nCVM: the CVM type is supported.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param Support NONE: no special models are supported by default.\nCVM: the CVM type is supported.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Specifies the default value does not support any special type instance type.
+     * @param Support Specifies the default value does not support any special type instance type.
      */
     public void setSupport(String Support) {
         this.Support = Support;
     }
 
     /**
-     * Get Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return Ipv6 Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Whether ipv6 is supported. 0: indicates no support. 1: indicates support. 
+     * @return Ipv6 Whether ipv6 is supported. 0: indicates no support. 1: indicates support.
      */
     public Long getIpv6() {
         return this.Ipv6;
     }
 
     /**
-     * Set Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param Ipv6 Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Whether ipv6 is supported. 0: indicates no support. 1: indicates support.
+     * @param Ipv6 Whether ipv6 is supported. 0: indicates no support. 1: indicates support.
      */
     public void setIpv6(Long Ipv6) {
         this.Ipv6 = Ipv6;
     }
 
     /**
-     * Get Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return MultiZone Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Whether cross-az is supported. valid values: 0 (unsupported), 1 (supported). 
+     * @return MultiZone Whether cross-az is supported. valid values: 0 (unsupported), 1 (supported).
      */
     public Long getMultiZone() {
         return this.MultiZone;
     }
 
     /**
-     * Set Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param MultiZone Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Whether cross-az is supported. valid values: 0 (unsupported), 1 (supported).
+     * @param MultiZone Whether cross-az is supported. valid values: 0 (unsupported), 1 (supported).
      */
     public void setMultiZone(Long MultiZone) {
         this.MultiZone = MultiZone;

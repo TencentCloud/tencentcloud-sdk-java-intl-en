@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class InstanceAttributesResponse extends AbstractModel {
 
     /**
-    * Instance ID
+    * The ckafka cluster instance Id.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * Specifies the Name of the ckafka cluster instance.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -59,7 +59,7 @@ public class InstanceAttributesResponse extends AbstractModel {
     private String Vport;
 
     /**
-    * Instance status. 0: creating, 1: running, 2: deleting
+    * Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
     */
     @SerializedName("Status")
     @Expose
@@ -165,7 +165,6 @@ public class InstanceAttributesResponse extends AbstractModel {
 
     /**
     * Tag array
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
@@ -173,71 +172,66 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Availability Zone List
     */
     @SerializedName("ZoneIds")
     @Expose
     private Long [] ZoneIds;
 
     /**
-    * Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the ckafka cluster instance version.
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * Maximum number of groups
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Maximum number of groups.
     */
     @SerializedName("MaxGroupNum")
     @Expose
     private Long MaxGroupNum;
 
     /**
-    * Offering type. `0`: Standard Edition; `1`: Professional Edition
-Note: this field may return `null`, indicating that no valid value was found.
+    * Sale type. valid values: 0 (standard version), 1 (pro edition).
     */
     @SerializedName("Cvm")
     @Expose
     private Long Cvm;
 
     /**
-    * Type.
-Note: this field may return `null`, indicating that no valid value was found.
+    * Instance type. valid values:. 
+Specifies the pro edition.    
+Standard version.
+premium. specifies the advanced edition.
+Specifies the serverless version.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
     */
     @SerializedName("Features")
     @Expose
     private String [] Features;
 
     /**
-    * Dynamic message retention policy
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Dynamic message retention policy.
     */
     @SerializedName("RetentionTimeConfig")
     @Expose
     private DynamicRetentionTime RetentionTimeConfig;
 
     /**
-    * Maximum number of connections
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Maximum number of connections.
     */
     @SerializedName("MaxConnection")
     @Expose
@@ -245,71 +239,144 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Public network bandwidth
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PublicNetwork")
     @Expose
     private Long PublicNetwork;
 
     /**
-    * Time
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the deprecated field with no actual meaning.
     */
     @SerializedName("DeleteRouteTimestamp")
     @Expose
     private String DeleteRouteTimestamp;
 
     /**
-    * Number of remaining creatable partitions
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Number of remaining creatable partitions.
     */
     @SerializedName("RemainingPartitions")
     @Expose
     private Long RemainingPartitions;
 
     /**
-    * Number of remaining creatable topics
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Number of remaining creatable topics.
     */
     @SerializedName("RemainingTopics")
     @Expose
     private Long RemainingTopics;
 
     /**
-    * Dynamic disk expansion policy.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Scaling policy for dynamic disk.
     */
     @SerializedName("DynamicDiskConfig")
     @Expose
     private DynamicDiskConfig DynamicDiskConfig;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+    * Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+    */
+    @SerializedName("InstanceChargeType")
+    @Expose
+    private String InstanceChargeType;
+
+    /**
+    * Whether to enable the elastic bandwidth allowlist.   
+Indicates the allowlist feature with elastic bandwidth enabled.
+0: elastic bandwidth allowlist feature is disabled.
+    */
+    @SerializedName("ElasticBandwidthSwitch")
+    @Expose
+    private Long ElasticBandwidthSwitch;
+
+    /**
+    * Indicates the elastic bandwidth activation status.
+1: indicates elastic bandwidth is disabled.
+Enable elastic bandwidth.
+Enable elastic bandwidth successfully.
+33: disabling elastic bandwidth.
+Indicates that the elastic bandwidth is successfully disabled.
+Enable elastic bandwidth failed.
+Bandwidth failure.
+    */
+    @SerializedName("ElasticBandwidthOpenStatus")
+    @Expose
+    private Long ElasticBandwidthOpenStatus;
+
+    /**
+    * Cluster type.  
+CLOUD_IDC idc cluster.
+CLOUD_CVM_SHARE shared cluster.
+CLOUD_CVM_YUNTI yunti cvm cluster.
+CLOUD_CVM. specifies the cvm cluster.
+CLOUD_CDC cdc cluster.
+CLOUD_EKS_TSE eks cluster.
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
+    * Number of free partitions.
+    */
+    @SerializedName("FreePartitionNumber")
+    @Expose
+    private Long FreePartitionNumber;
+
+    /**
+    * Specifies the elastic bandwidth upper limit.
+    */
+    @SerializedName("ElasticFloatBandwidth")
+    @Expose
+    private Long ElasticFloatBandwidth;
+
+    /**
+    * ssl custom certificate id. only returned for instance clusters with custom certificates.
+    */
+    @SerializedName("CustomCertId")
+    @Expose
+    private String CustomCertId;
+
+    /**
+    * Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+    */
+    @SerializedName("UncleanLeaderElectionEnable")
+    @Expose
+    private Long UncleanLeaderElectionEnable;
+
+    /**
+    * Instance deletion protection switch. 1: enabled; 0: disabled.
+    */
+    @SerializedName("DeleteProtectionEnable")
+    @Expose
+    private Long DeleteProtectionEnable;
+
+    /**
+     * Get The ckafka cluster instance Id. 
+     * @return InstanceId The ckafka cluster instance Id.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set The ckafka cluster instance Id.
+     * @param InstanceId The ckafka cluster instance Id.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Specifies the Name of the ckafka cluster instance. 
+     * @return InstanceName Specifies the Name of the ckafka cluster instance.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Specifies the Name of the ckafka cluster instance.
+     * @param InstanceName Specifies the Name of the ckafka cluster instance.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -364,16 +431,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Instance status. 0: creating, 1: running, 2: deleting 
-     * @return Status Instance status. 0: creating, 1: running, 2: deleting
+     * Get Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed. 
+     * @return Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. 0: creating, 1: running, 2: deleting
-     * @param Status Instance status. 0: creating, 1: running, 2: deleting
+     * Set Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+     * @param Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -604,10 +671,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Tag array
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Tag array 
      * @return Tags Tag array
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -615,19 +680,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Tag array
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param Tags Tag array
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Expiration time
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Expiration time 
      * @return ExpireTime Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getExpireTime() {
         return this.ExpireTime;
@@ -635,179 +696,159 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param ExpireTime Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneIds Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Availability Zone List 
+     * @return ZoneIds Availability Zone List
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ZoneIds Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Availability Zone List
+     * @param ZoneIds Availability Zone List
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Version Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the ckafka cluster instance version. 
+     * @return Version Specifies the ckafka cluster instance version.
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Version Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the ckafka cluster instance version.
+     * @param Version Specifies the ckafka cluster instance version.
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Maximum number of groups
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MaxGroupNum Maximum number of groups
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Maximum number of groups. 
+     * @return MaxGroupNum Maximum number of groups.
      */
     public Long getMaxGroupNum() {
         return this.MaxGroupNum;
     }
 
     /**
-     * Set Maximum number of groups
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MaxGroupNum Maximum number of groups
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Maximum number of groups.
+     * @param MaxGroupNum Maximum number of groups.
      */
     public void setMaxGroupNum(Long MaxGroupNum) {
         this.MaxGroupNum = MaxGroupNum;
     }
 
     /**
-     * Get Offering type. `0`: Standard Edition; `1`: Professional Edition
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return Cvm Offering type. `0`: Standard Edition; `1`: Professional Edition
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Sale type. valid values: 0 (standard version), 1 (pro edition). 
+     * @return Cvm Sale type. valid values: 0 (standard version), 1 (pro edition).
      */
     public Long getCvm() {
         return this.Cvm;
     }
 
     /**
-     * Set Offering type. `0`: Standard Edition; `1`: Professional Edition
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param Cvm Offering type. `0`: Standard Edition; `1`: Professional Edition
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Sale type. valid values: 0 (standard version), 1 (pro edition).
+     * @param Cvm Sale type. valid values: 0 (standard version), 1 (pro edition).
      */
     public void setCvm(Long Cvm) {
         this.Cvm = Cvm;
     }
 
     /**
-     * Get Type.
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return InstanceType Type.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Instance type. valid values:. 
+Specifies the pro edition.    
+Standard version.
+premium. specifies the advanced edition.
+Specifies the serverless version. 
+     * @return InstanceType Instance type. valid values:. 
+Specifies the pro edition.    
+Standard version.
+premium. specifies the advanced edition.
+Specifies the serverless version.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Type.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param InstanceType Type.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Instance type. valid values:. 
+Specifies the pro edition.    
+Standard version.
+premium. specifies the advanced edition.
+Specifies the serverless version.
+     * @param InstanceType Instance type. valid values:. 
+Specifies the pro edition.    
+Standard version.
+premium. specifies the advanced edition.
+Specifies the serverless version.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Features Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets. 
+     * @return Features Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
      */
     public String [] getFeatures() {
         return this.Features;
     }
 
     /**
-     * Set Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Features Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
+     * @param Features Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
      */
     public void setFeatures(String [] Features) {
         this.Features = Features;
     }
 
     /**
-     * Get Dynamic message retention policy
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return RetentionTimeConfig Dynamic message retention policy
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Dynamic message retention policy. 
+     * @return RetentionTimeConfig Dynamic message retention policy.
      */
     public DynamicRetentionTime getRetentionTimeConfig() {
         return this.RetentionTimeConfig;
     }
 
     /**
-     * Set Dynamic message retention policy
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param RetentionTimeConfig Dynamic message retention policy
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Dynamic message retention policy.
+     * @param RetentionTimeConfig Dynamic message retention policy.
      */
     public void setRetentionTimeConfig(DynamicRetentionTime RetentionTimeConfig) {
         this.RetentionTimeConfig = RetentionTimeConfig;
     }
 
     /**
-     * Get Maximum number of connections
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MaxConnection Maximum number of connections
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Maximum number of connections. 
+     * @return MaxConnection Maximum number of connections.
      */
     public Long getMaxConnection() {
         return this.MaxConnection;
     }
 
     /**
-     * Set Maximum number of connections
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MaxConnection Maximum number of connections
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Maximum number of connections.
+     * @param MaxConnection Maximum number of connections.
      */
     public void setMaxConnection(Long MaxConnection) {
         this.MaxConnection = MaxConnection;
     }
 
     /**
-     * Get Public network bandwidth
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Public network bandwidth 
      * @return PublicNetwork Public network bandwidth
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getPublicNetwork() {
         return this.PublicNetwork;
@@ -815,92 +856,278 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Public network bandwidth
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param PublicNetwork Public network bandwidth
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPublicNetwork(Long PublicNetwork) {
         this.PublicNetwork = PublicNetwork;
     }
 
     /**
-     * Get Time
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DeleteRouteTimestamp Time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the deprecated field with no actual meaning. 
+     * @return DeleteRouteTimestamp Specifies the deprecated field with no actual meaning.
      */
     public String getDeleteRouteTimestamp() {
         return this.DeleteRouteTimestamp;
     }
 
     /**
-     * Set Time
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DeleteRouteTimestamp Time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the deprecated field with no actual meaning.
+     * @param DeleteRouteTimestamp Specifies the deprecated field with no actual meaning.
      */
     public void setDeleteRouteTimestamp(String DeleteRouteTimestamp) {
         this.DeleteRouteTimestamp = DeleteRouteTimestamp;
     }
 
     /**
-     * Get Number of remaining creatable partitions
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return RemainingPartitions Number of remaining creatable partitions
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Number of remaining creatable partitions. 
+     * @return RemainingPartitions Number of remaining creatable partitions.
      */
     public Long getRemainingPartitions() {
         return this.RemainingPartitions;
     }
 
     /**
-     * Set Number of remaining creatable partitions
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param RemainingPartitions Number of remaining creatable partitions
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Number of remaining creatable partitions.
+     * @param RemainingPartitions Number of remaining creatable partitions.
      */
     public void setRemainingPartitions(Long RemainingPartitions) {
         this.RemainingPartitions = RemainingPartitions;
     }
 
     /**
-     * Get Number of remaining creatable topics
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return RemainingTopics Number of remaining creatable topics
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Number of remaining creatable topics. 
+     * @return RemainingTopics Number of remaining creatable topics.
      */
     public Long getRemainingTopics() {
         return this.RemainingTopics;
     }
 
     /**
-     * Set Number of remaining creatable topics
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param RemainingTopics Number of remaining creatable topics
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Number of remaining creatable topics.
+     * @param RemainingTopics Number of remaining creatable topics.
      */
     public void setRemainingTopics(Long RemainingTopics) {
         this.RemainingTopics = RemainingTopics;
     }
 
     /**
-     * Get Dynamic disk expansion policy.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return DynamicDiskConfig Dynamic disk expansion policy.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Scaling policy for dynamic disk. 
+     * @return DynamicDiskConfig Scaling policy for dynamic disk.
      */
     public DynamicDiskConfig getDynamicDiskConfig() {
         return this.DynamicDiskConfig;
     }
 
     /**
-     * Set Dynamic disk expansion policy.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param DynamicDiskConfig Dynamic disk expansion policy.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Scaling policy for dynamic disk.
+     * @param DynamicDiskConfig Scaling policy for dynamic disk.
      */
     public void setDynamicDiskConfig(DynamicDiskConfig DynamicDiskConfig) {
         this.DynamicDiskConfig = DynamicDiskConfig;
+    }
+
+    /**
+     * Get Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package. 
+     * @return InstanceChargeType Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+     */
+    public String getInstanceChargeType() {
+        return this.InstanceChargeType;
+    }
+
+    /**
+     * Set Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+     * @param InstanceChargeType Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+     */
+    public void setInstanceChargeType(String InstanceChargeType) {
+        this.InstanceChargeType = InstanceChargeType;
+    }
+
+    /**
+     * Get Whether to enable the elastic bandwidth allowlist.   
+Indicates the allowlist feature with elastic bandwidth enabled.
+0: elastic bandwidth allowlist feature is disabled. 
+     * @return ElasticBandwidthSwitch Whether to enable the elastic bandwidth allowlist.   
+Indicates the allowlist feature with elastic bandwidth enabled.
+0: elastic bandwidth allowlist feature is disabled.
+     */
+    public Long getElasticBandwidthSwitch() {
+        return this.ElasticBandwidthSwitch;
+    }
+
+    /**
+     * Set Whether to enable the elastic bandwidth allowlist.   
+Indicates the allowlist feature with elastic bandwidth enabled.
+0: elastic bandwidth allowlist feature is disabled.
+     * @param ElasticBandwidthSwitch Whether to enable the elastic bandwidth allowlist.   
+Indicates the allowlist feature with elastic bandwidth enabled.
+0: elastic bandwidth allowlist feature is disabled.
+     */
+    public void setElasticBandwidthSwitch(Long ElasticBandwidthSwitch) {
+        this.ElasticBandwidthSwitch = ElasticBandwidthSwitch;
+    }
+
+    /**
+     * Get Indicates the elastic bandwidth activation status.
+1: indicates elastic bandwidth is disabled.
+Enable elastic bandwidth.
+Enable elastic bandwidth successfully.
+33: disabling elastic bandwidth.
+Indicates that the elastic bandwidth is successfully disabled.
+Enable elastic bandwidth failed.
+Bandwidth failure. 
+     * @return ElasticBandwidthOpenStatus Indicates the elastic bandwidth activation status.
+1: indicates elastic bandwidth is disabled.
+Enable elastic bandwidth.
+Enable elastic bandwidth successfully.
+33: disabling elastic bandwidth.
+Indicates that the elastic bandwidth is successfully disabled.
+Enable elastic bandwidth failed.
+Bandwidth failure.
+     */
+    public Long getElasticBandwidthOpenStatus() {
+        return this.ElasticBandwidthOpenStatus;
+    }
+
+    /**
+     * Set Indicates the elastic bandwidth activation status.
+1: indicates elastic bandwidth is disabled.
+Enable elastic bandwidth.
+Enable elastic bandwidth successfully.
+33: disabling elastic bandwidth.
+Indicates that the elastic bandwidth is successfully disabled.
+Enable elastic bandwidth failed.
+Bandwidth failure.
+     * @param ElasticBandwidthOpenStatus Indicates the elastic bandwidth activation status.
+1: indicates elastic bandwidth is disabled.
+Enable elastic bandwidth.
+Enable elastic bandwidth successfully.
+33: disabling elastic bandwidth.
+Indicates that the elastic bandwidth is successfully disabled.
+Enable elastic bandwidth failed.
+Bandwidth failure.
+     */
+    public void setElasticBandwidthOpenStatus(Long ElasticBandwidthOpenStatus) {
+        this.ElasticBandwidthOpenStatus = ElasticBandwidthOpenStatus;
+    }
+
+    /**
+     * Get Cluster type.  
+CLOUD_IDC idc cluster.
+CLOUD_CVM_SHARE shared cluster.
+CLOUD_CVM_YUNTI yunti cvm cluster.
+CLOUD_CVM. specifies the cvm cluster.
+CLOUD_CDC cdc cluster.
+CLOUD_EKS_TSE eks cluster. 
+     * @return ClusterType Cluster type.  
+CLOUD_IDC idc cluster.
+CLOUD_CVM_SHARE shared cluster.
+CLOUD_CVM_YUNTI yunti cvm cluster.
+CLOUD_CVM. specifies the cvm cluster.
+CLOUD_CDC cdc cluster.
+CLOUD_EKS_TSE eks cluster.
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set Cluster type.  
+CLOUD_IDC idc cluster.
+CLOUD_CVM_SHARE shared cluster.
+CLOUD_CVM_YUNTI yunti cvm cluster.
+CLOUD_CVM. specifies the cvm cluster.
+CLOUD_CDC cdc cluster.
+CLOUD_EKS_TSE eks cluster.
+     * @param ClusterType Cluster type.  
+CLOUD_IDC idc cluster.
+CLOUD_CVM_SHARE shared cluster.
+CLOUD_CVM_YUNTI yunti cvm cluster.
+CLOUD_CVM. specifies the cvm cluster.
+CLOUD_CDC cdc cluster.
+CLOUD_EKS_TSE eks cluster.
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get Number of free partitions. 
+     * @return FreePartitionNumber Number of free partitions.
+     */
+    public Long getFreePartitionNumber() {
+        return this.FreePartitionNumber;
+    }
+
+    /**
+     * Set Number of free partitions.
+     * @param FreePartitionNumber Number of free partitions.
+     */
+    public void setFreePartitionNumber(Long FreePartitionNumber) {
+        this.FreePartitionNumber = FreePartitionNumber;
+    }
+
+    /**
+     * Get Specifies the elastic bandwidth upper limit. 
+     * @return ElasticFloatBandwidth Specifies the elastic bandwidth upper limit.
+     */
+    public Long getElasticFloatBandwidth() {
+        return this.ElasticFloatBandwidth;
+    }
+
+    /**
+     * Set Specifies the elastic bandwidth upper limit.
+     * @param ElasticFloatBandwidth Specifies the elastic bandwidth upper limit.
+     */
+    public void setElasticFloatBandwidth(Long ElasticFloatBandwidth) {
+        this.ElasticFloatBandwidth = ElasticFloatBandwidth;
+    }
+
+    /**
+     * Get ssl custom certificate id. only returned for instance clusters with custom certificates. 
+     * @return CustomCertId ssl custom certificate id. only returned for instance clusters with custom certificates.
+     */
+    public String getCustomCertId() {
+        return this.CustomCertId;
+    }
+
+    /**
+     * Set ssl custom certificate id. only returned for instance clusters with custom certificates.
+     * @param CustomCertId ssl custom certificate id. only returned for instance clusters with custom certificates.
+     */
+    public void setCustomCertId(String CustomCertId) {
+        this.CustomCertId = CustomCertId;
+    }
+
+    /**
+     * Get Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable. 
+     * @return UncleanLeaderElectionEnable Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+     */
+    public Long getUncleanLeaderElectionEnable() {
+        return this.UncleanLeaderElectionEnable;
+    }
+
+    /**
+     * Set Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+     * @param UncleanLeaderElectionEnable Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+     */
+    public void setUncleanLeaderElectionEnable(Long UncleanLeaderElectionEnable) {
+        this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;
+    }
+
+    /**
+     * Get Instance deletion protection switch. 1: enabled; 0: disabled. 
+     * @return DeleteProtectionEnable Instance deletion protection switch. 1: enabled; 0: disabled.
+     */
+    public Long getDeleteProtectionEnable() {
+        return this.DeleteProtectionEnable;
+    }
+
+    /**
+     * Set Instance deletion protection switch. 1: enabled; 0: disabled.
+     * @param DeleteProtectionEnable Instance deletion protection switch. 1: enabled; 0: disabled.
+     */
+    public void setDeleteProtectionEnable(Long DeleteProtectionEnable) {
+        this.DeleteProtectionEnable = DeleteProtectionEnable;
     }
 
     public InstanceAttributesResponse() {
@@ -1028,6 +1255,33 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.DynamicDiskConfig != null) {
             this.DynamicDiskConfig = new DynamicDiskConfig(source.DynamicDiskConfig);
         }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+        if (source.ElasticBandwidthSwitch != null) {
+            this.ElasticBandwidthSwitch = new Long(source.ElasticBandwidthSwitch);
+        }
+        if (source.ElasticBandwidthOpenStatus != null) {
+            this.ElasticBandwidthOpenStatus = new Long(source.ElasticBandwidthOpenStatus);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.FreePartitionNumber != null) {
+            this.FreePartitionNumber = new Long(source.FreePartitionNumber);
+        }
+        if (source.ElasticFloatBandwidth != null) {
+            this.ElasticFloatBandwidth = new Long(source.ElasticFloatBandwidth);
+        }
+        if (source.CustomCertId != null) {
+            this.CustomCertId = new String(source.CustomCertId);
+        }
+        if (source.UncleanLeaderElectionEnable != null) {
+            this.UncleanLeaderElectionEnable = new Long(source.UncleanLeaderElectionEnable);
+        }
+        if (source.DeleteProtectionEnable != null) {
+            this.DeleteProtectionEnable = new Long(source.DeleteProtectionEnable);
+        }
     }
 
 
@@ -1070,6 +1324,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "RemainingPartitions", this.RemainingPartitions);
         this.setParamSimple(map, prefix + "RemainingTopics", this.RemainingTopics);
         this.setParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
+        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
+        this.setParamSimple(map, prefix + "ElasticBandwidthOpenStatus", this.ElasticBandwidthOpenStatus);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "FreePartitionNumber", this.FreePartitionNumber);
+        this.setParamSimple(map, prefix + "ElasticFloatBandwidth", this.ElasticFloatBandwidth);
+        this.setParamSimple(map, prefix + "CustomCertId", this.CustomCertId);
+        this.setParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
+        this.setParamSimple(map, prefix + "DeleteProtectionEnable", this.DeleteProtectionEnable);
 
     }
 }

@@ -24,92 +24,117 @@ import java.util.HashMap;
 public class ModifyInstancePreRequest extends AbstractModel {
 
     /**
-    * Instance name.
+    * ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Estimated disk capacity, which can be increased by increment.
+    * Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
+Specification limits can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Estimated bandwidth, which can be increased by increment.
+    * Peak bandwidth in MB/s.
+Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+
     */
     @SerializedName("BandWidth")
     @Expose
     private Long BandWidth;
 
     /**
-    * Estimated partition count, which can be increased by increment.
+    * Partition upper bound. maximum value of 40000. step length of 100.
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
     */
     @SerializedName("Partition")
     @Expose
     private Long Partition;
 
     /**
-     * Get Instance name. 
-     * @return InstanceId Instance name.
+     * Get ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1). 
+     * @return InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance name.
-     * @param InstanceId Instance name.
+     * Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @param InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Estimated disk capacity, which can be increased by increment. 
-     * @return DiskSize Estimated disk capacity, which can be increased by increment.
+     * Get Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
+Specification limits can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+ 
+     * @return DiskSize Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
+Specification limits can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Estimated disk capacity, which can be increased by increment.
-     * @param DiskSize Estimated disk capacity, which can be increased by increment.
+     * Set Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
+Specification limits can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+
+     * @param DiskSize Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
+Specification limits can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Estimated bandwidth, which can be increased by increment. 
-     * @return BandWidth Estimated bandwidth, which can be increased by increment.
+     * Get Peak bandwidth in MB/s.
+Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+ 
+     * @return BandWidth Peak bandwidth in MB/s.
+Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+
      */
     public Long getBandWidth() {
         return this.BandWidth;
     }
 
     /**
-     * Set Estimated bandwidth, which can be increased by increment.
-     * @param BandWidth Estimated bandwidth, which can be increased by increment.
+     * Set Peak bandwidth in MB/s.
+Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+
+     * @param BandWidth Peak bandwidth in MB/s.
+Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+
      */
     public void setBandWidth(Long BandWidth) {
         this.BandWidth = BandWidth;
     }
 
     /**
-     * Get Estimated partition count, which can be increased by increment. 
-     * @return Partition Estimated partition count, which can be increased by increment.
+     * Get Partition upper bound. maximum value of 40000. step length of 100.
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1 
+     * @return Partition Partition upper bound. maximum value of 40000. step length of 100.
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set Estimated partition count, which can be increased by increment.
-     * @param Partition Estimated partition count, which can be increased by increment.
+     * Set Partition upper bound. maximum value of 40000. step length of 100.
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+     * @param Partition Partition upper bound. maximum value of 40000. step length of 100.
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;

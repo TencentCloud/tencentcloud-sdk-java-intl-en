@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InquireCkafkaPriceRequest extends AbstractModel {
 
     /**
-    * `standard`: Standard Edition; `profession`: Pro Edition
+    * Chinese site standard version fill in standards2 international site standard version fill in standard pro edition fill in profession advanced edition fill in premium.
     */
     @SerializedName("InstanceType")
     @Expose
@@ -45,14 +45,15 @@ public class InquireCkafkaPriceRequest extends AbstractModel {
     private Long InstanceNum;
 
     /**
-    * Private network bandwidth in MB/sec, which is required when you purchase an instance.
+    * Specifies the internal network bandwidth size of the instance, in MB/s (required when purchased; bandwidth information is required for pro edition/advanced edition inquiries).
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * Disk type and size, which is required when you purchase an instance.
+    * Specifies the purchase type and size of the hard disk of the instance. required when purchased. disk information is required for pro edition or advanced edition inquiries.
+
     */
     @SerializedName("InquiryDiskParam")
     @Expose
@@ -73,7 +74,10 @@ public class InquireCkafkaPriceRequest extends AbstractModel {
     private Long Topic;
 
     /**
-    * The number of instance partitions to be purchased, which is required when you purchase an instance.
+    * Number of partitions for instance purchase, unit: unit (required when purchased; bandwidth information required for pro edition/advanced edition inquiry).
+Partition upper limit. maximum value of 40000. step length of 100.
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+
     */
     @SerializedName("Partition")
     @Expose
@@ -101,7 +105,7 @@ public class InquireCkafkaPriceRequest extends AbstractModel {
     private String BillType;
 
     /**
-    * Billing mode for public network bandwidth, which is required when you purchase public network bandwidth. Currently, public network bandwidth is only supported for Pro Edition.
+    * Public network bandwidth billing mode. currently only the pro edition supports public network bandwidth. required when purchasing public network bandwidth. value must be a multiple of 3.
     */
     @SerializedName("PublicNetworkParam")
     @Expose
@@ -115,16 +119,16 @@ public class InquireCkafkaPriceRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-     * Get `standard`: Standard Edition; `profession`: Pro Edition 
-     * @return InstanceType `standard`: Standard Edition; `profession`: Pro Edition
+     * Get Chinese site standard version fill in standards2 international site standard version fill in standard pro edition fill in profession advanced edition fill in premium. 
+     * @return InstanceType Chinese site standard version fill in standards2 international site standard version fill in standard pro edition fill in profession advanced edition fill in premium.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set `standard`: Standard Edition; `profession`: Pro Edition
-     * @param InstanceType `standard`: Standard Edition; `profession`: Pro Edition
+     * Set Chinese site standard version fill in standards2 international site standard version fill in standard pro edition fill in profession advanced edition fill in premium.
+     * @param InstanceType Chinese site standard version fill in standards2 international site standard version fill in standard pro edition fill in profession advanced edition fill in premium.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -163,32 +167,36 @@ public class InquireCkafkaPriceRequest extends AbstractModel {
     }
 
     /**
-     * Get Private network bandwidth in MB/sec, which is required when you purchase an instance. 
-     * @return Bandwidth Private network bandwidth in MB/sec, which is required when you purchase an instance.
+     * Get Specifies the internal network bandwidth size of the instance, in MB/s (required when purchased; bandwidth information is required for pro edition/advanced edition inquiries). 
+     * @return Bandwidth Specifies the internal network bandwidth size of the instance, in MB/s (required when purchased; bandwidth information is required for pro edition/advanced edition inquiries).
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set Private network bandwidth in MB/sec, which is required when you purchase an instance.
-     * @param Bandwidth Private network bandwidth in MB/sec, which is required when you purchase an instance.
+     * Set Specifies the internal network bandwidth size of the instance, in MB/s (required when purchased; bandwidth information is required for pro edition/advanced edition inquiries).
+     * @param Bandwidth Specifies the internal network bandwidth size of the instance, in MB/s (required when purchased; bandwidth information is required for pro edition/advanced edition inquiries).
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get Disk type and size, which is required when you purchase an instance. 
-     * @return InquiryDiskParam Disk type and size, which is required when you purchase an instance.
+     * Get Specifies the purchase type and size of the hard disk of the instance. required when purchased. disk information is required for pro edition or advanced edition inquiries.
+ 
+     * @return InquiryDiskParam Specifies the purchase type and size of the hard disk of the instance. required when purchased. disk information is required for pro edition or advanced edition inquiries.
+
      */
     public InquiryDiskParam getInquiryDiskParam() {
         return this.InquiryDiskParam;
     }
 
     /**
-     * Set Disk type and size, which is required when you purchase an instance.
-     * @param InquiryDiskParam Disk type and size, which is required when you purchase an instance.
+     * Set Specifies the purchase type and size of the hard disk of the instance. required when purchased. disk information is required for pro edition or advanced edition inquiries.
+
+     * @param InquiryDiskParam Specifies the purchase type and size of the hard disk of the instance. required when purchased. disk information is required for pro edition or advanced edition inquiries.
+
      */
     public void setInquiryDiskParam(InquiryDiskParam InquiryDiskParam) {
         this.InquiryDiskParam = InquiryDiskParam;
@@ -227,16 +235,28 @@ public class InquireCkafkaPriceRequest extends AbstractModel {
     }
 
     /**
-     * Get The number of instance partitions to be purchased, which is required when you purchase an instance. 
-     * @return Partition The number of instance partitions to be purchased, which is required when you purchase an instance.
+     * Get Number of partitions for instance purchase, unit: unit (required when purchased; bandwidth information required for pro edition/advanced edition inquiry).
+Partition upper limit. maximum value of 40000. step length of 100.
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+ 
+     * @return Partition Number of partitions for instance purchase, unit: unit (required when purchased; bandwidth information required for pro edition/advanced edition inquiry).
+Partition upper limit. maximum value of 40000. step length of 100.
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set The number of instance partitions to be purchased, which is required when you purchase an instance.
-     * @param Partition The number of instance partitions to be purchased, which is required when you purchase an instance.
+     * Set Number of partitions for instance purchase, unit: unit (required when purchased; bandwidth information required for pro edition/advanced edition inquiry).
+Partition upper limit. maximum value of 40000. step length of 100.
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+
+     * @param Partition Number of partitions for instance purchase, unit: unit (required when purchased; bandwidth information required for pro edition/advanced edition inquiry).
+Partition upper limit. maximum value of 40000. step length of 100.
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;
@@ -291,16 +311,16 @@ public class InquireCkafkaPriceRequest extends AbstractModel {
     }
 
     /**
-     * Get Billing mode for public network bandwidth, which is required when you purchase public network bandwidth. Currently, public network bandwidth is only supported for Pro Edition. 
-     * @return PublicNetworkParam Billing mode for public network bandwidth, which is required when you purchase public network bandwidth. Currently, public network bandwidth is only supported for Pro Edition.
+     * Get Public network bandwidth billing mode. currently only the pro edition supports public network bandwidth. required when purchasing public network bandwidth. value must be a multiple of 3. 
+     * @return PublicNetworkParam Public network bandwidth billing mode. currently only the pro edition supports public network bandwidth. required when purchasing public network bandwidth. value must be a multiple of 3.
      */
     public InquiryPublicNetworkParam getPublicNetworkParam() {
         return this.PublicNetworkParam;
     }
 
     /**
-     * Set Billing mode for public network bandwidth, which is required when you purchase public network bandwidth. Currently, public network bandwidth is only supported for Pro Edition.
-     * @param PublicNetworkParam Billing mode for public network bandwidth, which is required when you purchase public network bandwidth. Currently, public network bandwidth is only supported for Pro Edition.
+     * Set Public network bandwidth billing mode. currently only the pro edition supports public network bandwidth. required when purchasing public network bandwidth. value must be a multiple of 3.
+     * @param PublicNetworkParam Public network bandwidth billing mode. currently only the pro edition supports public network bandwidth. required when purchasing public network bandwidth. value must be a multiple of 3.
      */
     public void setPublicNetworkParam(InquiryPublicNetworkParam PublicNetworkParam) {
         this.PublicNetworkParam = PublicNetworkParam;

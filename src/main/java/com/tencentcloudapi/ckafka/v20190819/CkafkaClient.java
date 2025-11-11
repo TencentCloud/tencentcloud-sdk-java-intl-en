@@ -105,7 +105,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a DataHub topic.
+     *This API is used to create a DIP topic.
      * @param req CreateDatahubTopicRequest
      * @return CreateDatahubTopicResponse
      * @throws TencentCloudSDKException
@@ -116,14 +116,14 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a pay-as-you-go instance.  It will be deprecated in future versions. We recommend that you use the `CreatePostPaidInstance` API instead.  You can call this API via SDK or the TencentCloud API console to create a pay-as-you-go CKafka instance,  which is an alternate option for making a purchase in the console.
-     * @param req CreateInstancePostRequest
-     * @return CreateInstancePostResponse
+     *This API is used to create prepaid annual and monthly instances. It only supports creating Pro Edition instances.
+     * @param req CreateInstancePreRequest
+     * @return CreateInstancePreResponse
      * @throws TencentCloudSDKException
      */
-    public CreateInstancePostResponse CreateInstancePost(CreateInstancePostRequest req) throws TencentCloudSDKException{
+    public CreateInstancePreResponse CreateInstancePre(CreateInstancePreRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "CreateInstancePost", CreateInstancePostResponse.class);
+        return this.internalRequest(req, "CreateInstancePre", CreateInstancePreResponse.class);
     }
 
     /**
@@ -146,6 +146,17 @@ public class CkafkaClient extends AbstractClient{
     public CreatePostPaidInstanceResponse CreatePostPaidInstance(CreatePostPaidInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreatePostPaidInstance", CreatePostPaidInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to add instance routes.
+     * @param req CreateRouteRequest
+     * @return CreateRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRouteResponse CreateRoute(CreateRouteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRoute", CreateRouteResponse.class);
     }
 
     /**
@@ -193,7 +204,18 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a monthly subscribed (prepaid) instance.
+     *This API is used to delete post-payment instances. It directly performs instance termination by calling API deletion without associating connectors and tasks in pre-check.
+     * @param req DeleteInstancePostRequest
+     * @return DeleteInstancePostResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInstancePostResponse DeleteInstancePost(DeleteInstancePostRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteInstancePost", DeleteInstancePostResponse.class);
+    }
+
+    /**
+     *This API is used to delete prepaid instances. It performs isolation and deletion actions on the instance. After successful execution, the instance will be directly deleted and terminated. By calling API deletion, it directly performs instance termination without associating connectors and tasks in pre-check.
      * @param req DeleteInstancePreRequest
      * @return DeleteInstancePreResponse
      * @throws TencentCloudSDKException
@@ -314,7 +336,18 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the DataHub topic attributes.
+     *This API is used to get instance information corresponding to backend CVM, including cvmId and ip. It is for Pro Edition, while Standard Edition returns empty data.
+     * @param req DescribeCvmInfoRequest
+     * @return DescribeCvmInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCvmInfoResponse DescribeCvmInfo(DescribeCvmInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCvmInfo", DescribeCvmInfoResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve DIP topic attributes.
      * @param req DescribeDatahubTopicRequest
      * @return DescribeDatahubTopicResponse
      * @throws TencentCloudSDKException
@@ -369,7 +402,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get instance attributes. 
+     *This API is used to obtain instance attributes.
      * @param req DescribeInstanceAttributesRequest
      * @return DescribeInstanceAttributesResponse
      * @throws TencentCloudSDKException
@@ -380,7 +413,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the list of CKafka instances under a user account.
+     *This API is used to search for a list of TDMQ CKafka instances under a user account.
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse
      * @throws TencentCloudSDKException
@@ -424,6 +457,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *This API is used to retrieve the security group route information list.
+     * @param req DescribeSecurityGroupRoutesRequest
+     * @return DescribeSecurityGroupRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityGroupRoutesResponse DescribeSecurityGroupRoutes(DescribeSecurityGroupRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityGroupRoutes", DescribeSecurityGroupRoutesResponse.class);
+    }
+
+    /**
      *This API is used to query the task status.
      * @param req DescribeTaskStatusRequest
      * @return DescribeTaskStatusResponse
@@ -447,8 +491,7 @@ This API is used to get the list of topics in a CKafka instance of a user.
     }
 
     /**
-     *This API is used to get topic attributes.
-
+     *This API is used to retrieve topic attributes.
      * @param req DescribeTopicAttributesRequest
      * @return DescribeTopicAttributesResponse
      * @throws TencentCloudSDKException
@@ -503,6 +546,17 @@ This API is used to get the list of topics in a CKafka instance of a user.
     }
 
     /**
+     *This API is used to search for a list of TDMQ CKafka instances of the specified type under a user account.
+     * @param req DescribeTypeInstancesRequest
+     * @return DescribeTypeInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTypeInstancesResponse DescribeTypeInstances(DescribeTypeInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTypeInstances", DescribeTypeInstancesResponse.class);
+    }
+
+    /**
      *This API is used to query user information.
      * @param req DescribeUserRequest
      * @return DescribeUserResponse
@@ -536,6 +590,17 @@ This API is used to get the list of topics in a CKafka instance of a user.
     }
 
     /**
+     *This API is used to query a message list by timestamp.
+     * @param req FetchMessageListByTimestampRequest
+     * @return FetchMessageListByTimestampResponse
+     * @throws TencentCloudSDKException
+     */
+    public FetchMessageListByTimestampResponse FetchMessageListByTimestamp(FetchMessageListByTimestampRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "FetchMessageListByTimestamp", FetchMessageListByTimestampResponse.class);
+    }
+
+    /**
      *This API is used to purchase a CKafka instance or query the instance renewal price.
      * @param req InquireCkafkaPriceRequest
      * @return InquireCkafkaPriceResponse
@@ -547,7 +612,7 @@ This API is used to get the list of topics in a CKafka instance of a user.
     }
 
     /**
-     *This API is used to modify an ACL policy, and currently only supports specifying whether to apply the preset rule to new topics.
+     *This API is used to modify ACL policy, currently only support whether to apply preset rules to newly-added topics.
      * @param req ModifyAclRuleRequest
      * @return ModifyAclRuleResponse
      * @throws TencentCloudSDKException
@@ -558,7 +623,7 @@ This API is used to get the list of topics in a CKafka instance of a user.
     }
 
     /**
-     *This API is used to modify the DataHub topic attributes.
+     *This API is used to modify DIP topic attributes.
      * @param req ModifyDatahubTopicRequest
      * @return ModifyDatahubTopicResponse
      * @throws TencentCloudSDKException
@@ -591,7 +656,7 @@ This API is used to get the list of topics in a CKafka instance of a user.
     }
 
     /**
-     *This API is used to change the configurations of a prepaid instance, such as disk capacity and bandwidth.
+     *This API is used to change the configuration of prepaid instances, adjust disks, modify bandwidth, and manage partitions.
      * @param req ModifyInstancePreRequest
      * @return ModifyInstancePreResponse
      * @throws TencentCloudSDKException

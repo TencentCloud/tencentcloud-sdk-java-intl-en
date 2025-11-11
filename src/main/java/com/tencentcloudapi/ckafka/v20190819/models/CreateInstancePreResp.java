@@ -38,8 +38,7 @@ public class CreateInstancePreResp extends AbstractModel {
     private String ReturnMessage;
 
     /**
-    * Data returned by the operation.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the Data returned by the operation.
     */
     @SerializedName("Data")
     @Expose
@@ -85,20 +84,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Data returned by the operation.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Data Data returned by the operation.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the Data returned by the operation. 
+     * @return Data Specifies the Data returned by the operation.
      */
     public CreateInstancePreData getData() {
         return this.Data;
     }
 
     /**
-     * Set Data returned by the operation.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Data Data returned by the operation.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the Data returned by the operation.
+     * @param Data Specifies the Data returned by the operation.
      */
     public void setData(CreateInstancePreData Data) {
         this.Data = Data;

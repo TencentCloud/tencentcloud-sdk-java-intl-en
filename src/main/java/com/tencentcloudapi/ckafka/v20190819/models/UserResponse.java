@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class UserResponse extends AbstractModel {
 
     /**
-    * List of eligible users
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the eligible users list.
     */
     @SerializedName("Users")
     @Expose
@@ -39,20 +38,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long TotalCount;
 
     /**
-     * Get List of eligible users
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Users List of eligible users
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the eligible users list. 
+     * @return Users Specifies the eligible users list.
      */
     public User [] getUsers() {
         return this.Users;
     }
 
     /**
-     * Set List of eligible users
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Users List of eligible users
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the eligible users list.
+     * @param Users Specifies the eligible users list.
      */
     public void setUsers(User [] Users) {
         this.Users = Users;

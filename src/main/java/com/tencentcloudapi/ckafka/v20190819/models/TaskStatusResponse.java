@@ -31,7 +31,7 @@ public class TaskStatusResponse extends AbstractModel {
     private Long Status;
 
     /**
-    * Output information Note: This field may return null, indicating that no valid values can be obtained.
+    * Output information.
     */
     @SerializedName("Output")
     @Expose
@@ -54,16 +54,16 @@ public class TaskStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get Output information Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output information Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Output information. 
+     * @return Output Output information.
      */
     public String getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output information Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Output information Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Output information.
+     * @param Output Output information.
      */
     public void setOutput(String Output) {
         this.Output = Output;

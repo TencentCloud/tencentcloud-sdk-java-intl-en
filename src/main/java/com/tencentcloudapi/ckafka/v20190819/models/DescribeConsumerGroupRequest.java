@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeConsumerGroupRequest extends AbstractModel {
 
     /**
-    * CKafka instance ID.
+    * ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Name of the group to be queried, which is optional.
+    * Specifies the group name you want to query.
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
+    * Specifies the corresponding topic name in the group to be queried by the user. if this parameter is specified while the group is unspecified, ignore this parameter.
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Number of results to be returned in this request
+    * Returns the limit quantity of the consumption group. supports a maximum of 50.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset position
+    * Specifies the starting offset amount of the consumer group list.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get CKafka instance ID. 
-     * @return InstanceId CKafka instance ID.
+     * Get ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1). 
+     * @return InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set CKafka instance ID.
-     * @param InstanceId CKafka instance ID.
+     * Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @param InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Name of the group to be queried, which is optional. 
-     * @return GroupName Name of the group to be queried, which is optional.
+     * Get Specifies the group name you want to query. 
+     * @return GroupName Specifies the group name you want to query.
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set Name of the group to be queried, which is optional.
-     * @param GroupName Name of the group to be queried, which is optional.
+     * Set Specifies the group name you want to query.
+     * @param GroupName Specifies the group name you want to query.
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored. 
-     * @return TopicName Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
+     * Get Specifies the corresponding topic name in the group to be queried by the user. if this parameter is specified while the group is unspecified, ignore this parameter. 
+     * @return TopicName Specifies the corresponding topic name in the group to be queried by the user. if this parameter is specified while the group is unspecified, ignore this parameter.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
-     * @param TopicName Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
+     * Set Specifies the corresponding topic name in the group to be queried by the user. if this parameter is specified while the group is unspecified, ignore this parameter.
+     * @param TopicName Specifies the corresponding topic name in the group to be queried by the user. if this parameter is specified while the group is unspecified, ignore this parameter.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Number of results to be returned in this request 
-     * @return Limit Number of results to be returned in this request
+     * Get Returns the limit quantity of the consumption group. supports a maximum of 50. 
+     * @return Limit Returns the limit quantity of the consumption group. supports a maximum of 50.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned in this request
-     * @param Limit Number of results to be returned in this request
+     * Set Returns the limit quantity of the consumption group. supports a maximum of 50.
+     * @param Limit Returns the limit quantity of the consumption group. supports a maximum of 50.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset position 
-     * @return Offset Offset position
+     * Get Specifies the starting offset amount of the consumer group list. 
+     * @return Offset Specifies the starting offset amount of the consumer group list.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset position
-     * @param Offset Offset position
+     * Set Specifies the starting offset amount of the consumer group list.
+     * @param Offset Specifies the starting offset amount of the consumer group list.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -38,9 +38,10 @@ public class ControlAIConversationRequest extends AbstractModel {
     private Long SdkAppId;
 
     /**
-    * Control command. currently supports the following commands:.
+    * Control command. currently supported commands are as follows:.
 
--ServerPushText. specifies the text sent by the server to the AI robot. the AI robot will broadcast the text.
+-ServerPushText. specifies the text sent by the server to the AI robot for broadcast.
+-InvokeLLM. specifies the server sends text to the large model to trigger a dialogue.
     */
     @SerializedName("Command")
     @Expose
@@ -52,6 +53,13 @@ public class ControlAIConversationRequest extends AbstractModel {
     @SerializedName("ServerPushText")
     @Expose
     private ServerPushText ServerPushText;
+
+    /**
+    * The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content to the large model and adds X-Invoke-LLM="1" to the header.
+    */
+    @SerializedName("InvokeLLM")
+    @Expose
+    private InvokeLLM InvokeLLM;
 
     /**
      * Get Specifies the session ID. 
@@ -86,24 +94,28 @@ public class ControlAIConversationRequest extends AbstractModel {
     }
 
     /**
-     * Get Control command. currently supports the following commands:.
+     * Get Control command. currently supported commands are as follows:.
 
--ServerPushText. specifies the text sent by the server to the AI robot. the AI robot will broadcast the text. 
-     * @return Command Control command. currently supports the following commands:.
+-ServerPushText. specifies the text sent by the server to the AI robot for broadcast.
+-InvokeLLM. specifies the server sends text to the large model to trigger a dialogue. 
+     * @return Command Control command. currently supported commands are as follows:.
 
--ServerPushText. specifies the text sent by the server to the AI robot. the AI robot will broadcast the text.
+-ServerPushText. specifies the text sent by the server to the AI robot for broadcast.
+-InvokeLLM. specifies the server sends text to the large model to trigger a dialogue.
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set Control command. currently supports the following commands:.
+     * Set Control command. currently supported commands are as follows:.
 
--ServerPushText. specifies the text sent by the server to the AI robot. the AI robot will broadcast the text.
-     * @param Command Control command. currently supports the following commands:.
+-ServerPushText. specifies the text sent by the server to the AI robot for broadcast.
+-InvokeLLM. specifies the server sends text to the large model to trigger a dialogue.
+     * @param Command Control command. currently supported commands are as follows:.
 
--ServerPushText. specifies the text sent by the server to the AI robot. the AI robot will broadcast the text.
+-ServerPushText. specifies the text sent by the server to the AI robot for broadcast.
+-InvokeLLM. specifies the server sends text to the large model to trigger a dialogue.
      */
     public void setCommand(String Command) {
         this.Command = Command;
@@ -123,6 +135,22 @@ public class ControlAIConversationRequest extends AbstractModel {
      */
     public void setServerPushText(ServerPushText ServerPushText) {
         this.ServerPushText = ServerPushText;
+    }
+
+    /**
+     * Get The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content to the large model and adds X-Invoke-LLM="1" to the header. 
+     * @return InvokeLLM The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content to the large model and adds X-Invoke-LLM="1" to the header.
+     */
+    public InvokeLLM getInvokeLLM() {
+        return this.InvokeLLM;
+    }
+
+    /**
+     * Set The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content to the large model and adds X-Invoke-LLM="1" to the header.
+     * @param InvokeLLM The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content to the large model and adds X-Invoke-LLM="1" to the header.
+     */
+    public void setInvokeLLM(InvokeLLM InvokeLLM) {
+        this.InvokeLLM = InvokeLLM;
     }
 
     public ControlAIConversationRequest() {
@@ -145,6 +173,9 @@ public class ControlAIConversationRequest extends AbstractModel {
         if (source.ServerPushText != null) {
             this.ServerPushText = new ServerPushText(source.ServerPushText);
         }
+        if (source.InvokeLLM != null) {
+            this.InvokeLLM = new InvokeLLM(source.InvokeLLM);
+        }
     }
 
 
@@ -156,6 +187,7 @@ public class ControlAIConversationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamObj(map, prefix + "ServerPushText.", this.ServerPushText);
+        this.setParamObj(map, prefix + "InvokeLLM.", this.InvokeLLM);
 
     }
 }

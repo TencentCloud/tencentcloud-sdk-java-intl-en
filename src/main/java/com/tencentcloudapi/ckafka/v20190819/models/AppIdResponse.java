@@ -31,8 +31,7 @@ public class AppIdResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * List of eligible `AppId`
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the App Id list that meets the requirements.
     */
     @SerializedName("AppIdList")
     @Expose
@@ -55,20 +54,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of eligible `AppId`
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AppIdList List of eligible `AppId`
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the App Id list that meets the requirements. 
+     * @return AppIdList Specifies the App Id list that meets the requirements.
      */
     public Long [] getAppIdList() {
         return this.AppIdList;
     }
 
     /**
-     * Set List of eligible `AppId`
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AppIdList List of eligible `AppId`
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the App Id list that meets the requirements.
+     * @param AppIdList Specifies the App Id list that meets the requirements.
      */
     public void setAppIdList(Long [] AppIdList) {
         this.AppIdList = AppIdList;

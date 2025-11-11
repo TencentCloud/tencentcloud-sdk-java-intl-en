@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class PartitionOffset extends AbstractModel {
 
     /**
-    * Partition, such as "0" or "1"
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Partition
     */
     @SerializedName("Partition")
     @Expose
     private String Partition;
 
     /**
-    * Offset, such as 100
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get Partition, such as "0" or "1"
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Partition Partition, such as "0" or "1"
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Partition 
+     * @return Partition Partition
      */
     public String getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set Partition, such as "0" or "1"
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Partition Partition, such as "0" or "1"
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Partition
+     * @param Partition Partition
      */
     public void setPartition(String Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get Offset, such as 100
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Offset Offset, such as 100
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the offset. 
+     * @return Offset Specifies the offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, such as 100
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Offset Offset, such as 100
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the offset.
+     * @param Offset Specifies the offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

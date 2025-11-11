@@ -59,60 +59,81 @@ public class ZoneResponse extends AbstractModel {
     private Price MessagePrice;
 
     /**
-    * Cluster information dedicated to a user
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Specifies the user-exclusive cluster info.
     */
     @SerializedName("ClusterInfo")
     @Expose
     private ClusterInfo [] ClusterInfo;
 
     /**
-    * Purchase of Standard Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Purchase the standard version configuration.
     */
     @SerializedName("Standard")
     @Expose
     private String Standard;
 
     /**
-    * Purchase of Standard S2 Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Purchase the standard version S2 configuration.
     */
     @SerializedName("StandardS2")
     @Expose
     private String StandardS2;
 
     /**
-    * Purchase of Pro Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Specifies the configuration for purchasing the professional edition.
     */
     @SerializedName("Profession")
     @Expose
     private String Profession;
 
     /**
-    * Purchase of Physical Dedicated Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Purchase physical dedicated edition configuration.
     */
     @SerializedName("Physical")
     @Expose
     private String Physical;
 
     /**
-    * Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
     */
     @SerializedName("PublicNetwork")
     @Expose
     private String PublicNetwork;
 
     /**
-    * Public network bandwidth configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Configures the public network bandwidth.
     */
     @SerializedName("PublicNetworkLimit")
     @Expose
     private String PublicNetworkLimit;
+
+    /**
+    * Request ID.
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+    * Pagination Offset
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * Pagination Limit
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * Mandatory. input tag.
+    */
+    @SerializedName("ForceCheckTag")
+    @Expose
+    private Boolean ForceCheckTag;
 
     /**
      * Get Zone list 
@@ -195,143 +216,179 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Cluster information dedicated to a user
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return ClusterInfo Cluster information dedicated to a user
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Specifies the user-exclusive cluster info. 
+     * @return ClusterInfo Specifies the user-exclusive cluster info.
      */
     public ClusterInfo [] getClusterInfo() {
         return this.ClusterInfo;
     }
 
     /**
-     * Set Cluster information dedicated to a user
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param ClusterInfo Cluster information dedicated to a user
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Specifies the user-exclusive cluster info.
+     * @param ClusterInfo Specifies the user-exclusive cluster info.
      */
     public void setClusterInfo(ClusterInfo [] ClusterInfo) {
         this.ClusterInfo = ClusterInfo;
     }
 
     /**
-     * Get Purchase of Standard Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return Standard Purchase of Standard Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Purchase the standard version configuration. 
+     * @return Standard Purchase the standard version configuration.
      */
     public String getStandard() {
         return this.Standard;
     }
 
     /**
-     * Set Purchase of Standard Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param Standard Purchase of Standard Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Purchase the standard version configuration.
+     * @param Standard Purchase the standard version configuration.
      */
     public void setStandard(String Standard) {
         this.Standard = Standard;
     }
 
     /**
-     * Get Purchase of Standard S2 Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return StandardS2 Purchase of Standard S2 Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Purchase the standard version S2 configuration. 
+     * @return StandardS2 Purchase the standard version S2 configuration.
      */
     public String getStandardS2() {
         return this.StandardS2;
     }
 
     /**
-     * Set Purchase of Standard S2 Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param StandardS2 Purchase of Standard S2 Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Purchase the standard version S2 configuration.
+     * @param StandardS2 Purchase the standard version S2 configuration.
      */
     public void setStandardS2(String StandardS2) {
         this.StandardS2 = StandardS2;
     }
 
     /**
-     * Get Purchase of Pro Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return Profession Purchase of Pro Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Specifies the configuration for purchasing the professional edition. 
+     * @return Profession Specifies the configuration for purchasing the professional edition.
      */
     public String getProfession() {
         return this.Profession;
     }
 
     /**
-     * Set Purchase of Pro Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param Profession Purchase of Pro Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Specifies the configuration for purchasing the professional edition.
+     * @param Profession Specifies the configuration for purchasing the professional edition.
      */
     public void setProfession(String Profession) {
         this.Profession = Profession;
     }
 
     /**
-     * Get Purchase of Physical Dedicated Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return Physical Purchase of Physical Dedicated Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Purchase physical dedicated edition configuration. 
+     * @return Physical Purchase physical dedicated edition configuration.
      */
     public String getPhysical() {
         return this.Physical;
     }
 
     /**
-     * Set Purchase of Physical Dedicated Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param Physical Purchase of Physical Dedicated Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Purchase physical dedicated edition configuration.
+     * @param Physical Purchase physical dedicated edition configuration.
      */
     public void setPhysical(String Physical) {
         this.Physical = Physical;
     }
 
     /**
-     * Get Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return PublicNetwork Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless. 
+     * @return PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
      */
     public String getPublicNetwork() {
         return this.PublicNetwork;
     }
 
     /**
-     * Set Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param PublicNetwork Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
+     * @param PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
      */
     public void setPublicNetwork(String PublicNetwork) {
         this.PublicNetwork = PublicNetwork;
     }
 
     /**
-     * Get Public network bandwidth configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return PublicNetworkLimit Public network bandwidth configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Configures the public network bandwidth. 
+     * @return PublicNetworkLimit Configures the public network bandwidth.
      */
     public String getPublicNetworkLimit() {
         return this.PublicNetworkLimit;
     }
 
     /**
-     * Set Public network bandwidth configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param PublicNetworkLimit Public network bandwidth configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Configures the public network bandwidth.
+     * @param PublicNetworkLimit Configures the public network bandwidth.
      */
     public void setPublicNetworkLimit(String PublicNetworkLimit) {
         this.PublicNetworkLimit = PublicNetworkLimit;
+    }
+
+    /**
+     * Get Request ID. 
+     * @return RequestId Request ID.
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set Request ID.
+     * @param RequestId Request ID.
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    /**
+     * Get Pagination Offset 
+     * @return Offset Pagination Offset
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Pagination Offset
+     * @param Offset Pagination Offset
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get Pagination Limit 
+     * @return Limit Pagination Limit
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Pagination Limit
+     * @param Limit Pagination Limit
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get Mandatory. input tag. 
+     * @return ForceCheckTag Mandatory. input tag.
+     */
+    public Boolean getForceCheckTag() {
+        return this.ForceCheckTag;
+    }
+
+    /**
+     * Set Mandatory. input tag.
+     * @param ForceCheckTag Mandatory. input tag.
+     */
+    public void setForceCheckTag(Boolean ForceCheckTag) {
+        this.ForceCheckTag = ForceCheckTag;
     }
 
     public ZoneResponse() {
@@ -384,6 +441,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.PublicNetworkLimit != null) {
             this.PublicNetworkLimit = new String(source.PublicNetworkLimit);
         }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.ForceCheckTag != null) {
+            this.ForceCheckTag = new Boolean(source.ForceCheckTag);
+        }
     }
 
 
@@ -403,6 +472,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Physical", this.Physical);
         this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
         this.setParamSimple(map, prefix + "PublicNetworkLimit", this.PublicNetworkLimit);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "ForceCheckTag", this.ForceCheckTag);
 
     }
 }

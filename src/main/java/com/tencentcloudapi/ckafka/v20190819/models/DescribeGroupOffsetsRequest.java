@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeGroupOffsetsRequest extends AbstractModel {
 
     /**
-    * (Filter) filter by instance ID
+    * The ckafka cluster instance Id.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -66,16 +66,16 @@ public class DescribeGroupOffsetsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get (Filter) filter by instance ID 
-     * @return InstanceId (Filter) filter by instance ID
+     * Get The ckafka cluster instance Id. 
+     * @return InstanceId The ckafka cluster instance Id.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set (Filter) filter by instance ID
-     * @param InstanceId (Filter) filter by instance ID
+     * Set The ckafka cluster instance Id.
+     * @param InstanceId The ckafka cluster instance Id.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

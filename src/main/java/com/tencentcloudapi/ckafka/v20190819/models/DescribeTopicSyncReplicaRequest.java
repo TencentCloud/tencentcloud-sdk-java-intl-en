@@ -45,7 +45,7 @@ public class DescribeTopicSyncReplicaRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+    * Number of returned results. default value: 20. must be greater than 0.
     */
     @SerializedName("Limit")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeTopicSyncReplicaRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. 
-     * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * Get Number of returned results. default value: 20. must be greater than 0. 
+     * @return Limit Number of returned results. default value: 20. must be greater than 0.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
-     * @param Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * Set Number of returned results. default value: 20. must be greater than 0.
+     * @param Limit Number of returned results. default value: 20. must be greater than 0.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

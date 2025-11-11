@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class OperateResponseData extends AbstractModel {
 
     /**
-    * FlowId11
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Flow ID.
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+    * RouteIdDto
     */
     @SerializedName("RouteDTO")
     @Expose
     private RouteDTO RouteDTO;
 
     /**
-     * Get FlowId11
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FlowId FlowId11
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Flow ID. 
+     * @return FlowId Flow ID.
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set FlowId11
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FlowId FlowId11
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Flow ID.
+     * @param FlowId Flow ID.
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get RouteIdDto Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RouteDTO RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+     * Get RouteIdDto 
+     * @return RouteDTO RouteIdDto
      */
     public RouteDTO getRouteDTO() {
         return this.RouteDTO;
     }
 
     /**
-     * Set RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RouteDTO RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+     * Set RouteIdDto
+     * @param RouteDTO RouteIdDto
      */
     public void setRouteDTO(RouteDTO RouteDTO) {
         this.RouteDTO = RouteDTO;

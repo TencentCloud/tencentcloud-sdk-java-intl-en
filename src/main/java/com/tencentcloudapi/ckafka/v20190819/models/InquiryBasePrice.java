@@ -24,40 +24,35 @@ import java.util.HashMap;
 public class InquiryBasePrice extends AbstractModel {
 
     /**
-    * Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Original price unit.
     */
     @SerializedName("UnitPrice")
     @Expose
     private Float UnitPrice;
 
     /**
-    * Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Discount unit price.
     */
     @SerializedName("UnitPriceDiscount")
     @Expose
     private Float UnitPriceDiscount;
 
     /**
-    * Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total original price.
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total discount price.
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-    * Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Discount (unit: %).
     */
     @SerializedName("Discount")
     @Expose
@@ -104,108 +99,87 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TimeUnit;
 
     /**
-    * Purchase quantity
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Purchase quantity.
     */
     @SerializedName("Value")
     @Expose
     private Long Value;
 
     /**
-     * Get Original unit price
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UnitPrice Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Original price unit. 
+     * @return UnitPrice Original price unit.
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
     }
 
     /**
-     * Set Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UnitPrice Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Original price unit.
+     * @param UnitPrice Original price unit.
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UnitPriceDiscount Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Discount unit price. 
+     * @return UnitPriceDiscount Discount unit price.
      */
     public Float getUnitPriceDiscount() {
         return this.UnitPriceDiscount;
     }
 
     /**
-     * Set Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UnitPriceDiscount Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Discount unit price.
+     * @param UnitPriceDiscount Discount unit price.
      */
     public void setUnitPriceDiscount(Float UnitPriceDiscount) {
         this.UnitPriceDiscount = UnitPriceDiscount;
     }
 
     /**
-     * Get Original price in total
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginalPrice Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total original price. 
+     * @return OriginalPrice Total original price.
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginalPrice Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total original price.
+     * @param OriginalPrice Total original price.
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiscountPrice Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total discount price. 
+     * @return DiscountPrice Total discount price.
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiscountPrice Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total discount price.
+     * @param DiscountPrice Total discount price.
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
     }
 
     /**
-     * Get Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Discount Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Discount (unit: %). 
+     * @return Discount Discount (unit: %).
      */
     public Float getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Discount Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Discount (unit: %).
+     * @param Discount Discount (unit: %).
      */
     public void setDiscount(Float Discount) {
         this.Discount = Discount;
@@ -312,20 +286,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Purchase quantity
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Value Purchase quantity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Purchase quantity. 
+     * @return Value Purchase quantity.
      */
     public Long getValue() {
         return this.Value;
     }
 
     /**
-     * Set Purchase quantity
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Value Purchase quantity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Purchase quantity.
+     * @param Value Purchase quantity.
      */
     public void setValue(Long Value) {
         this.Value = Value;

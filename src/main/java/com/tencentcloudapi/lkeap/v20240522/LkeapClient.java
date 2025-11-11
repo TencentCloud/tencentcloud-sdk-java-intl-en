@@ -97,6 +97,17 @@ There is a call limit for single-account for this API. If you need to increase t
     }
 
     /**
+     *This API is used for quasi-real-time document parsing, using HTTP SSE protocol for communication.
+     * @param req ReconstructDocumentSSERequest
+     * @return ReconstructDocumentSSEResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReconstructDocumentSSEResponse ReconstructDocumentSSE(ReconstructDocumentSSERequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReconstructDocumentSSE", ReconstructDocumentSSEResponse.class);
+    }
+
+    /**
      *This API is used to reorder the results of multi-channel recall based on the rerank model of knowledge engine fine-tuning model technology, sort the segments according to the relevance between the query and the segment content from high to low score, and output the corresponding scoring results.
      * @param req RunRerankRequest
      * @return RunRerankResponse

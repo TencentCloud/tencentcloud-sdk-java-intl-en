@@ -61,8 +61,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String Value;
 
     /**
-    * Message timestamp
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Message timestamp.
     */
     @SerializedName("Timestamp")
     @Expose
@@ -165,20 +164,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Message timestamp
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Timestamp Message timestamp
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Message timestamp. 
+     * @return Timestamp Message timestamp.
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set Message timestamp
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Timestamp Message timestamp
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Message timestamp.
+     * @param Timestamp Message timestamp.
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;

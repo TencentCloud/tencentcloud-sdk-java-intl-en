@@ -31,8 +31,7 @@ public class GroupOffsetResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The topic partition array, where each element is a json object.
     */
     @SerializedName("TopicList")
     @Expose
@@ -55,20 +54,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TopicList Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The topic partition array, where each element is a json object. 
+     * @return TopicList The topic partition array, where each element is a json object.
      */
     public GroupOffsetTopic [] getTopicList() {
         return this.TopicList;
     }
 
     /**
-     * Set Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TopicList Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The topic partition array, where each element is a json object.
+     * @param TopicList The topic partition array, where each element is a json object.
      */
     public void setTopicList(GroupOffsetTopic [] TopicList) {
         this.TopicList = TopicList;

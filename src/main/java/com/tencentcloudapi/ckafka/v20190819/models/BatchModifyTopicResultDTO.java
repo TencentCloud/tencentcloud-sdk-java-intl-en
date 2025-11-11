@@ -24,107 +24,92 @@ import java.util.HashMap;
 public class BatchModifyTopicResultDTO extends AbstractModel {
 
     /**
-    * Instance ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * The ckafka cluster instance Id.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Topic name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Topic name
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Status code.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Operation return code.
     */
     @SerializedName("ReturnCode")
     @Expose
     private String ReturnCode;
 
     /**
-    * Message status.
+    * Returned information.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get Instance ID.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return InstanceId Instance ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get The ckafka cluster instance Id. 
+     * @return InstanceId The ckafka cluster instance Id.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param InstanceId Instance ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set The ckafka cluster instance Id.
+     * @param InstanceId The ckafka cluster instance Id.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Topic name.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return TopicName Topic name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Topic name 
+     * @return TopicName Topic name
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Topic name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param TopicName Topic name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Topic name
+     * @param TopicName Topic name
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Status code.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ReturnCode Status code.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Operation return code. 
+     * @return ReturnCode Operation return code.
      */
     public String getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set Status code.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ReturnCode Status code.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Operation return code.
+     * @param ReturnCode Operation return code.
      */
     public void setReturnCode(String ReturnCode) {
         this.ReturnCode = ReturnCode;
     }
 
     /**
-     * Get Message status. 
-     * @return Message Message status.
+     * Get Returned information. 
+     * @return Message Returned information.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Message status.
-     * @param Message Message status.
+     * Set Returned information.
+     * @param Message Returned information.
      */
     public void setMessage(String Message) {
         this.Message = Message;

@@ -38,7 +38,7 @@ public class CreateInstancePostResp extends AbstractModel {
     private String ReturnMessage;
 
     /**
-    * Returned data.  Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the Data returned.
     */
     @SerializedName("Data")
     @Expose
@@ -77,16 +77,16 @@ public class CreateInstancePostResp extends AbstractModel {
     }
 
     /**
-     * Get Returned data.  Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data Returned data.  Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the Data returned. 
+     * @return Data Specifies the Data returned.
      */
     public CreateInstancePostData getData() {
         return this.Data;
     }
 
     /**
-     * Set Returned data.  Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data Returned data.  Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the Data returned.
+     * @param Data Specifies the Data returned.
      */
     public void setData(CreateInstancePostData Data) {
         this.Data = Data;

@@ -24,112 +24,92 @@ import java.util.HashMap;
 public class SaleInfo extends AbstractModel {
 
     /**
-    * Manually set flag.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * The manually configured flag. valid values: true (sold-out), false (available).
     */
     @SerializedName("Flag")
     @Expose
     private Boolean Flag;
 
     /**
-    * CKafka version (v1.1.1/2.4.2/0.10.2）
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the ckafka version number (1.1.1/2.4.2/0.10.2).
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * Whether it is Pro Edition or Standard Edition.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Pro edition, standard version flag.
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * Whether it has been sold out. `true`: sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies whether the item is sold-out. valid values: true (sold-out).
     */
     @SerializedName("SoldOut")
     @Expose
     private Boolean SoldOut;
 
     /**
-     * Get Manually set flag.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Flag Manually set flag.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get The manually configured flag. valid values: true (sold-out), false (available). 
+     * @return Flag The manually configured flag. valid values: true (sold-out), false (available).
      */
     public Boolean getFlag() {
         return this.Flag;
     }
 
     /**
-     * Set Manually set flag.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Flag Manually set flag.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set The manually configured flag. valid values: true (sold-out), false (available).
+     * @param Flag The manually configured flag. valid values: true (sold-out), false (available).
      */
     public void setFlag(Boolean Flag) {
         this.Flag = Flag;
     }
 
     /**
-     * Get CKafka version (v1.1.1/2.4.2/0.10.2）
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Version CKafka version (v1.1.1/2.4.2/0.10.2）
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the ckafka version number (1.1.1/2.4.2/0.10.2). 
+     * @return Version Specifies the ckafka version number (1.1.1/2.4.2/0.10.2).
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set CKafka version (v1.1.1/2.4.2/0.10.2）
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Version CKafka version (v1.1.1/2.4.2/0.10.2）
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the ckafka version number (1.1.1/2.4.2/0.10.2).
+     * @param Version Specifies the ckafka version number (1.1.1/2.4.2/0.10.2).
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Whether it is Pro Edition or Standard Edition.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Platform Whether it is Pro Edition or Standard Edition.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Pro edition, standard version flag. 
+     * @return Platform Pro edition, standard version flag.
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set Whether it is Pro Edition or Standard Edition.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Platform Whether it is Pro Edition or Standard Edition.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Pro edition, standard version flag.
+     * @param Platform Pro edition, standard version flag.
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get Whether it has been sold out. `true`: sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SoldOut Whether it has been sold out. `true`: sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies whether the item is sold-out. valid values: true (sold-out). 
+     * @return SoldOut Specifies whether the item is sold-out. valid values: true (sold-out).
      */
     public Boolean getSoldOut() {
         return this.SoldOut;
     }
 
     /**
-     * Set Whether it has been sold out. `true`: sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SoldOut Whether it has been sold out. `true`: sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies whether the item is sold-out. valid values: true (sold-out).
+     * @param SoldOut Specifies whether the item is sold-out. valid values: true (sold-out).
      */
     public void setSoldOut(Boolean SoldOut) {
         this.SoldOut = SoldOut;

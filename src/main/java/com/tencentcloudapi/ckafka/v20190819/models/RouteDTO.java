@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class RouteDTO extends AbstractModel {
 
     /**
-    * RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
+    * Route ID
     */
     @SerializedName("RouteId")
     @Expose
     private Long RouteId;
 
     /**
-     * Get RouteId11 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RouteId RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Route ID 
+     * @return RouteId Route ID
      */
     public Long getRouteId() {
         return this.RouteId;
     }
 
     /**
-     * Set RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RouteId RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Route ID
+     * @param RouteId Route ID
      */
     public void setRouteId(Long RouteId) {
         this.RouteId = RouteId;

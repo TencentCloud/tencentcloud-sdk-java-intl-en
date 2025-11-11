@@ -31,8 +31,7 @@ public class AclRuleResp extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * ACL rule list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * AclRule list.
     */
     @SerializedName("AclRuleList")
     @Expose
@@ -55,20 +54,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get ACL rule list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AclRuleList ACL rule list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get AclRule list. 
+     * @return AclRuleList AclRule list.
      */
     public AclRule [] getAclRuleList() {
         return this.AclRuleList;
     }
 
     /**
-     * Set ACL rule list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AclRuleList ACL rule list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set AclRule list.
+     * @param AclRuleList AclRule list.
      */
     public void setAclRuleList(AclRule [] AclRuleList) {
         this.AclRuleList = AclRuleList;

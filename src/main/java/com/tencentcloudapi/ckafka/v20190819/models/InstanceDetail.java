@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class InstanceDetail extends AbstractModel {
 
     /**
-    * Instance ID
+    * The ckafka cluster instance Id.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * CKafka cluster instance name.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -59,7 +59,7 @@ public class InstanceDetail extends AbstractModel {
     private VipEntity [] VipList;
 
     /**
-    * Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+    * Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
     */
     @SerializedName("Status")
     @Expose
@@ -73,7 +73,7 @@ public class InstanceDetail extends AbstractModel {
     private Long Bandwidth;
 
     /**
-    * Instance storage capacity in GB
+    * Specifies the ckafka cluster instance disk size in gb.
     */
     @SerializedName("DiskSize")
     @Expose
@@ -157,96 +157,84 @@ public class InstanceDetail extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
+    * kafka version information.
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Cross-Availability zone.
     */
     @SerializedName("ZoneIds")
     @Expose
     private Long [] ZoneIds;
 
     /**
-    * CKafka sale type
-Note: this field may return null, indicating that no valid values can be obtained.
+    * ckafka sales type.
     */
     @SerializedName("Cvm")
     @Expose
     private Long Cvm;
 
     /**
-    * CKafka instance type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Specifies the cluster instance type of ckafka.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Disk type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Specifies the ckafka cluster instance disk type.
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * Maximum number of topics for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Maximum number of topics for current specifications.
     */
     @SerializedName("MaxTopicNumber")
     @Expose
     private Long MaxTopicNumber;
 
     /**
-    * Maximum number of partitions for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Maximum number of partitions for current specifications.
     */
     @SerializedName("MaxPartitionNumber")
     @Expose
     private Long MaxPartitionNumber;
 
     /**
-    * Time of scheduled upgrade
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Scheduled configuration upgrade time.
     */
     @SerializedName("RebalanceTime")
     @Expose
     private String RebalanceTime;
 
     /**
-    * Number of partitions in the current instance.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the number of partitions in the current instance.
     */
     @SerializedName("PartitionNumber")
     @Expose
     private Long PartitionNumber;
 
     /**
-    * Public network bandwidth type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the public network bandwidth type of the ckafka cluster instance.
     */
     @SerializedName("PublicNetworkChargeType")
     @Expose
     private String PublicNetworkChargeType;
 
     /**
-    * Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
     */
     @SerializedName("PublicNetwork")
     @Expose
     private Long PublicNetwork;
 
     /**
-    * Instance type.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the underlying cluster type of the ckafka cluster instance.
     */
     @SerializedName("ClusterType")
     @Expose
@@ -254,39 +242,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Instance feature list.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Features")
     @Expose
     private String [] Features;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get The ckafka cluster instance Id. 
+     * @return InstanceId The ckafka cluster instance Id.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set The ckafka cluster instance Id.
+     * @param InstanceId The ckafka cluster instance Id.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get CKafka cluster instance name. 
+     * @return InstanceName CKafka cluster instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set CKafka cluster instance name.
+     * @param InstanceName CKafka cluster instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -341,16 +328,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed 
-     * @return Status Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+     * Get Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed. 
+     * @return Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
-     * @param Status Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+     * Set Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+     * @param Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -373,16 +360,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance storage capacity in GB 
-     * @return DiskSize Instance storage capacity in GB
+     * Get Specifies the ckafka cluster instance disk size in gb. 
+     * @return DiskSize Specifies the ckafka cluster instance disk size in gb.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Instance storage capacity in GB
-     * @param DiskSize Instance storage capacity in GB
+     * Set Specifies the ckafka cluster instance disk size in gb.
+     * @param DiskSize Specifies the ckafka cluster instance disk size in gb.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
@@ -565,250 +552,200 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Version Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get kafka version information. 
+     * @return Version kafka version information.
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Version Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set kafka version information.
+     * @param Version kafka version information.
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneIds Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Cross-Availability zone. 
+     * @return ZoneIds Cross-Availability zone.
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ZoneIds Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Cross-Availability zone.
+     * @param ZoneIds Cross-Availability zone.
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get CKafka sale type
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Cvm CKafka sale type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get ckafka sales type. 
+     * @return Cvm ckafka sales type.
      */
     public Long getCvm() {
         return this.Cvm;
     }
 
     /**
-     * Set CKafka sale type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Cvm CKafka sale type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set ckafka sales type.
+     * @param Cvm ckafka sales type.
      */
     public void setCvm(Long Cvm) {
         this.Cvm = Cvm;
     }
 
     /**
-     * Get CKafka instance type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return InstanceType CKafka instance type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Specifies the cluster instance type of ckafka. 
+     * @return InstanceType Specifies the cluster instance type of ckafka.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set CKafka instance type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param InstanceType CKafka instance type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Specifies the cluster instance type of ckafka.
+     * @param InstanceType Specifies the cluster instance type of ckafka.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Disk type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return DiskType Disk type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Specifies the ckafka cluster instance disk type. 
+     * @return DiskType Specifies the ckafka cluster instance disk type.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Disk type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param DiskType Disk type
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Specifies the ckafka cluster instance disk type.
+     * @param DiskType Specifies the ckafka cluster instance disk type.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Maximum number of topics for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return MaxTopicNumber Maximum number of topics for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Maximum number of topics for current specifications. 
+     * @return MaxTopicNumber Maximum number of topics for current specifications.
      */
     public Long getMaxTopicNumber() {
         return this.MaxTopicNumber;
     }
 
     /**
-     * Set Maximum number of topics for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param MaxTopicNumber Maximum number of topics for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Maximum number of topics for current specifications.
+     * @param MaxTopicNumber Maximum number of topics for current specifications.
      */
     public void setMaxTopicNumber(Long MaxTopicNumber) {
         this.MaxTopicNumber = MaxTopicNumber;
     }
 
     /**
-     * Get Maximum number of partitions for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return MaxPartitionNumber Maximum number of partitions for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Maximum number of partitions for current specifications. 
+     * @return MaxPartitionNumber Maximum number of partitions for current specifications.
      */
     public Long getMaxPartitionNumber() {
         return this.MaxPartitionNumber;
     }
 
     /**
-     * Set Maximum number of partitions for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param MaxPartitionNumber Maximum number of partitions for the current instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Maximum number of partitions for current specifications.
+     * @param MaxPartitionNumber Maximum number of partitions for current specifications.
      */
     public void setMaxPartitionNumber(Long MaxPartitionNumber) {
         this.MaxPartitionNumber = MaxPartitionNumber;
     }
 
     /**
-     * Get Time of scheduled upgrade
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return RebalanceTime Time of scheduled upgrade
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Scheduled configuration upgrade time. 
+     * @return RebalanceTime Scheduled configuration upgrade time.
      */
     public String getRebalanceTime() {
         return this.RebalanceTime;
     }
 
     /**
-     * Set Time of scheduled upgrade
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param RebalanceTime Time of scheduled upgrade
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Scheduled configuration upgrade time.
+     * @param RebalanceTime Scheduled configuration upgrade time.
      */
     public void setRebalanceTime(String RebalanceTime) {
         this.RebalanceTime = RebalanceTime;
     }
 
     /**
-     * Get Number of partitions in the current instance.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return PartitionNumber Number of partitions in the current instance.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the number of partitions in the current instance. 
+     * @return PartitionNumber Specifies the number of partitions in the current instance.
      */
     public Long getPartitionNumber() {
         return this.PartitionNumber;
     }
 
     /**
-     * Set Number of partitions in the current instance.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param PartitionNumber Number of partitions in the current instance.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the number of partitions in the current instance.
+     * @param PartitionNumber Specifies the number of partitions in the current instance.
      */
     public void setPartitionNumber(Long PartitionNumber) {
         this.PartitionNumber = PartitionNumber;
     }
 
     /**
-     * Get Public network bandwidth type.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return PublicNetworkChargeType Public network bandwidth type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the public network bandwidth type of the ckafka cluster instance. 
+     * @return PublicNetworkChargeType Specifies the public network bandwidth type of the ckafka cluster instance.
      */
     public String getPublicNetworkChargeType() {
         return this.PublicNetworkChargeType;
     }
 
     /**
-     * Set Public network bandwidth type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param PublicNetworkChargeType Public network bandwidth type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the public network bandwidth type of the ckafka cluster instance.
+     * @param PublicNetworkChargeType Specifies the public network bandwidth type of the ckafka cluster instance.
      */
     public void setPublicNetworkChargeType(String PublicNetworkChargeType) {
         this.PublicNetworkChargeType = PublicNetworkChargeType;
     }
 
     /**
-     * Get Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return PublicNetwork Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. 
+     * @return PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
      */
     public Long getPublicNetwork() {
         return this.PublicNetwork;
     }
 
     /**
-     * Set Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param PublicNetwork Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
+     * @param PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
      */
     public void setPublicNetwork(Long PublicNetwork) {
         this.PublicNetwork = PublicNetwork;
     }
 
     /**
-     * Get Instance type.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClusterType Instance type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the underlying cluster type of the ckafka cluster instance. 
+     * @return ClusterType Specifies the underlying cluster type of the ckafka cluster instance.
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set Instance type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClusterType Instance type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the underlying cluster type of the ckafka cluster instance.
+     * @param ClusterType Specifies the underlying cluster type of the ckafka cluster instance.
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get Instance feature list.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Instance feature list. 
      * @return Features Instance feature list.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getFeatures() {
         return this.Features;
@@ -816,9 +753,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Instance feature list.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Features Instance feature list.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFeatures(String [] Features) {
         this.Features = Features;

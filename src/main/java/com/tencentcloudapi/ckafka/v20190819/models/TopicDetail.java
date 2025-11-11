@@ -31,7 +31,7 @@ public class TopicDetail extends AbstractModel {
     private String TopicName;
 
     /**
-    * Topic ID
+    * Topic Id.
     */
     @SerializedName("TopicId")
     @Expose
@@ -45,15 +45,14 @@ public class TopicDetail extends AbstractModel {
     private Long PartitionNum;
 
     /**
-    * Number of replicas
+    * Number of topic replicas. valid values: 1, 3.
     */
     @SerializedName("ReplicaNum")
     @Expose
     private Long ReplicaNum;
 
     /**
-    * Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Remarks.
     */
     @SerializedName("Note")
     @Expose
@@ -81,8 +80,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long IpWhiteListCount;
 
     /**
-    * COS bucket for data backup: address of the destination COS bucket
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Data backup cos bucket. specifies the bucket address for archiving to cos.
     */
     @SerializedName("ForwardCosBucket")
     @Expose
@@ -103,24 +101,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long ForwardInterval;
 
     /**
-    * Advanced configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Advanced configuration.
     */
     @SerializedName("Config")
     @Expose
     private Config Config;
 
     /**
-    * Message retention time configuration (for recording the latest retention time)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Message retention period configuration (used for dynamic configuration change records).
     */
     @SerializedName("RetentionTimeConfig")
     @Expose
     private TopicRetentionTimeConfigRsp RetentionTimeConfig;
 
     /**
-    * `0`: normal, `1`: deleted, `2`: deleting
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * 0: normal. 1: deleted. 2: deleting.
     */
     @SerializedName("Status")
     @Expose
@@ -151,16 +146,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Topic ID 
-     * @return TopicId Topic ID
+     * Get Topic Id. 
+     * @return TopicId Topic Id.
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Topic ID
-     * @param TopicId Topic ID
+     * Set Topic Id.
+     * @param TopicId Topic Id.
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
@@ -183,36 +178,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of replicas 
-     * @return ReplicaNum Number of replicas
+     * Get Number of topic replicas. valid values: 1, 3. 
+     * @return ReplicaNum Number of topic replicas. valid values: 1, 3.
      */
     public Long getReplicaNum() {
         return this.ReplicaNum;
     }
 
     /**
-     * Set Number of replicas
-     * @param ReplicaNum Number of replicas
+     * Set Number of topic replicas. valid values: 1, 3.
+     * @param ReplicaNum Number of topic replicas. valid values: 1, 3.
      */
     public void setReplicaNum(Long ReplicaNum) {
         this.ReplicaNum = ReplicaNum;
     }
 
     /**
-     * Get Remarks
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Note Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Remarks. 
+     * @return Note Remarks.
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Note Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Remarks.
+     * @param Note Remarks.
      */
     public void setNote(String Note) {
         this.Note = Note;
@@ -267,20 +258,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get COS bucket for data backup: address of the destination COS bucket
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ForwardCosBucket COS bucket for data backup: address of the destination COS bucket
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Data backup cos bucket. specifies the bucket address for archiving to cos. 
+     * @return ForwardCosBucket Data backup cos bucket. specifies the bucket address for archiving to cos.
      */
     public String getForwardCosBucket() {
         return this.ForwardCosBucket;
     }
 
     /**
-     * Set COS bucket for data backup: address of the destination COS bucket
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ForwardCosBucket COS bucket for data backup: address of the destination COS bucket
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Data backup cos bucket. specifies the bucket address for archiving to cos.
+     * @param ForwardCosBucket Data backup cos bucket. specifies the bucket address for archiving to cos.
      */
     public void setForwardCosBucket(String ForwardCosBucket) {
         this.ForwardCosBucket = ForwardCosBucket;
@@ -319,60 +306,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Advanced configuration
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Config Advanced configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Advanced configuration. 
+     * @return Config Advanced configuration.
      */
     public Config getConfig() {
         return this.Config;
     }
 
     /**
-     * Set Advanced configuration
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Config Advanced configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Advanced configuration.
+     * @param Config Advanced configuration.
      */
     public void setConfig(Config Config) {
         this.Config = Config;
     }
 
     /**
-     * Get Message retention time configuration (for recording the latest retention time)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return RetentionTimeConfig Message retention time configuration (for recording the latest retention time)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Message retention period configuration (used for dynamic configuration change records). 
+     * @return RetentionTimeConfig Message retention period configuration (used for dynamic configuration change records).
      */
     public TopicRetentionTimeConfigRsp getRetentionTimeConfig() {
         return this.RetentionTimeConfig;
     }
 
     /**
-     * Set Message retention time configuration (for recording the latest retention time)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param RetentionTimeConfig Message retention time configuration (for recording the latest retention time)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Message retention period configuration (used for dynamic configuration change records).
+     * @param RetentionTimeConfig Message retention period configuration (used for dynamic configuration change records).
      */
     public void setRetentionTimeConfig(TopicRetentionTimeConfigRsp RetentionTimeConfig) {
         this.RetentionTimeConfig = RetentionTimeConfig;
     }
 
     /**
-     * Get `0`: normal, `1`: deleted, `2`: deleting
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return Status `0`: normal, `1`: deleted, `2`: deleting
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get 0: normal. 1: deleted. 2: deleting. 
+     * @return Status 0: normal. 1: deleted. 2: deleting.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set `0`: normal, `1`: deleted, `2`: deleting
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param Status `0`: normal, `1`: deleted, `2`: deleting
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set 0: normal. 1: deleted. 2: deleting.
+     * @param Status 0: normal. 1: deleted. 2: deleting.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

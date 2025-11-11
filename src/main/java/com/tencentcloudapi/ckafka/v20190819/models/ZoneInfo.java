@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ZoneInfo extends AbstractModel {
 
     /**
-    * Zone ID
+    * Availability zone
     */
     @SerializedName("ZoneId")
     @Expose
@@ -38,28 +38,28 @@ public class ZoneInfo extends AbstractModel {
     private Long IsInternalApp;
 
     /**
-    * Application ID
+    * Application identifier
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * Flag
+    * Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
     */
     @SerializedName("Flag")
     @Expose
     private Boolean Flag;
 
     /**
-    * Zone name
+    * Availability zone name.
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * Zone status
+    * Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
     */
     @SerializedName("ZoneStatus")
     @Expose
@@ -73,31 +73,37 @@ public class ZoneInfo extends AbstractModel {
     private String Exflag;
 
     /**
-    * JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
+    * Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
     */
     @SerializedName("SoldOut")
     @Expose
     private String SoldOut;
 
     /**
-    * Information on whether Standard Edition has been sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the sell-out information of the standard version.
     */
     @SerializedName("SalesInfo")
     @Expose
     private SaleInfo [] SalesInfo;
 
     /**
-     * Get Zone ID 
-     * @return ZoneId Zone ID
+    * Additional flag.
+    */
+    @SerializedName("ExtraFlag")
+    @Expose
+    private String ExtraFlag;
+
+    /**
+     * Get Availability zone 
+     * @return ZoneId Availability zone
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone ID
-     * @param ZoneId Zone ID
+     * Set Availability zone
+     * @param ZoneId Availability zone
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -120,64 +126,64 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Application ID 
-     * @return AppId Application ID
+     * Get Application identifier 
+     * @return AppId Application identifier
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set Application ID
-     * @param AppId Application ID
+     * Set Application identifier
+     * @param AppId Application identifier
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Flag 
-     * @return Flag Flag
+     * Get Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out. 
+     * @return Flag Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
      */
     public Boolean getFlag() {
         return this.Flag;
     }
 
     /**
-     * Set Flag
-     * @param Flag Flag
+     * Set Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
+     * @param Flag Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
      */
     public void setFlag(Boolean Flag) {
         this.Flag = Flag;
     }
 
     /**
-     * Get Zone name 
-     * @return ZoneName Zone name
+     * Get Availability zone name. 
+     * @return ZoneName Availability zone name.
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set Zone name
-     * @param ZoneName Zone name
+     * Set Availability zone name.
+     * @param ZoneName Availability zone name.
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get Zone status 
-     * @return ZoneStatus Zone status
+     * Get Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut. 
+     * @return ZoneStatus Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
      */
     public Long getZoneStatus() {
         return this.ZoneStatus;
     }
 
     /**
-     * Set Zone status
-     * @param ZoneStatus Zone status
+     * Set Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
+     * @param ZoneStatus Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
      */
     public void setZoneStatus(Long ZoneStatus) {
         this.ZoneStatus = ZoneStatus;
@@ -186,7 +192,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     /**
      * Get Extra flag 
      * @return Exflag Extra flag
+     * @deprecated
      */
+    @Deprecated
     public String getExflag() {
         return this.Exflag;
     }
@@ -194,45 +202,59 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     /**
      * Set Extra flag
      * @param Exflag Extra flag
+     * @deprecated
      */
+    @Deprecated
     public void setExflag(String Exflag) {
         this.Exflag = Exflag;
     }
 
     /**
-     * Get JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”. 
-     * @return SoldOut JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
+     * Get Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out). 
+     * @return SoldOut Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
      */
     public String getSoldOut() {
         return this.SoldOut;
     }
 
     /**
-     * Set JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
-     * @param SoldOut JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
+     * Set Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
+     * @param SoldOut Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
      */
     public void setSoldOut(String SoldOut) {
         this.SoldOut = SoldOut;
     }
 
     /**
-     * Get Information on whether Standard Edition has been sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SalesInfo Information on whether Standard Edition has been sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the sell-out information of the standard version. 
+     * @return SalesInfo Specifies the sell-out information of the standard version.
      */
     public SaleInfo [] getSalesInfo() {
         return this.SalesInfo;
     }
 
     /**
-     * Set Information on whether Standard Edition has been sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SalesInfo Information on whether Standard Edition has been sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the sell-out information of the standard version.
+     * @param SalesInfo Specifies the sell-out information of the standard version.
      */
     public void setSalesInfo(SaleInfo [] SalesInfo) {
         this.SalesInfo = SalesInfo;
+    }
+
+    /**
+     * Get Additional flag. 
+     * @return ExtraFlag Additional flag.
+     */
+    public String getExtraFlag() {
+        return this.ExtraFlag;
+    }
+
+    /**
+     * Set Additional flag.
+     * @param ExtraFlag Additional flag.
+     */
+    public void setExtraFlag(String ExtraFlag) {
+        this.ExtraFlag = ExtraFlag;
     }
 
     public ZoneInfo() {
@@ -273,6 +295,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.SalesInfo[i] = new SaleInfo(source.SalesInfo[i]);
             }
         }
+        if (source.ExtraFlag != null) {
+            this.ExtraFlag = new String(source.ExtraFlag);
+        }
     }
 
 
@@ -289,6 +314,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Exflag", this.Exflag);
         this.setParamSimple(map, prefix + "SoldOut", this.SoldOut);
         this.setParamArrayObj(map, prefix + "SalesInfo.", this.SalesInfo);
+        this.setParamSimple(map, prefix + "ExtraFlag", this.ExtraFlag);
 
     }
 }

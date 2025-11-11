@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeACLRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeACLRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Quantity limit
+    * Number limit. default value is 50. maximum value is 50.
     */
     @SerializedName("Limit")
     @Expose
@@ -66,16 +66,16 @@ public class DescribeACLRequest extends AbstractModel {
     private String SearchWord;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api. 
+     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -130,16 +130,16 @@ public class DescribeACLRequest extends AbstractModel {
     }
 
     /**
-     * Get Quantity limit 
-     * @return Limit Quantity limit
+     * Get Number limit. default value is 50. maximum value is 50. 
+     * @return Limit Number limit. default value is 50. maximum value is 50.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Quantity limit
-     * @param Limit Quantity limit
+     * Set Number limit. default value is 50. maximum value is 50.
+     * @param Limit Number limit. default value is 50. maximum value is 50.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

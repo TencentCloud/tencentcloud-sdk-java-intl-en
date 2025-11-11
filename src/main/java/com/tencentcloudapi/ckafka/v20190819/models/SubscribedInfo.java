@@ -31,24 +31,21 @@ public class SubscribedInfo extends AbstractModel {
     private String TopicName;
 
     /**
-    * Subscribed partition
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the subscription partition.
     */
     @SerializedName("Partition")
     @Expose
     private Long [] Partition;
 
     /**
-    * Partition offset information
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the partition offset information.
     */
     @SerializedName("PartitionOffset")
     @Expose
     private PartitionOffset [] PartitionOffset;
 
     /**
-    * ID of the subscribed topic. 
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Subscribed topic ID.
     */
     @SerializedName("TopicId")
     @Expose
@@ -71,60 +68,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Subscribed partition
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Partition Subscribed partition
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the subscription partition. 
+     * @return Partition Specifies the subscription partition.
      */
     public Long [] getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set Subscribed partition
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Partition Subscribed partition
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the subscription partition.
+     * @param Partition Specifies the subscription partition.
      */
     public void setPartition(Long [] Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get Partition offset information
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PartitionOffset Partition offset information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the partition offset information. 
+     * @return PartitionOffset Specifies the partition offset information.
      */
     public PartitionOffset [] getPartitionOffset() {
         return this.PartitionOffset;
     }
 
     /**
-     * Set Partition offset information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PartitionOffset Partition offset information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the partition offset information.
+     * @param PartitionOffset Specifies the partition offset information.
      */
     public void setPartitionOffset(PartitionOffset [] PartitionOffset) {
         this.PartitionOffset = PartitionOffset;
     }
 
     /**
-     * Get ID of the subscribed topic. 
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TopicId ID of the subscribed topic. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Subscribed topic ID. 
+     * @return TopicId Subscribed topic ID.
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set ID of the subscribed topic. 
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TopicId ID of the subscribed topic. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Subscribed topic ID.
+     * @param TopicId Subscribed topic ID.
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

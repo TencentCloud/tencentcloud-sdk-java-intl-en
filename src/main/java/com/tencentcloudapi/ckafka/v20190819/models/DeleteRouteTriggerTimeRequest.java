@@ -24,23 +24,46 @@ import java.util.HashMap;
 public class DeleteRouteTriggerTimeRequest extends AbstractModel {
 
     /**
-    * Modification time.
+    * ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * Modifies the scheduled time for deleting routes.
     */
     @SerializedName("DelayTime")
     @Expose
     private String DelayTime;
 
     /**
-     * Get Modification time. 
-     * @return DelayTime Modification time.
+     * Get ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1). 
+     * @return InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @param InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Modifies the scheduled time for deleting routes. 
+     * @return DelayTime Modifies the scheduled time for deleting routes.
      */
     public String getDelayTime() {
         return this.DelayTime;
     }
 
     /**
-     * Set Modification time.
-     * @param DelayTime Modification time.
+     * Set Modifies the scheduled time for deleting routes.
+     * @param DelayTime Modifies the scheduled time for deleting routes.
      */
     public void setDelayTime(String DelayTime) {
         this.DelayTime = DelayTime;
@@ -54,6 +77,9 @@ public class DeleteRouteTriggerTimeRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteRouteTriggerTimeRequest(DeleteRouteTriggerTimeRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
         if (source.DelayTime != null) {
             this.DelayTime = new String(source.DelayTime);
         }
@@ -64,6 +90,7 @@ public class DeleteRouteTriggerTimeRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "DelayTime", this.DelayTime);
 
     }

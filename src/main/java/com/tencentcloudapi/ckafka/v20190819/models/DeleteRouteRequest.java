@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DeleteRouteRequest extends AbstractModel {
 
     /**
-    * Unique instance ID.
+    * ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Route ID.
+    * Route id, obtain through the API [DescribeRoute](https://www.tencentcloud.comom/document/product/597/45484?from_cn_redirect=1).
     */
     @SerializedName("RouteId")
     @Expose
@@ -45,39 +45,39 @@ public class DeleteRouteRequest extends AbstractModel {
     private Long CallerAppid;
 
     /**
-    * The time when a route was deleted.
+    * Sets the scheduled deletion time for routes. only public network routes support scheduled deletion. available for any time within the next 24 hours.
     */
     @SerializedName("DeleteRouteTime")
     @Expose
     private String DeleteRouteTime;
 
     /**
-     * Get Unique instance ID. 
-     * @return InstanceId Unique instance ID.
+     * Get ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1). 
+     * @return InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Unique instance ID.
-     * @param InstanceId Unique instance ID.
+     * Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @param InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Route ID. 
-     * @return RouteId Route ID.
+     * Get Route id, obtain through the API [DescribeRoute](https://www.tencentcloud.comom/document/product/597/45484?from_cn_redirect=1). 
+     * @return RouteId Route id, obtain through the API [DescribeRoute](https://www.tencentcloud.comom/document/product/597/45484?from_cn_redirect=1).
      */
     public Long getRouteId() {
         return this.RouteId;
     }
 
     /**
-     * Set Route ID.
-     * @param RouteId Route ID.
+     * Set Route id, obtain through the API [DescribeRoute](https://www.tencentcloud.comom/document/product/597/45484?from_cn_redirect=1).
+     * @param RouteId Route id, obtain through the API [DescribeRoute](https://www.tencentcloud.comom/document/product/597/45484?from_cn_redirect=1).
      */
     public void setRouteId(Long RouteId) {
         this.RouteId = RouteId;
@@ -100,16 +100,16 @@ public class DeleteRouteRequest extends AbstractModel {
     }
 
     /**
-     * Get The time when a route was deleted. 
-     * @return DeleteRouteTime The time when a route was deleted.
+     * Get Sets the scheduled deletion time for routes. only public network routes support scheduled deletion. available for any time within the next 24 hours. 
+     * @return DeleteRouteTime Sets the scheduled deletion time for routes. only public network routes support scheduled deletion. available for any time within the next 24 hours.
      */
     public String getDeleteRouteTime() {
         return this.DeleteRouteTime;
     }
 
     /**
-     * Set The time when a route was deleted.
-     * @param DeleteRouteTime The time when a route was deleted.
+     * Set Sets the scheduled deletion time for routes. only public network routes support scheduled deletion. available for any time within the next 24 hours.
+     * @param DeleteRouteTime Sets the scheduled deletion time for routes. only public network routes support scheduled deletion. available for any time within the next 24 hours.
      */
     public void setDeleteRouteTime(String DeleteRouteTime) {
         this.DeleteRouteTime = DeleteRouteTime;

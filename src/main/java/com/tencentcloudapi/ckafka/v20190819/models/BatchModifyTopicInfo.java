@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BatchModifyTopicInfo extends AbstractModel {
 
     /**
-    * Topic name.
+    * Topic name
     */
     @SerializedName("TopicName")
     @Expose
@@ -80,14 +80,14 @@ public class BatchModifyTopicInfo extends AbstractModel {
     private Long RetentionMs;
 
     /**
-    * Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
+    * Specifies the message retention size in the topic dimension in bytes. value range: 1 GB to 1024 GB.
     */
     @SerializedName("RetentionBytes")
     @Expose
     private Long RetentionBytes;
 
     /**
-    * Segment rolling duration in milliseconds. Value range: 1-90 days.
+    * Duration of Segment shard scrolling in milliseconds. value range: 1 day to 90 days.
     */
     @SerializedName("SegmentMs")
     @Expose
@@ -101,16 +101,23 @@ public class BatchModifyTopicInfo extends AbstractModel {
     private Long MaxMessageBytes;
 
     /**
-     * Get Topic name. 
-     * @return TopicName Topic name.
+    * Specifies the time type for message storage: CreateTime/LogAppendTime.
+    */
+    @SerializedName("LogMsgTimestampType")
+    @Expose
+    private String LogMsgTimestampType;
+
+    /**
+     * Get Topic name 
+     * @return TopicName Topic name
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Topic name.
-     * @param TopicName Topic name.
+     * Set Topic name
+     * @param TopicName Topic name
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -229,32 +236,32 @@ public class BatchModifyTopicInfo extends AbstractModel {
     }
 
     /**
-     * Get Message retention size in topic dimension. Value range: 1 MB - 1024 GB. 
-     * @return RetentionBytes Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
+     * Get Specifies the message retention size in the topic dimension in bytes. value range: 1 GB to 1024 GB. 
+     * @return RetentionBytes Specifies the message retention size in the topic dimension in bytes. value range: 1 GB to 1024 GB.
      */
     public Long getRetentionBytes() {
         return this.RetentionBytes;
     }
 
     /**
-     * Set Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
-     * @param RetentionBytes Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
+     * Set Specifies the message retention size in the topic dimension in bytes. value range: 1 GB to 1024 GB.
+     * @param RetentionBytes Specifies the message retention size in the topic dimension in bytes. value range: 1 GB to 1024 GB.
      */
     public void setRetentionBytes(Long RetentionBytes) {
         this.RetentionBytes = RetentionBytes;
     }
 
     /**
-     * Get Segment rolling duration in milliseconds. Value range: 1-90 days. 
-     * @return SegmentMs Segment rolling duration in milliseconds. Value range: 1-90 days.
+     * Get Duration of Segment shard scrolling in milliseconds. value range: 1 day to 90 days. 
+     * @return SegmentMs Duration of Segment shard scrolling in milliseconds. value range: 1 day to 90 days.
      */
     public Long getSegmentMs() {
         return this.SegmentMs;
     }
 
     /**
-     * Set Segment rolling duration in milliseconds. Value range: 1-90 days.
-     * @param SegmentMs Segment rolling duration in milliseconds. Value range: 1-90 days.
+     * Set Duration of Segment shard scrolling in milliseconds. value range: 1 day to 90 days.
+     * @param SegmentMs Duration of Segment shard scrolling in milliseconds. value range: 1 day to 90 days.
      */
     public void setSegmentMs(Long SegmentMs) {
         this.SegmentMs = SegmentMs;
@@ -274,6 +281,22 @@ public class BatchModifyTopicInfo extends AbstractModel {
      */
     public void setMaxMessageBytes(Long MaxMessageBytes) {
         this.MaxMessageBytes = MaxMessageBytes;
+    }
+
+    /**
+     * Get Specifies the time type for message storage: CreateTime/LogAppendTime. 
+     * @return LogMsgTimestampType Specifies the time type for message storage: CreateTime/LogAppendTime.
+     */
+    public String getLogMsgTimestampType() {
+        return this.LogMsgTimestampType;
+    }
+
+    /**
+     * Set Specifies the time type for message storage: CreateTime/LogAppendTime.
+     * @param LogMsgTimestampType Specifies the time type for message storage: CreateTime/LogAppendTime.
+     */
+    public void setLogMsgTimestampType(String LogMsgTimestampType) {
+        this.LogMsgTimestampType = LogMsgTimestampType;
     }
 
     public BatchModifyTopicInfo() {
@@ -317,6 +340,9 @@ public class BatchModifyTopicInfo extends AbstractModel {
         if (source.MaxMessageBytes != null) {
             this.MaxMessageBytes = new Long(source.MaxMessageBytes);
         }
+        if (source.LogMsgTimestampType != null) {
+            this.LogMsgTimestampType = new String(source.LogMsgTimestampType);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class BatchModifyTopicInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
         this.setParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
         this.setParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
+        this.setParamSimple(map, prefix + "LogMsgTimestampType", this.LogMsgTimestampType);
 
     }
 }

@@ -31,15 +31,14 @@ public class TopicAttributesResponse extends AbstractModel {
     private String TopicId;
 
     /**
-    * Creation time
+    * Specifies the unix second-level timestamp of the creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * Topic remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Describes the topic remark.
     */
     @SerializedName("Note")
     @Expose
@@ -81,24 +80,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private TopicPartitionDO [] Partitions;
 
     /**
-    * Switch of the preset ACL rule. `1`: enable, `0`: disable.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * ACL preset policy switch. valid values: 1 (on); 0 (off).
     */
     @SerializedName("EnableAclRule")
     @Expose
     private Long EnableAclRule;
 
     /**
-    * Preset ACL rule list.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Preset policy list.
     */
     @SerializedName("AclRuleList")
     @Expose
     private AclRule [] AclRuleList;
 
     /**
-    * Traffic throttling policy in topic dimension.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * topic throttling policy.
     */
     @SerializedName("QuotaConfig")
     @Expose
@@ -106,7 +102,6 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReplicaNum")
     @Expose
@@ -129,36 +124,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Specifies the unix second-level timestamp of the creation time. 
+     * @return CreateTime Specifies the unix second-level timestamp of the creation time.
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Specifies the unix second-level timestamp of the creation time.
+     * @param CreateTime Specifies the unix second-level timestamp of the creation time.
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Topic remarks
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Note Topic remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Describes the topic remark. 
+     * @return Note Describes the topic remark.
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set Topic remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Note Topic remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Describes the topic remark.
+     * @param Note Describes the topic remark.
      */
     public void setNote(String Note) {
         this.Note = Note;
@@ -245,70 +236,56 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Switch of the preset ACL rule. `1`: enable, `0`: disable.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return EnableAclRule Switch of the preset ACL rule. `1`: enable, `0`: disable.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get ACL preset policy switch. valid values: 1 (on); 0 (off). 
+     * @return EnableAclRule ACL preset policy switch. valid values: 1 (on); 0 (off).
      */
     public Long getEnableAclRule() {
         return this.EnableAclRule;
     }
 
     /**
-     * Set Switch of the preset ACL rule. `1`: enable, `0`: disable.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param EnableAclRule Switch of the preset ACL rule. `1`: enable, `0`: disable.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set ACL preset policy switch. valid values: 1 (on); 0 (off).
+     * @param EnableAclRule ACL preset policy switch. valid values: 1 (on); 0 (off).
      */
     public void setEnableAclRule(Long EnableAclRule) {
         this.EnableAclRule = EnableAclRule;
     }
 
     /**
-     * Get Preset ACL rule list.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return AclRuleList Preset ACL rule list.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Preset policy list. 
+     * @return AclRuleList Preset policy list.
      */
     public AclRule [] getAclRuleList() {
         return this.AclRuleList;
     }
 
     /**
-     * Set Preset ACL rule list.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param AclRuleList Preset ACL rule list.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Preset policy list.
+     * @param AclRuleList Preset policy list.
      */
     public void setAclRuleList(AclRule [] AclRuleList) {
         this.AclRuleList = AclRuleList;
     }
 
     /**
-     * Get Traffic throttling policy in topic dimension.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return QuotaConfig Traffic throttling policy in topic dimension.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get topic throttling policy. 
+     * @return QuotaConfig topic throttling policy.
      */
     public InstanceQuotaConfigResp getQuotaConfig() {
         return this.QuotaConfig;
     }
 
     /**
-     * Set Traffic throttling policy in topic dimension.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param QuotaConfig Traffic throttling policy in topic dimension.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set topic throttling policy.
+     * @param QuotaConfig topic throttling policy.
      */
     public void setQuotaConfig(InstanceQuotaConfigResp QuotaConfig) {
         this.QuotaConfig = QuotaConfig;
     }
 
     /**
-     * Get Number of replicas
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of replicas 
      * @return ReplicaNum Number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getReplicaNum() {
         return this.ReplicaNum;
@@ -316,9 +293,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ReplicaNum Number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReplicaNum(Long ReplicaNum) {
         this.ReplicaNum = ReplicaNum;

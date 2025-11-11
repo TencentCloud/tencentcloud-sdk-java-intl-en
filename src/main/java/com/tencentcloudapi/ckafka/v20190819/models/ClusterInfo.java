@@ -38,48 +38,42 @@ public class ClusterInfo extends AbstractModel {
     private String ClusterName;
 
     /**
-    * The cluster’s maximum disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Maximum disk of the cluster (unit: GB).
     */
     @SerializedName("MaxDiskSize")
     @Expose
     private Long MaxDiskSize;
 
     /**
-    * The cluster’s maximum bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Maximum bandwidth of the cluster. unit: MB/s.
     */
     @SerializedName("MaxBandWidth")
     @Expose
     private Long MaxBandWidth;
 
     /**
-    * The cluster’s available disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Current availability of cluster disk (unit: GB).
     */
     @SerializedName("AvailableDiskSize")
     @Expose
     private Long AvailableDiskSize;
 
     /**
-    * The cluster’s available bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Available bandwidth of the cluster. unit: MB/s.
     */
     @SerializedName("AvailableBandWidth")
     @Expose
     private Long AvailableBandWidth;
 
     /**
-    * The AZ where the cluster resides
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Indicates the AZ to which the cluster belongs.
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -118,120 +112,96 @@ Note: `null` may be returned for this field, indicating that no valid values can
     }
 
     /**
-     * Get The cluster’s maximum disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return MaxDiskSize The cluster’s maximum disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Maximum disk of the cluster (unit: GB). 
+     * @return MaxDiskSize Maximum disk of the cluster (unit: GB).
      */
     public Long getMaxDiskSize() {
         return this.MaxDiskSize;
     }
 
     /**
-     * Set The cluster’s maximum disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param MaxDiskSize The cluster’s maximum disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Maximum disk of the cluster (unit: GB).
+     * @param MaxDiskSize Maximum disk of the cluster (unit: GB).
      */
     public void setMaxDiskSize(Long MaxDiskSize) {
         this.MaxDiskSize = MaxDiskSize;
     }
 
     /**
-     * Get The cluster’s maximum bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return MaxBandWidth The cluster’s maximum bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Maximum bandwidth of the cluster. unit: MB/s. 
+     * @return MaxBandWidth Maximum bandwidth of the cluster. unit: MB/s.
      */
     public Long getMaxBandWidth() {
         return this.MaxBandWidth;
     }
 
     /**
-     * Set The cluster’s maximum bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param MaxBandWidth The cluster’s maximum bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Maximum bandwidth of the cluster. unit: MB/s.
+     * @param MaxBandWidth Maximum bandwidth of the cluster. unit: MB/s.
      */
     public void setMaxBandWidth(Long MaxBandWidth) {
         this.MaxBandWidth = MaxBandWidth;
     }
 
     /**
-     * Get The cluster’s available disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return AvailableDiskSize The cluster’s available disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Current availability of cluster disk (unit: GB). 
+     * @return AvailableDiskSize Current availability of cluster disk (unit: GB).
      */
     public Long getAvailableDiskSize() {
         return this.AvailableDiskSize;
     }
 
     /**
-     * Set The cluster’s available disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param AvailableDiskSize The cluster’s available disk capacity in GB
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Current availability of cluster disk (unit: GB).
+     * @param AvailableDiskSize Current availability of cluster disk (unit: GB).
      */
     public void setAvailableDiskSize(Long AvailableDiskSize) {
         this.AvailableDiskSize = AvailableDiskSize;
     }
 
     /**
-     * Get The cluster’s available bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return AvailableBandWidth The cluster’s available bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Available bandwidth of the cluster. unit: MB/s. 
+     * @return AvailableBandWidth Available bandwidth of the cluster. unit: MB/s.
      */
     public Long getAvailableBandWidth() {
         return this.AvailableBandWidth;
     }
 
     /**
-     * Set The cluster’s available bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param AvailableBandWidth The cluster’s available bandwidth in MB/s
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Available bandwidth of the cluster. unit: MB/s.
+     * @param AvailableBandWidth Available bandwidth of the cluster. unit: MB/s.
      */
     public void setAvailableBandWidth(Long AvailableBandWidth) {
         this.AvailableBandWidth = AvailableBandWidth;
     }
 
     /**
-     * Get The AZ where the cluster resides
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return ZoneId The AZ where the cluster resides
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Indicates the AZ to which the cluster belongs. 
+     * @return ZoneId Indicates the AZ to which the cluster belongs.
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The AZ where the cluster resides
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param ZoneId The AZ where the cluster resides
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Indicates the AZ to which the cluster belongs.
+     * @param ZoneId Indicates the AZ to which the cluster belongs.
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return ZoneIds The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located. 
+     * @return ZoneIds The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param ZoneIds The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
+     * @param ZoneIds The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;

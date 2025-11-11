@@ -1,5 +1,8 @@
 package com.tencentcloudapi.ccc.v20200210;
 public enum CccErrorCode {
+     /* Operation failed. */
+     FAILEDOPERATION("FailedOperation"),
+     
      /* No available AI concurrency licenses. please proceed to purchase on the console. */
      FAILEDOPERATION_AICONCURRENTNOPACKAGE("FailedOperation.AIConcurrentNoPackage"),
      

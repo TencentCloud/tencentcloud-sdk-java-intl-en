@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeGroup extends AbstractModel {
 
     /**
-    * groupId
+    * Consumer group name.
     */
     @SerializedName("Group")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeGroup extends AbstractModel {
     private String Protocol;
 
     /**
-     * Get groupId 
-     * @return Group groupId
+     * Get Consumer group name. 
+     * @return Group Consumer group name.
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set groupId
-     * @param Group groupId
+     * Set Consumer group name.
+     * @param Group Consumer group name.
      */
     public void setGroup(String Group) {
         this.Group = Group;

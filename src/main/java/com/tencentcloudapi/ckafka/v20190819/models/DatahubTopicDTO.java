@@ -52,7 +52,7 @@ public class DatahubTopicDTO extends AbstractModel {
     private Long PartitionNum;
 
     /**
-    * Expiration time
+    * Expiration time in milliseconds.
     */
     @SerializedName("RetentionMs")
     @Expose
@@ -137,16 +137,16 @@ public class DatahubTopicDTO extends AbstractModel {
     }
 
     /**
-     * Get Expiration time 
-     * @return RetentionMs Expiration time
+     * Get Expiration time in milliseconds. 
+     * @return RetentionMs Expiration time in milliseconds.
      */
     public Long getRetentionMs() {
         return this.RetentionMs;
     }
 
     /**
-     * Set Expiration time
-     * @param RetentionMs Expiration time
+     * Set Expiration time in milliseconds.
+     * @param RetentionMs Expiration time in milliseconds.
      */
     public void setRetentionMs(Long RetentionMs) {
         this.RetentionMs = RetentionMs;

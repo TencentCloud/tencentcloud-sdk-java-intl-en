@@ -31,7 +31,7 @@ public class BatchModifyGroupOffsetsRequest extends AbstractModel {
     private String GroupName;
 
     /**
-    * Instance name.
+    * The ckafka cluster instance Id.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -68,16 +68,16 @@ public class BatchModifyGroupOffsetsRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance name. 
-     * @return InstanceId Instance name.
+     * Get The ckafka cluster instance Id. 
+     * @return InstanceId The ckafka cluster instance Id.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance name.
-     * @param InstanceId Instance name.
+     * Set The ckafka cluster instance Id.
+     * @param InstanceId The ckafka cluster instance Id.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

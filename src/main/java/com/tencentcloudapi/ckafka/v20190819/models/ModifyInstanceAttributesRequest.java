@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyInstanceAttributesRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
+    * Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
     */
     @SerializedName("MsgRetentionTime")
     @Expose
     private Long MsgRetentionTime;
 
     /**
-    * Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+    * Specifies the Name of the ckafka cluster instance.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -59,14 +59,14 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     private DynamicRetentionTime DynamicRetentionConfig;
 
     /**
-    * Modification of the rebalancing time after upgrade
+    * Specifies the execution time of a scheduled task for edition upgrade or configuration upgrade in Unix timestamp, accurate to the second.
     */
     @SerializedName("RebalanceTime")
     @Expose
     private Long RebalanceTime;
 
     /**
-    * Public network bandwidth
+    * Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
     */
     @SerializedName("PublicNetwork")
     @Expose
@@ -80,55 +80,69 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     private DynamicDiskConfig DynamicDiskConfig;
 
     /**
-    * The size of a single message in bytes at the instance level.
+    * Single message size at the instance level (unit: byte). value range: 1024 (excluding) to 12582912 (excluding).
     */
     @SerializedName("MaxMessageByte")
     @Expose
     private Long MaxMessageByte;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+    * Whether to allow unsynchronized replicas to be elected as leader. valid values: 1 (enable), 0 (disable).
+    */
+    @SerializedName("UncleanLeaderElectionEnable")
+    @Expose
+    private Long UncleanLeaderElectionEnable;
+
+    /**
+    * Instance deletion protection switch. 1: enabled; 0: disabled.
+    */
+    @SerializedName("DeleteProtectionEnable")
+    @Expose
+    private Long DeleteProtectionEnable;
+
+    /**
+     * Get ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1). 
+     * @return InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * @param InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy 
-     * @return MsgRetentionTime Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
+     * Get Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days. 
+     * @return MsgRetentionTime Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
      */
     public Long getMsgRetentionTime() {
         return this.MsgRetentionTime;
     }
 
     /**
-     * Set Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
-     * @param MsgRetentionTime Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
+     * Set Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
+     * @param MsgRetentionTime Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
      */
     public void setMsgRetentionTime(Long MsgRetentionTime) {
         this.MsgRetentionTime = MsgRetentionTime;
     }
 
     /**
-     * Get Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`) 
-     * @return InstanceName Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+     * Get Specifies the Name of the ckafka cluster instance. 
+     * @return InstanceName Specifies the Name of the ckafka cluster instance.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
-     * @param InstanceName Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+     * Set Specifies the Name of the ckafka cluster instance.
+     * @param InstanceName Specifies the Name of the ckafka cluster instance.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -167,32 +181,32 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get Modification of the rebalancing time after upgrade 
-     * @return RebalanceTime Modification of the rebalancing time after upgrade
+     * Get Specifies the execution time of a scheduled task for edition upgrade or configuration upgrade in Unix timestamp, accurate to the second. 
+     * @return RebalanceTime Specifies the execution time of a scheduled task for edition upgrade or configuration upgrade in Unix timestamp, accurate to the second.
      */
     public Long getRebalanceTime() {
         return this.RebalanceTime;
     }
 
     /**
-     * Set Modification of the rebalancing time after upgrade
-     * @param RebalanceTime Modification of the rebalancing time after upgrade
+     * Set Specifies the execution time of a scheduled task for edition upgrade or configuration upgrade in Unix timestamp, accurate to the second.
+     * @param RebalanceTime Specifies the execution time of a scheduled task for edition upgrade or configuration upgrade in Unix timestamp, accurate to the second.
      */
     public void setRebalanceTime(Long RebalanceTime) {
         this.RebalanceTime = RebalanceTime;
     }
 
     /**
-     * Get Public network bandwidth 
-     * @return PublicNetwork Public network bandwidth
+     * Get Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. 
+     * @return PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
      */
     public Long getPublicNetwork() {
         return this.PublicNetwork;
     }
 
     /**
-     * Set Public network bandwidth
-     * @param PublicNetwork Public network bandwidth
+     * Set Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
+     * @param PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
      */
     public void setPublicNetwork(Long PublicNetwork) {
         this.PublicNetwork = PublicNetwork;
@@ -201,7 +215,9 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     /**
      * Get Dynamic disk expansion policy configuration. 
      * @return DynamicDiskConfig Dynamic disk expansion policy configuration.
+     * @deprecated
      */
+    @Deprecated
     public DynamicDiskConfig getDynamicDiskConfig() {
         return this.DynamicDiskConfig;
     }
@@ -209,25 +225,59 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     /**
      * Set Dynamic disk expansion policy configuration.
      * @param DynamicDiskConfig Dynamic disk expansion policy configuration.
+     * @deprecated
      */
+    @Deprecated
     public void setDynamicDiskConfig(DynamicDiskConfig DynamicDiskConfig) {
         this.DynamicDiskConfig = DynamicDiskConfig;
     }
 
     /**
-     * Get The size of a single message in bytes at the instance level. 
-     * @return MaxMessageByte The size of a single message in bytes at the instance level.
+     * Get Single message size at the instance level (unit: byte). value range: 1024 (excluding) to 12582912 (excluding). 
+     * @return MaxMessageByte Single message size at the instance level (unit: byte). value range: 1024 (excluding) to 12582912 (excluding).
      */
     public Long getMaxMessageByte() {
         return this.MaxMessageByte;
     }
 
     /**
-     * Set The size of a single message in bytes at the instance level.
-     * @param MaxMessageByte The size of a single message in bytes at the instance level.
+     * Set Single message size at the instance level (unit: byte). value range: 1024 (excluding) to 12582912 (excluding).
+     * @param MaxMessageByte Single message size at the instance level (unit: byte). value range: 1024 (excluding) to 12582912 (excluding).
      */
     public void setMaxMessageByte(Long MaxMessageByte) {
         this.MaxMessageByte = MaxMessageByte;
+    }
+
+    /**
+     * Get Whether to allow unsynchronized replicas to be elected as leader. valid values: 1 (enable), 0 (disable). 
+     * @return UncleanLeaderElectionEnable Whether to allow unsynchronized replicas to be elected as leader. valid values: 1 (enable), 0 (disable).
+     */
+    public Long getUncleanLeaderElectionEnable() {
+        return this.UncleanLeaderElectionEnable;
+    }
+
+    /**
+     * Set Whether to allow unsynchronized replicas to be elected as leader. valid values: 1 (enable), 0 (disable).
+     * @param UncleanLeaderElectionEnable Whether to allow unsynchronized replicas to be elected as leader. valid values: 1 (enable), 0 (disable).
+     */
+    public void setUncleanLeaderElectionEnable(Long UncleanLeaderElectionEnable) {
+        this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;
+    }
+
+    /**
+     * Get Instance deletion protection switch. 1: enabled; 0: disabled. 
+     * @return DeleteProtectionEnable Instance deletion protection switch. 1: enabled; 0: disabled.
+     */
+    public Long getDeleteProtectionEnable() {
+        return this.DeleteProtectionEnable;
+    }
+
+    /**
+     * Set Instance deletion protection switch. 1: enabled; 0: disabled.
+     * @param DeleteProtectionEnable Instance deletion protection switch. 1: enabled; 0: disabled.
+     */
+    public void setDeleteProtectionEnable(Long DeleteProtectionEnable) {
+        this.DeleteProtectionEnable = DeleteProtectionEnable;
     }
 
     public ModifyInstanceAttributesRequest() {
@@ -265,6 +315,12 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
         if (source.MaxMessageByte != null) {
             this.MaxMessageByte = new Long(source.MaxMessageByte);
         }
+        if (source.UncleanLeaderElectionEnable != null) {
+            this.UncleanLeaderElectionEnable = new Long(source.UncleanLeaderElectionEnable);
+        }
+        if (source.DeleteProtectionEnable != null) {
+            this.DeleteProtectionEnable = new Long(source.DeleteProtectionEnable);
+        }
     }
 
 
@@ -281,6 +337,8 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
         this.setParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
         this.setParamSimple(map, prefix + "MaxMessageByte", this.MaxMessageByte);
+        this.setParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
+        this.setParamSimple(map, prefix + "DeleteProtectionEnable", this.DeleteProtectionEnable);
 
     }
 }

@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class TopicResult extends AbstractModel {
 
     /**
-    * List of returned topic information
-Note: this field may return null, indicating that no valid values can be obtained.
+    * List of returned topic information.
     */
     @SerializedName("TopicList")
     @Expose
     private Topic [] TopicList;
 
     /**
-    * Number of eligible topics
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Number of eligible topics.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get List of returned topic information
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TopicList List of returned topic information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get List of returned topic information. 
+     * @return TopicList List of returned topic information.
      */
     public Topic [] getTopicList() {
         return this.TopicList;
     }
 
     /**
-     * Set List of returned topic information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TopicList List of returned topic information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set List of returned topic information.
+     * @param TopicList List of returned topic information.
      */
     public void setTopicList(Topic [] TopicList) {
         this.TopicList = TopicList;
     }
 
     /**
-     * Get Number of eligible topics
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Number of eligible topics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Number of eligible topics. 
+     * @return TotalCount Number of eligible topics.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible topics
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Number of eligible topics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Number of eligible topics.
+     * @param TotalCount Number of eligible topics.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

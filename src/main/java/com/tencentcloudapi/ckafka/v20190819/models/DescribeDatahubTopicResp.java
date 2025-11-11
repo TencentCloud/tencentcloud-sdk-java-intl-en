@@ -52,15 +52,14 @@ public class DescribeDatahubTopicResp extends AbstractModel {
     private Long PartitionNum;
 
     /**
-    * Expiration time
+    * Expiration time in milliseconds.
     */
     @SerializedName("RetentionMs")
     @Expose
     private Long RetentionMs;
 
     /**
-    * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Remarks.
     */
     @SerializedName("Note")
     @Expose
@@ -88,8 +87,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Status;
 
     /**
-    * Service routing address
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the service routing address.
     */
     @SerializedName("Address")
     @Expose
@@ -160,36 +158,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Expiration time 
-     * @return RetentionMs Expiration time
+     * Get Expiration time in milliseconds. 
+     * @return RetentionMs Expiration time in milliseconds.
      */
     public Long getRetentionMs() {
         return this.RetentionMs;
     }
 
     /**
-     * Set Expiration time
-     * @param RetentionMs Expiration time
+     * Set Expiration time in milliseconds.
+     * @param RetentionMs Expiration time in milliseconds.
      */
     public void setRetentionMs(Long RetentionMs) {
         this.RetentionMs = RetentionMs;
     }
 
     /**
-     * Get Remarks
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Note Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Remarks. 
+     * @return Note Remarks.
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Note Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Remarks.
+     * @param Note Remarks.
      */
     public void setNote(String Note) {
         this.Note = Note;
@@ -244,20 +238,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Service routing address
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Address Service routing address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the service routing address. 
+     * @return Address Specifies the service routing address.
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set Service routing address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Address Service routing address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the service routing address.
+     * @param Address Specifies the service routing address.
      */
     public void setAddress(String Address) {
         this.Address = Address;

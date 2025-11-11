@@ -24,97 +24,92 @@ import java.util.HashMap;
 public class CreateInstancePostData extends AbstractModel {
 
     /**
-    * This parameter has a fixed value of 0 returned by `CreateInstancePre`. It is only used for backend data alignment  and cannot be used as the query condition for `CheckTaskStatus`. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+    * CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * List of order IDs Note: This field may return null, indicating that no valid values can be obtained.
+    * Order ID list
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-    * Instance ID. When multiple instances are purchased, the ID of the first one is returned by default . Note: This field may return null, indicating that no valid values can be obtained.
+    * The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Mapping between orders and the purchased instances.  Note: This field may return null, indicating that no valid values can be obtained.
+    * Order and purchase mapping list corresponding to the instance.
     */
     @SerializedName("DealNameInstanceIdMapping")
     @Expose
     private DealInstanceDTO [] DealNameInstanceIdMapping;
 
     /**
-     * Get This parameter has a fixed value of 0 returned by `CreateInstancePre`. It is only used for backend data alignment  and cannot be used as the query condition for `CheckTaskStatus`. 
-Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return FlowId This parameter has a fixed value of 0 returned by `CreateInstancePre`. It is only used for backend data alignment  and cannot be used as the query condition for `CheckTaskStatus`. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure. 
+     * @return FlowId CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set This parameter has a fixed value of 0 returned by `CreateInstancePre`. It is only used for backend data alignment  and cannot be used as the query condition for `CheckTaskStatus`. 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param FlowId This parameter has a fixed value of 0 returned by `CreateInstancePre`. It is only used for backend data alignment  and cannot be used as the query condition for `CheckTaskStatus`. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
+     * @param FlowId CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get List of order IDs Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DealNames List of order IDs Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Order ID list 
+     * @return DealNames Order ID list
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set List of order IDs Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DealNames List of order IDs Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Order ID list
+     * @param DealNames Order ID list
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get Instance ID. When multiple instances are purchased, the ID of the first one is returned by default . Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceId Instance ID. When multiple instances are purchased, the ID of the first one is returned by default . Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances. 
+     * @return InstanceId The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID. When multiple instances are purchased, the ID of the first one is returned by default . Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceId Instance ID. When multiple instances are purchased, the ID of the first one is returned by default . Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
+     * @param InstanceId The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Mapping between orders and the purchased instances.  Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DealNameInstanceIdMapping Mapping between orders and the purchased instances.  Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Order and purchase mapping list corresponding to the instance. 
+     * @return DealNameInstanceIdMapping Order and purchase mapping list corresponding to the instance.
      */
     public DealInstanceDTO [] getDealNameInstanceIdMapping() {
         return this.DealNameInstanceIdMapping;
     }
 
     /**
-     * Set Mapping between orders and the purchased instances.  Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DealNameInstanceIdMapping Mapping between orders and the purchased instances.  Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Order and purchase mapping list corresponding to the instance.
+     * @param DealNameInstanceIdMapping Order and purchase mapping list corresponding to the instance.
      */
     public void setDealNameInstanceIdMapping(DealInstanceDTO [] DealNameInstanceIdMapping) {
         this.DealNameInstanceIdMapping = DealNameInstanceIdMapping;

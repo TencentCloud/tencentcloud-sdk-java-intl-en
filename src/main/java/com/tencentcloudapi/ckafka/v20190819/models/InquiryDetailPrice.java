@@ -56,8 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private InquiryBasePrice TopicPrice;
 
     /**
-    * Instance package price
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance package price.
     */
     @SerializedName("InstanceTypePrice")
     @Expose
@@ -144,20 +143,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance package price
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceTypePrice Instance package price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance package price. 
+     * @return InstanceTypePrice Instance package price.
      */
     public InquiryBasePrice getInstanceTypePrice() {
         return this.InstanceTypePrice;
     }
 
     /**
-     * Set Instance package price
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceTypePrice Instance package price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance package price.
+     * @param InstanceTypePrice Instance package price.
      */
     public void setInstanceTypePrice(InquiryBasePrice InstanceTypePrice) {
         this.InstanceTypePrice = InstanceTypePrice;

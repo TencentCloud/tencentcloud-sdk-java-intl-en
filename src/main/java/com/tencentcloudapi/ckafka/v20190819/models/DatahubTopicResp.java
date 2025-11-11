@@ -31,8 +31,7 @@ public class DatahubTopicResp extends AbstractModel {
     private String TopicName;
 
     /**
-    * TopicId
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Topic Id.
     */
     @SerializedName("TopicId")
     @Expose
@@ -55,20 +54,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get TopicId
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TopicId TopicId
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Topic Id. 
+     * @return TopicId Topic Id.
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set TopicId
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TopicId TopicId
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Topic Id.
+     * @param TopicId Topic Id.
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

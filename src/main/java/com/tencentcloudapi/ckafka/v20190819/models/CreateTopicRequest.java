@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateTopicRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance Id. you can obtain it by calling the DescribeInstances api.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+    * Can only contain letters, digits, underscores, "-", or ".".
     */
     @SerializedName("TopicName")
     @Expose
@@ -73,42 +73,42 @@ public class CreateTopicRequest extends AbstractModel {
     private String CleanUpPolicy;
 
     /**
-    * Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+    * Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
     */
     @SerializedName("Note")
     @Expose
     private String Note;
 
     /**
-    * Default value: 1
+    * Minimum number of synchronous replicas, defaults to 1.
     */
     @SerializedName("MinInsyncReplicas")
     @Expose
     private Long MinInsyncReplicas;
 
     /**
-    * Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
+    * Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
     */
     @SerializedName("UncleanLeaderElectionEnable")
     @Expose
     private Long UncleanLeaderElectionEnable;
 
     /**
-    * Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
+    * Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
     */
     @SerializedName("RetentionMs")
     @Expose
     private Long RetentionMs;
 
     /**
-    * Segment rolling duration in ms. The current minimum value is 3,600,000 ms
+    * Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
     */
     @SerializedName("SegmentMs")
     @Expose
     private Long SegmentMs;
 
     /**
-    * Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+    * Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
     */
     @SerializedName("MaxMessageBytes")
     @Expose
@@ -129,7 +129,7 @@ public class CreateTopicRequest extends AbstractModel {
     private String AclRuleName;
 
     /**
-    * Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+    * Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
     */
     @SerializedName("RetentionBytes")
     @Expose
@@ -143,32 +143,32 @@ public class CreateTopicRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance Id. you can obtain it by calling the DescribeInstances api. 
+     * @return InstanceId Instance Id. you can obtain it by calling the DescribeInstances api.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance Id. you can obtain it by calling the DescribeInstances api.
+     * @param InstanceId Instance Id. you can obtain it by calling the DescribeInstances api.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter. 
-     * @return TopicName Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * Get Can only contain letters, digits, underscores, "-", or ".". 
+     * @return TopicName Can only contain letters, digits, underscores, "-", or ".".
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-     * @param TopicName Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * Set Can only contain letters, digits, underscores, "-", or ".".
+     * @param TopicName Can only contain letters, digits, underscores, "-", or ".".
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -255,96 +255,96 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`) 
-     * @return Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+     * Get Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-). 
+     * @return Note Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
-     * @param Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+     * Set Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
+     * @param Note Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get Default value: 1 
-     * @return MinInsyncReplicas Default value: 1
+     * Get Minimum number of synchronous replicas, defaults to 1. 
+     * @return MinInsyncReplicas Minimum number of synchronous replicas, defaults to 1.
      */
     public Long getMinInsyncReplicas() {
         return this.MinInsyncReplicas;
     }
 
     /**
-     * Set Default value: 1
-     * @param MinInsyncReplicas Default value: 1
+     * Set Minimum number of synchronous replicas, defaults to 1.
+     * @param MinInsyncReplicas Minimum number of synchronous replicas, defaults to 1.
      */
     public void setMinInsyncReplicas(Long MinInsyncReplicas) {
         this.MinInsyncReplicas = MinInsyncReplicas;
     }
 
     /**
-     * Get Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false 
-     * @return UncleanLeaderElectionEnable Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
+     * Get Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed. 
+     * @return UncleanLeaderElectionEnable Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
      */
     public Long getUncleanLeaderElectionEnable() {
         return this.UncleanLeaderElectionEnable;
     }
 
     /**
-     * Set Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
-     * @param UncleanLeaderElectionEnable Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
+     * Set Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
+     * @param UncleanLeaderElectionEnable Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
      */
     public void setUncleanLeaderElectionEnable(Long UncleanLeaderElectionEnable) {
         this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;
     }
 
     /**
-     * Get Message retention period in milliseconds, which is optional. Min value: 60,000 ms. 
-     * @return RetentionMs Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
+     * Get Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days). 
+     * @return RetentionMs Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
      */
     public Long getRetentionMs() {
         return this.RetentionMs;
     }
 
     /**
-     * Set Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
-     * @param RetentionMs Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
+     * Set Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
+     * @param RetentionMs Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
      */
     public void setRetentionMs(Long RetentionMs) {
         this.RetentionMs = RetentionMs;
     }
 
     /**
-     * Get Segment rolling duration in ms. The current minimum value is 3,600,000 ms 
-     * @return SegmentMs Segment rolling duration in ms. The current minimum value is 3,600,000 ms
+     * Get Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day). 
+     * @return SegmentMs Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
      */
     public Long getSegmentMs() {
         return this.SegmentMs;
     }
 
     /**
-     * Set Segment rolling duration in ms. The current minimum value is 3,600,000 ms
-     * @param SegmentMs Segment rolling duration in ms. The current minimum value is 3,600,000 ms
+     * Set Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
+     * @param SegmentMs Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
      */
     public void setSegmentMs(Long SegmentMs) {
         this.SegmentMs = SegmentMs;
     }
 
     /**
-     * Get Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB). 
-     * @return MaxMessageBytes Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+     * Get Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB). 
+     * @return MaxMessageBytes Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
      */
     public Long getMaxMessageBytes() {
         return this.MaxMessageBytes;
     }
 
     /**
-     * Set Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
-     * @param MaxMessageBytes Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+     * Set Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
+     * @param MaxMessageBytes Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
      */
     public void setMaxMessageBytes(Long MaxMessageBytes) {
         this.MaxMessageBytes = MaxMessageBytes;
@@ -383,16 +383,16 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B. 
-     * @return RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+     * Get Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824. 
+     * @return RetentionBytes Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
      */
     public Long getRetentionBytes() {
         return this.RetentionBytes;
     }
 
     /**
-     * Set Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
-     * @param RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+     * Set Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
+     * @param RetentionBytes Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
      */
     public void setRetentionBytes(Long RetentionBytes) {
         this.RetentionBytes = RetentionBytes;

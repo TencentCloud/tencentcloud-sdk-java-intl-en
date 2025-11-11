@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class RouteResponse extends AbstractModel {
 
     /**
-    * Route information list
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Route Information List
     */
     @SerializedName("Routers")
     @Expose
     private Route [] Routers;
 
     /**
-     * Get Route information list
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Routers Route information list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Route Information List 
+     * @return Routers Route Information List
      */
     public Route [] getRouters() {
         return this.Routers;
     }
 
     /**
-     * Set Route information list
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Routers Route information list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Route Information List
+     * @param Routers Route Information List
      */
     public void setRouters(Route [] Routers) {
         this.Routers = Routers;

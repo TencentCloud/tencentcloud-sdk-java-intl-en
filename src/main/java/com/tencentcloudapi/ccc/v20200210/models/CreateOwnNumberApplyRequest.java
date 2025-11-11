@@ -52,6 +52,20 @@ public class CreateOwnNumberApplyRequest extends AbstractModel {
     private String Prefix;
 
     /**
+    * Domestic long-distance mobile phone prefix.
+    */
+    @SerializedName("MobileNddPrefix")
+    @Expose
+    private String MobileNddPrefix;
+
+    /**
+    * Removes the area code for local calls.
+    */
+    @SerializedName("LocalNumberTrimAC")
+    @Expose
+    private Boolean LocalNumberTrimAC;
+
+    /**
      * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
      * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
@@ -115,6 +129,38 @@ public class CreateOwnNumberApplyRequest extends AbstractModel {
         this.Prefix = Prefix;
     }
 
+    /**
+     * Get Domestic long-distance mobile phone prefix. 
+     * @return MobileNddPrefix Domestic long-distance mobile phone prefix.
+     */
+    public String getMobileNddPrefix() {
+        return this.MobileNddPrefix;
+    }
+
+    /**
+     * Set Domestic long-distance mobile phone prefix.
+     * @param MobileNddPrefix Domestic long-distance mobile phone prefix.
+     */
+    public void setMobileNddPrefix(String MobileNddPrefix) {
+        this.MobileNddPrefix = MobileNddPrefix;
+    }
+
+    /**
+     * Get Removes the area code for local calls. 
+     * @return LocalNumberTrimAC Removes the area code for local calls.
+     */
+    public Boolean getLocalNumberTrimAC() {
+        return this.LocalNumberTrimAC;
+    }
+
+    /**
+     * Set Removes the area code for local calls.
+     * @param LocalNumberTrimAC Removes the area code for local calls.
+     */
+    public void setLocalNumberTrimAC(Boolean LocalNumberTrimAC) {
+        this.LocalNumberTrimAC = LocalNumberTrimAC;
+    }
+
     public CreateOwnNumberApplyRequest() {
     }
 
@@ -138,6 +184,12 @@ public class CreateOwnNumberApplyRequest extends AbstractModel {
         if (source.Prefix != null) {
             this.Prefix = new String(source.Prefix);
         }
+        if (source.MobileNddPrefix != null) {
+            this.MobileNddPrefix = new String(source.MobileNddPrefix);
+        }
+        if (source.LocalNumberTrimAC != null) {
+            this.LocalNumberTrimAC = new Boolean(source.LocalNumberTrimAC);
+        }
     }
 
 
@@ -149,6 +201,8 @@ public class CreateOwnNumberApplyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SipTrunkId", this.SipTrunkId);
         this.setParamArrayObj(map, prefix + "DetailList.", this.DetailList);
         this.setParamSimple(map, prefix + "Prefix", this.Prefix);
+        this.setParamSimple(map, prefix + "MobileNddPrefix", this.MobileNddPrefix);
+        this.setParamSimple(map, prefix + "LocalNumberTrimAC", this.LocalNumberTrimAC);
 
     }
 }

@@ -40,8 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Time;
 
     /**
-    * Whether it is a supported version
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies whether supported versions are required or not.
     */
     @SerializedName("IsUnSupportVersion")
     @Expose
@@ -88,20 +87,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether it is a supported version
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsUnSupportVersion Whether it is a supported version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether supported versions are required or not. 
+     * @return IsUnSupportVersion Specifies whether supported versions are required or not.
      */
     public Boolean getIsUnSupportVersion() {
         return this.IsUnSupportVersion;
     }
 
     /**
-     * Set Whether it is a supported version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsUnSupportVersion Whether it is a supported version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether supported versions are required or not.
+     * @param IsUnSupportVersion Specifies whether supported versions are required or not.
      */
     public void setIsUnSupportVersion(Boolean IsUnSupportVersion) {
         this.IsUnSupportVersion = IsUnSupportVersion;

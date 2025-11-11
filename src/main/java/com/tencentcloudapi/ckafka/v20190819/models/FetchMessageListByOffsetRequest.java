@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FetchMessageListByOffsetRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * The ckafka cluster instance Id.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -59,16 +59,16 @@ public class FetchMessageListByOffsetRequest extends AbstractModel {
     private Long SinglePartitionRecordNumber;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get The ckafka cluster instance Id. 
+     * @return InstanceId The ckafka cluster instance Id.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set The ckafka cluster instance Id.
+     * @param InstanceId The ckafka cluster instance Id.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

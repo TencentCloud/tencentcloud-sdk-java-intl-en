@@ -31,8 +31,7 @@ public class GroupInfoTopics extends AbstractModel {
     private String Topic;
 
     /**
-    * Information of assigned partition
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Allocates partition info.
     */
     @SerializedName("Partitions")
     @Expose
@@ -55,20 +54,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Information of assigned partition
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Partitions Information of assigned partition
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Allocates partition info. 
+     * @return Partitions Allocates partition info.
      */
     public Long [] getPartitions() {
         return this.Partitions;
     }
 
     /**
-     * Set Information of assigned partition
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Partitions Information of assigned partition
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Allocates partition info.
+     * @param Partitions Allocates partition info.
      */
     public void setPartitions(Long [] Partitions) {
         this.Partitions = Partitions;

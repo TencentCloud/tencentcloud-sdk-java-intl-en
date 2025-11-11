@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeUserRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * The ckafka cluster instance Id.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,30 +38,30 @@ public class DescribeUserRequest extends AbstractModel {
     private String SearchWord;
 
     /**
-    * Offset
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results to be returned in this request
+    * The number of returns.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get The ckafka cluster instance Id. 
+     * @return InstanceId The ckafka cluster instance Id.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set The ckafka cluster instance Id.
+     * @param InstanceId The ckafka cluster instance Id.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -84,32 +84,32 @@ public class DescribeUserRequest extends AbstractModel {
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results to be returned in this request 
-     * @return Limit Number of results to be returned in this request
+     * Get The number of returns. 
+     * @return Limit The number of returns.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned in this request
-     * @param Limit Number of results to be returned in this request
+     * Set The number of returns.
+     * @param Limit The number of returns.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

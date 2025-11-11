@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRouteRequest extends AbstractModel {
 
     /**
-    * Unique instance ID
+    * The ckafka cluster instance Id.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeRouteRequest extends AbstractModel {
     private Long RouteId;
 
     /**
-     * Get Unique instance ID 
-     * @return InstanceId Unique instance ID
+     * Get The ckafka cluster instance Id. 
+     * @return InstanceId The ckafka cluster instance Id.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Unique instance ID
-     * @param InstanceId Unique instance ID
+     * Set The ckafka cluster instance Id.
+     * @param InstanceId The ckafka cluster instance Id.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

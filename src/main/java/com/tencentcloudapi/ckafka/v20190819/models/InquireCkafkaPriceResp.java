@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class InquireCkafkaPriceResp extends AbstractModel {
 
     /**
-    * Instance price
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the instance price.
     */
     @SerializedName("InstancePrice")
     @Expose
@@ -40,20 +39,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private InquiryPrice PublicNetworkBandwidthPrice;
 
     /**
-     * Get Instance price
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstancePrice Instance price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the instance price. 
+     * @return InstancePrice Specifies the instance price.
      */
     public InquiryPrice getInstancePrice() {
         return this.InstancePrice;
     }
 
     /**
-     * Set Instance price
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstancePrice Instance price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the instance price.
+     * @param InstancePrice Specifies the instance price.
      */
     public void setInstancePrice(InquiryPrice InstancePrice) {
         this.InstancePrice = InstancePrice;

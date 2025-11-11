@@ -87,14 +87,14 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     private Long Tries;
 
     /**
-    * Custom variables (supported only in advanced versions).
+    * Custom variable (advanced edition support). using the same variable in the CalleeAttributes field will overwrite here.
     */
     @SerializedName("Variables")
     @Expose
     private Variable [] Variables;
 
     /**
-    * UUI
+    * User-Defined data. specifies that using UUI in the CalleeAttributes field will overwrite here.
     */
     @SerializedName("UUI")
     @Expose
@@ -273,32 +273,32 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Custom variables (supported only in advanced versions). 
-     * @return Variables Custom variables (supported only in advanced versions).
+     * Get Custom variable (advanced edition support). using the same variable in the CalleeAttributes field will overwrite here. 
+     * @return Variables Custom variable (advanced edition support). using the same variable in the CalleeAttributes field will overwrite here.
      */
     public Variable [] getVariables() {
         return this.Variables;
     }
 
     /**
-     * Set Custom variables (supported only in advanced versions).
-     * @param Variables Custom variables (supported only in advanced versions).
+     * Set Custom variable (advanced edition support). using the same variable in the CalleeAttributes field will overwrite here.
+     * @param Variables Custom variable (advanced edition support). using the same variable in the CalleeAttributes field will overwrite here.
      */
     public void setVariables(Variable [] Variables) {
         this.Variables = Variables;
     }
 
     /**
-     * Get UUI 
-     * @return UUI UUI
+     * Get User-Defined data. specifies that using UUI in the CalleeAttributes field will overwrite here. 
+     * @return UUI User-Defined data. specifies that using UUI in the CalleeAttributes field will overwrite here.
      */
     public String getUUI() {
         return this.UUI;
     }
 
     /**
-     * Set UUI
-     * @param UUI UUI
+     * Set User-Defined data. specifies that using UUI in the CalleeAttributes field will overwrite here.
+     * @param UUI User-Defined data. specifies that using UUI in the CalleeAttributes field will overwrite here.
      */
     public void setUUI(String UUI) {
         this.UUI = UUI;

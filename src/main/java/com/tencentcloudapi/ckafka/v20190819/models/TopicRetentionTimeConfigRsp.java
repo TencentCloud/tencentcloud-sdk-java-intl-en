@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class TopicRetentionTimeConfigRsp extends AbstractModel {
 
     /**
-    * Expected value, i.e., the topic message retention time (min) configured
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Expected value, the message retention period (in minutes) set by user configuration.
     */
     @SerializedName("Expect")
     @Expose
     private Long Expect;
 
     /**
-    * Current value (min), i.e., the retention time currently in effect, which may be dynamically adjusted
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Current value, which is the current effective value (may contain dynamic adjustment in minutes).
     */
     @SerializedName("Current")
     @Expose
     private Long Current;
 
     /**
-    * Last modified time
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Last modified time.
     */
     @SerializedName("ModTimeStamp")
     @Expose
     private Long ModTimeStamp;
 
     /**
-     * Get Expected value, i.e., the topic message retention time (min) configured
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return Expect Expected value, i.e., the topic message retention time (min) configured
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Expected value, the message retention period (in minutes) set by user configuration. 
+     * @return Expect Expected value, the message retention period (in minutes) set by user configuration.
      */
     public Long getExpect() {
         return this.Expect;
     }
 
     /**
-     * Set Expected value, i.e., the topic message retention time (min) configured
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param Expect Expected value, i.e., the topic message retention time (min) configured
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Expected value, the message retention period (in minutes) set by user configuration.
+     * @param Expect Expected value, the message retention period (in minutes) set by user configuration.
      */
     public void setExpect(Long Expect) {
         this.Expect = Expect;
     }
 
     /**
-     * Get Current value (min), i.e., the retention time currently in effect, which may be dynamically adjusted
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return Current Current value (min), i.e., the retention time currently in effect, which may be dynamically adjusted
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Current value, which is the current effective value (may contain dynamic adjustment in minutes). 
+     * @return Current Current value, which is the current effective value (may contain dynamic adjustment in minutes).
      */
     public Long getCurrent() {
         return this.Current;
     }
 
     /**
-     * Set Current value (min), i.e., the retention time currently in effect, which may be dynamically adjusted
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param Current Current value (min), i.e., the retention time currently in effect, which may be dynamically adjusted
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Current value, which is the current effective value (may contain dynamic adjustment in minutes).
+     * @param Current Current value, which is the current effective value (may contain dynamic adjustment in minutes).
      */
     public void setCurrent(Long Current) {
         this.Current = Current;
     }
 
     /**
-     * Get Last modified time
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return ModTimeStamp Last modified time
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Last modified time. 
+     * @return ModTimeStamp Last modified time.
      */
     public Long getModTimeStamp() {
         return this.ModTimeStamp;
     }
 
     /**
-     * Set Last modified time
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param ModTimeStamp Last modified time
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Last modified time.
+     * @param ModTimeStamp Last modified time.
      */
     public void setModTimeStamp(Long ModTimeStamp) {
         this.ModTimeStamp = ModTimeStamp;

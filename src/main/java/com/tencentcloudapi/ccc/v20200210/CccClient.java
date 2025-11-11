@@ -311,6 +311,17 @@ This API is used to make calls. Currently, the agent side can only call the user
     }
 
     /**
+     *This API is used to get the list of Intelligent Agents.
+     * @param req DescribeAIAgentInfoListRequest
+     * @return DescribeAIAgentInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIAgentInfoListResponse DescribeAIAgentInfoList(DescribeAIAgentInfoListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIAgentInfoList", DescribeAIAgentInfoListResponse.class);
+    }
+
+    /**
      *This API is used to obtain AI Conversation Analytics results.
      * @param req DescribeAIAnalysisResultRequest
      * @return DescribeAIAnalysisResultResponse
@@ -715,6 +726,17 @@ This API is used to make calls. Currently, the agent side can only call the user
     public ResumePredictiveDialingCampaignResponse ResumePredictiveDialingCampaign(ResumePredictiveDialingCampaignRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResumePredictiveDialingCampaign", ResumePredictiveDialingCampaignResponse.class);
+    }
+
+    /**
+     *This API is used to set staff status.
+     * @param req SetStaffStatusRequest
+     * @return SetStaffStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetStaffStatusResponse SetStaffStatus(SetStaffStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetStaffStatus", SetStaffStatusResponse.class);
     }
 
     /**

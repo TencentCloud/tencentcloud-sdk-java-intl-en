@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BatchCreateAclRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,30 +38,30 @@ public class BatchCreateAclRequest extends AbstractModel {
     private Long ResourceType;
 
     /**
-    * Resource list array.
+    * Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1).
     */
     @SerializedName("ResourceNames")
     @Expose
     private String [] ResourceNames;
 
     /**
-    * ACL rule list.
+    * Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.comom/document/product/597/89217?from_cn_redirect=1).
     */
     @SerializedName("RuleList")
     @Expose
     private AclRuleInfo [] RuleList;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api. 
+     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -84,32 +84,32 @@ public class BatchCreateAclRequest extends AbstractModel {
     }
 
     /**
-     * Get Resource list array. 
-     * @return ResourceNames Resource list array.
+     * Get Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1). 
+     * @return ResourceNames Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1).
      */
     public String [] getResourceNames() {
         return this.ResourceNames;
     }
 
     /**
-     * Set Resource list array.
-     * @param ResourceNames Resource list array.
+     * Set Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1).
+     * @param ResourceNames Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1).
      */
     public void setResourceNames(String [] ResourceNames) {
         this.ResourceNames = ResourceNames;
     }
 
     /**
-     * Get ACL rule list. 
-     * @return RuleList ACL rule list.
+     * Get Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.comom/document/product/597/89217?from_cn_redirect=1). 
+     * @return RuleList Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.comom/document/product/597/89217?from_cn_redirect=1).
      */
     public AclRuleInfo [] getRuleList() {
         return this.RuleList;
     }
 
     /**
-     * Set ACL rule list.
-     * @param RuleList ACL rule list.
+     * Set Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.comom/document/product/597/89217?from_cn_redirect=1).
+     * @param RuleList Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.comom/document/product/597/89217?from_cn_redirect=1).
      */
     public void setRuleList(AclRuleInfo [] RuleList) {
         this.RuleList = RuleList;

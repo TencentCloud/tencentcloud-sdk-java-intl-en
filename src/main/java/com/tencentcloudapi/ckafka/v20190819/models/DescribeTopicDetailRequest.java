@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTopicDetailRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeTopicDetailRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
+    * Number of returned results. default: 20. value must be above 0.
     */
     @SerializedName("Limit")
     @Expose
@@ -59,16 +59,37 @@ public class DescribeTopicDetailRequest extends AbstractModel {
     private String AclRuleName;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+    * Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
+    * 0 - sequential, 1 - reverse order. default value: 0.
+    */
+    @SerializedName("OrderType")
+    @Expose
+    private Long OrderType;
+
+    /**
+    * Currently supports ReplicaNum (number of replicas) filter criteria.
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+     * Get The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api. 
+     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -107,16 +128,16 @@ public class DescribeTopicDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0 
-     * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
+     * Get Number of returned results. default: 20. value must be above 0. 
+     * @return Limit Number of returned results. default: 20. value must be above 0.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
-     * @param Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
+     * Set Number of returned results. default: 20. value must be above 0.
+     * @param Limit Number of returned results. default: 20. value must be above 0.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -136,6 +157,54 @@ public class DescribeTopicDetailRequest extends AbstractModel {
      */
     public void setAclRuleName(String AclRuleName) {
         this.AclRuleName = AclRuleName;
+    }
+
+    /**
+     * Get Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime. 
+     * @return OrderBy Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+     * @param OrderBy Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
+    /**
+     * Get 0 - sequential, 1 - reverse order. default value: 0. 
+     * @return OrderType 0 - sequential, 1 - reverse order. default value: 0.
+     */
+    public Long getOrderType() {
+        return this.OrderType;
+    }
+
+    /**
+     * Set 0 - sequential, 1 - reverse order. default value: 0.
+     * @param OrderType 0 - sequential, 1 - reverse order. default value: 0.
+     */
+    public void setOrderType(Long OrderType) {
+        this.OrderType = OrderType;
+    }
+
+    /**
+     * Get Currently supports ReplicaNum (number of replicas) filter criteria. 
+     * @return Filters Currently supports ReplicaNum (number of replicas) filter criteria.
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set Currently supports ReplicaNum (number of replicas) filter criteria.
+     * @param Filters Currently supports ReplicaNum (number of replicas) filter criteria.
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     public DescribeTopicDetailRequest() {
@@ -161,6 +230,18 @@ public class DescribeTopicDetailRequest extends AbstractModel {
         if (source.AclRuleName != null) {
             this.AclRuleName = new String(source.AclRuleName);
         }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderType != null) {
+            this.OrderType = new Long(source.OrderType);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -173,6 +254,9 @@ public class DescribeTopicDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "OrderType", this.OrderType);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

@@ -24,56 +24,49 @@ import java.util.HashMap;
 public class InquiryPrice extends AbstractModel {
 
     /**
-    * Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Original price unit.
     */
     @SerializedName("UnitPrice")
     @Expose
     private Float UnitPrice;
 
     /**
-    * Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Discount unit price.
     */
     @SerializedName("UnitPriceDiscount")
     @Expose
     private Float UnitPriceDiscount;
 
     /**
-    * Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total original price.
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total discount price.
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-    * Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Discount (unit: %).
     */
     @SerializedName("Discount")
     @Expose
     private Float Discount;
 
     /**
-    * Number of purchased items
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of products
     */
     @SerializedName("GoodsNum")
     @Expose
     private Long GoodsNum;
 
     /**
-    * Currency for payment
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the payment currency.
     */
     @SerializedName("Currency")
     @Expose
@@ -88,16 +81,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DiskType;
 
     /**
-    * Validity period
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Purchase duration.
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * Unit of the validity period (`m`: Month; `h`: Hour)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the purchase duration unit ("m" for monthly, "h" for hourly).
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -120,140 +111,112 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private InquiryDetailPrice DetailPrices;
 
     /**
-     * Get Original unit price
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UnitPrice Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Original price unit. 
+     * @return UnitPrice Original price unit.
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
     }
 
     /**
-     * Set Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UnitPrice Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Original price unit.
+     * @param UnitPrice Original price unit.
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UnitPriceDiscount Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Discount unit price. 
+     * @return UnitPriceDiscount Discount unit price.
      */
     public Float getUnitPriceDiscount() {
         return this.UnitPriceDiscount;
     }
 
     /**
-     * Set Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UnitPriceDiscount Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Discount unit price.
+     * @param UnitPriceDiscount Discount unit price.
      */
     public void setUnitPriceDiscount(Float UnitPriceDiscount) {
         this.UnitPriceDiscount = UnitPriceDiscount;
     }
 
     /**
-     * Get Original price in total
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginalPrice Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total original price. 
+     * @return OriginalPrice Total original price.
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginalPrice Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total original price.
+     * @param OriginalPrice Total original price.
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiscountPrice Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total discount price. 
+     * @return DiscountPrice Total discount price.
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiscountPrice Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total discount price.
+     * @param DiscountPrice Total discount price.
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
     }
 
     /**
-     * Get Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Discount Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Discount (unit: %). 
+     * @return Discount Discount (unit: %).
      */
     public Float getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Discount Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Discount (unit: %).
+     * @param Discount Discount (unit: %).
      */
     public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 
     /**
-     * Get Number of purchased items
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GoodsNum Number of purchased items
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of products 
+     * @return GoodsNum Number of products
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set Number of purchased items
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GoodsNum Number of purchased items
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of products
+     * @param GoodsNum Number of products
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get Currency for payment
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Currency Currency for payment
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the payment currency. 
+     * @return Currency Specifies the payment currency.
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set Currency for payment
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Currency Currency for payment
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the payment currency.
+     * @param Currency Specifies the payment currency.
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;
@@ -280,40 +243,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Validity period
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TimeSpan Validity period
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Purchase duration. 
+     * @return TimeSpan Purchase duration.
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Validity period
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TimeSpan Validity period
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Purchase duration.
+     * @param TimeSpan Purchase duration.
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get Unit of the validity period (`m`: Month; `h`: Hour)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TimeUnit Unit of the validity period (`m`: Month; `h`: Hour)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the purchase duration unit ("m" for monthly, "h" for hourly). 
+     * @return TimeUnit Specifies the purchase duration unit ("m" for monthly, "h" for hourly).
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Unit of the validity period (`m`: Month; `h`: Hour)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TimeUnit Unit of the validity period (`m`: Month; `h`: Hour)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the purchase duration unit ("m" for monthly, "h" for hourly).
+     * @param TimeUnit Specifies the purchase duration unit ("m" for monthly, "h" for hourly).
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;

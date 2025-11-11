@@ -31,56 +31,49 @@ public class ConsumerGroupResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Topic list
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Topic list.
     */
     @SerializedName("TopicList")
     @Expose
     private ConsumerGroupTopic [] TopicList;
 
     /**
-    * Consumer group list
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the consumption group List.
     */
     @SerializedName("GroupList")
     @Expose
     private ConsumerGroup [] GroupList;
 
     /**
-    * Total number of partitions
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Total number of partitions.
     */
     @SerializedName("TotalPartition")
     @Expose
     private Long TotalPartition;
 
     /**
-    * List of monitored partitions
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Monitored partition list.
     */
     @SerializedName("PartitionListForMonitor")
     @Expose
     private Partition [] PartitionListForMonitor;
 
     /**
-    * Total number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Total number of topics.
     */
     @SerializedName("TotalTopic")
     @Expose
     private Long TotalTopic;
 
     /**
-    * List of monitored topics
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Monitored topic list.
     */
     @SerializedName("TopicListForMonitor")
     @Expose
     private ConsumerGroupTopic [] TopicListForMonitor;
 
     /**
-    * List of monitored groups
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Monitored group list.
     */
     @SerializedName("GroupListForMonitor")
     @Expose
@@ -103,140 +96,112 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Topic list
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TopicList Topic list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Topic list. 
+     * @return TopicList Topic list.
      */
     public ConsumerGroupTopic [] getTopicList() {
         return this.TopicList;
     }
 
     /**
-     * Set Topic list
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TopicList Topic list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Topic list.
+     * @param TopicList Topic list.
      */
     public void setTopicList(ConsumerGroupTopic [] TopicList) {
         this.TopicList = TopicList;
     }
 
     /**
-     * Get Consumer group list
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return GroupList Consumer group list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the consumption group List. 
+     * @return GroupList Specifies the consumption group List.
      */
     public ConsumerGroup [] getGroupList() {
         return this.GroupList;
     }
 
     /**
-     * Set Consumer group list
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param GroupList Consumer group list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the consumption group List.
+     * @param GroupList Specifies the consumption group List.
      */
     public void setGroupList(ConsumerGroup [] GroupList) {
         this.GroupList = GroupList;
     }
 
     /**
-     * Get Total number of partitions
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TotalPartition Total number of partitions
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Total number of partitions. 
+     * @return TotalPartition Total number of partitions.
      */
     public Long getTotalPartition() {
         return this.TotalPartition;
     }
 
     /**
-     * Set Total number of partitions
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TotalPartition Total number of partitions
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Total number of partitions.
+     * @param TotalPartition Total number of partitions.
      */
     public void setTotalPartition(Long TotalPartition) {
         this.TotalPartition = TotalPartition;
     }
 
     /**
-     * Get List of monitored partitions
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PartitionListForMonitor List of monitored partitions
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Monitored partition list. 
+     * @return PartitionListForMonitor Monitored partition list.
      */
     public Partition [] getPartitionListForMonitor() {
         return this.PartitionListForMonitor;
     }
 
     /**
-     * Set List of monitored partitions
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PartitionListForMonitor List of monitored partitions
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Monitored partition list.
+     * @param PartitionListForMonitor Monitored partition list.
      */
     public void setPartitionListForMonitor(Partition [] PartitionListForMonitor) {
         this.PartitionListForMonitor = PartitionListForMonitor;
     }
 
     /**
-     * Get Total number of topics
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TotalTopic Total number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Total number of topics. 
+     * @return TotalTopic Total number of topics.
      */
     public Long getTotalTopic() {
         return this.TotalTopic;
     }
 
     /**
-     * Set Total number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TotalTopic Total number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Total number of topics.
+     * @param TotalTopic Total number of topics.
      */
     public void setTotalTopic(Long TotalTopic) {
         this.TotalTopic = TotalTopic;
     }
 
     /**
-     * Get List of monitored topics
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TopicListForMonitor List of monitored topics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Monitored topic list. 
+     * @return TopicListForMonitor Monitored topic list.
      */
     public ConsumerGroupTopic [] getTopicListForMonitor() {
         return this.TopicListForMonitor;
     }
 
     /**
-     * Set List of monitored topics
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TopicListForMonitor List of monitored topics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Monitored topic list.
+     * @param TopicListForMonitor Monitored topic list.
      */
     public void setTopicListForMonitor(ConsumerGroupTopic [] TopicListForMonitor) {
         this.TopicListForMonitor = TopicListForMonitor;
     }
 
     /**
-     * Get List of monitored groups
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return GroupListForMonitor List of monitored groups
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Monitored group list. 
+     * @return GroupListForMonitor Monitored group list.
      */
     public Group [] getGroupListForMonitor() {
         return this.GroupListForMonitor;
     }
 
     /**
-     * Set List of monitored groups
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param GroupListForMonitor List of monitored groups
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Monitored group list.
+     * @param GroupListForMonitor Monitored group list.
      */
     public void setGroupListForMonitor(Group [] GroupListForMonitor) {
         this.GroupListForMonitor = GroupListForMonitor;

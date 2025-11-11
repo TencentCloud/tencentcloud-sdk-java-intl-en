@@ -31,7 +31,7 @@ public class InquiryPublicNetworkParam extends AbstractModel {
     private String PublicNetworkChargeType;
 
     /**
-    * Public network bandwidth in MB
+    * Public network bandwidth, in MB. value must be 0 or a multiple of 3.
     */
     @SerializedName("PublicNetworkMonthly")
     @Expose
@@ -54,16 +54,16 @@ public class InquiryPublicNetworkParam extends AbstractModel {
     }
 
     /**
-     * Get Public network bandwidth in MB 
-     * @return PublicNetworkMonthly Public network bandwidth in MB
+     * Get Public network bandwidth, in MB. value must be 0 or a multiple of 3. 
+     * @return PublicNetworkMonthly Public network bandwidth, in MB. value must be 0 or a multiple of 3.
      */
     public Long getPublicNetworkMonthly() {
         return this.PublicNetworkMonthly;
     }
 
     /**
-     * Set Public network bandwidth in MB
-     * @param PublicNetworkMonthly Public network bandwidth in MB
+     * Set Public network bandwidth, in MB. value must be 0 or a multiple of 3.
+     * @param PublicNetworkMonthly Public network bandwidth, in MB. value must be 0 or a multiple of 3.
      */
     public void setPublicNetworkMonthly(Long PublicNetworkMonthly) {
         this.PublicNetworkMonthly = PublicNetworkMonthly;

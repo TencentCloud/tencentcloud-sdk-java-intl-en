@@ -31,8 +31,7 @@ public class DescribeDatahubTopicsResp extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Topic list.
     */
     @SerializedName("TopicList")
     @Expose
@@ -55,20 +54,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Topic list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TopicList Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Topic list. 
+     * @return TopicList Topic list.
      */
     public DatahubTopicDTO [] getTopicList() {
         return this.TopicList;
     }
 
     /**
-     * Set Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TopicList Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Topic list.
+     * @param TopicList Topic list.
      */
     public void setTopicList(DatahubTopicDTO [] TopicList) {
         this.TopicList = TopicList;

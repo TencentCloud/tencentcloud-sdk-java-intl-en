@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class Group extends AbstractModel {
 
     /**
-    * Group name
+    * Consumer group name.
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-     * Get Group name 
-     * @return GroupName Group name
+     * Get Consumer group name. 
+     * @return GroupName Consumer group name.
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set Group name
-     * @param GroupName Group name
+     * Set Consumer group name.
+     * @param GroupName Consumer group name.
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;

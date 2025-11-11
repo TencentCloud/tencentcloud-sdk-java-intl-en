@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DealInstanceDTO extends AbstractModel {
 
     /**
-    * Order list.  Note: This field may return null, indicating that no valid values can be obtained.
+    * Order transaction.
     */
     @SerializedName("DealName")
     @Expose
     private String DealName;
 
     /**
-    * ID list of the purchased CKafka instances corresponding to the order list.  Note: This field may return null, indicating that no valid values can be obtained.
+    * Order transaction corresponds to the list of purchased CKafka instance ids.
     */
     @SerializedName("InstanceIdList")
     @Expose
     private String [] InstanceIdList;
 
     /**
-     * Get Order list.  Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DealName Order list.  Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Order transaction. 
+     * @return DealName Order transaction.
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set Order list.  Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DealName Order list.  Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Order transaction.
+     * @param DealName Order transaction.
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
     }
 
     /**
-     * Get ID list of the purchased CKafka instances corresponding to the order list.  Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceIdList ID list of the purchased CKafka instances corresponding to the order list.  Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Order transaction corresponds to the list of purchased CKafka instance ids. 
+     * @return InstanceIdList Order transaction corresponds to the list of purchased CKafka instance ids.
      */
     public String [] getInstanceIdList() {
         return this.InstanceIdList;
     }
 
     /**
-     * Set ID list of the purchased CKafka instances corresponding to the order list.  Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceIdList ID list of the purchased CKafka instances corresponding to the order list.  Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Order transaction corresponds to the list of purchased CKafka instance ids.
+     * @param InstanceIdList Order transaction corresponds to the list of purchased CKafka instance ids.
      */
     public void setInstanceIdList(String [] InstanceIdList) {
         this.InstanceIdList = InstanceIdList;

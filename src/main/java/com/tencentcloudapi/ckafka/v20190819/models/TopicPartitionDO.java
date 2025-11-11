@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class TopicPartitionDO extends AbstractModel {
 
     /**
-    * Partition ID
+    * Partition ID. specifies the Partition ID.
     */
     @SerializedName("Partition")
     @Expose
     private Long Partition;
 
     /**
-    * Leader running status
+    * Leader running status. 0 means running normally.
     */
     @SerializedName("LeaderStatus")
     @Expose
@@ -52,32 +52,32 @@ public class TopicPartitionDO extends AbstractModel {
     private Long ReplicaNum;
 
     /**
-     * Get Partition ID 
-     * @return Partition Partition ID
+     * Get Partition ID. specifies the Partition ID. 
+     * @return Partition Partition ID. specifies the Partition ID.
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set Partition ID
-     * @param Partition Partition ID
+     * Set Partition ID. specifies the Partition ID.
+     * @param Partition Partition ID. specifies the Partition ID.
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get Leader running status 
-     * @return LeaderStatus Leader running status
+     * Get Leader running status. 0 means running normally. 
+     * @return LeaderStatus Leader running status. 0 means running normally.
      */
     public Long getLeaderStatus() {
         return this.LeaderStatus;
     }
 
     /**
-     * Set Leader running status
-     * @param LeaderStatus Leader running status
+     * Set Leader running status. 0 means running normally.
+     * @param LeaderStatus Leader running status. 0 means running normally.
      */
     public void setLeaderStatus(Long LeaderStatus) {
         this.LeaderStatus = LeaderStatus;

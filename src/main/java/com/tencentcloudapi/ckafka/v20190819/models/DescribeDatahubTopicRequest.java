@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeDatahubTopicRequest extends AbstractModel {
 
     /**
-    * Name
+    * Elastic topic name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get Name 
-     * @return Name Name
+     * Get Elastic topic name. 
+     * @return Name Elastic topic name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name
-     * @param Name Name
+     * Set Elastic topic name.
+     * @param Name Elastic topic name.
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAclRuleRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,30 +38,30 @@ public class DescribeAclRuleRequest extends AbstractModel {
     private String RuleName;
 
     /**
-    * ACL rule matching type
+    * ACL rule-based matching type (PREFIXED: prefix match, PRESET: PRESET policy).
     */
     @SerializedName("PatternType")
     @Expose
     private String PatternType;
 
     /**
-    * Whether to read simplified ACL rules
+    * Specifies whether to read the simplified ACL rule. default value is false, which means not to read the simplified ACL rule.
     */
     @SerializedName("IsSimplified")
     @Expose
     private Boolean IsSimplified;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api. 
+     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -84,32 +84,32 @@ public class DescribeAclRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get ACL rule matching type 
-     * @return PatternType ACL rule matching type
+     * Get ACL rule-based matching type (PREFIXED: prefix match, PRESET: PRESET policy). 
+     * @return PatternType ACL rule-based matching type (PREFIXED: prefix match, PRESET: PRESET policy).
      */
     public String getPatternType() {
         return this.PatternType;
     }
 
     /**
-     * Set ACL rule matching type
-     * @param PatternType ACL rule matching type
+     * Set ACL rule-based matching type (PREFIXED: prefix match, PRESET: PRESET policy).
+     * @param PatternType ACL rule-based matching type (PREFIXED: prefix match, PRESET: PRESET policy).
      */
     public void setPatternType(String PatternType) {
         this.PatternType = PatternType;
     }
 
     /**
-     * Get Whether to read simplified ACL rules 
-     * @return IsSimplified Whether to read simplified ACL rules
+     * Get Specifies whether to read the simplified ACL rule. default value is false, which means not to read the simplified ACL rule. 
+     * @return IsSimplified Specifies whether to read the simplified ACL rule. default value is false, which means not to read the simplified ACL rule.
      */
     public Boolean getIsSimplified() {
         return this.IsSimplified;
     }
 
     /**
-     * Set Whether to read simplified ACL rules
-     * @param IsSimplified Whether to read simplified ACL rules
+     * Set Specifies whether to read the simplified ACL rule. default value is false, which means not to read the simplified ACL rule.
+     * @param IsSimplified Specifies whether to read the simplified ACL rule. default value is false, which means not to read the simplified ACL rule.
      */
     public void setIsSimplified(Boolean IsSimplified) {
         this.IsSimplified = IsSimplified;

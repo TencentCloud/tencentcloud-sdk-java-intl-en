@@ -64,7 +64,7 @@ Stable: each consumer in the consumer group has joined and is in stable state
     private GroupInfoMember [] Members;
 
     /**
-    * Kafka consumer group
+    * Consumer group name.
     */
     @SerializedName("Group")
     @Expose
@@ -171,16 +171,16 @@ Stable: each consumer in the consumer group has joined and is in stable state
     }
 
     /**
-     * Get Kafka consumer group 
-     * @return Group Kafka consumer group
+     * Get Consumer group name. 
+     * @return Group Consumer group name.
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set Kafka consumer group
-     * @param Group Kafka consumer group
+     * Set Consumer group name.
+     * @param Group Consumer group name.
      */
     public void setGroup(String Group) {
         this.Group = Group;

@@ -31,14 +31,14 @@ public class ModifyInstanceAttributesConfig extends AbstractModel {
     private Boolean AutoCreateTopicEnable;
 
     /**
-    * Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
+    * Default number of partitions for a newly created topic. if AutoCreateTopicEnable is set to true and no value is set, defaults to 3.
     */
     @SerializedName("DefaultNumPartitions")
     @Expose
     private Long DefaultNumPartitions;
 
     /**
-    * If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
+    * Default number of replicas for a newly created topic. if AutoCreateTopicEnable is set to true and not specified, defaults to 2.
     */
     @SerializedName("DefaultReplicationFactor")
     @Expose
@@ -61,32 +61,32 @@ public class ModifyInstanceAttributesConfig extends AbstractModel {
     }
 
     /**
-     * Get Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default 
-     * @return DefaultNumPartitions Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
+     * Get Default number of partitions for a newly created topic. if AutoCreateTopicEnable is set to true and no value is set, defaults to 3. 
+     * @return DefaultNumPartitions Default number of partitions for a newly created topic. if AutoCreateTopicEnable is set to true and no value is set, defaults to 3.
      */
     public Long getDefaultNumPartitions() {
         return this.DefaultNumPartitions;
     }
 
     /**
-     * Set Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
-     * @param DefaultNumPartitions Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
+     * Set Default number of partitions for a newly created topic. if AutoCreateTopicEnable is set to true and no value is set, defaults to 3.
+     * @param DefaultNumPartitions Default number of partitions for a newly created topic. if AutoCreateTopicEnable is set to true and no value is set, defaults to 3.
      */
     public void setDefaultNumPartitions(Long DefaultNumPartitions) {
         this.DefaultNumPartitions = DefaultNumPartitions;
     }
 
     /**
-     * Get If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default 
-     * @return DefaultReplicationFactor If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
+     * Get Default number of replicas for a newly created topic. if AutoCreateTopicEnable is set to true and not specified, defaults to 2. 
+     * @return DefaultReplicationFactor Default number of replicas for a newly created topic. if AutoCreateTopicEnable is set to true and not specified, defaults to 2.
      */
     public Long getDefaultReplicationFactor() {
         return this.DefaultReplicationFactor;
     }
 
     /**
-     * Set If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
-     * @param DefaultReplicationFactor If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
+     * Set Default number of replicas for a newly created topic. if AutoCreateTopicEnable is set to true and not specified, defaults to 2.
+     * @param DefaultReplicationFactor Default number of replicas for a newly created topic. if AutoCreateTopicEnable is set to true and not specified, defaults to 2.
      */
     public void setDefaultReplicationFactor(Long DefaultReplicationFactor) {
         this.DefaultReplicationFactor = DefaultReplicationFactor;

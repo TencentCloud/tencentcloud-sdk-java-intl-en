@@ -31,8 +31,7 @@ public class AclResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * ACL list
-Note: this field may return null, indicating that no valid values can be obtained.
+    * ACL list.
     */
     @SerializedName("AclList")
     @Expose
@@ -55,20 +54,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get ACL list
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AclList ACL list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get ACL list. 
+     * @return AclList ACL list.
      */
     public Acl [] getAclList() {
         return this.AclList;
     }
 
     /**
-     * Set ACL list
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AclList ACL list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set ACL list.
+     * @param AclList ACL list.
      */
     public void setAclList(Acl [] AclList) {
         this.AclList = AclList;

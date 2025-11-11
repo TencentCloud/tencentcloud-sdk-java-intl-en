@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAclRuleRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,7 +38,7 @@ public class CreateAclRuleRequest extends AbstractModel {
     private String ResourceType;
 
     /**
-    * Matching type. Valid values: `PREFIXED`(match by prefix), `PRESET` (match by preset policy).
+    * ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET.
     */
     @SerializedName("PatternType")
     @Expose
@@ -59,14 +59,14 @@ public class CreateAclRuleRequest extends AbstractModel {
     private AclRuleInfo [] RuleList;
 
     /**
-    * Prefix value for prefix match
+    * Indicates the prefix for prefix match. this parameter is required when PatternType value is PREFIXED.
     */
     @SerializedName("Pattern")
     @Expose
     private String Pattern;
 
     /**
-    * A parameter used to specify whether the preset ACL rule is applied to new topics
+    * Specifies whether to apply the preset ACL rule to newly-added topics. defaults to 0, which means no. a value of 1 means yes.
     */
     @SerializedName("IsApplied")
     @Expose
@@ -80,16 +80,16 @@ public class CreateAclRuleRequest extends AbstractModel {
     private String Comment;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api. 
+     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -112,16 +112,16 @@ public class CreateAclRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get Matching type. Valid values: `PREFIXED`(match by prefix), `PRESET` (match by preset policy). 
-     * @return PatternType Matching type. Valid values: `PREFIXED`(match by prefix), `PRESET` (match by preset policy).
+     * Get ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET. 
+     * @return PatternType ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET.
      */
     public String getPatternType() {
         return this.PatternType;
     }
 
     /**
-     * Set Matching type. Valid values: `PREFIXED`(match by prefix), `PRESET` (match by preset policy).
-     * @param PatternType Matching type. Valid values: `PREFIXED`(match by prefix), `PRESET` (match by preset policy).
+     * Set ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET.
+     * @param PatternType ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET.
      */
     public void setPatternType(String PatternType) {
         this.PatternType = PatternType;
@@ -160,32 +160,32 @@ public class CreateAclRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get Prefix value for prefix match 
-     * @return Pattern Prefix value for prefix match
+     * Get Indicates the prefix for prefix match. this parameter is required when PatternType value is PREFIXED. 
+     * @return Pattern Indicates the prefix for prefix match. this parameter is required when PatternType value is PREFIXED.
      */
     public String getPattern() {
         return this.Pattern;
     }
 
     /**
-     * Set Prefix value for prefix match
-     * @param Pattern Prefix value for prefix match
+     * Set Indicates the prefix for prefix match. this parameter is required when PatternType value is PREFIXED.
+     * @param Pattern Indicates the prefix for prefix match. this parameter is required when PatternType value is PREFIXED.
      */
     public void setPattern(String Pattern) {
         this.Pattern = Pattern;
     }
 
     /**
-     * Get A parameter used to specify whether the preset ACL rule is applied to new topics 
-     * @return IsApplied A parameter used to specify whether the preset ACL rule is applied to new topics
+     * Get Specifies whether to apply the preset ACL rule to newly-added topics. defaults to 0, which means no. a value of 1 means yes. 
+     * @return IsApplied Specifies whether to apply the preset ACL rule to newly-added topics. defaults to 0, which means no. a value of 1 means yes.
      */
     public Long getIsApplied() {
         return this.IsApplied;
     }
 
     /**
-     * Set A parameter used to specify whether the preset ACL rule is applied to new topics
-     * @param IsApplied A parameter used to specify whether the preset ACL rule is applied to new topics
+     * Set Specifies whether to apply the preset ACL rule to newly-added topics. defaults to 0, which means no. a value of 1 means yes.
+     * @param IsApplied Specifies whether to apply the preset ACL rule to newly-added topics. defaults to 0, which means no. a value of 1 means yes.
      */
     public void setIsApplied(Long IsApplied) {
         this.IsApplied = IsApplied;

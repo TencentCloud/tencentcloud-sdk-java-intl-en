@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDatahubTopicRequest extends AbstractModel {
 
     /**
-    * Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+    * Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
     */
     @SerializedName("Name")
     @Expose
@@ -59,16 +59,16 @@ public class CreateDatahubTopicRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter. 
-     * @return Name Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * Get Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-). 
+     * @return Name Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-     * @param Name Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * Set Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
+     * @param Name Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
      */
     public void setName(String Name) {
         this.Name = Name;

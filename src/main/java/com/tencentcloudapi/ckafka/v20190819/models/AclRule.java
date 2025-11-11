@@ -25,63 +25,55 @@ public class AclRule extends AbstractModel {
 
     /**
     * ACL rule name.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * Instance ID.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * The ckafka cluster instance Id.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * ACL rule-based matching type. currently only supports prefix match. valid values: PREFIXED.
     */
     @SerializedName("PatternType")
     @Expose
     private String PatternType;
 
     /**
-    * Prefix value for prefix match.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Indicates the prefix value for prefix match.
     */
     @SerializedName("Pattern")
     @Expose
     private String Pattern;
 
     /**
-    * ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Acl resource type, currently only support Topic. valid values: Topic.
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * ACL information contained in the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Specifies the ACL information contained in the rule.
     */
     @SerializedName("AclList")
     @Expose
     private String AclList;
 
     /**
-    * Creation time of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Specifies the time when the rule was created.
     */
     @SerializedName("CreateTimeStamp")
     @Expose
     private String CreateTimeStamp;
 
     /**
-    * A parameter used to specify whether the preset ACL rule is applied to new topics.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Specifies whether to apply the preset ACL rule to newly-added topics.
     */
     @SerializedName("IsApplied")
     @Expose
@@ -89,49 +81,42 @@ Note: `null` may be returned for this field, indicating that no valid values can
 
     /**
     * Rule update time.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTimeStamp")
     @Expose
     private String UpdateTimeStamp;
 
     /**
-    * Remarks of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Specifies the remark of the rule.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * One of the corresponding topic names that is displayed.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * One of the displayed corresponding TopicName.
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * The number of topics that apply this ACL rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Number of topics to which the ACL rule is applied.
     */
     @SerializedName("TopicCount")
     @Expose
     private Long TopicCount;
 
     /**
-    * Name of rule type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the pattern type.
     */
     @SerializedName("PatternTypeTitle")
     @Expose
     private String PatternTypeTitle;
 
     /**
-     * Get ACL rule name.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * Get ACL rule name. 
      * @return RuleName ACL rule name.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public String getRuleName() {
         return this.RuleName;
@@ -139,159 +124,127 @@ Note: `null` may be returned for this field, indicating that no valid values can
 
     /**
      * Set ACL rule name.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      * @param RuleName ACL rule name.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get Instance ID.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return InstanceId Instance ID.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get The ckafka cluster instance Id. 
+     * @return InstanceId The ckafka cluster instance Id.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param InstanceId Instance ID.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set The ckafka cluster instance Id.
+     * @param InstanceId The ckafka cluster instance Id.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return PatternType Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get ACL rule-based matching type. currently only supports prefix match. valid values: PREFIXED. 
+     * @return PatternType ACL rule-based matching type. currently only supports prefix match. valid values: PREFIXED.
      */
     public String getPatternType() {
         return this.PatternType;
     }
 
     /**
-     * Set Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param PatternType Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set ACL rule-based matching type. currently only supports prefix match. valid values: PREFIXED.
+     * @param PatternType ACL rule-based matching type. currently only supports prefix match. valid values: PREFIXED.
      */
     public void setPatternType(String PatternType) {
         this.PatternType = PatternType;
     }
 
     /**
-     * Get Prefix value for prefix match.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return Pattern Prefix value for prefix match.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Indicates the prefix value for prefix match. 
+     * @return Pattern Indicates the prefix value for prefix match.
      */
     public String getPattern() {
         return this.Pattern;
     }
 
     /**
-     * Set Prefix value for prefix match.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param Pattern Prefix value for prefix match.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Indicates the prefix value for prefix match.
+     * @param Pattern Indicates the prefix value for prefix match.
      */
     public void setPattern(String Pattern) {
         this.Pattern = Pattern;
     }
 
     /**
-     * Get ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return ResourceType ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Acl resource type, currently only support Topic. valid values: Topic. 
+     * @return ResourceType Acl resource type, currently only support Topic. valid values: Topic.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param ResourceType ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Acl resource type, currently only support Topic. valid values: Topic.
+     * @param ResourceType Acl resource type, currently only support Topic. valid values: Topic.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get ACL information contained in the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return AclList ACL information contained in the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Specifies the ACL information contained in the rule. 
+     * @return AclList Specifies the ACL information contained in the rule.
      */
     public String getAclList() {
         return this.AclList;
     }
 
     /**
-     * Set ACL information contained in the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param AclList ACL information contained in the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Specifies the ACL information contained in the rule.
+     * @param AclList Specifies the ACL information contained in the rule.
      */
     public void setAclList(String AclList) {
         this.AclList = AclList;
     }
 
     /**
-     * Get Creation time of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return CreateTimeStamp Creation time of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Specifies the time when the rule was created. 
+     * @return CreateTimeStamp Specifies the time when the rule was created.
      */
     public String getCreateTimeStamp() {
         return this.CreateTimeStamp;
     }
 
     /**
-     * Set Creation time of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param CreateTimeStamp Creation time of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Specifies the time when the rule was created.
+     * @param CreateTimeStamp Specifies the time when the rule was created.
      */
     public void setCreateTimeStamp(String CreateTimeStamp) {
         this.CreateTimeStamp = CreateTimeStamp;
     }
 
     /**
-     * Get A parameter used to specify whether the preset ACL rule is applied to new topics.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return IsApplied A parameter used to specify whether the preset ACL rule is applied to new topics.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Specifies whether to apply the preset ACL rule to newly-added topics. 
+     * @return IsApplied Specifies whether to apply the preset ACL rule to newly-added topics.
      */
     public Long getIsApplied() {
         return this.IsApplied;
     }
 
     /**
-     * Set A parameter used to specify whether the preset ACL rule is applied to new topics.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param IsApplied A parameter used to specify whether the preset ACL rule is applied to new topics.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Specifies whether to apply the preset ACL rule to newly-added topics.
+     * @param IsApplied Specifies whether to apply the preset ACL rule to newly-added topics.
      */
     public void setIsApplied(Long IsApplied) {
         this.IsApplied = IsApplied;
     }
 
     /**
-     * Get Rule update time.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * Get Rule update time. 
      * @return UpdateTimeStamp Rule update time.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public String getUpdateTimeStamp() {
         return this.UpdateTimeStamp;
@@ -299,89 +252,71 @@ Note: `null` may be returned for this field, indicating that no valid values can
 
     /**
      * Set Rule update time.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      * @param UpdateTimeStamp Rule update time.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public void setUpdateTimeStamp(String UpdateTimeStamp) {
         this.UpdateTimeStamp = UpdateTimeStamp;
     }
 
     /**
-     * Get Remarks of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return Comment Remarks of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Specifies the remark of the rule. 
+     * @return Comment Specifies the remark of the rule.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Remarks of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param Comment Remarks of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Specifies the remark of the rule.
+     * @param Comment Specifies the remark of the rule.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get One of the corresponding topic names that is displayed.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return TopicName One of the corresponding topic names that is displayed.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get One of the displayed corresponding TopicName. 
+     * @return TopicName One of the displayed corresponding TopicName.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set One of the corresponding topic names that is displayed.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param TopicName One of the corresponding topic names that is displayed.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set One of the displayed corresponding TopicName.
+     * @param TopicName One of the displayed corresponding TopicName.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get The number of topics that apply this ACL rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return TopicCount The number of topics that apply this ACL rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Number of topics to which the ACL rule is applied. 
+     * @return TopicCount Number of topics to which the ACL rule is applied.
      */
     public Long getTopicCount() {
         return this.TopicCount;
     }
 
     /**
-     * Set The number of topics that apply this ACL rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param TopicCount The number of topics that apply this ACL rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Number of topics to which the ACL rule is applied.
+     * @param TopicCount Number of topics to which the ACL rule is applied.
      */
     public void setTopicCount(Long TopicCount) {
         this.TopicCount = TopicCount;
     }
 
     /**
-     * Get Name of rule type.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return PatternTypeTitle Name of rule type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the pattern type. 
+     * @return PatternTypeTitle Specifies the pattern type.
      */
     public String getPatternTypeTitle() {
         return this.PatternTypeTitle;
     }
 
     /**
-     * Set Name of rule type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param PatternTypeTitle Name of rule type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the pattern type.
+     * @param PatternTypeTitle Specifies the pattern type.
      */
     public void setPatternTypeTitle(String PatternTypeTitle) {
         this.PatternTypeTitle = PatternTypeTitle;

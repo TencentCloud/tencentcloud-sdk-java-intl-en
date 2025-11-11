@@ -42,7 +42,7 @@ public class Route extends AbstractModel {
     private Long RouteId;
 
     /**
-    * VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
+    * Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
     */
     @SerializedName("VipType")
     @Expose
@@ -72,12 +72,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long DomainPort;
 
     /**
-    * Timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Timestamp.
     */
     @SerializedName("DeleteTimestamp")
     @Expose
     private String DeleteTimestamp;
+
+    /**
+    * Specifies the subnet Id.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Subnet")
+    @Expose
+    private String Subnet;
+
+    /**
+    * Virtual IP list (1:1 broker node).
+    */
+    @SerializedName("BrokerVipList")
+    @Expose
+    private VipEntity [] BrokerVipList;
+
+    /**
+    * VPC Id. specifies the Id of the vpc.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Note")
+    @Expose
+    private String Note;
+
+    /**
+    * Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
 
     /**
      * Get Instance connection method
@@ -128,16 +166,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)). 
-     * @return VipType VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
+     * Get Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route). 
+     * @return VipType Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
      */
     public Long getVipType() {
         return this.VipType;
     }
 
     /**
-     * Set VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
-     * @param VipType VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
+     * Set Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
+     * @param VipType Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
      */
     public void setVipType(Long VipType) {
         this.VipType = VipType;
@@ -200,23 +238,115 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Timestamp
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DeleteTimestamp Timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Timestamp. 
+     * @return DeleteTimestamp Timestamp.
      */
     public String getDeleteTimestamp() {
         return this.DeleteTimestamp;
     }
 
     /**
-     * Set Timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DeleteTimestamp Timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Timestamp.
+     * @param DeleteTimestamp Timestamp.
      */
     public void setDeleteTimestamp(String DeleteTimestamp) {
         this.DeleteTimestamp = DeleteTimestamp;
+    }
+
+    /**
+     * Get Specifies the subnet Id.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Subnet Specifies the subnet Id.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSubnet() {
+        return this.Subnet;
+    }
+
+    /**
+     * Set Specifies the subnet Id.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Subnet Specifies the subnet Id.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSubnet(String Subnet) {
+        this.Subnet = Subnet;
+    }
+
+    /**
+     * Get Virtual IP list (1:1 broker node). 
+     * @return BrokerVipList Virtual IP list (1:1 broker node).
+     */
+    public VipEntity [] getBrokerVipList() {
+        return this.BrokerVipList;
+    }
+
+    /**
+     * Set Virtual IP list (1:1 broker node).
+     * @param BrokerVipList Virtual IP list (1:1 broker node).
+     */
+    public void setBrokerVipList(VipEntity [] BrokerVipList) {
+        this.BrokerVipList = BrokerVipList;
+    }
+
+    /**
+     * Get VPC Id. specifies the Id of the vpc.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return VpcId VPC Id. specifies the Id of the vpc.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set VPC Id. specifies the Id of the vpc.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param VpcId VPC Id. specifies the Id of the vpc.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get Remarks
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Note Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getNote() {
+        return this.Note;
+    }
+
+    /**
+     * Set Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Note Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setNote(String Note) {
+        this.Note = Note;
+    }
+
+    /**
+     * Get Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Status Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Status Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     public Route() {
@@ -251,6 +381,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.DeleteTimestamp != null) {
             this.DeleteTimestamp = new String(source.DeleteTimestamp);
         }
+        if (source.Subnet != null) {
+            this.Subnet = new String(source.Subnet);
+        }
+        if (source.BrokerVipList != null) {
+            this.BrokerVipList = new VipEntity[source.BrokerVipList.length];
+            for (int i = 0; i < source.BrokerVipList.length; i++) {
+                this.BrokerVipList[i] = new VipEntity(source.BrokerVipList[i]);
+            }
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Note != null) {
+            this.Note = new String(source.Note);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -265,6 +413,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "DomainPort", this.DomainPort);
         this.setParamSimple(map, prefix + "DeleteTimestamp", this.DeleteTimestamp);
+        this.setParamSimple(map, prefix + "Subnet", this.Subnet);
+        this.setParamArrayObj(map, prefix + "BrokerVipList.", this.BrokerVipList);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "Note", this.Note);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

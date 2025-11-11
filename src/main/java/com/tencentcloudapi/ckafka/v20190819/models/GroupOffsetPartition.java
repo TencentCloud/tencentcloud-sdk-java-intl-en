@@ -38,8 +38,7 @@ public class GroupOffsetPartition extends AbstractModel {
     private Long Offset;
 
     /**
-    * Metadata can be passed in for other purposes when the consumer submits messages. Currently, this parameter is usually an empty string
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Supports consumers to submit messages with imported metadata for other purposes, currently an empty string.
     */
     @SerializedName("Metadata")
     @Expose
@@ -99,20 +98,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Metadata can be passed in for other purposes when the consumer submits messages. Currently, this parameter is usually an empty string
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Metadata Metadata can be passed in for other purposes when the consumer submits messages. Currently, this parameter is usually an empty string
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Supports consumers to submit messages with imported metadata for other purposes, currently an empty string. 
+     * @return Metadata Supports consumers to submit messages with imported metadata for other purposes, currently an empty string.
      */
     public String getMetadata() {
         return this.Metadata;
     }
 
     /**
-     * Set Metadata can be passed in for other purposes when the consumer submits messages. Currently, this parameter is usually an empty string
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Metadata Metadata can be passed in for other purposes when the consumer submits messages. Currently, this parameter is usually an empty string
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Supports consumers to submit messages with imported metadata for other purposes, currently an empty string.
+     * @param Metadata Supports consumers to submit messages with imported metadata for other purposes, currently an empty string.
      */
     public void setMetadata(String Metadata) {
         this.Metadata = Metadata;

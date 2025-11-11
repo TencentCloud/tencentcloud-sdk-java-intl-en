@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class GroupResponse extends AbstractModel {
 
     /**
-    * Count
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Counting.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,45 +32,37 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * GroupList
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GroupList")
     @Expose
     private DescribeGroup [] GroupList;
 
     /**
-    * Consumer group quota
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the consumer group quota.
     */
     @SerializedName("GroupCountQuota")
     @Expose
     private Long GroupCountQuota;
 
     /**
-     * Get Count
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Count
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Counting. 
+     * @return TotalCount Counting.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Count
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Count
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Counting.
+     * @param TotalCount Counting.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get GroupList
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get GroupList 
      * @return GroupList GroupList
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public DescribeGroup [] getGroupList() {
         return this.GroupList;
@@ -79,29 +70,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set GroupList
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param GroupList GroupList
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setGroupList(DescribeGroup [] GroupList) {
         this.GroupList = GroupList;
     }
 
     /**
-     * Get Consumer group quota
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupCountQuota Consumer group quota
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the consumer group quota. 
+     * @return GroupCountQuota Specifies the consumer group quota.
      */
     public Long getGroupCountQuota() {
         return this.GroupCountQuota;
     }
 
     /**
-     * Set Consumer group quota
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupCountQuota Consumer group quota
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the consumer group quota.
+     * @param GroupCountQuota Specifies the consumer group quota.
      */
     public void setGroupCountQuota(Long GroupCountQuota) {
         this.GroupCountQuota = GroupCountQuota;

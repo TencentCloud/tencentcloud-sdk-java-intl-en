@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class TopicDetailResponse extends AbstractModel {
 
     /**
-    * List of returned topic details
-Note: this field may return null, indicating that no valid values can be obtained.
+    * List of returned topic details.
     */
     @SerializedName("TopicList")
     @Expose
@@ -39,20 +38,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long TotalCount;
 
     /**
-     * Get List of returned topic details
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TopicList List of returned topic details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get List of returned topic details. 
+     * @return TopicList List of returned topic details.
      */
     public TopicDetail [] getTopicList() {
         return this.TopicList;
     }
 
     /**
-     * Set List of returned topic details
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TopicList List of returned topic details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set List of returned topic details.
+     * @param TopicList List of returned topic details.
      */
     public void setTopicList(TopicDetail [] TopicList) {
         this.TopicList = TopicList;

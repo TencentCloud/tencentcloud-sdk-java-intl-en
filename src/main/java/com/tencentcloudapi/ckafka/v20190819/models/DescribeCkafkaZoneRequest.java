@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeCkafkaZoneRequest extends AbstractModel {
 
     /**
-    * Cloud Dedicated Cluster (CDC) business parameter.
+    * cdc cluster Id.
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-     * Get Cloud Dedicated Cluster (CDC) business parameter. 
-     * @return CdcId Cloud Dedicated Cluster (CDC) business parameter.
+     * Get cdc cluster Id. 
+     * @return CdcId cdc cluster Id.
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set Cloud Dedicated Cluster (CDC) business parameter.
-     * @param CdcId Cloud Dedicated Cluster (CDC) business parameter.
+     * Set cdc cluster Id.
+     * @param CdcId cdc cluster Id.
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;

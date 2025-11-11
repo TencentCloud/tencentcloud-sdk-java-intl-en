@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class Config extends AbstractModel {
 
     /**
-    * Message retention period
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Message retention period in milliseconds.
     */
     @SerializedName("Retention")
     @Expose
@@ -49,8 +48,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CleanUpPolicy;
 
     /**
-    * Segment rolling duration
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Duration of Segment shard scrolling in milliseconds.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SegmentMs")
     @Expose
@@ -65,44 +64,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long UncleanLeaderElectionEnable;
 
     /**
-    * Number of bytes for segment rolling
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Segment specifies the number of bytes for sharding scroll. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SegmentBytes")
     @Expose
     private Long SegmentBytes;
 
     /**
-    * Maximum number of message bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Maximum message byte size. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxMessageBytes")
     @Expose
     private Long MaxMessageBytes;
 
     /**
-    * Message retention file size.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the message retention file size in Bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RetentionBytes")
     @Expose
     private Long RetentionBytes;
 
     /**
-     * Get Message retention period
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Retention Message retention period
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The time type for message saving. CreateTime means the time when the producer created this message. LogAppendTime means the time when the broker received the message.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LogMsgTimestampType")
+    @Expose
+    private String LogMsgTimestampType;
+
+    /**
+     * Get Message retention period in milliseconds. 
+     * @return Retention Message retention period in milliseconds.
      */
     public Long getRetention() {
         return this.Retention;
     }
 
     /**
-     * Set Message retention period
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Retention Message retention period
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Message retention period in milliseconds.
+     * @param Retention Message retention period in milliseconds.
      */
     public void setRetention(Long Retention) {
         this.Retention = Retention;
@@ -153,20 +156,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Segment rolling duration
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SegmentMs Segment rolling duration
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Duration of Segment shard scrolling in milliseconds.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SegmentMs Duration of Segment shard scrolling in milliseconds.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getSegmentMs() {
         return this.SegmentMs;
     }
 
     /**
-     * Set Segment rolling duration
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SegmentMs Segment rolling duration
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Duration of Segment shard scrolling in milliseconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SegmentMs Duration of Segment shard scrolling in milliseconds.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSegmentMs(Long SegmentMs) {
         this.SegmentMs = SegmentMs;
@@ -193,63 +196,83 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of bytes for segment rolling
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SegmentBytes Number of bytes for segment rolling
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Segment specifies the number of bytes for sharding scroll. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SegmentBytes Segment specifies the number of bytes for sharding scroll. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getSegmentBytes() {
         return this.SegmentBytes;
     }
 
     /**
-     * Set Number of bytes for segment rolling
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SegmentBytes Number of bytes for segment rolling
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Segment specifies the number of bytes for sharding scroll. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SegmentBytes Segment specifies the number of bytes for sharding scroll. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSegmentBytes(Long SegmentBytes) {
         this.SegmentBytes = SegmentBytes;
     }
 
     /**
-     * Get Maximum number of message bytes
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MaxMessageBytes Maximum number of message bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Maximum message byte size. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MaxMessageBytes Maximum message byte size. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMaxMessageBytes() {
         return this.MaxMessageBytes;
     }
 
     /**
-     * Set Maximum number of message bytes
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MaxMessageBytes Maximum number of message bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Maximum message byte size. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MaxMessageBytes Maximum message byte size. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMaxMessageBytes(Long MaxMessageBytes) {
         this.MaxMessageBytes = MaxMessageBytes;
     }
 
     /**
-     * Get Message retention file size.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return RetentionBytes Message retention file size.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the message retention file size in Bytes.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RetentionBytes Specifies the message retention file size in Bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRetentionBytes() {
         return this.RetentionBytes;
     }
 
     /**
-     * Set Message retention file size.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param RetentionBytes Message retention file size.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the message retention file size in Bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RetentionBytes Specifies the message retention file size in Bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRetentionBytes(Long RetentionBytes) {
         this.RetentionBytes = RetentionBytes;
+    }
+
+    /**
+     * Get The time type for message saving. CreateTime means the time when the producer created this message. LogAppendTime means the time when the broker received the message.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LogMsgTimestampType The time type for message saving. CreateTime means the time when the producer created this message. LogAppendTime means the time when the broker received the message.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getLogMsgTimestampType() {
+        return this.LogMsgTimestampType;
+    }
+
+    /**
+     * Set The time type for message saving. CreateTime means the time when the producer created this message. LogAppendTime means the time when the broker received the message.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LogMsgTimestampType The time type for message saving. CreateTime means the time when the producer created this message. LogAppendTime means the time when the broker received the message.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLogMsgTimestampType(String LogMsgTimestampType) {
+        this.LogMsgTimestampType = LogMsgTimestampType;
     }
 
     public Config() {
@@ -284,6 +307,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.RetentionBytes != null) {
             this.RetentionBytes = new Long(source.RetentionBytes);
         }
+        if (source.LogMsgTimestampType != null) {
+            this.LogMsgTimestampType = new String(source.LogMsgTimestampType);
+        }
     }
 
 
@@ -299,6 +325,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "SegmentBytes", this.SegmentBytes);
         this.setParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
         this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
+        this.setParamSimple(map, prefix + "LogMsgTimestampType", this.LogMsgTimestampType);
 
     }
 }

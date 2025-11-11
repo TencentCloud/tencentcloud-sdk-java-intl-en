@@ -31,8 +31,7 @@ public class Assignment extends AbstractModel {
     private Long Version;
 
     /**
-    * Topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+    * topic information list.
     */
     @SerializedName("Topics")
     @Expose
@@ -55,20 +54,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Topic information list
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Topics Topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get topic information list. 
+     * @return Topics topic information list.
      */
     public GroupInfoTopics [] getTopics() {
         return this.Topics;
     }
 
     /**
-     * Set Topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Topics Topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set topic information list.
+     * @param Topics topic information list.
      */
     public void setTopics(GroupInfoTopics [] Topics) {
         this.Topics = Topics;

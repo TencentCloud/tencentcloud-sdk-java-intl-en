@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class FetchMessageByOffsetRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Topic name
+    * Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
     */
     @SerializedName("Topic")
     @Expose
@@ -45,39 +45,39 @@ public class FetchMessageByOffsetRequest extends AbstractModel {
     private Long Partition;
 
     /**
-    * Offset information, which is required.
+    * Specifies the position information.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api. 
+     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Topic name 
-     * @return Topic Topic name
+     * Get Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api. 
+     * @return Topic Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set Topic name
-     * @param Topic Topic name
+     * Set Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
+     * @param Topic Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
@@ -100,16 +100,16 @@ public class FetchMessageByOffsetRequest extends AbstractModel {
     }
 
     /**
-     * Get Offset information, which is required. 
-     * @return Offset Offset information, which is required.
+     * Get Specifies the position information. 
+     * @return Offset Specifies the position information.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset information, which is required.
-     * @param Offset Offset information, which is required.
+     * Set Specifies the position information.
+     * @param Offset Specifies the position information.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

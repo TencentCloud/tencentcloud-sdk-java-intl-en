@@ -31,21 +31,21 @@ public class AclRuleInfo extends AbstractModel {
     private String Operation;
 
     /**
-    * Permission types: `Deny`, `Allow`.
+    * Permission type. Deny: Deny. Allow: permission.
     */
     @SerializedName("PermissionType")
     @Expose
     private String PermissionType;
 
     /**
-    * The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
+    * Indicates any host is accessible in the entire region.
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
+    * The User. User:* means any User is accessible in the entire region. the current User can only be the User in the list of users. the input format requires the [User:] prefix. for example, for User A, input User:A.
     */
     @SerializedName("Principal")
     @Expose
@@ -68,48 +68,48 @@ public class AclRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get Permission types: `Deny`, `Allow`. 
-     * @return PermissionType Permission types: `Deny`, `Allow`.
+     * Get Permission type. Deny: Deny. Allow: permission. 
+     * @return PermissionType Permission type. Deny: Deny. Allow: permission.
      */
     public String getPermissionType() {
         return this.PermissionType;
     }
 
     /**
-     * Set Permission types: `Deny`, `Allow`.
-     * @param PermissionType Permission types: `Deny`, `Allow`.
+     * Set Permission type. Deny: Deny. Allow: permission.
+     * @param PermissionType Permission type. Deny: Deny. Allow: permission.
      */
     public void setPermissionType(String PermissionType) {
         this.PermissionType = PermissionType;
     }
 
     /**
-     * Get The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range. 
-     * @return Host The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
+     * Get Indicates any host is accessible in the entire region. 
+     * @return Host Indicates any host is accessible in the entire region.
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
-     * @param Host The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
+     * Set Indicates any host is accessible in the entire region.
+     * @param Host Indicates any host is accessible in the entire region.
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example). 
-     * @return Principal The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
+     * Get The User. User:* means any User is accessible in the entire region. the current User can only be the User in the list of users. the input format requires the [User:] prefix. for example, for User A, input User:A. 
+     * @return Principal The User. User:* means any User is accessible in the entire region. the current User can only be the User in the list of users. the input format requires the [User:] prefix. for example, for User A, input User:A.
      */
     public String getPrincipal() {
         return this.Principal;
     }
 
     /**
-     * Set The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
-     * @param Principal The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
+     * Set The User. User:* means any User is accessible in the entire region. the current User can only be the User in the list of users. the input format requires the [User:] prefix. for example, for User A, input User:A.
+     * @param Principal The User. User:* means any User is accessible in the entire region. the current User can only be the User in the list of users. the input format requires the [User:] prefix. for example, for User A, input User:A.
      */
     public void setPrincipal(String Principal) {
         this.Principal = Principal;

@@ -89,58 +89,79 @@ public class TelCdrInfo extends AbstractModel {
     /**
     * EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
 
-**Scenario         EndStatus         EndStatusString         status description**.
+**Scenario**	EndStatus	EndStatusString	Status description.
 
-Incoming and outgoing calls.
+Incoming & outgoing calls. 1. ok. normal call.
 
-Incoming and outgoing calls	0	error	exception termination.
+IVR period user give up.
 
-Inbound call 102 ivrGiveUp user hang up during IVR.
+**User give up while in queue**.
 
-Inbound call 103 waitingGiveUp user gives up while queuing.
+Inbound call 104 ringingGiveUp. specifies the user gives up during ringing.
 
-Inbound call 104 ringingGiveUp user give up during ringing.
+Inbound call 105. specifies no agent online.
 
-Inbound call 105 no agent online.
+Inbound call notWorkTime **off hours**.   
 
-Inbound call 106 notWorkTime outside working hours.   
+IVR ends automatically (no manual intervention).
 
-Inbound call 107 ivrEnd ends after IVR.
+Inbound call. 100. blocklist (system side).
 
-Inbound call 100 blackList. 
+restrictedCallee. specifies the global outbound call risk number interception (system side).
 
-Outbound call 2 unconnected unanswered.
+Outbound call 109 tooManyRequest **outbound call frequency control interception (system side)**.
 
-Outgoing call        108        restrictedCallee    the callee is restricted due to high risk.
+Outbound call 110 restrictedArea **block outgoing calls by region (system side)**.
 
-Outbound call 109 too many requests outbound over-frequency limit.
-
-Outgoing call             110	        restrictedArea	    valid values for the area where outgoing calls are restricted.
-
-Outbound call 111 restrictedTime outgoing call time limit.
+restrictedTime. specifies the outbound call interception period on the system side.
                          
-Outbound call 201 unknown unknown status.
+202 notAnswer **callee unanswered**.
 
-Outgoing call 202 not answered the callee did not answer.
+Outbound call 203 userReject **callee reject hangup**.
 
-Outgoing call            203	    userReject	callee rejects and hangs up.
+Power off. **callee powered off**.
 
-Outbound call 204 powerOff callee is powered off.
+205            numberNotExist	**callee nonexistent number**.
 
-Outbound call 205 number does not exist the callee's number is non - existent.
+Busy. specifies the callee is busy.
 
-Outbound call 206 busy callee is busy.
+Outbound call 207 outOfCredit **callee in arrears**.
 
-Outbound call 207 arrears callee in arrears.
+208 operatorError indicates operator channel exception.
 
-Outbound call 208 operator channel exception.
+Outgoing call caller cancellation.
 
-Outbound call 209 callerCancel call cancellation by the caller.
+Outgoing call	        210	           notInService	**callee out of service area**.
 
-Outgoing call 210 notInService callee out of service area.
+Phone call in/out 211 clientError **client error**.
 
-Incoming and outgoing calls 211 clientError client errors.
-Outbound call 212 carrier blocked.
+Outgoing call 212 carrierBlocked **carrier blocklist**.
+
+Note: call reminder.
+
+Outbound call 215 numberInvalid **called number is invalid**.
+
+Outbound call 216 callRestricted. note: call restricted.
+
+Callee restricted by blocklist.
+
+Outbound call 218 areaRestricted. **callee area restricted**.
+
+Prompt call forwarding.
+
+Caller cancellation during ringing.
+
+Caller cancel without ring.
+
+Audio dial-in 501 call conflict **VoIP user call termination**.
+
+VoIP user client timeout.
+
+Audio dial-in 503 VoIP user client error.
+
+Chinese description (https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+English description (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
     */
     @SerializedName("EndStatus")
     @Expose
@@ -217,60 +238,7 @@ Outbound call 212 carrier blocked.
     private Long SkillGroupId;
 
     /**
-    * EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
-
-**Scenario         EndStatus         EndStatusString         status description**.
-
-Incoming and outgoing calls.
-
-Incoming and outgoing calls	0	error	exception termination.
-
-Inbound call 102 ivrGiveUp user hang up during IVR.
-
-Inbound call 103 waitingGiveUp user gives up while queuing.
-
-Inbound call 104 ringingGiveUp user give up during ringing.
-
-Inbound call 105 no agent online.
-
-Inbound call 106 notWorkTime outside working hours.   
-
-Inbound call 107 ivrEnd ends after IVR.
-
-Inbound call 100 blackList. 
-
-Outbound call 2 unconnected unanswered.
-
-Outgoing call        108        restrictedCallee    the callee is restricted due to high risk.
-
-Outbound call 109 too many requests outbound over-frequency limit.
-
-Outgoing call             110	        restrictedArea	    valid values for the area where outgoing calls are restricted.
-
-Outbound call 111 restrictedTime outgoing call time limit.
-                         
-Outgoing call 201 unknown unknown status.
-
-Outgoing call 202 notAnswer callee not answered.
-
-Outgoing call            203	    userReject	callee rejects and hangs up.
-
-Outbound call 204 powerOff callee is powered off.
-
-Outbound call 205 number does not exist the callee's number is non - existent.
-
-Outgoing call 206 busy callee is busy.
-
-Outbound call 207 out of credit callee in arrears.
-
-Outbound call 208 operator channel exception.
-
-Outgoing call 209 callerCancel call cancellation by the caller.
-
-Outgoing call 210 notInService callee out of service area.
-
-Incoming and outgoing calls 211 clientError client errors.
-Outbound call 212 carrier blocked.
+    * Refers to the EndStatus field.
     */
     @SerializedName("EndStatusString")
     @Expose
@@ -548,112 +516,154 @@ No record (offline asr generation is not enabled or no package is available).
     /**
      * Get EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
 
-**Scenario         EndStatus         EndStatusString         status description**.
+**Scenario**	EndStatus	EndStatusString	Status description.
 
-Incoming and outgoing calls.
+Incoming & outgoing calls. 1. ok. normal call.
 
-Incoming and outgoing calls	0	error	exception termination.
+IVR period user give up.
 
-Inbound call 102 ivrGiveUp user hang up during IVR.
+**User give up while in queue**.
 
-Inbound call 103 waitingGiveUp user gives up while queuing.
+Inbound call 104 ringingGiveUp. specifies the user gives up during ringing.
 
-Inbound call 104 ringingGiveUp user give up during ringing.
+Inbound call 105. specifies no agent online.
 
-Inbound call 105 no agent online.
+Inbound call notWorkTime **off hours**.   
 
-Inbound call 106 notWorkTime outside working hours.   
+IVR ends automatically (no manual intervention).
 
-Inbound call 107 ivrEnd ends after IVR.
+Inbound call. 100. blocklist (system side).
 
-Inbound call 100 blackList. 
+restrictedCallee. specifies the global outbound call risk number interception (system side).
 
-Outbound call 2 unconnected unanswered.
+Outbound call 109 tooManyRequest **outbound call frequency control interception (system side)**.
 
-Outgoing call        108        restrictedCallee    the callee is restricted due to high risk.
+Outbound call 110 restrictedArea **block outgoing calls by region (system side)**.
 
-Outbound call 109 too many requests outbound over-frequency limit.
-
-Outgoing call             110	        restrictedArea	    valid values for the area where outgoing calls are restricted.
-
-Outbound call 111 restrictedTime outgoing call time limit.
+restrictedTime. specifies the outbound call interception period on the system side.
                          
-Outbound call 201 unknown unknown status.
+202 notAnswer **callee unanswered**.
 
-Outgoing call 202 not answered the callee did not answer.
+Outbound call 203 userReject **callee reject hangup**.
 
-Outgoing call            203	    userReject	callee rejects and hangs up.
+Power off. **callee powered off**.
 
-Outbound call 204 powerOff callee is powered off.
+205            numberNotExist	**callee nonexistent number**.
 
-Outbound call 205 number does not exist the callee's number is non - existent.
+Busy. specifies the callee is busy.
 
-Outbound call 206 busy callee is busy.
+Outbound call 207 outOfCredit **callee in arrears**.
 
-Outbound call 207 arrears callee in arrears.
+208 operatorError indicates operator channel exception.
 
-Outbound call 208 operator channel exception.
+Outgoing call caller cancellation.
 
-Outbound call 209 callerCancel call cancellation by the caller.
+Outgoing call	        210	           notInService	**callee out of service area**.
 
-Outgoing call 210 notInService callee out of service area.
+Phone call in/out 211 clientError **client error**.
 
-Incoming and outgoing calls 211 clientError client errors.
-Outbound call 212 carrier blocked. 
+Outgoing call 212 carrierBlocked **carrier blocklist**.
+
+Note: call reminder.
+
+Outbound call 215 numberInvalid **called number is invalid**.
+
+Outbound call 216 callRestricted. note: call restricted.
+
+Callee restricted by blocklist.
+
+Outbound call 218 areaRestricted. **callee area restricted**.
+
+Prompt call forwarding.
+
+Caller cancellation during ringing.
+
+Caller cancel without ring.
+
+Audio dial-in 501 call conflict **VoIP user call termination**.
+
+VoIP user client timeout.
+
+Audio dial-in 503 VoIP user client error.
+
+Chinese description (https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+English description (https://www.tencentcloud.com/document/product/1229/71847?lang=en). 
      * @return EndStatus EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
 
-**Scenario         EndStatus         EndStatusString         status description**.
+**Scenario**	EndStatus	EndStatusString	Status description.
 
-Incoming and outgoing calls.
+Incoming & outgoing calls. 1. ok. normal call.
 
-Incoming and outgoing calls	0	error	exception termination.
+IVR period user give up.
 
-Inbound call 102 ivrGiveUp user hang up during IVR.
+**User give up while in queue**.
 
-Inbound call 103 waitingGiveUp user gives up while queuing.
+Inbound call 104 ringingGiveUp. specifies the user gives up during ringing.
 
-Inbound call 104 ringingGiveUp user give up during ringing.
+Inbound call 105. specifies no agent online.
 
-Inbound call 105 no agent online.
+Inbound call notWorkTime **off hours**.   
 
-Inbound call 106 notWorkTime outside working hours.   
+IVR ends automatically (no manual intervention).
 
-Inbound call 107 ivrEnd ends after IVR.
+Inbound call. 100. blocklist (system side).
 
-Inbound call 100 blackList. 
+restrictedCallee. specifies the global outbound call risk number interception (system side).
 
-Outbound call 2 unconnected unanswered.
+Outbound call 109 tooManyRequest **outbound call frequency control interception (system side)**.
 
-Outgoing call        108        restrictedCallee    the callee is restricted due to high risk.
+Outbound call 110 restrictedArea **block outgoing calls by region (system side)**.
 
-Outbound call 109 too many requests outbound over-frequency limit.
-
-Outgoing call             110	        restrictedArea	    valid values for the area where outgoing calls are restricted.
-
-Outbound call 111 restrictedTime outgoing call time limit.
+restrictedTime. specifies the outbound call interception period on the system side.
                          
-Outbound call 201 unknown unknown status.
+202 notAnswer **callee unanswered**.
 
-Outgoing call 202 not answered the callee did not answer.
+Outbound call 203 userReject **callee reject hangup**.
 
-Outgoing call            203	    userReject	callee rejects and hangs up.
+Power off. **callee powered off**.
 
-Outbound call 204 powerOff callee is powered off.
+205            numberNotExist	**callee nonexistent number**.
 
-Outbound call 205 number does not exist the callee's number is non - existent.
+Busy. specifies the callee is busy.
 
-Outbound call 206 busy callee is busy.
+Outbound call 207 outOfCredit **callee in arrears**.
 
-Outbound call 207 arrears callee in arrears.
+208 operatorError indicates operator channel exception.
 
-Outbound call 208 operator channel exception.
+Outgoing call caller cancellation.
 
-Outbound call 209 callerCancel call cancellation by the caller.
+Outgoing call	        210	           notInService	**callee out of service area**.
 
-Outgoing call 210 notInService callee out of service area.
+Phone call in/out 211 clientError **client error**.
 
-Incoming and outgoing calls 211 clientError client errors.
-Outbound call 212 carrier blocked.
+Outgoing call 212 carrierBlocked **carrier blocklist**.
+
+Note: call reminder.
+
+Outbound call 215 numberInvalid **called number is invalid**.
+
+Outbound call 216 callRestricted. note: call restricted.
+
+Callee restricted by blocklist.
+
+Outbound call 218 areaRestricted. **callee area restricted**.
+
+Prompt call forwarding.
+
+Caller cancellation during ringing.
+
+Caller cancel without ring.
+
+Audio dial-in 501 call conflict **VoIP user call termination**.
+
+VoIP user client timeout.
+
+Audio dial-in 503 VoIP user client error.
+
+Chinese description (https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+English description (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
      */
     public Long getEndStatus() {
         return this.EndStatus;
@@ -662,112 +672,154 @@ Outbound call 212 carrier blocked.
     /**
      * Set EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
 
-**Scenario         EndStatus         EndStatusString         status description**.
+**Scenario**	EndStatus	EndStatusString	Status description.
 
-Incoming and outgoing calls.
+Incoming & outgoing calls. 1. ok. normal call.
 
-Incoming and outgoing calls	0	error	exception termination.
+IVR period user give up.
 
-Inbound call 102 ivrGiveUp user hang up during IVR.
+**User give up while in queue**.
 
-Inbound call 103 waitingGiveUp user gives up while queuing.
+Inbound call 104 ringingGiveUp. specifies the user gives up during ringing.
 
-Inbound call 104 ringingGiveUp user give up during ringing.
+Inbound call 105. specifies no agent online.
 
-Inbound call 105 no agent online.
+Inbound call notWorkTime **off hours**.   
 
-Inbound call 106 notWorkTime outside working hours.   
+IVR ends automatically (no manual intervention).
 
-Inbound call 107 ivrEnd ends after IVR.
+Inbound call. 100. blocklist (system side).
 
-Inbound call 100 blackList. 
+restrictedCallee. specifies the global outbound call risk number interception (system side).
 
-Outbound call 2 unconnected unanswered.
+Outbound call 109 tooManyRequest **outbound call frequency control interception (system side)**.
 
-Outgoing call        108        restrictedCallee    the callee is restricted due to high risk.
+Outbound call 110 restrictedArea **block outgoing calls by region (system side)**.
 
-Outbound call 109 too many requests outbound over-frequency limit.
-
-Outgoing call             110	        restrictedArea	    valid values for the area where outgoing calls are restricted.
-
-Outbound call 111 restrictedTime outgoing call time limit.
+restrictedTime. specifies the outbound call interception period on the system side.
                          
-Outbound call 201 unknown unknown status.
+202 notAnswer **callee unanswered**.
 
-Outgoing call 202 not answered the callee did not answer.
+Outbound call 203 userReject **callee reject hangup**.
 
-Outgoing call            203	    userReject	callee rejects and hangs up.
+Power off. **callee powered off**.
 
-Outbound call 204 powerOff callee is powered off.
+205            numberNotExist	**callee nonexistent number**.
 
-Outbound call 205 number does not exist the callee's number is non - existent.
+Busy. specifies the callee is busy.
 
-Outbound call 206 busy callee is busy.
+Outbound call 207 outOfCredit **callee in arrears**.
 
-Outbound call 207 arrears callee in arrears.
+208 operatorError indicates operator channel exception.
 
-Outbound call 208 operator channel exception.
+Outgoing call caller cancellation.
 
-Outbound call 209 callerCancel call cancellation by the caller.
+Outgoing call	        210	           notInService	**callee out of service area**.
 
-Outgoing call 210 notInService callee out of service area.
+Phone call in/out 211 clientError **client error**.
 
-Incoming and outgoing calls 211 clientError client errors.
-Outbound call 212 carrier blocked.
+Outgoing call 212 carrierBlocked **carrier blocklist**.
+
+Note: call reminder.
+
+Outbound call 215 numberInvalid **called number is invalid**.
+
+Outbound call 216 callRestricted. note: call restricted.
+
+Callee restricted by blocklist.
+
+Outbound call 218 areaRestricted. **callee area restricted**.
+
+Prompt call forwarding.
+
+Caller cancellation during ringing.
+
+Caller cancel without ring.
+
+Audio dial-in 501 call conflict **VoIP user call termination**.
+
+VoIP user client timeout.
+
+Audio dial-in 503 VoIP user client error.
+
+Chinese description (https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+English description (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
      * @param EndStatus EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
 
-**Scenario         EndStatus         EndStatusString         status description**.
+**Scenario**	EndStatus	EndStatusString	Status description.
 
-Incoming and outgoing calls.
+Incoming & outgoing calls. 1. ok. normal call.
 
-Incoming and outgoing calls	0	error	exception termination.
+IVR period user give up.
 
-Inbound call 102 ivrGiveUp user hang up during IVR.
+**User give up while in queue**.
 
-Inbound call 103 waitingGiveUp user gives up while queuing.
+Inbound call 104 ringingGiveUp. specifies the user gives up during ringing.
 
-Inbound call 104 ringingGiveUp user give up during ringing.
+Inbound call 105. specifies no agent online.
 
-Inbound call 105 no agent online.
+Inbound call notWorkTime **off hours**.   
 
-Inbound call 106 notWorkTime outside working hours.   
+IVR ends automatically (no manual intervention).
 
-Inbound call 107 ivrEnd ends after IVR.
+Inbound call. 100. blocklist (system side).
 
-Inbound call 100 blackList. 
+restrictedCallee. specifies the global outbound call risk number interception (system side).
 
-Outbound call 2 unconnected unanswered.
+Outbound call 109 tooManyRequest **outbound call frequency control interception (system side)**.
 
-Outgoing call        108        restrictedCallee    the callee is restricted due to high risk.
+Outbound call 110 restrictedArea **block outgoing calls by region (system side)**.
 
-Outbound call 109 too many requests outbound over-frequency limit.
-
-Outgoing call             110	        restrictedArea	    valid values for the area where outgoing calls are restricted.
-
-Outbound call 111 restrictedTime outgoing call time limit.
+restrictedTime. specifies the outbound call interception period on the system side.
                          
-Outbound call 201 unknown unknown status.
+202 notAnswer **callee unanswered**.
 
-Outgoing call 202 not answered the callee did not answer.
+Outbound call 203 userReject **callee reject hangup**.
 
-Outgoing call            203	    userReject	callee rejects and hangs up.
+Power off. **callee powered off**.
 
-Outbound call 204 powerOff callee is powered off.
+205            numberNotExist	**callee nonexistent number**.
 
-Outbound call 205 number does not exist the callee's number is non - existent.
+Busy. specifies the callee is busy.
 
-Outbound call 206 busy callee is busy.
+Outbound call 207 outOfCredit **callee in arrears**.
 
-Outbound call 207 arrears callee in arrears.
+208 operatorError indicates operator channel exception.
 
-Outbound call 208 operator channel exception.
+Outgoing call caller cancellation.
 
-Outbound call 209 callerCancel call cancellation by the caller.
+Outgoing call	        210	           notInService	**callee out of service area**.
 
-Outgoing call 210 notInService callee out of service area.
+Phone call in/out 211 clientError **client error**.
 
-Incoming and outgoing calls 211 clientError client errors.
-Outbound call 212 carrier blocked.
+Outgoing call 212 carrierBlocked **carrier blocklist**.
+
+Note: call reminder.
+
+Outbound call 215 numberInvalid **called number is invalid**.
+
+Outbound call 216 callRestricted. note: call restricted.
+
+Callee restricted by blocklist.
+
+Outbound call 218 areaRestricted. **callee area restricted**.
+
+Prompt call forwarding.
+
+Caller cancellation during ringing.
+
+Caller cancel without ring.
+
+Audio dial-in 501 call conflict **VoIP user call termination**.
+
+VoIP user client timeout.
+
+Audio dial-in 503 VoIP user client error.
+
+Chinese description (https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+English description (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
      */
     public void setEndStatus(Long EndStatus) {
         this.EndStatus = EndStatus;
@@ -934,228 +986,16 @@ Outbound call 212 carrier blocked.
     }
 
     /**
-     * Get EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
-
-**Scenario         EndStatus         EndStatusString         status description**.
-
-Incoming and outgoing calls.
-
-Incoming and outgoing calls	0	error	exception termination.
-
-Inbound call 102 ivrGiveUp user hang up during IVR.
-
-Inbound call 103 waitingGiveUp user gives up while queuing.
-
-Inbound call 104 ringingGiveUp user give up during ringing.
-
-Inbound call 105 no agent online.
-
-Inbound call 106 notWorkTime outside working hours.   
-
-Inbound call 107 ivrEnd ends after IVR.
-
-Inbound call 100 blackList. 
-
-Outbound call 2 unconnected unanswered.
-
-Outgoing call        108        restrictedCallee    the callee is restricted due to high risk.
-
-Outbound call 109 too many requests outbound over-frequency limit.
-
-Outgoing call             110	        restrictedArea	    valid values for the area where outgoing calls are restricted.
-
-Outbound call 111 restrictedTime outgoing call time limit.
-                         
-Outgoing call 201 unknown unknown status.
-
-Outgoing call 202 notAnswer callee not answered.
-
-Outgoing call            203	    userReject	callee rejects and hangs up.
-
-Outbound call 204 powerOff callee is powered off.
-
-Outbound call 205 number does not exist the callee's number is non - existent.
-
-Outgoing call 206 busy callee is busy.
-
-Outbound call 207 out of credit callee in arrears.
-
-Outbound call 208 operator channel exception.
-
-Outgoing call 209 callerCancel call cancellation by the caller.
-
-Outgoing call 210 notInService callee out of service area.
-
-Incoming and outgoing calls 211 clientError client errors.
-Outbound call 212 carrier blocked. 
-     * @return EndStatusString EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
-
-**Scenario         EndStatus         EndStatusString         status description**.
-
-Incoming and outgoing calls.
-
-Incoming and outgoing calls	0	error	exception termination.
-
-Inbound call 102 ivrGiveUp user hang up during IVR.
-
-Inbound call 103 waitingGiveUp user gives up while queuing.
-
-Inbound call 104 ringingGiveUp user give up during ringing.
-
-Inbound call 105 no agent online.
-
-Inbound call 106 notWorkTime outside working hours.   
-
-Inbound call 107 ivrEnd ends after IVR.
-
-Inbound call 100 blackList. 
-
-Outbound call 2 unconnected unanswered.
-
-Outgoing call        108        restrictedCallee    the callee is restricted due to high risk.
-
-Outbound call 109 too many requests outbound over-frequency limit.
-
-Outgoing call             110	        restrictedArea	    valid values for the area where outgoing calls are restricted.
-
-Outbound call 111 restrictedTime outgoing call time limit.
-                         
-Outgoing call 201 unknown unknown status.
-
-Outgoing call 202 notAnswer callee not answered.
-
-Outgoing call            203	    userReject	callee rejects and hangs up.
-
-Outbound call 204 powerOff callee is powered off.
-
-Outbound call 205 number does not exist the callee's number is non - existent.
-
-Outgoing call 206 busy callee is busy.
-
-Outbound call 207 out of credit callee in arrears.
-
-Outbound call 208 operator channel exception.
-
-Outgoing call 209 callerCancel call cancellation by the caller.
-
-Outgoing call 210 notInService callee out of service area.
-
-Incoming and outgoing calls 211 clientError client errors.
-Outbound call 212 carrier blocked.
+     * Get Refers to the EndStatus field. 
+     * @return EndStatusString Refers to the EndStatus field.
      */
     public String getEndStatusString() {
         return this.EndStatusString;
     }
 
     /**
-     * Set EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
-
-**Scenario         EndStatus         EndStatusString         status description**.
-
-Incoming and outgoing calls.
-
-Incoming and outgoing calls	0	error	exception termination.
-
-Inbound call 102 ivrGiveUp user hang up during IVR.
-
-Inbound call 103 waitingGiveUp user gives up while queuing.
-
-Inbound call 104 ringingGiveUp user give up during ringing.
-
-Inbound call 105 no agent online.
-
-Inbound call 106 notWorkTime outside working hours.   
-
-Inbound call 107 ivrEnd ends after IVR.
-
-Inbound call 100 blackList. 
-
-Outbound call 2 unconnected unanswered.
-
-Outgoing call        108        restrictedCallee    the callee is restricted due to high risk.
-
-Outbound call 109 too many requests outbound over-frequency limit.
-
-Outgoing call             110	        restrictedArea	    valid values for the area where outgoing calls are restricted.
-
-Outbound call 111 restrictedTime outgoing call time limit.
-                         
-Outgoing call 201 unknown unknown status.
-
-Outgoing call 202 notAnswer callee not answered.
-
-Outgoing call            203	    userReject	callee rejects and hangs up.
-
-Outbound call 204 powerOff callee is powered off.
-
-Outbound call 205 number does not exist the callee's number is non - existent.
-
-Outgoing call 206 busy callee is busy.
-
-Outbound call 207 out of credit callee in arrears.
-
-Outbound call 208 operator channel exception.
-
-Outgoing call 209 callerCancel call cancellation by the caller.
-
-Outgoing call 210 notInService callee out of service area.
-
-Incoming and outgoing calls 211 clientError client errors.
-Outbound call 212 carrier blocked.
-     * @param EndStatusString EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
-
-**Scenario         EndStatus         EndStatusString         status description**.
-
-Incoming and outgoing calls.
-
-Incoming and outgoing calls	0	error	exception termination.
-
-Inbound call 102 ivrGiveUp user hang up during IVR.
-
-Inbound call 103 waitingGiveUp user gives up while queuing.
-
-Inbound call 104 ringingGiveUp user give up during ringing.
-
-Inbound call 105 no agent online.
-
-Inbound call 106 notWorkTime outside working hours.   
-
-Inbound call 107 ivrEnd ends after IVR.
-
-Inbound call 100 blackList. 
-
-Outbound call 2 unconnected unanswered.
-
-Outgoing call        108        restrictedCallee    the callee is restricted due to high risk.
-
-Outbound call 109 too many requests outbound over-frequency limit.
-
-Outgoing call             110	        restrictedArea	    valid values for the area where outgoing calls are restricted.
-
-Outbound call 111 restrictedTime outgoing call time limit.
-                         
-Outgoing call 201 unknown unknown status.
-
-Outgoing call 202 notAnswer callee not answered.
-
-Outgoing call            203	    userReject	callee rejects and hangs up.
-
-Outbound call 204 powerOff callee is powered off.
-
-Outbound call 205 number does not exist the callee's number is non - existent.
-
-Outgoing call 206 busy callee is busy.
-
-Outbound call 207 out of credit callee in arrears.
-
-Outbound call 208 operator channel exception.
-
-Outgoing call 209 callerCancel call cancellation by the caller.
-
-Outgoing call 210 notInService callee out of service area.
-
-Incoming and outgoing calls 211 clientError client errors.
-Outbound call 212 carrier blocked.
+     * Set Refers to the EndStatus field.
+     * @param EndStatusString Refers to the EndStatus field.
      */
     public void setEndStatusString(String EndStatusString) {
         this.EndStatusString = EndStatusString;

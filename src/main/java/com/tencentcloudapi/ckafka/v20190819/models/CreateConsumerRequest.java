@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateConsumerRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Group name.
+    * Consumer group name.
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * Topic name. You must specify the name of an existing topic for either `TopicName` or `TopicNameList`.
+    * Topic name. one of TopicName or TopicNameList must display a specified existing topic name.
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Topic name array.
+    * Topic name list.
     */
     @SerializedName("TopicNameList")
     @Expose
     private String [] TopicNameList;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api. 
+     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * @param InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Group name. 
-     * @return GroupName Group name.
+     * Get Consumer group name. 
+     * @return GroupName Consumer group name.
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set Group name.
-     * @param GroupName Group name.
+     * Set Consumer group name.
+     * @param GroupName Consumer group name.
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get Topic name. You must specify the name of an existing topic for either `TopicName` or `TopicNameList`. 
-     * @return TopicName Topic name. You must specify the name of an existing topic for either `TopicName` or `TopicNameList`.
+     * Get Topic name. one of TopicName or TopicNameList must display a specified existing topic name. 
+     * @return TopicName Topic name. one of TopicName or TopicNameList must display a specified existing topic name.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Topic name. You must specify the name of an existing topic for either `TopicName` or `TopicNameList`.
-     * @param TopicName Topic name. You must specify the name of an existing topic for either `TopicName` or `TopicNameList`.
+     * Set Topic name. one of TopicName or TopicNameList must display a specified existing topic name.
+     * @param TopicName Topic name. one of TopicName or TopicNameList must display a specified existing topic name.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Topic name array. 
-     * @return TopicNameList Topic name array.
+     * Get Topic name list. 
+     * @return TopicNameList Topic name list.
      */
     public String [] getTopicNameList() {
         return this.TopicNameList;
     }
 
     /**
-     * Set Topic name array.
-     * @param TopicNameList Topic name array.
+     * Set Topic name list.
+     * @param TopicNameList Topic name list.
      */
     public void setTopicNameList(String [] TopicNameList) {
         this.TopicNameList = TopicNameList;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDatahubTopicsRequest extends AbstractModel {
 
     /**
-    * Keyword for query
+    * Search term.
     */
     @SerializedName("SearchWord")
     @Expose
@@ -45,16 +45,37 @@ public class DescribeDatahubTopicsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get Keyword for query 
-     * @return SearchWord Keyword for query
+    * Specifies whether to query the topic list from the connection.
+    */
+    @SerializedName("QueryFromConnectResource")
+    @Expose
+    private Boolean QueryFromConnectResource;
+
+    /**
+    * Connection ID.
+    */
+    @SerializedName("ConnectResourceId")
+    @Expose
+    private String ConnectResourceId;
+
+    /**
+    * topic resource expression.
+    */
+    @SerializedName("TopicRegularExpression")
+    @Expose
+    private String TopicRegularExpression;
+
+    /**
+     * Get Search term. 
+     * @return SearchWord Search term.
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set Keyword for query
-     * @param SearchWord Keyword for query
+     * Set Search term.
+     * @param SearchWord Search term.
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
@@ -92,6 +113,54 @@ public class DescribeDatahubTopicsRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get Specifies whether to query the topic list from the connection. 
+     * @return QueryFromConnectResource Specifies whether to query the topic list from the connection.
+     */
+    public Boolean getQueryFromConnectResource() {
+        return this.QueryFromConnectResource;
+    }
+
+    /**
+     * Set Specifies whether to query the topic list from the connection.
+     * @param QueryFromConnectResource Specifies whether to query the topic list from the connection.
+     */
+    public void setQueryFromConnectResource(Boolean QueryFromConnectResource) {
+        this.QueryFromConnectResource = QueryFromConnectResource;
+    }
+
+    /**
+     * Get Connection ID. 
+     * @return ConnectResourceId Connection ID.
+     */
+    public String getConnectResourceId() {
+        return this.ConnectResourceId;
+    }
+
+    /**
+     * Set Connection ID.
+     * @param ConnectResourceId Connection ID.
+     */
+    public void setConnectResourceId(String ConnectResourceId) {
+        this.ConnectResourceId = ConnectResourceId;
+    }
+
+    /**
+     * Get topic resource expression. 
+     * @return TopicRegularExpression topic resource expression.
+     */
+    public String getTopicRegularExpression() {
+        return this.TopicRegularExpression;
+    }
+
+    /**
+     * Set topic resource expression.
+     * @param TopicRegularExpression topic resource expression.
+     */
+    public void setTopicRegularExpression(String TopicRegularExpression) {
+        this.TopicRegularExpression = TopicRegularExpression;
+    }
+
     public DescribeDatahubTopicsRequest() {
     }
 
@@ -109,6 +178,15 @@ public class DescribeDatahubTopicsRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.QueryFromConnectResource != null) {
+            this.QueryFromConnectResource = new Boolean(source.QueryFromConnectResource);
+        }
+        if (source.ConnectResourceId != null) {
+            this.ConnectResourceId = new String(source.ConnectResourceId);
+        }
+        if (source.TopicRegularExpression != null) {
+            this.TopicRegularExpression = new String(source.TopicRegularExpression);
+        }
     }
 
 
@@ -119,6 +197,9 @@ public class DescribeDatahubTopicsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "QueryFromConnectResource", this.QueryFromConnectResource);
+        this.setParamSimple(map, prefix + "ConnectResourceId", this.ConnectResourceId);
+        this.setParamSimple(map, prefix + "TopicRegularExpression", this.TopicRegularExpression);
 
     }
 }

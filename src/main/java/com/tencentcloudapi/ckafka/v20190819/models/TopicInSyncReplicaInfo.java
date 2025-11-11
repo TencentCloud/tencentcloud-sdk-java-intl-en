@@ -52,32 +52,28 @@ public class TopicInSyncReplicaInfo extends AbstractModel {
     private String InSyncReplica;
 
     /**
-    * Starting offset
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Start Offset.
     */
     @SerializedName("BeginOffset")
     @Expose
     private Long BeginOffset;
 
     /**
-    * Ending offset
-Note: this field may return null, indicating that no valid values can be obtained.
+    * End Offset.
     */
     @SerializedName("EndOffset")
     @Expose
     private Long EndOffset;
 
     /**
-    * Number of messages
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Message count.
     */
     @SerializedName("MessageCount")
     @Expose
     private Long MessageCount;
 
     /**
-    * Unsynced replica set
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Unsynced replica.
     */
     @SerializedName("OutOfSyncReplica")
     @Expose
@@ -148,80 +144,64 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Starting offset
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return BeginOffset Starting offset
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Start Offset. 
+     * @return BeginOffset Start Offset.
      */
     public Long getBeginOffset() {
         return this.BeginOffset;
     }
 
     /**
-     * Set Starting offset
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param BeginOffset Starting offset
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Start Offset.
+     * @param BeginOffset Start Offset.
      */
     public void setBeginOffset(Long BeginOffset) {
         this.BeginOffset = BeginOffset;
     }
 
     /**
-     * Get Ending offset
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return EndOffset Ending offset
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get End Offset. 
+     * @return EndOffset End Offset.
      */
     public Long getEndOffset() {
         return this.EndOffset;
     }
 
     /**
-     * Set Ending offset
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EndOffset Ending offset
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set End Offset.
+     * @param EndOffset End Offset.
      */
     public void setEndOffset(Long EndOffset) {
         this.EndOffset = EndOffset;
     }
 
     /**
-     * Get Number of messages
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MessageCount Number of messages
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Message count. 
+     * @return MessageCount Message count.
      */
     public Long getMessageCount() {
         return this.MessageCount;
     }
 
     /**
-     * Set Number of messages
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MessageCount Number of messages
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Message count.
+     * @param MessageCount Message count.
      */
     public void setMessageCount(Long MessageCount) {
         this.MessageCount = MessageCount;
     }
 
     /**
-     * Get Unsynced replica set
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OutOfSyncReplica Unsynced replica set
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Unsynced replica. 
+     * @return OutOfSyncReplica Unsynced replica.
      */
     public String getOutOfSyncReplica() {
         return this.OutOfSyncReplica;
     }
 
     /**
-     * Set Unsynced replica set
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OutOfSyncReplica Unsynced replica set
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Unsynced replica.
+     * @param OutOfSyncReplica Unsynced replica.
      */
     public void setOutOfSyncReplica(String OutOfSyncReplica) {
         this.OutOfSyncReplica = OutOfSyncReplica;

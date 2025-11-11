@@ -24,97 +24,92 @@ import java.util.HashMap;
 public class Instance extends AbstractModel {
 
     /**
-    * Instance ID
+    * The ckafka cluster instance Id.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * Specifies the Name of the ckafka cluster instance.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+    * Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Whether it is an open-source instance. true: yes, false: no
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies whether the instance is open-source. valid values: true (open-source), false (not open-source).
     */
     @SerializedName("IfCommunity")
     @Expose
     private Boolean IfCommunity;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get The ckafka cluster instance Id. 
+     * @return InstanceId The ckafka cluster instance Id.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set The ckafka cluster instance Id.
+     * @param InstanceId The ckafka cluster instance Id.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Specifies the Name of the ckafka cluster instance. 
+     * @return InstanceName Specifies the Name of the ckafka cluster instance.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Specifies the Name of the ckafka cluster instance.
+     * @param InstanceName Specifies the Name of the ckafka cluster instance.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed 
-     * @return Status Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+     * Get Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed. 
+     * @return Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
-     * @param Status Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+     * Set Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+     * @param Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Whether it is an open-source instance. true: yes, false: no
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IfCommunity Whether it is an open-source instance. true: yes, false: no
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether the instance is open-source. valid values: true (open-source), false (not open-source). 
+     * @return IfCommunity Specifies whether the instance is open-source. valid values: true (open-source), false (not open-source).
      */
     public Boolean getIfCommunity() {
         return this.IfCommunity;
     }
 
     /**
-     * Set Whether it is an open-source instance. true: yes, false: no
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IfCommunity Whether it is an open-source instance. true: yes, false: no
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether the instance is open-source. valid values: true (open-source), false (not open-source).
+     * @param IfCommunity Specifies whether the instance is open-source. valid values: true (open-source), false (not open-source).
      */
     public void setIfCommunity(Boolean IfCommunity) {
         this.IfCommunity = IfCommunity;

@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class InstanceResponse extends AbstractModel {
 
     /**
-    * List of eligible instances
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the list of instances meeting the conditions.
     */
     @SerializedName("InstanceList")
     @Expose
     private Instance [] InstanceList;
 
     /**
-    * Total number of eligible results
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Total results that meet the conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get List of eligible instances
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceList List of eligible instances
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the list of instances meeting the conditions. 
+     * @return InstanceList Specifies the list of instances meeting the conditions.
      */
     public Instance [] getInstanceList() {
         return this.InstanceList;
     }
 
     /**
-     * Set List of eligible instances
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param InstanceList List of eligible instances
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the list of instances meeting the conditions.
+     * @param InstanceList Specifies the list of instances meeting the conditions.
      */
     public void setInstanceList(Instance [] InstanceList) {
         this.InstanceList = InstanceList;
     }
 
     /**
-     * Get Total number of eligible results
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number of eligible results
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Total results that meet the conditions. 
+     * @return TotalCount Total results that meet the conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of eligible results
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total number of eligible results
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Total results that meet the conditions.
+     * @param TotalCount Total results that meet the conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

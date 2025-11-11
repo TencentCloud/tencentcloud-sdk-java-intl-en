@@ -45,6 +45,13 @@ public class BindNumberCallInInterfaceRequest extends AbstractModel {
     private Interface CallInInterface;
 
     /**
+    * Bind number type. specifies the type of the bind number. inner: internal number | number: line number.
+    */
+    @SerializedName("NumberType")
+    @Expose
+    private String NumberType;
+
+    /**
      * Get App ID (required). can be used to view https://console.cloud.tencent.com/ccc. 
      * @return SdkAppId App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
      */
@@ -92,6 +99,22 @@ public class BindNumberCallInInterfaceRequest extends AbstractModel {
         this.CallInInterface = CallInInterface;
     }
 
+    /**
+     * Get Bind number type. specifies the type of the bind number. inner: internal number | number: line number. 
+     * @return NumberType Bind number type. specifies the type of the bind number. inner: internal number | number: line number.
+     */
+    public String getNumberType() {
+        return this.NumberType;
+    }
+
+    /**
+     * Set Bind number type. specifies the type of the bind number. inner: internal number | number: line number.
+     * @param NumberType Bind number type. specifies the type of the bind number. inner: internal number | number: line number.
+     */
+    public void setNumberType(String NumberType) {
+        this.NumberType = NumberType;
+    }
+
     public BindNumberCallInInterfaceRequest() {
     }
 
@@ -109,6 +132,9 @@ public class BindNumberCallInInterfaceRequest extends AbstractModel {
         if (source.CallInInterface != null) {
             this.CallInInterface = new Interface(source.CallInInterface);
         }
+        if (source.NumberType != null) {
+            this.NumberType = new String(source.NumberType);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class BindNumberCallInInterfaceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "Number", this.Number);
         this.setParamObj(map, prefix + "CallInInterface.", this.CallInInterface);
+        this.setParamSimple(map, prefix + "NumberType", this.NumberType);
 
     }
 }

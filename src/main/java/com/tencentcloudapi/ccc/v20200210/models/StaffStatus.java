@@ -52,6 +52,27 @@ public class StaffStatus extends AbstractModel {
     private String SessionId;
 
     /**
+    * Reason for break.
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
+    * Agent email.
+    */
+    @SerializedName("StaffEmail")
+    @Expose
+    private String StaffEmail;
+
+    /**
+    * Agent id.
+    */
+    @SerializedName("StaffNo")
+    @Expose
+    private String StaffNo;
+
+    /**
      * Get Specifies the cursor used for querying in pagination scenarios. 
      * @return Cursor Specifies the cursor used for querying in pagination scenarios.
      */
@@ -115,6 +136,54 @@ public class StaffStatus extends AbstractModel {
         this.SessionId = SessionId;
     }
 
+    /**
+     * Get Reason for break. 
+     * @return Reason Reason for break.
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set Reason for break.
+     * @param Reason Reason for break.
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
+    /**
+     * Get Agent email. 
+     * @return StaffEmail Agent email.
+     */
+    public String getStaffEmail() {
+        return this.StaffEmail;
+    }
+
+    /**
+     * Set Agent email.
+     * @param StaffEmail Agent email.
+     */
+    public void setStaffEmail(String StaffEmail) {
+        this.StaffEmail = StaffEmail;
+    }
+
+    /**
+     * Get Agent id. 
+     * @return StaffNo Agent id.
+     */
+    public String getStaffNo() {
+        return this.StaffNo;
+    }
+
+    /**
+     * Set Agent id.
+     * @param StaffNo Agent id.
+     */
+    public void setStaffNo(String StaffNo) {
+        this.StaffNo = StaffNo;
+    }
+
     public StaffStatus() {
     }
 
@@ -135,6 +204,15 @@ public class StaffStatus extends AbstractModel {
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
+        if (source.StaffEmail != null) {
+            this.StaffEmail = new String(source.StaffEmail);
+        }
+        if (source.StaffNo != null) {
+            this.StaffNo = new String(source.StaffNo);
+        }
     }
 
 
@@ -146,6 +224,9 @@ public class StaffStatus extends AbstractModel {
         this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamSimple(map, prefix + "StaffEmail", this.StaffEmail);
+        this.setParamSimple(map, prefix + "StaffNo", this.StaffNo);
 
     }
 }

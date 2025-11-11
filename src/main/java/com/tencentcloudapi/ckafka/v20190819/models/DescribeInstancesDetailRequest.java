@@ -208,7 +208,9 @@ public class DescribeInstancesDetailRequest extends AbstractModel {
     /**
      * Get This parameter has been deprecated and replaced with `InstanceIdList`. 
      * @return InstanceIds This parameter has been deprecated and replaced with `InstanceIdList`.
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceIds() {
         return this.InstanceIds;
     }
@@ -216,7 +218,9 @@ public class DescribeInstancesDetailRequest extends AbstractModel {
     /**
      * Set This parameter has been deprecated and replaced with `InstanceIdList`.
      * @param InstanceIds This parameter has been deprecated and replaced with `InstanceIdList`.
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceIds(String InstanceIds) {
         this.InstanceIds = InstanceIds;
     }

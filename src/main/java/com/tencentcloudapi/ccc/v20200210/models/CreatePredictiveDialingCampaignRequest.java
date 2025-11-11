@@ -73,7 +73,7 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
     private Long Priority;
 
     /**
-    * Expected call drop rate, percentage, 5 - 50.
+    * Expected call drop rate. value range: 0-50%.
     */
     @SerializedName("ExpectedAbandonRate")
     @Expose
@@ -262,16 +262,16 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
     }
 
     /**
-     * Get Expected call drop rate, percentage, 5 - 50. 
-     * @return ExpectedAbandonRate Expected call drop rate, percentage, 5 - 50.
+     * Get Expected call drop rate. value range: 0-50%. 
+     * @return ExpectedAbandonRate Expected call drop rate. value range: 0-50%.
      */
     public Long getExpectedAbandonRate() {
         return this.ExpectedAbandonRate;
     }
 
     /**
-     * Set Expected call drop rate, percentage, 5 - 50.
-     * @param ExpectedAbandonRate Expected call drop rate, percentage, 5 - 50.
+     * Set Expected call drop rate. value range: 0-50%.
+     * @param ExpectedAbandonRate Expected call drop rate. value range: 0-50%.
      */
     public void setExpectedAbandonRate(Long ExpectedAbandonRate) {
         this.ExpectedAbandonRate = ExpectedAbandonRate;

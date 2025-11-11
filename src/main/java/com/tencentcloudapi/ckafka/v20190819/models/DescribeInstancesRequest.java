@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel {
 
     /**
-    * (Filter) filter by instance ID
+    * (Query condition) filter by the ckafka cluster instance Id.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * (Filter) filter by instance name. Fuzzy search is supported
+    * Search term. example: (query condition) filter by instance name. fuzzy query is supported.
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+    * Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
     */
     @SerializedName("Status")
     @Expose
@@ -66,55 +66,55 @@ public class DescribeInstancesRequest extends AbstractModel {
     private String TagKey;
 
     /**
-    * VPC ID.
+    * (Query condition) VPC Id.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-     * Get (Filter) filter by instance ID 
-     * @return InstanceId (Filter) filter by instance ID
+     * Get (Query condition) filter by the ckafka cluster instance Id. 
+     * @return InstanceId (Query condition) filter by the ckafka cluster instance Id.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set (Filter) filter by instance ID
-     * @param InstanceId (Filter) filter by instance ID
+     * Set (Query condition) filter by the ckafka cluster instance Id.
+     * @param InstanceId (Query condition) filter by the ckafka cluster instance Id.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get (Filter) filter by instance name. Fuzzy search is supported 
-     * @return SearchWord (Filter) filter by instance name. Fuzzy search is supported
+     * Get Search term. example: (query condition) filter by instance name. fuzzy query is supported. 
+     * @return SearchWord Search term. example: (query condition) filter by instance name. fuzzy query is supported.
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set (Filter) filter by instance name. Fuzzy search is supported
-     * @param SearchWord (Filter) filter by instance name. Fuzzy search is supported
+     * Set Search term. example: (query condition) filter by instance name. fuzzy query is supported.
+     * @param SearchWord Search term. example: (query condition) filter by instance name. fuzzy query is supported.
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default 
-     * @return Status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+     * Get Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all. 
+     * @return Status Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
-     * @param Status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+     * Set Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
+     * @param Status Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
@@ -155,7 +155,9 @@ public class DescribeInstancesRequest extends AbstractModel {
     /**
      * Get Tag key value (this field has been deprecated). 
      * @return TagKey Tag key value (this field has been deprecated).
+     * @deprecated
      */
+    @Deprecated
     public String getTagKey() {
         return this.TagKey;
     }
@@ -163,22 +165,24 @@ public class DescribeInstancesRequest extends AbstractModel {
     /**
      * Set Tag key value (this field has been deprecated).
      * @param TagKey Tag key value (this field has been deprecated).
+     * @deprecated
      */
+    @Deprecated
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get VPC ID. 
-     * @return VpcId VPC ID.
+     * Get (Query condition) VPC Id. 
+     * @return VpcId (Query condition) VPC Id.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID.
-     * @param VpcId VPC ID.
+     * Set (Query condition) VPC Id.
+     * @param VpcId (Query condition) VPC Id.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

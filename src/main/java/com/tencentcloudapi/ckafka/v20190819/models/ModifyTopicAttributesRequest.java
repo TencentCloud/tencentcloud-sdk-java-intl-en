@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyTopicAttributesRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * The ckafka cluster instance Id.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Topic name.
+    * Topic name
     */
     @SerializedName("TopicName")
     @Expose
@@ -73,18 +73,18 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     private Long RetentionMs;
 
     /**
-    * Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
-    */
-    @SerializedName("SegmentMs")
-    @Expose
-    private Long SegmentMs;
-
-    /**
     * Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
     */
     @SerializedName("MaxMessageBytes")
     @Expose
     private Long MaxMessageBytes;
+
+    /**
+    * Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+    */
+    @SerializedName("SegmentMs")
+    @Expose
+    private Long SegmentMs;
 
     /**
     * Message deletion policy. Valid values: delete, compact
@@ -108,7 +108,7 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     private Long EnableAclRule;
 
     /**
-    * Name of the preset ACL rule.
+    * ACL rule name.
     */
     @SerializedName("AclRuleName")
     @Expose
@@ -129,53 +129,53 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * Production throttling in MB/sec.
+    * Production traffic throttling in MB/s. set to -1 to disable throttling.
     */
     @SerializedName("QuotaProducerByteRate")
     @Expose
     private Long QuotaProducerByteRate;
 
     /**
-    * Consumption throttling in MB/sec.
+    * Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
     */
     @SerializedName("QuotaConsumerByteRate")
     @Expose
     private Long QuotaConsumerByteRate;
 
     /**
-    * The number of topic replicas.
+    * Number of topic replicas. valid values: 1, 3.
     */
     @SerializedName("ReplicaNum")
     @Expose
     private Long ReplicaNum;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get The ckafka cluster instance Id. 
+     * @return InstanceId The ckafka cluster instance Id.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set The ckafka cluster instance Id.
+     * @param InstanceId The ckafka cluster instance Id.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Topic name. 
-     * @return TopicName Topic name.
+     * Get Topic name 
+     * @return TopicName Topic name
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Topic name.
-     * @param TopicName Topic name.
+     * Set Topic name
+     * @param TopicName Topic name
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -262,22 +262,6 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get Segment rolling duration in ms. The current minimum value is 86,400,000 ms. 
-     * @return SegmentMs Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
-     */
-    public Long getSegmentMs() {
-        return this.SegmentMs;
-    }
-
-    /**
-     * Set Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
-     * @param SegmentMs Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
-     */
-    public void setSegmentMs(Long SegmentMs) {
-        this.SegmentMs = SegmentMs;
-    }
-
-    /**
      * Get Max message size in bytes. Max value: 8,388,608 bytes (8 MB). 
      * @return MaxMessageBytes Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
      */
@@ -291,6 +275,22 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
      */
     public void setMaxMessageBytes(Long MaxMessageBytes) {
         this.MaxMessageBytes = MaxMessageBytes;
+    }
+
+    /**
+     * Get Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms. 
+     * @return SegmentMs Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+     */
+    public Long getSegmentMs() {
+        return this.SegmentMs;
+    }
+
+    /**
+     * Set Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+     * @param SegmentMs Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+     */
+    public void setSegmentMs(Long SegmentMs) {
+        this.SegmentMs = SegmentMs;
     }
 
     /**
@@ -342,16 +342,16 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get Name of the preset ACL rule. 
-     * @return AclRuleName Name of the preset ACL rule.
+     * Get ACL rule name. 
+     * @return AclRuleName ACL rule name.
      */
     public String getAclRuleName() {
         return this.AclRuleName;
     }
 
     /**
-     * Set Name of the preset ACL rule.
-     * @param AclRuleName Name of the preset ACL rule.
+     * Set ACL rule name.
+     * @param AclRuleName ACL rule name.
      */
     public void setAclRuleName(String AclRuleName) {
         this.AclRuleName = AclRuleName;
@@ -390,48 +390,48 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get Production throttling in MB/sec. 
-     * @return QuotaProducerByteRate Production throttling in MB/sec.
+     * Get Production traffic throttling in MB/s. set to -1 to disable throttling. 
+     * @return QuotaProducerByteRate Production traffic throttling in MB/s. set to -1 to disable throttling.
      */
     public Long getQuotaProducerByteRate() {
         return this.QuotaProducerByteRate;
     }
 
     /**
-     * Set Production throttling in MB/sec.
-     * @param QuotaProducerByteRate Production throttling in MB/sec.
+     * Set Production traffic throttling in MB/s. set to -1 to disable throttling.
+     * @param QuotaProducerByteRate Production traffic throttling in MB/s. set to -1 to disable throttling.
      */
     public void setQuotaProducerByteRate(Long QuotaProducerByteRate) {
         this.QuotaProducerByteRate = QuotaProducerByteRate;
     }
 
     /**
-     * Get Consumption throttling in MB/sec. 
-     * @return QuotaConsumerByteRate Consumption throttling in MB/sec.
+     * Get Consumption traffic throttling in MB/s. set to -1 for unlimited consumption. 
+     * @return QuotaConsumerByteRate Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
      */
     public Long getQuotaConsumerByteRate() {
         return this.QuotaConsumerByteRate;
     }
 
     /**
-     * Set Consumption throttling in MB/sec.
-     * @param QuotaConsumerByteRate Consumption throttling in MB/sec.
+     * Set Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
+     * @param QuotaConsumerByteRate Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
      */
     public void setQuotaConsumerByteRate(Long QuotaConsumerByteRate) {
         this.QuotaConsumerByteRate = QuotaConsumerByteRate;
     }
 
     /**
-     * Get The number of topic replicas. 
-     * @return ReplicaNum The number of topic replicas.
+     * Get Number of topic replicas. valid values: 1, 3. 
+     * @return ReplicaNum Number of topic replicas. valid values: 1, 3.
      */
     public Long getReplicaNum() {
         return this.ReplicaNum;
     }
 
     /**
-     * Set The number of topic replicas.
-     * @param ReplicaNum The number of topic replicas.
+     * Set Number of topic replicas. valid values: 1, 3.
+     * @param ReplicaNum Number of topic replicas. valid values: 1, 3.
      */
     public void setReplicaNum(Long ReplicaNum) {
         this.ReplicaNum = ReplicaNum;
@@ -466,11 +466,11 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
         if (source.RetentionMs != null) {
             this.RetentionMs = new Long(source.RetentionMs);
         }
-        if (source.SegmentMs != null) {
-            this.SegmentMs = new Long(source.SegmentMs);
-        }
         if (source.MaxMessageBytes != null) {
             this.MaxMessageBytes = new Long(source.MaxMessageBytes);
+        }
+        if (source.SegmentMs != null) {
+            this.SegmentMs = new Long(source.SegmentMs);
         }
         if (source.CleanUpPolicy != null) {
             this.CleanUpPolicy = new String(source.CleanUpPolicy);
@@ -519,8 +519,8 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MinInsyncReplicas", this.MinInsyncReplicas);
         this.setParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
         this.setParamSimple(map, prefix + "RetentionMs", this.RetentionMs);
-        this.setParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
         this.setParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
+        this.setParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
         this.setParamSimple(map, prefix + "CleanUpPolicy", this.CleanUpPolicy);
         this.setParamArraySimple(map, prefix + "IpWhiteList.", this.IpWhiteList);
         this.setParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
