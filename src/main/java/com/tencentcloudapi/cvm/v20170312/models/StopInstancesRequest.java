@@ -72,7 +72,9 @@ This parameter is only valid for some pay-as-you-go instances using cloud disks.
     /**
      * Get (Disused. Please use `StopType` instead.) Whether to forcibly shut down an instance after a normal shutdown fails. Valid values: <br><li>`TRUE`: yes;<br><li>`FALSE`: no<br><br>Default value: `FALSE`.  
      * @return ForceStop (Disused. Please use `StopType` instead.) Whether to forcibly shut down an instance after a normal shutdown fails. Valid values: <br><li>`TRUE`: yes;<br><li>`FALSE`: no<br><br>Default value: `FALSE`. 
+     * @deprecated
      */
+    @Deprecated
     public Boolean getForceStop() {
         return this.ForceStop;
     }
@@ -80,7 +82,9 @@ This parameter is only valid for some pay-as-you-go instances using cloud disks.
     /**
      * Set (Disused. Please use `StopType` instead.) Whether to forcibly shut down an instance after a normal shutdown fails. Valid values: <br><li>`TRUE`: yes;<br><li>`FALSE`: no<br><br>Default value: `FALSE`. 
      * @param ForceStop (Disused. Please use `StopType` instead.) Whether to forcibly shut down an instance after a normal shutdown fails. Valid values: <br><li>`TRUE`: yes;<br><li>`FALSE`: no<br><br>Default value: `FALSE`. 
+     * @deprecated
      */
+    @Deprecated
     public void setForceStop(Boolean ForceStop) {
         this.ForceStop = ForceStop;
     }

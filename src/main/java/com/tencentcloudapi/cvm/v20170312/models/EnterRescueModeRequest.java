@@ -52,6 +52,13 @@ public class EnterRescueModeRequest extends AbstractModel {
     private Boolean ForceStop;
 
     /**
+    * 
+    */
+    @SerializedName("StopType")
+    @Expose
+    private String StopType;
+
+    /**
      * Get Instance ID Needs to Enter Rescue Mode 
      * @return InstanceId Instance ID Needs to Enter Rescue Mode
      */
@@ -102,7 +109,9 @@ public class EnterRescueModeRequest extends AbstractModel {
     /**
      * Get Whether to perform forced shutdown. 
      * @return ForceStop Whether to perform forced shutdown.
+     * @deprecated
      */
+    @Deprecated
     public Boolean getForceStop() {
         return this.ForceStop;
     }
@@ -110,9 +119,27 @@ public class EnterRescueModeRequest extends AbstractModel {
     /**
      * Set Whether to perform forced shutdown.
      * @param ForceStop Whether to perform forced shutdown.
+     * @deprecated
      */
+    @Deprecated
     public void setForceStop(Boolean ForceStop) {
         this.ForceStop = ForceStop;
+    }
+
+    /**
+     * Get  
+     * @return StopType 
+     */
+    public String getStopType() {
+        return this.StopType;
+    }
+
+    /**
+     * Set 
+     * @param StopType 
+     */
+    public void setStopType(String StopType) {
+        this.StopType = StopType;
     }
 
     public EnterRescueModeRequest() {
@@ -135,6 +162,9 @@ public class EnterRescueModeRequest extends AbstractModel {
         if (source.ForceStop != null) {
             this.ForceStop = new Boolean(source.ForceStop);
         }
+        if (source.StopType != null) {
+            this.StopType = new String(source.StopType);
+        }
     }
 
 
@@ -146,6 +176,7 @@ public class EnterRescueModeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "ForceStop", this.ForceStop);
+        this.setParamSimple(map, prefix + "StopType", this.StopType);
 
     }
 }

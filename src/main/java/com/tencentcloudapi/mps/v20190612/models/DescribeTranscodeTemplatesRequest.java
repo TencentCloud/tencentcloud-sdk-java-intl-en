@@ -116,6 +116,41 @@ no_config: Not configured.
     private String CompressType;
 
     /**
+    * Enhancement scenario configuration. Valid values:
+<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
+<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
+<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
+<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
+<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
+<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
+<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
+<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
+    */
+    @SerializedName("EnhanceSceneType")
+    @Expose
+    private String EnhanceSceneType;
+
+    /**
+    * Enhanced transcoding type. Valid values:
+<li>Common: standard transcoding.</li>
+<li>TEHD-100: top speed codec video transcoding.</li>
+<li>TEHD-200: top speed codec audio transcoding.</li>
+    */
+    @SerializedName("EnhanceTranscodeType")
+    @Expose
+    private String EnhanceTranscodeType;
+
+    /**
+    * Enhancement type. Valid values:
+<li>VideoEnhance: video enhancement only.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>VideoAudioEnhance: video and audio enhancement included.</li>
+    */
+    @SerializedName("EnhanceType")
+    @Expose
+    private String EnhanceType;
+
+    /**
      * Get Unique ID filter of transcoding templates. Array length limit: 100. 
      * @return Definitions Unique ID filter of transcoding templates. Array length limit: 100.
      */
@@ -363,6 +398,110 @@ no_config: Not configured.
         this.CompressType = CompressType;
     }
 
+    /**
+     * Get Enhancement scenario configuration. Valid values:
+<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
+<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
+<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
+<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
+<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
+<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
+<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
+<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li> 
+     * @return EnhanceSceneType Enhancement scenario configuration. Valid values:
+<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
+<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
+<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
+<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
+<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
+<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
+<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
+<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
+     */
+    public String getEnhanceSceneType() {
+        return this.EnhanceSceneType;
+    }
+
+    /**
+     * Set Enhancement scenario configuration. Valid values:
+<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
+<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
+<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
+<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
+<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
+<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
+<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
+<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
+     * @param EnhanceSceneType Enhancement scenario configuration. Valid values:
+<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
+<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
+<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
+<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
+<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
+<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
+<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
+<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
+     */
+    public void setEnhanceSceneType(String EnhanceSceneType) {
+        this.EnhanceSceneType = EnhanceSceneType;
+    }
+
+    /**
+     * Get Enhanced transcoding type. Valid values:
+<li>Common: standard transcoding.</li>
+<li>TEHD-100: top speed codec video transcoding.</li>
+<li>TEHD-200: top speed codec audio transcoding.</li> 
+     * @return EnhanceTranscodeType Enhanced transcoding type. Valid values:
+<li>Common: standard transcoding.</li>
+<li>TEHD-100: top speed codec video transcoding.</li>
+<li>TEHD-200: top speed codec audio transcoding.</li>
+     */
+    public String getEnhanceTranscodeType() {
+        return this.EnhanceTranscodeType;
+    }
+
+    /**
+     * Set Enhanced transcoding type. Valid values:
+<li>Common: standard transcoding.</li>
+<li>TEHD-100: top speed codec video transcoding.</li>
+<li>TEHD-200: top speed codec audio transcoding.</li>
+     * @param EnhanceTranscodeType Enhanced transcoding type. Valid values:
+<li>Common: standard transcoding.</li>
+<li>TEHD-100: top speed codec video transcoding.</li>
+<li>TEHD-200: top speed codec audio transcoding.</li>
+     */
+    public void setEnhanceTranscodeType(String EnhanceTranscodeType) {
+        this.EnhanceTranscodeType = EnhanceTranscodeType;
+    }
+
+    /**
+     * Get Enhancement type. Valid values:
+<li>VideoEnhance: video enhancement only.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>VideoAudioEnhance: video and audio enhancement included.</li> 
+     * @return EnhanceType Enhancement type. Valid values:
+<li>VideoEnhance: video enhancement only.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>VideoAudioEnhance: video and audio enhancement included.</li>
+     */
+    public String getEnhanceType() {
+        return this.EnhanceType;
+    }
+
+    /**
+     * Set Enhancement type. Valid values:
+<li>VideoEnhance: video enhancement only.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>VideoAudioEnhance: video and audio enhancement included.</li>
+     * @param EnhanceType Enhancement type. Valid values:
+<li>VideoEnhance: video enhancement only.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>VideoAudioEnhance: video and audio enhancement included.</li>
+     */
+    public void setEnhanceType(String EnhanceType) {
+        this.EnhanceType = EnhanceType;
+    }
+
     public DescribeTranscodeTemplatesRequest() {
     }
 
@@ -404,6 +543,15 @@ no_config: Not configured.
         if (source.CompressType != null) {
             this.CompressType = new String(source.CompressType);
         }
+        if (source.EnhanceSceneType != null) {
+            this.EnhanceSceneType = new String(source.EnhanceSceneType);
+        }
+        if (source.EnhanceTranscodeType != null) {
+            this.EnhanceTranscodeType = new String(source.EnhanceTranscodeType);
+        }
+        if (source.EnhanceType != null) {
+            this.EnhanceType = new String(source.EnhanceType);
+        }
     }
 
 
@@ -421,6 +569,9 @@ no_config: Not configured.
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "CompressType", this.CompressType);
+        this.setParamSimple(map, prefix + "EnhanceSceneType", this.EnhanceSceneType);
+        this.setParamSimple(map, prefix + "EnhanceTranscodeType", this.EnhanceTranscodeType);
+        this.setParamSimple(map, prefix + "EnhanceType", this.EnhanceType);
 
     }
 }

@@ -38,6 +38,13 @@ public class EventSettingsReq extends AbstractModel {
     private String InputAttachment;
 
     /**
+    * When the type is FIXED_PTS, it is mandatory and defaults to 0
+    */
+    @SerializedName("PipelineId")
+    @Expose
+    private Long PipelineId;
+
+    /**
     * Name of the output group to attach. This parameter is required if `EventType` is `TIMED_RECORD`.
     */
     @SerializedName("OutputGroupName")
@@ -137,6 +144,22 @@ public class EventSettingsReq extends AbstractModel {
      */
     public void setInputAttachment(String InputAttachment) {
         this.InputAttachment = InputAttachment;
+    }
+
+    /**
+     * Get When the type is FIXED_PTS, it is mandatory and defaults to 0 
+     * @return PipelineId When the type is FIXED_PTS, it is mandatory and defaults to 0
+     */
+    public Long getPipelineId() {
+        return this.PipelineId;
+    }
+
+    /**
+     * Set When the type is FIXED_PTS, it is mandatory and defaults to 0
+     * @param PipelineId When the type is FIXED_PTS, it is mandatory and defaults to 0
+     */
+    public void setPipelineId(Long PipelineId) {
+        this.PipelineId = PipelineId;
     }
 
     /**
@@ -313,6 +336,9 @@ public class EventSettingsReq extends AbstractModel {
         if (source.InputAttachment != null) {
             this.InputAttachment = new String(source.InputAttachment);
         }
+        if (source.PipelineId != null) {
+            this.PipelineId = new Long(source.PipelineId);
+        }
         if (source.OutputGroupName != null) {
             this.OutputGroupName = new String(source.OutputGroupName);
         }
@@ -358,6 +384,7 @@ public class EventSettingsReq extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EventType", this.EventType);
         this.setParamSimple(map, prefix + "InputAttachment", this.InputAttachment);
+        this.setParamSimple(map, prefix + "PipelineId", this.PipelineId);
         this.setParamSimple(map, prefix + "OutputGroupName", this.OutputGroupName);
         this.setParamSimple(map, prefix + "ManifestName", this.ManifestName);
         this.setParamArrayObj(map, prefix + "Destinations.", this.Destinations);

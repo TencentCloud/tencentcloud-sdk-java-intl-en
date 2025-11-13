@@ -24,17 +24,17 @@ import java.util.HashMap;
 public class AiAnalysisResult extends AbstractModel {
 
     /**
-    * Task type. valid values:.
-<Li>Classification: intelligent classification.</li>.
-<Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tagging.</li>.
-<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
-<Li>Highlight: intelligent highlights</li>.
-<Li>DeLogo: intelligent removal.</li>.
-<li>Description: large model summarization.</li>
-
-<Li>Dubbing: intelligent dubbing.</li>.
-<Li>VideoRemake: specifies video deduplication.</li>.
+    * Task type. Valid values:
+<li>Classification: smart classification.</li>
+<li>Cover: smart cover.</li>
+<li>Tag: smart tag.</li>
+<li>FrameTag: smart frame tag.</li>
+<li>Highlight: smart highlights.</li>
+<li>DeLogo: smart erasing.</li>
+<li>Description: LLM summary.</li>
+<li>Dubbing: smart dubbing.</li>
+<li>VideoRemake: video deduplication.</li>
+<li>VideoComprehension: video (audio) recognition.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -133,56 +133,64 @@ Note: This field may return null, indicating that no valid value can be obtained
     private AiAnalysisTaskVideoRemakeResult VideoRemakeTask;
 
     /**
-     * Get Task type. valid values:.
-<Li>Classification: intelligent classification.</li>.
-<Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tagging.</li>.
-<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
-<Li>Highlight: intelligent highlights</li>.
-<Li>DeLogo: intelligent removal.</li>.
-<li>Description: large model summarization.</li>
+    * Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("VideoComprehensionTask")
+    @Expose
+    private AiAnalysisTaskVideoComprehensionResult VideoComprehensionTask;
 
-<Li>Dubbing: intelligent dubbing.</li>.
-<Li>VideoRemake: specifies video deduplication.</li>. 
-     * @return Type Task type. valid values:.
-<Li>Classification: intelligent classification.</li>.
-<Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tagging.</li>.
-<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
-<Li>Highlight: intelligent highlights</li>.
-<Li>DeLogo: intelligent removal.</li>.
-<li>Description: large model summarization.</li>
-
-<Li>Dubbing: intelligent dubbing.</li>.
-<Li>VideoRemake: specifies video deduplication.</li>.
+    /**
+     * Get Task type. Valid values:
+<li>Classification: smart classification.</li>
+<li>Cover: smart cover.</li>
+<li>Tag: smart tag.</li>
+<li>FrameTag: smart frame tag.</li>
+<li>Highlight: smart highlights.</li>
+<li>DeLogo: smart erasing.</li>
+<li>Description: LLM summary.</li>
+<li>Dubbing: smart dubbing.</li>
+<li>VideoRemake: video deduplication.</li>
+<li>VideoComprehension: video (audio) recognition.</li> 
+     * @return Type Task type. Valid values:
+<li>Classification: smart classification.</li>
+<li>Cover: smart cover.</li>
+<li>Tag: smart tag.</li>
+<li>FrameTag: smart frame tag.</li>
+<li>Highlight: smart highlights.</li>
+<li>DeLogo: smart erasing.</li>
+<li>Description: LLM summary.</li>
+<li>Dubbing: smart dubbing.</li>
+<li>VideoRemake: video deduplication.</li>
+<li>VideoComprehension: video (audio) recognition.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Task type. valid values:.
-<Li>Classification: intelligent classification.</li>.
-<Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tagging.</li>.
-<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
-<Li>Highlight: intelligent highlights</li>.
-<Li>DeLogo: intelligent removal.</li>.
-<li>Description: large model summarization.</li>
-
-<Li>Dubbing: intelligent dubbing.</li>.
-<Li>VideoRemake: specifies video deduplication.</li>.
-     * @param Type Task type. valid values:.
-<Li>Classification: intelligent classification.</li>.
-<Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tagging.</li>.
-<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
-<Li>Highlight: intelligent highlights</li>.
-<Li>DeLogo: intelligent removal.</li>.
-<li>Description: large model summarization.</li>
-
-<Li>Dubbing: intelligent dubbing.</li>.
-<Li>VideoRemake: specifies video deduplication.</li>.
+     * Set Task type. Valid values:
+<li>Classification: smart classification.</li>
+<li>Cover: smart cover.</li>
+<li>Tag: smart tag.</li>
+<li>FrameTag: smart frame tag.</li>
+<li>Highlight: smart highlights.</li>
+<li>DeLogo: smart erasing.</li>
+<li>Description: LLM summary.</li>
+<li>Dubbing: smart dubbing.</li>
+<li>VideoRemake: video deduplication.</li>
+<li>VideoComprehension: video (audio) recognition.</li>
+     * @param Type Task type. Valid values:
+<li>Classification: smart classification.</li>
+<li>Cover: smart cover.</li>
+<li>Tag: smart tag.</li>
+<li>FrameTag: smart frame tag.</li>
+<li>Highlight: smart highlights.</li>
+<li>DeLogo: smart erasing.</li>
+<li>Description: LLM summary.</li>
+<li>Dubbing: smart dubbing.</li>
+<li>VideoRemake: video deduplication.</li>
+<li>VideoComprehension: video (audio) recognition.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -412,6 +420,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.VideoRemakeTask = VideoRemakeTask;
     }
 
+    /**
+     * Get Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return VideoComprehensionTask Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AiAnalysisTaskVideoComprehensionResult getVideoComprehensionTask() {
+        return this.VideoComprehensionTask;
+    }
+
+    /**
+     * Set Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param VideoComprehensionTask Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setVideoComprehensionTask(AiAnalysisTaskVideoComprehensionResult VideoComprehensionTask) {
+        this.VideoComprehensionTask = VideoComprehensionTask;
+    }
+
     public AiAnalysisResult() {
     }
 
@@ -459,6 +487,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.VideoRemakeTask != null) {
             this.VideoRemakeTask = new AiAnalysisTaskVideoRemakeResult(source.VideoRemakeTask);
         }
+        if (source.VideoComprehensionTask != null) {
+            this.VideoComprehensionTask = new AiAnalysisTaskVideoComprehensionResult(source.VideoComprehensionTask);
+        }
     }
 
 
@@ -479,6 +510,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "HorizontalToVerticalTask.", this.HorizontalToVerticalTask);
         this.setParamObj(map, prefix + "DubbingTask.", this.DubbingTask);
         this.setParamObj(map, prefix + "VideoRemakeTask.", this.VideoRemakeTask);
+        this.setParamObj(map, prefix + "VideoComprehensionTask.", this.VideoComprehensionTask);
 
     }
 }

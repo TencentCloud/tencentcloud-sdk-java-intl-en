@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SystemDisk extends AbstractModel {
 
     /**
-    * Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+    * Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
 <li>LOCAL_BASIC: Local SATA disk</li>
 <li>LOCAL_SSD: Local NVMe SSD</li>
 <li>CLOUD_BASIC: Cloud SATA disk</li>
@@ -41,7 +41,7 @@ Default value: Current disk types with inventory available.
 
     /**
     * System disk ID.
-Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
     */
     @SerializedName("DiskId")
     @Expose
@@ -70,7 +70,7 @@ Note: This field may return null, indicating that no valid value is found.
     private String DiskName;
 
     /**
-     * Get Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+     * Get Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
 <li>LOCAL_BASIC: Local SATA disk</li>
 <li>LOCAL_SSD: Local NVMe SSD</li>
 <li>CLOUD_BASIC: Cloud SATA disk</li>
@@ -80,7 +80,7 @@ Note: This field may return null, indicating that no valid value is found.
 <li>CLOUD_HSSD: Enhanced SSD</li>
 <li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available. 
-     * @return DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+     * @return DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
 <li>LOCAL_BASIC: Local SATA disk</li>
 <li>LOCAL_SSD: Local NVMe SSD</li>
 <li>CLOUD_BASIC: Cloud SATA disk</li>
@@ -96,7 +96,7 @@ Default value: Current disk types with inventory available.
     }
 
     /**
-     * Set Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+     * Set Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
 <li>LOCAL_BASIC: Local SATA disk</li>
 <li>LOCAL_SSD: Local NVMe SSD</li>
 <li>CLOUD_BASIC: Cloud SATA disk</li>
@@ -106,7 +106,7 @@ Default value: Current disk types with inventory available.
 <li>CLOUD_HSSD: Enhanced SSD</li>
 <li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
-     * @param DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+     * @param DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
 <li>LOCAL_BASIC: Local SATA disk</li>
 <li>LOCAL_SSD: Local NVMe SSD</li>
 <li>CLOUD_BASIC: Cloud SATA disk</li>
@@ -123,9 +123,9 @@ Default value: Current disk types with inventory available.
 
     /**
      * Get System disk ID.
-Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1). 
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237). 
      * @return DiskId System disk ID.
-Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
      */
     public String getDiskId() {
         return this.DiskId;
@@ -133,9 +133,9 @@ Currently, this parameter is only used for response parameters in query apis suc
 
     /**
      * Set System disk ID.
-Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
      * @param DiskId System disk ID.
-Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;

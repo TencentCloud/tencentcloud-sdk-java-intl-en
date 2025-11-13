@@ -39,6 +39,13 @@ Note: This field may return null, indicating that no valid value can be obtained
     private RawSmartEraseParameter RawParameter;
 
     /**
+    * Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+    */
+    @SerializedName("OverrideParameter")
+    @Expose
+    private OverrideEraseParameter OverrideParameter;
+
+    /**
     * Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
 Note: This field may return null, indicating that no valid value can be obtained.
     */
@@ -96,6 +103,22 @@ Note: This field may return null, indicating that no valid value can be obtained
      */
     public void setRawParameter(RawSmartEraseParameter RawParameter) {
         this.RawParameter = RawParameter;
+    }
+
+    /**
+     * Get Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters. 
+     * @return OverrideParameter Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+     */
+    public OverrideEraseParameter getOverrideParameter() {
+        return this.OverrideParameter;
+    }
+
+    /**
+     * Set Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+     * @param OverrideParameter Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+     */
+    public void setOverrideParameter(OverrideEraseParameter OverrideParameter) {
+        this.OverrideParameter = OverrideParameter;
     }
 
     /**
@@ -184,6 +207,9 @@ Specifies the output path must end with `.{format}`. variable names, please refe
         if (source.RawParameter != null) {
             this.RawParameter = new RawSmartEraseParameter(source.RawParameter);
         }
+        if (source.OverrideParameter != null) {
+            this.OverrideParameter = new OverrideEraseParameter(source.OverrideParameter);
+        }
         if (source.OutputStorage != null) {
             this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
         }
@@ -199,6 +225,7 @@ Specifies the output path must end with `.{format}`. variable names, please refe
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamObj(map, prefix + "RawParameter.", this.RawParameter);
+        this.setParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
 

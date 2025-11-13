@@ -45,7 +45,19 @@ public class CosFileUploadTrigger extends AbstractModel {
     private String Dir;
 
     /**
-    * Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow.
+    * All supported formats are as follows:
+- Video file extension. The following 15 options are supported:
+`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, and `.m4v`.
+- Audio file extension. The following 7 options are supported:
+`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, and `.amr`.
+- Subtitle file extension. The following 2 options are supported:
+`.vtt` and `.srt`.
+- `*`: any file format is supported.
+- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).
+**Note**:
+1. If the input format list includes `*`, it indicates that any file format is supported.
+2. File extensions can be provided with or without `.`, such as `.mp4` or `mp4`, both are supported.
+3. Custom file extensions should consist of digits, letters, and characters, and have a length between 1 and 64 characters.
     */
     @SerializedName("Formats")
     @Expose
@@ -100,16 +112,64 @@ public class CosFileUploadTrigger extends AbstractModel {
     }
 
     /**
-     * Get Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow. 
-     * @return Formats Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow.
+     * Get All supported formats are as follows:
+- Video file extension. The following 15 options are supported:
+`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, and `.m4v`.
+- Audio file extension. The following 7 options are supported:
+`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, and `.amr`.
+- Subtitle file extension. The following 2 options are supported:
+`.vtt` and `.srt`.
+- `*`: any file format is supported.
+- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).
+**Note**:
+1. If the input format list includes `*`, it indicates that any file format is supported.
+2. File extensions can be provided with or without `.`, such as `.mp4` or `mp4`, both are supported.
+3. Custom file extensions should consist of digits, letters, and characters, and have a length between 1 and 64 characters. 
+     * @return Formats All supported formats are as follows:
+- Video file extension. The following 15 options are supported:
+`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, and `.m4v`.
+- Audio file extension. The following 7 options are supported:
+`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, and `.amr`.
+- Subtitle file extension. The following 2 options are supported:
+`.vtt` and `.srt`.
+- `*`: any file format is supported.
+- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).
+**Note**:
+1. If the input format list includes `*`, it indicates that any file format is supported.
+2. File extensions can be provided with or without `.`, such as `.mp4` or `mp4`, both are supported.
+3. Custom file extensions should consist of digits, letters, and characters, and have a length between 1 and 64 characters.
      */
     public String [] getFormats() {
         return this.Formats;
     }
 
     /**
-     * Set Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow.
-     * @param Formats Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow.
+     * Set All supported formats are as follows:
+- Video file extension. The following 15 options are supported:
+`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, and `.m4v`.
+- Audio file extension. The following 7 options are supported:
+`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, and `.amr`.
+- Subtitle file extension. The following 2 options are supported:
+`.vtt` and `.srt`.
+- `*`: any file format is supported.
+- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).
+**Note**:
+1. If the input format list includes `*`, it indicates that any file format is supported.
+2. File extensions can be provided with or without `.`, such as `.mp4` or `mp4`, both are supported.
+3. Custom file extensions should consist of digits, letters, and characters, and have a length between 1 and 64 characters.
+     * @param Formats All supported formats are as follows:
+- Video file extension. The following 15 options are supported:
+`.mp4`, `.avi`, `.mov`, `.wmv`, `.flv`, `.mkv`, `.mpg`, `.mpeg`, `.rm`, `.rmvb`, `.asf`, `.3gp`, `.webm`, `.ts`, and `.m4v`.
+- Audio file extension. The following 7 options are supported:
+`.mp3`, `.wav`, `.aac`, `.flac`, `.ogg`, `.m4a`, and `.amr`.
+- Subtitle file extension. The following 2 options are supported:
+`.vtt` and `.srt`.
+- `*`: any file format is supported.
+- Unspecified or input an empty list: the system supports the following preset file formats: video (`.mp4`, `.ts`, `.flv`, `.wmv`, `.asf`, `.rm`, `.rmvb`, `.mpg`, `.mpeg`, `.3gp`, `.mov`, `.webm`, `.mkv`, `.avi`, and `.m4v`); audio (`.mp3`, `.m4a`, `.flac`, `.ogg`, `.wav`, `.amr`, and `.aac`); subtitle (`.vtt` and `.srt`).
+**Note**:
+1. If the input format list includes `*`, it indicates that any file format is supported.
+2. File extensions can be provided with or without `.`, such as `.mp4` or `mp4`, both are supported.
+3. Custom file extensions should consist of digits, letters, and characters, and have a length between 1 and 64 characters.
      */
     public void setFormats(String [] Formats) {
         this.Formats = Formats;

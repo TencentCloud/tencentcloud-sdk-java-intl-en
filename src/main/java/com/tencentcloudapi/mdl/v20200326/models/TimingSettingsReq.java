@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TimingSettingsReq extends AbstractModel {
 
     /**
-    * Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+    * Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`,`FIXED_PTS `. This parameter is required if `EventType` is `INPUT_SWITCH`.
     */
     @SerializedName("StartType")
     @Expose
@@ -55,16 +55,23 @@ It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`)
     private String EndTime;
 
     /**
-     * Get Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`. 
-     * @return StartType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+    * Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+    */
+    @SerializedName("PTS")
+    @Expose
+    private Long PTS;
+
+    /**
+     * Get Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`,`FIXED_PTS `. This parameter is required if `EventType` is `INPUT_SWITCH`. 
+     * @return StartType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`,`FIXED_PTS `. This parameter is required if `EventType` is `INPUT_SWITCH`.
      */
     public String getStartType() {
         return this.StartType;
     }
 
     /**
-     * Set Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
-     * @param StartType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+     * Set Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`,`FIXED_PTS `. This parameter is required if `EventType` is `INPUT_SWITCH`.
+     * @param StartType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`,`FIXED_PTS `. This parameter is required if `EventType` is `INPUT_SWITCH`.
      */
     public void setStartType(String StartType) {
         this.StartType = StartType;
@@ -130,6 +137,22 @@ It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`)
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get Effective only when StartType is FIXED_PTS, with a range of 1-8589934592 
+     * @return PTS Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+     */
+    public Long getPTS() {
+        return this.PTS;
+    }
+
+    /**
+     * Set Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+     * @param PTS Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+     */
+    public void setPTS(Long PTS) {
+        this.PTS = PTS;
+    }
+
     public TimingSettingsReq() {
     }
 
@@ -150,6 +173,9 @@ It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`)
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.PTS != null) {
+            this.PTS = new Long(source.PTS);
+        }
     }
 
 
@@ -161,6 +187,7 @@ It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`)
         this.setParamSimple(map, prefix + "Time", this.Time);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "PTS", this.PTS);
 
     }
 }

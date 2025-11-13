@@ -61,6 +61,15 @@ public class DescribeSmartSubtitleTemplatesRequest extends AbstractModel {
     private String Name;
 
     /**
+    * Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+    */
+    @SerializedName("ProcessType")
+    @Expose
+    private Long ProcessType;
+
+    /**
      * Get Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers. 
      * @return Definitions Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers.
      */
@@ -148,6 +157,30 @@ public class DescribeSmartSubtitleTemplatesRequest extends AbstractModel {
         this.Name = Name;
     }
 
+    /**
+     * Get Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation. 
+     * @return ProcessType Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+     */
+    public Long getProcessType() {
+        return this.ProcessType;
+    }
+
+    /**
+     * Set Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+     * @param ProcessType Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+     */
+    public void setProcessType(Long ProcessType) {
+        this.ProcessType = ProcessType;
+    }
+
     public DescribeSmartSubtitleTemplatesRequest() {
     }
 
@@ -174,6 +207,9 @@ public class DescribeSmartSubtitleTemplatesRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.ProcessType != null) {
+            this.ProcessType = new Long(source.ProcessType);
+        }
     }
 
 
@@ -186,6 +222,7 @@ public class DescribeSmartSubtitleTemplatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "ProcessType", this.ProcessType);
 
     }
 }

@@ -21,25 +21,24 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HdrConfig extends AbstractModel {
+public class DiffusionEnhanceConfig extends AbstractModel {
 
     /**
-    * Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: ON.
+    * Capability configuration switch. Valid values:
+ON: enabled.
+OFF: disabled.
+Default value: OFF.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Type. Valid values:
-<li>HDR10</li>
-<li>HLG</li>
-Default value: HDR10.
-Note: The video encoding method should be h264 or h265.
-Note: The video encoding bit depth is 10.
+    * Strength type. Valid values:
+weak
+normal
+strong
+Default value: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
@@ -47,47 +46,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Type;
 
     /**
-     * Get Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: ON. 
-     * @return Switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: ON.
+     * Get Capability configuration switch. Valid values:
+ON: enabled.
+OFF: disabled.
+Default value: OFF. 
+     * @return Switch Capability configuration switch. Valid values:
+ON: enabled.
+OFF: disabled.
+Default value: OFF.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: ON.
-     * @param Switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: ON.
+     * Set Capability configuration switch. Valid values:
+ON: enabled.
+OFF: disabled.
+Default value: OFF.
+     * @param Switch Capability configuration switch. Valid values:
+ON: enabled.
+OFF: disabled.
+Default value: OFF.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Type. Valid values:
-<li>HDR10</li>
-<li>HLG</li>
-Default value: HDR10.
-Note: The video encoding method should be h264 or h265.
-Note: The video encoding bit depth is 10.
+     * Get Strength type. Valid values:
+weak
+normal
+strong
+Default value: normal.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Type. Valid values:
-<li>HDR10</li>
-<li>HLG</li>
-Default value: HDR10.
-Note: The video encoding method should be h264 or h265.
-Note: The video encoding bit depth is 10.
+     * @return Type Strength type. Valid values:
+weak
+normal
+strong
+Default value: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
@@ -95,33 +92,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Type. Valid values:
-<li>HDR10</li>
-<li>HLG</li>
-Default value: HDR10.
-Note: The video encoding method should be h264 or h265.
-Note: The video encoding bit depth is 10.
+     * Set Strength type. Valid values:
+weak
+normal
+strong
+Default value: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Type. Valid values:
-<li>HDR10</li>
-<li>HLG</li>
-Default value: HDR10.
-Note: The video encoding method should be h264 or h265.
-Note: The video encoding bit depth is 10.
+     * @param Type Strength type. Valid values:
+weak
+normal
+strong
+Default value: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
-    public HdrConfig() {
+    public DiffusionEnhanceConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public HdrConfig(HdrConfig source) {
+    public DiffusionEnhanceConfig(DiffusionEnhanceConfig source) {
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }

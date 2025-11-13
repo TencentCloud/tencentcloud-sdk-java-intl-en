@@ -173,7 +173,7 @@ Note: this field is null in postpaid mode.
     private LoginSettings LoginSettings;
 
     /**
-    * Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
+    * Instance status. for specific status types, see the  [instance status table](https://www.tencentcloud.com/document/product/213/15753#instancestatus)
     */
     @SerializedName("InstanceState")
     @Expose
@@ -678,16 +678,16 @@ Note: this field is null in postpaid mode.
     }
 
     /**
-     * Get Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus). 
-     * @return InstanceState Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
+     * Get Instance status. for specific status types, see the  [instance status table](https://www.tencentcloud.com/document/product/213/15753#instancestatus) 
+     * @return InstanceState Instance status. for specific status types, see the  [instance status table](https://www.tencentcloud.com/document/product/213/15753#instancestatus)
      */
     public String getInstanceState() {
         return this.InstanceState;
     }
 
     /**
-     * Set Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
-     * @param InstanceState Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
+     * Set Instance status. for specific status types, see the  [instance status table](https://www.tencentcloud.com/document/product/213/15753#instancestatus)
+     * @param InstanceState Instance status. for specific status types, see the  [instance status table](https://www.tencentcloud.com/document/product/213/15753#instancestatus)
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;

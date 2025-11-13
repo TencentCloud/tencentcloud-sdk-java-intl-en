@@ -25,9 +25,8 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
 
     /**
     * Task type. Currently, the valid values include:
-<Li>WorkflowTask: workflow processing task.</li>
-
-Note: This field may return null, indicating that no valid value can be obtained.
+<li>WorkflowTask: workflow processing task.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskType")
     @Expose
@@ -43,6 +42,27 @@ Note: This field may return null, indicating that no valid value can be obtained
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * Error code when the task fails.
+    */
+    @SerializedName("ErrCode")
+    @Expose
+    private Long ErrCode;
+
+    /**
+    * Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+    */
+    @SerializedName("ErrMsg")
+    @Expose
+    private String ErrMsg;
+
+    /**
+    * Task exception message.
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
 
     /**
     * Execution status and results of the image processing task.
@@ -77,13 +97,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Task type. Currently, the valid values include:
-<Li>WorkflowTask: workflow processing task.</li>
-
-Note: This field may return null, indicating that no valid value can be obtained. 
+<li>WorkflowTask: workflow processing task.</li>
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TaskType Task type. Currently, the valid values include:
-<Li>WorkflowTask: workflow processing task.</li>
-
-Note: This field may return null, indicating that no valid value can be obtained.
+<li>WorkflowTask: workflow processing task.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTaskType() {
         return this.TaskType;
@@ -91,13 +109,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Task type. Currently, the valid values include:
-<Li>WorkflowTask: workflow processing task.</li>
-
-Note: This field may return null, indicating that no valid value can be obtained.
+<li>WorkflowTask: workflow processing task.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskType Task type. Currently, the valid values include:
-<Li>WorkflowTask: workflow processing task.</li>
-
-Note: This field may return null, indicating that no valid value can be obtained.
+<li>WorkflowTask: workflow processing task.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -133,6 +149,54 @@ Note: This field may return null, indicating that no valid value can be obtained
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get Error code when the task fails. 
+     * @return ErrCode Error code when the task fails.
+     */
+    public Long getErrCode() {
+        return this.ErrCode;
+    }
+
+    /**
+     * Set Error code when the task fails.
+     * @param ErrCode Error code when the task fails.
+     */
+    public void setErrCode(Long ErrCode) {
+        this.ErrCode = ErrCode;
+    }
+
+    /**
+     * Get Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
+     * @return ErrMsg Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     */
+    public String getErrMsg() {
+        return this.ErrMsg;
+    }
+
+    /**
+     * Set Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param ErrMsg Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     */
+    public void setErrMsg(String ErrMsg) {
+        this.ErrMsg = ErrMsg;
+    }
+
+    /**
+     * Get Task exception message. 
+     * @return Message Task exception message.
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set Task exception message.
+     * @param Message Task exception message.
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
     }
 
     /**
@@ -225,6 +289,15 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
         if (source.ImageProcessTaskResultSet != null) {
             this.ImageProcessTaskResultSet = new ImageProcessTaskResult[source.ImageProcessTaskResultSet.length];
             for (int i = 0; i < source.ImageProcessTaskResultSet.length; i++) {
@@ -249,6 +322,9 @@ Note: This field may return null, indicating that no valid value can be obtained
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+        this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamArrayObj(map, prefix + "ImageProcessTaskResultSet.", this.ImageProcessTaskResultSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);

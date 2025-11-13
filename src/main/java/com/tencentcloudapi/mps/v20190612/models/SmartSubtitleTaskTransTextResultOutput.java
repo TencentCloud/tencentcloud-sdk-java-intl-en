@@ -46,6 +46,20 @@ Note: This field may return null, indicating that no valid value can be obtained
     private TaskOutputStorage OutputStorage;
 
     /**
+    * Subtitle file URL.
+    */
+    @SerializedName("Path")
+    @Expose
+    private String Path;
+
+    /**
+    * Returned translation result during multilingual translation.	
+    */
+    @SerializedName("SubtitleResults")
+    @Expose
+    private SubtitleTransResultItem [] SubtitleResults;
+
+    /**
      * Get List of segments for translation.
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return SegmentSet List of segments for translation.
@@ -97,6 +111,38 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.OutputStorage = OutputStorage;
     }
 
+    /**
+     * Get Subtitle file URL. 
+     * @return Path Subtitle file URL.
+     */
+    public String getPath() {
+        return this.Path;
+    }
+
+    /**
+     * Set Subtitle file URL.
+     * @param Path Subtitle file URL.
+     */
+    public void setPath(String Path) {
+        this.Path = Path;
+    }
+
+    /**
+     * Get Returned translation result during multilingual translation.	 
+     * @return SubtitleResults Returned translation result during multilingual translation.	
+     */
+    public SubtitleTransResultItem [] getSubtitleResults() {
+        return this.SubtitleResults;
+    }
+
+    /**
+     * Set Returned translation result during multilingual translation.	
+     * @param SubtitleResults Returned translation result during multilingual translation.	
+     */
+    public void setSubtitleResults(SubtitleTransResultItem [] SubtitleResults) {
+        this.SubtitleResults = SubtitleResults;
+    }
+
     public SmartSubtitleTaskTransTextResultOutput() {
     }
 
@@ -117,6 +163,15 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.OutputStorage != null) {
             this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
         }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.SubtitleResults != null) {
+            this.SubtitleResults = new SubtitleTransResultItem[source.SubtitleResults.length];
+            for (int i = 0; i < source.SubtitleResults.length; i++) {
+                this.SubtitleResults[i] = new SubtitleTransResultItem(source.SubtitleResults[i]);
+            }
+        }
     }
 
 
@@ -127,6 +182,8 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
         this.setParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+        this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamArrayObj(map, prefix + "SubtitleResults.", this.SubtitleResults);
 
     }
 }

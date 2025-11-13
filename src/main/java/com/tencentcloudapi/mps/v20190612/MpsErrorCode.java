@@ -219,6 +219,9 @@ public enum MpsErrorCode {
      /* Incorrect parameter value: object library parameter is invalid. */
      INVALIDPARAMETERVALUE_OBJECTLIBRARY("InvalidParameterValue.ObjectLibrary"),
      
+     /* Incorrect parameter value: the OcrSwitch parameter value is invalid. */
+     INVALIDPARAMETERVALUE_OCRSWITCH("InvalidParameterValue.OcrSwitch"),
+     
      /* Incorrect parameter value: incorrect face image format. */
      INVALIDPARAMETERVALUE_PICFORMATERROR("InvalidParameterValue.PicFormatError"),
      
@@ -323,6 +326,9 @@ public enum MpsErrorCode {
      
      /* The configuration for the translation target language is incorrect under the smart erasing - subtitle erasing template. */
      INVALIDPARAMETERVALUE_TRANSDSTLANG("InvalidParameterValue.TransDstLang"),
+     
+     /* Incorrect parameter value: the TransSwitch parameter value is invalid. */
+     INVALIDPARAMETERVALUE_TRANSSWITCH("InvalidParameterValue.TransSwitch"),
      
      /* The value of the target language parameter is incorrect. */
      INVALIDPARAMETERVALUE_TRANSLATEDSTLANGUAGE("InvalidParameterValue.TranslateDstLanguage"),

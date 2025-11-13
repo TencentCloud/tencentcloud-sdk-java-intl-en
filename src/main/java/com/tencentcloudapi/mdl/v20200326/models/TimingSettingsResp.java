@@ -55,6 +55,13 @@ It indicates the end time for recording in UTC format (e.g., `2020-01-01T12:00:0
     private String EndTime;
 
     /**
+    * Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+    */
+    @SerializedName("PTS")
+    @Expose
+    private Long PTS;
+
+    /**
      * Get Event trigger type 
      * @return StartType Event trigger type
      */
@@ -130,6 +137,22 @@ It indicates the end time for recording in UTC format (e.g., `2020-01-01T12:00:0
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get Effective only when StartType is FIXED_PTS, with a range of 1-8589934592 
+     * @return PTS Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+     */
+    public Long getPTS() {
+        return this.PTS;
+    }
+
+    /**
+     * Set Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+     * @param PTS Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+     */
+    public void setPTS(Long PTS) {
+        this.PTS = PTS;
+    }
+
     public TimingSettingsResp() {
     }
 
@@ -150,6 +173,9 @@ It indicates the end time for recording in UTC format (e.g., `2020-01-01T12:00:0
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.PTS != null) {
+            this.PTS = new Long(source.PTS);
+        }
     }
 
 
@@ -161,6 +187,7 @@ It indicates the end time for recording in UTC format (e.g., `2020-01-01T12:00:0
         this.setParamSimple(map, prefix + "Time", this.Time);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "PTS", this.PTS);
 
     }
 }

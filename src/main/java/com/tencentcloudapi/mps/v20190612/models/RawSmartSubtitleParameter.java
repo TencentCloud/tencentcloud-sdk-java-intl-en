@@ -35,40 +35,53 @@ The value can only be 0 when TranslateSwitch is set to OFF. The value can only b
     private Long SubtitleType;
 
     /**
-    * Video source language for intelligent caption.
-Valid values: 
-zh: Simplified Chinese.
-en: Eenglish.
-Ja: Japanese.
-Ko: Korean.
-zh-PY: Simplified Chinese, English and Cantonese.
-zh-medical: Medical Chinese.
-yue: Cantonese.
-Vi: Vietnamese.
-ms: Malay.
-id: Indonesian.
-fil: Filipino.
-th: Thai.
-pt: Portuguese.
-tr: Turkish.
-ar: Arabic.
-es: Spanish.
-hi: Hindi
-Fr: French.
-de: German.
-zh-dialect: Chinese dialect
-zh_en: Simplified Chinese and English
-prime_zh: Simplified Chinese, Chinese Dialect and English.
+    * Source language of the video with smart subtitles.
+Currently, the following languages are supported:
+`zh`: Simplified Chinese.
+`yue`: Cantonese.
+`zh-PY`: Chinese, English, and Cantonese.
+`zh_medical`: Chinese (medical scenario).
+`zh_dialect`: Chinese dialect.
+`prime_zh`: Chinese, English, and Chinese dialects.
+`zh_en`: Chinese and English.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+`auto`: automatic recognition (it is only supported in pure subtitle translation).
     */
     @SerializedName("VideoSrcLanguage")
     @Expose
     private String VideoSrcLanguage;
 
     /**
-    * Intelligent subtitle file format.
-vtt: WebVTT format.
-srt: SRT format.
-If this field is left blank, no subtitle file will be generated.
+    * Smart subtitle file format:
+- Under the ASR recognition and translation processing type:
+     -vtt: WebVTT format subtitle.
+     -srt: SRT format subtitle.
+     - If this field is unspecified or left blank, no subtitle file will be generated.
+- Under the pure subtitle translation processing type:
+    - original: consistent with the source file.
+    - vtt: WebVTT format subtitle.
+    - srt: SRT format subtitle.
+**Note**:
+- For ASR recognition mode, when 2 or more languages are involved in translation, this field cannot be unspecified or left blank.
+- For pure subtitle translation mode, this field cannot be unspecified or left blank.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubtitleFormat")
     @Expose
@@ -76,9 +89,10 @@ If this field is left blank, no subtitle file will be generated.
 
     /**
     * Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
+`ON`: translation enabled.
+`OFF`: translation disabled.
+**Note**: For pure subtitle translation mode, the default value is enabled if the field is unspecified. The field cannot be left blank or set to `OFF`.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TranslateSwitch")
     @Expose
@@ -86,26 +100,29 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Target language for subtitle translation.
-This field takes effect when TranslateSwitch is set to ON.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-fr: French
-es: Spanish
-it: Italian
-de: German
-tr: Turkish
-ru: Russian
-pt: Portuguese
-vi: Vietnamese
-id: Indonesian
-ms: Malay
-th: Thai
-ar: Arabic
-hi: Hindi
-Note: This field may return null, indicating that no valid value can be obtained.
+This field is valid when the value of TranslateSwitch is ON. List of translation languages:
+`zh`: Simplified Chinese.
+`zh-TW`: Traditional Chinese.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TranslateDstLanguage")
     @Expose
@@ -125,6 +142,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
+
+    /**
+    * Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+**Note**: The default processing type is ASR recognition subtitle if the field is unspecified.
+    */
+    @SerializedName("ProcessType")
+    @Expose
+    private Long ProcessType;
 
     /**
      * Get Smart subtitle language type.
@@ -159,136 +186,188 @@ The value can only be 0 when TranslateSwitch is set to OFF. The value can only b
     }
 
     /**
-     * Get Video source language for intelligent caption.
-Valid values: 
-zh: Simplified Chinese.
-en: Eenglish.
-Ja: Japanese.
-Ko: Korean.
-zh-PY: Simplified Chinese, English and Cantonese.
-zh-medical: Medical Chinese.
-yue: Cantonese.
-Vi: Vietnamese.
-ms: Malay.
-id: Indonesian.
-fil: Filipino.
-th: Thai.
-pt: Portuguese.
-tr: Turkish.
-ar: Arabic.
-es: Spanish.
-hi: Hindi
-Fr: French.
-de: German.
-zh-dialect: Chinese dialect
-zh_en: Simplified Chinese and English
-prime_zh: Simplified Chinese, Chinese Dialect and English. 
-     * @return VideoSrcLanguage Video source language for intelligent caption.
-Valid values: 
-zh: Simplified Chinese.
-en: Eenglish.
-Ja: Japanese.
-Ko: Korean.
-zh-PY: Simplified Chinese, English and Cantonese.
-zh-medical: Medical Chinese.
-yue: Cantonese.
-Vi: Vietnamese.
-ms: Malay.
-id: Indonesian.
-fil: Filipino.
-th: Thai.
-pt: Portuguese.
-tr: Turkish.
-ar: Arabic.
-es: Spanish.
-hi: Hindi
-Fr: French.
-de: German.
-zh-dialect: Chinese dialect
-zh_en: Simplified Chinese and English
-prime_zh: Simplified Chinese, Chinese Dialect and English.
+     * Get Source language of the video with smart subtitles.
+Currently, the following languages are supported:
+`zh`: Simplified Chinese.
+`yue`: Cantonese.
+`zh-PY`: Chinese, English, and Cantonese.
+`zh_medical`: Chinese (medical scenario).
+`zh_dialect`: Chinese dialect.
+`prime_zh`: Chinese, English, and Chinese dialects.
+`zh_en`: Chinese and English.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+`auto`: automatic recognition (it is only supported in pure subtitle translation). 
+     * @return VideoSrcLanguage Source language of the video with smart subtitles.
+Currently, the following languages are supported:
+`zh`: Simplified Chinese.
+`yue`: Cantonese.
+`zh-PY`: Chinese, English, and Cantonese.
+`zh_medical`: Chinese (medical scenario).
+`zh_dialect`: Chinese dialect.
+`prime_zh`: Chinese, English, and Chinese dialects.
+`zh_en`: Chinese and English.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+`auto`: automatic recognition (it is only supported in pure subtitle translation).
      */
     public String getVideoSrcLanguage() {
         return this.VideoSrcLanguage;
     }
 
     /**
-     * Set Video source language for intelligent caption.
-Valid values: 
-zh: Simplified Chinese.
-en: Eenglish.
-Ja: Japanese.
-Ko: Korean.
-zh-PY: Simplified Chinese, English and Cantonese.
-zh-medical: Medical Chinese.
-yue: Cantonese.
-Vi: Vietnamese.
-ms: Malay.
-id: Indonesian.
-fil: Filipino.
-th: Thai.
-pt: Portuguese.
-tr: Turkish.
-ar: Arabic.
-es: Spanish.
-hi: Hindi
-Fr: French.
-de: German.
-zh-dialect: Chinese dialect
-zh_en: Simplified Chinese and English
-prime_zh: Simplified Chinese, Chinese Dialect and English.
-     * @param VideoSrcLanguage Video source language for intelligent caption.
-Valid values: 
-zh: Simplified Chinese.
-en: Eenglish.
-Ja: Japanese.
-Ko: Korean.
-zh-PY: Simplified Chinese, English and Cantonese.
-zh-medical: Medical Chinese.
-yue: Cantonese.
-Vi: Vietnamese.
-ms: Malay.
-id: Indonesian.
-fil: Filipino.
-th: Thai.
-pt: Portuguese.
-tr: Turkish.
-ar: Arabic.
-es: Spanish.
-hi: Hindi
-Fr: French.
-de: German.
-zh-dialect: Chinese dialect
-zh_en: Simplified Chinese and English
-prime_zh: Simplified Chinese, Chinese Dialect and English.
+     * Set Source language of the video with smart subtitles.
+Currently, the following languages are supported:
+`zh`: Simplified Chinese.
+`yue`: Cantonese.
+`zh-PY`: Chinese, English, and Cantonese.
+`zh_medical`: Chinese (medical scenario).
+`zh_dialect`: Chinese dialect.
+`prime_zh`: Chinese, English, and Chinese dialects.
+`zh_en`: Chinese and English.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+`auto`: automatic recognition (it is only supported in pure subtitle translation).
+     * @param VideoSrcLanguage Source language of the video with smart subtitles.
+Currently, the following languages are supported:
+`zh`: Simplified Chinese.
+`yue`: Cantonese.
+`zh-PY`: Chinese, English, and Cantonese.
+`zh_medical`: Chinese (medical scenario).
+`zh_dialect`: Chinese dialect.
+`prime_zh`: Chinese, English, and Chinese dialects.
+`zh_en`: Chinese and English.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+`auto`: automatic recognition (it is only supported in pure subtitle translation).
      */
     public void setVideoSrcLanguage(String VideoSrcLanguage) {
         this.VideoSrcLanguage = VideoSrcLanguage;
     }
 
     /**
-     * Get Intelligent subtitle file format.
-vtt: WebVTT format.
-srt: SRT format.
-If this field is left blank, no subtitle file will be generated. 
-     * @return SubtitleFormat Intelligent subtitle file format.
-vtt: WebVTT format.
-srt: SRT format.
-If this field is left blank, no subtitle file will be generated.
+     * Get Smart subtitle file format:
+- Under the ASR recognition and translation processing type:
+     -vtt: WebVTT format subtitle.
+     -srt: SRT format subtitle.
+     - If this field is unspecified or left blank, no subtitle file will be generated.
+- Under the pure subtitle translation processing type:
+    - original: consistent with the source file.
+    - vtt: WebVTT format subtitle.
+    - srt: SRT format subtitle.
+**Note**:
+- For ASR recognition mode, when 2 or more languages are involved in translation, this field cannot be unspecified or left blank.
+- For pure subtitle translation mode, this field cannot be unspecified or left blank.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubtitleFormat Smart subtitle file format:
+- Under the ASR recognition and translation processing type:
+     -vtt: WebVTT format subtitle.
+     -srt: SRT format subtitle.
+     - If this field is unspecified or left blank, no subtitle file will be generated.
+- Under the pure subtitle translation processing type:
+    - original: consistent with the source file.
+    - vtt: WebVTT format subtitle.
+    - srt: SRT format subtitle.
+**Note**:
+- For ASR recognition mode, when 2 or more languages are involved in translation, this field cannot be unspecified or left blank.
+- For pure subtitle translation mode, this field cannot be unspecified or left blank.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSubtitleFormat() {
         return this.SubtitleFormat;
     }
 
     /**
-     * Set Intelligent subtitle file format.
-vtt: WebVTT format.
-srt: SRT format.
-If this field is left blank, no subtitle file will be generated.
-     * @param SubtitleFormat Intelligent subtitle file format.
-vtt: WebVTT format.
-srt: SRT format.
-If this field is left blank, no subtitle file will be generated.
+     * Set Smart subtitle file format:
+- Under the ASR recognition and translation processing type:
+     -vtt: WebVTT format subtitle.
+     -srt: SRT format subtitle.
+     - If this field is unspecified or left blank, no subtitle file will be generated.
+- Under the pure subtitle translation processing type:
+    - original: consistent with the source file.
+    - vtt: WebVTT format subtitle.
+    - srt: SRT format subtitle.
+**Note**:
+- For ASR recognition mode, when 2 or more languages are involved in translation, this field cannot be unspecified or left blank.
+- For pure subtitle translation mode, this field cannot be unspecified or left blank.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubtitleFormat Smart subtitle file format:
+- Under the ASR recognition and translation processing type:
+     -vtt: WebVTT format subtitle.
+     -srt: SRT format subtitle.
+     - If this field is unspecified or left blank, no subtitle file will be generated.
+- Under the pure subtitle translation processing type:
+    - original: consistent with the source file.
+    - vtt: WebVTT format subtitle.
+    - srt: SRT format subtitle.
+**Note**:
+- For ASR recognition mode, when 2 or more languages are involved in translation, this field cannot be unspecified or left blank.
+- For pure subtitle translation mode, this field cannot be unspecified or left blank.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubtitleFormat(String SubtitleFormat) {
         this.SubtitleFormat = SubtitleFormat;
@@ -296,13 +375,15 @@ If this field is left blank, no subtitle file will be generated.
 
     /**
      * Get Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained. 
+`ON`: translation enabled.
+`OFF`: translation disabled.
+**Note**: For pure subtitle translation mode, the default value is enabled if the field is unspecified. The field cannot be left blank or set to `OFF`.
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TranslateSwitch Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
+`ON`: translation enabled.
+`OFF`: translation disabled.
+**Note**: For pure subtitle translation mode, the default value is enabled if the field is unspecified. The field cannot be left blank or set to `OFF`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTranslateSwitch() {
         return this.TranslateSwitch;
@@ -310,13 +391,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
+`ON`: translation enabled.
+`OFF`: translation disabled.
+**Note**: For pure subtitle translation mode, the default value is enabled if the field is unspecified. The field cannot be left blank or set to `OFF`.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param TranslateSwitch Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
+`ON`: translation enabled.
+`OFF`: translation disabled.
+**Note**: For pure subtitle translation mode, the default value is enabled if the field is unspecified. The field cannot be left blank or set to `OFF`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTranslateSwitch(String TranslateSwitch) {
         this.TranslateSwitch = TranslateSwitch;
@@ -324,47 +407,53 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Target language for subtitle translation.
-This field takes effect when TranslateSwitch is set to ON.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-fr: French
-es: Spanish
-it: Italian
-de: German
-tr: Turkish
-ru: Russian
-pt: Portuguese
-vi: Vietnamese
-id: Indonesian
-ms: Malay
-th: Thai
-ar: Arabic
-hi: Hindi
-Note: This field may return null, indicating that no valid value can be obtained. 
+This field is valid when the value of TranslateSwitch is ON. List of translation languages:
+`zh`: Simplified Chinese.
+`zh-TW`: Traditional Chinese.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TranslateDstLanguage Target language for subtitle translation.
-This field takes effect when TranslateSwitch is set to ON.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-fr: French
-es: Spanish
-it: Italian
-de: German
-tr: Turkish
-ru: Russian
-pt: Portuguese
-vi: Vietnamese
-id: Indonesian
-ms: Malay
-th: Thai
-ar: Arabic
-hi: Hindi
-Note: This field may return null, indicating that no valid value can be obtained.
+This field is valid when the value of TranslateSwitch is ON. List of translation languages:
+`zh`: Simplified Chinese.
+`zh-TW`: Traditional Chinese.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTranslateDstLanguage() {
         return this.TranslateDstLanguage;
@@ -372,47 +461,53 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Target language for subtitle translation.
-This field takes effect when TranslateSwitch is set to ON.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-fr: French
-es: Spanish
-it: Italian
-de: German
-tr: Turkish
-ru: Russian
-pt: Portuguese
-vi: Vietnamese
-id: Indonesian
-ms: Malay
-th: Thai
-ar: Arabic
-hi: Hindi
-Note: This field may return null, indicating that no valid value can be obtained.
+This field is valid when the value of TranslateSwitch is ON. List of translation languages:
+`zh`: Simplified Chinese.
+`zh-TW`: Traditional Chinese.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param TranslateDstLanguage Target language for subtitle translation.
-This field takes effect when TranslateSwitch is set to ON.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-fr: French
-es: Spanish
-it: Italian
-de: German
-tr: Turkish
-ru: Russian
-pt: Portuguese
-vi: Vietnamese
-id: Indonesian
-ms: Malay
-th: Thai
-ar: Arabic
-hi: Hindi
-Note: This field may return null, indicating that no valid value can be obtained.
+This field is valid when the value of TranslateSwitch is ON. List of translation languages:
+`zh`: Simplified Chinese.
+`zh-TW`: Traditional Chinese.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTranslateDstLanguage(String TranslateDstLanguage) {
         this.TranslateDstLanguage = TranslateDstLanguage;
@@ -454,6 +549,34 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.ExtInfo = ExtInfo;
     }
 
+    /**
+     * Get Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+**Note**: The default processing type is ASR recognition subtitle if the field is unspecified. 
+     * @return ProcessType Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+**Note**: The default processing type is ASR recognition subtitle if the field is unspecified.
+     */
+    public Long getProcessType() {
+        return this.ProcessType;
+    }
+
+    /**
+     * Set Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+**Note**: The default processing type is ASR recognition subtitle if the field is unspecified.
+     * @param ProcessType Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+**Note**: The default processing type is ASR recognition subtitle if the field is unspecified.
+     */
+    public void setProcessType(Long ProcessType) {
+        this.ProcessType = ProcessType;
+    }
+
     public RawSmartSubtitleParameter() {
     }
 
@@ -483,6 +606,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.ExtInfo != null) {
             this.ExtInfo = new String(source.ExtInfo);
         }
+        if (source.ProcessType != null) {
+            this.ProcessType = new Long(source.ProcessType);
+        }
     }
 
 
@@ -497,6 +623,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "TranslateDstLanguage", this.TranslateDstLanguage);
         this.setParamObj(map, prefix + "AsrHotWordsConfigure.", this.AsrHotWordsConfigure);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
+        this.setParamSimple(map, prefix + "ProcessType", this.ProcessType);
 
     }
 }

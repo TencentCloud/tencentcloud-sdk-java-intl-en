@@ -25,8 +25,9 @@ public class SmartSubtitlesResult extends AbstractModel {
 
     /**
     * Task type. Valid values:
-<li>AsrFullTextRecognition: full speech recognition</li>
-<li>TransTextRecognition: speech translation</li>
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
+- PureSubtitleTrans: pure subtitle translation.
     */
     @SerializedName("Type")
     @Expose
@@ -52,12 +53,22 @@ Note: This field may return null, indicating that no valid value can be obtained
     private SmartSubtitleTaskTransTextResult TransTextTask;
 
     /**
+    * The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PureSubtitleTransTask")
+    @Expose
+    private PureSubtitleTransResult PureSubtitleTransTask;
+
+    /**
      * Get Task type. Valid values:
-<li>AsrFullTextRecognition: full speech recognition</li>
-<li>TransTextRecognition: speech translation</li> 
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
+- PureSubtitleTrans: pure subtitle translation. 
      * @return Type Task type. Valid values:
-<li>AsrFullTextRecognition: full speech recognition</li>
-<li>TransTextRecognition: speech translation</li>
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
+- PureSubtitleTrans: pure subtitle translation.
      */
     public String getType() {
         return this.Type;
@@ -65,11 +76,13 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Task type. Valid values:
-<li>AsrFullTextRecognition: full speech recognition</li>
-<li>TransTextRecognition: speech translation</li>
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
+- PureSubtitleTrans: pure subtitle translation.
      * @param Type Task type. Valid values:
-<li>AsrFullTextRecognition: full speech recognition</li>
-<li>TransTextRecognition: speech translation</li>
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
+- PureSubtitleTrans: pure subtitle translation.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -127,6 +140,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.TransTextTask = TransTextTask;
     }
 
+    /**
+     * Get The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PureSubtitleTransTask The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public PureSubtitleTransResult getPureSubtitleTransTask() {
+        return this.PureSubtitleTransTask;
+    }
+
+    /**
+     * Set The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PureSubtitleTransTask The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPureSubtitleTransTask(PureSubtitleTransResult PureSubtitleTransTask) {
+        this.PureSubtitleTransTask = PureSubtitleTransTask;
+    }
+
     public SmartSubtitlesResult() {
     }
 
@@ -144,6 +177,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.TransTextTask != null) {
             this.TransTextTask = new SmartSubtitleTaskTransTextResult(source.TransTextTask);
         }
+        if (source.PureSubtitleTransTask != null) {
+            this.PureSubtitleTransTask = new PureSubtitleTransResult(source.PureSubtitleTransTask);
+        }
     }
 
 
@@ -154,6 +190,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
         this.setParamObj(map, prefix + "TransTextTask.", this.TransTextTask);
+        this.setParamObj(map, prefix + "PureSubtitleTransTask.", this.PureSubtitleTransTask);
 
     }
 }

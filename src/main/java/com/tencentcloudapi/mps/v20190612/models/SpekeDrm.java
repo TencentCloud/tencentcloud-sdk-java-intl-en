@@ -24,8 +24,10 @@ import java.util.HashMap;
 public class SpekeDrm extends AbstractModel {
 
     /**
-    * Resource tagging. the field content is user-customized.
+    * Resource ID. The field content is user-defined.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+This field corresponds to the cid field in the Speke request.
+Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
     */
     @SerializedName("ResourceId")
     @Expose
@@ -48,10 +50,15 @@ Note: different DRM manufacturers have different limitations on the number of su
     private String Vector;
 
     /**
-    * Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
+    * Encryption method. Options:  
+- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
+- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
 
-cbcs: supported by PlayReady, Widevine, and FairPlay
-cenc: supported by PlayReady and Widevine
+If not specified:  
+- FairPlay defaults to **cbcs**.  
+- PlayReady and Widevine default to **cenc**.  
+- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
+- Widevine+PlayReady defaults to **cenc**.
     */
     @SerializedName("EncryptionMethod")
     @Expose
@@ -68,20 +75,28 @@ preset1: use different keys for each substream
     private String EncryptionPreset;
 
     /**
-     * Get Resource tagging. the field content is user-customized.
-It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-). 
-     * @return ResourceId Resource tagging. the field content is user-customized.
+     * Get Resource ID. The field content is user-defined.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+This field corresponds to the cid field in the Speke request.
+Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors. 
+     * @return ResourceId Resource ID. The field content is user-defined.
+It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+This field corresponds to the cid field in the Speke request.
+Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Resource tagging. the field content is user-customized.
+     * Set Resource ID. The field content is user-defined.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
-     * @param ResourceId Resource tagging. the field content is user-customized.
+This field corresponds to the cid field in the Speke request.
+Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
+     * @param ResourceId Resource ID. The field content is user-defined.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+This field corresponds to the cid field in the Speke request.
+Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
@@ -128,28 +143,48 @@ Note: different DRM manufacturers have different limitations on the number of su
     }
 
     /**
-     * Get Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
+     * Get Encryption method. Options:  
+- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
+- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
 
-cbcs: supported by PlayReady, Widevine, and FairPlay
-cenc: supported by PlayReady and Widevine 
-     * @return EncryptionMethod Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
+If not specified:  
+- FairPlay defaults to **cbcs**.  
+- PlayReady and Widevine default to **cenc**.  
+- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
+- Widevine+PlayReady defaults to **cenc**. 
+     * @return EncryptionMethod Encryption method. Options:  
+- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
+- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
 
-cbcs: supported by PlayReady, Widevine, and FairPlay
-cenc: supported by PlayReady and Widevine
+If not specified:  
+- FairPlay defaults to **cbcs**.  
+- PlayReady and Widevine default to **cenc**.  
+- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
+- Widevine+PlayReady defaults to **cenc**.
      */
     public String getEncryptionMethod() {
         return this.EncryptionMethod;
     }
 
     /**
-     * Set Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
+     * Set Encryption method. Options:  
+- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
+- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
 
-cbcs: supported by PlayReady, Widevine, and FairPlay
-cenc: supported by PlayReady and Widevine
-     * @param EncryptionMethod Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
+If not specified:  
+- FairPlay defaults to **cbcs**.  
+- PlayReady and Widevine default to **cenc**.  
+- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
+- Widevine+PlayReady defaults to **cenc**.
+     * @param EncryptionMethod Encryption method. Options:  
+- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
+- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
 
-cbcs: supported by PlayReady, Widevine, and FairPlay
-cenc: supported by PlayReady and Widevine
+If not specified:  
+- FairPlay defaults to **cbcs**.  
+- PlayReady and Widevine default to **cenc**.  
+- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
+- Widevine+PlayReady defaults to **cenc**.
      */
     public void setEncryptionMethod(String EncryptionMethod) {
         this.EncryptionMethod = EncryptionMethod;

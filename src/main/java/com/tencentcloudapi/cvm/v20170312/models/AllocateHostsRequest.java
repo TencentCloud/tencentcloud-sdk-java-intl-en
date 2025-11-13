@@ -38,14 +38,14 @@ public class AllocateHostsRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-    * Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+    * Not supported. Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
     */
     @SerializedName("HostChargePrepaid")
     @Expose
     private ChargePrepaid HostChargePrepaid;
 
     /**
-    * Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
+    * Instance [billing type](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). <br><li>`POSTPAID_BY_HOUR`: Hourly-based pay-as-you-go <br>
     */
     @SerializedName("HostChargeType")
     @Expose
@@ -105,32 +105,32 @@ public class AllocateHostsRequest extends AbstractModel {
     }
 
     /**
-     * Get Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances. 
-     * @return HostChargePrepaid Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+     * Get Not supported. Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances. 
+     * @return HostChargePrepaid Not supported. Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
      */
     public ChargePrepaid getHostChargePrepaid() {
         return this.HostChargePrepaid;
     }
 
     /**
-     * Set Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
-     * @param HostChargePrepaid Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+     * Set Not supported. Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+     * @param HostChargePrepaid Not supported. Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
      */
     public void setHostChargePrepaid(ChargePrepaid HostChargePrepaid) {
         this.HostChargePrepaid = HostChargePrepaid;
     }
 
     /**
-     * Get Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'. 
-     * @return HostChargeType Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
+     * Get Instance [billing type](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). <br><li>`POSTPAID_BY_HOUR`: Hourly-based pay-as-you-go <br> 
+     * @return HostChargeType Instance [billing type](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). <br><li>`POSTPAID_BY_HOUR`: Hourly-based pay-as-you-go <br>
      */
     public String getHostChargeType() {
         return this.HostChargeType;
     }
 
     /**
-     * Set Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
-     * @param HostChargeType Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
+     * Set Instance [billing type](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). <br><li>`POSTPAID_BY_HOUR`: Hourly-based pay-as-you-go <br>
+     * @param HostChargeType Instance [billing type](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). <br><li>`POSTPAID_BY_HOUR`: Hourly-based pay-as-you-go <br>
      */
     public void setHostChargeType(String HostChargeType) {
         this.HostChargeType = HostChargeType;

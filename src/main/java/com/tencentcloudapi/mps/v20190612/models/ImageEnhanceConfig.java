@@ -32,6 +32,13 @@ public class ImageEnhanceConfig extends AbstractModel {
     private SuperResolutionConfig SuperResolution;
 
     /**
+    * Advanced super-resolution configuration.
+    */
+    @SerializedName("AdvancedSuperResolutionConfig")
+    @Expose
+    private AdvancedSuperResolutionConfig AdvancedSuperResolutionConfig;
+
+    /**
     * Denoising configuration.
 Note: This field may return null, indicating that no valid value can be obtained.
     */
@@ -97,6 +104,22 @@ Note: This field may return null, indicating that no valid value can be obtained
      */
     public void setSuperResolution(SuperResolutionConfig SuperResolution) {
         this.SuperResolution = SuperResolution;
+    }
+
+    /**
+     * Get Advanced super-resolution configuration. 
+     * @return AdvancedSuperResolutionConfig Advanced super-resolution configuration.
+     */
+    public AdvancedSuperResolutionConfig getAdvancedSuperResolutionConfig() {
+        return this.AdvancedSuperResolutionConfig;
+    }
+
+    /**
+     * Set Advanced super-resolution configuration.
+     * @param AdvancedSuperResolutionConfig Advanced super-resolution configuration.
+     */
+    public void setAdvancedSuperResolutionConfig(AdvancedSuperResolutionConfig AdvancedSuperResolutionConfig) {
+        this.AdvancedSuperResolutionConfig = AdvancedSuperResolutionConfig;
     }
 
     /**
@@ -230,6 +253,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.SuperResolution != null) {
             this.SuperResolution = new SuperResolutionConfig(source.SuperResolution);
         }
+        if (source.AdvancedSuperResolutionConfig != null) {
+            this.AdvancedSuperResolutionConfig = new AdvancedSuperResolutionConfig(source.AdvancedSuperResolutionConfig);
+        }
         if (source.Denoise != null) {
             this.Denoise = new ImageDenoiseConfig(source.Denoise);
         }
@@ -256,6 +282,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "SuperResolution.", this.SuperResolution);
+        this.setParamObj(map, prefix + "AdvancedSuperResolutionConfig.", this.AdvancedSuperResolutionConfig);
         this.setParamObj(map, prefix + "Denoise.", this.Denoise);
         this.setParamObj(map, prefix + "ImageQualityEnhance.", this.ImageQualityEnhance);
         this.setParamObj(map, prefix + "ColorEnhance.", this.ColorEnhance);

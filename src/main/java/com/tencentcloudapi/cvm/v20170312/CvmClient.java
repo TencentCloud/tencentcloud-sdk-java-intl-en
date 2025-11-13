@@ -40,7 +40,6 @@ public class CvmClient extends AbstractClient{
 
     /**
      *This API is used to create CDH instances with specified configuration.
-* When HostChargeType is PREPAID, the HostChargePrepaid parameter must be specified.
      * @param req AllocateHostsRequest
      * @return AllocateHostsResponse
      * @throws TencentCloudSDKException

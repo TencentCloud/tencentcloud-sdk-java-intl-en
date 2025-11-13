@@ -34,6 +34,13 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
     * Subtitle file path.
     */
+    @SerializedName("Path")
+    @Expose
+    private String Path;
+
+    /**
+    * Subtitle file path.
+    */
     @SerializedName("SubtitlePath")
     @Expose
     private String SubtitlePath;
@@ -63,6 +70,22 @@ Note: This field may return null, indicating that no valid value can be obtained
      */
     public void setSegmentSet(SmartSubtitleTaskAsrFullTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
+    }
+
+    /**
+     * Get Subtitle file path. 
+     * @return Path Subtitle file path.
+     */
+    public String getPath() {
+        return this.Path;
+    }
+
+    /**
+     * Set Subtitle file path.
+     * @param Path Subtitle file path.
+     */
+    public void setPath(String Path) {
+        this.Path = Path;
     }
 
     /**
@@ -111,6 +134,9 @@ Note: This field may return null, indicating that no valid value can be obtained
                 this.SegmentSet[i] = new SmartSubtitleTaskAsrFullTextSegmentItem(source.SegmentSet[i]);
             }
         }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
         if (source.SubtitlePath != null) {
             this.SubtitlePath = new String(source.SubtitlePath);
         }
@@ -125,6 +151,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+        this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
 

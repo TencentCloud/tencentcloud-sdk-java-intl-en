@@ -114,6 +114,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String StdExtInfo;
 
     /**
+    * Specifies the frame at the given pts time as a key frame and segments it. unit: milliseconds (relative deviation <=1ms is allowed). when gop and segment duration are specified simultaneously, they function together. note: enable RawPts, keep the frame rate as source, and ensure the passed-in pts time corresponds to a frame in the source.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("KeyPTSList")
+    @Expose
+    private Long [] KeyPTSList;
+
+    /**
      * Get Adaptive dynamic streaming template ID. 
      * @return Definition Adaptive dynamic streaming template ID.
      */
@@ -341,6 +349,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.StdExtInfo = StdExtInfo;
     }
 
+    /**
+     * Get Specifies the frame at the given pts time as a key frame and segments it. unit: milliseconds (relative deviation <=1ms is allowed). when gop and segment duration are specified simultaneously, they function together. note: enable RawPts, keep the frame rate as source, and ensure the passed-in pts time corresponds to a frame in the source.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return KeyPTSList Specifies the frame at the given pts time as a key frame and segments it. unit: milliseconds (relative deviation <=1ms is allowed). when gop and segment duration are specified simultaneously, they function together. note: enable RawPts, keep the frame rate as source, and ensure the passed-in pts time corresponds to a frame in the source.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long [] getKeyPTSList() {
+        return this.KeyPTSList;
+    }
+
+    /**
+     * Set Specifies the frame at the given pts time as a key frame and segments it. unit: milliseconds (relative deviation <=1ms is allowed). when gop and segment duration are specified simultaneously, they function together. note: enable RawPts, keep the frame rate as source, and ensure the passed-in pts time corresponds to a frame in the source.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param KeyPTSList Specifies the frame at the given pts time as a key frame and segments it. unit: milliseconds (relative deviation <=1ms is allowed). when gop and segment duration are specified simultaneously, they function together. note: enable RawPts, keep the frame rate as source, and ensure the passed-in pts time corresponds to a frame in the source.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setKeyPTSList(Long [] KeyPTSList) {
+        this.KeyPTSList = KeyPTSList;
+    }
+
     public AdaptiveDynamicStreamingTaskInput() {
     }
 
@@ -388,6 +416,12 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.StdExtInfo != null) {
             this.StdExtInfo = new String(source.StdExtInfo);
         }
+        if (source.KeyPTSList != null) {
+            this.KeyPTSList = new Long[source.KeyPTSList.length];
+            for (int i = 0; i < source.KeyPTSList.length; i++) {
+                this.KeyPTSList[i] = new Long(source.KeyPTSList[i]);
+            }
+        }
     }
 
 
@@ -406,6 +440,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "DefinitionType", this.DefinitionType);
         this.setParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
         this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
+        this.setParamArraySimple(map, prefix + "KeyPTSList.", this.KeyPTSList);
 
     }
 }

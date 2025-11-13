@@ -31,14 +31,26 @@ public class BandwidthPackage extends AbstractModel {
     private String BandwidthPackageId;
 
     /**
-    * Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
+    * Bandwidth package type, includes:
+<li>BGP: General BGP bandwidth package</li>
+<li>HIGH_QUALITY_BGP: Dedicated BGP bandwidth package</li>
+<li>ANYCAST: AIA BGP bandwidth package</li>
+<li>SINGLEISP_CMCC: CMCC bandwidth package</li>
+<li>SINGLEISP_CTCC: CTCC bandwidth package</li>
+<li>SINGLEISP_CUCC: CUCC bandwidth package</li>
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+    * Bandwidth package billing type, includes:
+<li>ENHANCED95_POSTPAID_BY_MONTH: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: Postpaid - Main Traffic Billing</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>TOP5_POSTPAID_BY_MONTH: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket</li>
+
     */
     @SerializedName("ChargeType")
     @Expose
@@ -80,7 +92,9 @@ public class BandwidthPackage extends AbstractModel {
     private Long Bandwidth;
 
     /**
-    * 
+    * Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
     */
     @SerializedName("Egress")
     @Expose
@@ -103,32 +117,80 @@ public class BandwidthPackage extends AbstractModel {
     }
 
     /**
-     * Get Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC` 
-     * @return NetworkType Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
+     * Get Bandwidth package type, includes:
+<li>BGP: General BGP bandwidth package</li>
+<li>HIGH_QUALITY_BGP: Dedicated BGP bandwidth package</li>
+<li>ANYCAST: AIA BGP bandwidth package</li>
+<li>SINGLEISP_CMCC: CMCC bandwidth package</li>
+<li>SINGLEISP_CTCC: CTCC bandwidth package</li>
+<li>SINGLEISP_CUCC: CUCC bandwidth package</li> 
+     * @return NetworkType Bandwidth package type, includes:
+<li>BGP: General BGP bandwidth package</li>
+<li>HIGH_QUALITY_BGP: Dedicated BGP bandwidth package</li>
+<li>ANYCAST: AIA BGP bandwidth package</li>
+<li>SINGLEISP_CMCC: CMCC bandwidth package</li>
+<li>SINGLEISP_CTCC: CTCC bandwidth package</li>
+<li>SINGLEISP_CUCC: CUCC bandwidth package</li>
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
-     * @param NetworkType Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
+     * Set Bandwidth package type, includes:
+<li>BGP: General BGP bandwidth package</li>
+<li>HIGH_QUALITY_BGP: Dedicated BGP bandwidth package</li>
+<li>ANYCAST: AIA BGP bandwidth package</li>
+<li>SINGLEISP_CMCC: CMCC bandwidth package</li>
+<li>SINGLEISP_CTCC: CTCC bandwidth package</li>
+<li>SINGLEISP_CUCC: CUCC bandwidth package</li>
+     * @param NetworkType Bandwidth package type, includes:
+<li>BGP: General BGP bandwidth package</li>
+<li>HIGH_QUALITY_BGP: Dedicated BGP bandwidth package</li>
+<li>ANYCAST: AIA BGP bandwidth package</li>
+<li>SINGLEISP_CMCC: CMCC bandwidth package</li>
+<li>SINGLEISP_CTCC: CTCC bandwidth package</li>
+<li>SINGLEISP_CUCC: CUCC bandwidth package</li>
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH' 
-     * @return ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+     * Get Bandwidth package billing type, includes:
+<li>ENHANCED95_POSTPAID_BY_MONTH: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: Postpaid - Main Traffic Billing</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>TOP5_POSTPAID_BY_MONTH: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket</li>
+ 
+     * @return ChargeType Bandwidth package billing type, includes:
+<li>ENHANCED95_POSTPAID_BY_MONTH: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: Postpaid - Main Traffic Billing</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>TOP5_POSTPAID_BY_MONTH: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket</li>
+
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
-     * @param ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+     * Set Bandwidth package billing type, includes:
+<li>ENHANCED95_POSTPAID_BY_MONTH: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: Postpaid - Main Traffic Billing</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>TOP5_POSTPAID_BY_MONTH: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket</li>
+
+     * @param ChargeType Bandwidth package billing type, includes:
+<li>ENHANCED95_POSTPAID_BY_MONTH: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: Postpaid - Main Traffic Billing</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>TOP5_POSTPAID_BY_MONTH: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket</li>
+
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
@@ -215,16 +277,24 @@ public class BandwidthPackage extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Egress 
+     * Get Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+ 
+     * @return Egress Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
      */
     public String getEgress() {
         return this.Egress;
     }
 
     /**
-     * Set 
-     * @param Egress 
+     * Set Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
+     * @param Egress Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
      */
     public void setEgress(String Egress) {
         this.Egress = Egress;

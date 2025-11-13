@@ -59,6 +59,13 @@ public class InquiryPriceResetInstanceRequest extends AbstractModel {
     private EnhancedService EnhancedService;
 
     /**
+    * 
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+
+    /**
      * Get Instance ID. To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. 
      * @return InstanceId Instance ID. To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response.
      */
@@ -138,6 +145,22 @@ public class InquiryPriceResetInstanceRequest extends AbstractModel {
         this.EnhancedService = EnhancedService;
     }
 
+    /**
+     * Get  
+     * @return UserData 
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * Set 
+     * @param UserData 
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
+    }
+
     public InquiryPriceResetInstanceRequest() {
     }
 
@@ -161,6 +184,9 @@ public class InquiryPriceResetInstanceRequest extends AbstractModel {
         if (source.EnhancedService != null) {
             this.EnhancedService = new EnhancedService(source.EnhancedService);
         }
+        if (source.UserData != null) {
+            this.UserData = new String(source.UserData);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class InquiryPriceResetInstanceRequest extends AbstractModel {
         this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
         this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
+        this.setParamSimple(map, prefix + "UserData", this.UserData);
 
     }
 }

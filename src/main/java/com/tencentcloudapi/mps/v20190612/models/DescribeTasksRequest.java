@@ -34,7 +34,9 @@ public class DescribeTasksRequest extends AbstractModel {
     private String Status;
 
     /**
-    * Indicates whether there is a subtask failure when the task is complete.
+    * Whether there is a failed subtask when the task ends. If this parameter is left unspecified, ignore it.
+<li>false: filter the main tasks to identify those that have no failed subtasks.</li>
+<li>true: filter the main tasks to identify those that have failed subtasks.</li>
     */
     @SerializedName("SubTaskHasFailed")
     @Expose
@@ -97,16 +99,24 @@ public class DescribeTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get Indicates whether there is a subtask failure when the task is complete. 
-     * @return SubTaskHasFailed Indicates whether there is a subtask failure when the task is complete.
+     * Get Whether there is a failed subtask when the task ends. If this parameter is left unspecified, ignore it.
+<li>false: filter the main tasks to identify those that have no failed subtasks.</li>
+<li>true: filter the main tasks to identify those that have failed subtasks.</li> 
+     * @return SubTaskHasFailed Whether there is a failed subtask when the task ends. If this parameter is left unspecified, ignore it.
+<li>false: filter the main tasks to identify those that have no failed subtasks.</li>
+<li>true: filter the main tasks to identify those that have failed subtasks.</li>
      */
     public Boolean getSubTaskHasFailed() {
         return this.SubTaskHasFailed;
     }
 
     /**
-     * Set Indicates whether there is a subtask failure when the task is complete.
-     * @param SubTaskHasFailed Indicates whether there is a subtask failure when the task is complete.
+     * Set Whether there is a failed subtask when the task ends. If this parameter is left unspecified, ignore it.
+<li>false: filter the main tasks to identify those that have no failed subtasks.</li>
+<li>true: filter the main tasks to identify those that have failed subtasks.</li>
+     * @param SubTaskHasFailed Whether there is a failed subtask when the task ends. If this parameter is left unspecified, ignore it.
+<li>false: filter the main tasks to identify those that have no failed subtasks.</li>
+<li>true: filter the main tasks to identify those that have failed subtasks.</li>
      */
     public void setSubTaskHasFailed(Boolean SubTaskHasFailed) {
         this.SubTaskHasFailed = SubTaskHasFailed;

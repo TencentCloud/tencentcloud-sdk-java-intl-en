@@ -52,14 +52,14 @@ public class DescribeAddressesRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
+    * The Offset. The default value is 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
+    * Number of returned results. Default value: 20. Maximum value: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
     */
     @SerializedName("Limit")
     @Expose
@@ -154,32 +154,32 @@ public class DescribeAddressesRequest extends AbstractModel {
     }
 
     /**
-     * Get The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation. 
-     * @return Offset The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
+     * Get The Offset. The default value is 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688). 
+     * @return Offset The Offset. The default value is 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
-     * @param Offset The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
+     * Set The Offset. The default value is 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+     * @param Offset The Offset. The default value is 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation. 
-     * @return Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
+     * Get Number of returned results. Default value: 20. Maximum value: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688). 
+     * @return Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
-     * @param Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
+     * Set Number of returned results. Default value: 20. Maximum value: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+     * @param Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
