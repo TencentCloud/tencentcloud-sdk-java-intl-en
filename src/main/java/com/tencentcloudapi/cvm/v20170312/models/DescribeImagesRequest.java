@@ -46,7 +46,7 @@ public class DescribeImagesRequest extends AbstractModel {
 <li><strong>tag-value</strong></li>
 <p style="padding-left: 30px;">Filter by the <strong>tag value</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 <li><strong>tag:tag-key</strong></li>
-<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace “tag-key” with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
+<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace "tag-key" with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
     */
     @SerializedName("Filters")
     @Expose
@@ -67,7 +67,7 @@ public class DescribeImagesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Instance type, e.g. `S1.SMALL1`
+    * Instance type, e.g. `SA5.MEDIUM2`
     */
     @SerializedName("InstanceType")
     @Expose
@@ -105,7 +105,7 @@ public class DescribeImagesRequest extends AbstractModel {
 <li><strong>tag-value</strong></li>
 <p style="padding-left: 30px;">Filter by the <strong>tag value</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 <li><strong>tag:tag-key</strong></li>
-<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace “tag-key” with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p> 
+<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace "tag-key" with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p> 
      * @return Filters Filters. Each request can have up to 10 `Filters`, and 5 `Filters.Values` for each filter. `ImageIds` and `Filters` cannot be specified at the same time. See details:
 
 <li><strong>image-id</strong></li>
@@ -121,7 +121,7 @@ public class DescribeImagesRequest extends AbstractModel {
 <li><strong>tag-value</strong></li>
 <p style="padding-left: 30px;">Filter by the <strong>tag value</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 <li><strong>tag:tag-key</strong></li>
-<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace “tag-key” with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
+<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace "tag-key" with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -143,7 +143,7 @@ public class DescribeImagesRequest extends AbstractModel {
 <li><strong>tag-value</strong></li>
 <p style="padding-left: 30px;">Filter by the <strong>tag value</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 <li><strong>tag:tag-key</strong></li>
-<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace “tag-key” with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
+<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace "tag-key" with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
      * @param Filters Filters. Each request can have up to 10 `Filters`, and 5 `Filters.Values` for each filter. `ImageIds` and `Filters` cannot be specified at the same time. See details:
 
 <li><strong>image-id</strong></li>
@@ -159,7 +159,7 @@ public class DescribeImagesRequest extends AbstractModel {
 <li><strong>tag-value</strong></li>
 <p style="padding-left: 30px;">Filter by the <strong>tag value</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 <li><strong>tag:tag-key</strong></li>
-<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace “tag-key” with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
+<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace "tag-key" with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -198,16 +198,16 @@ public class DescribeImagesRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance type, e.g. `S1.SMALL1` 
-     * @return InstanceType Instance type, e.g. `S1.SMALL1`
+     * Get Instance type, e.g. `SA5.MEDIUM2` 
+     * @return InstanceType Instance type, e.g. `SA5.MEDIUM2`
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type, e.g. `S1.SMALL1`
-     * @param InstanceType Instance type, e.g. `S1.SMALL1`
+     * Set Instance type, e.g. `SA5.MEDIUM2`
+     * @param InstanceType Instance type, e.g. `SA5.MEDIUM2`
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

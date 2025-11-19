@@ -630,6 +630,7 @@ MCU stream mixing and transcoding fees: [See Cloud Stream Mixing and Transcoding
 
     /**
      *This API is used to stop a relaying task.
+You can create a relay task before the anchor enters the room. When the relay task is finished, you need to call the stop interface actively. If you do not call the Stop Relay Task Interface, Tencent Cloud will automatically stop the mix relay task when all users participating in the mix have no data uploaded for a period of time exceeding the timeout (AgentParams.MaxIdleTime) set when starting the relay task.
      * @param req StopPublishCdnStreamRequest
      * @return StopPublishCdnStreamResponse
      * @throws TencentCloudSDKException

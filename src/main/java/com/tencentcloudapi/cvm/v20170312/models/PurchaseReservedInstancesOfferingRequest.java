@@ -52,7 +52,7 @@ public class PurchaseReservedInstancesOfferingRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-    * Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+    * Reserved instance name.<br><li>The RI name defaults to "unnamed" if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
     */
     @SerializedName("ReservedInstanceName")
     @Expose
@@ -123,16 +123,16 @@ public class PurchaseReservedInstancesOfferingRequest extends AbstractModel {
     }
 
     /**
-     * Get Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li> 
-     * @return ReservedInstanceName Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+     * Get Reserved instance name.<br><li>The RI name defaults to "unnamed" if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li> 
+     * @return ReservedInstanceName Reserved instance name.<br><li>The RI name defaults to "unnamed" if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
      */
     public String getReservedInstanceName() {
         return this.ReservedInstanceName;
     }
 
     /**
-     * Set Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
-     * @param ReservedInstanceName Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+     * Set Reserved instance name.<br><li>The RI name defaults to "unnamed" if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+     * @param ReservedInstanceName Reserved instance name.<br><li>The RI name defaults to "unnamed" if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
      */
     public void setReservedInstanceName(String ReservedInstanceName) {
         this.ReservedInstanceName = ReservedInstanceName;
