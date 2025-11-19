@@ -31,11 +31,18 @@ public class DescribeApmInstancesRequest extends AbstractModel {
     private ApmTag [] Tags;
 
     /**
-    * Filter by business system name.
+    * Filters by business system name, and fuzzy search is supported.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
+
+    /**
+    * Filters by business system ID, and fuzzy search is supported.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
 
     /**
     * Filter by business system id.
@@ -75,19 +82,35 @@ public class DescribeApmInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter by business system name. 
-     * @return InstanceName Filter by business system name.
+     * Get Filters by business system name, and fuzzy search is supported. 
+     * @return InstanceName Filters by business system name, and fuzzy search is supported.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Filter by business system name.
-     * @param InstanceName Filter by business system name.
+     * Set Filters by business system name, and fuzzy search is supported.
+     * @param InstanceName Filters by business system name, and fuzzy search is supported.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get Filters by business system ID, and fuzzy search is supported. 
+     * @return InstanceId Filters by business system ID, and fuzzy search is supported.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Filters by business system ID, and fuzzy search is supported.
+     * @param InstanceId Filters by business system ID, and fuzzy search is supported.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
@@ -155,6 +178,9 @@ public class DescribeApmInstancesRequest extends AbstractModel {
         if (source.InstanceName != null) {
             this.InstanceName = new String(source.InstanceName);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
         if (source.InstanceIds != null) {
             this.InstanceIds = new String[source.InstanceIds.length];
             for (int i = 0; i < source.InstanceIds.length; i++) {
@@ -176,6 +202,7 @@ public class DescribeApmInstancesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "DemoInstanceFlag", this.DemoInstanceFlag);
         this.setParamSimple(map, prefix + "AllRegionsFlag", this.AllRegionsFlag);

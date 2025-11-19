@@ -306,6 +306,17 @@ This API is used to set the default request rate limit to 5 requests/second.
     }
 
     /**
+     *This API is used to recognize the coordinates of four corners of cards.
+     * @param req RecognizeDetectCardCoordsRequest
+     * @return RecognizeDetectCardCoordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeDetectCardCoordsResponse RecognizeDetectCardCoords(RecognizeDetectCardCoordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RecognizeDetectCardCoords", RecognizeDetectCardCoordsResponse.class);
+    }
+
+    /**
      *This API is used to recognize various types of invoices or tickets in an image or PDF file. You can also specify a type. 14 types of standard expense reimbursement invoices are supported, including value-added tax (VAT) invoice (special, general, roll, blockchain, and toll), fully digitalized electronic invoice (special and general), non-tax revenue invoice (general receipt and general payment voucher), quota invoice, general machine-printed invoice, car sales invoice (motor vehicle sales invoice and used car invoice), train ticket, taxi receipt, itinerary/receipt of e-ticket for air transportation, bus ticket, ship ticket, toll receipt, and medical invoice (inpatient and outpatient). This API can also be used for intelligent recognition of other types of invoices. To try now, click [here](https://intl.cloud.tencent.com/product/ocr?from_cn_redirect=1).
 
 A maximum of 5 requests can be initiated per second for this API.

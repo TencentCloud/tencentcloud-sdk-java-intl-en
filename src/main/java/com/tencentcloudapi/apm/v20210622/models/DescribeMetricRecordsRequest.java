@@ -52,6 +52,13 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
     private Long EndTime;
 
     /**
+    * Aggregation dimension.
+    */
+    @SerializedName("GroupBy")
+    @Expose
+    private String [] GroupBy;
+
+    /**
     * Filter criteria.
     */
     @SerializedName("Filters")
@@ -64,13 +71,6 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
     @SerializedName("OrFilters")
     @Expose
     private Filter [] OrFilters;
-
-    /**
-    * Aggregation dimension.
-    */
-    @SerializedName("GroupBy")
-    @Expose
-    private String [] GroupBy;
 
     /**
     * Sort
@@ -197,6 +197,22 @@ The currently supported values are:.
     }
 
     /**
+     * Get Aggregation dimension. 
+     * @return GroupBy Aggregation dimension.
+     */
+    public String [] getGroupBy() {
+        return this.GroupBy;
+    }
+
+    /**
+     * Set Aggregation dimension.
+     * @param GroupBy Aggregation dimension.
+     */
+    public void setGroupBy(String [] GroupBy) {
+        this.GroupBy = GroupBy;
+    }
+
+    /**
      * Get Filter criteria. 
      * @return Filters Filter criteria.
      */
@@ -226,22 +242,6 @@ The currently supported values are:.
      */
     public void setOrFilters(Filter [] OrFilters) {
         this.OrFilters = OrFilters;
-    }
-
-    /**
-     * Get Aggregation dimension. 
-     * @return GroupBy Aggregation dimension.
-     */
-    public String [] getGroupBy() {
-        return this.GroupBy;
-    }
-
-    /**
-     * Set Aggregation dimension.
-     * @param GroupBy Aggregation dimension.
-     */
-    public void setGroupBy(String [] GroupBy) {
-        this.GroupBy = GroupBy;
     }
 
     /**
@@ -423,6 +423,12 @@ The currently supported values are:.
         if (source.EndTime != null) {
             this.EndTime = new Long(source.EndTime);
         }
+        if (source.GroupBy != null) {
+            this.GroupBy = new String[source.GroupBy.length];
+            for (int i = 0; i < source.GroupBy.length; i++) {
+                this.GroupBy[i] = new String(source.GroupBy[i]);
+            }
+        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -433,12 +439,6 @@ The currently supported values are:.
             this.OrFilters = new Filter[source.OrFilters.length];
             for (int i = 0; i < source.OrFilters.length; i++) {
                 this.OrFilters[i] = new Filter(source.OrFilters[i]);
-            }
-        }
-        if (source.GroupBy != null) {
-            this.GroupBy = new String[source.GroupBy.length];
-            for (int i = 0; i < source.GroupBy.length; i++) {
-                this.GroupBy[i] = new String(source.GroupBy[i]);
             }
         }
         if (source.OrderBy != null) {
@@ -473,9 +473,9 @@ The currently supported values are:.
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "OrFilters.", this.OrFilters);
-        this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
         this.setParamObj(map, prefix + "OrderBy.", this.OrderBy);
         this.setParamSimple(map, prefix + "BusinessName", this.BusinessName);
         this.setParamSimple(map, prefix + "Type", this.Type);

@@ -157,6 +157,20 @@ public class ApmApplicationConfigView extends AbstractModel {
     private Boolean TraceSquash;
 
     /**
+    * Specifies the memory threshold for probe fusing.
+    */
+    @SerializedName("DisableMemoryUsed")
+    @Expose
+    private Long DisableMemoryUsed;
+
+    /**
+    * Specifies the CPU threshold for probe fusing.
+    */
+    @SerializedName("DisableCpuUsed")
+    @Expose
+    private Long DisableCpuUsed;
+
+    /**
      * Get Business system id. 
      * @return InstanceKey Business system id.
      */
@@ -460,6 +474,38 @@ public class ApmApplicationConfigView extends AbstractModel {
         this.TraceSquash = TraceSquash;
     }
 
+    /**
+     * Get Specifies the memory threshold for probe fusing. 
+     * @return DisableMemoryUsed Specifies the memory threshold for probe fusing.
+     */
+    public Long getDisableMemoryUsed() {
+        return this.DisableMemoryUsed;
+    }
+
+    /**
+     * Set Specifies the memory threshold for probe fusing.
+     * @param DisableMemoryUsed Specifies the memory threshold for probe fusing.
+     */
+    public void setDisableMemoryUsed(Long DisableMemoryUsed) {
+        this.DisableMemoryUsed = DisableMemoryUsed;
+    }
+
+    /**
+     * Get Specifies the CPU threshold for probe fusing. 
+     * @return DisableCpuUsed Specifies the CPU threshold for probe fusing.
+     */
+    public Long getDisableCpuUsed() {
+        return this.DisableCpuUsed;
+    }
+
+    /**
+     * Set Specifies the CPU threshold for probe fusing.
+     * @param DisableCpuUsed Specifies the CPU threshold for probe fusing.
+     */
+    public void setDisableCpuUsed(Long DisableCpuUsed) {
+        this.DisableCpuUsed = DisableCpuUsed;
+    }
+
     public ApmApplicationConfigView() {
     }
 
@@ -528,6 +574,12 @@ public class ApmApplicationConfigView extends AbstractModel {
         if (source.TraceSquash != null) {
             this.TraceSquash = new Boolean(source.TraceSquash);
         }
+        if (source.DisableMemoryUsed != null) {
+            this.DisableMemoryUsed = new Long(source.DisableMemoryUsed);
+        }
+        if (source.DisableCpuUsed != null) {
+            this.DisableCpuUsed = new Long(source.DisableCpuUsed);
+        }
     }
 
 
@@ -554,6 +606,8 @@ public class ApmApplicationConfigView extends AbstractModel {
         this.setParamSimple(map, prefix + "AgentEnable", this.AgentEnable);
         this.setParamArrayObj(map, prefix + "InstrumentList.", this.InstrumentList);
         this.setParamSimple(map, prefix + "TraceSquash", this.TraceSquash);
+        this.setParamSimple(map, prefix + "DisableMemoryUsed", this.DisableMemoryUsed);
+        this.setParamSimple(map, prefix + "DisableCpuUsed", this.DisableCpuUsed);
 
     }
 }

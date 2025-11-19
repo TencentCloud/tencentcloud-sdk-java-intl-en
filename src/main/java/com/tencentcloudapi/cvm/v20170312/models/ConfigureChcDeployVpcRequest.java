@@ -45,6 +45,13 @@ public class ConfigureChcDeployVpcRequest extends AbstractModel {
     private String [] DeploySecurityGroupIds;
 
     /**
+    * 
+    */
+    @SerializedName("ChcDeployExtraConfig")
+    @Expose
+    private ChcDeployExtraConfig ChcDeployExtraConfig;
+
+    /**
      * Get CHC instance ID 
      * @return ChcIds CHC instance ID
      */
@@ -92,6 +99,22 @@ public class ConfigureChcDeployVpcRequest extends AbstractModel {
         this.DeploySecurityGroupIds = DeploySecurityGroupIds;
     }
 
+    /**
+     * Get  
+     * @return ChcDeployExtraConfig 
+     */
+    public ChcDeployExtraConfig getChcDeployExtraConfig() {
+        return this.ChcDeployExtraConfig;
+    }
+
+    /**
+     * Set 
+     * @param ChcDeployExtraConfig 
+     */
+    public void setChcDeployExtraConfig(ChcDeployExtraConfig ChcDeployExtraConfig) {
+        this.ChcDeployExtraConfig = ChcDeployExtraConfig;
+    }
+
     public ConfigureChcDeployVpcRequest() {
     }
 
@@ -115,6 +138,9 @@ public class ConfigureChcDeployVpcRequest extends AbstractModel {
                 this.DeploySecurityGroupIds[i] = new String(source.DeploySecurityGroupIds[i]);
             }
         }
+        if (source.ChcDeployExtraConfig != null) {
+            this.ChcDeployExtraConfig = new ChcDeployExtraConfig(source.ChcDeployExtraConfig);
+        }
     }
 
 
@@ -125,6 +151,7 @@ public class ConfigureChcDeployVpcRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ChcIds.", this.ChcIds);
         this.setParamObj(map, prefix + "DeployVirtualPrivateCloud.", this.DeployVirtualPrivateCloud);
         this.setParamArraySimple(map, prefix + "DeploySecurityGroupIds.", this.DeploySecurityGroupIds);
+        this.setParamObj(map, prefix + "ChcDeployExtraConfig.", this.ChcDeployExtraConfig);
 
     }
 }

@@ -59,6 +59,13 @@ public class Line extends AbstractModel {
     private ApmTag [] Tags;
 
     /**
+    * Metric data unit
+    */
+    @SerializedName("MetricUnit")
+    @Expose
+    private String MetricUnit;
+
+    /**
      * Get Metric name. 
      * @return MetricName Metric name.
      */
@@ -138,6 +145,22 @@ public class Line extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get Metric data unit 
+     * @return MetricUnit Metric data unit
+     */
+    public String getMetricUnit() {
+        return this.MetricUnit;
+    }
+
+    /**
+     * Set Metric data unit
+     * @param MetricUnit Metric data unit
+     */
+    public void setMetricUnit(String MetricUnit) {
+        this.MetricUnit = MetricUnit;
+    }
+
     public Line() {
     }
 
@@ -170,6 +193,9 @@ public class Line extends AbstractModel {
                 this.Tags[i] = new ApmTag(source.Tags[i]);
             }
         }
+        if (source.MetricUnit != null) {
+            this.MetricUnit = new String(source.MetricUnit);
+        }
     }
 
 
@@ -182,6 +208,7 @@ public class Line extends AbstractModel {
         this.setParamArraySimple(map, prefix + "TimeSerial.", this.TimeSerial);
         this.setParamArraySimple(map, prefix + "DataSerial.", this.DataSerial);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "MetricUnit", this.MetricUnit);
 
     }
 }

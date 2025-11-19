@@ -38,13 +38,6 @@ public class DescribeTagValuesRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Filter criteria.
-    */
-    @SerializedName("Filters")
-    @Expose
-    private Filter [] Filters;
-
-    /**
     * Start time (unit: sec).
     */
     @SerializedName("StartTime")
@@ -57,6 +50,13 @@ public class DescribeTagValuesRequest extends AbstractModel {
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
+
+    /**
+    * Filter criteria.
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
 
     /**
     * Or filter criteria.
@@ -105,22 +105,6 @@ public class DescribeTagValuesRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter criteria. 
-     * @return Filters Filter criteria.
-     */
-    public Filter [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set Filter criteria.
-     * @param Filters Filter criteria.
-     */
-    public void setFilters(Filter [] Filters) {
-        this.Filters = Filters;
-    }
-
-    /**
      * Get Start time (unit: sec). 
      * @return StartTime Start time (unit: sec).
      */
@@ -150,6 +134,22 @@ public class DescribeTagValuesRequest extends AbstractModel {
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
+    }
+
+    /**
+     * Get Filter criteria. 
+     * @return Filters Filter criteria.
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set Filter criteria.
+     * @param Filters Filter criteria.
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     /**
@@ -198,17 +198,17 @@ public class DescribeTagValuesRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.Filters != null) {
-            this.Filters = new Filter[source.Filters.length];
-            for (int i = 0; i < source.Filters.length; i++) {
-                this.Filters[i] = new Filter(source.Filters[i]);
-            }
-        }
         if (source.StartTime != null) {
             this.StartTime = new Long(source.StartTime);
         }
         if (source.EndTime != null) {
             this.EndTime = new Long(source.EndTime);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
         }
         if (source.OrFilters != null) {
             this.OrFilters = new Filter[source.OrFilters.length];
@@ -228,9 +228,9 @@ public class DescribeTagValuesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "OrFilters.", this.OrFilters);
         this.setParamSimple(map, prefix + "Type", this.Type);
 

@@ -31,7 +31,11 @@ public class DescribeGeneralOTSpanListResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * The trace structure containing the query results spans. the string after the opentelemetry standard trace structure is hashed. first, the trace is converted into a json string using ptrace.jsonmarshaler, then compressed with gzip, and finally converted into a base64 standard string.
+    * The Spans field contains the entire content of the link data. since the data is compressed, perform the following three steps to switch back to the original text.
+Decode the text in the Spans field with Base64 to get the compressed byte[].
+Use gzip to decompress the compressed byte array and get the byte array before compression.
+Uses UTF-8 character set to convert byte[] before compression to text.
+
     */
     @SerializedName("Spans")
     @Expose
@@ -61,16 +65,32 @@ public class DescribeGeneralOTSpanListResponse extends AbstractModel {
     }
 
     /**
-     * Get The trace structure containing the query results spans. the string after the opentelemetry standard trace structure is hashed. first, the trace is converted into a json string using ptrace.jsonmarshaler, then compressed with gzip, and finally converted into a base64 standard string. 
-     * @return Spans The trace structure containing the query results spans. the string after the opentelemetry standard trace structure is hashed. first, the trace is converted into a json string using ptrace.jsonmarshaler, then compressed with gzip, and finally converted into a base64 standard string.
+     * Get The Spans field contains the entire content of the link data. since the data is compressed, perform the following three steps to switch back to the original text.
+Decode the text in the Spans field with Base64 to get the compressed byte[].
+Use gzip to decompress the compressed byte array and get the byte array before compression.
+Uses UTF-8 character set to convert byte[] before compression to text.
+ 
+     * @return Spans The Spans field contains the entire content of the link data. since the data is compressed, perform the following three steps to switch back to the original text.
+Decode the text in the Spans field with Base64 to get the compressed byte[].
+Use gzip to decompress the compressed byte array and get the byte array before compression.
+Uses UTF-8 character set to convert byte[] before compression to text.
+
      */
     public String getSpans() {
         return this.Spans;
     }
 
     /**
-     * Set The trace structure containing the query results spans. the string after the opentelemetry standard trace structure is hashed. first, the trace is converted into a json string using ptrace.jsonmarshaler, then compressed with gzip, and finally converted into a base64 standard string.
-     * @param Spans The trace structure containing the query results spans. the string after the opentelemetry standard trace structure is hashed. first, the trace is converted into a json string using ptrace.jsonmarshaler, then compressed with gzip, and finally converted into a base64 standard string.
+     * Set The Spans field contains the entire content of the link data. since the data is compressed, perform the following three steps to switch back to the original text.
+Decode the text in the Spans field with Base64 to get the compressed byte[].
+Use gzip to decompress the compressed byte array and get the byte array before compression.
+Uses UTF-8 character set to convert byte[] before compression to text.
+
+     * @param Spans The Spans field contains the entire content of the link data. since the data is compressed, perform the following three steps to switch back to the original text.
+Decode the text in the Spans field with Base64 to get the compressed byte[].
+Use gzip to decompress the compressed byte array and get the byte array before compression.
+Uses UTF-8 character set to convert byte[] before compression to text.
+
      */
     public void setSpans(String Spans) {
         this.Spans = Spans;

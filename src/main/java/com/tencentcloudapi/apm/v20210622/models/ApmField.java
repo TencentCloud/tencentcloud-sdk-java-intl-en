@@ -68,6 +68,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CompareVal;
 
     /**
+    * Metric Chinese Name
+    */
+    @SerializedName("NameCN")
+    @Expose
+    private String NameCN;
+
+    /**
+    * Metric English name
+    */
+    @SerializedName("NameEN")
+    @Expose
+    private String NameEN;
+
+    /**
      * Get Metric name. 
      * @return Key Metric name.
      */
@@ -171,6 +185,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.CompareVal = CompareVal;
     }
 
+    /**
+     * Get Metric Chinese Name 
+     * @return NameCN Metric Chinese Name
+     */
+    public String getNameCN() {
+        return this.NameCN;
+    }
+
+    /**
+     * Set Metric Chinese Name
+     * @param NameCN Metric Chinese Name
+     */
+    public void setNameCN(String NameCN) {
+        this.NameCN = NameCN;
+    }
+
+    /**
+     * Get Metric English name 
+     * @return NameEN Metric English name
+     */
+    public String getNameEN() {
+        return this.NameEN;
+    }
+
+    /**
+     * Set Metric English name
+     * @param NameEN Metric English name
+     */
+    public void setNameEN(String NameEN) {
+        this.NameEN = NameEN;
+    }
+
     public ApmField() {
     }
 
@@ -203,6 +249,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.CompareVal != null) {
             this.CompareVal = new String(source.CompareVal);
         }
+        if (source.NameCN != null) {
+            this.NameCN = new String(source.NameCN);
+        }
+        if (source.NameEN != null) {
+            this.NameEN = new String(source.NameEN);
+        }
     }
 
 
@@ -216,6 +268,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "CompareVals.", this.CompareVals);
         this.setParamArrayObj(map, prefix + "LastPeriodValue.", this.LastPeriodValue);
         this.setParamSimple(map, prefix + "CompareVal", this.CompareVal);
+        this.setParamSimple(map, prefix + "NameCN", this.NameCN);
+        this.setParamSimple(map, prefix + "NameEN", this.NameEN);
 
     }
 }

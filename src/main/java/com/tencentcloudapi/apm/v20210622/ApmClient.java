@@ -50,6 +50,50 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create metric match rules between apm Business System and Prometheus Instance.
+     * @param req CreateApmPrometheusRuleRequest
+     * @return CreateApmPrometheusRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApmPrometheusRuleResponse CreateApmPrometheusRule(CreateApmPrometheusRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateApmPrometheusRule", CreateApmPrometheusRuleResponse.class);
+    }
+
+    /**
+     *Create sampling configurations
+     * @param req CreateApmSampleConfigRequest
+     * @return CreateApmSampleConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApmSampleConfigResponse CreateApmSampleConfig(CreateApmSampleConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateApmSampleConfig", CreateApmSampleConfigResponse.class);
+    }
+
+    /**
+     *This API is used to create an event task.
+     * @param req CreateProfileTaskRequest
+     * @return CreateProfileTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProfileTaskResponse CreateProfileTask(CreateProfileTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProfileTask", CreateProfileTaskResponse.class);
+    }
+
+    /**
+     *Delete sampling configurations
+     * @param req DeleteApmSampleConfigRequest
+     * @return DeleteApmSampleConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApmSampleConfigResponse DeleteApmSampleConfig(DeleteApmSampleConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteApmSampleConfig", DeleteApmSampleConfigResponse.class);
+    }
+
+    /**
      *Obtaining APM Access Point.
      * @param req DescribeApmAgentRequest
      * @return DescribeApmAgentResponse
@@ -61,6 +105,28 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query application configuration.
+     * @param req DescribeApmApplicationConfigRequest
+     * @return DescribeApmApplicationConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApmApplicationConfigResponse DescribeApmApplicationConfig(DescribeApmApplicationConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApmApplicationConfig", DescribeApmApplicationConfigResponse.class);
+    }
+
+    /**
+     *This API is used to query the relationship between apm Business System and other product.
+     * @param req DescribeApmAssociationRequest
+     * @return DescribeApmAssociationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApmAssociationResponse DescribeApmAssociation(DescribeApmAssociationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApmAssociation", DescribeApmAssociationResponse.class);
+    }
+
+    /**
      *This API is used to obtain the list of APM business systems.
      * @param req DescribeApmInstancesRequest
      * @return DescribeApmInstancesResponse
@@ -69,6 +135,39 @@ public class ApmClient extends AbstractClient{
     public DescribeApmInstancesResponse DescribeApmInstances(DescribeApmInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeApmInstances", DescribeApmInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to query the match rule for metrics between apm Business System and Prometheus Instance.
+     * @param req DescribeApmPrometheusRuleRequest
+     * @return DescribeApmPrometheusRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApmPrometheusRuleResponse DescribeApmPrometheusRule(DescribeApmPrometheusRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApmPrometheusRule", DescribeApmPrometheusRuleResponse.class);
+    }
+
+    /**
+     *Query sampling configuration
+     * @param req DescribeApmSampleConfigRequest
+     * @return DescribeApmSampleConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApmSampleConfigResponse DescribeApmSampleConfig(DescribeApmSampleConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApmSampleConfig", DescribeApmSampleConfigResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the list of APM application metrics.
+     * @param req DescribeApmServiceMetricRequest
+     * @return DescribeApmServiceMetricResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApmServiceMetricResponse DescribeApmServiceMetric(DescribeApmServiceMetricRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApmServiceMetric", DescribeApmServiceMetricResponse.class);
     }
 
     /**
@@ -150,6 +249,28 @@ The API call frequency is limited to 20 requests per second and 1200 requests pe
     }
 
     /**
+     *Modify application configurations
+     * @param req ModifyApmApplicationConfigRequest
+     * @return ModifyApmApplicationConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApmApplicationConfigResponse ModifyApmApplicationConfig(ModifyApmApplicationConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApmApplicationConfig", ModifyApmApplicationConfigResponse.class);
+    }
+
+    /**
+     *This API is used to modify the relationship between the apm Business System and other products, including deletion.
+     * @param req ModifyApmAssociationRequest
+     * @return ModifyApmAssociationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApmAssociationResponse ModifyApmAssociation(ModifyApmAssociationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApmAssociation", ModifyApmAssociationResponse.class);
+    }
+
+    /**
      *This API is used to modify the APM business system.
      * @param req ModifyApmInstanceRequest
      * @return ModifyApmInstanceResponse
@@ -158,6 +279,28 @@ The API call frequency is limited to 20 requests per second and 1200 requests pe
     public ModifyApmInstanceResponse ModifyApmInstance(ModifyApmInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyApmInstance", ModifyApmInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to modify metric match rules between apm Business System and Prometheus Instance.
+     * @param req ModifyApmPrometheusRuleRequest
+     * @return ModifyApmPrometheusRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApmPrometheusRuleResponse ModifyApmPrometheusRule(ModifyApmPrometheusRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApmPrometheusRule", ModifyApmPrometheusRuleResponse.class);
+    }
+
+    /**
+     *Modify sampling configurations
+     * @param req ModifyApmSampleConfigRequest
+     * @return ModifyApmSampleConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApmSampleConfigResponse ModifyApmSampleConfig(ModifyApmSampleConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApmSampleConfig", ModifyApmSampleConfigResponse.class);
     }
 
     /**

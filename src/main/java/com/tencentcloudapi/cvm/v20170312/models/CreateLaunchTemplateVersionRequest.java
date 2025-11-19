@@ -226,6 +226,13 @@ If the dry run succeeds, the RequestId will be returned.
     private Boolean DisableApiTermination;
 
     /**
+    * 
+    */
+    @SerializedName("EnableJumboFrame")
+    @Expose
+    private Boolean EnableJumboFrame;
+
+    /**
     * Custom metadata. specifies that custom metadata key-value pairs can be added when creating a CVM.
 Note: this field is in beta test.
     */
@@ -717,6 +724,22 @@ If the dry run succeeds, the RequestId will be returned.
     }
 
     /**
+     * Get  
+     * @return EnableJumboFrame 
+     */
+    public Boolean getEnableJumboFrame() {
+        return this.EnableJumboFrame;
+    }
+
+    /**
+     * Set 
+     * @param EnableJumboFrame 
+     */
+    public void setEnableJumboFrame(Boolean EnableJumboFrame) {
+        this.EnableJumboFrame = EnableJumboFrame;
+    }
+
+    /**
      * Get Custom metadata. specifies that custom metadata key-value pairs can be added when creating a CVM.
 Note: this field is in beta test. 
      * @return Metadata Custom metadata. specifies that custom metadata key-value pairs can be added when creating a CVM.
@@ -872,6 +895,9 @@ Note: this field is in beta test.
         if (source.DisableApiTermination != null) {
             this.DisableApiTermination = new Boolean(source.DisableApiTermination);
         }
+        if (source.EnableJumboFrame != null) {
+            this.EnableJumboFrame = new Boolean(source.EnableJumboFrame);
+        }
         if (source.Metadata != null) {
             this.Metadata = new Metadata(source.Metadata);
         }
@@ -913,6 +939,7 @@ Note: this field is in beta test.
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+        this.setParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
         this.setParamObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamSimple(map, prefix + "TemplateDataModifyAction", this.TemplateDataModifyAction);
 

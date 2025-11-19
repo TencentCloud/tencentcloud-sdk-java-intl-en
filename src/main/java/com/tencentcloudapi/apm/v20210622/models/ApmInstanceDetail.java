@@ -289,6 +289,139 @@ Account in arrears.
     private Long StopReason;
 
     /**
+    * Whether to enable detection of remote command execution (0 = disabled; 1 = enabled).
+    */
+    @SerializedName("IsRemoteCommandExecutionAnalysis")
+    @Expose
+    private Long IsRemoteCommandExecutionAnalysis;
+
+    /**
+    * Whether to enable detection of Java webshell execution (0 = disabled; 1 = enabled).
+    */
+    @SerializedName("IsMemoryHijackingAnalysis")
+    @Expose
+    private Long IsMemoryHijackingAnalysis;
+
+    /**
+    * CLS index type. (0 = full-text index; 1 = key-value index).
+    */
+    @SerializedName("LogIndexType")
+    @Expose
+    private Long LogIndexType;
+
+    /**
+    * Index key of traceId. It is valid when the CLS index type is key-value index.
+    */
+    @SerializedName("LogTraceIdKey")
+    @Expose
+    private String LogTraceIdKey;
+
+    /**
+    * Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+    */
+    @SerializedName("IsDeleteAnyFileAnalysis")
+    @Expose
+    private Long IsDeleteAnyFileAnalysis;
+
+    /**
+    * Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+    */
+    @SerializedName("IsReadAnyFileAnalysis")
+    @Expose
+    private Long IsReadAnyFileAnalysis;
+
+    /**
+    * Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+    */
+    @SerializedName("IsUploadAnyFileAnalysis")
+    @Expose
+    private Long IsUploadAnyFileAnalysis;
+
+    /**
+    * Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+    */
+    @SerializedName("IsIncludeAnyFileAnalysis")
+    @Expose
+    private Long IsIncludeAnyFileAnalysis;
+
+    /**
+    * Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+    */
+    @SerializedName("IsDirectoryTraversalAnalysis")
+    @Expose
+    private Long IsDirectoryTraversalAnalysis;
+
+    /**
+    * Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+    */
+    @SerializedName("IsTemplateEngineInjectionAnalysis")
+    @Expose
+    private Long IsTemplateEngineInjectionAnalysis;
+
+    /**
+    * Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+    */
+    @SerializedName("IsScriptEngineInjectionAnalysis")
+    @Expose
+    private Long IsScriptEngineInjectionAnalysis;
+
+    /**
+    * Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+    */
+    @SerializedName("IsExpressionInjectionAnalysis")
+    @Expose
+    private Long IsExpressionInjectionAnalysis;
+
+    /**
+    * Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+    */
+    @SerializedName("IsJNDIInjectionAnalysis")
+    @Expose
+    private Long IsJNDIInjectionAnalysis;
+
+    /**
+    * Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+    */
+    @SerializedName("IsJNIInjectionAnalysis")
+    @Expose
+    private Long IsJNIInjectionAnalysis;
+
+    /**
+    * Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+    */
+    @SerializedName("IsWebshellBackdoorAnalysis")
+    @Expose
+    private Long IsWebshellBackdoorAnalysis;
+
+    /**
+    * Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+    */
+    @SerializedName("IsDeserializationAnalysis")
+    @Expose
+    private Long IsDeserializationAnalysis;
+
+    /**
+    * Business system authentication token.
+    */
+    @SerializedName("Token")
+    @Expose
+    private String Token;
+
+    /**
+    * Convergence threshold for URL long segments.
+    */
+    @SerializedName("UrlLongSegmentThreshold")
+    @Expose
+    private Long UrlLongSegmentThreshold;
+
+    /**
+    * Convergence threshold for URL numerical segments.
+    */
+    @SerializedName("UrlNumberSegmentThreshold")
+    @Expose
+    private Long UrlNumberSegmentThreshold;
+
+    /**
      * Get Business system id. 
      * @return InstanceId Business system id.
      */
@@ -904,6 +1037,310 @@ Account in arrears.
         this.StopReason = StopReason;
     }
 
+    /**
+     * Get Whether to enable detection of remote command execution (0 = disabled; 1 = enabled). 
+     * @return IsRemoteCommandExecutionAnalysis Whether to enable detection of remote command execution (0 = disabled; 1 = enabled).
+     */
+    public Long getIsRemoteCommandExecutionAnalysis() {
+        return this.IsRemoteCommandExecutionAnalysis;
+    }
+
+    /**
+     * Set Whether to enable detection of remote command execution (0 = disabled; 1 = enabled).
+     * @param IsRemoteCommandExecutionAnalysis Whether to enable detection of remote command execution (0 = disabled; 1 = enabled).
+     */
+    public void setIsRemoteCommandExecutionAnalysis(Long IsRemoteCommandExecutionAnalysis) {
+        this.IsRemoteCommandExecutionAnalysis = IsRemoteCommandExecutionAnalysis;
+    }
+
+    /**
+     * Get Whether to enable detection of Java webshell execution (0 = disabled; 1 = enabled). 
+     * @return IsMemoryHijackingAnalysis Whether to enable detection of Java webshell execution (0 = disabled; 1 = enabled).
+     */
+    public Long getIsMemoryHijackingAnalysis() {
+        return this.IsMemoryHijackingAnalysis;
+    }
+
+    /**
+     * Set Whether to enable detection of Java webshell execution (0 = disabled; 1 = enabled).
+     * @param IsMemoryHijackingAnalysis Whether to enable detection of Java webshell execution (0 = disabled; 1 = enabled).
+     */
+    public void setIsMemoryHijackingAnalysis(Long IsMemoryHijackingAnalysis) {
+        this.IsMemoryHijackingAnalysis = IsMemoryHijackingAnalysis;
+    }
+
+    /**
+     * Get CLS index type. (0 = full-text index; 1 = key-value index). 
+     * @return LogIndexType CLS index type. (0 = full-text index; 1 = key-value index).
+     */
+    public Long getLogIndexType() {
+        return this.LogIndexType;
+    }
+
+    /**
+     * Set CLS index type. (0 = full-text index; 1 = key-value index).
+     * @param LogIndexType CLS index type. (0 = full-text index; 1 = key-value index).
+     */
+    public void setLogIndexType(Long LogIndexType) {
+        this.LogIndexType = LogIndexType;
+    }
+
+    /**
+     * Get Index key of traceId. It is valid when the CLS index type is key-value index. 
+     * @return LogTraceIdKey Index key of traceId. It is valid when the CLS index type is key-value index.
+     */
+    public String getLogTraceIdKey() {
+        return this.LogTraceIdKey;
+    }
+
+    /**
+     * Set Index key of traceId. It is valid when the CLS index type is key-value index.
+     * @param LogTraceIdKey Index key of traceId. It is valid when the CLS index type is key-value index.
+     */
+    public void setLogTraceIdKey(String LogTraceIdKey) {
+        this.LogTraceIdKey = LogTraceIdKey;
+    }
+
+    /**
+     * Get Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.) 
+     * @return IsDeleteAnyFileAnalysis Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+     */
+    public Long getIsDeleteAnyFileAnalysis() {
+        return this.IsDeleteAnyFileAnalysis;
+    }
+
+    /**
+     * Set Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+     * @param IsDeleteAnyFileAnalysis Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+     */
+    public void setIsDeleteAnyFileAnalysis(Long IsDeleteAnyFileAnalysis) {
+        this.IsDeleteAnyFileAnalysis = IsDeleteAnyFileAnalysis;
+    }
+
+    /**
+     * Get Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.) 
+     * @return IsReadAnyFileAnalysis Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+     */
+    public Long getIsReadAnyFileAnalysis() {
+        return this.IsReadAnyFileAnalysis;
+    }
+
+    /**
+     * Set Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+     * @param IsReadAnyFileAnalysis Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+     */
+    public void setIsReadAnyFileAnalysis(Long IsReadAnyFileAnalysis) {
+        this.IsReadAnyFileAnalysis = IsReadAnyFileAnalysis;
+    }
+
+    /**
+     * Get Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.) 
+     * @return IsUploadAnyFileAnalysis Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+     */
+    public Long getIsUploadAnyFileAnalysis() {
+        return this.IsUploadAnyFileAnalysis;
+    }
+
+    /**
+     * Set Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+     * @param IsUploadAnyFileAnalysis Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+     */
+    public void setIsUploadAnyFileAnalysis(Long IsUploadAnyFileAnalysis) {
+        this.IsUploadAnyFileAnalysis = IsUploadAnyFileAnalysis;
+    }
+
+    /**
+     * Get Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.) 
+     * @return IsIncludeAnyFileAnalysis Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+     */
+    public Long getIsIncludeAnyFileAnalysis() {
+        return this.IsIncludeAnyFileAnalysis;
+    }
+
+    /**
+     * Set Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+     * @param IsIncludeAnyFileAnalysis Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+     */
+    public void setIsIncludeAnyFileAnalysis(Long IsIncludeAnyFileAnalysis) {
+        this.IsIncludeAnyFileAnalysis = IsIncludeAnyFileAnalysis;
+    }
+
+    /**
+     * Get Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled). 
+     * @return IsDirectoryTraversalAnalysis Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+     */
+    public Long getIsDirectoryTraversalAnalysis() {
+        return this.IsDirectoryTraversalAnalysis;
+    }
+
+    /**
+     * Set Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+     * @param IsDirectoryTraversalAnalysis Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+     */
+    public void setIsDirectoryTraversalAnalysis(Long IsDirectoryTraversalAnalysis) {
+        this.IsDirectoryTraversalAnalysis = IsDirectoryTraversalAnalysis;
+    }
+
+    /**
+     * Get Whether to enable template engine injection detection. (0: disabled; 1: enabled.) 
+     * @return IsTemplateEngineInjectionAnalysis Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+     */
+    public Long getIsTemplateEngineInjectionAnalysis() {
+        return this.IsTemplateEngineInjectionAnalysis;
+    }
+
+    /**
+     * Set Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+     * @param IsTemplateEngineInjectionAnalysis Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+     */
+    public void setIsTemplateEngineInjectionAnalysis(Long IsTemplateEngineInjectionAnalysis) {
+        this.IsTemplateEngineInjectionAnalysis = IsTemplateEngineInjectionAnalysis;
+    }
+
+    /**
+     * Get Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.) 
+     * @return IsScriptEngineInjectionAnalysis Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+     */
+    public Long getIsScriptEngineInjectionAnalysis() {
+        return this.IsScriptEngineInjectionAnalysis;
+    }
+
+    /**
+     * Set Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+     * @param IsScriptEngineInjectionAnalysis Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+     */
+    public void setIsScriptEngineInjectionAnalysis(Long IsScriptEngineInjectionAnalysis) {
+        this.IsScriptEngineInjectionAnalysis = IsScriptEngineInjectionAnalysis;
+    }
+
+    /**
+     * Get Whether to enable expression injection detection. (0 - disabled; 1 - enabled.) 
+     * @return IsExpressionInjectionAnalysis Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+     */
+    public Long getIsExpressionInjectionAnalysis() {
+        return this.IsExpressionInjectionAnalysis;
+    }
+
+    /**
+     * Set Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+     * @param IsExpressionInjectionAnalysis Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+     */
+    public void setIsExpressionInjectionAnalysis(Long IsExpressionInjectionAnalysis) {
+        this.IsExpressionInjectionAnalysis = IsExpressionInjectionAnalysis;
+    }
+
+    /**
+     * Get Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.) 
+     * @return IsJNDIInjectionAnalysis Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+     */
+    public Long getIsJNDIInjectionAnalysis() {
+        return this.IsJNDIInjectionAnalysis;
+    }
+
+    /**
+     * Set Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+     * @param IsJNDIInjectionAnalysis Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+     */
+    public void setIsJNDIInjectionAnalysis(Long IsJNDIInjectionAnalysis) {
+        this.IsJNDIInjectionAnalysis = IsJNDIInjectionAnalysis;
+    }
+
+    /**
+     * Get Whether to enable JNI injection detection. (0 - disabled, 1 - enabled). 
+     * @return IsJNIInjectionAnalysis Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+     */
+    public Long getIsJNIInjectionAnalysis() {
+        return this.IsJNIInjectionAnalysis;
+    }
+
+    /**
+     * Set Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+     * @param IsJNIInjectionAnalysis Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+     */
+    public void setIsJNIInjectionAnalysis(Long IsJNIInjectionAnalysis) {
+        this.IsJNIInjectionAnalysis = IsJNIInjectionAnalysis;
+    }
+
+    /**
+     * Get Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled). 
+     * @return IsWebshellBackdoorAnalysis Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+     */
+    public Long getIsWebshellBackdoorAnalysis() {
+        return this.IsWebshellBackdoorAnalysis;
+    }
+
+    /**
+     * Set Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+     * @param IsWebshellBackdoorAnalysis Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+     */
+    public void setIsWebshellBackdoorAnalysis(Long IsWebshellBackdoorAnalysis) {
+        this.IsWebshellBackdoorAnalysis = IsWebshellBackdoorAnalysis;
+    }
+
+    /**
+     * Get Whether to enable deserialization detection. (0 - disabled; 1 - enabled). 
+     * @return IsDeserializationAnalysis Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+     */
+    public Long getIsDeserializationAnalysis() {
+        return this.IsDeserializationAnalysis;
+    }
+
+    /**
+     * Set Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+     * @param IsDeserializationAnalysis Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+     */
+    public void setIsDeserializationAnalysis(Long IsDeserializationAnalysis) {
+        this.IsDeserializationAnalysis = IsDeserializationAnalysis;
+    }
+
+    /**
+     * Get Business system authentication token. 
+     * @return Token Business system authentication token.
+     */
+    public String getToken() {
+        return this.Token;
+    }
+
+    /**
+     * Set Business system authentication token.
+     * @param Token Business system authentication token.
+     */
+    public void setToken(String Token) {
+        this.Token = Token;
+    }
+
+    /**
+     * Get Convergence threshold for URL long segments. 
+     * @return UrlLongSegmentThreshold Convergence threshold for URL long segments.
+     */
+    public Long getUrlLongSegmentThreshold() {
+        return this.UrlLongSegmentThreshold;
+    }
+
+    /**
+     * Set Convergence threshold for URL long segments.
+     * @param UrlLongSegmentThreshold Convergence threshold for URL long segments.
+     */
+    public void setUrlLongSegmentThreshold(Long UrlLongSegmentThreshold) {
+        this.UrlLongSegmentThreshold = UrlLongSegmentThreshold;
+    }
+
+    /**
+     * Get Convergence threshold for URL numerical segments. 
+     * @return UrlNumberSegmentThreshold Convergence threshold for URL numerical segments.
+     */
+    public Long getUrlNumberSegmentThreshold() {
+        return this.UrlNumberSegmentThreshold;
+    }
+
+    /**
+     * Set Convergence threshold for URL numerical segments.
+     * @param UrlNumberSegmentThreshold Convergence threshold for URL numerical segments.
+     */
+    public void setUrlNumberSegmentThreshold(Long UrlNumberSegmentThreshold) {
+        this.UrlNumberSegmentThreshold = UrlNumberSegmentThreshold;
+    }
+
     public ApmInstanceDetail() {
     }
 
@@ -1029,6 +1466,63 @@ Account in arrears.
         if (source.StopReason != null) {
             this.StopReason = new Long(source.StopReason);
         }
+        if (source.IsRemoteCommandExecutionAnalysis != null) {
+            this.IsRemoteCommandExecutionAnalysis = new Long(source.IsRemoteCommandExecutionAnalysis);
+        }
+        if (source.IsMemoryHijackingAnalysis != null) {
+            this.IsMemoryHijackingAnalysis = new Long(source.IsMemoryHijackingAnalysis);
+        }
+        if (source.LogIndexType != null) {
+            this.LogIndexType = new Long(source.LogIndexType);
+        }
+        if (source.LogTraceIdKey != null) {
+            this.LogTraceIdKey = new String(source.LogTraceIdKey);
+        }
+        if (source.IsDeleteAnyFileAnalysis != null) {
+            this.IsDeleteAnyFileAnalysis = new Long(source.IsDeleteAnyFileAnalysis);
+        }
+        if (source.IsReadAnyFileAnalysis != null) {
+            this.IsReadAnyFileAnalysis = new Long(source.IsReadAnyFileAnalysis);
+        }
+        if (source.IsUploadAnyFileAnalysis != null) {
+            this.IsUploadAnyFileAnalysis = new Long(source.IsUploadAnyFileAnalysis);
+        }
+        if (source.IsIncludeAnyFileAnalysis != null) {
+            this.IsIncludeAnyFileAnalysis = new Long(source.IsIncludeAnyFileAnalysis);
+        }
+        if (source.IsDirectoryTraversalAnalysis != null) {
+            this.IsDirectoryTraversalAnalysis = new Long(source.IsDirectoryTraversalAnalysis);
+        }
+        if (source.IsTemplateEngineInjectionAnalysis != null) {
+            this.IsTemplateEngineInjectionAnalysis = new Long(source.IsTemplateEngineInjectionAnalysis);
+        }
+        if (source.IsScriptEngineInjectionAnalysis != null) {
+            this.IsScriptEngineInjectionAnalysis = new Long(source.IsScriptEngineInjectionAnalysis);
+        }
+        if (source.IsExpressionInjectionAnalysis != null) {
+            this.IsExpressionInjectionAnalysis = new Long(source.IsExpressionInjectionAnalysis);
+        }
+        if (source.IsJNDIInjectionAnalysis != null) {
+            this.IsJNDIInjectionAnalysis = new Long(source.IsJNDIInjectionAnalysis);
+        }
+        if (source.IsJNIInjectionAnalysis != null) {
+            this.IsJNIInjectionAnalysis = new Long(source.IsJNIInjectionAnalysis);
+        }
+        if (source.IsWebshellBackdoorAnalysis != null) {
+            this.IsWebshellBackdoorAnalysis = new Long(source.IsWebshellBackdoorAnalysis);
+        }
+        if (source.IsDeserializationAnalysis != null) {
+            this.IsDeserializationAnalysis = new Long(source.IsDeserializationAnalysis);
+        }
+        if (source.Token != null) {
+            this.Token = new String(source.Token);
+        }
+        if (source.UrlLongSegmentThreshold != null) {
+            this.UrlLongSegmentThreshold = new Long(source.UrlLongSegmentThreshold);
+        }
+        if (source.UrlNumberSegmentThreshold != null) {
+            this.UrlNumberSegmentThreshold = new Long(source.UrlNumberSegmentThreshold);
+        }
     }
 
 
@@ -1073,6 +1567,25 @@ Account in arrears.
         this.setParamSimple(map, prefix + "IsInstrumentationVulnerabilityScan", this.IsInstrumentationVulnerabilityScan);
         this.setParamSimple(map, prefix + "IsSqlInjectionAnalysis", this.IsSqlInjectionAnalysis);
         this.setParamSimple(map, prefix + "StopReason", this.StopReason);
+        this.setParamSimple(map, prefix + "IsRemoteCommandExecutionAnalysis", this.IsRemoteCommandExecutionAnalysis);
+        this.setParamSimple(map, prefix + "IsMemoryHijackingAnalysis", this.IsMemoryHijackingAnalysis);
+        this.setParamSimple(map, prefix + "LogIndexType", this.LogIndexType);
+        this.setParamSimple(map, prefix + "LogTraceIdKey", this.LogTraceIdKey);
+        this.setParamSimple(map, prefix + "IsDeleteAnyFileAnalysis", this.IsDeleteAnyFileAnalysis);
+        this.setParamSimple(map, prefix + "IsReadAnyFileAnalysis", this.IsReadAnyFileAnalysis);
+        this.setParamSimple(map, prefix + "IsUploadAnyFileAnalysis", this.IsUploadAnyFileAnalysis);
+        this.setParamSimple(map, prefix + "IsIncludeAnyFileAnalysis", this.IsIncludeAnyFileAnalysis);
+        this.setParamSimple(map, prefix + "IsDirectoryTraversalAnalysis", this.IsDirectoryTraversalAnalysis);
+        this.setParamSimple(map, prefix + "IsTemplateEngineInjectionAnalysis", this.IsTemplateEngineInjectionAnalysis);
+        this.setParamSimple(map, prefix + "IsScriptEngineInjectionAnalysis", this.IsScriptEngineInjectionAnalysis);
+        this.setParamSimple(map, prefix + "IsExpressionInjectionAnalysis", this.IsExpressionInjectionAnalysis);
+        this.setParamSimple(map, prefix + "IsJNDIInjectionAnalysis", this.IsJNDIInjectionAnalysis);
+        this.setParamSimple(map, prefix + "IsJNIInjectionAnalysis", this.IsJNIInjectionAnalysis);
+        this.setParamSimple(map, prefix + "IsWebshellBackdoorAnalysis", this.IsWebshellBackdoorAnalysis);
+        this.setParamSimple(map, prefix + "IsDeserializationAnalysis", this.IsDeserializationAnalysis);
+        this.setParamSimple(map, prefix + "Token", this.Token);
+        this.setParamSimple(map, prefix + "UrlLongSegmentThreshold", this.UrlLongSegmentThreshold);
+        this.setParamSimple(map, prefix + "UrlNumberSegmentThreshold", this.UrlNumberSegmentThreshold);
 
     }
 }

@@ -21,189 +21,182 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyApmInstanceRequest extends AbstractModel {
+public class ModifyApmApplicationConfigRequest extends AbstractModel {
 
     /**
-    * Business system id.
+    * Business system ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Business system name.
+    * Application name
     */
-    @SerializedName("Name")
+    @SerializedName("ServiceName")
     @Expose
-    private String Name;
+    private String ServiceName;
 
     /**
-    * Tag list.
+    * URL convergence switch. 0: Off; 1: On
     */
-    @SerializedName("Tags")
+    @SerializedName("UrlConvergenceSwitch")
     @Expose
-    private ApmTag [] Tags;
+    private Long UrlConvergenceSwitch;
 
     /**
-    * Business system description.
+    * URL convergence threshold
     */
-    @SerializedName("Description")
+    @SerializedName("UrlConvergenceThreshold")
     @Expose
-    private String Description;
+    private Long UrlConvergenceThreshold;
 
     /**
-    * Retention period of trace data (unit: days).
+    * Regex rules for exception filtering, separated by commas
     */
-    @SerializedName("TraceDuration")
+    @SerializedName("ExceptionFilter")
     @Expose
-    private Long TraceDuration;
+    private String ExceptionFilter;
 
     /**
-    * Billing switch.
+    * Regex rules for URL convergence, separated by commas
     */
-    @SerializedName("OpenBilling")
+    @SerializedName("UrlConvergence")
     @Expose
-    private Boolean OpenBilling;
+    private String UrlConvergence;
 
     /**
-    * Business system report limit.
+    * Error code filtering, separated by commas
     */
-    @SerializedName("SpanDailyCounters")
+    @SerializedName("ErrorCodeFilter")
     @Expose
-    private Long SpanDailyCounters;
+    private String ErrorCodeFilter;
 
     /**
-    * Error rate warning line. when the average error rate of the application exceeds this threshold, the system will give an abnormal note.
+    * Regex rules for URL exclusion, separated by commas
     */
-    @SerializedName("ErrRateThreshold")
+    @SerializedName("UrlExclude")
     @Expose
-    private Long ErrRateThreshold;
+    private String UrlExclude;
 
     /**
-    * Sampling rate (unit: %).
-    */
-    @SerializedName("SampleRate")
-    @Expose
-    private Long SampleRate;
-
-    /**
-    * Error sampling switch (0: off, 1: on).
-    */
-    @SerializedName("ErrorSample")
-    @Expose
-    private Long ErrorSample;
-
-    /**
-    * Sampling slow call saving threshold (unit: ms).
-    */
-    @SerializedName("SlowRequestSavedThreshold")
-    @Expose
-    private Long SlowRequestSavedThreshold;
-
-    /**
-    * Log feature switch (0: off; 1: on).
+    * Log switch. 0: Off; 1: On
     */
     @SerializedName("IsRelatedLog")
     @Expose
     private Long IsRelatedLog;
 
     /**
-    * Log region, which takes effect after the log feature is enabled.
+    * Log region.
     */
     @SerializedName("LogRegion")
     @Expose
     private String LogRegion;
 
     /**
-    * CLS log topic id, which takes effect after the log feature is enabled.
+    * Log topic ID
     */
     @SerializedName("LogTopicID")
     @Expose
     private String LogTopicID;
 
     /**
-    * Logset, which takes effect only after the log feature is enabled.
+    * CLS log set/ES cluster ID
     */
     @SerializedName("LogSet")
     @Expose
     private String LogSet;
 
     /**
-    * Log source, which takes effect only after the log feature is enabled.
+    * Log source: CLS or ES
     */
     @SerializedName("LogSource")
     @Expose
     private String LogSource;
 
     /**
-    * List of custom display tags.
+    * APIs to be filtered
     */
-    @SerializedName("CustomShowTags")
+    @SerializedName("IgnoreOperationName")
     @Expose
-    private String [] CustomShowTags;
+    private String IgnoreOperationName;
 
     /**
-    * Modify billing mode (1: prepaid, 0: pay-as-you-go).
+    * Whether thread profiling is enabled.
     */
-    @SerializedName("PayMode")
+    @SerializedName("EnableSnapshot")
     @Expose
-    private Long PayMode;
+    private Boolean EnableSnapshot;
 
     /**
-    * Response time warning line.
+    * Timeout threshold for thread profiling.
     */
-    @SerializedName("ResponseDurationWarningThreshold")
+    @SerializedName("SnapshotTimeout")
     @Expose
-    private Long ResponseDurationWarningThreshold;
+    private Long SnapshotTimeout;
 
     /**
-    * Whether it is free (0 = paid edition; 1 = tsf restricted free edition; 2 = free edition), default 0.
+    * Whether agent is enabled.
     */
-    @SerializedName("Free")
+    @SerializedName("AgentEnable")
     @Expose
-    private Long Free;
+    private Boolean AgentEnable;
 
     /**
-    * Whether to associate the dashboard (0 = off, 1 = on).
+    * Whether link compression is enabled.
+    */
+    @SerializedName("TraceSquash")
+    @Expose
+    private Boolean TraceSquash;
+
+    /**
+    * Switch for enabling application diagnosis.
+    */
+    @SerializedName("EventEnable")
+    @Expose
+    private Boolean EventEnable;
+
+    /**
+    * Component List
+    */
+    @SerializedName("InstrumentList")
+    @Expose
+    private Instrument [] InstrumentList;
+
+    /**
+    * Related configurations of the probe APIs.
+    */
+    @SerializedName("AgentOperationConfigView")
+    @Expose
+    private AgentOperationConfigView AgentOperationConfigView;
+
+    /**
+    * Whether to enable application log configuration.
+    */
+    @SerializedName("EnableLogConfig")
+    @Expose
+    private Boolean EnableLogConfig;
+
+    /**
+    * Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+    */
+    @SerializedName("EnableDashboardConfig")
+    @Expose
+    private Boolean EnableDashboardConfig;
+
+    /**
+    * Whether to associate with Dashboard. 0: disabled; 1: enabled.
     */
     @SerializedName("IsRelatedDashboard")
     @Expose
     private Long IsRelatedDashboard;
 
     /**
-    * Associated dashboard id, which takes effect after the associated dashboard is enabled.
+    * dashboard ID
     */
     @SerializedName("DashboardTopicID")
     @Expose
     private String DashboardTopicID;
-
-    /**
-    * SQL injection detection switch (0: off, 1: on).
-    */
-    @SerializedName("IsSqlInjectionAnalysis")
-    @Expose
-    private Long IsSqlInjectionAnalysis;
-
-    /**
-    * Whether to enable component vulnerability detection (0 = no, 1 = yes).
-    */
-    @SerializedName("IsInstrumentationVulnerabilityScan")
-    @Expose
-    private Long IsInstrumentationVulnerabilityScan;
-
-    /**
-    * Whether to enable detection of the remote command attack.
-    */
-    @SerializedName("IsRemoteCommandExecutionAnalysis")
-    @Expose
-    private Long IsRemoteCommandExecutionAnalysis;
-
-    /**
-    * Whether to enable detection of Java webshell.
-    */
-    @SerializedName("IsMemoryHijackingAnalysis")
-    @Expose
-    private Long IsMemoryHijackingAnalysis;
 
     /**
     * CLS index type. (0 = full-text index; 1 = key-value index).
@@ -218,6 +211,41 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     @SerializedName("LogTraceIdKey")
     @Expose
     private String LogTraceIdKey;
+
+    /**
+    * Whether to enable the application security configuration.
+    */
+    @SerializedName("EnableSecurityConfig")
+    @Expose
+    private Boolean EnableSecurityConfig;
+
+    /**
+    * Whether to enable SQL injection analysis.
+    */
+    @SerializedName("IsSqlInjectionAnalysis")
+    @Expose
+    private Long IsSqlInjectionAnalysis;
+
+    /**
+    * Whether to enable detection of component vulnerability.
+    */
+    @SerializedName("IsInstrumentationVulnerabilityScan")
+    @Expose
+    private Long IsInstrumentationVulnerabilityScan;
+
+    /**
+    * Whether remote command detection is enabled.
+    */
+    @SerializedName("IsRemoteCommandExecutionAnalysis")
+    @Expose
+    private Long IsRemoteCommandExecutionAnalysis;
+
+    /**
+    * Whether to enable detection of Java webshell.
+    */
+    @SerializedName("IsMemoryHijackingAnalysis")
+    @Expose
+    private Long IsMemoryHijackingAnalysis;
 
     /**
     * Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
@@ -304,6 +332,13 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private Long IsDeserializationAnalysis;
 
     /**
+    * Automatic convergence switch for APIs. 0: disabled | 1: enabled.
+    */
+    @SerializedName("UrlAutoConvergenceEnable")
+    @Expose
+    private Boolean UrlAutoConvergenceEnable;
+
+    /**
     * Convergence threshold for URL long segments.
     */
     @SerializedName("UrlLongSegmentThreshold")
@@ -318,419 +353,417 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private Long UrlNumberSegmentThreshold;
 
     /**
-     * Get Business system id. 
-     * @return InstanceId Business system id.
+    * Specifies the memory threshold for probe fusing.
+    */
+    @SerializedName("DisableMemoryUsed")
+    @Expose
+    private Long DisableMemoryUsed;
+
+    /**
+    * Specifies the CPU threshold for probe fusing.
+    */
+    @SerializedName("DisableCpuUsed")
+    @Expose
+    private Long DisableCpuUsed;
+
+    /**
+     * Get Business system ID. 
+     * @return InstanceId Business system ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Business system id.
-     * @param InstanceId Business system id.
+     * Set Business system ID.
+     * @param InstanceId Business system ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Business system name. 
-     * @return Name Business system name.
+     * Get Application name 
+     * @return ServiceName Application name
      */
-    public String getName() {
-        return this.Name;
+    public String getServiceName() {
+        return this.ServiceName;
     }
 
     /**
-     * Set Business system name.
-     * @param Name Business system name.
+     * Set Application name
+     * @param ServiceName Application name
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setServiceName(String ServiceName) {
+        this.ServiceName = ServiceName;
     }
 
     /**
-     * Get Tag list. 
-     * @return Tags Tag list.
+     * Get URL convergence switch. 0: Off; 1: On 
+     * @return UrlConvergenceSwitch URL convergence switch. 0: Off; 1: On
      */
-    public ApmTag [] getTags() {
-        return this.Tags;
+    public Long getUrlConvergenceSwitch() {
+        return this.UrlConvergenceSwitch;
     }
 
     /**
-     * Set Tag list.
-     * @param Tags Tag list.
+     * Set URL convergence switch. 0: Off; 1: On
+     * @param UrlConvergenceSwitch URL convergence switch. 0: Off; 1: On
      */
-    public void setTags(ApmTag [] Tags) {
-        this.Tags = Tags;
+    public void setUrlConvergenceSwitch(Long UrlConvergenceSwitch) {
+        this.UrlConvergenceSwitch = UrlConvergenceSwitch;
     }
 
     /**
-     * Get Business system description. 
-     * @return Description Business system description.
+     * Get URL convergence threshold 
+     * @return UrlConvergenceThreshold URL convergence threshold
      */
-    public String getDescription() {
-        return this.Description;
+    public Long getUrlConvergenceThreshold() {
+        return this.UrlConvergenceThreshold;
     }
 
     /**
-     * Set Business system description.
-     * @param Description Business system description.
+     * Set URL convergence threshold
+     * @param UrlConvergenceThreshold URL convergence threshold
      */
-    public void setDescription(String Description) {
-        this.Description = Description;
+    public void setUrlConvergenceThreshold(Long UrlConvergenceThreshold) {
+        this.UrlConvergenceThreshold = UrlConvergenceThreshold;
     }
 
     /**
-     * Get Retention period of trace data (unit: days). 
-     * @return TraceDuration Retention period of trace data (unit: days).
+     * Get Regex rules for exception filtering, separated by commas 
+     * @return ExceptionFilter Regex rules for exception filtering, separated by commas
      */
-    public Long getTraceDuration() {
-        return this.TraceDuration;
+    public String getExceptionFilter() {
+        return this.ExceptionFilter;
     }
 
     /**
-     * Set Retention period of trace data (unit: days).
-     * @param TraceDuration Retention period of trace data (unit: days).
+     * Set Regex rules for exception filtering, separated by commas
+     * @param ExceptionFilter Regex rules for exception filtering, separated by commas
      */
-    public void setTraceDuration(Long TraceDuration) {
-        this.TraceDuration = TraceDuration;
+    public void setExceptionFilter(String ExceptionFilter) {
+        this.ExceptionFilter = ExceptionFilter;
     }
 
     /**
-     * Get Billing switch. 
-     * @return OpenBilling Billing switch.
+     * Get Regex rules for URL convergence, separated by commas 
+     * @return UrlConvergence Regex rules for URL convergence, separated by commas
      */
-    public Boolean getOpenBilling() {
-        return this.OpenBilling;
+    public String getUrlConvergence() {
+        return this.UrlConvergence;
     }
 
     /**
-     * Set Billing switch.
-     * @param OpenBilling Billing switch.
+     * Set Regex rules for URL convergence, separated by commas
+     * @param UrlConvergence Regex rules for URL convergence, separated by commas
      */
-    public void setOpenBilling(Boolean OpenBilling) {
-        this.OpenBilling = OpenBilling;
+    public void setUrlConvergence(String UrlConvergence) {
+        this.UrlConvergence = UrlConvergence;
     }
 
     /**
-     * Get Business system report limit. 
-     * @return SpanDailyCounters Business system report limit.
+     * Get Error code filtering, separated by commas 
+     * @return ErrorCodeFilter Error code filtering, separated by commas
      */
-    public Long getSpanDailyCounters() {
-        return this.SpanDailyCounters;
+    public String getErrorCodeFilter() {
+        return this.ErrorCodeFilter;
     }
 
     /**
-     * Set Business system report limit.
-     * @param SpanDailyCounters Business system report limit.
+     * Set Error code filtering, separated by commas
+     * @param ErrorCodeFilter Error code filtering, separated by commas
      */
-    public void setSpanDailyCounters(Long SpanDailyCounters) {
-        this.SpanDailyCounters = SpanDailyCounters;
+    public void setErrorCodeFilter(String ErrorCodeFilter) {
+        this.ErrorCodeFilter = ErrorCodeFilter;
     }
 
     /**
-     * Get Error rate warning line. when the average error rate of the application exceeds this threshold, the system will give an abnormal note. 
-     * @return ErrRateThreshold Error rate warning line. when the average error rate of the application exceeds this threshold, the system will give an abnormal note.
+     * Get Regex rules for URL exclusion, separated by commas 
+     * @return UrlExclude Regex rules for URL exclusion, separated by commas
      */
-    public Long getErrRateThreshold() {
-        return this.ErrRateThreshold;
+    public String getUrlExclude() {
+        return this.UrlExclude;
     }
 
     /**
-     * Set Error rate warning line. when the average error rate of the application exceeds this threshold, the system will give an abnormal note.
-     * @param ErrRateThreshold Error rate warning line. when the average error rate of the application exceeds this threshold, the system will give an abnormal note.
+     * Set Regex rules for URL exclusion, separated by commas
+     * @param UrlExclude Regex rules for URL exclusion, separated by commas
      */
-    public void setErrRateThreshold(Long ErrRateThreshold) {
-        this.ErrRateThreshold = ErrRateThreshold;
+    public void setUrlExclude(String UrlExclude) {
+        this.UrlExclude = UrlExclude;
     }
 
     /**
-     * Get Sampling rate (unit: %). 
-     * @return SampleRate Sampling rate (unit: %).
-     */
-    public Long getSampleRate() {
-        return this.SampleRate;
-    }
-
-    /**
-     * Set Sampling rate (unit: %).
-     * @param SampleRate Sampling rate (unit: %).
-     */
-    public void setSampleRate(Long SampleRate) {
-        this.SampleRate = SampleRate;
-    }
-
-    /**
-     * Get Error sampling switch (0: off, 1: on). 
-     * @return ErrorSample Error sampling switch (0: off, 1: on).
-     */
-    public Long getErrorSample() {
-        return this.ErrorSample;
-    }
-
-    /**
-     * Set Error sampling switch (0: off, 1: on).
-     * @param ErrorSample Error sampling switch (0: off, 1: on).
-     */
-    public void setErrorSample(Long ErrorSample) {
-        this.ErrorSample = ErrorSample;
-    }
-
-    /**
-     * Get Sampling slow call saving threshold (unit: ms). 
-     * @return SlowRequestSavedThreshold Sampling slow call saving threshold (unit: ms).
-     */
-    public Long getSlowRequestSavedThreshold() {
-        return this.SlowRequestSavedThreshold;
-    }
-
-    /**
-     * Set Sampling slow call saving threshold (unit: ms).
-     * @param SlowRequestSavedThreshold Sampling slow call saving threshold (unit: ms).
-     */
-    public void setSlowRequestSavedThreshold(Long SlowRequestSavedThreshold) {
-        this.SlowRequestSavedThreshold = SlowRequestSavedThreshold;
-    }
-
-    /**
-     * Get Log feature switch (0: off; 1: on). 
-     * @return IsRelatedLog Log feature switch (0: off; 1: on).
+     * Get Log switch. 0: Off; 1: On 
+     * @return IsRelatedLog Log switch. 0: Off; 1: On
      */
     public Long getIsRelatedLog() {
         return this.IsRelatedLog;
     }
 
     /**
-     * Set Log feature switch (0: off; 1: on).
-     * @param IsRelatedLog Log feature switch (0: off; 1: on).
+     * Set Log switch. 0: Off; 1: On
+     * @param IsRelatedLog Log switch. 0: Off; 1: On
      */
     public void setIsRelatedLog(Long IsRelatedLog) {
         this.IsRelatedLog = IsRelatedLog;
     }
 
     /**
-     * Get Log region, which takes effect after the log feature is enabled. 
-     * @return LogRegion Log region, which takes effect after the log feature is enabled.
+     * Get Log region. 
+     * @return LogRegion Log region.
      */
     public String getLogRegion() {
         return this.LogRegion;
     }
 
     /**
-     * Set Log region, which takes effect after the log feature is enabled.
-     * @param LogRegion Log region, which takes effect after the log feature is enabled.
+     * Set Log region.
+     * @param LogRegion Log region.
      */
     public void setLogRegion(String LogRegion) {
         this.LogRegion = LogRegion;
     }
 
     /**
-     * Get CLS log topic id, which takes effect after the log feature is enabled. 
-     * @return LogTopicID CLS log topic id, which takes effect after the log feature is enabled.
+     * Get Log topic ID 
+     * @return LogTopicID Log topic ID
      */
     public String getLogTopicID() {
         return this.LogTopicID;
     }
 
     /**
-     * Set CLS log topic id, which takes effect after the log feature is enabled.
-     * @param LogTopicID CLS log topic id, which takes effect after the log feature is enabled.
+     * Set Log topic ID
+     * @param LogTopicID Log topic ID
      */
     public void setLogTopicID(String LogTopicID) {
         this.LogTopicID = LogTopicID;
     }
 
     /**
-     * Get Logset, which takes effect only after the log feature is enabled. 
-     * @return LogSet Logset, which takes effect only after the log feature is enabled.
+     * Get CLS log set/ES cluster ID 
+     * @return LogSet CLS log set/ES cluster ID
      */
     public String getLogSet() {
         return this.LogSet;
     }
 
     /**
-     * Set Logset, which takes effect only after the log feature is enabled.
-     * @param LogSet Logset, which takes effect only after the log feature is enabled.
+     * Set CLS log set/ES cluster ID
+     * @param LogSet CLS log set/ES cluster ID
      */
     public void setLogSet(String LogSet) {
         this.LogSet = LogSet;
     }
 
     /**
-     * Get Log source, which takes effect only after the log feature is enabled. 
-     * @return LogSource Log source, which takes effect only after the log feature is enabled.
+     * Get Log source: CLS or ES 
+     * @return LogSource Log source: CLS or ES
      */
     public String getLogSource() {
         return this.LogSource;
     }
 
     /**
-     * Set Log source, which takes effect only after the log feature is enabled.
-     * @param LogSource Log source, which takes effect only after the log feature is enabled.
+     * Set Log source: CLS or ES
+     * @param LogSource Log source: CLS or ES
      */
     public void setLogSource(String LogSource) {
         this.LogSource = LogSource;
     }
 
     /**
-     * Get List of custom display tags. 
-     * @return CustomShowTags List of custom display tags.
+     * Get APIs to be filtered 
+     * @return IgnoreOperationName APIs to be filtered
      */
-    public String [] getCustomShowTags() {
-        return this.CustomShowTags;
+    public String getIgnoreOperationName() {
+        return this.IgnoreOperationName;
     }
 
     /**
-     * Set List of custom display tags.
-     * @param CustomShowTags List of custom display tags.
+     * Set APIs to be filtered
+     * @param IgnoreOperationName APIs to be filtered
      */
-    public void setCustomShowTags(String [] CustomShowTags) {
-        this.CustomShowTags = CustomShowTags;
+    public void setIgnoreOperationName(String IgnoreOperationName) {
+        this.IgnoreOperationName = IgnoreOperationName;
     }
 
     /**
-     * Get Modify billing mode (1: prepaid, 0: pay-as-you-go). 
-     * @return PayMode Modify billing mode (1: prepaid, 0: pay-as-you-go).
+     * Get Whether thread profiling is enabled. 
+     * @return EnableSnapshot Whether thread profiling is enabled.
      */
-    public Long getPayMode() {
-        return this.PayMode;
+    public Boolean getEnableSnapshot() {
+        return this.EnableSnapshot;
     }
 
     /**
-     * Set Modify billing mode (1: prepaid, 0: pay-as-you-go).
-     * @param PayMode Modify billing mode (1: prepaid, 0: pay-as-you-go).
+     * Set Whether thread profiling is enabled.
+     * @param EnableSnapshot Whether thread profiling is enabled.
      */
-    public void setPayMode(Long PayMode) {
-        this.PayMode = PayMode;
+    public void setEnableSnapshot(Boolean EnableSnapshot) {
+        this.EnableSnapshot = EnableSnapshot;
     }
 
     /**
-     * Get Response time warning line. 
-     * @return ResponseDurationWarningThreshold Response time warning line.
+     * Get Timeout threshold for thread profiling. 
+     * @return SnapshotTimeout Timeout threshold for thread profiling.
      */
-    public Long getResponseDurationWarningThreshold() {
-        return this.ResponseDurationWarningThreshold;
+    public Long getSnapshotTimeout() {
+        return this.SnapshotTimeout;
     }
 
     /**
-     * Set Response time warning line.
-     * @param ResponseDurationWarningThreshold Response time warning line.
+     * Set Timeout threshold for thread profiling.
+     * @param SnapshotTimeout Timeout threshold for thread profiling.
      */
-    public void setResponseDurationWarningThreshold(Long ResponseDurationWarningThreshold) {
-        this.ResponseDurationWarningThreshold = ResponseDurationWarningThreshold;
+    public void setSnapshotTimeout(Long SnapshotTimeout) {
+        this.SnapshotTimeout = SnapshotTimeout;
     }
 
     /**
-     * Get Whether it is free (0 = paid edition; 1 = tsf restricted free edition; 2 = free edition), default 0. 
-     * @return Free Whether it is free (0 = paid edition; 1 = tsf restricted free edition; 2 = free edition), default 0.
+     * Get Whether agent is enabled. 
+     * @return AgentEnable Whether agent is enabled.
      */
-    public Long getFree() {
-        return this.Free;
+    public Boolean getAgentEnable() {
+        return this.AgentEnable;
     }
 
     /**
-     * Set Whether it is free (0 = paid edition; 1 = tsf restricted free edition; 2 = free edition), default 0.
-     * @param Free Whether it is free (0 = paid edition; 1 = tsf restricted free edition; 2 = free edition), default 0.
+     * Set Whether agent is enabled.
+     * @param AgentEnable Whether agent is enabled.
      */
-    public void setFree(Long Free) {
-        this.Free = Free;
+    public void setAgentEnable(Boolean AgentEnable) {
+        this.AgentEnable = AgentEnable;
     }
 
     /**
-     * Get Whether to associate the dashboard (0 = off, 1 = on). 
-     * @return IsRelatedDashboard Whether to associate the dashboard (0 = off, 1 = on).
+     * Get Whether link compression is enabled. 
+     * @return TraceSquash Whether link compression is enabled.
+     */
+    public Boolean getTraceSquash() {
+        return this.TraceSquash;
+    }
+
+    /**
+     * Set Whether link compression is enabled.
+     * @param TraceSquash Whether link compression is enabled.
+     */
+    public void setTraceSquash(Boolean TraceSquash) {
+        this.TraceSquash = TraceSquash;
+    }
+
+    /**
+     * Get Switch for enabling application diagnosis. 
+     * @return EventEnable Switch for enabling application diagnosis.
+     */
+    public Boolean getEventEnable() {
+        return this.EventEnable;
+    }
+
+    /**
+     * Set Switch for enabling application diagnosis.
+     * @param EventEnable Switch for enabling application diagnosis.
+     */
+    public void setEventEnable(Boolean EventEnable) {
+        this.EventEnable = EventEnable;
+    }
+
+    /**
+     * Get Component List 
+     * @return InstrumentList Component List
+     */
+    public Instrument [] getInstrumentList() {
+        return this.InstrumentList;
+    }
+
+    /**
+     * Set Component List
+     * @param InstrumentList Component List
+     */
+    public void setInstrumentList(Instrument [] InstrumentList) {
+        this.InstrumentList = InstrumentList;
+    }
+
+    /**
+     * Get Related configurations of the probe APIs. 
+     * @return AgentOperationConfigView Related configurations of the probe APIs.
+     */
+    public AgentOperationConfigView getAgentOperationConfigView() {
+        return this.AgentOperationConfigView;
+    }
+
+    /**
+     * Set Related configurations of the probe APIs.
+     * @param AgentOperationConfigView Related configurations of the probe APIs.
+     */
+    public void setAgentOperationConfigView(AgentOperationConfigView AgentOperationConfigView) {
+        this.AgentOperationConfigView = AgentOperationConfigView;
+    }
+
+    /**
+     * Get Whether to enable application log configuration. 
+     * @return EnableLogConfig Whether to enable application log configuration.
+     */
+    public Boolean getEnableLogConfig() {
+        return this.EnableLogConfig;
+    }
+
+    /**
+     * Set Whether to enable application log configuration.
+     * @param EnableLogConfig Whether to enable application log configuration.
+     */
+    public void setEnableLogConfig(Boolean EnableLogConfig) {
+        this.EnableLogConfig = EnableLogConfig;
+    }
+
+    /**
+     * Get Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration). 
+     * @return EnableDashboardConfig Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+     */
+    public Boolean getEnableDashboardConfig() {
+        return this.EnableDashboardConfig;
+    }
+
+    /**
+     * Set Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+     * @param EnableDashboardConfig Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+     */
+    public void setEnableDashboardConfig(Boolean EnableDashboardConfig) {
+        this.EnableDashboardConfig = EnableDashboardConfig;
+    }
+
+    /**
+     * Get Whether to associate with Dashboard. 0: disabled; 1: enabled. 
+     * @return IsRelatedDashboard Whether to associate with Dashboard. 0: disabled; 1: enabled.
      */
     public Long getIsRelatedDashboard() {
         return this.IsRelatedDashboard;
     }
 
     /**
-     * Set Whether to associate the dashboard (0 = off, 1 = on).
-     * @param IsRelatedDashboard Whether to associate the dashboard (0 = off, 1 = on).
+     * Set Whether to associate with Dashboard. 0: disabled; 1: enabled.
+     * @param IsRelatedDashboard Whether to associate with Dashboard. 0: disabled; 1: enabled.
      */
     public void setIsRelatedDashboard(Long IsRelatedDashboard) {
         this.IsRelatedDashboard = IsRelatedDashboard;
     }
 
     /**
-     * Get Associated dashboard id, which takes effect after the associated dashboard is enabled. 
-     * @return DashboardTopicID Associated dashboard id, which takes effect after the associated dashboard is enabled.
+     * Get dashboard ID 
+     * @return DashboardTopicID dashboard ID
      */
     public String getDashboardTopicID() {
         return this.DashboardTopicID;
     }
 
     /**
-     * Set Associated dashboard id, which takes effect after the associated dashboard is enabled.
-     * @param DashboardTopicID Associated dashboard id, which takes effect after the associated dashboard is enabled.
+     * Set dashboard ID
+     * @param DashboardTopicID dashboard ID
      */
     public void setDashboardTopicID(String DashboardTopicID) {
         this.DashboardTopicID = DashboardTopicID;
-    }
-
-    /**
-     * Get SQL injection detection switch (0: off, 1: on). 
-     * @return IsSqlInjectionAnalysis SQL injection detection switch (0: off, 1: on).
-     */
-    public Long getIsSqlInjectionAnalysis() {
-        return this.IsSqlInjectionAnalysis;
-    }
-
-    /**
-     * Set SQL injection detection switch (0: off, 1: on).
-     * @param IsSqlInjectionAnalysis SQL injection detection switch (0: off, 1: on).
-     */
-    public void setIsSqlInjectionAnalysis(Long IsSqlInjectionAnalysis) {
-        this.IsSqlInjectionAnalysis = IsSqlInjectionAnalysis;
-    }
-
-    /**
-     * Get Whether to enable component vulnerability detection (0 = no, 1 = yes). 
-     * @return IsInstrumentationVulnerabilityScan Whether to enable component vulnerability detection (0 = no, 1 = yes).
-     */
-    public Long getIsInstrumentationVulnerabilityScan() {
-        return this.IsInstrumentationVulnerabilityScan;
-    }
-
-    /**
-     * Set Whether to enable component vulnerability detection (0 = no, 1 = yes).
-     * @param IsInstrumentationVulnerabilityScan Whether to enable component vulnerability detection (0 = no, 1 = yes).
-     */
-    public void setIsInstrumentationVulnerabilityScan(Long IsInstrumentationVulnerabilityScan) {
-        this.IsInstrumentationVulnerabilityScan = IsInstrumentationVulnerabilityScan;
-    }
-
-    /**
-     * Get Whether to enable detection of the remote command attack. 
-     * @return IsRemoteCommandExecutionAnalysis Whether to enable detection of the remote command attack.
-     */
-    public Long getIsRemoteCommandExecutionAnalysis() {
-        return this.IsRemoteCommandExecutionAnalysis;
-    }
-
-    /**
-     * Set Whether to enable detection of the remote command attack.
-     * @param IsRemoteCommandExecutionAnalysis Whether to enable detection of the remote command attack.
-     */
-    public void setIsRemoteCommandExecutionAnalysis(Long IsRemoteCommandExecutionAnalysis) {
-        this.IsRemoteCommandExecutionAnalysis = IsRemoteCommandExecutionAnalysis;
-    }
-
-    /**
-     * Get Whether to enable detection of Java webshell. 
-     * @return IsMemoryHijackingAnalysis Whether to enable detection of Java webshell.
-     */
-    public Long getIsMemoryHijackingAnalysis() {
-        return this.IsMemoryHijackingAnalysis;
-    }
-
-    /**
-     * Set Whether to enable detection of Java webshell.
-     * @param IsMemoryHijackingAnalysis Whether to enable detection of Java webshell.
-     */
-    public void setIsMemoryHijackingAnalysis(Long IsMemoryHijackingAnalysis) {
-        this.IsMemoryHijackingAnalysis = IsMemoryHijackingAnalysis;
     }
 
     /**
@@ -763,6 +796,86 @@ public class ModifyApmInstanceRequest extends AbstractModel {
      */
     public void setLogTraceIdKey(String LogTraceIdKey) {
         this.LogTraceIdKey = LogTraceIdKey;
+    }
+
+    /**
+     * Get Whether to enable the application security configuration. 
+     * @return EnableSecurityConfig Whether to enable the application security configuration.
+     */
+    public Boolean getEnableSecurityConfig() {
+        return this.EnableSecurityConfig;
+    }
+
+    /**
+     * Set Whether to enable the application security configuration.
+     * @param EnableSecurityConfig Whether to enable the application security configuration.
+     */
+    public void setEnableSecurityConfig(Boolean EnableSecurityConfig) {
+        this.EnableSecurityConfig = EnableSecurityConfig;
+    }
+
+    /**
+     * Get Whether to enable SQL injection analysis. 
+     * @return IsSqlInjectionAnalysis Whether to enable SQL injection analysis.
+     */
+    public Long getIsSqlInjectionAnalysis() {
+        return this.IsSqlInjectionAnalysis;
+    }
+
+    /**
+     * Set Whether to enable SQL injection analysis.
+     * @param IsSqlInjectionAnalysis Whether to enable SQL injection analysis.
+     */
+    public void setIsSqlInjectionAnalysis(Long IsSqlInjectionAnalysis) {
+        this.IsSqlInjectionAnalysis = IsSqlInjectionAnalysis;
+    }
+
+    /**
+     * Get Whether to enable detection of component vulnerability. 
+     * @return IsInstrumentationVulnerabilityScan Whether to enable detection of component vulnerability.
+     */
+    public Long getIsInstrumentationVulnerabilityScan() {
+        return this.IsInstrumentationVulnerabilityScan;
+    }
+
+    /**
+     * Set Whether to enable detection of component vulnerability.
+     * @param IsInstrumentationVulnerabilityScan Whether to enable detection of component vulnerability.
+     */
+    public void setIsInstrumentationVulnerabilityScan(Long IsInstrumentationVulnerabilityScan) {
+        this.IsInstrumentationVulnerabilityScan = IsInstrumentationVulnerabilityScan;
+    }
+
+    /**
+     * Get Whether remote command detection is enabled. 
+     * @return IsRemoteCommandExecutionAnalysis Whether remote command detection is enabled.
+     */
+    public Long getIsRemoteCommandExecutionAnalysis() {
+        return this.IsRemoteCommandExecutionAnalysis;
+    }
+
+    /**
+     * Set Whether remote command detection is enabled.
+     * @param IsRemoteCommandExecutionAnalysis Whether remote command detection is enabled.
+     */
+    public void setIsRemoteCommandExecutionAnalysis(Long IsRemoteCommandExecutionAnalysis) {
+        this.IsRemoteCommandExecutionAnalysis = IsRemoteCommandExecutionAnalysis;
+    }
+
+    /**
+     * Get Whether to enable detection of Java webshell. 
+     * @return IsMemoryHijackingAnalysis Whether to enable detection of Java webshell.
+     */
+    public Long getIsMemoryHijackingAnalysis() {
+        return this.IsMemoryHijackingAnalysis;
+    }
+
+    /**
+     * Set Whether to enable detection of Java webshell.
+     * @param IsMemoryHijackingAnalysis Whether to enable detection of Java webshell.
+     */
+    public void setIsMemoryHijackingAnalysis(Long IsMemoryHijackingAnalysis) {
+        this.IsMemoryHijackingAnalysis = IsMemoryHijackingAnalysis;
     }
 
     /**
@@ -958,6 +1071,22 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     }
 
     /**
+     * Get Automatic convergence switch for APIs. 0: disabled | 1: enabled. 
+     * @return UrlAutoConvergenceEnable Automatic convergence switch for APIs. 0: disabled | 1: enabled.
+     */
+    public Boolean getUrlAutoConvergenceEnable() {
+        return this.UrlAutoConvergenceEnable;
+    }
+
+    /**
+     * Set Automatic convergence switch for APIs. 0: disabled | 1: enabled.
+     * @param UrlAutoConvergenceEnable Automatic convergence switch for APIs. 0: disabled | 1: enabled.
+     */
+    public void setUrlAutoConvergenceEnable(Boolean UrlAutoConvergenceEnable) {
+        this.UrlAutoConvergenceEnable = UrlAutoConvergenceEnable;
+    }
+
+    /**
      * Get Convergence threshold for URL long segments. 
      * @return UrlLongSegmentThreshold Convergence threshold for URL long segments.
      */
@@ -989,49 +1118,69 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.UrlNumberSegmentThreshold = UrlNumberSegmentThreshold;
     }
 
-    public ModifyApmInstanceRequest() {
+    /**
+     * Get Specifies the memory threshold for probe fusing. 
+     * @return DisableMemoryUsed Specifies the memory threshold for probe fusing.
+     */
+    public Long getDisableMemoryUsed() {
+        return this.DisableMemoryUsed;
+    }
+
+    /**
+     * Set Specifies the memory threshold for probe fusing.
+     * @param DisableMemoryUsed Specifies the memory threshold for probe fusing.
+     */
+    public void setDisableMemoryUsed(Long DisableMemoryUsed) {
+        this.DisableMemoryUsed = DisableMemoryUsed;
+    }
+
+    /**
+     * Get Specifies the CPU threshold for probe fusing. 
+     * @return DisableCpuUsed Specifies the CPU threshold for probe fusing.
+     */
+    public Long getDisableCpuUsed() {
+        return this.DisableCpuUsed;
+    }
+
+    /**
+     * Set Specifies the CPU threshold for probe fusing.
+     * @param DisableCpuUsed Specifies the CPU threshold for probe fusing.
+     */
+    public void setDisableCpuUsed(Long DisableCpuUsed) {
+        this.DisableCpuUsed = DisableCpuUsed;
+    }
+
+    public ModifyApmApplicationConfigRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyApmInstanceRequest(ModifyApmInstanceRequest source) {
+    public ModifyApmApplicationConfigRequest(ModifyApmApplicationConfigRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
         }
-        if (source.Tags != null) {
-            this.Tags = new ApmTag[source.Tags.length];
-            for (int i = 0; i < source.Tags.length; i++) {
-                this.Tags[i] = new ApmTag(source.Tags[i]);
-            }
+        if (source.UrlConvergenceSwitch != null) {
+            this.UrlConvergenceSwitch = new Long(source.UrlConvergenceSwitch);
         }
-        if (source.Description != null) {
-            this.Description = new String(source.Description);
+        if (source.UrlConvergenceThreshold != null) {
+            this.UrlConvergenceThreshold = new Long(source.UrlConvergenceThreshold);
         }
-        if (source.TraceDuration != null) {
-            this.TraceDuration = new Long(source.TraceDuration);
+        if (source.ExceptionFilter != null) {
+            this.ExceptionFilter = new String(source.ExceptionFilter);
         }
-        if (source.OpenBilling != null) {
-            this.OpenBilling = new Boolean(source.OpenBilling);
+        if (source.UrlConvergence != null) {
+            this.UrlConvergence = new String(source.UrlConvergence);
         }
-        if (source.SpanDailyCounters != null) {
-            this.SpanDailyCounters = new Long(source.SpanDailyCounters);
+        if (source.ErrorCodeFilter != null) {
+            this.ErrorCodeFilter = new String(source.ErrorCodeFilter);
         }
-        if (source.ErrRateThreshold != null) {
-            this.ErrRateThreshold = new Long(source.ErrRateThreshold);
-        }
-        if (source.SampleRate != null) {
-            this.SampleRate = new Long(source.SampleRate);
-        }
-        if (source.ErrorSample != null) {
-            this.ErrorSample = new Long(source.ErrorSample);
-        }
-        if (source.SlowRequestSavedThreshold != null) {
-            this.SlowRequestSavedThreshold = new Long(source.SlowRequestSavedThreshold);
+        if (source.UrlExclude != null) {
+            this.UrlExclude = new String(source.UrlExclude);
         }
         if (source.IsRelatedLog != null) {
             this.IsRelatedLog = new Long(source.IsRelatedLog);
@@ -1048,26 +1197,53 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         if (source.LogSource != null) {
             this.LogSource = new String(source.LogSource);
         }
-        if (source.CustomShowTags != null) {
-            this.CustomShowTags = new String[source.CustomShowTags.length];
-            for (int i = 0; i < source.CustomShowTags.length; i++) {
-                this.CustomShowTags[i] = new String(source.CustomShowTags[i]);
+        if (source.IgnoreOperationName != null) {
+            this.IgnoreOperationName = new String(source.IgnoreOperationName);
+        }
+        if (source.EnableSnapshot != null) {
+            this.EnableSnapshot = new Boolean(source.EnableSnapshot);
+        }
+        if (source.SnapshotTimeout != null) {
+            this.SnapshotTimeout = new Long(source.SnapshotTimeout);
+        }
+        if (source.AgentEnable != null) {
+            this.AgentEnable = new Boolean(source.AgentEnable);
+        }
+        if (source.TraceSquash != null) {
+            this.TraceSquash = new Boolean(source.TraceSquash);
+        }
+        if (source.EventEnable != null) {
+            this.EventEnable = new Boolean(source.EventEnable);
+        }
+        if (source.InstrumentList != null) {
+            this.InstrumentList = new Instrument[source.InstrumentList.length];
+            for (int i = 0; i < source.InstrumentList.length; i++) {
+                this.InstrumentList[i] = new Instrument(source.InstrumentList[i]);
             }
         }
-        if (source.PayMode != null) {
-            this.PayMode = new Long(source.PayMode);
+        if (source.AgentOperationConfigView != null) {
+            this.AgentOperationConfigView = new AgentOperationConfigView(source.AgentOperationConfigView);
         }
-        if (source.ResponseDurationWarningThreshold != null) {
-            this.ResponseDurationWarningThreshold = new Long(source.ResponseDurationWarningThreshold);
+        if (source.EnableLogConfig != null) {
+            this.EnableLogConfig = new Boolean(source.EnableLogConfig);
         }
-        if (source.Free != null) {
-            this.Free = new Long(source.Free);
+        if (source.EnableDashboardConfig != null) {
+            this.EnableDashboardConfig = new Boolean(source.EnableDashboardConfig);
         }
         if (source.IsRelatedDashboard != null) {
             this.IsRelatedDashboard = new Long(source.IsRelatedDashboard);
         }
         if (source.DashboardTopicID != null) {
             this.DashboardTopicID = new String(source.DashboardTopicID);
+        }
+        if (source.LogIndexType != null) {
+            this.LogIndexType = new Long(source.LogIndexType);
+        }
+        if (source.LogTraceIdKey != null) {
+            this.LogTraceIdKey = new String(source.LogTraceIdKey);
+        }
+        if (source.EnableSecurityConfig != null) {
+            this.EnableSecurityConfig = new Boolean(source.EnableSecurityConfig);
         }
         if (source.IsSqlInjectionAnalysis != null) {
             this.IsSqlInjectionAnalysis = new Long(source.IsSqlInjectionAnalysis);
@@ -1080,12 +1256,6 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         }
         if (source.IsMemoryHijackingAnalysis != null) {
             this.IsMemoryHijackingAnalysis = new Long(source.IsMemoryHijackingAnalysis);
-        }
-        if (source.LogIndexType != null) {
-            this.LogIndexType = new Long(source.LogIndexType);
-        }
-        if (source.LogTraceIdKey != null) {
-            this.LogTraceIdKey = new String(source.LogTraceIdKey);
         }
         if (source.IsDeleteAnyFileAnalysis != null) {
             this.IsDeleteAnyFileAnalysis = new Long(source.IsDeleteAnyFileAnalysis);
@@ -1123,11 +1293,20 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         if (source.IsDeserializationAnalysis != null) {
             this.IsDeserializationAnalysis = new Long(source.IsDeserializationAnalysis);
         }
+        if (source.UrlAutoConvergenceEnable != null) {
+            this.UrlAutoConvergenceEnable = new Boolean(source.UrlAutoConvergenceEnable);
+        }
         if (source.UrlLongSegmentThreshold != null) {
             this.UrlLongSegmentThreshold = new Long(source.UrlLongSegmentThreshold);
         }
         if (source.UrlNumberSegmentThreshold != null) {
             this.UrlNumberSegmentThreshold = new Long(source.UrlNumberSegmentThreshold);
+        }
+        if (source.DisableMemoryUsed != null) {
+            this.DisableMemoryUsed = new Long(source.DisableMemoryUsed);
+        }
+        if (source.DisableCpuUsed != null) {
+            this.DisableCpuUsed = new Long(source.DisableCpuUsed);
         }
     }
 
@@ -1137,33 +1316,37 @@ public class ModifyApmInstanceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
-        this.setParamSimple(map, prefix + "Description", this.Description);
-        this.setParamSimple(map, prefix + "TraceDuration", this.TraceDuration);
-        this.setParamSimple(map, prefix + "OpenBilling", this.OpenBilling);
-        this.setParamSimple(map, prefix + "SpanDailyCounters", this.SpanDailyCounters);
-        this.setParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
-        this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
-        this.setParamSimple(map, prefix + "ErrorSample", this.ErrorSample);
-        this.setParamSimple(map, prefix + "SlowRequestSavedThreshold", this.SlowRequestSavedThreshold);
+        this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
+        this.setParamSimple(map, prefix + "UrlConvergenceSwitch", this.UrlConvergenceSwitch);
+        this.setParamSimple(map, prefix + "UrlConvergenceThreshold", this.UrlConvergenceThreshold);
+        this.setParamSimple(map, prefix + "ExceptionFilter", this.ExceptionFilter);
+        this.setParamSimple(map, prefix + "UrlConvergence", this.UrlConvergence);
+        this.setParamSimple(map, prefix + "ErrorCodeFilter", this.ErrorCodeFilter);
+        this.setParamSimple(map, prefix + "UrlExclude", this.UrlExclude);
         this.setParamSimple(map, prefix + "IsRelatedLog", this.IsRelatedLog);
         this.setParamSimple(map, prefix + "LogRegion", this.LogRegion);
         this.setParamSimple(map, prefix + "LogTopicID", this.LogTopicID);
         this.setParamSimple(map, prefix + "LogSet", this.LogSet);
         this.setParamSimple(map, prefix + "LogSource", this.LogSource);
-        this.setParamArraySimple(map, prefix + "CustomShowTags.", this.CustomShowTags);
-        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
-        this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
-        this.setParamSimple(map, prefix + "Free", this.Free);
+        this.setParamSimple(map, prefix + "IgnoreOperationName", this.IgnoreOperationName);
+        this.setParamSimple(map, prefix + "EnableSnapshot", this.EnableSnapshot);
+        this.setParamSimple(map, prefix + "SnapshotTimeout", this.SnapshotTimeout);
+        this.setParamSimple(map, prefix + "AgentEnable", this.AgentEnable);
+        this.setParamSimple(map, prefix + "TraceSquash", this.TraceSquash);
+        this.setParamSimple(map, prefix + "EventEnable", this.EventEnable);
+        this.setParamArrayObj(map, prefix + "InstrumentList.", this.InstrumentList);
+        this.setParamObj(map, prefix + "AgentOperationConfigView.", this.AgentOperationConfigView);
+        this.setParamSimple(map, prefix + "EnableLogConfig", this.EnableLogConfig);
+        this.setParamSimple(map, prefix + "EnableDashboardConfig", this.EnableDashboardConfig);
         this.setParamSimple(map, prefix + "IsRelatedDashboard", this.IsRelatedDashboard);
         this.setParamSimple(map, prefix + "DashboardTopicID", this.DashboardTopicID);
+        this.setParamSimple(map, prefix + "LogIndexType", this.LogIndexType);
+        this.setParamSimple(map, prefix + "LogTraceIdKey", this.LogTraceIdKey);
+        this.setParamSimple(map, prefix + "EnableSecurityConfig", this.EnableSecurityConfig);
         this.setParamSimple(map, prefix + "IsSqlInjectionAnalysis", this.IsSqlInjectionAnalysis);
         this.setParamSimple(map, prefix + "IsInstrumentationVulnerabilityScan", this.IsInstrumentationVulnerabilityScan);
         this.setParamSimple(map, prefix + "IsRemoteCommandExecutionAnalysis", this.IsRemoteCommandExecutionAnalysis);
         this.setParamSimple(map, prefix + "IsMemoryHijackingAnalysis", this.IsMemoryHijackingAnalysis);
-        this.setParamSimple(map, prefix + "LogIndexType", this.LogIndexType);
-        this.setParamSimple(map, prefix + "LogTraceIdKey", this.LogTraceIdKey);
         this.setParamSimple(map, prefix + "IsDeleteAnyFileAnalysis", this.IsDeleteAnyFileAnalysis);
         this.setParamSimple(map, prefix + "IsReadAnyFileAnalysis", this.IsReadAnyFileAnalysis);
         this.setParamSimple(map, prefix + "IsUploadAnyFileAnalysis", this.IsUploadAnyFileAnalysis);
@@ -1176,8 +1359,11 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsJNIInjectionAnalysis", this.IsJNIInjectionAnalysis);
         this.setParamSimple(map, prefix + "IsWebshellBackdoorAnalysis", this.IsWebshellBackdoorAnalysis);
         this.setParamSimple(map, prefix + "IsDeserializationAnalysis", this.IsDeserializationAnalysis);
+        this.setParamSimple(map, prefix + "UrlAutoConvergenceEnable", this.UrlAutoConvergenceEnable);
         this.setParamSimple(map, prefix + "UrlLongSegmentThreshold", this.UrlLongSegmentThreshold);
         this.setParamSimple(map, prefix + "UrlNumberSegmentThreshold", this.UrlNumberSegmentThreshold);
+        this.setParamSimple(map, prefix + "DisableMemoryUsed", this.DisableMemoryUsed);
+        this.setParamSimple(map, prefix + "DisableCpuUsed", this.DisableCpuUsed);
 
     }
 }

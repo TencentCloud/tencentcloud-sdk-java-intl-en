@@ -38,13 +38,6 @@ public class DescribeServiceOverviewRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Filter criteria.
-    */
-    @SerializedName("Filters")
-    @Expose
-    private Filter [] Filters;
-
-    /**
     * Aggregation dimension.
     */
     @SerializedName("GroupBy")
@@ -64,6 +57,13 @@ public class DescribeServiceOverviewRequest extends AbstractModel {
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
+
+    /**
+    * Filter criteria.
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
 
     /**
     * Sorting method
@@ -123,22 +123,6 @@ Value: fill in.
     }
 
     /**
-     * Get Filter criteria. 
-     * @return Filters Filter criteria.
-     */
-    public Filter [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set Filter criteria.
-     * @param Filters Filter criteria.
-     */
-    public void setFilters(Filter [] Filters) {
-        this.Filters = Filters;
-    }
-
-    /**
      * Get Aggregation dimension. 
      * @return GroupBy Aggregation dimension.
      */
@@ -184,6 +168,22 @@ Value: fill in.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
+    }
+
+    /**
+     * Get Filter criteria. 
+     * @return Filters Filter criteria.
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set Filter criteria.
+     * @param Filters Filter criteria.
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     /**
@@ -267,12 +267,6 @@ Value: fill in.
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.Filters != null) {
-            this.Filters = new Filter[source.Filters.length];
-            for (int i = 0; i < source.Filters.length; i++) {
-                this.Filters[i] = new Filter(source.Filters[i]);
-            }
-        }
         if (source.GroupBy != null) {
             this.GroupBy = new String[source.GroupBy.length];
             for (int i = 0; i < source.GroupBy.length; i++) {
@@ -284,6 +278,12 @@ Value: fill in.
         }
         if (source.EndTime != null) {
             this.EndTime = new Long(source.EndTime);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
         }
         if (source.OrderBy != null) {
             this.OrderBy = new OrderBy(source.OrderBy);
@@ -303,10 +303,10 @@ Value: fill in.
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Metrics.", this.Metrics);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamObj(map, prefix + "OrderBy.", this.OrderBy);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);

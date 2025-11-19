@@ -63,6 +63,17 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     }
 
     /**
+     *This API is used to call the text representation model to convert text into a vector represented by numbers, which can be used in scenarios such as text retrieval, information recommendation, and knowledge mining. There is a single-account call limit control for this API. If you need to increase the concurrency limit, please contact us (https://cloud.tencent.com/act/event/Online_service).
+     * @param req GetEmbeddingRequest
+     * @return GetEmbeddingResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetEmbeddingResponse GetEmbedding(GetEmbeddingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetEmbedding", GetEmbeddingResponse.class);
+    }
+
+    /**
      *This is an asynchronous API for querying results, which is used to obtain the result of document parsing.
      * @param req GetReconstructDocumentResultRequest
      * @return GetReconstructDocumentResultResponse

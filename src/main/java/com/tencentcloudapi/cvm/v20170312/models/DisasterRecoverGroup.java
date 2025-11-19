@@ -78,6 +78,13 @@ Note: This field may return null, indicating that no valid value is found.
     private String CreateTime;
 
     /**
+    * 
+    */
+    @SerializedName("Affinity")
+    @Expose
+    private Long Affinity;
+
+    /**
     * List of tags associated with the placement group.
     */
     @SerializedName("Tags")
@@ -217,6 +224,22 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
+     * Get  
+     * @return Affinity 
+     */
+    public Long getAffinity() {
+        return this.Affinity;
+    }
+
+    /**
+     * Set 
+     * @param Affinity 
+     */
+    public void setAffinity(Long Affinity) {
+        this.Affinity = Affinity;
+    }
+
+    /**
      * Get List of tags associated with the placement group. 
      * @return Tags List of tags associated with the placement group.
      */
@@ -264,6 +287,9 @@ Note: This field may return null, indicating that no valid value is found.
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.Affinity != null) {
+            this.Affinity = new Long(source.Affinity);
+        }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -284,6 +310,7 @@ Note: This field may return null, indicating that no valid value is found.
         this.setParamSimple(map, prefix + "CurrentNum", this.CurrentNum);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "Affinity", this.Affinity);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
