@@ -52,6 +52,34 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private TargetGroupInstance [] TargetGroupInstances;
 
     /**
+    * 
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+    * 
+    */
+    @SerializedName("HealthCheck")
+    @Expose
+    private TargetGroupHealthCheck HealthCheck;
+
+    /**
+    * 
+    */
+    @SerializedName("ScheduleAlgorithm")
+    @Expose
+    private String ScheduleAlgorithm;
+
+    /**
      * Get Target group name (up to 50 characters) 
      * @return TargetGroupName Target group name (up to 50 characters)
      */
@@ -115,6 +143,70 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.TargetGroupInstances = TargetGroupInstances;
     }
 
+    /**
+     * Get  
+     * @return Type 
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 
+     * @param Type 
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get  
+     * @return Protocol 
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set 
+     * @param Protocol 
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get  
+     * @return HealthCheck 
+     */
+    public TargetGroupHealthCheck getHealthCheck() {
+        return this.HealthCheck;
+    }
+
+    /**
+     * Set 
+     * @param HealthCheck 
+     */
+    public void setHealthCheck(TargetGroupHealthCheck HealthCheck) {
+        this.HealthCheck = HealthCheck;
+    }
+
+    /**
+     * Get  
+     * @return ScheduleAlgorithm 
+     */
+    public String getScheduleAlgorithm() {
+        return this.ScheduleAlgorithm;
+    }
+
+    /**
+     * Set 
+     * @param ScheduleAlgorithm 
+     */
+    public void setScheduleAlgorithm(String ScheduleAlgorithm) {
+        this.ScheduleAlgorithm = ScheduleAlgorithm;
+    }
+
     public CreateTargetGroupRequest() {
     }
 
@@ -138,6 +230,18 @@ public class CreateTargetGroupRequest extends AbstractModel {
                 this.TargetGroupInstances[i] = new TargetGroupInstance(source.TargetGroupInstances[i]);
             }
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new TargetGroupHealthCheck(source.HealthCheck);
+        }
+        if (source.ScheduleAlgorithm != null) {
+            this.ScheduleAlgorithm = new String(source.ScheduleAlgorithm);
+        }
     }
 
 
@@ -149,6 +253,10 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamArrayObj(map, prefix + "TargetGroupInstances.", this.TargetGroupInstances);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
+        this.setParamSimple(map, prefix + "ScheduleAlgorithm", this.ScheduleAlgorithm);
 
     }
 }

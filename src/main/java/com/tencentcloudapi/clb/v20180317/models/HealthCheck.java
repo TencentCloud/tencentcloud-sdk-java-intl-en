@@ -24,391 +24,491 @@ import java.util.HashMap;
 public class HealthCheck extends AbstractModel {
 
     /**
-    * Whether to enable health check. 1: enable; 0: disable.
+    * Whether to enable health check. 1: Enable; 0: Disable.
+
+It is enabled by default.
     */
     @SerializedName("HealthSwitch")
     @Expose
     private Long HealthSwitch;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Health check response timeout, in seconds. Value range: 2–60. Default value: 2. The response timeout should be less than the check interval.
     */
     @SerializedName("TimeOut")
     @Expose
     private Long TimeOut;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Health check interval, in seconds. Default value: 5. Value range: 2–300 for IPv4 CLB instances and 5–300 for IPv6 CLB instances.
+Note: The value range is 5–300 for some IPv4 CLB instances of early versions.
     */
     @SerializedName("IntervalTime")
     @Expose
     private Long IntervalTime;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Healthy threshold. Default: 3, indicating that if a forwarding is found healthy three consecutive times, it is considered to be normal. Value range: 2-10. Unit: times.
     */
     @SerializedName("HealthNum")
     @Expose
     private Long HealthNum;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Unhealthy threshold. Default: 3, indicating that if a forwarding is found unhealthy three consecutive times, it is considered to be exceptional. Value range: 2-10. Unit: times.
     */
     @SerializedName("UnHealthNum")
     @Expose
     private Long UnHealthNum;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Health check status code. (This parameter applies only to HTTP/HTTPS forwarding rules and the HTTP health check method of TCP listeners.) Value range: 1–31. Default value: 31.
+1: return 1xx after the check (healthy); 2: return 2xx after the check (healthy); 4: return 3xx after the check (healthy); 8: return 4xx after the check (healthy); 16: return 5xx after the check (healthy). If you expect that multiple codes represent a healthy real server, set the value to the sum of the corresponding values.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpCode")
     @Expose
     private Long HttpCode;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
+
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpCheckPath")
     @Expose
     private String HttpCheckPath;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Health check domain name, which will be contained in a Host header field of the HTTP protocol. (This parameter applies only to HTTP/HTTPS listeners and the HTTP health check method of TCP listeners. For TCP listeners, this parameter is required if the HTTP health check method is used.)
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpCheckDomain")
     @Expose
     private String HttpCheckDomain;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
+
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpCheckMethod")
     @Expose
     private String HttpCheckMethod;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
+
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CheckPort")
     @Expose
     private Long CheckPort;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the input format of the health check. Valid values: HEX and TEXT. If the value is HEX, the characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number. (Applicable only to TCP/UDP listeners.)
+
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ContextType")
     @Expose
     private String ContextType;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the content of the request sent by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
+
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SendContext")
     @Expose
     private String SendContext;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the result returned by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
+
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RecvContext")
     @Expose
     private String RecvContext;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Protocol used for health checks. Valid values: TCP (for TCP listeners, TCP_SSL listeners, and QUIC listeners), HTTP (for TCP listeners, TCP_SSL listeners, QUIC listeners, HTTP rules, and HTTPS rules), HTTPS (for HTTPS rules), GRPC (for HTTP rules and HTTPS rules), PING (for UDP listeners), and CUSTOM (for UDP listeners and TCP listeners). The default value is HTTP for HTTP listeners, TCP for TCP, TCP_SSL, and QUIC listeners, and PING for UDP listeners. For HTTPS listeners, the protocol is the same as the backend forwarding protocol.
     */
     @SerializedName("CheckType")
     @Expose
     private String CheckType;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * HTTP version. This field indicates the HTTP version of real servers and is required if the value of CheckType is HTTP. Valid values: HTTP/1.0 and HTTP/1.1. (This field applies only to TCP listeners.)
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpVersion")
     @Expose
     private String HttpVersion;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Source IP address type for health checks. 0: use the LB VIP as the source IP address; 1: use an IP address in the 100.64 range as the source IP address.
     */
     @SerializedName("SourceIpType")
     @Expose
     private Long SourceIpType;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Health check status code when the protocol is GRPC. (This parameter applies only to rules with the backend forwarding protocol of GRPC.) Default value: 12. You can enter a single numerical value, multiple numerical values, or a range. For example, 20, 20,25, or 0-99.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExtendedCode")
     @Expose
     private String ExtendedCode;
 
     /**
-     * Get Whether to enable health check. 1: enable; 0: disable. 
-     * @return HealthSwitch Whether to enable health check. 1: enable; 0: disable.
+     * Get Whether to enable health check. 1: Enable; 0: Disable.
+
+It is enabled by default. 
+     * @return HealthSwitch Whether to enable health check. 1: Enable; 0: Disable.
+
+It is enabled by default.
      */
     public Long getHealthSwitch() {
         return this.HealthSwitch;
     }
 
     /**
-     * Set Whether to enable health check. 1: enable; 0: disable.
-     * @param HealthSwitch Whether to enable health check. 1: enable; 0: disable.
+     * Set Whether to enable health check. 1: Enable; 0: Disable.
+
+It is enabled by default.
+     * @param HealthSwitch Whether to enable health check. 1: Enable; 0: Disable.
+
+It is enabled by default.
      */
     public void setHealthSwitch(Long HealthSwitch) {
         this.HealthSwitch = HealthSwitch;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TimeOut Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Health check response timeout, in seconds. Value range: 2–60. Default value: 2. The response timeout should be less than the check interval. 
+     * @return TimeOut Health check response timeout, in seconds. Value range: 2–60. Default value: 2. The response timeout should be less than the check interval.
      */
     public Long getTimeOut() {
         return this.TimeOut;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TimeOut Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Health check response timeout, in seconds. Value range: 2–60. Default value: 2. The response timeout should be less than the check interval.
+     * @param TimeOut Health check response timeout, in seconds. Value range: 2–60. Default value: 2. The response timeout should be less than the check interval.
      */
     public void setTimeOut(Long TimeOut) {
         this.TimeOut = TimeOut;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IntervalTime Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Health check interval, in seconds. Default value: 5. Value range: 2–300 for IPv4 CLB instances and 5–300 for IPv6 CLB instances.
+Note: The value range is 5–300 for some IPv4 CLB instances of early versions. 
+     * @return IntervalTime Health check interval, in seconds. Default value: 5. Value range: 2–300 for IPv4 CLB instances and 5–300 for IPv6 CLB instances.
+Note: The value range is 5–300 for some IPv4 CLB instances of early versions.
      */
     public Long getIntervalTime() {
         return this.IntervalTime;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IntervalTime Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Health check interval, in seconds. Default value: 5. Value range: 2–300 for IPv4 CLB instances and 5–300 for IPv6 CLB instances.
+Note: The value range is 5–300 for some IPv4 CLB instances of early versions.
+     * @param IntervalTime Health check interval, in seconds. Default value: 5. Value range: 2–300 for IPv4 CLB instances and 5–300 for IPv6 CLB instances.
+Note: The value range is 5–300 for some IPv4 CLB instances of early versions.
      */
     public void setIntervalTime(Long IntervalTime) {
         this.IntervalTime = IntervalTime;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HealthNum Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Healthy threshold. Default: 3, indicating that if a forwarding is found healthy three consecutive times, it is considered to be normal. Value range: 2-10. Unit: times. 
+     * @return HealthNum Healthy threshold. Default: 3, indicating that if a forwarding is found healthy three consecutive times, it is considered to be normal. Value range: 2-10. Unit: times.
      */
     public Long getHealthNum() {
         return this.HealthNum;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HealthNum Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Healthy threshold. Default: 3, indicating that if a forwarding is found healthy three consecutive times, it is considered to be normal. Value range: 2-10. Unit: times.
+     * @param HealthNum Healthy threshold. Default: 3, indicating that if a forwarding is found healthy three consecutive times, it is considered to be normal. Value range: 2-10. Unit: times.
      */
     public void setHealthNum(Long HealthNum) {
         this.HealthNum = HealthNum;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UnHealthNum Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Unhealthy threshold. Default: 3, indicating that if a forwarding is found unhealthy three consecutive times, it is considered to be exceptional. Value range: 2-10. Unit: times. 
+     * @return UnHealthNum Unhealthy threshold. Default: 3, indicating that if a forwarding is found unhealthy three consecutive times, it is considered to be exceptional. Value range: 2-10. Unit: times.
      */
     public Long getUnHealthNum() {
         return this.UnHealthNum;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UnHealthNum Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Unhealthy threshold. Default: 3, indicating that if a forwarding is found unhealthy three consecutive times, it is considered to be exceptional. Value range: 2-10. Unit: times.
+     * @param UnHealthNum Unhealthy threshold. Default: 3, indicating that if a forwarding is found unhealthy three consecutive times, it is considered to be exceptional. Value range: 2-10. Unit: times.
      */
     public void setUnHealthNum(Long UnHealthNum) {
         this.UnHealthNum = UnHealthNum;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HttpCode Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Health check status code. (This parameter applies only to HTTP/HTTPS forwarding rules and the HTTP health check method of TCP listeners.) Value range: 1–31. Default value: 31.
+1: return 1xx after the check (healthy); 2: return 2xx after the check (healthy); 4: return 3xx after the check (healthy); 8: return 4xx after the check (healthy); 16: return 5xx after the check (healthy). If you expect that multiple codes represent a healthy real server, set the value to the sum of the corresponding values.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HttpCode Health check status code. (This parameter applies only to HTTP/HTTPS forwarding rules and the HTTP health check method of TCP listeners.) Value range: 1–31. Default value: 31.
+1: return 1xx after the check (healthy); 2: return 2xx after the check (healthy); 4: return 3xx after the check (healthy); 8: return 4xx after the check (healthy); 16: return 5xx after the check (healthy). If you expect that multiple codes represent a healthy real server, set the value to the sum of the corresponding values.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getHttpCode() {
         return this.HttpCode;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HttpCode Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Health check status code. (This parameter applies only to HTTP/HTTPS forwarding rules and the HTTP health check method of TCP listeners.) Value range: 1–31. Default value: 31.
+1: return 1xx after the check (healthy); 2: return 2xx after the check (healthy); 4: return 3xx after the check (healthy); 8: return 4xx after the check (healthy); 16: return 5xx after the check (healthy). If you expect that multiple codes represent a healthy real server, set the value to the sum of the corresponding values.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HttpCode Health check status code. (This parameter applies only to HTTP/HTTPS forwarding rules and the HTTP health check method of TCP listeners.) Value range: 1–31. Default value: 31.
+1: return 1xx after the check (healthy); 2: return 2xx after the check (healthy); 4: return 3xx after the check (healthy); 8: return 4xx after the check (healthy); 16: return 5xx after the check (healthy). If you expect that multiple codes represent a healthy real server, set the value to the sum of the corresponding values.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHttpCode(Long HttpCode) {
         this.HttpCode = HttpCode;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HttpCheckPath Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
+
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HttpCheckPath Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHttpCheckPath() {
         return this.HttpCheckPath;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HttpCheckPath Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HttpCheckPath Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHttpCheckPath(String HttpCheckPath) {
         this.HttpCheckPath = HttpCheckPath;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HttpCheckDomain Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Health check domain name, which will be contained in a Host header field of the HTTP protocol. (This parameter applies only to HTTP/HTTPS listeners and the HTTP health check method of TCP listeners. For TCP listeners, this parameter is required if the HTTP health check method is used.)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HttpCheckDomain Health check domain name, which will be contained in a Host header field of the HTTP protocol. (This parameter applies only to HTTP/HTTPS listeners and the HTTP health check method of TCP listeners. For TCP listeners, this parameter is required if the HTTP health check method is used.)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHttpCheckDomain() {
         return this.HttpCheckDomain;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HttpCheckDomain Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Health check domain name, which will be contained in a Host header field of the HTTP protocol. (This parameter applies only to HTTP/HTTPS listeners and the HTTP health check method of TCP listeners. For TCP listeners, this parameter is required if the HTTP health check method is used.)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HttpCheckDomain Health check domain name, which will be contained in a Host header field of the HTTP protocol. (This parameter applies only to HTTP/HTTPS listeners and the HTTP health check method of TCP listeners. For TCP listeners, this parameter is required if the HTTP health check method is used.)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHttpCheckDomain(String HttpCheckDomain) {
         this.HttpCheckDomain = HttpCheckDomain;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HttpCheckMethod Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
+
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HttpCheckMethod Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHttpCheckMethod() {
         return this.HttpCheckMethod;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HttpCheckMethod Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HttpCheckMethod Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHttpCheckMethod(String HttpCheckMethod) {
         this.HttpCheckMethod = HttpCheckMethod;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CheckPort Note: This field may return null, indicating that no valid values can be obtained.
+     * Get A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
+
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CheckPort A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCheckPort() {
         return this.CheckPort;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CheckPort Note: This field may return null, indicating that no valid values can be obtained.
+     * Set A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CheckPort A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCheckPort(Long CheckPort) {
         this.CheckPort = CheckPort;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContextType Note: This field may return null, indicating that no valid values can be obtained.
+     * Get A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the input format of the health check. Valid values: HEX and TEXT. If the value is HEX, the characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number. (Applicable only to TCP/UDP listeners.)
+
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ContextType A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the input format of the health check. Valid values: HEX and TEXT. If the value is HEX, the characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number. (Applicable only to TCP/UDP listeners.)
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getContextType() {
         return this.ContextType;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContextType Note: This field may return null, indicating that no valid values can be obtained.
+     * Set A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the input format of the health check. Valid values: HEX and TEXT. If the value is HEX, the characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number. (Applicable only to TCP/UDP listeners.)
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ContextType A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the input format of the health check. Valid values: HEX and TEXT. If the value is HEX, the characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number. (Applicable only to TCP/UDP listeners.)
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setContextType(String ContextType) {
         this.ContextType = ContextType;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SendContext Note: This field may return null, indicating that no valid values can be obtained.
+     * Get A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the content of the request sent by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
+
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SendContext A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the content of the request sent by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSendContext() {
         return this.SendContext;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SendContext Note: This field may return null, indicating that no valid values can be obtained.
+     * Set A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the content of the request sent by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SendContext A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the content of the request sent by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSendContext(String SendContext) {
         this.SendContext = SendContext;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RecvContext Note: This field may return null, indicating that no valid values can be obtained.
+     * Get A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the result returned by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
+
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RecvContext A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the result returned by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRecvContext() {
         return this.RecvContext;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RecvContext Note: This field may return null, indicating that no valid values can be obtained.
+     * Set A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the result returned by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RecvContext A custom check parameter, which is required if the value of CheckType (health check protocol) is CUSTOM. This parameter represents the result returned by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRecvContext(String RecvContext) {
         this.RecvContext = RecvContext;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CheckType Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Protocol used for health checks. Valid values: TCP (for TCP listeners, TCP_SSL listeners, and QUIC listeners), HTTP (for TCP listeners, TCP_SSL listeners, QUIC listeners, HTTP rules, and HTTPS rules), HTTPS (for HTTPS rules), GRPC (for HTTP rules and HTTPS rules), PING (for UDP listeners), and CUSTOM (for UDP listeners and TCP listeners). The default value is HTTP for HTTP listeners, TCP for TCP, TCP_SSL, and QUIC listeners, and PING for UDP listeners. For HTTPS listeners, the protocol is the same as the backend forwarding protocol. 
+     * @return CheckType Protocol used for health checks. Valid values: TCP (for TCP listeners, TCP_SSL listeners, and QUIC listeners), HTTP (for TCP listeners, TCP_SSL listeners, QUIC listeners, HTTP rules, and HTTPS rules), HTTPS (for HTTPS rules), GRPC (for HTTP rules and HTTPS rules), PING (for UDP listeners), and CUSTOM (for UDP listeners and TCP listeners). The default value is HTTP for HTTP listeners, TCP for TCP, TCP_SSL, and QUIC listeners, and PING for UDP listeners. For HTTPS listeners, the protocol is the same as the backend forwarding protocol.
      */
     public String getCheckType() {
         return this.CheckType;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CheckType Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Protocol used for health checks. Valid values: TCP (for TCP listeners, TCP_SSL listeners, and QUIC listeners), HTTP (for TCP listeners, TCP_SSL listeners, QUIC listeners, HTTP rules, and HTTPS rules), HTTPS (for HTTPS rules), GRPC (for HTTP rules and HTTPS rules), PING (for UDP listeners), and CUSTOM (for UDP listeners and TCP listeners). The default value is HTTP for HTTP listeners, TCP for TCP, TCP_SSL, and QUIC listeners, and PING for UDP listeners. For HTTPS listeners, the protocol is the same as the backend forwarding protocol.
+     * @param CheckType Protocol used for health checks. Valid values: TCP (for TCP listeners, TCP_SSL listeners, and QUIC listeners), HTTP (for TCP listeners, TCP_SSL listeners, QUIC listeners, HTTP rules, and HTTPS rules), HTTPS (for HTTPS rules), GRPC (for HTTP rules and HTTPS rules), PING (for UDP listeners), and CUSTOM (for UDP listeners and TCP listeners). The default value is HTTP for HTTP listeners, TCP for TCP, TCP_SSL, and QUIC listeners, and PING for UDP listeners. For HTTPS listeners, the protocol is the same as the backend forwarding protocol.
      */
     public void setCheckType(String CheckType) {
         this.CheckType = CheckType;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HttpVersion Note: This field may return null, indicating that no valid values can be obtained.
+     * Get HTTP version. This field indicates the HTTP version of real servers and is required if the value of CheckType is HTTP. Valid values: HTTP/1.0 and HTTP/1.1. (This field applies only to TCP listeners.)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HttpVersion HTTP version. This field indicates the HTTP version of real servers and is required if the value of CheckType is HTTP. Valid values: HTTP/1.0 and HTTP/1.1. (This field applies only to TCP listeners.)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHttpVersion() {
         return this.HttpVersion;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HttpVersion Note: This field may return null, indicating that no valid values can be obtained.
+     * Set HTTP version. This field indicates the HTTP version of real servers and is required if the value of CheckType is HTTP. Valid values: HTTP/1.0 and HTTP/1.1. (This field applies only to TCP listeners.)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HttpVersion HTTP version. This field indicates the HTTP version of real servers and is required if the value of CheckType is HTTP. Valid values: HTTP/1.0 and HTTP/1.1. (This field applies only to TCP listeners.)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHttpVersion(String HttpVersion) {
         this.HttpVersion = HttpVersion;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SourceIpType Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Source IP address type for health checks. 0: use the LB VIP as the source IP address; 1: use an IP address in the 100.64 range as the source IP address. 
+     * @return SourceIpType Source IP address type for health checks. 0: use the LB VIP as the source IP address; 1: use an IP address in the 100.64 range as the source IP address.
      */
     public Long getSourceIpType() {
         return this.SourceIpType;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SourceIpType Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Source IP address type for health checks. 0: use the LB VIP as the source IP address; 1: use an IP address in the 100.64 range as the source IP address.
+     * @param SourceIpType Source IP address type for health checks. 0: use the LB VIP as the source IP address; 1: use an IP address in the 100.64 range as the source IP address.
      */
     public void setSourceIpType(Long SourceIpType) {
         this.SourceIpType = SourceIpType;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExtendedCode Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Health check status code when the protocol is GRPC. (This parameter applies only to rules with the backend forwarding protocol of GRPC.) Default value: 12. You can enter a single numerical value, multiple numerical values, or a range. For example, 20, 20,25, or 0-99.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExtendedCode Health check status code when the protocol is GRPC. (This parameter applies only to rules with the backend forwarding protocol of GRPC.) Default value: 12. You can enter a single numerical value, multiple numerical values, or a range. For example, 20, 20,25, or 0-99.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExtendedCode() {
         return this.ExtendedCode;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExtendedCode Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Health check status code when the protocol is GRPC. (This parameter applies only to rules with the backend forwarding protocol of GRPC.) Default value: 12. You can enter a single numerical value, multiple numerical values, or a range. For example, 20, 20,25, or 0-99.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExtendedCode Health check status code when the protocol is GRPC. (This parameter applies only to rules with the backend forwarding protocol of GRPC.) Default value: 12. You can enter a single numerical value, multiple numerical values, or a range. For example, 20, 20,25, or 0-99.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExtendedCode(String ExtendedCode) {
         this.ExtendedCode = ExtendedCode;

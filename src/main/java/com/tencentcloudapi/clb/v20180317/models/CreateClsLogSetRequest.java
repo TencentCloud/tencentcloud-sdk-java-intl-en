@@ -63,7 +63,9 @@ public class CreateClsLogSetRequest extends AbstractModel {
     /**
      * Get Logset retention period (in days) 
      * @return Period Logset retention period (in days)
+     * @deprecated
      */
+    @Deprecated
     public Long getPeriod() {
         return this.Period;
     }
@@ -71,7 +73,9 @@ public class CreateClsLogSetRequest extends AbstractModel {
     /**
      * Set Logset retention period (in days)
      * @param Period Logset retention period (in days)
+     * @deprecated
      */
+    @Deprecated
     public void setPeriod(Long Period) {
         this.Period = Period;
     }

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyListenerRequest extends AbstractModel {
 
     /**
-    * CLB instance ID
+    * ID of the CLB instance. You can call the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) API to query the ID.
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * CLB listener ID
+    * ID of the CLB instance listener. You can call the [DescribeListeners](https://intl.cloud.tencent.com/document/product/214/30686?from_cn_redirect=1) API to query the ID.
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * New listener name
+    * New listener name. The maximum length is 255 characters.
     */
     @SerializedName("ListenerName")
     @Expose
@@ -66,7 +66,9 @@ public class ModifyListenerRequest extends AbstractModel {
     private CertificateInput Certificate;
 
     /**
-    * Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
+    * Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+They indicate weighted round-robin and least connections, respectively. Default value: WRR.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
     */
     @SerializedName("Scheduler")
     @Expose
@@ -87,21 +89,28 @@ public class ModifyListenerRequest extends AbstractModel {
     private String TargetType;
 
     /**
-    * Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled.
+    * Whether to enable the persistent connection feature. This parameter applies only to HTTP/HTTPS listeners.
+The default value is 0, indicating disabled, and 1 indicates enabled.
+
+Enable this feature with caution if the maximum number of connections is limited for real servers. This feature is in beta testing. To use it, submit a [beta testing application](https://intl.cloud.tencent.com/apply/p/tsodp6qm21?from_cn_redirect=1).
     */
     @SerializedName("KeepaliveEnable")
     @Expose
     private Long KeepaliveEnable;
 
     /**
-    * Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+    * Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+True: send an RST packet to the client; False: do not send an RST packet to the client.
     */
     @SerializedName("DeregisterTargetRst")
     @Expose
     private Boolean DeregisterTargetRst;
 
     /**
-    * Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+    * Session persistence type. NORMAL: default session persistence type; QUIC_CID: perform session persistence based on QUIC connection ID. If the value is set to QUIC_CID, only the UDP protocol is supported.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+
+Default value: NORMAL.
     */
     @SerializedName("SessionType")
     @Expose
@@ -116,6 +125,8 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
     * Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
     */
     @SerializedName("MaxConn")
     @Expose
@@ -123,68 +134,84 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
     * Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
     */
     @SerializedName("MaxCps")
     @Expose
     private Long MaxCps;
 
     /**
-    * Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+    * Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
     */
     @SerializedName("IdleConnectTimeout")
     @Expose
     private Long IdleConnectTimeout;
 
     /**
-    * Whether to enable SNAT.
+    * 
+    */
+    @SerializedName("ProxyProtocol")
+    @Expose
+    private Boolean ProxyProtocol;
+
+    /**
+    * Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
     */
     @SerializedName("SnatEnable")
     @Expose
     private Boolean SnatEnable;
 
     /**
-     * Get CLB instance ID 
-     * @return LoadBalancerId CLB instance ID
+    * Data compression mode.
+    */
+    @SerializedName("DataCompressMode")
+    @Expose
+    private String DataCompressMode;
+
+    /**
+     * Get ID of the CLB instance. You can call the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) API to query the ID. 
+     * @return LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) API to query the ID.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set CLB instance ID
-     * @param LoadBalancerId CLB instance ID
+     * Set ID of the CLB instance. You can call the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) API to query the ID.
+     * @param LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) API to query the ID.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get CLB listener ID 
-     * @return ListenerId CLB listener ID
+     * Get ID of the CLB instance listener. You can call the [DescribeListeners](https://intl.cloud.tencent.com/document/product/214/30686?from_cn_redirect=1) API to query the ID. 
+     * @return ListenerId ID of the CLB instance listener. You can call the [DescribeListeners](https://intl.cloud.tencent.com/document/product/214/30686?from_cn_redirect=1) API to query the ID.
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set CLB listener ID
-     * @param ListenerId CLB listener ID
+     * Set ID of the CLB instance listener. You can call the [DescribeListeners](https://intl.cloud.tencent.com/document/product/214/30686?from_cn_redirect=1) API to query the ID.
+     * @param ListenerId ID of the CLB instance listener. You can call the [DescribeListeners](https://intl.cloud.tencent.com/document/product/214/30686?from_cn_redirect=1) API to query the ID.
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get New listener name 
-     * @return ListenerName New listener name
+     * Get New listener name. The maximum length is 255 characters. 
+     * @return ListenerName New listener name. The maximum length is 255 characters.
      */
     public String getListenerName() {
         return this.ListenerName;
     }
 
     /**
-     * Set New listener name
-     * @param ListenerName New listener name
+     * Set New listener name. The maximum length is 255 characters.
+     * @param ListenerName New listener name. The maximum length is 255 characters.
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;
@@ -239,16 +266,24 @@ public class ModifyListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules. 
-     * @return Scheduler Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
+     * Get Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+They indicate weighted round-robin and least connections, respectively. Default value: WRR.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules. 
+     * @return Scheduler Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+They indicate weighted round-robin and least connections, respectively. Default value: WRR.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
-     * @param Scheduler Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
+     * Set Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+They indicate weighted round-robin and least connections, respectively. Default value: WRR.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
+     * @param Scheduler Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+They indicate weighted round-robin and least connections, respectively. Default value: WRR.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
@@ -287,48 +322,76 @@ public class ModifyListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled. 
-     * @return KeepaliveEnable Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled.
+     * Get Whether to enable the persistent connection feature. This parameter applies only to HTTP/HTTPS listeners.
+The default value is 0, indicating disabled, and 1 indicates enabled.
+
+Enable this feature with caution if the maximum number of connections is limited for real servers. This feature is in beta testing. To use it, submit a [beta testing application](https://intl.cloud.tencent.com/apply/p/tsodp6qm21?from_cn_redirect=1). 
+     * @return KeepaliveEnable Whether to enable the persistent connection feature. This parameter applies only to HTTP/HTTPS listeners.
+The default value is 0, indicating disabled, and 1 indicates enabled.
+
+Enable this feature with caution if the maximum number of connections is limited for real servers. This feature is in beta testing. To use it, submit a [beta testing application](https://intl.cloud.tencent.com/apply/p/tsodp6qm21?from_cn_redirect=1).
      */
     public Long getKeepaliveEnable() {
         return this.KeepaliveEnable;
     }
 
     /**
-     * Set Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled.
-     * @param KeepaliveEnable Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled.
+     * Set Whether to enable the persistent connection feature. This parameter applies only to HTTP/HTTPS listeners.
+The default value is 0, indicating disabled, and 1 indicates enabled.
+
+Enable this feature with caution if the maximum number of connections is limited for real servers. This feature is in beta testing. To use it, submit a [beta testing application](https://intl.cloud.tencent.com/apply/p/tsodp6qm21?from_cn_redirect=1).
+     * @param KeepaliveEnable Whether to enable the persistent connection feature. This parameter applies only to HTTP/HTTPS listeners.
+The default value is 0, indicating disabled, and 1 indicates enabled.
+
+Enable this feature with caution if the maximum number of connections is limited for real servers. This feature is in beta testing. To use it, submit a [beta testing application](https://intl.cloud.tencent.com/apply/p/tsodp6qm21?from_cn_redirect=1).
      */
     public void setKeepaliveEnable(Long KeepaliveEnable) {
         this.KeepaliveEnable = KeepaliveEnable;
     }
 
     /**
-     * Get Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only. 
-     * @return DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+     * Get Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+True: send an RST packet to the client; False: do not send an RST packet to the client. 
+     * @return DeregisterTargetRst Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+True: send an RST packet to the client; False: do not send an RST packet to the client.
      */
     public Boolean getDeregisterTargetRst() {
         return this.DeregisterTargetRst;
     }
 
     /**
-     * Set Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
-     * @param DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+     * Set Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+True: send an RST packet to the client; False: do not send an RST packet to the client.
+     * @param DeregisterTargetRst Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+True: send an RST packet to the client; False: do not send an RST packet to the client.
      */
     public void setDeregisterTargetRst(Boolean DeregisterTargetRst) {
         this.DeregisterTargetRst = DeregisterTargetRst;
     }
 
     /**
-     * Get Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. 
-     * @return SessionType Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+     * Get Session persistence type. NORMAL: default session persistence type; QUIC_CID: perform session persistence based on QUIC connection ID. If the value is set to QUIC_CID, only the UDP protocol is supported.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+
+Default value: NORMAL. 
+     * @return SessionType Session persistence type. NORMAL: default session persistence type; QUIC_CID: perform session persistence based on QUIC connection ID. If the value is set to QUIC_CID, only the UDP protocol is supported.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+
+Default value: NORMAL.
      */
     public String getSessionType() {
         return this.SessionType;
     }
 
     /**
-     * Set Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
-     * @param SessionType Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+     * Set Session persistence type. NORMAL: default session persistence type; QUIC_CID: perform session persistence based on QUIC connection ID. If the value is set to QUIC_CID, only the UDP protocol is supported.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+
+Default value: NORMAL.
+     * @param SessionType Session persistence type. NORMAL: default session persistence type; QUIC_CID: perform session persistence based on QUIC connection ID. If the value is set to QUIC_CID, only the UDP protocol is supported.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+
+Default value: NORMAL.
      */
     public void setSessionType(String SessionType) {
         this.SessionType = SessionType;
@@ -351,8 +414,12 @@ public class ModifyListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter. 
+     * Get Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit. 
      * @return MaxConn Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
      */
     public Long getMaxConn() {
         return this.MaxConn;
@@ -360,15 +427,23 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
      * Set Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
      * @param MaxConn Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
      */
     public void setMaxConn(Long MaxConn) {
         this.MaxConn = MaxConn;
     }
 
     /**
-     * Get Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter. 
+     * Get Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit. 
      * @return MaxCps Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
      */
     public Long getMaxCps() {
         return this.MaxCps;
@@ -376,42 +451,78 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
      * Set Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
      * @param MaxCps Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
      */
     public void setMaxCps(Long MaxCps) {
         this.MaxCps = MaxCps;
     }
 
     /**
-     * Get Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category).  
-     * @return IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+     * Get Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600. 
+     * @return IdleConnectTimeout Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
      */
     public Long getIdleConnectTimeout() {
         return this.IdleConnectTimeout;
     }
 
     /**
-     * Set Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
-     * @param IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+     * Set Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
+     * @param IdleConnectTimeout Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
      */
     public void setIdleConnectTimeout(Long IdleConnectTimeout) {
         this.IdleConnectTimeout = IdleConnectTimeout;
     }
 
     /**
-     * Get Whether to enable SNAT. 
-     * @return SnatEnable Whether to enable SNAT.
+     * Get  
+     * @return ProxyProtocol 
+     */
+    public Boolean getProxyProtocol() {
+        return this.ProxyProtocol;
+    }
+
+    /**
+     * Set 
+     * @param ProxyProtocol 
+     */
+    public void setProxyProtocol(Boolean ProxyProtocol) {
+        this.ProxyProtocol = ProxyProtocol;
+    }
+
+    /**
+     * Get Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT. 
+     * @return SnatEnable Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
      */
     public Boolean getSnatEnable() {
         return this.SnatEnable;
     }
 
     /**
-     * Set Whether to enable SNAT.
-     * @param SnatEnable Whether to enable SNAT.
+     * Set Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
+     * @param SnatEnable Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
      */
     public void setSnatEnable(Boolean SnatEnable) {
         this.SnatEnable = SnatEnable;
+    }
+
+    /**
+     * Get Data compression mode. 
+     * @return DataCompressMode Data compression mode.
+     */
+    public String getDataCompressMode() {
+        return this.DataCompressMode;
+    }
+
+    /**
+     * Set Data compression mode.
+     * @param DataCompressMode Data compression mode.
+     */
+    public void setDataCompressMode(String DataCompressMode) {
+        this.DataCompressMode = DataCompressMode;
     }
 
     public ModifyListenerRequest() {
@@ -470,8 +581,14 @@ public class ModifyListenerRequest extends AbstractModel {
         if (source.IdleConnectTimeout != null) {
             this.IdleConnectTimeout = new Long(source.IdleConnectTimeout);
         }
+        if (source.ProxyProtocol != null) {
+            this.ProxyProtocol = new Boolean(source.ProxyProtocol);
+        }
         if (source.SnatEnable != null) {
             this.SnatEnable = new Boolean(source.SnatEnable);
+        }
+        if (source.DataCompressMode != null) {
+            this.DataCompressMode = new String(source.DataCompressMode);
         }
     }
 
@@ -496,7 +613,9 @@ public class ModifyListenerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxConn", this.MaxConn);
         this.setParamSimple(map, prefix + "MaxCps", this.MaxCps);
         this.setParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
+        this.setParamSimple(map, prefix + "ProxyProtocol", this.ProxyProtocol);
         this.setParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
+        this.setParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
 
     }
 }

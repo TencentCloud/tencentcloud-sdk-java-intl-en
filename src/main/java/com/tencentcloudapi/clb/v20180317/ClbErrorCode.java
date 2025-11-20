@@ -21,6 +21,9 @@ public enum ClbErrorCode {
      /* Instances without listeners cannot be stopped. */
      FAILEDOPERATION_NOLISTENERINLB("FailedOperation.NoListenerInLB"),
      
+     /*  */
+     FAILEDOPERATION_RESOURCEINCLONING("FailedOperation.ResourceInCloning"),
+     
      /* The specified resource is currently being operated. Please try again later. */
      FAILEDOPERATION_RESOURCEINOPERATING("FailedOperation.ResourceInOperating"),
      

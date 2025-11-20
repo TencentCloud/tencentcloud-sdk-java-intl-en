@@ -74,6 +74,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private AssociationItem [] AssociatedRule;
 
     /**
+    * 
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+    * 
+    */
+    @SerializedName("ScheduleAlgorithm")
+    @Expose
+    private String ScheduleAlgorithm;
+
+    /**
+    * 
+    */
+    @SerializedName("HealthCheck")
+    @Expose
+    private TargetGroupHealthCheck HealthCheck;
+
+    /**
      * Get Target group ID 
      * @return TargetGroupId Target group ID
      */
@@ -189,6 +210,54 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.AssociatedRule = AssociatedRule;
     }
 
+    /**
+     * Get  
+     * @return Protocol 
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set 
+     * @param Protocol 
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get  
+     * @return ScheduleAlgorithm 
+     */
+    public String getScheduleAlgorithm() {
+        return this.ScheduleAlgorithm;
+    }
+
+    /**
+     * Set 
+     * @param ScheduleAlgorithm 
+     */
+    public void setScheduleAlgorithm(String ScheduleAlgorithm) {
+        this.ScheduleAlgorithm = ScheduleAlgorithm;
+    }
+
+    /**
+     * Get  
+     * @return HealthCheck 
+     */
+    public TargetGroupHealthCheck getHealthCheck() {
+        return this.HealthCheck;
+    }
+
+    /**
+     * Set 
+     * @param HealthCheck 
+     */
+    public void setHealthCheck(TargetGroupHealthCheck HealthCheck) {
+        this.HealthCheck = HealthCheck;
+    }
+
     public TargetGroupInfo() {
     }
 
@@ -221,6 +290,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.AssociatedRule[i] = new AssociationItem(source.AssociatedRule[i]);
             }
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.ScheduleAlgorithm != null) {
+            this.ScheduleAlgorithm = new String(source.ScheduleAlgorithm);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new TargetGroupHealthCheck(source.HealthCheck);
+        }
     }
 
 
@@ -235,6 +313,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamArrayObj(map, prefix + "AssociatedRule.", this.AssociatedRule);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "ScheduleAlgorithm", this.ScheduleAlgorithm);
+        this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
 
     }
 }

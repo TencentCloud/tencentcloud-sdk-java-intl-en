@@ -38,6 +38,13 @@ public class MultiCertInfo extends AbstractModel {
     private CertInfo [] CertList;
 
     /**
+    * Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+    */
+    @SerializedName("SSLVerifyClient")
+    @Expose
+    private String SSLVerifyClient;
+
+    /**
      * Get Authentication type. Values: `UNIDIRECTIONAL` (one-way authentication), `MUTUAL` (two-way authentication) 
      * @return SSLMode Authentication type. Values: `UNIDIRECTIONAL` (one-way authentication), `MUTUAL` (two-way authentication)
      */
@@ -69,6 +76,22 @@ public class MultiCertInfo extends AbstractModel {
         this.CertList = CertList;
     }
 
+    /**
+     * Get Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON. 
+     * @return SSLVerifyClient Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+     */
+    public String getSSLVerifyClient() {
+        return this.SSLVerifyClient;
+    }
+
+    /**
+     * Set Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+     * @param SSLVerifyClient Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+     */
+    public void setSSLVerifyClient(String SSLVerifyClient) {
+        this.SSLVerifyClient = SSLVerifyClient;
+    }
+
     public MultiCertInfo() {
     }
 
@@ -86,6 +109,9 @@ public class MultiCertInfo extends AbstractModel {
                 this.CertList[i] = new CertInfo(source.CertList[i]);
             }
         }
+        if (source.SSLVerifyClient != null) {
+            this.SSLVerifyClient = new String(source.SSLVerifyClient);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class MultiCertInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SSLMode", this.SSLMode);
         this.setParamArrayObj(map, prefix + "CertList.", this.CertList);
+        this.setParamSimple(map, prefix + "SSLVerifyClient", this.SSLVerifyClient);
 
     }
 }

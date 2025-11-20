@@ -116,7 +116,9 @@ public class RsWeightRule extends AbstractModel {
     /**
      * Get Target rule domain name. This parameter does not take effect if LocationId is specified 
      * @return Domain Target rule domain name. This parameter does not take effect if LocationId is specified
+     * @deprecated
      */
+    @Deprecated
     public String getDomain() {
         return this.Domain;
     }
@@ -124,7 +126,9 @@ public class RsWeightRule extends AbstractModel {
     /**
      * Set Target rule domain name. This parameter does not take effect if LocationId is specified
      * @param Domain Target rule domain name. This parameter does not take effect if LocationId is specified
+     * @deprecated
      */
+    @Deprecated
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
@@ -132,7 +136,9 @@ public class RsWeightRule extends AbstractModel {
     /**
      * Get Target rule URL. This parameter does not take effect if LocationId is specified 
      * @return Url Target rule URL. This parameter does not take effect if LocationId is specified
+     * @deprecated
      */
+    @Deprecated
     public String getUrl() {
         return this.Url;
     }
@@ -140,7 +146,9 @@ public class RsWeightRule extends AbstractModel {
     /**
      * Set Target rule URL. This parameter does not take effect if LocationId is specified
      * @param Url Target rule URL. This parameter does not take effect if LocationId is specified
+     * @deprecated
      */
+    @Deprecated
     public void setUrl(String Url) {
         this.Url = Url;
     }

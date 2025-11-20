@@ -24,14 +24,22 @@ import java.util.HashMap;
 public class CertificateInput extends AbstractModel {
 
     /**
-    * Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+    * Authentication type. UNIDIRECTIONAL: one-way authentication; MUTUAL: mutual authentication.
+Default value: UNIDIRECTIONAL.
     */
     @SerializedName("SSLMode")
     @Expose
     private String SSLMode;
 
     /**
-    * ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
+    * Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+    */
+    @SerializedName("SSLVerifyClient")
+    @Expose
+    private String SSLVerifyClient;
+
+    /**
+    * Server certificate ID. If this parameter is not specified, you need to upload a certificate and specify CertContent (server certificate content), CertKey (server certificate key), and CertName (server certificate name).
     */
     @SerializedName("CertId")
     @Expose
@@ -80,32 +88,52 @@ public class CertificateInput extends AbstractModel {
     private String CertCaContent;
 
     /**
-     * Get Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication) 
-     * @return SSLMode Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+     * Get Authentication type. UNIDIRECTIONAL: one-way authentication; MUTUAL: mutual authentication.
+Default value: UNIDIRECTIONAL. 
+     * @return SSLMode Authentication type. UNIDIRECTIONAL: one-way authentication; MUTUAL: mutual authentication.
+Default value: UNIDIRECTIONAL.
      */
     public String getSSLMode() {
         return this.SSLMode;
     }
 
     /**
-     * Set Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
-     * @param SSLMode Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+     * Set Authentication type. UNIDIRECTIONAL: one-way authentication; MUTUAL: mutual authentication.
+Default value: UNIDIRECTIONAL.
+     * @param SSLMode Authentication type. UNIDIRECTIONAL: one-way authentication; MUTUAL: mutual authentication.
+Default value: UNIDIRECTIONAL.
      */
     public void setSSLMode(String SSLMode) {
         this.SSLMode = SSLMode;
     }
 
     /**
-     * Get ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName. 
-     * @return CertId ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
+     * Get Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON. 
+     * @return SSLVerifyClient Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+     */
+    public String getSSLVerifyClient() {
+        return this.SSLVerifyClient;
+    }
+
+    /**
+     * Set Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+     * @param SSLVerifyClient Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+     */
+    public void setSSLVerifyClient(String SSLVerifyClient) {
+        this.SSLVerifyClient = SSLVerifyClient;
+    }
+
+    /**
+     * Get Server certificate ID. If this parameter is not specified, you need to upload a certificate and specify CertContent (server certificate content), CertKey (server certificate key), and CertName (server certificate name). 
+     * @return CertId Server certificate ID. If this parameter is not specified, you need to upload a certificate and specify CertContent (server certificate content), CertKey (server certificate key), and CertName (server certificate name).
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
-     * @param CertId ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
+     * Set Server certificate ID. If this parameter is not specified, you need to upload a certificate and specify CertContent (server certificate content), CertKey (server certificate key), and CertName (server certificate name).
+     * @param CertId Server certificate ID. If this parameter is not specified, you need to upload a certificate and specify CertContent (server certificate content), CertKey (server certificate key), and CertName (server certificate name).
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
@@ -218,6 +246,9 @@ public class CertificateInput extends AbstractModel {
         if (source.SSLMode != null) {
             this.SSLMode = new String(source.SSLMode);
         }
+        if (source.SSLVerifyClient != null) {
+            this.SSLVerifyClient = new String(source.SSLVerifyClient);
+        }
         if (source.CertId != null) {
             this.CertId = new String(source.CertId);
         }
@@ -247,6 +278,7 @@ public class CertificateInput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SSLMode", this.SSLMode);
+        this.setParamSimple(map, prefix + "SSLVerifyClient", this.SSLVerifyClient);
         this.setParamSimple(map, prefix + "CertId", this.CertId);
         this.setParamSimple(map, prefix + "CertCaId", this.CertCaId);
         this.setParamSimple(map, prefix + "CertName", this.CertName);

@@ -38,6 +38,13 @@ public class ModifyTargetWeightRequest extends AbstractModel {
     private String ListenerId;
 
     /**
+    * List of real servers for which to modify the weights
+    */
+    @SerializedName("Targets")
+    @Expose
+    private Target [] Targets;
+
+    /**
     * Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
     */
     @SerializedName("LocationId")
@@ -57,13 +64,6 @@ public class ModifyTargetWeightRequest extends AbstractModel {
     @SerializedName("Url")
     @Expose
     private String Url;
-
-    /**
-    * List of real servers for which to modify the weights
-    */
-    @SerializedName("Targets")
-    @Expose
-    private Target [] Targets;
 
     /**
     * New forwarding weight of a real server. Value range: 0-100. Default value: 10. If the Targets.Weight parameter is set, this parameter will not take effect.
@@ -102,6 +102,22 @@ public class ModifyTargetWeightRequest extends AbstractModel {
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
+    }
+
+    /**
+     * Get List of real servers for which to modify the weights 
+     * @return Targets List of real servers for which to modify the weights
+     */
+    public Target [] getTargets() {
+        return this.Targets;
+    }
+
+    /**
+     * Set List of real servers for which to modify the weights
+     * @param Targets List of real servers for which to modify the weights
+     */
+    public void setTargets(Target [] Targets) {
+        this.Targets = Targets;
     }
 
     /**
@@ -153,22 +169,6 @@ public class ModifyTargetWeightRequest extends AbstractModel {
     }
 
     /**
-     * Get List of real servers for which to modify the weights 
-     * @return Targets List of real servers for which to modify the weights
-     */
-    public Target [] getTargets() {
-        return this.Targets;
-    }
-
-    /**
-     * Set List of real servers for which to modify the weights
-     * @param Targets List of real servers for which to modify the weights
-     */
-    public void setTargets(Target [] Targets) {
-        this.Targets = Targets;
-    }
-
-    /**
      * Get New forwarding weight of a real server. Value range: 0-100. Default value: 10. If the Targets.Weight parameter is set, this parameter will not take effect. 
      * @return Weight New forwarding weight of a real server. Value range: 0-100. Default value: 10. If the Targets.Weight parameter is set, this parameter will not take effect.
      */
@@ -198,6 +198,12 @@ public class ModifyTargetWeightRequest extends AbstractModel {
         if (source.ListenerId != null) {
             this.ListenerId = new String(source.ListenerId);
         }
+        if (source.Targets != null) {
+            this.Targets = new Target[source.Targets.length];
+            for (int i = 0; i < source.Targets.length; i++) {
+                this.Targets[i] = new Target(source.Targets[i]);
+            }
+        }
         if (source.LocationId != null) {
             this.LocationId = new String(source.LocationId);
         }
@@ -206,12 +212,6 @@ public class ModifyTargetWeightRequest extends AbstractModel {
         }
         if (source.Url != null) {
             this.Url = new String(source.Url);
-        }
-        if (source.Targets != null) {
-            this.Targets = new Target[source.Targets.length];
-            for (int i = 0; i < source.Targets.length; i++) {
-                this.Targets[i] = new Target(source.Targets[i]);
-            }
         }
         if (source.Weight != null) {
             this.Weight = new Long(source.Weight);
@@ -225,10 +225,10 @@ public class ModifyTargetWeightRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
+        this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Url", this.Url);
-        this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
 
     }
