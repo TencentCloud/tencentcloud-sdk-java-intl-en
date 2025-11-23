@@ -38,6 +38,13 @@ public class DescribeRouteRequest extends AbstractModel {
     private Long RouteId;
 
     /**
+    * Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
+    */
+    @SerializedName("MainRouteFlag")
+    @Expose
+    private Boolean MainRouteFlag;
+
+    /**
      * Get The ckafka cluster instance Id. 
      * @return InstanceId The ckafka cluster instance Id.
      */
@@ -69,6 +76,22 @@ public class DescribeRouteRequest extends AbstractModel {
         this.RouteId = RouteId;
     }
 
+    /**
+     * Get Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	 
+     * @return MainRouteFlag Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
+     */
+    public Boolean getMainRouteFlag() {
+        return this.MainRouteFlag;
+    }
+
+    /**
+     * Set Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
+     * @param MainRouteFlag Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
+     */
+    public void setMainRouteFlag(Boolean MainRouteFlag) {
+        this.MainRouteFlag = MainRouteFlag;
+    }
+
     public DescribeRouteRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeRouteRequest extends AbstractModel {
         if (source.RouteId != null) {
             this.RouteId = new Long(source.RouteId);
         }
+        if (source.MainRouteFlag != null) {
+            this.MainRouteFlag = new Boolean(source.MainRouteFlag);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeRouteRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "RouteId", this.RouteId);
+        this.setParamSimple(map, prefix + "MainRouteFlag", this.MainRouteFlag);
 
     }
 }

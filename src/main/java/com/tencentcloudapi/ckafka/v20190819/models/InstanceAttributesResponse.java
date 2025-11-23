@@ -273,6 +273,20 @@ Specifies the serverless version.
     private DynamicDiskConfig DynamicDiskConfig;
 
     /**
+    * Specifies the system maintenance time.
+    */
+    @SerializedName("SystemMaintenanceTime")
+    @Expose
+    private String SystemMaintenanceTime;
+
+    /**
+    * Specifies the maximum size of messages at the instance level.
+    */
+    @SerializedName("MaxMessageByte")
+    @Expose
+    private Long MaxMessageByte;
+
+    /**
     * Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
     */
     @SerializedName("InstanceChargeType")
@@ -927,6 +941,38 @@ Specifies the serverless version.
     }
 
     /**
+     * Get Specifies the system maintenance time. 
+     * @return SystemMaintenanceTime Specifies the system maintenance time.
+     */
+    public String getSystemMaintenanceTime() {
+        return this.SystemMaintenanceTime;
+    }
+
+    /**
+     * Set Specifies the system maintenance time.
+     * @param SystemMaintenanceTime Specifies the system maintenance time.
+     */
+    public void setSystemMaintenanceTime(String SystemMaintenanceTime) {
+        this.SystemMaintenanceTime = SystemMaintenanceTime;
+    }
+
+    /**
+     * Get Specifies the maximum size of messages at the instance level. 
+     * @return MaxMessageByte Specifies the maximum size of messages at the instance level.
+     */
+    public Long getMaxMessageByte() {
+        return this.MaxMessageByte;
+    }
+
+    /**
+     * Set Specifies the maximum size of messages at the instance level.
+     * @param MaxMessageByte Specifies the maximum size of messages at the instance level.
+     */
+    public void setMaxMessageByte(Long MaxMessageByte) {
+        this.MaxMessageByte = MaxMessageByte;
+    }
+
+    /**
      * Get Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package. 
      * @return InstanceChargeType Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
      */
@@ -1255,6 +1301,12 @@ CLOUD_EKS_TSE eks cluster.
         if (source.DynamicDiskConfig != null) {
             this.DynamicDiskConfig = new DynamicDiskConfig(source.DynamicDiskConfig);
         }
+        if (source.SystemMaintenanceTime != null) {
+            this.SystemMaintenanceTime = new String(source.SystemMaintenanceTime);
+        }
+        if (source.MaxMessageByte != null) {
+            this.MaxMessageByte = new Long(source.MaxMessageByte);
+        }
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
         }
@@ -1324,6 +1376,8 @@ CLOUD_EKS_TSE eks cluster.
         this.setParamSimple(map, prefix + "RemainingPartitions", this.RemainingPartitions);
         this.setParamSimple(map, prefix + "RemainingTopics", this.RemainingTopics);
         this.setParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
+        this.setParamSimple(map, prefix + "SystemMaintenanceTime", this.SystemMaintenanceTime);
+        this.setParamSimple(map, prefix + "MaxMessageByte", this.MaxMessageByte);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
         this.setParamSimple(map, prefix + "ElasticBandwidthOpenStatus", this.ElasticBandwidthOpenStatus);

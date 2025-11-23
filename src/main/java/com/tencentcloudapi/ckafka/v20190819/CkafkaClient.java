@@ -204,6 +204,28 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete an ACL rule.
+     * @param req DeleteAclRuleRequest
+     * @return DeleteAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAclRuleResponse DeleteAclRule(DeleteAclRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAclRule", DeleteAclRuleResponse.class);
+    }
+
+    /**
+     *Delete consumer groups.
+     * @param req DeleteGroupRequest
+     * @return DeleteGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGroup", DeleteGroupResponse.class);
+    }
+
+    /**
      *This API is used to delete post-payment instances. It directly performs instance termination by calling API deletion without associating connectors and tasks in pre-check.
      * @param req DeleteInstancePostRequest
      * @return DeleteInstancePostResponse
@@ -303,14 +325,14 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the user list.
-     * @param req DescribeAppInfoRequest
-     * @return DescribeAppInfoResponse
+     *This API is used to query instance version information.
+     * @param req DescribeCkafkaVersionRequest
+     * @return DescribeCkafkaVersionResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAppInfoResponse DescribeAppInfo(DescribeAppInfoRequest req) throws TencentCloudSDKException{
+    public DescribeCkafkaVersionResponse DescribeCkafkaVersion(DescribeCkafkaVersionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAppInfo", DescribeAppInfoResponse.class);
+        return this.internalRequest(req, "DescribeCkafkaVersion", DescribeCkafkaVersionResponse.class);
     }
 
     /**
@@ -612,6 +634,17 @@ This API is used to get the list of topics in a CKafka instance of a user.
     }
 
     /**
+     *This API is used to perform downsizing on a pay-as-you-go instance.
+     * @param req InstanceScalingDownRequest
+     * @return InstanceScalingDownResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstanceScalingDownResponse InstanceScalingDown(InstanceScalingDownRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InstanceScalingDown", InstanceScalingDownResponse.class);
+    }
+
+    /**
      *This API is used to modify ACL policy, currently only support whether to apply preset rules to newly-added topics.
      * @param req ModifyAclRuleRequest
      * @return ModifyAclRuleResponse
@@ -678,6 +711,17 @@ This API is used to get the list of topics in a CKafka instance of a user.
     }
 
     /**
+     *This API is used to set automated ops attributes.
+     * @param req ModifyRoutineMaintenanceTaskRequest
+     * @return ModifyRoutineMaintenanceTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoutineMaintenanceTaskResponse ModifyRoutineMaintenanceTask(ModifyRoutineMaintenanceTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRoutineMaintenanceTask", ModifyRoutineMaintenanceTaskResponse.class);
+    }
+
+    /**
      *This API is used to modify topic attributes.
      * @param req ModifyTopicAttributesRequest
      * @return ModifyTopicAttributesResponse
@@ -697,6 +741,17 @@ This API is used to get the list of topics in a CKafka instance of a user.
     public SendMessageResponse SendMessage(SendMessageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SendMessage", SendMessageResponse.class);
+    }
+
+    /**
+     *This API is used to upgrade the broker version.
+     * @param req UpgradeBrokerVersionRequest
+     * @return UpgradeBrokerVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeBrokerVersionResponse UpgradeBrokerVersion(UpgradeBrokerVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradeBrokerVersion", UpgradeBrokerVersionResponse.class);
     }
 
 }

@@ -150,6 +150,13 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     private Long ReplicaNum;
 
     /**
+    * Specifies the time type for message saving: CreateTime/LogAppendTime.
+    */
+    @SerializedName("LogMsgTimestampType")
+    @Expose
+    private String LogMsgTimestampType;
+
+    /**
      * Get The ckafka cluster instance Id. 
      * @return InstanceId The ckafka cluster instance Id.
      */
@@ -437,6 +444,22 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
         this.ReplicaNum = ReplicaNum;
     }
 
+    /**
+     * Get Specifies the time type for message saving: CreateTime/LogAppendTime. 
+     * @return LogMsgTimestampType Specifies the time type for message saving: CreateTime/LogAppendTime.
+     */
+    public String getLogMsgTimestampType() {
+        return this.LogMsgTimestampType;
+    }
+
+    /**
+     * Set Specifies the time type for message saving: CreateTime/LogAppendTime.
+     * @param LogMsgTimestampType Specifies the time type for message saving: CreateTime/LogAppendTime.
+     */
+    public void setLogMsgTimestampType(String LogMsgTimestampType) {
+        this.LogMsgTimestampType = LogMsgTimestampType;
+    }
+
     public ModifyTopicAttributesRequest() {
     }
 
@@ -505,6 +528,9 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
         if (source.ReplicaNum != null) {
             this.ReplicaNum = new Long(source.ReplicaNum);
         }
+        if (source.LogMsgTimestampType != null) {
+            this.LogMsgTimestampType = new String(source.LogMsgTimestampType);
+        }
     }
 
 
@@ -530,6 +556,7 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "QuotaProducerByteRate", this.QuotaProducerByteRate);
         this.setParamSimple(map, prefix + "QuotaConsumerByteRate", this.QuotaConsumerByteRate);
         this.setParamSimple(map, prefix + "ReplicaNum", this.ReplicaNum);
+        this.setParamSimple(map, prefix + "LogMsgTimestampType", this.LogMsgTimestampType);
 
     }
 }

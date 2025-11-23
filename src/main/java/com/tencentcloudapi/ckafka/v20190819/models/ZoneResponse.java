@@ -24,368 +24,368 @@ import java.util.HashMap;
 public class ZoneResponse extends AbstractModel {
 
     /**
-    * Zone list
+    * <P>Specifies the zone list.</p>.
     */
     @SerializedName("ZoneList")
     @Expose
     private ZoneInfo [] ZoneList;
 
     /**
-    * Maximum number of instances to be purchased
+    * <P>Maximum number of instances that can be purchased.</p>.
     */
     @SerializedName("MaxBuyInstanceNum")
     @Expose
     private Long MaxBuyInstanceNum;
 
     /**
-    * Maximum bandwidth in MB/S
+    * <p>Maximum purchase bandwidth in Mb/s.</p>.
     */
     @SerializedName("MaxBandwidth")
     @Expose
     private Long MaxBandwidth;
 
     /**
-    * Pay-as-you-go unit price
+    * <P>Unit price for postpayment.</p>.
     */
     @SerializedName("UnitPrice")
     @Expose
     private Price UnitPrice;
 
     /**
-    * Pay-as-you-go unit message price
+    * <P>Message unit price for postpayment.</p>.
     */
     @SerializedName("MessagePrice")
     @Expose
     private Price MessagePrice;
 
     /**
-    * Specifies the user-exclusive cluster info.
+    * <P>User-Exclusive cluster information.</p>.
     */
     @SerializedName("ClusterInfo")
     @Expose
     private ClusterInfo [] ClusterInfo;
 
     /**
-    * Purchase the standard version configuration.
+    * <P>Specifies the standard version configuration to purchase.</p>.
     */
     @SerializedName("Standard")
     @Expose
     private String Standard;
 
     /**
-    * Purchase the standard version S2 configuration.
+    * <P>Specifies the purchase of standard version s2 configuration.</p>.
     */
     @SerializedName("StandardS2")
     @Expose
     private String StandardS2;
 
     /**
-    * Specifies the configuration for purchasing the professional edition.
+    * <P>Specifies the configuration for purchasing professional edition.</p>.
     */
     @SerializedName("Profession")
     @Expose
     private String Profession;
 
     /**
-    * Purchase physical dedicated edition configuration.
+    * <P>Purchase physical dedicated edition configuration.</p>.
     */
     @SerializedName("Physical")
     @Expose
     private String Physical;
 
     /**
-    * Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
+    * <p>Specifies the public network bandwidth. valid values: 3Mbps to 999Mbps. only supported in pro edition. abandoned, meaningless.</p>.
     */
     @SerializedName("PublicNetwork")
     @Expose
     private String PublicNetwork;
 
     /**
-    * Configures the public network bandwidth.
+    * <P>Public network bandwidth configuration.</p>.
     */
     @SerializedName("PublicNetworkLimit")
     @Expose
     private String PublicNetworkLimit;
 
     /**
-    * Request ID.
+    * <p>Request Id.</p>.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
 
     /**
-    * Pagination Offset
+    * <P>Specifies the pagination offset.</p>.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Pagination Limit
+    * <P>Specifies the pagination limit.</p>.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Mandatory. input tag.
+    * <P>Specifies whether the tag is mandatory.</p>.
     */
     @SerializedName("ForceCheckTag")
     @Expose
     private Boolean ForceCheckTag;
 
     /**
-     * Get Zone list 
-     * @return ZoneList Zone list
+     * Get <P>Specifies the zone list.</p>. 
+     * @return ZoneList <P>Specifies the zone list.</p>.
      */
     public ZoneInfo [] getZoneList() {
         return this.ZoneList;
     }
 
     /**
-     * Set Zone list
-     * @param ZoneList Zone list
+     * Set <P>Specifies the zone list.</p>.
+     * @param ZoneList <P>Specifies the zone list.</p>.
      */
     public void setZoneList(ZoneInfo [] ZoneList) {
         this.ZoneList = ZoneList;
     }
 
     /**
-     * Get Maximum number of instances to be purchased 
-     * @return MaxBuyInstanceNum Maximum number of instances to be purchased
+     * Get <P>Maximum number of instances that can be purchased.</p>. 
+     * @return MaxBuyInstanceNum <P>Maximum number of instances that can be purchased.</p>.
      */
     public Long getMaxBuyInstanceNum() {
         return this.MaxBuyInstanceNum;
     }
 
     /**
-     * Set Maximum number of instances to be purchased
-     * @param MaxBuyInstanceNum Maximum number of instances to be purchased
+     * Set <P>Maximum number of instances that can be purchased.</p>.
+     * @param MaxBuyInstanceNum <P>Maximum number of instances that can be purchased.</p>.
      */
     public void setMaxBuyInstanceNum(Long MaxBuyInstanceNum) {
         this.MaxBuyInstanceNum = MaxBuyInstanceNum;
     }
 
     /**
-     * Get Maximum bandwidth in MB/S 
-     * @return MaxBandwidth Maximum bandwidth in MB/S
+     * Get <p>Maximum purchase bandwidth in Mb/s.</p>. 
+     * @return MaxBandwidth <p>Maximum purchase bandwidth in Mb/s.</p>.
      */
     public Long getMaxBandwidth() {
         return this.MaxBandwidth;
     }
 
     /**
-     * Set Maximum bandwidth in MB/S
-     * @param MaxBandwidth Maximum bandwidth in MB/S
+     * Set <p>Maximum purchase bandwidth in Mb/s.</p>.
+     * @param MaxBandwidth <p>Maximum purchase bandwidth in Mb/s.</p>.
      */
     public void setMaxBandwidth(Long MaxBandwidth) {
         this.MaxBandwidth = MaxBandwidth;
     }
 
     /**
-     * Get Pay-as-you-go unit price 
-     * @return UnitPrice Pay-as-you-go unit price
+     * Get <P>Unit price for postpayment.</p>. 
+     * @return UnitPrice <P>Unit price for postpayment.</p>.
      */
     public Price getUnitPrice() {
         return this.UnitPrice;
     }
 
     /**
-     * Set Pay-as-you-go unit price
-     * @param UnitPrice Pay-as-you-go unit price
+     * Set <P>Unit price for postpayment.</p>.
+     * @param UnitPrice <P>Unit price for postpayment.</p>.
      */
     public void setUnitPrice(Price UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get Pay-as-you-go unit message price 
-     * @return MessagePrice Pay-as-you-go unit message price
+     * Get <P>Message unit price for postpayment.</p>. 
+     * @return MessagePrice <P>Message unit price for postpayment.</p>.
      */
     public Price getMessagePrice() {
         return this.MessagePrice;
     }
 
     /**
-     * Set Pay-as-you-go unit message price
-     * @param MessagePrice Pay-as-you-go unit message price
+     * Set <P>Message unit price for postpayment.</p>.
+     * @param MessagePrice <P>Message unit price for postpayment.</p>.
      */
     public void setMessagePrice(Price MessagePrice) {
         this.MessagePrice = MessagePrice;
     }
 
     /**
-     * Get Specifies the user-exclusive cluster info. 
-     * @return ClusterInfo Specifies the user-exclusive cluster info.
+     * Get <P>User-Exclusive cluster information.</p>. 
+     * @return ClusterInfo <P>User-Exclusive cluster information.</p>.
      */
     public ClusterInfo [] getClusterInfo() {
         return this.ClusterInfo;
     }
 
     /**
-     * Set Specifies the user-exclusive cluster info.
-     * @param ClusterInfo Specifies the user-exclusive cluster info.
+     * Set <P>User-Exclusive cluster information.</p>.
+     * @param ClusterInfo <P>User-Exclusive cluster information.</p>.
      */
     public void setClusterInfo(ClusterInfo [] ClusterInfo) {
         this.ClusterInfo = ClusterInfo;
     }
 
     /**
-     * Get Purchase the standard version configuration. 
-     * @return Standard Purchase the standard version configuration.
+     * Get <P>Specifies the standard version configuration to purchase.</p>. 
+     * @return Standard <P>Specifies the standard version configuration to purchase.</p>.
      */
     public String getStandard() {
         return this.Standard;
     }
 
     /**
-     * Set Purchase the standard version configuration.
-     * @param Standard Purchase the standard version configuration.
+     * Set <P>Specifies the standard version configuration to purchase.</p>.
+     * @param Standard <P>Specifies the standard version configuration to purchase.</p>.
      */
     public void setStandard(String Standard) {
         this.Standard = Standard;
     }
 
     /**
-     * Get Purchase the standard version S2 configuration. 
-     * @return StandardS2 Purchase the standard version S2 configuration.
+     * Get <P>Specifies the purchase of standard version s2 configuration.</p>. 
+     * @return StandardS2 <P>Specifies the purchase of standard version s2 configuration.</p>.
      */
     public String getStandardS2() {
         return this.StandardS2;
     }
 
     /**
-     * Set Purchase the standard version S2 configuration.
-     * @param StandardS2 Purchase the standard version S2 configuration.
+     * Set <P>Specifies the purchase of standard version s2 configuration.</p>.
+     * @param StandardS2 <P>Specifies the purchase of standard version s2 configuration.</p>.
      */
     public void setStandardS2(String StandardS2) {
         this.StandardS2 = StandardS2;
     }
 
     /**
-     * Get Specifies the configuration for purchasing the professional edition. 
-     * @return Profession Specifies the configuration for purchasing the professional edition.
+     * Get <P>Specifies the configuration for purchasing professional edition.</p>. 
+     * @return Profession <P>Specifies the configuration for purchasing professional edition.</p>.
      */
     public String getProfession() {
         return this.Profession;
     }
 
     /**
-     * Set Specifies the configuration for purchasing the professional edition.
-     * @param Profession Specifies the configuration for purchasing the professional edition.
+     * Set <P>Specifies the configuration for purchasing professional edition.</p>.
+     * @param Profession <P>Specifies the configuration for purchasing professional edition.</p>.
      */
     public void setProfession(String Profession) {
         this.Profession = Profession;
     }
 
     /**
-     * Get Purchase physical dedicated edition configuration. 
-     * @return Physical Purchase physical dedicated edition configuration.
+     * Get <P>Purchase physical dedicated edition configuration.</p>. 
+     * @return Physical <P>Purchase physical dedicated edition configuration.</p>.
      */
     public String getPhysical() {
         return this.Physical;
     }
 
     /**
-     * Set Purchase physical dedicated edition configuration.
-     * @param Physical Purchase physical dedicated edition configuration.
+     * Set <P>Purchase physical dedicated edition configuration.</p>.
+     * @param Physical <P>Purchase physical dedicated edition configuration.</p>.
      */
     public void setPhysical(String Physical) {
         this.Physical = Physical;
     }
 
     /**
-     * Get Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless. 
-     * @return PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
+     * Get <p>Specifies the public network bandwidth. valid values: 3Mbps to 999Mbps. only supported in pro edition. abandoned, meaningless.</p>. 
+     * @return PublicNetwork <p>Specifies the public network bandwidth. valid values: 3Mbps to 999Mbps. only supported in pro edition. abandoned, meaningless.</p>.
      */
     public String getPublicNetwork() {
         return this.PublicNetwork;
     }
 
     /**
-     * Set Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
-     * @param PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
+     * Set <p>Specifies the public network bandwidth. valid values: 3Mbps to 999Mbps. only supported in pro edition. abandoned, meaningless.</p>.
+     * @param PublicNetwork <p>Specifies the public network bandwidth. valid values: 3Mbps to 999Mbps. only supported in pro edition. abandoned, meaningless.</p>.
      */
     public void setPublicNetwork(String PublicNetwork) {
         this.PublicNetwork = PublicNetwork;
     }
 
     /**
-     * Get Configures the public network bandwidth. 
-     * @return PublicNetworkLimit Configures the public network bandwidth.
+     * Get <P>Public network bandwidth configuration.</p>. 
+     * @return PublicNetworkLimit <P>Public network bandwidth configuration.</p>.
      */
     public String getPublicNetworkLimit() {
         return this.PublicNetworkLimit;
     }
 
     /**
-     * Set Configures the public network bandwidth.
-     * @param PublicNetworkLimit Configures the public network bandwidth.
+     * Set <P>Public network bandwidth configuration.</p>.
+     * @param PublicNetworkLimit <P>Public network bandwidth configuration.</p>.
      */
     public void setPublicNetworkLimit(String PublicNetworkLimit) {
         this.PublicNetworkLimit = PublicNetworkLimit;
     }
 
     /**
-     * Get Request ID. 
-     * @return RequestId Request ID.
+     * Get <p>Request Id.</p>. 
+     * @return RequestId <p>Request Id.</p>.
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * Set Request ID.
-     * @param RequestId Request ID.
+     * Set <p>Request Id.</p>.
+     * @param RequestId <p>Request Id.</p>.
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
     }
 
     /**
-     * Get Pagination Offset 
-     * @return Offset Pagination Offset
+     * Get <P>Specifies the pagination offset.</p>. 
+     * @return Offset <P>Specifies the pagination offset.</p>.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination Offset
-     * @param Offset Pagination Offset
+     * Set <P>Specifies the pagination offset.</p>.
+     * @param Offset <P>Specifies the pagination offset.</p>.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Pagination Limit 
-     * @return Limit Pagination Limit
+     * Get <P>Specifies the pagination limit.</p>. 
+     * @return Limit <P>Specifies the pagination limit.</p>.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Pagination Limit
-     * @param Limit Pagination Limit
+     * Set <P>Specifies the pagination limit.</p>.
+     * @param Limit <P>Specifies the pagination limit.</p>.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Mandatory. input tag. 
-     * @return ForceCheckTag Mandatory. input tag.
+     * Get <P>Specifies whether the tag is mandatory.</p>. 
+     * @return ForceCheckTag <P>Specifies whether the tag is mandatory.</p>.
      */
     public Boolean getForceCheckTag() {
         return this.ForceCheckTag;
     }
 
     /**
-     * Set Mandatory. input tag.
-     * @param ForceCheckTag Mandatory. input tag.
+     * Set <P>Specifies whether the tag is mandatory.</p>.
+     * @param ForceCheckTag <P>Specifies whether the tag is mandatory.</p>.
      */
     public void setForceCheckTag(Boolean ForceCheckTag) {
         this.ForceCheckTag = ForceCheckTag;

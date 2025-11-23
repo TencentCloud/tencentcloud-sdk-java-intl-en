@@ -143,6 +143,13 @@ public class CreateTopicRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * Time type for message saving. valid values: CreateTime/LogAppendTime.
+    */
+    @SerializedName("LogMsgTimestampType")
+    @Expose
+    private String LogMsgTimestampType;
+
+    /**
      * Get Instance Id. you can obtain it by calling the DescribeInstances api. 
      * @return InstanceId Instance Id. you can obtain it by calling the DescribeInstances api.
      */
@@ -414,6 +421,22 @@ public class CreateTopicRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get Time type for message saving. valid values: CreateTime/LogAppendTime. 
+     * @return LogMsgTimestampType Time type for message saving. valid values: CreateTime/LogAppendTime.
+     */
+    public String getLogMsgTimestampType() {
+        return this.LogMsgTimestampType;
+    }
+
+    /**
+     * Set Time type for message saving. valid values: CreateTime/LogAppendTime.
+     * @param LogMsgTimestampType Time type for message saving. valid values: CreateTime/LogAppendTime.
+     */
+    public void setLogMsgTimestampType(String LogMsgTimestampType) {
+        this.LogMsgTimestampType = LogMsgTimestampType;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -479,6 +502,9 @@ public class CreateTopicRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.LogMsgTimestampType != null) {
+            this.LogMsgTimestampType = new String(source.LogMsgTimestampType);
+        }
     }
 
 
@@ -503,6 +529,7 @@ public class CreateTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
         this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "LogMsgTimestampType", this.LogMsgTimestampType);
 
     }
 }
