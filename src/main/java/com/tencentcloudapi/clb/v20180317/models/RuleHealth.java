@@ -47,8 +47,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Url;
 
     /**
-    * Health status of the real server bound to this rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Advanced routing rule ID.
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private String RuleId;
+
+    /**
+    * Indicates the health check status of the backend service bound to this rule.
     */
     @SerializedName("Targets")
     @Expose
@@ -111,20 +117,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Health status of the real server bound to this rule
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Targets Health status of the real server bound to this rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Advanced routing rule ID. 
+     * @return RuleId Advanced routing rule ID.
+     */
+    public String getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set Advanced routing rule ID.
+     * @param RuleId Advanced routing rule ID.
+     */
+    public void setRuleId(String RuleId) {
+        this.RuleId = RuleId;
+    }
+
+    /**
+     * Get Indicates the health check status of the backend service bound to this rule. 
+     * @return Targets Indicates the health check status of the backend service bound to this rule.
      */
     public TargetHealth [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set Health status of the real server bound to this rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Targets Health status of the real server bound to this rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Indicates the health check status of the backend service bound to this rule.
+     * @param Targets Indicates the health check status of the backend service bound to this rule.
      */
     public void setTargets(TargetHealth [] Targets) {
         this.Targets = Targets;
@@ -147,6 +165,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
         if (source.Targets != null) {
             this.Targets = new TargetHealth[source.Targets.length];
             for (int i = 0; i < source.Targets.length; i++) {
@@ -163,6 +184,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
 
     }

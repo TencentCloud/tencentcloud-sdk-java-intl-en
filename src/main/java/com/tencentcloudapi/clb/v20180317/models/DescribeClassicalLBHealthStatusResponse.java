@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeClassicalLBHealthStatusResponse extends AbstractModel {
 
     /**
-    * List of real server health statuses
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Backend health status list.
     */
     @SerializedName("HealthList")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get List of real server health statuses
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return HealthList List of real server health statuses
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Backend health status list. 
+     * @return HealthList Backend health status list.
      */
     public ClassicalHealth [] getHealthList() {
         return this.HealthList;
     }
 
     /**
-     * Set List of real server health statuses
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param HealthList List of real server health statuses
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Backend health status list.
+     * @param HealthList Backend health status list.
      */
     public void setHealthList(ClassicalHealth [] HealthList) {
         this.HealthList = HealthList;

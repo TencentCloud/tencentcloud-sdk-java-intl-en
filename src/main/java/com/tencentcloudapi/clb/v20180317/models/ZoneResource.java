@@ -31,8 +31,7 @@ public class ZoneResource extends AbstractModel {
     private String MasterZone;
 
     /**
-    * List of resources
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Resource list.
     */
     @SerializedName("ResourceSet")
     @Expose
@@ -82,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean EdgeZone;
 
     /**
-    * Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Specifies the network outbound.
     */
     @SerializedName("Egress")
     @Expose
@@ -106,20 +104,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get List of resources
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ResourceSet List of resources
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Resource list. 
+     * @return ResourceSet Resource list.
      */
     public Resource [] getResourceSet() {
         return this.ResourceSet;
     }
 
     /**
-     * Set List of resources
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ResourceSet List of resources
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Resource list.
+     * @param ResourceSet Resource list.
      */
     public void setResourceSet(Resource [] ResourceSet) {
         this.ResourceSet = ResourceSet;
@@ -226,20 +220,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Network egress
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Egress Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Specifies the network outbound. 
+     * @return Egress Specifies the network outbound.
      */
     public String getEgress() {
         return this.Egress;
     }
 
     /**
-     * Set Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Egress Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Specifies the network outbound.
+     * @param Egress Specifies the network outbound.
      */
     public void setEgress(String Egress) {
         this.Egress = Egress;

@@ -99,8 +99,7 @@ Enable this feature with caution if the maximum number of connections is limited
     private Long KeepaliveEnable;
 
     /**
-    * Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
-True: send an RST packet to the client; False: do not send an RST packet to the client.
+    * Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
     */
     @SerializedName("DeregisterTargetRst")
     @Expose
@@ -142,21 +141,21 @@ Default value: -1, which indicates no limit.
     private Long MaxCps;
 
     /**
-    * Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
+    * Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding 1980, [submit a ticket application](https://console.cloud.tencent.com/workorder/category). the maximum settable value is 3600.
     */
     @SerializedName("IdleConnectTimeout")
     @Expose
     private Long IdleConnectTimeout;
 
     /**
-    * 
+    * Specifies whether PP is supported for TCP_SSL and QUIC.
     */
     @SerializedName("ProxyProtocol")
     @Expose
     private Boolean ProxyProtocol;
 
     /**
-    * Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
+    * Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
     */
     @SerializedName("SnatEnable")
     @Expose
@@ -168,6 +167,41 @@ Default value: -1, which indicates no limit.
     @SerializedName("DataCompressMode")
     @Expose
     private String DataCompressMode;
+
+    /**
+    * Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+    */
+    @SerializedName("RescheduleTargetZeroWeight")
+    @Expose
+    private Boolean RescheduleTargetZeroWeight;
+
+    /**
+    * Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+    */
+    @SerializedName("RescheduleUnhealthy")
+    @Expose
+    private Boolean RescheduleUnhealthy;
+
+    /**
+    * Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+    */
+    @SerializedName("RescheduleExpandTarget")
+    @Expose
+    private Boolean RescheduleExpandTarget;
+
+    /**
+    * Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+    */
+    @SerializedName("RescheduleStartTime")
+    @Expose
+    private Long RescheduleStartTime;
+
+    /**
+    * Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
+    */
+    @SerializedName("RescheduleInterval")
+    @Expose
+    private Long RescheduleInterval;
 
     /**
      * Get ID of the CLB instance. You can call the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) API to query the ID. 
@@ -350,20 +384,16 @@ Enable this feature with caution if the maximum number of connections is limited
     }
 
     /**
-     * Get Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
-True: send an RST packet to the client; False: do not send an RST packet to the client. 
-     * @return DeregisterTargetRst Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
-True: send an RST packet to the client; False: do not send an RST packet to the client.
+     * Get Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature. 
+     * @return DeregisterTargetRst Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
      */
     public Boolean getDeregisterTargetRst() {
         return this.DeregisterTargetRst;
     }
 
     /**
-     * Set Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
-True: send an RST packet to the client; False: do not send an RST packet to the client.
-     * @param DeregisterTargetRst Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
-True: send an RST packet to the client; False: do not send an RST packet to the client.
+     * Set Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     * @param DeregisterTargetRst Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
      */
     public void setDeregisterTargetRst(Boolean DeregisterTargetRst) {
         this.DeregisterTargetRst = DeregisterTargetRst;
@@ -462,48 +492,48 @@ Default value: -1, which indicates no limit.
     }
 
     /**
-     * Get Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600. 
-     * @return IdleConnectTimeout Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
+     * Get Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding 1980, [submit a ticket application](https://console.cloud.tencent.com/workorder/category). the maximum settable value is 3600. 
+     * @return IdleConnectTimeout Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding 1980, [submit a ticket application](https://console.cloud.tencent.com/workorder/category). the maximum settable value is 3600.
      */
     public Long getIdleConnectTimeout() {
         return this.IdleConnectTimeout;
     }
 
     /**
-     * Set Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
-     * @param IdleConnectTimeout Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
+     * Set Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding 1980, [submit a ticket application](https://console.cloud.tencent.com/workorder/category). the maximum settable value is 3600.
+     * @param IdleConnectTimeout Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding 1980, [submit a ticket application](https://console.cloud.tencent.com/workorder/category). the maximum settable value is 3600.
      */
     public void setIdleConnectTimeout(Long IdleConnectTimeout) {
         this.IdleConnectTimeout = IdleConnectTimeout;
     }
 
     /**
-     * Get  
-     * @return ProxyProtocol 
+     * Get Specifies whether PP is supported for TCP_SSL and QUIC. 
+     * @return ProxyProtocol Specifies whether PP is supported for TCP_SSL and QUIC.
      */
     public Boolean getProxyProtocol() {
         return this.ProxyProtocol;
     }
 
     /**
-     * Set 
-     * @param ProxyProtocol 
+     * Set Specifies whether PP is supported for TCP_SSL and QUIC.
+     * @param ProxyProtocol Specifies whether PP is supported for TCP_SSL and QUIC.
      */
     public void setProxyProtocol(Boolean ProxyProtocol) {
         this.ProxyProtocol = ProxyProtocol;
     }
 
     /**
-     * Get Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT. 
-     * @return SnatEnable Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
+     * Get Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa. 
+     * @return SnatEnable Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
      */
     public Boolean getSnatEnable() {
         return this.SnatEnable;
     }
 
     /**
-     * Set Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
-     * @param SnatEnable Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
+     * Set Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
+     * @param SnatEnable Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
      */
     public void setSnatEnable(Boolean SnatEnable) {
         this.SnatEnable = SnatEnable;
@@ -523,6 +553,86 @@ Default value: -1, which indicates no limit.
      */
     public void setDataCompressMode(String DataCompressMode) {
         this.DataCompressMode = DataCompressMode;
+    }
+
+    /**
+     * Get Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature. 
+     * @return RescheduleTargetZeroWeight Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     */
+    public Boolean getRescheduleTargetZeroWeight() {
+        return this.RescheduleTargetZeroWeight;
+    }
+
+    /**
+     * Set Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     * @param RescheduleTargetZeroWeight Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     */
+    public void setRescheduleTargetZeroWeight(Boolean RescheduleTargetZeroWeight) {
+        this.RescheduleTargetZeroWeight = RescheduleTargetZeroWeight;
+    }
+
+    /**
+     * Get Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature. 
+     * @return RescheduleUnhealthy Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     */
+    public Boolean getRescheduleUnhealthy() {
+        return this.RescheduleUnhealthy;
+    }
+
+    /**
+     * Set Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     * @param RescheduleUnhealthy Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     */
+    public void setRescheduleUnhealthy(Boolean RescheduleUnhealthy) {
+        this.RescheduleUnhealthy = RescheduleUnhealthy;
+    }
+
+    /**
+     * Get Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature. 
+     * @return RescheduleExpandTarget Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     */
+    public Boolean getRescheduleExpandTarget() {
+        return this.RescheduleExpandTarget;
+    }
+
+    /**
+     * Set Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     * @param RescheduleExpandTarget Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     */
+    public void setRescheduleExpandTarget(Boolean RescheduleExpandTarget) {
+        this.RescheduleExpandTarget = RescheduleExpandTarget;
+    }
+
+    /**
+     * Get Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners. 
+     * @return RescheduleStartTime Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+     */
+    public Long getRescheduleStartTime() {
+        return this.RescheduleStartTime;
+    }
+
+    /**
+     * Set Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+     * @param RescheduleStartTime Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+     */
+    public void setRescheduleStartTime(Long RescheduleStartTime) {
+        this.RescheduleStartTime = RescheduleStartTime;
+    }
+
+    /**
+     * Get Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this. 
+     * @return RescheduleInterval Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
+     */
+    public Long getRescheduleInterval() {
+        return this.RescheduleInterval;
+    }
+
+    /**
+     * Set Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
+     * @param RescheduleInterval Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
+     */
+    public void setRescheduleInterval(Long RescheduleInterval) {
+        this.RescheduleInterval = RescheduleInterval;
     }
 
     public ModifyListenerRequest() {
@@ -590,6 +700,21 @@ Default value: -1, which indicates no limit.
         if (source.DataCompressMode != null) {
             this.DataCompressMode = new String(source.DataCompressMode);
         }
+        if (source.RescheduleTargetZeroWeight != null) {
+            this.RescheduleTargetZeroWeight = new Boolean(source.RescheduleTargetZeroWeight);
+        }
+        if (source.RescheduleUnhealthy != null) {
+            this.RescheduleUnhealthy = new Boolean(source.RescheduleUnhealthy);
+        }
+        if (source.RescheduleExpandTarget != null) {
+            this.RescheduleExpandTarget = new Boolean(source.RescheduleExpandTarget);
+        }
+        if (source.RescheduleStartTime != null) {
+            this.RescheduleStartTime = new Long(source.RescheduleStartTime);
+        }
+        if (source.RescheduleInterval != null) {
+            this.RescheduleInterval = new Long(source.RescheduleInterval);
+        }
     }
 
 
@@ -616,6 +741,11 @@ Default value: -1, which indicates no limit.
         this.setParamSimple(map, prefix + "ProxyProtocol", this.ProxyProtocol);
         this.setParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
         this.setParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
+        this.setParamSimple(map, prefix + "RescheduleTargetZeroWeight", this.RescheduleTargetZeroWeight);
+        this.setParamSimple(map, prefix + "RescheduleUnhealthy", this.RescheduleUnhealthy);
+        this.setParamSimple(map, prefix + "RescheduleExpandTarget", this.RescheduleExpandTarget);
+        this.setParamSimple(map, prefix + "RescheduleStartTime", this.RescheduleStartTime);
+        this.setParamSimple(map, prefix + "RescheduleInterval", this.RescheduleInterval);
 
     }
 }

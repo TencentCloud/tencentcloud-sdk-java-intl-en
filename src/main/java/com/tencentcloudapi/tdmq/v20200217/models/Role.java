@@ -59,6 +59,13 @@ public class Role extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
+    */
+    @SerializedName("PermType")
+    @Expose
+    private String PermType;
+
+    /**
      * Get Role name. 
      * @return RoleName Role name.
      */
@@ -138,6 +145,22 @@ public class Role extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group). 
+     * @return PermType Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
+     */
+    public String getPermType() {
+        return this.PermType;
+    }
+
+    /**
+     * Set Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
+     * @param PermType Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
+     */
+    public void setPermType(String PermType) {
+        this.PermType = PermType;
+    }
+
     public Role() {
     }
 
@@ -161,6 +184,9 @@ public class Role extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.PermType != null) {
+            this.PermType = new String(source.PermType);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class Role extends AbstractModel {
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "PermType", this.PermType);
 
     }
 }

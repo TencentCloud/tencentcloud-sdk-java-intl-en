@@ -82,11 +82,59 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Whether the route can be modified
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CanEditRoute")
     @Expose
     private Boolean CanEditRoute;
+
+    /**
+    * Specifies different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BillingLabelVersion")
+    @Expose
+    private String BillingLabelVersion;
+
+    /**
+    * Instance expiration timestamp, accurate to the millisecond level.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private Long ExpireTime;
+
+    /**
+    * Whether to enable automatic topic creation.
+true indicates enabled. false indicates disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AutoCreateTopicStatus")
+    @Expose
+    private Boolean AutoCreateTopicStatus;
+
+    /**
+    * Specifies the default number of partitions for automatic topic creation. valid values: 0 if not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DefaultPartitionNumber")
+    @Expose
+    private Long DefaultPartitionNumber;
+
+    /**
+    * User-Defined tenant alias. if there is no, reuse the professional cluster ID.
+
+    */
+    @SerializedName("Tenant")
+    @Expose
+    private String Tenant;
+
+    /**
+    * Deletion protection switch flag.
+    */
+    @SerializedName("DeleteProtection")
+    @Expose
+    private Long DeleteProtection;
 
     /**
      * Get Cluster ID 
@@ -222,9 +270,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Whether the route can be modified
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return CanEditRoute Whether the route can be modified
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getCanEditRoute() {
         return this.CanEditRoute;
@@ -232,12 +280,132 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Whether the route can be modified
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param CanEditRoute Whether the route can be modified
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCanEditRoute(Boolean CanEditRoute) {
         this.CanEditRoute = CanEditRoute;
+    }
+
+    /**
+     * Get Specifies different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BillingLabelVersion Specifies different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getBillingLabelVersion() {
+        return this.BillingLabelVersion;
+    }
+
+    /**
+     * Set Specifies different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BillingLabelVersion Specifies different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBillingLabelVersion(String BillingLabelVersion) {
+        this.BillingLabelVersion = BillingLabelVersion;
+    }
+
+    /**
+     * Get Instance expiration timestamp, accurate to the millisecond level.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExpireTime Instance expiration timestamp, accurate to the millisecond level.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set Instance expiration timestamp, accurate to the millisecond level.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExpireTime Instance expiration timestamp, accurate to the millisecond level.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setExpireTime(Long ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get Whether to enable automatic topic creation.
+true indicates enabled. false indicates disabled.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AutoCreateTopicStatus Whether to enable automatic topic creation.
+true indicates enabled. false indicates disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getAutoCreateTopicStatus() {
+        return this.AutoCreateTopicStatus;
+    }
+
+    /**
+     * Set Whether to enable automatic topic creation.
+true indicates enabled. false indicates disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AutoCreateTopicStatus Whether to enable automatic topic creation.
+true indicates enabled. false indicates disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAutoCreateTopicStatus(Boolean AutoCreateTopicStatus) {
+        this.AutoCreateTopicStatus = AutoCreateTopicStatus;
+    }
+
+    /**
+     * Get Specifies the default number of partitions for automatic topic creation. valid values: 0 if not enabled.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DefaultPartitionNumber Specifies the default number of partitions for automatic topic creation. valid values: 0 if not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getDefaultPartitionNumber() {
+        return this.DefaultPartitionNumber;
+    }
+
+    /**
+     * Set Specifies the default number of partitions for automatic topic creation. valid values: 0 if not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DefaultPartitionNumber Specifies the default number of partitions for automatic topic creation. valid values: 0 if not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDefaultPartitionNumber(Long DefaultPartitionNumber) {
+        this.DefaultPartitionNumber = DefaultPartitionNumber;
+    }
+
+    /**
+     * Get User-Defined tenant alias. if there is no, reuse the professional cluster ID.
+ 
+     * @return Tenant User-Defined tenant alias. if there is no, reuse the professional cluster ID.
+
+     */
+    public String getTenant() {
+        return this.Tenant;
+    }
+
+    /**
+     * Set User-Defined tenant alias. if there is no, reuse the professional cluster ID.
+
+     * @param Tenant User-Defined tenant alias. if there is no, reuse the professional cluster ID.
+
+     */
+    public void setTenant(String Tenant) {
+        this.Tenant = Tenant;
+    }
+
+    /**
+     * Get Deletion protection switch flag. 
+     * @return DeleteProtection Deletion protection switch flag.
+     */
+    public Long getDeleteProtection() {
+        return this.DeleteProtection;
+    }
+
+    /**
+     * Set Deletion protection switch flag.
+     * @param DeleteProtection Deletion protection switch flag.
+     */
+    public void setDeleteProtection(Long DeleteProtection) {
+        this.DeleteProtection = DeleteProtection;
     }
 
     public PulsarProClusterInfo() {
@@ -278,6 +446,24 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         if (source.CanEditRoute != null) {
             this.CanEditRoute = new Boolean(source.CanEditRoute);
         }
+        if (source.BillingLabelVersion != null) {
+            this.BillingLabelVersion = new String(source.BillingLabelVersion);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.AutoCreateTopicStatus != null) {
+            this.AutoCreateTopicStatus = new Boolean(source.AutoCreateTopicStatus);
+        }
+        if (source.DefaultPartitionNumber != null) {
+            this.DefaultPartitionNumber = new Long(source.DefaultPartitionNumber);
+        }
+        if (source.Tenant != null) {
+            this.Tenant = new String(source.Tenant);
+        }
+        if (source.DeleteProtection != null) {
+            this.DeleteProtection = new Long(source.DeleteProtection);
+        }
     }
 
 
@@ -294,6 +480,12 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         this.setParamArrayObj(map, prefix + "NodeDistribution.", this.NodeDistribution);
         this.setParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
         this.setParamSimple(map, prefix + "CanEditRoute", this.CanEditRoute);
+        this.setParamSimple(map, prefix + "BillingLabelVersion", this.BillingLabelVersion);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "AutoCreateTopicStatus", this.AutoCreateTopicStatus);
+        this.setParamSimple(map, prefix + "DefaultPartitionNumber", this.DefaultPartitionNumber);
+        this.setParamSimple(map, prefix + "Tenant", this.Tenant);
+        this.setParamSimple(map, prefix + "DeleteProtection", this.DeleteProtection);
 
     }
 }

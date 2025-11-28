@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class TypeInfo extends AbstractModel {
 
     /**
-    * ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Operator type.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specification availability.
     */
     @SerializedName("SpecAvailabilitySet")
     @Expose
     private SpecAvailability [] SpecAvailabilitySet;
 
     /**
-     * Get ISP Type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Operator type. 
+     * @return Type Operator type.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Operator type.
+     * @param Type Operator type.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Specification availability
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SpecAvailabilitySet Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specification availability. 
+     * @return SpecAvailabilitySet Specification availability.
      */
     public SpecAvailability [] getSpecAvailabilitySet() {
         return this.SpecAvailabilitySet;
     }
 
     /**
-     * Set Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SpecAvailabilitySet Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specification availability.
+     * @param SpecAvailabilitySet Specification availability.
      */
     public void setSpecAvailabilitySet(SpecAvailability [] SpecAvailabilitySet) {
         this.SpecAvailabilitySet = SpecAvailabilitySet;

@@ -38,6 +38,13 @@ public class BasicTargetGroupInfo extends AbstractModel {
     private String TargetGroupName;
 
     /**
+    * Specifies the weight of the target group.
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
+
+    /**
      * Get Target group ID 
      * @return TargetGroupId Target group ID
      */
@@ -69,6 +76,22 @@ public class BasicTargetGroupInfo extends AbstractModel {
         this.TargetGroupName = TargetGroupName;
     }
 
+    /**
+     * Get Specifies the weight of the target group. 
+     * @return Weight Specifies the weight of the target group.
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set Specifies the weight of the target group.
+     * @param Weight Specifies the weight of the target group.
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
+    }
+
     public BasicTargetGroupInfo() {
     }
 
@@ -83,6 +106,9 @@ public class BasicTargetGroupInfo extends AbstractModel {
         if (source.TargetGroupName != null) {
             this.TargetGroupName = new String(source.TargetGroupName);
         }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class BasicTargetGroupInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
         this.setParamSimple(map, prefix + "TargetGroupName", this.TargetGroupName);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
 
     }
 }

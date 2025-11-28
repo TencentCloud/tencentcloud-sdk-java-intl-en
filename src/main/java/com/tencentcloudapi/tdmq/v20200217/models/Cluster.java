@@ -230,6 +230,29 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long PayMode;
 
     /**
+    * Project ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
+    * Project name
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProjectName")
+    @Expose
+    private String ProjectName;
+
+    /**
+    * Specifies whether the pro edition instance can be upgraded.
+    */
+    @SerializedName("UpgradeProInstance")
+    @Expose
+    private Boolean UpgradeProInstance;
+
+    /**
      * Get Cluster ID. 
      * @return ClusterId Cluster ID.
      */
@@ -729,6 +752,62 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.PayMode = PayMode;
     }
 
+    /**
+     * Get Project ID.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProjectId Project ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set Project ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProjectId Project ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get Project name
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProjectName Project name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getProjectName() {
+        return this.ProjectName;
+    }
+
+    /**
+     * Set Project name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProjectName Project name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProjectName(String ProjectName) {
+        this.ProjectName = ProjectName;
+    }
+
+    /**
+     * Get Specifies whether the pro edition instance can be upgraded. 
+     * @return UpgradeProInstance Specifies whether the pro edition instance can be upgraded.
+     */
+    public Boolean getUpgradeProInstance() {
+        return this.UpgradeProInstance;
+    }
+
+    /**
+     * Set Specifies whether the pro edition instance can be upgraded.
+     * @param UpgradeProInstance Specifies whether the pro edition instance can be upgraded.
+     */
+    public void setUpgradeProInstance(Boolean UpgradeProInstance) {
+        this.UpgradeProInstance = UpgradeProInstance;
+    }
+
     public Cluster() {
     }
 
@@ -821,6 +900,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.UpgradeProInstance != null) {
+            this.UpgradeProInstance = new Boolean(source.UpgradeProInstance);
+        }
     }
 
 
@@ -855,6 +943,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
+        this.setParamSimple(map, prefix + "UpgradeProInstance", this.UpgradeProInstance);
 
     }
 }

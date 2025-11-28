@@ -45,7 +45,7 @@ public class DescribeTargetGroupsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
+    * Filter condition array, mutually exclusive with TargetGroupIds, supports TargetGroupVpcId (vpc ID), TargetGroupName (target group name), and Tag.
     */
     @SerializedName("Filters")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeTargetGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. 
-     * @return Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
+     * Get Filter condition array, mutually exclusive with TargetGroupIds, supports TargetGroupVpcId (vpc ID), TargetGroupName (target group name), and Tag. 
+     * @return Filters Filter condition array, mutually exclusive with TargetGroupIds, supports TargetGroupVpcId (vpc ID), TargetGroupName (target group name), and Tag.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
-     * @param Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
+     * Set Filter condition array, mutually exclusive with TargetGroupIds, supports TargetGroupVpcId (vpc ID), TargetGroupName (target group name), and Tag.
+     * @param Filters Filter condition array, mutually exclusive with TargetGroupIds, supports TargetGroupVpcId (vpc ID), TargetGroupName (target group name), and Tag.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

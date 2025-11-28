@@ -45,16 +45,14 @@ public class LbRsTargets extends AbstractModel {
     private Long Port;
 
     /**
-    * VPC ID of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * vpcId of RS
     */
     @SerializedName("VpcId")
     @Expose
     private Long VpcId;
 
     /**
-    * Weight of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * RS weight
     */
     @SerializedName("Weight")
     @Expose
@@ -109,40 +107,32 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get VPC ID of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return VpcId VPC ID of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get vpcId of RS 
+     * @return VpcId vpcId of RS
      */
     public Long getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param VpcId VPC ID of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set vpcId of RS
+     * @param VpcId vpcId of RS
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Weight of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Weight Weight of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get RS weight 
+     * @return Weight RS weight
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set Weight of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Weight Weight of the real server.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set RS weight
+     * @param Weight RS weight
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

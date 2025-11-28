@@ -46,15 +46,13 @@ public class RuleTargets extends AbstractModel {
 
     /**
     * Real server information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Targets")
     @Expose
     private Backend [] Targets;
 
     /**
-    * Information about backend SCF functions.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Describes the backend cloud function info.
     */
     @SerializedName("FunctionTargets")
     @Expose
@@ -109,10 +107,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Real server information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Real server information 
      * @return Targets Real server information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Backend [] getTargets() {
         return this.Targets;
@@ -120,29 +116,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Real server information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Targets Real server information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTargets(Backend [] Targets) {
         this.Targets = Targets;
     }
 
     /**
-     * Get Information about backend SCF functions.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FunctionTargets Information about backend SCF functions.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Describes the backend cloud function info. 
+     * @return FunctionTargets Describes the backend cloud function info.
      */
     public FunctionTarget [] getFunctionTargets() {
         return this.FunctionTargets;
     }
 
     /**
-     * Set Information about backend SCF functions.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FunctionTargets Information about backend SCF functions.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Describes the backend cloud function info.
+     * @param FunctionTargets Describes the backend cloud function info.
      */
     public void setFunctionTargets(FunctionTarget [] FunctionTargets) {
         this.FunctionTargets = FunctionTargets;

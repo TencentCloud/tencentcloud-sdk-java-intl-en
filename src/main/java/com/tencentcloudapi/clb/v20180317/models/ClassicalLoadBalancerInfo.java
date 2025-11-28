@@ -31,8 +31,7 @@ public class ClassicalLoadBalancerInfo extends AbstractModel {
     private String InstanceId;
 
     /**
-    * List of CLB instance IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CLB instance ID list
     */
     @SerializedName("LoadBalancerIds")
     @Expose
@@ -55,20 +54,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of CLB instance IDs
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LoadBalancerIds List of CLB instance IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CLB instance ID list 
+     * @return LoadBalancerIds CLB instance ID list
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set List of CLB instance IDs
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LoadBalancerIds List of CLB instance IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CLB instance ID list
+     * @param LoadBalancerIds CLB instance ID list
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

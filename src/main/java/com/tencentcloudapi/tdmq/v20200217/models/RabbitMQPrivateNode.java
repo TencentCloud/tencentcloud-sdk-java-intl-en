@@ -32,8 +32,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String NodeName;
 
     /**
-    * Node status
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Node status. running indicates the node is active. down indicates an exception.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NodeStatus")
     @Expose
@@ -92,20 +92,20 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Node status
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return NodeStatus Node status
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Node status. running indicates the node is active. down indicates an exception.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NodeStatus Node status. running indicates the node is active. down indicates an exception.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNodeStatus() {
         return this.NodeStatus;
     }
 
     /**
-     * Set Node status
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param NodeStatus Node status
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Node status. running indicates the node is active. down indicates an exception.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NodeStatus Node status. running indicates the node is active. down indicates an exception.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNodeStatus(String NodeStatus) {
         this.NodeStatus = NodeStatus;

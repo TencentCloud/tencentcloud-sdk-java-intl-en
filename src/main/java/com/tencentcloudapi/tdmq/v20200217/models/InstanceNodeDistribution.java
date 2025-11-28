@@ -45,6 +45,21 @@ public class InstanceNodeDistribution extends AbstractModel {
     private Long NodeCount;
 
     /**
+    * This flag is true if there is a scheduling task with no switchback AZs.
+    */
+    @SerializedName("NodePermWipeFlag")
+    @Expose
+    private Boolean NodePermWipeFlag;
+
+    /**
+    * Availability zone status
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ZoneStatus")
+    @Expose
+    private String ZoneStatus;
+
+    /**
      * Get AZ 
      * @return ZoneName AZ
      */
@@ -92,6 +107,42 @@ public class InstanceNodeDistribution extends AbstractModel {
         this.NodeCount = NodeCount;
     }
 
+    /**
+     * Get This flag is true if there is a scheduling task with no switchback AZs. 
+     * @return NodePermWipeFlag This flag is true if there is a scheduling task with no switchback AZs.
+     */
+    public Boolean getNodePermWipeFlag() {
+        return this.NodePermWipeFlag;
+    }
+
+    /**
+     * Set This flag is true if there is a scheduling task with no switchback AZs.
+     * @param NodePermWipeFlag This flag is true if there is a scheduling task with no switchback AZs.
+     */
+    public void setNodePermWipeFlag(Boolean NodePermWipeFlag) {
+        this.NodePermWipeFlag = NodePermWipeFlag;
+    }
+
+    /**
+     * Get Availability zone status
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ZoneStatus Availability zone status
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getZoneStatus() {
+        return this.ZoneStatus;
+    }
+
+    /**
+     * Set Availability zone status
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ZoneStatus Availability zone status
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setZoneStatus(String ZoneStatus) {
+        this.ZoneStatus = ZoneStatus;
+    }
+
     public InstanceNodeDistribution() {
     }
 
@@ -109,6 +160,12 @@ public class InstanceNodeDistribution extends AbstractModel {
         if (source.NodeCount != null) {
             this.NodeCount = new Long(source.NodeCount);
         }
+        if (source.NodePermWipeFlag != null) {
+            this.NodePermWipeFlag = new Boolean(source.NodePermWipeFlag);
+        }
+        if (source.ZoneStatus != null) {
+            this.ZoneStatus = new String(source.ZoneStatus);
+        }
     }
 
 
@@ -119,6 +176,8 @@ public class InstanceNodeDistribution extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
+        this.setParamSimple(map, prefix + "NodePermWipeFlag", this.NodePermWipeFlag);
+        this.setParamSimple(map, prefix + "ZoneStatus", this.ZoneStatus);
 
     }
 }

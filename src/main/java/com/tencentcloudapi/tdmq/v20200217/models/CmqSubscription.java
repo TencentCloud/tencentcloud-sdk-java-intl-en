@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class CmqSubscription extends AbstractModel {
 
     /**
-    * Subscription name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Subscription name, which must be unique under the same account and same topic in a single region. the name is a string of no more than 64 characters, beginning with a letter, and the remaining part may contain letters, numbers, and hyphens (-).
     */
     @SerializedName("SubscriptionName")
     @Expose
     private String SubscriptionName;
 
     /**
-    * Subscription ID, which will be used during monitoring data pull.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Subscription ID. The subscription ID is used when monitoring data is pulled.
     */
     @SerializedName("SubscriptionId")
     @Expose
@@ -48,24 +46,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long TopicOwner;
 
     /**
-    * Number of messages to be delivered in the subscription.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The number of messages waiting for shipping for this subscription.
     */
     @SerializedName("MsgCount")
     @Expose
     private Long MsgCount;
 
     /**
-    * Time when the subscription attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The last time the subscription attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
     */
     @SerializedName("LastModifyTime")
     @Expose
     private Long LastModifyTime;
 
     /**
-    * Subscription creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The time when the subscription was created. Returns a Unix timestamp, accurate to milliseconds.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -80,84 +75,78 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] BindingKey;
 
     /**
-    * Endpoint that receives notifications, which varies by `protocol`: for HTTP, the endpoint must start with `http://`, and the `host` can be a domain or IP; for `queue`, `queueName` should be entered.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The endpoint that receives notifications is differentiated by protocol: For HTTP, the endpoint must start with http://, and the host can be a domain name or IP; for queue, fill in queueName.
     */
     @SerializedName("Endpoint")
     @Expose
     private String Endpoint;
 
     /**
-    * Filtering policy selected when a subscription is created:
-If `filterType` is 1, `filterTag` will be used for filtering.
-If `filterType` is 2, `bindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Describes the filtering policy selected by users when creating subscriptions.
+filterType = 1 indicates Tag filtering when users use filterTag.
+filterType = 2 indicates user use bindingKey for filtering.
     */
     @SerializedName("FilterTags")
     @Expose
     private String [] FilterTags;
 
     /**
-    * Subscription protocol. Currently, two protocols are supported: HTTP and queue. To use the HTTP protocol, you need to build your own web server to receive messages. With the queue protocol, messages are automatically pushed to a CMQ queue and you can pull them concurrently.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The subscription protocol, currently supports two protocols: HTTP and queue. When the HTTP protocol is used, users need to set up their own web server to accept messages. When the queue protocol is used, messages will automatically be pushed to CMQ queues, and users can pull messages concurrently.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * CMQ push server retry policy in case an error occurs while pushing a message to the endpoint. Valid values:
-(1) BACKOFF_RETRY: backoff retry, which is to retry at a fixed interval, discard the message after a certain number of retries, and continue to push the next message.
-(2) EXPONENTIAL_DECAY_RETRY: exponential decay retry, which is to retry at an exponentially increasing interval, such as 1s, 2s, 4s, 8s, and so on. As a message can be retained in a topic for one day, failed messages will be discarded at most after one day of retry. Default value: EXPONENTIAL_DECAY_RETRY.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the CMQ push server retry policy when an error occurs while pushing messages to an endpoint. valid values:.
+BACKOFF_RETRY, backoff retry. retry at regular intervals, discard the message after a certain number of retries, and continue to push the next message.
+(2) EXPONENTIAL_DECAY_RETRY, EXPONENTIAL DECAY RETRY. the interval between retries increases exponentially, for example starting at 1s, followed by 2s, 4s, 8s... since the Topic message period is one day, RETRY for at most one day then discard the message. default value is EXPONENTIAL_DECAY_RETRY.
     */
     @SerializedName("NotifyStrategy")
     @Expose
     private String NotifyStrategy;
 
     /**
-    * Push content format. Valid values: 1. JSON; 2. SIMPLIFIED, i.e., the raw format. If `protocol` is `queue`, this value must be `SIMPLIFIED`. If `protocol` is `HTTP`, both values are acceptable, and the default value is `JSON`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The format of the push content. Values: (1) JSON; (2) SIMPLIFIED, i.e., raw format. If protocol is queue, the value must be SIMPLIFIED. If protocol is HTTP, both values are acceptable, with the default being JSON.
     */
     @SerializedName("NotifyContentFormat")
     @Expose
     private String NotifyContentFormat;
 
     /**
-     * Get Subscription name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SubscriptionName Subscription name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Topic Name of the Subscription
+    */
+    @SerializedName("TopicName")
+    @Expose
+    private String TopicName;
+
+    /**
+     * Get Subscription name, which must be unique under the same account and same topic in a single region. the name is a string of no more than 64 characters, beginning with a letter, and the remaining part may contain letters, numbers, and hyphens (-). 
+     * @return SubscriptionName Subscription name, which must be unique under the same account and same topic in a single region. the name is a string of no more than 64 characters, beginning with a letter, and the remaining part may contain letters, numbers, and hyphens (-).
      */
     public String getSubscriptionName() {
         return this.SubscriptionName;
     }
 
     /**
-     * Set Subscription name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SubscriptionName Subscription name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Subscription name, which must be unique under the same account and same topic in a single region. the name is a string of no more than 64 characters, beginning with a letter, and the remaining part may contain letters, numbers, and hyphens (-).
+     * @param SubscriptionName Subscription name, which must be unique under the same account and same topic in a single region. the name is a string of no more than 64 characters, beginning with a letter, and the remaining part may contain letters, numbers, and hyphens (-).
      */
     public void setSubscriptionName(String SubscriptionName) {
         this.SubscriptionName = SubscriptionName;
     }
 
     /**
-     * Get Subscription ID, which will be used during monitoring data pull.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SubscriptionId Subscription ID, which will be used during monitoring data pull.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Subscription ID. The subscription ID is used when monitoring data is pulled. 
+     * @return SubscriptionId Subscription ID. The subscription ID is used when monitoring data is pulled.
      */
     public String getSubscriptionId() {
         return this.SubscriptionId;
     }
 
     /**
-     * Set Subscription ID, which will be used during monitoring data pull.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SubscriptionId Subscription ID, which will be used during monitoring data pull.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Subscription ID. The subscription ID is used when monitoring data is pulled.
+     * @param SubscriptionId Subscription ID. The subscription ID is used when monitoring data is pulled.
      */
     public void setSubscriptionId(String SubscriptionId) {
         this.SubscriptionId = SubscriptionId;
@@ -184,60 +173,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of messages to be delivered in the subscription.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MsgCount Number of messages to be delivered in the subscription.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The number of messages waiting for shipping for this subscription. 
+     * @return MsgCount The number of messages waiting for shipping for this subscription.
      */
     public Long getMsgCount() {
         return this.MsgCount;
     }
 
     /**
-     * Set Number of messages to be delivered in the subscription.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MsgCount Number of messages to be delivered in the subscription.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The number of messages waiting for shipping for this subscription.
+     * @param MsgCount The number of messages waiting for shipping for this subscription.
      */
     public void setMsgCount(Long MsgCount) {
         this.MsgCount = MsgCount;
     }
 
     /**
-     * Get Time when the subscription attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return LastModifyTime Time when the subscription attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The last time the subscription attribute was modified. Returns a Unix timestamp, accurate to milliseconds. 
+     * @return LastModifyTime The last time the subscription attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
      */
     public Long getLastModifyTime() {
         return this.LastModifyTime;
     }
 
     /**
-     * Set Time when the subscription attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param LastModifyTime Time when the subscription attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The last time the subscription attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
+     * @param LastModifyTime The last time the subscription attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
      */
     public void setLastModifyTime(Long LastModifyTime) {
         this.LastModifyTime = LastModifyTime;
     }
 
     /**
-     * Get Subscription creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Subscription creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The time when the subscription was created. Returns a Unix timestamp, accurate to milliseconds. 
+     * @return CreateTime The time when the subscription was created. Returns a Unix timestamp, accurate to milliseconds.
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Subscription creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Subscription creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The time when the subscription was created. Returns a Unix timestamp, accurate to milliseconds.
+     * @param CreateTime The time when the subscription was created. Returns a Unix timestamp, accurate to milliseconds.
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
@@ -264,119 +241,115 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Endpoint that receives notifications, which varies by `protocol`: for HTTP, the endpoint must start with `http://`, and the `host` can be a domain or IP; for `queue`, `queueName` should be entered.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Endpoint Endpoint that receives notifications, which varies by `protocol`: for HTTP, the endpoint must start with `http://`, and the `host` can be a domain or IP; for `queue`, `queueName` should be entered.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The endpoint that receives notifications is differentiated by protocol: For HTTP, the endpoint must start with http://, and the host can be a domain name or IP; for queue, fill in queueName. 
+     * @return Endpoint The endpoint that receives notifications is differentiated by protocol: For HTTP, the endpoint must start with http://, and the host can be a domain name or IP; for queue, fill in queueName.
      */
     public String getEndpoint() {
         return this.Endpoint;
     }
 
     /**
-     * Set Endpoint that receives notifications, which varies by `protocol`: for HTTP, the endpoint must start with `http://`, and the `host` can be a domain or IP; for `queue`, `queueName` should be entered.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Endpoint Endpoint that receives notifications, which varies by `protocol`: for HTTP, the endpoint must start with `http://`, and the `host` can be a domain or IP; for `queue`, `queueName` should be entered.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The endpoint that receives notifications is differentiated by protocol: For HTTP, the endpoint must start with http://, and the host can be a domain name or IP; for queue, fill in queueName.
+     * @param Endpoint The endpoint that receives notifications is differentiated by protocol: For HTTP, the endpoint must start with http://, and the host can be a domain name or IP; for queue, fill in queueName.
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;
     }
 
     /**
-     * Get Filtering policy selected when a subscription is created:
-If `filterType` is 1, `filterTag` will be used for filtering.
-If `filterType` is 2, `bindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FilterTags Filtering policy selected when a subscription is created:
-If `filterType` is 1, `filterTag` will be used for filtering.
-If `filterType` is 2, `bindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Describes the filtering policy selected by users when creating subscriptions.
+filterType = 1 indicates Tag filtering when users use filterTag.
+filterType = 2 indicates user use bindingKey for filtering. 
+     * @return FilterTags Describes the filtering policy selected by users when creating subscriptions.
+filterType = 1 indicates Tag filtering when users use filterTag.
+filterType = 2 indicates user use bindingKey for filtering.
      */
     public String [] getFilterTags() {
         return this.FilterTags;
     }
 
     /**
-     * Set Filtering policy selected when a subscription is created:
-If `filterType` is 1, `filterTag` will be used for filtering.
-If `filterType` is 2, `bindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FilterTags Filtering policy selected when a subscription is created:
-If `filterType` is 1, `filterTag` will be used for filtering.
-If `filterType` is 2, `bindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Describes the filtering policy selected by users when creating subscriptions.
+filterType = 1 indicates Tag filtering when users use filterTag.
+filterType = 2 indicates user use bindingKey for filtering.
+     * @param FilterTags Describes the filtering policy selected by users when creating subscriptions.
+filterType = 1 indicates Tag filtering when users use filterTag.
+filterType = 2 indicates user use bindingKey for filtering.
      */
     public void setFilterTags(String [] FilterTags) {
         this.FilterTags = FilterTags;
     }
 
     /**
-     * Get Subscription protocol. Currently, two protocols are supported: HTTP and queue. To use the HTTP protocol, you need to build your own web server to receive messages. With the queue protocol, messages are automatically pushed to a CMQ queue and you can pull them concurrently.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Protocol Subscription protocol. Currently, two protocols are supported: HTTP and queue. To use the HTTP protocol, you need to build your own web server to receive messages. With the queue protocol, messages are automatically pushed to a CMQ queue and you can pull them concurrently.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The subscription protocol, currently supports two protocols: HTTP and queue. When the HTTP protocol is used, users need to set up their own web server to accept messages. When the queue protocol is used, messages will automatically be pushed to CMQ queues, and users can pull messages concurrently. 
+     * @return Protocol The subscription protocol, currently supports two protocols: HTTP and queue. When the HTTP protocol is used, users need to set up their own web server to accept messages. When the queue protocol is used, messages will automatically be pushed to CMQ queues, and users can pull messages concurrently.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Subscription protocol. Currently, two protocols are supported: HTTP and queue. To use the HTTP protocol, you need to build your own web server to receive messages. With the queue protocol, messages are automatically pushed to a CMQ queue and you can pull them concurrently.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Protocol Subscription protocol. Currently, two protocols are supported: HTTP and queue. To use the HTTP protocol, you need to build your own web server to receive messages. With the queue protocol, messages are automatically pushed to a CMQ queue and you can pull them concurrently.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The subscription protocol, currently supports two protocols: HTTP and queue. When the HTTP protocol is used, users need to set up their own web server to accept messages. When the queue protocol is used, messages will automatically be pushed to CMQ queues, and users can pull messages concurrently.
+     * @param Protocol The subscription protocol, currently supports two protocols: HTTP and queue. When the HTTP protocol is used, users need to set up their own web server to accept messages. When the queue protocol is used, messages will automatically be pushed to CMQ queues, and users can pull messages concurrently.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get CMQ push server retry policy in case an error occurs while pushing a message to the endpoint. Valid values:
-(1) BACKOFF_RETRY: backoff retry, which is to retry at a fixed interval, discard the message after a certain number of retries, and continue to push the next message.
-(2) EXPONENTIAL_DECAY_RETRY: exponential decay retry, which is to retry at an exponentially increasing interval, such as 1s, 2s, 4s, 8s, and so on. As a message can be retained in a topic for one day, failed messages will be discarded at most after one day of retry. Default value: EXPONENTIAL_DECAY_RETRY.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return NotifyStrategy CMQ push server retry policy in case an error occurs while pushing a message to the endpoint. Valid values:
-(1) BACKOFF_RETRY: backoff retry, which is to retry at a fixed interval, discard the message after a certain number of retries, and continue to push the next message.
-(2) EXPONENTIAL_DECAY_RETRY: exponential decay retry, which is to retry at an exponentially increasing interval, such as 1s, 2s, 4s, 8s, and so on. As a message can be retained in a topic for one day, failed messages will be discarded at most after one day of retry. Default value: EXPONENTIAL_DECAY_RETRY.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the CMQ push server retry policy when an error occurs while pushing messages to an endpoint. valid values:.
+BACKOFF_RETRY, backoff retry. retry at regular intervals, discard the message after a certain number of retries, and continue to push the next message.
+(2) EXPONENTIAL_DECAY_RETRY, EXPONENTIAL DECAY RETRY. the interval between retries increases exponentially, for example starting at 1s, followed by 2s, 4s, 8s... since the Topic message period is one day, RETRY for at most one day then discard the message. default value is EXPONENTIAL_DECAY_RETRY. 
+     * @return NotifyStrategy Specifies the CMQ push server retry policy when an error occurs while pushing messages to an endpoint. valid values:.
+BACKOFF_RETRY, backoff retry. retry at regular intervals, discard the message after a certain number of retries, and continue to push the next message.
+(2) EXPONENTIAL_DECAY_RETRY, EXPONENTIAL DECAY RETRY. the interval between retries increases exponentially, for example starting at 1s, followed by 2s, 4s, 8s... since the Topic message period is one day, RETRY for at most one day then discard the message. default value is EXPONENTIAL_DECAY_RETRY.
      */
     public String getNotifyStrategy() {
         return this.NotifyStrategy;
     }
 
     /**
-     * Set CMQ push server retry policy in case an error occurs while pushing a message to the endpoint. Valid values:
-(1) BACKOFF_RETRY: backoff retry, which is to retry at a fixed interval, discard the message after a certain number of retries, and continue to push the next message.
-(2) EXPONENTIAL_DECAY_RETRY: exponential decay retry, which is to retry at an exponentially increasing interval, such as 1s, 2s, 4s, 8s, and so on. As a message can be retained in a topic for one day, failed messages will be discarded at most after one day of retry. Default value: EXPONENTIAL_DECAY_RETRY.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param NotifyStrategy CMQ push server retry policy in case an error occurs while pushing a message to the endpoint. Valid values:
-(1) BACKOFF_RETRY: backoff retry, which is to retry at a fixed interval, discard the message after a certain number of retries, and continue to push the next message.
-(2) EXPONENTIAL_DECAY_RETRY: exponential decay retry, which is to retry at an exponentially increasing interval, such as 1s, 2s, 4s, 8s, and so on. As a message can be retained in a topic for one day, failed messages will be discarded at most after one day of retry. Default value: EXPONENTIAL_DECAY_RETRY.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the CMQ push server retry policy when an error occurs while pushing messages to an endpoint. valid values:.
+BACKOFF_RETRY, backoff retry. retry at regular intervals, discard the message after a certain number of retries, and continue to push the next message.
+(2) EXPONENTIAL_DECAY_RETRY, EXPONENTIAL DECAY RETRY. the interval between retries increases exponentially, for example starting at 1s, followed by 2s, 4s, 8s... since the Topic message period is one day, RETRY for at most one day then discard the message. default value is EXPONENTIAL_DECAY_RETRY.
+     * @param NotifyStrategy Specifies the CMQ push server retry policy when an error occurs while pushing messages to an endpoint. valid values:.
+BACKOFF_RETRY, backoff retry. retry at regular intervals, discard the message after a certain number of retries, and continue to push the next message.
+(2) EXPONENTIAL_DECAY_RETRY, EXPONENTIAL DECAY RETRY. the interval between retries increases exponentially, for example starting at 1s, followed by 2s, 4s, 8s... since the Topic message period is one day, RETRY for at most one day then discard the message. default value is EXPONENTIAL_DECAY_RETRY.
      */
     public void setNotifyStrategy(String NotifyStrategy) {
         this.NotifyStrategy = NotifyStrategy;
     }
 
     /**
-     * Get Push content format. Valid values: 1. JSON; 2. SIMPLIFIED, i.e., the raw format. If `protocol` is `queue`, this value must be `SIMPLIFIED`. If `protocol` is `HTTP`, both values are acceptable, and the default value is `JSON`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return NotifyContentFormat Push content format. Valid values: 1. JSON; 2. SIMPLIFIED, i.e., the raw format. If `protocol` is `queue`, this value must be `SIMPLIFIED`. If `protocol` is `HTTP`, both values are acceptable, and the default value is `JSON`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The format of the push content. Values: (1) JSON; (2) SIMPLIFIED, i.e., raw format. If protocol is queue, the value must be SIMPLIFIED. If protocol is HTTP, both values are acceptable, with the default being JSON. 
+     * @return NotifyContentFormat The format of the push content. Values: (1) JSON; (2) SIMPLIFIED, i.e., raw format. If protocol is queue, the value must be SIMPLIFIED. If protocol is HTTP, both values are acceptable, with the default being JSON.
      */
     public String getNotifyContentFormat() {
         return this.NotifyContentFormat;
     }
 
     /**
-     * Set Push content format. Valid values: 1. JSON; 2. SIMPLIFIED, i.e., the raw format. If `protocol` is `queue`, this value must be `SIMPLIFIED`. If `protocol` is `HTTP`, both values are acceptable, and the default value is `JSON`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param NotifyContentFormat Push content format. Valid values: 1. JSON; 2. SIMPLIFIED, i.e., the raw format. If `protocol` is `queue`, this value must be `SIMPLIFIED`. If `protocol` is `HTTP`, both values are acceptable, and the default value is `JSON`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The format of the push content. Values: (1) JSON; (2) SIMPLIFIED, i.e., raw format. If protocol is queue, the value must be SIMPLIFIED. If protocol is HTTP, both values are acceptable, with the default being JSON.
+     * @param NotifyContentFormat The format of the push content. Values: (1) JSON; (2) SIMPLIFIED, i.e., raw format. If protocol is queue, the value must be SIMPLIFIED. If protocol is HTTP, both values are acceptable, with the default being JSON.
      */
     public void setNotifyContentFormat(String NotifyContentFormat) {
         this.NotifyContentFormat = NotifyContentFormat;
+    }
+
+    /**
+     * Get Topic Name of the Subscription 
+     * @return TopicName Topic Name of the Subscription
+     */
+    public String getTopicName() {
+        return this.TopicName;
+    }
+
+    /**
+     * Set Topic Name of the Subscription
+     * @param TopicName Topic Name of the Subscription
+     */
+    public void setTopicName(String TopicName) {
+        this.TopicName = TopicName;
     }
 
     public CmqSubscription() {
@@ -429,6 +402,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.NotifyContentFormat != null) {
             this.NotifyContentFormat = new String(source.NotifyContentFormat);
         }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
     }
 
 
@@ -448,6 +424,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "NotifyStrategy", this.NotifyStrategy);
         this.setParamSimple(map, prefix + "NotifyContentFormat", this.NotifyContentFormat);
+        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
 
     }
 }

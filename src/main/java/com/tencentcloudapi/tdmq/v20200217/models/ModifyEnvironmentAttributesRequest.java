@@ -38,18 +38,18 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel {
     private Long MsgTTL;
 
     /**
-    * Remarks (up to 128 characters).
-    */
-    @SerializedName("Remark")
-    @Expose
-    private String Remark;
-
-    /**
     * Cluster ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
+
+    /**
+    * Remarks (up to 128 characters).
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
 
     /**
     * Message retention policy
@@ -98,22 +98,6 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get Remarks (up to 128 characters). 
-     * @return Remark Remarks (up to 128 characters).
-     */
-    public String getRemark() {
-        return this.Remark;
-    }
-
-    /**
-     * Set Remarks (up to 128 characters).
-     * @param Remark Remarks (up to 128 characters).
-     */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
-    }
-
-    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -127,6 +111,22 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel {
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get Remarks (up to 128 characters). 
+     * @return Remark Remarks (up to 128 characters).
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set Remarks (up to 128 characters).
+     * @param Remark Remarks (up to 128 characters).
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
     }
 
     /**
@@ -175,11 +175,11 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel {
         if (source.MsgTTL != null) {
             this.MsgTTL = new Long(source.MsgTTL);
         }
-        if (source.Remark != null) {
-            this.Remark = new String(source.Remark);
-        }
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
         }
         if (source.RetentionPolicy != null) {
             this.RetentionPolicy = new RetentionPolicy(source.RetentionPolicy);
@@ -196,8 +196,8 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
         this.setParamSimple(map, prefix + "AutoSubscriptionCreation", this.AutoSubscriptionCreation);
 

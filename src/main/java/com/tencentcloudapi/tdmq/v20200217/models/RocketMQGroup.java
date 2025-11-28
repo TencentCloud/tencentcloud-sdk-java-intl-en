@@ -134,6 +134,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long RetryMaxTimes;
 
     /**
+    * Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * Number of subscribed topics.
+    */
+    @SerializedName("SubscribeTopicNum")
+    @Expose
+    private Long SubscribeTopicNum;
+
+    /**
+    * List of bound tags
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get Consumer group name. 
      * @return Name Consumer group name.
      */
@@ -168,7 +198,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Consumption TPS. 
      * @return TPS Consumption TPS.
+     * @deprecated
      */
+    @Deprecated
     public Long getTPS() {
         return this.TPS;
     }
@@ -176,7 +208,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Consumption TPS.
      * @param TPS Consumption TPS.
+     * @deprecated
      */
+    @Deprecated
     public void setTPS(Long TPS) {
         this.TPS = TPS;
     }
@@ -184,7 +218,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get The total number of heaped messages. 
      * @return TotalAccumulative The total number of heaped messages.
+     * @deprecated
      */
+    @Deprecated
     public Long getTotalAccumulative() {
         return this.TotalAccumulative;
     }
@@ -192,7 +228,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set The total number of heaped messages.
      * @param TotalAccumulative The total number of heaped messages.
+     * @deprecated
      */
+    @Deprecated
     public void setTotalAccumulative(Long TotalAccumulative) {
         this.TotalAccumulative = TotalAccumulative;
     }
@@ -393,6 +431,78 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RetryMaxTimes = RetryMaxTimes;
     }
 
+    /**
+     * Get Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceId Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceId Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Namespace
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Namespace Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Namespace Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get Number of subscribed topics. 
+     * @return SubscribeTopicNum Number of subscribed topics.
+     */
+    public Long getSubscribeTopicNum() {
+        return this.SubscribeTopicNum;
+    }
+
+    /**
+     * Set Number of subscribed topics.
+     * @param SubscribeTopicNum Number of subscribed topics.
+     */
+    public void setSubscribeTopicNum(Long SubscribeTopicNum) {
+        this.SubscribeTopicNum = SubscribeTopicNum;
+    }
+
+    /**
+     * Get List of bound tags 
+     * @return TagList List of bound tags
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set List of bound tags
+     * @param TagList List of bound tags
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
     public RocketMQGroup() {
     }
 
@@ -446,6 +556,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RetryMaxTimes != null) {
             this.RetryMaxTimes = new Long(source.RetryMaxTimes);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.SubscribeTopicNum != null) {
+            this.SubscribeTopicNum = new Long(source.SubscribeTopicNum);
+        }
+        if (source.TagList != null) {
+            this.TagList = new Tag[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new Tag(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -468,6 +593,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BroadcastEnabled", this.BroadcastEnabled);
         this.setParamSimple(map, prefix + "GroupType", this.GroupType);
         this.setParamSimple(map, prefix + "RetryMaxTimes", this.RetryMaxTimes);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "SubscribeTopicNum", this.SubscribeTopicNum);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

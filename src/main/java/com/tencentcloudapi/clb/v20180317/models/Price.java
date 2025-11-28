@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class Price extends AbstractModel {
 
     /**
-    * Instance price.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Describes the instance pricing.
     */
     @SerializedName("InstancePrice")
     @Expose
@@ -48,20 +47,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private ItemPrice LcuPrice;
 
     /**
-     * Get Instance price.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return InstancePrice Instance price.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Describes the instance pricing. 
+     * @return InstancePrice Describes the instance pricing.
      */
     public ItemPrice getInstancePrice() {
         return this.InstancePrice;
     }
 
     /**
-     * Set Instance price.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param InstancePrice Instance price.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Describes the instance pricing.
+     * @param InstancePrice Describes the instance pricing.
      */
     public void setInstancePrice(ItemPrice InstancePrice) {
         this.InstancePrice = InstancePrice;

@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class CmqTransactionPolicy extends AbstractModel {
 
     /**
-    * First lookback time.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * First recheck time.
     */
     @SerializedName("FirstQueryInterval")
     @Expose
     private Long FirstQueryInterval;
 
     /**
-    * Maximum number of queries.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Maximum query times.
     */
     @SerializedName("MaxQueryCount")
     @Expose
     private Long MaxQueryCount;
 
     /**
-     * Get First lookback time.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FirstQueryInterval First lookback time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get First recheck time. 
+     * @return FirstQueryInterval First recheck time.
      */
     public Long getFirstQueryInterval() {
         return this.FirstQueryInterval;
     }
 
     /**
-     * Set First lookback time.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FirstQueryInterval First lookback time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set First recheck time.
+     * @param FirstQueryInterval First recheck time.
      */
     public void setFirstQueryInterval(Long FirstQueryInterval) {
         this.FirstQueryInterval = FirstQueryInterval;
     }
 
     /**
-     * Get Maximum number of queries.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MaxQueryCount Maximum number of queries.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Maximum query times. 
+     * @return MaxQueryCount Maximum query times.
      */
     public Long getMaxQueryCount() {
         return this.MaxQueryCount;
     }
 
     /**
-     * Set Maximum number of queries.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MaxQueryCount Maximum number of queries.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Maximum query times.
+     * @param MaxQueryCount Maximum query times.
      */
     public void setMaxQueryCount(Long MaxQueryCount) {
         this.MaxQueryCount = MaxQueryCount;

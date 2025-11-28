@@ -31,16 +31,14 @@ public class RuleOutput extends AbstractModel {
     private String LocationId;
 
     /**
-    * Domain name of the forwarding rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Domain name of the forwarding rule
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Forwarding rule path.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Path of forwarding rules.
     */
     @SerializedName("Url")
     @Expose
@@ -54,8 +52,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long SessionExpireTime;
 
     /**
-    * Health check information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Health Check Information
     */
     @SerializedName("HealthCheck")
     @Expose
@@ -84,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ListenerId;
 
     /**
-    * Redirect target information of a forwarding rule
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Redirection target information of the forwarding rule
     */
     @SerializedName("RewriteTarget")
     @Expose
@@ -149,39 +145,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private BasicTargetGroupInfo TargetGroup;
 
     /**
-    * WAF instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * WAF instance ID.
     */
     @SerializedName("WafDomainId")
     @Expose
     private String WafDomainId;
 
     /**
-    * TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Called server routing. valid when ForwardType is TRPC. currently not yet available.
     */
     @SerializedName("TrpcCallee")
     @Expose
     private String TrpcCallee;
 
     /**
-    * TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * TRPC calling service api. valid when ForwardType is TRPC. currently not yet available.
     */
     @SerializedName("TrpcFunc")
     @Expose
     private String TrpcFunc;
 
     /**
-    * QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
+    * QUIC status. QUIC_ACTIVE means enabled, QUIC_INACTIVE means not enabled. note that only HTTPS domain names can enable QUIC.
     */
     @SerializedName("QuicStatus")
     @Expose
     private String QuicStatus;
 
     /**
-    * List of domain names associated with the forwarding rule
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the domain name list of the forwarding rule.
     */
     @SerializedName("Domains")
     @Expose
@@ -196,11 +188,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private BasicTargetGroupInfo [] TargetGroupList;
 
     /**
-    * OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+    * OAuth configuration status.
     */
     @SerializedName("OAuth")
     @Expose
     private OAuth OAuth;
+
+    /**
+    * Specifies the custom cookie name.
+    */
+    @SerializedName("CookieName")
+    @Expose
+    private String CookieName;
 
     /**
      * Get Forwarding rule ID 
@@ -219,40 +218,32 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Domain name of the forwarding rule.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Domain Domain name of the forwarding rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Domain name of the forwarding rule 
+     * @return Domain Domain name of the forwarding rule
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name of the forwarding rule.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Domain Domain name of the forwarding rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Domain name of the forwarding rule
+     * @param Domain Domain name of the forwarding rule
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Forwarding rule path.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Url Forwarding rule path.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Path of forwarding rules. 
+     * @return Url Path of forwarding rules.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Forwarding rule path.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Url Forwarding rule path.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Path of forwarding rules.
+     * @param Url Path of forwarding rules.
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -275,20 +266,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Health check information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HealthCheck Health check information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Health Check Information 
+     * @return HealthCheck Health Check Information
      */
     public HealthCheck getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set Health check information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HealthCheck Health check information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Health Check Information
+     * @param HealthCheck Health Check Information
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;
@@ -347,20 +334,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Redirect target information of a forwarding rule
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RewriteTarget Redirect target information of a forwarding rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Redirection target information of the forwarding rule 
+     * @return RewriteTarget Redirection target information of the forwarding rule
      */
     public RewriteTarget getRewriteTarget() {
         return this.RewriteTarget;
     }
 
     /**
-     * Set Redirect target information of a forwarding rule
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RewriteTarget Redirect target information of a forwarding rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Redirection target information of the forwarding rule
+     * @param RewriteTarget Redirection target information of the forwarding rule
      */
     public void setRewriteTarget(RewriteTarget RewriteTarget) {
         this.RewriteTarget = RewriteTarget;
@@ -499,96 +482,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get WAF instance ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WafDomainId WAF instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get WAF instance ID. 
+     * @return WafDomainId WAF instance ID.
      */
     public String getWafDomainId() {
         return this.WafDomainId;
     }
 
     /**
-     * Set WAF instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WafDomainId WAF instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set WAF instance ID.
+     * @param WafDomainId WAF instance ID.
      */
     public void setWafDomainId(String WafDomainId) {
         this.WafDomainId = WafDomainId;
     }
 
     /**
-     * Get TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TrpcCallee TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Called server routing. valid when ForwardType is TRPC. currently not yet available. 
+     * @return TrpcCallee Called server routing. valid when ForwardType is TRPC. currently not yet available.
      */
     public String getTrpcCallee() {
         return this.TrpcCallee;
     }
 
     /**
-     * Set TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TrpcCallee TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Called server routing. valid when ForwardType is TRPC. currently not yet available.
+     * @param TrpcCallee Called server routing. valid when ForwardType is TRPC. currently not yet available.
      */
     public void setTrpcCallee(String TrpcCallee) {
         this.TrpcCallee = TrpcCallee;
     }
 
     /**
-     * Get TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TrpcFunc TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get TRPC calling service api. valid when ForwardType is TRPC. currently not yet available. 
+     * @return TrpcFunc TRPC calling service api. valid when ForwardType is TRPC. currently not yet available.
      */
     public String getTrpcFunc() {
         return this.TrpcFunc;
     }
 
     /**
-     * Set TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TrpcFunc TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set TRPC calling service api. valid when ForwardType is TRPC. currently not yet available.
+     * @param TrpcFunc TRPC calling service api. valid when ForwardType is TRPC. currently not yet available.
      */
     public void setTrpcFunc(String TrpcFunc) {
         this.TrpcFunc = TrpcFunc;
     }
 
     /**
-     * Get QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QuicStatus QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get QUIC status. QUIC_ACTIVE means enabled, QUIC_INACTIVE means not enabled. note that only HTTPS domain names can enable QUIC. 
+     * @return QuicStatus QUIC status. QUIC_ACTIVE means enabled, QUIC_INACTIVE means not enabled. note that only HTTPS domain names can enable QUIC.
      */
     public String getQuicStatus() {
         return this.QuicStatus;
     }
 
     /**
-     * Set QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QuicStatus QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set QUIC status. QUIC_ACTIVE means enabled, QUIC_INACTIVE means not enabled. note that only HTTPS domain names can enable QUIC.
+     * @param QuicStatus QUIC status. QUIC_ACTIVE means enabled, QUIC_INACTIVE means not enabled. note that only HTTPS domain names can enable QUIC.
      */
     public void setQuicStatus(String QuicStatus) {
         this.QuicStatus = QuicStatus;
     }
 
     /**
-     * Get List of domain names associated with the forwarding rule
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Domains List of domain names associated with the forwarding rule
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the domain name list of the forwarding rule. 
+     * @return Domains Specifies the domain name list of the forwarding rule.
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set List of domain names associated with the forwarding rule
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Domains List of domain names associated with the forwarding rule
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the domain name list of the forwarding rule.
+     * @param Domains Specifies the domain name list of the forwarding rule.
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
@@ -615,19 +582,35 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OAuth OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get OAuth configuration status. 
+     * @return OAuth OAuth configuration status.
      */
     public OAuth getOAuth() {
         return this.OAuth;
     }
 
     /**
-     * Set OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OAuth OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set OAuth configuration status.
+     * @param OAuth OAuth configuration status.
      */
     public void setOAuth(OAuth OAuth) {
         this.OAuth = OAuth;
+    }
+
+    /**
+     * Get Specifies the custom cookie name. 
+     * @return CookieName Specifies the custom cookie name.
+     */
+    public String getCookieName() {
+        return this.CookieName;
+    }
+
+    /**
+     * Set Specifies the custom cookie name.
+     * @param CookieName Specifies the custom cookie name.
+     */
+    public void setCookieName(String CookieName) {
+        this.CookieName = CookieName;
     }
 
     public RuleOutput() {
@@ -716,6 +699,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.OAuth != null) {
             this.OAuth = new OAuth(source.OAuth);
         }
+        if (source.CookieName != null) {
+            this.CookieName = new String(source.CookieName);
+        }
     }
 
 
@@ -747,6 +733,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
         this.setParamObj(map, prefix + "OAuth.", this.OAuth);
+        this.setParamSimple(map, prefix + "CookieName", this.CookieName);
 
     }
 }

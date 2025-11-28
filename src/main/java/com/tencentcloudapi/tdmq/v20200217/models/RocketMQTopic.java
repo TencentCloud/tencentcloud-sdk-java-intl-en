@@ -74,6 +74,53 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long UpdateTime;
 
     /**
+    * Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * Last write time, in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LastUpdateTime")
+    @Expose
+    private Long LastUpdateTime;
+
+    /**
+    * Number of Subscriptions
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SubscriptionCount")
+    @Expose
+    private Long SubscriptionCount;
+
+    /**
+    * Subscribe to the relationship list.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SubscriptionData")
+    @Expose
+    private RocketMQSubscription [] SubscriptionData;
+
+    /**
+    * List of bound tags
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get Topic name. 
      * @return Name Topic name.
      */
@@ -189,6 +236,122 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceId Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceId Instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Namespace
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Namespace Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Namespace Namespace
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get Last write time, in seconds.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LastUpdateTime Last write time, in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getLastUpdateTime() {
+        return this.LastUpdateTime;
+    }
+
+    /**
+     * Set Last write time, in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LastUpdateTime Last write time, in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLastUpdateTime(Long LastUpdateTime) {
+        this.LastUpdateTime = LastUpdateTime;
+    }
+
+    /**
+     * Get Number of Subscriptions
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubscriptionCount Number of Subscriptions
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getSubscriptionCount() {
+        return this.SubscriptionCount;
+    }
+
+    /**
+     * Set Number of Subscriptions
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubscriptionCount Number of Subscriptions
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSubscriptionCount(Long SubscriptionCount) {
+        this.SubscriptionCount = SubscriptionCount;
+    }
+
+    /**
+     * Get Subscribe to the relationship list.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubscriptionData Subscribe to the relationship list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public RocketMQSubscription [] getSubscriptionData() {
+        return this.SubscriptionData;
+    }
+
+    /**
+     * Set Subscribe to the relationship list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubscriptionData Subscribe to the relationship list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSubscriptionData(RocketMQSubscription [] SubscriptionData) {
+        this.SubscriptionData = SubscriptionData;
+    }
+
+    /**
+     * Get List of bound tags 
+     * @return TagList List of bound tags
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set List of bound tags
+     * @param TagList List of bound tags
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
     public RocketMQTopic() {
     }
 
@@ -218,6 +381,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.UpdateTime != null) {
             this.UpdateTime = new Long(source.UpdateTime);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.LastUpdateTime != null) {
+            this.LastUpdateTime = new Long(source.LastUpdateTime);
+        }
+        if (source.SubscriptionCount != null) {
+            this.SubscriptionCount = new Long(source.SubscriptionCount);
+        }
+        if (source.SubscriptionData != null) {
+            this.SubscriptionData = new RocketMQSubscription[source.SubscriptionData.length];
+            for (int i = 0; i < source.SubscriptionData.length; i++) {
+                this.SubscriptionData[i] = new RocketMQSubscription(source.SubscriptionData[i]);
+            }
+        }
+        if (source.TagList != null) {
+            this.TagList = new Tag[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new Tag(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -232,6 +419,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "PartitionNum", this.PartitionNum);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
+        this.setParamSimple(map, prefix + "SubscriptionCount", this.SubscriptionCount);
+        this.setParamArrayObj(map, prefix + "SubscriptionData.", this.SubscriptionData);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

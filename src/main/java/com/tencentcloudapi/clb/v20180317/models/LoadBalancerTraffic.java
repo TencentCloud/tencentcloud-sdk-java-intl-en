@@ -59,8 +59,7 @@ public class LoadBalancerTraffic extends AbstractModel {
     private Float OutBandwidth;
 
     /**
-    * CLB domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the CLB domain name.
     */
     @SerializedName("Domain")
     @Expose
@@ -147,20 +146,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get CLB domain name
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Domain CLB domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the CLB domain name. 
+     * @return Domain Specifies the CLB domain name.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set CLB domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Domain CLB domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the CLB domain name.
+     * @param Domain Specifies the CLB domain name.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

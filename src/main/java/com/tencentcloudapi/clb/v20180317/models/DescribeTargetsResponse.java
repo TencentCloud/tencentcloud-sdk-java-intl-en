@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeTargetsResponse extends AbstractModel {
 
     /**
-    * Information of real servers bound to the listener
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Information of real servers bound to the listener.
     */
     @SerializedName("Listeners")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Information of real servers bound to the listener
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Listeners Information of real servers bound to the listener
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Information of real servers bound to the listener. 
+     * @return Listeners Information of real servers bound to the listener.
      */
     public ListenerBackend [] getListeners() {
         return this.Listeners;
     }
 
     /**
-     * Set Information of real servers bound to the listener
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Listeners Information of real servers bound to the listener
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Information of real servers bound to the listener.
+     * @param Listeners Information of real servers bound to the listener.
      */
     public void setListeners(ListenerBackend [] Listeners) {
         this.Listeners = Listeners;

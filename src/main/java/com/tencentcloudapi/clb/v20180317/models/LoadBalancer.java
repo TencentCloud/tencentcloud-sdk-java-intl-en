@@ -38,8 +38,8 @@ public class LoadBalancer extends AbstractModel {
     private String LoadBalancerName;
 
     /**
-    * CLB instance network type:
-OPEN: public network; INTERNAL: private network.
+    * Network type of the load balancing instance.
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
     */
     @SerializedName("LoadBalancerType")
     @Expose
@@ -53,7 +53,7 @@ OPEN: public network; INTERNAL: private network.
     private Long Forward;
 
     /**
-    * Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
+    * The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead.
     */
     @SerializedName("Domain")
     @Expose
@@ -61,32 +61,30 @@ OPEN: public network; INTERNAL: private network.
 
     /**
     * List of VIPs of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LoadBalancerVips")
     @Expose
     private String [] LoadBalancerVips;
 
     /**
-    * CLB instance status, including:
-0: creating; 1: running.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the state of the load balancing instance, including.
+0: creating. 1: normal operation.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * CLB instance creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CLB instance creation time
+Format: YYYY-MM-DD HH:MM:ss.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last status change time of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Last status transition time of the CLB instance.
+Format: YYYY-MM-DD HH:MM:ss.
     */
     @SerializedName("StatusTime")
     @Expose
@@ -101,31 +99,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Anti-DDoS Pro identifier for CLB. 1: CLB with Anti-DDoS Pro; 0: CLB without Anti-DDoS Pro.
     */
     @SerializedName("OpenBgp")
     @Expose
     private Long OpenBgp;
 
     /**
-    * SNAT is enabled for all private network classic CLB created before December 2016.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether SNAT is enabled. for traditional private network clbs before december 2016, SNAT was enabled.
     */
     @SerializedName("Snat")
     @Expose
     private Boolean Snat;
 
     /**
-    * 0: not isolated; 1: isolated.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether isolated. 0 means not isolated. 1 means isolated.
     */
     @SerializedName("Isolation")
     @Expose
@@ -140,8 +134,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Log;
 
     /**
-    * Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Subnet of the CLB instance (applicable only to VPC-type CLB instances on private networks)
     */
     @SerializedName("SubnetId")
     @Expose
@@ -149,54 +142,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * CLB instance tag information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-    * Security group of a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Security group of the CLB instance
     */
     @SerializedName("SecureGroups")
     @Expose
     private String [] SecureGroups;
 
     /**
-    * Basic information of a backend server bound to a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Basic information of real servers bound to the CLB instance
     */
     @SerializedName("TargetRegionInfo")
     @Expose
     private TargetRegionInfo TargetRegionInfo;
 
     /**
-    * Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
     */
     @SerializedName("AnycastZone")
     @Expose
     private String AnycastZone;
 
     /**
-    * IP version. Valid values: ipv4, ipv6
-Note: this field may return null, indicating that no valid values can be obtained.
+    * IP Version, ipv4 | ipv6
     */
     @SerializedName("AddressIPVersion")
     @Expose
     private String AddressIPVersion;
 
     /**
-    * VPC ID in a numeric form
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
     */
     @SerializedName("NumericalVpcId")
     @Expose
     private Long NumericalVpcId;
 
     /**
-    * ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the ISP of the load balancer IP address.
+
+-BGP (multi-line).
+- CMCC: CMCC single line network.
+-CTCC: ctcc single-line.
+- CUCC: china unicom single-line.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VipIsp")
     @Expose
@@ -219,7 +212,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ZoneInfo [] BackupZoneSet;
 
     /**
-    * CLB instance isolation time
+    * Specifies the isolation time of the cloud load balancer instance.
+Format: YYYY-MM-DD HH:MM:ss.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsolatedTime")
@@ -259,16 +253,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private LBChargePrepaid PrepaidAttributes;
 
     /**
-    * Logset ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Log set ID of Cloud Log Service (CLS) for CLB
     */
     @SerializedName("LogSetId")
     @Expose
     private String LogSetId;
 
     /**
-    * Log topic ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Log topic ID of Cloud Log Service (CLS) for CLB
     */
     @SerializedName("LogTopicId")
     @Expose
@@ -292,62 +284,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Whether an Anti-DDoS Pro instance can be bound
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsDDos")
     @Expose
     private Boolean IsDDos;
 
     /**
-    * Custom configuration ID at the CLB instance level
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Custom configuration IDs of CLB instances
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
 
     /**
-    * Whether a real server opens the traffic from a CLB instance to the internet
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Whether the real server allows traffic from CLB
     */
     @SerializedName("LoadBalancerPassToTarget")
     @Expose
     private Boolean LoadBalancerPassToTarget;
 
     /**
-    * Private network dedicated cluster
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Exclusive cluster on the private network
     */
     @SerializedName("ExclusiveCluster")
     @Expose
     private ExclusiveCluster ExclusiveCluster;
 
     /**
-    * This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the field is meaningful when the IP address version is ipv6. valid values: ipv6Nat64 | ipv6FullChain.
+IPv6Nat64: specifies a load balancer based on Nat64 IPv6 transition technology.
+IPv6FullChain: specifies a cloud load balancer implemented based on ipv6 single-stack technology.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IPv6Mode")
     @Expose
     private String IPv6Mode;
 
     /**
-    * Whether to enable SnatPro.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies whether SnatPro is enabled.
     */
     @SerializedName("SnatPro")
     @Expose
     private Boolean SnatPro;
 
     /**
-    * `SnatIp` list after SnatPro load balancing is enabled.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Enables the SnatIp list after turning on SnatPro load balancing.
     */
     @SerializedName("SnatIps")
     @Expose
     private SnatIp [] SnatIps;
 
     /**
-    * Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
+    * Performance capacity specification. <ul><li> clb.c1.small: minimalist specification </li> <li> clb.c2.medium: standard specification </li> <li> clb.c3.small: advanced type 1 specification </li> <li> clb.c3.medium: advanced type 2 specification </li> <li> clb.c4.small: super type 1 specification </li> <li> clb.c4.medium: super type 2 specification </li> <li> clb.c4.large: super type 3 specification </li> <li> clb.c4.xlarge: super type 4 specification </li> <li>"" : non-performance capacity instance</li></ul>.
     */
     @SerializedName("SlaType")
     @Expose
@@ -355,22 +343,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Whether VIP is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsBlock")
     @Expose
     private Boolean IsBlock;
 
     /**
-    * Time blocked or unblocked
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the blocking or unblocking time.
+Format: YYYY-MM-DD HH:MM:ss.
     */
     @SerializedName("IsBlockTime")
     @Expose
     private String IsBlockTime;
 
     /**
-    * Whether the IP type is the local BGP
+    * Whether the IP type is Local BGP
     */
     @SerializedName("LocalBgp")
     @Expose
@@ -385,8 +372,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ClusterTag;
 
     /**
-    * If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with IPv4 and IPv6 CVM instances simultaneously.
     */
     @SerializedName("MixIpTarget")
     @Expose
@@ -409,16 +395,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String NfvInfo;
 
     /**
-    * Health check logset ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Health check log set ID of Cloud Log Service (CLS) for CLB
     */
     @SerializedName("HealthLogSetId")
     @Expose
     private String HealthLogSetId;
 
     /**
-    * Health check log topic ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Health check log topic ID of Cloud Log Service (CLS) for CLB
     */
     @SerializedName("HealthLogTopicId")
     @Expose
@@ -433,35 +417,69 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] ClusterIds;
 
     /**
-    * CLB attribute
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Attributes of cloud load balancer, input an array of strings to determine whether it is enabled.
+DeleteProtect: specifies deletion protection. once enabled, it prevents the cloud load balancer from being accidentally deleted. 
+UserInVisible: invisible to users, controls load balancing visibility to users. 
+BlockStatus: specifies the blockage status, used to limit certain operations or traffic for cloud load balancer. 
+NoLBNat: disables the NAT feature of cloud load balancer for direct forwarding of traffic in specific scenarios. 
+BanStatus: specifies the blocking status for suspending the clb service or restricting access. 
+ShiftupFlag: specifies the upgrade flag used to identify if the cloud load balancer requires a configuration upgrade or performance improvement. 
+Specifies the stopped status. once enabled, the cloud load balancer suspends service. 
+NoVpcGw: specifies not to use VPC gateway to bypass the gateway for direct traffic handling. 
+SgInTgw: specifies the security group in TGW (Transit Gateway) involving network security policy configuration. 
+SharedLimitFlag: specifies the shared limit flag used to control the resource constraints of cloud load balancer. 
+WafFlag: specifies the Web application firewall (WAF) flag. enabled to enable WAF protection. 
+IsDomainCLB: indicates whether the cloud load balancer is domain name-based for traffic distribution. 
+IPv6Snat: IPv6 source address translation (Snat), used for source address processing in IPv6 networks. 
+HideDomain. specifies whether to hide the domain name for privacy protection or to avoid exposing it in specific scenarios. 
+JumboFrame: specifies giant frame support. once enabled, it supports larger data frames to improve network efficiency. 
+NoLBNatL4IPdc: specifies layer 4 IP direct connection without NAT, used for direct forwarding of IP traffic in layer 4 load balancing. 
+VpcGwL3Service: specifies the VPC gateway layer-3 Service, which involves the gateway feature of the layer-3 network. 
+Ipv62Flag: specifies the Ipv6 expansion Flag for specific feature support. 
+Ipv62ExclusiveFlag: specifies the Ipv6 exclusive flag used for exclusive Ipv6 traffic processing. 
+BgpPro: specifies BGP Pro support. 
+ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP options. 
+
     */
     @SerializedName("AttributeFlags")
     @Expose
     private String [] AttributeFlags;
 
     /**
-    * Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the domain name of the load balancing instance.
     */
     @SerializedName("LoadBalancerDomain")
     @Expose
     private String LoadBalancerDomain;
 
     /**
-    * Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Specifies the network outbound.
     */
     @SerializedName("Egress")
     @Expose
     private String Egress;
 
     /**
-    * 
+    * Indicates whether the instance type is dedicated. 1: dedicated instance. 0: non-dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Exclusive")
     @Expose
     private Long Exclusive;
+
+    /**
+    * Specifies the number of bound backend services.
+    */
+    @SerializedName("TargetCount")
+    @Expose
+    private Long TargetCount;
+
+    /**
+    * Specifies the Endpoint id associated with the clb instance.
+    */
+    @SerializedName("AssociateEndpoint")
+    @Expose
+    private String AssociateEndpoint;
 
     /**
      * Get CLB instance ID. 
@@ -496,20 +514,20 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get CLB instance network type:
-OPEN: public network; INTERNAL: private network. 
-     * @return LoadBalancerType CLB instance network type:
-OPEN: public network; INTERNAL: private network.
+     * Get Network type of the load balancing instance.
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1). 
+     * @return LoadBalancerType Network type of the load balancing instance.
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
      */
     public String getLoadBalancerType() {
         return this.LoadBalancerType;
     }
 
     /**
-     * Set CLB instance network type:
-OPEN: public network; INTERNAL: private network.
-     * @param LoadBalancerType CLB instance network type:
-OPEN: public network; INTERNAL: private network.
+     * Set Network type of the load balancing instance.
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
+     * @param LoadBalancerType Network type of the load balancing instance.
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
      */
     public void setLoadBalancerType(String LoadBalancerType) {
         this.LoadBalancerType = LoadBalancerType;
@@ -532,26 +550,24 @@ OPEN: public network; INTERNAL: private network.
     }
 
     /**
-     * Get Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Domain Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead. 
+     * @return Domain The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Domain Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead.
+     * @param Domain The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get List of VIPs of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of VIPs of a CLB instance. 
      * @return LoadBalancerVips List of VIPs of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getLoadBalancerVips() {
         return this.LoadBalancerVips;
@@ -559,73 +575,67 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of VIPs of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LoadBalancerVips List of VIPs of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLoadBalancerVips(String [] LoadBalancerVips) {
         this.LoadBalancerVips = LoadBalancerVips;
     }
 
     /**
-     * Get CLB instance status, including:
-0: creating; 1: running.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status CLB instance status, including:
-0: creating; 1: running.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the state of the load balancing instance, including.
+0: creating. 1: normal operation. 
+     * @return Status Specifies the state of the load balancing instance, including.
+0: creating. 1: normal operation.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set CLB instance status, including:
-0: creating; 1: running.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status CLB instance status, including:
-0: creating; 1: running.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the state of the load balancing instance, including.
+0: creating. 1: normal operation.
+     * @param Status Specifies the state of the load balancing instance, including.
+0: creating. 1: normal operation.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get CLB instance creation time.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime CLB instance creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CLB instance creation time
+Format: YYYY-MM-DD HH:MM:ss. 
+     * @return CreateTime CLB instance creation time
+Format: YYYY-MM-DD HH:MM:ss.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set CLB instance creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime CLB instance creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CLB instance creation time
+Format: YYYY-MM-DD HH:MM:ss.
+     * @param CreateTime CLB instance creation time
+Format: YYYY-MM-DD HH:MM:ss.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last status change time of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StatusTime Last status change time of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Last status transition time of the CLB instance.
+Format: YYYY-MM-DD HH:MM:ss. 
+     * @return StatusTime Last status transition time of the CLB instance.
+Format: YYYY-MM-DD HH:MM:ss.
      */
     public String getStatusTime() {
         return this.StatusTime;
     }
 
     /**
-     * Set Last status change time of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StatusTime Last status change time of a CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Last status transition time of the CLB instance.
+Format: YYYY-MM-DD HH:MM:ss.
+     * @param StatusTime Last status transition time of the CLB instance.
+Format: YYYY-MM-DD HH:MM:ss.
      */
     public void setStatusTime(String StatusTime) {
         this.StatusTime = StatusTime;
@@ -648,10 +658,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get VPC ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get VPC ID 
      * @return VpcId VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVpcId() {
         return this.VpcId;
@@ -659,69 +667,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VpcId VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OpenBgp Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Anti-DDoS Pro identifier for CLB. 1: CLB with Anti-DDoS Pro; 0: CLB without Anti-DDoS Pro. 
+     * @return OpenBgp Anti-DDoS Pro identifier for CLB. 1: CLB with Anti-DDoS Pro; 0: CLB without Anti-DDoS Pro.
      */
     public Long getOpenBgp() {
         return this.OpenBgp;
     }
 
     /**
-     * Set Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OpenBgp Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Anti-DDoS Pro identifier for CLB. 1: CLB with Anti-DDoS Pro; 0: CLB without Anti-DDoS Pro.
+     * @param OpenBgp Anti-DDoS Pro identifier for CLB. 1: CLB with Anti-DDoS Pro; 0: CLB without Anti-DDoS Pro.
      */
     public void setOpenBgp(Long OpenBgp) {
         this.OpenBgp = OpenBgp;
     }
 
     /**
-     * Get SNAT is enabled for all private network classic CLB created before December 2016.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Snat SNAT is enabled for all private network classic CLB created before December 2016.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether SNAT is enabled. for traditional private network clbs before december 2016, SNAT was enabled. 
+     * @return Snat Whether SNAT is enabled. for traditional private network clbs before december 2016, SNAT was enabled.
      */
     public Boolean getSnat() {
         return this.Snat;
     }
 
     /**
-     * Set SNAT is enabled for all private network classic CLB created before December 2016.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Snat SNAT is enabled for all private network classic CLB created before December 2016.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether SNAT is enabled. for traditional private network clbs before december 2016, SNAT was enabled.
+     * @param Snat Whether SNAT is enabled. for traditional private network clbs before december 2016, SNAT was enabled.
      */
     public void setSnat(Boolean Snat) {
         this.Snat = Snat;
     }
 
     /**
-     * Get 0: not isolated; 1: isolated.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Isolation 0: not isolated; 1: isolated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether isolated. 0 means not isolated. 1 means isolated. 
+     * @return Isolation Whether isolated. 0 means not isolated. 1 means isolated.
      */
     public Long getIsolation() {
         return this.Isolation;
     }
 
     /**
-     * Set 0: not isolated; 1: isolated.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Isolation 0: not isolated; 1: isolated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether isolated. 0 means not isolated. 1 means isolated.
+     * @param Isolation Whether isolated. 0 means not isolated. 1 means isolated.
      */
     public void setIsolation(Long Isolation) {
         this.Isolation = Isolation;
@@ -752,30 +746,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubnetId Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Subnet of the CLB instance (applicable only to VPC-type CLB instances on private networks) 
+     * @return SubnetId Subnet of the CLB instance (applicable only to VPC-type CLB instances on private networks)
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubnetId Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Subnet of the CLB instance (applicable only to VPC-type CLB instances on private networks)
+     * @param SubnetId Subnet of the CLB instance (applicable only to VPC-type CLB instances on private networks)
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get CLB instance tag information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get CLB instance tag information 
      * @return Tags CLB instance tag information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TagInfo [] getTags() {
         return this.Tags;
@@ -783,125 +771,127 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set CLB instance tag information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tags CLB instance tag information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Security group of a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SecureGroups Security group of a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Security group of the CLB instance 
+     * @return SecureGroups Security group of the CLB instance
      */
     public String [] getSecureGroups() {
         return this.SecureGroups;
     }
 
     /**
-     * Set Security group of a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SecureGroups Security group of a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Security group of the CLB instance
+     * @param SecureGroups Security group of the CLB instance
      */
     public void setSecureGroups(String [] SecureGroups) {
         this.SecureGroups = SecureGroups;
     }
 
     /**
-     * Get Basic information of a backend server bound to a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TargetRegionInfo Basic information of a backend server bound to a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Basic information of real servers bound to the CLB instance 
+     * @return TargetRegionInfo Basic information of real servers bound to the CLB instance
      */
     public TargetRegionInfo getTargetRegionInfo() {
         return this.TargetRegionInfo;
     }
 
     /**
-     * Set Basic information of a backend server bound to a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TargetRegionInfo Basic information of a backend server bound to a CLB instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Basic information of real servers bound to the CLB instance
+     * @param TargetRegionInfo Basic information of real servers bound to the CLB instance
      */
     public void setTargetRegionInfo(TargetRegionInfo TargetRegionInfo) {
         this.TargetRegionInfo = TargetRegionInfo;
     }
 
     /**
-     * Get Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AnycastZone Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Anycast CLB release domain. For non-anycast CLB, this field returns an empty string. 
+     * @return AnycastZone Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
      */
     public String getAnycastZone() {
         return this.AnycastZone;
     }
 
     /**
-     * Set Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AnycastZone Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
+     * @param AnycastZone Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
      */
     public void setAnycastZone(String AnycastZone) {
         this.AnycastZone = AnycastZone;
     }
 
     /**
-     * Get IP version. Valid values: ipv4, ipv6
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AddressIPVersion IP version. Valid values: ipv4, ipv6
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get IP Version, ipv4 | ipv6 
+     * @return AddressIPVersion IP Version, ipv4 | ipv6
      */
     public String getAddressIPVersion() {
         return this.AddressIPVersion;
     }
 
     /**
-     * Set IP version. Valid values: ipv4, ipv6
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AddressIPVersion IP version. Valid values: ipv4, ipv6
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set IP Version, ipv4 | ipv6
+     * @param AddressIPVersion IP Version, ipv4 | ipv6
      */
     public void setAddressIPVersion(String AddressIPVersion) {
         this.AddressIPVersion = AddressIPVersion;
     }
 
     /**
-     * Get VPC ID in a numeric form
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NumericalVpcId VPC ID in a numeric form
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1). 
+     * @return NumericalVpcId Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
      */
     public Long getNumericalVpcId() {
         return this.NumericalVpcId;
     }
 
     /**
-     * Set VPC ID in a numeric form
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NumericalVpcId VPC ID in a numeric form
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+     * @param NumericalVpcId Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
      */
     public void setNumericalVpcId(Long NumericalVpcId) {
         this.NumericalVpcId = NumericalVpcId;
     }
 
     /**
-     * Get ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VipIsp ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the ISP of the load balancer IP address.
+
+-BGP (multi-line).
+- CMCC: CMCC single line network.
+-CTCC: ctcc single-line.
+- CUCC: china unicom single-line.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return VipIsp Specifies the ISP of the load balancer IP address.
+
+-BGP (multi-line).
+- CMCC: CMCC single line network.
+-CTCC: ctcc single-line.
+- CUCC: china unicom single-line.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVipIsp() {
         return this.VipIsp;
     }
 
     /**
-     * Set ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VipIsp ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the ISP of the load balancer IP address.
+
+-BGP (multi-line).
+- CMCC: CMCC single line network.
+-CTCC: ctcc single-line.
+- CUCC: china unicom single-line.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param VipIsp Specifies the ISP of the load balancer IP address.
+
+-BGP (multi-line).
+- CMCC: CMCC single line network.
+-CTCC: ctcc single-line.
+- CUCC: china unicom single-line.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVipIsp(String VipIsp) {
         this.VipIsp = VipIsp;
@@ -948,9 +938,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get CLB instance isolation time
+     * Get Specifies the isolation time of the cloud load balancer instance.
+Format: YYYY-MM-DD HH:MM:ss.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsolatedTime CLB instance isolation time
+     * @return IsolatedTime Specifies the isolation time of the cloud load balancer instance.
+Format: YYYY-MM-DD HH:MM:ss.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIsolatedTime() {
@@ -958,9 +950,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set CLB instance isolation time
+     * Set Specifies the isolation time of the cloud load balancer instance.
+Format: YYYY-MM-DD HH:MM:ss.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsolatedTime CLB instance isolation time
+     * @param IsolatedTime Specifies the isolation time of the cloud load balancer instance.
+Format: YYYY-MM-DD HH:MM:ss.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsolatedTime(String IsolatedTime) {
@@ -1048,40 +1042,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Logset ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LogSetId Logset ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Log set ID of Cloud Log Service (CLS) for CLB 
+     * @return LogSetId Log set ID of Cloud Log Service (CLS) for CLB
      */
     public String getLogSetId() {
         return this.LogSetId;
     }
 
     /**
-     * Set Logset ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LogSetId Logset ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Log set ID of Cloud Log Service (CLS) for CLB
+     * @param LogSetId Log set ID of Cloud Log Service (CLS) for CLB
      */
     public void setLogSetId(String LogSetId) {
         this.LogSetId = LogSetId;
     }
 
     /**
-     * Get Log topic ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LogTopicId Log topic ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Log topic ID of Cloud Log Service (CLS) for CLB 
+     * @return LogTopicId Log topic ID of Cloud Log Service (CLS) for CLB
      */
     public String getLogTopicId() {
         return this.LogTopicId;
     }
 
     /**
-     * Set Log topic ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LogTopicId Log topic ID of CLB Log Service (CLS)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Log topic ID of Cloud Log Service (CLS) for CLB
+     * @param LogTopicId Log topic ID of Cloud Log Service (CLS) for CLB
      */
     public void setLogTopicId(String LogTopicId) {
         this.LogTopicId = LogTopicId;
@@ -1128,10 +1114,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether an Anti-DDoS Pro instance can be bound
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Whether an Anti-DDoS Pro instance can be bound 
      * @return IsDDos Whether an Anti-DDoS Pro instance can be bound
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsDDos() {
         return this.IsDDos;
@@ -1139,155 +1123,139 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Whether an Anti-DDoS Pro instance can be bound
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IsDDos Whether an Anti-DDoS Pro instance can be bound
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsDDos(Boolean IsDDos) {
         this.IsDDos = IsDDos;
     }
 
     /**
-     * Get Custom configuration ID at the CLB instance level
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConfigId Custom configuration ID at the CLB instance level
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Custom configuration IDs of CLB instances 
+     * @return ConfigId Custom configuration IDs of CLB instances
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set Custom configuration ID at the CLB instance level
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConfigId Custom configuration ID at the CLB instance level
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Custom configuration IDs of CLB instances
+     * @param ConfigId Custom configuration IDs of CLB instances
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
     }
 
     /**
-     * Get Whether a real server opens the traffic from a CLB instance to the internet
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return LoadBalancerPassToTarget Whether a real server opens the traffic from a CLB instance to the internet
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Whether the real server allows traffic from CLB 
+     * @return LoadBalancerPassToTarget Whether the real server allows traffic from CLB
      */
     public Boolean getLoadBalancerPassToTarget() {
         return this.LoadBalancerPassToTarget;
     }
 
     /**
-     * Set Whether a real server opens the traffic from a CLB instance to the internet
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param LoadBalancerPassToTarget Whether a real server opens the traffic from a CLB instance to the internet
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Whether the real server allows traffic from CLB
+     * @param LoadBalancerPassToTarget Whether the real server allows traffic from CLB
      */
     public void setLoadBalancerPassToTarget(Boolean LoadBalancerPassToTarget) {
         this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
     }
 
     /**
-     * Get Private network dedicated cluster
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ExclusiveCluster Private network dedicated cluster
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Exclusive cluster on the private network 
+     * @return ExclusiveCluster Exclusive cluster on the private network
      */
     public ExclusiveCluster getExclusiveCluster() {
         return this.ExclusiveCluster;
     }
 
     /**
-     * Set Private network dedicated cluster
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ExclusiveCluster Private network dedicated cluster
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Exclusive cluster on the private network
+     * @param ExclusiveCluster Exclusive cluster on the private network
      */
     public void setExclusiveCluster(ExclusiveCluster ExclusiveCluster) {
         this.ExclusiveCluster = ExclusiveCluster;
     }
 
     /**
-     * Get This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IPv6Mode This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the field is meaningful when the IP address version is ipv6. valid values: ipv6Nat64 | ipv6FullChain.
+IPv6Nat64: specifies a load balancer based on Nat64 IPv6 transition technology.
+IPv6FullChain: specifies a cloud load balancer implemented based on ipv6 single-stack technology.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IPv6Mode Specifies the field is meaningful when the IP address version is ipv6. valid values: ipv6Nat64 | ipv6FullChain.
+IPv6Nat64: specifies a load balancer based on Nat64 IPv6 transition technology.
+IPv6FullChain: specifies a cloud load balancer implemented based on ipv6 single-stack technology.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIPv6Mode() {
         return this.IPv6Mode;
     }
 
     /**
-     * Set This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IPv6Mode This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the field is meaningful when the IP address version is ipv6. valid values: ipv6Nat64 | ipv6FullChain.
+IPv6Nat64: specifies a load balancer based on Nat64 IPv6 transition technology.
+IPv6FullChain: specifies a cloud load balancer implemented based on ipv6 single-stack technology.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IPv6Mode Specifies the field is meaningful when the IP address version is ipv6. valid values: ipv6Nat64 | ipv6FullChain.
+IPv6Nat64: specifies a load balancer based on Nat64 IPv6 transition technology.
+IPv6FullChain: specifies a cloud load balancer implemented based on ipv6 single-stack technology.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIPv6Mode(String IPv6Mode) {
         this.IPv6Mode = IPv6Mode;
     }
 
     /**
-     * Get Whether to enable SnatPro.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SnatPro Whether to enable SnatPro.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether SnatPro is enabled. 
+     * @return SnatPro Specifies whether SnatPro is enabled.
      */
     public Boolean getSnatPro() {
         return this.SnatPro;
     }
 
     /**
-     * Set Whether to enable SnatPro.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SnatPro Whether to enable SnatPro.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether SnatPro is enabled.
+     * @param SnatPro Specifies whether SnatPro is enabled.
      */
     public void setSnatPro(Boolean SnatPro) {
         this.SnatPro = SnatPro;
     }
 
     /**
-     * Get `SnatIp` list after SnatPro load balancing is enabled.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SnatIps `SnatIp` list after SnatPro load balancing is enabled.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Enables the SnatIp list after turning on SnatPro load balancing. 
+     * @return SnatIps Enables the SnatIp list after turning on SnatPro load balancing.
      */
     public SnatIp [] getSnatIps() {
         return this.SnatIps;
     }
 
     /**
-     * Set `SnatIp` list after SnatPro load balancing is enabled.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SnatIps `SnatIp` list after SnatPro load balancing is enabled.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Enables the SnatIp list after turning on SnatPro load balancing.
+     * @param SnatIps Enables the SnatIp list after turning on SnatPro load balancing.
      */
     public void setSnatIps(SnatIp [] SnatIps) {
         this.SnatIps = SnatIps;
     }
 
     /**
-     * Get Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SlaType Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Performance capacity specification. <ul><li> clb.c1.small: minimalist specification </li> <li> clb.c2.medium: standard specification </li> <li> clb.c3.small: advanced type 1 specification </li> <li> clb.c3.medium: advanced type 2 specification </li> <li> clb.c4.small: super type 1 specification </li> <li> clb.c4.medium: super type 2 specification </li> <li> clb.c4.large: super type 3 specification </li> <li> clb.c4.xlarge: super type 4 specification </li> <li>"" : non-performance capacity instance</li></ul>. 
+     * @return SlaType Performance capacity specification. <ul><li> clb.c1.small: minimalist specification </li> <li> clb.c2.medium: standard specification </li> <li> clb.c3.small: advanced type 1 specification </li> <li> clb.c3.medium: advanced type 2 specification </li> <li> clb.c4.small: super type 1 specification </li> <li> clb.c4.medium: super type 2 specification </li> <li> clb.c4.large: super type 3 specification </li> <li> clb.c4.xlarge: super type 4 specification </li> <li>"" : non-performance capacity instance</li></ul>.
      */
     public String getSlaType() {
         return this.SlaType;
     }
 
     /**
-     * Set Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SlaType Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Performance capacity specification. <ul><li> clb.c1.small: minimalist specification </li> <li> clb.c2.medium: standard specification </li> <li> clb.c3.small: advanced type 1 specification </li> <li> clb.c3.medium: advanced type 2 specification </li> <li> clb.c4.small: super type 1 specification </li> <li> clb.c4.medium: super type 2 specification </li> <li> clb.c4.large: super type 3 specification </li> <li> clb.c4.xlarge: super type 4 specification </li> <li>"" : non-performance capacity instance</li></ul>.
+     * @param SlaType Performance capacity specification. <ul><li> clb.c1.small: minimalist specification </li> <li> clb.c2.medium: standard specification </li> <li> clb.c3.small: advanced type 1 specification </li> <li> clb.c3.medium: advanced type 2 specification </li> <li> clb.c4.small: super type 1 specification </li> <li> clb.c4.medium: super type 2 specification </li> <li> clb.c4.large: super type 3 specification </li> <li> clb.c4.xlarge: super type 4 specification </li> <li>"" : non-performance capacity instance</li></ul>.
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;
     }
 
     /**
-     * Get Whether VIP is blocked
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Whether VIP is blocked 
      * @return IsBlock Whether VIP is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsBlock() {
         return this.IsBlock;
@@ -1295,45 +1263,43 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Whether VIP is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param IsBlock Whether VIP is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIsBlock(Boolean IsBlock) {
         this.IsBlock = IsBlock;
     }
 
     /**
-     * Get Time blocked or unblocked
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsBlockTime Time blocked or unblocked
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the blocking or unblocking time.
+Format: YYYY-MM-DD HH:MM:ss. 
+     * @return IsBlockTime Specifies the blocking or unblocking time.
+Format: YYYY-MM-DD HH:MM:ss.
      */
     public String getIsBlockTime() {
         return this.IsBlockTime;
     }
 
     /**
-     * Set Time blocked or unblocked
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsBlockTime Time blocked or unblocked
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the blocking or unblocking time.
+Format: YYYY-MM-DD HH:MM:ss.
+     * @param IsBlockTime Specifies the blocking or unblocking time.
+Format: YYYY-MM-DD HH:MM:ss.
      */
     public void setIsBlockTime(String IsBlockTime) {
         this.IsBlockTime = IsBlockTime;
     }
 
     /**
-     * Get Whether the IP type is the local BGP 
-     * @return LocalBgp Whether the IP type is the local BGP
+     * Get Whether the IP type is Local BGP 
+     * @return LocalBgp Whether the IP type is Local BGP
      */
     public Boolean getLocalBgp() {
         return this.LocalBgp;
     }
 
     /**
-     * Set Whether the IP type is the local BGP
-     * @param LocalBgp Whether the IP type is the local BGP
+     * Set Whether the IP type is Local BGP
+     * @param LocalBgp Whether the IP type is Local BGP
      */
     public void setLocalBgp(Boolean LocalBgp) {
         this.LocalBgp = LocalBgp;
@@ -1360,20 +1326,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with IPv4 and IPv6 CVM instances simultaneously. 
+     * @return MixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with IPv4 and IPv6 CVM instances simultaneously.
      */
     public Boolean getMixIpTarget() {
         return this.MixIpTarget;
     }
 
     /**
-     * Set If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with IPv4 and IPv6 CVM instances simultaneously.
+     * @param MixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with IPv4 and IPv6 CVM instances simultaneously.
      */
     public void setMixIpTarget(Boolean MixIpTarget) {
         this.MixIpTarget = MixIpTarget;
@@ -1420,40 +1382,32 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Health check logset ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return HealthLogSetId Health check logset ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Health check log set ID of Cloud Log Service (CLS) for CLB 
+     * @return HealthLogSetId Health check log set ID of Cloud Log Service (CLS) for CLB
      */
     public String getHealthLogSetId() {
         return this.HealthLogSetId;
     }
 
     /**
-     * Set Health check logset ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param HealthLogSetId Health check logset ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Health check log set ID of Cloud Log Service (CLS) for CLB
+     * @param HealthLogSetId Health check log set ID of Cloud Log Service (CLS) for CLB
      */
     public void setHealthLogSetId(String HealthLogSetId) {
         this.HealthLogSetId = HealthLogSetId;
     }
 
     /**
-     * Get Health check log topic ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return HealthLogTopicId Health check log topic ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Health check log topic ID of Cloud Log Service (CLS) for CLB 
+     * @return HealthLogTopicId Health check log topic ID of Cloud Log Service (CLS) for CLB
      */
     public String getHealthLogTopicId() {
         return this.HealthLogTopicId;
     }
 
     /**
-     * Set Health check log topic ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param HealthLogTopicId Health check log topic ID of CLB CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Health check log topic ID of Cloud Log Service (CLS) for CLB
+     * @param HealthLogTopicId Health check log topic ID of Cloud Log Service (CLS) for CLB
      */
     public void setHealthLogTopicId(String HealthLogTopicId) {
         this.HealthLogTopicId = HealthLogTopicId;
@@ -1480,79 +1434,191 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get CLB attribute
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return AttributeFlags CLB attribute
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Attributes of cloud load balancer, input an array of strings to determine whether it is enabled.
+DeleteProtect: specifies deletion protection. once enabled, it prevents the cloud load balancer from being accidentally deleted. 
+UserInVisible: invisible to users, controls load balancing visibility to users. 
+BlockStatus: specifies the blockage status, used to limit certain operations or traffic for cloud load balancer. 
+NoLBNat: disables the NAT feature of cloud load balancer for direct forwarding of traffic in specific scenarios. 
+BanStatus: specifies the blocking status for suspending the clb service or restricting access. 
+ShiftupFlag: specifies the upgrade flag used to identify if the cloud load balancer requires a configuration upgrade or performance improvement. 
+Specifies the stopped status. once enabled, the cloud load balancer suspends service. 
+NoVpcGw: specifies not to use VPC gateway to bypass the gateway for direct traffic handling. 
+SgInTgw: specifies the security group in TGW (Transit Gateway) involving network security policy configuration. 
+SharedLimitFlag: specifies the shared limit flag used to control the resource constraints of cloud load balancer. 
+WafFlag: specifies the Web application firewall (WAF) flag. enabled to enable WAF protection. 
+IsDomainCLB: indicates whether the cloud load balancer is domain name-based for traffic distribution. 
+IPv6Snat: IPv6 source address translation (Snat), used for source address processing in IPv6 networks. 
+HideDomain. specifies whether to hide the domain name for privacy protection or to avoid exposing it in specific scenarios. 
+JumboFrame: specifies giant frame support. once enabled, it supports larger data frames to improve network efficiency. 
+NoLBNatL4IPdc: specifies layer 4 IP direct connection without NAT, used for direct forwarding of IP traffic in layer 4 load balancing. 
+VpcGwL3Service: specifies the VPC gateway layer-3 Service, which involves the gateway feature of the layer-3 network. 
+Ipv62Flag: specifies the Ipv6 expansion Flag for specific feature support. 
+Ipv62ExclusiveFlag: specifies the Ipv6 exclusive flag used for exclusive Ipv6 traffic processing. 
+BgpPro: specifies BGP Pro support. 
+ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP options. 
+ 
+     * @return AttributeFlags Attributes of cloud load balancer, input an array of strings to determine whether it is enabled.
+DeleteProtect: specifies deletion protection. once enabled, it prevents the cloud load balancer from being accidentally deleted. 
+UserInVisible: invisible to users, controls load balancing visibility to users. 
+BlockStatus: specifies the blockage status, used to limit certain operations or traffic for cloud load balancer. 
+NoLBNat: disables the NAT feature of cloud load balancer for direct forwarding of traffic in specific scenarios. 
+BanStatus: specifies the blocking status for suspending the clb service or restricting access. 
+ShiftupFlag: specifies the upgrade flag used to identify if the cloud load balancer requires a configuration upgrade or performance improvement. 
+Specifies the stopped status. once enabled, the cloud load balancer suspends service. 
+NoVpcGw: specifies not to use VPC gateway to bypass the gateway for direct traffic handling. 
+SgInTgw: specifies the security group in TGW (Transit Gateway) involving network security policy configuration. 
+SharedLimitFlag: specifies the shared limit flag used to control the resource constraints of cloud load balancer. 
+WafFlag: specifies the Web application firewall (WAF) flag. enabled to enable WAF protection. 
+IsDomainCLB: indicates whether the cloud load balancer is domain name-based for traffic distribution. 
+IPv6Snat: IPv6 source address translation (Snat), used for source address processing in IPv6 networks. 
+HideDomain. specifies whether to hide the domain name for privacy protection or to avoid exposing it in specific scenarios. 
+JumboFrame: specifies giant frame support. once enabled, it supports larger data frames to improve network efficiency. 
+NoLBNatL4IPdc: specifies layer 4 IP direct connection without NAT, used for direct forwarding of IP traffic in layer 4 load balancing. 
+VpcGwL3Service: specifies the VPC gateway layer-3 Service, which involves the gateway feature of the layer-3 network. 
+Ipv62Flag: specifies the Ipv6 expansion Flag for specific feature support. 
+Ipv62ExclusiveFlag: specifies the Ipv6 exclusive flag used for exclusive Ipv6 traffic processing. 
+BgpPro: specifies BGP Pro support. 
+ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP options. 
+
      */
     public String [] getAttributeFlags() {
         return this.AttributeFlags;
     }
 
     /**
-     * Set CLB attribute
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param AttributeFlags CLB attribute
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Attributes of cloud load balancer, input an array of strings to determine whether it is enabled.
+DeleteProtect: specifies deletion protection. once enabled, it prevents the cloud load balancer from being accidentally deleted. 
+UserInVisible: invisible to users, controls load balancing visibility to users. 
+BlockStatus: specifies the blockage status, used to limit certain operations or traffic for cloud load balancer. 
+NoLBNat: disables the NAT feature of cloud load balancer for direct forwarding of traffic in specific scenarios. 
+BanStatus: specifies the blocking status for suspending the clb service or restricting access. 
+ShiftupFlag: specifies the upgrade flag used to identify if the cloud load balancer requires a configuration upgrade or performance improvement. 
+Specifies the stopped status. once enabled, the cloud load balancer suspends service. 
+NoVpcGw: specifies not to use VPC gateway to bypass the gateway for direct traffic handling. 
+SgInTgw: specifies the security group in TGW (Transit Gateway) involving network security policy configuration. 
+SharedLimitFlag: specifies the shared limit flag used to control the resource constraints of cloud load balancer. 
+WafFlag: specifies the Web application firewall (WAF) flag. enabled to enable WAF protection. 
+IsDomainCLB: indicates whether the cloud load balancer is domain name-based for traffic distribution. 
+IPv6Snat: IPv6 source address translation (Snat), used for source address processing in IPv6 networks. 
+HideDomain. specifies whether to hide the domain name for privacy protection or to avoid exposing it in specific scenarios. 
+JumboFrame: specifies giant frame support. once enabled, it supports larger data frames to improve network efficiency. 
+NoLBNatL4IPdc: specifies layer 4 IP direct connection without NAT, used for direct forwarding of IP traffic in layer 4 load balancing. 
+VpcGwL3Service: specifies the VPC gateway layer-3 Service, which involves the gateway feature of the layer-3 network. 
+Ipv62Flag: specifies the Ipv6 expansion Flag for specific feature support. 
+Ipv62ExclusiveFlag: specifies the Ipv6 exclusive flag used for exclusive Ipv6 traffic processing. 
+BgpPro: specifies BGP Pro support. 
+ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP options. 
+
+     * @param AttributeFlags Attributes of cloud load balancer, input an array of strings to determine whether it is enabled.
+DeleteProtect: specifies deletion protection. once enabled, it prevents the cloud load balancer from being accidentally deleted. 
+UserInVisible: invisible to users, controls load balancing visibility to users. 
+BlockStatus: specifies the blockage status, used to limit certain operations or traffic for cloud load balancer. 
+NoLBNat: disables the NAT feature of cloud load balancer for direct forwarding of traffic in specific scenarios. 
+BanStatus: specifies the blocking status for suspending the clb service or restricting access. 
+ShiftupFlag: specifies the upgrade flag used to identify if the cloud load balancer requires a configuration upgrade or performance improvement. 
+Specifies the stopped status. once enabled, the cloud load balancer suspends service. 
+NoVpcGw: specifies not to use VPC gateway to bypass the gateway for direct traffic handling. 
+SgInTgw: specifies the security group in TGW (Transit Gateway) involving network security policy configuration. 
+SharedLimitFlag: specifies the shared limit flag used to control the resource constraints of cloud load balancer. 
+WafFlag: specifies the Web application firewall (WAF) flag. enabled to enable WAF protection. 
+IsDomainCLB: indicates whether the cloud load balancer is domain name-based for traffic distribution. 
+IPv6Snat: IPv6 source address translation (Snat), used for source address processing in IPv6 networks. 
+HideDomain. specifies whether to hide the domain name for privacy protection or to avoid exposing it in specific scenarios. 
+JumboFrame: specifies giant frame support. once enabled, it supports larger data frames to improve network efficiency. 
+NoLBNatL4IPdc: specifies layer 4 IP direct connection without NAT, used for direct forwarding of IP traffic in layer 4 load balancing. 
+VpcGwL3Service: specifies the VPC gateway layer-3 Service, which involves the gateway feature of the layer-3 network. 
+Ipv62Flag: specifies the Ipv6 expansion Flag for specific feature support. 
+Ipv62ExclusiveFlag: specifies the Ipv6 exclusive flag used for exclusive Ipv6 traffic processing. 
+BgpPro: specifies BGP Pro support. 
+ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP options. 
+
      */
     public void setAttributeFlags(String [] AttributeFlags) {
         this.AttributeFlags = AttributeFlags;
     }
 
     /**
-     * Get Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LoadBalancerDomain Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the domain name of the load balancing instance. 
+     * @return LoadBalancerDomain Specifies the domain name of the load balancing instance.
      */
     public String getLoadBalancerDomain() {
         return this.LoadBalancerDomain;
     }
 
     /**
-     * Set Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LoadBalancerDomain Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the domain name of the load balancing instance.
+     * @param LoadBalancerDomain Specifies the domain name of the load balancing instance.
      */
     public void setLoadBalancerDomain(String LoadBalancerDomain) {
         this.LoadBalancerDomain = LoadBalancerDomain;
     }
 
     /**
-     * Get Network egress
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Egress Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Specifies the network outbound. 
+     * @return Egress Specifies the network outbound.
      */
     public String getEgress() {
         return this.Egress;
     }
 
     /**
-     * Set Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Egress Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Specifies the network outbound.
+     * @param Egress Specifies the network outbound.
      */
     public void setEgress(String Egress) {
         this.Egress = Egress;
     }
 
     /**
-     * Get  
-     * @return Exclusive 
+     * Get Indicates whether the instance type is dedicated. 1: dedicated instance. 0: non-dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Exclusive Indicates whether the instance type is dedicated. 1: dedicated instance. 0: non-dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getExclusive() {
         return this.Exclusive;
     }
 
     /**
-     * Set 
-     * @param Exclusive 
+     * Set Indicates whether the instance type is dedicated. 1: dedicated instance. 0: non-dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Exclusive Indicates whether the instance type is dedicated. 1: dedicated instance. 0: non-dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExclusive(Long Exclusive) {
         this.Exclusive = Exclusive;
+    }
+
+    /**
+     * Get Specifies the number of bound backend services. 
+     * @return TargetCount Specifies the number of bound backend services.
+     */
+    public Long getTargetCount() {
+        return this.TargetCount;
+    }
+
+    /**
+     * Set Specifies the number of bound backend services.
+     * @param TargetCount Specifies the number of bound backend services.
+     */
+    public void setTargetCount(Long TargetCount) {
+        this.TargetCount = TargetCount;
+    }
+
+    /**
+     * Get Specifies the Endpoint id associated with the clb instance. 
+     * @return AssociateEndpoint Specifies the Endpoint id associated with the clb instance.
+     */
+    public String getAssociateEndpoint() {
+        return this.AssociateEndpoint;
+    }
+
+    /**
+     * Set Specifies the Endpoint id associated with the clb instance.
+     * @param AssociateEndpoint Specifies the Endpoint id associated with the clb instance.
+     */
+    public void setAssociateEndpoint(String AssociateEndpoint) {
+        this.AssociateEndpoint = AssociateEndpoint;
     }
 
     public LoadBalancer() {
@@ -1755,6 +1821,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (source.Exclusive != null) {
             this.Exclusive = new Long(source.Exclusive);
         }
+        if (source.TargetCount != null) {
+            this.TargetCount = new Long(source.TargetCount);
+        }
+        if (source.AssociateEndpoint != null) {
+            this.AssociateEndpoint = new String(source.AssociateEndpoint);
+        }
     }
 
 
@@ -1818,6 +1890,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
         this.setParamSimple(map, prefix + "Egress", this.Egress);
         this.setParamSimple(map, prefix + "Exclusive", this.Exclusive);
+        this.setParamSimple(map, prefix + "TargetCount", this.TargetCount);
+        this.setParamSimple(map, prefix + "AssociateEndpoint", this.AssociateEndpoint);
 
     }
 }

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class RewriteTarget extends AbstractModel {
 
     /**
-    * Listener ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+    * Listener ID of the redirection target. this field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TargetListenerId")
@@ -33,8 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TargetListenerId;
 
     /**
-    * Forwarding rule ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+    * Specifies the forwarding rule ID of redirection target. field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TargetLocationId")
@@ -42,35 +40,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TargetLocationId;
 
     /**
-    * Redirection status code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the redirection status code.
     */
     @SerializedName("RewriteCode")
     @Expose
     private Long RewriteCode;
 
     /**
-    * Whether the matched URL is carried in redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether the matched URL is carried in redirection
     */
     @SerializedName("TakeUrl")
     @Expose
     private Boolean TakeUrl;
 
     /**
-    * Redirection type. Manual: manual redirection; Auto: automatic redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Redirection type. Manual: Manual redirection; Auto: Automatic redirection
     */
     @SerializedName("RewriteType")
     @Expose
     private String RewriteType;
 
     /**
-     * Get Listener ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+     * Get Listener ID of the redirection target. this field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TargetListenerId Listener ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+     * @return TargetListenerId Listener ID of the redirection target. this field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTargetListenerId() {
@@ -78,11 +71,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Listener ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+     * Set Listener ID of the redirection target. this field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TargetListenerId Listener ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+     * @param TargetListenerId Listener ID of the redirection target. this field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTargetListenerId(String TargetListenerId) {
@@ -90,11 +81,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Forwarding rule ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+     * Get Specifies the forwarding rule ID of redirection target. field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TargetLocationId Forwarding rule ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+     * @return TargetLocationId Specifies the forwarding rule ID of redirection target. field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTargetLocationId() {
@@ -102,11 +91,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Forwarding rule ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+     * Set Specifies the forwarding rule ID of redirection target. field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TargetLocationId Forwarding rule ID of a redirect target
-Note: This field may return null, indicating that there is no redirection.
+     * @param TargetLocationId Specifies the forwarding rule ID of redirection target. field is valid only when redirection is configured.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTargetLocationId(String TargetLocationId) {
@@ -114,60 +101,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Redirection status code
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return RewriteCode Redirection status code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the redirection status code. 
+     * @return RewriteCode Specifies the redirection status code.
      */
     public Long getRewriteCode() {
         return this.RewriteCode;
     }
 
     /**
-     * Set Redirection status code
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param RewriteCode Redirection status code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the redirection status code.
+     * @param RewriteCode Specifies the redirection status code.
      */
     public void setRewriteCode(Long RewriteCode) {
         this.RewriteCode = RewriteCode;
     }
 
     /**
-     * Get Whether the matched URL is carried in redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return TakeUrl Whether the matched URL is carried in redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether the matched URL is carried in redirection 
+     * @return TakeUrl Whether the matched URL is carried in redirection
      */
     public Boolean getTakeUrl() {
         return this.TakeUrl;
     }
 
     /**
-     * Set Whether the matched URL is carried in redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param TakeUrl Whether the matched URL is carried in redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether the matched URL is carried in redirection
+     * @param TakeUrl Whether the matched URL is carried in redirection
      */
     public void setTakeUrl(Boolean TakeUrl) {
         this.TakeUrl = TakeUrl;
     }
 
     /**
-     * Get Redirection type. Manual: manual redirection; Auto: automatic redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return RewriteType Redirection type. Manual: manual redirection; Auto: automatic redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Redirection type. Manual: Manual redirection; Auto: Automatic redirection 
+     * @return RewriteType Redirection type. Manual: Manual redirection; Auto: Automatic redirection
      */
     public String getRewriteType() {
         return this.RewriteType;
     }
 
     /**
-     * Set Redirection type. Manual: manual redirection; Auto: automatic redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param RewriteType Redirection type. Manual: manual redirection; Auto: automatic redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Redirection type. Manual: Manual redirection; Auto: Automatic redirection
+     * @param RewriteType Redirection type. Manual: Manual redirection; Auto: Automatic redirection
      */
     public void setRewriteType(String RewriteType) {
         this.RewriteType = RewriteType;

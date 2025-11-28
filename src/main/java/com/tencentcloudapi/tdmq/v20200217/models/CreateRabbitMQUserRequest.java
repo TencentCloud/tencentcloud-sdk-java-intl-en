@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRabbitMQUserRequest extends AbstractModel {
 
     /**
-    * Cluster instance ID
+    * Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,7 +38,7 @@ public class CreateRabbitMQUserRequest extends AbstractModel {
     private String User;
 
     /**
-    * Password, which is used for login.
+    * Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
     */
     @SerializedName("Password")
     @Expose
@@ -52,7 +52,7 @@ public class CreateRabbitMQUserRequest extends AbstractModel {
     private String Description;
 
     /**
-    * User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
+    * User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
 Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
     */
     @SerializedName("Tags")
@@ -74,16 +74,16 @@ Valid values: `management` (Common console user), monitoring` (Console admin use
     private Long MaxChannels;
 
     /**
-     * Get Cluster instance ID 
-     * @return InstanceId Cluster instance ID
+     * Get Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1). 
+     * @return InstanceId Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster instance ID
-     * @param InstanceId Cluster instance ID
+     * Set Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+     * @param InstanceId Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -106,16 +106,16 @@ Valid values: `management` (Common console user), monitoring` (Console admin use
     }
 
     /**
-     * Get Password, which is used for login. 
-     * @return Password Password, which is used for login.
+     * Get Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/]. 
+     * @return Password Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Password, which is used for login.
-     * @param Password Password, which is used for login.
+     * Set Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
+     * @param Password Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
      */
     public void setPassword(String Password) {
         this.Password = Password;
@@ -138,9 +138,9 @@ Valid values: `management` (Common console user), monitoring` (Console admin use
     }
 
     /**
-     * Get User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
+     * Get User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
 Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user. 
-     * @return Tags User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
+     * @return Tags User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
 Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
      */
     public String [] getTags() {
@@ -148,9 +148,9 @@ Valid values: `management` (Common console user), monitoring` (Console admin use
     }
 
     /**
-     * Set User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
+     * Set User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
 Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
-     * @param Tags User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
+     * @param Tags User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
 Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
      */
     public void setTags(String [] Tags) {

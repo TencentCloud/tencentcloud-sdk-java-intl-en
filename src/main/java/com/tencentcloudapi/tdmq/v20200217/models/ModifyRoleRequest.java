@@ -31,6 +31,13 @@ public class ModifyRoleRequest extends AbstractModel {
     private String RoleName;
 
     /**
+    * Cluster ID (required)
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
     * Remarks (up to 128 characters).
     */
     @SerializedName("Remark")
@@ -38,11 +45,18 @@ public class ModifyRoleRequest extends AbstractModel {
     private String Remark;
 
     /**
-    * Cluster ID (required)
+    * Batch binds namespace information.
     */
-    @SerializedName("ClusterId")
+    @SerializedName("EnvironmentRoleSets")
     @Expose
-    private String ClusterId;
+    private EnvironmentRoleSet [] EnvironmentRoleSets;
+
+    /**
+    * Unbinds all namespaces. set to true.
+    */
+    @SerializedName("UnbindAllEnvironment")
+    @Expose
+    private Boolean UnbindAllEnvironment;
 
     /**
      * Get Role name, which can contain up to 32 letters, digits, hyphens, and underscores. 
@@ -58,6 +72,22 @@ public class ModifyRoleRequest extends AbstractModel {
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
+    }
+
+    /**
+     * Get Cluster ID (required) 
+     * @return ClusterId Cluster ID (required)
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Cluster ID (required)
+     * @param ClusterId Cluster ID (required)
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
@@ -77,19 +107,35 @@ public class ModifyRoleRequest extends AbstractModel {
     }
 
     /**
-     * Get Cluster ID (required) 
-     * @return ClusterId Cluster ID (required)
+     * Get Batch binds namespace information. 
+     * @return EnvironmentRoleSets Batch binds namespace information.
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public EnvironmentRoleSet [] getEnvironmentRoleSets() {
+        return this.EnvironmentRoleSets;
     }
 
     /**
-     * Set Cluster ID (required)
-     * @param ClusterId Cluster ID (required)
+     * Set Batch binds namespace information.
+     * @param EnvironmentRoleSets Batch binds namespace information.
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setEnvironmentRoleSets(EnvironmentRoleSet [] EnvironmentRoleSets) {
+        this.EnvironmentRoleSets = EnvironmentRoleSets;
+    }
+
+    /**
+     * Get Unbinds all namespaces. set to true. 
+     * @return UnbindAllEnvironment Unbinds all namespaces. set to true.
+     */
+    public Boolean getUnbindAllEnvironment() {
+        return this.UnbindAllEnvironment;
+    }
+
+    /**
+     * Set Unbinds all namespaces. set to true.
+     * @param UnbindAllEnvironment Unbinds all namespaces. set to true.
+     */
+    public void setUnbindAllEnvironment(Boolean UnbindAllEnvironment) {
+        this.UnbindAllEnvironment = UnbindAllEnvironment;
     }
 
     public ModifyRoleRequest() {
@@ -103,11 +149,20 @@ public class ModifyRoleRequest extends AbstractModel {
         if (source.RoleName != null) {
             this.RoleName = new String(source.RoleName);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+        if (source.EnvironmentRoleSets != null) {
+            this.EnvironmentRoleSets = new EnvironmentRoleSet[source.EnvironmentRoleSets.length];
+            for (int i = 0; i < source.EnvironmentRoleSets.length; i++) {
+                this.EnvironmentRoleSets[i] = new EnvironmentRoleSet(source.EnvironmentRoleSets[i]);
+            }
+        }
+        if (source.UnbindAllEnvironment != null) {
+            this.UnbindAllEnvironment = new Boolean(source.UnbindAllEnvironment);
         }
     }
 
@@ -117,8 +172,10 @@ public class ModifyRoleRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamArrayObj(map, prefix + "EnvironmentRoleSets.", this.EnvironmentRoleSets);
+        this.setParamSimple(map, prefix + "UnbindAllEnvironment", this.UnbindAllEnvironment);
 
     }
 }

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DisassociateTargetGroupsRequest extends AbstractModel {
 
     /**
-    * Array of rules to be unbound
+    * Specifies the relationship array of rules to be unbound, supports batch operations for multiple listeners with a maximum of 20 per bulk removal.
     */
     @SerializedName("Associations")
     @Expose
     private TargetGroupAssociation [] Associations;
 
     /**
-     * Get Array of rules to be unbound 
-     * @return Associations Array of rules to be unbound
+     * Get Specifies the relationship array of rules to be unbound, supports batch operations for multiple listeners with a maximum of 20 per bulk removal. 
+     * @return Associations Specifies the relationship array of rules to be unbound, supports batch operations for multiple listeners with a maximum of 20 per bulk removal.
      */
     public TargetGroupAssociation [] getAssociations() {
         return this.Associations;
     }
 
     /**
-     * Set Array of rules to be unbound
-     * @param Associations Array of rules to be unbound
+     * Set Specifies the relationship array of rules to be unbound, supports batch operations for multiple listeners with a maximum of 20 per bulk removal.
+     * @param Associations Specifies the relationship array of rules to be unbound, supports batch operations for multiple listeners with a maximum of 20 per bulk removal.
      */
     public void setAssociations(TargetGroupAssociation [] Associations) {
         this.Associations = Associations;

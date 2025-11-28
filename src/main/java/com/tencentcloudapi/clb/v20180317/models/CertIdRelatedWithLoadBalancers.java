@@ -31,8 +31,7 @@ public class CertIdRelatedWithLoadBalancers extends AbstractModel {
     private String CertId;
 
     /**
-    * List of CLB instances associated with certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+    * List of CLB instances associated with the certificate
     */
     @SerializedName("LoadBalancers")
     @Expose
@@ -55,20 +54,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of CLB instances associated with certificate
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return LoadBalancers List of CLB instances associated with certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get List of CLB instances associated with the certificate 
+     * @return LoadBalancers List of CLB instances associated with the certificate
      */
     public LoadBalancer [] getLoadBalancers() {
         return this.LoadBalancers;
     }
 
     /**
-     * Set List of CLB instances associated with certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param LoadBalancers List of CLB instances associated with certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set List of CLB instances associated with the certificate
+     * @param LoadBalancers List of CLB instances associated with the certificate
      */
     public void setLoadBalancers(LoadBalancer [] LoadBalancers) {
         this.LoadBalancers = LoadBalancers;

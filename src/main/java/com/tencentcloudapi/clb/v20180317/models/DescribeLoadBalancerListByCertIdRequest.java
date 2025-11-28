@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class DescribeLoadBalancerListByCertIdRequest extends AbstractModel {
 
     /**
-    * Server or client certificate ID
+    * Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+Specifies the maximum length of the array is 20.
     */
     @SerializedName("CertIds")
     @Expose
     private String [] CertIds;
 
     /**
-     * Get Server or client certificate ID 
-     * @return CertIds Server or client certificate ID
+     * Get Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+Specifies the maximum length of the array is 20. 
+     * @return CertIds Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+Specifies the maximum length of the array is 20.
      */
     public String [] getCertIds() {
         return this.CertIds;
     }
 
     /**
-     * Set Server or client certificate ID
-     * @param CertIds Server or client certificate ID
+     * Set Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+Specifies the maximum length of the array is 20.
+     * @param CertIds Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+Specifies the maximum length of the array is 20.
      */
     public void setCertIds(String [] CertIds) {
         this.CertIds = CertIds;

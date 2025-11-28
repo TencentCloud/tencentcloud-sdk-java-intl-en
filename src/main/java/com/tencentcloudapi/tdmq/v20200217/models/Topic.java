@@ -209,6 +209,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long PulsarTopicType;
 
     /**
+    * Retention period for unconsumed messages in seconds.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MsgTTL")
+    @Expose
+    private Long MsgTTL;
+
+    /**
+    * Cluster ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * Tenant alias customized by users. if there is no, reuse the professional cluster ID.
+
+    */
+    @SerializedName("Tenant")
+    @Expose
+    private String Tenant;
+
+    /**
+    * Whether exception consumer isolation is enabled.
+    */
+    @SerializedName("IsolateConsumerEnable")
+    @Expose
+    private Boolean IsolateConsumerEnable;
+
+    /**
+    * Specifies the consumer Ack timeout period in seconds.
+    */
+    @SerializedName("AckTimeOut")
+    @Expose
+    private Long AckTimeOut;
+
+    /**
      * Get Average size of the messages published in the last interval in bytes.
 Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return AverageMsgSize Average size of the messages published in the last interval in bytes.
@@ -684,6 +722,98 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.PulsarTopicType = PulsarTopicType;
     }
 
+    /**
+     * Get Retention period for unconsumed messages in seconds.
+
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MsgTTL Retention period for unconsumed messages in seconds.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMsgTTL() {
+        return this.MsgTTL;
+    }
+
+    /**
+     * Set Retention period for unconsumed messages in seconds.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MsgTTL Retention period for unconsumed messages in seconds.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMsgTTL(Long MsgTTL) {
+        this.MsgTTL = MsgTTL;
+    }
+
+    /**
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get Tenant alias customized by users. if there is no, reuse the professional cluster ID.
+ 
+     * @return Tenant Tenant alias customized by users. if there is no, reuse the professional cluster ID.
+
+     */
+    public String getTenant() {
+        return this.Tenant;
+    }
+
+    /**
+     * Set Tenant alias customized by users. if there is no, reuse the professional cluster ID.
+
+     * @param Tenant Tenant alias customized by users. if there is no, reuse the professional cluster ID.
+
+     */
+    public void setTenant(String Tenant) {
+        this.Tenant = Tenant;
+    }
+
+    /**
+     * Get Whether exception consumer isolation is enabled. 
+     * @return IsolateConsumerEnable Whether exception consumer isolation is enabled.
+     */
+    public Boolean getIsolateConsumerEnable() {
+        return this.IsolateConsumerEnable;
+    }
+
+    /**
+     * Set Whether exception consumer isolation is enabled.
+     * @param IsolateConsumerEnable Whether exception consumer isolation is enabled.
+     */
+    public void setIsolateConsumerEnable(Boolean IsolateConsumerEnable) {
+        this.IsolateConsumerEnable = IsolateConsumerEnable;
+    }
+
+    /**
+     * Get Specifies the consumer Ack timeout period in seconds. 
+     * @return AckTimeOut Specifies the consumer Ack timeout period in seconds.
+     */
+    public Long getAckTimeOut() {
+        return this.AckTimeOut;
+    }
+
+    /**
+     * Set Specifies the consumer Ack timeout period in seconds.
+     * @param AckTimeOut Specifies the consumer Ack timeout period in seconds.
+     */
+    public void setAckTimeOut(Long AckTimeOut) {
+        this.AckTimeOut = AckTimeOut;
+    }
+
     public Topic() {
     }
 
@@ -761,6 +891,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.PulsarTopicType != null) {
             this.PulsarTopicType = new Long(source.PulsarTopicType);
         }
+        if (source.MsgTTL != null) {
+            this.MsgTTL = new Long(source.MsgTTL);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Tenant != null) {
+            this.Tenant = new String(source.Tenant);
+        }
+        if (source.IsolateConsumerEnable != null) {
+            this.IsolateConsumerEnable = new Boolean(source.IsolateConsumerEnable);
+        }
+        if (source.AckTimeOut != null) {
+            this.AckTimeOut = new Long(source.AckTimeOut);
+        }
     }
 
 
@@ -790,6 +935,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ProducerLimit", this.ProducerLimit);
         this.setParamSimple(map, prefix + "ConsumerLimit", this.ConsumerLimit);
         this.setParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
+        this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Tenant", this.Tenant);
+        this.setParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
+        this.setParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
 
     }
 }

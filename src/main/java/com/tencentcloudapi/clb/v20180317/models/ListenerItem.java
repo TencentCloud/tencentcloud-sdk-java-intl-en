@@ -61,8 +61,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private LbRsTargets [] Targets;
 
     /**
-    * End port of the listener.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * End port of a port range for a listener
     */
     @SerializedName("EndPort")
     @Expose
@@ -157,20 +156,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get End port of the listener.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return EndPort End port of the listener.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get End port of a port range for a listener 
+     * @return EndPort End port of a port range for a listener
      */
     public Long getEndPort() {
         return this.EndPort;
     }
 
     /**
-     * Set End port of the listener.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param EndPort End port of the listener.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set End port of a port range for a listener
+     * @param EndPort End port of a port range for a listener
      */
     public void setEndPort(Long EndPort) {
         this.EndPort = EndPort;

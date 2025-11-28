@@ -31,7 +31,7 @@ public class ModifyTargetGroupInstancesWeightRequest extends AbstractModel {
     private String TargetGroupId;
 
     /**
-    * Array of servers for which to modify weights
+    * Array of servers whose weight is to be modified. Port is a required item in this api.
     */
     @SerializedName("TargetGroupInstances")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyTargetGroupInstancesWeightRequest extends AbstractModel {
     }
 
     /**
-     * Get Array of servers for which to modify weights 
-     * @return TargetGroupInstances Array of servers for which to modify weights
+     * Get Array of servers whose weight is to be modified. Port is a required item in this api. 
+     * @return TargetGroupInstances Array of servers whose weight is to be modified. Port is a required item in this api.
      */
     public TargetGroupInstance [] getTargetGroupInstances() {
         return this.TargetGroupInstances;
     }
 
     /**
-     * Set Array of servers for which to modify weights
-     * @param TargetGroupInstances Array of servers for which to modify weights
+     * Set Array of servers whose weight is to be modified. Port is a required item in this api.
+     * @param TargetGroupInstances Array of servers whose weight is to be modified. Port is a required item in this api.
      */
     public void setTargetGroupInstances(TargetGroupInstance [] TargetGroupInstances) {
         this.TargetGroupInstances = TargetGroupInstances;

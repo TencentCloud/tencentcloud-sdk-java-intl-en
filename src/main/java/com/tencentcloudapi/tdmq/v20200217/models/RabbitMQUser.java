@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RabbitMQUser extends AbstractModel {
 
     /**
-    * Cluster instance ID
+    * Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
     */
     @SerializedName("InstanceId")
     @Expose
@@ -46,15 +46,13 @@ public class RabbitMQUser extends AbstractModel {
 
     /**
     * User description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    * User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
     */
     @SerializedName("Tags")
     @Expose
@@ -82,16 +80,46 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     private String Type;
 
     /**
-     * Get Cluster instance ID 
-     * @return InstanceId Cluster instance ID
+    * Maximum number of available connections per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxConnections")
+    @Expose
+    private Long MaxConnections;
+
+    /**
+    * Maximum number of available channels per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxChannels")
+    @Expose
+    private Long MaxChannels;
+
+    /**
+    * Creation timestamp.
+    */
+    @SerializedName("CreateTs")
+    @Expose
+    private Long CreateTs;
+
+    /**
+    * Modification timestamp.
+    */
+    @SerializedName("ModifyTs")
+    @Expose
+    private Long ModifyTs;
+
+    /**
+     * Get Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1). 
+     * @return InstanceId Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster instance ID
-     * @param InstanceId Cluster instance ID
+     * Set Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+     * @param InstanceId Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -130,10 +158,8 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     }
 
     /**
-     * Get User description
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+     * Get User description 
      * @return Description User description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public String getDescription() {
         return this.Description;
@@ -141,29 +167,23 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set User description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param Description User description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return Tags User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Get User tags, which determine the scope of permissions of this user to access RabbitMQ Management. 
+     * @return Tags User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param Tags User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Set User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
+     * @param Tags User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
@@ -217,6 +237,78 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         this.Type = Type;
     }
 
+    /**
+     * Get Maximum number of available connections per user.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MaxConnections Maximum number of available connections per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMaxConnections() {
+        return this.MaxConnections;
+    }
+
+    /**
+     * Set Maximum number of available connections per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MaxConnections Maximum number of available connections per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMaxConnections(Long MaxConnections) {
+        this.MaxConnections = MaxConnections;
+    }
+
+    /**
+     * Get Maximum number of available channels per user.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MaxChannels Maximum number of available channels per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMaxChannels() {
+        return this.MaxChannels;
+    }
+
+    /**
+     * Set Maximum number of available channels per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MaxChannels Maximum number of available channels per user.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMaxChannels(Long MaxChannels) {
+        this.MaxChannels = MaxChannels;
+    }
+
+    /**
+     * Get Creation timestamp. 
+     * @return CreateTs Creation timestamp.
+     */
+    public Long getCreateTs() {
+        return this.CreateTs;
+    }
+
+    /**
+     * Set Creation timestamp.
+     * @param CreateTs Creation timestamp.
+     */
+    public void setCreateTs(Long CreateTs) {
+        this.CreateTs = CreateTs;
+    }
+
+    /**
+     * Get Modification timestamp. 
+     * @return ModifyTs Modification timestamp.
+     */
+    public Long getModifyTs() {
+        return this.ModifyTs;
+    }
+
+    /**
+     * Set Modification timestamp.
+     * @param ModifyTs Modification timestamp.
+     */
+    public void setModifyTs(Long ModifyTs) {
+        this.ModifyTs = ModifyTs;
+    }
+
     public RabbitMQUser() {
     }
 
@@ -252,6 +344,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.MaxConnections != null) {
+            this.MaxConnections = new Long(source.MaxConnections);
+        }
+        if (source.MaxChannels != null) {
+            this.MaxChannels = new Long(source.MaxChannels);
+        }
+        if (source.CreateTs != null) {
+            this.CreateTs = new Long(source.CreateTs);
+        }
+        if (source.ModifyTs != null) {
+            this.ModifyTs = new Long(source.ModifyTs);
+        }
     }
 
 
@@ -267,6 +371,10 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "MaxConnections", this.MaxConnections);
+        this.setParamSimple(map, prefix + "MaxChannels", this.MaxChannels);
+        this.setParamSimple(map, prefix + "CreateTs", this.CreateTs);
+        this.setParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
 
     }
 }

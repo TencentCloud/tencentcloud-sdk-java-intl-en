@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyDomainRequest extends AbstractModel {
 
     /**
-    * CLB instance ID.
+    * ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * CLB listener ID.
+    * ID of the clb listener. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * Legacy domain name under a listener.
+    * An existing domain under the listener, can be queried through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
     */
     @SerializedName("Domain")
     @Expose
@@ -52,48 +52,48 @@ public class ModifyDomainRequest extends AbstractModel {
     private String NewDomain;
 
     /**
-     * Get CLB instance ID. 
-     * @return LoadBalancerId CLB instance ID.
+     * Get ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID. 
+     * @return LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set CLB instance ID.
-     * @param LoadBalancerId CLB instance ID.
+     * Set ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
+     * @param LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get CLB listener ID. 
-     * @return ListenerId CLB listener ID.
+     * Get ID of the clb listener. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID. 
+     * @return ListenerId ID of the clb listener. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set CLB listener ID.
-     * @param ListenerId CLB listener ID.
+     * Set ID of the clb listener. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
+     * @param ListenerId ID of the clb listener. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get Legacy domain name under a listener. 
-     * @return Domain Legacy domain name under a listener.
+     * Get An existing domain under the listener, can be queried through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api. 
+     * @return Domain An existing domain under the listener, can be queried through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Legacy domain name under a listener.
-     * @param Domain Legacy domain name under a listener.
+     * Set An existing domain under the listener, can be queried through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+     * @param Domain An existing domain under the listener, can be queried through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

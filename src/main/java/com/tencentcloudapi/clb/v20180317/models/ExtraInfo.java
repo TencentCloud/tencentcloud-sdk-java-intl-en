@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ExtraInfo extends AbstractModel {
 
     /**
-    * Whether to enable VIP direct connection
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to enable VIP Direct Connect
     */
     @SerializedName("ZhiTong")
     @Expose
@@ -33,37 +32,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * TgwGroup name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TgwGroupName")
     @Expose
     private String TgwGroupName;
 
     /**
-     * Get Whether to enable VIP direct connection
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ZhiTong Whether to enable VIP direct connection
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to enable VIP Direct Connect 
+     * @return ZhiTong Whether to enable VIP Direct Connect
      */
     public Boolean getZhiTong() {
         return this.ZhiTong;
     }
 
     /**
-     * Set Whether to enable VIP direct connection
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ZhiTong Whether to enable VIP direct connection
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to enable VIP Direct Connect
+     * @param ZhiTong Whether to enable VIP Direct Connect
      */
     public void setZhiTong(Boolean ZhiTong) {
         this.ZhiTong = ZhiTong;
     }
 
     /**
-     * Get TgwGroup name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get TgwGroup name 
      * @return TgwGroupName TgwGroup name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTgwGroupName() {
         return this.TgwGroupName;
@@ -71,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set TgwGroup name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TgwGroupName TgwGroup name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTgwGroupName(String TgwGroupName) {
         this.TgwGroupName = TgwGroupName;

@@ -140,6 +140,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MaxBandWidth;
 
     /**
+    * Tag list of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * Cluster Creation Time
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * Specifies the different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BillingLabelVersion")
+    @Expose
+    private String BillingLabelVersion;
+
+    /**
+    * Custom tenant.
+    */
+    @SerializedName("Tenant")
+    @Expose
+    private String Tenant;
+
+    /**
+    * Certificate list of the cluster.
+    */
+    @SerializedName("CertificateList")
+    @Expose
+    private CertificateInfo [] CertificateList;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -411,6 +449,98 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.MaxBandWidth = MaxBandWidth;
     }
 
+    /**
+     * Get Tag list of the cluster
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tags Tag list of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag list of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tags Tag list of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get Cluster Creation Time
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CreateTime Cluster Creation Time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Cluster Creation Time
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CreateTime Cluster Creation Time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get Specifies the different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BillingLabelVersion Specifies the different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getBillingLabelVersion() {
+        return this.BillingLabelVersion;
+    }
+
+    /**
+     * Set Specifies the different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BillingLabelVersion Specifies the different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBillingLabelVersion(String BillingLabelVersion) {
+        this.BillingLabelVersion = BillingLabelVersion;
+    }
+
+    /**
+     * Get Custom tenant. 
+     * @return Tenant Custom tenant.
+     */
+    public String getTenant() {
+        return this.Tenant;
+    }
+
+    /**
+     * Set Custom tenant.
+     * @param Tenant Custom tenant.
+     */
+    public void setTenant(String Tenant) {
+        this.Tenant = Tenant;
+    }
+
+    /**
+     * Get Certificate list of the cluster. 
+     * @return CertificateList Certificate list of the cluster.
+     */
+    public CertificateInfo [] getCertificateList() {
+        return this.CertificateList;
+    }
+
+    /**
+     * Set Certificate list of the cluster.
+     * @param CertificateList Certificate list of the cluster.
+     */
+    public void setCertificateList(CertificateInfo [] CertificateList) {
+        this.CertificateList = CertificateList;
+    }
+
     public PulsarProInstance() {
     }
 
@@ -467,6 +597,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.MaxBandWidth != null) {
             this.MaxBandWidth = new Long(source.MaxBandWidth);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.BillingLabelVersion != null) {
+            this.BillingLabelVersion = new String(source.BillingLabelVersion);
+        }
+        if (source.Tenant != null) {
+            this.Tenant = new String(source.Tenant);
+        }
+        if (source.CertificateList != null) {
+            this.CertificateList = new CertificateInfo[source.CertificateList.length];
+            for (int i = 0; i < source.CertificateList.length; i++) {
+                this.CertificateList[i] = new CertificateInfo(source.CertificateList[i]);
+            }
+        }
     }
 
 
@@ -490,6 +641,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "MaxBandWidth", this.MaxBandWidth);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "BillingLabelVersion", this.BillingLabelVersion);
+        this.setParamSimple(map, prefix + "Tenant", this.Tenant);
+        this.setParamArrayObj(map, prefix + "CertificateList.", this.CertificateList);
 
     }
 }

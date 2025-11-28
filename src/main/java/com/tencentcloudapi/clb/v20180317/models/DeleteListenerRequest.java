@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteListenerRequest extends AbstractModel {
 
     /**
-    * CLB instance ID
+    * ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * ID of the listener to be deleted
+    * The listener ID to be deleted, can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-     * Get CLB instance ID 
-     * @return LoadBalancerId CLB instance ID
+     * Get ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID. 
+     * @return LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set CLB instance ID
-     * @param LoadBalancerId CLB instance ID
+     * Set ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
+     * @param LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get ID of the listener to be deleted 
-     * @return ListenerId ID of the listener to be deleted
+     * Get The listener ID to be deleted, can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api. 
+     * @return ListenerId The listener ID to be deleted, can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set ID of the listener to be deleted
-     * @param ListenerId ID of the listener to be deleted
+     * Set The listener ID to be deleted, can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+     * @param ListenerId The listener ID to be deleted, can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;

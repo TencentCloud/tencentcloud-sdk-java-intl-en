@@ -24,115 +24,150 @@ import java.util.HashMap;
 public class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel {
 
     /**
-    * Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
+    * Operation type.
+-ADD. specifies the creation.
+- DELETE: DELETE.
+-UPDATE: modify.
+-BIND: specifies the binding status.
+-UNBIND: unbind.
     */
     @SerializedName("OperationType")
     @Expose
     private String OperationType;
 
     /**
-    * This field is required except for creating custom configurations, such as "pz-1234abcd".
+    * Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
     */
     @SerializedName("UconfigId")
     @Expose
     private String UconfigId;
 
     /**
-    * This field is required when creating or modifying custom configurations.
+    * Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
     */
     @SerializedName("ConfigContent")
     @Expose
     private String ConfigContent;
 
     /**
-    * This field is required when creating or renaming custom configurations.
+    * Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
     */
     @SerializedName("ConfigName")
     @Expose
     private String ConfigName;
 
     /**
-    * This field is required when binding/unbinding resources.
+    * CLB instance ID. this field is required for bind/unbind operations.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
     */
     @SerializedName("LoadBalancerIds")
     @Expose
     private String [] LoadBalancerIds;
 
     /**
-     * Get Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND` 
-     * @return OperationType Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
+     * Get Operation type.
+-ADD. specifies the creation.
+- DELETE: DELETE.
+-UPDATE: modify.
+-BIND: specifies the binding status.
+-UNBIND: unbind. 
+     * @return OperationType Operation type.
+-ADD. specifies the creation.
+- DELETE: DELETE.
+-UPDATE: modify.
+-BIND: specifies the binding status.
+-UNBIND: unbind.
      */
     public String getOperationType() {
         return this.OperationType;
     }
 
     /**
-     * Set Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
-     * @param OperationType Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
+     * Set Operation type.
+-ADD. specifies the creation.
+- DELETE: DELETE.
+-UPDATE: modify.
+-BIND: specifies the binding status.
+-UNBIND: unbind.
+     * @param OperationType Operation type.
+-ADD. specifies the creation.
+- DELETE: DELETE.
+-UPDATE: modify.
+-BIND: specifies the binding status.
+-UNBIND: unbind.
      */
     public void setOperationType(String OperationType) {
         this.OperationType = OperationType;
     }
 
     /**
-     * Get This field is required except for creating custom configurations, such as "pz-1234abcd". 
-     * @return UconfigId This field is required except for creating custom configurations, such as "pz-1234abcd".
+     * Get Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd. 
+     * @return UconfigId Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
      */
     public String getUconfigId() {
         return this.UconfigId;
     }
 
     /**
-     * Set This field is required except for creating custom configurations, such as "pz-1234abcd".
-     * @param UconfigId This field is required except for creating custom configurations, such as "pz-1234abcd".
+     * Set Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
+     * @param UconfigId Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
      */
     public void setUconfigId(String UconfigId) {
         this.UconfigId = UconfigId;
     }
 
     /**
-     * Get This field is required when creating or modifying custom configurations. 
-     * @return ConfigContent This field is required when creating or modifying custom configurations.
+     * Get Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1). 
+     * @return ConfigContent Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
      */
     public String getConfigContent() {
         return this.ConfigContent;
     }
 
     /**
-     * Set This field is required when creating or modifying custom configurations.
-     * @param ConfigContent This field is required when creating or modifying custom configurations.
+     * Set Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+     * @param ConfigContent Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
      */
     public void setConfigContent(String ConfigContent) {
         this.ConfigContent = ConfigContent;
     }
 
     /**
-     * Get This field is required when creating or renaming custom configurations. 
-     * @return ConfigName This field is required when creating or renaming custom configurations.
+     * Get Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required. 
+     * @return ConfigName Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
      */
     public String getConfigName() {
         return this.ConfigName;
     }
 
     /**
-     * Set This field is required when creating or renaming custom configurations.
-     * @param ConfigName This field is required when creating or renaming custom configurations.
+     * Set Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
+     * @param ConfigName Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
      */
     public void setConfigName(String ConfigName) {
         this.ConfigName = ConfigName;
     }
 
     /**
-     * Get This field is required when binding/unbinding resources. 
-     * @return LoadBalancerIds This field is required when binding/unbinding resources.
+     * Get CLB instance ID. this field is required for bind/unbind operations.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api. 
+     * @return LoadBalancerIds CLB instance ID. this field is required for bind/unbind operations.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set This field is required when binding/unbinding resources.
-     * @param LoadBalancerIds This field is required when binding/unbinding resources.
+     * Set CLB instance ID. this field is required for bind/unbind operations.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+     * @param LoadBalancerIds CLB instance ID. this field is required for bind/unbind operations.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

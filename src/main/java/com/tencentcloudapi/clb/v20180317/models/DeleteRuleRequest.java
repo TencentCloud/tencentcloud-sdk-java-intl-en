@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DeleteRuleRequest extends AbstractModel {
 
     /**
-    * CLB instance ID
+    * ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * CLB listener ID
+    * ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * Array of IDs of the forwarding rules to be deleted
+    * Array of ids of forwarding rules to be deleted, can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/api/214/46916?from_cn_redirect=1) api.
     */
     @SerializedName("LocationIds")
     @Expose
     private String [] LocationIds;
 
     /**
-    * The domain name associated with the forwarding rule to delete. If the rule is associated with multiple domain names, specify any one of them.
+    * Domain name of the forwarding rule to be deleted. if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/api/214/46916?from_cn_redirect=1) api.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * The forwarding path of the forwarding rule to delete.
+    * Forwarding path of the forwarding rule to be deleted can be accessed through the DescribeLoadBalancersDetail api (https://www.tencentcloud.comom/document/api/214/46916?from_cn_redirect=1).
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
+    * A default domain name must be configured under the listener. when you need to delete the default domain name, you can specify another domain name as the new default domain name. if the new default domain name is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
     */
     @SerializedName("NewDefaultServerDomain")
     @Expose
     private String NewDefaultServerDomain;
 
     /**
-     * Get CLB instance ID 
-     * @return LoadBalancerId CLB instance ID
+     * Get ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID. 
+     * @return LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set CLB instance ID
-     * @param LoadBalancerId CLB instance ID
+     * Set ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
+     * @param LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get CLB listener ID 
-     * @return ListenerId CLB listener ID
+     * Get ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID. 
+     * @return ListenerId ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set CLB listener ID
-     * @param ListenerId CLB listener ID
+     * Set ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
+     * @param ListenerId ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get Array of IDs of the forwarding rules to be deleted 
-     * @return LocationIds Array of IDs of the forwarding rules to be deleted
+     * Get Array of ids of forwarding rules to be deleted, can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/api/214/46916?from_cn_redirect=1) api. 
+     * @return LocationIds Array of ids of forwarding rules to be deleted, can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/api/214/46916?from_cn_redirect=1) api.
      */
     public String [] getLocationIds() {
         return this.LocationIds;
     }
 
     /**
-     * Set Array of IDs of the forwarding rules to be deleted
-     * @param LocationIds Array of IDs of the forwarding rules to be deleted
+     * Set Array of ids of forwarding rules to be deleted, can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/api/214/46916?from_cn_redirect=1) api.
+     * @param LocationIds Array of ids of forwarding rules to be deleted, can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/api/214/46916?from_cn_redirect=1) api.
      */
     public void setLocationIds(String [] LocationIds) {
         this.LocationIds = LocationIds;
     }
 
     /**
-     * Get The domain name associated with the forwarding rule to delete. If the rule is associated with multiple domain names, specify any one of them. 
-     * @return Domain The domain name associated with the forwarding rule to delete. If the rule is associated with multiple domain names, specify any one of them.
+     * Get Domain name of the forwarding rule to be deleted. if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/api/214/46916?from_cn_redirect=1) api. 
+     * @return Domain Domain name of the forwarding rule to be deleted. if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/api/214/46916?from_cn_redirect=1) api.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set The domain name associated with the forwarding rule to delete. If the rule is associated with multiple domain names, specify any one of them.
-     * @param Domain The domain name associated with the forwarding rule to delete. If the rule is associated with multiple domain names, specify any one of them.
+     * Set Domain name of the forwarding rule to be deleted. if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/api/214/46916?from_cn_redirect=1) api.
+     * @param Domain Domain name of the forwarding rule to be deleted. if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/api/214/46916?from_cn_redirect=1) api.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get The forwarding path of the forwarding rule to delete. 
-     * @return Url The forwarding path of the forwarding rule to delete.
+     * Get Forwarding path of the forwarding rule to be deleted can be accessed through the DescribeLoadBalancersDetail api (https://www.tencentcloud.comom/document/api/214/46916?from_cn_redirect=1). 
+     * @return Url Forwarding path of the forwarding rule to be deleted can be accessed through the DescribeLoadBalancersDetail api (https://www.tencentcloud.comom/document/api/214/46916?from_cn_redirect=1).
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set The forwarding path of the forwarding rule to delete.
-     * @param Url The forwarding path of the forwarding rule to delete.
+     * Set Forwarding path of the forwarding rule to be deleted can be accessed through the DescribeLoadBalancersDetail api (https://www.tencentcloud.comom/document/api/214/46916?from_cn_redirect=1).
+     * @param Url Forwarding path of the forwarding rule to be deleted can be accessed through the DescribeLoadBalancersDetail api (https://www.tencentcloud.comom/document/api/214/46916?from_cn_redirect=1).
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them. 
-     * @return NewDefaultServerDomain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
+     * Get A default domain name must be configured under the listener. when you need to delete the default domain name, you can specify another domain name as the new default domain name. if the new default domain name is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api. 
+     * @return NewDefaultServerDomain A default domain name must be configured under the listener. when you need to delete the default domain name, you can specify another domain name as the new default domain name. if the new default domain name is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
      */
     public String getNewDefaultServerDomain() {
         return this.NewDefaultServerDomain;
     }
 
     /**
-     * Set Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
-     * @param NewDefaultServerDomain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
+     * Set A default domain name must be configured under the listener. when you need to delete the default domain name, you can specify another domain name as the new default domain name. if the new default domain name is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+     * @param NewDefaultServerDomain A default domain name must be configured under the listener. when you need to delete the default domain name, you can specify another domain name as the new default domain name. if the new default domain name is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
      */
     public void setNewDefaultServerDomain(String NewDefaultServerDomain) {
         this.NewDefaultServerDomain = NewDefaultServerDomain;

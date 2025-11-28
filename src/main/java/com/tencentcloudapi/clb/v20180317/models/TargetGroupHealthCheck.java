@@ -24,391 +24,446 @@ import java.util.HashMap;
 public class TargetGroupHealthCheck extends AbstractModel {
 
     /**
-    * 
+    * Whether to enable the health check.
     */
     @SerializedName("HealthSwitch")
     @Expose
     private Boolean HealthSwitch;
 
     /**
-    * 
+    * Health check method. among them, only the new version V2 target group type supports this parameter. valid values: TCP | HTTP | HTTPS | PING | CUSTOM. among them:.
+<ur><li>When the backend forwarding protocol of the target group is TCP, the health check method supports TCP/HTTP/CUSTOM, with a default value of TCP.</li><li>when the backend forwarding protocol of the target group is UDP, the health check method supports PING/CUSTOM, with a default value of PING.</li><li>when the backend forwarding protocol of the target group is HTTP, the health check method supports HTTP/TCP, with a default value of HTTP.</li><li>when the backend forwarding protocol of the target group is HTTPS, the health check method supports HTTPS/TCP, with a default value of HTTPS.</li><li>when the backend forwarding protocol of the target group is GRPC, the health check method supports GRPC/TCP, with a default value of GRPC.</li></ur>.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 
+    * Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. (applicable only to TCP/UDP target group).
+
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 
+    * Health check timeout. The default is 2 seconds. Value range: 2-30 seconds.
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * 
+    * Detection interval time. The default is 5 seconds. Value range: 2-300 seconds.
     */
     @SerializedName("GapTime")
     @Expose
     private Long GapTime;
 
     /**
-    * 
+    * Health detection threshold. The default is 3 times. Value range: 2-10 times.
     */
     @SerializedName("GoodLimit")
     @Expose
     private Long GoodLimit;
 
     /**
-    * 
+    * Unhealth detection threshold. The default is 3 times. Value range: 2-10 times.
     */
     @SerializedName("BadLimit")
     @Expose
     private Long BadLimit;
 
     /**
-    * 
+    * Indicates whether jumbo frames are enabled for probe packets of all rss in the target group. enabled by default. this parameter is supported only for GWLB type target groups.
     */
     @SerializedName("JumboFrame")
     @Expose
     private Boolean JumboFrame;
 
     /**
-    * 
+    * Health check status code (applicable only to HTTP/HTTPS target group and HTTP health check method of TCP target group). value range: 1~31. default: 31. among them: <url> <li>1 means post-detection return value 1xx represents health.</li> <li>2 means return 2xx represents health.</li> <li>4 means return 3xx represents health.</li> <li>8 means return 4xx represents health.</li> <li>16 means return 5xx represents health.</li></url> to have multiple return codes represent health, sum up corresponding values.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpCode")
     @Expose
     private Long HttpCode;
 
     /**
-    * 
+    * Health check domain name. among them: <ur><li>applicable only to HTTP/HTTPS target groups and TCP target groups when using HTTP health check method.</li><li>targeting HTTP/HTTPS target groups, this parameter is required when using HTTP health check method.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpCheckDomain")
     @Expose
     private String HttpCheckDomain;
 
     /**
-    * 
+    * Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpCheckPath")
     @Expose
     private String HttpCheckPath;
 
     /**
-    * 
+    * Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpCheckMethod")
     @Expose
     private String HttpCheckMethod;
 
     /**
-    * 
+    * Input format of health check. required when health check method is CUSTOM. valid values: HEX or TEXT. among them:<ur><li>TEXT: TEXT format.</li><li>HEX: hexadecimal format. characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number.</li><li>applicable only to TCP/UDP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ContextType")
     @Expose
     private String ContextType;
 
     /**
-    * 
+    * CUSTOM check parameters. required when the CheckType value is CUSTOM, represents the content of the request sent by the health check, only ASCII visible characters, maximum length limit 500. applicable only to TCP/UDP target group.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SendContext")
     @Expose
     private String SendContext;
 
     /**
-    * 
+    * CUSTOM check parameters. required when the CheckType value is CUSTOM. represents the result returned by the health check. only ASCII visible characters are allowed. maximum length limit is 500. (applicable only to TCP/UDP target group).
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RecvContext")
     @Expose
     private String RecvContext;
 
     /**
-    * 
+    * HTTP version, where: <ur><li>this field is required if the value of CheckType is HTTP.</li><li>supports configuration options: HTTP/1.0, HTTP/1.1.</li><li>applicable only to TCP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpVersion")
     @Expose
     private String HttpVersion;
 
     /**
-    * 
+    * Health check status code when the protocol is GRPC. (this parameter applies only to target groups with the backend forwarding protocol of GRPC.) default value: 12. valid values: a single numerical value, multiple numerical values, or a range. for example, 20, 20,25, or 0-99.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExtendedCode")
     @Expose
     private String ExtendedCode;
 
     /**
-     * Get  
-     * @return HealthSwitch 
+     * Get Whether to enable the health check. 
+     * @return HealthSwitch Whether to enable the health check.
      */
     public Boolean getHealthSwitch() {
         return this.HealthSwitch;
     }
 
     /**
-     * Set 
-     * @param HealthSwitch 
+     * Set Whether to enable the health check.
+     * @param HealthSwitch Whether to enable the health check.
      */
     public void setHealthSwitch(Boolean HealthSwitch) {
         this.HealthSwitch = HealthSwitch;
     }
 
     /**
-     * Get  
-     * @return Protocol 
+     * Get Health check method. among them, only the new version V2 target group type supports this parameter. valid values: TCP | HTTP | HTTPS | PING | CUSTOM. among them:.
+<ur><li>When the backend forwarding protocol of the target group is TCP, the health check method supports TCP/HTTP/CUSTOM, with a default value of TCP.</li><li>when the backend forwarding protocol of the target group is UDP, the health check method supports PING/CUSTOM, with a default value of PING.</li><li>when the backend forwarding protocol of the target group is HTTP, the health check method supports HTTP/TCP, with a default value of HTTP.</li><li>when the backend forwarding protocol of the target group is HTTPS, the health check method supports HTTPS/TCP, with a default value of HTTPS.</li><li>when the backend forwarding protocol of the target group is GRPC, the health check method supports GRPC/TCP, with a default value of GRPC.</li></ur>. 
+     * @return Protocol Health check method. among them, only the new version V2 target group type supports this parameter. valid values: TCP | HTTP | HTTPS | PING | CUSTOM. among them:.
+<ur><li>When the backend forwarding protocol of the target group is TCP, the health check method supports TCP/HTTP/CUSTOM, with a default value of TCP.</li><li>when the backend forwarding protocol of the target group is UDP, the health check method supports PING/CUSTOM, with a default value of PING.</li><li>when the backend forwarding protocol of the target group is HTTP, the health check method supports HTTP/TCP, with a default value of HTTP.</li><li>when the backend forwarding protocol of the target group is HTTPS, the health check method supports HTTPS/TCP, with a default value of HTTPS.</li><li>when the backend forwarding protocol of the target group is GRPC, the health check method supports GRPC/TCP, with a default value of GRPC.</li></ur>.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 
-     * @param Protocol 
+     * Set Health check method. among them, only the new version V2 target group type supports this parameter. valid values: TCP | HTTP | HTTPS | PING | CUSTOM. among them:.
+<ur><li>When the backend forwarding protocol of the target group is TCP, the health check method supports TCP/HTTP/CUSTOM, with a default value of TCP.</li><li>when the backend forwarding protocol of the target group is UDP, the health check method supports PING/CUSTOM, with a default value of PING.</li><li>when the backend forwarding protocol of the target group is HTTP, the health check method supports HTTP/TCP, with a default value of HTTP.</li><li>when the backend forwarding protocol of the target group is HTTPS, the health check method supports HTTPS/TCP, with a default value of HTTPS.</li><li>when the backend forwarding protocol of the target group is GRPC, the health check method supports GRPC/TCP, with a default value of GRPC.</li></ur>.
+     * @param Protocol Health check method. among them, only the new version V2 target group type supports this parameter. valid values: TCP | HTTP | HTTPS | PING | CUSTOM. among them:.
+<ur><li>When the backend forwarding protocol of the target group is TCP, the health check method supports TCP/HTTP/CUSTOM, with a default value of TCP.</li><li>when the backend forwarding protocol of the target group is UDP, the health check method supports PING/CUSTOM, with a default value of PING.</li><li>when the backend forwarding protocol of the target group is HTTP, the health check method supports HTTP/TCP, with a default value of HTTP.</li><li>when the backend forwarding protocol of the target group is HTTPS, the health check method supports HTTPS/TCP, with a default value of HTTPS.</li><li>when the backend forwarding protocol of the target group is GRPC, the health check method supports GRPC/TCP, with a default value of GRPC.</li></ur>.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get  
-     * @return Port 
+     * Get Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. (applicable only to TCP/UDP target group).
+ 
+     * @return Port Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. (applicable only to TCP/UDP target group).
+
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 
-     * @param Port 
+     * Set Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. (applicable only to TCP/UDP target group).
+
+     * @param Port Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. (applicable only to TCP/UDP target group).
+
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get  
-     * @return Timeout 
+     * Get Health check timeout. The default is 2 seconds. Value range: 2-30 seconds. 
+     * @return Timeout Health check timeout. The default is 2 seconds. Value range: 2-30 seconds.
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 
-     * @param Timeout 
+     * Set Health check timeout. The default is 2 seconds. Value range: 2-30 seconds.
+     * @param Timeout Health check timeout. The default is 2 seconds. Value range: 2-30 seconds.
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get  
-     * @return GapTime 
+     * Get Detection interval time. The default is 5 seconds. Value range: 2-300 seconds. 
+     * @return GapTime Detection interval time. The default is 5 seconds. Value range: 2-300 seconds.
      */
     public Long getGapTime() {
         return this.GapTime;
     }
 
     /**
-     * Set 
-     * @param GapTime 
+     * Set Detection interval time. The default is 5 seconds. Value range: 2-300 seconds.
+     * @param GapTime Detection interval time. The default is 5 seconds. Value range: 2-300 seconds.
      */
     public void setGapTime(Long GapTime) {
         this.GapTime = GapTime;
     }
 
     /**
-     * Get  
-     * @return GoodLimit 
+     * Get Health detection threshold. The default is 3 times. Value range: 2-10 times. 
+     * @return GoodLimit Health detection threshold. The default is 3 times. Value range: 2-10 times.
      */
     public Long getGoodLimit() {
         return this.GoodLimit;
     }
 
     /**
-     * Set 
-     * @param GoodLimit 
+     * Set Health detection threshold. The default is 3 times. Value range: 2-10 times.
+     * @param GoodLimit Health detection threshold. The default is 3 times. Value range: 2-10 times.
      */
     public void setGoodLimit(Long GoodLimit) {
         this.GoodLimit = GoodLimit;
     }
 
     /**
-     * Get  
-     * @return BadLimit 
+     * Get Unhealth detection threshold. The default is 3 times. Value range: 2-10 times. 
+     * @return BadLimit Unhealth detection threshold. The default is 3 times. Value range: 2-10 times.
      */
     public Long getBadLimit() {
         return this.BadLimit;
     }
 
     /**
-     * Set 
-     * @param BadLimit 
+     * Set Unhealth detection threshold. The default is 3 times. Value range: 2-10 times.
+     * @param BadLimit Unhealth detection threshold. The default is 3 times. Value range: 2-10 times.
      */
     public void setBadLimit(Long BadLimit) {
         this.BadLimit = BadLimit;
     }
 
     /**
-     * Get  
-     * @return JumboFrame 
+     * Get Indicates whether jumbo frames are enabled for probe packets of all rss in the target group. enabled by default. this parameter is supported only for GWLB type target groups. 
+     * @return JumboFrame Indicates whether jumbo frames are enabled for probe packets of all rss in the target group. enabled by default. this parameter is supported only for GWLB type target groups.
      */
     public Boolean getJumboFrame() {
         return this.JumboFrame;
     }
 
     /**
-     * Set 
-     * @param JumboFrame 
+     * Set Indicates whether jumbo frames are enabled for probe packets of all rss in the target group. enabled by default. this parameter is supported only for GWLB type target groups.
+     * @param JumboFrame Indicates whether jumbo frames are enabled for probe packets of all rss in the target group. enabled by default. this parameter is supported only for GWLB type target groups.
      */
     public void setJumboFrame(Boolean JumboFrame) {
         this.JumboFrame = JumboFrame;
     }
 
     /**
-     * Get  
-     * @return HttpCode 
+     * Get Health check status code (applicable only to HTTP/HTTPS target group and HTTP health check method of TCP target group). value range: 1~31. default: 31. among them: <url> <li>1 means post-detection return value 1xx represents health.</li> <li>2 means return 2xx represents health.</li> <li>4 means return 3xx represents health.</li> <li>8 means return 4xx represents health.</li> <li>16 means return 5xx represents health.</li></url> to have multiple return codes represent health, sum up corresponding values.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HttpCode Health check status code (applicable only to HTTP/HTTPS target group and HTTP health check method of TCP target group). value range: 1~31. default: 31. among them: <url> <li>1 means post-detection return value 1xx represents health.</li> <li>2 means return 2xx represents health.</li> <li>4 means return 3xx represents health.</li> <li>8 means return 4xx represents health.</li> <li>16 means return 5xx represents health.</li></url> to have multiple return codes represent health, sum up corresponding values.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getHttpCode() {
         return this.HttpCode;
     }
 
     /**
-     * Set 
-     * @param HttpCode 
+     * Set Health check status code (applicable only to HTTP/HTTPS target group and HTTP health check method of TCP target group). value range: 1~31. default: 31. among them: <url> <li>1 means post-detection return value 1xx represents health.</li> <li>2 means return 2xx represents health.</li> <li>4 means return 3xx represents health.</li> <li>8 means return 4xx represents health.</li> <li>16 means return 5xx represents health.</li></url> to have multiple return codes represent health, sum up corresponding values.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HttpCode Health check status code (applicable only to HTTP/HTTPS target group and HTTP health check method of TCP target group). value range: 1~31. default: 31. among them: <url> <li>1 means post-detection return value 1xx represents health.</li> <li>2 means return 2xx represents health.</li> <li>4 means return 3xx represents health.</li> <li>8 means return 4xx represents health.</li> <li>16 means return 5xx represents health.</li></url> to have multiple return codes represent health, sum up corresponding values.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHttpCode(Long HttpCode) {
         this.HttpCode = HttpCode;
     }
 
     /**
-     * Get  
-     * @return HttpCheckDomain 
+     * Get Health check domain name. among them: <ur><li>applicable only to HTTP/HTTPS target groups and TCP target groups when using HTTP health check method.</li><li>targeting HTTP/HTTPS target groups, this parameter is required when using HTTP health check method.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HttpCheckDomain Health check domain name. among them: <ur><li>applicable only to HTTP/HTTPS target groups and TCP target groups when using HTTP health check method.</li><li>targeting HTTP/HTTPS target groups, this parameter is required when using HTTP health check method.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHttpCheckDomain() {
         return this.HttpCheckDomain;
     }
 
     /**
-     * Set 
-     * @param HttpCheckDomain 
+     * Set Health check domain name. among them: <ur><li>applicable only to HTTP/HTTPS target groups and TCP target groups when using HTTP health check method.</li><li>targeting HTTP/HTTPS target groups, this parameter is required when using HTTP health check method.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HttpCheckDomain Health check domain name. among them: <ur><li>applicable only to HTTP/HTTPS target groups and TCP target groups when using HTTP health check method.</li><li>targeting HTTP/HTTPS target groups, this parameter is required when using HTTP health check method.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHttpCheckDomain(String HttpCheckDomain) {
         this.HttpCheckDomain = HttpCheckDomain;
     }
 
     /**
-     * Get  
-     * @return HttpCheckPath 
+     * Get Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HttpCheckPath Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHttpCheckPath() {
         return this.HttpCheckPath;
     }
 
     /**
-     * Set 
-     * @param HttpCheckPath 
+     * Set Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HttpCheckPath Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHttpCheckPath(String HttpCheckPath) {
         this.HttpCheckPath = HttpCheckPath;
     }
 
     /**
-     * Get  
-     * @return HttpCheckMethod 
+     * Get Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HttpCheckMethod Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHttpCheckMethod() {
         return this.HttpCheckMethod;
     }
 
     /**
-     * Set 
-     * @param HttpCheckMethod 
+     * Set Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HttpCheckMethod Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Default: HEAD. Valid values: HEAD and GET.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHttpCheckMethod(String HttpCheckMethod) {
         this.HttpCheckMethod = HttpCheckMethod;
     }
 
     /**
-     * Get  
-     * @return ContextType 
+     * Get Input format of health check. required when health check method is CUSTOM. valid values: HEX or TEXT. among them:<ur><li>TEXT: TEXT format.</li><li>HEX: hexadecimal format. characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number.</li><li>applicable only to TCP/UDP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ContextType Input format of health check. required when health check method is CUSTOM. valid values: HEX or TEXT. among them:<ur><li>TEXT: TEXT format.</li><li>HEX: hexadecimal format. characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number.</li><li>applicable only to TCP/UDP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getContextType() {
         return this.ContextType;
     }
 
     /**
-     * Set 
-     * @param ContextType 
+     * Set Input format of health check. required when health check method is CUSTOM. valid values: HEX or TEXT. among them:<ur><li>TEXT: TEXT format.</li><li>HEX: hexadecimal format. characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number.</li><li>applicable only to TCP/UDP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ContextType Input format of health check. required when health check method is CUSTOM. valid values: HEX or TEXT. among them:<ur><li>TEXT: TEXT format.</li><li>HEX: hexadecimal format. characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number.</li><li>applicable only to TCP/UDP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setContextType(String ContextType) {
         this.ContextType = ContextType;
     }
 
     /**
-     * Get  
-     * @return SendContext 
+     * Get CUSTOM check parameters. required when the CheckType value is CUSTOM, represents the content of the request sent by the health check, only ASCII visible characters, maximum length limit 500. applicable only to TCP/UDP target group.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SendContext CUSTOM check parameters. required when the CheckType value is CUSTOM, represents the content of the request sent by the health check, only ASCII visible characters, maximum length limit 500. applicable only to TCP/UDP target group.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSendContext() {
         return this.SendContext;
     }
 
     /**
-     * Set 
-     * @param SendContext 
+     * Set CUSTOM check parameters. required when the CheckType value is CUSTOM, represents the content of the request sent by the health check, only ASCII visible characters, maximum length limit 500. applicable only to TCP/UDP target group.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SendContext CUSTOM check parameters. required when the CheckType value is CUSTOM, represents the content of the request sent by the health check, only ASCII visible characters, maximum length limit 500. applicable only to TCP/UDP target group.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSendContext(String SendContext) {
         this.SendContext = SendContext;
     }
 
     /**
-     * Get  
-     * @return RecvContext 
+     * Get CUSTOM check parameters. required when the CheckType value is CUSTOM. represents the result returned by the health check. only ASCII visible characters are allowed. maximum length limit is 500. (applicable only to TCP/UDP target group).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RecvContext CUSTOM check parameters. required when the CheckType value is CUSTOM. represents the result returned by the health check. only ASCII visible characters are allowed. maximum length limit is 500. (applicable only to TCP/UDP target group).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRecvContext() {
         return this.RecvContext;
     }
 
     /**
-     * Set 
-     * @param RecvContext 
+     * Set CUSTOM check parameters. required when the CheckType value is CUSTOM. represents the result returned by the health check. only ASCII visible characters are allowed. maximum length limit is 500. (applicable only to TCP/UDP target group).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RecvContext CUSTOM check parameters. required when the CheckType value is CUSTOM. represents the result returned by the health check. only ASCII visible characters are allowed. maximum length limit is 500. (applicable only to TCP/UDP target group).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRecvContext(String RecvContext) {
         this.RecvContext = RecvContext;
     }
 
     /**
-     * Get  
-     * @return HttpVersion 
+     * Get HTTP version, where: <ur><li>this field is required if the value of CheckType is HTTP.</li><li>supports configuration options: HTTP/1.0, HTTP/1.1.</li><li>applicable only to TCP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HttpVersion HTTP version, where: <ur><li>this field is required if the value of CheckType is HTTP.</li><li>supports configuration options: HTTP/1.0, HTTP/1.1.</li><li>applicable only to TCP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHttpVersion() {
         return this.HttpVersion;
     }
 
     /**
-     * Set 
-     * @param HttpVersion 
+     * Set HTTP version, where: <ur><li>this field is required if the value of CheckType is HTTP.</li><li>supports configuration options: HTTP/1.0, HTTP/1.1.</li><li>applicable only to TCP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HttpVersion HTTP version, where: <ur><li>this field is required if the value of CheckType is HTTP.</li><li>supports configuration options: HTTP/1.0, HTTP/1.1.</li><li>applicable only to TCP target group.</li></ur>.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHttpVersion(String HttpVersion) {
         this.HttpVersion = HttpVersion;
     }
 
     /**
-     * Get  
-     * @return ExtendedCode 
+     * Get Health check status code when the protocol is GRPC. (this parameter applies only to target groups with the backend forwarding protocol of GRPC.) default value: 12. valid values: a single numerical value, multiple numerical values, or a range. for example, 20, 20,25, or 0-99.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExtendedCode Health check status code when the protocol is GRPC. (this parameter applies only to target groups with the backend forwarding protocol of GRPC.) default value: 12. valid values: a single numerical value, multiple numerical values, or a range. for example, 20, 20,25, or 0-99.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExtendedCode() {
         return this.ExtendedCode;
     }
 
     /**
-     * Set 
-     * @param ExtendedCode 
+     * Set Health check status code when the protocol is GRPC. (this parameter applies only to target groups with the backend forwarding protocol of GRPC.) default value: 12. valid values: a single numerical value, multiple numerical values, or a range. for example, 20, 20,25, or 0-99.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExtendedCode Health check status code when the protocol is GRPC. (this parameter applies only to target groups with the backend forwarding protocol of GRPC.) default value: 12. valid values: a single numerical value, multiple numerical values, or a range. for example, 20, 20,25, or 0-99.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExtendedCode(String ExtendedCode) {
         this.ExtendedCode = ExtendedCode;

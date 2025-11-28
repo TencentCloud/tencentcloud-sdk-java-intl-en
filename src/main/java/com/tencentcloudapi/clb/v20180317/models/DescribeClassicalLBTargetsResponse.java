@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeClassicalLBTargetsResponse extends AbstractModel {
 
     /**
-    * Real server list
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Real server list.
     */
     @SerializedName("Targets")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Real server list
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Targets Real server list
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Real server list. 
+     * @return Targets Real server list.
      */
     public ClassicalTarget [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set Real server list
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Targets Real server list
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Real server list.
+     * @param Targets Real server list.
      */
     public void setTargets(ClassicalTarget [] Targets) {
         this.Targets = Targets;

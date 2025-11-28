@@ -97,8 +97,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String HttpCheckMethod;
 
     /**
-    * A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
-
+    * Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. pass the parameter value -1 to restore default settings. (applicable only to TCP/UDP listener).
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CheckPort")
@@ -347,11 +346,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
-
+     * Get Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. pass the parameter value -1 to restore default settings. (applicable only to TCP/UDP listener).
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CheckPort A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
-
+     * @return CheckPort Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. pass the parameter value -1 to restore default settings. (applicable only to TCP/UDP listener).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCheckPort() {
@@ -359,11 +356,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
-
+     * Set Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. pass the parameter value -1 to restore default settings. (applicable only to TCP/UDP listener).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CheckPort A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
-
+     * @param CheckPort Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. pass the parameter value -1 to restore default settings. (applicable only to TCP/UDP listener).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCheckPort(Long CheckPort) {

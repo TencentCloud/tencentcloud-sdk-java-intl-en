@@ -76,7 +76,7 @@ Port range: 1–65535.
     private Long SessionExpireTime;
 
     /**
-    * Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+    * Listener forwarding mode. valid values: WRR (weighted round-robin), LEAST_CONN (LEAST connections).
 Default value: WRR. This parameter applies only to TCP, UDP, TCP_SSL, and QUIC listeners.
     */
     @SerializedName("Scheduler")
@@ -120,7 +120,7 @@ Enable this feature with caution if the maximum number of connections is limited
     private Long EndPort;
 
     /**
-    * Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+    * Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
     */
     @SerializedName("DeregisterTargetRst")
     @Expose
@@ -150,21 +150,21 @@ Enable this feature with caution if the maximum number of connections is limited
     private Long MaxCps;
 
     /**
-    * Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
+    * Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding the permissible range, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
     */
     @SerializedName("IdleConnectTimeout")
     @Expose
     private Long IdleConnectTimeout;
 
     /**
-    * 
+    * Specifies whether PP is supported for TCP_SSL and QUIC.
     */
     @SerializedName("ProxyProtocol")
     @Expose
     private Boolean ProxyProtocol;
 
     /**
-    * Whether to enable SNAT. True: enable; False: disable.
+    * Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
     */
     @SerializedName("SnatEnable")
     @Expose
@@ -178,14 +178,16 @@ Enable this feature with caution if the maximum number of connections is limited
     private Long [] FullEndPorts;
 
     /**
-    * Whether to enable H2C for a private network HTTP listener. True: enable; False: disable.
+    * Enable private network http listener h2c switch. valid values: True (enable), False (disable).
+Disabled by default.
     */
     @SerializedName("H2cSwitch")
     @Expose
     private Boolean H2cSwitch;
 
     /**
-    * Whether to disable SSL for TCP_SSL listeners. Dual-stack binding is still supported after SSL is disabled. True: disable; False: enable.
+    * Whether to disable SSL for TCP_SSL listeners. dual-stack binding is still supported after SSL is disabled. valid values: True (disable), False (enable).
+Disabled by default.
     */
     @SerializedName("SslCloseSwitch")
     @Expose
@@ -197,6 +199,41 @@ Enable this feature with caution if the maximum number of connections is limited
     @SerializedName("DataCompressMode")
     @Expose
     private String DataCompressMode;
+
+    /**
+    * Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+    */
+    @SerializedName("RescheduleTargetZeroWeight")
+    @Expose
+    private Boolean RescheduleTargetZeroWeight;
+
+    /**
+    * Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+    */
+    @SerializedName("RescheduleUnhealthy")
+    @Expose
+    private Boolean RescheduleUnhealthy;
+
+    /**
+    * Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+    */
+    @SerializedName("RescheduleExpandTarget")
+    @Expose
+    private Boolean RescheduleExpandTarget;
+
+    /**
+    * Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+    */
+    @SerializedName("RescheduleStartTime")
+    @Expose
+    private Long RescheduleStartTime;
+
+    /**
+    * Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
+    */
+    @SerializedName("RescheduleInterval")
+    @Expose
+    private Long RescheduleInterval;
 
     /**
      * Get ID of the CLB instance. You can call the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) API to obtain the ID. 
@@ -323,9 +360,9 @@ Port range: 1–65535.
     }
 
     /**
-     * Get Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+     * Get Listener forwarding mode. valid values: WRR (weighted round-robin), LEAST_CONN (LEAST connections).
 Default value: WRR. This parameter applies only to TCP, UDP, TCP_SSL, and QUIC listeners. 
-     * @return Scheduler Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+     * @return Scheduler Listener forwarding mode. valid values: WRR (weighted round-robin), LEAST_CONN (LEAST connections).
 Default value: WRR. This parameter applies only to TCP, UDP, TCP_SSL, and QUIC listeners.
      */
     public String getScheduler() {
@@ -333,9 +370,9 @@ Default value: WRR. This parameter applies only to TCP, UDP, TCP_SSL, and QUIC l
     }
 
     /**
-     * Set Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+     * Set Listener forwarding mode. valid values: WRR (weighted round-robin), LEAST_CONN (LEAST connections).
 Default value: WRR. This parameter applies only to TCP, UDP, TCP_SSL, and QUIC listeners.
-     * @param Scheduler Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+     * @param Scheduler Listener forwarding mode. valid values: WRR (weighted round-robin), LEAST_CONN (LEAST connections).
 Default value: WRR. This parameter applies only to TCP, UDP, TCP_SSL, and QUIC listeners.
      */
     public void setScheduler(String Scheduler) {
@@ -427,16 +464,16 @@ Enable this feature with caution if the maximum number of connections is limited
     }
 
     /**
-     * Get Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners. 
-     * @return DeregisterTargetRst Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+     * Get Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature. 
+     * @return DeregisterTargetRst Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
      */
     public Boolean getDeregisterTargetRst() {
         return this.DeregisterTargetRst;
     }
 
     /**
-     * Set Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
-     * @param DeregisterTargetRst Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+     * Set Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     * @param DeregisterTargetRst Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
      */
     public void setDeregisterTargetRst(Boolean DeregisterTargetRst) {
         this.DeregisterTargetRst = DeregisterTargetRst;
@@ -499,48 +536,48 @@ Enable this feature with caution if the maximum number of connections is limited
     }
 
     /**
-     * Get Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). 
-     * @return IdleConnectTimeout Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
+     * Get Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding the permissible range, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). 
+     * @return IdleConnectTimeout Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding the permissible range, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
      */
     public Long getIdleConnectTimeout() {
         return this.IdleConnectTimeout;
     }
 
     /**
-     * Set Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
-     * @param IdleConnectTimeout Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
+     * Set Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding the permissible range, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
+     * @param IdleConnectTimeout Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding the permissible range, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category).
      */
     public void setIdleConnectTimeout(Long IdleConnectTimeout) {
         this.IdleConnectTimeout = IdleConnectTimeout;
     }
 
     /**
-     * Get  
-     * @return ProxyProtocol 
+     * Get Specifies whether PP is supported for TCP_SSL and QUIC. 
+     * @return ProxyProtocol Specifies whether PP is supported for TCP_SSL and QUIC.
      */
     public Boolean getProxyProtocol() {
         return this.ProxyProtocol;
     }
 
     /**
-     * Set 
-     * @param ProxyProtocol 
+     * Set Specifies whether PP is supported for TCP_SSL and QUIC.
+     * @param ProxyProtocol Specifies whether PP is supported for TCP_SSL and QUIC.
      */
     public void setProxyProtocol(Boolean ProxyProtocol) {
         this.ProxyProtocol = ProxyProtocol;
     }
 
     /**
-     * Get Whether to enable SNAT. True: enable; False: disable. 
-     * @return SnatEnable Whether to enable SNAT. True: enable; False: disable.
+     * Get Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa. 
+     * @return SnatEnable Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
      */
     public Boolean getSnatEnable() {
         return this.SnatEnable;
     }
 
     /**
-     * Set Whether to enable SNAT. True: enable; False: disable.
-     * @param SnatEnable Whether to enable SNAT. True: enable; False: disable.
+     * Set Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
+     * @param SnatEnable Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
      */
     public void setSnatEnable(Boolean SnatEnable) {
         this.SnatEnable = SnatEnable;
@@ -563,32 +600,40 @@ Enable this feature with caution if the maximum number of connections is limited
     }
 
     /**
-     * Get Whether to enable H2C for a private network HTTP listener. True: enable; False: disable. 
-     * @return H2cSwitch Whether to enable H2C for a private network HTTP listener. True: enable; False: disable.
+     * Get Enable private network http listener h2c switch. valid values: True (enable), False (disable).
+Disabled by default. 
+     * @return H2cSwitch Enable private network http listener h2c switch. valid values: True (enable), False (disable).
+Disabled by default.
      */
     public Boolean getH2cSwitch() {
         return this.H2cSwitch;
     }
 
     /**
-     * Set Whether to enable H2C for a private network HTTP listener. True: enable; False: disable.
-     * @param H2cSwitch Whether to enable H2C for a private network HTTP listener. True: enable; False: disable.
+     * Set Enable private network http listener h2c switch. valid values: True (enable), False (disable).
+Disabled by default.
+     * @param H2cSwitch Enable private network http listener h2c switch. valid values: True (enable), False (disable).
+Disabled by default.
      */
     public void setH2cSwitch(Boolean H2cSwitch) {
         this.H2cSwitch = H2cSwitch;
     }
 
     /**
-     * Get Whether to disable SSL for TCP_SSL listeners. Dual-stack binding is still supported after SSL is disabled. True: disable; False: enable. 
-     * @return SslCloseSwitch Whether to disable SSL for TCP_SSL listeners. Dual-stack binding is still supported after SSL is disabled. True: disable; False: enable.
+     * Get Whether to disable SSL for TCP_SSL listeners. dual-stack binding is still supported after SSL is disabled. valid values: True (disable), False (enable).
+Disabled by default. 
+     * @return SslCloseSwitch Whether to disable SSL for TCP_SSL listeners. dual-stack binding is still supported after SSL is disabled. valid values: True (disable), False (enable).
+Disabled by default.
      */
     public Boolean getSslCloseSwitch() {
         return this.SslCloseSwitch;
     }
 
     /**
-     * Set Whether to disable SSL for TCP_SSL listeners. Dual-stack binding is still supported after SSL is disabled. True: disable; False: enable.
-     * @param SslCloseSwitch Whether to disable SSL for TCP_SSL listeners. Dual-stack binding is still supported after SSL is disabled. True: disable; False: enable.
+     * Set Whether to disable SSL for TCP_SSL listeners. dual-stack binding is still supported after SSL is disabled. valid values: True (disable), False (enable).
+Disabled by default.
+     * @param SslCloseSwitch Whether to disable SSL for TCP_SSL listeners. dual-stack binding is still supported after SSL is disabled. valid values: True (disable), False (enable).
+Disabled by default.
      */
     public void setSslCloseSwitch(Boolean SslCloseSwitch) {
         this.SslCloseSwitch = SslCloseSwitch;
@@ -608,6 +653,86 @@ Enable this feature with caution if the maximum number of connections is limited
      */
     public void setDataCompressMode(String DataCompressMode) {
         this.DataCompressMode = DataCompressMode;
+    }
+
+    /**
+     * Get Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature. 
+     * @return RescheduleTargetZeroWeight Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     */
+    public Boolean getRescheduleTargetZeroWeight() {
+        return this.RescheduleTargetZeroWeight;
+    }
+
+    /**
+     * Set Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     * @param RescheduleTargetZeroWeight Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     */
+    public void setRescheduleTargetZeroWeight(Boolean RescheduleTargetZeroWeight) {
+        this.RescheduleTargetZeroWeight = RescheduleTargetZeroWeight;
+    }
+
+    /**
+     * Get Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature. 
+     * @return RescheduleUnhealthy Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     */
+    public Boolean getRescheduleUnhealthy() {
+        return this.RescheduleUnhealthy;
+    }
+
+    /**
+     * Set Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     * @param RescheduleUnhealthy Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     */
+    public void setRescheduleUnhealthy(Boolean RescheduleUnhealthy) {
+        this.RescheduleUnhealthy = RescheduleUnhealthy;
+    }
+
+    /**
+     * Get Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature. 
+     * @return RescheduleExpandTarget Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     */
+    public Boolean getRescheduleExpandTarget() {
+        return this.RescheduleExpandTarget;
+    }
+
+    /**
+     * Set Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     * @param RescheduleExpandTarget Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     */
+    public void setRescheduleExpandTarget(Boolean RescheduleExpandTarget) {
+        this.RescheduleExpandTarget = RescheduleExpandTarget;
+    }
+
+    /**
+     * Get Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners. 
+     * @return RescheduleStartTime Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+     */
+    public Long getRescheduleStartTime() {
+        return this.RescheduleStartTime;
+    }
+
+    /**
+     * Set Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+     * @param RescheduleStartTime Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+     */
+    public void setRescheduleStartTime(Long RescheduleStartTime) {
+        this.RescheduleStartTime = RescheduleStartTime;
+    }
+
+    /**
+     * Get Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this. 
+     * @return RescheduleInterval Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
+     */
+    public Long getRescheduleInterval() {
+        return this.RescheduleInterval;
+    }
+
+    /**
+     * Set Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
+     * @param RescheduleInterval Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
+     */
+    public void setRescheduleInterval(Long RescheduleInterval) {
+        this.RescheduleInterval = RescheduleInterval;
     }
 
     public CreateListenerRequest() {
@@ -699,6 +824,21 @@ Enable this feature with caution if the maximum number of connections is limited
         if (source.DataCompressMode != null) {
             this.DataCompressMode = new String(source.DataCompressMode);
         }
+        if (source.RescheduleTargetZeroWeight != null) {
+            this.RescheduleTargetZeroWeight = new Boolean(source.RescheduleTargetZeroWeight);
+        }
+        if (source.RescheduleUnhealthy != null) {
+            this.RescheduleUnhealthy = new Boolean(source.RescheduleUnhealthy);
+        }
+        if (source.RescheduleExpandTarget != null) {
+            this.RescheduleExpandTarget = new Boolean(source.RescheduleExpandTarget);
+        }
+        if (source.RescheduleStartTime != null) {
+            this.RescheduleStartTime = new Long(source.RescheduleStartTime);
+        }
+        if (source.RescheduleInterval != null) {
+            this.RescheduleInterval = new Long(source.RescheduleInterval);
+        }
     }
 
 
@@ -730,6 +870,11 @@ Enable this feature with caution if the maximum number of connections is limited
         this.setParamSimple(map, prefix + "H2cSwitch", this.H2cSwitch);
         this.setParamSimple(map, prefix + "SslCloseSwitch", this.SslCloseSwitch);
         this.setParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
+        this.setParamSimple(map, prefix + "RescheduleTargetZeroWeight", this.RescheduleTargetZeroWeight);
+        this.setParamSimple(map, prefix + "RescheduleUnhealthy", this.RescheduleUnhealthy);
+        this.setParamSimple(map, prefix + "RescheduleExpandTarget", this.RescheduleExpandTarget);
+        this.setParamSimple(map, prefix + "RescheduleStartTime", this.RescheduleStartTime);
+        this.setParamSimple(map, prefix + "RescheduleInterval", this.RescheduleInterval);
 
     }
 }

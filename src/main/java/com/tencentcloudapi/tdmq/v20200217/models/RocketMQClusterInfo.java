@@ -139,7 +139,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Internal TCP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InternalEndpoint")
     @Expose
@@ -147,11 +147,127 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
     * Internal HTTP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpInternalEndpoint")
     @Expose
     private String HttpInternalEndpoint;
+
+    /**
+    * Whether to enable ACL authentication. For Exclusive Edition instances, ACL authentication can be disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AclEnabled")
+    @Expose
+    private Boolean AclEnabled;
+
+    /**
+    * Public network CLB instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PublicClbId")
+    @Expose
+    private String PublicClbId;
+
+    /**
+    * vip
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Vip")
+    @Expose
+    private String Vip;
+
+    /**
+    * Specifies the VPC it belongs to.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * Whether migration is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SupportMigration")
+    @Expose
+    private Boolean SupportMigration;
+
+    /**
+    * Instance status:
+0: Creating
+1: Normal
+2: Isolating
+3: Destroyed
+4: Abnormal
+5: Deliver failed
+6: Changing the configuration
+7: Configuration change failed
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceStatus")
+    @Expose
+    private Long InstanceStatus;
+
+    /**
+    * Indicates the AZ to which the cluster belongs.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private Long ZoneId;
+
+    /**
+    * The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ZoneIds")
+    @Expose
+    private Long [] ZoneIds;
+
+    /**
+    * Whether it is frozen.
+    */
+    @SerializedName("IsFrozen")
+    @Expose
+    private Boolean IsFrozen;
+
+    /**
+    * Whether to enable automatic topic creation.
+    */
+    @SerializedName("AutoCreateTopicEnabled")
+    @Expose
+    private Boolean AutoCreateTopicEnabled;
+
+    /**
+    * Whether to enable the admin feature of the cluster.
+    */
+    @SerializedName("AdminFeatureEnabled")
+    @Expose
+    private Boolean AdminFeatureEnabled;
+
+    /**
+    * Admin AK
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AdminAccessKey")
+    @Expose
+    private String AdminAccessKey;
+
+    /**
+    * Admin SK
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AdminSecretKey")
+    @Expose
+    private String AdminSecretKey;
+
+    /**
+    * Whether to enable deletion protection
+    */
+    @SerializedName("EnableDeletionProtection")
+    @Expose
+    private Boolean EnableDeletionProtection;
 
     /**
      * Get Cluster ID 
@@ -431,9 +547,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Internal TCP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return InternalEndpoint Internal TCP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInternalEndpoint() {
         return this.InternalEndpoint;
@@ -441,9 +557,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Internal TCP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param InternalEndpoint Internal TCP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInternalEndpoint(String InternalEndpoint) {
         this.InternalEndpoint = InternalEndpoint;
@@ -451,9 +567,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Internal HTTP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return HttpInternalEndpoint Internal HTTP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHttpInternalEndpoint() {
         return this.HttpInternalEndpoint;
@@ -461,12 +577,308 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Internal HTTP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param HttpInternalEndpoint Internal HTTP access address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHttpInternalEndpoint(String HttpInternalEndpoint) {
         this.HttpInternalEndpoint = HttpInternalEndpoint;
+    }
+
+    /**
+     * Get Whether to enable ACL authentication. For Exclusive Edition instances, ACL authentication can be disabled.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AclEnabled Whether to enable ACL authentication. For Exclusive Edition instances, ACL authentication can be disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getAclEnabled() {
+        return this.AclEnabled;
+    }
+
+    /**
+     * Set Whether to enable ACL authentication. For Exclusive Edition instances, ACL authentication can be disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AclEnabled Whether to enable ACL authentication. For Exclusive Edition instances, ACL authentication can be disabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAclEnabled(Boolean AclEnabled) {
+        this.AclEnabled = AclEnabled;
+    }
+
+    /**
+     * Get Public network CLB instance ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PublicClbId Public network CLB instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getPublicClbId() {
+        return this.PublicClbId;
+    }
+
+    /**
+     * Set Public network CLB instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PublicClbId Public network CLB instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPublicClbId(String PublicClbId) {
+        this.PublicClbId = PublicClbId;
+    }
+
+    /**
+     * Get vip
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Vip vip
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getVip() {
+        return this.Vip;
+    }
+
+    /**
+     * Set vip
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Vip vip
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setVip(String Vip) {
+        this.Vip = Vip;
+    }
+
+    /**
+     * Get Specifies the VPC it belongs to.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return VpcId Specifies the VPC it belongs to.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set Specifies the VPC it belongs to.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param VpcId Specifies the VPC it belongs to.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get Whether migration is supported.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SupportMigration Whether migration is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getSupportMigration() {
+        return this.SupportMigration;
+    }
+
+    /**
+     * Set Whether migration is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SupportMigration Whether migration is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSupportMigration(Boolean SupportMigration) {
+        this.SupportMigration = SupportMigration;
+    }
+
+    /**
+     * Get Instance status:
+0: Creating
+1: Normal
+2: Isolating
+3: Destroyed
+4: Abnormal
+5: Deliver failed
+6: Changing the configuration
+7: Configuration change failed
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceStatus Instance status:
+0: Creating
+1: Normal
+2: Isolating
+3: Destroyed
+4: Abnormal
+5: Deliver failed
+6: Changing the configuration
+7: Configuration change failed
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getInstanceStatus() {
+        return this.InstanceStatus;
+    }
+
+    /**
+     * Set Instance status:
+0: Creating
+1: Normal
+2: Isolating
+3: Destroyed
+4: Abnormal
+5: Deliver failed
+6: Changing the configuration
+7: Configuration change failed
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceStatus Instance status:
+0: Creating
+1: Normal
+2: Isolating
+3: Destroyed
+4: Abnormal
+5: Deliver failed
+6: Changing the configuration
+7: Configuration change failed
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInstanceStatus(Long InstanceStatus) {
+        this.InstanceStatus = InstanceStatus;
+    }
+
+    /**
+     * Get Indicates the AZ to which the cluster belongs.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ZoneId Indicates the AZ to which the cluster belongs.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set Indicates the AZ to which the cluster belongs.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ZoneId Indicates the AZ to which the cluster belongs.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ZoneIds The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long [] getZoneIds() {
+        return this.ZoneIds;
+    }
+
+    /**
+     * Set The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ZoneIds The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setZoneIds(Long [] ZoneIds) {
+        this.ZoneIds = ZoneIds;
+    }
+
+    /**
+     * Get Whether it is frozen. 
+     * @return IsFrozen Whether it is frozen.
+     */
+    public Boolean getIsFrozen() {
+        return this.IsFrozen;
+    }
+
+    /**
+     * Set Whether it is frozen.
+     * @param IsFrozen Whether it is frozen.
+     */
+    public void setIsFrozen(Boolean IsFrozen) {
+        this.IsFrozen = IsFrozen;
+    }
+
+    /**
+     * Get Whether to enable automatic topic creation. 
+     * @return AutoCreateTopicEnabled Whether to enable automatic topic creation.
+     */
+    public Boolean getAutoCreateTopicEnabled() {
+        return this.AutoCreateTopicEnabled;
+    }
+
+    /**
+     * Set Whether to enable automatic topic creation.
+     * @param AutoCreateTopicEnabled Whether to enable automatic topic creation.
+     */
+    public void setAutoCreateTopicEnabled(Boolean AutoCreateTopicEnabled) {
+        this.AutoCreateTopicEnabled = AutoCreateTopicEnabled;
+    }
+
+    /**
+     * Get Whether to enable the admin feature of the cluster. 
+     * @return AdminFeatureEnabled Whether to enable the admin feature of the cluster.
+     */
+    public Boolean getAdminFeatureEnabled() {
+        return this.AdminFeatureEnabled;
+    }
+
+    /**
+     * Set Whether to enable the admin feature of the cluster.
+     * @param AdminFeatureEnabled Whether to enable the admin feature of the cluster.
+     */
+    public void setAdminFeatureEnabled(Boolean AdminFeatureEnabled) {
+        this.AdminFeatureEnabled = AdminFeatureEnabled;
+    }
+
+    /**
+     * Get Admin AK
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AdminAccessKey Admin AK
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAdminAccessKey() {
+        return this.AdminAccessKey;
+    }
+
+    /**
+     * Set Admin AK
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AdminAccessKey Admin AK
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAdminAccessKey(String AdminAccessKey) {
+        this.AdminAccessKey = AdminAccessKey;
+    }
+
+    /**
+     * Get Admin SK
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AdminSecretKey Admin SK
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAdminSecretKey() {
+        return this.AdminSecretKey;
+    }
+
+    /**
+     * Set Admin SK
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AdminSecretKey Admin SK
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAdminSecretKey(String AdminSecretKey) {
+        this.AdminSecretKey = AdminSecretKey;
+    }
+
+    /**
+     * Get Whether to enable deletion protection 
+     * @return EnableDeletionProtection Whether to enable deletion protection
+     */
+    public Boolean getEnableDeletionProtection() {
+        return this.EnableDeletionProtection;
+    }
+
+    /**
+     * Set Whether to enable deletion protection
+     * @param EnableDeletionProtection Whether to enable deletion protection
+     */
+    public void setEnableDeletionProtection(Boolean EnableDeletionProtection) {
+        this.EnableDeletionProtection = EnableDeletionProtection;
     }
 
     public RocketMQClusterInfo() {
@@ -531,6 +943,51 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         if (source.HttpInternalEndpoint != null) {
             this.HttpInternalEndpoint = new String(source.HttpInternalEndpoint);
         }
+        if (source.AclEnabled != null) {
+            this.AclEnabled = new Boolean(source.AclEnabled);
+        }
+        if (source.PublicClbId != null) {
+            this.PublicClbId = new String(source.PublicClbId);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SupportMigration != null) {
+            this.SupportMigration = new Boolean(source.SupportMigration);
+        }
+        if (source.InstanceStatus != null) {
+            this.InstanceStatus = new Long(source.InstanceStatus);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.ZoneIds != null) {
+            this.ZoneIds = new Long[source.ZoneIds.length];
+            for (int i = 0; i < source.ZoneIds.length; i++) {
+                this.ZoneIds[i] = new Long(source.ZoneIds[i]);
+            }
+        }
+        if (source.IsFrozen != null) {
+            this.IsFrozen = new Boolean(source.IsFrozen);
+        }
+        if (source.AutoCreateTopicEnabled != null) {
+            this.AutoCreateTopicEnabled = new Boolean(source.AutoCreateTopicEnabled);
+        }
+        if (source.AdminFeatureEnabled != null) {
+            this.AdminFeatureEnabled = new Boolean(source.AdminFeatureEnabled);
+        }
+        if (source.AdminAccessKey != null) {
+            this.AdminAccessKey = new String(source.AdminAccessKey);
+        }
+        if (source.AdminSecretKey != null) {
+            this.AdminSecretKey = new String(source.AdminSecretKey);
+        }
+        if (source.EnableDeletionProtection != null) {
+            this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
+        }
     }
 
 
@@ -555,6 +1012,20 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         this.setParamSimple(map, prefix + "HttpVpcEndpoint", this.HttpVpcEndpoint);
         this.setParamSimple(map, prefix + "InternalEndpoint", this.InternalEndpoint);
         this.setParamSimple(map, prefix + "HttpInternalEndpoint", this.HttpInternalEndpoint);
+        this.setParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
+        this.setParamSimple(map, prefix + "PublicClbId", this.PublicClbId);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SupportMigration", this.SupportMigration);
+        this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+        this.setParamSimple(map, prefix + "IsFrozen", this.IsFrozen);
+        this.setParamSimple(map, prefix + "AutoCreateTopicEnabled", this.AutoCreateTopicEnabled);
+        this.setParamSimple(map, prefix + "AdminFeatureEnabled", this.AdminFeatureEnabled);
+        this.setParamSimple(map, prefix + "AdminAccessKey", this.AdminAccessKey);
+        this.setParamSimple(map, prefix + "AdminSecretKey", this.AdminSecretKey);
+        this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
 
     }
 }

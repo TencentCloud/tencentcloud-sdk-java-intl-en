@@ -26,6 +26,7 @@ public class GetCardVerificationExternalResultResponse extends AbstractModel {
     /**
     * Indicates the status. valid values: 
 PASSED
+PROCESSING
 WARNING
     */
     @SerializedName("Status")
@@ -78,9 +79,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Indicates the status. valid values: 
 PASSED
+PROCESSING
 WARNING 
      * @return Status Indicates the status. valid values: 
 PASSED
+PROCESSING
 WARNING
      */
     public String getStatus() {
@@ -90,9 +93,11 @@ WARNING
     /**
      * Set Indicates the status. valid values: 
 PASSED
+PROCESSING
 WARNING
      * @param Status Indicates the status. valid values: 
 PASSED
+PROCESSING
 WARNING
      */
     public void setStatus(String Status) {

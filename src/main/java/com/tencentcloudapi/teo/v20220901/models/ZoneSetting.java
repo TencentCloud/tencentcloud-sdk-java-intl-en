@@ -184,6 +184,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Grpc Grpc;
 
     /**
+    * Network Error Logging configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("NetworkErrorLogging")
+    @Expose
+    private NetworkErrorLogging NetworkErrorLogging;
+
+    /**
     * Image optimization configuration. 
 Note: This field may return `null`, indicating that no valid value was found.
     */
@@ -616,6 +624,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
+     * Get Network Error Logging configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return NetworkErrorLogging Network Error Logging configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public NetworkErrorLogging getNetworkErrorLogging() {
+        return this.NetworkErrorLogging;
+    }
+
+    /**
+     * Set Network Error Logging configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param NetworkErrorLogging Network Error Logging configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setNetworkErrorLogging(NetworkErrorLogging NetworkErrorLogging) {
+        this.NetworkErrorLogging = NetworkErrorLogging;
+    }
+
+    /**
      * Get Image optimization configuration. 
 Note: This field may return `null`, indicating that no valid value was found. 
      * @return ImageOptimize Image optimization configuration. 
@@ -763,6 +791,9 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         if (source.Grpc != null) {
             this.Grpc = new Grpc(source.Grpc);
         }
+        if (source.NetworkErrorLogging != null) {
+            this.NetworkErrorLogging = new NetworkErrorLogging(source.NetworkErrorLogging);
+        }
         if (source.ImageOptimize != null) {
             this.ImageOptimize = new ImageOptimize(source.ImageOptimize);
         }
@@ -802,6 +833,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         this.setParamObj(map, prefix + "Https.", this.Https);
         this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
         this.setParamObj(map, prefix + "Grpc.", this.Grpc);
+        this.setParamObj(map, prefix + "NetworkErrorLogging.", this.NetworkErrorLogging);
         this.setParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
         this.setParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
         this.setParamObj(map, prefix + "StandardDebug.", this.StandardDebug);

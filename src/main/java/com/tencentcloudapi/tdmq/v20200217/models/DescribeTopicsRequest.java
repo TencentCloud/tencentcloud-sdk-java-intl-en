@@ -31,6 +31,13 @@ public class DescribeTopicsRequest extends AbstractModel {
     private String EnvironmentId;
 
     /**
+    * Pulsar cluster ID.
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
     * Fuzzy match by topic name.
     */
     @SerializedName("TopicName")
@@ -61,13 +68,6 @@ public class DescribeTopicsRequest extends AbstractModel {
     @SerializedName("TopicType")
     @Expose
     private Long TopicType;
-
-    /**
-    * Pulsar cluster ID.
-    */
-    @SerializedName("ClusterId")
-    @Expose
-    private String ClusterId;
 
     /**
     * * TopicName
@@ -102,6 +102,22 @@ Required: No
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
+    }
+
+    /**
+     * Get Pulsar cluster ID. 
+     * @return ClusterId Pulsar cluster ID.
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Pulsar cluster ID.
+     * @param ClusterId Pulsar cluster ID.
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
@@ -185,22 +201,6 @@ Required: No
     }
 
     /**
-     * Get Pulsar cluster ID. 
-     * @return ClusterId Pulsar cluster ID.
-     */
-    public String getClusterId() {
-        return this.ClusterId;
-    }
-
-    /**
-     * Set Pulsar cluster ID.
-     * @param ClusterId Pulsar cluster ID.
-     */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
-    }
-
-    /**
      * Get * TopicName
 Query by topic name for exact search.
 Type: String
@@ -263,6 +263,9 @@ Required: No
         if (source.EnvironmentId != null) {
             this.EnvironmentId = new String(source.EnvironmentId);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.TopicName != null) {
             this.TopicName = new String(source.TopicName);
         }
@@ -274,9 +277,6 @@ Required: No
         }
         if (source.TopicType != null) {
             this.TopicType = new Long(source.TopicType);
-        }
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
         }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
@@ -295,11 +295,11 @@ Required: No
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "TopicType", this.TopicType);
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "TopicCreator", this.TopicCreator);
 

@@ -38,7 +38,7 @@ public class CreateRocketMQTopicRequest extends AbstractModel {
     private String [] Namespaces;
 
     /**
-    * Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
+    * Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction, and DelayScheduled. Transaction is only supported in the Exclusive Edition.
     */
     @SerializedName("Type")
     @Expose
@@ -98,16 +98,16 @@ public class CreateRocketMQTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`. 
-     * @return Type Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
+     * Get Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction, and DelayScheduled. Transaction is only supported in the Exclusive Edition. 
+     * @return Type Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction, and DelayScheduled. Transaction is only supported in the Exclusive Edition.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
-     * @param Type Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
+     * Set Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction, and DelayScheduled. Transaction is only supported in the Exclusive Edition.
+     * @param Type Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction, and DelayScheduled. Transaction is only supported in the Exclusive Edition.
      */
     public void setType(String Type) {
         this.Type = Type;

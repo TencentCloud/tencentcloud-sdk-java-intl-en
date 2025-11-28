@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateClusterRequest extends AbstractModel {
 
     /**
-    * Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
+    * Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
     */
     @SerializedName("ClusterName")
     @Expose
@@ -59,16 +59,16 @@ public class CreateClusterRequest extends AbstractModel {
     private Boolean PublicAccessEnabled;
 
     /**
-     * Get Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores. 
-     * @return ClusterName Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
+     * Get Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters. 
+     * @return ClusterName Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
-     * @param ClusterName Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
+     * Set Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
+     * @param ClusterName Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;

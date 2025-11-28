@@ -38,7 +38,7 @@ public class ModifyClusterRequest extends AbstractModel {
     private String ClusterName;
 
     /**
-    * Remarks.
+    * Description information. length limit is 128 bytes.
     */
     @SerializedName("Remark")
     @Expose
@@ -84,16 +84,16 @@ public class ModifyClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get Remarks. 
-     * @return Remark Remarks.
+     * Get Description information. length limit is 128 bytes. 
+     * @return Remark Description information. length limit is 128 bytes.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remarks.
-     * @param Remark Remarks.
+     * Set Description information. length limit is 128 bytes.
+     * @param Remark Description information. length limit is 128 bytes.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

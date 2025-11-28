@@ -38,6 +38,13 @@ public class CreateRocketMQClusterRequest extends AbstractModel {
     private String Remark;
 
     /**
+    * Tag list
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get Cluster name, which can contain 3–64 letters, digits, hyphens, and underscores 
      * @return Name Cluster name, which can contain 3–64 letters, digits, hyphens, and underscores
      */
@@ -69,6 +76,22 @@ public class CreateRocketMQClusterRequest extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get Tag list 
+     * @return TagList Tag list
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set Tag list
+     * @param TagList Tag list
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
     public CreateRocketMQClusterRequest() {
     }
 
@@ -83,6 +106,12 @@ public class CreateRocketMQClusterRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.TagList != null) {
+            this.TagList = new Tag[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new Tag(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class CreateRocketMQClusterRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

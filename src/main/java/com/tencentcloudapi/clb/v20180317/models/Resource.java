@@ -38,16 +38,14 @@ public class Resource extends AbstractModel {
     private String Isp;
 
     /**
-    * Available resources
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Available resources.
     */
     @SerializedName("AvailabilitySet")
     @Expose
     private ResourceAvailability [] AvailabilitySet;
 
     /**
-    * ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Operator type info.
     */
     @SerializedName("TypeSet")
     @Expose
@@ -86,40 +84,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Available resources
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return AvailabilitySet Available resources
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Available resources. 
+     * @return AvailabilitySet Available resources.
      */
     public ResourceAvailability [] getAvailabilitySet() {
         return this.AvailabilitySet;
     }
 
     /**
-     * Set Available resources
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param AvailabilitySet Available resources
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Available resources.
+     * @param AvailabilitySet Available resources.
      */
     public void setAvailabilitySet(ResourceAvailability [] AvailabilitySet) {
         this.AvailabilitySet = AvailabilitySet;
     }
 
     /**
-     * Get ISP Type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TypeSet ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Operator type info. 
+     * @return TypeSet Operator type info.
      */
     public TypeInfo [] getTypeSet() {
         return this.TypeSet;
     }
 
     /**
-     * Set ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TypeSet ISP Type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Operator type info.
+     * @param TypeSet Operator type info.
      */
     public void setTypeSet(TypeInfo [] TypeSet) {
         this.TypeSet = TypeSet;

@@ -188,6 +188,14 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     private GrpcParameters Grpc;
 
     /**
+    * Network Error Logging configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+    */
+    @SerializedName("NetworkErrorLogging")
+    @Expose
+    private NetworkErrorLoggingParameters NetworkErrorLogging;
+
+    /**
     * Accelerate optimization and configuration in mainland china.
 Note: this field may return null, which indicates a failure to obtain a valid value.
     */
@@ -621,6 +629,26 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
+     * Get Network Error Logging configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return NetworkErrorLogging Network Error Logging configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     */
+    public NetworkErrorLoggingParameters getNetworkErrorLogging() {
+        return this.NetworkErrorLogging;
+    }
+
+    /**
+     * Set Network Error Logging configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param NetworkErrorLogging Network Error Logging configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     */
+    public void setNetworkErrorLogging(NetworkErrorLoggingParameters NetworkErrorLogging) {
+        this.NetworkErrorLogging = NetworkErrorLogging;
+    }
+
+    /**
      * Get Accelerate optimization and configuration in mainland china.
 Note: this field may return null, which indicates a failure to obtain a valid value. 
      * @return AccelerateMainland Accelerate optimization and configuration in mainland china.
@@ -732,6 +760,9 @@ Note: this field may return null, which indicates a failure to obtain a valid va
         if (source.Grpc != null) {
             this.Grpc = new GrpcParameters(source.Grpc);
         }
+        if (source.NetworkErrorLogging != null) {
+            this.NetworkErrorLogging = new NetworkErrorLoggingParameters(source.NetworkErrorLogging);
+        }
         if (source.AccelerateMainland != null) {
             this.AccelerateMainland = new AccelerateMainlandParameters(source.AccelerateMainland);
         }
@@ -765,6 +796,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
         this.setParamObj(map, prefix + "ClientIPHeader.", this.ClientIPHeader);
         this.setParamObj(map, prefix + "ClientIPCountry.", this.ClientIPCountry);
         this.setParamObj(map, prefix + "Grpc.", this.Grpc);
+        this.setParamObj(map, prefix + "NetworkErrorLogging.", this.NetworkErrorLogging);
         this.setParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
         this.setParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
 

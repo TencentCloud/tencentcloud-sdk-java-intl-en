@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyCmqQueueAttributeRequest extends AbstractModel {
 
     /**
-    * Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+    * Queue name, which must be unique under the same account in the same region. A queue name is a string of up to 64 characters, starting with a letter, and the remaining part can include letters, digits, and hyphens (-).
     */
     @SerializedName("QueueName")
     @Expose
@@ -94,7 +94,7 @@ public class ModifyCmqQueueAttributeRequest extends AbstractModel {
     private String DeadLetterQueueName;
 
     /**
-    * Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+    * Specifies the essential parameter when policy is 1. maximum unconsumed expiration time. value range: 300-43200 in seconds, must be less than the maximum message retention time MsgRetentionSeconds.
     */
     @SerializedName("MaxTimeToLive")
     @Expose
@@ -136,16 +136,16 @@ public class ModifyCmqQueueAttributeRequest extends AbstractModel {
     private Long RetentionSizeInMB;
 
     /**
-     * Get Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter. 
-     * @return QueueName Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+     * Get Queue name, which must be unique under the same account in the same region. A queue name is a string of up to 64 characters, starting with a letter, and the remaining part can include letters, digits, and hyphens (-). 
+     * @return QueueName Queue name, which must be unique under the same account in the same region. A queue name is a string of up to 64 characters, starting with a letter, and the remaining part can include letters, digits, and hyphens (-).
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
-     * @param QueueName Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+     * Set Queue name, which must be unique under the same account in the same region. A queue name is a string of up to 64 characters, starting with a letter, and the remaining part can include letters, digits, and hyphens (-).
+     * @param QueueName Queue name, which must be unique under the same account in the same region. A queue name is a string of up to 64 characters, starting with a letter, and the remaining part can include letters, digits, and hyphens (-).
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
@@ -296,16 +296,16 @@ public class ModifyCmqQueueAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period) 
-     * @return MaxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+     * Get Specifies the essential parameter when policy is 1. maximum unconsumed expiration time. value range: 300-43200 in seconds, must be less than the maximum message retention time MsgRetentionSeconds. 
+     * @return MaxTimeToLive Specifies the essential parameter when policy is 1. maximum unconsumed expiration time. value range: 300-43200 in seconds, must be less than the maximum message retention time MsgRetentionSeconds.
      */
     public Long getMaxTimeToLive() {
         return this.MaxTimeToLive;
     }
 
     /**
-     * Set Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-     * @param MaxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+     * Set Specifies the essential parameter when policy is 1. maximum unconsumed expiration time. value range: 300-43200 in seconds, must be less than the maximum message retention time MsgRetentionSeconds.
+     * @param MaxTimeToLive Specifies the essential parameter when policy is 1. maximum unconsumed expiration time. value range: 300-43200 in seconds, must be less than the maximum message retention time MsgRetentionSeconds.
      */
     public void setMaxTimeToLive(Long MaxTimeToLive) {
         this.MaxTimeToLive = MaxTimeToLive;

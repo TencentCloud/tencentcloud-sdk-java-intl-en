@@ -24,14 +24,15 @@ import java.util.HashMap;
 public class Quota extends AbstractModel {
 
     /**
-    * Quota name. Valid values:
-<li> `TOTAL_OPEN_CLB_QUOTA`: Quota of public network CLB instances in the current region</li>
-<li> `TOTAL_INTERNAL_CLB_QUOTA`: Quota of private network CLB instances in the current region</li>
-<li> `TOTAL_LISTENER_QUOTA`: Quota of listeners under one CLB instance</li>
-<li> `TOTAL_LISTENER_RULE_QUOTA`: Quota of forwarding rules under one listener</li>
-<li> `TOTAL_TARGET_BIND_QUOTA`: Quota of CVM instances can be bound under one forwarding rule</li>
-<li> `TOTAL_SNAP_IP_QUOTA`: Quota of SNAT IPs for cross-region binding 2.0 under one CLB instance </li>
-<li> `TOTAL_ISP_CLB_QUOTA`: Quota of triple-ISP (CMCC/CUCC/CTCC) CLB instances in the current region</li>
+    * Quota name. value range:.
+<Li>TOTAL_OPEN_CLB_QUOTA: specifies the public network clb quota in the current region for the user.</li>.
+<Li>TOTAL_INTERNAL_CLB_QUOTA: specifies the private network clb quota in the current region for the user.</li>.
+<li>TOTAL_LISTENER_QUOTA: specifies the LISTENER QUOTA under a CLB.</li>.
+<Li>TOTAL_LISTENER_RULE_QUOTA: specifies the forwarding rule quota under a listener.</li>.
+<Li>TOTAL_TARGET_BIND_QUOTA: specifies the quota of devices that can be bound to a forwarding rule.</li>.
+<li> TOTAL_SNAT_IP_QUOTA: specifies the SNAT IP QUOTA for a cross-regional 2.0 CLB instance. </li>.
+<Li>TOTAL_ISP_CLB_QUOTA: specifies the quota of triple-isp (cmcc/cucc/ctcc) clb instances in the current region for the user.</li>.
+<li>TOTAL_FULL_PORT_RANGE_LISTENER_QUOTA: specifies the QUOTA of single-protocol FULL PORT RANGE listeners for a CLB instance.</li>.
     */
     @SerializedName("QuotaId")
     @Expose
@@ -53,44 +54,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long QuotaLimit;
 
     /**
-     * Get Quota name. Valid values:
-<li> `TOTAL_OPEN_CLB_QUOTA`: Quota of public network CLB instances in the current region</li>
-<li> `TOTAL_INTERNAL_CLB_QUOTA`: Quota of private network CLB instances in the current region</li>
-<li> `TOTAL_LISTENER_QUOTA`: Quota of listeners under one CLB instance</li>
-<li> `TOTAL_LISTENER_RULE_QUOTA`: Quota of forwarding rules under one listener</li>
-<li> `TOTAL_TARGET_BIND_QUOTA`: Quota of CVM instances can be bound under one forwarding rule</li>
-<li> `TOTAL_SNAP_IP_QUOTA`: Quota of SNAT IPs for cross-region binding 2.0 under one CLB instance </li>
-<li> `TOTAL_ISP_CLB_QUOTA`: Quota of triple-ISP (CMCC/CUCC/CTCC) CLB instances in the current region</li> 
-     * @return QuotaId Quota name. Valid values:
-<li> `TOTAL_OPEN_CLB_QUOTA`: Quota of public network CLB instances in the current region</li>
-<li> `TOTAL_INTERNAL_CLB_QUOTA`: Quota of private network CLB instances in the current region</li>
-<li> `TOTAL_LISTENER_QUOTA`: Quota of listeners under one CLB instance</li>
-<li> `TOTAL_LISTENER_RULE_QUOTA`: Quota of forwarding rules under one listener</li>
-<li> `TOTAL_TARGET_BIND_QUOTA`: Quota of CVM instances can be bound under one forwarding rule</li>
-<li> `TOTAL_SNAP_IP_QUOTA`: Quota of SNAT IPs for cross-region binding 2.0 under one CLB instance </li>
-<li> `TOTAL_ISP_CLB_QUOTA`: Quota of triple-ISP (CMCC/CUCC/CTCC) CLB instances in the current region</li>
+     * Get Quota name. value range:.
+<Li>TOTAL_OPEN_CLB_QUOTA: specifies the public network clb quota in the current region for the user.</li>.
+<Li>TOTAL_INTERNAL_CLB_QUOTA: specifies the private network clb quota in the current region for the user.</li>.
+<li>TOTAL_LISTENER_QUOTA: specifies the LISTENER QUOTA under a CLB.</li>.
+<Li>TOTAL_LISTENER_RULE_QUOTA: specifies the forwarding rule quota under a listener.</li>.
+<Li>TOTAL_TARGET_BIND_QUOTA: specifies the quota of devices that can be bound to a forwarding rule.</li>.
+<li> TOTAL_SNAT_IP_QUOTA: specifies the SNAT IP QUOTA for a cross-regional 2.0 CLB instance. </li>.
+<Li>TOTAL_ISP_CLB_QUOTA: specifies the quota of triple-isp (cmcc/cucc/ctcc) clb instances in the current region for the user.</li>.
+<li>TOTAL_FULL_PORT_RANGE_LISTENER_QUOTA: specifies the QUOTA of single-protocol FULL PORT RANGE listeners for a CLB instance.</li>. 
+     * @return QuotaId Quota name. value range:.
+<Li>TOTAL_OPEN_CLB_QUOTA: specifies the public network clb quota in the current region for the user.</li>.
+<Li>TOTAL_INTERNAL_CLB_QUOTA: specifies the private network clb quota in the current region for the user.</li>.
+<li>TOTAL_LISTENER_QUOTA: specifies the LISTENER QUOTA under a CLB.</li>.
+<Li>TOTAL_LISTENER_RULE_QUOTA: specifies the forwarding rule quota under a listener.</li>.
+<Li>TOTAL_TARGET_BIND_QUOTA: specifies the quota of devices that can be bound to a forwarding rule.</li>.
+<li> TOTAL_SNAT_IP_QUOTA: specifies the SNAT IP QUOTA for a cross-regional 2.0 CLB instance. </li>.
+<Li>TOTAL_ISP_CLB_QUOTA: specifies the quota of triple-isp (cmcc/cucc/ctcc) clb instances in the current region for the user.</li>.
+<li>TOTAL_FULL_PORT_RANGE_LISTENER_QUOTA: specifies the QUOTA of single-protocol FULL PORT RANGE listeners for a CLB instance.</li>.
      */
     public String getQuotaId() {
         return this.QuotaId;
     }
 
     /**
-     * Set Quota name. Valid values:
-<li> `TOTAL_OPEN_CLB_QUOTA`: Quota of public network CLB instances in the current region</li>
-<li> `TOTAL_INTERNAL_CLB_QUOTA`: Quota of private network CLB instances in the current region</li>
-<li> `TOTAL_LISTENER_QUOTA`: Quota of listeners under one CLB instance</li>
-<li> `TOTAL_LISTENER_RULE_QUOTA`: Quota of forwarding rules under one listener</li>
-<li> `TOTAL_TARGET_BIND_QUOTA`: Quota of CVM instances can be bound under one forwarding rule</li>
-<li> `TOTAL_SNAP_IP_QUOTA`: Quota of SNAT IPs for cross-region binding 2.0 under one CLB instance </li>
-<li> `TOTAL_ISP_CLB_QUOTA`: Quota of triple-ISP (CMCC/CUCC/CTCC) CLB instances in the current region</li>
-     * @param QuotaId Quota name. Valid values:
-<li> `TOTAL_OPEN_CLB_QUOTA`: Quota of public network CLB instances in the current region</li>
-<li> `TOTAL_INTERNAL_CLB_QUOTA`: Quota of private network CLB instances in the current region</li>
-<li> `TOTAL_LISTENER_QUOTA`: Quota of listeners under one CLB instance</li>
-<li> `TOTAL_LISTENER_RULE_QUOTA`: Quota of forwarding rules under one listener</li>
-<li> `TOTAL_TARGET_BIND_QUOTA`: Quota of CVM instances can be bound under one forwarding rule</li>
-<li> `TOTAL_SNAP_IP_QUOTA`: Quota of SNAT IPs for cross-region binding 2.0 under one CLB instance </li>
-<li> `TOTAL_ISP_CLB_QUOTA`: Quota of triple-ISP (CMCC/CUCC/CTCC) CLB instances in the current region</li>
+     * Set Quota name. value range:.
+<Li>TOTAL_OPEN_CLB_QUOTA: specifies the public network clb quota in the current region for the user.</li>.
+<Li>TOTAL_INTERNAL_CLB_QUOTA: specifies the private network clb quota in the current region for the user.</li>.
+<li>TOTAL_LISTENER_QUOTA: specifies the LISTENER QUOTA under a CLB.</li>.
+<Li>TOTAL_LISTENER_RULE_QUOTA: specifies the forwarding rule quota under a listener.</li>.
+<Li>TOTAL_TARGET_BIND_QUOTA: specifies the quota of devices that can be bound to a forwarding rule.</li>.
+<li> TOTAL_SNAT_IP_QUOTA: specifies the SNAT IP QUOTA for a cross-regional 2.0 CLB instance. </li>.
+<Li>TOTAL_ISP_CLB_QUOTA: specifies the quota of triple-isp (cmcc/cucc/ctcc) clb instances in the current region for the user.</li>.
+<li>TOTAL_FULL_PORT_RANGE_LISTENER_QUOTA: specifies the QUOTA of single-protocol FULL PORT RANGE listeners for a CLB instance.</li>.
+     * @param QuotaId Quota name. value range:.
+<Li>TOTAL_OPEN_CLB_QUOTA: specifies the public network clb quota in the current region for the user.</li>.
+<Li>TOTAL_INTERNAL_CLB_QUOTA: specifies the private network clb quota in the current region for the user.</li>.
+<li>TOTAL_LISTENER_QUOTA: specifies the LISTENER QUOTA under a CLB.</li>.
+<Li>TOTAL_LISTENER_RULE_QUOTA: specifies the forwarding rule quota under a listener.</li>.
+<Li>TOTAL_TARGET_BIND_QUOTA: specifies the quota of devices that can be bound to a forwarding rule.</li>.
+<li> TOTAL_SNAT_IP_QUOTA: specifies the SNAT IP QUOTA for a cross-regional 2.0 CLB instance. </li>.
+<Li>TOTAL_ISP_CLB_QUOTA: specifies the quota of triple-isp (cmcc/cucc/ctcc) clb instances in the current region for the user.</li>.
+<li>TOTAL_FULL_PORT_RANGE_LISTENER_QUOTA: specifies the QUOTA of single-protocol FULL PORT RANGE listeners for a CLB instance.</li>.
      */
     public void setQuotaId(String QuotaId) {
         this.QuotaId = QuotaId;

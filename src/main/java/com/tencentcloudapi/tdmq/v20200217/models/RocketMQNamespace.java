@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RocketMQNamespace extends AbstractModel {
 
     /**
-    * Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
+    * Namespace name, which can contain 3 - 64 letters, digits, hyphens, and underscores.
     */
     @SerializedName("NamespaceId")
     @Expose
     private String NamespaceId;
 
     /**
-    * Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
+    * Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds - 15 days. This parameter is disused.
     */
     @SerializedName("Ttl")
     @Expose
@@ -70,39 +70,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Internal access point address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InternalEndpoint")
     @Expose
     private String InternalEndpoint;
 
     /**
-     * Get Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores. 
-     * @return NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
+     * Get Namespace name, which can contain 3 - 64 letters, digits, hyphens, and underscores. 
+     * @return NamespaceId Namespace name, which can contain 3 - 64 letters, digits, hyphens, and underscores.
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
-     * @param NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
+     * Set Namespace name, which can contain 3 - 64 letters, digits, hyphens, and underscores.
+     * @param NamespaceId Namespace name, which can contain 3 - 64 letters, digits, hyphens, and underscores.
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused. 
-     * @return Ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
+     * Get Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds - 15 days. This parameter is disused. 
+     * @return Ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds - 15 days. This parameter is disused.
      */
     public Long getTtl() {
         return this.Ttl;
     }
 
     /**
-     * Set Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
-     * @param Ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
+     * Set Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds - 15 days. This parameter is disused.
+     * @param Ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds - 15 days. This parameter is disused.
      */
     public void setTtl(Long Ttl) {
         this.Ttl = Ttl;
@@ -186,9 +186,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Internal access point address
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return InternalEndpoint Internal access point address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInternalEndpoint() {
         return this.InternalEndpoint;
@@ -196,9 +196,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Internal access point address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param InternalEndpoint Internal access point address
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInternalEndpoint(String InternalEndpoint) {
         this.InternalEndpoint = InternalEndpoint;

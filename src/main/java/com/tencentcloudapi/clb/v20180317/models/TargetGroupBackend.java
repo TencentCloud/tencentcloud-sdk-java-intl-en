@@ -45,7 +45,7 @@ public class TargetGroupBackend extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Listening port of real server
+    * Specifies the listening port of the backend service. for a port range listener, this field returns 0, representing an invalid port, indicating settings not supported.
     */
     @SerializedName("Port")
     @Expose
@@ -59,24 +59,21 @@ public class TargetGroupBackend extends AbstractModel {
     private Long Weight;
 
     /**
-    * Public IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Public network IP of the real server
     */
     @SerializedName("PublicIpAddresses")
     @Expose
     private String [] PublicIpAddresses;
 
     /**
-    * Private IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Private network IP of the real server
     */
     @SerializedName("PrivateIpAddresses")
     @Expose
     private String [] PrivateIpAddresses;
 
     /**
-    * Real server instance name
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Instance name of the real server
     */
     @SerializedName("InstanceName")
     @Expose
@@ -91,16 +88,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RegisteredTime;
 
     /**
-    * Unique ENI ID
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Unique ID of the ENI
     */
     @SerializedName("EniId")
     @Expose
     private String EniId;
 
     /**
-    * AZ ID of the real server
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the availability zone ID of the backend service.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -155,16 +150,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Listening port of real server 
-     * @return Port Listening port of real server
+     * Get Specifies the listening port of the backend service. for a port range listener, this field returns 0, representing an invalid port, indicating settings not supported. 
+     * @return Port Specifies the listening port of the backend service. for a port range listener, this field returns 0, representing an invalid port, indicating settings not supported.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Listening port of real server
-     * @param Port Listening port of real server
+     * Set Specifies the listening port of the backend service. for a port range listener, this field returns 0, representing an invalid port, indicating settings not supported.
+     * @param Port Specifies the listening port of the backend service. for a port range listener, this field returns 0, representing an invalid port, indicating settings not supported.
      */
     public void setPort(Long Port) {
         this.Port = Port;
@@ -187,60 +182,48 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Public IP of real server
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PublicIpAddresses Public IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Public network IP of the real server 
+     * @return PublicIpAddresses Public network IP of the real server
      */
     public String [] getPublicIpAddresses() {
         return this.PublicIpAddresses;
     }
 
     /**
-     * Set Public IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PublicIpAddresses Public IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Public network IP of the real server
+     * @param PublicIpAddresses Public network IP of the real server
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;
     }
 
     /**
-     * Get Private IP of real server
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PrivateIpAddresses Private IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Private network IP of the real server 
+     * @return PrivateIpAddresses Private network IP of the real server
      */
     public String [] getPrivateIpAddresses() {
         return this.PrivateIpAddresses;
     }
 
     /**
-     * Set Private IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PrivateIpAddresses Private IP of real server
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Private network IP of the real server
+     * @param PrivateIpAddresses Private network IP of the real server
      */
     public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
         this.PrivateIpAddresses = PrivateIpAddresses;
     }
 
     /**
-     * Get Real server instance name
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceName Real server instance name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Instance name of the real server 
+     * @return InstanceName Instance name of the real server
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Real server instance name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param InstanceName Real server instance name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Instance name of the real server
+     * @param InstanceName Instance name of the real server
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -267,40 +250,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Unique ENI ID
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return EniId Unique ENI ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Unique ID of the ENI 
+     * @return EniId Unique ID of the ENI
      */
     public String getEniId() {
         return this.EniId;
     }
 
     /**
-     * Set Unique ENI ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EniId Unique ENI ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Unique ID of the ENI
+     * @param EniId Unique ID of the ENI
      */
     public void setEniId(String EniId) {
         this.EniId = EniId;
     }
 
     /**
-     * Get AZ ID of the real server
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return ZoneId AZ ID of the real server
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the availability zone ID of the backend service. 
+     * @return ZoneId Specifies the availability zone ID of the backend service.
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set AZ ID of the real server
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param ZoneId AZ ID of the real server
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the availability zone ID of the backend service.
+     * @param ZoneId Specifies the availability zone ID of the backend service.
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;

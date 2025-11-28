@@ -31,7 +31,7 @@ public class RegisterTargetGroupInstancesRequest extends AbstractModel {
     private String TargetGroupId;
 
     /**
-    * Server instance array
+    * Server instance array. the VPC of the server and target group must be the same.
     */
     @SerializedName("TargetGroupInstances")
     @Expose
@@ -54,16 +54,16 @@ public class RegisterTargetGroupInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Server instance array 
-     * @return TargetGroupInstances Server instance array
+     * Get Server instance array. the VPC of the server and target group must be the same. 
+     * @return TargetGroupInstances Server instance array. the VPC of the server and target group must be the same.
      */
     public TargetGroupInstance [] getTargetGroupInstances() {
         return this.TargetGroupInstances;
     }
 
     /**
-     * Set Server instance array
-     * @param TargetGroupInstances Server instance array
+     * Set Server instance array. the VPC of the server and target group must be the same.
+     * @param TargetGroupInstances Server instance array. the VPC of the server and target group must be the same.
      */
     public void setTargetGroupInstances(TargetGroupInstance [] TargetGroupInstances) {
         this.TargetGroupInstances = TargetGroupInstances;

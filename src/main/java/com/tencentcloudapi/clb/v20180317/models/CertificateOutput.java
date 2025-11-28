@@ -31,6 +31,13 @@ public class CertificateOutput extends AbstractModel {
     private String SSLMode;
 
     /**
+    * Specifies whether client certificate verification is enabled. this parameter is valid only when mutual authentication is enabled.
+    */
+    @SerializedName("SSLVerifyClient")
+    @Expose
+    private String SSLVerifyClient;
+
+    /**
     * Server certificate ID.
     */
     @SerializedName("CertId")
@@ -39,15 +46,13 @@ public class CertificateOutput extends AbstractModel {
 
     /**
     * Client certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CertCaId")
     @Expose
     private String CertCaId;
 
     /**
-    * IDs of extra server certificates
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the server certificate ID for multi-server certificate scenario expansion.
     */
     @SerializedName("ExtCertIds")
     @Expose
@@ -70,6 +75,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Specifies whether client certificate verification is enabled. this parameter is valid only when mutual authentication is enabled. 
+     * @return SSLVerifyClient Specifies whether client certificate verification is enabled. this parameter is valid only when mutual authentication is enabled.
+     */
+    public String getSSLVerifyClient() {
+        return this.SSLVerifyClient;
+    }
+
+    /**
+     * Set Specifies whether client certificate verification is enabled. this parameter is valid only when mutual authentication is enabled.
+     * @param SSLVerifyClient Specifies whether client certificate verification is enabled. this parameter is valid only when mutual authentication is enabled.
+     */
+    public void setSSLVerifyClient(String SSLVerifyClient) {
+        this.SSLVerifyClient = SSLVerifyClient;
+    }
+
+    /**
      * Get Server certificate ID. 
      * @return CertId Server certificate ID.
      */
@@ -86,10 +107,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Client certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Client certificate ID. 
      * @return CertCaId Client certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCertCaId() {
         return this.CertCaId;
@@ -97,29 +116,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Client certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CertCaId Client certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCertCaId(String CertCaId) {
         this.CertCaId = CertCaId;
     }
 
     /**
-     * Get IDs of extra server certificates
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return ExtCertIds IDs of extra server certificates
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the server certificate ID for multi-server certificate scenario expansion. 
+     * @return ExtCertIds Specifies the server certificate ID for multi-server certificate scenario expansion.
      */
     public String [] getExtCertIds() {
         return this.ExtCertIds;
     }
 
     /**
-     * Set IDs of extra server certificates
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param ExtCertIds IDs of extra server certificates
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the server certificate ID for multi-server certificate scenario expansion.
+     * @param ExtCertIds Specifies the server certificate ID for multi-server certificate scenario expansion.
      */
     public void setExtCertIds(String [] ExtCertIds) {
         this.ExtCertIds = ExtCertIds;
@@ -135,6 +148,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public CertificateOutput(CertificateOutput source) {
         if (source.SSLMode != null) {
             this.SSLMode = new String(source.SSLMode);
+        }
+        if (source.SSLVerifyClient != null) {
+            this.SSLVerifyClient = new String(source.SSLVerifyClient);
         }
         if (source.CertId != null) {
             this.CertId = new String(source.CertId);
@@ -156,6 +172,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SSLMode", this.SSLMode);
+        this.setParamSimple(map, prefix + "SSLVerifyClient", this.SSLVerifyClient);
         this.setParamSimple(map, prefix + "CertId", this.CertId);
         this.setParamSimple(map, prefix + "CertCaId", this.CertCaId);
         this.setParamArraySimple(map, prefix + "ExtCertIds.", this.ExtCertIds);

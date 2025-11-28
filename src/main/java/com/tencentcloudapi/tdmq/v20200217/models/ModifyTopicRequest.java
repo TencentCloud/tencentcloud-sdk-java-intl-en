@@ -38,11 +38,18 @@ public class ModifyTopicRequest extends AbstractModel {
     private String TopicName;
 
     /**
-    * Number of partitions, which must be equal to or greater than the original number of partitions. To maintain the original number of partitions, enter the original number. Modifying the number of partitions will take effect only for non-globally sequential messages. There can be up to 128 partitions.
+    * Specifies the number of partitions, which must be greater than or equal to the original partition count. if you want to maintain the original number of partitions, please enter the original number. changing the number of partitions is only effective for non-global sequential messages and cannot exceed 32 partitions.
     */
     @SerializedName("Partitions")
     @Expose
     private Long Partitions;
+
+    /**
+    * Pulsar cluster ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
 
     /**
     * Remarks (up to 128 characters).
@@ -52,11 +59,33 @@ public class ModifyTopicRequest extends AbstractModel {
     private String Remark;
 
     /**
-    * Pulsar cluster ID
+    * Unconsumed message expiration time. measurement unit: seconds. value range: 60 seconds to 15 days.
+
     */
-    @SerializedName("ClusterId")
+    @SerializedName("MsgTTL")
     @Expose
-    private String ClusterId;
+    private Long MsgTTL;
+
+    /**
+    * Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy refers to dynamically adjusting the maximum unacknowledged messages under the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers.
+    */
+    @SerializedName("UnackPolicy")
+    @Expose
+    private String UnackPolicy;
+
+    /**
+    * Whether exception consumer isolation is enabled.
+    */
+    @SerializedName("IsolateConsumerEnable")
+    @Expose
+    private Boolean IsolateConsumerEnable;
+
+    /**
+    * Consumer Ack timeout period in seconds. value range: 60-(3600*24).
+    */
+    @SerializedName("AckTimeOut")
+    @Expose
+    private Long AckTimeOut;
 
     /**
      * Get Environment (namespace) name. 
@@ -91,19 +120,35 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of partitions, which must be equal to or greater than the original number of partitions. To maintain the original number of partitions, enter the original number. Modifying the number of partitions will take effect only for non-globally sequential messages. There can be up to 128 partitions. 
-     * @return Partitions Number of partitions, which must be equal to or greater than the original number of partitions. To maintain the original number of partitions, enter the original number. Modifying the number of partitions will take effect only for non-globally sequential messages. There can be up to 128 partitions.
+     * Get Specifies the number of partitions, which must be greater than or equal to the original partition count. if you want to maintain the original number of partitions, please enter the original number. changing the number of partitions is only effective for non-global sequential messages and cannot exceed 32 partitions. 
+     * @return Partitions Specifies the number of partitions, which must be greater than or equal to the original partition count. if you want to maintain the original number of partitions, please enter the original number. changing the number of partitions is only effective for non-global sequential messages and cannot exceed 32 partitions.
      */
     public Long getPartitions() {
         return this.Partitions;
     }
 
     /**
-     * Set Number of partitions, which must be equal to or greater than the original number of partitions. To maintain the original number of partitions, enter the original number. Modifying the number of partitions will take effect only for non-globally sequential messages. There can be up to 128 partitions.
-     * @param Partitions Number of partitions, which must be equal to or greater than the original number of partitions. To maintain the original number of partitions, enter the original number. Modifying the number of partitions will take effect only for non-globally sequential messages. There can be up to 128 partitions.
+     * Set Specifies the number of partitions, which must be greater than or equal to the original partition count. if you want to maintain the original number of partitions, please enter the original number. changing the number of partitions is only effective for non-global sequential messages and cannot exceed 32 partitions.
+     * @param Partitions Specifies the number of partitions, which must be greater than or equal to the original partition count. if you want to maintain the original number of partitions, please enter the original number. changing the number of partitions is only effective for non-global sequential messages and cannot exceed 32 partitions.
      */
     public void setPartitions(Long Partitions) {
         this.Partitions = Partitions;
+    }
+
+    /**
+     * Get Pulsar cluster ID 
+     * @return ClusterId Pulsar cluster ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Pulsar cluster ID
+     * @param ClusterId Pulsar cluster ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
@@ -123,19 +168,71 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get Pulsar cluster ID 
-     * @return ClusterId Pulsar cluster ID
+     * Get Unconsumed message expiration time. measurement unit: seconds. value range: 60 seconds to 15 days.
+ 
+     * @return MsgTTL Unconsumed message expiration time. measurement unit: seconds. value range: 60 seconds to 15 days.
+
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public Long getMsgTTL() {
+        return this.MsgTTL;
     }
 
     /**
-     * Set Pulsar cluster ID
-     * @param ClusterId Pulsar cluster ID
+     * Set Unconsumed message expiration time. measurement unit: seconds. value range: 60 seconds to 15 days.
+
+     * @param MsgTTL Unconsumed message expiration time. measurement unit: seconds. value range: 60 seconds to 15 days.
+
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setMsgTTL(Long MsgTTL) {
+        this.MsgTTL = MsgTTL;
+    }
+
+    /**
+     * Get Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy refers to dynamically adjusting the maximum unacknowledged messages under the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers. 
+     * @return UnackPolicy Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy refers to dynamically adjusting the maximum unacknowledged messages under the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers.
+     */
+    public String getUnackPolicy() {
+        return this.UnackPolicy;
+    }
+
+    /**
+     * Set Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy refers to dynamically adjusting the maximum unacknowledged messages under the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers.
+     * @param UnackPolicy Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy refers to dynamically adjusting the maximum unacknowledged messages under the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers.
+     */
+    public void setUnackPolicy(String UnackPolicy) {
+        this.UnackPolicy = UnackPolicy;
+    }
+
+    /**
+     * Get Whether exception consumer isolation is enabled. 
+     * @return IsolateConsumerEnable Whether exception consumer isolation is enabled.
+     */
+    public Boolean getIsolateConsumerEnable() {
+        return this.IsolateConsumerEnable;
+    }
+
+    /**
+     * Set Whether exception consumer isolation is enabled.
+     * @param IsolateConsumerEnable Whether exception consumer isolation is enabled.
+     */
+    public void setIsolateConsumerEnable(Boolean IsolateConsumerEnable) {
+        this.IsolateConsumerEnable = IsolateConsumerEnable;
+    }
+
+    /**
+     * Get Consumer Ack timeout period in seconds. value range: 60-(3600*24). 
+     * @return AckTimeOut Consumer Ack timeout period in seconds. value range: 60-(3600*24).
+     */
+    public Long getAckTimeOut() {
+        return this.AckTimeOut;
+    }
+
+    /**
+     * Set Consumer Ack timeout period in seconds. value range: 60-(3600*24).
+     * @param AckTimeOut Consumer Ack timeout period in seconds. value range: 60-(3600*24).
+     */
+    public void setAckTimeOut(Long AckTimeOut) {
+        this.AckTimeOut = AckTimeOut;
     }
 
     public ModifyTopicRequest() {
@@ -155,11 +252,23 @@ public class ModifyTopicRequest extends AbstractModel {
         if (source.Partitions != null) {
             this.Partitions = new Long(source.Partitions);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+        if (source.MsgTTL != null) {
+            this.MsgTTL = new Long(source.MsgTTL);
+        }
+        if (source.UnackPolicy != null) {
+            this.UnackPolicy = new String(source.UnackPolicy);
+        }
+        if (source.IsolateConsumerEnable != null) {
+            this.IsolateConsumerEnable = new Boolean(source.IsolateConsumerEnable);
+        }
+        if (source.AckTimeOut != null) {
+            this.AckTimeOut = new Long(source.AckTimeOut);
         }
     }
 
@@ -171,8 +280,12 @@ public class ModifyTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "Partitions", this.Partitions);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
+        this.setParamSimple(map, prefix + "UnackPolicy", this.UnackPolicy);
+        this.setParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
+        this.setParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
 
     }
 }

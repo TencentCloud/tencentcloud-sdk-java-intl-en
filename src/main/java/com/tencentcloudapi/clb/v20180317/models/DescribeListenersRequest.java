@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeListenersRequest extends AbstractModel {
 
     /**
-    * CLB instance ID.
+    * ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/api/214/30685?from_cn_redirect=1) api to obtain the ID.
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * Array of CLB listener IDs to query (100 IDs at most).
+    * Specifies the array of clb listener ids to query, with a maximum of 100. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/api/214/30686?from_cn_redirect=1) api to obtain the ids.
     */
     @SerializedName("ListenerIds")
     @Expose
@@ -45,39 +45,39 @@ public class DescribeListenersRequest extends AbstractModel {
     private String Protocol;
 
     /**
-    * Port of the listeners to be queried
+    * Port of listener to query. value range: 1-65535.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get CLB instance ID. 
-     * @return LoadBalancerId CLB instance ID.
+     * Get ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/api/214/30685?from_cn_redirect=1) api to obtain the ID. 
+     * @return LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/api/214/30685?from_cn_redirect=1) api to obtain the ID.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set CLB instance ID.
-     * @param LoadBalancerId CLB instance ID.
+     * Set ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/api/214/30685?from_cn_redirect=1) api to obtain the ID.
+     * @param LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/api/214/30685?from_cn_redirect=1) api to obtain the ID.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get Array of CLB listener IDs to query (100 IDs at most). 
-     * @return ListenerIds Array of CLB listener IDs to query (100 IDs at most).
+     * Get Specifies the array of clb listener ids to query, with a maximum of 100. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/api/214/30686?from_cn_redirect=1) api to obtain the ids. 
+     * @return ListenerIds Specifies the array of clb listener ids to query, with a maximum of 100. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/api/214/30686?from_cn_redirect=1) api to obtain the ids.
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set Array of CLB listener IDs to query (100 IDs at most).
-     * @param ListenerIds Array of CLB listener IDs to query (100 IDs at most).
+     * Set Specifies the array of clb listener ids to query, with a maximum of 100. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/api/214/30686?from_cn_redirect=1) api to obtain the ids.
+     * @param ListenerIds Specifies the array of clb listener ids to query, with a maximum of 100. you can call the [DescribeListeners](https://www.tencentcloud.comom/document/api/214/30686?from_cn_redirect=1) api to obtain the ids.
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;
@@ -100,16 +100,16 @@ public class DescribeListenersRequest extends AbstractModel {
     }
 
     /**
-     * Get Port of the listeners to be queried 
-     * @return Port Port of the listeners to be queried
+     * Get Port of listener to query. value range: 1-65535. 
+     * @return Port Port of listener to query. value range: 1-65535.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port of the listeners to be queried
-     * @param Port Port of the listeners to be queried
+     * Set Port of listener to query. value range: 1-65535.
+     * @param Port Port of listener to query. value range: 1-65535.
      */
     public void setPort(Long Port) {
         this.Port = Port;

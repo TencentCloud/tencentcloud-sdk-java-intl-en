@@ -38,8 +38,7 @@ public class CmqQueue extends AbstractModel {
     private String QueueName;
 
     /**
-    * Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Limit on the number of messages produced per second. The size of consumed messages is 1.1 times this value.
     */
     @SerializedName("Qps")
     @Expose
@@ -47,15 +46,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Bandwidth limit.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Bps")
     @Expose
     private Long Bps;
 
     /**
-    * Maximum retention period for inflight messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the maximum retention time for in-flight messages, which must be less than the message retention period.
     */
     @SerializedName("MaxDelaySeconds")
     @Expose
@@ -69,72 +66,63 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long MaxMsgHeapNum;
 
     /**
-    * Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Long polling waiting time for message receipt. Value range 0-30 seconds, default value 0.
     */
     @SerializedName("PollingWaitSeconds")
     @Expose
     private Long PollingWaitSeconds;
 
     /**
-    * Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Message retention period. The value range is 60-1,296,000 seconds (1 min-15 days), with a default value of 345,600 seconds (4 days).
     */
     @SerializedName("MsgRetentionSeconds")
     @Expose
     private Long MsgRetentionSeconds;
 
     /**
-    * Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Message visibility timeout period. The value range is 1-43,200 seconds (within 12 hours), with a default value of 30.
     */
     @SerializedName("VisibilityTimeout")
     @Expose
     private Long VisibilityTimeout;
 
     /**
-    * Maximum message length. Value range: 1024–1048576 bytes (i.e., 1–1024 KB). Default value: 65536.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Maximum message length. Range: 1,024-1,048,576 bytes (i.e., 1K-1,024K). Default value is 65,536.
     */
     @SerializedName("MaxMsgSize")
     @Expose
     private Long MaxMsgSize;
 
     /**
-    * Maximum time range during which a message can be rewound in the queue, which ranges from 0 to 43,200 seconds. 0 indicates that message rewind is disabled.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Maximum message backtracking time for backtracking queues, range 0-43,200 seconds. 0 means message backtracking is not enabled.
     */
     @SerializedName("RewindSeconds")
     @Expose
     private Long RewindSeconds;
 
     /**
-    * Queue creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Creation time of queues. Returns a Unix timestamp, accurate to milliseconds.
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * Time when the queue attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The last time the queue attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
     */
     @SerializedName("LastModifyTime")
     @Expose
     private Long LastModifyTime;
 
     /**
-    * Total number of messages in `Active` status (i.e., unconsumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Total number of active messages (not being consumed) in queue, an approximate value.
     */
     @SerializedName("ActiveMsgNum")
     @Expose
     private Long ActiveMsgNum;
 
     /**
-    * Total number of messages in `Inactive` status (i.e., being consumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Total number of inactive messages (being consumed) in queue, an approximate value.
     */
     @SerializedName("InactiveMsgNum")
     @Expose
@@ -222,47 +210,41 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TenantId")
     @Expose
     private String TenantId;
 
     /**
-    * Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the namespace name.
     */
     @SerializedName("NamespaceName")
     @Expose
     private String NamespaceName;
 
     /**
-    * Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * The maximum number of unacknowledged messages.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Maximum Number of Unacknowledged Messages
     */
     @SerializedName("MaxUnackedMsgNum")
     @Expose
     private Long MaxUnackedMsgNum;
 
     /**
-    * Maximum size of heaped messages in bytes.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Maximum Message Backlog Size (bytes)
     */
     @SerializedName("MaxMsgBacklogSize")
     @Expose
     private Long MaxMsgBacklogSize;
 
     /**
-    * Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Queue retrospective storage space. Value range: 1024 MB to 10240 MB. 0 indicates disabled.
     */
     @SerializedName("RetentionSizeInMB")
     @Expose
@@ -301,30 +283,24 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Qps Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Limit on the number of messages produced per second. The size of consumed messages is 1.1 times this value. 
+     * @return Qps Limit on the number of messages produced per second. The size of consumed messages is 1.1 times this value.
      */
     public Long getQps() {
         return this.Qps;
     }
 
     /**
-     * Set Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Qps Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Limit on the number of messages produced per second. The size of consumed messages is 1.1 times this value.
+     * @param Qps Limit on the number of messages produced per second. The size of consumed messages is 1.1 times this value.
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
     /**
-     * Get Bandwidth limit.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Bandwidth limit. 
      * @return Bps Bandwidth limit.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getBps() {
         return this.Bps;
@@ -332,29 +308,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Bandwidth limit.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param Bps Bandwidth limit.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setBps(Long Bps) {
         this.Bps = Bps;
     }
 
     /**
-     * Get Maximum retention period for inflight messages.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MaxDelaySeconds Maximum retention period for inflight messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the maximum retention time for in-flight messages, which must be less than the message retention period. 
+     * @return MaxDelaySeconds Specifies the maximum retention time for in-flight messages, which must be less than the message retention period.
      */
     public Long getMaxDelaySeconds() {
         return this.MaxDelaySeconds;
     }
 
     /**
-     * Set Maximum retention period for inflight messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MaxDelaySeconds Maximum retention period for inflight messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the maximum retention time for in-flight messages, which must be less than the message retention period.
+     * @param MaxDelaySeconds Specifies the maximum retention time for in-flight messages, which must be less than the message retention period.
      */
     public void setMaxDelaySeconds(Long MaxDelaySeconds) {
         this.MaxDelaySeconds = MaxDelaySeconds;
@@ -377,180 +347,144 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PollingWaitSeconds Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Long polling waiting time for message receipt. Value range 0-30 seconds, default value 0. 
+     * @return PollingWaitSeconds Long polling waiting time for message receipt. Value range 0-30 seconds, default value 0.
      */
     public Long getPollingWaitSeconds() {
         return this.PollingWaitSeconds;
     }
 
     /**
-     * Set Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PollingWaitSeconds Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Long polling waiting time for message receipt. Value range 0-30 seconds, default value 0.
+     * @param PollingWaitSeconds Long polling waiting time for message receipt. Value range 0-30 seconds, default value 0.
      */
     public void setPollingWaitSeconds(Long PollingWaitSeconds) {
         this.PollingWaitSeconds = PollingWaitSeconds;
     }
 
     /**
-     * Get Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MsgRetentionSeconds Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Message retention period. The value range is 60-1,296,000 seconds (1 min-15 days), with a default value of 345,600 seconds (4 days). 
+     * @return MsgRetentionSeconds Message retention period. The value range is 60-1,296,000 seconds (1 min-15 days), with a default value of 345,600 seconds (4 days).
      */
     public Long getMsgRetentionSeconds() {
         return this.MsgRetentionSeconds;
     }
 
     /**
-     * Set Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MsgRetentionSeconds Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Message retention period. The value range is 60-1,296,000 seconds (1 min-15 days), with a default value of 345,600 seconds (4 days).
+     * @param MsgRetentionSeconds Message retention period. The value range is 60-1,296,000 seconds (1 min-15 days), with a default value of 345,600 seconds (4 days).
      */
     public void setMsgRetentionSeconds(Long MsgRetentionSeconds) {
         this.MsgRetentionSeconds = MsgRetentionSeconds;
     }
 
     /**
-     * Get Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return VisibilityTimeout Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Message visibility timeout period. The value range is 1-43,200 seconds (within 12 hours), with a default value of 30. 
+     * @return VisibilityTimeout Message visibility timeout period. The value range is 1-43,200 seconds (within 12 hours), with a default value of 30.
      */
     public Long getVisibilityTimeout() {
         return this.VisibilityTimeout;
     }
 
     /**
-     * Set Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param VisibilityTimeout Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Message visibility timeout period. The value range is 1-43,200 seconds (within 12 hours), with a default value of 30.
+     * @param VisibilityTimeout Message visibility timeout period. The value range is 1-43,200 seconds (within 12 hours), with a default value of 30.
      */
     public void setVisibilityTimeout(Long VisibilityTimeout) {
         this.VisibilityTimeout = VisibilityTimeout;
     }
 
     /**
-     * Get Maximum message length. Value range: 1024–1048576 bytes (i.e., 1–1024 KB). Default value: 65536.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MaxMsgSize Maximum message length. Value range: 1024–1048576 bytes (i.e., 1–1024 KB). Default value: 65536.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Maximum message length. Range: 1,024-1,048,576 bytes (i.e., 1K-1,024K). Default value is 65,536. 
+     * @return MaxMsgSize Maximum message length. Range: 1,024-1,048,576 bytes (i.e., 1K-1,024K). Default value is 65,536.
      */
     public Long getMaxMsgSize() {
         return this.MaxMsgSize;
     }
 
     /**
-     * Set Maximum message length. Value range: 1024–1048576 bytes (i.e., 1–1024 KB). Default value: 65536.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MaxMsgSize Maximum message length. Value range: 1024–1048576 bytes (i.e., 1–1024 KB). Default value: 65536.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Maximum message length. Range: 1,024-1,048,576 bytes (i.e., 1K-1,024K). Default value is 65,536.
+     * @param MaxMsgSize Maximum message length. Range: 1,024-1,048,576 bytes (i.e., 1K-1,024K). Default value is 65,536.
      */
     public void setMaxMsgSize(Long MaxMsgSize) {
         this.MaxMsgSize = MaxMsgSize;
     }
 
     /**
-     * Get Maximum time range during which a message can be rewound in the queue, which ranges from 0 to 43,200 seconds. 0 indicates that message rewind is disabled.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RewindSeconds Maximum time range during which a message can be rewound in the queue, which ranges from 0 to 43,200 seconds. 0 indicates that message rewind is disabled.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Maximum message backtracking time for backtracking queues, range 0-43,200 seconds. 0 means message backtracking is not enabled. 
+     * @return RewindSeconds Maximum message backtracking time for backtracking queues, range 0-43,200 seconds. 0 means message backtracking is not enabled.
      */
     public Long getRewindSeconds() {
         return this.RewindSeconds;
     }
 
     /**
-     * Set Maximum time range during which a message can be rewound in the queue, which ranges from 0 to 43,200 seconds. 0 indicates that message rewind is disabled.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RewindSeconds Maximum time range during which a message can be rewound in the queue, which ranges from 0 to 43,200 seconds. 0 indicates that message rewind is disabled.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Maximum message backtracking time for backtracking queues, range 0-43,200 seconds. 0 means message backtracking is not enabled.
+     * @param RewindSeconds Maximum message backtracking time for backtracking queues, range 0-43,200 seconds. 0 means message backtracking is not enabled.
      */
     public void setRewindSeconds(Long RewindSeconds) {
         this.RewindSeconds = RewindSeconds;
     }
 
     /**
-     * Get Queue creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Queue creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Creation time of queues. Returns a Unix timestamp, accurate to milliseconds. 
+     * @return CreateTime Creation time of queues. Returns a Unix timestamp, accurate to milliseconds.
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Queue creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Queue creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Creation time of queues. Returns a Unix timestamp, accurate to milliseconds.
+     * @param CreateTime Creation time of queues. Returns a Unix timestamp, accurate to milliseconds.
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Time when the queue attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return LastModifyTime Time when the queue attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The last time the queue attribute was modified. Returns a Unix timestamp, accurate to milliseconds. 
+     * @return LastModifyTime The last time the queue attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
      */
     public Long getLastModifyTime() {
         return this.LastModifyTime;
     }
 
     /**
-     * Set Time when the queue attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param LastModifyTime Time when the queue attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The last time the queue attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
+     * @param LastModifyTime The last time the queue attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
      */
     public void setLastModifyTime(Long LastModifyTime) {
         this.LastModifyTime = LastModifyTime;
     }
 
     /**
-     * Get Total number of messages in `Active` status (i.e., unconsumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ActiveMsgNum Total number of messages in `Active` status (i.e., unconsumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Total number of active messages (not being consumed) in queue, an approximate value. 
+     * @return ActiveMsgNum Total number of active messages (not being consumed) in queue, an approximate value.
      */
     public Long getActiveMsgNum() {
         return this.ActiveMsgNum;
     }
 
     /**
-     * Set Total number of messages in `Active` status (i.e., unconsumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ActiveMsgNum Total number of messages in `Active` status (i.e., unconsumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Total number of active messages (not being consumed) in queue, an approximate value.
+     * @param ActiveMsgNum Total number of active messages (not being consumed) in queue, an approximate value.
      */
     public void setActiveMsgNum(Long ActiveMsgNum) {
         this.ActiveMsgNum = ActiveMsgNum;
     }
 
     /**
-     * Get Total number of messages in `Inactive` status (i.e., being consumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return InactiveMsgNum Total number of messages in `Inactive` status (i.e., being consumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Total number of inactive messages (being consumed) in queue, an approximate value. 
+     * @return InactiveMsgNum Total number of inactive messages (being consumed) in queue, an approximate value.
      */
     public Long getInactiveMsgNum() {
         return this.InactiveMsgNum;
     }
 
     /**
-     * Set Total number of messages in `Inactive` status (i.e., being consumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param InactiveMsgNum Total number of messages in `Inactive` status (i.e., being consumed) in the queue, which is an approximate value.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Total number of inactive messages (being consumed) in queue, an approximate value.
+     * @param InactiveMsgNum Total number of inactive messages (being consumed) in queue, an approximate value.
      */
     public void setInactiveMsgNum(Long InactiveMsgNum) {
         this.InactiveMsgNum = InactiveMsgNum;
@@ -757,10 +691,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Tenant ID 
      * @return TenantId Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getTenantId() {
         return this.TenantId;
@@ -768,109 +700,87 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param TenantId Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTenantId(String TenantId) {
         this.TenantId = TenantId;
     }
 
     /**
-     * Get Namespace name
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return NamespaceName Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the namespace name. 
+     * @return NamespaceName Specifies the namespace name.
      */
     public String getNamespaceName() {
         return this.NamespaceName;
     }
 
     /**
-     * Set Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param NamespaceName Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the namespace name.
+     * @param NamespaceName Specifies the namespace name.
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed 
+     * @return Status Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
+     * @param Status Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The maximum number of unacknowledged messages.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return MaxUnackedMsgNum The maximum number of unacknowledged messages.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Maximum Number of Unacknowledged Messages 
+     * @return MaxUnackedMsgNum Maximum Number of Unacknowledged Messages
      */
     public Long getMaxUnackedMsgNum() {
         return this.MaxUnackedMsgNum;
     }
 
     /**
-     * Set The maximum number of unacknowledged messages.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param MaxUnackedMsgNum The maximum number of unacknowledged messages.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Maximum Number of Unacknowledged Messages
+     * @param MaxUnackedMsgNum Maximum Number of Unacknowledged Messages
      */
     public void setMaxUnackedMsgNum(Long MaxUnackedMsgNum) {
         this.MaxUnackedMsgNum = MaxUnackedMsgNum;
     }
 
     /**
-     * Get Maximum size of heaped messages in bytes.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return MaxMsgBacklogSize Maximum size of heaped messages in bytes.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Maximum Message Backlog Size (bytes) 
+     * @return MaxMsgBacklogSize Maximum Message Backlog Size (bytes)
      */
     public Long getMaxMsgBacklogSize() {
         return this.MaxMsgBacklogSize;
     }
 
     /**
-     * Set Maximum size of heaped messages in bytes.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param MaxMsgBacklogSize Maximum size of heaped messages in bytes.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Maximum Message Backlog Size (bytes)
+     * @param MaxMsgBacklogSize Maximum Message Backlog Size (bytes)
      */
     public void setMaxMsgBacklogSize(Long MaxMsgBacklogSize) {
         this.MaxMsgBacklogSize = MaxMsgBacklogSize;
     }
 
     /**
-     * Get Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Queue retrospective storage space. Value range: 1024 MB to 10240 MB. 0 indicates disabled. 
+     * @return RetentionSizeInMB Queue retrospective storage space. Value range: 1024 MB to 10240 MB. 0 indicates disabled.
      */
     public Long getRetentionSizeInMB() {
         return this.RetentionSizeInMB;
     }
 
     /**
-     * Set Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Queue retrospective storage space. Value range: 1024 MB to 10240 MB. 0 indicates disabled.
+     * @param RetentionSizeInMB Queue retrospective storage space. Value range: 1024 MB to 10240 MB. 0 indicates disabled.
      */
     public void setRetentionSizeInMB(Long RetentionSizeInMB) {
         this.RetentionSizeInMB = RetentionSizeInMB;

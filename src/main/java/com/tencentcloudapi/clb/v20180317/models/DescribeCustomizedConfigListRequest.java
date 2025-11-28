@@ -31,14 +31,14 @@ public class DescribeCustomizedConfigListRequest extends AbstractModel {
     private String ConfigType;
 
     /**
-    * Pagination offset. Default: 0.
+    * Pagination offset. defaults to 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results per page. Default: 20.
+    * Number of results. default value: 20.
     */
     @SerializedName("Limit")
     @Expose
@@ -52,16 +52,24 @@ public class DescribeCustomizedConfigListRequest extends AbstractModel {
     private String ConfigName;
 
     /**
-    * Configuration ID.
+    * Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
     */
     @SerializedName("UconfigIds")
     @Expose
     private String [] UconfigIds;
 
     /**
-    * The filters are:
-<li> loadbalancer-id - String - Required: no - (filter) CLB instance ID, such as "lb-12345678". </li>
-<li> vip - String - Required: no - (filter) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
+    * Filter criteria as follows:.
+- loadbalancer-id
+Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- vip
+Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
     */
     @SerializedName("Filters")
     @Expose
@@ -84,32 +92,32 @@ public class DescribeCustomizedConfigListRequest extends AbstractModel {
     }
 
     /**
-     * Get Pagination offset. Default: 0. 
-     * @return Offset Pagination offset. Default: 0.
+     * Get Pagination offset. defaults to 0. 
+     * @return Offset Pagination offset. defaults to 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset. Default: 0.
-     * @param Offset Pagination offset. Default: 0.
+     * Set Pagination offset. defaults to 0.
+     * @param Offset Pagination offset. defaults to 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results per page. Default: 20. 
-     * @return Limit Number of results per page. Default: 20.
+     * Get Number of results. default value: 20. 
+     * @return Limit Number of results. default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results per page. Default: 20.
-     * @param Limit Number of results per page. Default: 20.
+     * Set Number of results. default value: 20.
+     * @param Limit Number of results. default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -132,40 +140,72 @@ public class DescribeCustomizedConfigListRequest extends AbstractModel {
     }
 
     /**
-     * Get Configuration ID. 
-     * @return UconfigIds Configuration ID.
+     * Get Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api. 
+     * @return UconfigIds Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
      */
     public String [] getUconfigIds() {
         return this.UconfigIds;
     }
 
     /**
-     * Set Configuration ID.
-     * @param UconfigIds Configuration ID.
+     * Set Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
+     * @param UconfigIds Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
      */
     public void setUconfigIds(String [] UconfigIds) {
         this.UconfigIds = UconfigIds;
     }
 
     /**
-     * Get The filters are:
-<li> loadbalancer-id - String - Required: no - (filter) CLB instance ID, such as "lb-12345678". </li>
-<li> vip - String - Required: no - (filter) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li> 
-     * @return Filters The filters are:
-<li> loadbalancer-id - String - Required: no - (filter) CLB instance ID, such as "lb-12345678". </li>
-<li> vip - String - Required: no - (filter) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
+     * Get Filter criteria as follows:.
+- loadbalancer-id
+Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- vip
+Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1). 
+     * @return Filters Filter criteria as follows:.
+- loadbalancer-id
+Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- vip
+Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set The filters are:
-<li> loadbalancer-id - String - Required: no - (filter) CLB instance ID, such as "lb-12345678". </li>
-<li> vip - String - Required: no - (filter) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
-     * @param Filters The filters are:
-<li> loadbalancer-id - String - Required: no - (filter) CLB instance ID, such as "lb-12345678". </li>
-<li> vip - String - Required: no - (filter) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
+     * Set Filter criteria as follows:.
+- loadbalancer-id
+Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- vip
+Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+     * @param Filters Filter criteria as follows:.
+- loadbalancer-id
+Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- vip
+Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

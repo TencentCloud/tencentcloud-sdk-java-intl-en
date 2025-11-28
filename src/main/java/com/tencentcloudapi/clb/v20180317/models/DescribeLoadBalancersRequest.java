@@ -46,14 +46,14 @@ OPEN: public network; INTERNAL: private network.
     private Long Forward;
 
     /**
-    * CLB instance name.
+    * Specifies the name of the clb instance. fuzzy query is supported.
     */
     @SerializedName("LoadBalancerName")
     @Expose
     private String LoadBalancerName;
 
     /**
-    * The domain name that Tencent Cloud assigned for the CLB instance.
+    * Tencent cloud assigns a domain name to the cloud load balancer instance. fuzzy query is supported.
     */
     @SerializedName("Domain")
     @Expose
@@ -95,28 +95,35 @@ OPEN: public network; INTERNAL: private network.
     private Long Limit;
 
     /**
-    * Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
+    * Sorting parameter. supports the following fields:.
+- LoadBalancerName
+- CreateTime
+- Domain
+- LoadBalancerType
+
+Defaults to CreateTime.
+
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 1: reverse; 0: sequential. Default value: reverse by creation time |
+    * 1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order.
     */
     @SerializedName("OrderType")
     @Expose
     private Long OrderType;
 
     /**
-    * Search field which fuzzy matches name, domain name, or VIP.
+    * Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-    * ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
+    * Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -130,15 +137,15 @@ OPEN: public network; INTERNAL: private network.
     private Long WithRs;
 
     /**
-    * VPC where a CLB instance resides, such as vpc-bhqkbhdx.
-Basic network does not support queries by VpcId.
+    * Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+Searches for cloud load balancer of basic network type. allows input '0'.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Security group ID, e.g., `sg-m1cc****`.
+    * Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -158,6 +165,14 @@ Basic network does not support queries by VpcId.
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+    * Specifies the expanded fields to return. not specified, expanded fields do not return by default. supported expanded fields are as follows:.
+<Li>TargetCount: specifies the number of real servers bound to it.</li>.
+    */
+    @SerializedName("AdditionalFields")
+    @Expose
+    private String [] AdditionalFields;
 
     /**
      * Get CLB instance IDs. There can be up to 20 IDs. 
@@ -212,32 +227,32 @@ OPEN: public network; INTERNAL: private network.
     }
 
     /**
-     * Get CLB instance name. 
-     * @return LoadBalancerName CLB instance name.
+     * Get Specifies the name of the clb instance. fuzzy query is supported. 
+     * @return LoadBalancerName Specifies the name of the clb instance. fuzzy query is supported.
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
     }
 
     /**
-     * Set CLB instance name.
-     * @param LoadBalancerName CLB instance name.
+     * Set Specifies the name of the clb instance. fuzzy query is supported.
+     * @param LoadBalancerName Specifies the name of the clb instance. fuzzy query is supported.
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;
     }
 
     /**
-     * Get The domain name that Tencent Cloud assigned for the CLB instance. 
-     * @return Domain The domain name that Tencent Cloud assigned for the CLB instance.
+     * Get Tencent cloud assigns a domain name to the cloud load balancer instance. fuzzy query is supported. 
+     * @return Domain Tencent cloud assigns a domain name to the cloud load balancer instance. fuzzy query is supported.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set The domain name that Tencent Cloud assigned for the CLB instance.
-     * @param Domain The domain name that Tencent Cloud assigned for the CLB instance.
+     * Set Tencent cloud assigns a domain name to the cloud load balancer instance. fuzzy query is supported.
+     * @param Domain Tencent cloud assigns a domain name to the cloud load balancer instance. fuzzy query is supported.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
@@ -324,64 +339,92 @@ OPEN: public network; INTERNAL: private network.
     }
 
     /**
-     * Get Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType. 
-     * @return OrderBy Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
+     * Get Sorting parameter. supports the following fields:.
+- LoadBalancerName
+- CreateTime
+- Domain
+- LoadBalancerType
+
+Defaults to CreateTime.
+ 
+     * @return OrderBy Sorting parameter. supports the following fields:.
+- LoadBalancerName
+- CreateTime
+- Domain
+- LoadBalancerType
+
+Defaults to CreateTime.
+
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
-     * @param OrderBy Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
+     * Set Sorting parameter. supports the following fields:.
+- LoadBalancerName
+- CreateTime
+- Domain
+- LoadBalancerType
+
+Defaults to CreateTime.
+
+     * @param OrderBy Sorting parameter. supports the following fields:.
+- LoadBalancerName
+- CreateTime
+- Domain
+- LoadBalancerType
+
+Defaults to CreateTime.
+
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 1: reverse; 0: sequential. Default value: reverse by creation time | 
-     * @return OrderType 1: reverse; 0: sequential. Default value: reverse by creation time |
+     * Get 1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order. 
+     * @return OrderType 1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order.
      */
     public Long getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 1: reverse; 0: sequential. Default value: reverse by creation time |
-     * @param OrderType 1: reverse; 0: sequential. Default value: reverse by creation time |
+     * Set 1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order.
+     * @param OrderType 1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order.
      */
     public void setOrderType(Long OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get Search field which fuzzy matches name, domain name, or VIP. 
-     * @return SearchKey Search field which fuzzy matches name, domain name, or VIP.
+     * Get Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance. 
+     * @return SearchKey Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set Search field which fuzzy matches name, domain name, or VIP.
-     * @param SearchKey Search field which fuzzy matches name, domain name, or VIP.
+     * Set Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
+     * @param SearchKey Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
     }
 
     /**
-     * Get ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. 
-     * @return ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
+     * Get Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed. 
+     * @return ProjectId Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
-     * @param ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
+     * Set Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
+     * @param ProjectId Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -404,36 +447,36 @@ OPEN: public network; INTERNAL: private network.
     }
 
     /**
-     * Get VPC where a CLB instance resides, such as vpc-bhqkbhdx.
-Basic network does not support queries by VpcId. 
-     * @return VpcId VPC where a CLB instance resides, such as vpc-bhqkbhdx.
-Basic network does not support queries by VpcId.
+     * Get Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+Searches for cloud load balancer of basic network type. allows input '0'. 
+     * @return VpcId Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+Searches for cloud load balancer of basic network type. allows input '0'.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC where a CLB instance resides, such as vpc-bhqkbhdx.
-Basic network does not support queries by VpcId.
-     * @param VpcId VPC where a CLB instance resides, such as vpc-bhqkbhdx.
-Basic network does not support queries by VpcId.
+     * Set Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+Searches for cloud load balancer of basic network type. allows input '0'.
+     * @param VpcId Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+Searches for cloud load balancer of basic network type. allows input '0'.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Security group ID, e.g., `sg-m1cc****`. 
-     * @return SecurityGroup Security group ID, e.g., `sg-m1cc****`.
+     * Get Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1). 
+     * @return SecurityGroup Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
      */
     public String getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set Security group ID, e.g., `sg-m1cc****`.
-     * @param SecurityGroup Security group ID, e.g., `sg-m1cc****`.
+     * Set Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+     * @param SecurityGroup Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
      */
     public void setSecurityGroup(String SecurityGroup) {
         this.SecurityGroup = SecurityGroup;
@@ -473,6 +516,26 @@ Basic network does not support queries by VpcId.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get Specifies the expanded fields to return. not specified, expanded fields do not return by default. supported expanded fields are as follows:.
+<Li>TargetCount: specifies the number of real servers bound to it.</li>. 
+     * @return AdditionalFields Specifies the expanded fields to return. not specified, expanded fields do not return by default. supported expanded fields are as follows:.
+<Li>TargetCount: specifies the number of real servers bound to it.</li>.
+     */
+    public String [] getAdditionalFields() {
+        return this.AdditionalFields;
+    }
+
+    /**
+     * Set Specifies the expanded fields to return. not specified, expanded fields do not return by default. supported expanded fields are as follows:.
+<Li>TargetCount: specifies the number of real servers bound to it.</li>.
+     * @param AdditionalFields Specifies the expanded fields to return. not specified, expanded fields do not return by default. supported expanded fields are as follows:.
+<Li>TargetCount: specifies the number of real servers bound to it.</li>.
+     */
+    public void setAdditionalFields(String [] AdditionalFields) {
+        this.AdditionalFields = AdditionalFields;
     }
 
     public DescribeLoadBalancersRequest() {
@@ -555,6 +618,12 @@ Basic network does not support queries by VpcId.
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.AdditionalFields != null) {
+            this.AdditionalFields = new String[source.AdditionalFields.length];
+            for (int i = 0; i < source.AdditionalFields.length; i++) {
+                this.AdditionalFields[i] = new String(source.AdditionalFields[i]);
+            }
+        }
     }
 
 
@@ -581,6 +650,7 @@ Basic network does not support queries by VpcId.
         this.setParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
         this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArraySimple(map, prefix + "AdditionalFields.", this.AdditionalFields);
 
     }
 }

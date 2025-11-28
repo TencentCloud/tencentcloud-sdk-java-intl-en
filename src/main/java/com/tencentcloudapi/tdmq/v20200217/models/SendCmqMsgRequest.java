@@ -38,7 +38,7 @@ public class SendCmqMsgRequest extends AbstractModel {
     private String MsgContent;
 
     /**
-    * Delay time
+    * Delay time. expressed in seconds, default value is 0, cannot exceed the max message unacknowledgement time in queue configuration.
     */
     @SerializedName("DelaySeconds")
     @Expose
@@ -77,16 +77,16 @@ public class SendCmqMsgRequest extends AbstractModel {
     }
 
     /**
-     * Get Delay time 
-     * @return DelaySeconds Delay time
+     * Get Delay time. expressed in seconds, default value is 0, cannot exceed the max message unacknowledgement time in queue configuration. 
+     * @return DelaySeconds Delay time. expressed in seconds, default value is 0, cannot exceed the max message unacknowledgement time in queue configuration.
      */
     public Long getDelaySeconds() {
         return this.DelaySeconds;
     }
 
     /**
-     * Set Delay time
-     * @param DelaySeconds Delay time
+     * Set Delay time. expressed in seconds, default value is 0, cannot exceed the max message unacknowledgement time in queue configuration.
+     * @param DelaySeconds Delay time. expressed in seconds, default value is 0, cannot exceed the max message unacknowledgement time in queue configuration.
      */
     public void setDelaySeconds(Long DelaySeconds) {
         this.DelaySeconds = DelaySeconds;

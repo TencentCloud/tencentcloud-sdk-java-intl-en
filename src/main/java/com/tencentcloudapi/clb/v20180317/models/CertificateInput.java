@@ -74,14 +74,14 @@ Default value: UNIDIRECTIONAL.
     private String CertContent;
 
     /**
-    * Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+    * Upload client CA certificate name. if SSLMode=MUTUAL and there is no CertCaId, this parameter is required.
     */
     @SerializedName("CertCaName")
     @Expose
     private String CertCaName;
 
     /**
-    * Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+    * Upload client certificate content. if SSLMode is MUTUAL and there is no CertCaId, this parameter is required.
     */
     @SerializedName("CertCaContent")
     @Expose
@@ -204,32 +204,32 @@ Default value: UNIDIRECTIONAL.
     }
 
     /**
-     * Get Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required. 
-     * @return CertCaName Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+     * Get Upload client CA certificate name. if SSLMode=MUTUAL and there is no CertCaId, this parameter is required. 
+     * @return CertCaName Upload client CA certificate name. if SSLMode=MUTUAL and there is no CertCaId, this parameter is required.
      */
     public String getCertCaName() {
         return this.CertCaName;
     }
 
     /**
-     * Set Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
-     * @param CertCaName Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+     * Set Upload client CA certificate name. if SSLMode=MUTUAL and there is no CertCaId, this parameter is required.
+     * @param CertCaName Upload client CA certificate name. if SSLMode=MUTUAL and there is no CertCaId, this parameter is required.
      */
     public void setCertCaName(String CertCaName) {
         this.CertCaName = CertCaName;
     }
 
     /**
-     * Get Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required. 
-     * @return CertCaContent Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+     * Get Upload client certificate content. if SSLMode is MUTUAL and there is no CertCaId, this parameter is required. 
+     * @return CertCaContent Upload client certificate content. if SSLMode is MUTUAL and there is no CertCaId, this parameter is required.
      */
     public String getCertCaContent() {
         return this.CertCaContent;
     }
 
     /**
-     * Set Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
-     * @param CertCaContent Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+     * Set Upload client certificate content. if SSLMode is MUTUAL and there is no CertCaId, this parameter is required.
+     * @param CertCaContent Upload client certificate content. if SSLMode is MUTUAL and there is no CertCaId, this parameter is required.
      */
     public void setCertCaContent(String CertCaContent) {
         this.CertCaContent = CertCaContent;

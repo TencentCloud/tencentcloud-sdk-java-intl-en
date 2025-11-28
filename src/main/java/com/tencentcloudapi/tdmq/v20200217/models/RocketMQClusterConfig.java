@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RocketMQClusterConfig extends AbstractModel {
 
     /**
-    * Maximum TPS per namespace
+    * Upper limit of TPS per single namespace.
     */
     @SerializedName("MaxTpsPerNamespace")
     @Expose
@@ -95,17 +95,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MaxQueuesPerTopic;
 
     /**
-     * Get Maximum TPS per namespace 
-     * @return MaxTpsPerNamespace Maximum TPS per namespace
+    * Topic distribution.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TopicDistribution")
+    @Expose
+    private RocketMQTopicDistribution [] TopicDistribution;
+
+    /**
+    * Maximum number of roles.
+    */
+    @SerializedName("MaxRoleNum")
+    @Expose
+    private Long MaxRoleNum;
+
+    /**
+    * TPS quota.
+    */
+    @SerializedName("MaxTpsLimit")
+    @Expose
+    private Long MaxTpsLimit;
+
+    /**
+     * Get Upper limit of TPS per single namespace. 
+     * @return MaxTpsPerNamespace Upper limit of TPS per single namespace.
+     * @deprecated
      */
+    @Deprecated
     public Long getMaxTpsPerNamespace() {
         return this.MaxTpsPerNamespace;
     }
 
     /**
-     * Set Maximum TPS per namespace
-     * @param MaxTpsPerNamespace Maximum TPS per namespace
+     * Set Upper limit of TPS per single namespace.
+     * @param MaxTpsPerNamespace Upper limit of TPS per single namespace.
+     * @deprecated
      */
+    @Deprecated
     public void setMaxTpsPerNamespace(Long MaxTpsPerNamespace) {
         this.MaxTpsPerNamespace = MaxTpsPerNamespace;
     }
@@ -258,6 +284,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.MaxQueuesPerTopic = MaxQueuesPerTopic;
     }
 
+    /**
+     * Get Topic distribution.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TopicDistribution Topic distribution.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public RocketMQTopicDistribution [] getTopicDistribution() {
+        return this.TopicDistribution;
+    }
+
+    /**
+     * Set Topic distribution.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TopicDistribution Topic distribution.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTopicDistribution(RocketMQTopicDistribution [] TopicDistribution) {
+        this.TopicDistribution = TopicDistribution;
+    }
+
+    /**
+     * Get Maximum number of roles. 
+     * @return MaxRoleNum Maximum number of roles.
+     */
+    public Long getMaxRoleNum() {
+        return this.MaxRoleNum;
+    }
+
+    /**
+     * Set Maximum number of roles.
+     * @param MaxRoleNum Maximum number of roles.
+     */
+    public void setMaxRoleNum(Long MaxRoleNum) {
+        this.MaxRoleNum = MaxRoleNum;
+    }
+
+    /**
+     * Get TPS quota. 
+     * @return MaxTpsLimit TPS quota.
+     */
+    public Long getMaxTpsLimit() {
+        return this.MaxTpsLimit;
+    }
+
+    /**
+     * Set TPS quota.
+     * @param MaxTpsLimit TPS quota.
+     */
+    public void setMaxTpsLimit(Long MaxTpsLimit) {
+        this.MaxTpsLimit = MaxTpsLimit;
+    }
+
     public RocketMQClusterConfig() {
     }
 
@@ -296,6 +374,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.MaxQueuesPerTopic != null) {
             this.MaxQueuesPerTopic = new Long(source.MaxQueuesPerTopic);
         }
+        if (source.TopicDistribution != null) {
+            this.TopicDistribution = new RocketMQTopicDistribution[source.TopicDistribution.length];
+            for (int i = 0; i < source.TopicDistribution.length; i++) {
+                this.TopicDistribution[i] = new RocketMQTopicDistribution(source.TopicDistribution[i]);
+            }
+        }
+        if (source.MaxRoleNum != null) {
+            this.MaxRoleNum = new Long(source.MaxRoleNum);
+        }
+        if (source.MaxTpsLimit != null) {
+            this.MaxTpsLimit = new Long(source.MaxTpsLimit);
+        }
     }
 
 
@@ -313,6 +403,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MaxRetentionTime", this.MaxRetentionTime);
         this.setParamSimple(map, prefix + "MaxLatencyTime", this.MaxLatencyTime);
         this.setParamSimple(map, prefix + "MaxQueuesPerTopic", this.MaxQueuesPerTopic);
+        this.setParamArrayObj(map, prefix + "TopicDistribution.", this.TopicDistribution);
+        this.setParamSimple(map, prefix + "MaxRoleNum", this.MaxRoleNum);
+        this.setParamSimple(map, prefix + "MaxTpsLimit", this.MaxTpsLimit);
 
     }
 }

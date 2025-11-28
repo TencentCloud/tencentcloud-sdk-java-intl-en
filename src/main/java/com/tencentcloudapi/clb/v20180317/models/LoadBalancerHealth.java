@@ -31,16 +31,14 @@ public class LoadBalancerHealth extends AbstractModel {
     private String LoadBalancerId;
 
     /**
-    * CLB instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the name of the load balancing instance.
     */
     @SerializedName("LoadBalancerName")
     @Expose
     private String LoadBalancerName;
 
     /**
-    * List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Listener list
     */
     @SerializedName("Listeners")
     @Expose
@@ -63,40 +61,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get CLB instance name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LoadBalancerName CLB instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the name of the load balancing instance. 
+     * @return LoadBalancerName Specifies the name of the load balancing instance.
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
     }
 
     /**
-     * Set CLB instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LoadBalancerName CLB instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the name of the load balancing instance.
+     * @param LoadBalancerName Specifies the name of the load balancing instance.
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;
     }
 
     /**
-     * Get List of listeners
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Listeners List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Listener list 
+     * @return Listeners Listener list
      */
     public ListenerHealth [] getListeners() {
         return this.Listeners;
     }
 
     /**
-     * Set List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Listeners List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Listener list
+     * @param Listeners Listener list
      */
     public void setListeners(ListenerHealth [] Listeners) {
         this.Listeners = Listeners;

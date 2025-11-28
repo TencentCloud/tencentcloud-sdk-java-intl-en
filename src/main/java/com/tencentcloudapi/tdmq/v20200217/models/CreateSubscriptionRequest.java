@@ -52,18 +52,18 @@ public class CreateSubscriptionRequest extends AbstractModel {
     private Boolean IsIdempotent;
 
     /**
-    * Remarks (up to 128 characters).
-    */
-    @SerializedName("Remark")
-    @Expose
-    private String Remark;
-
-    /**
     * Pulsar cluster ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
+
+    /**
+    * Remarks (up to 128 characters).
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
 
     /**
     * Whether to automatically create a dead letter topic and a retry letter topic. true: yes (default value); false: no.
@@ -144,22 +144,6 @@ public class CreateSubscriptionRequest extends AbstractModel {
     }
 
     /**
-     * Get Remarks (up to 128 characters). 
-     * @return Remark Remarks (up to 128 characters).
-     */
-    public String getRemark() {
-        return this.Remark;
-    }
-
-    /**
-     * Set Remarks (up to 128 characters).
-     * @param Remark Remarks (up to 128 characters).
-     */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
-    }
-
-    /**
      * Get Pulsar cluster ID 
      * @return ClusterId Pulsar cluster ID
      */
@@ -173,6 +157,22 @@ public class CreateSubscriptionRequest extends AbstractModel {
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get Remarks (up to 128 characters). 
+     * @return Remark Remarks (up to 128 characters).
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set Remarks (up to 128 characters).
+     * @param Remark Remarks (up to 128 characters).
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
     }
 
     /**
@@ -227,11 +227,11 @@ public class CreateSubscriptionRequest extends AbstractModel {
         if (source.IsIdempotent != null) {
             this.IsIdempotent = new Boolean(source.IsIdempotent);
         }
-        if (source.Remark != null) {
-            this.Remark = new String(source.Remark);
-        }
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
         }
         if (source.AutoCreatePolicyTopic != null) {
             this.AutoCreatePolicyTopic = new Boolean(source.AutoCreatePolicyTopic);
@@ -250,8 +250,8 @@ public class CreateSubscriptionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
         this.setParamSimple(map, prefix + "IsIdempotent", this.IsIdempotent);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "AutoCreatePolicyTopic", this.AutoCreatePolicyTopic);
         this.setParamSimple(map, prefix + "PostFixPattern", this.PostFixPattern);
 

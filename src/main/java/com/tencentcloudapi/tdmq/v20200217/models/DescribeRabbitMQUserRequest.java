@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRabbitMQUserRequest extends AbstractModel {
 
     /**
-    * Cluster instance ID
+    * Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,14 +38,14 @@ public class DescribeRabbitMQUserRequest extends AbstractModel {
     private String SearchUser;
 
     /**
-    * Pagination offset
+    * Specifies the page Offset. default is 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Pagination limit
+    * Page Limit. default value: 20.
     */
     @SerializedName("Limit")
     @Expose
@@ -59,23 +59,24 @@ public class DescribeRabbitMQUserRequest extends AbstractModel {
     private String User;
 
     /**
-    * User tag, which is used to filter users.
+    * User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-     * Get Cluster instance ID 
-     * @return InstanceId Cluster instance ID
+     * Get Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1). 
+     * @return InstanceId Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster instance ID
-     * @param InstanceId Cluster instance ID
+     * Set Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+     * @param InstanceId Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -98,32 +99,32 @@ public class DescribeRabbitMQUserRequest extends AbstractModel {
     }
 
     /**
-     * Get Pagination offset 
-     * @return Offset Pagination offset
+     * Get Specifies the page Offset. default is 0. 
+     * @return Offset Specifies the page Offset. default is 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset
-     * @param Offset Pagination offset
+     * Set Specifies the page Offset. default is 0.
+     * @param Offset Specifies the page Offset. default is 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Pagination limit 
-     * @return Limit Pagination limit
+     * Get Page Limit. default value: 20. 
+     * @return Limit Page Limit. default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Pagination limit
-     * @param Limit Pagination limit
+     * Set Page Limit. default value: 20.
+     * @param Limit Page Limit. default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -146,16 +147,20 @@ public class DescribeRabbitMQUserRequest extends AbstractModel {
     }
 
     /**
-     * Get User tag, which is used to filter users. 
-     * @return Tags User tag, which is used to filter users.
+     * Get User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user. 
+     * @return Tags User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set User tag, which is used to filter users.
-     * @param Tags User tag, which is used to filter users.
+     * Set User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
+     * @param Tags User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

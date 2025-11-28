@@ -90,6 +90,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ListenerName;
 
     /**
+    * Weight associated with the target group. this parameter takes effect only for the new version v2 target group.
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
+
+    /**
+    * Advanced routing rule ID.
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private String RuleId;
+
+    /**
      * Get ID of associated CLB instance 
      * @return LoadBalancerId ID of associated CLB instance
      */
@@ -245,6 +259,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.ListenerName = ListenerName;
     }
 
+    /**
+     * Get Weight associated with the target group. this parameter takes effect only for the new version v2 target group. 
+     * @return Weight Weight associated with the target group. this parameter takes effect only for the new version v2 target group.
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set Weight associated with the target group. this parameter takes effect only for the new version v2 target group.
+     * @param Weight Weight associated with the target group. this parameter takes effect only for the new version v2 target group.
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
+    }
+
+    /**
+     * Get Advanced routing rule ID. 
+     * @return RuleId Advanced routing rule ID.
+     */
+    public String getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set Advanced routing rule ID.
+     * @param RuleId Advanced routing rule ID.
+     */
+    public void setRuleId(String RuleId) {
+        this.RuleId = RuleId;
+    }
+
     public AssociationItem() {
     }
 
@@ -280,6 +326,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.ListenerName != null) {
             this.ListenerName = new String(source.ListenerName);
         }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
     }
 
 
@@ -296,6 +348,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
         this.setParamSimple(map, prefix + "ListenerName", this.ListenerName);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
 
     }
 }

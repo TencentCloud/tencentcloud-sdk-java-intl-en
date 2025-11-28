@@ -138,6 +138,28 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This api is used to create a professional cluster with prepayment via api calls.
+     * @param req CreateProClusterRequest
+     * @return CreateProClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProClusterResponse CreateProCluster(CreateProClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProCluster", CreateProClusterResponse.class);
+    }
+
+    /**
+     *This API is used to create a TDMQ for RabbitMQ routing relationship.
+     * @param req CreateRabbitMQBindingRequest
+     * @return CreateRabbitMQBindingResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRabbitMQBindingResponse CreateRabbitMQBinding(CreateRabbitMQBindingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRabbitMQBinding", CreateRabbitMQBindingResponse.class);
+    }
+
+    /**
      *This API is used to create a TDMQ for RabbitMQ user.
      * @param req CreateRabbitMQUserRequest
      * @return CreateRabbitMQUserResponse
@@ -149,7 +171,7 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a TDMQ for RabbitMQ exclusive instance.
+     *This API is used to create a RabbitMQ managed instance.
      * @param req CreateRabbitMQVipInstanceRequest
      * @return CreateRabbitMQVipInstanceResponse
      * @throws TencentCloudSDKException
@@ -182,6 +204,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *Creates environment role authorization
+     * @param req CreateRocketMQEnvironmentRoleRequest
+     * @return CreateRocketMQEnvironmentRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRocketMQEnvironmentRoleResponse CreateRocketMQEnvironmentRole(CreateRocketMQEnvironmentRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRocketMQEnvironmentRole", CreateRocketMQEnvironmentRoleResponse.class);
+    }
+
+    /**
      *This API is used to create a RocketMQ consumer group.
      * @param req CreateRocketMQGroupRequest
      * @return CreateRocketMQGroupResponse
@@ -204,6 +237,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a role.
+     * @param req CreateRocketMQRoleRequest
+     * @return CreateRocketMQRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRocketMQRoleResponse CreateRocketMQRole(CreateRocketMQRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRocketMQRole", CreateRocketMQRoleResponse.class);
+    }
+
+    /**
      *This API is used to create a RocketMQ topic.
      * @param req CreateRocketMQTopicRequest
      * @return CreateRocketMQTopicResponse
@@ -212,6 +256,17 @@ public class TdmqClient extends AbstractClient{
     public CreateRocketMQTopicResponse CreateRocketMQTopic(CreateRocketMQTopicRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateRocketMQTopic", CreateRocketMQTopicResponse.class);
+    }
+
+    /**
+     *This API is used to create a RocketMQ Exclusive Edition instance.
+     * @param req CreateRocketMQVipInstanceRequest
+     * @return CreateRocketMQVipInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRocketMQVipInstanceResponse CreateRocketMQVipInstance(CreateRocketMQVipInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRocketMQVipInstance", CreateRocketMQVipInstanceResponse.class);
     }
 
     /**
@@ -314,6 +369,39 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a professional cluster with prepayment via API calls.
+     * @param req DeleteProClusterRequest
+     * @return DeleteProClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProClusterResponse DeleteProCluster(DeleteProClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteProCluster", DeleteProClusterResponse.class);
+    }
+
+    /**
+     *This API is used to unbind RabbitMQ routing relationships.
+     * @param req DeleteRabbitMQBindingRequest
+     * @return DeleteRabbitMQBindingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRabbitMQBindingResponse DeleteRabbitMQBinding(DeleteRabbitMQBindingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRabbitMQBinding", DeleteRabbitMQBindingResponse.class);
+    }
+
+    /**
+     *This API is used to delete RabbitMQ permissions.
+     * @param req DeleteRabbitMQPermissionRequest
+     * @return DeleteRabbitMQPermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRabbitMQPermissionResponse DeleteRabbitMQPermission(DeleteRabbitMQPermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRabbitMQPermission", DeleteRabbitMQPermissionResponse.class);
+    }
+
+    /**
      *This API is used to delete a TDMQ for RabbitMQ user.
      * @param req DeleteRabbitMQUserRequest
      * @return DeleteRabbitMQUserResponse
@@ -325,7 +413,7 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a TDMQ for RabbitMQ exclusive instance.
+     *This API is used to delete a RabbitMQ managed instance.
      * @param req DeleteRabbitMQVipInstanceRequest
      * @return DeleteRabbitMQVipInstanceResponse
      * @throws TencentCloudSDKException
@@ -358,6 +446,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *Deletes environment role authorization
+     * @param req DeleteRocketMQEnvironmentRolesRequest
+     * @return DeleteRocketMQEnvironmentRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRocketMQEnvironmentRolesResponse DeleteRocketMQEnvironmentRoles(DeleteRocketMQEnvironmentRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRocketMQEnvironmentRoles", DeleteRocketMQEnvironmentRolesResponse.class);
+    }
+
+    /**
      *This API is used to delete a RocketMQ consumer group.
      * @param req DeleteRocketMQGroupRequest
      * @return DeleteRocketMQGroupResponse
@@ -380,6 +479,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *Deletes roles. Batch deletion is supported.
+     * @param req DeleteRocketMQRolesRequest
+     * @return DeleteRocketMQRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRocketMQRolesResponse DeleteRocketMQRoles(DeleteRocketMQRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRocketMQRoles", DeleteRocketMQRolesResponse.class);
+    }
+
+    /**
      *This API is used to delete a RocketMQ topic.
      * @param req DeleteRocketMQTopicRequest
      * @return DeleteRocketMQTopicResponse
@@ -388,6 +498,17 @@ public class TdmqClient extends AbstractClient{
     public DeleteRocketMQTopicResponse DeleteRocketMQTopic(DeleteRocketMQTopicRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRocketMQTopic", DeleteRocketMQTopicResponse.class);
+    }
+
+    /**
+     *This API is used to delete a RocketMQ Exclusive Edition instance.
+     * @param req DeleteRocketMQVipInstanceRequest
+     * @return DeleteRocketMQVipInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRocketMQVipInstanceResponse DeleteRocketMQVipInstance(DeleteRocketMQVipInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRocketMQVipInstance", DeleteRocketMQVipInstanceResponse.class);
     }
 
     /**
@@ -465,17 +586,6 @@ public class TdmqClient extends AbstractClient{
     public DescribeClustersResponse DescribeClusters(DescribeClustersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClusters", DescribeClustersResponse.class);
-    }
-
-    /**
-     *This API is used to enumerate the source queues of a CMQ dead letter queue.
-     * @param req DescribeCmqDeadLetterSourceQueuesRequest
-     * @return DescribeCmqDeadLetterSourceQueuesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCmqDeadLetterSourceQueuesResponse DescribeCmqDeadLetterSourceQueues(DescribeCmqDeadLetterSourceQueuesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCmqDeadLetterSourceQueues", DescribeCmqDeadLetterSourceQueuesResponse.class);
     }
 
     /**
@@ -567,6 +677,39 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *Queries message trajectory
+     * @param req DescribeMqMsgTraceRequest
+     * @return DescribeMqMsgTraceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMqMsgTraceResponse DescribeMqMsgTrace(DescribeMqMsgTraceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMqMsgTrace", DescribeMqMsgTraceResponse.class);
+    }
+
+    /**
+     *This API is used to get message details.
+     * @param req DescribeMsgRequest
+     * @return DescribeMsgResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMsgResponse DescribeMsg(DescribeMsgRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMsg", DescribeMsgResponse.class);
+    }
+
+    /**
+     *Queries message trajectory
+     * @param req DescribeMsgTraceRequest
+     * @return DescribeMsgTraceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMsgTraceResponse DescribeMsgTrace(DescribeMsgTraceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMsgTrace", DescribeMsgTraceResponse.class);
+    }
+
+    /**
      *This API is used to obtain message production overview information.
      * @param req DescribePublisherSummaryRequest
      * @return DescribePublisherSummaryResponse
@@ -611,7 +754,29 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of TDMQ for RabbitMQ exclusive cluster nodes.
+     *This API is used to query the list of RabbitMQ route relations.
+     * @param req DescribeRabbitMQBindingsRequest
+     * @return DescribeRabbitMQBindingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQBindingsResponse DescribeRabbitMQBindings(DescribeRabbitMQBindingsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRabbitMQBindings", DescribeRabbitMQBindingsResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of TDMQ for RabbitMQ exchanges.
+     * @param req DescribeRabbitMQExchangesRequest
+     * @return DescribeRabbitMQExchangesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQExchangesResponse DescribeRabbitMQExchanges(DescribeRabbitMQExchangesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRabbitMQExchanges", DescribeRabbitMQExchangesResponse.class);
+    }
+
+    /**
+     *This API is used to query the RabbitMQ managed node list.
      * @param req DescribeRabbitMQNodeListRequest
      * @return DescribeRabbitMQNodeListResponse
      * @throws TencentCloudSDKException
@@ -619,6 +784,39 @@ public class TdmqClient extends AbstractClient{
     public DescribeRabbitMQNodeListResponse DescribeRabbitMQNodeList(DescribeRabbitMQNodeListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRabbitMQNodeList", DescribeRabbitMQNodeListResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of TDMQ for RabbitMQ permissions.
+     * @param req DescribeRabbitMQPermissionRequest
+     * @return DescribeRabbitMQPermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQPermissionResponse DescribeRabbitMQPermission(DescribeRabbitMQPermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRabbitMQPermission", DescribeRabbitMQPermissionResponse.class);
+    }
+
+    /**
+     *This API is used to query the details of RabbitMQ queues.
+     * @param req DescribeRabbitMQQueueDetailRequest
+     * @return DescribeRabbitMQQueueDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQQueueDetailResponse DescribeRabbitMQQueueDetail(DescribeRabbitMQQueueDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRabbitMQQueueDetail", DescribeRabbitMQQueueDetailResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of TDMQ for RabbitMQ queues.
+     * @param req DescribeRabbitMQQueuesRequest
+     * @return DescribeRabbitMQQueuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQQueuesResponse DescribeRabbitMQQueues(DescribeRabbitMQQueuesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRabbitMQQueues", DescribeRabbitMQQueuesResponse.class);
     }
 
     /**
@@ -633,7 +831,18 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of the purchased TDMQ for RabbitMQ exclusive instances.
+     *This API is used to obtain information about one RabbitMQ managed instance.
+     * @param req DescribeRabbitMQVipInstanceRequest
+     * @return DescribeRabbitMQVipInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQVipInstanceResponse DescribeRabbitMQVipInstance(DescribeRabbitMQVipInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRabbitMQVipInstance", DescribeRabbitMQVipInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to query the RabbitMQ managed instance list of user purchases.
      * @param req DescribeRabbitMQVipInstancesRequest
      * @return DescribeRabbitMQVipInstancesResponse
      * @throws TencentCloudSDKException
@@ -652,17 +861,6 @@ public class TdmqClient extends AbstractClient{
     public DescribeRabbitMQVirtualHostResponse DescribeRabbitMQVirtualHost(DescribeRabbitMQVirtualHostRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRabbitMQVirtualHost", DescribeRabbitMQVirtualHostResponse.class);
-    }
-
-    /**
-     *This API is used to query the list of TDMQ for RabbitMQ exclusive vhosts.
-     * @param req DescribeRabbitMQVirtualHostListRequest
-     * @return DescribeRabbitMQVirtualHostListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRabbitMQVirtualHostListResponse DescribeRabbitMQVirtualHostList(DescribeRabbitMQVirtualHostListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRabbitMQVirtualHostList", DescribeRabbitMQVirtualHostListResponse.class);
     }
 
     /**
@@ -688,6 +886,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *Obtains the namespace role list
+     * @param req DescribeRocketMQEnvironmentRolesRequest
+     * @return DescribeRocketMQEnvironmentRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQEnvironmentRolesResponse DescribeRocketMQEnvironmentRoles(DescribeRocketMQEnvironmentRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQEnvironmentRoles", DescribeRocketMQEnvironmentRolesResponse.class);
+    }
+
+    /**
      *This API is used to get the list of RocketMQ consumer groups.
      * @param req DescribeRocketMQGroupsRequest
      * @return DescribeRocketMQGroupsResponse
@@ -710,6 +919,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *Queries message trajectory
+     * @param req DescribeRocketMQMsgTraceRequest
+     * @return DescribeRocketMQMsgTraceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQMsgTraceResponse DescribeRocketMQMsgTrace(DescribeRocketMQMsgTraceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQMsgTrace", DescribeRocketMQMsgTraceResponse.class);
+    }
+
+    /**
      *This API is used to get the list of RocketMQ namespaces.
      * @param req DescribeRocketMQNamespacesRequest
      * @return DescribeRocketMQNamespacesResponse
@@ -721,6 +941,94 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the producer client list under a specified topic in RocketMQ.
+     * @param req DescribeRocketMQProducersRequest
+     * @return DescribeRocketMQProducersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQProducersResponse DescribeRocketMQProducers(DescribeRocketMQProducersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQProducers", DescribeRocketMQProducersResponse.class);
+    }
+
+    /**
+     *This API is used to pull public network metric monitoring data from TCOP. Currently, only inbound bandwidth and outbound bandwidth metrics from client to LB are supported.
+     * @param req DescribeRocketMQPublicAccessMonitorDataRequest
+     * @return DescribeRocketMQPublicAccessMonitorDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQPublicAccessMonitorDataResponse DescribeRocketMQPublicAccessMonitorData(DescribeRocketMQPublicAccessMonitorDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQPublicAccessMonitorData", DescribeRocketMQPublicAccessMonitorDataResponse.class);
+    }
+
+    /**
+     *This API is used to query the public network access information of RocketMQ instances.
+     * @param req DescribeRocketMQPublicAccessPointRequest
+     * @return DescribeRocketMQPublicAccessPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQPublicAccessPointResponse DescribeRocketMQPublicAccessPoint(DescribeRocketMQPublicAccessPointRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQPublicAccessPoint", DescribeRocketMQPublicAccessPointResponse.class);
+    }
+
+    /**
+     *Obtains the list of roles
+     * @param req DescribeRocketMQRolesRequest
+     * @return DescribeRocketMQRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQRolesResponse DescribeRocketMQRoles(DescribeRocketMQRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQRoles", DescribeRocketMQRolesResponse.class);
+    }
+
+    /**
+     *Used to obtain the RocketMQ metric sorting list, such as sorting topics under a cluster instance by the most occupied storage space.
+     * @param req DescribeRocketMQTopUsagesRequest
+     * @return DescribeRocketMQTopUsagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQTopUsagesResponse DescribeRocketMQTopUsages(DescribeRocketMQTopUsagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQTopUsages", DescribeRocketMQTopUsagesResponse.class);
+    }
+
+    /**
+     *This API is used to obtain RocketMQ topic details.
+     * @param req DescribeRocketMQTopicRequest
+     * @return DescribeRocketMQTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQTopicResponse DescribeRocketMQTopic(DescribeRocketMQTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQTopic", DescribeRocketMQTopicResponse.class);
+    }
+
+    /**
+     *Query RocketMQ messages.
+     * @param req DescribeRocketMQTopicMsgsRequest
+     * @return DescribeRocketMQTopicMsgsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQTopicMsgsResponse DescribeRocketMQTopicMsgs(DescribeRocketMQTopicMsgsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQTopicMsgs", DescribeRocketMQTopicMsgsResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the topic production details list.
+     * @param req DescribeRocketMQTopicStatsRequest
+     * @return DescribeRocketMQTopicStatsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQTopicStatsResponse DescribeRocketMQTopicStats(DescribeRocketMQTopicStatsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQTopicStats", DescribeRocketMQTopicStatsResponse.class);
+    }
+
+    /**
      *This API is used to get the list of RocketMQ topics.
      * @param req DescribeRocketMQTopicsRequest
      * @return DescribeRocketMQTopicsResponse
@@ -729,6 +1037,17 @@ public class TdmqClient extends AbstractClient{
     public DescribeRocketMQTopicsResponse DescribeRocketMQTopics(DescribeRocketMQTopicsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRocketMQTopics", DescribeRocketMQTopicsResponse.class);
+    }
+
+    /**
+     *Obtains the list of topics subscribed under a specified consumer group
+     * @param req DescribeRocketMQTopicsByGroupRequest
+     * @return DescribeRocketMQTopicsByGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQTopicsByGroupResponse DescribeRocketMQTopicsByGroup(DescribeRocketMQTopicsByGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQTopicsByGroup", DescribeRocketMQTopicsByGroupResponse.class);
     }
 
     /**
@@ -776,6 +1095,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query messages.
+     * @param req DescribeTopicMsgsRequest
+     * @return DescribeTopicMsgsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicMsgsResponse DescribeTopicMsgs(DescribeTopicMsgsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopicMsgs", DescribeTopicMsgsResponse.class);
+    }
+
+    /**
      *This API is used to get the list of topics under an environment.
      * @param req DescribeTopicsRequest
      * @return DescribeTopicsResponse
@@ -784,6 +1114,17 @@ public class TdmqClient extends AbstractClient{
     public DescribeTopicsResponse DescribeTopics(DescribeTopicsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTopics", DescribeTopicsResponse.class);
+    }
+
+    /**
+     *Export the RocketMQ message details.
+     * @param req ExportRocketMQMessageDetailRequest
+     * @return ExportRocketMQMessageDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportRocketMQMessageDetailResponse ExportRocketMQMessageDetail(ExportRocketMQMessageDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportRocketMQMessageDetail", ExportRocketMQMessageDetailResponse.class);
     }
 
     /**
@@ -853,6 +1194,28 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the public network security policy for pulsar Pro Edition.
+     * @param req ModifyPublicNetworkSecurityPolicyRequest
+     * @return ModifyPublicNetworkSecurityPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPublicNetworkSecurityPolicyResponse ModifyPublicNetworkSecurityPolicy(ModifyPublicNetworkSecurityPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPublicNetworkSecurityPolicy", ModifyPublicNetworkSecurityPolicyResponse.class);
+    }
+
+    /**
+     *This API is used to modify RabbitMQ permissions.
+     * @param req ModifyRabbitMQPermissionRequest
+     * @return ModifyRabbitMQPermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRabbitMQPermissionResponse ModifyRabbitMQPermission(ModifyRabbitMQPermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRabbitMQPermission", ModifyRabbitMQPermissionResponse.class);
+    }
+
+    /**
      *This API is used to modify a TDMQ for RabbitMQ user.
      * @param req ModifyRabbitMQUserRequest
      * @return ModifyRabbitMQUserResponse
@@ -886,6 +1249,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *Modifies environment role authorization
+     * @param req ModifyRocketMQEnvironmentRoleRequest
+     * @return ModifyRocketMQEnvironmentRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRocketMQEnvironmentRoleResponse ModifyRocketMQEnvironmentRole(ModifyRocketMQEnvironmentRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRocketMQEnvironmentRole", ModifyRocketMQEnvironmentRoleResponse.class);
+    }
+
+    /**
      *This API is used to update a RocketMQ consumer group.
      * @param req ModifyRocketMQGroupRequest
      * @return ModifyRocketMQGroupResponse
@@ -894,6 +1268,17 @@ public class TdmqClient extends AbstractClient{
     public ModifyRocketMQGroupResponse ModifyRocketMQGroup(ModifyRocketMQGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyRocketMQGroup", ModifyRocketMQGroupResponse.class);
+    }
+
+    /**
+     *Modify the RocketMQ dedicated instance.
+     * @param req ModifyRocketMQInstanceRequest
+     * @return ModifyRocketMQInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRocketMQInstanceResponse ModifyRocketMQInstance(ModifyRocketMQInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRocketMQInstance", ModifyRocketMQInstanceResponse.class);
     }
 
     /**
@@ -916,6 +1301,17 @@ public class TdmqClient extends AbstractClient{
     public ModifyRocketMQNamespaceResponse ModifyRocketMQNamespace(ModifyRocketMQNamespaceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyRocketMQNamespace", ModifyRocketMQNamespaceResponse.class);
+    }
+
+    /**
+     *Modifies roles
+     * @param req ModifyRocketMQRoleRequest
+     * @return ModifyRocketMQRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRocketMQRoleResponse ModifyRocketMQRole(ModifyRocketMQRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRocketMQRole", ModifyRocketMQRoleResponse.class);
     }
 
     /**
@@ -963,27 +1359,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *Currently, the `ReceiveMessage` API only supports partitioned topics. It is used to receive messages sent to a specified partitioned topic. If it is called when there are no messages in the partitioned topic, the `ReceiveTimeout` exception will be reported.
+     *This API is used to receive messages sent to a specified Partitioned Topic. It supports only Partitioned Topic type. When there are no messages in the Partitioned Topic but the API is still called, it throws a ReceiveTimeout exception.
 
-Instructions on how to use `BatchReceivePolicy`:
+This API is used to batch receive policies.
 
-`BatchReceive` has three parameters:
+This API is used to provide the following three parameters:.
 
-● `MaxNumMessages`: The maximum number of messages returned by `Receive` when `BatchReceive` is used.
-● `MaxNumBytes`: The maximum size (in bytes) of the message returned by `Receive` when `BatchReceive` is used.
-● `Timeout`: The maximum timeout period (in milliseconds) of calling `Receive` when `BatchReceive` is used.
+MaxNumMessages: The maximum number of messages returned by the Receive API each time when using BatchReceive.
+MaxNumBytes: the maximum size of messages returned by the Receive API in a single BatchReceive operation, in bytes.
+Timeout: The maximum timeout period for each Receive API call when using BatchReceive is how long, in MS.
 
-By default, if you don’t specify any of the three parameters, the `BatchReceive` feature is disabled; if one of the three parameter values is above zero, `BatchReceive` is enabled. `BatchReceive` will be disabled when any of the three parameter values reaches the threshold you specify.
+This API is used to disable the BatchReceive feature if none of the three parameters are specified. If any one of the three parameters has a value greater than 0, BatchReceive is enabled. BatchReceive completes when reaching the threshold specified in any one of the three parameters.
 
-Note: The values of both `MaxNumMessages` and `MaxNumBytes` are subject to the value of `ReceiveQueueSize`. If the values of `ReceiveQueueSize` and `MaxNumMessages` are 5 and 10, respectively, you can receive up to five rather than 10 messages when `BatchReceive` is used.
+Note: MaxNumMessages and MaxNumBytes are subject to the size of ReceiveQueueSize for each receipt of messages. If ReceiveQueueSize is set to 5 and MaxNumMessages is set to 10, then BatchReceive will receive at most 5 messages at once rather than 10.
 
 
 
-The API configured with `BatchReceivePolicy` returns multiple messages at a time.
+This API is used to return multiple messages at one time.
 
-1. These messages are separated by “###”. After receiving them, you can separate them with split tools in different languages.
-2. MessageIDs are separated by “###”. After receiving the messages, you can separate the MessageIDs with split tools in different languages, so that you can obtain the `MessageID` field information required for calling the `AcknowledgeMessage` API.
-
+This API is used to Split multiple messages with the special character '###', allowing the business side to use Split tools in different languages to separate messages after receiving them.
+Multiple MessageIDs use the special character '###' to separate with each other. After receiving the message, the business side can leverage the Split tool provided by different languages to separate different messages. (Used for filling in the necessary MessageID field information when calling the AcknowledgeMessage API.).
      * @param req ReceiveMessageRequest
      * @return ReceiveMessageResponse
      * @throws TencentCloudSDKException
@@ -1013,6 +1408,17 @@ The API configured with `BatchReceivePolicy` returns multiple messages at a time
     public ResetRocketMQConsumerOffSetResponse ResetRocketMQConsumerOffSet(ResetRocketMQConsumerOffSetRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResetRocketMQConsumerOffSet", ResetRocketMQConsumerOffSetResponse.class);
+    }
+
+    /**
+     *Resend the RocketMQ dead letter messages.
+     * @param req RetryRocketMQDlqMessageRequest
+     * @return RetryRocketMQDlqMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public RetryRocketMQDlqMessageResponse RetryRocketMQDlqMessage(RetryRocketMQDlqMessageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RetryRocketMQDlqMessage", RetryRocketMQDlqMessageResponse.class);
     }
 
     /**
@@ -1074,7 +1480,7 @@ The message cannot be sent to a persistent topic.
     }
 
     /**
-     *This document is used to send a TDMQ for RocketMQ message.
+     *This API is used to send messages through RocketMQ. It is only used for sending a small number of test messages from the console and does not provide SLA. Cloud API is subject to traffic throttling. In real business scenarios, use the RocketMQ SDK to send messages.
      * @param req SendRocketMQMessageRequest
      * @return SendRocketMQMessageResponse
      * @throws TencentCloudSDKException
@@ -1082,6 +1488,17 @@ The message cannot be sent to a persistent topic.
     public SendRocketMQMessageResponse SendRocketMQMessage(SendRocketMQMessageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SendRocketMQMessage", SendRocketMQMessageResponse.class);
+    }
+
+    /**
+     *This API is used to enable/disable public network access, and set the security access policy.
+     * @param req SetRocketMQPublicAccessPointRequest
+     * @return SetRocketMQPublicAccessPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetRocketMQPublicAccessPointResponse SetRocketMQPublicAccessPoint(SetRocketMQPublicAccessPointRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetRocketMQPublicAccessPoint", SetRocketMQPublicAccessPointResponse.class);
     }
 
     /**

@@ -31,14 +31,14 @@ public class DescribeRabbitMQVipInstancesRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * The maximum number of queried items, which defaults to 20.
+    * Maximum number of items for query. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Start offset for query
+    * Starting position of the query. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -61,32 +61,32 @@ public class DescribeRabbitMQVipInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get The maximum number of queried items, which defaults to 20. 
-     * @return Limit The maximum number of queried items, which defaults to 20.
+     * Get Maximum number of items for query. Default value: 20. 
+     * @return Limit Maximum number of items for query. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The maximum number of queried items, which defaults to 20.
-     * @param Limit The maximum number of queried items, which defaults to 20.
+     * Set Maximum number of items for query. Default value: 20.
+     * @param Limit Maximum number of items for query. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Start offset for query 
-     * @return Offset Start offset for query
+     * Get Starting position of the query. Default value: 0. 
+     * @return Offset Starting position of the query. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Start offset for query
-     * @param Offset Start offset for query
+     * Set Starting position of the query. Default value: 0.
+     * @param Offset Starting position of the query. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

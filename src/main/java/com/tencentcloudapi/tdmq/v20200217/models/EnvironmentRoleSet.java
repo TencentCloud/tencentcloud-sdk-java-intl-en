@@ -25,7 +25,7 @@ public class EnvironmentRoleSet extends AbstractModel {
 
     /**
     * The IDs of the bound namespaces cannot be delicate and the namespaces must contain resources
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -34,7 +34,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     /**
     * Permissions to be bound to a namespace. Enumerated values: `consume`, `produce`, and `consume, produce`. This parameter cannot be left empty.
 
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Permissions")
     @Expose
@@ -42,9 +42,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get The IDs of the bound namespaces cannot be delicate and the namespaces must contain resources
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return EnvironmentId The IDs of the bound namespaces cannot be delicate and the namespaces must contain resources
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
@@ -52,9 +52,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set The IDs of the bound namespaces cannot be delicate and the namespaces must contain resources
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param EnvironmentId The IDs of the bound namespaces cannot be delicate and the namespaces must contain resources
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
@@ -63,10 +63,10 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     /**
      * Get Permissions to be bound to a namespace. Enumerated values: `consume`, `produce`, and `consume, produce`. This parameter cannot be left empty.
 
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Permissions Permissions to be bound to a namespace. Enumerated values: `consume`, `produce`, and `consume, produce`. This parameter cannot be left empty.
 
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getPermissions() {
         return this.Permissions;
@@ -75,10 +75,10 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     /**
      * Set Permissions to be bound to a namespace. Enumerated values: `consume`, `produce`, and `consume, produce`. This parameter cannot be left empty.
 
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Permissions Permissions to be bound to a namespace. Enumerated values: `consume`, `produce`, and `consume, produce`. This parameter cannot be left empty.
 
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPermissions(String [] Permissions) {
         this.Permissions = Permissions;

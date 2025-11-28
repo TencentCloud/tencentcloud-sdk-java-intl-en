@@ -45,13 +45,6 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
     private String GroupId;
 
     /**
-    * Topic name.
-    */
-    @SerializedName("Topic")
-    @Expose
-    private String Topic;
-
-    /**
     * Reset method. 0: Start from the latest offset; 1: Start from specified time point.
     */
     @SerializedName("Type")
@@ -59,11 +52,25 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
     private Long Type;
 
     /**
+    * Topic name.
+    */
+    @SerializedName("Topic")
+    @Expose
+    private String Topic;
+
+    /**
     * The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
     */
     @SerializedName("ResetTimestamp")
     @Expose
     private Long ResetTimestamp;
+
+    /**
+    * Whether the reset flag is retry topic.
+    */
+    @SerializedName("RetryFlag")
+    @Expose
+    private Boolean RetryFlag;
 
     /**
      * Get Cluster ID. 
@@ -114,22 +121,6 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
     }
 
     /**
-     * Get Topic name. 
-     * @return Topic Topic name.
-     */
-    public String getTopic() {
-        return this.Topic;
-    }
-
-    /**
-     * Set Topic name.
-     * @param Topic Topic name.
-     */
-    public void setTopic(String Topic) {
-        this.Topic = Topic;
-    }
-
-    /**
      * Get Reset method. 0: Start from the latest offset; 1: Start from specified time point. 
      * @return Type Reset method. 0: Start from the latest offset; 1: Start from specified time point.
      */
@@ -146,6 +137,22 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
     }
 
     /**
+     * Get Topic name. 
+     * @return Topic Topic name.
+     */
+    public String getTopic() {
+        return this.Topic;
+    }
+
+    /**
+     * Set Topic name.
+     * @param Topic Topic name.
+     */
+    public void setTopic(String Topic) {
+        this.Topic = Topic;
+    }
+
+    /**
      * Get The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`. 
      * @return ResetTimestamp The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
      */
@@ -159,6 +166,22 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
      */
     public void setResetTimestamp(Long ResetTimestamp) {
         this.ResetTimestamp = ResetTimestamp;
+    }
+
+    /**
+     * Get Whether the reset flag is retry topic. 
+     * @return RetryFlag Whether the reset flag is retry topic.
+     */
+    public Boolean getRetryFlag() {
+        return this.RetryFlag;
+    }
+
+    /**
+     * Set Whether the reset flag is retry topic.
+     * @param RetryFlag Whether the reset flag is retry topic.
+     */
+    public void setRetryFlag(Boolean RetryFlag) {
+        this.RetryFlag = RetryFlag;
     }
 
     public ResetRocketMQConsumerOffSetRequest() {
@@ -178,14 +201,17 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
-        if (source.Topic != null) {
-            this.Topic = new String(source.Topic);
-        }
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.Topic != null) {
+            this.Topic = new String(source.Topic);
+        }
         if (source.ResetTimestamp != null) {
             this.ResetTimestamp = new Long(source.ResetTimestamp);
+        }
+        if (source.RetryFlag != null) {
+            this.RetryFlag = new Boolean(source.RetryFlag);
         }
     }
 
@@ -197,9 +223,10 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
-        this.setParamSimple(map, prefix + "Topic", this.Topic);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Topic", this.Topic);
         this.setParamSimple(map, prefix + "ResetTimestamp", this.ResetTimestamp);
+        this.setParamSimple(map, prefix + "RetryFlag", this.RetryFlag);
 
     }
 }

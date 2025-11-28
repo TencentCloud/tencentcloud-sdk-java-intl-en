@@ -66,7 +66,7 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel {
     private String FilterGroup;
 
     /**
-    * Sort by specified field. Valid values: `tps`, `accumulative`.
+    * Sorts by the specified field. Valid value: subscribeNum: number of subscribed topics.
     */
     @SerializedName("SortedBy")
     @Expose
@@ -92,6 +92,13 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel {
     @SerializedName("Types")
     @Expose
     private String [] Types;
+
+    /**
+    * Tag filter
+    */
+    @SerializedName("TagFilters")
+    @Expose
+    private TagFilter [] TagFilters;
 
     /**
      * Get Cluster ID. 
@@ -190,16 +197,16 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get Sort by specified field. Valid values: `tps`, `accumulative`. 
-     * @return SortedBy Sort by specified field. Valid values: `tps`, `accumulative`.
+     * Get Sorts by the specified field. Valid value: subscribeNum: number of subscribed topics. 
+     * @return SortedBy Sorts by the specified field. Valid value: subscribeNum: number of subscribed topics.
      */
     public String getSortedBy() {
         return this.SortedBy;
     }
 
     /**
-     * Set Sort by specified field. Valid values: `tps`, `accumulative`.
-     * @param SortedBy Sort by specified field. Valid values: `tps`, `accumulative`.
+     * Set Sorts by the specified field. Valid value: subscribeNum: number of subscribed topics.
+     * @param SortedBy Sorts by the specified field. Valid value: subscribeNum: number of subscribed topics.
      */
     public void setSortedBy(String SortedBy) {
         this.SortedBy = SortedBy;
@@ -253,6 +260,22 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel {
         this.Types = Types;
     }
 
+    /**
+     * Get Tag filter 
+     * @return TagFilters Tag filter
+     */
+    public TagFilter [] getTagFilters() {
+        return this.TagFilters;
+    }
+
+    /**
+     * Set Tag filter
+     * @param TagFilters Tag filter
+     */
+    public void setTagFilters(TagFilter [] TagFilters) {
+        this.TagFilters = TagFilters;
+    }
+
     public DescribeRocketMQGroupsRequest() {
     }
 
@@ -294,6 +317,12 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel {
                 this.Types[i] = new String(source.Types[i]);
             }
         }
+        if (source.TagFilters != null) {
+            this.TagFilters = new TagFilter[source.TagFilters.length];
+            for (int i = 0; i < source.TagFilters.length; i++) {
+                this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
+            }
+        }
     }
 
 
@@ -311,6 +340,7 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SortOrder", this.SortOrder);
         this.setParamSimple(map, prefix + "FilterOneGroup", this.FilterOneGroup);
         this.setParamArraySimple(map, prefix + "Types.", this.Types);
+        this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
 
     }
 }

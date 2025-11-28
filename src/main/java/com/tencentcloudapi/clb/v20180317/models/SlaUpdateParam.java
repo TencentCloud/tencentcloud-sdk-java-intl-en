@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class SlaUpdateParam extends AbstractModel {
 
     /**
-    * ID of the CLB instance
+    * CLB instance ID.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
     */
     @SerializedName("LoadBalancerId")
     @Expose
@@ -38,16 +39,20 @@ public class SlaUpdateParam extends AbstractModel {
     private String SlaType;
 
     /**
-     * Get ID of the CLB instance 
-     * @return LoadBalancerId ID of the CLB instance
+     * Get CLB instance ID.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api. 
+     * @return LoadBalancerId CLB instance ID.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set ID of the CLB instance
-     * @param LoadBalancerId ID of the CLB instance
+     * Set CLB instance ID.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+     * @param LoadBalancerId CLB instance ID.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;

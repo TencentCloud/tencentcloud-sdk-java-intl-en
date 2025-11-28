@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Backend extends AbstractModel {
 
     /**
-    * Real server type. Valid values: CVM, ENI, CCN.
+    * Specifies the backend service type. valid values: CVM, ENI, CCN, EVM, GLOBALROUTE, NAT, SRV.
     */
     @SerializedName("Type")
     @Expose
@@ -38,7 +38,7 @@ public class Backend extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Listening port of a real server
+    * Specifies the listening port of the backend service. if it is a full listening target group bound to a port range listener, this port returns 0, indicating an invalid port. the port of the bound backend service follows the listener port.
     */
     @SerializedName("Port")
     @Expose
@@ -60,8 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] PublicIpAddresses;
 
     /**
-    * Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Private network IP of the real server
     */
     @SerializedName("PrivateIpAddresses")
     @Expose
@@ -76,8 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String InstanceName;
 
     /**
-    * Bound time of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Real server binding time
     */
     @SerializedName("RegisteredTime")
     @Expose
@@ -92,23 +90,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String EniId;
 
     /**
-    * Tag.Note: This field may return null, indicating that no valid values can be obtained.
+    * Tag.
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-     * Get Real server type. Valid values: CVM, ENI, CCN. 
-     * @return Type Real server type. Valid values: CVM, ENI, CCN.
+     * Get Specifies the backend service type. valid values: CVM, ENI, CCN, EVM, GLOBALROUTE, NAT, SRV. 
+     * @return Type Specifies the backend service type. valid values: CVM, ENI, CCN, EVM, GLOBALROUTE, NAT, SRV.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Real server type. Valid values: CVM, ENI, CCN.
-     * @param Type Real server type. Valid values: CVM, ENI, CCN.
+     * Set Specifies the backend service type. valid values: CVM, ENI, CCN, EVM, GLOBALROUTE, NAT, SRV.
+     * @param Type Specifies the backend service type. valid values: CVM, ENI, CCN, EVM, GLOBALROUTE, NAT, SRV.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -131,16 +129,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Listening port of a real server 
-     * @return Port Listening port of a real server
+     * Get Specifies the listening port of the backend service. if it is a full listening target group bound to a port range listener, this port returns 0, indicating an invalid port. the port of the bound backend service follows the listener port. 
+     * @return Port Specifies the listening port of the backend service. if it is a full listening target group bound to a port range listener, this port returns 0, indicating an invalid port. the port of the bound backend service follows the listener port.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Listening port of a real server
-     * @param Port Listening port of a real server
+     * Set Specifies the listening port of the backend service. if it is a full listening target group bound to a port range listener, this port returns 0, indicating an invalid port. the port of the bound backend service follows the listener port.
+     * @param Port Specifies the listening port of the backend service. if it is a full listening target group bound to a port range listener, this port returns 0, indicating an invalid port. the port of the bound backend service follows the listener port.
      */
     public void setPort(Long Port) {
         this.Port = Port;
@@ -183,20 +181,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PrivateIpAddresses Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Private network IP of the real server 
+     * @return PrivateIpAddresses Private network IP of the real server
      */
     public String [] getPrivateIpAddresses() {
         return this.PrivateIpAddresses;
     }
 
     /**
-     * Set Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PrivateIpAddresses Private IP of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Private network IP of the real server
+     * @param PrivateIpAddresses Private network IP of the real server
      */
     public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
         this.PrivateIpAddresses = PrivateIpAddresses;
@@ -223,20 +217,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Bound time of a real server
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegisteredTime Bound time of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Real server binding time 
+     * @return RegisteredTime Real server binding time
      */
     public String getRegisteredTime() {
         return this.RegisteredTime;
     }
 
     /**
-     * Set Bound time of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RegisteredTime Bound time of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Real server binding time
+     * @param RegisteredTime Real server binding time
      */
     public void setRegisteredTime(String RegisteredTime) {
         this.RegisteredTime = RegisteredTime;
@@ -263,16 +253,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Tag.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag. 
+     * @return Tag Tag.
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Tag.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Tag.
+     * @param Tag Tag.
      */
     public void setTag(String Tag) {
         this.Tag = Tag;

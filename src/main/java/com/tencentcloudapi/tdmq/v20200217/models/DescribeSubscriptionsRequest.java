@@ -38,6 +38,13 @@ public class DescribeSubscriptionsRequest extends AbstractModel {
     private String TopicName;
 
     /**
+    * Pulsar cluster ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
     * Offset, which defaults to 0 if left empty.
     */
     @SerializedName("Offset")
@@ -64,13 +71,6 @@ public class DescribeSubscriptionsRequest extends AbstractModel {
     @SerializedName("Filters")
     @Expose
     private FilterSubscription [] Filters;
-
-    /**
-    * Pulsar cluster ID
-    */
-    @SerializedName("ClusterId")
-    @Expose
-    private String ClusterId;
 
     /**
      * Get Environment (namespace) name. 
@@ -102,6 +102,22 @@ public class DescribeSubscriptionsRequest extends AbstractModel {
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
+    }
+
+    /**
+     * Get Pulsar cluster ID 
+     * @return ClusterId Pulsar cluster ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Pulsar cluster ID
+     * @param ClusterId Pulsar cluster ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
@@ -168,22 +184,6 @@ public class DescribeSubscriptionsRequest extends AbstractModel {
         this.Filters = Filters;
     }
 
-    /**
-     * Get Pulsar cluster ID 
-     * @return ClusterId Pulsar cluster ID
-     */
-    public String getClusterId() {
-        return this.ClusterId;
-    }
-
-    /**
-     * Set Pulsar cluster ID
-     * @param ClusterId Pulsar cluster ID
-     */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
-    }
-
     public DescribeSubscriptionsRequest() {
     }
 
@@ -197,6 +197,9 @@ public class DescribeSubscriptionsRequest extends AbstractModel {
         }
         if (source.TopicName != null) {
             this.TopicName = new String(source.TopicName);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
         }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
@@ -213,9 +216,6 @@ public class DescribeSubscriptionsRequest extends AbstractModel {
                 this.Filters[i] = new FilterSubscription(source.Filters[i]);
             }
         }
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
-        }
     }
 
 
@@ -225,11 +225,11 @@ public class DescribeSubscriptionsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

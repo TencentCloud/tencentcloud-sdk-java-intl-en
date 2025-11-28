@@ -74,6 +74,13 @@ Default value: RECREATE.
     private Boolean DesiredCapacitySyncWithMaxMinSize;
 
     /**
+    * Scaling in unhealthy instances first. If enabled, preferentially selects unhealthy instances during scale in. Default value: False.
+    */
+    @SerializedName("PriorityScaleInUnhealthy")
+    @Expose
+    private Boolean PriorityScaleInUnhealthy;
+
+    /**
      * Get Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default. 
      * @return ReplaceMonitorUnhealthy Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
      */
@@ -201,6 +208,22 @@ Default value: RECREATE.
         this.DesiredCapacitySyncWithMaxMinSize = DesiredCapacitySyncWithMaxMinSize;
     }
 
+    /**
+     * Get Scaling in unhealthy instances first. If enabled, preferentially selects unhealthy instances during scale in. Default value: False. 
+     * @return PriorityScaleInUnhealthy Scaling in unhealthy instances first. If enabled, preferentially selects unhealthy instances during scale in. Default value: False.
+     */
+    public Boolean getPriorityScaleInUnhealthy() {
+        return this.PriorityScaleInUnhealthy;
+    }
+
+    /**
+     * Set Scaling in unhealthy instances first. If enabled, preferentially selects unhealthy instances during scale in. Default value: False.
+     * @param PriorityScaleInUnhealthy Scaling in unhealthy instances first. If enabled, preferentially selects unhealthy instances during scale in. Default value: False.
+     */
+    public void setPriorityScaleInUnhealthy(Boolean PriorityScaleInUnhealthy) {
+        this.PriorityScaleInUnhealthy = PriorityScaleInUnhealthy;
+    }
+
     public ServiceSettings() {
     }
 
@@ -227,6 +250,9 @@ Default value: RECREATE.
         if (source.DesiredCapacitySyncWithMaxMinSize != null) {
             this.DesiredCapacitySyncWithMaxMinSize = new Boolean(source.DesiredCapacitySyncWithMaxMinSize);
         }
+        if (source.PriorityScaleInUnhealthy != null) {
+            this.PriorityScaleInUnhealthy = new Boolean(source.PriorityScaleInUnhealthy);
+        }
     }
 
 
@@ -240,6 +266,7 @@ Default value: RECREATE.
         this.setParamSimple(map, prefix + "ReplaceMode", this.ReplaceMode);
         this.setParamSimple(map, prefix + "AutoUpdateInstanceTags", this.AutoUpdateInstanceTags);
         this.setParamSimple(map, prefix + "DesiredCapacitySyncWithMaxMinSize", this.DesiredCapacitySyncWithMaxMinSize);
+        this.setParamSimple(map, prefix + "PriorityScaleInUnhealthy", this.PriorityScaleInUnhealthy);
 
     }
 }

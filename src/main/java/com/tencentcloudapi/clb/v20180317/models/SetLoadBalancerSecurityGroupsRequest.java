@@ -24,46 +24,51 @@ import java.util.HashMap;
 public class SetLoadBalancerSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * CLB instance ID
+    * ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * Array of security group IDs. One CLB instance can be bound to up to 50 security groups. If you want to unbind all security groups, you do not need to pass in this parameter, or you can pass in an empty array.
+    * Specifies an array of security group ids. a load balancing instance supports a maximum binding of 50 security groups. to unbind all security groups, omit this parameter.
+Can be queried through the [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1) api.
     */
     @SerializedName("SecurityGroups")
     @Expose
     private String [] SecurityGroups;
 
     /**
-     * Get CLB instance ID 
-     * @return LoadBalancerId CLB instance ID
+     * Get ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID. 
+     * @return LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set CLB instance ID
-     * @param LoadBalancerId CLB instance ID
+     * Set ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+     * @param LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get Array of security group IDs. One CLB instance can be bound to up to 50 security groups. If you want to unbind all security groups, you do not need to pass in this parameter, or you can pass in an empty array. 
-     * @return SecurityGroups Array of security group IDs. One CLB instance can be bound to up to 50 security groups. If you want to unbind all security groups, you do not need to pass in this parameter, or you can pass in an empty array.
+     * Get Specifies an array of security group ids. a load balancing instance supports a maximum binding of 50 security groups. to unbind all security groups, omit this parameter.
+Can be queried through the [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1) api. 
+     * @return SecurityGroups Specifies an array of security group ids. a load balancing instance supports a maximum binding of 50 security groups. to unbind all security groups, omit this parameter.
+Can be queried through the [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1) api.
      */
     public String [] getSecurityGroups() {
         return this.SecurityGroups;
     }
 
     /**
-     * Set Array of security group IDs. One CLB instance can be bound to up to 50 security groups. If you want to unbind all security groups, you do not need to pass in this parameter, or you can pass in an empty array.
-     * @param SecurityGroups Array of security group IDs. One CLB instance can be bound to up to 50 security groups. If you want to unbind all security groups, you do not need to pass in this parameter, or you can pass in an empty array.
+     * Set Specifies an array of security group ids. a load balancing instance supports a maximum binding of 50 security groups. to unbind all security groups, omit this parameter.
+Can be queried through the [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1) api.
+     * @param SecurityGroups Specifies an array of security group ids. a load balancing instance supports a maximum binding of 50 security groups. to unbind all security groups, omit this parameter.
+Can be queried through the [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1) api.
      */
     public void setSecurityGroups(String [] SecurityGroups) {
         this.SecurityGroups = SecurityGroups;

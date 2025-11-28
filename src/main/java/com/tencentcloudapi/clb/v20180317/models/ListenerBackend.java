@@ -46,23 +46,20 @@ public class ListenerBackend extends AbstractModel {
 
     /**
     * Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Rules")
     @Expose
     private RuleTargets [] Rules;
 
     /**
-    * List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of real servers bound to the listener (applicable only to TCP/UDP/TCP_SSL listener)
     */
     @SerializedName("Targets")
     @Expose
     private Backend [] Targets;
 
     /**
-    * Ending port in port range if port range is supported; 0 if port range is not supported
-Note: this field may return null, indicating that no valid values can be obtained.
+    * End port in a port range if port range is supported, or 0 if port range is not supported
     */
     @SerializedName("EndPort")
     @Expose
@@ -117,10 +114,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Information of rules under a listener (applicable only to HTTP/HTTPS listeners) 
      * @return Rules Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RuleTargets [] getRules() {
         return this.Rules;
@@ -128,49 +123,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Rules Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRules(RuleTargets [] Rules) {
         this.Rules = Rules;
     }
 
     /**
-     * Get List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Targets List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of real servers bound to the listener (applicable only to TCP/UDP/TCP_SSL listener) 
+     * @return Targets List of real servers bound to the listener (applicable only to TCP/UDP/TCP_SSL listener)
      */
     public Backend [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Targets List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of real servers bound to the listener (applicable only to TCP/UDP/TCP_SSL listener)
+     * @param Targets List of real servers bound to the listener (applicable only to TCP/UDP/TCP_SSL listener)
      */
     public void setTargets(Backend [] Targets) {
         this.Targets = Targets;
     }
 
     /**
-     * Get Ending port in port range if port range is supported; 0 if port range is not supported
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return EndPort Ending port in port range if port range is supported; 0 if port range is not supported
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get End port in a port range if port range is supported, or 0 if port range is not supported 
+     * @return EndPort End port in a port range if port range is supported, or 0 if port range is not supported
      */
     public Long getEndPort() {
         return this.EndPort;
     }
 
     /**
-     * Set Ending port in port range if port range is supported; 0 if port range is not supported
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EndPort Ending port in port range if port range is supported; 0 if port range is not supported
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set End port in a port range if port range is supported, or 0 if port range is not supported
+     * @param EndPort End port in a port range if port range is supported, or 0 if port range is not supported
      */
     public void setEndPort(Long EndPort) {
         this.EndPort = EndPort;

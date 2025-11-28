@@ -67,7 +67,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     private String Scheduler;
 
     /**
-    * Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
+    * Specifies the forwarding protocol between cloud load balancer and backend service. currently supports HTTP/HTTPS/GRPC/GRPCS/TRPC. TRPC is not yet available. default HTTP.
     */
     @SerializedName("ForwardType")
     @Expose
@@ -128,6 +128,13 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     @SerializedName("MultiCertInfo")
     @Expose
     private MultiCertInfo MultiCertInfo;
+
+    /**
+    * Specifies the custom cookie name.
+    */
+    @SerializedName("CookieName")
+    @Expose
+    private String CookieName;
 
     /**
      * Get Forwarding rule path. Length: 1-200. 
@@ -230,16 +237,16 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     }
 
     /**
-     * Get Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`. 
-     * @return ForwardType Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
+     * Get Specifies the forwarding protocol between cloud load balancer and backend service. currently supports HTTP/HTTPS/GRPC/GRPCS/TRPC. TRPC is not yet available. default HTTP. 
+     * @return ForwardType Specifies the forwarding protocol between cloud load balancer and backend service. currently supports HTTP/HTTPS/GRPC/GRPCS/TRPC. TRPC is not yet available. default HTTP.
      */
     public String getForwardType() {
         return this.ForwardType;
     }
 
     /**
-     * Set Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
-     * @param ForwardType Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
+     * Set Specifies the forwarding protocol between cloud load balancer and backend service. currently supports HTTP/HTTPS/GRPC/GRPCS/TRPC. TRPC is not yet available. default HTTP.
+     * @param ForwardType Specifies the forwarding protocol between cloud load balancer and backend service. currently supports HTTP/HTTPS/GRPC/GRPCS/TRPC. TRPC is not yet available. default HTTP.
      */
     public void setForwardType(String ForwardType) {
         this.ForwardType = ForwardType;
@@ -373,6 +380,22 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         this.MultiCertInfo = MultiCertInfo;
     }
 
+    /**
+     * Get Specifies the custom cookie name. 
+     * @return CookieName Specifies the custom cookie name.
+     */
+    public String getCookieName() {
+        return this.CookieName;
+    }
+
+    /**
+     * Set Specifies the custom cookie name.
+     * @param CookieName Specifies the custom cookie name.
+     */
+    public void setCookieName(String CookieName) {
+        this.CookieName = CookieName;
+    }
+
     public RuleInput() {
     }
 
@@ -429,6 +452,9 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         if (source.MultiCertInfo != null) {
             this.MultiCertInfo = new MultiCertInfo(source.MultiCertInfo);
         }
+        if (source.CookieName != null) {
+            this.CookieName = new String(source.CookieName);
+        }
     }
 
 
@@ -451,6 +477,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         this.setParamSimple(map, prefix + "Quic", this.Quic);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
+        this.setParamSimple(map, prefix + "CookieName", this.CookieName);
 
     }
 }

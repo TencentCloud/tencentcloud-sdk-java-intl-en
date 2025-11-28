@@ -25,41 +25,35 @@ public class CmqDeadLetterPolicy extends AbstractModel {
 
     /**
     * Dead letter queue.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DeadLetterQueue")
     @Expose
     private String DeadLetterQueue;
 
     /**
-    * Dead letter queue policy.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Dead letter queue policy. 0: maximum number of receipt. 1: maximum unconsumed time.
     */
     @SerializedName("Policy")
     @Expose
     private Long Policy;
 
     /**
-    * Maximum period in seconds before an unconsumed message expires, which is required if `Policy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Maximum unconsumed expiration time. Required if policy is 1. Range: 300-43,200 seconds, must be less than the maximum message retention time MsgRetentionSeconds.
     */
     @SerializedName("MaxTimeToLive")
     @Expose
     private Long MaxTimeToLive;
 
     /**
-    * Maximum number of receipts.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Maximum number of receipt. required when Policy is 0. value range: 1 to 1000.
     */
     @SerializedName("MaxReceiveCount")
     @Expose
     private Long MaxReceiveCount;
 
     /**
-     * Get Dead letter queue.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Dead letter queue. 
      * @return DeadLetterQueue Dead letter queue.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDeadLetterQueue() {
         return this.DeadLetterQueue;
@@ -67,69 +61,55 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Dead letter queue.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param DeadLetterQueue Dead letter queue.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDeadLetterQueue(String DeadLetterQueue) {
         this.DeadLetterQueue = DeadLetterQueue;
     }
 
     /**
-     * Get Dead letter queue policy.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Policy Dead letter queue policy.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Dead letter queue policy. 0: maximum number of receipt. 1: maximum unconsumed time. 
+     * @return Policy Dead letter queue policy. 0: maximum number of receipt. 1: maximum unconsumed time.
      */
     public Long getPolicy() {
         return this.Policy;
     }
 
     /**
-     * Set Dead letter queue policy.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Policy Dead letter queue policy.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Dead letter queue policy. 0: maximum number of receipt. 1: maximum unconsumed time.
+     * @param Policy Dead letter queue policy. 0: maximum number of receipt. 1: maximum unconsumed time.
      */
     public void setPolicy(Long Policy) {
         this.Policy = Policy;
     }
 
     /**
-     * Get Maximum period in seconds before an unconsumed message expires, which is required if `Policy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MaxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `Policy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Maximum unconsumed expiration time. Required if policy is 1. Range: 300-43,200 seconds, must be less than the maximum message retention time MsgRetentionSeconds. 
+     * @return MaxTimeToLive Maximum unconsumed expiration time. Required if policy is 1. Range: 300-43,200 seconds, must be less than the maximum message retention time MsgRetentionSeconds.
      */
     public Long getMaxTimeToLive() {
         return this.MaxTimeToLive;
     }
 
     /**
-     * Set Maximum period in seconds before an unconsumed message expires, which is required if `Policy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MaxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `Policy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Maximum unconsumed expiration time. Required if policy is 1. Range: 300-43,200 seconds, must be less than the maximum message retention time MsgRetentionSeconds.
+     * @param MaxTimeToLive Maximum unconsumed expiration time. Required if policy is 1. Range: 300-43,200 seconds, must be less than the maximum message retention time MsgRetentionSeconds.
      */
     public void setMaxTimeToLive(Long MaxTimeToLive) {
         this.MaxTimeToLive = MaxTimeToLive;
     }
 
     /**
-     * Get Maximum number of receipts.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MaxReceiveCount Maximum number of receipts.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Maximum number of receipt. required when Policy is 0. value range: 1 to 1000. 
+     * @return MaxReceiveCount Maximum number of receipt. required when Policy is 0. value range: 1 to 1000.
      */
     public Long getMaxReceiveCount() {
         return this.MaxReceiveCount;
     }
 
     /**
-     * Set Maximum number of receipts.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MaxReceiveCount Maximum number of receipts.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Maximum number of receipt. required when Policy is 0. value range: 1 to 1000.
+     * @param MaxReceiveCount Maximum number of receipt. required when Policy is 0. value range: 1 to 1000.
      */
     public void setMaxReceiveCount(Long MaxReceiveCount) {
         this.MaxReceiveCount = MaxReceiveCount;

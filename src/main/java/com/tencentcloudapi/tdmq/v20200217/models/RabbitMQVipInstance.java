@@ -38,8 +38,7 @@ public class RabbitMQVipInstance extends AbstractModel {
     private String InstanceName;
 
     /**
-    * Instance version
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Instance version.
     */
     @SerializedName("InstanceVersion")
     @Expose
@@ -88,7 +87,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long MaxStorage;
 
     /**
-    * Instance expiration time in milliseconds
+    * Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -102,7 +101,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long AutoRenewFlag;
 
     /**
-    * Payment mode. `0`: Postpaid; `1`: Prepaid.
+    * 1 indicates prepaid mode, 0 indicates postpaid.
     */
     @SerializedName("PayMode")
     @Expose
@@ -110,21 +109,29 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Remarks
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Instance specification ID
+    * Node specification of the cluster. specifies the corresponding flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
     */
     @SerializedName("SpecName")
     @Expose
     private String SpecName;
 
     /**
-    * Cluster exception
+    * Cluster exception information.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExceptionInformation")
@@ -138,6 +145,56 @@ This parameter is used to display the instance status additionally and distingui
     @SerializedName("ClusterStatus")
     @Expose
     private Long ClusterStatus;
+
+    /**
+    * Public network access point.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PublicAccessEndpoint")
+    @Expose
+    private String PublicAccessEndpoint;
+
+    /**
+    * VPC access point list.
+    */
+    @SerializedName("Vpcs")
+    @Expose
+    private VpcEndpointInfo [] Vpcs;
+
+    /**
+    * Creation time in milliseconds. unix timestamp.
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
+    * Instance type. valid values: 0 (managed), 1 (Serverless).
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private Long InstanceType;
+
+    /**
+    * Isolation time, in milliseconds. unix timestamp.
+    */
+    @SerializedName("IsolatedTime")
+    @Expose
+    private Long IsolatedTime;
+
+    /**
+    * Whether deletion protection is enabled.
+    */
+    @SerializedName("EnableDeletionProtection")
+    @Expose
+    private Boolean EnableDeletionProtection;
+
+    /**
+    * Tag list
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
      * Get Instance ID 
@@ -172,20 +229,16 @@ This parameter is used to display the instance status additionally and distingui
     }
 
     /**
-     * Get Instance version
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return InstanceVersion Instance version
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Instance version. 
+     * @return InstanceVersion Instance version.
      */
     public String getInstanceVersion() {
         return this.InstanceVersion;
     }
 
     /**
-     * Set Instance version
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param InstanceVersion Instance version
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Instance version.
+     * @param InstanceVersion Instance version.
      */
     public void setInstanceVersion(String InstanceVersion) {
         this.InstanceVersion = InstanceVersion;
@@ -288,16 +341,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Instance expiration time in milliseconds 
-     * @return ExpireTime Instance expiration time in milliseconds
+     * Get Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources. 
+     * @return ExpireTime Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Instance expiration time in milliseconds
-     * @param ExpireTime Instance expiration time in milliseconds
+     * Set Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
+     * @param ExpireTime Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
@@ -320,26 +373,24 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Payment mode. `0`: Postpaid; `1`: Prepaid. 
-     * @return PayMode Payment mode. `0`: Postpaid; `1`: Prepaid.
+     * Get 1 indicates prepaid mode, 0 indicates postpaid. 
+     * @return PayMode 1 indicates prepaid mode, 0 indicates postpaid.
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Payment mode. `0`: Postpaid; `1`: Prepaid.
-     * @param PayMode Payment mode. `0`: Postpaid; `1`: Prepaid.
+     * Set 1 indicates prepaid mode, 0 indicates postpaid.
+     * @param PayMode 1 indicates prepaid mode, 0 indicates postpaid.
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Remarks
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Remarks 
      * @return Remark Remarks
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getRemark() {
         return this.Remark;
@@ -347,34 +398,68 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Remarks
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Remark Remarks
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Instance specification ID 
-     * @return SpecName Instance specification ID
+     * Get Node specification of the cluster. specifies the corresponding flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1. 
+     * @return SpecName Node specification of the cluster. specifies the corresponding flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
      */
     public String getSpecName() {
         return this.SpecName;
     }
 
     /**
-     * Set Instance specification ID
-     * @param SpecName Instance specification ID
+     * Set Node specification of the cluster. specifies the corresponding flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
+     * @param SpecName Node specification of the cluster. specifies the corresponding flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
      */
     public void setSpecName(String SpecName) {
         this.SpecName = SpecName;
     }
 
     /**
-     * Get Cluster exception
+     * Get Cluster exception information.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExceptionInformation Cluster exception
+     * @return ExceptionInformation Cluster exception information.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExceptionInformation() {
@@ -382,9 +467,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Cluster exception
+     * Set Cluster exception information.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExceptionInformation Cluster exception
+     * @param ExceptionInformation Cluster exception information.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExceptionInformation(String ExceptionInformation) {
@@ -409,6 +494,122 @@ This parameter is used to display the instance status additionally and distingui
      */
     public void setClusterStatus(Long ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
+    }
+
+    /**
+     * Get Public network access point.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PublicAccessEndpoint Public network access point.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getPublicAccessEndpoint() {
+        return this.PublicAccessEndpoint;
+    }
+
+    /**
+     * Set Public network access point.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PublicAccessEndpoint Public network access point.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPublicAccessEndpoint(String PublicAccessEndpoint) {
+        this.PublicAccessEndpoint = PublicAccessEndpoint;
+    }
+
+    /**
+     * Get VPC access point list. 
+     * @return Vpcs VPC access point list.
+     */
+    public VpcEndpointInfo [] getVpcs() {
+        return this.Vpcs;
+    }
+
+    /**
+     * Set VPC access point list.
+     * @param Vpcs VPC access point list.
+     */
+    public void setVpcs(VpcEndpointInfo [] Vpcs) {
+        this.Vpcs = Vpcs;
+    }
+
+    /**
+     * Get Creation time in milliseconds. unix timestamp. 
+     * @return CreateTime Creation time in milliseconds. unix timestamp.
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Creation time in milliseconds. unix timestamp.
+     * @param CreateTime Creation time in milliseconds. unix timestamp.
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get Instance type. valid values: 0 (managed), 1 (Serverless). 
+     * @return InstanceType Instance type. valid values: 0 (managed), 1 (Serverless).
+     */
+    public Long getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set Instance type. valid values: 0 (managed), 1 (Serverless).
+     * @param InstanceType Instance type. valid values: 0 (managed), 1 (Serverless).
+     */
+    public void setInstanceType(Long InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get Isolation time, in milliseconds. unix timestamp. 
+     * @return IsolatedTime Isolation time, in milliseconds. unix timestamp.
+     */
+    public Long getIsolatedTime() {
+        return this.IsolatedTime;
+    }
+
+    /**
+     * Set Isolation time, in milliseconds. unix timestamp.
+     * @param IsolatedTime Isolation time, in milliseconds. unix timestamp.
+     */
+    public void setIsolatedTime(Long IsolatedTime) {
+        this.IsolatedTime = IsolatedTime;
+    }
+
+    /**
+     * Get Whether deletion protection is enabled. 
+     * @return EnableDeletionProtection Whether deletion protection is enabled.
+     */
+    public Boolean getEnableDeletionProtection() {
+        return this.EnableDeletionProtection;
+    }
+
+    /**
+     * Set Whether deletion protection is enabled.
+     * @param EnableDeletionProtection Whether deletion protection is enabled.
+     */
+    public void setEnableDeletionProtection(Boolean EnableDeletionProtection) {
+        this.EnableDeletionProtection = EnableDeletionProtection;
+    }
+
+    /**
+     * Get Tag list 
+     * @return Tags Tag list
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag list
+     * @param Tags Tag list
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
     }
 
     public RabbitMQVipInstance() {
@@ -467,6 +668,33 @@ This parameter is used to display the instance status additionally and distingui
         if (source.ClusterStatus != null) {
             this.ClusterStatus = new Long(source.ClusterStatus);
         }
+        if (source.PublicAccessEndpoint != null) {
+            this.PublicAccessEndpoint = new String(source.PublicAccessEndpoint);
+        }
+        if (source.Vpcs != null) {
+            this.Vpcs = new VpcEndpointInfo[source.Vpcs.length];
+            for (int i = 0; i < source.Vpcs.length; i++) {
+                this.Vpcs[i] = new VpcEndpointInfo(source.Vpcs[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
+        if (source.IsolatedTime != null) {
+            this.IsolatedTime = new Long(source.IsolatedTime);
+        }
+        if (source.EnableDeletionProtection != null) {
+            this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -490,6 +718,13 @@ This parameter is used to display the instance status additionally and distingui
         this.setParamSimple(map, prefix + "SpecName", this.SpecName);
         this.setParamSimple(map, prefix + "ExceptionInformation", this.ExceptionInformation);
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+        this.setParamSimple(map, prefix + "PublicAccessEndpoint", this.PublicAccessEndpoint);
+        this.setParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+        this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

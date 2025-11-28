@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRabbitMQVirtualHostRequest extends AbstractModel {
 
     /**
-    * Cluster instance ID
+    * Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
     */
     @SerializedName("InstanceId")
     @Expose
@@ -52,16 +52,23 @@ public class CreateRabbitMQVirtualHostRequest extends AbstractModel {
     private Boolean TraceFlag;
 
     /**
-     * Get Cluster instance ID 
-     * @return InstanceId Cluster instance ID
+    * Whether to create an image queue policy. Default value: true.
+    */
+    @SerializedName("MirrorQueuePolicyFlag")
+    @Expose
+    private Boolean MirrorQueuePolicyFlag;
+
+    /**
+     * Get Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1). 
+     * @return InstanceId Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster instance ID
-     * @param InstanceId Cluster instance ID
+     * Set Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+     * @param InstanceId Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -115,6 +122,22 @@ public class CreateRabbitMQVirtualHostRequest extends AbstractModel {
         this.TraceFlag = TraceFlag;
     }
 
+    /**
+     * Get Whether to create an image queue policy. Default value: true. 
+     * @return MirrorQueuePolicyFlag Whether to create an image queue policy. Default value: true.
+     */
+    public Boolean getMirrorQueuePolicyFlag() {
+        return this.MirrorQueuePolicyFlag;
+    }
+
+    /**
+     * Set Whether to create an image queue policy. Default value: true.
+     * @param MirrorQueuePolicyFlag Whether to create an image queue policy. Default value: true.
+     */
+    public void setMirrorQueuePolicyFlag(Boolean MirrorQueuePolicyFlag) {
+        this.MirrorQueuePolicyFlag = MirrorQueuePolicyFlag;
+    }
+
     public CreateRabbitMQVirtualHostRequest() {
     }
 
@@ -135,6 +158,9 @@ public class CreateRabbitMQVirtualHostRequest extends AbstractModel {
         if (source.TraceFlag != null) {
             this.TraceFlag = new Boolean(source.TraceFlag);
         }
+        if (source.MirrorQueuePolicyFlag != null) {
+            this.MirrorQueuePolicyFlag = new Boolean(source.MirrorQueuePolicyFlag);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateRabbitMQVirtualHostRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VirtualHost", this.VirtualHost);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "TraceFlag", this.TraceFlag);
+        this.setParamSimple(map, prefix + "MirrorQueuePolicyFlag", this.MirrorQueuePolicyFlag);
 
     }
 }

@@ -31,7 +31,7 @@ public class ModifyTargetGroupInstancesPortRequest extends AbstractModel {
     private String TargetGroupId;
 
     /**
-    * Array of servers for which to modify ports
+    * Array of servers whose Port is to be modified. NewPort and Port are required items in this api.
     */
     @SerializedName("TargetGroupInstances")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyTargetGroupInstancesPortRequest extends AbstractModel {
     }
 
     /**
-     * Get Array of servers for which to modify ports 
-     * @return TargetGroupInstances Array of servers for which to modify ports
+     * Get Array of servers whose Port is to be modified. NewPort and Port are required items in this api. 
+     * @return TargetGroupInstances Array of servers whose Port is to be modified. NewPort and Port are required items in this api.
      */
     public TargetGroupInstance [] getTargetGroupInstances() {
         return this.TargetGroupInstances;
     }
 
     /**
-     * Set Array of servers for which to modify ports
-     * @param TargetGroupInstances Array of servers for which to modify ports
+     * Set Array of servers whose Port is to be modified. NewPort and Port are required items in this api.
+     * @param TargetGroupInstances Array of servers whose Port is to be modified. NewPort and Port are required items in this api.
      */
     public void setTargetGroupInstances(TargetGroupInstance [] TargetGroupInstances) {
         this.TargetGroupInstances = TargetGroupInstances;

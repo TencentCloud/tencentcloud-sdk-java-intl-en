@@ -31,48 +31,42 @@ public class BindDetailItem extends AbstractModel {
     private String LoadBalancerId;
 
     /**
-    * Specifies the ID of listener to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * ID of the listener bound to the configuration
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * Specifies the domain name to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Domain name bound to the configuration
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Sets the bound rule.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Rule bound to the configuration
     */
     @SerializedName("LocationId")
     @Expose
     private String LocationId;
 
     /**
-    * Listener name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Listener name
     */
     @SerializedName("ListenerName")
     @Expose
     private String ListenerName;
 
     /**
-    * Listener protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Listener protocol
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Listener port.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Listener port
     */
     @SerializedName("Vport")
     @Expose
@@ -88,7 +82,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Configuration ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("UconfigId")
     @Expose
@@ -111,120 +104,96 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Specifies the ID of listener to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ListenerId Specifies the ID of listener to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get ID of the listener bound to the configuration 
+     * @return ListenerId ID of the listener bound to the configuration
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set Specifies the ID of listener to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ListenerId Specifies the ID of listener to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set ID of the listener bound to the configuration
+     * @param ListenerId ID of the listener bound to the configuration
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get Specifies the domain name to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Domain Specifies the domain name to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Domain name bound to the configuration 
+     * @return Domain Domain name bound to the configuration
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Specifies the domain name to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Domain Specifies the domain name to be bound
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Domain name bound to the configuration
+     * @param Domain Domain name bound to the configuration
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Sets the bound rule.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return LocationId Sets the bound rule.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Rule bound to the configuration 
+     * @return LocationId Rule bound to the configuration
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set Sets the bound rule.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param LocationId Sets the bound rule.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Rule bound to the configuration
+     * @param LocationId Rule bound to the configuration
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
     }
 
     /**
-     * Get Listener name.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ListenerName Listener name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Listener name 
+     * @return ListenerName Listener name
      */
     public String getListenerName() {
         return this.ListenerName;
     }
 
     /**
-     * Set Listener name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ListenerName Listener name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Listener name
+     * @param ListenerName Listener name
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;
     }
 
     /**
-     * Get Listener protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Protocol Listener protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Listener protocol 
+     * @return Protocol Listener protocol
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Listener protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Protocol Listener protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Listener protocol
+     * @param Protocol Listener protocol
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Listener port.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Vport Listener port.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Listener port 
+     * @return Vport Listener port
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set Listener port.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Vport Listener port.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Listener port
+     * @param Vport Listener port
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
@@ -251,10 +220,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Configuration ID.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * Get Configuration ID. 
      * @return UconfigId Configuration ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getUconfigId() {
         return this.UconfigId;
@@ -262,9 +229,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Configuration ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param UconfigId Configuration ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setUconfigId(String UconfigId) {
         this.UconfigId = UconfigId;

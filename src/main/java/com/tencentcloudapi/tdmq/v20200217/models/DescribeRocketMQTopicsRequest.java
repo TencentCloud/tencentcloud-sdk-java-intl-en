@@ -66,6 +66,20 @@ public class DescribeRocketMQTopicsRequest extends AbstractModel {
     private String FilterName;
 
     /**
+    * Filters by subscription consumer group name.
+    */
+    @SerializedName("FilterGroup")
+    @Expose
+    private String FilterGroup;
+
+    /**
+    * Tag filter
+    */
+    @SerializedName("TagFilters")
+    @Expose
+    private TagFilter [] TagFilters;
+
+    /**
      * Get Offset for query. 
      * @return Offset Offset for query.
      */
@@ -161,6 +175,38 @@ public class DescribeRocketMQTopicsRequest extends AbstractModel {
         this.FilterName = FilterName;
     }
 
+    /**
+     * Get Filters by subscription consumer group name. 
+     * @return FilterGroup Filters by subscription consumer group name.
+     */
+    public String getFilterGroup() {
+        return this.FilterGroup;
+    }
+
+    /**
+     * Set Filters by subscription consumer group name.
+     * @param FilterGroup Filters by subscription consumer group name.
+     */
+    public void setFilterGroup(String FilterGroup) {
+        this.FilterGroup = FilterGroup;
+    }
+
+    /**
+     * Get Tag filter 
+     * @return TagFilters Tag filter
+     */
+    public TagFilter [] getTagFilters() {
+        return this.TagFilters;
+    }
+
+    /**
+     * Set Tag filter
+     * @param TagFilters Tag filter
+     */
+    public void setTagFilters(TagFilter [] TagFilters) {
+        this.TagFilters = TagFilters;
+    }
+
     public DescribeRocketMQTopicsRequest() {
     }
 
@@ -190,6 +236,15 @@ public class DescribeRocketMQTopicsRequest extends AbstractModel {
         if (source.FilterName != null) {
             this.FilterName = new String(source.FilterName);
         }
+        if (source.FilterGroup != null) {
+            this.FilterGroup = new String(source.FilterGroup);
+        }
+        if (source.TagFilters != null) {
+            this.TagFilters = new TagFilter[source.TagFilters.length];
+            for (int i = 0; i < source.TagFilters.length; i++) {
+                this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
+            }
+        }
     }
 
 
@@ -203,6 +258,8 @@ public class DescribeRocketMQTopicsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamArraySimple(map, prefix + "FilterType.", this.FilterType);
         this.setParamSimple(map, prefix + "FilterName", this.FilterName);
+        this.setParamSimple(map, prefix + "FilterGroup", this.FilterGroup);
+        this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
 
     }
 }

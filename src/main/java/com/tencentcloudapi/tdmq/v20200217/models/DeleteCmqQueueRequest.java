@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteCmqQueueRequest extends AbstractModel {
 
     /**
-    * Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+    * Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the remainder can contain letters, digits, and hyphens (-).
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-     * Get Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter. 
-     * @return QueueName Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+     * Get Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the remainder can contain letters, digits, and hyphens (-). 
+     * @return QueueName Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the remainder can contain letters, digits, and hyphens (-).
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
-     * @param QueueName Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+     * Set Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the remainder can contain letters, digits, and hyphens (-).
+     * @param QueueName Queue name, unique under the same account in a single region. queue name is a string of no more than 64 characters, beginning with a letter, the remainder can contain letters, digits, and hyphens (-).
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;

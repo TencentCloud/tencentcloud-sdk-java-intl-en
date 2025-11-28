@@ -33,7 +33,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Message queue name.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("QueueName")
     @Expose
@@ -60,10 +59,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Message queue name.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Message queue name. 
      * @return QueueName Message queue name.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getQueueName() {
         return this.QueueName;
@@ -71,9 +68,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Message queue name.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param QueueName Message queue name.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;

@@ -59,14 +59,18 @@ public class DescribeRabbitMQVirtualHostRequest extends AbstractModel {
     private Filter Filters;
 
     /**
-    * 
+    * Specifies the sorting field.
+MessageHeapCount - specifies the message backlog count.
+MessageRateInOut - total production and consumption rate.
+MessageRateIn - production rate.
+MessageRateOut - consumption rate.
     */
     @SerializedName("SortElement")
     @Expose
     private String SortElement;
 
     /**
-    * 
+    * Sorting order. Valid values: ascend and descend.
     */
     @SerializedName("SortOrder")
     @Expose
@@ -153,32 +157,48 @@ public class DescribeRabbitMQVirtualHostRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return SortElement 
+     * Get Specifies the sorting field.
+MessageHeapCount - specifies the message backlog count.
+MessageRateInOut - total production and consumption rate.
+MessageRateIn - production rate.
+MessageRateOut - consumption rate. 
+     * @return SortElement Specifies the sorting field.
+MessageHeapCount - specifies the message backlog count.
+MessageRateInOut - total production and consumption rate.
+MessageRateIn - production rate.
+MessageRateOut - consumption rate.
      */
     public String getSortElement() {
         return this.SortElement;
     }
 
     /**
-     * Set 
-     * @param SortElement 
+     * Set Specifies the sorting field.
+MessageHeapCount - specifies the message backlog count.
+MessageRateInOut - total production and consumption rate.
+MessageRateIn - production rate.
+MessageRateOut - consumption rate.
+     * @param SortElement Specifies the sorting field.
+MessageHeapCount - specifies the message backlog count.
+MessageRateInOut - total production and consumption rate.
+MessageRateIn - production rate.
+MessageRateOut - consumption rate.
      */
     public void setSortElement(String SortElement) {
         this.SortElement = SortElement;
     }
 
     /**
-     * Get  
-     * @return SortOrder 
+     * Get Sorting order. Valid values: ascend and descend. 
+     * @return SortOrder Sorting order. Valid values: ascend and descend.
      */
     public String getSortOrder() {
         return this.SortOrder;
     }
 
     /**
-     * Set 
-     * @param SortOrder 
+     * Set Sorting order. Valid values: ascend and descend.
+     * @param SortOrder Sorting order. Valid values: ascend and descend.
      */
     public void setSortOrder(String SortOrder) {
         this.SortOrder = SortOrder;

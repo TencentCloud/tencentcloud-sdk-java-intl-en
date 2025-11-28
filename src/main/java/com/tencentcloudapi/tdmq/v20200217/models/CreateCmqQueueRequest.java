@@ -52,7 +52,7 @@ public class CreateCmqQueueRequest extends AbstractModel {
     private Long VisibilityTimeout;
 
     /**
-    * Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+    * Maximum message length. value range: 1024-1048576 Byte (1-1024K). default value: 1048576.
     */
     @SerializedName("MaxMsgSize")
     @Expose
@@ -207,16 +207,16 @@ public class CreateCmqQueueRequest extends AbstractModel {
     }
 
     /**
-     * Get Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536. 
-     * @return MaxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+     * Get Maximum message length. value range: 1024-1048576 Byte (1-1024K). default value: 1048576. 
+     * @return MaxMsgSize Maximum message length. value range: 1024-1048576 Byte (1-1024K). default value: 1048576.
      */
     public Long getMaxMsgSize() {
         return this.MaxMsgSize;
     }
 
     /**
-     * Set Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
-     * @param MaxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+     * Set Maximum message length. value range: 1024-1048576 Byte (1-1024K). default value: 1048576.
+     * @param MaxMsgSize Maximum message length. value range: 1024-1048576 Byte (1-1024K). default value: 1048576.
      */
     public void setMaxMsgSize(Long MaxMsgSize) {
         this.MaxMsgSize = MaxMsgSize;

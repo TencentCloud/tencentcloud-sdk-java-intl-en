@@ -38,9 +38,9 @@ public class LoadBalancerDetail extends AbstractModel {
     private String LoadBalancerName;
 
     /**
-    * CLB instance network type:
-Public: public network; Private: private network.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Network type of the load balancing instance.
+Public: Public network attribute. Private: Private network attribute. for Private network cloud load balancer, bind EIP for Public network access. refer to EIP document.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LoadBalancerType")
     @Expose
@@ -317,37 +317,39 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private Long SniSwitch;
 
     /**
-    * Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the domain name of the load balancing instance.
     */
     @SerializedName("LoadBalancerDomain")
     @Expose
     private String LoadBalancerDomain;
 
     /**
-    * Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Specifies the network outbound.
     */
     @SerializedName("Egress")
     @Expose
     private String Egress;
 
     /**
-    * 
+    * Specifies the attributes of cloud load balancer.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AttributeFlags")
     @Expose
     private String [] AttributeFlags;
 
     /**
-    * 
+    * Specification type information for load balancing instances <ul><li>clb.c1.small: minimalist specification</li> <li>clb.c2.medium: standard specification</li> <li>clb.c3.small: advanced type 1 specification</li> <li>clb.c3.medium: advanced type 2 specification</li> <li>clb.c4.small: ultra type 1 specification</li> <li>clb.c4.medium: ultra type 2 specification</li> <li>clb.c4.large: ultra type 3 specification</li> <li>clb.c4.xlarge: ultra type 4 specification</li> <li>"" : non-lcu-supported instance</li></ul>.
+
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SlaType")
     @Expose
     private String SlaType;
 
     /**
-    * 
+    * 0 means non-dedicated instance. 1 means dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Exclusive")
     @Expose
@@ -386,24 +388,24 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get CLB instance network type:
-Public: public network; Private: private network.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return LoadBalancerType CLB instance network type:
-Public: public network; Private: private network.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Network type of the load balancing instance.
+Public: Public network attribute. Private: Private network attribute. for Private network cloud load balancer, bind EIP for Public network access. refer to EIP document.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LoadBalancerType Network type of the load balancing instance.
+Public: Public network attribute. Private: Private network attribute. for Private network cloud load balancer, bind EIP for Public network access. refer to EIP document.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLoadBalancerType() {
         return this.LoadBalancerType;
     }
 
     /**
-     * Set CLB instance network type:
-Public: public network; Private: private network.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param LoadBalancerType CLB instance network type:
-Public: public network; Private: private network.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Network type of the load balancing instance.
+Public: Public network attribute. Private: Private network attribute. for Private network cloud load balancer, bind EIP for Public network access. refer to EIP document.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LoadBalancerType Network type of the load balancing instance.
+Public: Public network attribute. Private: Private network attribute. for Private network cloud load balancer, bind EIP for Public network access. refer to EIP document.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLoadBalancerType(String LoadBalancerType) {
         this.LoadBalancerType = LoadBalancerType;
@@ -1082,88 +1084,96 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LoadBalancerDomain Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the domain name of the load balancing instance. 
+     * @return LoadBalancerDomain Specifies the domain name of the load balancing instance.
      */
     public String getLoadBalancerDomain() {
         return this.LoadBalancerDomain;
     }
 
     /**
-     * Set Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LoadBalancerDomain Domain name of the CLB instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the domain name of the load balancing instance.
+     * @param LoadBalancerDomain Specifies the domain name of the load balancing instance.
      */
     public void setLoadBalancerDomain(String LoadBalancerDomain) {
         this.LoadBalancerDomain = LoadBalancerDomain;
     }
 
     /**
-     * Get Network egress
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Egress Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Specifies the network outbound. 
+     * @return Egress Specifies the network outbound.
      */
     public String getEgress() {
         return this.Egress;
     }
 
     /**
-     * Set Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Egress Network egress
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Specifies the network outbound.
+     * @param Egress Specifies the network outbound.
      */
     public void setEgress(String Egress) {
         this.Egress = Egress;
     }
 
     /**
-     * Get  
-     * @return AttributeFlags 
+     * Get Specifies the attributes of cloud load balancer.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AttributeFlags Specifies the attributes of cloud load balancer.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getAttributeFlags() {
         return this.AttributeFlags;
     }
 
     /**
-     * Set 
-     * @param AttributeFlags 
+     * Set Specifies the attributes of cloud load balancer.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AttributeFlags Specifies the attributes of cloud load balancer.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAttributeFlags(String [] AttributeFlags) {
         this.AttributeFlags = AttributeFlags;
     }
 
     /**
-     * Get  
-     * @return SlaType 
+     * Get Specification type information for load balancing instances <ul><li>clb.c1.small: minimalist specification</li> <li>clb.c2.medium: standard specification</li> <li>clb.c3.small: advanced type 1 specification</li> <li>clb.c3.medium: advanced type 2 specification</li> <li>clb.c4.small: ultra type 1 specification</li> <li>clb.c4.medium: ultra type 2 specification</li> <li>clb.c4.large: ultra type 3 specification</li> <li>clb.c4.xlarge: ultra type 4 specification</li> <li>"" : non-lcu-supported instance</li></ul>.
+
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SlaType Specification type information for load balancing instances <ul><li>clb.c1.small: minimalist specification</li> <li>clb.c2.medium: standard specification</li> <li>clb.c3.small: advanced type 1 specification</li> <li>clb.c3.medium: advanced type 2 specification</li> <li>clb.c4.small: ultra type 1 specification</li> <li>clb.c4.medium: ultra type 2 specification</li> <li>clb.c4.large: ultra type 3 specification</li> <li>clb.c4.xlarge: ultra type 4 specification</li> <li>"" : non-lcu-supported instance</li></ul>.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSlaType() {
         return this.SlaType;
     }
 
     /**
-     * Set 
-     * @param SlaType 
+     * Set Specification type information for load balancing instances <ul><li>clb.c1.small: minimalist specification</li> <li>clb.c2.medium: standard specification</li> <li>clb.c3.small: advanced type 1 specification</li> <li>clb.c3.medium: advanced type 2 specification</li> <li>clb.c4.small: ultra type 1 specification</li> <li>clb.c4.medium: ultra type 2 specification</li> <li>clb.c4.large: ultra type 3 specification</li> <li>clb.c4.xlarge: ultra type 4 specification</li> <li>"" : non-lcu-supported instance</li></ul>.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SlaType Specification type information for load balancing instances <ul><li>clb.c1.small: minimalist specification</li> <li>clb.c2.medium: standard specification</li> <li>clb.c3.small: advanced type 1 specification</li> <li>clb.c3.medium: advanced type 2 specification</li> <li>clb.c4.small: ultra type 1 specification</li> <li>clb.c4.medium: ultra type 2 specification</li> <li>clb.c4.large: ultra type 3 specification</li> <li>clb.c4.xlarge: ultra type 4 specification</li> <li>"" : non-lcu-supported instance</li></ul>.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;
     }
 
     /**
-     * Get  
-     * @return Exclusive 
+     * Get 0 means non-dedicated instance. 1 means dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Exclusive 0 means non-dedicated instance. 1 means dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getExclusive() {
         return this.Exclusive;
     }
 
     /**
-     * Set 
-     * @param Exclusive 
+     * Set 0 means non-dedicated instance. 1 means dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Exclusive 0 means non-dedicated instance. 1 means dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExclusive(Long Exclusive) {
         this.Exclusive = Exclusive;

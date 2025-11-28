@@ -24,46 +24,61 @@ import java.util.HashMap;
 public class SpecAvailability extends AbstractModel {
 
     /**
-    * Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the specification type.
+<Li>Clb.C2.Medium (standard type)</li><li>clb.c3.small (advanced type 1)</li><li>clb.c3.medium (advanced type 2)</li>.
+<li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li> <li>shared (shared type)</li>.
+
     */
     @SerializedName("SpecType")
     @Expose
     private String SpecType;
 
     /**
-    * Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
+    * Specification availability. resource availability, "Available": Available, "Unavailable": Unavailable.
     */
     @SerializedName("Availability")
     @Expose
     private String Availability;
 
     /**
-     * Get Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SpecType Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the specification type.
+<Li>Clb.C2.Medium (standard type)</li><li>clb.c3.small (advanced type 1)</li><li>clb.c3.medium (advanced type 2)</li>.
+<li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li> <li>shared (shared type)</li>.
+ 
+     * @return SpecType Specifies the specification type.
+<Li>Clb.C2.Medium (standard type)</li><li>clb.c3.small (advanced type 1)</li><li>clb.c3.medium (advanced type 2)</li>.
+<li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li> <li>shared (shared type)</li>.
+
      */
     public String getSpecType() {
         return this.SpecType;
     }
 
     /**
-     * Set Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SpecType Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the specification type.
+<Li>Clb.C2.Medium (standard type)</li><li>clb.c3.small (advanced type 1)</li><li>clb.c3.medium (advanced type 2)</li>.
+<li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li> <li>shared (shared type)</li>.
+
+     * @param SpecType Specifies the specification type.
+<Li>Clb.C2.Medium (standard type)</li><li>clb.c3.small (advanced type 1)</li><li>clb.c3.medium (advanced type 2)</li>.
+<li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li> <li>shared (shared type)</li>.
+
      */
     public void setSpecType(String SpecType) {
         this.SpecType = SpecType;
     }
 
     /**
-     * Get Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Availability Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specification availability. resource availability, "Available": Available, "Unavailable": Unavailable. 
+     * @return Availability Specification availability. resource availability, "Available": Available, "Unavailable": Unavailable.
      */
     public String getAvailability() {
         return this.Availability;
     }
 
     /**
-     * Set Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Availability Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specification availability. resource availability, "Available": Available, "Unavailable": Unavailable.
+     * @param Availability Specification availability. resource availability, "Available": Available, "Unavailable": Unavailable.
      */
     public void setAvailability(String Availability) {
         this.Availability = Availability;

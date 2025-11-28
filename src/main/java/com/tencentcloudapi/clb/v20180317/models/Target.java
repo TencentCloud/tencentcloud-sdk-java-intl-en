@@ -24,26 +24,23 @@ import java.util.HashMap;
 public class Target extends AbstractModel {
 
     /**
-    * Listening port of a real server
-Note: this parameter is required when binding a CVM or ENI.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the listening port of the backend service.
+Note: this parameter must be specified when binding to CVM (cloud virtual machine) or ENI (elastic network interface).
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Real server type. Value range: CVM (Cloud Virtual Machine), ENI (Elastic Network Interface). This parameter does not take effect currently as an input parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the backend service type. valid values: CVM (cloud virtual machine), ENI (elastic network interface). as an input parameter, this parameter does not take effect currently.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: Either `InstanceId` or `EniIp` can be passed in.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * This parameter must be passed in when binding to CVM. it represents the unique ID of the CVM and can be obtained from the InstanceId field in the response of the DescribeInstances api. indicates binding the primary IPv4 address of the primary network interface. the InstanceId cannot be specified in the following scenarios: binding to non-CVM resources, binding to auxiliary network interface ips on CVM, binding to CVM through cross-domain 2.0, and binding to IPv6 addresses of CVM.
+Note: you can only input one of the InstanceId parameter or the EniIp parameter.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -57,84 +54,71 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long Weight;
 
     /**
-    * It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * This parameter must be passed in for IP binding. it supports eni ips and other private IP addresses. if it is an eni, it must first be bound to a CVM before binding to a cloud load balancer instance.
+Note: only one of the InstanceId parameter and EniIp parameter can be passed. if binding a dual-stack IPV6 instance, this parameter must be passed. if it is a cross-region binding, the parameter must be passed and the InstanceId parameter is not supported.
     */
     @SerializedName("EniIp")
     @Expose
     private String EniIp;
 
     /**
-    * Tag.Note: This field may return null, indicating that no valid values can be obtained.
+    * Tag.
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-     * Get Listening port of a real server
-Note: this parameter is required when binding a CVM or ENI.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Port Listening port of a real server
-Note: this parameter is required when binding a CVM or ENI.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the listening port of the backend service.
+Note: this parameter must be specified when binding to CVM (cloud virtual machine) or ENI (elastic network interface). 
+     * @return Port Specifies the listening port of the backend service.
+Note: this parameter must be specified when binding to CVM (cloud virtual machine) or ENI (elastic network interface).
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Listening port of a real server
-Note: this parameter is required when binding a CVM or ENI.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Port Listening port of a real server
-Note: this parameter is required when binding a CVM or ENI.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the listening port of the backend service.
+Note: this parameter must be specified when binding to CVM (cloud virtual machine) or ENI (elastic network interface).
+     * @param Port Specifies the listening port of the backend service.
+Note: this parameter must be specified when binding to CVM (cloud virtual machine) or ENI (elastic network interface).
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Real server type. Value range: CVM (Cloud Virtual Machine), ENI (Elastic Network Interface). This parameter does not take effect currently as an input parameter.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Real server type. Value range: CVM (Cloud Virtual Machine), ENI (Elastic Network Interface). This parameter does not take effect currently as an input parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the backend service type. valid values: CVM (cloud virtual machine), ENI (elastic network interface). as an input parameter, this parameter does not take effect currently. 
+     * @return Type Specifies the backend service type. valid values: CVM (cloud virtual machine), ENI (elastic network interface). as an input parameter, this parameter does not take effect currently.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Real server type. Value range: CVM (Cloud Virtual Machine), ENI (Elastic Network Interface). This parameter does not take effect currently as an input parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Real server type. Value range: CVM (Cloud Virtual Machine), ENI (Elastic Network Interface). This parameter does not take effect currently as an input parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the backend service type. valid values: CVM (cloud virtual machine), ENI (elastic network interface). as an input parameter, this parameter does not take effect currently.
+     * @param Type Specifies the backend service type. valid values: CVM (cloud virtual machine), ENI (elastic network interface). as an input parameter, this parameter does not take effect currently.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: Either `InstanceId` or `EniIp` can be passed in.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: Either `InstanceId` or `EniIp` can be passed in.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get This parameter must be passed in when binding to CVM. it represents the unique ID of the CVM and can be obtained from the InstanceId field in the response of the DescribeInstances api. indicates binding the primary IPv4 address of the primary network interface. the InstanceId cannot be specified in the following scenarios: binding to non-CVM resources, binding to auxiliary network interface ips on CVM, binding to CVM through cross-domain 2.0, and binding to IPv6 addresses of CVM.
+Note: you can only input one of the InstanceId parameter or the EniIp parameter. 
+     * @return InstanceId This parameter must be passed in when binding to CVM. it represents the unique ID of the CVM and can be obtained from the InstanceId field in the response of the DescribeInstances api. indicates binding the primary IPv4 address of the primary network interface. the InstanceId cannot be specified in the following scenarios: binding to non-CVM resources, binding to auxiliary network interface ips on CVM, binding to CVM through cross-domain 2.0, and binding to IPv6 addresses of CVM.
+Note: you can only input one of the InstanceId parameter or the EniIp parameter.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: Either `InstanceId` or `EniIp` can be passed in.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: Either `InstanceId` or `EniIp` can be passed in.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set This parameter must be passed in when binding to CVM. it represents the unique ID of the CVM and can be obtained from the InstanceId field in the response of the DescribeInstances api. indicates binding the primary IPv4 address of the primary network interface. the InstanceId cannot be specified in the following scenarios: binding to non-CVM resources, binding to auxiliary network interface ips on CVM, binding to CVM through cross-domain 2.0, and binding to IPv6 addresses of CVM.
+Note: you can only input one of the InstanceId parameter or the EniIp parameter.
+     * @param InstanceId This parameter must be passed in when binding to CVM. it represents the unique ID of the CVM and can be obtained from the InstanceId field in the response of the DescribeInstances api. indicates binding the primary IPv4 address of the primary network interface. the InstanceId cannot be specified in the following scenarios: binding to non-CVM resources, binding to auxiliary network interface ips on CVM, binding to CVM through cross-domain 2.0, and binding to IPv6 addresses of CVM.
+Note: you can only input one of the InstanceId parameter or the EniIp parameter.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -157,40 +141,36 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return EniIp It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get This parameter must be passed in for IP binding. it supports eni ips and other private IP addresses. if it is an eni, it must first be bound to a CVM before binding to a cloud load balancer instance.
+Note: only one of the InstanceId parameter and EniIp parameter can be passed. if binding a dual-stack IPV6 instance, this parameter must be passed. if it is a cross-region binding, the parameter must be passed and the InstanceId parameter is not supported. 
+     * @return EniIp This parameter must be passed in for IP binding. it supports eni ips and other private IP addresses. if it is an eni, it must first be bound to a CVM before binding to a cloud load balancer instance.
+Note: only one of the InstanceId parameter and EniIp parameter can be passed. if binding a dual-stack IPV6 instance, this parameter must be passed. if it is a cross-region binding, the parameter must be passed and the InstanceId parameter is not supported.
      */
     public String getEniIp() {
         return this.EniIp;
     }
 
     /**
-     * Set It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param EniIp It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set This parameter must be passed in for IP binding. it supports eni ips and other private IP addresses. if it is an eni, it must first be bound to a CVM before binding to a cloud load balancer instance.
+Note: only one of the InstanceId parameter and EniIp parameter can be passed. if binding a dual-stack IPV6 instance, this parameter must be passed. if it is a cross-region binding, the parameter must be passed and the InstanceId parameter is not supported.
+     * @param EniIp This parameter must be passed in for IP binding. it supports eni ips and other private IP addresses. if it is an eni, it must first be bound to a CVM before binding to a cloud load balancer instance.
+Note: only one of the InstanceId parameter and EniIp parameter can be passed. if binding a dual-stack IPV6 instance, this parameter must be passed. if it is a cross-region binding, the parameter must be passed and the InstanceId parameter is not supported.
      */
     public void setEniIp(String EniIp) {
         this.EniIp = EniIp;
     }
 
     /**
-     * Get Tag.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag. 
+     * @return Tag Tag.
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Tag.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Tag.
+     * @param Tag Tag.
      */
     public void setTag(String Tag) {
         this.Tag = Tag;

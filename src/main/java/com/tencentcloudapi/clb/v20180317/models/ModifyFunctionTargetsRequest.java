@@ -38,7 +38,7 @@ public class ModifyFunctionTargetsRequest extends AbstractModel {
     private String ListenerId;
 
     /**
-    * The backend cloud functions to modify
+    * Specifies the backend SCF service list to modify. only Event function type is supported.
     */
     @SerializedName("FunctionTargets")
     @Expose
@@ -98,16 +98,16 @@ public class ModifyFunctionTargetsRequest extends AbstractModel {
     }
 
     /**
-     * Get The backend cloud functions to modify 
-     * @return FunctionTargets The backend cloud functions to modify
+     * Get Specifies the backend SCF service list to modify. only Event function type is supported. 
+     * @return FunctionTargets Specifies the backend SCF service list to modify. only Event function type is supported.
      */
     public FunctionTarget [] getFunctionTargets() {
         return this.FunctionTargets;
     }
 
     /**
-     * Set The backend cloud functions to modify
-     * @param FunctionTargets The backend cloud functions to modify
+     * Set Specifies the backend SCF service list to modify. only Event function type is supported.
+     * @param FunctionTargets Specifies the backend SCF service list to modify. only Event function type is supported.
      */
     public void setFunctionTargets(FunctionTarget [] FunctionTargets) {
         this.FunctionTargets = FunctionTargets;

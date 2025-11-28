@@ -45,7 +45,9 @@ public class CreateTopicRequest extends AbstractModel {
     private String TopicType;
 
     /**
-    * Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
+    * Storage time in days, defaults to 30.
+-Log access to standard storage supports 1 to 3600 days. a value of 3640 indicates permanent retention.
+-Log access to infrequent storage supports 7 to 3600 days. a value of 3640 indicates permanent retention.
     */
     @SerializedName("Period")
     @Expose
@@ -107,16 +109,24 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get Logset retention period, in days. Default value: 30 days. Value range: [1, 3600]. 
-     * @return Period Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
+     * Get Storage time in days, defaults to 30.
+-Log access to standard storage supports 1 to 3600 days. a value of 3640 indicates permanent retention.
+-Log access to infrequent storage supports 7 to 3600 days. a value of 3640 indicates permanent retention. 
+     * @return Period Storage time in days, defaults to 30.
+-Log access to standard storage supports 1 to 3600 days. a value of 3640 indicates permanent retention.
+-Log access to infrequent storage supports 7 to 3600 days. a value of 3640 indicates permanent retention.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
-     * @param Period Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
+     * Set Storage time in days, defaults to 30.
+-Log access to standard storage supports 1 to 3600 days. a value of 3640 indicates permanent retention.
+-Log access to infrequent storage supports 7 to 3600 days. a value of 3640 indicates permanent retention.
+     * @param Period Storage time in days, defaults to 30.
+-Log access to standard storage supports 1 to 3600 days. a value of 3640 indicates permanent retention.
+-Log access to infrequent storage supports 7 to 3600 days. a value of 3640 indicates permanent retention.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

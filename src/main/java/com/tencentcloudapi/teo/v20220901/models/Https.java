@@ -44,11 +44,11 @@ public class Https extends AbstractModel {
     private String OcspStapling;
 
     /**
-    * Tls version settings, valid values:.
-<Li>`TLSv1`: tlsv1 version;</li>.
-<li>`TLSv1.1`: TLSv1.1 version;</li>.
-<li>TLSv1.2: specifies the TLSv1.2 version.</li>.
-<Li>TLSv1.3: specifies the TLSv1.3 version. consecutive versions must be enabled when modifying.</li>.
+    * Tls version settings. valid values:.
+<Li>TLSv1: specifies the tlsv1 version.</li>.
+<Li>TLSv1.1: specifies the tlsv1.1 version.</li>.
+<Li>TLSv1.2: specifies the tlsv1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
     */
     @SerializedName("TlsVersion")
     @Expose
@@ -146,32 +146,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Tls version settings, valid values:.
-<Li>`TLSv1`: tlsv1 version;</li>.
-<li>`TLSv1.1`: TLSv1.1 version;</li>.
-<li>TLSv1.2: specifies the TLSv1.2 version.</li>.
-<Li>TLSv1.3: specifies the TLSv1.3 version. consecutive versions must be enabled when modifying.</li>. 
-     * @return TlsVersion Tls version settings, valid values:.
-<Li>`TLSv1`: tlsv1 version;</li>.
-<li>`TLSv1.1`: TLSv1.1 version;</li>.
-<li>TLSv1.2: specifies the TLSv1.2 version.</li>.
-<Li>TLSv1.3: specifies the TLSv1.3 version. consecutive versions must be enabled when modifying.</li>.
+     * Get Tls version settings. valid values:.
+<Li>TLSv1: specifies the tlsv1 version.</li>.
+<Li>TLSv1.1: specifies the tlsv1.1 version.</li>.
+<Li>TLSv1.2: specifies the tlsv1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>. 
+     * @return TlsVersion Tls version settings. valid values:.
+<Li>TLSv1: specifies the tlsv1 version.</li>.
+<Li>TLSv1.1: specifies the tlsv1.1 version.</li>.
+<Li>TLSv1.2: specifies the tlsv1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
      */
     public String [] getTlsVersion() {
         return this.TlsVersion;
     }
 
     /**
-     * Set Tls version settings, valid values:.
-<Li>`TLSv1`: tlsv1 version;</li>.
-<li>`TLSv1.1`: TLSv1.1 version;</li>.
-<li>TLSv1.2: specifies the TLSv1.2 version.</li>.
-<Li>TLSv1.3: specifies the TLSv1.3 version. consecutive versions must be enabled when modifying.</li>.
-     * @param TlsVersion Tls version settings, valid values:.
-<Li>`TLSv1`: tlsv1 version;</li>.
-<li>`TLSv1.1`: TLSv1.1 version;</li>.
-<li>TLSv1.2: specifies the TLSv1.2 version.</li>.
-<Li>TLSv1.3: specifies the TLSv1.3 version. consecutive versions must be enabled when modifying.</li>.
+     * Set Tls version settings. valid values:.
+<Li>TLSv1: specifies the tlsv1 version.</li>.
+<Li>TLSv1.1: specifies the tlsv1.1 version.</li>.
+<Li>TLSv1.2: specifies the tlsv1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
+     * @param TlsVersion Tls version settings. valid values:.
+<Li>TLSv1: specifies the tlsv1 version.</li>.
+<Li>TLSv1.1: specifies the tlsv1.1 version.</li>.
+<Li>TLSv1.2: specifies the tlsv1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
      */
     public void setTlsVersion(String [] TlsVersion) {
         this.TlsVersion = TlsVersion;

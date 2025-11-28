@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeClassicalLBListenersResponse extends AbstractModel {
 
     /**
-    * Listener list
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the listener list.
     */
     @SerializedName("Listeners")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Listener list
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Listeners Listener list
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the listener list. 
+     * @return Listeners Specifies the listener list.
      */
     public ClassicalListener [] getListeners() {
         return this.Listeners;
     }
 
     /**
-     * Set Listener list
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Listeners Listener list
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the listener list.
+     * @param Listeners Specifies the listener list.
      */
     public void setListeners(ClassicalListener [] Listeners) {
         this.Listeners = Listeners;

@@ -24,21 +24,25 @@ import java.util.HashMap;
 public class SetLoadBalancerClsLogRequest extends AbstractModel {
 
     /**
-    * CLB instance ID
+    * ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * Logset ID of the Cloud Log Service (CLS).<li>When adding or updating a log topic, call the [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/58624?from_cn_redirect=1) API to obtain the logset ID.</li><li>When deleting a log topic, set this parameter to null.</li>
+    * Log set ID of cloud log service (CLS).
+<li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.comom/document/product/614/58624?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+<Li>When deleting a log topic, set this parameter to an empty string.</li>.
     */
     @SerializedName("LogSetId")
     @Expose
     private String LogSetId;
 
     /**
-    * Log topic ID of the CLS.<li>When adding or updating a log topic, call the [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1) API to obtain the log topic ID.</li><li>When deleting a log topic, set this parameter to null.</li>
+    * Specifies the log topic ID of cloud log service (CLS).
+<li>Specifies the log topic ID can be obtained by calling the [DescribeTopics](https://www.tencentcloud.comom/document/product/614/56454?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+<Li>When deleting a log topic, set this parameter to an empty string.</li>.
     */
     @SerializedName("LogTopicId")
     @Expose
@@ -55,48 +59,64 @@ Default: `ACCESS`
     private String LogType;
 
     /**
-     * Get CLB instance ID 
-     * @return LoadBalancerId CLB instance ID
+     * Get ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID. 
+     * @return LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set CLB instance ID
-     * @param LoadBalancerId CLB instance ID
+     * Set ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+     * @param LoadBalancerId ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get Logset ID of the Cloud Log Service (CLS).<li>When adding or updating a log topic, call the [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/58624?from_cn_redirect=1) API to obtain the logset ID.</li><li>When deleting a log topic, set this parameter to null.</li> 
-     * @return LogSetId Logset ID of the Cloud Log Service (CLS).<li>When adding or updating a log topic, call the [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/58624?from_cn_redirect=1) API to obtain the logset ID.</li><li>When deleting a log topic, set this parameter to null.</li>
+     * Get Log set ID of cloud log service (CLS).
+<li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.comom/document/product/614/58624?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+<Li>When deleting a log topic, set this parameter to an empty string.</li>. 
+     * @return LogSetId Log set ID of cloud log service (CLS).
+<li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.comom/document/product/614/58624?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+<Li>When deleting a log topic, set this parameter to an empty string.</li>.
      */
     public String getLogSetId() {
         return this.LogSetId;
     }
 
     /**
-     * Set Logset ID of the Cloud Log Service (CLS).<li>When adding or updating a log topic, call the [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/58624?from_cn_redirect=1) API to obtain the logset ID.</li><li>When deleting a log topic, set this parameter to null.</li>
-     * @param LogSetId Logset ID of the Cloud Log Service (CLS).<li>When adding or updating a log topic, call the [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/58624?from_cn_redirect=1) API to obtain the logset ID.</li><li>When deleting a log topic, set this parameter to null.</li>
+     * Set Log set ID of cloud log service (CLS).
+<li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.comom/document/product/614/58624?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+<Li>When deleting a log topic, set this parameter to an empty string.</li>.
+     * @param LogSetId Log set ID of cloud log service (CLS).
+<li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.comom/document/product/614/58624?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+<Li>When deleting a log topic, set this parameter to an empty string.</li>.
      */
     public void setLogSetId(String LogSetId) {
         this.LogSetId = LogSetId;
     }
 
     /**
-     * Get Log topic ID of the CLS.<li>When adding or updating a log topic, call the [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1) API to obtain the log topic ID.</li><li>When deleting a log topic, set this parameter to null.</li> 
-     * @return LogTopicId Log topic ID of the CLS.<li>When adding or updating a log topic, call the [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1) API to obtain the log topic ID.</li><li>When deleting a log topic, set this parameter to null.</li>
+     * Get Specifies the log topic ID of cloud log service (CLS).
+<li>Specifies the log topic ID can be obtained by calling the [DescribeTopics](https://www.tencentcloud.comom/document/product/614/56454?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+<Li>When deleting a log topic, set this parameter to an empty string.</li>. 
+     * @return LogTopicId Specifies the log topic ID of cloud log service (CLS).
+<li>Specifies the log topic ID can be obtained by calling the [DescribeTopics](https://www.tencentcloud.comom/document/product/614/56454?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+<Li>When deleting a log topic, set this parameter to an empty string.</li>.
      */
     public String getLogTopicId() {
         return this.LogTopicId;
     }
 
     /**
-     * Set Log topic ID of the CLS.<li>When adding or updating a log topic, call the [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1) API to obtain the log topic ID.</li><li>When deleting a log topic, set this parameter to null.</li>
-     * @param LogTopicId Log topic ID of the CLS.<li>When adding or updating a log topic, call the [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1) API to obtain the log topic ID.</li><li>When deleting a log topic, set this parameter to null.</li>
+     * Set Specifies the log topic ID of cloud log service (CLS).
+<li>Specifies the log topic ID can be obtained by calling the [DescribeTopics](https://www.tencentcloud.comom/document/product/614/56454?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+<Li>When deleting a log topic, set this parameter to an empty string.</li>.
+     * @param LogTopicId Specifies the log topic ID of cloud log service (CLS).
+<li>Specifies the log topic ID can be obtained by calling the [DescribeTopics](https://www.tencentcloud.comom/document/product/614/56454?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+<Li>When deleting a log topic, set this parameter to an empty string.</li>.
      */
     public void setLogTopicId(String LogTopicId) {
         this.LogTopicId = LogTopicId;

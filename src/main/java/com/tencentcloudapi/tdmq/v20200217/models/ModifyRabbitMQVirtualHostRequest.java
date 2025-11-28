@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyRabbitMQVirtualHostRequest extends AbstractModel {
 
     /**
-    * Cluster instance ID
+    * Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Vhost name
+    * VirtualHost name, such as testvhost. effective VirtualHost names can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking Vhost in the left sidebar, and finding the Vhost name in the Vhost list.
     */
     @SerializedName("VirtualHost")
     @Expose
     private String VirtualHost;
 
     /**
-    * Description
+    * Describes the Virtual Host.
     */
     @SerializedName("Description")
     @Expose
@@ -52,48 +52,48 @@ public class ModifyRabbitMQVirtualHostRequest extends AbstractModel {
     private Boolean TraceFlag;
 
     /**
-     * Get Cluster instance ID 
-     * @return InstanceId Cluster instance ID
+     * Get Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1). 
+     * @return InstanceId Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster instance ID
-     * @param InstanceId Cluster instance ID
+     * Set Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+     * @param InstanceId Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Vhost name 
-     * @return VirtualHost Vhost name
+     * Get VirtualHost name, such as testvhost. effective VirtualHost names can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking Vhost in the left sidebar, and finding the Vhost name in the Vhost list. 
+     * @return VirtualHost VirtualHost name, such as testvhost. effective VirtualHost names can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking Vhost in the left sidebar, and finding the Vhost name in the Vhost list.
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set Vhost name
-     * @param VirtualHost Vhost name
+     * Set VirtualHost name, such as testvhost. effective VirtualHost names can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking Vhost in the left sidebar, and finding the Vhost name in the Vhost list.
+     * @param VirtualHost VirtualHost name, such as testvhost. effective VirtualHost names can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking Vhost in the left sidebar, and finding the Vhost name in the Vhost list.
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get Description 
-     * @return Description Description
+     * Get Describes the Virtual Host. 
+     * @return Description Describes the Virtual Host.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description
-     * @param Description Description
+     * Set Describes the Virtual Host.
+     * @param Description Describes the Virtual Host.
      */
     public void setDescription(String Description) {
         this.Description = Description;

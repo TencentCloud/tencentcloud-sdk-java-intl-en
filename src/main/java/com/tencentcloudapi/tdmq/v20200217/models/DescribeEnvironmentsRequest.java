@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeEnvironmentsRequest extends AbstractModel {
 
     /**
+    * Pulsar cluster ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
     * Fuzzy search by namespace name.
     */
     @SerializedName("EnvironmentId")
@@ -45,13 +52,6 @@ public class DescribeEnvironmentsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Pulsar cluster ID
-    */
-    @SerializedName("ClusterId")
-    @Expose
-    private String ClusterId;
-
-    /**
     * * EnvironmentId
 Filter by namespace for exact query.
 Type: String
@@ -60,6 +60,22 @@ Required: No
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+     * Get Pulsar cluster ID 
+     * @return ClusterId Pulsar cluster ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Pulsar cluster ID
+     * @param ClusterId Pulsar cluster ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
 
     /**
      * Get Fuzzy search by namespace name. 
@@ -110,22 +126,6 @@ Required: No
     }
 
     /**
-     * Get Pulsar cluster ID 
-     * @return ClusterId Pulsar cluster ID
-     */
-    public String getClusterId() {
-        return this.ClusterId;
-    }
-
-    /**
-     * Set Pulsar cluster ID
-     * @param ClusterId Pulsar cluster ID
-     */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
-    }
-
-    /**
      * Get * EnvironmentId
 Filter by namespace for exact query.
 Type: String
@@ -161,6 +161,9 @@ Required: No
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeEnvironmentsRequest(DescribeEnvironmentsRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.EnvironmentId != null) {
             this.EnvironmentId = new String(source.EnvironmentId);
         }
@@ -169,9 +172,6 @@ Required: No
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
-        }
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
         }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
@@ -186,10 +186,10 @@ Required: No
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }

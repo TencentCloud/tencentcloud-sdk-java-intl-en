@@ -38,72 +38,95 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
     private String VirtualHost;
 
     /**
-    * Vhost description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    * Vhost description information.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Vhost tag
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    * Vhost tags.
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * Creation time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Modification time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    * Modification time.
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * Statistics of vhost overview
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    * Vhost overview statistics information.
     */
     @SerializedName("VirtualHostStatistics")
     @Expose
     private RabbitMQVirtualHostStatistics VirtualHostStatistics;
 
     /**
-    * 
+    * Message trace enabling status. true: enabled; false: disabled.
+    */
+    @SerializedName("TraceFlag")
+    @Expose
+    private Boolean TraceFlag;
+
+    /**
+    * Vhost status, which corresponds to status in the native product console. Valid values: running, partial, stopped, and unknown.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Message backlog count.
     */
     @SerializedName("MessageHeapCount")
     @Expose
     private Long MessageHeapCount;
 
     /**
-    * 
+    * Message input rate.
     */
     @SerializedName("MessageRateIn")
     @Expose
     private Float MessageRateIn;
 
     /**
-    * 
+    * Message output rate.
     */
     @SerializedName("MessageRateOut")
     @Expose
     private Float MessageRateOut;
+
+    /**
+    * Whether an image queue policy exists. true: Exists; false: Does not exist.
+    */
+    @SerializedName("MirrorQueuePolicyFlag")
+    @Expose
+    private Boolean MirrorQueuePolicyFlag;
+
+    /**
+    * Creation timestamp.
+    */
+    @SerializedName("CreateTs")
+    @Expose
+    private Long CreateTs;
+
+    /**
+    * Modification timestamp.
+    */
+    @SerializedName("ModifyTs")
+    @Expose
+    private Long ModifyTs;
 
     /**
      * Get Cluster instance ID 
@@ -138,167 +161,211 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     }
 
     /**
-     * Get Vhost description
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return Description Vhost description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Get Vhost description information. 
+     * @return Description Vhost description information.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Vhost description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param Description Vhost description
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Set Vhost description information.
+     * @param Description Vhost description information.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Vhost tag
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Vhost tag
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Get Vhost tags. 
+     * @return Tags Vhost tags.
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Vhost tag
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param Tags Vhost tag
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Set Vhost tags.
+     * @param Tags Vhost tags.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Creation time
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Creation time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Creation time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Modification time
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return ModifyTime Modification time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Get Modification time. 
+     * @return ModifyTime Modification time.
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set Modification time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param ModifyTime Modification time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Set Modification time.
+     * @param ModifyTime Modification time.
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get Statistics of vhost overview
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return VirtualHostStatistics Statistics of vhost overview
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Get Vhost overview statistics information. 
+     * @return VirtualHostStatistics Vhost overview statistics information.
      */
     public RabbitMQVirtualHostStatistics getVirtualHostStatistics() {
         return this.VirtualHostStatistics;
     }
 
     /**
-     * Set Statistics of vhost overview
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param VirtualHostStatistics Statistics of vhost overview
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Set Vhost overview statistics information.
+     * @param VirtualHostStatistics Vhost overview statistics information.
      */
     public void setVirtualHostStatistics(RabbitMQVirtualHostStatistics VirtualHostStatistics) {
         this.VirtualHostStatistics = VirtualHostStatistics;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Message trace enabling status. true: enabled; false: disabled. 
+     * @return TraceFlag Message trace enabling status. true: enabled; false: disabled.
+     */
+    public Boolean getTraceFlag() {
+        return this.TraceFlag;
+    }
+
+    /**
+     * Set Message trace enabling status. true: enabled; false: disabled.
+     * @param TraceFlag Message trace enabling status. true: enabled; false: disabled.
+     */
+    public void setTraceFlag(Boolean TraceFlag) {
+        this.TraceFlag = TraceFlag;
+    }
+
+    /**
+     * Get Vhost status, which corresponds to status in the native product console. Valid values: running, partial, stopped, and unknown. 
+     * @return Status Vhost status, which corresponds to status in the native product console. Valid values: running, partial, stopped, and unknown.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Vhost status, which corresponds to status in the native product console. Valid values: running, partial, stopped, and unknown.
+     * @param Status Vhost status, which corresponds to status in the native product console. Valid values: running, partial, stopped, and unknown.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return MessageHeapCount 
+     * Get Message backlog count. 
+     * @return MessageHeapCount Message backlog count.
      */
     public Long getMessageHeapCount() {
         return this.MessageHeapCount;
     }
 
     /**
-     * Set 
-     * @param MessageHeapCount 
+     * Set Message backlog count.
+     * @param MessageHeapCount Message backlog count.
      */
     public void setMessageHeapCount(Long MessageHeapCount) {
         this.MessageHeapCount = MessageHeapCount;
     }
 
     /**
-     * Get  
-     * @return MessageRateIn 
+     * Get Message input rate. 
+     * @return MessageRateIn Message input rate.
      */
     public Float getMessageRateIn() {
         return this.MessageRateIn;
     }
 
     /**
-     * Set 
-     * @param MessageRateIn 
+     * Set Message input rate.
+     * @param MessageRateIn Message input rate.
      */
     public void setMessageRateIn(Float MessageRateIn) {
         this.MessageRateIn = MessageRateIn;
     }
 
     /**
-     * Get  
-     * @return MessageRateOut 
+     * Get Message output rate. 
+     * @return MessageRateOut Message output rate.
      */
     public Float getMessageRateOut() {
         return this.MessageRateOut;
     }
 
     /**
-     * Set 
-     * @param MessageRateOut 
+     * Set Message output rate.
+     * @param MessageRateOut Message output rate.
      */
     public void setMessageRateOut(Float MessageRateOut) {
         this.MessageRateOut = MessageRateOut;
+    }
+
+    /**
+     * Get Whether an image queue policy exists. true: Exists; false: Does not exist. 
+     * @return MirrorQueuePolicyFlag Whether an image queue policy exists. true: Exists; false: Does not exist.
+     */
+    public Boolean getMirrorQueuePolicyFlag() {
+        return this.MirrorQueuePolicyFlag;
+    }
+
+    /**
+     * Set Whether an image queue policy exists. true: Exists; false: Does not exist.
+     * @param MirrorQueuePolicyFlag Whether an image queue policy exists. true: Exists; false: Does not exist.
+     */
+    public void setMirrorQueuePolicyFlag(Boolean MirrorQueuePolicyFlag) {
+        this.MirrorQueuePolicyFlag = MirrorQueuePolicyFlag;
+    }
+
+    /**
+     * Get Creation timestamp. 
+     * @return CreateTs Creation timestamp.
+     */
+    public Long getCreateTs() {
+        return this.CreateTs;
+    }
+
+    /**
+     * Set Creation timestamp.
+     * @param CreateTs Creation timestamp.
+     */
+    public void setCreateTs(Long CreateTs) {
+        this.CreateTs = CreateTs;
+    }
+
+    /**
+     * Get Modification timestamp. 
+     * @return ModifyTs Modification timestamp.
+     */
+    public Long getModifyTs() {
+        return this.ModifyTs;
+    }
+
+    /**
+     * Set Modification timestamp.
+     * @param ModifyTs Modification timestamp.
+     */
+    public void setModifyTs(Long ModifyTs) {
+        this.ModifyTs = ModifyTs;
     }
 
     public RabbitMQVirtualHostInfo() {
@@ -333,6 +400,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         if (source.VirtualHostStatistics != null) {
             this.VirtualHostStatistics = new RabbitMQVirtualHostStatistics(source.VirtualHostStatistics);
         }
+        if (source.TraceFlag != null) {
+            this.TraceFlag = new Boolean(source.TraceFlag);
+        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
@@ -344,6 +414,15 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         }
         if (source.MessageRateOut != null) {
             this.MessageRateOut = new Float(source.MessageRateOut);
+        }
+        if (source.MirrorQueuePolicyFlag != null) {
+            this.MirrorQueuePolicyFlag = new Boolean(source.MirrorQueuePolicyFlag);
+        }
+        if (source.CreateTs != null) {
+            this.CreateTs = new Long(source.CreateTs);
+        }
+        if (source.ModifyTs != null) {
+            this.ModifyTs = new Long(source.ModifyTs);
         }
     }
 
@@ -359,10 +438,14 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamObj(map, prefix + "VirtualHostStatistics.", this.VirtualHostStatistics);
+        this.setParamSimple(map, prefix + "TraceFlag", this.TraceFlag);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "MessageHeapCount", this.MessageHeapCount);
         this.setParamSimple(map, prefix + "MessageRateIn", this.MessageRateIn);
         this.setParamSimple(map, prefix + "MessageRateOut", this.MessageRateOut);
+        this.setParamSimple(map, prefix + "MirrorQueuePolicyFlag", this.MirrorQueuePolicyFlag);
+        this.setParamSimple(map, prefix + "CreateTs", this.CreateTs);
+        this.setParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
 
     }
 }

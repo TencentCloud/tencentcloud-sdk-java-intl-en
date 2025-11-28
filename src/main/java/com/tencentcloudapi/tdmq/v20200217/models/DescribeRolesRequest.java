@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeRolesRequest extends AbstractModel {
 
     /**
+    * Cluster ID (required)
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
     * Fuzzy query by role name
     */
     @SerializedName("RoleName")
@@ -45,13 +52,6 @@ public class DescribeRolesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Cluster ID (required)
-    */
-    @SerializedName("ClusterId")
-    @Expose
-    private String ClusterId;
-
-    /**
     * * RoleName
 Filter by role name for exact query.
 Type: String
@@ -60,6 +60,22 @@ Required: no
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+     * Get Cluster ID (required) 
+     * @return ClusterId Cluster ID (required)
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Cluster ID (required)
+     * @param ClusterId Cluster ID (required)
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
 
     /**
      * Get Fuzzy query by role name 
@@ -110,22 +126,6 @@ Required: no
     }
 
     /**
-     * Get Cluster ID (required) 
-     * @return ClusterId Cluster ID (required)
-     */
-    public String getClusterId() {
-        return this.ClusterId;
-    }
-
-    /**
-     * Set Cluster ID (required)
-     * @param ClusterId Cluster ID (required)
-     */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
-    }
-
-    /**
      * Get * RoleName
 Filter by role name for exact query.
 Type: String
@@ -161,6 +161,9 @@ Required: no
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeRolesRequest(DescribeRolesRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.RoleName != null) {
             this.RoleName = new String(source.RoleName);
         }
@@ -169,9 +172,6 @@ Required: no
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
-        }
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
         }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
@@ -186,10 +186,10 @@ Required: no
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }

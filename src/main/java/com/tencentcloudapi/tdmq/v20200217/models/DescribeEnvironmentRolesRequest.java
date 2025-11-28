@@ -24,7 +24,14 @@ import java.util.HashMap;
 public class DescribeEnvironmentRolesRequest extends AbstractModel {
 
     /**
-    * Environment/namespace name (required).
+    * Pulsar cluster ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * Environment (namespace) name.
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -45,13 +52,6 @@ public class DescribeEnvironmentRolesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Pulsar cluster ID (required).
-    */
-    @SerializedName("ClusterId")
-    @Expose
-    private String ClusterId;
-
-    /**
     * Role name.
     */
     @SerializedName("RoleName")
@@ -69,16 +69,32 @@ Required: No
     private Filter [] Filters;
 
     /**
-     * Get Environment/namespace name (required). 
-     * @return EnvironmentId Environment/namespace name (required).
+     * Get Pulsar cluster ID 
+     * @return ClusterId Pulsar cluster ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Pulsar cluster ID
+     * @param ClusterId Pulsar cluster ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get Environment (namespace) name. 
+     * @return EnvironmentId Environment (namespace) name.
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set Environment/namespace name (required).
-     * @param EnvironmentId Environment/namespace name (required).
+     * Set Environment (namespace) name.
+     * @param EnvironmentId Environment (namespace) name.
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
@@ -114,22 +130,6 @@ Required: No
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
-    }
-
-    /**
-     * Get Pulsar cluster ID (required). 
-     * @return ClusterId Pulsar cluster ID (required).
-     */
-    public String getClusterId() {
-        return this.ClusterId;
-    }
-
-    /**
-     * Set Pulsar cluster ID (required).
-     * @param ClusterId Pulsar cluster ID (required).
-     */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
     }
 
     /**
@@ -184,6 +184,9 @@ Required: No
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeEnvironmentRolesRequest(DescribeEnvironmentRolesRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.EnvironmentId != null) {
             this.EnvironmentId = new String(source.EnvironmentId);
         }
@@ -192,9 +195,6 @@ Required: No
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
-        }
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
         }
         if (source.RoleName != null) {
             this.RoleName = new String(source.RoleName);
@@ -212,10 +212,10 @@ Required: No
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 

@@ -31,7 +31,8 @@ public class DeregisterTargetGroupInstancesRequest extends AbstractModel {
     private String TargetGroupId;
 
     /**
-    * Information of server to be unbound
+    * Specifies information on server to be unbound. supports bulk removal with the largest quantity of 20 per operation.
+Port is a required item in this api.
     */
     @SerializedName("TargetGroupInstances")
     @Expose
@@ -54,16 +55,20 @@ public class DeregisterTargetGroupInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Information of server to be unbound 
-     * @return TargetGroupInstances Information of server to be unbound
+     * Get Specifies information on server to be unbound. supports bulk removal with the largest quantity of 20 per operation.
+Port is a required item in this api. 
+     * @return TargetGroupInstances Specifies information on server to be unbound. supports bulk removal with the largest quantity of 20 per operation.
+Port is a required item in this api.
      */
     public TargetGroupInstance [] getTargetGroupInstances() {
         return this.TargetGroupInstances;
     }
 
     /**
-     * Set Information of server to be unbound
-     * @param TargetGroupInstances Information of server to be unbound
+     * Set Specifies information on server to be unbound. supports bulk removal with the largest quantity of 20 per operation.
+Port is a required item in this api.
+     * @param TargetGroupInstances Specifies information on server to be unbound. supports bulk removal with the largest quantity of 20 per operation.
+Port is a required item in this api.
      */
     public void setTargetGroupInstances(TargetGroupInstance [] TargetGroupInstances) {
         this.TargetGroupInstances = TargetGroupInstances;

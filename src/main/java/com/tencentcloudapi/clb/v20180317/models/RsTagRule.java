@@ -45,7 +45,7 @@ public class RsTagRule extends AbstractModel {
     private String LocationId;
 
     /**
-    * Modified tag of the real server. This parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target). The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Weight parameter in the Target is empty.
+    * Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.comom/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
     */
     @SerializedName("Tag")
     @Expose
@@ -100,16 +100,16 @@ public class RsTagRule extends AbstractModel {
     }
 
     /**
-     * Get Modified tag of the real server. This parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target). The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Weight parameter in the Target is empty. 
-     * @return Tag Modified tag of the real server. This parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target). The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Weight parameter in the Target is empty.
+     * Get Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.comom/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty. 
+     * @return Tag Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.comom/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Modified tag of the real server. This parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target). The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Weight parameter in the Target is empty.
-     * @param Tag Modified tag of the real server. This parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target). The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Weight parameter in the Target is empty.
+     * Set Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.comom/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
+     * @param Tag Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.comom/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
      */
     public void setTag(String Tag) {
         this.Tag = Tag;

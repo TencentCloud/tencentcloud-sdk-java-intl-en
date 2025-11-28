@@ -59,16 +59,14 @@ public class CrossTargets extends AbstractModel {
     private String EniId;
 
     /**
-    * ID of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
+    * Submachine instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Name of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
+    * Submachine instance name.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -162,40 +160,32 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get ID of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return InstanceId ID of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Submachine instance ID. 
+     * @return InstanceId Submachine instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param InstanceId ID of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Submachine instance ID.
+     * @param InstanceId Submachine instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Name of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return InstanceName Name of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Submachine instance name. 
+     * @return InstanceName Submachine instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Name of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param InstanceName Name of the CVM instance
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Submachine instance name.
+     * @param InstanceName Submachine instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

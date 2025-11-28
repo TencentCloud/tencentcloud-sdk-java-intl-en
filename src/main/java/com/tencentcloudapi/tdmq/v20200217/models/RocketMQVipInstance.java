@@ -38,8 +38,7 @@ public class RocketMQVipInstance extends AbstractModel {
     private String InstanceName;
 
     /**
-    * Instance version
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance version.
     */
     @SerializedName("InstanceVersion")
     @Expose
@@ -110,7 +109,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Remark")
     @Expose
@@ -124,28 +122,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SpecName;
 
     /**
-    * The maximum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    * Maximum configurable message retention time, in hours
     */
     @SerializedName("MaxRetention")
     @Expose
     private Long MaxRetention;
 
     /**
-    * The minimum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    * Minimum configurable message retention time, in hours
     */
     @SerializedName("MinRetention")
     @Expose
     private Long MinRetention;
 
     /**
-    * Instance message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+    * Instance message retention time, in hours
     */
     @SerializedName("Retention")
     @Expose
     private Long Retention;
+
+    /**
+    * Whether to enable ACL authentication.
+    */
+    @SerializedName("AclEnabled")
+    @Expose
+    private Boolean AclEnabled;
+
+    /**
+    * Destruction time.
+    */
+    @SerializedName("DestroyTime")
+    @Expose
+    private Long DestroyTime;
 
     /**
      * Get Instance ID 
@@ -180,20 +189,16 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     }
 
     /**
-     * Get Instance version
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceVersion Instance version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance version. 
+     * @return InstanceVersion Instance version.
      */
     public String getInstanceVersion() {
         return this.InstanceVersion;
     }
 
     /**
-     * Set Instance version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceVersion Instance version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance version.
+     * @param InstanceVersion Instance version.
      */
     public void setInstanceVersion(String InstanceVersion) {
         this.InstanceVersion = InstanceVersion;
@@ -344,10 +349,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Remarks
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Remarks 
      * @return Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRemark() {
         return this.Remark;
@@ -355,9 +358,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -380,63 +381,83 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The maximum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return MaxRetention The maximum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Get Maximum configurable message retention time, in hours 
+     * @return MaxRetention Maximum configurable message retention time, in hours
      */
     public Long getMaxRetention() {
         return this.MaxRetention;
     }
 
     /**
-     * Set The maximum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param MaxRetention The maximum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Set Maximum configurable message retention time, in hours
+     * @param MaxRetention Maximum configurable message retention time, in hours
      */
     public void setMaxRetention(Long MaxRetention) {
         this.MaxRetention = MaxRetention;
     }
 
     /**
-     * Get The minimum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return MinRetention The minimum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Get Minimum configurable message retention time, in hours 
+     * @return MinRetention Minimum configurable message retention time, in hours
      */
     public Long getMinRetention() {
         return this.MinRetention;
     }
 
     /**
-     * Set The minimum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param MinRetention The minimum message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Set Minimum configurable message retention time, in hours
+     * @param MinRetention Minimum configurable message retention time, in hours
      */
     public void setMinRetention(Long MinRetention) {
         this.MinRetention = MinRetention;
     }
 
     /**
-     * Get Instance message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
-     * @return Retention Instance message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Get Instance message retention time, in hours 
+     * @return Retention Instance message retention time, in hours
      */
     public Long getRetention() {
         return this.Retention;
     }
 
     /**
-     * Set Instance message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param Retention Instance message retention period in hours
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * Set Instance message retention time, in hours
+     * @param Retention Instance message retention time, in hours
      */
     public void setRetention(Long Retention) {
         this.Retention = Retention;
+    }
+
+    /**
+     * Get Whether to enable ACL authentication. 
+     * @return AclEnabled Whether to enable ACL authentication.
+     */
+    public Boolean getAclEnabled() {
+        return this.AclEnabled;
+    }
+
+    /**
+     * Set Whether to enable ACL authentication.
+     * @param AclEnabled Whether to enable ACL authentication.
+     */
+    public void setAclEnabled(Boolean AclEnabled) {
+        this.AclEnabled = AclEnabled;
+    }
+
+    /**
+     * Get Destruction time. 
+     * @return DestroyTime Destruction time.
+     */
+    public Long getDestroyTime() {
+        return this.DestroyTime;
+    }
+
+    /**
+     * Set Destruction time.
+     * @param DestroyTime Destruction time.
+     */
+    public void setDestroyTime(Long DestroyTime) {
+        this.DestroyTime = DestroyTime;
     }
 
     public RocketMQVipInstance() {
@@ -498,6 +519,12 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         if (source.Retention != null) {
             this.Retention = new Long(source.Retention);
         }
+        if (source.AclEnabled != null) {
+            this.AclEnabled = new Boolean(source.AclEnabled);
+        }
+        if (source.DestroyTime != null) {
+            this.DestroyTime = new Long(source.DestroyTime);
+        }
     }
 
 
@@ -522,6 +549,8 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         this.setParamSimple(map, prefix + "MaxRetention", this.MaxRetention);
         this.setParamSimple(map, prefix + "MinRetention", this.MinRetention);
         this.setParamSimple(map, prefix + "Retention", this.Retention);
+        this.setParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
+        this.setParamSimple(map, prefix + "DestroyTime", this.DestroyTime);
 
     }
 }

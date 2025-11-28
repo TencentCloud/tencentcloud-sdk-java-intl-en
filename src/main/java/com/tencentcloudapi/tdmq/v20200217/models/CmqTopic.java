@@ -25,7 +25,6 @@ public class CmqTopic extends AbstractModel {
 
     /**
     * Topic ID.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TopicId")
     @Expose
@@ -33,23 +32,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Topic name.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Maximum lifecycle of message in topic. After the period specified by this parameter has elapsed since a message is sent to the topic, the message will be deleted no matter whether it has been successfully pushed to the user. This parameter is measured in seconds and defaulted to one day (86,400 seconds), which cannot be modified.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Maximum lifetime of messages in a topic. After the time specified by this parameter has elapsed since sending to this topic, the message will be deleted whether or not it has been successfully pushed to the user. Measured in seconds and fixed at one day (86,400 seconds). This attribute cannot be modified.
     */
     @SerializedName("MsgRetentionSeconds")
     @Expose
     private Long MsgRetentionSeconds;
 
     /**
-    * Maximum message size, which ranges from 1,024 to 1,048,576 bytes (i.e., 1–1,024 KB). The default value is 65,536.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Maximum message length. value range: 1024-1048576 bytes (1-1024 kb). default value: 1048576.
     */
     @SerializedName("MaxMsgSize")
     @Expose
@@ -57,41 +53,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of messages published per second.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Qps")
     @Expose
     private Long Qps;
 
     /**
-    * Filtering policy selected when a subscription is created:
-If `filterType` is 1, `FilterTag` will be used for filtering.
-If `filterType` is 2, `BindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Describes the filtering policy selected by users when creating subscriptions.
+FilterType = 1 means when users use Tag filtering with FilterTag.
+FilterType = 2 indicates user use BindingKey for filtering.
     */
     @SerializedName("FilterType")
     @Expose
     private Long FilterType;
 
     /**
-    * Topic creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Topic creation time. Returns a Unix timestamp, accurate to milliseconds.
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * Time when the topic attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The last time the topic attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
     */
     @SerializedName("LastModifyTime")
     @Expose
     private Long LastModifyTime;
 
     /**
-    * Number of current messages in the topic (number of retained messages).
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Number of messages in the current topic (message backlog).
     */
     @SerializedName("MsgCount")
     @Expose
@@ -123,41 +114,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TenantId")
     @Expose
     private String TenantId;
 
     /**
-    * Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies the namespace name.
     */
     @SerializedName("NamespaceName")
     @Expose
     private String NamespaceName;
 
     /**
-    * Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Valid values: `0` (Pulsar), `1` (RocketMQ).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 0: Pulsar, 1: RocketMQ
     */
     @SerializedName("BrokerType")
     @Expose
     private Long BrokerType;
 
     /**
-     * Get Topic ID.
-Note: this field may return null, indicating that no valid values can be obtained. 
+    * Number of Subscriptions
+    */
+    @SerializedName("SubscriptionCount")
+    @Expose
+    private Long SubscriptionCount;
+
+    /**
+     * Get Topic ID. 
      * @return TopicId Topic ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getTopicId() {
         return this.TopicId;
@@ -165,19 +157,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Topic ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param TopicId Topic ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Topic name.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Topic name. 
      * @return TopicName Topic name.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getTopicName() {
         return this.TopicName;
@@ -185,59 +173,47 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Topic name.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param TopicName Topic name.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Maximum lifecycle of message in topic. After the period specified by this parameter has elapsed since a message is sent to the topic, the message will be deleted no matter whether it has been successfully pushed to the user. This parameter is measured in seconds and defaulted to one day (86,400 seconds), which cannot be modified.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MsgRetentionSeconds Maximum lifecycle of message in topic. After the period specified by this parameter has elapsed since a message is sent to the topic, the message will be deleted no matter whether it has been successfully pushed to the user. This parameter is measured in seconds and defaulted to one day (86,400 seconds), which cannot be modified.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Maximum lifetime of messages in a topic. After the time specified by this parameter has elapsed since sending to this topic, the message will be deleted whether or not it has been successfully pushed to the user. Measured in seconds and fixed at one day (86,400 seconds). This attribute cannot be modified. 
+     * @return MsgRetentionSeconds Maximum lifetime of messages in a topic. After the time specified by this parameter has elapsed since sending to this topic, the message will be deleted whether or not it has been successfully pushed to the user. Measured in seconds and fixed at one day (86,400 seconds). This attribute cannot be modified.
      */
     public Long getMsgRetentionSeconds() {
         return this.MsgRetentionSeconds;
     }
 
     /**
-     * Set Maximum lifecycle of message in topic. After the period specified by this parameter has elapsed since a message is sent to the topic, the message will be deleted no matter whether it has been successfully pushed to the user. This parameter is measured in seconds and defaulted to one day (86,400 seconds), which cannot be modified.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MsgRetentionSeconds Maximum lifecycle of message in topic. After the period specified by this parameter has elapsed since a message is sent to the topic, the message will be deleted no matter whether it has been successfully pushed to the user. This parameter is measured in seconds and defaulted to one day (86,400 seconds), which cannot be modified.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Maximum lifetime of messages in a topic. After the time specified by this parameter has elapsed since sending to this topic, the message will be deleted whether or not it has been successfully pushed to the user. Measured in seconds and fixed at one day (86,400 seconds). This attribute cannot be modified.
+     * @param MsgRetentionSeconds Maximum lifetime of messages in a topic. After the time specified by this parameter has elapsed since sending to this topic, the message will be deleted whether or not it has been successfully pushed to the user. Measured in seconds and fixed at one day (86,400 seconds). This attribute cannot be modified.
      */
     public void setMsgRetentionSeconds(Long MsgRetentionSeconds) {
         this.MsgRetentionSeconds = MsgRetentionSeconds;
     }
 
     /**
-     * Get Maximum message size, which ranges from 1,024 to 1,048,576 bytes (i.e., 1–1,024 KB). The default value is 65,536.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MaxMsgSize Maximum message size, which ranges from 1,024 to 1,048,576 bytes (i.e., 1–1,024 KB). The default value is 65,536.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Maximum message length. value range: 1024-1048576 bytes (1-1024 kb). default value: 1048576. 
+     * @return MaxMsgSize Maximum message length. value range: 1024-1048576 bytes (1-1024 kb). default value: 1048576.
      */
     public Long getMaxMsgSize() {
         return this.MaxMsgSize;
     }
 
     /**
-     * Set Maximum message size, which ranges from 1,024 to 1,048,576 bytes (i.e., 1–1,024 KB). The default value is 65,536.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MaxMsgSize Maximum message size, which ranges from 1,024 to 1,048,576 bytes (i.e., 1–1,024 KB). The default value is 65,536.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Maximum message length. value range: 1024-1048576 bytes (1-1024 kb). default value: 1048576.
+     * @param MaxMsgSize Maximum message length. value range: 1024-1048576 bytes (1-1024 kb). default value: 1048576.
      */
     public void setMaxMsgSize(Long MaxMsgSize) {
         this.MaxMsgSize = MaxMsgSize;
     }
 
     /**
-     * Get Number of messages published per second.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Number of messages published per second. 
      * @return Qps Number of messages published per second.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getQps() {
         return this.Qps;
@@ -245,97 +221,79 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of messages published per second.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param Qps Number of messages published per second.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
     /**
-     * Get Filtering policy selected when a subscription is created:
-If `filterType` is 1, `FilterTag` will be used for filtering.
-If `filterType` is 2, `BindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FilterType Filtering policy selected when a subscription is created:
-If `filterType` is 1, `FilterTag` will be used for filtering.
-If `filterType` is 2, `BindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Describes the filtering policy selected by users when creating subscriptions.
+FilterType = 1 means when users use Tag filtering with FilterTag.
+FilterType = 2 indicates user use BindingKey for filtering. 
+     * @return FilterType Describes the filtering policy selected by users when creating subscriptions.
+FilterType = 1 means when users use Tag filtering with FilterTag.
+FilterType = 2 indicates user use BindingKey for filtering.
      */
     public Long getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set Filtering policy selected when a subscription is created:
-If `filterType` is 1, `FilterTag` will be used for filtering.
-If `filterType` is 2, `BindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FilterType Filtering policy selected when a subscription is created:
-If `filterType` is 1, `FilterTag` will be used for filtering.
-If `filterType` is 2, `BindingKey` will be used for filtering.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Describes the filtering policy selected by users when creating subscriptions.
+FilterType = 1 means when users use Tag filtering with FilterTag.
+FilterType = 2 indicates user use BindingKey for filtering.
+     * @param FilterType Describes the filtering policy selected by users when creating subscriptions.
+FilterType = 1 means when users use Tag filtering with FilterTag.
+FilterType = 2 indicates user use BindingKey for filtering.
      */
     public void setFilterType(Long FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get Topic creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Topic creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Topic creation time. Returns a Unix timestamp, accurate to milliseconds. 
+     * @return CreateTime Topic creation time. Returns a Unix timestamp, accurate to milliseconds.
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Topic creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Topic creation time. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Topic creation time. Returns a Unix timestamp, accurate to milliseconds.
+     * @param CreateTime Topic creation time. Returns a Unix timestamp, accurate to milliseconds.
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Time when the topic attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return LastModifyTime Time when the topic attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The last time the topic attribute was modified. Returns a Unix timestamp, accurate to milliseconds. 
+     * @return LastModifyTime The last time the topic attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
      */
     public Long getLastModifyTime() {
         return this.LastModifyTime;
     }
 
     /**
-     * Set Time when the topic attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param LastModifyTime Time when the topic attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The last time the topic attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
+     * @param LastModifyTime The last time the topic attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
      */
     public void setLastModifyTime(Long LastModifyTime) {
         this.LastModifyTime = LastModifyTime;
     }
 
     /**
-     * Get Number of current messages in the topic (number of retained messages).
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MsgCount Number of current messages in the topic (number of retained messages).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Number of messages in the current topic (message backlog). 
+     * @return MsgCount Number of messages in the current topic (message backlog).
      */
     public Long getMsgCount() {
         return this.MsgCount;
     }
 
     /**
-     * Set Number of current messages in the topic (number of retained messages).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MsgCount Number of current messages in the topic (number of retained messages).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Number of messages in the current topic (message backlog).
+     * @param MsgCount Number of messages in the current topic (message backlog).
      */
     public void setMsgCount(Long MsgCount) {
         this.MsgCount = MsgCount;
@@ -402,10 +360,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Tenant ID 
      * @return TenantId Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getTenantId() {
         return this.TenantId;
@@ -413,72 +369,74 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param TenantId Tenant ID
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTenantId(String TenantId) {
         this.TenantId = TenantId;
     }
 
     /**
-     * Get Namespace name
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return NamespaceName Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the namespace name. 
+     * @return NamespaceName Specifies the namespace name.
      */
     public String getNamespaceName() {
         return this.NamespaceName;
     }
 
     /**
-     * Set Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param NamespaceName Namespace name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the namespace name.
+     * @param NamespaceName Specifies the namespace name.
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed 
+     * @return Status Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
+     * @param Status Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Valid values: `0` (Pulsar), `1` (RocketMQ).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BrokerType Valid values: `0` (Pulsar), `1` (RocketMQ).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 0: Pulsar, 1: RocketMQ 
+     * @return BrokerType 0: Pulsar, 1: RocketMQ
      */
     public Long getBrokerType() {
         return this.BrokerType;
     }
 
     /**
-     * Set Valid values: `0` (Pulsar), `1` (RocketMQ).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BrokerType Valid values: `0` (Pulsar), `1` (RocketMQ).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 0: Pulsar, 1: RocketMQ
+     * @param BrokerType 0: Pulsar, 1: RocketMQ
      */
     public void setBrokerType(Long BrokerType) {
         this.BrokerType = BrokerType;
+    }
+
+    /**
+     * Get Number of Subscriptions 
+     * @return SubscriptionCount Number of Subscriptions
+     */
+    public Long getSubscriptionCount() {
+        return this.SubscriptionCount;
+    }
+
+    /**
+     * Set Number of Subscriptions
+     * @param SubscriptionCount Number of Subscriptions
+     */
+    public void setSubscriptionCount(Long SubscriptionCount) {
+        this.SubscriptionCount = SubscriptionCount;
     }
 
     public CmqTopic() {
@@ -540,6 +498,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.BrokerType != null) {
             this.BrokerType = new Long(source.BrokerType);
         }
+        if (source.SubscriptionCount != null) {
+            this.SubscriptionCount = new Long(source.SubscriptionCount);
+        }
     }
 
 
@@ -563,6 +524,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "BrokerType", this.BrokerType);
+        this.setParamSimple(map, prefix + "SubscriptionCount", this.SubscriptionCount);
 
     }
 }

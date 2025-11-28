@@ -90,7 +90,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Whether to enable "Auto-Create Subscription"
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AutoSubscriptionCreation")
     @Expose
@@ -250,9 +250,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Whether to enable "Auto-Create Subscription"
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getAutoSubscriptionCreation() {
         return this.AutoSubscriptionCreation;
@@ -260,9 +260,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Whether to enable "Auto-Create Subscription"
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAutoSubscriptionCreation(Boolean AutoSubscriptionCreation) {
         this.AutoSubscriptionCreation = AutoSubscriptionCreation;

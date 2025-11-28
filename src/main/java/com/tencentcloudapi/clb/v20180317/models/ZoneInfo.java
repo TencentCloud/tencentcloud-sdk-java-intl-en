@@ -24,168 +24,138 @@ import java.util.HashMap;
 public class ZoneInfo extends AbstractModel {
 
     /**
-    * Unique AZ ID in a numeric form, such as 100001
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Unique ID of the AZ in numeric form, such as 100001
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * Unique AZ ID in a string form, such as ap-guangzhou-1
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Unique ID of the AZ in string format, such as ap-guangzhou-1
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * AZ name, such as Guangzhou Zone 1
-Note: This field may return null, indicating that no valid values can be obtained.
+    * AZ name, such as Guangzhou 1
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * AZ region, e.g., ap-guangzhou.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the region of the availability zone, for example: ap-guangzhou.
     */
     @SerializedName("ZoneRegion")
     @Expose
     private String ZoneRegion;
 
     /**
-    * Whether the AZ is the `LocalZone`, e.g., false.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Indicates whether the AZ is a LocalZone az, for example: false.
     */
     @SerializedName("LocalZone")
     @Expose
     private Boolean LocalZone;
 
     /**
-    * Whether the AZ is an edge zone. Values: `true`, `false`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Indicates whether the AZ is an EdgeZone az, for example: false.
     */
     @SerializedName("EdgeZone")
     @Expose
     private Boolean EdgeZone;
 
     /**
-     * Get Unique AZ ID in a numeric form, such as 100001
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneId Unique AZ ID in a numeric form, such as 100001
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Unique ID of the AZ in numeric form, such as 100001 
+     * @return ZoneId Unique ID of the AZ in numeric form, such as 100001
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Unique AZ ID in a numeric form, such as 100001
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ZoneId Unique AZ ID in a numeric form, such as 100001
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Unique ID of the AZ in numeric form, such as 100001
+     * @param ZoneId Unique ID of the AZ in numeric form, such as 100001
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Unique AZ ID in a string form, such as ap-guangzhou-1
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Zone Unique AZ ID in a string form, such as ap-guangzhou-1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Unique ID of the AZ in string format, such as ap-guangzhou-1 
+     * @return Zone Unique ID of the AZ in string format, such as ap-guangzhou-1
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Unique AZ ID in a string form, such as ap-guangzhou-1
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Zone Unique AZ ID in a string form, such as ap-guangzhou-1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Unique ID of the AZ in string format, such as ap-guangzhou-1
+     * @param Zone Unique ID of the AZ in string format, such as ap-guangzhou-1
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get AZ name, such as Guangzhou Zone 1
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneName AZ name, such as Guangzhou Zone 1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get AZ name, such as Guangzhou 1 
+     * @return ZoneName AZ name, such as Guangzhou 1
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set AZ name, such as Guangzhou Zone 1
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ZoneName AZ name, such as Guangzhou Zone 1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set AZ name, such as Guangzhou 1
+     * @param ZoneName AZ name, such as Guangzhou 1
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get AZ region, e.g., ap-guangzhou.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return ZoneRegion AZ region, e.g., ap-guangzhou.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the region of the availability zone, for example: ap-guangzhou. 
+     * @return ZoneRegion Specifies the region of the availability zone, for example: ap-guangzhou.
      */
     public String getZoneRegion() {
         return this.ZoneRegion;
     }
 
     /**
-     * Set AZ region, e.g., ap-guangzhou.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param ZoneRegion AZ region, e.g., ap-guangzhou.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the region of the availability zone, for example: ap-guangzhou.
+     * @param ZoneRegion Specifies the region of the availability zone, for example: ap-guangzhou.
      */
     public void setZoneRegion(String ZoneRegion) {
         this.ZoneRegion = ZoneRegion;
     }
 
     /**
-     * Get Whether the AZ is the `LocalZone`, e.g., false.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return LocalZone Whether the AZ is the `LocalZone`, e.g., false.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Indicates whether the AZ is a LocalZone az, for example: false. 
+     * @return LocalZone Indicates whether the AZ is a LocalZone az, for example: false.
      */
     public Boolean getLocalZone() {
         return this.LocalZone;
     }
 
     /**
-     * Set Whether the AZ is the `LocalZone`, e.g., false.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param LocalZone Whether the AZ is the `LocalZone`, e.g., false.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Indicates whether the AZ is a LocalZone az, for example: false.
+     * @param LocalZone Indicates whether the AZ is a LocalZone az, for example: false.
      */
     public void setLocalZone(Boolean LocalZone) {
         this.LocalZone = LocalZone;
     }
 
     /**
-     * Get Whether the AZ is an edge zone. Values: `true`, `false`.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return EdgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Indicates whether the AZ is an EdgeZone az, for example: false. 
+     * @return EdgeZone Indicates whether the AZ is an EdgeZone az, for example: false.
      */
     public Boolean getEdgeZone() {
         return this.EdgeZone;
     }
 
     /**
-     * Set Whether the AZ is an edge zone. Values: `true`, `false`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param EdgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Indicates whether the AZ is an EdgeZone az, for example: false.
+     * @param EdgeZone Indicates whether the AZ is an EdgeZone az, for example: false.
      */
     public void setEdgeZone(Boolean EdgeZone) {
         this.EdgeZone = EdgeZone;

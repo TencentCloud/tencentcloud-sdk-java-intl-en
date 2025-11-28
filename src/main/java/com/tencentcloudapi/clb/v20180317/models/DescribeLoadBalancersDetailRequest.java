@@ -45,24 +45,61 @@ public class DescribeLoadBalancersDetailRequest extends AbstractModel {
     private String [] Fields;
 
     /**
-    * When the Fields include TargetId, TargetAddress, TargetPort, TargetWeight, ListenerId, Protocol, Port, LocationId, Domain, and Url, you should select exporting the Target of the target group or a non-target group. Valid values: NODE, GROUP.
+    * When the Fields include TargetId, TargetAddress, TargetPort, TargetWeight, ListenerId, Protocol, Port, LocationId, Domain, and Url, you must select exporting the Target of the Target GROUP or a non-Target GROUP. valid values: NODE, GROUP.
     */
     @SerializedName("TargetType")
     @Expose
     private String TargetType;
 
     /**
-    * Filter condition of querying lists describing CLB instance details:
-<li> loadbalancer-id - String - Required: no - (Filter condition) CLB instance ID, such as "lb-12345678". </li>
-<li> project-id - String - Required: no - (Filter condition) Project ID, such as "0" and "123".</li>
-<li> network - String - Required: no - (Filter condition) Network type of the CLB instance, such as "Public" and "Private".</li>
-<li> vip - String - Required: no - (Filter condition) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
-<li> target-ip - String - Required: no - (Filter condition) Private IP of the target real servers, such as"1.1.1.1" and "2203::214:4".</li>
-<li> vpcid - String - Required: no - (Filter condition) Identifier of the VPC instance to which the CLB instance belongs, such as "vpc-12345678".</li>
-<li> zone - String - Required: no - (Filter condition) Availability zone where the CLB instance resides, such as "ap-guangzhou-1".</li>
-<li> tag-key - String - Required: no - (Filter condition) Tag key of the CLB instance, such as "name".</li>
-<li> tag:* - String - Required: no - (Filter condition) CLB instance tag, followed by tag key after the colon ':'. For example, use {"Name": "tag:name","Values": ["zhangsan", "lisi"]} to filter the tag key “name” with the tag value “zhangsan” and “lisi”.</li>
-<li> fuzzy-search - String - Required: no - (Filter condition) Fuzzy search for CLB instance VIP and CLB instance name, such as "1.1".</li>
+    * Querying conditions for cloud load balancer detailed information list. detailed filter criteria.
+- loadbalancer-id
+Filter by [clb ID], for example: lb-rbw5skde.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- project-id
+Filters by [project ID]. for example: "0", "123".
+Type: String.
+Required: No
+Method for obtaining: [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1).
+- network
+Filters by [clb network type]. for example: Public.
+Type: String.
+Required: No
+Valid values: Private (Private network), Public (Public network).
+- vip
+Filter by [cloud load balancer VIP], such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+- vpcid
+Filter by the vpc to which the cloud load balancer belongs, such as "vpc-12345678".
+Type: String.
+Required: No
+Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+- target-ip
+Filters by the private network IP of the backend destination. for example: "1.1.1.1", "2203::214:4".
+Type: String.
+Required: No
+- zone
+Filter by [availability zone of the cloud load balancer]. for example: "ap-guangzhou-1".
+Type: String.
+Required: No
+Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+- tag-key
+Filters by [tag key of the cloud load balancer tag], for example: "name".
+Type: String.
+Required: No
+Method for obtaining: [DescribeTags](https://www.tencentcloud.comom/document/api/651/35316?from_cn_redirect=1).
+- tag:*
+Filter by [cloud load balancer tag], where ':' is followed by the tag key. for example, to filter by tag key 'name' with tag Values 'zhangsan' and 'lisi', use {"name": "tag:name","Values": ["zhangsan", "lisi"]}.
+Type: String.
+Required: No
+Method for obtaining: [DescribeTagKeys](https://www.tencentcloud.comom/document/api/651/35318?from_cn_redirect=1).
+- fuzzy-search
+Searches by [clb VIP, clb name] using fuzzy search, for example: "1.1".
+Type: String.
+Required: No
     */
     @SerializedName("Filters")
     @Expose
@@ -117,72 +154,220 @@ public class DescribeLoadBalancersDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get When the Fields include TargetId, TargetAddress, TargetPort, TargetWeight, ListenerId, Protocol, Port, LocationId, Domain, and Url, you should select exporting the Target of the target group or a non-target group. Valid values: NODE, GROUP. 
-     * @return TargetType When the Fields include TargetId, TargetAddress, TargetPort, TargetWeight, ListenerId, Protocol, Port, LocationId, Domain, and Url, you should select exporting the Target of the target group or a non-target group. Valid values: NODE, GROUP.
+     * Get When the Fields include TargetId, TargetAddress, TargetPort, TargetWeight, ListenerId, Protocol, Port, LocationId, Domain, and Url, you must select exporting the Target of the Target GROUP or a non-Target GROUP. valid values: NODE, GROUP. 
+     * @return TargetType When the Fields include TargetId, TargetAddress, TargetPort, TargetWeight, ListenerId, Protocol, Port, LocationId, Domain, and Url, you must select exporting the Target of the Target GROUP or a non-Target GROUP. valid values: NODE, GROUP.
      */
     public String getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set When the Fields include TargetId, TargetAddress, TargetPort, TargetWeight, ListenerId, Protocol, Port, LocationId, Domain, and Url, you should select exporting the Target of the target group or a non-target group. Valid values: NODE, GROUP.
-     * @param TargetType When the Fields include TargetId, TargetAddress, TargetPort, TargetWeight, ListenerId, Protocol, Port, LocationId, Domain, and Url, you should select exporting the Target of the target group or a non-target group. Valid values: NODE, GROUP.
+     * Set When the Fields include TargetId, TargetAddress, TargetPort, TargetWeight, ListenerId, Protocol, Port, LocationId, Domain, and Url, you must select exporting the Target of the Target GROUP or a non-Target GROUP. valid values: NODE, GROUP.
+     * @param TargetType When the Fields include TargetId, TargetAddress, TargetPort, TargetWeight, ListenerId, Protocol, Port, LocationId, Domain, and Url, you must select exporting the Target of the Target GROUP or a non-Target GROUP. valid values: NODE, GROUP.
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get Filter condition of querying lists describing CLB instance details:
-<li> loadbalancer-id - String - Required: no - (Filter condition) CLB instance ID, such as "lb-12345678". </li>
-<li> project-id - String - Required: no - (Filter condition) Project ID, such as "0" and "123".</li>
-<li> network - String - Required: no - (Filter condition) Network type of the CLB instance, such as "Public" and "Private".</li>
-<li> vip - String - Required: no - (Filter condition) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
-<li> target-ip - String - Required: no - (Filter condition) Private IP of the target real servers, such as"1.1.1.1" and "2203::214:4".</li>
-<li> vpcid - String - Required: no - (Filter condition) Identifier of the VPC instance to which the CLB instance belongs, such as "vpc-12345678".</li>
-<li> zone - String - Required: no - (Filter condition) Availability zone where the CLB instance resides, such as "ap-guangzhou-1".</li>
-<li> tag-key - String - Required: no - (Filter condition) Tag key of the CLB instance, such as "name".</li>
-<li> tag:* - String - Required: no - (Filter condition) CLB instance tag, followed by tag key after the colon ':'. For example, use {"Name": "tag:name","Values": ["zhangsan", "lisi"]} to filter the tag key “name” with the tag value “zhangsan” and “lisi”.</li>
-<li> fuzzy-search - String - Required: no - (Filter condition) Fuzzy search for CLB instance VIP and CLB instance name, such as "1.1".</li> 
-     * @return Filters Filter condition of querying lists describing CLB instance details:
-<li> loadbalancer-id - String - Required: no - (Filter condition) CLB instance ID, such as "lb-12345678". </li>
-<li> project-id - String - Required: no - (Filter condition) Project ID, such as "0" and "123".</li>
-<li> network - String - Required: no - (Filter condition) Network type of the CLB instance, such as "Public" and "Private".</li>
-<li> vip - String - Required: no - (Filter condition) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
-<li> target-ip - String - Required: no - (Filter condition) Private IP of the target real servers, such as"1.1.1.1" and "2203::214:4".</li>
-<li> vpcid - String - Required: no - (Filter condition) Identifier of the VPC instance to which the CLB instance belongs, such as "vpc-12345678".</li>
-<li> zone - String - Required: no - (Filter condition) Availability zone where the CLB instance resides, such as "ap-guangzhou-1".</li>
-<li> tag-key - String - Required: no - (Filter condition) Tag key of the CLB instance, such as "name".</li>
-<li> tag:* - String - Required: no - (Filter condition) CLB instance tag, followed by tag key after the colon ':'. For example, use {"Name": "tag:name","Values": ["zhangsan", "lisi"]} to filter the tag key “name” with the tag value “zhangsan” and “lisi”.</li>
-<li> fuzzy-search - String - Required: no - (Filter condition) Fuzzy search for CLB instance VIP and CLB instance name, such as "1.1".</li>
+     * Get Querying conditions for cloud load balancer detailed information list. detailed filter criteria.
+- loadbalancer-id
+Filter by [clb ID], for example: lb-rbw5skde.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- project-id
+Filters by [project ID]. for example: "0", "123".
+Type: String.
+Required: No
+Method for obtaining: [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1).
+- network
+Filters by [clb network type]. for example: Public.
+Type: String.
+Required: No
+Valid values: Private (Private network), Public (Public network).
+- vip
+Filter by [cloud load balancer VIP], such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+- vpcid
+Filter by the vpc to which the cloud load balancer belongs, such as "vpc-12345678".
+Type: String.
+Required: No
+Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+- target-ip
+Filters by the private network IP of the backend destination. for example: "1.1.1.1", "2203::214:4".
+Type: String.
+Required: No
+- zone
+Filter by [availability zone of the cloud load balancer]. for example: "ap-guangzhou-1".
+Type: String.
+Required: No
+Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+- tag-key
+Filters by [tag key of the cloud load balancer tag], for example: "name".
+Type: String.
+Required: No
+Method for obtaining: [DescribeTags](https://www.tencentcloud.comom/document/api/651/35316?from_cn_redirect=1).
+- tag:*
+Filter by [cloud load balancer tag], where ':' is followed by the tag key. for example, to filter by tag key 'name' with tag Values 'zhangsan' and 'lisi', use {"name": "tag:name","Values": ["zhangsan", "lisi"]}.
+Type: String.
+Required: No
+Method for obtaining: [DescribeTagKeys](https://www.tencentcloud.comom/document/api/651/35318?from_cn_redirect=1).
+- fuzzy-search
+Searches by [clb VIP, clb name] using fuzzy search, for example: "1.1".
+Type: String.
+Required: No 
+     * @return Filters Querying conditions for cloud load balancer detailed information list. detailed filter criteria.
+- loadbalancer-id
+Filter by [clb ID], for example: lb-rbw5skde.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- project-id
+Filters by [project ID]. for example: "0", "123".
+Type: String.
+Required: No
+Method for obtaining: [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1).
+- network
+Filters by [clb network type]. for example: Public.
+Type: String.
+Required: No
+Valid values: Private (Private network), Public (Public network).
+- vip
+Filter by [cloud load balancer VIP], such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+- vpcid
+Filter by the vpc to which the cloud load balancer belongs, such as "vpc-12345678".
+Type: String.
+Required: No
+Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+- target-ip
+Filters by the private network IP of the backend destination. for example: "1.1.1.1", "2203::214:4".
+Type: String.
+Required: No
+- zone
+Filter by [availability zone of the cloud load balancer]. for example: "ap-guangzhou-1".
+Type: String.
+Required: No
+Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+- tag-key
+Filters by [tag key of the cloud load balancer tag], for example: "name".
+Type: String.
+Required: No
+Method for obtaining: [DescribeTags](https://www.tencentcloud.comom/document/api/651/35316?from_cn_redirect=1).
+- tag:*
+Filter by [cloud load balancer tag], where ':' is followed by the tag key. for example, to filter by tag key 'name' with tag Values 'zhangsan' and 'lisi', use {"name": "tag:name","Values": ["zhangsan", "lisi"]}.
+Type: String.
+Required: No
+Method for obtaining: [DescribeTagKeys](https://www.tencentcloud.comom/document/api/651/35318?from_cn_redirect=1).
+- fuzzy-search
+Searches by [clb VIP, clb name] using fuzzy search, for example: "1.1".
+Type: String.
+Required: No
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter condition of querying lists describing CLB instance details:
-<li> loadbalancer-id - String - Required: no - (Filter condition) CLB instance ID, such as "lb-12345678". </li>
-<li> project-id - String - Required: no - (Filter condition) Project ID, such as "0" and "123".</li>
-<li> network - String - Required: no - (Filter condition) Network type of the CLB instance, such as "Public" and "Private".</li>
-<li> vip - String - Required: no - (Filter condition) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
-<li> target-ip - String - Required: no - (Filter condition) Private IP of the target real servers, such as"1.1.1.1" and "2203::214:4".</li>
-<li> vpcid - String - Required: no - (Filter condition) Identifier of the VPC instance to which the CLB instance belongs, such as "vpc-12345678".</li>
-<li> zone - String - Required: no - (Filter condition) Availability zone where the CLB instance resides, such as "ap-guangzhou-1".</li>
-<li> tag-key - String - Required: no - (Filter condition) Tag key of the CLB instance, such as "name".</li>
-<li> tag:* - String - Required: no - (Filter condition) CLB instance tag, followed by tag key after the colon ':'. For example, use {"Name": "tag:name","Values": ["zhangsan", "lisi"]} to filter the tag key “name” with the tag value “zhangsan” and “lisi”.</li>
-<li> fuzzy-search - String - Required: no - (Filter condition) Fuzzy search for CLB instance VIP and CLB instance name, such as "1.1".</li>
-     * @param Filters Filter condition of querying lists describing CLB instance details:
-<li> loadbalancer-id - String - Required: no - (Filter condition) CLB instance ID, such as "lb-12345678". </li>
-<li> project-id - String - Required: no - (Filter condition) Project ID, such as "0" and "123".</li>
-<li> network - String - Required: no - (Filter condition) Network type of the CLB instance, such as "Public" and "Private".</li>
-<li> vip - String - Required: no - (Filter condition) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
-<li> target-ip - String - Required: no - (Filter condition) Private IP of the target real servers, such as"1.1.1.1" and "2203::214:4".</li>
-<li> vpcid - String - Required: no - (Filter condition) Identifier of the VPC instance to which the CLB instance belongs, such as "vpc-12345678".</li>
-<li> zone - String - Required: no - (Filter condition) Availability zone where the CLB instance resides, such as "ap-guangzhou-1".</li>
-<li> tag-key - String - Required: no - (Filter condition) Tag key of the CLB instance, such as "name".</li>
-<li> tag:* - String - Required: no - (Filter condition) CLB instance tag, followed by tag key after the colon ':'. For example, use {"Name": "tag:name","Values": ["zhangsan", "lisi"]} to filter the tag key “name” with the tag value “zhangsan” and “lisi”.</li>
-<li> fuzzy-search - String - Required: no - (Filter condition) Fuzzy search for CLB instance VIP and CLB instance name, such as "1.1".</li>
+     * Set Querying conditions for cloud load balancer detailed information list. detailed filter criteria.
+- loadbalancer-id
+Filter by [clb ID], for example: lb-rbw5skde.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- project-id
+Filters by [project ID]. for example: "0", "123".
+Type: String.
+Required: No
+Method for obtaining: [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1).
+- network
+Filters by [clb network type]. for example: Public.
+Type: String.
+Required: No
+Valid values: Private (Private network), Public (Public network).
+- vip
+Filter by [cloud load balancer VIP], such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+- vpcid
+Filter by the vpc to which the cloud load balancer belongs, such as "vpc-12345678".
+Type: String.
+Required: No
+Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+- target-ip
+Filters by the private network IP of the backend destination. for example: "1.1.1.1", "2203::214:4".
+Type: String.
+Required: No
+- zone
+Filter by [availability zone of the cloud load balancer]. for example: "ap-guangzhou-1".
+Type: String.
+Required: No
+Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+- tag-key
+Filters by [tag key of the cloud load balancer tag], for example: "name".
+Type: String.
+Required: No
+Method for obtaining: [DescribeTags](https://www.tencentcloud.comom/document/api/651/35316?from_cn_redirect=1).
+- tag:*
+Filter by [cloud load balancer tag], where ':' is followed by the tag key. for example, to filter by tag key 'name' with tag Values 'zhangsan' and 'lisi', use {"name": "tag:name","Values": ["zhangsan", "lisi"]}.
+Type: String.
+Required: No
+Method for obtaining: [DescribeTagKeys](https://www.tencentcloud.comom/document/api/651/35318?from_cn_redirect=1).
+- fuzzy-search
+Searches by [clb VIP, clb name] using fuzzy search, for example: "1.1".
+Type: String.
+Required: No
+     * @param Filters Querying conditions for cloud load balancer detailed information list. detailed filter criteria.
+- loadbalancer-id
+Filter by [clb ID], for example: lb-rbw5skde.
+Type: String.
+Required: No
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+- project-id
+Filters by [project ID]. for example: "0", "123".
+Type: String.
+Required: No
+Method for obtaining: [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1).
+- network
+Filters by [clb network type]. for example: Public.
+Type: String.
+Required: No
+Valid values: Private (Private network), Public (Public network).
+- vip
+Filter by [cloud load balancer VIP], such as "1.1.1.1", "2204::22:3".
+Type: String.
+Required: No
+- vpcid
+Filter by the vpc to which the cloud load balancer belongs, such as "vpc-12345678".
+Type: String.
+Required: No
+Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+- target-ip
+Filters by the private network IP of the backend destination. for example: "1.1.1.1", "2203::214:4".
+Type: String.
+Required: No
+- zone
+Filter by [availability zone of the cloud load balancer]. for example: "ap-guangzhou-1".
+Type: String.
+Required: No
+Method for obtaining: [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+- tag-key
+Filters by [tag key of the cloud load balancer tag], for example: "name".
+Type: String.
+Required: No
+Method for obtaining: [DescribeTags](https://www.tencentcloud.comom/document/api/651/35316?from_cn_redirect=1).
+- tag:*
+Filter by [cloud load balancer tag], where ':' is followed by the tag key. for example, to filter by tag key 'name' with tag Values 'zhangsan' and 'lisi', use {"name": "tag:name","Values": ["zhangsan", "lisi"]}.
+Type: String.
+Required: No
+Method for obtaining: [DescribeTagKeys](https://www.tencentcloud.comom/document/api/651/35318?from_cn_redirect=1).
+- fuzzy-search
+Searches by [clb VIP, clb name] using fuzzy search, for example: "1.1".
+Type: String.
+Required: No
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

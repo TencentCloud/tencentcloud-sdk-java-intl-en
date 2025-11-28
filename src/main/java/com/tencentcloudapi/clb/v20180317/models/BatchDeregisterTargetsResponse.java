@@ -31,7 +31,7 @@ public class BatchDeregisterTargetsResponse extends AbstractModel {
     private String [] FailListenerIdSet;
 
     /**
-    * 
+    * Failed to unbind error reason information.
     */
     @SerializedName("Message")
     @Expose
@@ -61,16 +61,16 @@ public class BatchDeregisterTargetsResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Failed to unbind error reason information. 
+     * @return Message Failed to unbind error reason information.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Failed to unbind error reason information.
+     * @param Message Failed to unbind error reason information.
      */
     public void setMessage(String Message) {
         this.Message = Message;

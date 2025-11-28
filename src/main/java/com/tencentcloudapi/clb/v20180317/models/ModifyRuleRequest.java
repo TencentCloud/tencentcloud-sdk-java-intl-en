@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyRuleRequest extends AbstractModel {
 
     /**
-    * CLB instance ID
+    * ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * CLB listener ID
+    * ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * ID of the forwarding rule to be modified.
+    * Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
     */
     @SerializedName("LocationId")
     @Expose
@@ -68,6 +68,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
 
     /**
     * Session persistence duration, in seconds. Value range: 0 or 30-86400.
+Defaults to 0.
     */
     @SerializedName("SessionExpireTime")
     @Expose
@@ -102,48 +103,55 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     private OAuth OAuth;
 
     /**
-     * Get CLB instance ID 
-     * @return LoadBalancerId CLB instance ID
+    * Specifies the custom cookie name.
+    */
+    @SerializedName("CookieName")
+    @Expose
+    private String CookieName;
+
+    /**
+     * Get ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID. 
+     * @return LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set CLB instance ID
-     * @param LoadBalancerId CLB instance ID
+     * Set ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+     * @param LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get CLB listener ID 
-     * @return ListenerId CLB listener ID
+     * Get ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api. 
+     * @return ListenerId ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set CLB listener ID
-     * @param ListenerId CLB listener ID
+     * Set ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+     * @param ListenerId ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get ID of the forwarding rule to be modified. 
-     * @return LocationId ID of the forwarding rule to be modified.
+     * Get Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1). 
+     * @return LocationId Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set ID of the forwarding rule to be modified.
-     * @param LocationId ID of the forwarding rule to be modified.
+     * Set Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
+     * @param LocationId Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
@@ -202,8 +210,10 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     }
 
     /**
-     * Get Session persistence duration, in seconds. Value range: 0 or 30-86400. 
+     * Get Session persistence duration, in seconds. Value range: 0 or 30-86400.
+Defaults to 0. 
      * @return SessionExpireTime Session persistence duration, in seconds. Value range: 0 or 30-86400.
+Defaults to 0.
      */
     public Long getSessionExpireTime() {
         return this.SessionExpireTime;
@@ -211,7 +221,9 @@ They represent weighted round robin, least connections, and IP hash, respectivel
 
     /**
      * Set Session persistence duration, in seconds. Value range: 0 or 30-86400.
+Defaults to 0.
      * @param SessionExpireTime Session persistence duration, in seconds. Value range: 0 or 30-86400.
+Defaults to 0.
      */
     public void setSessionExpireTime(Long SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;
@@ -281,6 +293,22 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         this.OAuth = OAuth;
     }
 
+    /**
+     * Get Specifies the custom cookie name. 
+     * @return CookieName Specifies the custom cookie name.
+     */
+    public String getCookieName() {
+        return this.CookieName;
+    }
+
+    /**
+     * Set Specifies the custom cookie name.
+     * @param CookieName Specifies the custom cookie name.
+     */
+    public void setCookieName(String CookieName) {
+        this.CookieName = CookieName;
+    }
+
     public ModifyRuleRequest() {
     }
 
@@ -322,6 +350,9 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         if (source.OAuth != null) {
             this.OAuth = new OAuth(source.OAuth);
         }
+        if (source.CookieName != null) {
+            this.CookieName = new String(source.CookieName);
+        }
     }
 
 
@@ -340,6 +371,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         this.setParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
         this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
         this.setParamObj(map, prefix + "OAuth.", this.OAuth);
+        this.setParamSimple(map, prefix + "CookieName", this.CookieName);
 
     }
 }

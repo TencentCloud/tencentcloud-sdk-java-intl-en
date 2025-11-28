@@ -31,7 +31,7 @@ public class PostMaxSizeParameters extends AbstractModel {
     private String Switch;
 
     /**
-    * Maximum size of the file uploaded for streaming via a post request. Takes effect only when Switch is on. Range: 1 MB - 800 MB (bytes).
+    * Specifies the maximum limit for file streaming transmission in POST request upload. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
     */
     @SerializedName("MaxSize")
     @Expose
@@ -54,16 +54,16 @@ public class PostMaxSizeParameters extends AbstractModel {
     }
 
     /**
-     * Get Maximum size of the file uploaded for streaming via a post request. Takes effect only when Switch is on. Range: 1 MB - 800 MB (bytes). 
-     * @return MaxSize Maximum size of the file uploaded for streaming via a post request. Takes effect only when Switch is on. Range: 1 MB - 800 MB (bytes).
+     * Get Specifies the maximum limit for file streaming transmission in POST request upload. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte. 
+     * @return MaxSize Specifies the maximum limit for file streaming transmission in POST request upload. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set Maximum size of the file uploaded for streaming via a post request. Takes effect only when Switch is on. Range: 1 MB - 800 MB (bytes).
-     * @param MaxSize Maximum size of the file uploaded for streaming via a post request. Takes effect only when Switch is on. Range: 1 MB - 800 MB (bytes).
+     * Set Specifies the maximum limit for file streaming transmission in POST request upload. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
+     * @param MaxSize Specifies the maximum limit for file streaming transmission in POST request upload. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

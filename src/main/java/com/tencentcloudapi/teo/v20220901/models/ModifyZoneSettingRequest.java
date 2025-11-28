@@ -175,6 +175,13 @@ The original configuration will apply if it is not specified.
     private Grpc Grpc;
 
     /**
+    * Network Error Logging configuration. The original configuration will apply if it is not specified.
+    */
+    @SerializedName("NetworkErrorLogging")
+    @Expose
+    private NetworkErrorLogging NetworkErrorLogging;
+
+    /**
     * Image optimization. 
 It is disabled if this parameter is not specified.
     */
@@ -573,6 +580,22 @@ The original configuration will apply if it is not specified.
     }
 
     /**
+     * Get Network Error Logging configuration. The original configuration will apply if it is not specified. 
+     * @return NetworkErrorLogging Network Error Logging configuration. The original configuration will apply if it is not specified.
+     */
+    public NetworkErrorLogging getNetworkErrorLogging() {
+        return this.NetworkErrorLogging;
+    }
+
+    /**
+     * Set Network Error Logging configuration. The original configuration will apply if it is not specified.
+     * @param NetworkErrorLogging Network Error Logging configuration. The original configuration will apply if it is not specified.
+     */
+    public void setNetworkErrorLogging(NetworkErrorLogging NetworkErrorLogging) {
+        this.NetworkErrorLogging = NetworkErrorLogging;
+    }
+
+    /**
      * Get Image optimization. 
 It is disabled if this parameter is not specified. 
      * @return ImageOptimize Image optimization. 
@@ -689,6 +712,9 @@ It is disabled if this parameter is not specified.
         if (source.Grpc != null) {
             this.Grpc = new Grpc(source.Grpc);
         }
+        if (source.NetworkErrorLogging != null) {
+            this.NetworkErrorLogging = new NetworkErrorLogging(source.NetworkErrorLogging);
+        }
         if (source.ImageOptimize != null) {
             this.ImageOptimize = new ImageOptimize(source.ImageOptimize);
         }
@@ -724,6 +750,7 @@ It is disabled if this parameter is not specified.
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
         this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
         this.setParamObj(map, prefix + "Grpc.", this.Grpc);
+        this.setParamObj(map, prefix + "NetworkErrorLogging.", this.NetworkErrorLogging);
         this.setParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
         this.setParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
         this.setParamObj(map, prefix + "JITVideoProcess.", this.JITVideoProcess);

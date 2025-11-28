@@ -74,8 +74,7 @@ public class IdleLoadBalancer extends AbstractModel {
     private Long Forward;
 
     /**
-    * The load balancing hostname.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the clb domain name.
     */
     @SerializedName("Domain")
     @Expose
@@ -198,20 +197,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get The load balancing hostname.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Domain The load balancing hostname.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the clb domain name. 
+     * @return Domain Specifies the clb domain name.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set The load balancing hostname.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Domain The load balancing hostname.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the clb domain name.
+     * @param Domain Specifies the clb domain name.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

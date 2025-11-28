@@ -38,11 +38,47 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
     private String TargetGroupName;
 
     /**
-    * New default port of target group
+    * The new default port of the target group. this parameter is not supported for full listen target groups.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
+
+    /**
+    * Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
+<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
+    */
+    @SerializedName("ScheduleAlgorithm")
+    @Expose
+    private String ScheduleAlgorithm;
+
+    /**
+    * Health check details.
+    */
+    @SerializedName("HealthCheck")
+    @Expose
+    private TargetGroupHealthCheck HealthCheck;
+
+    /**
+    * Default Weight for backend service. among them: <ul><li>value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
+
+    /**
+    * Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. true: disable; false: enable. this feature is off by default.
+    */
+    @SerializedName("KeepaliveEnable")
+    @Expose
+    private Boolean KeepaliveEnable;
+
+    /**
+    * Specifies the session persistence time in seconds. value range: 30-3600. default: 0 (disabled). this parameter is unsupported for TCP/UDP target groups.
+    */
+    @SerializedName("SessionExpireTime")
+    @Expose
+    private Long SessionExpireTime;
 
     /**
      * Get Target group ID 
@@ -77,19 +113,103 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get New default port of target group 
-     * @return Port New default port of target group
+     * Get The new default port of the target group. this parameter is not supported for full listen target groups. 
+     * @return Port The new default port of the target group. this parameter is not supported for full listen target groups.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set New default port of target group
-     * @param Port New default port of target group
+     * Set The new default port of the target group. this parameter is not supported for full listen target groups.
+     * @param Port The new default port of the target group. this parameter is not supported for full listen target groups.
      */
     public void setPort(Long Port) {
         this.Port = Port;
+    }
+
+    /**
+     * Get Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
+<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>. 
+     * @return ScheduleAlgorithm Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
+<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
+     */
+    public String getScheduleAlgorithm() {
+        return this.ScheduleAlgorithm;
+    }
+
+    /**
+     * Set Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
+<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
+     * @param ScheduleAlgorithm Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
+<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
+     */
+    public void setScheduleAlgorithm(String ScheduleAlgorithm) {
+        this.ScheduleAlgorithm = ScheduleAlgorithm;
+    }
+
+    /**
+     * Get Health check details. 
+     * @return HealthCheck Health check details.
+     */
+    public TargetGroupHealthCheck getHealthCheck() {
+        return this.HealthCheck;
+    }
+
+    /**
+     * Set Health check details.
+     * @param HealthCheck Health check details.
+     */
+    public void setHealthCheck(TargetGroupHealthCheck HealthCheck) {
+        this.HealthCheck = HealthCheck;
+    }
+
+    /**
+     * Get Default Weight for backend service. among them: <ul><li>value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>. 
+     * @return Weight Default Weight for backend service. among them: <ul><li>value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set Default Weight for backend service. among them: <ul><li>value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
+     * @param Weight Default Weight for backend service. among them: <ul><li>value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
+    }
+
+    /**
+     * Get Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. true: disable; false: enable. this feature is off by default. 
+     * @return KeepaliveEnable Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. true: disable; false: enable. this feature is off by default.
+     */
+    public Boolean getKeepaliveEnable() {
+        return this.KeepaliveEnable;
+    }
+
+    /**
+     * Set Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. true: disable; false: enable. this feature is off by default.
+     * @param KeepaliveEnable Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. true: disable; false: enable. this feature is off by default.
+     */
+    public void setKeepaliveEnable(Boolean KeepaliveEnable) {
+        this.KeepaliveEnable = KeepaliveEnable;
+    }
+
+    /**
+     * Get Specifies the session persistence time in seconds. value range: 30-3600. default: 0 (disabled). this parameter is unsupported for TCP/UDP target groups. 
+     * @return SessionExpireTime Specifies the session persistence time in seconds. value range: 30-3600. default: 0 (disabled). this parameter is unsupported for TCP/UDP target groups.
+     */
+    public Long getSessionExpireTime() {
+        return this.SessionExpireTime;
+    }
+
+    /**
+     * Set Specifies the session persistence time in seconds. value range: 30-3600. default: 0 (disabled). this parameter is unsupported for TCP/UDP target groups.
+     * @param SessionExpireTime Specifies the session persistence time in seconds. value range: 30-3600. default: 0 (disabled). this parameter is unsupported for TCP/UDP target groups.
+     */
+    public void setSessionExpireTime(Long SessionExpireTime) {
+        this.SessionExpireTime = SessionExpireTime;
     }
 
     public ModifyTargetGroupAttributeRequest() {
@@ -109,6 +229,21 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
         if (source.Port != null) {
             this.Port = new Long(source.Port);
         }
+        if (source.ScheduleAlgorithm != null) {
+            this.ScheduleAlgorithm = new String(source.ScheduleAlgorithm);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new TargetGroupHealthCheck(source.HealthCheck);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
+        if (source.KeepaliveEnable != null) {
+            this.KeepaliveEnable = new Boolean(source.KeepaliveEnable);
+        }
+        if (source.SessionExpireTime != null) {
+            this.SessionExpireTime = new Long(source.SessionExpireTime);
+        }
     }
 
 
@@ -119,6 +254,11 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
         this.setParamSimple(map, prefix + "TargetGroupName", this.TargetGroupName);
         this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamSimple(map, prefix + "ScheduleAlgorithm", this.ScheduleAlgorithm);
+        this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
+        this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
+        this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
 
     }
 }

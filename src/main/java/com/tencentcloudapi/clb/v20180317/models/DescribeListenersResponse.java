@@ -31,8 +31,7 @@ public class DescribeListenersResponse extends AbstractModel {
     private Listener [] Listeners;
 
     /**
-    * Total number of listeners (with filters of port, protocol, and listener ID applied).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Total number of listeners (filtered by port, protocol, and listener ID).
     */
     @SerializedName("TotalCount")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Total number of listeners (with filters of port, protocol, and listener ID applied).
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number of listeners (with filters of port, protocol, and listener ID applied).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Total number of listeners (filtered by port, protocol, and listener ID). 
+     * @return TotalCount Total number of listeners (filtered by port, protocol, and listener ID).
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of listeners (with filters of port, protocol, and listener ID applied).
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param TotalCount Total number of listeners (with filters of port, protocol, and listener ID applied).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Total number of listeners (filtered by port, protocol, and listener ID).
+     * @param TotalCount Total number of listeners (filtered by port, protocol, and listener ID).
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

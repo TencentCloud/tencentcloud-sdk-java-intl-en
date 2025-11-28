@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class AcknowledgeMessageResponse extends AbstractModel {
 
     /**
-    * If it is an empty string, no error occurred.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * If "", it indicates that there is no error return. otherwise return specific error information.
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -39,20 +38,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get If it is an empty string, no error occurred.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ErrorMsg If it is an empty string, no error occurred.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get If "", it indicates that there is no error return. otherwise return specific error information. 
+     * @return ErrorMsg If "", it indicates that there is no error return. otherwise return specific error information.
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set If it is an empty string, no error occurred.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ErrorMsg If it is an empty string, no error occurred.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set If "", it indicates that there is no error return. otherwise return specific error information.
+     * @param ErrorMsg If "", it indicates that there is no error return. otherwise return specific error information.
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

@@ -31,14 +31,14 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     private Long [] ZoneIds;
 
     /**
-    * VPC ID
+    * vpc ID, such as vpc-xxx. valid VpcId can be obtained by logging in to the virtual private cloud console (https://console.cloud.tencent.com/vpc/vpc?rid=1) or via api call to DescribeVpcEx (https://www.tencentcloud.comom/document/api/215/1372?from_cn_redirect=1), retrieving the unVpcId field from the api response. if both VpcId and SubnetId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * VPC subnet ID
+    * The subnet ID of the vpc, such as subnet-xxx. valid subnet ids can be queried by logging in to the subnet console (https://console.cloud.tencent.com/vpc/subnet?rid=1) or by calling the api [DescribeSubnets](https://www.tencentcloud.comom/document/api/215/15784?from_cn_redirect=1) and obtaining the unSubnetId field from the api response. if both SubnetId and VpcId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
     */
     @SerializedName("SubnetId")
     @Expose
@@ -52,7 +52,16 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     private String ClusterName;
 
     /**
-    * Node specification (`rabbit-vip-basic-1`: Basic; `rabbit-vip-basic-2`: Standard; `rabbit-vip-basic-3`: Advanced I; `rabbit-vip-basic-4`: Advanced II). If this parameter is left empty, the default value is `rabbit-vip-basic-1`.
+    * Node specification of the cluster. need to enter the corresponding specification flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
     */
     @SerializedName("NodeSpec")
     @Expose
@@ -73,14 +82,14 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     private Long StorageSize;
 
     /**
-    * Whether to enable mirrored queue. Default value: `false`.
+    * Whether the default image queue is enabled. true means enabled, false means not enabled. defaults to false if not specified.
     */
     @SerializedName("EnableCreateDefaultHaMirrorQueue")
     @Expose
     private Boolean EnableCreateDefaultHaMirrorQueue;
 
     /**
-    * Whether to enable auto-renewal. Default value: `true`.
+    * Only applies to prepaid clusters (when PayMode parameter is 1). specifies whether the cluster is automatically renewed. true means auto-renewal is enabled. the default is true if not specified.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -92,6 +101,55 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
+
+    /**
+    * Payment mode. 0: postpaid, (pay-as-you-go); 1: prepaid (monthly subscription). Monthly subscription is used by default.
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Long PayMode;
+
+    /**
+    * Specifies the cluster edition. defaults to 3.8.30. valid values: 3.8.30, 3.11.8, 3.13.7.
+    */
+    @SerializedName("ClusterVersion")
+    @Expose
+    private String ClusterVersion;
+
+    /**
+    * Whether the request is from the international website. Default value: false.
+    */
+    @SerializedName("IsIntl")
+    @Expose
+    private Boolean IsIntl;
+
+    /**
+    * Resource tag list.
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private Tag [] ResourceTags;
+
+    /**
+    * Specifies the public bandwidth size in Mbps.
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
+
+    /**
+    * Whether to enable public network access. If this parameter is not specified, the value is false by default.
+    */
+    @SerializedName("EnablePublicAccess")
+    @Expose
+    private Boolean EnablePublicAccess;
+
+    /**
+    * Whether to enable cluster deletion protection. if this parameter is not specified, the value is false by default.
+    */
+    @SerializedName("EnableDeletionProtection")
+    @Expose
+    private Boolean EnableDeletionProtection;
 
     /**
      * Get AZ 
@@ -110,32 +168,32 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get vpc ID, such as vpc-xxx. valid VpcId can be obtained by logging in to the virtual private cloud console (https://console.cloud.tencent.com/vpc/vpc?rid=1) or via api call to DescribeVpcEx (https://www.tencentcloud.comom/document/api/215/1372?from_cn_redirect=1), retrieving the unVpcId field from the api response. if both VpcId and SubnetId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used. 
+     * @return VpcId vpc ID, such as vpc-xxx. valid VpcId can be obtained by logging in to the virtual private cloud console (https://console.cloud.tencent.com/vpc/vpc?rid=1) or via api call to DescribeVpcEx (https://www.tencentcloud.comom/document/api/215/1372?from_cn_redirect=1), retrieving the unVpcId field from the api response. if both VpcId and SubnetId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set vpc ID, such as vpc-xxx. valid VpcId can be obtained by logging in to the virtual private cloud console (https://console.cloud.tencent.com/vpc/vpc?rid=1) or via api call to DescribeVpcEx (https://www.tencentcloud.comom/document/api/215/1372?from_cn_redirect=1), retrieving the unVpcId field from the api response. if both VpcId and SubnetId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
+     * @param VpcId vpc ID, such as vpc-xxx. valid VpcId can be obtained by logging in to the virtual private cloud console (https://console.cloud.tencent.com/vpc/vpc?rid=1) or via api call to DescribeVpcEx (https://www.tencentcloud.comom/document/api/215/1372?from_cn_redirect=1), retrieving the unVpcId field from the api response. if both VpcId and SubnetId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get VPC subnet ID 
-     * @return SubnetId VPC subnet ID
+     * Get The subnet ID of the vpc, such as subnet-xxx. valid subnet ids can be queried by logging in to the subnet console (https://console.cloud.tencent.com/vpc/subnet?rid=1) or by calling the api [DescribeSubnets](https://www.tencentcloud.comom/document/api/215/15784?from_cn_redirect=1) and obtaining the unSubnetId field from the api response. if both SubnetId and VpcId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used. 
+     * @return SubnetId The subnet ID of the vpc, such as subnet-xxx. valid subnet ids can be queried by logging in to the subnet console (https://console.cloud.tencent.com/vpc/subnet?rid=1) or by calling the api [DescribeSubnets](https://www.tencentcloud.comom/document/api/215/15784?from_cn_redirect=1) and obtaining the unSubnetId field from the api response. if both SubnetId and VpcId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set VPC subnet ID
-     * @param SubnetId VPC subnet ID
+     * Set The subnet ID of the vpc, such as subnet-xxx. valid subnet ids can be queried by logging in to the subnet console (https://console.cloud.tencent.com/vpc/subnet?rid=1) or by calling the api [DescribeSubnets](https://www.tencentcloud.comom/document/api/215/15784?from_cn_redirect=1) and obtaining the unSubnetId field from the api response. if both SubnetId and VpcId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
+     * @param SubnetId The subnet ID of the vpc, such as subnet-xxx. valid subnet ids can be queried by logging in to the subnet console (https://console.cloud.tencent.com/vpc/subnet?rid=1) or by calling the api [DescribeSubnets](https://www.tencentcloud.comom/document/api/215/15784?from_cn_redirect=1) and obtaining the unSubnetId field from the api response. if both SubnetId and VpcId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -158,16 +216,52 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Node specification (`rabbit-vip-basic-1`: Basic; `rabbit-vip-basic-2`: Standard; `rabbit-vip-basic-3`: Advanced I; `rabbit-vip-basic-4`: Advanced II). If this parameter is left empty, the default value is `rabbit-vip-basic-1`. 
-     * @return NodeSpec Node specification (`rabbit-vip-basic-1`: Basic; `rabbit-vip-basic-2`: Standard; `rabbit-vip-basic-3`: Advanced I; `rabbit-vip-basic-4`: Advanced II). If this parameter is left empty, the default value is `rabbit-vip-basic-1`.
+     * Get Node specification of the cluster. need to enter the corresponding specification flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1. 
+     * @return NodeSpec Node specification of the cluster. need to enter the corresponding specification flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
      */
     public String getNodeSpec() {
         return this.NodeSpec;
     }
 
     /**
-     * Set Node specification (`rabbit-vip-basic-1`: Basic; `rabbit-vip-basic-2`: Standard; `rabbit-vip-basic-3`: Advanced I; `rabbit-vip-basic-4`: Advanced II). If this parameter is left empty, the default value is `rabbit-vip-basic-1`.
-     * @param NodeSpec Node specification (`rabbit-vip-basic-1`: Basic; `rabbit-vip-basic-2`: Standard; `rabbit-vip-basic-3`: Advanced I; `rabbit-vip-basic-4`: Advanced II). If this parameter is left empty, the default value is `rabbit-vip-basic-1`.
+     * Set Node specification of the cluster. need to enter the corresponding specification flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
+     * @param NodeSpec Node specification of the cluster. need to enter the corresponding specification flag.
+2C8G:rabbit-vip-profession-2c8g
+4C16G:rabbit-vip-profession-4c16g
+8C32G:rabbit-vip-profession-8c32g
+16C32G:rabbit-vip-basic-4
+16C64G:rabbit-vip-profession-16c64g
+2C4G:rabbit-vip-basic-5
+4C8G:rabbit-vip-basic-1
+8C16G (sold out): rabbit-vip-basic-2.
+Specifies the default value as 4C8G: rabbit-vip-basic-1.
      */
     public void setNodeSpec(String NodeSpec) {
         this.NodeSpec = NodeSpec;
@@ -206,32 +300,32 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to enable mirrored queue. Default value: `false`. 
-     * @return EnableCreateDefaultHaMirrorQueue Whether to enable mirrored queue. Default value: `false`.
+     * Get Whether the default image queue is enabled. true means enabled, false means not enabled. defaults to false if not specified. 
+     * @return EnableCreateDefaultHaMirrorQueue Whether the default image queue is enabled. true means enabled, false means not enabled. defaults to false if not specified.
      */
     public Boolean getEnableCreateDefaultHaMirrorQueue() {
         return this.EnableCreateDefaultHaMirrorQueue;
     }
 
     /**
-     * Set Whether to enable mirrored queue. Default value: `false`.
-     * @param EnableCreateDefaultHaMirrorQueue Whether to enable mirrored queue. Default value: `false`.
+     * Set Whether the default image queue is enabled. true means enabled, false means not enabled. defaults to false if not specified.
+     * @param EnableCreateDefaultHaMirrorQueue Whether the default image queue is enabled. true means enabled, false means not enabled. defaults to false if not specified.
      */
     public void setEnableCreateDefaultHaMirrorQueue(Boolean EnableCreateDefaultHaMirrorQueue) {
         this.EnableCreateDefaultHaMirrorQueue = EnableCreateDefaultHaMirrorQueue;
     }
 
     /**
-     * Get Whether to enable auto-renewal. Default value: `true`. 
-     * @return AutoRenewFlag Whether to enable auto-renewal. Default value: `true`.
+     * Get Only applies to prepaid clusters (when PayMode parameter is 1). specifies whether the cluster is automatically renewed. true means auto-renewal is enabled. the default is true if not specified. 
+     * @return AutoRenewFlag Only applies to prepaid clusters (when PayMode parameter is 1). specifies whether the cluster is automatically renewed. true means auto-renewal is enabled. the default is true if not specified.
      */
     public Boolean getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Whether to enable auto-renewal. Default value: `true`.
-     * @param AutoRenewFlag Whether to enable auto-renewal. Default value: `true`.
+     * Set Only applies to prepaid clusters (when PayMode parameter is 1). specifies whether the cluster is automatically renewed. true means auto-renewal is enabled. the default is true if not specified.
+     * @param AutoRenewFlag Only applies to prepaid clusters (when PayMode parameter is 1). specifies whether the cluster is automatically renewed. true means auto-renewal is enabled. the default is true if not specified.
      */
     public void setAutoRenewFlag(Boolean AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
@@ -251,6 +345,118 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
+    }
+
+    /**
+     * Get Payment mode. 0: postpaid, (pay-as-you-go); 1: prepaid (monthly subscription). Monthly subscription is used by default. 
+     * @return PayMode Payment mode. 0: postpaid, (pay-as-you-go); 1: prepaid (monthly subscription). Monthly subscription is used by default.
+     */
+    public Long getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set Payment mode. 0: postpaid, (pay-as-you-go); 1: prepaid (monthly subscription). Monthly subscription is used by default.
+     * @param PayMode Payment mode. 0: postpaid, (pay-as-you-go); 1: prepaid (monthly subscription). Monthly subscription is used by default.
+     */
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get Specifies the cluster edition. defaults to 3.8.30. valid values: 3.8.30, 3.11.8, 3.13.7. 
+     * @return ClusterVersion Specifies the cluster edition. defaults to 3.8.30. valid values: 3.8.30, 3.11.8, 3.13.7.
+     */
+    public String getClusterVersion() {
+        return this.ClusterVersion;
+    }
+
+    /**
+     * Set Specifies the cluster edition. defaults to 3.8.30. valid values: 3.8.30, 3.11.8, 3.13.7.
+     * @param ClusterVersion Specifies the cluster edition. defaults to 3.8.30. valid values: 3.8.30, 3.11.8, 3.13.7.
+     */
+    public void setClusterVersion(String ClusterVersion) {
+        this.ClusterVersion = ClusterVersion;
+    }
+
+    /**
+     * Get Whether the request is from the international website. Default value: false. 
+     * @return IsIntl Whether the request is from the international website. Default value: false.
+     */
+    public Boolean getIsIntl() {
+        return this.IsIntl;
+    }
+
+    /**
+     * Set Whether the request is from the international website. Default value: false.
+     * @param IsIntl Whether the request is from the international website. Default value: false.
+     */
+    public void setIsIntl(Boolean IsIntl) {
+        this.IsIntl = IsIntl;
+    }
+
+    /**
+     * Get Resource tag list. 
+     * @return ResourceTags Resource tag list.
+     */
+    public Tag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set Resource tag list.
+     * @param ResourceTags Resource tag list.
+     */
+    public void setResourceTags(Tag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
+     * Get Specifies the public bandwidth size in Mbps. 
+     * @return Bandwidth Specifies the public bandwidth size in Mbps.
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set Specifies the public bandwidth size in Mbps.
+     * @param Bandwidth Specifies the public bandwidth size in Mbps.
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
+    /**
+     * Get Whether to enable public network access. If this parameter is not specified, the value is false by default. 
+     * @return EnablePublicAccess Whether to enable public network access. If this parameter is not specified, the value is false by default.
+     */
+    public Boolean getEnablePublicAccess() {
+        return this.EnablePublicAccess;
+    }
+
+    /**
+     * Set Whether to enable public network access. If this parameter is not specified, the value is false by default.
+     * @param EnablePublicAccess Whether to enable public network access. If this parameter is not specified, the value is false by default.
+     */
+    public void setEnablePublicAccess(Boolean EnablePublicAccess) {
+        this.EnablePublicAccess = EnablePublicAccess;
+    }
+
+    /**
+     * Get Whether to enable cluster deletion protection. if this parameter is not specified, the value is false by default. 
+     * @return EnableDeletionProtection Whether to enable cluster deletion protection. if this parameter is not specified, the value is false by default.
+     */
+    public Boolean getEnableDeletionProtection() {
+        return this.EnableDeletionProtection;
+    }
+
+    /**
+     * Set Whether to enable cluster deletion protection. if this parameter is not specified, the value is false by default.
+     * @param EnableDeletionProtection Whether to enable cluster deletion protection. if this parameter is not specified, the value is false by default.
+     */
+    public void setEnableDeletionProtection(Boolean EnableDeletionProtection) {
+        this.EnableDeletionProtection = EnableDeletionProtection;
     }
 
     public CreateRabbitMQVipInstanceRequest() {
@@ -294,6 +500,30 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
         }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.ClusterVersion != null) {
+            this.ClusterVersion = new String(source.ClusterVersion);
+        }
+        if (source.IsIntl != null) {
+            this.IsIntl = new Boolean(source.IsIntl);
+        }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new Tag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
+            }
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.EnablePublicAccess != null) {
+            this.EnablePublicAccess = new Boolean(source.EnablePublicAccess);
+        }
+        if (source.EnableDeletionProtection != null) {
+            this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
+        }
     }
 
 
@@ -311,6 +541,13 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableCreateDefaultHaMirrorQueue", this.EnableCreateDefaultHaMirrorQueue);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
+        this.setParamSimple(map, prefix + "IsIntl", this.IsIntl);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "EnablePublicAccess", this.EnablePublicAccess);
+        this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
 
     }
 }

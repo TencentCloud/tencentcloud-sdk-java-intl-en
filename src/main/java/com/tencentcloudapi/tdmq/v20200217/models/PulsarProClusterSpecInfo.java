@@ -67,6 +67,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ScalableTps;
 
     /**
+    * 32 or 128.
+Maximum number of partitions for topics in the current cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxPartitions")
+    @Expose
+    private Long MaxPartitions;
+
+    /**
+    * Maximum delayed message count for the product. 0 indicates no limit.	
+    */
+    @SerializedName("MaxDelayedMessages")
+    @Expose
+    private Long MaxDelayedMessages;
+
+    /**
      * Get Cluster specification name 
      * @return SpecName Cluster specification name
      */
@@ -166,6 +182,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ScalableTps = ScalableTps;
     }
 
+    /**
+     * Get 32 or 128.
+Maximum number of partitions for topics in the current cluster.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MaxPartitions 32 or 128.
+Maximum number of partitions for topics in the current cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMaxPartitions() {
+        return this.MaxPartitions;
+    }
+
+    /**
+     * Set 32 or 128.
+Maximum number of partitions for topics in the current cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MaxPartitions 32 or 128.
+Maximum number of partitions for topics in the current cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMaxPartitions(Long MaxPartitions) {
+        this.MaxPartitions = MaxPartitions;
+    }
+
+    /**
+     * Get Maximum delayed message count for the product. 0 indicates no limit.	 
+     * @return MaxDelayedMessages Maximum delayed message count for the product. 0 indicates no limit.	
+     */
+    public Long getMaxDelayedMessages() {
+        return this.MaxDelayedMessages;
+    }
+
+    /**
+     * Set Maximum delayed message count for the product. 0 indicates no limit.	
+     * @param MaxDelayedMessages Maximum delayed message count for the product. 0 indicates no limit.	
+     */
+    public void setMaxDelayedMessages(Long MaxDelayedMessages) {
+        this.MaxDelayedMessages = MaxDelayedMessages;
+    }
+
     public PulsarProClusterSpecInfo() {
     }
 
@@ -192,6 +248,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ScalableTps != null) {
             this.ScalableTps = new Long(source.ScalableTps);
         }
+        if (source.MaxPartitions != null) {
+            this.MaxPartitions = new Long(source.MaxPartitions);
+        }
+        if (source.MaxDelayedMessages != null) {
+            this.MaxDelayedMessages = new Long(source.MaxDelayedMessages);
+        }
     }
 
 
@@ -205,6 +267,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MaxNamespaces", this.MaxNamespaces);
         this.setParamSimple(map, prefix + "MaxTopics", this.MaxTopics);
         this.setParamSimple(map, prefix + "ScalableTps", this.ScalableTps);
+        this.setParamSimple(map, prefix + "MaxPartitions", this.MaxPartitions);
+        this.setParamSimple(map, prefix + "MaxDelayedMessages", this.MaxDelayedMessages);
 
     }
 }

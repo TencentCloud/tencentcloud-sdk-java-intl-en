@@ -38,7 +38,7 @@ public class DescribeIdleLoadBalancersRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * CLB instance region
+    * The Region of the cloud load balancer can be obtained through the `RegionSet.Region` field in the API return value of [DescribeRegions](https://www.tencentcloud.comom/document/product/1596/77930?from_cn_redirect=1).
     */
     @SerializedName("LoadBalancerRegion")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeIdleLoadBalancersRequest extends AbstractModel {
     }
 
     /**
-     * Get CLB instance region 
-     * @return LoadBalancerRegion CLB instance region
+     * Get The Region of the cloud load balancer can be obtained through the `RegionSet.Region` field in the API return value of [DescribeRegions](https://www.tencentcloud.comom/document/product/1596/77930?from_cn_redirect=1). 
+     * @return LoadBalancerRegion The Region of the cloud load balancer can be obtained through the `RegionSet.Region` field in the API return value of [DescribeRegions](https://www.tencentcloud.comom/document/product/1596/77930?from_cn_redirect=1).
      */
     public String getLoadBalancerRegion() {
         return this.LoadBalancerRegion;
     }
 
     /**
-     * Set CLB instance region
-     * @param LoadBalancerRegion CLB instance region
+     * Set The Region of the cloud load balancer can be obtained through the `RegionSet.Region` field in the API return value of [DescribeRegions](https://www.tencentcloud.comom/document/product/1596/77930?from_cn_redirect=1).
+     * @param LoadBalancerRegion The Region of the cloud load balancer can be obtained through the `RegionSet.Region` field in the API return value of [DescribeRegions](https://www.tencentcloud.comom/document/product/1596/77930?from_cn_redirect=1).
      */
     public void setLoadBalancerRegion(String LoadBalancerRegion) {
         this.LoadBalancerRegion = LoadBalancerRegion;

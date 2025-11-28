@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeRabbitMQNodeListRequest extends AbstractModel {
 
     /**
-    * TDMQ for RabbitMQ cluster ID
+    * Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Offset
+    * Offset, default value 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The maximum entries per page
+    * Page limit. default value: 20.
     */
     @SerializedName("Limit")
     @Expose
@@ -52,10 +52,9 @@ public class DescribeRabbitMQNodeListRequest extends AbstractModel {
     private String NodeName;
 
     /**
-    * Name and value of a filter.
-Currently, only the `nodeStatus` filter is supported.
-Valid values: `running`, `down`.
-It is an array type and can contain multiple filters.
+    * Filter parameter name and value. currently only support filtering based on node status.
+"Name": "nodeStatus"
+"Value": running or down
 
     */
     @SerializedName("Filters")
@@ -63,8 +62,9 @@ It is an array type and can contain multiple filters.
     private Filter [] Filters;
 
     /**
-    * Sorting by a specified element.
-Valid values: `cpuUsage`, `diskUsage`.
+    * Sorts by the specified element. only 2 are present.
+CPU usage: specifies the CPU utilization of the node.
+diskUsage: specifies the node disk utilization.
     */
     @SerializedName("SortElement")
     @Expose
@@ -79,48 +79,48 @@ Valid values: `ascend`, `descend`.
     private String SortOrder;
 
     /**
-     * Get TDMQ for RabbitMQ cluster ID 
-     * @return InstanceId TDMQ for RabbitMQ cluster ID
+     * Get Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1). 
+     * @return InstanceId Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set TDMQ for RabbitMQ cluster ID
-     * @param InstanceId TDMQ for RabbitMQ cluster ID
+     * Set Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+     * @param InstanceId Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get Offset, default value 0. 
+     * @return Offset Offset, default value 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set Offset, default value 0.
+     * @param Offset Offset, default value 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The maximum entries per page 
-     * @return Limit The maximum entries per page
+     * Get Page limit. default value: 20. 
+     * @return Limit Page limit. default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The maximum entries per page
-     * @param Limit The maximum entries per page
+     * Set Page limit. default value: 20.
+     * @param Limit Page limit. default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -143,15 +143,13 @@ Valid values: `ascend`, `descend`.
     }
 
     /**
-     * Get Name and value of a filter.
-Currently, only the `nodeStatus` filter is supported.
-Valid values: `running`, `down`.
-It is an array type and can contain multiple filters.
+     * Get Filter parameter name and value. currently only support filtering based on node status.
+"Name": "nodeStatus"
+"Value": running or down
  
-     * @return Filters Name and value of a filter.
-Currently, only the `nodeStatus` filter is supported.
-Valid values: `running`, `down`.
-It is an array type and can contain multiple filters.
+     * @return Filters Filter parameter name and value. currently only support filtering based on node status.
+"Name": "nodeStatus"
+"Value": running or down
 
      */
     public Filter [] getFilters() {
@@ -159,15 +157,13 @@ It is an array type and can contain multiple filters.
     }
 
     /**
-     * Set Name and value of a filter.
-Currently, only the `nodeStatus` filter is supported.
-Valid values: `running`, `down`.
-It is an array type and can contain multiple filters.
+     * Set Filter parameter name and value. currently only support filtering based on node status.
+"Name": "nodeStatus"
+"Value": running or down
 
-     * @param Filters Name and value of a filter.
-Currently, only the `nodeStatus` filter is supported.
-Valid values: `running`, `down`.
-It is an array type and can contain multiple filters.
+     * @param Filters Filter parameter name and value. currently only support filtering based on node status.
+"Name": "nodeStatus"
+"Value": running or down
 
      */
     public void setFilters(Filter [] Filters) {
@@ -175,20 +171,24 @@ It is an array type and can contain multiple filters.
     }
 
     /**
-     * Get Sorting by a specified element.
-Valid values: `cpuUsage`, `diskUsage`. 
-     * @return SortElement Sorting by a specified element.
-Valid values: `cpuUsage`, `diskUsage`.
+     * Get Sorts by the specified element. only 2 are present.
+CPU usage: specifies the CPU utilization of the node.
+diskUsage: specifies the node disk utilization. 
+     * @return SortElement Sorts by the specified element. only 2 are present.
+CPU usage: specifies the CPU utilization of the node.
+diskUsage: specifies the node disk utilization.
      */
     public String getSortElement() {
         return this.SortElement;
     }
 
     /**
-     * Set Sorting by a specified element.
-Valid values: `cpuUsage`, `diskUsage`.
-     * @param SortElement Sorting by a specified element.
-Valid values: `cpuUsage`, `diskUsage`.
+     * Set Sorts by the specified element. only 2 are present.
+CPU usage: specifies the CPU utilization of the node.
+diskUsage: specifies the node disk utilization.
+     * @param SortElement Sorts by the specified element. only 2 are present.
+CPU usage: specifies the CPU utilization of the node.
+diskUsage: specifies the node disk utilization.
      */
     public void setSortElement(String SortElement) {
         this.SortElement = SortElement;

@@ -38,6 +38,13 @@ public class TargetRegionInfo extends AbstractModel {
     private String VpcId;
 
     /**
+    * Target'S network, in the format of 86323 for a private network, or 0 if it is a basic network.
+    */
+    @SerializedName("NumericalVpcId")
+    @Expose
+    private Long NumericalVpcId;
+
+    /**
      * Get Region of the target, such as ap-guangzhou 
      * @return Region Region of the target, such as ap-guangzhou
      */
@@ -69,6 +76,22 @@ public class TargetRegionInfo extends AbstractModel {
         this.VpcId = VpcId;
     }
 
+    /**
+     * Get Target'S network, in the format of 86323 for a private network, or 0 if it is a basic network. 
+     * @return NumericalVpcId Target'S network, in the format of 86323 for a private network, or 0 if it is a basic network.
+     */
+    public Long getNumericalVpcId() {
+        return this.NumericalVpcId;
+    }
+
+    /**
+     * Set Target'S network, in the format of 86323 for a private network, or 0 if it is a basic network.
+     * @param NumericalVpcId Target'S network, in the format of 86323 for a private network, or 0 if it is a basic network.
+     */
+    public void setNumericalVpcId(Long NumericalVpcId) {
+        this.NumericalVpcId = NumericalVpcId;
+    }
+
     public TargetRegionInfo() {
     }
 
@@ -83,6 +106,9 @@ public class TargetRegionInfo extends AbstractModel {
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
+        if (source.NumericalVpcId != null) {
+            this.NumericalVpcId = new Long(source.NumericalVpcId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class TargetRegionInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
 
     }
 }

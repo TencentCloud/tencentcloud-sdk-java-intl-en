@@ -94,6 +94,28 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a log download task.
+     * @param req CreateLogDownloadTaskRequest
+     * @return CreateLogDownloadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLogDownloadTaskResponse CreateLogDownloadTask(CreateLogDownloadTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLogDownloadTask", CreateLogDownloadTaskResponse.class);
+    }
+
+    /**
+     *This API is used to delete a log download task.
+     * @param req DeleteLogDownloadTaskRequest
+     * @return DeleteLogDownloadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLogDownloadTaskResponse DeleteLogDownloadTask(DeleteLogDownloadTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLogDownloadTask", DeleteLogDownloadTaskResponse.class);
+    }
+
+    /**
      *This API is used to query the asynchronous task status.
      * @param req DescribeAsyncRequestInfoRequest
      * @return DescribeAsyncRequestInfoResponse
@@ -204,6 +226,39 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to view the enabling status of Secure Sockets Layer (SSL) for an instance.
+     * @param req DescribeInstanceSSLRequest
+     * @return DescribeInstanceSSLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceSSLResponse DescribeInstanceSSL(DescribeInstanceSSLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceSSL", DescribeInstanceSSLResponse.class);
+    }
+
+    /**
+     *This API is used to query a log download task.
+     * @param req DescribeLogDownloadTasksRequest
+     * @return DescribeLogDownloadTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogDownloadTasksResponse DescribeLogDownloadTasks(DescribeLogDownloadTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogDownloadTasks", DescribeLogDownloadTasksResponse.class);
+    }
+
+    /**
+     *This API is used to query running logs.
+     * @param req DescribeMongodbLogsRequest
+     * @return DescribeMongodbLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMongodbLogsResponse DescribeMongodbLogs(DescribeMongodbLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMongodbLogs", DescribeMongodbLogsResponse.class);
+    }
+
+    /**
      *This API is used to query security groups bound to an instance.
      * @param req DescribeSecurityGroupRequest
      * @return DescribeSecurityGroupResponse
@@ -289,6 +344,17 @@ public class MongodbClient extends AbstractClient{
     public InquirePriceRenewDBInstancesResponse InquirePriceRenewDBInstances(InquirePriceRenewDBInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InquirePriceRenewDBInstances", InquirePriceRenewDBInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to set the SSL status for an instance.
+     * @param req InstanceEnableSSLRequest
+     * @return InstanceEnableSSLResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstanceEnableSSLResponse InstanceEnableSSL(InstanceEnableSSLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InstanceEnableSSL", InstanceEnableSSLResponse.class);
     }
 
     /**
@@ -399,6 +465,28 @@ public class MongodbClient extends AbstractClient{
     public TerminateDBInstancesResponse TerminateDBInstances(TerminateDBInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TerminateDBInstances", TerminateDBInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to upgrade the kernel version of the database instance.
+     * @param req UpgradeDBInstanceKernelVersionRequest
+     * @return UpgradeDBInstanceKernelVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersion(UpgradeDBInstanceKernelVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradeDBInstanceKernelVersion", UpgradeDBInstanceKernelVersionResponse.class);
+    }
+
+    /**
+     *This API is used to upgrade the database kernel across versions. Currently, it is only supported to upgrade from version 3.6 to 4.0, 4.0 to 4.2, 4.2 to 4.4, and 4.4 to 5.0.
+     * @param req UpgradeDbInstanceVersionRequest
+     * @return UpgradeDbInstanceVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeDbInstanceVersionResponse UpgradeDbInstanceVersion(UpgradeDbInstanceVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradeDbInstanceVersion", UpgradeDbInstanceVersionResponse.class);
     }
 
 }

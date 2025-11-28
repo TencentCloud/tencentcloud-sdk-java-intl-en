@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DeleteRabbitMQVipInstanceRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+    * Whether the request is from the international website. Default value: false.
+    */
+    @SerializedName("IsIntl")
+    @Expose
+    private Boolean IsIntl;
+
+    /**
+     * Get Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1). 
+     * @return InstanceId Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+     * @param InstanceId Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Whether the request is from the international website. Default value: false. 
+     * @return IsIntl Whether the request is from the international website. Default value: false.
+     */
+    public Boolean getIsIntl() {
+        return this.IsIntl;
+    }
+
+    /**
+     * Set Whether the request is from the international website. Default value: false.
+     * @param IsIntl Whether the request is from the international website. Default value: false.
+     */
+    public void setIsIntl(Boolean IsIntl) {
+        this.IsIntl = IsIntl;
     }
 
     public DeleteRabbitMQVipInstanceRequest() {
@@ -57,6 +80,9 @@ public class DeleteRabbitMQVipInstanceRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.IsIntl != null) {
+            this.IsIntl = new Boolean(source.IsIntl);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DeleteRabbitMQVipInstanceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "IsIntl", this.IsIntl);
 
     }
 }

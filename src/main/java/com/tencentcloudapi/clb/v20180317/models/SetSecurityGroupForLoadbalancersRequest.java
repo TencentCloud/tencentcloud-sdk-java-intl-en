@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SetSecurityGroupForLoadbalancersRequest extends AbstractModel {
 
     /**
-    * Security group ID, such as sg-12345678
+    * Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -39,23 +39,24 @@ DEL: unbind a security group
     private String OperationType;
 
     /**
-    * Array of CLB instance IDs
+    * ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+Specifies the maximum length supported by the list is 20.
     */
     @SerializedName("LoadBalancerIds")
     @Expose
     private String [] LoadBalancerIds;
 
     /**
-     * Get Security group ID, such as sg-12345678 
-     * @return SecurityGroup Security group ID, such as sg-12345678
+     * Get Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1). 
+     * @return SecurityGroup Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
      */
     public String getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set Security group ID, such as sg-12345678
-     * @param SecurityGroup Security group ID, such as sg-12345678
+     * Set Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+     * @param SecurityGroup Security group ID, such as sg-12345678. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
      */
     public void setSecurityGroup(String SecurityGroup) {
         this.SecurityGroup = SecurityGroup;
@@ -82,16 +83,20 @@ DEL: unbind a security group
     }
 
     /**
-     * Get Array of CLB instance IDs 
-     * @return LoadBalancerIds Array of CLB instance IDs
+     * Get ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+Specifies the maximum length supported by the list is 20. 
+     * @return LoadBalancerIds ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+Specifies the maximum length supported by the list is 20.
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set Array of CLB instance IDs
-     * @param LoadBalancerIds Array of CLB instance IDs
+     * Set ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+Specifies the maximum length supported by the list is 20.
+     * @param LoadBalancerIds ID array of the clb instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+Specifies the maximum length supported by the list is 20.
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

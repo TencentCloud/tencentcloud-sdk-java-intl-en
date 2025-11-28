@@ -31,8 +31,7 @@ public class DescribeLoadBalancersDetailResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * List of CLB instance details.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Load balancing detail list.
     */
     @SerializedName("LoadBalancerDetailSet")
     @Expose
@@ -62,20 +61,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of CLB instance details.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return LoadBalancerDetailSet List of CLB instance details.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Load balancing detail list. 
+     * @return LoadBalancerDetailSet Load balancing detail list.
      */
     public LoadBalancerDetail [] getLoadBalancerDetailSet() {
         return this.LoadBalancerDetailSet;
     }
 
     /**
-     * Set List of CLB instance details.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param LoadBalancerDetailSet List of CLB instance details.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Load balancing detail list.
+     * @param LoadBalancerDetailSet Load balancing detail list.
      */
     public void setLoadBalancerDetailSet(LoadBalancerDetail [] LoadBalancerDetailSet) {
         this.LoadBalancerDetailSet = LoadBalancerDetailSet;

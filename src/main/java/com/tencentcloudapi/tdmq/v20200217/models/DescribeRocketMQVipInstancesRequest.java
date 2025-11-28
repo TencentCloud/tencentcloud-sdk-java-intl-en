@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class DescribeRocketMQVipInstancesRequest extends AbstractModel {
 
     /**
-    * Query condition filter
+    * Query condition filter. supported query conditions are as follows:.
+Instance ids - specifies the instance ids.
+Instance name - specifies the instance name.
+Status - specifies the instance status.
     */
     @SerializedName("Filters")
     @Expose
@@ -45,16 +48,28 @@ public class DescribeRocketMQVipInstancesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get Query condition filter 
-     * @return Filters Query condition filter
+     * Get Query condition filter. supported query conditions are as follows:.
+Instance ids - specifies the instance ids.
+Instance name - specifies the instance name.
+Status - specifies the instance status. 
+     * @return Filters Query condition filter. supported query conditions are as follows:.
+Instance ids - specifies the instance ids.
+Instance name - specifies the instance name.
+Status - specifies the instance status.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Query condition filter
-     * @param Filters Query condition filter
+     * Set Query condition filter. supported query conditions are as follows:.
+Instance ids - specifies the instance ids.
+Instance name - specifies the instance name.
+Status - specifies the instance status.
+     * @param Filters Query condition filter. supported query conditions are as follows:.
+Instance ids - specifies the instance ids.
+Instance name - specifies the instance name.
+Status - specifies the instance status.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

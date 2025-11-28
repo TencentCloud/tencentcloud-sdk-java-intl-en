@@ -24,46 +24,76 @@ import java.util.HashMap;
 public class OAuth extends AbstractModel {
 
     /**
-    * Enable or disable authentication.True: Enable;False: Disable.Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies whether to turn on or off authentication.
+True: enable.
+False: disabled.
+Disabled by default.
     */
     @SerializedName("OAuthEnable")
     @Expose
     private Boolean OAuthEnable;
 
     /**
-    * Whether to reject or allow the request if all IAPs fail. BYPASS: Allow;REJECT: Reject.Note: This field may return null, indicating that no valid values can be obtained.
+    * Deny requests or allow when all iaps fail.
+BYPASS: specifies the bypass.
+REJECT.
+Defaults to BYPASS.
     */
     @SerializedName("OAuthFailureStatus")
     @Expose
     private String OAuthFailureStatus;
 
     /**
-     * Get Enable or disable authentication.True: Enable;False: Disable.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OAuthEnable Enable or disable authentication.True: Enable;False: Disable.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether to turn on or off authentication.
+True: enable.
+False: disabled.
+Disabled by default. 
+     * @return OAuthEnable Specifies whether to turn on or off authentication.
+True: enable.
+False: disabled.
+Disabled by default.
      */
     public Boolean getOAuthEnable() {
         return this.OAuthEnable;
     }
 
     /**
-     * Set Enable or disable authentication.True: Enable;False: Disable.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OAuthEnable Enable or disable authentication.True: Enable;False: Disable.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether to turn on or off authentication.
+True: enable.
+False: disabled.
+Disabled by default.
+     * @param OAuthEnable Specifies whether to turn on or off authentication.
+True: enable.
+False: disabled.
+Disabled by default.
      */
     public void setOAuthEnable(Boolean OAuthEnable) {
         this.OAuthEnable = OAuthEnable;
     }
 
     /**
-     * Get Whether to reject or allow the request if all IAPs fail. BYPASS: Allow;REJECT: Reject.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OAuthFailureStatus Whether to reject or allow the request if all IAPs fail. BYPASS: Allow;REJECT: Reject.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Deny requests or allow when all iaps fail.
+BYPASS: specifies the bypass.
+REJECT.
+Defaults to BYPASS. 
+     * @return OAuthFailureStatus Deny requests or allow when all iaps fail.
+BYPASS: specifies the bypass.
+REJECT.
+Defaults to BYPASS.
      */
     public String getOAuthFailureStatus() {
         return this.OAuthFailureStatus;
     }
 
     /**
-     * Set Whether to reject or allow the request if all IAPs fail. BYPASS: Allow;REJECT: Reject.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OAuthFailureStatus Whether to reject or allow the request if all IAPs fail. BYPASS: Allow;REJECT: Reject.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Deny requests or allow when all iaps fail.
+BYPASS: specifies the bypass.
+REJECT.
+Defaults to BYPASS.
+     * @param OAuthFailureStatus Deny requests or allow when all iaps fail.
+BYPASS: specifies the bypass.
+REJECT.
+Defaults to BYPASS.
      */
     public void setOAuthFailureStatus(String OAuthFailureStatus) {
         this.OAuthFailureStatus = OAuthFailureStatus;

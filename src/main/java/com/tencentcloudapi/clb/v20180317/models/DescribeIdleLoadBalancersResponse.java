@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeIdleLoadBalancersResponse extends AbstractModel {
 
     /**
-    * List of idle CLBs
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Idle instance list.
     */
     @SerializedName("IdleLoadBalancers")
     @Expose
@@ -46,20 +45,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get List of idle CLBs
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return IdleLoadBalancers List of idle CLBs
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Idle instance list. 
+     * @return IdleLoadBalancers Idle instance list.
      */
     public IdleLoadBalancer [] getIdleLoadBalancers() {
         return this.IdleLoadBalancers;
     }
 
     /**
-     * Set List of idle CLBs
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param IdleLoadBalancers List of idle CLBs
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Idle instance list.
+     * @param IdleLoadBalancers Idle instance list.
      */
     public void setIdleLoadBalancers(IdleLoadBalancer [] IdleLoadBalancers) {
         this.IdleLoadBalancers = IdleLoadBalancers;

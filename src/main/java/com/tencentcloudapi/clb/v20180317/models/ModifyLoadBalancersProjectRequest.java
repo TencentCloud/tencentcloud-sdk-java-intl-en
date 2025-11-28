@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ModifyLoadBalancersProjectRequest extends AbstractModel {
 
     /**
-    * IDs of CLB instances ID(s).
+    * One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+Specifies the maximum length supported by the list is 20.
     */
     @SerializedName("LoadBalancerIds")
     @Expose
@@ -38,16 +39,20 @@ public class ModifyLoadBalancersProjectRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-     * Get IDs of CLB instances ID(s). 
-     * @return LoadBalancerIds IDs of CLB instances ID(s).
+     * Get One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+Specifies the maximum length supported by the list is 20. 
+     * @return LoadBalancerIds One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+Specifies the maximum length supported by the list is 20.
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set IDs of CLB instances ID(s).
-     * @param LoadBalancerIds IDs of CLB instances ID(s).
+     * Set One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+Specifies the maximum length supported by the list is 20.
+     * @param LoadBalancerIds One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+Specifies the maximum length supported by the list is 20.
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

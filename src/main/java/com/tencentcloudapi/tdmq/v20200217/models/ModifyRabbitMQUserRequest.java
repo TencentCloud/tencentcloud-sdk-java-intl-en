@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyRabbitMQUserRequest extends AbstractModel {
 
     /**
-    * Cluster instance ID
+    * Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Username, which is used for login.
+    * Username, such as admin. effective User names can be found by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking a cluster in the cluster list, entering cluster details, and locating the list of users under the User and permission management tab, thereby finding the username.
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * Password, which is used for login.
+    * Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
     */
     @SerializedName("Password")
     @Expose
@@ -52,7 +52,8 @@ public class ModifyRabbitMQUserRequest extends AbstractModel {
     private String Description;
 
     /**
-    * User tag, which defines a user's permission scope for accessing RabbitMQ Management. If this parameter is not passed in, it won't be modified.
+    * User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
     */
     @SerializedName("Tags")
     @Expose
@@ -73,48 +74,48 @@ public class ModifyRabbitMQUserRequest extends AbstractModel {
     private Long MaxChannels;
 
     /**
-     * Get Cluster instance ID 
-     * @return InstanceId Cluster instance ID
+     * Get Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1). 
+     * @return InstanceId Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster instance ID
-     * @param InstanceId Cluster instance ID
+     * Set Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+     * @param InstanceId Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Username, which is used for login. 
-     * @return User Username, which is used for login.
+     * Get Username, such as admin. effective User names can be found by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking a cluster in the cluster list, entering cluster details, and locating the list of users under the User and permission management tab, thereby finding the username. 
+     * @return User Username, such as admin. effective User names can be found by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking a cluster in the cluster list, entering cluster details, and locating the list of users under the User and permission management tab, thereby finding the username.
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set Username, which is used for login.
-     * @param User Username, which is used for login.
+     * Set Username, such as admin. effective User names can be found by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking a cluster in the cluster list, entering cluster details, and locating the list of users under the User and permission management tab, thereby finding the username.
+     * @param User Username, such as admin. effective User names can be found by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking a cluster in the cluster list, entering cluster details, and locating the list of users under the User and permission management tab, thereby finding the username.
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get Password, which is used for login. 
-     * @return Password Password, which is used for login.
+     * Get Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/]. 
+     * @return Password Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Password, which is used for login.
-     * @param Password Password, which is used for login.
+     * Set Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
+     * @param Password Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
      */
     public void setPassword(String Password) {
         this.Password = Password;
@@ -137,16 +138,20 @@ public class ModifyRabbitMQUserRequest extends AbstractModel {
     }
 
     /**
-     * Get User tag, which defines a user's permission scope for accessing RabbitMQ Management. If this parameter is not passed in, it won't be modified. 
-     * @return Tags User tag, which defines a user's permission scope for accessing RabbitMQ Management. If this parameter is not passed in, it won't be modified.
+     * Get User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user. 
+     * @return Tags User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set User tag, which defines a user's permission scope for accessing RabbitMQ Management. If this parameter is not passed in, it won't be modified.
-     * @param Tags User tag, which defines a user's permission scope for accessing RabbitMQ Management. If this parameter is not passed in, it won't be modified.
+     * Set User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
+     * @param Tags User tag, used to determine the access permission of the user for RabbitMQ Management.
+management: ordinary console user. monitoring: administrative console user. other value: non-console user.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

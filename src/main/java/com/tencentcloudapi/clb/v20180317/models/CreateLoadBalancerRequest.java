@@ -75,22 +75,22 @@ Note: if the name of the new CLB instance already exists, a default name will be
     private String AddressIPVersion;
 
     /**
-    * Number of CLBs to be created. Default value: 1.
+    * Specifies the count of cloud load balancers to create, with a default value of 1. the count must not exceed the maximum value allowed for the account, with a default creation maximum value of 20.
     */
     @SerializedName("Number")
     @Expose
     private Long Number;
 
     /**
-    * Applicable only to public network IPv4 CLB instances. This parameter specifies the primary AZ ID for cross-AZ disaster recovery. For example, 100001 or ap-guangzhou-1.
-Note: The primary AZ sustains traffic. The secondary AZ does not sustain traffic by default and is used only when the primary AZ is unavailable. Currently, primary and secondary AZs are supported only for IPv4 CLB instances in Guangzhou, Shanghai, Nanjing, Beijing, Chengdu, Shenzhen Finance, Hong Kong (China), Seoul, Frankfurt, and Singapore regions. You can call the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API to query the list of primary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+    * Applicable only to public network IPv4 cloud load balancer instances. specifies the primary AZ ID for cross-az disaster recovery. both AZ ID and name are supported, such as 100001 or ap-guangzhou-1.
+Note: the primary AZ loads traffic. the secondary AZ does not load traffic by default and is used only if the primary AZ becomes unavailable.
     */
     @SerializedName("MasterZoneId")
     @Expose
     private String MasterZoneId;
 
     /**
-    * Applicable only to public network IPv4 CLB instances. This parameter specifies the AZ ID for creating a CLB instance. For example, ap-guangzhou-1.
+    * Applicable only to public network IPv4 clb instances. specifies the AZ ID or availability zone name for creating a clb instance. for example, 100001 or ap-guangzhou-1.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -126,7 +126,7 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
     private String Vip;
 
     /**
-    * Bandwidth package ID. If this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) will only support billing by bandwidth package (BANDWIDTH_PACKAGE). The attributes of the bandwidth package determine the settlement method. For IPv6 CLB instances purchased by bill-by-CVM users, if the ISP type is not BGP, the bandwidth package ID cannot be specified.
+    * BANDWIDTH PACKAGE ID, which can be obtained through the [DescribeBandwidthPackages](https://www.tencentcloud.comom/document/api/215/19209?from_cn_redirect=1) api. specifies the BANDWIDTH PACKAGE ID. when this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) supports only billing by BANDWIDTH PACKAGE (BANDWIDTH_PACKAGE). the attributes of the BANDWIDTH PACKAGE determine the settlement method. for IPv6 clb instances purchased by non-promoted users, if the operator type is not BGP, the BANDWIDTH PACKAGE ID cannot be specified.
     */
     @SerializedName("BandwidthPackageId")
     @Expose
@@ -182,22 +182,22 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
     private String ClusterTag;
 
     /**
-    * Applicable only to public network IPv4 CLB instances. This parameter specifies the secondary AZ ID for cross-AZ disaster recovery. For example, 100001 or ap-guangzhou-1.
-Note: The secondary AZ sustains traffic when the primary AZ encounters faults. You can call the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API to query the list of primary/secondary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+    * Applicable only to public network IPv4 clb instances. specifies the secondary AZ ID for cross-az disaster recovery. both AZ ID and name are supported, such as 100001 or ap-guangzhou-1.
+Note: The secondary AZ sustains traffic when the primary AZ encounters faults. You can call the [DescribeResources](https://www.tencentcloud.comom/document/api/214/70213?from_cn_redirect=1) API to query the list of primary/secondary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
     */
     @SerializedName("SlaveZoneId")
     @Expose
     private String SlaveZoneId;
 
     /**
-    * Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+    * The unique ID of EIP, which can be queried through the DescribeAddresses API (https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1). format: EIP-qhx8udkc. applicable only to private network clb binding EIP.
     */
     @SerializedName("EipAddressId")
     @Expose
     private String EipAddressId;
 
     /**
-    * Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
+    * Specifies whether to allow CLB traffic to the Target. enable (true): verify security groups on CLB. disable (false): verify security groups on both CLB and backend instances. IPv6 CLB security group default permit, this parameter is not required.
     */
     @SerializedName("LoadBalancerPassToTarget")
     @Expose
@@ -237,6 +237,13 @@ Note: The secondary AZ sustains traffic when the primary AZ encounters faults. Y
     @SerializedName("AccessLogTopicId")
     @Expose
     private String AccessLogTopicId;
+
+    /**
+    * Whether layer-7 advanced routing is enabled.
+    */
+    @SerializedName("AdvancedRoute")
+    @Expose
+    private Boolean AdvancedRoute;
 
     /**
      * Get CLB instance network type:
@@ -359,52 +366,52 @@ Note: if the name of the new CLB instance already exists, a default name will be
     }
 
     /**
-     * Get Number of CLBs to be created. Default value: 1. 
-     * @return Number Number of CLBs to be created. Default value: 1.
+     * Get Specifies the count of cloud load balancers to create, with a default value of 1. the count must not exceed the maximum value allowed for the account, with a default creation maximum value of 20. 
+     * @return Number Specifies the count of cloud load balancers to create, with a default value of 1. the count must not exceed the maximum value allowed for the account, with a default creation maximum value of 20.
      */
     public Long getNumber() {
         return this.Number;
     }
 
     /**
-     * Set Number of CLBs to be created. Default value: 1.
-     * @param Number Number of CLBs to be created. Default value: 1.
+     * Set Specifies the count of cloud load balancers to create, with a default value of 1. the count must not exceed the maximum value allowed for the account, with a default creation maximum value of 20.
+     * @param Number Specifies the count of cloud load balancers to create, with a default value of 1. the count must not exceed the maximum value allowed for the account, with a default creation maximum value of 20.
      */
     public void setNumber(Long Number) {
         this.Number = Number;
     }
 
     /**
-     * Get Applicable only to public network IPv4 CLB instances. This parameter specifies the primary AZ ID for cross-AZ disaster recovery. For example, 100001 or ap-guangzhou-1.
-Note: The primary AZ sustains traffic. The secondary AZ does not sustain traffic by default and is used only when the primary AZ is unavailable. Currently, primary and secondary AZs are supported only for IPv4 CLB instances in Guangzhou, Shanghai, Nanjing, Beijing, Chengdu, Shenzhen Finance, Hong Kong (China), Seoul, Frankfurt, and Singapore regions. You can call the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API to query the list of primary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
-     * @return MasterZoneId Applicable only to public network IPv4 CLB instances. This parameter specifies the primary AZ ID for cross-AZ disaster recovery. For example, 100001 or ap-guangzhou-1.
-Note: The primary AZ sustains traffic. The secondary AZ does not sustain traffic by default and is used only when the primary AZ is unavailable. Currently, primary and secondary AZs are supported only for IPv4 CLB instances in Guangzhou, Shanghai, Nanjing, Beijing, Chengdu, Shenzhen Finance, Hong Kong (China), Seoul, Frankfurt, and Singapore regions. You can call the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API to query the list of primary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+     * Get Applicable only to public network IPv4 cloud load balancer instances. specifies the primary AZ ID for cross-az disaster recovery. both AZ ID and name are supported, such as 100001 or ap-guangzhou-1.
+Note: the primary AZ loads traffic. the secondary AZ does not load traffic by default and is used only if the primary AZ becomes unavailable. 
+     * @return MasterZoneId Applicable only to public network IPv4 cloud load balancer instances. specifies the primary AZ ID for cross-az disaster recovery. both AZ ID and name are supported, such as 100001 or ap-guangzhou-1.
+Note: the primary AZ loads traffic. the secondary AZ does not load traffic by default and is used only if the primary AZ becomes unavailable.
      */
     public String getMasterZoneId() {
         return this.MasterZoneId;
     }
 
     /**
-     * Set Applicable only to public network IPv4 CLB instances. This parameter specifies the primary AZ ID for cross-AZ disaster recovery. For example, 100001 or ap-guangzhou-1.
-Note: The primary AZ sustains traffic. The secondary AZ does not sustain traffic by default and is used only when the primary AZ is unavailable. Currently, primary and secondary AZs are supported only for IPv4 CLB instances in Guangzhou, Shanghai, Nanjing, Beijing, Chengdu, Shenzhen Finance, Hong Kong (China), Seoul, Frankfurt, and Singapore regions. You can call the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API to query the list of primary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
-     * @param MasterZoneId Applicable only to public network IPv4 CLB instances. This parameter specifies the primary AZ ID for cross-AZ disaster recovery. For example, 100001 or ap-guangzhou-1.
-Note: The primary AZ sustains traffic. The secondary AZ does not sustain traffic by default and is used only when the primary AZ is unavailable. Currently, primary and secondary AZs are supported only for IPv4 CLB instances in Guangzhou, Shanghai, Nanjing, Beijing, Chengdu, Shenzhen Finance, Hong Kong (China), Seoul, Frankfurt, and Singapore regions. You can call the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API to query the list of primary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+     * Set Applicable only to public network IPv4 cloud load balancer instances. specifies the primary AZ ID for cross-az disaster recovery. both AZ ID and name are supported, such as 100001 or ap-guangzhou-1.
+Note: the primary AZ loads traffic. the secondary AZ does not load traffic by default and is used only if the primary AZ becomes unavailable.
+     * @param MasterZoneId Applicable only to public network IPv4 cloud load balancer instances. specifies the primary AZ ID for cross-az disaster recovery. both AZ ID and name are supported, such as 100001 or ap-guangzhou-1.
+Note: the primary AZ loads traffic. the secondary AZ does not load traffic by default and is used only if the primary AZ becomes unavailable.
      */
     public void setMasterZoneId(String MasterZoneId) {
         this.MasterZoneId = MasterZoneId;
     }
 
     /**
-     * Get Applicable only to public network IPv4 CLB instances. This parameter specifies the AZ ID for creating a CLB instance. For example, ap-guangzhou-1. 
-     * @return ZoneId Applicable only to public network IPv4 CLB instances. This parameter specifies the AZ ID for creating a CLB instance. For example, ap-guangzhou-1.
+     * Get Applicable only to public network IPv4 clb instances. specifies the AZ ID or availability zone name for creating a clb instance. for example, 100001 or ap-guangzhou-1. 
+     * @return ZoneId Applicable only to public network IPv4 clb instances. specifies the AZ ID or availability zone name for creating a clb instance. for example, 100001 or ap-guangzhou-1.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Applicable only to public network IPv4 CLB instances. This parameter specifies the AZ ID for creating a CLB instance. For example, ap-guangzhou-1.
-     * @param ZoneId Applicable only to public network IPv4 CLB instances. This parameter specifies the AZ ID for creating a CLB instance. For example, ap-guangzhou-1.
+     * Set Applicable only to public network IPv4 clb instances. specifies the AZ ID or availability zone name for creating a clb instance. for example, 100001 or ap-guangzhou-1.
+     * @param ZoneId Applicable only to public network IPv4 clb instances. specifies the AZ ID or availability zone name for creating a clb instance. for example, 100001 or ap-guangzhou-1.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -479,16 +486,16 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
     }
 
     /**
-     * Get Bandwidth package ID. If this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) will only support billing by bandwidth package (BANDWIDTH_PACKAGE). The attributes of the bandwidth package determine the settlement method. For IPv6 CLB instances purchased by bill-by-CVM users, if the ISP type is not BGP, the bandwidth package ID cannot be specified. 
-     * @return BandwidthPackageId Bandwidth package ID. If this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) will only support billing by bandwidth package (BANDWIDTH_PACKAGE). The attributes of the bandwidth package determine the settlement method. For IPv6 CLB instances purchased by bill-by-CVM users, if the ISP type is not BGP, the bandwidth package ID cannot be specified.
+     * Get BANDWIDTH PACKAGE ID, which can be obtained through the [DescribeBandwidthPackages](https://www.tencentcloud.comom/document/api/215/19209?from_cn_redirect=1) api. specifies the BANDWIDTH PACKAGE ID. when this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) supports only billing by BANDWIDTH PACKAGE (BANDWIDTH_PACKAGE). the attributes of the BANDWIDTH PACKAGE determine the settlement method. for IPv6 clb instances purchased by non-promoted users, if the operator type is not BGP, the BANDWIDTH PACKAGE ID cannot be specified. 
+     * @return BandwidthPackageId BANDWIDTH PACKAGE ID, which can be obtained through the [DescribeBandwidthPackages](https://www.tencentcloud.comom/document/api/215/19209?from_cn_redirect=1) api. specifies the BANDWIDTH PACKAGE ID. when this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) supports only billing by BANDWIDTH PACKAGE (BANDWIDTH_PACKAGE). the attributes of the BANDWIDTH PACKAGE determine the settlement method. for IPv6 clb instances purchased by non-promoted users, if the operator type is not BGP, the BANDWIDTH PACKAGE ID cannot be specified.
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * Set Bandwidth package ID. If this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) will only support billing by bandwidth package (BANDWIDTH_PACKAGE). The attributes of the bandwidth package determine the settlement method. For IPv6 CLB instances purchased by bill-by-CVM users, if the ISP type is not BGP, the bandwidth package ID cannot be specified.
-     * @param BandwidthPackageId Bandwidth package ID. If this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) will only support billing by bandwidth package (BANDWIDTH_PACKAGE). The attributes of the bandwidth package determine the settlement method. For IPv6 CLB instances purchased by bill-by-CVM users, if the ISP type is not BGP, the bandwidth package ID cannot be specified.
+     * Set BANDWIDTH PACKAGE ID, which can be obtained through the [DescribeBandwidthPackages](https://www.tencentcloud.comom/document/api/215/19209?from_cn_redirect=1) api. specifies the BANDWIDTH PACKAGE ID. when this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) supports only billing by BANDWIDTH PACKAGE (BANDWIDTH_PACKAGE). the attributes of the BANDWIDTH PACKAGE determine the settlement method. for IPv6 clb instances purchased by non-promoted users, if the operator type is not BGP, the BANDWIDTH PACKAGE ID cannot be specified.
+     * @param BandwidthPackageId BANDWIDTH PACKAGE ID, which can be obtained through the [DescribeBandwidthPackages](https://www.tencentcloud.comom/document/api/215/19209?from_cn_redirect=1) api. specifies the BANDWIDTH PACKAGE ID. when this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) supports only billing by BANDWIDTH PACKAGE (BANDWIDTH_PACKAGE). the attributes of the BANDWIDTH PACKAGE determine the settlement method. for IPv6 clb instances purchased by non-promoted users, if the operator type is not BGP, the BANDWIDTH PACKAGE ID cannot be specified.
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;
@@ -607,52 +614,52 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
     }
 
     /**
-     * Get Applicable only to public network IPv4 CLB instances. This parameter specifies the secondary AZ ID for cross-AZ disaster recovery. For example, 100001 or ap-guangzhou-1.
-Note: The secondary AZ sustains traffic when the primary AZ encounters faults. You can call the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API to query the list of primary/secondary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
-     * @return SlaveZoneId Applicable only to public network IPv4 CLB instances. This parameter specifies the secondary AZ ID for cross-AZ disaster recovery. For example, 100001 or ap-guangzhou-1.
-Note: The secondary AZ sustains traffic when the primary AZ encounters faults. You can call the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API to query the list of primary/secondary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+     * Get Applicable only to public network IPv4 clb instances. specifies the secondary AZ ID for cross-az disaster recovery. both AZ ID and name are supported, such as 100001 or ap-guangzhou-1.
+Note: The secondary AZ sustains traffic when the primary AZ encounters faults. You can call the [DescribeResources](https://www.tencentcloud.comom/document/api/214/70213?from_cn_redirect=1) API to query the list of primary/secondary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
+     * @return SlaveZoneId Applicable only to public network IPv4 clb instances. specifies the secondary AZ ID for cross-az disaster recovery. both AZ ID and name are supported, such as 100001 or ap-guangzhou-1.
+Note: The secondary AZ sustains traffic when the primary AZ encounters faults. You can call the [DescribeResources](https://www.tencentcloud.comom/document/api/214/70213?from_cn_redirect=1) API to query the list of primary/secondary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
      */
     public String getSlaveZoneId() {
         return this.SlaveZoneId;
     }
 
     /**
-     * Set Applicable only to public network IPv4 CLB instances. This parameter specifies the secondary AZ ID for cross-AZ disaster recovery. For example, 100001 or ap-guangzhou-1.
-Note: The secondary AZ sustains traffic when the primary AZ encounters faults. You can call the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API to query the list of primary/secondary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
-     * @param SlaveZoneId Applicable only to public network IPv4 CLB instances. This parameter specifies the secondary AZ ID for cross-AZ disaster recovery. For example, 100001 or ap-guangzhou-1.
-Note: The secondary AZ sustains traffic when the primary AZ encounters faults. You can call the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API to query the list of primary/secondary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+     * Set Applicable only to public network IPv4 clb instances. specifies the secondary AZ ID for cross-az disaster recovery. both AZ ID and name are supported, such as 100001 or ap-guangzhou-1.
+Note: The secondary AZ sustains traffic when the primary AZ encounters faults. You can call the [DescribeResources](https://www.tencentcloud.comom/document/api/214/70213?from_cn_redirect=1) API to query the list of primary/secondary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+     * @param SlaveZoneId Applicable only to public network IPv4 clb instances. specifies the secondary AZ ID for cross-az disaster recovery. both AZ ID and name are supported, such as 100001 or ap-guangzhou-1.
+Note: The secondary AZ sustains traffic when the primary AZ encounters faults. You can call the [DescribeResources](https://www.tencentcloud.comom/document/api/214/70213?from_cn_redirect=1) API to query the list of primary/secondary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
      */
     public void setSlaveZoneId(String SlaveZoneId) {
         this.SlaveZoneId = SlaveZoneId;
     }
 
     /**
-     * Get Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`. 
-     * @return EipAddressId Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+     * Get The unique ID of EIP, which can be queried through the DescribeAddresses API (https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1). format: EIP-qhx8udkc. applicable only to private network clb binding EIP. 
+     * @return EipAddressId The unique ID of EIP, which can be queried through the DescribeAddresses API (https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1). format: EIP-qhx8udkc. applicable only to private network clb binding EIP.
      */
     public String getEipAddressId() {
         return this.EipAddressId;
     }
 
     /**
-     * Set Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
-     * @param EipAddressId Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+     * Set The unique ID of EIP, which can be queried through the DescribeAddresses API (https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1). format: EIP-qhx8udkc. applicable only to private network clb binding EIP.
+     * @param EipAddressId The unique ID of EIP, which can be queried through the DescribeAddresses API (https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1). format: EIP-qhx8udkc. applicable only to private network clb binding EIP.
      */
     public void setEipAddressId(String EipAddressId) {
         this.EipAddressId = EipAddressId;
     }
 
     /**
-     * Get Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances. 
-     * @return LoadBalancerPassToTarget Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
+     * Get Specifies whether to allow CLB traffic to the Target. enable (true): verify security groups on CLB. disable (false): verify security groups on both CLB and backend instances. IPv6 CLB security group default permit, this parameter is not required. 
+     * @return LoadBalancerPassToTarget Specifies whether to allow CLB traffic to the Target. enable (true): verify security groups on CLB. disable (false): verify security groups on both CLB and backend instances. IPv6 CLB security group default permit, this parameter is not required.
      */
     public Boolean getLoadBalancerPassToTarget() {
         return this.LoadBalancerPassToTarget;
     }
 
     /**
-     * Set Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
-     * @param LoadBalancerPassToTarget Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
+     * Set Specifies whether to allow CLB traffic to the Target. enable (true): verify security groups on CLB. disable (false): verify security groups on both CLB and backend instances. IPv6 CLB security group default permit, this parameter is not required.
+     * @param LoadBalancerPassToTarget Specifies whether to allow CLB traffic to the Target. enable (true): verify security groups on CLB. disable (false): verify security groups on both CLB and backend instances. IPv6 CLB security group default permit, this parameter is not required.
      */
     public void setLoadBalancerPassToTarget(Boolean LoadBalancerPassToTarget) {
         this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
@@ -736,6 +743,22 @@ Note: The secondary AZ sustains traffic when the primary AZ encounters faults. Y
      */
     public void setAccessLogTopicId(String AccessLogTopicId) {
         this.AccessLogTopicId = AccessLogTopicId;
+    }
+
+    /**
+     * Get Whether layer-7 advanced routing is enabled. 
+     * @return AdvancedRoute Whether layer-7 advanced routing is enabled.
+     */
+    public Boolean getAdvancedRoute() {
+        return this.AdvancedRoute;
+    }
+
+    /**
+     * Set Whether layer-7 advanced routing is enabled.
+     * @param AdvancedRoute Whether layer-7 advanced routing is enabled.
+     */
+    public void setAdvancedRoute(Boolean AdvancedRoute) {
+        this.AdvancedRoute = AdvancedRoute;
     }
 
     public CreateLoadBalancerRequest() {
@@ -845,6 +868,9 @@ Note: The secondary AZ sustains traffic when the primary AZ encounters faults. Y
         if (source.AccessLogTopicId != null) {
             this.AccessLogTopicId = new String(source.AccessLogTopicId);
         }
+        if (source.AdvancedRoute != null) {
+            this.AdvancedRoute = new Boolean(source.AdvancedRoute);
+        }
     }
 
 
@@ -882,6 +908,7 @@ Note: The secondary AZ sustains traffic when the primary AZ encounters faults. Y
         this.setParamObj(map, prefix + "LBChargePrepaid.", this.LBChargePrepaid);
         this.setParamSimple(map, prefix + "LBChargeType", this.LBChargeType);
         this.setParamSimple(map, prefix + "AccessLogTopicId", this.AccessLogTopicId);
+        this.setParamSimple(map, prefix + "AdvancedRoute", this.AdvancedRoute);
 
     }
 }

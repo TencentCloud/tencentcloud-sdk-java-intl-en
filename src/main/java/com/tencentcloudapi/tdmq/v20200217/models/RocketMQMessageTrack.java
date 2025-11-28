@@ -31,7 +31,13 @@ public class RocketMQMessageTrack extends AbstractModel {
     private String Group;
 
     /**
-    * Consumption status
+    * Consumption status.
+CONSUMED.
+CONSUMED BUT FILTERED.
+NOT_CONSUME: specifies unconsumed.
+ENTER_RETRY: specifies whether to enter the retry queue.
+ENTER_DLQ: specifies whether the message enters the dead letter queue.
+Consumption status UNKNOWN.
     */
     @SerializedName("ConsumeStatus")
     @Expose
@@ -46,7 +52,7 @@ public class RocketMQMessageTrack extends AbstractModel {
 
     /**
     * Exception information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExceptionDesc")
     @Expose
@@ -69,16 +75,40 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     }
 
     /**
-     * Get Consumption status 
-     * @return ConsumeStatus Consumption status
+     * Get Consumption status.
+CONSUMED.
+CONSUMED BUT FILTERED.
+NOT_CONSUME: specifies unconsumed.
+ENTER_RETRY: specifies whether to enter the retry queue.
+ENTER_DLQ: specifies whether the message enters the dead letter queue.
+Consumption status UNKNOWN. 
+     * @return ConsumeStatus Consumption status.
+CONSUMED.
+CONSUMED BUT FILTERED.
+NOT_CONSUME: specifies unconsumed.
+ENTER_RETRY: specifies whether to enter the retry queue.
+ENTER_DLQ: specifies whether the message enters the dead letter queue.
+Consumption status UNKNOWN.
      */
     public String getConsumeStatus() {
         return this.ConsumeStatus;
     }
 
     /**
-     * Set Consumption status
-     * @param ConsumeStatus Consumption status
+     * Set Consumption status.
+CONSUMED.
+CONSUMED BUT FILTERED.
+NOT_CONSUME: specifies unconsumed.
+ENTER_RETRY: specifies whether to enter the retry queue.
+ENTER_DLQ: specifies whether the message enters the dead letter queue.
+Consumption status UNKNOWN.
+     * @param ConsumeStatus Consumption status.
+CONSUMED.
+CONSUMED BUT FILTERED.
+NOT_CONSUME: specifies unconsumed.
+ENTER_RETRY: specifies whether to enter the retry queue.
+ENTER_DLQ: specifies whether the message enters the dead letter queue.
+Consumption status UNKNOWN.
      */
     public void setConsumeStatus(String ConsumeStatus) {
         this.ConsumeStatus = ConsumeStatus;
@@ -102,9 +132,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Get Exception information
-Note: u200dThis field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ExceptionDesc Exception information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExceptionDesc() {
         return this.ExceptionDesc;
@@ -112,9 +142,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * Set Exception information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ExceptionDesc Exception information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExceptionDesc(String ExceptionDesc) {
         this.ExceptionDesc = ExceptionDesc;

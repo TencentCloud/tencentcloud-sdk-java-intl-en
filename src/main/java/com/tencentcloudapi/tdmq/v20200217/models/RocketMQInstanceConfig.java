@@ -108,6 +108,53 @@ public class RocketMQInstanceConfig extends AbstractModel {
     private Long MaxQueuesPerTopic;
 
     /**
+    * Maximum configurable message retention time, in hours	
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxRetention")
+    @Expose
+    private Long MaxRetention;
+
+    /**
+    * Minimum configurable message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MinRetention")
+    @Expose
+    private Long MinRetention;
+
+    /**
+    * Instance message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Retention")
+    @Expose
+    private Long Retention;
+
+    /**
+    * Minimum quota for the number of topics, which is the free quota. The default number is the minimum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TopicNumLowerLimit")
+    @Expose
+    private Long TopicNumLowerLimit;
+
+    /**
+    * Maximum quota for the number of topics. The default number is the maximum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TopicNumUpperLimit")
+    @Expose
+    private Long TopicNumUpperLimit;
+
+    /**
+    * Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5.
+    */
+    @SerializedName("SendReceiveRatio")
+    @Expose
+    private Float SendReceiveRatio;
+
+    /**
      * Get Maximum TPS per namespace 
      * @return MaxTpsPerNamespace Maximum TPS per namespace
      */
@@ -299,6 +346,122 @@ public class RocketMQInstanceConfig extends AbstractModel {
         this.MaxQueuesPerTopic = MaxQueuesPerTopic;
     }
 
+    /**
+     * Get Maximum configurable message retention time, in hours	
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MaxRetention Maximum configurable message retention time, in hours	
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMaxRetention() {
+        return this.MaxRetention;
+    }
+
+    /**
+     * Set Maximum configurable message retention time, in hours	
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MaxRetention Maximum configurable message retention time, in hours	
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMaxRetention(Long MaxRetention) {
+        this.MaxRetention = MaxRetention;
+    }
+
+    /**
+     * Get Minimum configurable message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MinRetention Minimum configurable message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMinRetention() {
+        return this.MinRetention;
+    }
+
+    /**
+     * Set Minimum configurable message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MinRetention Minimum configurable message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMinRetention(Long MinRetention) {
+        this.MinRetention = MinRetention;
+    }
+
+    /**
+     * Get Instance message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Retention Instance message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getRetention() {
+        return this.Retention;
+    }
+
+    /**
+     * Set Instance message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Retention Instance message retention time, in hours
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRetention(Long Retention) {
+        this.Retention = Retention;
+    }
+
+    /**
+     * Get Minimum quota for the number of topics, which is the free quota. The default number is the minimum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TopicNumLowerLimit Minimum quota for the number of topics, which is the free quota. The default number is the minimum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getTopicNumLowerLimit() {
+        return this.TopicNumLowerLimit;
+    }
+
+    /**
+     * Set Minimum quota for the number of topics, which is the free quota. The default number is the minimum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TopicNumLowerLimit Minimum quota for the number of topics, which is the free quota. The default number is the minimum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTopicNumLowerLimit(Long TopicNumLowerLimit) {
+        this.TopicNumLowerLimit = TopicNumLowerLimit;
+    }
+
+    /**
+     * Get Maximum quota for the number of topics. The default number is the maximum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TopicNumUpperLimit Maximum quota for the number of topics. The default number is the maximum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getTopicNumUpperLimit() {
+        return this.TopicNumUpperLimit;
+    }
+
+    /**
+     * Set Maximum quota for the number of topics. The default number is the maximum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TopicNumUpperLimit Maximum quota for the number of topics. The default number is the maximum quota per node in the cluster specification multiplied by the number of nodes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTopicNumUpperLimit(Long TopicNumUpperLimit) {
+        this.TopicNumUpperLimit = TopicNumUpperLimit;
+    }
+
+    /**
+     * Get Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5. 
+     * @return SendReceiveRatio Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5.
+     */
+    public Float getSendReceiveRatio() {
+        return this.SendReceiveRatio;
+    }
+
+    /**
+     * Set Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5.
+     * @param SendReceiveRatio Controls the TPS ratio for producing and consuming messages. Value range: 0–1. Default value: 0.5.
+     */
+    public void setSendReceiveRatio(Float SendReceiveRatio) {
+        this.SendReceiveRatio = SendReceiveRatio;
+    }
+
     public RocketMQInstanceConfig() {
     }
 
@@ -349,6 +512,24 @@ public class RocketMQInstanceConfig extends AbstractModel {
         if (source.MaxQueuesPerTopic != null) {
             this.MaxQueuesPerTopic = new Long(source.MaxQueuesPerTopic);
         }
+        if (source.MaxRetention != null) {
+            this.MaxRetention = new Long(source.MaxRetention);
+        }
+        if (source.MinRetention != null) {
+            this.MinRetention = new Long(source.MinRetention);
+        }
+        if (source.Retention != null) {
+            this.Retention = new Long(source.Retention);
+        }
+        if (source.TopicNumLowerLimit != null) {
+            this.TopicNumLowerLimit = new Long(source.TopicNumLowerLimit);
+        }
+        if (source.TopicNumUpperLimit != null) {
+            this.TopicNumUpperLimit = new Long(source.TopicNumUpperLimit);
+        }
+        if (source.SendReceiveRatio != null) {
+            this.SendReceiveRatio = new Float(source.SendReceiveRatio);
+        }
     }
 
 
@@ -368,6 +549,12 @@ public class RocketMQInstanceConfig extends AbstractModel {
         this.setParamArrayObj(map, prefix + "NodeDistribution.", this.NodeDistribution);
         this.setParamArrayObj(map, prefix + "TopicDistribution.", this.TopicDistribution);
         this.setParamSimple(map, prefix + "MaxQueuesPerTopic", this.MaxQueuesPerTopic);
+        this.setParamSimple(map, prefix + "MaxRetention", this.MaxRetention);
+        this.setParamSimple(map, prefix + "MinRetention", this.MinRetention);
+        this.setParamSimple(map, prefix + "Retention", this.Retention);
+        this.setParamSimple(map, prefix + "TopicNumLowerLimit", this.TopicNumLowerLimit);
+        this.setParamSimple(map, prefix + "TopicNumUpperLimit", this.TopicNumUpperLimit);
+        this.setParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
 
     }
 }

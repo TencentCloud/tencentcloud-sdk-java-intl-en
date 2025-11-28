@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class FunctionTarget extends AbstractModel {
 
     /**
-    * SCF related information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * SCF information
     */
     @SerializedName("Function")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long Weight;
 
     /**
-     * Get SCF related information
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Function SCF related information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get SCF information 
+     * @return Function SCF information
      */
     public FunctionInfo getFunction() {
         return this.Function;
     }
 
     /**
-     * Set SCF related information
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Function SCF related information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set SCF information
+     * @param Function SCF information
      */
     public void setFunction(FunctionInfo Function) {
         this.Function = Function;

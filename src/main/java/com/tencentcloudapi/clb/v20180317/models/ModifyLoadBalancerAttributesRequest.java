@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyLoadBalancerAttributesRequest extends AbstractModel {
 
     /**
-    * Unique CLB ID
+    * Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * CLB instance name
+    * Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
     */
     @SerializedName("LoadBalancerName")
     @Expose
@@ -52,60 +52,70 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel {
     private InternetAccessible InternetChargeInfo;
 
     /**
-    * Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+    * Specifies whether to allow CLB traffic to the Target.
+Enable pass-through (true): verify security groups on CLB only.
+Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
+Specifies no modification if left blank.
     */
     @SerializedName("LoadBalancerPassToTarget")
     @Expose
     private Boolean LoadBalancerPassToTarget;
 
     /**
-    * Whether to enable cross-region binding 2.0
+    * Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
     */
     @SerializedName("SnatPro")
     @Expose
     private Boolean SnatPro;
 
     /**
-    * Specifies whether to enable deletion protection.
+    * Specifies whether to enable deletion protection. leave it blank to keep the current setting.
     */
     @SerializedName("DeleteProtect")
     @Expose
     private Boolean DeleteProtect;
 
     /**
-    * Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+    * Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
     */
     @SerializedName("ModifyClassicDomain")
     @Expose
     private Boolean ModifyClassicDomain;
 
     /**
-     * Get Unique CLB ID 
-     * @return LoadBalancerId Unique CLB ID
+    * The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.comom/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+    */
+    @SerializedName("AssociateEndpoint")
+    @Expose
+    private String AssociateEndpoint;
+
+    /**
+     * Get Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID. 
+     * @return LoadBalancerId Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set Unique CLB ID
-     * @param LoadBalancerId Unique CLB ID
+     * Set Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+     * @param LoadBalancerId Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get CLB instance name 
-     * @return LoadBalancerName CLB instance name
+     * Get Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_". 
+     * @return LoadBalancerName Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
     }
 
     /**
-     * Set CLB instance name
-     * @param LoadBalancerName CLB instance name
+     * Set Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
+     * @param LoadBalancerName Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;
@@ -144,67 +154,95 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified. 
-     * @return LoadBalancerPassToTarget Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+     * Get Specifies whether to allow CLB traffic to the Target.
+Enable pass-through (true): verify security groups on CLB only.
+Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
+Specifies no modification if left blank. 
+     * @return LoadBalancerPassToTarget Specifies whether to allow CLB traffic to the Target.
+Enable pass-through (true): verify security groups on CLB only.
+Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
+Specifies no modification if left blank.
      */
     public Boolean getLoadBalancerPassToTarget() {
         return this.LoadBalancerPassToTarget;
     }
 
     /**
-     * Set Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
-     * @param LoadBalancerPassToTarget Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+     * Set Specifies whether to allow CLB traffic to the Target.
+Enable pass-through (true): verify security groups on CLB only.
+Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
+Specifies no modification if left blank.
+     * @param LoadBalancerPassToTarget Specifies whether to allow CLB traffic to the Target.
+Enable pass-through (true): verify security groups on CLB only.
+Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
+Specifies no modification if left blank.
      */
     public void setLoadBalancerPassToTarget(Boolean LoadBalancerPassToTarget) {
         this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
     }
 
     /**
-     * Get Whether to enable cross-region binding 2.0 
-     * @return SnatPro Whether to enable cross-region binding 2.0
+     * Get Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification. 
+     * @return SnatPro Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
      */
     public Boolean getSnatPro() {
         return this.SnatPro;
     }
 
     /**
-     * Set Whether to enable cross-region binding 2.0
-     * @param SnatPro Whether to enable cross-region binding 2.0
+     * Set Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
+     * @param SnatPro Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
      */
     public void setSnatPro(Boolean SnatPro) {
         this.SnatPro = SnatPro;
     }
 
     /**
-     * Get Specifies whether to enable deletion protection. 
-     * @return DeleteProtect Specifies whether to enable deletion protection.
+     * Get Specifies whether to enable deletion protection. leave it blank to keep the current setting. 
+     * @return DeleteProtect Specifies whether to enable deletion protection. leave it blank to keep the current setting.
      */
     public Boolean getDeleteProtect() {
         return this.DeleteProtect;
     }
 
     /**
-     * Set Specifies whether to enable deletion protection.
-     * @param DeleteProtect Specifies whether to enable deletion protection.
+     * Set Specifies whether to enable deletion protection. leave it blank to keep the current setting.
+     * @param DeleteProtect Specifies whether to enable deletion protection. leave it blank to keep the current setting.
      */
     public void setDeleteProtect(Boolean DeleteProtect) {
         this.DeleteProtect = DeleteProtect;
     }
 
     /**
-     * Get Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated.  
-     * @return ModifyClassicDomain Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+     * Get Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required. 
+     * @return ModifyClassicDomain Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
      */
     public Boolean getModifyClassicDomain() {
         return this.ModifyClassicDomain;
     }
 
     /**
-     * Set Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
-     * @param ModifyClassicDomain Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+     * Set Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
+     * @param ModifyClassicDomain Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
      */
     public void setModifyClassicDomain(Boolean ModifyClassicDomain) {
         this.ModifyClassicDomain = ModifyClassicDomain;
+    }
+
+    /**
+     * Get The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.comom/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind. 
+     * @return AssociateEndpoint The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.comom/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+     */
+    public String getAssociateEndpoint() {
+        return this.AssociateEndpoint;
+    }
+
+    /**
+     * Set The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.comom/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+     * @param AssociateEndpoint The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.comom/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+     */
+    public void setAssociateEndpoint(String AssociateEndpoint) {
+        this.AssociateEndpoint = AssociateEndpoint;
     }
 
     public ModifyLoadBalancerAttributesRequest() {
@@ -239,6 +277,9 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel {
         if (source.ModifyClassicDomain != null) {
             this.ModifyClassicDomain = new Boolean(source.ModifyClassicDomain);
         }
+        if (source.AssociateEndpoint != null) {
+            this.AssociateEndpoint = new String(source.AssociateEndpoint);
+        }
     }
 
 
@@ -254,6 +295,7 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
         this.setParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
         this.setParamSimple(map, prefix + "ModifyClassicDomain", this.ModifyClassicDomain);
+        this.setParamSimple(map, prefix + "AssociateEndpoint", this.AssociateEndpoint);
 
     }
 }

@@ -52,7 +52,7 @@ public class TargetHealth extends AbstractModel {
     private String TargetId;
 
     /**
-    * Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+    * Describes the detailed information of the current health status. for example: Alive, Dead, Unknown, Close. Alive status is healthy, Dead state is abnormal, Unknown status includes not started, checking, Unknown status, Close means health check disabled or listener status stop.
     */
     @SerializedName("HealthStatusDetail")
     @Expose
@@ -64,6 +64,20 @@ public class TargetHealth extends AbstractModel {
     @SerializedName("HealthStatusDetial")
     @Expose
     private String HealthStatusDetial;
+
+    /**
+    * Target group unique ID.
+    */
+    @SerializedName("TargetGroupId")
+    @Expose
+    private String TargetGroupId;
+
+    /**
+    * Specifies the weight of the Target.
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
 
     /**
      * Get Private IP of the target 
@@ -130,16 +144,16 @@ public class TargetHealth extends AbstractModel {
     }
 
     /**
-     * Get Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. 
-     * @return HealthStatusDetail Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+     * Get Describes the detailed information of the current health status. for example: Alive, Dead, Unknown, Close. Alive status is healthy, Dead state is abnormal, Unknown status includes not started, checking, Unknown status, Close means health check disabled or listener status stop. 
+     * @return HealthStatusDetail Describes the detailed information of the current health status. for example: Alive, Dead, Unknown, Close. Alive status is healthy, Dead state is abnormal, Unknown status includes not started, checking, Unknown status, Close means health check disabled or listener status stop.
      */
     public String getHealthStatusDetail() {
         return this.HealthStatusDetail;
     }
 
     /**
-     * Set Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
-     * @param HealthStatusDetail Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+     * Set Describes the detailed information of the current health status. for example: Alive, Dead, Unknown, Close. Alive status is healthy, Dead state is abnormal, Unknown status includes not started, checking, Unknown status, Close means health check disabled or listener status stop.
+     * @param HealthStatusDetail Describes the detailed information of the current health status. for example: Alive, Dead, Unknown, Close. Alive status is healthy, Dead state is abnormal, Unknown status includes not started, checking, Unknown status, Close means health check disabled or listener status stop.
      */
     public void setHealthStatusDetail(String HealthStatusDetail) {
         this.HealthStatusDetail = HealthStatusDetail;
@@ -163,6 +177,38 @@ public class TargetHealth extends AbstractModel {
     @Deprecated
     public void setHealthStatusDetial(String HealthStatusDetial) {
         this.HealthStatusDetial = HealthStatusDetial;
+    }
+
+    /**
+     * Get Target group unique ID. 
+     * @return TargetGroupId Target group unique ID.
+     */
+    public String getTargetGroupId() {
+        return this.TargetGroupId;
+    }
+
+    /**
+     * Set Target group unique ID.
+     * @param TargetGroupId Target group unique ID.
+     */
+    public void setTargetGroupId(String TargetGroupId) {
+        this.TargetGroupId = TargetGroupId;
+    }
+
+    /**
+     * Get Specifies the weight of the Target. 
+     * @return Weight Specifies the weight of the Target.
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set Specifies the weight of the Target.
+     * @param Weight Specifies the weight of the Target.
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
     }
 
     public TargetHealth() {
@@ -191,6 +237,12 @@ public class TargetHealth extends AbstractModel {
         if (source.HealthStatusDetial != null) {
             this.HealthStatusDetial = new String(source.HealthStatusDetial);
         }
+        if (source.TargetGroupId != null) {
+            this.TargetGroupId = new String(source.TargetGroupId);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
     }
 
 
@@ -204,6 +256,8 @@ public class TargetHealth extends AbstractModel {
         this.setParamSimple(map, prefix + "TargetId", this.TargetId);
         this.setParamSimple(map, prefix + "HealthStatusDetail", this.HealthStatusDetail);
         this.setParamSimple(map, prefix + "HealthStatusDetial", this.HealthStatusDetial);
+        this.setParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
 
     }
 }

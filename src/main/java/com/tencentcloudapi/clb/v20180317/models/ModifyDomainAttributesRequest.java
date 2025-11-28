@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyDomainAttributesRequest extends AbstractModel {
 
     /**
-    * CLB instance ID
+    * ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * CLB listener ID
+    * ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
+    * Domain name (must be a domain name under a created forwarding rule). if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
     */
     @SerializedName("Domain")
     @Expose
@@ -59,21 +59,24 @@ public class ModifyDomainAttributesRequest extends AbstractModel {
     private CertificateInput Certificate;
 
     /**
-    * Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
+    * Specifies whether to enable HTTP/2. note that only HTTPS domain names support HTTP/2.
+True: enable HTTP2. false: disable HTTP2.
     */
     @SerializedName("Http2")
     @Expose
     private Boolean Http2;
 
     /**
-    * Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+    * Whether to set as the default domain name. Note: Only one default domain name can be set under a listener.
+True: set as default domain name. false: do not set as default domain name.
     */
     @SerializedName("DefaultServer")
     @Expose
     private Boolean DefaultServer;
 
     /**
-    * Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+    * Specifies whether QUIC is enabled. note that QUIC can only be enabled for HTTPS domains.
+True: enable QUIC. False: disable.
     */
     @SerializedName("Quic")
     @Expose
@@ -101,48 +104,48 @@ public class ModifyDomainAttributesRequest extends AbstractModel {
     private MultiCertInfo MultiCertInfo;
 
     /**
-     * Get CLB instance ID 
-     * @return LoadBalancerId CLB instance ID
+     * Get ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID. 
+     * @return LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set CLB instance ID
-     * @param LoadBalancerId CLB instance ID
+     * Set ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
+     * @param LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get CLB listener ID 
-     * @return ListenerId CLB listener ID
+     * Get ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID. 
+     * @return ListenerId ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set CLB listener ID
-     * @param ListenerId CLB listener ID
+     * Set ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
+     * @param ListenerId ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one. 
-     * @return Domain The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
+     * Get Domain name (must be a domain name under a created forwarding rule). if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api. 
+     * @return Domain Domain name (must be a domain name under a created forwarding rule). if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
-     * @param Domain The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
+     * Set Domain name (must be a domain name under a created forwarding rule). if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
+     * @param Domain Domain name (must be a domain name under a created forwarding rule). if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
@@ -181,48 +184,60 @@ public class ModifyDomainAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names. 
-     * @return Http2 Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
+     * Get Specifies whether to enable HTTP/2. note that only HTTPS domain names support HTTP/2.
+True: enable HTTP2. false: disable HTTP2. 
+     * @return Http2 Specifies whether to enable HTTP/2. note that only HTTPS domain names support HTTP/2.
+True: enable HTTP2. false: disable HTTP2.
      */
     public Boolean getHttp2() {
         return this.Http2;
     }
 
     /**
-     * Set Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
-     * @param Http2 Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
+     * Set Specifies whether to enable HTTP/2. note that only HTTPS domain names support HTTP/2.
+True: enable HTTP2. false: disable HTTP2.
+     * @param Http2 Specifies whether to enable HTTP/2. note that only HTTPS domain names support HTTP/2.
+True: enable HTTP2. false: disable HTTP2.
      */
     public void setHttp2(Boolean Http2) {
         this.Http2 = Http2;
     }
 
     /**
-     * Get Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener. 
-     * @return DefaultServer Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+     * Get Whether to set as the default domain name. Note: Only one default domain name can be set under a listener.
+True: set as default domain name. false: do not set as default domain name. 
+     * @return DefaultServer Whether to set as the default domain name. Note: Only one default domain name can be set under a listener.
+True: set as default domain name. false: do not set as default domain name.
      */
     public Boolean getDefaultServer() {
         return this.DefaultServer;
     }
 
     /**
-     * Set Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
-     * @param DefaultServer Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+     * Set Whether to set as the default domain name. Note: Only one default domain name can be set under a listener.
+True: set as default domain name. false: do not set as default domain name.
+     * @param DefaultServer Whether to set as the default domain name. Note: Only one default domain name can be set under a listener.
+True: set as default domain name. false: do not set as default domain name.
      */
     public void setDefaultServer(Boolean DefaultServer) {
         this.DefaultServer = DefaultServer;
     }
 
     /**
-     * Get Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names. 
-     * @return Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+     * Get Specifies whether QUIC is enabled. note that QUIC can only be enabled for HTTPS domains.
+True: enable QUIC. False: disable. 
+     * @return Quic Specifies whether QUIC is enabled. note that QUIC can only be enabled for HTTPS domains.
+True: enable QUIC. False: disable.
      */
     public Boolean getQuic() {
         return this.Quic;
     }
 
     /**
-     * Set Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
-     * @param Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+     * Set Specifies whether QUIC is enabled. note that QUIC can only be enabled for HTTPS domains.
+True: enable QUIC. False: disable.
+     * @param Quic Specifies whether QUIC is enabled. note that QUIC can only be enabled for HTTPS domains.
+True: enable QUIC. False: disable.
      */
     public void setQuic(Boolean Quic) {
         this.Quic = Quic;

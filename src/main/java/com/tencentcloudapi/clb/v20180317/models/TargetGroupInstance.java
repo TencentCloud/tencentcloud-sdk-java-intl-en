@@ -31,21 +31,23 @@ public class TargetGroupInstance extends AbstractModel {
     private String BindIP;
 
     /**
-    * Port of target group instance
+    * Port of target group instance. this field is not supported for full listen target groups.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Weight of target group instance
+    * Weight of a target group instance
+Specifies that the Weight must be configured for a v2 target group. when calling the CreateTargetGroup API for target group creation, this parameter is used in combination with the Weight parameter in the create api, and one of them is required.
+Valid values: 0-100.
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * New port of target group instance
+    * The new port of the target group instance. this field is not supported for full listen target groups.
     */
     @SerializedName("NewPort")
     @Expose
@@ -68,48 +70,56 @@ public class TargetGroupInstance extends AbstractModel {
     }
 
     /**
-     * Get Port of target group instance 
-     * @return Port Port of target group instance
+     * Get Port of target group instance. this field is not supported for full listen target groups. 
+     * @return Port Port of target group instance. this field is not supported for full listen target groups.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port of target group instance
-     * @param Port Port of target group instance
+     * Set Port of target group instance. this field is not supported for full listen target groups.
+     * @param Port Port of target group instance. this field is not supported for full listen target groups.
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Weight of target group instance 
-     * @return Weight Weight of target group instance
+     * Get Weight of a target group instance
+Specifies that the Weight must be configured for a v2 target group. when calling the CreateTargetGroup API for target group creation, this parameter is used in combination with the Weight parameter in the create api, and one of them is required.
+Valid values: 0-100. 
+     * @return Weight Weight of a target group instance
+Specifies that the Weight must be configured for a v2 target group. when calling the CreateTargetGroup API for target group creation, this parameter is used in combination with the Weight parameter in the create api, and one of them is required.
+Valid values: 0-100.
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set Weight of target group instance
-     * @param Weight Weight of target group instance
+     * Set Weight of a target group instance
+Specifies that the Weight must be configured for a v2 target group. when calling the CreateTargetGroup API for target group creation, this parameter is used in combination with the Weight parameter in the create api, and one of them is required.
+Valid values: 0-100.
+     * @param Weight Weight of a target group instance
+Specifies that the Weight must be configured for a v2 target group. when calling the CreateTargetGroup API for target group creation, this parameter is used in combination with the Weight parameter in the create api, and one of them is required.
+Valid values: 0-100.
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get New port of target group instance 
-     * @return NewPort New port of target group instance
+     * Get The new port of the target group instance. this field is not supported for full listen target groups. 
+     * @return NewPort The new port of the target group instance. this field is not supported for full listen target groups.
      */
     public Long getNewPort() {
         return this.NewPort;
     }
 
     /**
-     * Set New port of target group instance
-     * @param NewPort New port of target group instance
+     * Set The new port of the target group instance. this field is not supported for full listen target groups.
+     * @param NewPort The new port of the target group instance. this field is not supported for full listen target groups.
      */
     public void setNewPort(Long NewPort) {
         this.NewPort = NewPort;

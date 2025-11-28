@@ -31,8 +31,7 @@ public class ListenerHealth extends AbstractModel {
     private String ListenerId;
 
     /**
-    * Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Listener name.
     */
     @SerializedName("ListenerName")
     @Expose
@@ -54,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * List of forwarding rules of the listener
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Rules")
     @Expose
@@ -77,20 +75,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Listener name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ListenerName Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Listener name. 
+     * @return ListenerName Listener name.
      */
     public String getListenerName() {
         return this.ListenerName;
     }
 
     /**
-     * Set Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ListenerName Listener name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Listener name.
+     * @param ListenerName Listener name.
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;
@@ -129,10 +123,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of forwarding rules of the listener
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of forwarding rules of the listener 
      * @return Rules List of forwarding rules of the listener
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RuleHealth [] getRules() {
         return this.Rules;
@@ -140,9 +132,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of forwarding rules of the listener
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Rules List of forwarding rules of the listener
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRules(RuleHealth [] Rules) {
         this.Rules = Rules;

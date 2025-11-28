@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTargetGroupInstancesRequest extends AbstractModel {
 
     /**
-    * Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+    * Filter criteria, currently supported by multiple conditions combined as TargetGroupId, BindIP, and InstanceId.
     */
     @SerializedName("Filters")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeTargetGroupInstancesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported. 
-     * @return Filters Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+     * Get Filter criteria, currently supported by multiple conditions combined as TargetGroupId, BindIP, and InstanceId. 
+     * @return Filters Filter criteria, currently supported by multiple conditions combined as TargetGroupId, BindIP, and InstanceId.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
-     * @param Filters Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+     * Set Filter criteria, currently supported by multiple conditions combined as TargetGroupId, BindIP, and InstanceId.
+     * @param Filters Filter criteria, currently supported by multiple conditions combined as TargetGroupId, BindIP, and InstanceId.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

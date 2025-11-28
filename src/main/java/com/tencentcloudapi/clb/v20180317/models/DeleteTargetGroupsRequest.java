@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteTargetGroupsRequest extends AbstractModel {
 
     /**
-    * Target group ID array
+    * Specifies the ID array of the target group. supports up to 20 deletions.
     */
     @SerializedName("TargetGroupIds")
     @Expose
     private String [] TargetGroupIds;
 
     /**
-     * Get Target group ID array 
-     * @return TargetGroupIds Target group ID array
+     * Get Specifies the ID array of the target group. supports up to 20 deletions. 
+     * @return TargetGroupIds Specifies the ID array of the target group. supports up to 20 deletions.
      */
     public String [] getTargetGroupIds() {
         return this.TargetGroupIds;
     }
 
     /**
-     * Set Target group ID array
-     * @param TargetGroupIds Target group ID array
+     * Set Specifies the ID array of the target group. supports up to 20 deletions.
+     * @param TargetGroupIds Specifies the ID array of the target group. supports up to 20 deletions.
      */
     public void setTargetGroupIds(String [] TargetGroupIds) {
         this.TargetGroupIds = TargetGroupIds;

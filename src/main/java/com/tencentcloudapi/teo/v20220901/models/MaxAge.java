@@ -33,8 +33,8 @@ public class MaxAge extends AbstractModel {
     private String FollowOrigin;
 
     /**
-    * Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
-Note: The value `0` means not to cache.
+    * MaxAge specifies the time setting in seconds. value range: 0–315360000.
+Specifies the time when the cache is disabled if set to 0.
     */
     @SerializedName("MaxAgeTime")
     @Expose
@@ -65,20 +65,20 @@ Note: The value `0` means not to cache.
     }
 
     /**
-     * Get Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
-Note: The value `0` means not to cache. 
-     * @return MaxAgeTime Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
-Note: The value `0` means not to cache.
+     * Get MaxAge specifies the time setting in seconds. value range: 0–315360000.
+Specifies the time when the cache is disabled if set to 0. 
+     * @return MaxAgeTime MaxAge specifies the time setting in seconds. value range: 0–315360000.
+Specifies the time when the cache is disabled if set to 0.
      */
     public Long getMaxAgeTime() {
         return this.MaxAgeTime;
     }
 
     /**
-     * Set Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
-Note: The value `0` means not to cache.
-     * @param MaxAgeTime Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
-Note: The value `0` means not to cache.
+     * Set MaxAge specifies the time setting in seconds. value range: 0–315360000.
+Specifies the time when the cache is disabled if set to 0.
+     * @param MaxAgeTime MaxAge specifies the time setting in seconds. value range: 0–315360000.
+Specifies the time when the cache is disabled if set to 0.
      */
     public void setMaxAgeTime(Long MaxAgeTime) {
         this.MaxAgeTime = MaxAgeTime;

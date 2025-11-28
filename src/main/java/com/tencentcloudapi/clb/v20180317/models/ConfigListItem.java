@@ -31,15 +31,14 @@ public class ConfigListItem extends AbstractModel {
     private String UconfigId;
 
     /**
-    * Configuration type.
+    * Configuration type. available values: CLB (instance dimension configuration), SERVER (service dimension configuration), LOCATION (rule dimension configuration).
     */
     @SerializedName("ConfigType")
     @Expose
     private String ConfigType;
 
     /**
-    * Configuration name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Configuration name
     */
     @SerializedName("ConfigName")
     @Expose
@@ -53,14 +52,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String ConfigContent;
 
     /**
-    * Creates configuration time.
+    * Specifies the configured creation time.
+Format: YYYY-MM-DD HH:MM:ss.
     */
     @SerializedName("CreateTimestamp")
     @Expose
     private String CreateTimestamp;
 
     /**
-    * Modifies configuration time.
+    * Specifies the modification time of the configuration.
+Format: YYYY-MM-DD HH:MM:ss.
     */
     @SerializedName("UpdateTimestamp")
     @Expose
@@ -83,36 +84,32 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Configuration type. 
-     * @return ConfigType Configuration type.
+     * Get Configuration type. available values: CLB (instance dimension configuration), SERVER (service dimension configuration), LOCATION (rule dimension configuration). 
+     * @return ConfigType Configuration type. available values: CLB (instance dimension configuration), SERVER (service dimension configuration), LOCATION (rule dimension configuration).
      */
     public String getConfigType() {
         return this.ConfigType;
     }
 
     /**
-     * Set Configuration type.
-     * @param ConfigType Configuration type.
+     * Set Configuration type. available values: CLB (instance dimension configuration), SERVER (service dimension configuration), LOCATION (rule dimension configuration).
+     * @param ConfigType Configuration type. available values: CLB (instance dimension configuration), SERVER (service dimension configuration), LOCATION (rule dimension configuration).
      */
     public void setConfigType(String ConfigType) {
         this.ConfigType = ConfigType;
     }
 
     /**
-     * Get Configuration name.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ConfigName Configuration name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Configuration name 
+     * @return ConfigName Configuration name
      */
     public String getConfigName() {
         return this.ConfigName;
     }
 
     /**
-     * Set Configuration name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ConfigName Configuration name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Configuration name
+     * @param ConfigName Configuration name
      */
     public void setConfigName(String ConfigName) {
         this.ConfigName = ConfigName;
@@ -135,32 +132,40 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Creates configuration time. 
-     * @return CreateTimestamp Creates configuration time.
+     * Get Specifies the configured creation time.
+Format: YYYY-MM-DD HH:MM:ss. 
+     * @return CreateTimestamp Specifies the configured creation time.
+Format: YYYY-MM-DD HH:MM:ss.
      */
     public String getCreateTimestamp() {
         return this.CreateTimestamp;
     }
 
     /**
-     * Set Creates configuration time.
-     * @param CreateTimestamp Creates configuration time.
+     * Set Specifies the configured creation time.
+Format: YYYY-MM-DD HH:MM:ss.
+     * @param CreateTimestamp Specifies the configured creation time.
+Format: YYYY-MM-DD HH:MM:ss.
      */
     public void setCreateTimestamp(String CreateTimestamp) {
         this.CreateTimestamp = CreateTimestamp;
     }
 
     /**
-     * Get Modifies configuration time. 
-     * @return UpdateTimestamp Modifies configuration time.
+     * Get Specifies the modification time of the configuration.
+Format: YYYY-MM-DD HH:MM:ss. 
+     * @return UpdateTimestamp Specifies the modification time of the configuration.
+Format: YYYY-MM-DD HH:MM:ss.
      */
     public String getUpdateTimestamp() {
         return this.UpdateTimestamp;
     }
 
     /**
-     * Set Modifies configuration time.
-     * @param UpdateTimestamp Modifies configuration time.
+     * Set Specifies the modification time of the configuration.
+Format: YYYY-MM-DD HH:MM:ss.
+     * @param UpdateTimestamp Specifies the modification time of the configuration.
+Format: YYYY-MM-DD HH:MM:ss.
      */
     public void setUpdateTimestamp(String UpdateTimestamp) {
         this.UpdateTimestamp = UpdateTimestamp;

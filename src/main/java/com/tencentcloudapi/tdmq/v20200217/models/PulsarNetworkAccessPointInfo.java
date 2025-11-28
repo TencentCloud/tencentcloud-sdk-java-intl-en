@@ -64,6 +64,72 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long RouteType;
 
     /**
+    * 0: local region access. since cross-region disaster recovery is not configured, this type of access point cannot perform cross-region switchover or switch back from remote access.
+Local region access. due to the configuration of cross-region disaster recovery, switchover can be performed at any time in a different location. this state is used for the primary cluster access point.
+Cross-Region access, completed offsite switchover, this state is used for the access point of the source cluster. the access point in this state is non-deletable.
+3: cross-region access can be switched back from remote access at any time. this state is for the access point of the target cluster. the access point in this state is non-deletable.
+Cross-Region access. the target cluster has completed offsite switchback and is in the state of waiting for deletion.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OperationType")
+    @Expose
+    private Long OperationType;
+
+    /**
+    * Access point type.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AccessPointsType")
+    @Expose
+    private String AccessPointsType;
+
+    /**
+    * Bandwidth. currently only public network has this value.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
+
+    /**
+    * Class.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SecurityPolicy")
+    @Expose
+    private SecurityPolicy [] SecurityPolicy;
+
+    /**
+    * Indicates whether it is a standard access point. valid values: true (standard), false (not standard).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StandardAccessPoint")
+    @Expose
+    private Boolean StandardAccessPoint;
+
+    /**
+    * AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ZoneName")
+    @Expose
+    private String ZoneName;
+
+    /**
+    * Specifies whether TLS encryption is enabled.
+    */
+    @SerializedName("Tls")
+    @Expose
+    private Boolean Tls;
+
+    /**
+    * Access point custom domain name.
+    */
+    @SerializedName("CustomUrl")
+    @Expose
+    private String CustomUrl;
+
+    /**
      * Get VPC ID. This field is left empty for supporting network and public network access points.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return VpcId VPC ID. This field is left empty for supporting network and public network access points.
@@ -163,6 +229,174 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RouteType = RouteType;
     }
 
+    /**
+     * Get 0: local region access. since cross-region disaster recovery is not configured, this type of access point cannot perform cross-region switchover or switch back from remote access.
+Local region access. due to the configuration of cross-region disaster recovery, switchover can be performed at any time in a different location. this state is used for the primary cluster access point.
+Cross-Region access, completed offsite switchover, this state is used for the access point of the source cluster. the access point in this state is non-deletable.
+3: cross-region access can be switched back from remote access at any time. this state is for the access point of the target cluster. the access point in this state is non-deletable.
+Cross-Region access. the target cluster has completed offsite switchback and is in the state of waiting for deletion.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OperationType 0: local region access. since cross-region disaster recovery is not configured, this type of access point cannot perform cross-region switchover or switch back from remote access.
+Local region access. due to the configuration of cross-region disaster recovery, switchover can be performed at any time in a different location. this state is used for the primary cluster access point.
+Cross-Region access, completed offsite switchover, this state is used for the access point of the source cluster. the access point in this state is non-deletable.
+3: cross-region access can be switched back from remote access at any time. this state is for the access point of the target cluster. the access point in this state is non-deletable.
+Cross-Region access. the target cluster has completed offsite switchback and is in the state of waiting for deletion.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getOperationType() {
+        return this.OperationType;
+    }
+
+    /**
+     * Set 0: local region access. since cross-region disaster recovery is not configured, this type of access point cannot perform cross-region switchover or switch back from remote access.
+Local region access. due to the configuration of cross-region disaster recovery, switchover can be performed at any time in a different location. this state is used for the primary cluster access point.
+Cross-Region access, completed offsite switchover, this state is used for the access point of the source cluster. the access point in this state is non-deletable.
+3: cross-region access can be switched back from remote access at any time. this state is for the access point of the target cluster. the access point in this state is non-deletable.
+Cross-Region access. the target cluster has completed offsite switchback and is in the state of waiting for deletion.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OperationType 0: local region access. since cross-region disaster recovery is not configured, this type of access point cannot perform cross-region switchover or switch back from remote access.
+Local region access. due to the configuration of cross-region disaster recovery, switchover can be performed at any time in a different location. this state is used for the primary cluster access point.
+Cross-Region access, completed offsite switchover, this state is used for the access point of the source cluster. the access point in this state is non-deletable.
+3: cross-region access can be switched back from remote access at any time. this state is for the access point of the target cluster. the access point in this state is non-deletable.
+Cross-Region access. the target cluster has completed offsite switchback and is in the state of waiting for deletion.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOperationType(Long OperationType) {
+        this.OperationType = OperationType;
+    }
+
+    /**
+     * Get Access point type.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AccessPointsType Access point type.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAccessPointsType() {
+        return this.AccessPointsType;
+    }
+
+    /**
+     * Set Access point type.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AccessPointsType Access point type.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAccessPointsType(String AccessPointsType) {
+        this.AccessPointsType = AccessPointsType;
+    }
+
+    /**
+     * Get Bandwidth. currently only public network has this value.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Bandwidth Bandwidth. currently only public network has this value.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set Bandwidth. currently only public network has this value.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Bandwidth Bandwidth. currently only public network has this value.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
+    /**
+     * Get Class.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SecurityPolicy Class.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public SecurityPolicy [] getSecurityPolicy() {
+        return this.SecurityPolicy;
+    }
+
+    /**
+     * Set Class.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SecurityPolicy Class.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSecurityPolicy(SecurityPolicy [] SecurityPolicy) {
+        this.SecurityPolicy = SecurityPolicy;
+    }
+
+    /**
+     * Get Indicates whether it is a standard access point. valid values: true (standard), false (not standard).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return StandardAccessPoint Indicates whether it is a standard access point. valid values: true (standard), false (not standard).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getStandardAccessPoint() {
+        return this.StandardAccessPoint;
+    }
+
+    /**
+     * Set Indicates whether it is a standard access point. valid values: true (standard), false (not standard).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param StandardAccessPoint Indicates whether it is a standard access point. valid values: true (standard), false (not standard).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStandardAccessPoint(Boolean StandardAccessPoint) {
+        this.StandardAccessPoint = StandardAccessPoint;
+    }
+
+    /**
+     * Get AZ information
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ZoneName AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getZoneName() {
+        return this.ZoneName;
+    }
+
+    /**
+     * Set AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ZoneName AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
+    }
+
+    /**
+     * Get Specifies whether TLS encryption is enabled. 
+     * @return Tls Specifies whether TLS encryption is enabled.
+     */
+    public Boolean getTls() {
+        return this.Tls;
+    }
+
+    /**
+     * Set Specifies whether TLS encryption is enabled.
+     * @param Tls Specifies whether TLS encryption is enabled.
+     */
+    public void setTls(Boolean Tls) {
+        this.Tls = Tls;
+    }
+
+    /**
+     * Get Access point custom domain name. 
+     * @return CustomUrl Access point custom domain name.
+     */
+    public String getCustomUrl() {
+        return this.CustomUrl;
+    }
+
+    /**
+     * Set Access point custom domain name.
+     * @param CustomUrl Access point custom domain name.
+     */
+    public void setCustomUrl(String CustomUrl) {
+        this.CustomUrl = CustomUrl;
+    }
+
     public PulsarNetworkAccessPointInfo() {
     }
 
@@ -186,6 +420,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RouteType != null) {
             this.RouteType = new Long(source.RouteType);
         }
+        if (source.OperationType != null) {
+            this.OperationType = new Long(source.OperationType);
+        }
+        if (source.AccessPointsType != null) {
+            this.AccessPointsType = new String(source.AccessPointsType);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.SecurityPolicy != null) {
+            this.SecurityPolicy = new SecurityPolicy[source.SecurityPolicy.length];
+            for (int i = 0; i < source.SecurityPolicy.length; i++) {
+                this.SecurityPolicy[i] = new SecurityPolicy(source.SecurityPolicy[i]);
+            }
+        }
+        if (source.StandardAccessPoint != null) {
+            this.StandardAccessPoint = new Boolean(source.StandardAccessPoint);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.Tls != null) {
+            this.Tls = new Boolean(source.Tls);
+        }
+        if (source.CustomUrl != null) {
+            this.CustomUrl = new String(source.CustomUrl);
+        }
     }
 
 
@@ -198,6 +459,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "RouteType", this.RouteType);
+        this.setParamSimple(map, prefix + "OperationType", this.OperationType);
+        this.setParamSimple(map, prefix + "AccessPointsType", this.AccessPointsType);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamArrayObj(map, prefix + "SecurityPolicy.", this.SecurityPolicy);
+        this.setParamSimple(map, prefix + "StandardAccessPoint", this.StandardAccessPoint);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "Tls", this.Tls);
+        this.setParamSimple(map, prefix + "CustomUrl", this.CustomUrl);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCmqSubscriptionDetailRequest extends AbstractModel {
 
     /**
-    * Topic name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+    * Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
     */
     @SerializedName("TopicName")
     @Expose
@@ -52,16 +52,31 @@ public class DescribeCmqSubscriptionDetailRequest extends AbstractModel {
     private String SubscriptionName;
 
     /**
-     * Get Topic name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter. 
-     * @return TopicName Topic name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+    * Queue name. Endpoint of bound subscription
+    */
+    @SerializedName("QueueName")
+    @Expose
+    private String QueueName;
+
+    /**
+    * Query type. valid values: (1) topic; (2) queue.
+Default value is topic. if queryType is topic, query subscriptions under the topic. if queryType is queue, query subscriptions bound to the queue.
+    */
+    @SerializedName("QueryType")
+    @Expose
+    private String QueryType;
+
+    /**
+     * Get Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-). 
+     * @return TopicName Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Topic name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
-     * @param TopicName Topic name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+     * Set Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
+     * @param TopicName Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -115,6 +130,42 @@ public class DescribeCmqSubscriptionDetailRequest extends AbstractModel {
         this.SubscriptionName = SubscriptionName;
     }
 
+    /**
+     * Get Queue name. Endpoint of bound subscription 
+     * @return QueueName Queue name. Endpoint of bound subscription
+     */
+    public String getQueueName() {
+        return this.QueueName;
+    }
+
+    /**
+     * Set Queue name. Endpoint of bound subscription
+     * @param QueueName Queue name. Endpoint of bound subscription
+     */
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
+    }
+
+    /**
+     * Get Query type. valid values: (1) topic; (2) queue.
+Default value is topic. if queryType is topic, query subscriptions under the topic. if queryType is queue, query subscriptions bound to the queue. 
+     * @return QueryType Query type. valid values: (1) topic; (2) queue.
+Default value is topic. if queryType is topic, query subscriptions under the topic. if queryType is queue, query subscriptions bound to the queue.
+     */
+    public String getQueryType() {
+        return this.QueryType;
+    }
+
+    /**
+     * Set Query type. valid values: (1) topic; (2) queue.
+Default value is topic. if queryType is topic, query subscriptions under the topic. if queryType is queue, query subscriptions bound to the queue.
+     * @param QueryType Query type. valid values: (1) topic; (2) queue.
+Default value is topic. if queryType is topic, query subscriptions under the topic. if queryType is queue, query subscriptions bound to the queue.
+     */
+    public void setQueryType(String QueryType) {
+        this.QueryType = QueryType;
+    }
+
     public DescribeCmqSubscriptionDetailRequest() {
     }
 
@@ -135,6 +186,12 @@ public class DescribeCmqSubscriptionDetailRequest extends AbstractModel {
         if (source.SubscriptionName != null) {
             this.SubscriptionName = new String(source.SubscriptionName);
         }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+        if (source.QueryType != null) {
+            this.QueryType = new String(source.QueryType);
+        }
     }
 
 
@@ -146,6 +203,8 @@ public class DescribeCmqSubscriptionDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
+        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
+        this.setParamSimple(map, prefix + "QueryType", this.QueryType);
 
     }
 }
