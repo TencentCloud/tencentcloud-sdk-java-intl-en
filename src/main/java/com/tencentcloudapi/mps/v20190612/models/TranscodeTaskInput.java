@@ -56,6 +56,14 @@ Note: this field may return `null`, indicating that no valid value was found.
     private WatermarkInput [] WatermarkSet;
 
     /**
+    * Digital watermark parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BlindWatermark")
+    @Expose
+    private BlindWatermarkInput BlindWatermark;
+
+    /**
     * List of blurs. Up to 10 ones can be supported.
     */
     @SerializedName("MosaicSet")
@@ -204,6 +212,26 @@ Note: this field may return `null`, indicating that no valid value was found.
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;
+    }
+
+    /**
+     * Get Digital watermark parameter.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BlindWatermark Digital watermark parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public BlindWatermarkInput getBlindWatermark() {
+        return this.BlindWatermark;
+    }
+
+    /**
+     * Set Digital watermark parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BlindWatermark Digital watermark parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBlindWatermark(BlindWatermarkInput BlindWatermark) {
+        this.BlindWatermark = BlindWatermark;
     }
 
     /**
@@ -417,6 +445,9 @@ Note: this field may return `null`, indicating that no valid value was found.
                 this.WatermarkSet[i] = new WatermarkInput(source.WatermarkSet[i]);
             }
         }
+        if (source.BlindWatermark != null) {
+            this.BlindWatermark = new BlindWatermarkInput(source.BlindWatermark);
+        }
         if (source.MosaicSet != null) {
             this.MosaicSet = new MosaicInput[source.MosaicSet.length];
             for (int i = 0; i < source.MosaicSet.length; i++) {
@@ -455,6 +486,7 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamObj(map, prefix + "RawParameter.", this.RawParameter);
         this.setParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+        this.setParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
         this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);

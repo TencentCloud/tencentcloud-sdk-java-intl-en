@@ -27,6 +27,7 @@ public class LiveStreamAiAnalysisResultItem extends AbstractModel {
     * Result type. Valid values:
 <li>SegmentRecognition: video splitting.</li>
 <li>Highlight: highlight.</li>
+<li>Description: summary.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -48,12 +49,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private MediaAiAnalysisHighlightItem [] HighlightResultSet;
 
     /**
+    * Summary result. It is valid when Type is Description.
+    */
+    @SerializedName("DescriptionResult")
+    @Expose
+    private LiveAiAnalysisDescriptionItem DescriptionResult;
+
+    /**
      * Get Result type. Valid values:
 <li>SegmentRecognition: video splitting.</li>
-<li>Highlight: highlight.</li> 
+<li>Highlight: highlight.</li>
+<li>Description: summary.</li> 
      * @return Type Result type. Valid values:
 <li>SegmentRecognition: video splitting.</li>
 <li>Highlight: highlight.</li>
+<li>Description: summary.</li>
      */
     public String getType() {
         return this.Type;
@@ -63,9 +73,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Set Result type. Valid values:
 <li>SegmentRecognition: video splitting.</li>
 <li>Highlight: highlight.</li>
+<li>Description: summary.</li>
      * @param Type Result type. Valid values:
 <li>SegmentRecognition: video splitting.</li>
 <li>Highlight: highlight.</li>
+<li>Description: summary.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -107,6 +119,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.HighlightResultSet = HighlightResultSet;
     }
 
+    /**
+     * Get Summary result. It is valid when Type is Description. 
+     * @return DescriptionResult Summary result. It is valid when Type is Description.
+     */
+    public LiveAiAnalysisDescriptionItem getDescriptionResult() {
+        return this.DescriptionResult;
+    }
+
+    /**
+     * Set Summary result. It is valid when Type is Description.
+     * @param DescriptionResult Summary result. It is valid when Type is Description.
+     */
+    public void setDescriptionResult(LiveAiAnalysisDescriptionItem DescriptionResult) {
+        this.DescriptionResult = DescriptionResult;
+    }
+
     public LiveStreamAiAnalysisResultItem() {
     }
 
@@ -130,6 +158,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.HighlightResultSet[i] = new MediaAiAnalysisHighlightItem(source.HighlightResultSet[i]);
             }
         }
+        if (source.DescriptionResult != null) {
+            this.DescriptionResult = new LiveAiAnalysisDescriptionItem(source.DescriptionResult);
+        }
     }
 
 
@@ -140,6 +171,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "SegmentResultSet.", this.SegmentResultSet);
         this.setParamArrayObj(map, prefix + "HighlightResultSet.", this.HighlightResultSet);
+        this.setParamObj(map, prefix + "DescriptionResult.", this.DescriptionResult);
 
     }
 }

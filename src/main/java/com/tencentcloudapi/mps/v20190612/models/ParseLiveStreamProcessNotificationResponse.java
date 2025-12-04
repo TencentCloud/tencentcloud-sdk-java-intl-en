@@ -24,12 +24,13 @@ import java.util.HashMap;
 public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
 
     /**
-    * Live stream processing result type, including:
-<li>AiReviewResult: content auditing result.</li>
+    * Live stream processing result type. Valid values:
+<li>AiReviewResult: content review result.</li>
 <li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live recording result.</li>
-<li>AiQualityControlResult: media quality inspection result.</li>
-<li>ProcessEof: live stream processing result.</li>
+<li>LiveRecordResult: live streaming recording result.</li>
+<li>AiQualityControlResult: media live quality control result.</li>
+<li>AiAnalysisResult: content analysis result.</li>
+<li>ProcessEof: end of live stream processing.</li>
     */
     @SerializedName("NotificationType")
     @Expose
@@ -123,36 +124,40 @@ Note: when this field return null, means no valid values can be obtained.
     private String RequestId;
 
     /**
-     * Get Live stream processing result type, including:
-<li>AiReviewResult: content auditing result.</li>
+     * Get Live stream processing result type. Valid values:
+<li>AiReviewResult: content review result.</li>
 <li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live recording result.</li>
-<li>AiQualityControlResult: media quality inspection result.</li>
-<li>ProcessEof: live stream processing result.</li> 
-     * @return NotificationType Live stream processing result type, including:
-<li>AiReviewResult: content auditing result.</li>
+<li>LiveRecordResult: live streaming recording result.</li>
+<li>AiQualityControlResult: media live quality control result.</li>
+<li>AiAnalysisResult: content analysis result.</li>
+<li>ProcessEof: end of live stream processing.</li> 
+     * @return NotificationType Live stream processing result type. Valid values:
+<li>AiReviewResult: content review result.</li>
 <li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live recording result.</li>
-<li>AiQualityControlResult: media quality inspection result.</li>
-<li>ProcessEof: live stream processing result.</li>
+<li>LiveRecordResult: live streaming recording result.</li>
+<li>AiQualityControlResult: media live quality control result.</li>
+<li>AiAnalysisResult: content analysis result.</li>
+<li>ProcessEof: end of live stream processing.</li>
      */
     public String getNotificationType() {
         return this.NotificationType;
     }
 
     /**
-     * Set Live stream processing result type, including:
-<li>AiReviewResult: content auditing result.</li>
+     * Set Live stream processing result type. Valid values:
+<li>AiReviewResult: content review result.</li>
 <li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live recording result.</li>
-<li>AiQualityControlResult: media quality inspection result.</li>
-<li>ProcessEof: live stream processing result.</li>
-     * @param NotificationType Live stream processing result type, including:
-<li>AiReviewResult: content auditing result.</li>
+<li>LiveRecordResult: live streaming recording result.</li>
+<li>AiQualityControlResult: media live quality control result.</li>
+<li>AiAnalysisResult: content analysis result.</li>
+<li>ProcessEof: end of live stream processing.</li>
+     * @param NotificationType Live stream processing result type. Valid values:
+<li>AiReviewResult: content review result.</li>
 <li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live recording result.</li>
-<li>AiQualityControlResult: media quality inspection result.</li>
-<li>ProcessEof: live stream processing result.</li>
+<li>LiveRecordResult: live streaming recording result.</li>
+<li>AiQualityControlResult: media live quality control result.</li>
+<li>AiAnalysisResult: content analysis result.</li>
+<li>ProcessEof: end of live stream processing.</li>
      */
     public void setNotificationType(String NotificationType) {
         this.NotificationType = NotificationType;

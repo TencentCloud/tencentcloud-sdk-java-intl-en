@@ -158,6 +158,15 @@ The default value is blink. The different action types passed in this parameter 
     private String SelectedWarningCodes;
 
     /**
+    * Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
+    */
+    @SerializedName("AllowExpiredDocument")
+    @Expose
+    private Boolean AllowExpiredDocument;
+
+    /**
      * Get When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered. 
      * @return AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
      */
@@ -513,6 +522,30 @@ The default value is blink. The different action types passed in this parameter 
         this.SelectedWarningCodes = SelectedWarningCodes;
     }
 
+    /**
+     * Get Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process. 
+     * @return AllowExpiredDocument Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
+     */
+    public Boolean getAllowExpiredDocument() {
+        return this.AllowExpiredDocument;
+    }
+
+    /**
+     * Set Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
+     * @param AllowExpiredDocument Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+true (default value): Expired HKID is allowed to enter the liveness process.
+false : Expired HKID is rejected and cannot enter the liveness process.
+     */
+    public void setAllowExpiredDocument(Boolean AllowExpiredDocument) {
+        this.AllowExpiredDocument = AllowExpiredDocument;
+    }
+
     public WebVerificationConfigIntl() {
     }
 
@@ -566,6 +599,9 @@ The default value is blink. The different action types passed in this parameter 
         if (source.SelectedWarningCodes != null) {
             this.SelectedWarningCodes = new String(source.SelectedWarningCodes);
         }
+        if (source.AllowExpiredDocument != null) {
+            this.AllowExpiredDocument = new Boolean(source.AllowExpiredDocument);
+        }
     }
 
 
@@ -588,6 +624,7 @@ The default value is blink. The different action types passed in this parameter 
         this.setParamSimple(map, prefix + "LivenessRetryLimit", this.LivenessRetryLimit);
         this.setParamSimple(map, prefix + "LivenessTimeout", this.LivenessTimeout);
         this.setParamSimple(map, prefix + "SelectedWarningCodes", this.SelectedWarningCodes);
+        this.setParamSimple(map, prefix + "AllowExpiredDocument", this.AllowExpiredDocument);
 
     }
 }

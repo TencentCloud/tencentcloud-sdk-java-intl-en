@@ -54,6 +54,16 @@ public class DescribeSmartEraseTemplatesRequest extends AbstractModel {
     private String Type;
 
     /**
+    * Erasing type filtering conditions for the smart erasing template.
+- subtitle: subtitle removal.
+- watermark: watermark removal.
+- privacy: privacy protection.
+    */
+    @SerializedName("EraseType")
+    @Expose
+    private String EraseType;
+
+    /**
     * Filtering condition for the smart erasing template name. Length limit: 64 characters.
     */
     @SerializedName("Name")
@@ -133,6 +143,34 @@ public class DescribeSmartEraseTemplatesRequest extends AbstractModel {
     }
 
     /**
+     * Get Erasing type filtering conditions for the smart erasing template.
+- subtitle: subtitle removal.
+- watermark: watermark removal.
+- privacy: privacy protection. 
+     * @return EraseType Erasing type filtering conditions for the smart erasing template.
+- subtitle: subtitle removal.
+- watermark: watermark removal.
+- privacy: privacy protection.
+     */
+    public String getEraseType() {
+        return this.EraseType;
+    }
+
+    /**
+     * Set Erasing type filtering conditions for the smart erasing template.
+- subtitle: subtitle removal.
+- watermark: watermark removal.
+- privacy: privacy protection.
+     * @param EraseType Erasing type filtering conditions for the smart erasing template.
+- subtitle: subtitle removal.
+- watermark: watermark removal.
+- privacy: privacy protection.
+     */
+    public void setEraseType(String EraseType) {
+        this.EraseType = EraseType;
+    }
+
+    /**
      * Get Filtering condition for the smart erasing template name. Length limit: 64 characters. 
      * @return Name Filtering condition for the smart erasing template name. Length limit: 64 characters.
      */
@@ -171,6 +209,9 @@ public class DescribeSmartEraseTemplatesRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.EraseType != null) {
+            this.EraseType = new String(source.EraseType);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -185,6 +226,7 @@ public class DescribeSmartEraseTemplatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "EraseType", this.EraseType);
         this.setParamSimple(map, prefix + "Name", this.Name);
 
     }

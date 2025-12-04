@@ -21,63 +21,48 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LiveStreamAiAnalysisResultInfo extends AbstractModel {
+public class LiveAiAnalysisDescriptionItem extends AbstractModel {
 
     /**
-    * Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
+    * Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("ResultSet")
+    @SerializedName("Paragraphs")
     @Expose
-    private LiveStreamAiAnalysisResultItem [] ResultSet;
+    private LiveAiParagraphInfo [] Paragraphs;
 
     /**
-     * Get Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
+     * Get Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ResultSet Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
+     * @return Paragraphs Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public LiveStreamAiAnalysisResultItem [] getResultSet() {
-        return this.ResultSet;
+    public LiveAiParagraphInfo [] getParagraphs() {
+        return this.Paragraphs;
     }
 
     /**
-     * Set Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
+     * Set Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ResultSet Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
+     * @param Paragraphs Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setResultSet(LiveStreamAiAnalysisResultItem [] ResultSet) {
-        this.ResultSet = ResultSet;
+    public void setParagraphs(LiveAiParagraphInfo [] Paragraphs) {
+        this.Paragraphs = Paragraphs;
     }
 
-    public LiveStreamAiAnalysisResultInfo() {
+    public LiveAiAnalysisDescriptionItem() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public LiveStreamAiAnalysisResultInfo(LiveStreamAiAnalysisResultInfo source) {
-        if (source.ResultSet != null) {
-            this.ResultSet = new LiveStreamAiAnalysisResultItem[source.ResultSet.length];
-            for (int i = 0; i < source.ResultSet.length; i++) {
-                this.ResultSet[i] = new LiveStreamAiAnalysisResultItem(source.ResultSet[i]);
+    public LiveAiAnalysisDescriptionItem(LiveAiAnalysisDescriptionItem source) {
+        if (source.Paragraphs != null) {
+            this.Paragraphs = new LiveAiParagraphInfo[source.Paragraphs.length];
+            for (int i = 0; i < source.Paragraphs.length; i++) {
+                this.Paragraphs[i] = new LiveAiParagraphInfo(source.Paragraphs[i]);
             }
         }
     }
@@ -87,7 +72,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ResultSet.", this.ResultSet);
+        this.setParamArrayObj(map, prefix + "Paragraphs.", this.Paragraphs);
 
     }
 }

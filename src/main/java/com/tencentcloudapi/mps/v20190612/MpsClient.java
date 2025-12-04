@@ -106,6 +106,17 @@ Smart subtitle (full speech, speech hotword, and speech translation)
     }
 
     /**
+     *This API is used to create a user-defined digital watermark template with an upper limit of 1000.
+     * @param req CreateBlindWatermarkTemplateRequest
+     * @return CreateBlindWatermarkTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplate(CreateBlindWatermarkTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBlindWatermarkTemplate", CreateBlindWatermarkTemplateResponse.class);
+    }
+
+    /**
      *This API is used to create a custom content moderation template. Up to 50 templates can be created in total.
      * @param req CreateContentReviewTemplateRequest
      * @return CreateContentReviewTemplateResponse
@@ -147,6 +158,17 @@ Smart subtitle (full speech, speech hotword, and speech translation)
     public CreatePersonSampleResponse CreatePersonSample(CreatePersonSampleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreatePersonSample", CreatePersonSampleResponse.class);
+    }
+
+    /**
+     *This API is used to create an image processing template.
+     * @param req CreateProcessImageTemplateRequest
+     * @return CreateProcessImageTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProcessImageTemplateResponse CreateProcessImageTemplate(CreateProcessImageTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProcessImageTemplate", CreateProcessImageTemplateResponse.class);
     }
 
     /**
@@ -344,6 +366,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to delete a user-defined digital watermark template.
+     * @param req DeleteBlindWatermarkTemplateRequest
+     * @return DeleteBlindWatermarkTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBlindWatermarkTemplateResponse DeleteBlindWatermarkTemplate(DeleteBlindWatermarkTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBlindWatermarkTemplate", DeleteBlindWatermarkTemplateResponse.class);
+    }
+
+    /**
      *This API is used to delete a custom content moderation template.
      * @param req DeleteContentReviewTemplateRequest
      * @return DeleteContentReviewTemplateResponse
@@ -385,6 +418,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeletePersonSampleResponse DeletePersonSample(DeletePersonSampleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeletePersonSample", DeletePersonSampleResponse.class);
+    }
+
+    /**
+     *This API is used to delete an image processing template.
+     * @param req DeleteProcessImageTemplateRequest
+     * @return DeleteProcessImageTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProcessImageTemplateResponse DeleteProcessImageTemplate(DeleteProcessImageTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteProcessImageTemplate", DeleteProcessImageTemplateResponse.class);
     }
 
     /**
@@ -575,6 +619,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to query a user-defined digital watermark template, and the pagination query is supported based on conditions.
+     * @param req DescribeBlindWatermarkTemplatesRequest
+     * @return DescribeBlindWatermarkTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplates(DescribeBlindWatermarkTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBlindWatermarkTemplates", DescribeBlindWatermarkTemplatesResponse.class);
+    }
+
+    /**
      *This API is used to query content moderation templates by template ID. Both custom and preset templates that match the template IDs passed in will be returned.
      * @param req DescribeContentReviewTemplatesRequest
      * @return DescribeContentReviewTemplatesResponse
@@ -638,6 +693,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribePersonSamplesResponse DescribePersonSamples(DescribePersonSamplesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePersonSamples", DescribePersonSamplesResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of image processing templates.
+     * @param req DescribeProcessImageTemplatesRequest
+     * @return DescribeProcessImageTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProcessImageTemplatesResponse DescribeProcessImageTemplates(DescribeProcessImageTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProcessImageTemplates", DescribeProcessImageTemplatesResponse.class);
     }
 
     /**
@@ -864,6 +930,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to initiate a digital watermark extraction task for a video. The extraction result can be queried through DescribeTaskDetail.
+     * @param req ExtractBlindWatermarkRequest
+     * @return ExtractBlindWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExtractBlindWatermarkResponse ExtractBlindWatermark(ExtractBlindWatermarkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExtractBlindWatermark", ExtractBlindWatermarkResponse.class);
+    }
+
+    /**
      *This API is used to manage initiated tasks.
      * @param req ManageTaskRequest
      * @return ManageTaskResponse
@@ -932,6 +1009,17 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     }
 
     /**
+     *This API is used to modify a user-defined digital watermark template. The digital watermark type cannot be modified.
+     * @param req ModifyBlindWatermarkTemplateRequest
+     * @return ModifyBlindWatermarkTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBlindWatermarkTemplateResponse ModifyBlindWatermarkTemplate(ModifyBlindWatermarkTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBlindWatermarkTemplate", ModifyBlindWatermarkTemplateResponse.class);
+    }
+
+    /**
      *This API is used to modify a custom content moderation template.
      * @param req ModifyContentReviewTemplateRequest
      * @return ModifyContentReviewTemplateResponse
@@ -973,6 +1061,17 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyPersonSampleResponse ModifyPersonSample(ModifyPersonSampleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPersonSample", ModifyPersonSampleResponse.class);
+    }
+
+    /**
+     *This API is used to modify an image processing template.
+     * @param req ModifyProcessImageTemplateRequest
+     * @return ModifyProcessImageTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyProcessImageTemplateResponse ModifyProcessImageTemplate(ModifyProcessImageTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyProcessImageTemplate", ModifyProcessImageTemplateResponse.class);
     }
 
     /**

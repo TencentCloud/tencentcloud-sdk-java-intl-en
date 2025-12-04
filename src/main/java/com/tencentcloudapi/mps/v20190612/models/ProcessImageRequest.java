@@ -46,7 +46,7 @@ public class ProcessImageRequest extends AbstractModel {
 
     /**
     * Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
 **Relative path example:**
 <Li>`Filename_{Variablename}.{format}`.</li>
 <Li>`Filename.{format}`.</li>
@@ -59,6 +59,20 @@ If not filled in, default relative path: `{inputName}.{format}`.
     @SerializedName("OutputPath")
     @Expose
     private String OutputPath;
+
+    /**
+    * Unique identifier of the image processing template.
+    */
+    @SerializedName("Definition")
+    @Expose
+    private Long Definition;
+
+    /**
+    * Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
 
     /**
     * Image processing parameter.
@@ -117,7 +131,7 @@ If not filled in, default relative path: `{inputName}.{format}`.
 
     /**
      * Get Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
 **Relative path example:**
 <Li>`Filename_{Variablename}.{format}`.</li>
 <Li>`Filename.{format}`.</li>
@@ -127,7 +141,7 @@ The path must end with `.{format}`. For details, please refer to the [Filename V
 
 If not filled in, default relative path: `{inputName}.{format}`. 
      * @return OutputPath Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
 **Relative path example:**
 <Li>`Filename_{Variablename}.{format}`.</li>
 <Li>`Filename.{format}`.</li>
@@ -143,7 +157,7 @@ If not filled in, default relative path: `{inputName}.{format}`.
 
     /**
      * Set Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
 **Relative path example:**
 <Li>`Filename_{Variablename}.{format}`.</li>
 <Li>`Filename.{format}`.</li>
@@ -153,7 +167,7 @@ The path must end with `.{format}`. For details, please refer to the [Filename V
 
 If not filled in, default relative path: `{inputName}.{format}`.
      * @param OutputPath Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
 **Relative path example:**
 <Li>`Filename_{Variablename}.{format}`.</li>
 <Li>`Filename.{format}`.</li>
@@ -165,6 +179,38 @@ If not filled in, default relative path: `{inputName}.{format}`.
      */
     public void setOutputPath(String OutputPath) {
         this.OutputPath = OutputPath;
+    }
+
+    /**
+     * Get Unique identifier of the image processing template. 
+     * @return Definition Unique identifier of the image processing template.
+     */
+    public Long getDefinition() {
+        return this.Definition;
+    }
+
+    /**
+     * Set Unique identifier of the image processing template.
+     * @param Definition Unique identifier of the image processing template.
+     */
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
+    }
+
+    /**
+     * Get Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account. 
+     * @return ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+     * @param ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
     }
 
     /**
@@ -203,6 +249,12 @@ If not filled in, default relative path: `{inputName}.{format}`.
         if (source.OutputPath != null) {
             this.OutputPath = new String(source.OutputPath);
         }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
         if (source.ImageTask != null) {
             this.ImageTask = new ImageTaskInput(source.ImageTask);
         }
@@ -217,6 +269,8 @@ If not filled in, default relative path: `{inputName}.{format}`.
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputDir", this.OutputDir);
         this.setParamSimple(map, prefix + "OutputPath", this.OutputPath);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamObj(map, prefix + "ImageTask.", this.ImageTask);
 
     }

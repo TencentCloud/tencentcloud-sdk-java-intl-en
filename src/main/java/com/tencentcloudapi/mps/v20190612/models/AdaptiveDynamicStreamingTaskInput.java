@@ -38,6 +38,14 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     private WatermarkInput [] WatermarkSet;
 
     /**
+    * Digital watermark parameter.	
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BlindWatermark")
+    @Expose
+    private BlindWatermarkInput BlindWatermark;
+
+    /**
     * Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
 Note: This field may return null, indicating that no valid value can be obtained.
     */
@@ -151,6 +159,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;
+    }
+
+    /**
+     * Get Digital watermark parameter.	
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BlindWatermark Digital watermark parameter.	
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public BlindWatermarkInput getBlindWatermark() {
+        return this.BlindWatermark;
+    }
+
+    /**
+     * Set Digital watermark parameter.	
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BlindWatermark Digital watermark parameter.	
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBlindWatermark(BlindWatermarkInput BlindWatermark) {
+        this.BlindWatermark = BlindWatermark;
     }
 
     /**
@@ -386,6 +414,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.WatermarkSet[i] = new WatermarkInput(source.WatermarkSet[i]);
             }
         }
+        if (source.BlindWatermark != null) {
+            this.BlindWatermark = new BlindWatermarkInput(source.BlindWatermark);
+        }
         if (source.OutputStorage != null) {
             this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
         }
@@ -431,6 +462,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+        this.setParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         this.setParamSimple(map, prefix + "SubStreamObjectName", this.SubStreamObjectName);

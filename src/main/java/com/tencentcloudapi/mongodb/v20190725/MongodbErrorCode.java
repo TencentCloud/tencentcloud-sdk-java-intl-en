@@ -3,6 +3,9 @@ public enum MongodbErrorCode {
      /* CAM signature/authentication error */
      AUTHFAILURE("AuthFailure"),
      
+     /* Operation failed. */
+     FAILEDOPERATION("FailedOperation"),
+     
      /* Termination protection is enabled for the instance. destruction is not allowed. */
      FAILEDOPERATION_DELETIONPROTECTIONENABLED("FailedOperation.DeletionProtectionEnabled"),
      
@@ -11,6 +14,9 @@ public enum MongodbErrorCode {
      
      /* Public network access has been enabled for the current instance. */
      FAILEDOPERATION_NOTALLOWMODIFYADDRAFTEROPENWANSERVICE("FailedOperation.NotAllowModifyAddrAfterOpenWanService"),
+     
+     /* Operations are not allowed to be performed while the instance is locked. */
+     FAILEDOPERATION_OPERATIONNOTALLOWEDININSTANCELOCKING("FailedOperation.OperationNotAllowedInInstanceLocking"),
      
      /* Physical backup is not supported when transparent data encryption is enabled for the instance. */
      FAILEDOPERATION_TRANSPARENTDATAENCRYPTIONALREADYOPEN("FailedOperation.TransparentDataEncryptionAlreadyOpen"),
@@ -27,6 +33,9 @@ public enum MongodbErrorCode {
      /* Failed to query the instance. */
      INTERNALERROR_FINDINSTANCEFAILED("InternalError.FindInstanceFailed"),
      
+     /* The password is different from the previously recorded one. */
+     INTERNALERROR_PASSWORDERROR("InternalError.PasswordError"),
+     
      /* Parameter error */
      INVALIDPARAMETER("InvalidParameter"),
      
@@ -35,6 +44,9 @@ public enum MongodbErrorCode {
      
      /* Invalid Vip information */
      INVALIDPARAMETER_INVALIDVIP("InvalidParameter.InvalidVip"),
+     
+     /* The parameter name is incorrect. */
+     INVALIDPARAMETER_MODIFYMONGODBPARAMS("InvalidParameter.ModifyMongodbParams"),
      
      /* The current sub-account has no permission to perform this operation. */
      INVALIDPARAMETER_PERMISSIONDENIED("InvalidParameter.PermissionDenied"),
@@ -84,11 +96,17 @@ public enum MongodbErrorCode {
      /* Memory and disk must be upgraded or degraded simultaneously. */
      INVALIDPARAMETERVALUE_MODIFYMODEERROR("InvalidParameterValue.ModifyModeError"),
      
+     /* The parameter value is incorrect. */
+     INVALIDPARAMETERVALUE_MODIFYMONGODBPARAMS("InvalidParameterValue.ModifyMongodbParams"),
+     
      /* The instance version is incorrect. */
      INVALIDPARAMETERVALUE_MONGOVERSIONERROR("InvalidParameterValue.MongoVersionError"),
      
      /* The instance version does not support querying the instance client information. */
      INVALIDPARAMETERVALUE_MONGOVERSIONNOTSUPPORTQUERYCLIENT("InvalidParameterValue.MongoVersionNotSupportQueryClient"),
+     
+     /* The node is not found in the current replica set/shard. */
+     INVALIDPARAMETERVALUE_NODENOTFOUNDINREPLICA("InvalidParameterValue.NodeNotFoundInReplica"),
      
      /* The instance was not found. */
      INVALIDPARAMETERVALUE_NOTFOUNDINSTANCE("InvalidParameterValue.NotFoundInstance"),
@@ -114,6 +132,9 @@ public enum MongodbErrorCode {
      /* The proxy version does not support querying the instance client information. Please submit a ticket for upgrade. */
      INVALIDPARAMETERVALUE_PROXYNOTSUPPORTQUERYCLIENT("InvalidParameterValue.ProxyNotSupportQueryClient"),
      
+     /* The query offset is out of range. */
+     INVALIDPARAMETERVALUE_QUERYOUTOFRANGE("InvalidParameterValue.QueryOutOfRange"),
+     
      /* Only slow logs generated in the past seven days can be queried. */
      INVALIDPARAMETERVALUE_QUERYTIMEOUTOFRANGE("InvalidParameterValue.QueryTimeOutOfRange"),
      
@@ -123,8 +144,14 @@ public enum MongodbErrorCode {
      /* Invalid region */
      INVALIDPARAMETERVALUE_REGIONERROR("InvalidParameterValue.RegionError"),
      
+     /* The current region does not support this operation. */
+     INVALIDPARAMETERVALUE_REGIONNOTSUPPORTOPERATION("InvalidParameterValue.RegionNotSupportOperation"),
+     
      /* The region does not support querying the instance client information. */
      INVALIDPARAMETERVALUE_REGIONNOTSUPPORTQUERYCLIENT("InvalidParameterValue.RegionNotSupportQueryClient"),
+     
+     /* The replica set/shard is not found. */
+     INVALIDPARAMETERVALUE_REPLICANOTFOUND("InvalidParameterValue.ReplicaNotFound"),
      
      /* Incorrect number of replica sets (shards). */
      INVALIDPARAMETERVALUE_REPLICASETNUMERROR("InvalidParameterValue.ReplicaSetNumError"),

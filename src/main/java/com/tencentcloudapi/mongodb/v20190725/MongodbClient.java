@@ -50,6 +50,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to customize an account to access the instance.
+     * @param req CreateAccountUserRequest
+     * @return CreateAccountUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccountUserResponse CreateAccountUser(CreateAccountUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAccountUser", CreateAccountUserResponse.class);
+    }
+
+    /**
      *This API is used to back up an instance.
      * @param req CreateBackupDBInstanceRequest
      * @return CreateBackupDBInstanceResponse
@@ -105,6 +116,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a custom account of an instance.
+     * @param req DeleteAccountUserRequest
+     * @return DeleteAccountUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAccountUserResponse DeleteAccountUser(DeleteAccountUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAccountUser", DeleteAccountUserResponse.class);
+    }
+
+    /**
      *This API is used to delete a log download task.
      * @param req DeleteLogDownloadTaskRequest
      * @return DeleteLogDownloadTaskResponse
@@ -138,6 +160,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the automatic backup configuration information of an instance.
+     * @param req DescribeBackupRulesRequest
+     * @return DescribeBackupRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupRulesResponse DescribeBackupRules(DescribeBackupRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupRules", DescribeBackupRulesResponse.class);
+    }
+
+    /**
      *This API is used to query the client connection information on an instance, including the IP address for connection and the number of connections.
      * @param req DescribeClientConnectionsRequest
      * @return DescribeClientConnectionsResponse
@@ -146,6 +179,17 @@ public class MongodbClient extends AbstractClient{
     public DescribeClientConnectionsResponse DescribeClientConnections(DescribeClientConnectionsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClientConnections", DescribeClientConnectionsResponse.class);
+    }
+
+    /**
+     *This API is used to query the operation currently being performed on a TencentDB for MongoDB instance.
+     * @param req DescribeCurrentOpRequest
+     * @return DescribeCurrentOpResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCurrentOpResponse DescribeCurrentOp(DescribeCurrentOpRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCurrentOp", DescribeCurrentOpResponse.class);
     }
 
     /**
@@ -303,6 +347,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to enable the transparent data encryption (TDE) capability for TencentDB for MongoDB.
+     * @param req EnableTransparentDataEncryptionRequest
+     * @return EnableTransparentDataEncryptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableTransparentDataEncryptionResponse EnableTransparentDataEncryption(EnableTransparentDataEncryptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableTransparentDataEncryption", EnableTransparentDataEncryptionResponse.class);
+    }
+
+    /**
      *This API is used to run the `FlushRouterConfig` command on all mongos instances.
      * @param req FlushInstanceRouterConfigRequest
      * @return FlushInstanceRouterConfigResponse
@@ -369,6 +424,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to terminate a specific operation performed on a TencentDB for MongoDB instance.
+     * @param req KillOpsRequest
+     * @return KillOpsResponse
+     * @throws TencentCloudSDKException
+     */
+    public KillOpsResponse KillOps(KillOpsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "KillOps", KillOpsResponse.class);
+    }
+
+    /**
      *This API is used to modify the network information on a TencentDB for MongoDB instance. It supports switching from a basic network to a VPC network or from one VPC network to another VPC network.
      * @param req ModifyDBInstanceNetworkAddressRequest
      * @return ModifyDBInstanceNetworkAddressResponse
@@ -399,6 +465,17 @@ public class MongodbClient extends AbstractClient{
     public ModifyDBInstanceSpecResponse ModifyDBInstanceSpec(ModifyDBInstanceSpecRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDBInstanceSpec", ModifyDBInstanceSpecResponse.class);
+    }
+
+    /**
+     *This API is used to modify the parameter configuration of a TencentDB for MongoDB instance.
+     * @param req ModifyInstanceParamsRequest
+     * @return ModifyInstanceParamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceParamsResponse ModifyInstanceParams(ModifyInstanceParamsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceParams", ModifyInstanceParamsResponse.class);
     }
 
     /**
@@ -446,6 +523,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to set the account permissions of an instance.
+     * @param req SetAccountUserPrivilegeRequest
+     * @return SetAccountUserPrivilegeResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetAccountUserPrivilegeResponse SetAccountUserPrivilege(SetAccountUserPrivilegeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetAccountUserPrivilege", SetAccountUserPrivilegeResponse.class);
+    }
+
+    /**
      *This API is used to set instance termination protection.
      * @param req SetDBInstanceDeletionProtectionRequest
      * @return SetDBInstanceDeletionProtectionResponse
@@ -454,6 +542,17 @@ public class MongodbClient extends AbstractClient{
     public SetDBInstanceDeletionProtectionResponse SetDBInstanceDeletionProtection(SetDBInstanceDeletionProtectionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetDBInstanceDeletionProtection", SetDBInstanceDeletionProtectionResponse.class);
+    }
+
+    /**
+     *This API is used to set the instance maintenance window.
+     * @param req SetInstanceMaintenanceRequest
+     * @return SetInstanceMaintenanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetInstanceMaintenanceResponse SetInstanceMaintenance(SetInstanceMaintenanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetInstanceMaintenance", SetInstanceMaintenanceResponse.class);
     }
 
     /**

@@ -126,6 +126,9 @@ public enum MpsErrorCode {
      /* Invalid switch value used to prohibit transcoding from low resolution to high resolution. */
      INVALIDPARAMETERVALUE_DISABLEHIGHERVIDEORESOLUTION("InvalidParameterValue.DisableHigherVideoResolution"),
      
+     /* Duplicated watermark text. */
+     INVALIDPARAMETERVALUE_DUPLICATEDTEXTCONTENT("InvalidParameterValue.DuplicatedTextContent"),
+     
      /* The enabled detection items of the template are empty. */
      INVALIDPARAMETERVALUE_EMPTYDETECTITEM("InvalidParameterValue.EmptyDetectItem"),
      

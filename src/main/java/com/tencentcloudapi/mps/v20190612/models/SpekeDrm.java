@@ -50,15 +50,14 @@ Note: different DRM manufacturers have different limitations on the number of su
     private String Vector;
 
     /**
-    * Encryption method. Options:  
-- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
-- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
-
-If not specified:  
-- FairPlay defaults to **cbcs**.  
-- PlayReady and Widevine default to **cenc**.  
-- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
-- Widevine+PlayReady defaults to **cenc**.
+    * Encryption method. Valid values:
+cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
+cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+If it is left unspecified:
+Use cbcs for FairPlay by default.
+Use cenc for PlayReady and Widevine by default.
+Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+Use cenc for Widevine+PlayReady by default.
     */
     @SerializedName("EncryptionMethod")
     @Expose
@@ -143,48 +142,44 @@ Note: different DRM manufacturers have different limitations on the number of su
     }
 
     /**
-     * Get Encryption method. Options:  
-- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
-- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
-
-If not specified:  
-- FairPlay defaults to **cbcs**.  
-- PlayReady and Widevine default to **cenc**.  
-- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
-- Widevine+PlayReady defaults to **cenc**. 
-     * @return EncryptionMethod Encryption method. Options:  
-- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
-- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
-
-If not specified:  
-- FairPlay defaults to **cbcs**.  
-- PlayReady and Widevine default to **cenc**.  
-- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
-- Widevine+PlayReady defaults to **cenc**.
+     * Get Encryption method. Valid values:
+cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
+cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+If it is left unspecified:
+Use cbcs for FairPlay by default.
+Use cenc for PlayReady and Widevine by default.
+Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+Use cenc for Widevine+PlayReady by default. 
+     * @return EncryptionMethod Encryption method. Valid values:
+cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
+cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+If it is left unspecified:
+Use cbcs for FairPlay by default.
+Use cenc for PlayReady and Widevine by default.
+Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+Use cenc for Widevine+PlayReady by default.
      */
     public String getEncryptionMethod() {
         return this.EncryptionMethod;
     }
 
     /**
-     * Set Encryption method. Options:  
-- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
-- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
-
-If not specified:  
-- FairPlay defaults to **cbcs**.  
-- PlayReady and Widevine default to **cenc**.  
-- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
-- Widevine+PlayReady defaults to **cenc**.
-     * @param EncryptionMethod Encryption method. Options:  
-- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
-- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
-
-If not specified:  
-- FairPlay defaults to **cbcs**.  
-- PlayReady and Widevine default to **cenc**.  
-- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
-- Widevine+PlayReady defaults to **cenc**.
+     * Set Encryption method. Valid values:
+cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
+cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+If it is left unspecified:
+Use cbcs for FairPlay by default.
+Use cenc for PlayReady and Widevine by default.
+Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+Use cenc for Widevine+PlayReady by default.
+     * @param EncryptionMethod Encryption method. Valid values:
+cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
+cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+If it is left unspecified:
+Use cbcs for FairPlay by default.
+Use cenc for PlayReady and Widevine by default.
+Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+Use cenc for Widevine+PlayReady by default.
      */
     public void setEncryptionMethod(String EncryptionMethod) {
         this.EncryptionMethod = EncryptionMethod;

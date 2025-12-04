@@ -66,14 +66,14 @@ public class ScheduleAnalysisTaskResult extends AbstractModel {
     private AiAnalysisResult [] Output;
 
     /**
-    * Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+    * Task execution start time in ISO date and time format.
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+    * Task execution completion time in ISO date and time format.
     */
     @SerializedName("FinishTime")
     @Expose
@@ -176,32 +176,32 @@ public class ScheduleAnalysisTaskResult extends AbstractModel {
     }
 
     /**
-     * Get Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52). 
-     * @return BeginProcessTime Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     * Get Task execution start time in ISO date and time format. 
+     * @return BeginProcessTime Task execution start time in ISO date and time format.
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
-     * @param BeginProcessTime Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     * Set Task execution start time in ISO date and time format.
+     * @param BeginProcessTime Task execution start time in ISO date and time format.
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52). 
-     * @return FinishTime Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     * Get Task execution completion time in ISO date and time format. 
+     * @return FinishTime Task execution completion time in ISO date and time format.
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
-     * @param FinishTime Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+     * Set Task execution completion time in ISO date and time format.
+     * @param FinishTime Task execution completion time in ISO date and time format.
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
