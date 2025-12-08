@@ -49,4 +49,48 @@ public class ControlcenterClient extends AbstractClient{
         return this.internalRequest(req, "BatchApplyAccountBaselines", BatchApplyAccountBaselinesResponse.class);
     }
 
+    /**
+     *This API is used to retrieve user baseline configuration data.
+     * @param req GetAccountFactoryBaselineRequest
+     * @return GetAccountFactoryBaselineResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAccountFactoryBaselineResponse GetAccountFactoryBaseline(GetAccountFactoryBaselineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetAccountFactoryBaseline", GetAccountFactoryBaselineResponse.class);
+    }
+
+    /**
+     *This API is used to obtain account factory system baseline items.
+     * @param req ListAccountFactoryBaselineItemsRequest
+     * @return ListAccountFactoryBaselineItemsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAccountFactoryBaselineItemsResponse ListAccountFactoryBaselineItems(ListAccountFactoryBaselineItemsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListAccountFactoryBaselineItems", ListAccountFactoryBaselineItemsResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the application history of a certain baseline item.
+     * @param req ListDeployStepTasksRequest
+     * @return ListDeployStepTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDeployStepTasksResponse ListDeployStepTasks(ListDeployStepTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDeployStepTasks", ListDeployStepTasksResponse.class);
+    }
+
+    /**
+     *This API is used to update the current baseline item configuration of a user. The baseline configuration will be overwritten with the current configuration. When adding new baseline items, the newly-added baseline configuration needs to be added to the existing configuration. When deleting baseline items, the deleted baseline configuration needs to be removed from the existing configuration, then save the latest baseline configuration.
+     * @param req UpdateAccountFactoryBaselineRequest
+     * @return UpdateAccountFactoryBaselineResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAccountFactoryBaselineResponse UpdateAccountFactoryBaseline(UpdateAccountFactoryBaselineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAccountFactoryBaseline", UpdateAccountFactoryBaselineResponse.class);
+    }
+
 }

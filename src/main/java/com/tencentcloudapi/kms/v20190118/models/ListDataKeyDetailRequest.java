@@ -94,6 +94,13 @@ public class ListDataKeyDetailRequest extends AbstractModel {
     private Long DataKeyLen;
 
     /**
+    * Tag filtering conditions.
+    */
+    @SerializedName("TagFilters")
+    @Expose
+    private TagFilter [] TagFilters;
+
+    /**
      * Get Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0. 
      * @return Offset Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
      */
@@ -253,6 +260,22 @@ public class ListDataKeyDetailRequest extends AbstractModel {
         this.DataKeyLen = DataKeyLen;
     }
 
+    /**
+     * Get Tag filtering conditions. 
+     * @return TagFilters Tag filtering conditions.
+     */
+    public TagFilter [] getTagFilters() {
+        return this.TagFilters;
+    }
+
+    /**
+     * Set Tag filtering conditions.
+     * @param TagFilters Tag filtering conditions.
+     */
+    public void setTagFilters(TagFilter [] TagFilters) {
+        this.TagFilters = TagFilters;
+    }
+
     public ListDataKeyDetailRequest() {
     }
 
@@ -291,6 +314,12 @@ public class ListDataKeyDetailRequest extends AbstractModel {
         if (source.DataKeyLen != null) {
             this.DataKeyLen = new Long(source.DataKeyLen);
         }
+        if (source.TagFilters != null) {
+            this.TagFilters = new TagFilter[source.TagFilters.length];
+            for (int i = 0; i < source.TagFilters.length; i++) {
+                this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
+            }
+        }
     }
 
 
@@ -308,6 +337,7 @@ public class ListDataKeyDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "DataKeyLen", this.DataKeyLen);
+        this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
 
     }
 }

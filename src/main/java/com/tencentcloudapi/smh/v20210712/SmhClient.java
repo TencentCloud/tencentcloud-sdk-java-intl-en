@@ -1,0 +1,151 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.smh.v20210712;
+
+import java.lang.reflect.Type;
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.reflect.TypeToken;
+import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+import com.tencentcloudapi.common.AbstractClient;
+import com.tencentcloudapi.common.profile.ClientProfile;
+import com.tencentcloudapi.common.JsonResponseModel;
+import com.tencentcloudapi.common.Credential;
+import com.tencentcloudapi.smh.v20210712.models.*;
+
+public class SmhClient extends AbstractClient{
+    private static String endpoint = "smh.intl.tencentcloudapi.com";
+    private static String service = "smh";
+    private static String version = "2021-07-12";
+
+    public SmhClient(Credential credential, String region) {
+        this(credential, region, new ClientProfile());
+    }
+
+    public SmhClient(Credential credential, String region, ClientProfile profile) {
+        super(SmhClient.endpoint, SmhClient.version, credential, region, profile);
+    }
+
+    /**
+     *This API is used to create a PaaS service media library.
+     * @param req CreateLibraryRequest
+     * @return CreateLibraryResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLibraryResponse CreateLibrary(CreateLibraryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLibrary", CreateLibraryResponse.class);
+    }
+
+    /**
+     *This API is used to delete a PaaS service media library.
+     * @param req DeleteLibraryRequest
+     * @return DeleteLibraryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLibraryResponse DeleteLibrary(DeleteLibraryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLibrary", DeleteLibraryResponse.class);
+    }
+
+    /**
+     *This API is used to query the PaaS service repository list.
+     * @param req DescribeLibrariesRequest
+     * @return DescribeLibrariesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibrariesResponse DescribeLibraries(DescribeLibrariesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraries", DescribeLibrariesResponse.class);
+    }
+
+    /**
+     *This API is used to query the PaaS service Media Library Key.
+     * @param req DescribeLibrarySecretRequest
+     * @return DescribeLibrarySecretResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibrarySecretResponse DescribeLibrarySecret(DescribeLibrarySecretRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibrarySecret", DescribeLibrarySecretResponse.class);
+    }
+
+    /**
+     *This API is used to query official cloud disk instances.
+     * @param req DescribeOfficialInstancesRequest
+     * @return DescribeOfficialInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOfficialInstancesResponse DescribeOfficialInstances(DescribeOfficialInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOfficialInstances", DescribeOfficialInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to query overview data of official cloud disk instances.
+     * @param req DescribeOfficialOverviewRequest
+     * @return DescribeOfficialOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOfficialOverviewResponse DescribeOfficialOverview(DescribeOfficialOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOfficialOverview", DescribeOfficialOverviewResponse.class);
+    }
+
+    /**
+     *This API is used to query traffic packages.
+     * @param req DescribeTrafficPackagesRequest
+     * @return DescribeTrafficPackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrafficPackagesResponse DescribeTrafficPackages(DescribeTrafficPackagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTrafficPackages", DescribeTrafficPackagesResponse.class);
+    }
+
+    /**
+     *This API is used to modify the configuration items of a PaaS service media library.
+     * @param req ModifyLibraryRequest
+     * @return ModifyLibraryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraryResponse ModifyLibrary(ModifyLibraryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibrary", ModifyLibraryResponse.class);
+    }
+
+    /**
+     *This API is used to send SMS verification codes for changing the admin account of a super official cloud disk instance.
+     * @param req SendSmsCodeRequest
+     * @return SendSmsCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendSmsCodeResponse SendSmsCode(SendSmsCodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SendSmsCode", SendSmsCodeResponse.class);
+    }
+
+    /**
+     *This API is used to verify the SMS verification code for rebinding the super administrator account of an official cloud disk instance.
+     * @param req VerifySmsCodeRequest
+     * @return VerifySmsCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifySmsCodeResponse VerifySmsCode(VerifySmsCodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "VerifySmsCode", VerifySmsCodeResponse.class);
+    }
+
+}

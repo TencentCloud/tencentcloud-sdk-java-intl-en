@@ -76,7 +76,9 @@ The default value is blink. The different action types passed in this parameter 
     private String ActionList;
 
     /**
-    * ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+    * PLUS: Plus Version.
+ENHANCED: Enhanced Version.
+BASIC: Basic Version (Default).
     */
     @SerializedName("SdkVersion")
     @Expose
@@ -231,16 +233,24 @@ The default value is blink. The different action types passed in this parameter 
     }
 
     /**
-     * Get ENHANCED: Enhanced Version, BASIC: Basic Version (Default) 
-     * @return SdkVersion ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+     * Get PLUS: Plus Version.
+ENHANCED: Enhanced Version.
+BASIC: Basic Version (Default). 
+     * @return SdkVersion PLUS: Plus Version.
+ENHANCED: Enhanced Version.
+BASIC: Basic Version (Default).
      */
     public String getSdkVersion() {
         return this.SdkVersion;
     }
 
     /**
-     * Set ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
-     * @param SdkVersion ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+     * Set PLUS: Plus Version.
+ENHANCED: Enhanced Version.
+BASIC: Basic Version (Default).
+     * @param SdkVersion PLUS: Plus Version.
+ENHANCED: Enhanced Version.
+BASIC: Basic Version (Default).
      */
     public void setSdkVersion(String SdkVersion) {
         this.SdkVersion = SdkVersion;

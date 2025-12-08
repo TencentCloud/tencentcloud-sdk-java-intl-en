@@ -45,14 +45,14 @@ public class SubtitleConf extends AbstractModel {
     private String CaptionSource;
 
     /**
-    * Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `.
+    * Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. When outputting as WebVTT, a single template can only output one language.
     */
     @SerializedName("ContentType")
     @Expose
     private Long ContentType;
 
     /**
-    * Output mode: 1 Burn in, 2 Embedded. Support `2` when CaptionSource selects `INPUT`. Support `1` when CaptionSource selects `ANALYSIS `.
+    * Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. Support `2` when CaptionSource selects `INPUT`. Support `1` and `3` when CaptionSource selects `ANALYSIS `.
     */
     @SerializedName("TargetType")
     @Expose
@@ -82,7 +82,7 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
     private SubtitleFontConf FontStyle;
 
     /**
-    * There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `.
+    * There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. When the output is WebVTT, only STEADY can be selected.
     */
     @SerializedName("StateEffectMode")
     @Expose
@@ -94,6 +94,34 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
     @SerializedName("SteadyStateDelayedTime")
     @Expose
     private Long SteadyStateDelayedTime;
+
+    /**
+    * Audio selector name, required for generating WebVTT subtitles using speech recognition, can be empty.
+    */
+    @SerializedName("AudioSelectorName")
+    @Expose
+    private String AudioSelectorName;
+
+    /**
+    * Format configuration for speech recognition output on WebVTT.
+    */
+    @SerializedName("WebVTTFontStyle")
+    @Expose
+    private WebVTTFontStyle WebVTTFontStyle;
+
+    /**
+    * Language code, length 2-20. ISO 639-2 three-digit code is recommend.
+    */
+    @SerializedName("LanguageCode")
+    @Expose
+    private String LanguageCode;
+
+    /**
+    * Language description, less than 100 characters in length.
+    */
+    @SerializedName("LanguageDescription")
+    @Expose
+    private String LanguageDescription;
 
     /**
      * Get Template name. 
@@ -144,32 +172,32 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
     }
 
     /**
-     * Get Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. 
-     * @return ContentType Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `.
+     * Get Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. When outputting as WebVTT, a single template can only output one language. 
+     * @return ContentType Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. When outputting as WebVTT, a single template can only output one language.
      */
     public Long getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `.
-     * @param ContentType Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `.
+     * Set Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. When outputting as WebVTT, a single template can only output one language.
+     * @param ContentType Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. When outputting as WebVTT, a single template can only output one language.
      */
     public void setContentType(Long ContentType) {
         this.ContentType = ContentType;
     }
 
     /**
-     * Get Output mode: 1 Burn in, 2 Embedded. Support `2` when CaptionSource selects `INPUT`. Support `1` when CaptionSource selects `ANALYSIS `. 
-     * @return TargetType Output mode: 1 Burn in, 2 Embedded. Support `2` when CaptionSource selects `INPUT`. Support `1` when CaptionSource selects `ANALYSIS `.
+     * Get Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. Support `2` when CaptionSource selects `INPUT`. Support `1` and `3` when CaptionSource selects `ANALYSIS `. 
+     * @return TargetType Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. Support `2` when CaptionSource selects `INPUT`. Support `1` and `3` when CaptionSource selects `ANALYSIS `.
      */
     public Long getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set Output mode: 1 Burn in, 2 Embedded. Support `2` when CaptionSource selects `INPUT`. Support `1` when CaptionSource selects `ANALYSIS `.
-     * @param TargetType Output mode: 1 Burn in, 2 Embedded. Support `2` when CaptionSource selects `INPUT`. Support `1` when CaptionSource selects `ANALYSIS `.
+     * Set Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. Support `2` when CaptionSource selects `INPUT`. Support `1` and `3` when CaptionSource selects `ANALYSIS `.
+     * @param TargetType Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. Support `2` when CaptionSource selects `INPUT`. Support `1` and `3` when CaptionSource selects `ANALYSIS `.
      */
     public void setTargetType(Long TargetType) {
         this.TargetType = TargetType;
@@ -232,16 +260,16 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
     }
 
     /**
-     * Get There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. 
-     * @return StateEffectMode There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `.
+     * Get There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. When the output is WebVTT, only STEADY can be selected. 
+     * @return StateEffectMode There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. When the output is WebVTT, only STEADY can be selected.
      */
     public String getStateEffectMode() {
         return this.StateEffectMode;
     }
 
     /**
-     * Set There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `.
-     * @param StateEffectMode There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `.
+     * Set There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. When the output is WebVTT, only STEADY can be selected.
+     * @param StateEffectMode There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. When the output is WebVTT, only STEADY can be selected.
      */
     public void setStateEffectMode(String StateEffectMode) {
         this.StateEffectMode = StateEffectMode;
@@ -261,6 +289,70 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
      */
     public void setSteadyStateDelayedTime(Long SteadyStateDelayedTime) {
         this.SteadyStateDelayedTime = SteadyStateDelayedTime;
+    }
+
+    /**
+     * Get Audio selector name, required for generating WebVTT subtitles using speech recognition, can be empty. 
+     * @return AudioSelectorName Audio selector name, required for generating WebVTT subtitles using speech recognition, can be empty.
+     */
+    public String getAudioSelectorName() {
+        return this.AudioSelectorName;
+    }
+
+    /**
+     * Set Audio selector name, required for generating WebVTT subtitles using speech recognition, can be empty.
+     * @param AudioSelectorName Audio selector name, required for generating WebVTT subtitles using speech recognition, can be empty.
+     */
+    public void setAudioSelectorName(String AudioSelectorName) {
+        this.AudioSelectorName = AudioSelectorName;
+    }
+
+    /**
+     * Get Format configuration for speech recognition output on WebVTT. 
+     * @return WebVTTFontStyle Format configuration for speech recognition output on WebVTT.
+     */
+    public WebVTTFontStyle getWebVTTFontStyle() {
+        return this.WebVTTFontStyle;
+    }
+
+    /**
+     * Set Format configuration for speech recognition output on WebVTT.
+     * @param WebVTTFontStyle Format configuration for speech recognition output on WebVTT.
+     */
+    public void setWebVTTFontStyle(WebVTTFontStyle WebVTTFontStyle) {
+        this.WebVTTFontStyle = WebVTTFontStyle;
+    }
+
+    /**
+     * Get Language code, length 2-20. ISO 639-2 three-digit code is recommend. 
+     * @return LanguageCode Language code, length 2-20. ISO 639-2 three-digit code is recommend.
+     */
+    public String getLanguageCode() {
+        return this.LanguageCode;
+    }
+
+    /**
+     * Set Language code, length 2-20. ISO 639-2 three-digit code is recommend.
+     * @param LanguageCode Language code, length 2-20. ISO 639-2 three-digit code is recommend.
+     */
+    public void setLanguageCode(String LanguageCode) {
+        this.LanguageCode = LanguageCode;
+    }
+
+    /**
+     * Get Language description, less than 100 characters in length. 
+     * @return LanguageDescription Language description, less than 100 characters in length.
+     */
+    public String getLanguageDescription() {
+        return this.LanguageDescription;
+    }
+
+    /**
+     * Set Language description, less than 100 characters in length.
+     * @param LanguageDescription Language description, less than 100 characters in length.
+     */
+    public void setLanguageDescription(String LanguageDescription) {
+        this.LanguageDescription = LanguageDescription;
     }
 
     public SubtitleConf() {
@@ -301,6 +393,18 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
         if (source.SteadyStateDelayedTime != null) {
             this.SteadyStateDelayedTime = new Long(source.SteadyStateDelayedTime);
         }
+        if (source.AudioSelectorName != null) {
+            this.AudioSelectorName = new String(source.AudioSelectorName);
+        }
+        if (source.WebVTTFontStyle != null) {
+            this.WebVTTFontStyle = new WebVTTFontStyle(source.WebVTTFontStyle);
+        }
+        if (source.LanguageCode != null) {
+            this.LanguageCode = new String(source.LanguageCode);
+        }
+        if (source.LanguageDescription != null) {
+            this.LanguageDescription = new String(source.LanguageDescription);
+        }
     }
 
 
@@ -318,6 +422,10 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
         this.setParamObj(map, prefix + "FontStyle.", this.FontStyle);
         this.setParamSimple(map, prefix + "StateEffectMode", this.StateEffectMode);
         this.setParamSimple(map, prefix + "SteadyStateDelayedTime", this.SteadyStateDelayedTime);
+        this.setParamSimple(map, prefix + "AudioSelectorName", this.AudioSelectorName);
+        this.setParamObj(map, prefix + "WebVTTFontStyle.", this.WebVTTFontStyle);
+        this.setParamSimple(map, prefix + "LanguageCode", this.LanguageCode);
+        this.setParamSimple(map, prefix + "LanguageDescription", this.LanguageDescription);
 
     }
 }

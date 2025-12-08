@@ -94,6 +94,13 @@ public class GenerateDataKeyRequest extends AbstractModel {
     private String HsmClusterId;
 
     /**
+    * Tag list. valid at that time when parameter IsHostedByKms=1 and the data key is hosted by kms.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Globally unique CMK ID 
      * @return KeyId Globally unique CMK ID
      */
@@ -253,6 +260,22 @@ public class GenerateDataKeyRequest extends AbstractModel {
         this.HsmClusterId = HsmClusterId;
     }
 
+    /**
+     * Get Tag list. valid at that time when parameter IsHostedByKms=1 and the data key is hosted by kms. 
+     * @return Tags Tag list. valid at that time when parameter IsHostedByKms=1 and the data key is hosted by kms.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag list. valid at that time when parameter IsHostedByKms=1 and the data key is hosted by kms.
+     * @param Tags Tag list. valid at that time when parameter IsHostedByKms=1 and the data key is hosted by kms.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public GenerateDataKeyRequest() {
     }
 
@@ -291,6 +314,12 @@ public class GenerateDataKeyRequest extends AbstractModel {
         if (source.HsmClusterId != null) {
             this.HsmClusterId = new String(source.HsmClusterId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -308,6 +337,7 @@ public class GenerateDataKeyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataKeyName", this.DataKeyName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

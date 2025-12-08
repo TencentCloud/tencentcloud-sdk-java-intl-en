@@ -38,6 +38,13 @@ public class DataKeyMetadata extends AbstractModel {
     private String KeyId;
 
     /**
+    * CMK name.
+    */
+    @SerializedName("KeyName")
+    @Expose
+    private String KeyName;
+
+    /**
     * Key name as a more recognizable and understandable data key.
     */
     @SerializedName("DataKeyName")
@@ -193,6 +200,22 @@ public class DataKeyMetadata extends AbstractModel {
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
+    }
+
+    /**
+     * Get CMK name. 
+     * @return KeyName CMK name.
+     */
+    public String getKeyName() {
+        return this.KeyName;
+    }
+
+    /**
+     * Set CMK name.
+     * @param KeyName CMK name.
+     */
+    public void setKeyName(String KeyName) {
+        this.KeyName = KeyName;
     }
 
     /**
@@ -497,6 +520,9 @@ public class DataKeyMetadata extends AbstractModel {
         if (source.KeyId != null) {
             this.KeyId = new String(source.KeyId);
         }
+        if (source.KeyName != null) {
+            this.KeyName = new String(source.KeyName);
+        }
         if (source.DataKeyName != null) {
             this.DataKeyName = new String(source.DataKeyName);
         }
@@ -560,6 +586,7 @@ public class DataKeyMetadata extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DataKeyId", this.DataKeyId);
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "KeyName", this.KeyName);
         this.setParamSimple(map, prefix + "DataKeyName", this.DataKeyName);
         this.setParamSimple(map, prefix + "NumberOfBytes", this.NumberOfBytes);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

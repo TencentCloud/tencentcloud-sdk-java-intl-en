@@ -67,6 +67,13 @@ When importing plaintext data key, KeyId cannot be empty. the data key is encryp
     private String HsmClusterId;
 
     /**
+    * Tag list
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Name of the data key. 
      * @return DataKeyName Name of the data key.
      */
@@ -166,6 +173,22 @@ When importing plaintext data key, KeyId cannot be empty. the data key is encryp
         this.HsmClusterId = HsmClusterId;
     }
 
+    /**
+     * Get Tag list 
+     * @return Tags Tag list
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag list
+     * @param Tags Tag list
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public ImportDataKeyRequest() {
     }
 
@@ -192,6 +215,12 @@ When importing plaintext data key, KeyId cannot be empty. the data key is encryp
         if (source.HsmClusterId != null) {
             this.HsmClusterId = new String(source.HsmClusterId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -205,6 +234,7 @@ When importing plaintext data key, KeyId cannot be empty. the data key is encryp
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

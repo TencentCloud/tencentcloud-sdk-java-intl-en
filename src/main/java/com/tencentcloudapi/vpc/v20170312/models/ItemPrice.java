@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ItemPrice extends AbstractModel {
 
     /**
-    * The pay-as-you-go billing method. Unit: CNY.
+    * The pay-as-you-go billing method. Unit: USD.
     */
     @SerializedName("UnitPrice")
     @Expose
@@ -38,30 +38,30 @@ public class ItemPrice extends AbstractModel {
     private String ChargeUnit;
 
     /**
-    * Original price of the prepaid product. Unit: CNY.
+    * Original price of the prepaid product. Unit: USD.
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * Discount price of the prepaid product. Unit: CNY.
+    * Discount price of the prepaid product. Unit: USD.
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-     * Get The pay-as-you-go billing method. Unit: CNY. 
-     * @return UnitPrice The pay-as-you-go billing method. Unit: CNY.
+     * Get The pay-as-you-go billing method. Unit: USD. 
+     * @return UnitPrice The pay-as-you-go billing method. Unit: USD.
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
     }
 
     /**
-     * Set The pay-as-you-go billing method. Unit: CNY.
-     * @param UnitPrice The pay-as-you-go billing method. Unit: CNY.
+     * Set The pay-as-you-go billing method. Unit: USD.
+     * @param UnitPrice The pay-as-you-go billing method. Unit: USD.
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
@@ -84,32 +84,32 @@ public class ItemPrice extends AbstractModel {
     }
 
     /**
-     * Get Original price of the prepaid product. Unit: CNY. 
-     * @return OriginalPrice Original price of the prepaid product. Unit: CNY.
+     * Get Original price of the prepaid product. Unit: USD. 
+     * @return OriginalPrice Original price of the prepaid product. Unit: USD.
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Original price of the prepaid product. Unit: CNY.
-     * @param OriginalPrice Original price of the prepaid product. Unit: CNY.
+     * Set Original price of the prepaid product. Unit: USD.
+     * @param OriginalPrice Original price of the prepaid product. Unit: USD.
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get Discount price of the prepaid product. Unit: CNY. 
-     * @return DiscountPrice Discount price of the prepaid product. Unit: CNY.
+     * Get Discount price of the prepaid product. Unit: USD. 
+     * @return DiscountPrice Discount price of the prepaid product. Unit: USD.
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set Discount price of the prepaid product. Unit: CNY.
-     * @param DiscountPrice Discount price of the prepaid product. Unit: CNY.
+     * Set Discount price of the prepaid product. Unit: USD.
+     * @param DiscountPrice Discount price of the prepaid product. Unit: USD.
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
