@@ -66,7 +66,7 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
     private AVTemplate [] AVTemplates;
 
     /**
-    * Subtitle template configuration, only AVTemplates are valid.
+    * Subtitle template configuration.
     */
     @SerializedName("CaptionTemplates")
     @Expose
@@ -225,16 +225,16 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
     }
 
     /**
-     * Get Subtitle template configuration, only AVTemplates are valid. 
-     * @return CaptionTemplates Subtitle template configuration, only AVTemplates are valid.
+     * Get Subtitle template configuration. 
+     * @return CaptionTemplates Subtitle template configuration.
      */
     public SubtitleConf [] getCaptionTemplates() {
         return this.CaptionTemplates;
     }
 
     /**
-     * Set Subtitle template configuration, only AVTemplates are valid.
-     * @param CaptionTemplates Subtitle template configuration, only AVTemplates are valid.
+     * Set Subtitle template configuration.
+     * @param CaptionTemplates Subtitle template configuration.
      */
     public void setCaptionTemplates(SubtitleConf [] CaptionTemplates) {
         this.CaptionTemplates = CaptionTemplates;

@@ -107,6 +107,13 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
     private String ImageUrlBack;
 
     /**
+    * Whether to extract the ID portrait. Default value: false.
+    */
+    @SerializedName("ReturnHeadImage")
+    @Expose
+    private Boolean ReturnHeadImage;
+
+    /**
      * Get Specifies the country of the document.
 ARG:Argentina
 AUS:Australia
@@ -366,6 +373,22 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
         this.ImageUrlBack = ImageUrlBack;
     }
 
+    /**
+     * Get Whether to extract the ID portrait. Default value: false. 
+     * @return ReturnHeadImage Whether to extract the ID portrait. Default value: false.
+     */
+    public Boolean getReturnHeadImage() {
+        return this.ReturnHeadImage;
+    }
+
+    /**
+     * Set Whether to extract the ID portrait. Default value: false.
+     * @param ReturnHeadImage Whether to extract the ID portrait. Default value: false.
+     */
+    public void setReturnHeadImage(Boolean ReturnHeadImage) {
+        this.ReturnHeadImage = ReturnHeadImage;
+    }
+
     public ApplyCardVerificationExternalRequest() {
     }
 
@@ -392,6 +415,9 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
         if (source.ImageUrlBack != null) {
             this.ImageUrlBack = new String(source.ImageUrlBack);
         }
+        if (source.ReturnHeadImage != null) {
+            this.ReturnHeadImage = new Boolean(source.ReturnHeadImage);
+        }
     }
 
 
@@ -405,6 +431,7 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
         this.setParamSimple(map, prefix + "ImageBase64Back", this.ImageBase64Back);
         this.setParamSimple(map, prefix + "ImageUrlFront", this.ImageUrlFront);
         this.setParamSimple(map, prefix + "ImageUrlBack", this.ImageUrlBack);
+        this.setParamSimple(map, prefix + "ReturnHeadImage", this.ReturnHeadImage);
 
     }
 }
