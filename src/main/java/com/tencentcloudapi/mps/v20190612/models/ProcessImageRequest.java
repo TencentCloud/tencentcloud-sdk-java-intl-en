@@ -62,6 +62,7 @@ If not filled in, default relative path: `{inputName}.{format}`.
 
     /**
     * Unique identifier of the image processing template.
+The image template feature is in beta testing. If you want to use it, submit a ticket for application.
     */
     @SerializedName("Definition")
     @Expose
@@ -182,8 +183,10 @@ If not filled in, default relative path: `{inputName}.{format}`.
     }
 
     /**
-     * Get Unique identifier of the image processing template. 
+     * Get Unique identifier of the image processing template.
+The image template feature is in beta testing. If you want to use it, submit a ticket for application. 
      * @return Definition Unique identifier of the image processing template.
+The image template feature is in beta testing. If you want to use it, submit a ticket for application.
      */
     public Long getDefinition() {
         return this.Definition;
@@ -191,7 +194,9 @@ If not filled in, default relative path: `{inputName}.{format}`.
 
     /**
      * Set Unique identifier of the image processing template.
+The image template feature is in beta testing. If you want to use it, submit a ticket for application.
      * @param Definition Unique identifier of the image processing template.
+The image template feature is in beta testing. If you want to use it, submit a ticket for application.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

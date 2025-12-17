@@ -94,6 +94,17 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
+     *Create a watermark detection task
+     * @param req CreateWatermarkDetectionRequest
+     * @return CreateWatermarkDetectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWatermarkDetectionResponse CreateWatermarkDetection(CreateWatermarkDetectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateWatermarkDetection", CreateWatermarkDetectionResponse.class);
+    }
+
+    /**
      *This API is used to delete a StreamLive channel.
      * @param req DeleteStreamLiveChannelRequest
      * @return DeleteStreamLiveChannelResponse
@@ -311,6 +322,28 @@ public class MdlClient extends AbstractClient{
     public DescribeStreamLiveWatermarksResponse DescribeStreamLiveWatermarks(DescribeStreamLiveWatermarksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeStreamLiveWatermarks", DescribeStreamLiveWatermarksResponse.class);
+    }
+
+    /**
+     *Describe watermark detection task
+     * @param req DescribeWatermarkDetectionRequest
+     * @return DescribeWatermarkDetectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWatermarkDetectionResponse DescribeWatermarkDetection(DescribeWatermarkDetectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWatermarkDetection", DescribeWatermarkDetectionResponse.class);
+    }
+
+    /**
+     *Batch Describe watermark detection task
+     * @param req DescribeWatermarkDetectionsRequest
+     * @return DescribeWatermarkDetectionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWatermarkDetectionsResponse DescribeWatermarkDetections(DescribeWatermarkDetectionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWatermarkDetections", DescribeWatermarkDetectionsResponse.class);
     }
 
     /**

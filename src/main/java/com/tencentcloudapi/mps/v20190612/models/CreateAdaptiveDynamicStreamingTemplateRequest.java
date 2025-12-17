@@ -93,8 +93,9 @@ This value only distinguishes template types. The task uses the values of Remove
     private Long PureAudio;
 
     /**
-    * Sharding type. available values: <li>ts-segment: HLS+ts segment</li> <li>ts-byterange: HLS+ts byte range</li> <li>mp4-segment: HLS+mp4 segment</li> <li>mp4-byterange: HLS+mp4 byte range</li> <li>ts-packed-audio: ts+packed audio</li> <li>mp4-packed-audio: mp4+packed audio</li> default value: ts-segment. 
-Note: the shard format of the adaptive bitrate stream is based on this field.
+    * Segment type. Valid values: <li>ts-segment: HLS+TS segment</li>; <li>ts-byterange: HLS+TS byte range</li>; <li>mp4-segment: HLS+MP4 segment</li>; <li>mp4-byterange: HLS/DASH+MP4 byte range</li>; <li>ts-packed-audio: TS+Packed Audio</li>; <li>mp4-packed-audio: MP4+Packed Audio</li>. The default value is ts-segment.
+ 
+Note: The segment format for the adaptive bitrate streaming is based on this field. The value of SegmentType can only be mp4-byterange in DASH format.
     */
     @SerializedName("SegmentType")
     @Expose
@@ -293,20 +294,24 @@ This value only distinguishes template types. The task uses the values of Remove
     }
 
     /**
-     * Get Sharding type. available values: <li>ts-segment: HLS+ts segment</li> <li>ts-byterange: HLS+ts byte range</li> <li>mp4-segment: HLS+mp4 segment</li> <li>mp4-byterange: HLS+mp4 byte range</li> <li>ts-packed-audio: ts+packed audio</li> <li>mp4-packed-audio: mp4+packed audio</li> default value: ts-segment. 
-Note: the shard format of the adaptive bitrate stream is based on this field. 
-     * @return SegmentType Sharding type. available values: <li>ts-segment: HLS+ts segment</li> <li>ts-byterange: HLS+ts byte range</li> <li>mp4-segment: HLS+mp4 segment</li> <li>mp4-byterange: HLS+mp4 byte range</li> <li>ts-packed-audio: ts+packed audio</li> <li>mp4-packed-audio: mp4+packed audio</li> default value: ts-segment. 
-Note: the shard format of the adaptive bitrate stream is based on this field.
+     * Get Segment type. Valid values: <li>ts-segment: HLS+TS segment</li>; <li>ts-byterange: HLS+TS byte range</li>; <li>mp4-segment: HLS+MP4 segment</li>; <li>mp4-byterange: HLS/DASH+MP4 byte range</li>; <li>ts-packed-audio: TS+Packed Audio</li>; <li>mp4-packed-audio: MP4+Packed Audio</li>. The default value is ts-segment.
+ 
+Note: The segment format for the adaptive bitrate streaming is based on this field. The value of SegmentType can only be mp4-byterange in DASH format. 
+     * @return SegmentType Segment type. Valid values: <li>ts-segment: HLS+TS segment</li>; <li>ts-byterange: HLS+TS byte range</li>; <li>mp4-segment: HLS+MP4 segment</li>; <li>mp4-byterange: HLS/DASH+MP4 byte range</li>; <li>ts-packed-audio: TS+Packed Audio</li>; <li>mp4-packed-audio: MP4+Packed Audio</li>. The default value is ts-segment.
+ 
+Note: The segment format for the adaptive bitrate streaming is based on this field. The value of SegmentType can only be mp4-byterange in DASH format.
      */
     public String getSegmentType() {
         return this.SegmentType;
     }
 
     /**
-     * Set Sharding type. available values: <li>ts-segment: HLS+ts segment</li> <li>ts-byterange: HLS+ts byte range</li> <li>mp4-segment: HLS+mp4 segment</li> <li>mp4-byterange: HLS+mp4 byte range</li> <li>ts-packed-audio: ts+packed audio</li> <li>mp4-packed-audio: mp4+packed audio</li> default value: ts-segment. 
-Note: the shard format of the adaptive bitrate stream is based on this field.
-     * @param SegmentType Sharding type. available values: <li>ts-segment: HLS+ts segment</li> <li>ts-byterange: HLS+ts byte range</li> <li>mp4-segment: HLS+mp4 segment</li> <li>mp4-byterange: HLS+mp4 byte range</li> <li>ts-packed-audio: ts+packed audio</li> <li>mp4-packed-audio: mp4+packed audio</li> default value: ts-segment. 
-Note: the shard format of the adaptive bitrate stream is based on this field.
+     * Set Segment type. Valid values: <li>ts-segment: HLS+TS segment</li>; <li>ts-byterange: HLS+TS byte range</li>; <li>mp4-segment: HLS+MP4 segment</li>; <li>mp4-byterange: HLS/DASH+MP4 byte range</li>; <li>ts-packed-audio: TS+Packed Audio</li>; <li>mp4-packed-audio: MP4+Packed Audio</li>. The default value is ts-segment.
+ 
+Note: The segment format for the adaptive bitrate streaming is based on this field. The value of SegmentType can only be mp4-byterange in DASH format.
+     * @param SegmentType Segment type. Valid values: <li>ts-segment: HLS+TS segment</li>; <li>ts-byterange: HLS+TS byte range</li>; <li>mp4-segment: HLS+MP4 segment</li>; <li>mp4-byterange: HLS/DASH+MP4 byte range</li>; <li>ts-packed-audio: TS+Packed Audio</li>; <li>mp4-packed-audio: MP4+Packed Audio</li>. The default value is ts-segment.
+ 
+Note: The segment format for the adaptive bitrate streaming is based on this field. The value of SegmentType can only be mp4-byterange in DASH format.
      */
     public void setSegmentType(String SegmentType) {
         this.SegmentType = SegmentType;

@@ -1498,6 +1498,17 @@ This API is used to return post-protection traffic request data by default. User
     }
 
     /**
+     *This API is used to query time series data for layer-7 domain services' origin-pull data.
+     * @param req DescribeTimingL7OriginPullDataRequest
+     * @return DescribeTimingL7OriginPullDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimingL7OriginPullDataResponse DescribeTimingL7OriginPullData(DescribeTimingL7OriginPullDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTimingL7OriginPullData", DescribeTimingL7OriginPullDataResponse.class);
+    }
+
+    /**
      *This API is used to query the top N data of the L7 domain name business by specified dimension.
 Create and bind policy Query instance Reset instance access password.
 This API is used to query data with a delay of about 10 minutes. It is recommended to pull data from at least 10 minutes before the current time.

@@ -112,9 +112,7 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
     private String Extra;
 
     /**
-    * PLUS: Plus Version.
-ENHANCED: Enhanced Version.
-BASIC: Basic Version (default).
+    * BASIC: Basic Version (default).
     */
     @SerializedName("SdkVersion")
     @Expose
@@ -394,24 +392,16 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
     }
 
     /**
-     * Get PLUS: Plus Version.
-ENHANCED: Enhanced Version.
-BASIC: Basic Version (default). 
-     * @return SdkVersion PLUS: Plus Version.
-ENHANCED: Enhanced Version.
-BASIC: Basic Version (default).
+     * Get BASIC: Basic Version (default). 
+     * @return SdkVersion BASIC: Basic Version (default).
      */
     public String getSdkVersion() {
         return this.SdkVersion;
     }
 
     /**
-     * Set PLUS: Plus Version.
-ENHANCED: Enhanced Version.
-BASIC: Basic Version (default).
-     * @param SdkVersion PLUS: Plus Version.
-ENHANCED: Enhanced Version.
-BASIC: Basic Version (default).
+     * Set BASIC: Basic Version (default).
+     * @param SdkVersion BASIC: Basic Version (default).
      */
     public void setSdkVersion(String SdkVersion) {
         this.SdkVersion = SdkVersion;

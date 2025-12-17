@@ -21,6 +21,9 @@ public enum MpsErrorCode {
      /* Operation failed: invalid user. */
      FAILEDOPERATION_INVALIDUSER("FailedOperation.InvalidUser"),
      
+     /* Operation failed due to a network error. */
+     FAILEDOPERATION_NETWORKERROR("FailedOperation.NetWorkError"),
+     
      /* Operation failed: Error setting the source notification. */
      FAILEDOPERATION_SETSOURCENOTIFY("FailedOperation.SetSourceNotify"),
      
@@ -266,6 +269,9 @@ public enum MpsErrorCode {
      
      /* Incorrect parameter value: SampleType. */
      INVALIDPARAMETERVALUE_SAMPLETYPE("InvalidParameterValue.SampleType"),
+     
+     /* A service parameter value error occurs. */
+     INVALIDPARAMETERVALUE_SERVICE("InvalidParameterValue.Service"),
      
      /* `SessionContext` is too long. */
      INVALIDPARAMETERVALUE_SESSIONCONTEXTTOOLONG("InvalidParameterValue.SessionContextTooLong"),

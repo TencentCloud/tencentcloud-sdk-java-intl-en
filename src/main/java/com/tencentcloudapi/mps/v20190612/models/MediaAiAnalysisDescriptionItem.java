@@ -68,6 +68,27 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String MindMapUrl;
 
     /**
+    * Path of the mind map of a summary task.
+    */
+    @SerializedName("MindMapPath")
+    @Expose
+    private String MindMapPath;
+
+    /**
+    * Subtitle file path of the video.
+    */
+    @SerializedName("SubtitlePath")
+    @Expose
+    private String SubtitlePath;
+
+    /**
+    * Storage location of the summary file.
+    */
+    @SerializedName("OutputStorage")
+    @Expose
+    private TaskOutputStorage OutputStorage;
+
+    /**
      * Get Intelligent description. 
      * @return Description Intelligent description.
      */
@@ -171,6 +192,54 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.MindMapUrl = MindMapUrl;
     }
 
+    /**
+     * Get Path of the mind map of a summary task. 
+     * @return MindMapPath Path of the mind map of a summary task.
+     */
+    public String getMindMapPath() {
+        return this.MindMapPath;
+    }
+
+    /**
+     * Set Path of the mind map of a summary task.
+     * @param MindMapPath Path of the mind map of a summary task.
+     */
+    public void setMindMapPath(String MindMapPath) {
+        this.MindMapPath = MindMapPath;
+    }
+
+    /**
+     * Get Subtitle file path of the video. 
+     * @return SubtitlePath Subtitle file path of the video.
+     */
+    public String getSubtitlePath() {
+        return this.SubtitlePath;
+    }
+
+    /**
+     * Set Subtitle file path of the video.
+     * @param SubtitlePath Subtitle file path of the video.
+     */
+    public void setSubtitlePath(String SubtitlePath) {
+        this.SubtitlePath = SubtitlePath;
+    }
+
+    /**
+     * Get Storage location of the summary file. 
+     * @return OutputStorage Storage location of the summary file.
+     */
+    public TaskOutputStorage getOutputStorage() {
+        return this.OutputStorage;
+    }
+
+    /**
+     * Set Storage location of the summary file.
+     * @param OutputStorage Storage location of the summary file.
+     */
+    public void setOutputStorage(TaskOutputStorage OutputStorage) {
+        this.OutputStorage = OutputStorage;
+    }
+
     public MediaAiAnalysisDescriptionItem() {
     }
 
@@ -203,6 +272,15 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.MindMapUrl != null) {
             this.MindMapUrl = new String(source.MindMapUrl);
         }
+        if (source.MindMapPath != null) {
+            this.MindMapPath = new String(source.MindMapPath);
+        }
+        if (source.SubtitlePath != null) {
+            this.SubtitlePath = new String(source.SubtitlePath);
+        }
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
     }
 
 
@@ -216,6 +294,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamArrayObj(map, prefix + "Paragraphs.", this.Paragraphs);
         this.setParamSimple(map, prefix + "MindMapUrl", this.MindMapUrl);
+        this.setParamSimple(map, prefix + "MindMapPath", this.MindMapPath);
+        this.setParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
+        this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
 
     }
 }

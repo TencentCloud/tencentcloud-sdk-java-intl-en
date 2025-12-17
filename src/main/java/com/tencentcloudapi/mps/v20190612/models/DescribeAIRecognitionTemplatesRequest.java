@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
 
     /**
-    * Unique ID filter of video content recognition templates. Array length limit: 10.
+    * Filter condition for the unique identifier of the video content recognition template. The array can contain up to 100 unique identifiers.
     */
     @SerializedName("Definitions")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
     private String Name;
 
     /**
-     * Get Unique ID filter of video content recognition templates. Array length limit: 10. 
-     * @return Definitions Unique ID filter of video content recognition templates. Array length limit: 10.
+     * Get Filter condition for the unique identifier of the video content recognition template. The array can contain up to 100 unique identifiers. 
+     * @return Definitions Filter condition for the unique identifier of the video content recognition template. The array can contain up to 100 unique identifiers.
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set Unique ID filter of video content recognition templates. Array length limit: 10.
-     * @param Definitions Unique ID filter of video content recognition templates. Array length limit: 10.
+     * Set Filter condition for the unique identifier of the video content recognition template. The array can contain up to 100 unique identifiers.
+     * @param Definitions Filter condition for the unique identifier of the video content recognition template. The array can contain up to 100 unique identifiers.
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
