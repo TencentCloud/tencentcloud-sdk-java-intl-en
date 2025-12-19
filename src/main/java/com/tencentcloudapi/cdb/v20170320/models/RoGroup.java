@@ -32,6 +32,7 @@ public class RoGroup extends AbstractModel {
 
     /**
     * Read-only group ID.
+Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
     */
     @SerializedName("RoGroupId")
     @Expose
@@ -52,7 +53,7 @@ public class RoGroup extends AbstractModel {
     private Long RoOfflineDelay;
 
     /**
-    * Latency threshold
+    * Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
     */
     @SerializedName("RoMaxDelayTime")
     @Expose
@@ -101,8 +102,7 @@ public class RoGroup extends AbstractModel {
     private Long Vport;
 
     /**
-    * VPC ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Virtual Private Cloud (VPC) ID.
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -110,31 +110,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Subnet ID.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * Read-only group region.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Region of the read-only group.
     */
     @SerializedName("RoGroupRegion")
     @Expose
     private String RoGroupRegion;
 
     /**
-    * Read-only group AZ.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * AZ of the read-only group.
     */
     @SerializedName("RoGroupZone")
     @Expose
     private String RoGroupZone;
 
     /**
-    * Replication delay.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
     */
     @SerializedName("DelayReplicationTime")
     @Expose
@@ -157,8 +153,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Read-only group ID. 
+     * Get Read-only group ID.
+Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join. 
      * @return RoGroupId Read-only group ID.
+Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
      */
     public String getRoGroupId() {
         return this.RoGroupId;
@@ -166,7 +164,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Read-only group ID.
+Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
      * @param RoGroupId Read-only group ID.
+Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
      */
     public void setRoGroupId(String RoGroupId) {
         this.RoGroupId = RoGroupId;
@@ -205,16 +205,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Latency threshold 
-     * @return RoMaxDelayTime Latency threshold
+     * Get Delay threshold, in seconds. Value range: 1–10000. The value is an integer. 
+     * @return RoMaxDelayTime Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
      */
     public Long getRoMaxDelayTime() {
         return this.RoMaxDelayTime;
     }
 
     /**
-     * Set Latency threshold
-     * @param RoMaxDelayTime Latency threshold
+     * Set Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
+     * @param RoMaxDelayTime Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
      */
     public void setRoMaxDelayTime(Long RoMaxDelayTime) {
         this.RoMaxDelayTime = RoMaxDelayTime;
@@ -317,30 +317,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get VPC ID.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return UniqVpcId VPC ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Virtual Private Cloud (VPC) ID. 
+     * @return UniqVpcId Virtual Private Cloud (VPC) ID.
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set VPC ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param UniqVpcId VPC ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Virtual Private Cloud (VPC) ID.
+     * @param UniqVpcId Virtual Private Cloud (VPC) ID.
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get Subnet ID.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Subnet ID. 
      * @return UniqSubnetId Subnet ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
@@ -348,69 +342,55 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Subnet ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param UniqSubnetId Subnet ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get Read-only group region.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RoGroupRegion Read-only group region.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Region of the read-only group. 
+     * @return RoGroupRegion Region of the read-only group.
      */
     public String getRoGroupRegion() {
         return this.RoGroupRegion;
     }
 
     /**
-     * Set Read-only group region.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RoGroupRegion Read-only group region.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Region of the read-only group.
+     * @param RoGroupRegion Region of the read-only group.
      */
     public void setRoGroupRegion(String RoGroupRegion) {
         this.RoGroupRegion = RoGroupRegion;
     }
 
     /**
-     * Get Read-only group AZ.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RoGroupZone Read-only group AZ.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get AZ of the read-only group. 
+     * @return RoGroupZone AZ of the read-only group.
      */
     public String getRoGroupZone() {
         return this.RoGroupZone;
     }
 
     /**
-     * Set Read-only group AZ.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RoGroupZone Read-only group AZ.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set AZ of the read-only group.
+     * @param RoGroupZone AZ of the read-only group.
      */
     public void setRoGroupZone(String RoGroupZone) {
         this.RoGroupZone = RoGroupZone;
     }
 
     /**
-     * Get Replication delay.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return DelayReplicationTime Replication delay.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Replication delay time, in seconds. Value range: 1–259200. The value is an integer. 
+     * @return DelayReplicationTime Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
      */
     public Long getDelayReplicationTime() {
         return this.DelayReplicationTime;
     }
 
     /**
-     * Set Replication delay.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param DelayReplicationTime Replication delay.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
+     * @param DelayReplicationTime Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
      */
     public void setDelayReplicationTime(Long DelayReplicationTime) {
         this.DelayReplicationTime = DelayReplicationTime;

@@ -45,8 +45,7 @@ public class InstanceInfo extends AbstractModel {
     private Long InitFlag;
 
     /**
-    * VIP information of a read-only instance. This field is exclusive to read-only instances where read-only access is enabled separately
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
     */
     @SerializedName("RoVipInfo")
     @Expose
@@ -74,8 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long VpcId;
 
     /**
-    * Information of a secondary server
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Secondary server information.
     */
     @SerializedName("SlaveInfo")
     @Expose
@@ -110,8 +108,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ProtectMode;
 
     /**
-    * Details of a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Detailed information about the read-only group.
     */
     @SerializedName("RoGroups")
     @Expose
@@ -167,8 +164,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long TaskStatus;
 
     /**
-    * Details of a primary instance
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Detailed information about the primary instance.
     */
     @SerializedName("MasterInfo")
     @Expose
@@ -196,8 +192,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String InstanceName;
 
     /**
-    * Details of a disaster recovery instance
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Detailed information about the disaster recovery instance.
     */
     @SerializedName("DrInfo")
     @Expose
@@ -295,24 +290,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ZoneName;
 
     /**
-    * Physical machine model
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Physical server model.
     */
     @SerializedName("DeviceClass")
     @Expose
     private String DeviceClass;
 
     /**
-    * Placement group ID
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Placement group ID.
     */
     @SerializedName("DeployGroupId")
     @Expose
     private String DeployGroupId;
 
     /**
-    * AZ ID
-Note: this field may return null, indicating that no valid values can be obtained.
+    * AZ ID.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -326,35 +318,71 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long InstanceNodes;
 
     /**
-    * List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Tag list.
     */
     @SerializedName("TagList")
     @Expose
     private TagInfoItem [] TagList;
 
     /**
-    * Engine type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Engine type.
     */
     @SerializedName("EngineType")
     @Expose
     private String EngineType;
 
     /**
-    * Maximum delay threshold
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Maximum delay threshold.
     */
     @SerializedName("MaxDelayTime")
     @Expose
     private Long MaxDelayTime;
 
     /**
-    * Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+    * Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
+Note:
+1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
+2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
+3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
+
+    /**
+    * Current number of CPU cores for scale-out.
+    */
+    @SerializedName("ExpandCpu")
+    @Expose
+    private Long ExpandCpu;
+
+    /**
+    * Cluster Edition instance node information.
+    */
+    @SerializedName("ClusterInfo")
+    @Expose
+    private ClusterInfo [] ClusterInfo;
+
+    /**
+    * Analysis engine node list.
+    */
+    @SerializedName("AnalysisNodeInfos")
+    @Expose
+    private AnalysisNodeInfo [] AnalysisNodeInfos;
+
+    /**
+    * Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
+    */
+    @SerializedName("DeviceBandwidth")
+    @Expose
+    private Long DeviceBandwidth;
+
+    /**
+    * Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+    */
+    @SerializedName("DestroyProtect")
+    @Expose
+    private String DestroyProtect;
 
     /**
      * Get Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled) 
@@ -405,20 +433,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get VIP information of a read-only instance. This field is exclusive to read-only instances where read-only access is enabled separately
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RoVipInfo VIP information of a read-only instance. This field is exclusive to read-only instances where read-only access is enabled separately
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Read-only VIP information. This field is available only for read-only instances with dedicated access enabled. 
+     * @return RoVipInfo Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
      */
     public RoVipInfo getRoVipInfo() {
         return this.RoVipInfo;
     }
 
     /**
-     * Set VIP information of a read-only instance. This field is exclusive to read-only instances where read-only access is enabled separately
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RoVipInfo VIP information of a read-only instance. This field is exclusive to read-only instances where read-only access is enabled separately
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
+     * @param RoVipInfo Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
      */
     public void setRoVipInfo(RoVipInfo RoVipInfo) {
         this.RoVipInfo = RoVipInfo;
@@ -473,20 +497,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Information of a secondary server
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SlaveInfo Information of a secondary server
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Secondary server information. 
+     * @return SlaveInfo Secondary server information.
      */
     public SlaveInfo getSlaveInfo() {
         return this.SlaveInfo;
     }
 
     /**
-     * Set Information of a secondary server
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SlaveInfo Information of a secondary server
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Secondary server information.
+     * @param SlaveInfo Secondary server information.
      */
     public void setSlaveInfo(SlaveInfo SlaveInfo) {
         this.SlaveInfo = SlaveInfo;
@@ -557,20 +577,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Details of a read-only group
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RoGroups Details of a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detailed information about the read-only group. 
+     * @return RoGroups Detailed information about the read-only group.
      */
     public RoGroup [] getRoGroups() {
         return this.RoGroups;
     }
 
     /**
-     * Set Details of a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RoGroups Details of a read-only group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detailed information about the read-only group.
+     * @param RoGroups Detailed information about the read-only group.
      */
     public void setRoGroups(RoGroup [] RoGroups) {
         this.RoGroups = RoGroups;
@@ -689,20 +705,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Details of a primary instance
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MasterInfo Details of a primary instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detailed information about the primary instance. 
+     * @return MasterInfo Detailed information about the primary instance.
      */
     public MasterInfo getMasterInfo() {
         return this.MasterInfo;
     }
 
     /**
-     * Set Details of a primary instance
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MasterInfo Details of a primary instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detailed information about the primary instance.
+     * @param MasterInfo Detailed information about the primary instance.
      */
     public void setMasterInfo(MasterInfo MasterInfo) {
         this.MasterInfo = MasterInfo;
@@ -757,20 +769,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Details of a disaster recovery instance
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DrInfo Details of a disaster recovery instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detailed information about the disaster recovery instance. 
+     * @return DrInfo Detailed information about the disaster recovery instance.
      */
     public DrInfo [] getDrInfo() {
         return this.DrInfo;
     }
 
     /**
-     * Set Details of a disaster recovery instance
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DrInfo Details of a disaster recovery instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detailed information about the disaster recovery instance.
+     * @param DrInfo Detailed information about the disaster recovery instance.
      */
     public void setDrInfo(DrInfo [] DrInfo) {
         this.DrInfo = DrInfo;
@@ -985,60 +993,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Physical machine model
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DeviceClass Physical machine model
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Physical server model. 
+     * @return DeviceClass Physical server model.
      */
     public String getDeviceClass() {
         return this.DeviceClass;
     }
 
     /**
-     * Set Physical machine model
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DeviceClass Physical machine model
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Physical server model.
+     * @param DeviceClass Physical server model.
      */
     public void setDeviceClass(String DeviceClass) {
         this.DeviceClass = DeviceClass;
     }
 
     /**
-     * Get Placement group ID
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DeployGroupId Placement group ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Placement group ID. 
+     * @return DeployGroupId Placement group ID.
      */
     public String getDeployGroupId() {
         return this.DeployGroupId;
     }
 
     /**
-     * Set Placement group ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DeployGroupId Placement group ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Placement group ID.
+     * @param DeployGroupId Placement group ID.
      */
     public void setDeployGroupId(String DeployGroupId) {
         this.DeployGroupId = DeployGroupId;
     }
 
     /**
-     * Get AZ ID
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneId AZ ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get AZ ID. 
+     * @return ZoneId AZ ID.
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set AZ ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ZoneId AZ ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set AZ ID.
+     * @param ZoneId AZ ID.
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
@@ -1061,79 +1057,163 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return TagList List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Tag list. 
+     * @return TagList Tag list.
      */
     public TagInfoItem [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param TagList List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Tag list.
+     * @param TagList Tag list.
      */
     public void setTagList(TagInfoItem [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get Engine type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EngineType Engine type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Engine type. 
+     * @return EngineType Engine type.
      */
     public String getEngineType() {
         return this.EngineType;
     }
 
     /**
-     * Set Engine type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EngineType Engine type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Engine type.
+     * @param EngineType Engine type.
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;
     }
 
     /**
-     * Get Maximum delay threshold
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaxDelayTime Maximum delay threshold
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Maximum delay threshold. 
+     * @return MaxDelayTime Maximum delay threshold.
      */
     public Long getMaxDelayTime() {
         return this.MaxDelayTime;
     }
 
     /**
-     * Set Maximum delay threshold
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaxDelayTime Maximum delay threshold
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Maximum delay threshold.
+     * @param MaxDelayTime Maximum delay threshold.
      */
     public void setMaxDelayTime(Long MaxDelayTime) {
         this.MaxDelayTime = MaxDelayTime;
     }
 
     /**
-     * Get Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD). 
-     * @return DiskType Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+     * Get Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
+Note:
+1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
+2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
+3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD. 
+     * @return DiskType Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
+Note:
+1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
+2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
+3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
-     * @param DiskType Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+     * Set Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
+Note:
+1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
+2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
+3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
+     * @param DiskType Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
+Note:
+1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
+2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
+3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
+    }
+
+    /**
+     * Get Current number of CPU cores for scale-out. 
+     * @return ExpandCpu Current number of CPU cores for scale-out.
+     */
+    public Long getExpandCpu() {
+        return this.ExpandCpu;
+    }
+
+    /**
+     * Set Current number of CPU cores for scale-out.
+     * @param ExpandCpu Current number of CPU cores for scale-out.
+     */
+    public void setExpandCpu(Long ExpandCpu) {
+        this.ExpandCpu = ExpandCpu;
+    }
+
+    /**
+     * Get Cluster Edition instance node information. 
+     * @return ClusterInfo Cluster Edition instance node information.
+     */
+    public ClusterInfo [] getClusterInfo() {
+        return this.ClusterInfo;
+    }
+
+    /**
+     * Set Cluster Edition instance node information.
+     * @param ClusterInfo Cluster Edition instance node information.
+     */
+    public void setClusterInfo(ClusterInfo [] ClusterInfo) {
+        this.ClusterInfo = ClusterInfo;
+    }
+
+    /**
+     * Get Analysis engine node list. 
+     * @return AnalysisNodeInfos Analysis engine node list.
+     */
+    public AnalysisNodeInfo [] getAnalysisNodeInfos() {
+        return this.AnalysisNodeInfos;
+    }
+
+    /**
+     * Set Analysis engine node list.
+     * @param AnalysisNodeInfos Analysis engine node list.
+     */
+    public void setAnalysisNodeInfos(AnalysisNodeInfo [] AnalysisNodeInfos) {
+        this.AnalysisNodeInfos = AnalysisNodeInfos;
+    }
+
+    /**
+     * Get Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB. 
+     * @return DeviceBandwidth Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
+     */
+    public Long getDeviceBandwidth() {
+        return this.DeviceBandwidth;
+    }
+
+    /**
+     * Set Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
+     * @param DeviceBandwidth Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
+     */
+    public void setDeviceBandwidth(Long DeviceBandwidth) {
+        this.DeviceBandwidth = DeviceBandwidth;
+    }
+
+    /**
+     * Get Instance termination protection status. on indicates enabled; otherwise, the protection is disabled. 
+     * @return DestroyProtect Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+     */
+    public String getDestroyProtect() {
+        return this.DestroyProtect;
+    }
+
+    /**
+     * Set Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+     * @param DestroyProtect Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+     */
+    public void setDestroyProtect(String DestroyProtect) {
+        this.DestroyProtect = DestroyProtect;
     }
 
     public InstanceInfo() {
@@ -1291,6 +1371,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.DiskType != null) {
             this.DiskType = new String(source.DiskType);
         }
+        if (source.ExpandCpu != null) {
+            this.ExpandCpu = new Long(source.ExpandCpu);
+        }
+        if (source.ClusterInfo != null) {
+            this.ClusterInfo = new ClusterInfo[source.ClusterInfo.length];
+            for (int i = 0; i < source.ClusterInfo.length; i++) {
+                this.ClusterInfo[i] = new ClusterInfo(source.ClusterInfo[i]);
+            }
+        }
+        if (source.AnalysisNodeInfos != null) {
+            this.AnalysisNodeInfos = new AnalysisNodeInfo[source.AnalysisNodeInfos.length];
+            for (int i = 0; i < source.AnalysisNodeInfos.length; i++) {
+                this.AnalysisNodeInfos[i] = new AnalysisNodeInfo(source.AnalysisNodeInfos[i]);
+            }
+        }
+        if (source.DeviceBandwidth != null) {
+            this.DeviceBandwidth = new Long(source.DeviceBandwidth);
+        }
+        if (source.DestroyProtect != null) {
+            this.DestroyProtect = new String(source.DestroyProtect);
+        }
     }
 
 
@@ -1344,6 +1445,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "EngineType", this.EngineType);
         this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "ExpandCpu", this.ExpandCpu);
+        this.setParamArrayObj(map, prefix + "ClusterInfo.", this.ClusterInfo);
+        this.setParamArrayObj(map, prefix + "AnalysisNodeInfos.", this.AnalysisNodeInfos);
+        this.setParamSimple(map, prefix + "DeviceBandwidth", this.DeviceBandwidth);
+        this.setParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
 
     }
 }

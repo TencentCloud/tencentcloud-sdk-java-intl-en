@@ -31,8 +31,7 @@ public class SlaveInfo extends AbstractModel {
     private SlaveInstanceInfo First;
 
     /**
-    * Information of secondary server 2
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Second secondary server information.
     */
     @SerializedName("Second")
     @Expose
@@ -55,20 +54,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Information of secondary server 2
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Second Information of secondary server 2
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Second secondary server information. 
+     * @return Second Second secondary server information.
      */
     public SlaveInstanceInfo getSecond() {
         return this.Second;
     }
 
     /**
-     * Set Information of secondary server 2
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Second Information of secondary server 2
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Second secondary server information.
+     * @param Second Second secondary server information.
      */
     public void setSecond(SlaveInstanceInfo Second) {
         this.Second = Second;

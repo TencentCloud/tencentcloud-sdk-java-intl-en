@@ -73,7 +73,7 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private String SecurityGroupId;
 
     /**
-    * Billing method. Value range: 0 (monthly subscribed), 1 (hourly).
+    * Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
     */
     @SerializedName("PayTypes")
     @Expose
@@ -87,7 +87,7 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private String [] InstanceNames;
 
     /**
-    * Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
+    * Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -129,21 +129,22 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private Long [] CdbErrors;
 
     /**
-    * Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
+    * Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported.
+    * Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
     */
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
 
     /**
-    * Whether security group ID is used as a filter
+    * Whether to use the security group ID as the filter condition.
+Note: 0 indicates no; 1 indicates yes.
     */
     @SerializedName("WithSecurityGroup")
     @Expose
@@ -241,7 +242,8 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private String [] UniqSubnetIds;
 
     /**
-    * Tag key value
+    * Tag key value.
+Note that tags cannot be queried for instances being created.
     */
     @SerializedName("Tags")
     @Expose
@@ -262,11 +264,18 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private String [] ProxyIds;
 
     /**
-    * Database engine type
+    * Database engine type. Valid values: InnoDB; RocksDB.
     */
     @SerializedName("EngineTypes")
     @Expose
     private String [] EngineTypes;
+
+    /**
+    * Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+    */
+    @SerializedName("QueryClusterInfo")
+    @Expose
+    private Boolean QueryClusterInfo;
 
     /**
      * Get Project ID. 
@@ -381,16 +390,16 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Billing method. Value range: 0 (monthly subscribed), 1 (hourly). 
-     * @return PayTypes Billing method. Value range: 0 (monthly subscribed), 1 (hourly).
+     * Get Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour. 
+     * @return PayTypes Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
      */
     public Long [] getPayTypes() {
         return this.PayTypes;
     }
 
     /**
-     * Set Billing method. Value range: 0 (monthly subscribed), 1 (hourly).
-     * @param PayTypes Billing method. Value range: 0 (monthly subscribed), 1 (hourly).
+     * Set Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
+     * @param PayTypes Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
      */
     public void setPayTypes(Long [] PayTypes) {
         this.PayTypes = PayTypes;
@@ -413,16 +422,16 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed 
-     * @return TaskStatus Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
+     * Get Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution. 
+     * @return TaskStatus Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
      */
     public Long [] getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
-     * @param TaskStatus Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
+     * Set Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
+     * @param TaskStatus Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
      */
     public void setTaskStatus(Long [] TaskStatus) {
         this.TaskStatus = TaskStatus;
@@ -509,48 +518,52 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime". 
-     * @return OrderBy Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
+     * Get Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime". 
+     * @return OrderBy Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
-     * @param OrderBy Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
+     * Set Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
+     * @param OrderBy Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported. 
-     * @return OrderDirection Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported.
+     * Get Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC". 
+     * @return OrderDirection Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported.
-     * @param OrderDirection Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported.
+     * Set Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
+     * @param OrderDirection Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;
     }
 
     /**
-     * Get Whether security group ID is used as a filter 
-     * @return WithSecurityGroup Whether security group ID is used as a filter
+     * Get Whether to use the security group ID as the filter condition.
+Note: 0 indicates no; 1 indicates yes. 
+     * @return WithSecurityGroup Whether to use the security group ID as the filter condition.
+Note: 0 indicates no; 1 indicates yes.
      */
     public Long getWithSecurityGroup() {
         return this.WithSecurityGroup;
     }
 
     /**
-     * Set Whether security group ID is used as a filter
-     * @param WithSecurityGroup Whether security group ID is used as a filter
+     * Set Whether to use the security group ID as the filter condition.
+Note: 0 indicates no; 1 indicates yes.
+     * @param WithSecurityGroup Whether to use the security group ID as the filter condition.
+Note: 0 indicates no; 1 indicates yes.
      */
     public void setWithSecurityGroup(Long WithSecurityGroup) {
         this.WithSecurityGroup = WithSecurityGroup;
@@ -765,16 +778,20 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Tag key value 
-     * @return Tags Tag key value
+     * Get Tag key value.
+Note that tags cannot be queried for instances being created. 
+     * @return Tags Tag key value.
+Note that tags cannot be queried for instances being created.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag key value
-     * @param Tags Tag key value
+     * Set Tag key value.
+Note that tags cannot be queried for instances being created.
+     * @param Tags Tag key value.
+Note that tags cannot be queried for instances being created.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -813,19 +830,35 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Database engine type 
-     * @return EngineTypes Database engine type
+     * Get Database engine type. Valid values: InnoDB; RocksDB. 
+     * @return EngineTypes Database engine type. Valid values: InnoDB; RocksDB.
      */
     public String [] getEngineTypes() {
         return this.EngineTypes;
     }
 
     /**
-     * Set Database engine type
-     * @param EngineTypes Database engine type
+     * Set Database engine type. Valid values: InnoDB; RocksDB.
+     * @param EngineTypes Database engine type. Valid values: InnoDB; RocksDB.
      */
     public void setEngineTypes(String [] EngineTypes) {
         this.EngineTypes = EngineTypes;
+    }
+
+    /**
+     * Get Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false. 
+     * @return QueryClusterInfo Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+     */
+    public Boolean getQueryClusterInfo() {
+        return this.QueryClusterInfo;
+    }
+
+    /**
+     * Set Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+     * @param QueryClusterInfo Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+     */
+    public void setQueryClusterInfo(Boolean QueryClusterInfo) {
+        this.QueryClusterInfo = QueryClusterInfo;
     }
 
     public DescribeDBInstancesRequest() {
@@ -1007,6 +1040,9 @@ public class DescribeDBInstancesRequest extends AbstractModel {
                 this.EngineTypes[i] = new String(source.EngineTypes[i]);
             }
         }
+        if (source.QueryClusterInfo != null) {
+            this.QueryClusterInfo = new Boolean(source.QueryClusterInfo);
+        }
     }
 
 
@@ -1049,6 +1085,7 @@ public class DescribeDBInstancesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ProxyVips.", this.ProxyVips);
         this.setParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
         this.setParamArraySimple(map, prefix + "EngineTypes.", this.EngineTypes);
+        this.setParamSimple(map, prefix + "QueryClusterInfo", this.QueryClusterInfo);
 
     }
 }

@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class TagInfoItem extends AbstractModel {
 
     /**
-    * Tag key
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Tag key.
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * Tag value
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Tag value.
     */
     @SerializedName("TagValue")
     @Expose
     private String TagValue;
 
     /**
-     * Get Tag key
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return TagKey Tag key
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Tag key. 
+     * @return TagKey Tag key.
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set Tag key
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param TagKey Tag key
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Tag key.
+     * @param TagKey Tag key.
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get Tag value
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return TagValue Tag value
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Tag value. 
+     * @return TagValue Tag value.
      */
     public String getTagValue() {
         return this.TagValue;
     }
 
     /**
-     * Set Tag value
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param TagValue Tag value
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Tag value.
+     * @param TagValue Tag value.
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;

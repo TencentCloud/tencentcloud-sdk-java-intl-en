@@ -94,7 +94,7 @@ public class RoInstanceInfo extends AbstractModel {
     private String InstanceName;
 
     /**
-    * Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
+    * Pay-as-you-go status. Valid values: 1 - normal; 2 - in arrears.
     */
     @SerializedName("HourFeeStatus")
     @Expose
@@ -178,11 +178,18 @@ public class RoInstanceInfo extends AbstractModel {
     private String DeadlineTime;
 
     /**
-    * RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
+    * Billing type of the RO instance. Valid values: 0 - yearly/monthly subscription; 1 - pay-as-you-go; 2-postpaid by month.
     */
     @SerializedName("PayType")
     @Expose
     private Long PayType;
+
+    /**
+    * RO replication delay status.
+    */
+    @SerializedName("ReplicationStatus")
+    @Expose
+    private String ReplicationStatus;
 
     /**
      * Get Master instance ID corresponding to the RO group 
@@ -345,16 +352,16 @@ public class RoInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears) 
-     * @return HourFeeStatus Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
+     * Get Pay-as-you-go status. Valid values: 1 - normal; 2 - in arrears. 
+     * @return HourFeeStatus Pay-as-you-go status. Valid values: 1 - normal; 2 - in arrears.
      */
     public Long getHourFeeStatus() {
         return this.HourFeeStatus;
     }
 
     /**
-     * Set Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
-     * @param HourFeeStatus Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
+     * Set Pay-as-you-go status. Valid values: 1 - normal; 2 - in arrears.
+     * @param HourFeeStatus Pay-as-you-go status. Valid values: 1 - normal; 2 - in arrears.
      */
     public void setHourFeeStatus(Long HourFeeStatus) {
         this.HourFeeStatus = HourFeeStatus;
@@ -537,19 +544,35 @@ public class RoInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid) 
-     * @return PayType RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
+     * Get Billing type of the RO instance. Valid values: 0 - yearly/monthly subscription; 1 - pay-as-you-go; 2-postpaid by month. 
+     * @return PayType Billing type of the RO instance. Valid values: 0 - yearly/monthly subscription; 1 - pay-as-you-go; 2-postpaid by month.
      */
     public Long getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
-     * @param PayType RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
+     * Set Billing type of the RO instance. Valid values: 0 - yearly/monthly subscription; 1 - pay-as-you-go; 2-postpaid by month.
+     * @param PayType Billing type of the RO instance. Valid values: 0 - yearly/monthly subscription; 1 - pay-as-you-go; 2-postpaid by month.
      */
     public void setPayType(Long PayType) {
         this.PayType = PayType;
+    }
+
+    /**
+     * Get RO replication delay status. 
+     * @return ReplicationStatus RO replication delay status.
+     */
+    public String getReplicationStatus() {
+        return this.ReplicationStatus;
+    }
+
+    /**
+     * Set RO replication delay status.
+     * @param ReplicationStatus RO replication delay status.
+     */
+    public void setReplicationStatus(String ReplicationStatus) {
+        this.ReplicationStatus = ReplicationStatus;
     }
 
     public RoInstanceInfo() {
@@ -629,6 +652,9 @@ public class RoInstanceInfo extends AbstractModel {
         if (source.PayType != null) {
             this.PayType = new Long(source.PayType);
         }
+        if (source.ReplicationStatus != null) {
+            this.ReplicationStatus = new String(source.ReplicationStatus);
+        }
     }
 
 
@@ -659,6 +685,7 @@ public class RoInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "DeadlineTime", this.DeadlineTime);
         this.setParamSimple(map, prefix + "PayType", this.PayType);
+        this.setParamSimple(map, prefix + "ReplicationStatus", this.ReplicationStatus);
 
     }
 }
