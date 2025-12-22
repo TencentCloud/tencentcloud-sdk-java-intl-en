@@ -38,6 +38,20 @@ public class ChannelAlertInfos extends AbstractModel {
     private ChannelPipelineAlerts [] Pipeline1;
 
     /**
+    * Pipeline 0 total active alarm count
+    */
+    @SerializedName("PipelineAActiveAlerts")
+    @Expose
+    private Long PipelineAActiveAlerts;
+
+    /**
+    * Pipeline 1 total active alarm count
+    */
+    @SerializedName("PipelineBActiveAlerts")
+    @Expose
+    private Long PipelineBActiveAlerts;
+
+    /**
      * Get Alarm details of pipeline 0 under this channel. 
      * @return Pipeline0 Alarm details of pipeline 0 under this channel.
      */
@@ -69,6 +83,38 @@ public class ChannelAlertInfos extends AbstractModel {
         this.Pipeline1 = Pipeline1;
     }
 
+    /**
+     * Get Pipeline 0 total active alarm count 
+     * @return PipelineAActiveAlerts Pipeline 0 total active alarm count
+     */
+    public Long getPipelineAActiveAlerts() {
+        return this.PipelineAActiveAlerts;
+    }
+
+    /**
+     * Set Pipeline 0 total active alarm count
+     * @param PipelineAActiveAlerts Pipeline 0 total active alarm count
+     */
+    public void setPipelineAActiveAlerts(Long PipelineAActiveAlerts) {
+        this.PipelineAActiveAlerts = PipelineAActiveAlerts;
+    }
+
+    /**
+     * Get Pipeline 1 total active alarm count 
+     * @return PipelineBActiveAlerts Pipeline 1 total active alarm count
+     */
+    public Long getPipelineBActiveAlerts() {
+        return this.PipelineBActiveAlerts;
+    }
+
+    /**
+     * Set Pipeline 1 total active alarm count
+     * @param PipelineBActiveAlerts Pipeline 1 total active alarm count
+     */
+    public void setPipelineBActiveAlerts(Long PipelineBActiveAlerts) {
+        this.PipelineBActiveAlerts = PipelineBActiveAlerts;
+    }
+
     public ChannelAlertInfos() {
     }
 
@@ -89,6 +135,12 @@ public class ChannelAlertInfos extends AbstractModel {
                 this.Pipeline1[i] = new ChannelPipelineAlerts(source.Pipeline1[i]);
             }
         }
+        if (source.PipelineAActiveAlerts != null) {
+            this.PipelineAActiveAlerts = new Long(source.PipelineAActiveAlerts);
+        }
+        if (source.PipelineBActiveAlerts != null) {
+            this.PipelineBActiveAlerts = new Long(source.PipelineBActiveAlerts);
+        }
     }
 
 
@@ -98,6 +150,8 @@ public class ChannelAlertInfos extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Pipeline0.", this.Pipeline0);
         this.setParamArrayObj(map, prefix + "Pipeline1.", this.Pipeline1);
+        this.setParamSimple(map, prefix + "PipelineAActiveAlerts", this.PipelineAActiveAlerts);
+        this.setParamSimple(map, prefix + "PipelineBActiveAlerts", this.PipelineBActiveAlerts);
 
     }
 }

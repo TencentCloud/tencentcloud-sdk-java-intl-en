@@ -38,27 +38,6 @@ public class DescribeTelCdrRequest extends AbstractModel {
     private Long EndTimeStamp;
 
     /**
-    * Instance id (deprecated).
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private Long InstanceId;
-
-    /**
-    * Maximum number of returned entries (deprecated).
-    */
-    @SerializedName("Limit")
-    @Expose
-    private Long Limit;
-
-    /**
-    * Offset (deprecated).
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
     */
     @SerializedName("SdkAppId")
@@ -78,6 +57,27 @@ public class DescribeTelCdrRequest extends AbstractModel {
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
+
+    /**
+    * Instance id (deprecated).
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private Long InstanceId;
+
+    /**
+    * Maximum number of returned entries (deprecated).
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * Offset (deprecated).
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
     * Filter by phone number.
@@ -123,6 +123,54 @@ public class DescribeTelCdrRequest extends AbstractModel {
      */
     public void setEndTimeStamp(Long EndTimeStamp) {
         this.EndTimeStamp = EndTimeStamp;
+    }
+
+    /**
+     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
+     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     */
+    public Long getSdkAppId() {
+        return this.SdkAppId;
+    }
+
+    /**
+     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     */
+    public void setSdkAppId(Long SdkAppId) {
+        this.SdkAppId = SdkAppId;
+    }
+
+    /**
+     * Get Page size (required), up to 100. 
+     * @return PageSize Page size (required), up to 100.
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set Page size (required), up to 100.
+     * @param PageSize Page size (required), up to 100.
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    /**
+     * Get <Page number (required), starting from 0.>. 
+     * @return PageNumber <Page number (required), starting from 0.>.
+     */
+    public Long getPageNumber() {
+        return this.PageNumber;
+    }
+
+    /**
+     * Set <Page number (required), starting from 0.>.
+     * @param PageNumber <Page number (required), starting from 0.>.
+     */
+    public void setPageNumber(Long PageNumber) {
+        this.PageNumber = PageNumber;
     }
 
     /**
@@ -178,54 +226,6 @@ public class DescribeTelCdrRequest extends AbstractModel {
     }
 
     /**
-     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
-     */
-    public Long getSdkAppId() {
-        return this.SdkAppId;
-    }
-
-    /**
-     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
-     */
-    public void setSdkAppId(Long SdkAppId) {
-        this.SdkAppId = SdkAppId;
-    }
-
-    /**
-     * Get Page size (required), up to 100. 
-     * @return PageSize Page size (required), up to 100.
-     */
-    public Long getPageSize() {
-        return this.PageSize;
-    }
-
-    /**
-     * Set Page size (required), up to 100.
-     * @param PageSize Page size (required), up to 100.
-     */
-    public void setPageSize(Long PageSize) {
-        this.PageSize = PageSize;
-    }
-
-    /**
-     * Get <Page number (required), starting from 0.>. 
-     * @return PageNumber <Page number (required), starting from 0.>.
-     */
-    public Long getPageNumber() {
-        return this.PageNumber;
-    }
-
-    /**
-     * Set <Page number (required), starting from 0.>.
-     * @param PageNumber <Page number (required), starting from 0.>.
-     */
-    public void setPageNumber(Long PageNumber) {
-        this.PageNumber = PageNumber;
-    }
-
-    /**
      * Get Filter by phone number. 
      * @return Phones Filter by phone number.
      */
@@ -271,15 +271,6 @@ public class DescribeTelCdrRequest extends AbstractModel {
         if (source.EndTimeStamp != null) {
             this.EndTimeStamp = new Long(source.EndTimeStamp);
         }
-        if (source.InstanceId != null) {
-            this.InstanceId = new Long(source.InstanceId);
-        }
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
-        }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
-        }
         if (source.SdkAppId != null) {
             this.SdkAppId = new Long(source.SdkAppId);
         }
@@ -288,6 +279,15 @@ public class DescribeTelCdrRequest extends AbstractModel {
         }
         if (source.PageNumber != null) {
             this.PageNumber = new Long(source.PageNumber);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new Long(source.InstanceId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
         if (source.Phones != null) {
             this.Phones = new String[source.Phones.length];
@@ -310,12 +310,12 @@ public class DescribeTelCdrRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTimeStamp", this.StartTimeStamp);
         this.setParamSimple(map, prefix + "EndTimeStamp", this.EndTimeStamp);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArraySimple(map, prefix + "Phones.", this.Phones);
         this.setParamArraySimple(map, prefix + "SessionIds.", this.SessionIds);
 

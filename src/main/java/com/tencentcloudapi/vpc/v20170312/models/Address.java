@@ -66,14 +66,14 @@ public class Address extends AbstractModel {
     private String CreatedTime;
 
     /**
-    * The ID of the bound ENI
+    * Specifies the bound elastic network interface ID. null means no elastic network interface is bound.
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * The private IP of the bound resources
+    * Bound resource internal ip. null means no bound resource internal ip.
     */
     @SerializedName("PrivateAddressIp")
     @Expose
@@ -122,14 +122,16 @@ public class Address extends AbstractModel {
     private AlgType EipAlgType;
 
     /**
-    * The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
+    * EIP ISP information. currently may return values including "CMCC" (mobile), "CTCC" (telecom), "CUCC" (china unicom), "BGP" (standard BGP).
     */
     @SerializedName("InternetServiceProvider")
     @Expose
     private String InternetServiceProvider;
 
     /**
-    * Whether the EIP is in a local BGP.
+    * Specifies whether the EIP is a local bandwidth EIP. valid values:.
+<li>true: EIP with local bandwidth.</li>.
+<li>false: not a local bandwidth EIP.</li>.
     */
     @SerializedName("LocalBgp")
     @Expose
@@ -162,24 +164,32 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String InternetChargeType;
 
     /**
-    * List of tags associated with the EIP
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the Tag list associated with the elastic IP.
     */
     @SerializedName("TagSet")
     @Expose
     private Tag [] TagSet;
 
     /**
-    * The expiration time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Prepaid monthly subscription bandwidth IP expiration time.
+Specifies the time format in YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("DeadlineDate")
     @Expose
     private String DeadlineDate;
 
     /**
-    * The type of instance bound with the EIP
-Note: this field may return `null`, indicating that no valid value was found.
+    * Instance type to which the EIP is bound. valid values:.
+<Li>CVM: indicates cloud virtual machine.</li>.
+<li>Specifies the NAT gateway.</li>.
+<Li>HAVIP: high availability virtual ip.</li>.
+<Li>ENI: specifies the elastic network interface.</li>.
+<Li>CLB: specifies a private network clb.</li>.
+<Li>DHCPIP: elastic private ip address</li>.
+
+
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("InstanceType")
     @Expose
@@ -218,16 +228,14 @@ Note: This field may return null, indicating that no valid value was found.
     private String BandwidthPackageId;
 
     /**
-    * Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
-Note: This field may return null, indicating that no valid value was found.
+    * Specifies the unique ID of the vpc to which the traditional elastic IPv6 belongs.
     */
     @SerializedName("UnVpcId")
     @Expose
     private String UnVpcId;
 
     /**
-    * Indicates the unique ID of the CDC.
-Note: This field may return 'null', indicating that no valid value was found.
+    * Specifies the unique ID of the CDC.
     */
     @SerializedName("DedicatedClusterId")
     @Expose
@@ -330,32 +338,32 @@ Note: This field may return 'null', indicating that no valid value was found.
     }
 
     /**
-     * Get The ID of the bound ENI 
-     * @return NetworkInterfaceId The ID of the bound ENI
+     * Get Specifies the bound elastic network interface ID. null means no elastic network interface is bound. 
+     * @return NetworkInterfaceId Specifies the bound elastic network interface ID. null means no elastic network interface is bound.
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set The ID of the bound ENI
-     * @param NetworkInterfaceId The ID of the bound ENI
+     * Set Specifies the bound elastic network interface ID. null means no elastic network interface is bound.
+     * @param NetworkInterfaceId Specifies the bound elastic network interface ID. null means no elastic network interface is bound.
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get The private IP of the bound resources 
-     * @return PrivateAddressIp The private IP of the bound resources
+     * Get Bound resource internal ip. null means no bound resource internal ip. 
+     * @return PrivateAddressIp Bound resource internal ip. null means no bound resource internal ip.
      */
     public String getPrivateAddressIp() {
         return this.PrivateAddressIp;
     }
 
     /**
-     * Set The private IP of the bound resources
-     * @param PrivateAddressIp The private IP of the bound resources
+     * Set Bound resource internal ip. null means no bound resource internal ip.
+     * @param PrivateAddressIp Bound resource internal ip. null means no bound resource internal ip.
      */
     public void setPrivateAddressIp(String PrivateAddressIp) {
         this.PrivateAddressIp = PrivateAddressIp;
@@ -458,32 +466,40 @@ Note: This field may return 'null', indicating that no valid value was found.
     }
 
     /**
-     * Get The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP" 
-     * @return InternetServiceProvider The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
+     * Get EIP ISP information. currently may return values including "CMCC" (mobile), "CTCC" (telecom), "CUCC" (china unicom), "BGP" (standard BGP). 
+     * @return InternetServiceProvider EIP ISP information. currently may return values including "CMCC" (mobile), "CTCC" (telecom), "CUCC" (china unicom), "BGP" (standard BGP).
      */
     public String getInternetServiceProvider() {
         return this.InternetServiceProvider;
     }
 
     /**
-     * Set The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
-     * @param InternetServiceProvider The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
+     * Set EIP ISP information. currently may return values including "CMCC" (mobile), "CTCC" (telecom), "CUCC" (china unicom), "BGP" (standard BGP).
+     * @param InternetServiceProvider EIP ISP information. currently may return values including "CMCC" (mobile), "CTCC" (telecom), "CUCC" (china unicom), "BGP" (standard BGP).
      */
     public void setInternetServiceProvider(String InternetServiceProvider) {
         this.InternetServiceProvider = InternetServiceProvider;
     }
 
     /**
-     * Get Whether the EIP is in a local BGP. 
-     * @return LocalBgp Whether the EIP is in a local BGP.
+     * Get Specifies whether the EIP is a local bandwidth EIP. valid values:.
+<li>true: EIP with local bandwidth.</li>.
+<li>false: not a local bandwidth EIP.</li>. 
+     * @return LocalBgp Specifies whether the EIP is a local bandwidth EIP. valid values:.
+<li>true: EIP with local bandwidth.</li>.
+<li>false: not a local bandwidth EIP.</li>.
      */
     public Boolean getLocalBgp() {
         return this.LocalBgp;
     }
 
     /**
-     * Set Whether the EIP is in a local BGP.
-     * @param LocalBgp Whether the EIP is in a local BGP.
+     * Set Specifies whether the EIP is a local bandwidth EIP. valid values:.
+<li>true: EIP with local bandwidth.</li>.
+<li>false: not a local bandwidth EIP.</li>.
+     * @param LocalBgp Specifies whether the EIP is a local bandwidth EIP. valid values:.
+<li>true: EIP with local bandwidth.</li>.
+<li>false: not a local bandwidth EIP.</li>.
      */
     public void setLocalBgp(Boolean LocalBgp) {
         this.LocalBgp = LocalBgp;
@@ -570,60 +586,92 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get List of tags associated with the EIP
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return TagSet List of tags associated with the EIP
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the Tag list associated with the elastic IP. 
+     * @return TagSet Specifies the Tag list associated with the elastic IP.
      */
     public Tag [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set List of tags associated with the EIP
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param TagSet List of tags associated with the EIP
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the Tag list associated with the elastic IP.
+     * @param TagSet Specifies the Tag list associated with the elastic IP.
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get The expiration time.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return DeadlineDate The expiration time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Prepaid monthly subscription bandwidth IP expiration time.
+Specifies the time format in YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid value was found. 
+     * @return DeadlineDate Prepaid monthly subscription bandwidth IP expiration time.
+Specifies the time format in YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid value was found.
      */
     public String getDeadlineDate() {
         return this.DeadlineDate;
     }
 
     /**
-     * Set The expiration time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param DeadlineDate The expiration time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Prepaid monthly subscription bandwidth IP expiration time.
+Specifies the time format in YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid value was found.
+     * @param DeadlineDate Prepaid monthly subscription bandwidth IP expiration time.
+Specifies the time format in YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setDeadlineDate(String DeadlineDate) {
         this.DeadlineDate = DeadlineDate;
     }
 
     /**
-     * Get The type of instance bound with the EIP
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return InstanceType The type of instance bound with the EIP
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Instance type to which the EIP is bound. valid values:.
+<Li>CVM: indicates cloud virtual machine.</li>.
+<li>Specifies the NAT gateway.</li>.
+<Li>HAVIP: high availability virtual ip.</li>.
+<Li>ENI: specifies the elastic network interface.</li>.
+<Li>CLB: specifies a private network clb.</li>.
+<Li>DHCPIP: elastic private ip address</li>.
+
+
+Note: This field may return null, indicating that no valid value was found. 
+     * @return InstanceType Instance type to which the EIP is bound. valid values:.
+<Li>CVM: indicates cloud virtual machine.</li>.
+<li>Specifies the NAT gateway.</li>.
+<Li>HAVIP: high availability virtual ip.</li>.
+<Li>ENI: specifies the elastic network interface.</li>.
+<Li>CLB: specifies a private network clb.</li>.
+<Li>DHCPIP: elastic private ip address</li>.
+
+
+Note: This field may return null, indicating that no valid value was found.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set The type of instance bound with the EIP
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param InstanceType The type of instance bound with the EIP
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Instance type to which the EIP is bound. valid values:.
+<Li>CVM: indicates cloud virtual machine.</li>.
+<li>Specifies the NAT gateway.</li>.
+<Li>HAVIP: high availability virtual ip.</li>.
+<Li>ENI: specifies the elastic network interface.</li>.
+<Li>CLB: specifies a private network clb.</li>.
+<Li>DHCPIP: elastic private ip address</li>.
+
+
+Note: This field may return null, indicating that no valid value was found.
+     * @param InstanceType Instance type to which the EIP is bound. valid values:.
+<Li>CVM: indicates cloud virtual machine.</li>.
+<li>Specifies the NAT gateway.</li>.
+<Li>HAVIP: high availability virtual ip.</li>.
+<Li>ENI: specifies the elastic network interface.</li>.
+<Li>CLB: specifies a private network clb.</li>.
+<Li>DHCPIP: elastic private ip address</li>.
+
+
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -710,40 +758,32 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return UnVpcId Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
-Note: This field may return null, indicating that no valid value was found.
+     * Get Specifies the unique ID of the vpc to which the traditional elastic IPv6 belongs. 
+     * @return UnVpcId Specifies the unique ID of the vpc to which the traditional elastic IPv6 belongs.
      */
     public String getUnVpcId() {
         return this.UnVpcId;
     }
 
     /**
-     * Set Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
-Note: This field may return null, indicating that no valid value was found.
-     * @param UnVpcId Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
-Note: This field may return null, indicating that no valid value was found.
+     * Set Specifies the unique ID of the vpc to which the traditional elastic IPv6 belongs.
+     * @param UnVpcId Specifies the unique ID of the vpc to which the traditional elastic IPv6 belongs.
      */
     public void setUnVpcId(String UnVpcId) {
         this.UnVpcId = UnVpcId;
     }
 
     /**
-     * Get Indicates the unique ID of the CDC.
-Note: This field may return 'null', indicating that no valid value was found. 
-     * @return DedicatedClusterId Indicates the unique ID of the CDC.
-Note: This field may return 'null', indicating that no valid value was found.
+     * Get Specifies the unique ID of the CDC. 
+     * @return DedicatedClusterId Specifies the unique ID of the CDC.
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set Indicates the unique ID of the CDC.
-Note: This field may return 'null', indicating that no valid value was found.
-     * @param DedicatedClusterId Indicates the unique ID of the CDC.
-Note: This field may return 'null', indicating that no valid value was found.
+     * Set Specifies the unique ID of the CDC.
+     * @param DedicatedClusterId Specifies the unique ID of the CDC.
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;

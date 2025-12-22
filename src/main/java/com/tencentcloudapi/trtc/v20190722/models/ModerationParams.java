@@ -70,7 +70,7 @@ Yidun: NetEase Yidun moderation. (Valid values: 1: audio slicing moderation; 2: 
     private ModerationSupplierParam ModerationSupplierParam;
 
     /**
-    * Whether to save the hit file. 0: not save by default; 1: save.
+    * Whether to save file. 0: not save by default; 1: save; 2 save the hit file.
     */
     @SerializedName("SaveModerationFile")
     @Expose
@@ -203,16 +203,16 @@ Yidun: NetEase Yidun moderation. (Valid values: 1: audio slicing moderation; 2: 
     }
 
     /**
-     * Get Whether to save the hit file. 0: not save by default; 1: save. 
-     * @return SaveModerationFile Whether to save the hit file. 0: not save by default; 1: save.
+     * Get Whether to save file. 0: not save by default; 1: save; 2 save the hit file. 
+     * @return SaveModerationFile Whether to save file. 0: not save by default; 1: save; 2 save the hit file.
      */
     public Long getSaveModerationFile() {
         return this.SaveModerationFile;
     }
 
     /**
-     * Set Whether to save the hit file. 0: not save by default; 1: save.
-     * @param SaveModerationFile Whether to save the hit file. 0: not save by default; 1: save.
+     * Set Whether to save file. 0: not save by default; 1: save; 2 save the hit file.
+     * @param SaveModerationFile Whether to save file. 0: not save by default; 1: save; 2 save the hit file.
      */
     public void setSaveModerationFile(Long SaveModerationFile) {
         this.SaveModerationFile = SaveModerationFile;

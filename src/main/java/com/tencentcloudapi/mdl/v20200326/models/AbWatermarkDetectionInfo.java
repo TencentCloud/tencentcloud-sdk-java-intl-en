@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class AbWatermarkDetectionInfo extends AbstractModel {
 
     /**
-    * 
+    * Task ID
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * Types of testing
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * State
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 
+    * Result
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * 
+    * Error code
     */
     @SerializedName("ErrorCode")
     @Expose
     private Long ErrorCode;
 
     /**
-    * 
+    * Error message
     */
     @SerializedName("ErrorMsg")
     @Expose
     private String ErrorMsg;
 
     /**
-    * 
+    * Input information
     */
     @SerializedName("InputInfo")
     @Expose
     private AbWatermarkInputInfo InputInfo;
 
     /**
-    * 
+    * Task notification configuration
     */
     @SerializedName("TaskNotifyConfig")
     @Expose
     private TaskNotifyConfig TaskNotifyConfig;
 
     /**
-    * 
+    * Create time
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 
+    * Update time
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-    * 
+    * Input file information
     */
     @SerializedName("InputFileInfo")
     @Expose
     private InputFileInfo InputFileInfo;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get Task ID 
+     * @return TaskId Task ID
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set Task ID
+     * @param TaskId Task ID
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Types of testing 
+     * @return Type Types of testing
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Types of testing
+     * @param Type Types of testing
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return State 
+     * Get State 
+     * @return State State
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 
-     * @param State 
+     * Set State
+     * @param State State
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get  
-     * @return Result 
+     * Get Result 
+     * @return Result Result
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 
-     * @param Result 
+     * Set Result
+     * @param Result Result
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get  
-     * @return ErrorCode 
+     * Get Error code 
+     * @return ErrorCode Error code
      */
     public Long getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set 
-     * @param ErrorCode 
+     * Set Error code
+     * @param ErrorCode Error code
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get  
-     * @return ErrorMsg 
+     * Get Error message 
+     * @return ErrorMsg Error message
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set 
-     * @param ErrorMsg 
+     * Set Error message
+     * @param ErrorMsg Error message
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
     }
 
     /**
-     * Get  
-     * @return InputInfo 
+     * Get Input information 
+     * @return InputInfo Input information
      */
     public AbWatermarkInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set 
-     * @param InputInfo 
+     * Set Input information
+     * @param InputInfo Input information
      */
     public void setInputInfo(AbWatermarkInputInfo InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get  
-     * @return TaskNotifyConfig 
+     * Get Task notification configuration 
+     * @return TaskNotifyConfig Task notification configuration
      */
     public TaskNotifyConfig getTaskNotifyConfig() {
         return this.TaskNotifyConfig;
     }
 
     /**
-     * Set 
-     * @param TaskNotifyConfig 
+     * Set Task notification configuration
+     * @param TaskNotifyConfig Task notification configuration
      */
     public void setTaskNotifyConfig(TaskNotifyConfig TaskNotifyConfig) {
         this.TaskNotifyConfig = TaskNotifyConfig;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get Create time 
+     * @return CreateTime Create time
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set Create time
+     * @param CreateTime Create time
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return UpdateTime 
+     * Get Update time 
+     * @return UpdateTime Update time
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 
-     * @param UpdateTime 
+     * Set Update time
+     * @param UpdateTime Update time
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get  
-     * @return InputFileInfo 
+     * Get Input file information 
+     * @return InputFileInfo Input file information
      */
     public InputFileInfo getInputFileInfo() {
         return this.InputFileInfo;
     }
 
     /**
-     * Set 
-     * @param InputFileInfo 
+     * Set Input file information
+     * @param InputFileInfo Input file information
      */
     public void setInputFileInfo(InputFileInfo InputFileInfo) {
         this.InputFileInfo = InputFileInfo;

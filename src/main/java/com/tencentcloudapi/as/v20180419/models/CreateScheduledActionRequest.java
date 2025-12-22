@@ -40,18 +40,18 @@ public class CreateScheduledActionRequest extends AbstractModel {
     private String ScheduledActionName;
 
     /**
-    * The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
-    */
-    @SerializedName("MaxSize")
-    @Expose
-    private Long MaxSize;
-
-    /**
     * The minimum number of instances set for the auto scaling group when the scheduled task is triggered.
     */
     @SerializedName("MinSize")
     @Expose
     private Long MinSize;
+
+    /**
+    * Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
 
     /**
     * The desired number of instances set for the auto scaling group when the scheduled task is triggered.
@@ -61,11 +61,11 @@ public class CreateScheduledActionRequest extends AbstractModel {
     private Long DesiredCapacity;
 
     /**
-    * Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+    * The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
     */
-    @SerializedName("StartTime")
+    @SerializedName("MaxSize")
     @Expose
-    private String StartTime;
+    private Long MaxSize;
 
     /**
     * End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard. <br><br>This parameter and `Recurrence` need to be specified at the same time. After the end time, the scheduled task will no longer take effect.
@@ -80,6 +80,19 @@ public class CreateScheduledActionRequest extends AbstractModel {
     @SerializedName("Recurrence")
     @Expose
     private String Recurrence;
+
+    /**
+    * Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+
+Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
+The following cases assume that DisableUpdateDesiredCapacity is True:
+- When scheduled task triggered, the original DesiredCapacity is 5. The scheduled task changes the minSize to 10, the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 5 is less than minSize 10, so the final new DesiredCapacity is 10.
+- When scheduled task triggered, the original DesiredCapacity is 25. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 25 is greater than the maxSize 20, so the final new DesiredCapacity is 20.
+- When scheduled task triggered, the original DesiredCapacity is 13. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect, and the DesiredCapacity is still 13.
+    */
+    @SerializedName("DisableUpdateDesiredCapacity")
+    @Expose
+    private Boolean DisableUpdateDesiredCapacity;
 
     /**
      * Get Scaling group ID. obtain available scaling group ids in the following ways:.
@@ -122,22 +135,6 @@ public class CreateScheduledActionRequest extends AbstractModel {
     }
 
     /**
-     * Get The maximum number of instances set for the auto scaling group when the scheduled task is triggered. 
-     * @return MaxSize The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
-     */
-    public Long getMaxSize() {
-        return this.MaxSize;
-    }
-
-    /**
-     * Set The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
-     * @param MaxSize The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
-     */
-    public void setMaxSize(Long MaxSize) {
-        this.MaxSize = MaxSize;
-    }
-
-    /**
      * Get The minimum number of instances set for the auto scaling group when the scheduled task is triggered. 
      * @return MinSize The minimum number of instances set for the auto scaling group when the scheduled task is triggered.
      */
@@ -151,6 +148,22 @@ public class CreateScheduledActionRequest extends AbstractModel {
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
+    }
+
+    /**
+     * Get Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard. 
+     * @return StartTime Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+     * @param StartTime Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
     }
 
     /**
@@ -170,19 +183,19 @@ public class CreateScheduledActionRequest extends AbstractModel {
     }
 
     /**
-     * Get Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard. 
-     * @return StartTime Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+     * Get The maximum number of instances set for the auto scaling group when the scheduled task is triggered. 
+     * @return MaxSize The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
      */
-    public String getStartTime() {
-        return this.StartTime;
+    public Long getMaxSize() {
+        return this.MaxSize;
     }
 
     /**
-     * Set Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
-     * @param StartTime Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+     * Set The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
+     * @param MaxSize The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
      */
-    public void setStartTime(String StartTime) {
-        this.StartTime = StartTime;
+    public void setMaxSize(Long MaxSize) {
+        this.MaxSize = MaxSize;
     }
 
     /**
@@ -217,6 +230,46 @@ public class CreateScheduledActionRequest extends AbstractModel {
         this.Recurrence = Recurrence;
     }
 
+    /**
+     * Get Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+
+Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
+The following cases assume that DisableUpdateDesiredCapacity is True:
+- When scheduled task triggered, the original DesiredCapacity is 5. The scheduled task changes the minSize to 10, the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 5 is less than minSize 10, so the final new DesiredCapacity is 10.
+- When scheduled task triggered, the original DesiredCapacity is 25. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 25 is greater than the maxSize 20, so the final new DesiredCapacity is 20.
+- When scheduled task triggered, the original DesiredCapacity is 13. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect, and the DesiredCapacity is still 13. 
+     * @return DisableUpdateDesiredCapacity Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+
+Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
+The following cases assume that DisableUpdateDesiredCapacity is True:
+- When scheduled task triggered, the original DesiredCapacity is 5. The scheduled task changes the minSize to 10, the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 5 is less than minSize 10, so the final new DesiredCapacity is 10.
+- When scheduled task triggered, the original DesiredCapacity is 25. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 25 is greater than the maxSize 20, so the final new DesiredCapacity is 20.
+- When scheduled task triggered, the original DesiredCapacity is 13. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect, and the DesiredCapacity is still 13.
+     */
+    public Boolean getDisableUpdateDesiredCapacity() {
+        return this.DisableUpdateDesiredCapacity;
+    }
+
+    /**
+     * Set Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+
+Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
+The following cases assume that DisableUpdateDesiredCapacity is True:
+- When scheduled task triggered, the original DesiredCapacity is 5. The scheduled task changes the minSize to 10, the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 5 is less than minSize 10, so the final new DesiredCapacity is 10.
+- When scheduled task triggered, the original DesiredCapacity is 25. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 25 is greater than the maxSize 20, so the final new DesiredCapacity is 20.
+- When scheduled task triggered, the original DesiredCapacity is 13. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect, and the DesiredCapacity is still 13.
+     * @param DisableUpdateDesiredCapacity Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+
+Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
+The following cases assume that DisableUpdateDesiredCapacity is True:
+- When scheduled task triggered, the original DesiredCapacity is 5. The scheduled task changes the minSize to 10, the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 5 is less than minSize 10, so the final new DesiredCapacity is 10.
+- When scheduled task triggered, the original DesiredCapacity is 25. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 25 is greater than the maxSize 20, so the final new DesiredCapacity is 20.
+- When scheduled task triggered, the original DesiredCapacity is 13. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect, and the DesiredCapacity is still 13.
+     */
+    public void setDisableUpdateDesiredCapacity(Boolean DisableUpdateDesiredCapacity) {
+        this.DisableUpdateDesiredCapacity = DisableUpdateDesiredCapacity;
+    }
+
     public CreateScheduledActionRequest() {
     }
 
@@ -231,23 +284,26 @@ public class CreateScheduledActionRequest extends AbstractModel {
         if (source.ScheduledActionName != null) {
             this.ScheduledActionName = new String(source.ScheduledActionName);
         }
-        if (source.MaxSize != null) {
-            this.MaxSize = new Long(source.MaxSize);
-        }
         if (source.MinSize != null) {
             this.MinSize = new Long(source.MinSize);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
         }
         if (source.DesiredCapacity != null) {
             this.DesiredCapacity = new Long(source.DesiredCapacity);
         }
-        if (source.StartTime != null) {
-            this.StartTime = new String(source.StartTime);
+        if (source.MaxSize != null) {
+            this.MaxSize = new Long(source.MaxSize);
         }
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
         if (source.Recurrence != null) {
             this.Recurrence = new String(source.Recurrence);
+        }
+        if (source.DisableUpdateDesiredCapacity != null) {
+            this.DisableUpdateDesiredCapacity = new Boolean(source.DisableUpdateDesiredCapacity);
         }
     }
 
@@ -258,12 +314,13 @@ public class CreateScheduledActionRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
         this.setParamSimple(map, prefix + "ScheduledActionName", this.ScheduledActionName);
-        this.setParamSimple(map, prefix + "MaxSize", this.MaxSize);
         this.setParamSimple(map, prefix + "MinSize", this.MinSize);
-        this.setParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
+        this.setParamSimple(map, prefix + "MaxSize", this.MaxSize);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Recurrence", this.Recurrence);
+        this.setParamSimple(map, prefix + "DisableUpdateDesiredCapacity", this.DisableUpdateDesiredCapacity);
 
     }
 }

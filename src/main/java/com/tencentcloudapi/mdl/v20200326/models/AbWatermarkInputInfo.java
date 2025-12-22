@@ -24,46 +24,51 @@ import java.util.HashMap;
 public class AbWatermarkInputInfo extends AbstractModel {
 
     /**
-    * 
+    * Input type, optional URL/COS, currently only supports URL
+
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * URL input information
     */
     @SerializedName("UrlInputInfo")
     @Expose
     private UrlInputInfo UrlInputInfo;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Input type, optional URL/COS, currently only supports URL
+ 
+     * @return Type Input type, optional URL/COS, currently only supports URL
+
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Input type, optional URL/COS, currently only supports URL
+
+     * @param Type Input type, optional URL/COS, currently only supports URL
+
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return UrlInputInfo 
+     * Get URL input information 
+     * @return UrlInputInfo URL input information
      */
     public UrlInputInfo getUrlInputInfo() {
         return this.UrlInputInfo;
     }
 
     /**
-     * Set 
-     * @param UrlInputInfo 
+     * Set URL input information
+     * @param UrlInputInfo URL input information
      */
     public void setUrlInputInfo(UrlInputInfo UrlInputInfo) {
         this.UrlInputInfo = UrlInputInfo;

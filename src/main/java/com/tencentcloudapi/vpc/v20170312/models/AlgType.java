@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class AlgType extends AbstractModel {
 
     /**
-    * Whether FTP ALG is enabled
+    * Ftp protocol Alg functionality whether enabled, available values:.
+<li>true: enable Ftp protocol Alg functionality.</li>.
+<li>false: disable Ftp protocol Alg functionality.</li>.
     */
     @SerializedName("Ftp")
     @Expose
     private Boolean Ftp;
 
     /**
-    * Whether SIP ALG is enabled
+    * Whether the Sip protocol Alg function is enabled. available values:.
+<li>true: enable Sip protocol Alg function.</li>.
+<li>false: disable Sip protocol Alg function.</li>.
     */
     @SerializedName("Sip")
     @Expose
     private Boolean Sip;
 
     /**
-     * Get Whether FTP ALG is enabled 
-     * @return Ftp Whether FTP ALG is enabled
+     * Get Ftp protocol Alg functionality whether enabled, available values:.
+<li>true: enable Ftp protocol Alg functionality.</li>.
+<li>false: disable Ftp protocol Alg functionality.</li>. 
+     * @return Ftp Ftp protocol Alg functionality whether enabled, available values:.
+<li>true: enable Ftp protocol Alg functionality.</li>.
+<li>false: disable Ftp protocol Alg functionality.</li>.
      */
     public Boolean getFtp() {
         return this.Ftp;
     }
 
     /**
-     * Set Whether FTP ALG is enabled
-     * @param Ftp Whether FTP ALG is enabled
+     * Set Ftp protocol Alg functionality whether enabled, available values:.
+<li>true: enable Ftp protocol Alg functionality.</li>.
+<li>false: disable Ftp protocol Alg functionality.</li>.
+     * @param Ftp Ftp protocol Alg functionality whether enabled, available values:.
+<li>true: enable Ftp protocol Alg functionality.</li>.
+<li>false: disable Ftp protocol Alg functionality.</li>.
      */
     public void setFtp(Boolean Ftp) {
         this.Ftp = Ftp;
     }
 
     /**
-     * Get Whether SIP ALG is enabled 
-     * @return Sip Whether SIP ALG is enabled
+     * Get Whether the Sip protocol Alg function is enabled. available values:.
+<li>true: enable Sip protocol Alg function.</li>.
+<li>false: disable Sip protocol Alg function.</li>. 
+     * @return Sip Whether the Sip protocol Alg function is enabled. available values:.
+<li>true: enable Sip protocol Alg function.</li>.
+<li>false: disable Sip protocol Alg function.</li>.
      */
     public Boolean getSip() {
         return this.Sip;
     }
 
     /**
-     * Set Whether SIP ALG is enabled
-     * @param Sip Whether SIP ALG is enabled
+     * Set Whether the Sip protocol Alg function is enabled. available values:.
+<li>true: enable Sip protocol Alg function.</li>.
+<li>false: disable Sip protocol Alg function.</li>.
+     * @param Sip Whether the Sip protocol Alg function is enabled. available values:.
+<li>true: enable Sip protocol Alg function.</li>.
+<li>false: disable Sip protocol Alg function.</li>.
      */
     public void setSip(Boolean Sip) {
         this.Sip = Sip;
