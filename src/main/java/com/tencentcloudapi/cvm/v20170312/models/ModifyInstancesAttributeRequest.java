@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstancesAttributeRequest extends AbstractModel {
 
     /**
-    * Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
+    * Instance ID(s). To obtain the instance IDs, you can call [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -73,7 +73,7 @@ public class ModifyInstancesAttributeRequest extends AbstractModel {
     private Boolean DisableApiTermination;
 
     /**
-    * Role type, used in conjunction with CamRoleName. this value can be obtained from the RoleType field in the API response of CAM [DescribeRoleList](https://www.tencentcloud.comom/document/product/598/36223?from_cn_redirect=1) or [GetRole](https://www.tencentcloud.comom/document/product/598/36221?from_cn_redirect=1). currently, only user, system, and service_linked types are accepted.
+    * Role type, used in conjunction with CamRoleName. this value can be obtained from the RoleType field in the API response of CAM [DescribeRoleList](https://www.tencentcloud.com/document/product/1219/67889) or [GetRole](https://www.tencentcloud.com/document/product/598/33557?lang=en). currently, only user, system, and service_linked types are accepted.
 For example, when CamRoleName contains "LinkedRoleIn" (such as TKE_QCSLinkedRoleInPrometheusService), DescribeRoleList and GetRole return RoleType as service_linked, this parameter must also transmit service_linked.
 The parameter default value is user. this parameter can be omitted if CameRoleName is not of the service_linked kind.
     */
@@ -92,16 +92,16 @@ Note: This parameter is valid only when a hostname is modified.
     private Boolean AutoReboot;
 
     /**
-     * Get Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100. 
-     * @return InstanceIds Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
+     * Get Instance ID(s). To obtain the instance IDs, you can call [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100. 
+     * @return InstanceIds Instance ID(s). To obtain the instance IDs, you can call [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
-     * @param InstanceIds Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
+     * Set Instance ID(s). To obtain the instance IDs, you can call [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
+     * @param InstanceIds Instance ID(s). To obtain the instance IDs, you can call [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -204,10 +204,10 @@ Note: This parameter is valid only when a hostname is modified.
     }
 
     /**
-     * Get Role type, used in conjunction with CamRoleName. this value can be obtained from the RoleType field in the API response of CAM [DescribeRoleList](https://www.tencentcloud.comom/document/product/598/36223?from_cn_redirect=1) or [GetRole](https://www.tencentcloud.comom/document/product/598/36221?from_cn_redirect=1). currently, only user, system, and service_linked types are accepted.
+     * Get Role type, used in conjunction with CamRoleName. this value can be obtained from the RoleType field in the API response of CAM [DescribeRoleList](https://www.tencentcloud.com/document/product/1219/67889) or [GetRole](https://www.tencentcloud.com/document/product/598/33557?lang=en). currently, only user, system, and service_linked types are accepted.
 For example, when CamRoleName contains "LinkedRoleIn" (such as TKE_QCSLinkedRoleInPrometheusService), DescribeRoleList and GetRole return RoleType as service_linked, this parameter must also transmit service_linked.
 The parameter default value is user. this parameter can be omitted if CameRoleName is not of the service_linked kind. 
-     * @return CamRoleType Role type, used in conjunction with CamRoleName. this value can be obtained from the RoleType field in the API response of CAM [DescribeRoleList](https://www.tencentcloud.comom/document/product/598/36223?from_cn_redirect=1) or [GetRole](https://www.tencentcloud.comom/document/product/598/36221?from_cn_redirect=1). currently, only user, system, and service_linked types are accepted.
+     * @return CamRoleType Role type, used in conjunction with CamRoleName. this value can be obtained from the RoleType field in the API response of CAM [DescribeRoleList](https://www.tencentcloud.com/document/product/1219/67889) or [GetRole](https://www.tencentcloud.com/document/product/598/33557?lang=en). currently, only user, system, and service_linked types are accepted.
 For example, when CamRoleName contains "LinkedRoleIn" (such as TKE_QCSLinkedRoleInPrometheusService), DescribeRoleList and GetRole return RoleType as service_linked, this parameter must also transmit service_linked.
 The parameter default value is user. this parameter can be omitted if CameRoleName is not of the service_linked kind.
      */
@@ -216,10 +216,10 @@ The parameter default value is user. this parameter can be omitted if CameRoleNa
     }
 
     /**
-     * Set Role type, used in conjunction with CamRoleName. this value can be obtained from the RoleType field in the API response of CAM [DescribeRoleList](https://www.tencentcloud.comom/document/product/598/36223?from_cn_redirect=1) or [GetRole](https://www.tencentcloud.comom/document/product/598/36221?from_cn_redirect=1). currently, only user, system, and service_linked types are accepted.
+     * Set Role type, used in conjunction with CamRoleName. this value can be obtained from the RoleType field in the API response of CAM [DescribeRoleList](https://www.tencentcloud.com/document/product/1219/67889) or [GetRole](https://www.tencentcloud.com/document/product/598/33557?lang=en). currently, only user, system, and service_linked types are accepted.
 For example, when CamRoleName contains "LinkedRoleIn" (such as TKE_QCSLinkedRoleInPrometheusService), DescribeRoleList and GetRole return RoleType as service_linked, this parameter must also transmit service_linked.
 The parameter default value is user. this parameter can be omitted if CameRoleName is not of the service_linked kind.
-     * @param CamRoleType Role type, used in conjunction with CamRoleName. this value can be obtained from the RoleType field in the API response of CAM [DescribeRoleList](https://www.tencentcloud.comom/document/product/598/36223?from_cn_redirect=1) or [GetRole](https://www.tencentcloud.comom/document/product/598/36221?from_cn_redirect=1). currently, only user, system, and service_linked types are accepted.
+     * @param CamRoleType Role type, used in conjunction with CamRoleName. this value can be obtained from the RoleType field in the API response of CAM [DescribeRoleList](https://www.tencentcloud.com/document/product/1219/67889) or [GetRole](https://www.tencentcloud.com/document/product/598/33557?lang=en). currently, only user, system, and service_linked types are accepted.
 For example, when CamRoleName contains "LinkedRoleIn" (such as TKE_QCSLinkedRoleInPrometheusService), DescribeRoleList and GetRole return RoleType as service_linked, this parameter must also transmit service_linked.
 The parameter default value is user. this parameter can be omitted if CameRoleName is not of the service_linked kind.
      */

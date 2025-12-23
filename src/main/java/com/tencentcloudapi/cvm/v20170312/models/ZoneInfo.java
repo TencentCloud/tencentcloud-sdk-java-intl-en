@@ -39,7 +39,6 @@ The names of availability zones across the network are as follows:
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 (sold out)</li>
 <li> ap-guangzhou-1 (sold out)</li>
-<li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
@@ -124,7 +123,6 @@ The names of availability zones across the network are as follows:
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 (sold out)</li>
 <li> ap-guangzhou-1 (sold out)</li>
-<li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
@@ -182,7 +180,6 @@ The names of availability zones across the network are as follows:
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 (sold out)</li>
 <li> ap-guangzhou-1 (sold out)</li>
-<li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
@@ -246,7 +243,6 @@ The names of availability zones across the network are as follows:
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 (sold out)</li>
 <li> ap-guangzhou-1 (sold out)</li>
-<li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
@@ -304,7 +300,6 @@ The names of availability zones across the network are as follows:
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 (sold out)</li>
 <li> ap-guangzhou-1 (sold out)</li>
-<li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>

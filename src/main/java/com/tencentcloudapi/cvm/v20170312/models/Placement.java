@@ -31,7 +31,7 @@ public class Placement extends AbstractModel {
     private String Zone;
 
     /**
-    * Instance'S project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProject](https://www.tencentcloud.com/document/product/651/54679). default value 0 means default project.
+    * Instance'S project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/54679). default value 0 means default project.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -68,16 +68,16 @@ public class Placement extends AbstractModel {
     }
 
     /**
-     * Get Instance'S project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProject](https://www.tencentcloud.com/document/product/651/54679). default value 0 means default project. 
-     * @return ProjectId Instance'S project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProject](https://www.tencentcloud.com/document/product/651/54679). default value 0 means default project.
+     * Get Instance'S project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/54679). default value 0 means default project. 
+     * @return ProjectId Instance'S project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/54679). default value 0 means default project.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Instance'S project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProject](https://www.tencentcloud.com/document/product/651/54679). default value 0 means default project.
-     * @param ProjectId Instance'S project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProject](https://www.tencentcloud.com/document/product/651/54679). default value 0 means default project.
+     * Set Instance'S project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/54679). default value 0 means default project.
+     * @param ProjectId Instance'S project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/54679). default value 0 means default project.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

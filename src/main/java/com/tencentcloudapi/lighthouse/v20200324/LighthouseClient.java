@@ -92,6 +92,18 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *This API is used to cancel image sharing across accounts.
+An image to be canceled sharing must be a custom image that is originally shared from another account to your account.
+     * @param req CancelShareBlueprintAcrossAccountsRequest
+     * @return CancelShareBlueprintAcrossAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelShareBlueprintAcrossAccountsResponse CancelShareBlueprintAcrossAccounts(CancelShareBlueprintAcrossAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelShareBlueprintAcrossAccounts", CancelShareBlueprintAcrossAccountsResponse.class);
+    }
+
+    /**
      *This API is used to create an image.
      * @param req CreateBlueprintRequest
      * @return CreateBlueprintResponse
@@ -770,6 +782,24 @@ In the `FirewallRules` parameter:
     }
 
     /**
+     *This API is used to share and cancel sharing of CVM custom images to the Lighthouse service.
+Sharing CVM images to Lighthouse requires the following conditions to be met:
+1. Images that have been shared cannot be shared again.
+2. Images imported from external sources are not supported for sharing.
+3. Full-instance images are not supported for sharing.
+4. Images need to support CloudInit to be eligible for sharing.
+5. The Platform and OsName of the images must meet the sharing conditions before the images are eligible for sharing.
+6. Only images in the NORMAL status are supported for sharing.
+     * @param req ModifyImageSharePermissionRequest
+     * @return ModifyImageSharePermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyImageSharePermissionResponse ModifyImageSharePermission(ModifyImageSharePermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyImageSharePermission", ModifyImageSharePermissionResponse.class);
+    }
+
+    /**
      *This API is used to modify an instance attribute. 
 * The instance name is used only for users’ convenience. 
 * Batch operations are supported. The maximum number of instances in each request is 100.
@@ -952,6 +982,23 @@ Note: Just like powering off a physical PC, a forced shutdown may cause data los
     public StopInstancesResponse StopInstances(StopInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopInstances", StopInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to synchronize a custom image to other regions.
+
+* Synchronization to multiple regions is supported. Up to 10 regions are supported.
+* Synchronization to the source region is not supported.
+* Only images in the NORMAL status are supported for synchronization.
+* Synchronization between Chinese mainland regions and regions outside the Chinese mainland is not supported.
+ * You can use the [DescribeBlueprints](https://www.tencentcloud.comom/document/api/1207/47689?from_cn_redirect=1) API to query the image status. When the status is NORMAL, it indicates that the source region synchronization ends.
+     * @param req SyncBlueprintRequest
+     * @return SyncBlueprintResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncBlueprintResponse SyncBlueprint(SyncBlueprintRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SyncBlueprint", SyncBlueprintResponse.class);
     }
 
     /**
