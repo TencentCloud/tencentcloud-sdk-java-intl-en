@@ -388,6 +388,17 @@ The snapshot must be in `NORMAL` status. To query the status of a snapshot, you 
     }
 
     /**
+     *This API is used to query the list of Cloud Virtual Machine (CVM) custom images and share the images to Tencent Cloud Lighthouse (Lighthouse).
+     * @param req DescribeImagesToShareRequest
+     * @return DescribeImagesToShareResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImagesToShareResponse DescribeImagesToShare(DescribeImagesToShareRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImagesToShare", DescribeImagesToShareResponse.class);
+    }
+
+    /**
      *This API is used to query the attributes of the default login key of an instance.
      * @param req DescribeInstanceLoginKeyPairAttributeRequest
      * @return DescribeInstanceLoginKeyPairAttributeResponse
@@ -951,6 +962,30 @@ Note: Just like powering off a physical PC, a forced shutdown may cause data los
     public ResetInstancesPasswordResponse ResetInstancesPassword(ResetInstancesPasswordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResetInstancesPassword", ResetInstancesPasswordResponse.class);
+    }
+
+    /**
+     *This API is used to scale out a cloud disk. The operation currently only supports cloud disks of the data disk type that are in the ATTACHED or UNATTACHED status.
+     * @param req ResizeDisksRequest
+     * @return ResizeDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResizeDisksResponse ResizeDisks(ResizeDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResizeDisks", ResizeDisksResponse.class);
+    }
+
+    /**
+     *This API is used to share an image across accounts.
+This API is used to share custom images only, and the status of the shared image must be NORMAL.
+The account receiving the shared image must be a root account.
+     * @param req ShareBlueprintAcrossAccountsRequest
+     * @return ShareBlueprintAcrossAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ShareBlueprintAcrossAccountsResponse ShareBlueprintAcrossAccounts(ShareBlueprintAcrossAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ShareBlueprintAcrossAccounts", ShareBlueprintAcrossAccountsResponse.class);
     }
 
     /**

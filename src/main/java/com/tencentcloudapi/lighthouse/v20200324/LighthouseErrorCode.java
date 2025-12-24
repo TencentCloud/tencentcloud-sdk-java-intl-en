@@ -42,6 +42,9 @@ public enum LighthouseErrorCode {
      /* Querying CBS quota failed. */
      FAILEDOPERATION_DESCRIBEDISKCONFIGQUOTAFAILED("FailedOperation.DescribeDiskConfigQuotaFailed"),
      
+     /* Failed to query the CVM image list. */
+     FAILEDOPERATION_DESCRIBEIMAGESFAILED("FailedOperation.DescribeImagesFailed"),
+     
      /* An error occurred when querying the instance status. */
      FAILEDOPERATION_DESCRIBEINSTANCESTATUS("FailedOperation.DescribeInstanceStatus"),
      
@@ -72,7 +75,7 @@ public enum LighthouseErrorCode {
      /* Failed to manipulate the instance. */
      FAILEDOPERATION_INSTANCEOPERATIONFAILED("FailedOperation.InstanceOperationFailed"),
      
-     /* Insufficient account balance. Please recharge promptly. */
+     /* The account balance is insufficient. Top up promptly. */
      FAILEDOPERATION_INSUFFICIENTBALANCE("FailedOperation.InsufficientBalance"),
      
      /* The command is not found. */
@@ -95,6 +98,12 @@ public enum LighthouseErrorCode {
      
      /* A request error occurred. */
      FAILEDOPERATION_REQUESTERROR("FailedOperation.RequestError"),
+     
+     /* Failed to scale out the cloud disk. Try again later. */
+     FAILEDOPERATION_RESIZEDISKSFAILED("FailedOperation.ResizeDisksFailed"),
+     
+     /* Failed to share an image across accounts. Try again later. */
+     FAILEDOPERATION_SHAREBLUEPRINTACROSSACCOUNTFAILED("FailedOperation.ShareBlueprintAcrossAccountFailed"),
      
      /* Failed to manipulate the snapshot. */
      FAILEDOPERATION_SNAPSHOTOPERATIONFAILED("FailedOperation.SnapshotOperationFailed"),
@@ -210,6 +219,18 @@ public enum LighthouseErrorCode {
      /* Incorrect parameter value. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
+     /* Sharing images to accounts in different sites is not allowed. */
+     INVALIDPARAMETERVALUE_ACCOUNTIDINVALIDACCOUNTAREA("InvalidParameterValue.AccountIdInvalidAccountArea"),
+     
+     /* The account is the current user. */
+     INVALIDPARAMETERVALUE_ACCOUNTIDSAMEWITHUIN("InvalidParameterValue.AccountIdSameWithUin"),
+     
+     /* The account ID does not exist. */
+     INVALIDPARAMETERVALUE_ACCOUNTIDSNOTEXIST("InvalidParameterValue.AccountIdsNotExist"),
+     
+     /* The account ID is not a root account. */
+     INVALIDPARAMETERVALUE_ACCOUNTIDSNOTOWNERACCOUNT("InvalidParameterValue.AccountIdsNotOwnerAccount"),
+     
      /* The configuration of this instance does not meet the requirements of the specified image. */
      INVALIDPARAMETERVALUE_BLUEPRINTCONFIGNOTMATCH("InvalidParameterValue.BlueprintConfigNotMatch"),
      
@@ -242,6 +263,9 @@ public enum LighthouseErrorCode {
      
      /* The disk size has changed. */
      INVALIDPARAMETERVALUE_DISKSIZENOTMATCH("InvalidParameterValue.DiskSizeNotMatch"),
+     
+     /* The specified cloud disk size is less than the current disk size. */
+     INVALIDPARAMETERVALUE_DISKSIZESMALLERTHANCURRENTDISKSIZE("InvalidParameterValue.DiskSizeSmallerThanCurrentDiskSize"),
      
      /* The parameter `KeyName` already exists and is duplicate. */
      INVALIDPARAMETERVALUE_DUPLICATEPARAMETERVALUE("InvalidParameterValue.DuplicateParameterValue"),
@@ -281,6 +305,9 @@ public enum LighthouseErrorCode {
      
      /* Invalid parameter value: the disk ID format is invalid. */
      INVALIDPARAMETERVALUE_INVALIDDISKIDMALFORMED("InvalidParameterValue.InvalidDiskIdMalformed"),
+     
+     /* The specified cloud disk size does not meet the requirements. */
+     INVALIDPARAMETERVALUE_INVALIDDISKSIZE("InvalidParameterValue.InvalidDiskSize"),
      
      /* Invalid cloud disk type. */
      INVALIDPARAMETERVALUE_INVALIDDISKTYPE("InvalidParameterValue.InvalidDiskType"),
@@ -399,6 +426,9 @@ public enum LighthouseErrorCode {
      /* The key pair quota is exceeded. */
      LIMITEXCEEDED_KEYPAIRLIMITEXCEEDED("LimitExceeded.KeyPairLimitExceeded"),
      
+     /* The image quota is insufficient to share images to the specified account. */
+     LIMITEXCEEDED_SHAREBLUEPRINTACROSSACCOUNTQUOTALIMITEXCEEDED("LimitExceeded.ShareBlueprintAcrossAccountQuotaLimitExceeded"),
+     
      /* The snapshot quota is exceeded. */
      LIMITEXCEEDED_SNAPSHOTQUOTALIMITEXCEEDED("LimitExceeded.SnapshotQuotaLimitExceeded"),
      
@@ -458,6 +488,9 @@ public enum LighthouseErrorCode {
      
      /* The disk ID does not exist. */
      RESOURCENOTFOUND_DISKIDNOTFOUND("ResourceNotFound.DiskIdNotFound"),
+     
+     /* The disk does not exist. */
+     RESOURCENOTFOUND_DISKNOTEXISTS("ResourceNotFound.DiskNotExists"),
      
      /* The disk does not exist. */
      RESOURCENOTFOUND_DISKNOTFOUND("ResourceNotFound.DiskNotFound"),
@@ -555,6 +588,9 @@ public enum LighthouseErrorCode {
      /* Failed to associate the CCN instance. Please check the CCN status and try again later. */
      UNSUPPORTEDOPERATION_ATTACHCCNFAILED("UnsupportedOperation.AttachCcnFailed"),
      
+     /* The image has already been shared. The operation is not supported. */
+     UNSUPPORTEDOPERATION_BLUEPRINTALREADYSHARED("UnsupportedOperation.BlueprintAlreadyShared"),
+     
      /* The current status of the image does not support this operation. */
      UNSUPPORTEDOPERATION_BLUEPRINTCURSTATEINVALID("UnsupportedOperation.BlueprintCurStateInvalid"),
      
@@ -641,6 +677,9 @@ public enum LighthouseErrorCode {
      
      /* The resource cannot be returned. */
      UNSUPPORTEDOPERATION_RESOURCENOTRETURNABLE("UnsupportedOperation.ResourceNotReturnable"),
+     
+     /* This operation is not supported if the new configuration is identical to the existing configuration during configuration changes. */
+     UNSUPPORTEDOPERATION_SAMEWITHOLDCONFIG("UnsupportedOperation.SameWithOldConfig"),
      
      /* The snapshot is busy. */
      UNSUPPORTEDOPERATION_SNAPSHOTBUSY("UnsupportedOperation.SnapshotBusy"),
